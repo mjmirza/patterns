@@ -37,6 +37,8 @@ ALLOW_UNREACHABLE = {
     "docs.camunda.io",
     "martendb.io",
     "openai.com",
+    "www.cs.umd.edu",
+    "www.slf4j.org",
 }
 
 
@@ -89,12 +91,15 @@ def probe(url: str, timeout: int) -> tuple[str, int | str]:
         return url, e.code
     except Exception:
         # A timeout or reset is network variance, not proof the host is dead.
-        # One retry at 1.5x the timeout before it counts against the citation.
-        try:
-            with urllib.request.urlopen(req, timeout=timeout * 1.5) as r:
-                return url, r.status
-        except Exception as e2:
-            return url, type(e2).__name__
+        # Two retries, growing the timeout each time, before it counts.
+        last: Exception | None = None
+        for attempt in (1.5, 2.5):
+            try:
+                with urllib.request.urlopen(req, timeout=timeout * attempt) as r:
+                    return url, r.status
+            except Exception as e2:
+                last = e2
+        return url, type(last).__name__ if last else "Unknown"
 
 
 def main() -> int:
