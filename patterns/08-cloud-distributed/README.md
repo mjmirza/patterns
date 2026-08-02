@@ -2,22 +2,35 @@
 
 Origin. Azure Architecture Center, Nygard
 
-18 entries, 172,195 words. Every entry carries all 18
+21 entries, 194,907 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud and Distributed
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Backends for Frontends](backends-for-frontends.md) | established | 7,877 | A product ships to more than one kind of client. |
 | [Cache-Aside](cache-aside.md) | canonical | 11,151 | A service reads the same records far more often than it writes them, and the read path is expensive. |
 | [Gateway Aggregation](gateway-aggregation.md) | canonical | 7,007 | A client needs data or a decision that no single backend service owns end to end. |
 | [Materialized View](materialized-view.md) | canonical | 8,521 | An application reads data far more often than it writes it, and the shape a write path needs is almost never the shape a read path wants. |
+
+## Cloud and Distributed Systems
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Ambassador](ambassador.md) | canonical | 7,796 | A service needs network capabilities that are not really its own concern. |
 
 ## Coordination
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Leader Election](leader-election.md) | canonical | 7,764 | A fleet of otherwise identical replicas exists for availability. |
+
+## Data Distribution
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Sharding](sharding.md) | canonical | 7,039 | A single database server has a hard limit on what it can do. |
 
 ## Data and Consistency
 
