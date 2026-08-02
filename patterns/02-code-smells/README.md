@@ -2,14 +2,14 @@
 
 Origin. Fowler and Beck, Refactoring
 
-3 entries, 24,379 words. Every entry carries all 18
+3 entries, 24,376 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Code Smell
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Comments](comments.md) | canonical | 8,798 | A comment is a message from one point in time to a later reader, and it is never checked by anything that runs. |
+| [Comments](comments.md) | canonical | 8,795 | A comment is a message from one point in time to a later reader, and it is never checked by anything that runs. |
 
 ## Code Smell, Object-Oriented Abusers
 
