@@ -39,10 +39,24 @@ def clean(u: str) -> str:
     return u
 
 
+def strip_fences(text: str) -> str:
+    # Placeholder URLs inside code samples are not citations and must not be probed.
+    out, inside = [], False
+    for line in text.splitlines():
+        if line.lstrip().startswith("```"):
+            inside = not inside
+            continue
+        if not inside:
+            out.append(line)
+    return "\n".join(out)
+
+
 def collect() -> dict[str, list[str]]:
     found: dict[str, list[str]] = {}
     for f in sorted(PATTERNS.rglob("*.md")):
-        for raw in URL.findall(f.read_text(encoding="utf-8", errors="replace")):
+        prose = strip_fences(f.read_text(encoding="utf-8", errors="replace"))
+        prose = re.sub(r"`[^`]*`", " ", prose)
+        for raw in URL.findall(prose):
             u = clean(raw)
             found.setdefault(u, []).append(str(f.relative_to(ROOT)))
     return found
