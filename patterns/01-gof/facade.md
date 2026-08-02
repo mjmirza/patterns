@@ -877,6 +877,7 @@ Techniques that apply.
   acquired resource is released. Assert the second one by counting live
   connections or descriptors before and after, since this is the resource-leak
   failure of dimension 11 and it is invisible to an assertion on the return value.
+  The three code listings below are written in exactly this shape.
 - **Architecture test on imports.** Assert mechanically that no package outside
   the allowlist imports the subsystem. Tools for this exist in most language
   toolchains, and without one the boundary is a convention that erodes at a
@@ -1014,7 +1015,10 @@ example already demonstrates, so a Rust listing would repeat rather than add.
 
 All three examples model the same subsystem from dimension 2. An encoder, a
 transport and a receipt store, sequenced behind one operation, with cleanup on
-every path and error translation at the boundary.
+every path and error translation at the boundary. Each `main` injects a transport
+fault on the second call and then prints the connection counter, because the
+error-path resource leak of dimension 11 is the defect these listings exist to
+demonstrate the absence of.
 
 ### Python
 
@@ -1034,14 +1038,15 @@ class Encoder:
 class Transport:
     def __init__(self) -> None:
         self.open_count = 0
+        self.fail = False
 
     def open(self) -> "Transport":
         self.open_count += 1
         return self
 
     def write(self, payload: bytes) -> str:
-        if not payload:
-            raise ValueError("empty payload")
+        if self.fail:
+            raise ValueError("transport refused")
         return f"ack-{len(payload)}"
 
     def close(self) -> None:
@@ -1077,7 +1082,11 @@ def send(subject: str, body: str) -> str:
 
 if __name__ == "__main__":
     print(send("hello", "first message"))
-    print(send("hello", "second message"))
+    _transport.fail = True
+    try:
+        send("hello", "second message")
+    except MailError as exc:
+        print("translated:", exc)
     print("leaked connections:", _transport.open_count)
 ```
 
@@ -1101,11 +1110,12 @@ class Encoder {
 
 class Transport {
   openCount = 0;
+  fail = false;
   open(): void {
     this.openCount += 1;
   }
   write(payload: string): string {
-    if (payload.length === 0) throw new Error("empty payload");
+    if (this.fail) throw new Error("transport refused");
     return `ack-${payload.length}`;
   }
   close(): void {
@@ -1145,6 +1155,12 @@ class MailFacade implements Mailer {
 const transport = new Transport();
 const mailer: Mailer = new MailFacade(new Encoder(), transport, new ReceiptStore());
 console.log(mailer.send("hello", "first message"));
+transport.fail = true;
+try {
+  mailer.send("hello", "second message");
+} catch (e) {
+  console.log("translated:", e instanceof MailError);
+}
 console.log("leaked connections:", transport.openCount);
 ```
 
@@ -1181,14 +1197,17 @@ func (encoder) encode(subject, body string) string {
 	return "Subject: " + subject + "\n\n" + body
 }
 
-type transport struct{ openCount int }
+type transport struct {
+	openCount int
+	fail      bool
+}
 
 func (t *transport) open()  { t.openCount++ }
 func (t *transport) close() { t.openCount-- }
 
 func (t *transport) write(payload string) (string, error) {
-	if payload == "" {
-		return "", errors.New("empty payload")
+	if t.fail {
+		return "", errors.New("transport refused")
 	}
 	return fmt.Sprintf("ack-%d", len(payload)), nil
 }
@@ -1224,18 +1243,33 @@ func (m *Mail) Send(subject, body string) (string, error) {
 
 func main() {
 	m := NewMail()
-	id, err := m.Send("hello", "first message")
-	fmt.Println(id, err)
-	_, err = m.Send("", "")
+	id, _ := m.Send("hello", "first message")
+	fmt.Println(id)
+	m.tr.fail = true
+	_, err := m.Send("hello", "second message")
 	fmt.Println("translated:", errors.Is(err, ErrMail))
 	fmt.Println("leaked connections:", m.tr.openCount)
 }
 ```
 
-All three listings deliberately print the connection counter, because the
-error-path resource leak of dimension 11 is the defect these examples exist to
-demonstrate the absence of. The run status of each listing is recorded in the
-verification note at the end of this entry rather than assumed.
+### Verification status of the listings
+
+Recorded from actual runs on 2026-08-02, not from reading the code.
+
+- Python, run with CPython 3.13 as a script. Output was `receipt-1`, then
+  `translated. transport refused`, then `leaked connections. 0`.
+- Go, run with `go vet ./...` clean followed by `go run .`. Output was
+  `receipt-1`, then `translated. true`, then `leaked connections. 0`.
+- TypeScript, compiled with `tsc` version 7.0.2 under `--strict` targeting
+  ES2020 with no errors, then executed with Node. Output was `receipt-1`, then
+  `translated. true`, then `leaked connections. 0`, then `receipt-fake` from the
+  fake used by a caller test.
+
+An earlier draft of the Go listing failed this check honestly. It triggered the
+error by passing an empty subject and body, but the encoder still produced a
+non-empty payload, so the failure path never ran and the run printed
+`translated. false`. The fault flag on the transport replaced that, which is both
+correct and closer to the fault-injection technique in dimension 15.
 
 ## 18. References
 
@@ -1295,9 +1329,3 @@ verification note at the end of this entry rather than assumed.
     Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Source of the
     Anti-Corruption Layer concept referenced in dimensions 1 and 13. Page
     numbers are not cited for the same reason.
-
-## Verification note on the code listings
-
-Recorded after running the listings rather than asserted from reading them. See
-the report at the end of the authoring session for the exact commands and
-outputs.

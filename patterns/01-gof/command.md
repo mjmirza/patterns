@@ -1144,7 +1144,7 @@ class AddCommand implements Command {
   }
 }
 
-class History {
+class UndoHistory {
   private done: Command[] = [];
   private undone: Command[] = [];
 
@@ -1163,10 +1163,10 @@ class History {
 }
 
 const counter = new Counter();
-const history = new History();
-history.run(new AddCommand(counter, 5));
-history.run(new AddCommand(counter, 3));
-history.undo();
+const undoHistory = new UndoHistory();
+undoHistory.run(new AddCommand(counter, 5));
+undoHistory.run(new AddCommand(counter, 3));
+undoHistory.undo();
 console.log(counter.value);
 
 type Task = () => void;
@@ -1417,7 +1417,11 @@ func main() {
     Verified 2026-08-02. Used to confirm the originator, caretaker and memento
     roles and the undo application referenced in dimension 8.
 
-Code verification note. The Python, Go and Java examples were each executed in
-the session that authored this entry and produced the expected output. The
-TypeScript block was checked with the TypeScript compiler. No example depends on
-a third party library.
+Code verification note, recorded 2026-08-02. The Python example was executed and
+printed two matching ledger states, which is the replay assertion it exists to
+demonstrate. The Go example was compiled and run with `go run`. The TypeScript
+block was type checked clean with `tsc --strict --target es2020`, and the undo
+history class is named `UndoHistory` because `History` collides with the DOM
+global of that name. The Java example was NOT compiled, because the authoring
+machine has no Java runtime installed, only the macOS `javac` stub, so it is
+reviewed rather than verified. No example depends on a third party library.
