@@ -155,3 +155,46 @@ was roughly 200 deep entries plus 700 lighter ones against 900 deep entries.
 The owner chose 900 deep entries with the cost visible. This note exists so the
 decision is not silently re-litigated later by a contributor who finds the
 authoring effort large.
+
+## Judgement versus sourced claim
+
+Not every sentence in an entry can carry a citation, and pretending otherwise
+produces fake citations. The rule is honest labelling, not universal sourcing.
+
+**Must be sourced.** Anything a reader could check and find wrong.
+
+1. Who named the pattern, when, and in which publication.
+2. Any statement about what a named library, language, or specification does.
+3. Any named production use.
+4. Any claim about a language feature, a memory model, or an API contract.
+5. Any historical or attribution claim, including "X called this an anti-pattern".
+
+**May be engineering judgement.** State it as reasoning, never dress it as fact.
+
+1. Dimension 3, forces, where you weigh which pressure dominates.
+2. Dimension 10, consequences, where the cost is a matter of degree.
+3. Dimension 11, failure modes, where the symptom is drawn from experience.
+4. Dimension 15, testing, and dimension 16, observability, which are practice.
+5. Dimension 17, security, where the implication is analytical.
+
+An entry that presents judgement as a sourced fact is worse than an entry with
+fewer citations. When a dimension is largely judgement, say so in one line at
+the top of that dimension so the reader can weigh it accordingly.
+
+## Available toolchains
+
+Compile or run every sample you can, and state plainly which you could not.
+
+| Language | Availability |
+|---|---|
+| Python | `python3`, present |
+| Go | `go`, present |
+| TypeScript | via `npx tsc`, present |
+| JavaScript | `node`, present |
+| Swift | `swiftc`, present |
+| Java | `javac`, being installed, check before assuming |
+| Rust | `rustc`, being installed, check before assuming |
+| C#, Kotlin | not installed, hand-check and say so |
+
+A sample you could not compile is still acceptable. Silently implying you did
+compile it is not.
