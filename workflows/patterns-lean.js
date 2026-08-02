@@ -69,6 +69,30 @@ Your file must show PASS. Fix and re-run until it does.
 Report in under 120 words: file path, dimensions out of 18, verified citation count, gate result, unverifiable claims.`
 }
 
+// Never trust the agent's own claim, only the gate re-check. Confirmed once,
+// live: "SKIP already complete" was returned for a file that did not exist.
+async function gateCheck(paths) {
+  if (!paths.length) return new Set()
+  const list = paths.map((p) => `- ${p}`).join('\n')
+  const out = await withTimeout(
+    agent(
+      `Run exactly: cd ${REPO} && python3 tools/check-structure.py 2>/dev/null\n` +
+      `For each of the paths below, find its line in that output and report ` +
+      `ONLY "PASS <path>" or "FAIL <path>", one per line, nothing else. ` +
+      `A path with no matching line in the output is FAIL. No commentary, no summary.\n${list}`,
+      { label: 'gate-check', phase: 'Verify' },
+    ),
+    GATE_TIMEOUT_MS,
+    () => null,
+  )
+  const passing = new Set()
+  for (const line of String(out || '').split('\n')) {
+    const m = line.match(/^PASS\s+(\S+)/)
+    if (m && paths.includes(m[1])) passing.add(m[1])
+  }
+  return passing
+}
+
 // RENAME_OK: rewritten loop verifies via the gate, not the return value.
 const raw = typeof args === 'string' ? JSON.parse(args) : args
 const batch = Array.isArray(raw) ? raw : raw.entries
