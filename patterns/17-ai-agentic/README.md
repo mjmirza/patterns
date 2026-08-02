@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-1 entries, 7,673 words. Every entry carries all 18
+3 entries, 25,926 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Agentic Workflow
@@ -10,6 +10,18 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Prompt Chaining](prompt-chaining.md) | established | 7,673 | A task is handed to a single LLM call, and the call is asked to do everything at once, understand a long or ambiguous instruction, apply several unrelated rules, transform the ... |
+
+## Multi-Agent Coordination
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Orchestrator-Worker](orchestrator-worker.md) | established | 10,095 | A task arrives whose internal shape cannot be known until the model has already looked at it. |
+
+## Workflow
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Routing](routing.md) | canonical | 8,158 | A single LLM call, driven by one prompt, is asked to handle every shape of input a system receives. |
 
 ## Reading order
 

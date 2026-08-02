@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-15 entries, 146,479 words. Every entry carries all 18
+18 entries, 171,524 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud and Distributed
@@ -10,6 +10,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Cache-Aside](cache-aside.md) | canonical | 11,154 | A service reads the same records far more often than it writes them, and the read path is expensive. |
+| [Gateway Aggregation](gateway-aggregation.md) | canonical | 7,007 | A client needs data or a decision that no single backend service owns end to end. |
+| [Health Endpoint Monitoring](health-endpoint-monitoring.md) | canonical | 7,690 | A service that has crashed is easy to notice. |
 | [Materialized View](materialized-view.md) | canonical | 8,521 | An application reads data far more often than it writes it, and the shape a write path needs is almost never the shape a read path wants. |
 
 ## Coordination
@@ -48,6 +50,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Publisher-Subscriber](publisher-subscriber.md) | canonical | 8,855 | A component in a system needs to tell other components that something happened, and it does not know, and should not need to know, who those other components are. |
+
+## Migration
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Strangler Fig](strangler-fig.md) | canonical | 10,348 | A system has been running in production for years. |
 
 ## Resilience
 
