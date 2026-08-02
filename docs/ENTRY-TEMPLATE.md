@@ -45,80 +45,98 @@ is not yet settled.
 ## The 18 dimensions, in order
 
 ### 1. Name, aliases, and lineage
+
 Canonical name. Every alias in real use. Who first described it, in which
 publication, in which year, with the citation. If the name is contested or the
 pattern is known by a different name in another community, say so here.
 
 ### 2. Problem and context
+
 The concrete situation that creates the need. Written so a reader who has never
 heard the pattern name can recognise the problem in their own codebase. State
 the context in which the problem arises, because a pattern outside its context
 is an anti-pattern.
 
 ### 3. Forces
+
 The competing pressures the pattern balances. At minimum consider latency,
 coupling, consistency, operability, cost, team topology, and cognitive load.
 Say which forces the pattern favours and which it sacrifices. A pattern that
 sacrifices nothing is described wrongly.
 
 ### 4. Applicability and non-applicability
+
 Two lists. When to reach for it. When NOT to, with the reason. The second list
 is the more valuable one and is the one most catalogs omit.
 
 ### 5. Structure
+
 Participants with their responsibilities, and the relationships between them.
 Name each participant with the role it plays, not with a generic class name.
 
 ### 6. ASCII structure diagram
+
 Inside a fenced code block. Boxes and arrows showing the participants and their
 relationships. Must be readable in a plain terminal at 80 columns.
 
 ### 7. Dynamics
+
 How the participants interact at runtime. A sequence flow, a state transition,
 or an event flow, whichever fits. Also inside a fenced code block when drawn.
 
 ### 8. Implementation variants
+
 The real ways this pattern is built in practice, with the trade-off of each.
 Include the language-idiomatic variants where a language changes the shape,
 for example a closure replacing a Strategy class.
 
 ### 9. Known production uses
+
 Named systems, libraries, frameworks, or standards, each with a source. At least
 two. This is the dimension that proves the pattern is real and not academic.
 
 ### 10. Consequences
+
 Positive and negative, as two explicit lists. Every pattern has a cost. Name it.
 
 ### 11. Failure modes and misuse
+
 How this pattern breaks in production, and how people misuse it. Include the
 symptom a reader would actually observe, not the abstract mistake alone.
 
 ### 12. Trade-off matrix
+
 A table comparing this pattern against its named alternatives across the forces
 from dimension 3. The alternatives must be named patterns, not strawmen.
 
 ### 13. Related and incompatible patterns
+
 Which patterns compose with this one, which ones replace it, and which ones
 actively conflict with it. Explain the relationship, never a bare list of names.
 
 ### 14. Refactoring path in and out
+
 How to introduce this pattern into code that does not have it, step by step.
 And how to remove it when it stops earning its place. Cross reference the
 refactoring family where a named refactoring applies.
 
 ### 15. Testing and verification
+
 How to test code that uses this pattern. What is easy to test because of it,
 and what became harder. Name the test doubles or techniques that apply.
 
 ### 16. Observability signals
+
 What to log, trace, or measure so this pattern is visible in production. What a
 healthy instance looks like on a dashboard, and what a failing one looks like.
 
 ### 17. Security and privacy implications
+
 The attack surface the pattern opens or closes. Data handling implications.
 Where it is silent, say so plainly rather than inventing a concern.
 
 ### 18. References
+
 Every source used, with author, title, edition or version, page or section, URL
 where one exists, and the date the URL was verified. Sources must be
 independently checkable by a reader.

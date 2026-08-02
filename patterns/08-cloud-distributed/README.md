@@ -2,16 +2,15 @@
 
 Origin. Azure Architecture Center, Nygard
 
-18 entries, 171,524 words. Every entry carries all 18
+18 entries, 172,251 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud and Distributed
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Cache-Aside](cache-aside.md) | canonical | 11,154 | A service reads the same records far more often than it writes them, and the read path is expensive. |
+| [Cache-Aside](cache-aside.md) | canonical | 11,151 | A service reads the same records far more often than it writes them, and the read path is expensive. |
 | [Gateway Aggregation](gateway-aggregation.md) | canonical | 7,007 | A client needs data or a decision that no single backend service owns end to end. |
-| [Health Endpoint Monitoring](health-endpoint-monitoring.md) | canonical | 7,690 | A service that has crashed is easy to notice. |
 | [Materialized View](materialized-view.md) | canonical | 8,521 | An application reads data far more often than it writes it, and the shape a write path needs is almost never the shape a read path wants. |
 
 ## Coordination
@@ -56,6 +55,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Strangler Fig](strangler-fig.md) | canonical | 10,348 | A system has been running in production for years. |
+
+## Reliability
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Health Endpoint Monitoring](health-endpoint-monitoring.md) | canonical | 8,420 | A service running behind a load balancer, an orchestrator, or a service mesh can fail in ways that are invisible from outside the process. |
 
 ## Resilience
 

@@ -10,12 +10,15 @@ Counts verified from the live sitemap (2026-08-02) where marked SITEMAP.
 SITEMAP: refactoring.guru covers 22. It omits **Interpreter**. We cover all 23.
 
 ### Creational (5)
+
 abstract-factory, builder, factory-method, prototype, singleton
 
 ### Structural (7)
+
 adapter, bridge, composite, decorator, facade, flyweight, proxy
 
 ### Behavioral (11)
+
 chain-of-responsibility, command, interpreter, iterator, mediator, memento,
 observer, state, strategy, template-method, visitor
 

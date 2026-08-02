@@ -110,30 +110,61 @@ def check_go(src: str, d: Path) -> tuple[int, str]:
     return run([go, "vet", str(f)], d)
 
 
+_TS_PROJECT: Path | None = None
+
+
+def ts_project() -> Path | None:
+    # A shared node_modules resolves @types/node; a fresh npx cache per file does not.
+    global _TS_PROJECT
+    if _TS_PROJECT is not None:
+        return _TS_PROJECT if (_TS_PROJECT / "node_modules/.bin/tsc").exists() else None
+    npm = tool("npm")
+    if not npm:
+        _TS_PROJECT = Path("/nonexistent")
+        return None
+    proj = Path(tempfile.mkdtemp(prefix="patterns-ts-"))
+    (proj / "package.json").write_text('{"name":"scratch","private":true}')
+    rc, out = run(
+        [npm, "install", "--no-audit", "--no-fund", "typescript@5", "@types/node@22"],
+        proj,
+        timeout=180,
+    )
+    if rc != 0:
+        _TS_PROJECT = Path("/nonexistent")
+        print(
+            f"warning: TypeScript scratch project failed: {out[:200]}", file=sys.stderr
+        )
+        return None
+    _TS_PROJECT = proj
+    return proj
+
+
 def check_ts(src: str, d: Path) -> tuple[int, str]:
-    npx = tool("npx")
-    if not npx:
-        return -1, "npx not available"
-    f = d / "s.ts"
+    proj = ts_project()
+    if proj is None:
+        return -1, "typescript scratch project unavailable"
+    f = proj / f"s_{d.name}.ts"
     f.write_text(src)
+    tsc = proj / "node_modules/.bin/tsc"
     return run(
         [
-            npx,
-            "-y",
-            "typescript@5",
-            "tsc",
+            str(tsc),
             "--noEmit",
             "--strict",
             "--target",
+            "es2022",
+            "--lib",
             "es2022",
             "--moduleResolution",
             "bundler",
             "--module",
             "esnext",
+            "--types",
+            "node",
             str(f),
         ],
-        d,
-        timeout=240,
+        proj,
+        timeout=60,
     )
 
 
@@ -173,6 +204,7 @@ def main() -> int:
     for f in files:
         text = f.read_text(encoding="utf-8", errors="replace")
         rel = f.relative_to(ROOT)
+        seen_by_lang: dict[str, str] = {}
         for i, (lang_raw, src) in enumerate(FENCE.findall(text), 1):
             lang = ALIASES.get(lang_raw.lower(), lang_raw.lower())
             if lang not in CHECKERS:
@@ -182,6 +214,15 @@ def main() -> int:
             total += 1
             with tempfile.TemporaryDirectory() as td:
                 code, out = CHECKERS[lang](src, Path(td))
+            # A block using a symbol from an earlier same-language block (a
+            # class shown, then a test double for it) is real docs, not broken.
+            if code not in (0, -1) and lang in seen_by_lang:
+                cumulative = seen_by_lang[lang] + "\n\n" + src
+                with tempfile.TemporaryDirectory() as td2:
+                    code2, out2 = CHECKERS[lang](cumulative, Path(td2))
+                if code2 == 0:
+                    code, out = code2, out2
+            seen_by_lang[lang] = seen_by_lang.get(lang, "") + "\n\n" + src
             if code == -1:
                 skipped += 1
             elif code == 0:

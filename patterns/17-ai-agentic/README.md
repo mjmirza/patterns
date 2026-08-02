@@ -2,8 +2,20 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-3 entries, 25,926 words. Every entry carries all 18
+5 entries, 43,651 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## AI and Agentic
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Tree of Thoughts](tree-of-thoughts.md) | established | 9,275 | A language model produces its answer as a single left-to-right token stream. |
+
+## Agentic
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Reflexion](reflexion.md) | emerging | 8,450 | An LLM agent that tries a task once and stops inherits every mistake in that one attempt permanently. |
 
 ## Agentic Workflow
 

@@ -1,0 +1,18 @@
+{
+  "config": {
+    "default": true,
+    "MD010": { "code_blocks": false },
+    "MD013": false,
+    "MD024": { "siblings_only": true },
+    "MD020": false,
+    "MD025": false,
+    "MD029": false,
+    "MD040": false,
+    "MD033": false,
+    "MD034": false,
+    "MD041": false,
+    "MD060": false
+  },
+  "globs": ["patterns/**/*.md", "docs/**/*.md", "README.md"],
+  "ignores": ["docs/council/**"]
+}

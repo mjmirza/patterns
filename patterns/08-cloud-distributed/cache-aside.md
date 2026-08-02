@@ -408,8 +408,8 @@ mechanism, which no client-side approach does.
 
 Each reader independently decides whether to rebuild before the entry expires,
 with a probability that rises as expiry approaches. The XFetch algorithm from
-Vattani, Chierichetti and Lowenstein evaluates `time() - delta * beta * ln(rand())
->= expiry`, where `delta` is the measured recomputation cost and `beta` tunes how
+Vattani, Chierichetti and Lowenstein evaluates `time() - delta *beta* ln(rand())
+>= expiry`, where`delta` is the measured recomputation cost and `beta` tunes how
 early recomputation is favoured
 ([Vattani, Chierichetti, Lowenstein, *Optimal Probabilistic Cache Stampede
 Prevention*, PVLDB volume 8, pages 886 to 897, 2015](https://dl.acm.org/doi/10.14778/2757807.2757813),
