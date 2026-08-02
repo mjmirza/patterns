@@ -3,7 +3,7 @@ name: Command
 slug: command
 family: 01-gof
 category: Behavioral
-aliases: [Action, Transaction, Operation Object]
+aliases: [Action, Transaction]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 related: [memento, composite, chain-of-responsibility, strategy, prototype, observer, mediator]
 incompatible_with: []
