@@ -1,0 +1,32 @@
+name: refresh-citations
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: re-probe every citation and commit the refreshed cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Probe every citation fresh, report only
+        run: |
+          rm -f .ref-cache.json
+          python3 tools/validate-refs.py --timeout 25 || true
+      - name: Commit the refreshed cache
+        run: |
+          if ! git diff --quiet -- .ref-cache.json; then
+            git config user.name "patterns-bot"
+            git config user.email "actions@github.com"
+            git add .ref-cache.json
+            git commit -m "chore: weekly citation cache refresh"
+            git push
+          fi
