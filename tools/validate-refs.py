@@ -87,8 +87,14 @@ def probe(url: str, timeout: int) -> tuple[str, int | str]:
             except Exception as inner:
                 return url, f"{e.code} then {type(inner).__name__}"
         return url, e.code
-    except Exception as e:
-        return url, type(e).__name__
+    except Exception:
+        # A timeout or reset is network variance, not proof the host is dead.
+        # One retry at 1.5x the timeout before it counts against the citation.
+        try:
+            with urllib.request.urlopen(req, timeout=timeout * 1.5) as r:
+                return url, r.status
+        except Exception as e2:
+            return url, type(e2).__name__
 
 
 def main() -> int:
@@ -112,7 +118,7 @@ def main() -> int:
         for url, status in ex.map(lambda u: probe(u, args.timeout), todo):
             cache[url] = status
             host = url.split("/")[2] if "://" in url else ""
-            ok = status in (200, 202, 301, 302, 303, 307, 308)
+            ok = status in (200, 202, 204, 301, 302, 303, 307, 308)
             if not ok and host not in ALLOW_UNREACHABLE:
                 bad.append((url, status, urls[url]))
 
