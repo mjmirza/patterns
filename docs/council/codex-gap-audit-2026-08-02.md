@@ -1,6 +1,7 @@
 Yes: the checklist is strong, but not complete at master level.
 
 **1. Missing Families**
+
 - **API and interface design patterns:** REST resource modeling, GraphQL resolver/data-loader patterns, gRPC streaming, webhook receiver, idempotent API, pagination patterns, versioning patterns.
 - **Release/deployment patterns:** Blue-Green Deployment, Canary Release, Rolling Deployment, Shadow Traffic, Dark Launch, Feature Toggle, Branch by Abstraction, Expand-Contract Migration.
 - **SRE/operations patterns:** SLO, Error Budget, Toil Automation, Runbook Automation, Game Day, Chaos Engineering, Graceful Degradation, Emergency Lever, Static Stability. Google SRE and AWS Well-Architected are authoritative here. ([sre.google](https://sre.google/books/?utm_source=openai)) ([docs.aws.amazon.com](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html?utm_source=openai))
@@ -11,6 +12,7 @@ Yes: the checklist is strong, but not complete at master level.
 - **Interaction/HCI patterns:** Undo, Wizard, Breadcrumbs, Command Palette, Inline Validation, Empty State, Progressive Disclosure, Autosave, Bulk Action, Optimistic Undo.
 
 **2. Missing Entries Inside Existing Families**
+
 - **05 Architectural:** CQRS as architecture style, Event Sourcing, CQRS/Event Sourcing pair, Service Mesh, API Gateway, Backend-for-Frontend, Event-Carried State Transfer, Shared Kernel Architecture, Plugin Sandbox.
 - **08 Cloud/Distributed:** Blue-Green Deployment, Canary Release, Rolling Deployment, Disaster Recovery Pilot Light, Warm Standby, Multi-Site Active/Active, Cell-Based Architecture, Regional Evacuation, Static Stability, Emergency Lever, Graceful Degradation.
 - **09 Concurrency:** Read-Copy-Update, Compare-and-Swap Loop, Lock Striping, Semaphore, Countdown Latch, Phaser, Work Queue, Structured Concurrency, Async/Await, Backpressure, Rate Limiter, Scheduler.
@@ -47,6 +49,7 @@ Each entry needs these dimensions, otherwise it reads as a starter catalog:
 - **Citations with page/section/version/date**
 
 **4. Padding To Cut**
+
 - **Family 04 Design Principles** should not be a pattern family. SOLID, GRASP, CUPID, CAP, PACELC, ACID, BASE, Conway’s Law, and Postel’s Law are principles, laws, or distributed-systems constraints. Keep them as cross-reference pages, not peer entries beside GoF/EIP/PoEAA.
 - **Family 18 Anti-Patterns** is valid only if anchored in Brown et al. and production failure modes. Otherwise it becomes a grab bag overlapping Code Smells and Security. Do not cut it entirely; split into **Software Anti-Patterns**, **Architecture Anti-Patterns**, **Distributed Systems Failure Patterns**, and **AI Anti-Patterns**.
 

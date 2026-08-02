@@ -10,12 +10,15 @@ Counts verified from the live sitemap (2026-08-02) where marked SITEMAP.
 SITEMAP: refactoring.guru covers 22. It omits **Interpreter**. We cover all 23.
 
 ### Creational (5)
+
 abstract-factory, builder, factory-method, prototype, singleton
 
 ### Structural (7)
+
 adapter, bridge, composite, decorator, facade, flyweight, proxy
 
 ### Behavioral (11)
+
 chain-of-responsibility, command, interpreter, iterator, mediator, memento,
 observer, state, strategy, template-method, visitor
 
@@ -219,7 +222,7 @@ Multi-agent: Supervisor, Hierarchical, Network/Swarm, Handoff, Debate,
 Safety and Ops: Input Guardrails, Output Guardrails, LLM-as-Judge,
   Human-in-the-Loop, LLM Circuit Breaker, Fallback Chain, Cost Guard,
   Token Budget, Semantic Caching, Prompt Injection Defense, PII Redaction,
-  Constitutional AI, Evaluation Harness, Golden Dataset, Tracing
+  Constitutional AI, Evaluation Suite, Golden Dataset, Tracing
 
 ## Family 18. Anti-Patterns
 

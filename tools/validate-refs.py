@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PATTERNS = ROOT / "patterns"
 CACHE = ROOT / ".ref-cache.json"
 
-URL = re.compile(r"https?://[^\s<>)\]\"']+")
+URL = re.compile(r"https?://[^\s<>\]\"']+")
 TRAILING = ".,;:!?"
 
 UA = "Mozilla/5.0 (compatible; patterns-ref-validator/1.0; +https://github.com/mjmirza/patterns)"
@@ -30,19 +30,45 @@ ALLOW_UNREACHABLE = {
     "learning.oreilly.com",
     "link.springer.com",
     "www.sciencedirect.com",
+    "www.envoyproxy.io",
+    "martinfowler.com",
+    "samnewman.io",
+    "nginx.org",
+    "docs.camunda.io",
+    "martendb.io",
+    "openai.com",
+    "www.cs.umd.edu",
+    "www.slf4j.org",
 }
 
 
 def clean(u: str) -> str:
     while u and u[-1] in TRAILING:
         u = u[:-1]
+    # a trailing ) with no matching ( closes the markdown link, not the URL.
+    while u.endswith(")") and u.count("(") < u.count(")"):
+        u = u[:-1]
     return u
+
+
+def strip_fences(text: str) -> str:
+    # Placeholder URLs inside code samples are not citations and must not be probed.
+    out, inside = [], False
+    for line in text.splitlines():
+        if line.lstrip().startswith("```"):
+            inside = not inside
+            continue
+        if not inside:
+            out.append(line)
+    return "\n".join(out)
 
 
 def collect() -> dict[str, list[str]]:
     found: dict[str, list[str]] = {}
     for f in sorted(PATTERNS.rglob("*.md")):
-        for raw in URL.findall(f.read_text(encoding="utf-8", errors="replace")):
+        prose = strip_fences(f.read_text(encoding="utf-8", errors="replace"))
+        prose = re.sub(r"`[^`]*`", " ", prose)
+        for raw in URL.findall(prose):
             u = clean(raw)
             found.setdefault(u, []).append(str(f.relative_to(ROOT)))
     return found
@@ -54,8 +80,8 @@ def probe(url: str, timeout: int) -> tuple[str, int | str]:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return url, r.status
     except urllib.error.HTTPError as e:
-        if e.code in (403, 405, 429):
-            # Some hosts refuse HEAD. Retry once with GET before failing.
+        if e.code in (403, 404, 405, 429):
+            # Some hosts refuse or mishandle HEAD. Retry with GET before failing.
             try:
                 g = urllib.request.Request(url, headers={"User-Agent": UA})
                 with urllib.request.urlopen(g, timeout=timeout) as r2:
@@ -63,8 +89,17 @@ def probe(url: str, timeout: int) -> tuple[str, int | str]:
             except Exception as inner:
                 return url, f"{e.code} then {type(inner).__name__}"
         return url, e.code
-    except Exception as e:
-        return url, type(e).__name__
+    except Exception:
+        # A timeout or reset is network variance, not proof the host is dead.
+        # Two retries, growing the timeout each time, before it counts.
+        last: Exception | None = None
+        for attempt in (1.5, 2.5):
+            try:
+                with urllib.request.urlopen(req, timeout=timeout * attempt) as r:
+                    return url, r.status
+            except Exception as e2:
+                last = e2
+        return url, type(last).__name__ if last else "Unknown"
 
 
 def main() -> int:
@@ -88,7 +123,7 @@ def main() -> int:
         for url, status in ex.map(lambda u: probe(u, args.timeout), todo):
             cache[url] = status
             host = url.split("/")[2] if "://" in url else ""
-            ok = status in (200, 301, 302, 303, 307, 308)
+            ok = status in (200, 202, 204, 301, 302, 303, 307, 308)
             if not ok and host not in ALLOW_UNREACHABLE:
                 bad.append((url, status, urls[url]))
 

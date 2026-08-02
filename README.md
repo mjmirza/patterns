@@ -170,7 +170,7 @@ Content is licensed under
 
 Use it, adapt it, sell work built on it. Give credit and link back.
 
-```
+```text
 "Patterns" by Mirza Iqbal, CC BY 4.0
 https://github.com/mjmirza/patterns
 ```

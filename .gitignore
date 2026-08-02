@@ -1,5 +1,6 @@
-.ref-cache.json
 .DS_Store
 __pycache__/
 *.pyc
 node_modules/
+.claude/
+.codex-logs/

@@ -1,0 +1,15 @@
+# Repo-scoped allowlist. Every term here is a NAMED PATTERN from a citable
+# primary source, not AI slop vocabulary. Blocking them would make the
+# corresponding family uncitable. Each carries its source.
+#
+# discovery         Richardson, Microservices Patterns (Manning 2018).
+#                   "Service Discovery", "Client-side Discovery",
+#                   "Server-side Discovery". microservices.io/patterns/
+# context engineering
+#                   Anthropic engineering, "Effective context engineering for
+#                   AI agents". A named practice in family 17.
+discovery
+context engineering
+# context window. A real technical term in family 17 (lost-in-the-middle,
+#   long context versus RAG) and in this repo's own operating notes.
+context window
