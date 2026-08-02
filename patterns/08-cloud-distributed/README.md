@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-10 entries, 102,241 words. Every entry carries all 18
+15 entries, 146,479 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud and Distributed
@@ -11,6 +11,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Cache-Aside](cache-aside.md) | canonical | 11,154 | A service reads the same records far more often than it writes them, and the read path is expensive. |
 | [Materialized View](materialized-view.md) | canonical | 8,521 | An application reads data far more often than it writes it, and the shape a write path needs is almost never the shape a read path wants. |
+
+## Coordination
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Leader Election](leader-election.md) | canonical | 7,820 | A fleet of otherwise identical replicas exists for availability. |
 
 ## Data and Consistency
 
@@ -28,7 +34,14 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Compensating Transaction](compensating-transaction.md) | canonical | 8,001 | A single database transaction gives you atomicity for free. |
 | [Saga](saga.md) | canonical | 9,350 | A business operation spans several stores of record and must either happen in full or leave nothing of consequence behind, and there is no transaction manager that can span them. |
+
+## Integration
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Anti-Corruption Layer](anti-corruption-layer.md) | canonical | 8,210 | A team owns a domain model it has deliberately kept clean. |
 
 ## Messaging and Integration
 
@@ -47,7 +60,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Queue-Based Load Leveling](queue-based-load-leveling.md) | canonical | 9,730 | A system accepts work at a rate that varies over time, sometimes sharply, while the component that actually performs the work has a roughly fixed processing capacity per unit time. |
 | [Rate Limiting](rate-limiting.md) | canonical | 10,988 | A service exposes an operation that costs something to perform. |
+| [Throttling](throttling.md) | canonical | 10,477 | A service exposes an operation that costs something to run. |
 
 ## Stability
 
