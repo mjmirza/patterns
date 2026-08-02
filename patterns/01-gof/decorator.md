@@ -456,13 +456,33 @@ forwarding class is presented as a reusable component in its own right rather
 than as an abstract member of a pattern. The practical advantage is that one
 forwarding class can serve decorators written by unrelated authors.
 
-**Delegation keyword.** The Kotlin `by` clause generates the forwarding methods
-at compile time, so the decorator declares only what it changes. This removes the
-forwarding tax entirely and is the largest quality-of-life difference between
-languages for this pattern. C# has no equivalent and pays the tax by hand. Go
-struct embedding achieves a similar effect by promoting the embedded type's
-methods, with the difference that Go promotion is not virtual, so an embedded
-value cannot call back into the outer type's override.
+**Delegation keyword.** The Kotlin `by` clause removes the forwarding tax
+outright, so the decorator declares only what it changes. The language
+documentation states that the clause causes the delegate to be stored internally
+in objects of the deriving type and the compiler to generate all the methods of
+the interface forwarding to it, and that an override in the deriving type is used
+in preference to the delegate's implementation (JetBrains, *Kotlin
+documentation*, "Delegation", https://kotlinlang.org/docs/delegation.html
+verified 2026-08-02). This is the largest quality-of-life difference between
+languages for this pattern. C# has no equivalent clause and pays the tax by hand.
+Go struct embedding reaches a similar place by promoting the embedded type's
+methods onto the outer type.
+
+Both delegation forms carry the same limitation, and it is the one that bites.
+Neither dispatches back into the outer type. The Kotlin documentation says
+plainly that members overridden in the deriving type are not called from the
+members of the delegate object, which can only access its own implementations of
+the interface members (same source). Effective Go makes the matching statement
+for embedding, that when an embedded type's method is invoked the receiver is the
+inner type and not the outer one, and it names this as the important way in which
+embedding differs from subclassing (Go project, *Effective Go*, "Embedding",
+https://go.dev/doc/effective_go verified 2026-08-02). The consequence is worth
+stating concretely. A self-call inside the wrapped object bypasses the
+decorator's override, so a decorator that overrides a method the component also
+calls internally will never see those internal calls. That is the
+delegation-skipping symptom from dimension 11 arriving from the opposite
+direction, with no line of the decorator's own code at fault, and no compiler
+warning in either language.
 
 **Function decorator.** In a language with first-class functions, when Component
 is a single-method interface, a decorator is a function from Component to
@@ -509,7 +529,13 @@ anywhere a Component is expected.
 
 **Dynamic proxy generation.** The `java.lang.reflect.Proxy` class, the .NET
 `DispatchProxy` type, and Python `__getattr__` forwarding all generate the
-forwarding behaviour at runtime rather than requiring it in source. This
+forwarding behaviour at runtime rather than requiring it in source. The .NET type
+is documented as providing a mechanism for instantiating proxy objects and
+handling their method dispatch, with its `Invoke` method invoked to dispatch
+control whenever any method on the generated proxy type is called (Microsoft,
+*.NET API documentation*, `System.Reflection.DispatchProxy`,
+https://learn.microsoft.com/en-us/dotnet/api/system.reflection.dispatchproxy
+verified 2026-08-02). This
 eliminates the forwarding tax on a wide interface, which is the one case where it
 is genuinely worth the cost. The cost is real. Static type checking of the
 decorator disappears, method dispatch becomes reflective and slower, stack traces
@@ -966,3 +992,690 @@ forwarding is the bulk of the code.
 6. Reconsider the component interface. It was widened, if it was widened, to
    serve clients rather than decorators. It should not need narrowing now, and
    narrowing it is a separate change with its own blast radius.
+
+## 15. Testing and verification
+
+Most of this dimension is practice rather than sourced fact, and it is written as
+reasoning. The two citations in it are for library behaviour, not for advice.
+
+Easier because of the pattern.
+
+- Each behaviour is testable alone. A caching decorator can be tested against a
+  hand-written recording component with no network, no clock and no framework. The
+  test asserts that two calls with the same key produce one call to the inner
+  component, which is the entire contract of that class in one line.
+- The base implementation stays testable without any of the concerns. Because the
+  concrete component never learned about retries or metrics, its test suite never
+  has to disable them.
+- Test doubles are ordinary components. A decorator accepts any Component, so a
+  stub, a spy or a fake slots in with no mocking framework and no bytecode
+  rewriting. The spy is the most useful of the three here, because the question a
+  decorator test asks is usually about call counts and call order rather than
+  about return values.
+- Fault injection is a decorator. A test-only layer that throws on the third call,
+  delays by two hundred milliseconds, or returns a truncated body composes into
+  the same stack the production code uses. This gives chaos testing at the object
+  level with no infrastructure, and it is the cheapest way to exercise the retry
+  and circuit-breaker paths that otherwise only run during an incident.
+- Ordering is testable as data. Because a stack is built at a composition root, a
+  test can build the same stack the application builds and assert properties of
+  it, which is impossible when the behaviour is buried in conditionals.
+
+Harder because of the pattern.
+
+- Nothing in a unit test proves the production stack. Every decorator can pass its
+  own test while the wiring assembles them in the wrong order, or omits one, or
+  adds one twice. The unit tests are green and the system is wrong, which is the
+  worst failure shape a test suite can have.
+- Assertions about the innermost component require reaching through the chain.
+  Either the test builds the stack itself and keeps a reference to the base, which
+  is what the code examples below do, or the decorator exposes an unwrapping
+  accessor, which .NET does with `BaseStream` on `GZipStream`
+  (https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.gzipstream
+  verified 2026-08-02).
+- Coverage tools flatter a decorator suite. Forwarding methods are executed by
+  every test that touches the stack, so line coverage on a decorator class runs
+  high while the branch that skips delegation stays untested.
+- A decorator that forgets to delegate produces a green outer test. If the test
+  asserts only on the outer return value, and the decorator fabricates a
+  plausible one, nothing fails.
+- Stack traces in failing tests are long and repetitive, so the assertion message
+  has to carry the diagnosis because the trace will not.
+
+Techniques that apply, in the order they earn their keep.
+
+- **Transparency test on the abstract Decorator base.** Wrap a component in the
+  bare base with no overrides and assert that every operation produces the same
+  result as calling the component directly. This one test catches a forwarding
+  method that was never written, which is otherwise a silent hole that every
+  ConcreteDecorator inherits.
+- **Chain-integrity test with a sentinel innermost component.** Build the real
+  production stack over a recording component, call every public operation, and
+  assert the recorder saw each one. Repeat for the error paths, because the
+  delegation-skipping bug from dimension 11 lives on the error path far more often
+  than on the happy path. This is the single highest-value test for this pattern
+  and almost nobody writes it.
+- **Composition-root test.** Assert on the assembled stack, not on the classes.
+  Ask the composition function for the object it would give the application, then
+  assert the layer order by unwrapping, by a debug description each layer
+  contributes, or by driving a probe call through it and checking the observed
+  sequence. Without this test the wiring is the only untested code in the system.
+- **Call-count test through a retrying layer.** Compose retry over a component
+  that fails a fixed number of times and assert both the returned value and the
+  number of inner calls. The second assertion is the one that catches a retry
+  budget that multiplies with a second retry layer.
+- **Order-invariant test rather than an order test.** Where an order is a safety
+  property, for example that no authorisation decision is served from a cache,
+  assert the property rather than the arrangement. An arrangement test breaks on
+  every legitimate refactor. A property test breaks only when the safety
+  property does.
+- **Contract test reused across the stack.** Write one suite against the Component
+  interface and run it against the bare component and against every decorated
+  configuration. A decorator that narrows the contract, as `GZipStream` does with
+  `Seek` and `Position`, fails this suite immediately rather than in production,
+  and the failure is the honest signal that the interface needs splitting.
+- **Property-based test on composability.** For a decorator that claims to be
+  transparent for some subset of operations, assert over generated inputs that
+  the decorated result equals the undecorated result. Caching, metrics and logging
+  layers should all satisfy this. A layer that fails it is doing more than it
+  claims.
+- **Test that names survive wrapping, in dynamic languages.** In Python, assert
+  that a decorated function keeps its `__name__` and `__doc__`, which is what
+  `functools.wraps` copies through `WRAPPER_ASSIGNMENTS`, and that `__wrapped__`
+  points at the original function so introspection can still reach it (Python
+  Software Foundation, *Python 3 documentation*, `functools`,
+  https://docs.python.org/3/library/functools.html verified 2026-08-02). Without
+  this test every traceback and every generated document names the wrapper.
+- **Depth assertion.** Where composition is driven by configuration, assert a
+  maximum stack depth in a test so the unbounded-composition failure from
+  dimension 11 is caught at build time rather than by a stack overflow.
+
+## 16. Observability signals
+
+This dimension is engineering practice. Treat it as reasoning, with two sourced
+claims about how tracing and layer ordering behave.
+
+The observability problem this pattern creates is precise. The composition is
+built at runtime and is invisible in the source, so at three in the morning
+nobody can answer which layers were installed in the failing deployment. The
+observability opportunity it creates is equally precise. Every call passes
+through every layer, so a decorator is the cheapest instrumentation point in the
+system. Both halves have to be worked, and teams almost always do the second and
+skip the first.
+
+Record the composition itself, once, at startup.
+
+- Emit one structured log line per composition root at startup listing the layer
+  names in call order, plus the configuration each layer was given, with secrets
+  redacted. Without it, an incident review has to reconstruct the stack from a
+  deployment artefact.
+- Expose the same list on a diagnostic endpoint or in a health payload, so the
+  question can be answered about a live process rather than about the artefact
+  that was supposedly deployed.
+- Include a hash of the ordered layer list in the log line. Comparing that hash
+  across replicas answers, in one query, whether the fleet is running the same
+  stack, which is a question that otherwise takes an hour.
+
+Record what each layer does, per call.
+
+- One span per layer, not one span for the whole stack. The OpenTelemetry model
+  makes nested spans the natural representation of this. Child spans represent
+  sub-operations and are linked to a parent by a parent span identifier, and spans
+  sharing a trace identifier with a parent hierarchy form the trace
+  (OpenTelemetry, "Traces", https://opentelemetry.io/docs/concepts/signals/traces/
+  verified 2026-08-02). A decorator stack maps onto that model without any
+  distortion, and the resulting waterfall shows exactly where the time went and
+  which layer returned early.
+- Where a span per layer is too expensive, put a span attribute on the outer span
+  naming the layers that acted. Attributes are documented as key-value metadata
+  annotating a span with information about the operation it tracks (same source).
+  A boolean per layer, or a compact string of layer initials, costs almost nothing
+  and answers the cache-hit question without a second span.
+- A counter per layer, labelled by layer name and outcome. For a cache layer,
+  hit and miss. For a retry layer, attempts and final outcome. For an
+  authorisation layer, allow and deny.
+- A latency histogram at the outermost layer and at the innermost, both. The
+  difference between the two is the cost the middle of the stack adds, and it is
+  the only honest measure of the pattern's overhead in that system.
+
+The measurement trap that this pattern creates, stated plainly because it
+produces wrong dashboards rather than missing ones. A counter placed outside a
+retrying layer counts client calls. A counter placed inside it counts backend
+calls. They differ by the retry factor, and under partial outage they differ by a
+lot. A counter placed outside a caching layer counts requests. A counter placed
+inside it counts misses. Neither pair is wrong, and a dashboard that mixes one of
+each without saying so under-reports backend load exactly when the backend is in
+trouble. Label every counter with the layer that emitted it and state in the
+dashboard which side of the cache and the retry it sits on. The dynamics diagrams
+in dimension 7 are the picture of this trap.
+
+Layer order changes what the numbers mean, and the layer library authors say so.
+The `tower` builder documentation states that the order in which layers are added
+affects how requests are handled and that layers added first are called with the
+request first, and it gives the concrete case that a buffer of one hundred
+followed by a concurrency limit of ten permits one hundred and ten in-flight
+requests while the reverse order permits ten
+(https://docs.rs/tower/latest/tower/builder/struct.ServiceBuilder.html verified
+2026-08-02). Two stacks with identical layers and identical configuration produce
+different concurrency, and therefore different queueing, different latency
+distributions and different saturation points. A capacity model built without
+knowing the order is a guess.
+
+A healthy instance on a dashboard. The startup composition hash is identical
+across every replica and changes only on deploy. The per-layer span waterfall has
+the same shape for the same route, with the outer layers contributing a flat and
+small share of total latency. Cache hit ratio is stable. Retry attempts sit near
+one per call. The difference between outermost and innermost latency histograms
+is flat and small.
+
+A failing instance, with the diagnosis each shape points to. Backend call volume
+exceeds client call volume by a growing factor, which is retry amplification, and
+if the factor is a perfect square then two retry layers are stacked. Cache hit
+ratio drops to zero after a deploy while the code did not change, which is a
+composition-order change that moved the cache inside a layer that varies the key.
+One replica shows a different composition hash, which is a partial rollout
+running two stacks. The gap between outer and inner latency histograms widens
+under load, which is a layer doing work proportional to load, typically a lock, a
+buffer copy or a synchronous log write. A span waterfall that is missing a layer
+present in the startup log is the delegation-skipping failure from dimension 11,
+observed rather than deduced.
+
+## 17. Security and privacy implications
+
+This dimension is analytical. Where the pattern is silent, this section says so
+rather than inventing a concern.
+
+The pattern is neutral on most of the classical attack surface. It does not
+parse input, cross a trust boundary, or manage credentials by virtue of being a
+decorator. What it changes is who can insert code into a call path and how easily
+a reader can tell that they did. Five implications follow from that, and two of
+them are genuinely favourable.
+
+**A decorator is the correct place to put a security control, and this is the
+pattern's main security benefit.** Authorisation, input validation, rate
+limiting, audit logging and encryption at rest all have the shape the pattern
+serves. They are orthogonal to the domain operation, they apply uniformly across
+implementations, and they must be impossible to forget. Placing them in a layer
+rather than in every method means one reviewed implementation covers every call
+site. The Jakarta Servlet specification ships this shape as public API and states
+it directly. The `ServletRequestWrapper` class documentation describes it as a
+convenient implementation of `ServletRequest` that developers subclass to adapt
+the request, and says in the class description that the class implements the
+Wrapper or Decorator pattern
+(https://jakarta.ee/specifications/servlet/6.0/apidocs/jakarta.servlet/jakarta/servlet/servletrequestwrapper
+verified 2026-08-02). Request sanitising wrappers in that ecosystem are decorators
+by the specification's own naming.
+
+**The same property means a decorator is a control that can be silently omitted.**
+A security layer that lives in the composition root is one line away from not
+existing, and its absence produces no compile error, no failing unit test and no
+runtime exception. It produces a system that works, faster. This is the pattern's
+sharpest security risk and it is a direct consequence of its main benefit. The
+defences are mechanical. Assert the presence of the security layer in a test that
+runs against the real composition root, not against a fixture. Make the composed
+type impossible to construct without the layer, for example by having the builder
+return a type that only the authorisation layer can produce. Alert on the startup
+composition log from dimension 16 when an expected layer name is absent.
+
+**Ordering is a security property, not a preference.** Caching outside
+authorisation serves a decision made for one principal to another principal. This
+is a real vulnerability class produced entirely by composition order, with every
+individual layer correct. The same applies to a rate limiter placed after an
+expensive layer rather than before it, which permits the cost to be incurred
+before the limit is checked, and to a decryption layer placed outside a logging
+layer, which logs plaintext. None of these is detectable by reading one class.
+The mitigations are the invariant tests from dimension 15 and a builder that
+rejects known-bad adjacencies.
+
+**Logging decorators are the most common source of sensitive-data leakage in this
+pattern.** A layer that logs arguments and return values for diagnosis is trivial
+to write and is usually the first decorator a team ships. It will log credentials
+on the login path, tokens on the refresh path, and personal data on every
+customer path, because it was written against the interface without knowing what
+flows through it. The weakness is catalogued as CWE-532, "Insertion of Sensitive
+Information into Log File", described as the product writing sensitive
+information to a log file (MITRE, *Common Weakness Enumeration*, CWE-532,
+https://cwe.mitre.org/data/definitions/532.html verified 2026-08-02). The
+decorator makes it worse than a scattered log statement would be, because one
+generic layer covers every operation including the ones nobody considered.
+Mitigate by allowlisting fields rather than logging whole payloads, by making the
+domain types carry their own redacted representation so the layer cannot see the
+raw value, and by treating any generic argument logger as a review-blocking
+change.
+
+**Dynamic proxy generation widens the trust boundary.** The runtime-generated
+forwarding variant from dimension 8 dispatches every method through a handler.
+Java's `Proxy` documentation states that a method invocation on a proxy instance
+is dispatched to the invocation handler's `invoke` method, passing the proxy, a
+`Method` object identifying the method invoked, and an array of arguments, and
+that whatever the handler returns is returned as the result
+(https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/Proxy.html
+verified 2026-08-02). That handler is a single point that sees every argument and
+can substitute every return value. If the handler class is supplied by a plugin,
+by a dependency-injection container reading a configuration file, or by any code
+outside the review boundary of the component, then an attacker who controls the
+handler controls the results the application acts on, without touching the
+component's source. Treat handler registration as privileged configuration, pin
+the set at build time where the plugin set is known, and prefer compile-time
+generation, which puts the forwarding code in the repository where it can be
+reviewed.
+
+Two places where the pattern is genuinely silent, stated so the reader does not
+look for a concern that is not there. It has no bearing on memory safety beyond
+whatever the host language already provides, and wrapping does not introduce a
+lifetime hazard that the language did not already have. It has no bearing on
+cryptographic correctness. An encryption decorator is exactly as sound as the
+primitive it calls, and placing that primitive in a wrapper neither helps nor
+hurts the cryptography.
+
+On privacy, one operational point. The composition log recommended in dimension
+16 lists layer names and their configuration. Layer configuration frequently
+contains connection strings, tenant identifiers and region names. Redact the
+configuration values and keep the layer names, which are the part that answers
+the incident question.
+
+## Code examples
+
+Four languages, each showing a different genuine shape of the pattern rather than
+the same code four times. All four were compiled and run on 2026-08-02, and the
+output quoted under each is the real output.
+
+Java and Kotlin are omitted for a stated reason. Java is the canonical language
+for the classical form, and dimension 9 covers `java.io` in detail, but no Java
+toolchain was available on the authoring machine and the repository policy is not
+to imply a compilation that did not happen. Kotlin is the language where the
+pattern is cheapest, because the `by` clause generates the forwarding, and its
+absence here is a toolchain gap rather than a judgement about the language.
+
+### TypeScript, the classical abstract decorator
+
+The GoF shape with an abstract forwarding base. `CountingRepo` sits under the
+cache so its counter measures backend calls rather than client calls, which is
+the measurement point dimension 16 makes.
+
+```typescript
+interface Repo {
+  get(key: string): Promise<string>;
+}
+
+class HttpRepo implements Repo {
+  async get(key: string): Promise<string> {
+    return `value-of-${key}`;
+  }
+}
+
+// The forwarding base exists so concrete decorators override only what changes.
+abstract class RepoDecorator implements Repo {
+  constructor(protected readonly inner: Repo) {}
+  get(key: string): Promise<string> {
+    return this.inner.get(key);
+  }
+}
+
+class CachingRepo extends RepoDecorator {
+  private readonly store = new Map<string, string>();
+  override async get(key: string): Promise<string> {
+    const hit = this.store.get(key);
+    if (hit !== undefined) return hit;
+    const value = await super.get(key);
+    this.store.set(key, value);
+    return value;
+  }
+}
+
+class CountingRepo extends RepoDecorator {
+  public calls = 0;
+  override get(key: string): Promise<string> {
+    this.calls += 1;
+    return super.get(key);
+  }
+}
+
+async function main(): Promise<void> {
+  const inner = new CountingRepo(new HttpRepo());
+  const repo: Repo = new CachingRepo(inner);
+  console.log(await repo.get("a"), await repo.get("a"), inner.calls);
+}
+
+void main();
+```
+
+Compiled with TypeScript 5.9.3 under `--strict --target es2022 --module
+commonjs` with no errors, then run on Node 23.11.0. Output.
+
+```text
+value-of-a value-of-a 1
+```
+
+Two client calls, one backend call. The assertion that matters is the `1`, and it
+is the chain-integrity test from dimension 15 written as a program.
+
+### Python, both forms in one file
+
+Python offers the object form and the function form, and the two are different
+enough that showing both is worth the space. `cached` is the object form. The
+`retrying` factory is the parameterised function form from dimension 8, using
+`functools.wraps` so the wrapped function keeps its identity.
+
+```python
+import functools
+from typing import Protocol
+
+
+class Repo(Protocol):
+    def get(self, key: str) -> str: ...
+
+
+class HttpRepo:
+    def get(self, key: str) -> str:
+        return f"value-of-{key}"
+
+
+def cached(repo):
+    store = {}
+
+    class Cached:
+        def get(self, key):
+            if key not in store:
+                store[key] = repo.get(key)
+            return store[key]
+
+    return Cached()
+
+
+def retrying(times):
+    def wrap(fn):
+        @functools.wraps(fn)
+        def inner(*a, **kw):
+            last = None
+            for _ in range(times):
+                try:
+                    return fn(*a, **kw)
+                except Exception as e:
+                    last = e
+            raise last
+
+        return inner
+
+    return wrap
+
+
+class Flaky:
+    def __init__(self):
+        self.n = 0
+
+    @retrying(times=3)
+    def get(self, key):
+        self.n += 1
+        if self.n < 3:
+            raise IOError("boom")
+        return f"value-of-{key} after {self.n}"
+
+
+r = cached(HttpRepo())
+print(r.get("a"), r.get("a"))
+print(Flaky().get("b"))
+print(Flaky.get.__name__)
+```
+
+Run on Python 3.14.6. Output.
+
+```text
+value-of-a value-of-a
+value-of-b after 3
+get
+```
+
+The third line is the point of `functools.wraps`. Without it the last line prints
+`inner`, and every traceback through that method names the wrapper rather than the
+method, which is the diagnostic loss dimension 15 asks a test to prevent.
+
+### Go, the function form in the standard library shape
+
+Go has no inheritance, and the standard library's `http.Handler` is a
+single-method interface, so the function form is the idiomatic one. `Chain` exists
+to invert the construction order, which is the job `tower::ServiceBuilder` does in
+Rust and the reason dimension 7 flags construction order as inverted.
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"time"
+)
+
+func Logging(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("in ", r.URL.Path)
+		next.ServeHTTP(w, r)
+		fmt.Println("out", r.URL.Path)
+	})
+}
+
+func Timing(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		start := time.Now()
+		next.ServeHTTP(w, r)
+		fmt.Printf("elapsed measured: %v\n", time.Since(start) > 0)
+	})
+}
+
+// Chain applies layers so the first argument is the outermost layer.
+func Chain(h http.Handler, layers ...func(http.Handler) http.Handler) http.Handler {
+	for i := len(layers) - 1; i >= 0; i-- {
+		h = layers[i](h)
+	}
+	return h
+}
+
+func main() {
+	base := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "ok:"+r.URL.Path)
+	})
+	h := Chain(base, Logging, Timing)
+	rec := httptest.NewRecorder()
+	h.ServeHTTP(rec, httptest.NewRequest("GET", "/health", nil))
+	fmt.Println("body:", rec.Body.String())
+}
+```
+
+Built and run with the Go toolchain in a module set to `go 1.21`. Output.
+
+```text
+in  /health
+elapsed measured: true
+out /health
+body: ok:/health
+```
+
+The interleaving is the pattern's runtime signature. Logging opens, Timing runs
+entirely inside it, and Logging closes. Reading the output top to bottom gives the
+call order, which reading the construction never does.
+
+### Rust, the generic wrapper with static dispatch
+
+Rust has no inheritance, so the decorator is a generic struct owning its inner
+value and implementing the same trait. The whole stack is one concrete type, so
+there is no per-layer dynamic dispatch. This is the shape `tower::Layer`
+formalises.
+
+```rust
+use std::collections::HashMap;
+
+trait Repo {
+    fn get(&mut self, key: &str) -> String;
+}
+
+struct HttpRepo {
+    calls: u32,
+}
+
+impl Repo for HttpRepo {
+    fn get(&mut self, key: &str) -> String {
+        self.calls += 1;
+        format!("value-of-{key}")
+    }
+}
+
+struct Caching<R: Repo> {
+    inner: R,
+    store: HashMap<String, String>,
+}
+
+impl<R: Repo> Caching<R> {
+    fn layer(inner: R) -> Self {
+        Caching { inner, store: HashMap::new() }
+    }
+}
+
+impl<R: Repo> Repo for Caching<R> {
+    fn get(&mut self, key: &str) -> String {
+        if let Some(v) = self.store.get(key) {
+            return v.clone();
+        }
+        let v = self.inner.get(key);
+        self.store.insert(key.to_string(), v.clone());
+        v
+    }
+}
+
+struct Upper<R: Repo> {
+    inner: R,
+}
+
+impl<R: Repo> Repo for Upper<R> {
+    fn get(&mut self, key: &str) -> String {
+        self.inner.get(key).to_uppercase()
+    }
+}
+
+fn main() {
+    let mut repo = Upper { inner: Caching::layer(HttpRepo { calls: 0 }) };
+    println!("{} {}", repo.get("a"), repo.get("a"));
+    println!("backend calls: {}", repo.inner.inner.calls);
+}
+```
+
+Compiled with rustc 1.97.1 at optimisation level one and run. Output.
+
+```text
+VALUE-OF-A VALUE-OF-A
+backend calls: 1
+```
+
+Note `repo.inner.inner.calls`. The full stack type is `Upper<Caching<HttpRepo>>`,
+so the composition is visible in the type system and the innermost component is
+reachable by name. That is the introspection property the other three languages
+lose, and it is bought by giving up the ability to hold a heterogeneous stack
+behind one type without boxing.
+
+## 18. References
+
+Books.
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994. Chapter
+   4, Structural Patterns, the Decorator entry. Source for the canonical name, the
+   Wrapper alias, the four participants, the combinatorial-subclassing motivation,
+   and the Related Patterns note connecting Decorator to Composite, Adapter,
+   Proxy and Strategy.
+2. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018. Item 18,
+   "Favor composition over inheritance". Source for the forwarding-class variant,
+   the `ForwardingSet` and `InstrumentedSet` example, and the argument that a
+   wrapper works over any implementation of the interface where a subclass works
+   over only one.
+
+Language and library specifications, all URLs verified 2026-08-02.
+
+3. Oracle. *Java SE 21 API Specification*, `java.io.FilterInputStream`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/FilterInputStream.html
+   Source for the abstract-decorator participant in the Java stream hierarchy and
+   for the protected `in` field holding the filtered stream.
+4. Oracle. *dev.java*, "Decorating I/O Streams".
+   https://dev.java/learn/java-io/reading-writing/decorating/
+   Source for the statement that the Java I/O API uses the Decorator pattern, and
+   for the compression example.
+5. Oracle. *Java SE 21 API Specification*, `java.lang.reflect.Proxy`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/Proxy.html
+   Source for the runtime-generated forwarding variant and for the dispatch
+   contract used in the security analysis.
+6. Jakarta EE. *Jakarta Servlet 6.0 API documentation*,
+   `jakarta.servlet.ServletRequestWrapper`.
+   https://jakarta.ee/specifications/servlet/6.0/apidocs/jakarta.servlet/jakarta/servlet/servletrequestwrapper
+   Source for a specification naming the pattern in its own class description and
+   for the `getRequest` accessor returning the wrapped request.
+7. Jakarta EE. *Jakarta Servlet Specification, version 6.0*, chapter 6,
+   Filtering. https://jakarta.ee/specifications/servlet/6.0/jakarta-servlet-spec-6.0
+   Source for the treatment of filter chaining and request wrapping as separate
+   concepts, used in the Chain of Responsibility comparison.
+8. Python Software Foundation. *Python 3 documentation*, `io`.
+   https://docs.python.org/3/library/io.html
+   Source for the `TextIOWrapper` over `BufferedReader` over raw stream layering.
+9. Python Software Foundation. *Python 3 documentation*, `functools`.
+   https://docs.python.org/3/library/functools.html
+   Source for `wraps`, the `WRAPPER_ASSIGNMENTS` attribute list, and the
+   `__wrapped__` attribute pointing at the wrapped function.
+10. Python Software Foundation. *PEP 318, Decorators for Functions and Methods*,
+    status Final. https://peps.python.org/pep-0318/
+    Source for the language-level decorator syntax and its desugaring, used to
+    separate the syntax from the structural pattern.
+11. TC39. *Decorators proposal*, Stage 2.7 as of the verification date.
+    https://github.com/tc39/proposal-decorators
+    Source for the JavaScript decorator semantics and the constraint that a
+    decorator replaces a value only with one of matching semantics.
+12. Microsoft. *.NET API documentation*, `System.IO.Compression.GZipStream`.
+    https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.gzipstream
+    Source for the `BaseStream` accessor, the `leaveOpen` constructor overloads,
+    and the documented `NotSupportedException` on `Length`, `Position`, `Seek`
+    and `SetLength`.
+13. `tower` crate. `tower::Layer` trait documentation.
+    https://docs.rs/tower/latest/tower/trait.Layer.html
+    Source for the equivalence of middleware and decoration, and for the
+    `layer` method signature taking an inner service and returning the wrapper.
+14. `tower` crate. `tower::builder::ServiceBuilder` documentation.
+    https://docs.rs/tower/latest/tower/builder/struct.ServiceBuilder.html
+    Source for the statement that layers added first are called with the request
+    first, and for the buffer and concurrency-limit ordering example used in
+    dimension 16.
+15. Go project. `net/http`, `StripPrefix`.
+    https://pkg.go.dev/net/http#StripPrefix
+    Source for the function-valued decorator in the Go standard library.
+16. JetBrains. *Kotlin documentation*, "Delegation".
+    https://kotlinlang.org/docs/delegation.html
+    Source for the `by` clause generating the forwarding methods, for overrides
+    taking precedence over the delegate, and for the statement that overridden
+    members are not called from the members of the delegate object.
+17. Go project. *Effective Go*, "Embedding".
+    https://go.dev/doc/effective_go
+    Source for method promotion from an embedded type, and for the statement
+    that the receiver of a promoted method is the inner type and not the outer
+    one, which is the important way embedding differs from subclassing.
+18. Microsoft. *.NET API documentation*, `System.Reflection.DispatchProxy`.
+    https://learn.microsoft.com/en-us/dotnet/api/system.reflection.dispatchproxy
+    Source for the runtime proxy-generation variant on .NET and for the `Invoke`
+    dispatch contract.
+
+Standards and research, URLs verified 2026-08-02.
+
+19. MITRE. *Common Weakness Enumeration*, CWE-532, "Insertion of Sensitive
+    Information into Log File". https://cwe.mitre.org/data/definitions/532.html
+    Source for the logging-decorator leakage class in dimension 17.
+20. OpenTelemetry. "Traces", concepts documentation.
+    https://opentelemetry.io/docs/concepts/signals/traces/
+    Source for the parent and child span model and the definition of span
+    attributes, used for the per-layer instrumentation recommendation.
+21. Virginia Niculescu, Adrian Sterca, Darius Bufnea. "Should Decorators Preserve
+    the Component Interface?", arXiv preprint arXiv:2009.06414, 2020.
+    https://arxiv.org/abs/2009.06414
+    Source for the academic treatment of the interface-preservation constraint
+    and the proposed relaxations, cited in the interface-bloat failure mode.
+
+Claims deliberately not made, recorded so a later contributor does not add them
+without evidence. No source was found that states the per-call cost of a
+decorator layer in any specific runtime, so no number is given for it, and
+dimension 3 says only that the cost is one dispatch per layer. No source was
+found attributing the phrase "smart proxy" to a specific publication, so that
+alias is recorded as being in informal use rather than as having a named origin.
