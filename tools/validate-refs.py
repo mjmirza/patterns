@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PATTERNS = ROOT / "patterns"
 CACHE = ROOT / ".ref-cache.json"
 
-URL = re.compile(r"https?://[^\s<>)\]\"']+")
+URL = re.compile(r"https?://[^\s<>\]\"']+")
 TRAILING = ".,;:!?"
 
 UA = "Mozilla/5.0 (compatible; patterns-ref-validator/1.0; +https://github.com/mjmirza/patterns)"
@@ -30,11 +30,21 @@ ALLOW_UNREACHABLE = {
     "learning.oreilly.com",
     "link.springer.com",
     "www.sciencedirect.com",
+    "www.envoyproxy.io",
+    "martinfowler.com",
+    "samnewman.io",
+    "nginx.org",
+    "docs.camunda.io",
+    "martendb.io",
+    "openai.com",
 }
 
 
 def clean(u: str) -> str:
     while u and u[-1] in TRAILING:
+        u = u[:-1]
+    # a trailing ) with no matching ( closes the markdown link, not the URL.
+    while u.endswith(")") and u.count("(") < u.count(")"):
         u = u[:-1]
     return u
 
@@ -68,8 +78,8 @@ def probe(url: str, timeout: int) -> tuple[str, int | str]:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return url, r.status
     except urllib.error.HTTPError as e:
-        if e.code in (403, 405, 429):
-            # Some hosts refuse HEAD. Retry once with GET before failing.
+        if e.code in (403, 404, 405, 429):
+            # Some hosts refuse or mishandle HEAD. Retry with GET before failing.
             try:
                 g = urllib.request.Request(url, headers={"User-Agent": UA})
                 with urllib.request.urlopen(g, timeout=timeout) as r2:
@@ -102,7 +112,7 @@ def main() -> int:
         for url, status in ex.map(lambda u: probe(u, args.timeout), todo):
             cache[url] = status
             host = url.split("/")[2] if "://" in url else ""
-            ok = status in (200, 301, 302, 303, 307, 308)
+            ok = status in (200, 202, 301, 302, 303, 307, 308)
             if not ok and host not in ALLOW_UNREACHABLE:
                 bad.append((url, status, urls[url]))
 

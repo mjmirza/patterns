@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-18 entries, 172,251 words. Every entry carries all 18
+18 entries, 172,195 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud and Distributed
@@ -17,7 +17,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Leader Election](leader-election.md) | canonical | 7,820 | A fleet of otherwise identical replicas exists for availability. |
+| [Leader Election](leader-election.md) | canonical | 7,764 | A fleet of otherwise identical replicas exists for availability. |
 
 ## Data and Consistency
 

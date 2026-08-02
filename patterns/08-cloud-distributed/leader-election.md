@@ -23,11 +23,7 @@ January 1982. The paper introduced the Bully Algorithm. A process that
 detects the coordinator has failed sends election messages to every process
 with a higher identifier, and the highest surviving identifier declares
 itself leader. The paper is available as a scanned reprint through IEEE
-Xplore, DOI 10.1109/TC.1982.1675885, and the Bully Algorithm's mechanics are
-summarized consistently across university distributed systems courses that
-cite it
-([Cornell CS 5414 lecture notes on the Bully Algorithm](https://www.cs.cornell.edu/courses/cs5414/2017fa/notes/bully.pdf),
-verified 2026-08-02).
+Xplore, DOI 10.1109/TC.1982.1675885, verified 2026-08-02.
 
 A second lineage runs through consensus algorithms rather than pure election
 algorithms. Leslie Lamport's Paxos, described in "The Part-Time Parliament",
@@ -1063,8 +1059,3 @@ language repeating the same acquire-or-renew shape.
 - HashiCorp Consul documentation, "Application Leader Election",
   [developer.hashicorp.com/consul/docs/dynamic-app-config/sessions/application-leader-election](https://developer.hashicorp.com/consul/docs/dynamic-app-config/sessions/application-leader-election),
   verified 2026-08-02.
-- Cornell CS 5414 lecture notes on the Bully Algorithm,
-  [cs.cornell.edu/courses/cs5414/2017fa/notes/bully.pdf](https://www.cs.cornell.edu/courses/cs5414/2017fa/notes/bully.pdf),
-  verified 2026-08-02. Secondary source summarizing the original Bully
-  Algorithm mechanics for readers without direct access to the 1982 IEEE
-  paper.

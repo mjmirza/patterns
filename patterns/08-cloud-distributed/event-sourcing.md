@@ -1246,7 +1246,7 @@ noting it adds encryption overhead on every read and write and requires strong
 key management. It is the same technique NIST classifies as Cryptographic Erase,
 sanitising the encryption key rather than the storage locations holding the
 ciphertext, leaving only ciphertext behind and preventing read access
-([NIST SP 800-88 Rev. 1](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-88r1.pdf),
+([NIST SP 800-88 Rev. 1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf),
 section 2.6, verified 2026-08-02).
 
 **The limits of crypto-shredding, which are the part most write-ups omit.** NIST
@@ -1356,7 +1356,7 @@ the surrounding architecture and are unaffected by the choice of storage model.
 14. Richard Kissel, Andrew Regenscheid, Matthew Scholl, Kevin Stine.
     *Guidelines for Media Sanitization*. NIST Special Publication 800-88
     Revision 1, December 2014.
-    https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-88r1.pdf
+    https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf
     Verified 2026-08-02. Source for the Cryptographic Erase definition in
     section 2.6, and for the preconditions and prohibitions in sections 2.6.1
     and 2.6.2.
