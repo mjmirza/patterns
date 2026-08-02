@@ -219,7 +219,7 @@ Multi-agent: Supervisor, Hierarchical, Network/Swarm, Handoff, Debate,
 Safety and Ops: Input Guardrails, Output Guardrails, LLM-as-Judge,
   Human-in-the-Loop, LLM Circuit Breaker, Fallback Chain, Cost Guard,
   Token Budget, Semantic Caching, Prompt Injection Defense, PII Redaction,
-  Constitutional AI, Evaluation Harness, Golden Dataset, Tracing
+  Constitutional AI, Evaluation Suite, Golden Dataset, Tracing
 
 ## Family 18. Anti-Patterns
 
