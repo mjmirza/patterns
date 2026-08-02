@@ -10,3 +10,6 @@
 #                   AI agents". A named practice in family 17.
 discovery
 context engineering
+# context window. A real technical term in family 17 (lost-in-the-middle,
+#   long context versus RAG) and in this repo's own operating notes.
+context window

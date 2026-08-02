@@ -1,0 +1,2326 @@
+[
+ {
+  "name": "Circuit Breaker",
+  "slug": "circuit-breaker",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/circuit-breaker.md",
+  "focus": ""
+ },
+ {
+  "name": "Retry",
+  "slug": "retry",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/retry.md",
+  "focus": ""
+ },
+ {
+  "name": "Bulkhead",
+  "slug": "bulkhead",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/bulkhead.md",
+  "focus": ""
+ },
+ {
+  "name": "Cache-Aside",
+  "slug": "cache-aside",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/cache-aside.md",
+  "focus": ""
+ },
+ {
+  "name": "CQRS",
+  "slug": "cqrs",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/cqrs.md",
+  "focus": ""
+ },
+ {
+  "name": "Event Sourcing",
+  "slug": "event-sourcing",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/event-sourcing.md",
+  "focus": ""
+ },
+ {
+  "name": "Saga",
+  "slug": "saga",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/saga.md",
+  "focus": ""
+ },
+ {
+  "name": "Rate Limiting",
+  "slug": "rate-limiting",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/rate-limiting.md",
+  "focus": ""
+ },
+ {
+  "name": "Sharding",
+  "slug": "sharding",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/sharding.md",
+  "focus": ""
+ },
+ {
+  "name": "Leader Election",
+  "slug": "leader-election",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/leader-election.md",
+  "focus": ""
+ },
+ {
+  "name": "Materialized View",
+  "slug": "materialized-view",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/materialized-view.md",
+  "focus": ""
+ },
+ {
+  "name": "Publisher-Subscriber",
+  "slug": "publisher-subscriber",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/publisher-subscriber.md",
+  "focus": ""
+ },
+ {
+  "name": "Queue-Based Load Leveling",
+  "slug": "queue-based-load-leveling",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/queue-based-load-leveling.md",
+  "focus": ""
+ },
+ {
+  "name": "Throttling",
+  "slug": "throttling",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/throttling.md",
+  "focus": ""
+ },
+ {
+  "name": "Anti-Corruption Layer",
+  "slug": "anti-corruption-layer",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/anti-corruption-layer.md",
+  "focus": ""
+ },
+ {
+  "name": "Strangler Fig",
+  "slug": "strangler-fig",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/strangler-fig.md",
+  "focus": ""
+ },
+ {
+  "name": "Compensating Transaction",
+  "slug": "compensating-transaction",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/compensating-transaction.md",
+  "focus": ""
+ },
+ {
+  "name": "Health Endpoint Monitoring",
+  "slug": "health-endpoint-monitoring",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/health-endpoint-monitoring.md",
+  "focus": ""
+ },
+ {
+  "name": "Gateway Aggregation",
+  "slug": "gateway-aggregation",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/gateway-aggregation.md",
+  "focus": ""
+ },
+ {
+  "name": "Backends for Frontends",
+  "slug": "backends-for-frontends",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/backends-for-frontends.md",
+  "focus": ""
+ },
+ {
+  "name": "Ambassador",
+  "slug": "ambassador",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/ambassador.md",
+  "focus": ""
+ },
+ {
+  "name": "Asynchronous Request-Reply",
+  "slug": "asynchronous-request-reply",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/asynchronous-request-reply.md",
+  "focus": ""
+ },
+ {
+  "name": "Choreography",
+  "slug": "choreography",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/choreography.md",
+  "focus": ""
+ },
+ {
+  "name": "Claim Check",
+  "slug": "claim-check",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/claim-check.md",
+  "focus": ""
+ },
+ {
+  "name": "Competing Consumers",
+  "slug": "competing-consumers",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/competing-consumers.md",
+  "focus": ""
+ },
+ {
+  "name": "Deployment Stamps",
+  "slug": "deployment-stamps",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/deployment-stamps.md",
+  "focus": ""
+ },
+ {
+  "name": "External Configuration Store",
+  "slug": "external-configuration-store",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/external-configuration-store.md",
+  "focus": ""
+ },
+ {
+  "name": "Federated Identity",
+  "slug": "federated-identity",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/federated-identity.md",
+  "focus": ""
+ },
+ {
+  "name": "Gatekeeper",
+  "slug": "gatekeeper",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/gatekeeper.md",
+  "focus": ""
+ },
+ {
+  "name": "Gateway Offloading",
+  "slug": "gateway-offloading",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/gateway-offloading.md",
+  "focus": ""
+ },
+ {
+  "name": "Gateway Routing",
+  "slug": "gateway-routing",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/gateway-routing.md",
+  "focus": ""
+ },
+ {
+  "name": "Geode",
+  "slug": "geode",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/geode.md",
+  "focus": ""
+ },
+ {
+  "name": "Index Table",
+  "slug": "index-table",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/index-table.md",
+  "focus": ""
+ },
+ {
+  "name": "Messaging Bridge",
+  "slug": "messaging-bridge",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/messaging-bridge.md",
+  "focus": ""
+ },
+ {
+  "name": "Pipes and Filters",
+  "slug": "pipes-filters",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/pipes-filters.md",
+  "focus": ""
+ },
+ {
+  "name": "Priority Queue",
+  "slug": "priority-queue",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/priority-queue.md",
+  "focus": ""
+ },
+ {
+  "name": "Scheduler Agent Supervisor",
+  "slug": "scheduler-agent-supervisor",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/scheduler-agent-supervisor.md",
+  "focus": ""
+ },
+ {
+  "name": "Sequential Convoy",
+  "slug": "sequential-convoy",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/sequential-convoy.md",
+  "focus": ""
+ },
+ {
+  "name": "Sidecar",
+  "slug": "sidecar",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/sidecar.md",
+  "focus": ""
+ },
+ {
+  "name": "Static Content Hosting",
+  "slug": "static-content-hosting",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/static-content-hosting.md",
+  "focus": ""
+ },
+ {
+  "name": "Valet Key",
+  "slug": "valet-key",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/valet-key.md",
+  "focus": ""
+ },
+ {
+  "name": "Cell-Based Architecture",
+  "slug": "cell-based-architecture",
+  "category": "cloud distributed",
+  "path": "patterns/08-cloud-distributed/cell-based-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "ReAct",
+  "slug": "react",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/react.md",
+  "focus": ""
+ },
+ {
+  "name": "Chain of Thought",
+  "slug": "chain-of-thought",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/chain-of-thought.md",
+  "focus": ""
+ },
+ {
+  "name": "Self-Consistency",
+  "slug": "self-consistency",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/self-consistency.md",
+  "focus": ""
+ },
+ {
+  "name": "Tree of Thoughts",
+  "slug": "tree-of-thoughts",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/tree-of-thoughts.md",
+  "focus": ""
+ },
+ {
+  "name": "Reflexion",
+  "slug": "reflexion",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/reflexion.md",
+  "focus": ""
+ },
+ {
+  "name": "Plan and Execute",
+  "slug": "plan-execute",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/plan-execute.md",
+  "focus": ""
+ },
+ {
+  "name": "Prompt Chaining",
+  "slug": "prompt-chaining",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/prompt-chaining.md",
+  "focus": ""
+ },
+ {
+  "name": "Routing",
+  "slug": "routing",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/routing.md",
+  "focus": ""
+ },
+ {
+  "name": "Parallelization",
+  "slug": "parallelization",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/parallelization.md",
+  "focus": ""
+ },
+ {
+  "name": "Orchestrator-Worker",
+  "slug": "orchestrator-worker",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/orchestrator-worker.md",
+  "focus": ""
+ },
+ {
+  "name": "Evaluator-Optimizer",
+  "slug": "evaluator-optimizer",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/evaluator-optimizer.md",
+  "focus": ""
+ },
+ {
+  "name": "Retrieval Augmented Generation",
+  "slug": "retrieval-augmented-generation",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/retrieval-augmented-generation.md",
+  "focus": ""
+ },
+ {
+  "name": "Advanced RAG",
+  "slug": "advanced-rag",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/advanced-rag.md",
+  "focus": ""
+ },
+ {
+  "name": "GraphRAG",
+  "slug": "graphrag",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/graphrag.md",
+  "focus": ""
+ },
+ {
+  "name": "Agentic RAG",
+  "slug": "agentic-rag",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/agentic-rag.md",
+  "focus": ""
+ },
+ {
+  "name": "Corrective RAG",
+  "slug": "corrective-rag",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/corrective-rag.md",
+  "focus": ""
+ },
+ {
+  "name": "Self-RAG",
+  "slug": "self-rag",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/self-rag.md",
+  "focus": ""
+ },
+ {
+  "name": "HyDE",
+  "slug": "hyde",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/hyde.md",
+  "focus": ""
+ },
+ {
+  "name": "Chunking Strategies",
+  "slug": "chunking-strategies",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/chunking-strategies.md",
+  "focus": ""
+ },
+ {
+  "name": "Hybrid Search",
+  "slug": "hybrid-search",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/hybrid-search.md",
+  "focus": ""
+ },
+ {
+  "name": "Reranking",
+  "slug": "reranking",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/reranking.md",
+  "focus": ""
+ },
+ {
+  "name": "Contextual Retrieval",
+  "slug": "contextual-retrieval",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/contextual-retrieval.md",
+  "focus": ""
+ },
+ {
+  "name": "Late Chunking",
+  "slug": "late-chunking",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/late-chunking.md",
+  "focus": ""
+ },
+ {
+  "name": "Function Calling",
+  "slug": "function-calling",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/function-calling.md",
+  "focus": ""
+ },
+ {
+  "name": "Structured Output",
+  "slug": "structured-output",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/structured-output.md",
+  "focus": ""
+ },
+ {
+  "name": "Model Context Protocol",
+  "slug": "model-context-protocol",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/model-context-protocol.md",
+  "focus": ""
+ },
+ {
+  "name": "Tool Result Caching",
+  "slug": "tool-result-caching",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/tool-result-caching.md",
+  "focus": ""
+ },
+ {
+  "name": "Agent Memory",
+  "slug": "agent-memory",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/agent-memory.md",
+  "focus": ""
+ },
+ {
+  "name": "Memory Compaction",
+  "slug": "memory-compaction",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/memory-compaction.md",
+  "focus": ""
+ },
+ {
+  "name": "Sub-Agent Isolation",
+  "slug": "sub-agent-isolation",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/sub-agent-isolation.md",
+  "focus": ""
+ },
+ {
+  "name": "Multi-Agent Supervisor",
+  "slug": "multi-agent-supervisor",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/multi-agent-supervisor.md",
+  "focus": ""
+ },
+ {
+  "name": "Hierarchical Agents",
+  "slug": "hierarchical-agents",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/hierarchical-agents.md",
+  "focus": ""
+ },
+ {
+  "name": "Agent Handoff",
+  "slug": "agent-handoff",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/agent-handoff.md",
+  "focus": ""
+ },
+ {
+  "name": "Agent Debate",
+  "slug": "agent-debate",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/agent-debate.md",
+  "focus": ""
+ },
+ {
+  "name": "Input Guardrails",
+  "slug": "input-guardrails",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/input-guardrails.md",
+  "focus": ""
+ },
+ {
+  "name": "Output Guardrails",
+  "slug": "output-guardrails",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/output-guardrails.md",
+  "focus": ""
+ },
+ {
+  "name": "LLM as Judge",
+  "slug": "llm-as-judge",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/llm-as-judge.md",
+  "focus": ""
+ },
+ {
+  "name": "Human in the Loop",
+  "slug": "human-in-the-loop",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/human-in-the-loop.md",
+  "focus": ""
+ },
+ {
+  "name": "LLM Circuit Breaker",
+  "slug": "llm-circuit-breaker",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/llm-circuit-breaker.md",
+  "focus": ""
+ },
+ {
+  "name": "Fallback Chain",
+  "slug": "fallback-chain",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/fallback-chain.md",
+  "focus": ""
+ },
+ {
+  "name": "Cost Guard",
+  "slug": "cost-guard",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/cost-guard.md",
+  "focus": ""
+ },
+ {
+  "name": "Token Budget",
+  "slug": "token-budget",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/token-budget.md",
+  "focus": ""
+ },
+ {
+  "name": "Semantic Caching",
+  "slug": "semantic-caching",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/semantic-caching.md",
+  "focus": ""
+ },
+ {
+  "name": "Prompt Injection Defense",
+  "slug": "prompt-injection-defense",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/prompt-injection-defense.md",
+  "focus": ""
+ },
+ {
+  "name": "PII Redaction",
+  "slug": "pii-redaction",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/pii-redaction.md",
+  "focus": ""
+ },
+ {
+  "name": "Constitutional AI",
+  "slug": "constitutional-ai",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/constitutional-ai.md",
+  "focus": ""
+ },
+ {
+  "name": "Evaluation Suite",
+  "slug": "evaluation-suite",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/evaluation-suite.md",
+  "focus": ""
+ },
+ {
+  "name": "Golden Dataset",
+  "slug": "golden-dataset",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/golden-dataset.md",
+  "focus": ""
+ },
+ {
+  "name": "Agent Tracing",
+  "slug": "agent-tracing",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/agent-tracing.md",
+  "focus": ""
+ },
+ {
+  "name": "Least to Most",
+  "slug": "least-to-most",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/least-to-most.md",
+  "focus": ""
+ },
+ {
+  "name": "Graph of Thoughts",
+  "slug": "graph-of-thoughts",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/graph-of-thoughts.md",
+  "focus": ""
+ },
+ {
+  "name": "Computer Use",
+  "slug": "computer-use",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/computer-use.md",
+  "focus": ""
+ },
+ {
+  "name": "Code Execution as Tool",
+  "slug": "code-execution-as-tool",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/code-execution-as-tool.md",
+  "focus": ""
+ },
+ {
+  "name": "Agentic Blackboard",
+  "slug": "agentic-blackboard",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/agentic-blackboard.md",
+  "focus": ""
+ },
+ {
+  "name": "Society of Mind",
+  "slug": "society-of-mind",
+  "category": "ai agentic",
+  "path": "patterns/17-ai-agentic/society-of-mind.md",
+  "focus": ""
+ },
+ {
+  "name": "Decompose by Business Capability",
+  "slug": "decompose-by-business-capability",
+  "category": "microservices",
+  "path": "patterns/10-microservices/decompose-by-business-capability.md",
+  "focus": ""
+ },
+ {
+  "name": "Decompose by Subdomain",
+  "slug": "decompose-by-subdomain",
+  "category": "microservices",
+  "path": "patterns/10-microservices/decompose-by-subdomain.md",
+  "focus": ""
+ },
+ {
+  "name": "Self-contained Service",
+  "slug": "self-contained-service",
+  "category": "microservices",
+  "path": "patterns/10-microservices/self-contained-service.md",
+  "focus": ""
+ },
+ {
+  "name": "Service per Team",
+  "slug": "service-per-team",
+  "category": "microservices",
+  "path": "patterns/10-microservices/service-per-team.md",
+  "focus": ""
+ },
+ {
+  "name": "Strangler Application",
+  "slug": "strangler-application",
+  "category": "microservices",
+  "path": "patterns/10-microservices/strangler-application.md",
+  "focus": ""
+ },
+ {
+  "name": "Database per Service",
+  "slug": "database-per-service",
+  "category": "microservices",
+  "path": "patterns/10-microservices/database-per-service.md",
+  "focus": ""
+ },
+ {
+  "name": "Shared Database",
+  "slug": "shared-database",
+  "category": "microservices",
+  "path": "patterns/10-microservices/shared-database.md",
+  "focus": ""
+ },
+ {
+  "name": "API Composition",
+  "slug": "api-composition",
+  "category": "microservices",
+  "path": "patterns/10-microservices/api-composition.md",
+  "focus": ""
+ },
+ {
+  "name": "Domain Event",
+  "slug": "domain-event",
+  "category": "microservices",
+  "path": "patterns/10-microservices/domain-event.md",
+  "focus": ""
+ },
+ {
+  "name": "Aggregate",
+  "slug": "aggregate",
+  "category": "microservices",
+  "path": "patterns/10-microservices/aggregate.md",
+  "focus": ""
+ },
+ {
+  "name": "Transactional Outbox",
+  "slug": "transactional-outbox",
+  "category": "microservices",
+  "path": "patterns/10-microservices/transactional-outbox.md",
+  "focus": ""
+ },
+ {
+  "name": "Polling Publisher",
+  "slug": "polling-publisher",
+  "category": "microservices",
+  "path": "patterns/10-microservices/polling-publisher.md",
+  "focus": ""
+ },
+ {
+  "name": "Transaction Log Tailing",
+  "slug": "transaction-log-tailing",
+  "category": "microservices",
+  "path": "patterns/10-microservices/transaction-log-tailing.md",
+  "focus": ""
+ },
+ {
+  "name": "Remote Procedure Invocation",
+  "slug": "remote-procedure-invocation",
+  "category": "microservices",
+  "path": "patterns/10-microservices/remote-procedure-invocation.md",
+  "focus": ""
+ },
+ {
+  "name": "Messaging",
+  "slug": "messaging",
+  "category": "microservices",
+  "path": "patterns/10-microservices/messaging.md",
+  "focus": ""
+ },
+ {
+  "name": "Idempotent Consumer",
+  "slug": "idempotent-consumer",
+  "category": "microservices",
+  "path": "patterns/10-microservices/idempotent-consumer.md",
+  "focus": ""
+ },
+ {
+  "name": "API Gateway",
+  "slug": "api-gateway",
+  "category": "microservices",
+  "path": "patterns/10-microservices/api-gateway.md",
+  "focus": ""
+ },
+ {
+  "name": "Client-side Service Discovery",
+  "slug": "client-side-service-discovery",
+  "category": "microservices",
+  "path": "patterns/10-microservices/client-side-service-discovery.md",
+  "focus": ""
+ },
+ {
+  "name": "Server-side Service Discovery",
+  "slug": "server-side-service-discovery",
+  "category": "microservices",
+  "path": "patterns/10-microservices/server-side-service-discovery.md",
+  "focus": ""
+ },
+ {
+  "name": "Service Registry",
+  "slug": "service-registry",
+  "category": "microservices",
+  "path": "patterns/10-microservices/service-registry.md",
+  "focus": ""
+ },
+ {
+  "name": "Self Registration",
+  "slug": "self-registration",
+  "category": "microservices",
+  "path": "patterns/10-microservices/self-registration.md",
+  "focus": ""
+ },
+ {
+  "name": "Third-party Registration",
+  "slug": "third-party-registration",
+  "category": "microservices",
+  "path": "patterns/10-microservices/third-party-registration.md",
+  "focus": ""
+ },
+ {
+  "name": "Service Instance per Host",
+  "slug": "service-instance-per-host",
+  "category": "microservices",
+  "path": "patterns/10-microservices/service-instance-per-host.md",
+  "focus": ""
+ },
+ {
+  "name": "Service Instance per VM",
+  "slug": "service-instance-per-vm",
+  "category": "microservices",
+  "path": "patterns/10-microservices/service-instance-per-vm.md",
+  "focus": ""
+ },
+ {
+  "name": "Service Instance per Container",
+  "slug": "service-instance-per-container",
+  "category": "microservices",
+  "path": "patterns/10-microservices/service-instance-per-container.md",
+  "focus": ""
+ },
+ {
+  "name": "Serverless Deployment",
+  "slug": "serverless-deployment",
+  "category": "microservices",
+  "path": "patterns/10-microservices/serverless-deployment.md",
+  "focus": ""
+ },
+ {
+  "name": "Service Deployment Platform",
+  "slug": "service-deployment-platform",
+  "category": "microservices",
+  "path": "patterns/10-microservices/service-deployment-platform.md",
+  "focus": ""
+ },
+ {
+  "name": "Service Mesh",
+  "slug": "service-mesh",
+  "category": "microservices",
+  "path": "patterns/10-microservices/service-mesh.md",
+  "focus": ""
+ },
+ {
+  "name": "Microservice Chassis",
+  "slug": "microservice-chassis",
+  "category": "microservices",
+  "path": "patterns/10-microservices/microservice-chassis.md",
+  "focus": ""
+ },
+ {
+  "name": "Externalized Configuration",
+  "slug": "externalized-configuration",
+  "category": "microservices",
+  "path": "patterns/10-microservices/externalized-configuration.md",
+  "focus": ""
+ },
+ {
+  "name": "Log Aggregation",
+  "slug": "log-aggregation",
+  "category": "microservices",
+  "path": "patterns/10-microservices/log-aggregation.md",
+  "focus": ""
+ },
+ {
+  "name": "Application Metrics",
+  "slug": "application-metrics",
+  "category": "microservices",
+  "path": "patterns/10-microservices/application-metrics.md",
+  "focus": ""
+ },
+ {
+  "name": "Audit Logging",
+  "slug": "audit-logging",
+  "category": "microservices",
+  "path": "patterns/10-microservices/audit-logging.md",
+  "focus": ""
+ },
+ {
+  "name": "Distributed Tracing",
+  "slug": "distributed-tracing",
+  "category": "microservices",
+  "path": "patterns/10-microservices/distributed-tracing.md",
+  "focus": ""
+ },
+ {
+  "name": "Exception Tracking",
+  "slug": "exception-tracking",
+  "category": "microservices",
+  "path": "patterns/10-microservices/exception-tracking.md",
+  "focus": ""
+ },
+ {
+  "name": "Health Check API",
+  "slug": "health-check-api",
+  "category": "microservices",
+  "path": "patterns/10-microservices/health-check-api.md",
+  "focus": ""
+ },
+ {
+  "name": "Log Deployments and Changes",
+  "slug": "log-deployments-changes",
+  "category": "microservices",
+  "path": "patterns/10-microservices/log-deployments-changes.md",
+  "focus": ""
+ },
+ {
+  "name": "Service Component Test",
+  "slug": "service-component-test",
+  "category": "microservices",
+  "path": "patterns/10-microservices/service-component-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Consumer-Driven Contract Test",
+  "slug": "consumer-driven-contract-test",
+  "category": "microservices",
+  "path": "patterns/10-microservices/consumer-driven-contract-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Consumer-Side Contract Test",
+  "slug": "consumer-side-contract-test",
+  "category": "microservices",
+  "path": "patterns/10-microservices/consumer-side-contract-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Access Token",
+  "slug": "access-token",
+  "category": "microservices",
+  "path": "patterns/10-microservices/access-token.md",
+  "focus": ""
+ },
+ {
+  "name": "Sidecar Proxy",
+  "slug": "sidecar-proxy",
+  "category": "microservices",
+  "path": "patterns/10-microservices/sidecar-proxy.md",
+  "focus": ""
+ },
+ {
+  "name": "Retry Budget",
+  "slug": "retry-budget",
+  "category": "microservices",
+  "path": "patterns/10-microservices/retry-budget.md",
+  "focus": ""
+ },
+ {
+  "name": "Schema Registry",
+  "slug": "schema-registry",
+  "category": "microservices",
+  "path": "patterns/10-microservices/schema-registry.md",
+  "focus": ""
+ },
+ {
+  "name": "Ubiquitous Language",
+  "slug": "ubiquitous-language",
+  "category": "ddd",
+  "path": "patterns/11-ddd/ubiquitous-language.md",
+  "focus": ""
+ },
+ {
+  "name": "Bounded Context",
+  "slug": "bounded-context",
+  "category": "ddd",
+  "path": "patterns/11-ddd/bounded-context.md",
+  "focus": ""
+ },
+ {
+  "name": "Context Map",
+  "slug": "context-map",
+  "category": "ddd",
+  "path": "patterns/11-ddd/context-map.md",
+  "focus": ""
+ },
+ {
+  "name": "Core Domain",
+  "slug": "core-domain",
+  "category": "ddd",
+  "path": "patterns/11-ddd/core-domain.md",
+  "focus": ""
+ },
+ {
+  "name": "Generic Subdomain",
+  "slug": "generic-subdomain",
+  "category": "ddd",
+  "path": "patterns/11-ddd/generic-subdomain.md",
+  "focus": ""
+ },
+ {
+  "name": "Supporting Subdomain",
+  "slug": "supporting-subdomain",
+  "category": "ddd",
+  "path": "patterns/11-ddd/supporting-subdomain.md",
+  "focus": ""
+ },
+ {
+  "name": "Shared Kernel",
+  "slug": "shared-kernel",
+  "category": "ddd",
+  "path": "patterns/11-ddd/shared-kernel.md",
+  "focus": ""
+ },
+ {
+  "name": "Customer Supplier",
+  "slug": "customer-supplier",
+  "category": "ddd",
+  "path": "patterns/11-ddd/customer-supplier.md",
+  "focus": ""
+ },
+ {
+  "name": "Conformist",
+  "slug": "conformist",
+  "category": "ddd",
+  "path": "patterns/11-ddd/conformist.md",
+  "focus": ""
+ },
+ {
+  "name": "Anticorruption Layer",
+  "slug": "anticorruption-layer",
+  "category": "ddd",
+  "path": "patterns/11-ddd/anticorruption-layer.md",
+  "focus": ""
+ },
+ {
+  "name": "Open Host Service",
+  "slug": "open-host-service",
+  "category": "ddd",
+  "path": "patterns/11-ddd/open-host-service.md",
+  "focus": ""
+ },
+ {
+  "name": "Published Language",
+  "slug": "published-language",
+  "category": "ddd",
+  "path": "patterns/11-ddd/published-language.md",
+  "focus": ""
+ },
+ {
+  "name": "Separate Ways",
+  "slug": "separate-ways",
+  "category": "ddd",
+  "path": "patterns/11-ddd/separate-ways.md",
+  "focus": ""
+ },
+ {
+  "name": "Big Ball of Mud",
+  "slug": "big-ball-of-mud",
+  "category": "ddd",
+  "path": "patterns/11-ddd/big-ball-of-mud.md",
+  "focus": ""
+ },
+ {
+  "name": "Entity",
+  "slug": "entity",
+  "category": "ddd",
+  "path": "patterns/11-ddd/entity.md",
+  "focus": ""
+ },
+ {
+  "name": "Value Object",
+  "slug": "value-object",
+  "category": "ddd",
+  "path": "patterns/11-ddd/value-object.md",
+  "focus": ""
+ },
+ {
+  "name": "Aggregate Root",
+  "slug": "aggregate-root",
+  "category": "ddd",
+  "path": "patterns/11-ddd/aggregate-root.md",
+  "focus": ""
+ },
+ {
+  "name": "Domain Event",
+  "slug": "domain-event",
+  "category": "ddd",
+  "path": "patterns/11-ddd/domain-event.md",
+  "focus": ""
+ },
+ {
+  "name": "Repository",
+  "slug": "repository",
+  "category": "ddd",
+  "path": "patterns/11-ddd/repository.md",
+  "focus": ""
+ },
+ {
+  "name": "Factory",
+  "slug": "factory",
+  "category": "ddd",
+  "path": "patterns/11-ddd/factory.md",
+  "focus": ""
+ },
+ {
+  "name": "Domain Service",
+  "slug": "domain-service",
+  "category": "ddd",
+  "path": "patterns/11-ddd/domain-service.md",
+  "focus": ""
+ },
+ {
+  "name": "Application Service",
+  "slug": "application-service",
+  "category": "ddd",
+  "path": "patterns/11-ddd/application-service.md",
+  "focus": ""
+ },
+ {
+  "name": "Module",
+  "slug": "module",
+  "category": "ddd",
+  "path": "patterns/11-ddd/module.md",
+  "focus": ""
+ },
+ {
+  "name": "Specification",
+  "slug": "specification",
+  "category": "ddd",
+  "path": "patterns/11-ddd/specification.md",
+  "focus": ""
+ },
+ {
+  "name": "Layered Architecture",
+  "slug": "layered-architecture",
+  "category": "ddd",
+  "path": "patterns/11-ddd/layered-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Process Manager",
+  "slug": "process-manager",
+  "category": "ddd",
+  "path": "patterns/11-ddd/process-manager.md",
+  "focus": ""
+ },
+ {
+  "name": "Domain Primitive",
+  "slug": "domain-primitive",
+  "category": "ddd",
+  "path": "patterns/11-ddd/domain-primitive.md",
+  "focus": ""
+ },
+ {
+  "name": "Event Storming",
+  "slug": "event-storming",
+  "category": "ddd",
+  "path": "patterns/11-ddd/event-storming.md",
+  "focus": ""
+ },
+ {
+  "name": "Domain Storytelling",
+  "slug": "domain-storytelling",
+  "category": "ddd",
+  "path": "patterns/11-ddd/domain-storytelling.md",
+  "focus": ""
+ },
+ {
+  "name": "Big Ball of Mud",
+  "slug": "big-ball-of-mud",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/big-ball-of-mud.md",
+  "focus": ""
+ },
+ {
+  "name": "Distributed Monolith",
+  "slug": "distributed-monolith",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/distributed-monolith.md",
+  "focus": ""
+ },
+ {
+  "name": "Nanoservices",
+  "slug": "nanoservices",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/nanoservices.md",
+  "focus": ""
+ },
+ {
+  "name": "Entity Service",
+  "slug": "entity-service",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/entity-service.md",
+  "focus": ""
+ },
+ {
+  "name": "Anemic Domain Model",
+  "slug": "anemic-domain-model",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/anemic-domain-model.md",
+  "focus": ""
+ },
+ {
+  "name": "Golden Hammer",
+  "slug": "golden-hammer",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/golden-hammer.md",
+  "focus": ""
+ },
+ {
+  "name": "Vendor Lock-in",
+  "slug": "vendor-lock-in",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/vendor-lock-in.md",
+  "focus": ""
+ },
+ {
+  "name": "Inner-Platform Effect",
+  "slug": "inner-platform-effect",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/inner-platform-effect.md",
+  "focus": ""
+ },
+ {
+  "name": "Stovepipe System",
+  "slug": "stovepipe-system",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/stovepipe-system.md",
+  "focus": ""
+ },
+ {
+  "name": "God Object",
+  "slug": "god-object",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/god-object.md",
+  "focus": ""
+ },
+ {
+  "name": "Spaghetti Code",
+  "slug": "spaghetti-code",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/spaghetti-code.md",
+  "focus": ""
+ },
+ {
+  "name": "Lava Flow",
+  "slug": "lava-flow",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/lava-flow.md",
+  "focus": ""
+ },
+ {
+  "name": "Boat Anchor",
+  "slug": "boat-anchor",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/boat-anchor.md",
+  "focus": ""
+ },
+ {
+  "name": "Poltergeist",
+  "slug": "poltergeist",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/poltergeist.md",
+  "focus": ""
+ },
+ {
+  "name": "Magic Numbers",
+  "slug": "magic-numbers",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/magic-numbers.md",
+  "focus": ""
+ },
+ {
+  "name": "Copy-Paste Programming",
+  "slug": "copy-paste-programming",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/copy-paste-programming.md",
+  "focus": ""
+ },
+ {
+  "name": "Yo-yo Problem",
+  "slug": "yo-yo-problem",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/yo-yo-problem.md",
+  "focus": ""
+ },
+ {
+  "name": "Circular Dependency",
+  "slug": "circular-dependency",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/circular-dependency.md",
+  "focus": ""
+ },
+ {
+  "name": "Singleton Abuse",
+  "slug": "singleton-abuse",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/singleton-abuse.md",
+  "focus": ""
+ },
+ {
+  "name": "Service Locator",
+  "slug": "service-locator",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/service-locator.md",
+  "focus": ""
+ },
+ {
+  "name": "Sequential Coupling",
+  "slug": "sequential-coupling",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/sequential-coupling.md",
+  "focus": ""
+ },
+ {
+  "name": "Call Super",
+  "slug": "call-super",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/call-super.md",
+  "focus": ""
+ },
+ {
+  "name": "N+1 Query",
+  "slug": "n+1-query",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/n+1-query.md",
+  "focus": ""
+ },
+ {
+  "name": "Chatty I/O",
+  "slug": "chatty-i-o",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/chatty-i-o.md",
+  "focus": ""
+ },
+ {
+  "name": "Busy Database",
+  "slug": "busy-database",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/busy-database.md",
+  "focus": ""
+ },
+ {
+  "name": "Busy Front End",
+  "slug": "busy-front-end",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/busy-front-end.md",
+  "focus": ""
+ },
+ {
+  "name": "Extraneous Fetching",
+  "slug": "extraneous-fetching",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/extraneous-fetching.md",
+  "focus": ""
+ },
+ {
+  "name": "Improper Instantiation",
+  "slug": "improper-instantiation",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/improper-instantiation.md",
+  "focus": ""
+ },
+ {
+  "name": "Monolithic Persistence",
+  "slug": "monolithic-persistence",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/monolithic-persistence.md",
+  "focus": ""
+ },
+ {
+  "name": "No Caching",
+  "slug": "no-caching",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/no-caching.md",
+  "focus": ""
+ },
+ {
+  "name": "Retry Storm",
+  "slug": "retry-storm",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/retry-storm.md",
+  "focus": ""
+ },
+ {
+  "name": "Thundering Herd",
+  "slug": "thundering-herd",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/thundering-herd.md",
+  "focus": ""
+ },
+ {
+  "name": "Cache Stampede",
+  "slug": "cache-stampede",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/cache-stampede.md",
+  "focus": ""
+ },
+ {
+  "name": "Split Brain",
+  "slug": "split-brain",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/split-brain.md",
+  "focus": ""
+ },
+ {
+  "name": "Poison Pill",
+  "slug": "poison-pill",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/poison-pill.md",
+  "focus": ""
+ },
+ {
+  "name": "Synchronous I/O",
+  "slug": "synchronous-i-o",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/synchronous-i-o.md",
+  "focus": ""
+ },
+ {
+  "name": "Premature Optimization",
+  "slug": "premature-optimization",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/premature-optimization.md",
+  "focus": ""
+ },
+ {
+  "name": "Cargo Cult Programming",
+  "slug": "cargo-cult-programming",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/cargo-cult-programming.md",
+  "focus": ""
+ },
+ {
+  "name": "Analysis Paralysis",
+  "slug": "analysis-paralysis",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/analysis-paralysis.md",
+  "focus": ""
+ },
+ {
+  "name": "Bikeshedding",
+  "slug": "bikeshedding",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/bikeshedding.md",
+  "focus": ""
+ },
+ {
+  "name": "Not Invented Here",
+  "slug": "not-invented-here",
+  "category": "anti patterns",
+  "path": "patterns/18-anti-patterns/not-invented-here.md",
+  "focus": ""
+ },
+ {
+  "name": "Dummy",
+  "slug": "dummy",
+  "category": "testing",
+  "path": "patterns/14-testing/dummy.md",
+  "focus": ""
+ },
+ {
+  "name": "Stub",
+  "slug": "stub",
+  "category": "testing",
+  "path": "patterns/14-testing/stub.md",
+  "focus": ""
+ },
+ {
+  "name": "Spy",
+  "slug": "spy",
+  "category": "testing",
+  "path": "patterns/14-testing/spy.md",
+  "focus": ""
+ },
+ {
+  "name": "Mock",
+  "slug": "mock",
+  "category": "testing",
+  "path": "patterns/14-testing/mock.md",
+  "focus": ""
+ },
+ {
+  "name": "Fake",
+  "slug": "fake",
+  "category": "testing",
+  "path": "patterns/14-testing/fake.md",
+  "focus": ""
+ },
+ {
+  "name": "Four-Phase Test",
+  "slug": "four-phase-test",
+  "category": "testing",
+  "path": "patterns/14-testing/four-phase-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Arrange Act Assert",
+  "slug": "arrange-act-assert",
+  "category": "testing",
+  "path": "patterns/14-testing/arrange-act-assert.md",
+  "focus": ""
+ },
+ {
+  "name": "Given When Then",
+  "slug": "given-when-then",
+  "category": "testing",
+  "path": "patterns/14-testing/given-when-then.md",
+  "focus": ""
+ },
+ {
+  "name": "Fresh Fixture",
+  "slug": "fresh-fixture",
+  "category": "testing",
+  "path": "patterns/14-testing/fresh-fixture.md",
+  "focus": ""
+ },
+ {
+  "name": "Shared Fixture",
+  "slug": "shared-fixture",
+  "category": "testing",
+  "path": "patterns/14-testing/shared-fixture.md",
+  "focus": ""
+ },
+ {
+  "name": "Prebuilt Fixture",
+  "slug": "prebuilt-fixture",
+  "category": "testing",
+  "path": "patterns/14-testing/prebuilt-fixture.md",
+  "focus": ""
+ },
+ {
+  "name": "Object Mother",
+  "slug": "object-mother",
+  "category": "testing",
+  "path": "patterns/14-testing/object-mother.md",
+  "focus": ""
+ },
+ {
+  "name": "Test Data Builder",
+  "slug": "test-data-builder",
+  "category": "testing",
+  "path": "patterns/14-testing/test-data-builder.md",
+  "focus": ""
+ },
+ {
+  "name": "Derived Value",
+  "slug": "derived-value",
+  "category": "testing",
+  "path": "patterns/14-testing/derived-value.md",
+  "focus": ""
+ },
+ {
+  "name": "Generated Value",
+  "slug": "generated-value",
+  "category": "testing",
+  "path": "patterns/14-testing/generated-value.md",
+  "focus": ""
+ },
+ {
+  "name": "Humble Object",
+  "slug": "humble-object",
+  "category": "testing",
+  "path": "patterns/14-testing/humble-object.md",
+  "focus": ""
+ },
+ {
+  "name": "Golden Master",
+  "slug": "golden-master",
+  "category": "testing",
+  "path": "patterns/14-testing/golden-master.md",
+  "focus": ""
+ },
+ {
+  "name": "Characterization Test",
+  "slug": "characterization-test",
+  "category": "testing",
+  "path": "patterns/14-testing/characterization-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Contract Test",
+  "slug": "contract-test",
+  "category": "testing",
+  "path": "patterns/14-testing/contract-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Property-Based Test",
+  "slug": "property-based-test",
+  "category": "testing",
+  "path": "patterns/14-testing/property-based-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Mutation Test",
+  "slug": "mutation-test",
+  "category": "testing",
+  "path": "patterns/14-testing/mutation-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Approval Test",
+  "slug": "approval-test",
+  "category": "testing",
+  "path": "patterns/14-testing/approval-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Snapshot Test",
+  "slug": "snapshot-test",
+  "category": "testing",
+  "path": "patterns/14-testing/snapshot-test.md",
+  "focus": ""
+ },
+ {
+  "name": "Testcontainers",
+  "slug": "testcontainers",
+  "category": "testing",
+  "path": "patterns/14-testing/testcontainers.md",
+  "focus": ""
+ },
+ {
+  "name": "Fault Injection",
+  "slug": "fault-injection",
+  "category": "testing",
+  "path": "patterns/14-testing/fault-injection.md",
+  "focus": ""
+ },
+ {
+  "name": "Test Pyramid",
+  "slug": "test-pyramid",
+  "category": "testing",
+  "path": "patterns/14-testing/test-pyramid.md",
+  "focus": ""
+ },
+ {
+  "name": "Test Trophy",
+  "slug": "test-trophy",
+  "category": "testing",
+  "path": "patterns/14-testing/test-trophy.md",
+  "focus": ""
+ },
+ {
+  "name": "Fuzz Testing",
+  "slug": "fuzz-testing",
+  "category": "testing",
+  "path": "patterns/14-testing/fuzz-testing.md",
+  "focus": ""
+ },
+ {
+  "name": "Metamorphic Testing",
+  "slug": "metamorphic-testing",
+  "category": "testing",
+  "path": "patterns/14-testing/metamorphic-testing.md",
+  "focus": ""
+ },
+ {
+  "name": "Differential Testing",
+  "slug": "differential-testing",
+  "category": "testing",
+  "path": "patterns/14-testing/differential-testing.md",
+  "focus": ""
+ },
+ {
+  "name": "Alternative Classes with Different Interfaces",
+  "slug": "alternative-classes-with-different-interfaces",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/alternative-classes-with-different-interfaces.md",
+  "focus": ""
+ },
+ {
+  "name": "Comments",
+  "slug": "comments",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/comments.md",
+  "focus": ""
+ },
+ {
+  "name": "Data Class",
+  "slug": "data-class",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/data-class.md",
+  "focus": ""
+ },
+ {
+  "name": "Data Clumps",
+  "slug": "data-clumps",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/data-clumps.md",
+  "focus": ""
+ },
+ {
+  "name": "Dead Code",
+  "slug": "dead-code",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/dead-code.md",
+  "focus": ""
+ },
+ {
+  "name": "Divergent Change",
+  "slug": "divergent-change",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/divergent-change.md",
+  "focus": ""
+ },
+ {
+  "name": "Duplicate Code",
+  "slug": "duplicate-code",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/duplicate-code.md",
+  "focus": ""
+ },
+ {
+  "name": "Feature Envy",
+  "slug": "feature-envy",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/feature-envy.md",
+  "focus": ""
+ },
+ {
+  "name": "Inappropriate Intimacy",
+  "slug": "inappropriate-intimacy",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/inappropriate-intimacy.md",
+  "focus": ""
+ },
+ {
+  "name": "Incomplete Library Class",
+  "slug": "incomplete-library-class",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/incomplete-library-class.md",
+  "focus": ""
+ },
+ {
+  "name": "Large Class",
+  "slug": "large-class",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/large-class.md",
+  "focus": ""
+ },
+ {
+  "name": "Lazy Class",
+  "slug": "lazy-class",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/lazy-class.md",
+  "focus": ""
+ },
+ {
+  "name": "Long Method",
+  "slug": "long-method",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/long-method.md",
+  "focus": ""
+ },
+ {
+  "name": "Long Parameter List",
+  "slug": "long-parameter-list",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/long-parameter-list.md",
+  "focus": ""
+ },
+ {
+  "name": "Message Chains",
+  "slug": "message-chains",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/message-chains.md",
+  "focus": ""
+ },
+ {
+  "name": "Middle Man",
+  "slug": "middle-man",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/middle-man.md",
+  "focus": ""
+ },
+ {
+  "name": "Parallel Inheritance Hierarchies",
+  "slug": "parallel-inheritance-hierarchies",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/parallel-inheritance-hierarchies.md",
+  "focus": ""
+ },
+ {
+  "name": "Primitive Obsession",
+  "slug": "primitive-obsession",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/primitive-obsession.md",
+  "focus": ""
+ },
+ {
+  "name": "Refused Bequest",
+  "slug": "refused-bequest",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/refused-bequest.md",
+  "focus": ""
+ },
+ {
+  "name": "Shotgun Surgery",
+  "slug": "shotgun-surgery",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/shotgun-surgery.md",
+  "focus": ""
+ },
+ {
+  "name": "Speculative Generality",
+  "slug": "speculative-generality",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/speculative-generality.md",
+  "focus": ""
+ },
+ {
+  "name": "Switch Statements",
+  "slug": "switch-statements",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/switch-statements.md",
+  "focus": ""
+ },
+ {
+  "name": "Temporary Field",
+  "slug": "temporary-field",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/temporary-field.md",
+  "focus": ""
+ },
+ {
+  "name": "Global Data",
+  "slug": "global-data",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/global-data.md",
+  "focus": ""
+ },
+ {
+  "name": "Mutable Data",
+  "slug": "mutable-data",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/mutable-data.md",
+  "focus": ""
+ },
+ {
+  "name": "Loops",
+  "slug": "loops",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/loops.md",
+  "focus": ""
+ },
+ {
+  "name": "Insider Trading",
+  "slug": "insider-trading",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/insider-trading.md",
+  "focus": ""
+ },
+ {
+  "name": "Repeated Switches",
+  "slug": "repeated-switches",
+  "category": "code smells",
+  "path": "patterns/02-code-smells/repeated-switches.md",
+  "focus": ""
+ },
+ {
+  "name": "Layered Architecture",
+  "slug": "layered-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/layered-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Hexagonal Architecture",
+  "slug": "hexagonal-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/hexagonal-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Clean Architecture",
+  "slug": "clean-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/clean-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Onion Architecture",
+  "slug": "onion-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/onion-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Model View Controller",
+  "slug": "model-view-controller",
+  "category": "architectural",
+  "path": "patterns/05-architectural/model-view-controller.md",
+  "focus": ""
+ },
+ {
+  "name": "Model View Presenter",
+  "slug": "model-view-presenter",
+  "category": "architectural",
+  "path": "patterns/05-architectural/model-view-presenter.md",
+  "focus": ""
+ },
+ {
+  "name": "Model View ViewModel",
+  "slug": "model-view-viewmodel",
+  "category": "architectural",
+  "path": "patterns/05-architectural/model-view-viewmodel.md",
+  "focus": ""
+ },
+ {
+  "name": "Model View Intent",
+  "slug": "model-view-intent",
+  "category": "architectural",
+  "path": "patterns/05-architectural/model-view-intent.md",
+  "focus": ""
+ },
+ {
+  "name": "VIPER",
+  "slug": "viper",
+  "category": "architectural",
+  "path": "patterns/05-architectural/viper.md",
+  "focus": ""
+ },
+ {
+  "name": "Microkernel",
+  "slug": "microkernel",
+  "category": "architectural",
+  "path": "patterns/05-architectural/microkernel.md",
+  "focus": ""
+ },
+ {
+  "name": "Pipes and Filters",
+  "slug": "pipes-filters",
+  "category": "architectural",
+  "path": "patterns/05-architectural/pipes-filters.md",
+  "focus": ""
+ },
+ {
+  "name": "Event-Driven Architecture",
+  "slug": "event-driven-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/event-driven-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Service Oriented Architecture",
+  "slug": "service-oriented-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/service-oriented-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Microservices Architecture",
+  "slug": "microservices-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/microservices-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Modular Monolith",
+  "slug": "modular-monolith",
+  "category": "architectural",
+  "path": "patterns/05-architectural/modular-monolith.md",
+  "focus": ""
+ },
+ {
+  "name": "Serverless Architecture",
+  "slug": "serverless-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/serverless-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Space-Based Architecture",
+  "slug": "space-based-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/space-based-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Broker Architecture",
+  "slug": "broker-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/broker-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Blackboard Architecture",
+  "slug": "blackboard-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/blackboard-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Peer-to-Peer",
+  "slug": "peer-to-peer",
+  "category": "architectural",
+  "path": "patterns/05-architectural/peer-to-peer.md",
+  "focus": ""
+ },
+ {
+  "name": "Client-Server",
+  "slug": "client-server",
+  "category": "architectural",
+  "path": "patterns/05-architectural/client-server.md",
+  "focus": ""
+ },
+ {
+  "name": "Primary-Replica",
+  "slug": "primary-replica",
+  "category": "architectural",
+  "path": "patterns/05-architectural/primary-replica.md",
+  "focus": ""
+ },
+ {
+  "name": "Event-Carried State Transfer",
+  "slug": "event-carried-state-transfer",
+  "category": "architectural",
+  "path": "patterns/05-architectural/event-carried-state-transfer.md",
+  "focus": ""
+ },
+ {
+  "name": "Plugin Architecture",
+  "slug": "plugin-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/plugin-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Cell-Based Architecture",
+  "slug": "cell-based-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/cell-based-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Shared Nothing",
+  "slug": "shared-nothing",
+  "category": "architectural",
+  "path": "patterns/05-architectural/shared-nothing.md",
+  "focus": ""
+ },
+ {
+  "name": "Pipeline Architecture",
+  "slug": "pipeline-architecture",
+  "category": "architectural",
+  "path": "patterns/05-architectural/pipeline-architecture.md",
+  "focus": ""
+ },
+ {
+  "name": "Single Responsibility Principle",
+  "slug": "single-responsibility-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/single-responsibility-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "Open Closed Principle",
+  "slug": "open-closed-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/open-closed-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "Liskov Substitution Principle",
+  "slug": "liskov-substitution-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/liskov-substitution-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "Interface Segregation Principle",
+  "slug": "interface-segregation-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/interface-segregation-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "Dependency Inversion Principle",
+  "slug": "dependency-inversion-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/dependency-inversion-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "Information Expert",
+  "slug": "information-expert",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/information-expert.md",
+  "focus": ""
+ },
+ {
+  "name": "Creator",
+  "slug": "creator",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/creator.md",
+  "focus": ""
+ },
+ {
+  "name": "Controller",
+  "slug": "controller",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/controller.md",
+  "focus": ""
+ },
+ {
+  "name": "Low Coupling",
+  "slug": "low-coupling",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/low-coupling.md",
+  "focus": ""
+ },
+ {
+  "name": "High Cohesion",
+  "slug": "high-cohesion",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/high-cohesion.md",
+  "focus": ""
+ },
+ {
+  "name": "Polymorphism",
+  "slug": "polymorphism",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/polymorphism.md",
+  "focus": ""
+ },
+ {
+  "name": "Pure Fabrication",
+  "slug": "pure-fabrication",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/pure-fabrication.md",
+  "focus": ""
+ },
+ {
+  "name": "Indirection",
+  "slug": "indirection",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/indirection.md",
+  "focus": ""
+ },
+ {
+  "name": "Protected Variations",
+  "slug": "protected-variations",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/protected-variations.md",
+  "focus": ""
+ },
+ {
+  "name": "Do Not Repeat Yourself",
+  "slug": "do-not-repeat-yourself",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/do-not-repeat-yourself.md",
+  "focus": ""
+ },
+ {
+  "name": "Keep It Simple",
+  "slug": "keep-it-simple",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/keep-it-simple.md",
+  "focus": ""
+ },
+ {
+  "name": "You Are Not Gonna Need It",
+  "slug": "you-are-not-gonna-need-it",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/you-are-not-gonna-need-it.md",
+  "focus": ""
+ },
+ {
+  "name": "Law of Demeter",
+  "slug": "law-of-demeter",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/law-of-demeter.md",
+  "focus": ""
+ },
+ {
+  "name": "Composition over Inheritance",
+  "slug": "composition-over-inheritance",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/composition-over-inheritance.md",
+  "focus": ""
+ },
+ {
+  "name": "Tell Do Not Ask",
+  "slug": "tell-do-not-ask",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/tell-do-not-ask.md",
+  "focus": ""
+ },
+ {
+  "name": "Separation of Concerns",
+  "slug": "separation-of-concerns",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/separation-of-concerns.md",
+  "focus": ""
+ },
+ {
+  "name": "Single Source of Truth",
+  "slug": "single-source-of-truth",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/single-source-of-truth.md",
+  "focus": ""
+ },
+ {
+  "name": "Principle of Least Astonishment",
+  "slug": "principle-of-least-astonishment",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/principle-of-least-astonishment.md",
+  "focus": ""
+ },
+ {
+  "name": "Fail Fast",
+  "slug": "fail-fast",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/fail-fast.md",
+  "focus": ""
+ },
+ {
+  "name": "Release Reuse Equivalence",
+  "slug": "release-reuse-equivalence",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/release-reuse-equivalence.md",
+  "focus": ""
+ },
+ {
+  "name": "Common Closure Principle",
+  "slug": "common-closure-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/common-closure-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "Common Reuse Principle",
+  "slug": "common-reuse-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/common-reuse-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "Acyclic Dependencies Principle",
+  "slug": "acyclic-dependencies-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/acyclic-dependencies-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "Stable Dependencies Principle",
+  "slug": "stable-dependencies-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/stable-dependencies-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "Stable Abstractions Principle",
+  "slug": "stable-abstractions-principle",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/stable-abstractions-principle.md",
+  "focus": ""
+ },
+ {
+  "name": "CAP Theorem",
+  "slug": "cap-theorem",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/cap-theorem.md",
+  "focus": ""
+ },
+ {
+  "name": "PACELC Theorem",
+  "slug": "pacelc-theorem",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/pacelc-theorem.md",
+  "focus": ""
+ },
+ {
+  "name": "ACID",
+  "slug": "acid",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/acid.md",
+  "focus": ""
+ },
+ {
+  "name": "BASE",
+  "slug": "base",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/base.md",
+  "focus": ""
+ },
+ {
+  "name": "Conway Law",
+  "slug": "conway-law",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/conway-law.md",
+  "focus": ""
+ },
+ {
+  "name": "Postel Law",
+  "slug": "postel-law",
+  "category": "principles and laws",
+  "path": "patterns/04-principles-and-laws/postel-law.md",
+  "focus": ""
+ }
+]
