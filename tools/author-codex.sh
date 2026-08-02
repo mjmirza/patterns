@@ -69,7 +69,7 @@ BEFORE YOU FINISH, run and satisfy both.
   cd $REPO && python3 tools/check-prose.py 2>/dev/null | tail -2
 Your file must print PASS. Fix and re-run until it does."
 
-  ( cd "$REPO" && timeout "$TIMEOUT" codex exec --skip-git-repo-check "$prompt" < /dev/null ) \
+  ( cd "$REPO" && timeout "$TIMEOUT" codex exec --skip-git-repo-check -s workspace-write "$prompt" < /dev/null ) \
     > "$LOGDIR/$slug.log" 2>&1
   rc=$?
 
