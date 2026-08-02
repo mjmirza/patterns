@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-8 entries, 84,865 words. Every entry carries all 18
+10 entries, 102,241 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud and Distributed
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Cache-Aside](cache-aside.md) | canonical | 11,154 | A service reads the same records far more often than it writes them, and the read path is expensive. |
+| [Materialized View](materialized-view.md) | canonical | 8,521 | An application reads data far more often than it writes it, and the shape a write path needs is almost never the shape a read path wants. |
 
 ## Data and Consistency
 
@@ -28,6 +29,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Saga](saga.md) | canonical | 9,350 | A business operation spans several stores of record and must either happen in full or leave nothing of consequence behind, and there is no transaction manager that can span them. |
+
+## Messaging and Integration
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Publisher-Subscriber](publisher-subscriber.md) | canonical | 8,855 | A component in a system needs to tell other components that something happened, and it does not know, and should not need to know, who those other components are. |
 
 ## Resilience
 
