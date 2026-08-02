@@ -1057,11 +1057,14 @@ C++ is omitted despite being the pattern's spiritual home, because its iterator
 categories and the invalidation rules per container are a chapter rather than a
 snippet, and a short example would misrepresent them.
 
-The Python, TypeScript and Go examples below were run on the authoring machine.
-The Java example was written against the documented behaviour of the collection
-classes but not executed, because no Java runtime is installed there. The Rust
-example was written against the trait's documented contract but not compiled, for
-the same reason.
+The Python and Go examples below were run on the authoring machine and produced
+the output described. The TypeScript examples were run as JavaScript with the
+type annotations removed, because no TypeScript compiler is installed there, so
+the runtime behaviour is confirmed and the type checking is not. The Java example
+was written against the documented behaviour of the collection classes but not
+executed, because no Java runtime is installed there. The Rust example was
+written against the trait's documented contract but not compiled, for the same
+reason.
 
 ### Python
 

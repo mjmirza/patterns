@@ -1,8 +1,8 @@
-.PHONY: check structure refs prose links all
+.PHONY: check structure refs prose links code all
 
 all: check
 
-check: structure prose refs links
+check: structure prose code refs links
 
 structure:
 	@python3 tools/check-structure.py
@@ -12,6 +12,9 @@ refs:
 
 prose:
 	@python3 tools/check-prose.py
+
+code:
+	@python3 tools/check-code.py --strict
 
 links:
 	@python3 tools/check-links.py
