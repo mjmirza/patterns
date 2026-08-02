@@ -2,8 +2,14 @@
 
 Origin. Azure Architecture Center, Nygard
 
-21 entries, 194,907 words. Every entry carries all 18
+23 entries, 211,411 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Cloud Distributed
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Asynchronous Request-Reply](asynchronous-request-reply.md) | canonical | 7,657 | A client calls an API expecting an answer inside the budget of one HTTP connection, typically well under a second. |
 
 ## Cloud and Distributed
 
@@ -61,6 +67,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Claim Check](claim-check.md) | canonical | 8,847 | A service publishes a message that needs to carry a large piece of data, a scanned document, a video file, a full order history export, a machine learning feature vector, a ... |
 | [Publisher-Subscriber](publisher-subscriber.md) | canonical | 8,855 | A component in a system needs to tell other components that something happened, and it does not know, and should not need to know, who those other components are. |
 
 ## Migration

@@ -69,17 +69,15 @@ Your file must show PASS. Fix and re-run until it does.
 Report in under 120 words: file path, dimensions out of 18, verified citation count, gate result, unverifiable claims.`
 }
 
-// Never trust the agent's own claim, only the gate re-check. Confirmed once,
-// live: "SKIP already complete" was returned for a file that did not exist.
+// The agent echoes raw output, never classifies it. A classifying agent
+// once fabricated a PASS line for a file check-structure.py never mentioned.
 async function gateCheck(paths) {
   if (!paths.length) return new Set()
-  const list = paths.map((p) => `- ${p}`).join('\n')
   const out = await withTimeout(
     agent(
-      `Run exactly: cd ${REPO} && python3 tools/check-structure.py 2>/dev/null\n` +
-      `For each of the paths below, find its line in that output and report ` +
-      `ONLY "PASS <path>" or "FAIL <path>", one per line, nothing else. ` +
-      `A path with no matching line in the output is FAIL. No commentary, no summary.\n${list}`,
+      `Run exactly this command and reply with ONLY its raw stdout, byte for ` +
+      `byte, no commentary before or after, no summary, no classification:\n` +
+      `cd ${REPO} && python3 tools/check-structure.py 2>/dev/null`,
       { label: 'gate-check', phase: 'Verify' },
     ),
     GATE_TIMEOUT_MS,
