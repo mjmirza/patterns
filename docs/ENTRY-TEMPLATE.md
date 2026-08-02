@@ -144,3 +144,14 @@ An entry is sent back when any of these is true.
 5. The prose reads as a paraphrase of a single source.
 6. The ASCII diagram sits outside a fenced code block.
 7. The entry omits the non-applicability list.
+
+## Scope decision, recorded 2026-08-02
+
+Every entry in this repository is authored at full depth. All eighteen
+dimensions, every entry, no exceptions and no lighter class of entry.
+
+A tiered model was considered and rejected by the repository owner. The trade
+was roughly 200 deep entries plus 700 lighter ones against 900 deep entries.
+The owner chose 900 deep entries with the cost visible. This note exists so the
+decision is not silently re-litigated later by a contributor who finds the
+authoring effort large.
