@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-51 entries, 441,012 words. Every entry carries all 18
+54 entries, 466,380 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -12,6 +12,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Advanced RAG](advanced-rag.md) | established | 9,369 | Naive RAG treats "find the k nearest vectors to this query's embedding" as if it were the same question as "find the passages that actually let the model answer this question ... |
 | [Agentic RAG](agentic-rag.md) | emerging | 10,218 | Naive RAG performs exactly one retrieval and exactly one generation per user turn, embed the query, fetch the top-k nearest chunks from a single index, paste them into the prompt ... |
 | [Chunking Strategies](chunking-strategies.md) | established | 7,093 | A large language model has a finite context limit, and even models with very large limits charge per token and lose retrieval accuracy on needles buried deep in a long context, a ... |
+| [Code Execution as Tool](code-execution-as-tool.md) | established | 9,276 | An LLM agent that can only call tools one at a time, through a fixed function-calling schema, hits a specific wall as soon as a task needs more than a handful of steps chained ... |
 | [Contextual Retrieval](contextual-retrieval.md) | established | 9,338 | A retrieval-augmented generation system splits source documents into chunks because an embedding model has a token limit and because retrieval precision degrades when a chunk ... |
 | [Corrective RAG](corrective-rag.md) | emerging | 8,133 | A support bot answers questions by retrieving from a company's help center index and handing the top few documents to a generator. |
 | [Evaluation Suite](evaluation-suite.md) | established | 9,431 | A function built from deterministic code either compiles or it does not, and a passing unit test today keeps passing tomorrow unless the code under test changes. |
@@ -50,6 +51,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Agentic Blackboard](agentic-blackboard.md) | established | 8,243 | A single agent loop works when one actor, running one prompt at a time, can hold enough of the problem in its own context to make progress alone. |
+| [Computer Use](computer-use.md) | emerging | 7,849 | Most of the software a person or a business depends on every day was never built with an API for an autonomous agent to call. |
 | [Constitutional AI](constitutional-ai.md) | established | 8,191 | A team is aligning a language model so that it refuses genuinely harmful requests, stays honest about its own uncertainty, and avoids the kind of output that erodes trust in an ... |
 | [Function Calling](function-calling.md) | canonical | 10,322 | A language model generates text by predicting the next token from everything that came before it in its context window. |
 | [Model Context Protocol](model-context-protocol.md) | canonical | 8,173 | Before MCP, every combination of an AI application and an external system needed its own custom integration. |
