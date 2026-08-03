@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-25 entries, 227,669 words. Every entry carries all 18
+28 entries, 253,942 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud Distributed
@@ -11,12 +11,19 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Asynchronous Request-Reply](asynchronous-request-reply.md) | canonical | 7,657 | A client calls an API expecting an answer inside the budget of one HTTP connection, typically well under a second. |
 
+## Cloud Distributed Systems
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [External Configuration Store](external-configuration-store.md) | canonical | 8,367 | An application reads its behavior-controlling values, a database connection string, a feature toggle, a rate limit, a UI theme choice, a downstream service URL, from a file that ... |
+
 ## Cloud and Distributed
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Backends for Frontends](backends-for-frontends.md) | established | 7,877 | A product ships to more than one kind of client. |
 | [Cache-Aside](cache-aside.md) | canonical | 11,151 | A service reads the same records far more often than it writes them, and the read path is expensive. |
+| [Federated Identity](federated-identity.md) | canonical | 8,634 | An organization runs several applications. |
 | [Gateway Aggregation](gateway-aggregation.md) | canonical | 7,007 | A client needs data or a decision that no single backend service owns end to end. |
 | [Materialized View](materialized-view.md) | canonical | 8,521 | An application reads data far more often than it writes it, and the shape a write path needs is almost never the shape a read path wants. |
 
@@ -56,6 +63,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Compensating Transaction](compensating-transaction.md) | canonical | 8,001 | A single database transaction gives you atomicity for free. |
 | [Saga](saga.md) | canonical | 9,350 | A business operation spans several stores of record and must either happen in full or leave nothing of consequence behind, and there is no transaction manager that can span them. |
+
+## Deployment and Scale
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Deployment Stamps](deployment-stamps.md) | canonical | 9,272 | A team ships a SaaS product as a single deployed instance, one application tier, one database, one everything, and every customer's traffic and data flow through that one instance. |
 
 ## Integration
 
