@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 101,
+  "published_total": 104,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 2,
   "stale_entries": 0,
-  "references_checked": 800,
+  "references_checked": 819,
   "rows": [
     {
       "family": "01-gof",
@@ -179,12 +179,12 @@
       "family": "17-ai-agentic",
       "name": "AI and Agentic",
       "origin": "Papers and vendor engineering, 2023 to 2026",
-      "published": 33,
-      "planned": 22,
+      "published": 36,
+      "planned": 19,
       "target": 55,
-      "percent": 60.0,
+      "percent": 65.5,
       "maturity": {
-        "established": 19,
+        "established": 22,
         "emerging": 5,
         "canonical": 9
       }

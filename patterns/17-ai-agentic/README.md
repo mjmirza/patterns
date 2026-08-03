@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-33 entries, 286,566 words. Every entry carries all 18
+36 entries, 310,452 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -15,6 +15,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Contextual Retrieval](contextual-retrieval.md) | established | 9,338 | A retrieval-augmented generation system splits source documents into chunks because an embedding model has a token limit and because retrieval precision degrades when a chunk ... |
 | [Corrective RAG](corrective-rag.md) | emerging | 8,133 | A support bot answers questions by retrieving from a company's help center index and handing the top few documents to a generator. |
 | [GraphRAG](graphrag.md) | emerging | 7,850 | A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. |
+| [Input Guardrails](input-guardrails.md) | established | 8,596 | An agent built on a large language model treats every token in its context window with roughly the same weight, whether that token came from the person operating the agent, from a ... |
 | [Late Chunking](late-chunking.md) | emerging | 8,222 | Picture a retrieval pipeline built over a long, single-narrative source, a Wikipedia article, a signed contract, a meeting transcript, a product manual. |
 | [Memory Compaction](memory-compaction.md) | established | 8,946 | An agent that runs for a long time accumulates a conversation. |
 | [Parallelization](parallelization.md) | established | 9,204 | An agentic pipeline built as a single sequential chain of LLM calls has one throughput limit, the wall-clock latency of the slowest single call multiplied by the number of calls ... |
@@ -42,6 +43,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Function Calling](function-calling.md) | canonical | 10,322 | A language model generates text by predicting the next token from everything that came before it in its context window. |
 | [Model Context Protocol](model-context-protocol.md) | canonical | 8,173 | Before MCP, every combination of an AI application and an external system needed its own custom integration. |
 | [Multi-Agent Supervisor](multi-agent-supervisor.md) | established | 8,159 | A single LLM-driven agent loop, one system prompt, one tool set, one context window, works well until the task genuinely needs more than one area of expertise or more than one ... |
+| [Output Guardrails](output-guardrails.md) | established | 8,551 | An LLM call is a probabilistic sample, not a deterministic function evaluation. |
 | [Plan and Execute](plan-execute.md) | canonical | 7,815 | A language model asked to solve a task that takes many steps, and that must call external tools along the way, faces a tension between two failure modes. |
 | [ReAct](react.md) | canonical | 7,775 | A language model asked to answer a multi-hop factual question, or to complete a task that spans several tool calls, has two failure modes when it is prompted with only one of the ... |
 | [Reflexion](reflexion.md) | emerging | 8,450 | An LLM agent that tries a task once and stops inherits every mistake in that one attempt permanently. |
@@ -80,6 +82,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Agent Debate](agent-debate.md) | established | 6,739 | A single model call, even a large capable one, has three structural weaknesses that a reader can observe directly. |
 | [Evaluator-Optimizer](evaluator-optimizer.md) | established | 9,063 | A single LLM call is a single roll of the dice against a task that has more than one way to go wrong. |
 | [Routing](routing.md) | canonical | 8,158 | A single LLM call, driven by one prompt, is asked to handle every shape of input a system receives. |
 
