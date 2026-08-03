@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-35 entries, 262,112 words. Every entry carries all 18
+38 entries, 284,234 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -85,6 +85,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Server-Side Service Discovery](server-side-service-discovery.md) | canonical | 7,771 | A service instance's network address is not static. |
 | [Service Registry](service-registry.md) | canonical | 6,188 | A service instance in a cloud environment does not have a fixed network location. |
 
+## Microservices, Observability
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Health Check API](health-check-api.md) | canonical | 5,516 | A running process is not the same thing as a working service. |
+
 ## Observability
 
 | Pattern | Maturity | Words | Intent |
@@ -93,6 +99,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Distributed Tracing](distributed-tracing.md) | canonical | 7,640 | A single user-facing request in a microservice architecture fans out into a call graph. |
 | [Exception Tracking](exception-tracking.md) | established | 8,433 | A request arrives at a service instance and, partway through handling it, code raises an exception the calling frames do not catch. |
 | [Log Aggregation](log-aggregation.md) | canonical | 8,736 | A service in a microservices system emits log lines to its own local standard output or to a file inside its own container. |
+| [Log Deployments and Changes](log-deployments-changes.md) | established | 9,444 | An engineer is paged. A service that was healthy an hour ago now returns higher error rates, or its latency has doubled, or a queue is backing up. |
 
 ## Reliability
 
@@ -114,6 +121,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Service per Team](service-per-team.md) | canonical | 7,510 | A system has been split into services, using Decompose by Business Capability or Decompose by Subdomain or simply by growing that way over years. |
 | [Strangler Application](strangler-application.md) | canonical | 8,747 | A team owns a monolithic application that has become expensive to change. |
 | [Transactional Outbox](transactional-outbox.md) | canonical | 7,548 | A service owns its own database, as the Database per Service pattern in this same family requires. |
+
+## Testing
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Service Component Test](service-component-test.md) | established | 7,162 | A team owns one service inside a system decomposed into many services, for example an Order Service that, in the course of handling a single request, calls a Customer Service to ... |
 
 ## Reading order
 
