@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-20 entries, 143,252 words. Every entry carries all 18
+23 entries, 165,091 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -42,6 +42,18 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [API Composition](api-composition.md) | canonical | 9,045 | A client, whether a mobile app, a web frontend, or another service, needs a single response that draws on data owned by more than one microservice, and no single service holds all ... |
 
+## Deployment
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Service Instance per Host](service-instance-per-host.md) | established | 7,761 | You have already decomposed a system into services, and each service runs as one or more service instances for throughput and redundancy, the same starting context Richardson ... |
+
+## Deployment and Discovery
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Third Party Registration](third-party-registration.md) | canonical | 8,071 | A caller wants to invoke a service that runs as more than one instance, and those instances are not static. |
+
 ## Domain Modeling
 
 | Pattern | Maturity | Words | Intent |
@@ -59,6 +71,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [API Gateway](api-gateway.md) | canonical | 7,645 | A client of a microservices system, whether a mobile app, a single-page web application, or a third-party integration, needs data or an action that in a monolith would have been a ... |
+| [Self Registration](self-registration.md) | canonical | 6,007 | A service instance's network location changes on every deployment, every autoscaling event, and every crash-and-restart. |
 | [Server-Side Service Discovery](server-side-service-discovery.md) | canonical | 7,771 | A service instance's network address is not static. |
 | [Service Registry](service-registry.md) | canonical | 6,188 | A service instance in a cloud environment does not have a fixed network location. |
 
