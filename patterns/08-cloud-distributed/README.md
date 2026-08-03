@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-40 entries, 361,171 words. Every entry carries all 18
+40 entries, 361,206 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud Distributed
@@ -97,7 +97,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Choreography](choreography.md) | established | 9,041 | A business process spans more than one service, and each service owns a slice of state that no other service is allowed to touch directly, because that is the entire point of ... |
 | [Claim Check](claim-check.md) | canonical | 8,847 | A service publishes a message that needs to carry a large piece of data, a scanned document, a video file, a full order history export, a machine learning feature vector, a ... |
 | [Publisher-Subscriber](publisher-subscriber.md) | canonical | 8,855 | A component in a system needs to tell other components that something happened, and it does not know, and should not need to know, who those other components are. |
-| [Sequential Convoy](sequential-convoy.md) | established | 10,136 | A system receives a stream of messages, and a subset of those messages must be applied in the order they were produced because applying them out of sequence corrupts the state ... |
+| [Sequential Convoy](sequential-convoy.md) | established | 10,171 | A system receives a stream of messages, and a subset of those messages must be applied in the order they were produced because applying them out of sequence corrupts the state ... |
 
 ## Migration
 

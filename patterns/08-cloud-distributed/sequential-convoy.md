@@ -1122,6 +1122,16 @@ lanes after `join()` returned.
 ### Go
 
 ```go
+import "sync"
+
+type message struct{ key string }
+
+type lane struct {
+	mu     sync.Mutex
+	queue  []message
+	active bool
+}
+
 type dispatcher struct {
 	mu      sync.Mutex
 	lanes   map[string]*lane
@@ -1184,6 +1194,16 @@ itself.
 ### Rust
 
 ```rust
+use std::collections::{HashMap, VecDeque};
+use std::sync::{Arc, Mutex};
+
+struct Msg;
+
+struct Lane {
+    queue: VecDeque<Msg>,
+    active: bool,
+}
+
 struct Dispatcher<F: Fn(&Msg) + Send + Sync + 'static> {
     lanes: Mutex<HashMap<String, Arc<Mutex<Lane>>>>,
     handler: Arc<F>,
