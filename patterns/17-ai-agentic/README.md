@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-36 entries, 310,452 words. Every entry carries all 18
+39 entries, 335,467 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -15,7 +15,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Contextual Retrieval](contextual-retrieval.md) | established | 9,338 | A retrieval-augmented generation system splits source documents into chunks because an embedding model has a token limit and because retrieval precision degrades when a chunk ... |
 | [Corrective RAG](corrective-rag.md) | emerging | 8,133 | A support bot answers questions by retrieving from a company's help center index and handing the top few documents to a generator. |
 | [GraphRAG](graphrag.md) | emerging | 7,850 | A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. |
+| [Human in the Loop](human-in-the-loop.md) | established | 7,618 | An agent is given a goal and a set of tools, and it plans and executes a sequence of tool calls autonomously. |
 | [Input Guardrails](input-guardrails.md) | established | 8,596 | An agent built on a large language model treats every token in its context window with roughly the same weight, whether that token came from the person operating the agent, from a ... |
+| [LLM as Judge](llm-as-judge.md) | established | 7,737 | A team ships a feature whose output is open-ended text, a chat reply, a document summary, a retrieval-augmented answer, or an autonomous agent's final report. |
 | [Late Chunking](late-chunking.md) | emerging | 8,222 | Picture a retrieval pipeline built over a long, single-narrative source, a Wikipedia article, a signed contract, a meeting transcript, a product manual. |
 | [Memory Compaction](memory-compaction.md) | established | 8,946 | An agent that runs for a long time accumulates a conversation. |
 | [Parallelization](parallelization.md) | established | 9,204 | An agentic pipeline built as a single sequential chain of LLM calls has one throughput limit, the wall-clock latency of the slowest single call multiplied by the number of calls ... |
@@ -70,6 +72,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Chain of Thought](chain-of-thought.md) | canonical | 8,805 | A large language model predicts its next token from everything that came before it in the same context. |
+
+## Reliability
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [LLM Circuit Breaker](llm-circuit-breaker.md) | established | 9,660 | A team ships an agent or a chat feature that calls out to a large language model. |
 
 ## Retrieval
 
