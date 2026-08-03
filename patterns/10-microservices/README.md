@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-29 entries, 213,571 words. Every entry carries all 18
+32 entries, 237,353 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -85,6 +85,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Server-Side Service Discovery](server-side-service-discovery.md) | canonical | 7,771 | A service instance's network address is not static. |
 | [Service Registry](service-registry.md) | canonical | 6,188 | A service instance in a cloud environment does not have a fixed network location. |
 
+## Observability
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Application Metrics](application-metrics.md) | canonical | 7,589 | A monolith has one process. When something is slow or wrong, an engineer attaches a profiler, reads a thread dump, or greps one log file, and the whole picture of the system's ... |
+| [Log Aggregation](log-aggregation.md) | canonical | 8,736 | A service in a microservices system emits log lines to its own local standard output or to a file inside its own container. |
+
 ## Reliability
 
 | Pattern | Maturity | Words | Intent |
@@ -98,6 +105,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Database per Service](database-per-service.md) | canonical | 7,094 | A team is decomposing a monolith into services, or is designing a new system as microservices from the start, per Decompose by Business Capability or Decompose by Subdomain. |
 | [Decompose by Business Capability](decompose-by-business-capability.md) | canonical | 6,765 | A team owns a monolith, or is building a new system, and needs to draw service boundaries. |
 | [Decompose by Subdomain](decompose-by-subdomain.md) | established | 7,192 | A team owns a system that has grown past the point where one deployable, one shared database, and one release train can move at the speed the business needs. |
+| [Externalized Configuration](externalized-configuration.md) | canonical | 7,457 | A service needs values that differ by where and how it is running. |
 | [Self-Contained Service](self-contained-service.md) | established | 6,998 | A team owns a piece of business capability end to end, say "product catalog" or "checkout" or "order history", and wants to release a change to that capability without asking ... |
 | [Service Mesh](service-mesh.md) | established | 6,980 | A system decomposed into many independently deployable services, following Decompose by Business Capability or Decompose by Subdomain, replaces in-process method calls with ... |
 | [Service per Team](service-per-team.md) | canonical | 7,510 | A system has been split into services, using Decompose by Business Capability or Decompose by Subdomain or simply by growing that way over years. |
