@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-31 entries, 281,028 words. Every entry carries all 18
+34 entries, 305,444 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud Distributed
@@ -10,6 +10,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Asynchronous Request-Reply](asynchronous-request-reply.md) | canonical | 7,657 | A client calls an API expecting an answer inside the budget of one HTTP connection, typically well under a second. |
+| [Index Table](index-table.md) | canonical | 8,260 | A data store organizes its records by a primary key so that, given the key, it can locate the record in close to constant time. |
+| [Messaging Bridge](messaging-bridge.md) | canonical | 6,068 | An organization that has been running for more than a few years rarely has one messaging system. |
 
 ## Cloud Distributed Systems
 
@@ -71,6 +73,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Deployment Stamps](deployment-stamps.md) | canonical | 9,272 | A team ships a SaaS product as a single deployed instance, one application tier, one database, one everything, and every customer's traffic and data flow through that one instance. |
+
+## Geo-Distribution and Availability
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Geode](geode.md) | established | 10,088 | A service with users spread across a continent, or across the world, starts from the simplest possible shape. |
 
 ## Integration
 
