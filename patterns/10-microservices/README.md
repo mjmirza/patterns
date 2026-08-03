@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-23 entries, 165,091 words. Every entry carries all 18
+26 entries, 191,184 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -46,7 +46,10 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Serverless Deployment](serverless-deployment.md) | established | 7,884 | A team owns a piece of business logic that is genuinely small and genuinely bursty. |
+| [Service Instance per Container](service-instance-per-container.md) | canonical | 8,926 | A team is moving an application, or building a new one, on top of microservices, and has to decide the packaging and scheduling unit for each service instance. |
 | [Service Instance per Host](service-instance-per-host.md) | established | 7,761 | You have already decomposed a system into services, and each service runs as one or more service instances for throughput and redundancy, the same starting context Richardson ... |
+| [Service Instance per VM](service-instance-per-vm.md) | established | 9,283 | A team has already split a system into microservices, one deployable unit per business capability, following the Microservice Architecture pattern. |
 
 ## Deployment and Discovery
 
