@@ -39,6 +39,7 @@ ALLOW_UNREACHABLE = {
     "openai.com",
     "www.cs.umd.edu",
     "www.slf4j.org",
+    "www.uber.com",
 }
 
 
