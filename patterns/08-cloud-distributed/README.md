@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-28 entries, 253,942 words. Every entry carries all 18
+31 entries, 281,028 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud Distributed
@@ -25,6 +25,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Cache-Aside](cache-aside.md) | canonical | 11,151 | A service reads the same records far more often than it writes them, and the read path is expensive. |
 | [Federated Identity](federated-identity.md) | canonical | 8,634 | An organization runs several applications. |
 | [Gateway Aggregation](gateway-aggregation.md) | canonical | 7,007 | A client needs data or a decision that no single backend service owns end to end. |
+| [Gateway Offloading](gateway-offloading.md) | canonical | 9,619 | An application is built as a set of backend instances, whether that is one service replicated many times or several distinct services behind one entry point. |
 | [Materialized View](materialized-view.md) | canonical | 8,521 | An application reads data far more often than it writes it, and the shape a write path needs is almost never the shape a read path wants. |
 
 ## Cloud and Distributed Systems
@@ -32,6 +33,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Ambassador](ambassador.md) | canonical | 7,796 | A service needs network capabilities that are not really its own concern. |
+| [Gateway Routing](gateway-routing.md) | canonical | 8,277 | A client, whether a browser, a mobile app, or another service, needs to talk to a system that is actually made of several independently deployed backends. |
 
 ## Coordination
 
@@ -111,6 +113,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Queue-Based Load Leveling](queue-based-load-leveling.md) | canonical | 9,730 | A system accepts work at a rate that varies over time, sometimes sharply, while the component that actually performs the work has a roughly fixed processing capacity per unit time. |
 | [Rate Limiting](rate-limiting.md) | canonical | 10,988 | A service exposes an operation that costs something to perform. |
 | [Throttling](throttling.md) | canonical | 10,477 | A service exposes an operation that costs something to run. |
+
+## Security
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Gatekeeper](gatekeeper.md) | established | 9,190 | A cloud service exposes one or more API endpoints across an untrusted network, typically the public internet. |
 
 ## Stability
 
