@@ -7,12 +7,30 @@ Every entry in this catalogue carries the eighteen dimensions defined in
 That bar applies equally to a maintainer's own pull request and to a first
 time contributor's. Nothing merges by exception.
 
+## Claim your entry before you write it
+
+`main` is protected. every change lands through a pull request, never a
+direct push, and the same four gates must pass before a merge is possible.
+
+Before starting work on a queued entry, open a **draft pull request** with
+just an empty target file (or the frontmatter stub) at the exact path from
+`docs/AUTHORING-QUEUE.json`. That draft PR IS the claim. A CI job (`claim
+check`) compares every open PR's added files against every other open PR and
+against what is already published on `main`, and fails the newer PR if two
+people are working on the same path. Push the real content to that same
+branch as you write it; the claim never expires because the PR itself is the
+claim.
+
+If you see a `claim check` failure naming your path, someone got there
+first. Rebase onto a different, unclaimed entry from the queue instead.
+
 ## Before you open a pull request
 
 1. Read `docs/ENTRY-TEMPLATE.md`. It is the schema, not a suggestion.
 2. Check `docs/AUTHORING-QUEUE.json` and the family README under
    `patterns/<family>/README.md` so a new entry does not duplicate one
-   already published or already queued.
+   already published or already queued. Also check `gh pr list` for a draft
+   PR already claiming the same path.
 3. Run the local gates before you push, the same four gates CI runs:
 
    ```

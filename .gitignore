@@ -4,3 +4,8 @@ __pycache__/
 node_modules/
 .claude/
 .codex-logs/
+.env
+.env.*
+*.pem
+*.key
+id_rsa*

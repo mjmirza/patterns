@@ -33,6 +33,46 @@ def passing() -> set[str]:
     }
 
 
+def claimed_paths() -> dict[str, int]:
+    # A path with an open PR is claimed. Fail open on any gh/network error.
+    try:
+        prs = json.loads(
+            subprocess.run(
+                ["gh", "pr", "list", "--state", "open", "--json", "number"],
+                capture_output=True,
+                text=True,
+                cwd=ROOT,
+                timeout=20,
+            ).stdout
+            or "[]"
+        )
+    except Exception:
+        return {}
+    claims: dict[str, int] = {}
+    for pr in prs:
+        num = pr.get("number")
+        if num is None:
+            continue
+        try:
+            files = json.loads(
+                subprocess.run(
+                    ["gh", "pr", "view", str(num), "--json", "files"],
+                    capture_output=True,
+                    text=True,
+                    cwd=ROOT,
+                    timeout=20,
+                ).stdout
+                or '{"files": []}'
+            )
+        except Exception:
+            continue
+        for f in files.get("files", []):
+            path = f.get("path", "")
+            if path.startswith("patterns/") and path.endswith(".md"):
+                claims[path] = num
+    return claims
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--size", type=int, default=8)
@@ -46,9 +86,16 @@ def main() -> int:
 
     entries = json.loads(QUEUE.read_text())
     done = passing()
-    todo = [e for e in entries if e["path"] not in done]
+    claims = claimed_paths()
+    todo = [e for e in entries if e["path"] not in done and e["path"] not in claims]
     if args.family:
         todo = [e for e in todo if e["path"].startswith(f"patterns/{args.family}")]
+
+    if claims and not args.status:
+        skipped = ", ".join(f"{p} (PR #{n})" for p, n in list(claims.items())[:5])
+        print(
+            f"skipping {len(claims)} claimed by an open PR: {skipped}", file=sys.stderr
+        )
 
     if args.status:
         by_family: dict[str, list[int]] = {}
