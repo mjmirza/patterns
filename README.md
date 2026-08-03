@@ -189,7 +189,51 @@ version.
 
 Contributions are licensed under CC BY 4.0.
 
-## Authoring plan and progress
+### Contributing with an AI coding agent
+
+If you use Claude Code, Cursor, Codex, or a similar agent, paste this prompt
+into it. It fetches the real rules from this repo rather than trusting a
+stale copy of them, and it enforces the branch-first-then-PR workflow this
+project requires.
+
+```
+You are contributing one entry to github.com/mjmirza/patterns, a master
+level software pattern catalogue. Follow these steps exactly, in order.
+
+1. Fork the repo (if you do not already have write access) and clone it.
+   Do NOT work directly on main.
+2. Read .github/CONTRIBUTING.md, docs/ENTRY-TEMPLATE.md, and one existing
+   published entry under patterns/ end to end. These are the real, current
+   rules. Do not assume you already know them.
+3. Check docs/AUTHORING-PLAN.md for an unclaimed pattern, or pick a pattern
+   the maintainer has not catalogued yet.
+4. Create a branch named entry/<slug>, for example entry/circuit-breaker.
+   Never commit to main.
+5. Open a DRAFT pull request immediately, naming only the branch and the
+   pattern you intend to write, before writing the entry. This draft PR is
+   how you CLAIM the entry so nobody else duplicates your work. CI will
+   reject a second PR that claims the same entry.
+6. Write the entry to docs/ENTRY-TEMPLATE.md's exact eighteen-dimension
+   shape. Original prose only, never paraphrased from a source close enough
+   to diff-match it. Every factual claim gets a real, working citation you
+   have actually checked, not one you assume exists.
+7. Run this repo's own local checks before pushing (see the CI job names in
+   .github/workflows/ci.yml for the exact commands: structure, prose, code
+   samples, citations, markdown style).
+8. Push, mark the PR ready for review, and fill in
+   .github/PULL_REQUEST_TEMPLATE.md with real command output, not a claim
+   that it passed.
+9. Wait. The maintainer (mjmirza) reviews and merges every PR by hand. Do
+   not merge your own PR, do not force-push over review feedback without
+   discussion, and do not touch .github/workflows/ or any other
+   CI-controlling file, those changes are blocked for anyone without the
+   maintainer's 'security-reviewed' label.
+
+If anything in this prompt conflicts with the actual .github/CONTRIBUTING.md
+in the repo, the file in the repo wins, not this prompt.
+```
+
+### Authoring plan and progress
 
 See [docs/AUTHORING-PLAN.md](docs/AUTHORING-PLAN.md) for the family by family
 authoring order and the current state of each family.
