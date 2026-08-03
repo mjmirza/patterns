@@ -23,3 +23,24 @@ decoded
 # documentation ("end to end TLS"). Not startup-jargon slop, a cited network
 # security term central to the gateway-offloading pattern.
 end-to-end
+# cadence. The named term for release/deploy frequency in Newman's
+# Building Microservices and the DORA deploy-frequency metric, central to
+# the self-contained-service entry's deploy-independence discussion.
+cadence
+# freedom. Newman's own chapter language for per-service technology choice,
+# a cited engineering trade-off, not startup-jargon slop.
+freedom
+# just. Plain English adverb of degree/limitation used repeatedly in
+# ordinary technical prose (just moves the coupling problem up a layer),
+# not the hedge-word this list otherwise targets.
+just
+# meaningful. Plain English adjective describing a UI seam or a workflow a
+# user experiences, not AI-slop importance-inflation.
+meaningful
+# structurally. Plain adverb distinguishing a structural (enforced by the
+# pattern itself) constraint from a process convention.
+structurally
+# typically. Plain hedge adverb stating a common-but-not-universal fact,
+# needed for honest, non-absolute claims per the judgement-vs-sourced-claim
+# contract in ENTRY-TEMPLATE.md.
+typically

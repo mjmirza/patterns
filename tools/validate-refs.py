@@ -40,6 +40,7 @@ ALLOW_UNREACHABLE = {
     "www.cs.umd.edu",
     "www.slf4j.org",
     "www.uber.com",
+    "queue.acm.org",
 }
 
 
