@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-45 entries, 385,685 words. Every entry carries all 18
+48 entries, 412,836 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -14,6 +14,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Chunking Strategies](chunking-strategies.md) | established | 7,093 | A large language model has a finite context limit, and even models with very large limits charge per token and lose retrieval accuracy on needles buried deep in a long context, a ... |
 | [Contextual Retrieval](contextual-retrieval.md) | established | 9,338 | A retrieval-augmented generation system splits source documents into chunks because an embedding model has a token limit and because retrieval precision degrades when a chunk ... |
 | [Corrective RAG](corrective-rag.md) | emerging | 8,133 | A support bot answers questions by retrieving from a company's help center index and handing the top few documents to a generator. |
+| [Evaluation Suite](evaluation-suite.md) | established | 9,431 | A function built from deterministic code either compiles or it does not, and a passing unit test today keeps passing tomorrow unless the code under test changes. |
+| [Golden Dataset](golden-dataset.md) | established | 9,529 | An engineer changes a system prompt, swaps a retrieval step, upgrades from one model version to another, or adjusts a temperature setting, and then has to answer one question ... |
 | [GraphRAG](graphrag.md) | emerging | 7,850 | A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. |
 | [Human in the Loop](human-in-the-loop.md) | established | 7,618 | An agent is given a goal and a set of tools, and it plans and executes a sequence of tool calls autonomously. |
 | [Input Guardrails](input-guardrails.md) | established | 8,596 | An agent built on a large language model treats every token in its context window with roughly the same weight, whether that token came from the person operating the agent, from a ... |
@@ -46,6 +48,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Constitutional AI](constitutional-ai.md) | established | 8,191 | A team is aligning a language model so that it refuses genuinely harmful requests, stays honest about its own uncertainty, and avoids the kind of output that erodes trust in an ... |
 | [Function Calling](function-calling.md) | canonical | 10,322 | A language model generates text by predicting the next token from everything that came before it in its context window. |
 | [Model Context Protocol](model-context-protocol.md) | canonical | 8,173 | Before MCP, every combination of an AI application and an external system needed its own custom integration. |
 | [Multi-Agent Supervisor](multi-agent-supervisor.md) | established | 8,159 | A single LLM-driven agent loop, one system prompt, one tool set, one context window, works well until the task genuinely needs more than one area of expertise or more than one ... |
