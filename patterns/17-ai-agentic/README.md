@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-24 entries, 204,944 words. Every entry carries all 18
+27 entries, 233,147 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -20,6 +20,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Reranking](reranking.md) | canonical | 7,225 | A reader who has never heard the word reranking has still hit the problem it solves. |
 | [Retrieval Augmented Generation](retrieval-augmented-generation.md) | canonical | 8,731 | A large language model's knowledge is frozen at the moment its training data was collected, and its parameters have a fixed, finite capacity that cannot hold every fact a user ... |
 | [Self-Consistency](self-consistency.md) | established | 6,441 | A large language model generating a chain-of-thought answer with standard greedy decoding commits to one path through the reasoning space, token by token, and never reconsiders. |
+| [Tool Result Caching](tool-result-caching.md) | established | 9,391 | An agent built on a tool-calling loop, the mechanism the Function Calling entry in this family describes, asks a model to decide, turn by turn, whether to answer directly or ... |
 
 ## AI and Agentic
 
@@ -32,10 +33,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Function Calling](function-calling.md) | canonical | 10,322 | A language model generates text by predicting the next token from everything that came before it in its context window. |
+| [Model Context Protocol](model-context-protocol.md) | canonical | 8,173 | Before MCP, every combination of an AI application and an external system needed its own custom integration. |
 | [Plan and Execute](plan-execute.md) | canonical | 7,815 | A language model asked to solve a task that takes many steps, and that must call external tools along the way, faces a tension between two failure modes. |
 | [ReAct](react.md) | canonical | 7,775 | A language model asked to answer a multi-hop factual question, or to complete a task that spans several tool calls, has two failure modes when it is prompted with only one of the ... |
 | [Reflexion](reflexion.md) | emerging | 8,450 | An LLM agent that tries a task once and stops inherits every mistake in that one attempt permanently. |
 | [Self-RAG](self-rag.md) | established | 10,532 | A retrieval-augmented language model that always retrieves, for every query, pays the same fixed cost whether the query needs an external source or not. |
+| [Structured Output](structured-output.md) | canonical | 10,639 | A program that calls a large language model eventually has to do something with the words that come back. |
 
 ## Agentic Workflow
 
