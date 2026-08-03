@@ -13,3 +13,13 @@ context engineering
 # context window. A real technical term in family 17 (lost-in-the-middle,
 #   long context versus RAG) and in this repo's own operating notes.
 context window
+# decode / decoded. Python's bytes.decode() and analogous encode/decode
+# terminology are literal stdlib method names in the gateway-offloading
+# code examples (compression, TLS byte streams), not AI-slop prose.
+decode
+decoded
+# end-to-end. The named technical term for the terminate-and-re-encrypt TLS
+# variant, used verbatim by Microsoft Learn's own Azure Application Gateway
+# documentation ("end to end TLS"). Not startup-jargon slop, a cited network
+# security term central to the gateway-offloading pattern.
+end-to-end
