@@ -207,7 +207,7 @@ required parameter, not a default the caller can silently omit.
 
 ## 4. Applicability and non-applicability
 
-**Reach for Evaluator-Optimizer when**
+Reach for Evaluator-Optimizer when:
 
 - A concrete rubric, schema, test suite, or style guide already exists, or
   can be written down, that states what a passing candidate looks like.
@@ -230,7 +230,7 @@ required parameter, not a default the caller can silently omit.
   compiler, a linter, a schema validator, a retrieval-grounding check, that
   can serve as the evaluator or gate the LLM evaluator's verdict.
 
-**Do not reach for it when**
+Do not reach for it when:
 
 - The interaction is on a real-time or tightly latency-budgeted path, live
   chat turns, autocomplete, a voice assistant's spoken turn, where even one
