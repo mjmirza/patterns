@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-48 entries, 412,836 words. Every entry carries all 18
+51 entries, 441,012 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -35,6 +35,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Graph of Thoughts](graph-of-thoughts.md) | established | 9,437 | Chain-of-Thought and Tree of Thoughts both encode an assumption about the shape of reasoning that holds for some problems and actively fights others. |
+| [Least to Most](least-to-most.md) | established | 8,932 | A single large language model call answers a question by producing one continuous span of tokens, and that span has to carry the entire reasoning chain the model needs to get the ... |
 | [Tree of Thoughts](tree-of-thoughts.md) | established | 9,275 | A language model produces its answer as a single left-to-right token stream. |
 
 ## AI/Agentic
@@ -73,6 +75,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Hierarchical Agents](hierarchical-agents.md) | established | 9,783 | A single agent with a tool belt and a large context window handles a surprising amount of real work, and the correct starting point for almost any agentic system is exactly that ... |
 | [Orchestrator-Worker](orchestrator-worker.md) | established | 10,095 | A task arrives whose internal shape cannot be known until the model has already looked at it. |
 | [Sub-Agent Isolation](sub-agent-isolation.md) | established | 9,798 | An agent delegates a subtask to another agent, and the subtask involves work whose intermediate output the delegating agent will never need again. |
+
+## Observability
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Agent Tracing](agent-tracing.md) | emerging | 9,807 | An agent that calls a model, receives a decision to call a tool, calls that tool, feeds the result back to the model, and repeats until it produces an answer, fails in ways a ... |
 
 ## Reasoning
 
