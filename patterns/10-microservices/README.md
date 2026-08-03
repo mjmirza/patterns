@@ -2,14 +2,26 @@
 
 Origin. Richardson
 
-8 entries, 59,461 words. Every entry carries all 18
+11 entries, 82,469 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Behavioral
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Domain Event](domain-event.md) | canonical | 6,667 | An operation on one part of a domain model needs to trigger a reaction in another part of the model, or in another bounded context entirely, and the class performing the operation ... |
 
 ## Data Query
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [API Composition](api-composition.md) | canonical | 9,045 | A client, whether a mobile app, a web frontend, or another service, needs a single response that draws on data owned by more than one microservice, and no single service holds all ... |
+
+## Domain Modeling
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Aggregate](aggregate.md) | canonical | 8,793 | A service, whether a monolith module or a microservice, owns a piece of the domain that contains more than one related object, and some of the rules that govern that piece span ... |
 
 ## Integration
 
@@ -27,6 +39,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Self-Contained Service](self-contained-service.md) | established | 6,998 | A team owns a piece of business capability end to end, say "product catalog" or "checkout" or "order history", and wants to release a change to that capability without asking ... |
 | [Service per Team](service-per-team.md) | canonical | 7,510 | A system has been split into services, using Decompose by Business Capability or Decompose by Subdomain or simply by growing that way over years. |
 | [Strangler Application](strangler-application.md) | canonical | 8,747 | A team owns a monolithic application that has become expensive to change. |
+| [Transactional Outbox](transactional-outbox.md) | canonical | 7,548 | A service owns its own database, as the Database per Service pattern in this same family requires. |
 
 ## Reading order
 
