@@ -1,0 +1,26 @@
+name: Factual correction
+description: A claim in a published entry is wrong, outdated, or overstated.
+title: "[correction]: "
+labels: ["correction"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+      description: Path to the entry, e.g. patterns/17-ai-agentic/react.md
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: The claim as written
+      description: Quote the exact sentence or line that is wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What it should say instead, and why
+      description: State the correct claim and cite the source that supports it.
+    validations:
+      required: true

@@ -1,0 +1,29 @@
+name: Broken reference link
+description: A citation URL no longer resolves (404, moved, domain gone).
+title: "[broken link]: "
+labels: ["broken-reference"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+      description: Path to the entry.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: The dead URL
+    validations:
+      required: true
+  - type: input
+    id: replacement
+    attributes:
+      label: A live replacement, if you found one
+      description: Prefer a Wayback Machine snapshot or a confirmed-live current URL over deleting the citation.
+  - type: markdown
+    attributes:
+      value: |
+        This repository never deletes or fabricates a citation to fix a broken
+        link. If you cannot find a live replacement, say so and a maintainer
+        will look for one via the Wayback Machine before removing anything.

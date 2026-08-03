@@ -11,6 +11,23 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blueviolet)
 
+<!-- BADGES:AUTOGEN:START -->
+![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
+![Latest release](https://img.shields.io/github/v/release/mjmirza/patterns?display_name=tag)
+![Contributors](https://img.shields.io/github/contributors/mjmirza/patterns)
+![Open issues](https://img.shields.io/github/issues/mjmirza/patterns)
+![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
+![Published entries](https://img.shields.io/badge/published-98-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-789-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-11.0%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-785-brightgreen)
+![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
+![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
+<!-- BADGES:AUTOGEN:END -->
+
+There is no documentation site yet (no rendered docs build to badge). Tracked
+as an open item in `docs/GOVERNANCE-AUDIT-2026-08-03.md`.
+
 ## What this is
 
 A reference you can hand to a staff engineer and have them find something they

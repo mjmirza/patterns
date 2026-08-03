@@ -8,7 +8,9 @@ from __future__ import annotations
 import csv
 import json
 import re
+import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -18,6 +20,9 @@ SCOPE_PATH = ROOT / "docs" / "SCOPE-TARGET.json"
 README_PATH = ROOT / "README.md"
 PROGRESS_PATH = ROOT / "docs" / "PROGRESS.md"
 DIST_DIR = ROOT / "dist"
+
+# An entry is stale past this many days since its last real edit (git log).
+STALE_DAYS = 180
 
 FRONTMATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 VALID_MATURITY = {"canonical", "established", "emerging", "contested", "deprecated"}
@@ -95,6 +100,31 @@ def published_by_family() -> dict[str, list[dict]]:
     return result
 
 
+def stale_count(published_paths: set[str]) -> int:
+    if not (ROOT / ".git").exists():
+        return 0
+    stale = 0
+    for rel in published_paths:
+        path = ROOT / rel
+        if not path.exists():
+            continue
+        try:
+            out = subprocess.run(
+                ["git", "log", "-1", "--format=%ct", "--", rel],
+                cwd=ROOT,
+                capture_output=True,
+                text=True,
+                timeout=5,
+            )
+            ts = int(out.stdout.strip())
+        except (ValueError, subprocess.SubprocessError):
+            continue
+        age_days = (datetime.now(timezone.utc).timestamp() - ts) / 86400
+        if age_days > STALE_DAYS:
+            stale += 1
+    return stale
+
+
 def planned_by_family(published_paths: set[str]) -> dict[str, int]:
     # Planned = queue entry not yet on disk, matching next-batch.py's filter.
     if not QUEUE_PATH.exists():
@@ -109,7 +139,7 @@ def planned_by_family(published_paths: set[str]) -> dict[str, int]:
     return counts
 
 
-def build_rows() -> tuple[list[dict], int, int]:
+def build_rows() -> tuple[list[dict], int, int, int]:
     pub = published_by_family()
     published_paths = {
         f"patterns/{fam}/{e['slug']}.md"
@@ -117,6 +147,7 @@ def build_rows() -> tuple[list[dict], int, int]:
         for e in entries
     }
     planned = planned_by_family(published_paths)
+    stale = stale_count(published_paths)
     families = sorted(set(FAMILY_ORIGIN) | set(pub) | set(planned))
     rows = []
     total_pub = 0
@@ -144,10 +175,17 @@ def build_rows() -> tuple[list[dict], int, int]:
         )
         total_pub += n_pub
         total_target += target
-    return rows, total_pub, total_target
+    return rows, total_pub, total_target, stale
 
 
-def write_dist(rows: list[dict], total_pub: int, total_target: int) -> None:
+def references_checked() -> int:
+    cache_path = ROOT / ".ref-cache.json"
+    if not cache_path.exists():
+        return 0
+    return len(json.loads(cache_path.read_text()))
+
+
+def write_dist(rows: list[dict], total_pub: int, total_target: int, stale: int) -> None:
     DIST_DIR.mkdir(exist_ok=True)
     payload = {
         "generated_by": "tools/gen-catalogue-status.py",
@@ -157,6 +195,8 @@ def write_dist(rows: list[dict], total_pub: int, total_target: int) -> None:
         "families_complete": sum(
             1 for r in rows if r["published"] == r["target"] and r["target"] > 0
         ),
+        "stale_entries": stale,
+        "references_checked": references_checked(),
         "rows": rows,
     }
     (DIST_DIR / "catalogue-status.json").write_text(
@@ -178,7 +218,9 @@ def write_dist(rows: list[dict], total_pub: int, total_target: int) -> None:
             )
 
 
-def write_progress(rows: list[dict], total_pub: int, total_target: int) -> None:
+def write_progress(
+    rows: list[dict], total_pub: int, total_target: int, stale: int
+) -> None:
     complete = sum(1 for r in rows if r["published"] == r["target"] and r["target"] > 0)
     lines = [
         "# Catalogue Progress",
@@ -191,6 +233,8 @@ def write_progress(rows: list[dict], total_pub: int, total_target: int) -> None:
         f"Completion: {round(100 * total_pub / total_target, 1) if total_target else 0}%",
         f"Families: {len(rows)}",
         f"Families complete: {complete}",
+        f"Stale entries (untouched past {STALE_DAYS} days): {stale}",
+        f"References checked (live in .ref-cache.json): {references_checked()}",
         "",
         "| # | Family | Published | Planned | Target | Percent |",
         "|---|---|---|---|---|---|",
@@ -203,7 +247,9 @@ def write_progress(rows: list[dict], total_pub: int, total_target: int) -> None:
     PROGRESS_PATH.write_text("\n".join(lines) + "\n")
 
 
-def rewrite_readme(rows: list[dict], total_pub: int, total_target: int) -> None:
+def rewrite_readme(
+    rows: list[dict], total_pub: int, total_target: int, stale: int
+) -> None:
     text = README_PATH.read_text()
 
     text = re.sub(
@@ -215,6 +261,30 @@ def rewrite_readme(rows: list[dict], total_pub: int, total_target: int) -> None:
         r"!\[Entries\]\(https://img\.shields\.io/badge/entries-[^)]+\)",
         f"![Entries](https://img.shields.io/badge/entries-{total_pub}%20published%20%2F%20{total_target}%20planned-yellow)",
         text,
+    )
+
+    completion = round(100 * total_pub / total_target, 1) if total_target else 0.0
+    refs = references_checked()
+    dynamic_block = "\n".join(
+        [
+            "![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)",
+            "![Latest release](https://img.shields.io/github/v/release/mjmirza/patterns?display_name=tag)",
+            "![Contributors](https://img.shields.io/github/contributors/mjmirza/patterns)",
+            "![Open issues](https://img.shields.io/github/issues/mjmirza/patterns)",
+            "![Schema version](https://img.shields.io/badge/schema-v1.0-informational)",
+            f"![Published entries](https://img.shields.io/badge/published-{total_pub}-brightgreen)",
+            f"![Planned entries](https://img.shields.io/badge/planned-{total_target - total_pub}-lightgrey)",
+            f"![Catalogue completion](https://img.shields.io/badge/completion-{completion}%25-yellow)",
+            f"![References checked](https://img.shields.io/badge/references%20checked-{refs}-brightgreen)",
+            f"![Stale entries](https://img.shields.io/badge/stale%20entries-{stale}-brightgreen)",
+            "![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)",
+        ]
+    )
+    text = re.sub(
+        r"<!-- BADGES:AUTOGEN:START -->.*?<!-- BADGES:AUTOGEN:END -->",
+        f"<!-- BADGES:AUTOGEN:START -->\n{dynamic_block}\n<!-- BADGES:AUTOGEN:END -->",
+        text,
+        flags=re.S,
     )
 
     table_lines = [
@@ -239,11 +309,13 @@ def rewrite_readme(rows: list[dict], total_pub: int, total_target: int) -> None:
 
 
 def main() -> int:
-    rows, total_pub, total_target = build_rows()
-    write_dist(rows, total_pub, total_target)
-    write_progress(rows, total_pub, total_target)
-    rewrite_readme(rows, total_pub, total_target)
-    print(f"published={total_pub} target={total_target} families={len(rows)}")
+    rows, total_pub, total_target, stale = build_rows()
+    write_dist(rows, total_pub, total_target, stale)
+    write_progress(rows, total_pub, total_target, stale)
+    rewrite_readme(rows, total_pub, total_target, stale)
+    print(
+        f"published={total_pub} target={total_target} families={len(rows)} stale={stale}"
+    )
     return 0
 
 

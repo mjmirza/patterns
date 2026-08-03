@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this catalogue, please cite it as below."
+title: "Patterns: A Master-Level Software Patterns Reference"
+abstract: >-
+  An open, community-correctable catalogue of software design and
+  architecture patterns. Every entry carries eighteen mandatory dimensions
+  (problem, forces, structure, dynamics, trade-offs, testing strategy,
+  production evidence, and more) and every factual claim cites a primary
+  source that is verified to resolve in continuous integration.
+type: dataset
+authors:
+  - family-names: Iqbal
+    given-names: Mirza
+repository-code: "https://github.com/mjmirza/patterns"
+url: "https://github.com/mjmirza/patterns"
+license: CC-BY-4.0
+version: "0.1.0"
+date-released: "2026-08-03"
+keywords:
+  - software-design-patterns
+  - software-architecture
+  - reference
+  - catalogue
+  - refactoring
+  - distributed-systems
+  - ai-agentic-patterns

@@ -1,0 +1,24 @@
+name: Production-use claim correction
+description: An entry's "seen in production" or adoption claim is unsourced, outdated, or wrong.
+title: "[production-use]: "
+labels: ["production-use"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: The claim as written
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What is wrong with it, and what should replace it
+      description: A retraction (no source exists) or a corrected claim with a real, checkable source.
+    validations:
+      required: true
