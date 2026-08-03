@@ -44,3 +44,7 @@ structurally
 # needed for honest, non-absolute claims per the judgement-vs-sourced-claim
 # contract in ENTRY-TEMPLATE.md.
 typically
+# unlock. sync.Mutex.Unlock() is the literal Go standard library method
+# name used in the transactional-outbox Go code example, not AI-slop
+# import verbiage.
+unlock
