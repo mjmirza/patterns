@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-40 entries, 361,206 words. Every entry carries all 18
+42 entries, 379,284 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud Distributed
@@ -118,6 +118,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Bulkhead](bulkhead.md) | canonical | 9,972 | A process holds a finite pool of something that every request needs. |
 | [Retry](retry.md) | canonical | 9,997 | A caller sends a request across a boundary it does not control. |
 
+## Resilience and Scale
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Cell-Based Architecture](cell-based-architecture.md) | established | 8,879 | A service starts as one deployed thing. One database, one fleet of application servers, one code path that every request runs through. |
+
 ## Resilience and Traffic Management
 
 | Pattern | Maturity | Words | Intent |
@@ -133,6 +139,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Gatekeeper](gatekeeper.md) | established | 9,190 | A cloud service exposes one or more API endpoints across an untrusted network, typically the public internet. |
+| [Valet Key](valet-key.md) | canonical | 9,199 | An application sits between a client, a browser, a mobile app, a worker process, and a data store or messaging service, object storage, a queue, a database export target. |
 
 ## Stability
 
