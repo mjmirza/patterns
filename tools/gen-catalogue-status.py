@@ -268,9 +268,6 @@ def rewrite_readme(
     dynamic_block = "\n".join(
         [
             "![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)",
-            "![Latest release](https://img.shields.io/github/v/release/mjmirza/patterns?display_name=tag)",
-            "![Contributors](https://img.shields.io/github/contributors/mjmirza/patterns)",
-            "![Open issues](https://img.shields.io/github/issues/mjmirza/patterns)",
             "![Schema version](https://img.shields.io/badge/schema-v1.0-informational)",
             f"![Published entries](https://img.shields.io/badge/published-{total_pub}-brightgreen)",
             f"![Planned entries](https://img.shields.io/badge/planned-{total_target - total_pub}-lightgrey)",
