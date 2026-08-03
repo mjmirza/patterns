@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-37 entries, 335,297 words. Every entry carries all 18
+40 entries, 361,171 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud Distributed
@@ -12,6 +12,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Asynchronous Request-Reply](asynchronous-request-reply.md) | canonical | 7,657 | A client calls an API expecting an answer inside the budget of one HTTP connection, typically well under a second. |
 | [Index Table](index-table.md) | canonical | 8,260 | A data store organizes its records by a primary key so that, given the key, it can locate the record in close to constant time. |
 | [Messaging Bridge](messaging-bridge.md) | canonical | 6,068 | An organization that has been running for more than a few years rarely has one messaging system. |
+| [Static Content Hosting](static-content-hosting.md) | canonical | 7,149 | A team is building a website, a documentation portal, a marketing page, a single-page application, or the client half of a larger system, and the content does not need to change ... |
 
 ## Cloud Distributed Systems
 
@@ -37,6 +38,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Ambassador](ambassador.md) | canonical | 7,796 | A service needs network capabilities that are not really its own concern. |
 | [Gateway Routing](gateway-routing.md) | canonical | 8,277 | A client, whether a browser, a mobile app, or another service, needs to talk to a system that is actually made of several independently deployed backends. |
 | [Pipes and Filters](pipes-filters.md) | canonical | 8,496 | A system needs to apply a series of transformations or checks to a stream of data, and the natural first implementation is one large function or one large class that performs ... |
+| [Sidecar](sidecar.md) | canonical | 8,589 | A service needs a capability that is not part of its core business logic. |
 
 ## Coordination
 
@@ -95,6 +97,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Choreography](choreography.md) | established | 9,041 | A business process spans more than one service, and each service owns a slice of state that no other service is allowed to touch directly, because that is the entire point of ... |
 | [Claim Check](claim-check.md) | canonical | 8,847 | A service publishes a message that needs to carry a large piece of data, a scanned document, a video file, a full order history export, a machine learning feature vector, a ... |
 | [Publisher-Subscriber](publisher-subscriber.md) | canonical | 8,855 | A component in a system needs to tell other components that something happened, and it does not know, and should not need to know, who those other components are. |
+| [Sequential Convoy](sequential-convoy.md) | established | 10,136 | A system receives a stream of messages, and a subset of those messages must be applied in the order they were produced because applying them out of sequence corrupts the state ... |
 
 ## Migration
 
