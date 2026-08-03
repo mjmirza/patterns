@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-34 entries, 305,444 words. Every entry carries all 18
+37 entries, 335,297 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud Distributed
@@ -36,12 +36,14 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Ambassador](ambassador.md) | canonical | 7,796 | A service needs network capabilities that are not really its own concern. |
 | [Gateway Routing](gateway-routing.md) | canonical | 8,277 | A client, whether a browser, a mobile app, or another service, needs to talk to a system that is actually made of several independently deployed backends. |
+| [Pipes and Filters](pipes-filters.md) | canonical | 8,496 | A system needs to apply a series of transformations or checks to a stream of data, and the natural first implementation is one large function or one large class that performs ... |
 
 ## Coordination
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Leader Election](leader-election.md) | canonical | 7,764 | A fleet of otherwise identical replicas exists for availability. |
+| [Scheduler Agent Supervisor](scheduler-agent-supervisor.md) | canonical | 11,058 | An application needs to run a task that has more than one step, and at least one of those steps calls a remote service or accesses a remote resource that the application does not ... |
 
 ## Data Distribution
 
@@ -118,6 +120,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Competing Consumers](competing-consumers.md) | canonical | 7,217 | A system produces units of work faster, or in bursts larger, than a single consumer process can absorb, and the units of work are independent of one another, meaning any one of ... |
+| [Priority Queue](priority-queue.md) | canonical | 10,299 | A distributed system that processes work through a queue, whether that queue is a message broker topic, a job table, a task list, or a pending pod list, eventually accumulates ... |
 | [Queue-Based Load Leveling](queue-based-load-leveling.md) | canonical | 9,730 | A system accepts work at a rate that varies over time, sometimes sharply, while the component that actually performs the work has a roughly fixed processing capacity per unit time. |
 | [Rate Limiting](rate-limiting.md) | canonical | 10,988 | A service exposes an operation that costs something to perform. |
 | [Throttling](throttling.md) | canonical | 10,477 | A service exposes an operation that costs something to run. |
