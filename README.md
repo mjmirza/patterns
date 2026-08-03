@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-101%20published%20%2F%20887%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-104%20published%20%2F%20887%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -17,10 +17,10 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 ![Contributors](https://img.shields.io/github/contributors/mjmirza/patterns)
 ![Open issues](https://img.shields.io/github/issues/mjmirza/patterns)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-101-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-786-lightgrey)
-![Catalogue completion](https://img.shields.io/badge/completion-11.4%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-800-brightgreen)
+![Published entries](https://img.shields.io/badge/published-104-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-783-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-11.7%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-819-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
@@ -107,7 +107,7 @@ README does not claim they are implemented.
 | 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 0 | 30 | 30 |
 | 15 | [Security](patterns/15-security/) | OWASP ASVS | 0 | 38 | 38 |
 | 16 | [Functional Programming](patterns/16-functional/) | Category theory in practice | 0 | 40 | 40 |
-| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 33 | 22 | 55 |
+| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 36 | 19 | 55 |
 | 18 | [Anti-Patterns](patterns/18-anti-patterns/) | Brown et al, AntiPatterns | 0 | 53 | 53 |
 | 19 | [API and Interface Design](patterns/19-api-design/) | REST, GraphQL, gRPC specifications | 0 | 10 | 10 |
 | 20 | [Release and Deployment](patterns/20-release-deployment/) | Humble and Farley | 0 | 10 | 10 |
