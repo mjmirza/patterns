@@ -64,7 +64,10 @@ BANNED IN THE FILE (repo gates reject the write):
 BEFORE REPORTING DONE, run:
   cd ${REPO} && python3 tools/check-structure.py 2>/dev/null | grep '${e.path}'
   cd ${REPO} && python3 tools/check-prose.py 2>/dev/null | tail -3
-Your file must show PASS. Fix and re-run until it does.
+  cd ${REPO} && python3 tools/check-code.py --only ${e.slug} --strict
+The structure grep must show PASS. check-code.py must report 0 failed.
+This is the exact command CI runs; a green here means CI will not catch a
+compile error you missed. Fix and re-run until both are clean.
 
 Report in under 120 words: file path, dimensions out of 18, verified citation count, gate result, unverifiable claims.`
 }
