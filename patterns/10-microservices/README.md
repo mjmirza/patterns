@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-17 entries, 123,347 words. Every entry carries all 18
+20 entries, 143,252 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -15,6 +15,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Client-side Service Discovery](client-side-service-discovery.md) | canonical | 5,946 | A microservices architecture replaces a small number of long-lived, statically addressed processes with many short-lived, dynamically addressed ones. |
 | [Remote Procedure Invocation](remote-procedure-invocation.md) | canonical | 6,005 | A microservice architecture splits a system into many independently deployable services, and almost every non-trivial request touches more than one of them. |
 
 ## Communication Style
@@ -58,6 +59,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [API Gateway](api-gateway.md) | canonical | 7,645 | A client of a microservices system, whether a mobile app, a single-page web application, or a third-party integration, needs data or an action that in a monolith would have been a ... |
+| [Server-Side Service Discovery](server-side-service-discovery.md) | canonical | 7,771 | A service instance's network address is not static. |
+| [Service Registry](service-registry.md) | canonical | 6,188 | A service instance in a cloud environment does not have a fixed network location. |
 
 ## Reliability
 
