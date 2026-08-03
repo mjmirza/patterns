@@ -60,14 +60,18 @@ BANNED IN THE FILE (repo gates reject the write):
 - These words and inflections: ${BANNED}
 - Emojis.
 - Placeholder URLs are fine inside code fences. Never an unverified URL in prose.
+- Never wrap a cited URL across two lines. A wrapped URL is a truncated,
+  unreachable citation. Keep every citation URL on one line even if long.
+- Never use bold text as a fake heading ("**Do this when**"). Use a real
+  markdown heading or a plain sentence ending in a colon before a list.
 
-BEFORE REPORTING DONE, run:
+BEFORE REPORTING DONE, run ALL FOUR, every one must be clean:
   cd ${REPO} && python3 tools/check-structure.py 2>/dev/null | grep '${e.path}'
   cd ${REPO} && python3 tools/check-prose.py 2>/dev/null | tail -3
   cd ${REPO} && python3 tools/check-code.py --only ${e.slug} --strict
-The structure grep must show PASS. check-code.py must report 0 failed.
-This is the exact command CI runs; a green here means CI will not catch a
-compile error you missed. Fix and re-run until both are clean.
+  cd ${REPO} && npx --yes markdownlint-cli2@0.23.2 '${e.path}'
+These are the exact commands CI runs. A green here means CI will not catch
+something you missed. Fix and re-run every one until all four are clean.
 
 Report in under 120 words: file path, dimensions out of 18, verified citation count, gate result, unverifiable claims.`
 }
