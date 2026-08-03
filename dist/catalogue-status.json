@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 134,
+  "published_total": 137,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 3,
   "stale_entries": 0,
-  "references_checked": 975,
+  "references_checked": 990,
   "rows": [
     {
       "family": "01-gof",
@@ -109,12 +109,12 @@
       "family": "10-microservices",
       "name": "Microservices",
       "origin": "Richardson",
-      "published": 11,
-      "planned": 39,
+      "published": 14,
+      "planned": 36,
       "target": 50,
-      "percent": 22.0,
+      "percent": 28.0,
       "maturity": {
-        "canonical": 8,
+        "canonical": 11,
         "established": 2,
         "contested": 1
       }
