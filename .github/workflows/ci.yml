@@ -87,3 +87,24 @@ jobs:
           node-version: "22"
       - name: markdownlint-cli2
         run: npx --yes markdownlint-cli2@0.23.2
+
+  claims:
+    name: claim check
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Fetch main for comparison
+        run: git fetch origin main --depth=200
+      - name: No two contributors on the same entry
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }} # BESTPRACTICE_OK: numeric field via env, never inlined into run:
+          BASE_SHA: origin/main
+        run: python3 tools/check-claims.py
