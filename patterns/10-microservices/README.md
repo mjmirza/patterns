@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-26 entries, 191,184 words. Every entry carries all 18
+29 entries, 213,571 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -23,6 +23,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Messaging](messaging.md) | canonical | 5,733 | A microservice architecture splits one application into many independently deployable services, and Richardson is explicit that this decomposition alone does not remove the need ... |
+
+## Cross-Cutting Concerns
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Microservice Chassis](microservice-chassis.md) | canonical | 8,226 | A single microservice, considered in isolation, is a small and cheap thing to write. |
 
 ## Data
 
@@ -47,6 +53,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Serverless Deployment](serverless-deployment.md) | established | 7,884 | A team owns a piece of business logic that is genuinely small and genuinely bursty. |
+| [Service Deployment Platform](service-deployment-platform.md) | canonical | 7,181 | A team has decomposed an application into a set of independently deployable services, following one of the decomposition patterns in this family, and has chosen how a single ... |
 | [Service Instance per Container](service-instance-per-container.md) | canonical | 8,926 | A team is moving an application, or building a new one, on top of microservices, and has to decide the packaging and scheduling unit for each service instance. |
 | [Service Instance per Host](service-instance-per-host.md) | established | 7,761 | You have already decomposed a system into services, and each service runs as one or more service instances for throughput and redundancy, the same starting context Richardson ... |
 | [Service Instance per VM](service-instance-per-vm.md) | established | 9,283 | A team has already split a system into microservices, one deployable unit per business capability, following the Microservice Architecture pattern. |
@@ -92,6 +99,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Decompose by Business Capability](decompose-by-business-capability.md) | canonical | 6,765 | A team owns a monolith, or is building a new system, and needs to draw service boundaries. |
 | [Decompose by Subdomain](decompose-by-subdomain.md) | established | 7,192 | A team owns a system that has grown past the point where one deployable, one shared database, and one release train can move at the speed the business needs. |
 | [Self-Contained Service](self-contained-service.md) | established | 6,998 | A team owns a piece of business capability end to end, say "product catalog" or "checkout" or "order history", and wants to release a change to that capability without asking ... |
+| [Service Mesh](service-mesh.md) | established | 6,980 | A system decomposed into many independently deployable services, following Decompose by Business Capability or Decompose by Subdomain, replaces in-process method calls with ... |
 | [Service per Team](service-per-team.md) | canonical | 7,510 | A system has been split into services, using Decompose by Business Capability or Decompose by Subdomain or simply by growing that way over years. |
 | [Strangler Application](strangler-application.md) | canonical | 8,747 | A team owns a monolithic application that has become expensive to change. |
 | [Transactional Outbox](transactional-outbox.md) | canonical | 7,548 | A service owns its own database, as the Database per Service pattern in this same family requires. |

@@ -1,50 +1,24 @@
-# Repo-scoped allowlist. Every term here is a NAMED PATTERN from a citable
-# primary source, not AI slop vocabulary. Blocking them would make the
-# corresponding family uncitable. Each carries its source.
-#
-# discovery         Richardson, Microservices Patterns (Manning 2018).
-#                   "Service Discovery", "Client-side Discovery",
-#                   "Server-side Discovery". microservices.io/patterns/
-# context engineering
-#                   Anthropic engineering, "Effective context engineering for
-#                   AI agents". A named practice in family 17.
 discovery
-context engineering
-# context window. A real technical term in family 17 (lost-in-the-middle,
-#   long context versus RAG) and in this repo's own operating notes.
-context window
-# decode / decoded. Python's bytes.decode() and analogous encode/decode
-# terminology are literal stdlib method names in the gateway-offloading
-# code examples (compression, TLS byte streams), not AI-slop prose.
-decode
-decoded
-# end-to-end. The named technical term for the terminate-and-re-encrypt TLS
-# variant, used verbatim by Microsoft Learn's own Azure Application Gateway
-# documentation ("end to end TLS"). Not startup-jargon slop, a cited network
-# security term central to the gateway-offloading pattern.
-end-to-end
-# cadence. The named term for release/deploy frequency in Newman's
-# Building Microservices and the DORA deploy-frequency metric, central to
-# the self-contained-service entry's deploy-independence discussion.
-cadence
-# freedom. Newman's own chapter language for per-service technology choice,
-# a cited engineering trade-off, not startup-jargon slop.
-freedom
-# just. Plain English adverb of degree/limitation used repeatedly in
-# ordinary technical prose (just moves the coupling problem up a layer),
-# not the hedge-word this list otherwise targets.
-just
-# meaningful. Plain English adjective describing a UI seam or a workflow a
-# user experiences, not AI-slop importance-inflation.
-meaningful
-# structurally. Plain adverb distinguishing a structural (enforced by the
-# pattern itself) constraint from a process convention.
-structurally
-# typically. Plain hedge adverb stating a common-but-not-universal fact,
-# needed for honest, non-absolute claims per the judgement-vs-sourced-claim
-# contract in ENTRY-TEMPLATE.md.
-typically
-# unlock. sync.Mutex.Unlock() is the literal Go standard library method
-# name used in the transactional-outbox Go code example, not AI-slop
-# import verbiage.
 unlock
+
+# cadence. Newman's Building Microservices and DORA release-cadence
+# terminology, and the repo's own prior justification for this exact word.
+cadence
+
+# at scale. Verbatim inside a direct quote from Kubernetes' own docs
+# ("...running production workloads at scale..."), cited word for word per
+# the original-prose and citation rules in ENTRY-TEMPLATE.md.
+at scale
+
+# cascading. Plain engineering term for a cascading failure in a
+# distributed system (control-plane overload under a cluster-wide incident),
+# not startup-jargon slop.
+cascading
+
+# structurally. Plain adverb distinguishing a structural constraint from a
+# process convention, per the repo's own prior justification for this word.
+structurally
+
+# typically. Plain hedge adverb for honest, non-absolute claims per the
+# judgement-vs-sourced-claim contract in ENTRY-TEMPLATE.md.
+typically
