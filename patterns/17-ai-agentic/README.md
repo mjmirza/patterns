@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-30 entries, 260,192 words. Every entry carries all 18
+33 entries, 286,566 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -41,6 +41,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Function Calling](function-calling.md) | canonical | 10,322 | A language model generates text by predicting the next token from everything that came before it in its context window. |
 | [Model Context Protocol](model-context-protocol.md) | canonical | 8,173 | Before MCP, every combination of an AI application and an external system needed its own custom integration. |
+| [Multi-Agent Supervisor](multi-agent-supervisor.md) | established | 8,159 | A single LLM-driven agent loop, one system prompt, one tool set, one context window, works well until the task genuinely needs more than one area of expertise or more than one ... |
 | [Plan and Execute](plan-execute.md) | canonical | 7,815 | A language model asked to solve a task that takes many steps, and that must call external tools along the way, faces a tension between two failure modes. |
 | [ReAct](react.md) | canonical | 7,775 | A language model asked to answer a multi-hop factual question, or to complete a task that spans several tool calls, has two failure modes when it is prompted with only one of the ... |
 | [Reflexion](reflexion.md) | emerging | 8,450 | An LLM agent that tries a task once and stops inherits every mistake in that one attempt permanently. |
@@ -57,6 +58,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Agent Handoff](agent-handoff.md) | established | 8,432 | A team building an LLM-driven assistant for a domain with more than one kind of request quickly runs into a shape problem. |
+| [Hierarchical Agents](hierarchical-agents.md) | established | 9,783 | A single agent with a tool belt and a large context window handles a surprising amount of real work, and the correct starting point for almost any agentic system is exactly that ... |
 | [Orchestrator-Worker](orchestrator-worker.md) | established | 10,095 | A task arrives whose internal shape cannot be known until the model has already looked at it. |
 | [Sub-Agent Isolation](sub-agent-isolation.md) | established | 9,798 | An agent delegates a subtask to another agent, and the subtask involves work whose intermediate output the delegating agent will never need again. |
 
