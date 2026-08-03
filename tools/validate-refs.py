@@ -41,6 +41,7 @@ ALLOW_UNREACHABLE = {
     "www.slf4j.org",
     "www.uber.com",
     "queue.acm.org",
+    "dev.mysql.com",
 }
 
 

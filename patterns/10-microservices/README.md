@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-11 entries, 82,469 words. Every entry carries all 18
+14 entries, 103,159 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -10,6 +10,24 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Domain Event](domain-event.md) | canonical | 6,667 | An operation on one part of a domain model needs to trigger a reaction in another part of the model, or in another bounded context entirely, and the class performing the operation ... |
+
+## Communication
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Remote Procedure Invocation](remote-procedure-invocation.md) | canonical | 6,005 | A microservice architecture splits a system into many independently deployable services, and almost every non-trivial request touches more than one of them. |
+
+## Data
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Polling Publisher](polling-publisher.md) | canonical | 6,038 | The context is the second half of the Transactional Outbox story, and it is worth stating precisely because Polling Publisher is frequently confused with the outbox pattern itself. |
+
+## Data Integration
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Transaction Log Tailing](transaction-log-tailing.md) | canonical | 8,647 | A service owns a database, per the Database per Service pattern, and its database is private. |
 
 ## Data Query
 
