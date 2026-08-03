@@ -115,7 +115,7 @@
  "https://discord.com/blog/how-discord-stores-trillions-of-messages": 200,
  "https://dl.acm.org/doi/10.1145/16894.16861": "403 then HTTPError",
  "https://dl.acm.org/doi/10.1145/359763.359789": "403 then HTTPError",
- "https://dl.acm.org/doi/10.1145/44483.44488": 200,
+ "https://dl.acm.org/doi/10.1145/44483.44488": "403 then HTTPError",
  "https://dl.acm.org/doi/10.1145/582318.582339": "403 then HTTPError",
  "https://dl.acm.org/doi/10.14778/2757807.2757813": "403 then HTTPError",
  "https://doc.akka.io/libraries/akka-core/current/typed/fsm.html": 200,

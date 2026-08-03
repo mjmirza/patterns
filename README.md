@@ -4,8 +4,8 @@ A master level reference for software patterns. Every entry is written from
 primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
-![Families](https://img.shields.io/badge/families-26-informational)
-![Entries](https://img.shields.io/badge/entries-in%20progress-yellow)
+![Families](https://img.shields.io/badge/families-29-informational)
+![Entries](https://img.shields.io/badge/entries-89%20published%20%2F%20887%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -18,9 +18,9 @@ did not know. Not a tutorial. Not an overview. Not a set of one paragraph
 summaries with a UML picture.
 
 Most pattern catalogues answer one question. What is this pattern. This one
-answers the fourteen questions an engineer actually has when they are deciding
-whether to use it, how it will fail, what it costs, how to test it, how to see
-it in production, and how to remove it later.
+answers the eighteen questions an engineer actually has when they are
+deciding whether to use it, how it will fail, what it costs, how to test it,
+how to see it in production, and how to remove it later.
 
 ## What makes an entry master level
 
@@ -52,36 +52,57 @@ by good intentions.
 Dimension 4's second list and dimension 11 are the ones most catalogues skip.
 They are the reason this repository exists.
 
+## Terminology
+
+The status words below mean exactly one thing each, and every count in this
+README is generated from repository state by `tools/gen-catalogue-status.py`,
+never hand-typed. See `docs/PROGRESS.md` and `dist/catalogue-status.json` for
+the live, machine-readable numbers.
+
+| Term | Meaning | Enforced by |
+|---|---|---|
+| Published | A file exists in `patterns/` and passes every CI gate | `tools/check-structure.py` |
+| Planned | Named in `docs/AUTHORING-QUEUE.json`, not yet on disk | `tools/next-batch.py` |
+| Total catalogue scope | Published plus planned, tracked in `docs/SCOPE-TARGET.json` | manual reconciliation, see that file |
+| canonical / established / emerging / contested / deprecated | Per-entry epistemic maturity, declared in frontmatter | `tools/check-structure.py` |
+
+Draft, in-review, and superseded are not yet modelled by the tooling. They
+are open work, listed in `docs/GOVERNANCE-AUDIT-2026-08-03.md`, and this
+README does not claim they are implemented.
+
 ## The families
 
-| # | Family | Origin | Entries |
-|---|---|---|---|
-| 01 | [Design Patterns (GoF)](patterns/01-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 23 |
-| 02 | [Code Smells](patterns/02-code-smells/) | Fowler and Beck, Refactoring | 28 |
-| 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 66 |
-| 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 35 |
-| 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 27 |
-| 06 | [Enterprise Application Architecture](patterns/06-poeaa/) | Fowler, PoEAA | 51 |
-| 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 65 |
-| 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 |
-| 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 28 |
-| 10 | [Microservices](patterns/10-microservices/) | Richardson | 44 |
-| 11 | [Domain-Driven Design](patterns/11-ddd/) | Evans, Vernon | 29 |
-| 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 37 |
-| 13 | [Frontend and UI](patterns/13-frontend-ui/) | Framework documentation | 25 |
-| 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 30 |
-| 15 | [Security](patterns/15-security/) | OWASP ASVS | 30 |
-| 16 | [Functional Programming](patterns/16-functional/) | Category theory in practice | 34 |
-| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 55 |
-| 18 | [Anti-Patterns](patterns/18-anti-patterns/) | Brown et al, AntiPatterns | 34 |
-| 19 | [API and Interface Design](patterns/19-api-design/) | REST, GraphQL, gRPC specifications | 20 |
-| 20 | [Release and Deployment](patterns/20-release-deployment/) | Humble and Farley | 18 |
-| 21 | [SRE and Operations](patterns/21-sre-operations/) | Google SRE, AWS Well-Architected | 22 |
-| 22 | [Observability](patterns/22-observability/) | OpenTelemetry, RED and USE methods | 16 |
-| 23 | [Workflow and Orchestration](patterns/23-workflow-orchestration/) | Durable execution literature | 15 |
-| 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 18 |
-| 25 | [MLOps](patterns/25-mlops/) | Google ML design patterns | 20 |
-| 26 | [Interaction and HCI](patterns/26-interaction-hci/) | Tidwell, Designing Interfaces | 20 |
+| # | Family | Origin | Published | Planned | Target |
+|---|---|---|---|---|---|
+| 01 | [Design Patterns (GoF)](patterns/01-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 23 | 0 | 23 |
+| 02 | [Code Smells](patterns/02-code-smells/) | Fowler and Beck, Refactoring | 3 | 25 | 28 |
+| 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 0 | 66 | 66 |
+| 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 0 | 50 | 50 |
+| 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 0 | 43 | 43 |
+| 06 | [Enterprise Application Architecture](patterns/06-poeaa/) | Fowler, PoEAA | 0 | 50 | 50 |
+| 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 0 | 57 | 57 |
+| 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 | 0 | 42 |
+| 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 0 | 40 | 40 |
+| 10 | [Microservices](patterns/10-microservices/) | Richardson | 0 | 50 | 50 |
+| 11 | [Domain-Driven Design](patterns/11-ddd/) | Evans, Vernon | 0 | 37 | 37 |
+| 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 0 | 43 | 43 |
+| 13 | [Frontend and UI](patterns/13-frontend-ui/) | Framework documentation | 0 | 34 | 34 |
+| 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 0 | 30 | 30 |
+| 15 | [Security](patterns/15-security/) | OWASP ASVS | 0 | 38 | 38 |
+| 16 | [Functional Programming](patterns/16-functional/) | Category theory in practice | 0 | 40 | 40 |
+| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 21 | 34 | 55 |
+| 18 | [Anti-Patterns](patterns/18-anti-patterns/) | Brown et al, AntiPatterns | 0 | 53 | 53 |
+| 19 | [API and Interface Design](patterns/19-api-design/) | REST, GraphQL, gRPC specifications | 0 | 10 | 10 |
+| 20 | [Release and Deployment](patterns/20-release-deployment/) | Humble and Farley | 0 | 10 | 10 |
+| 21 | [SRE and Operations](patterns/21-sre-operations/) | Google SRE, AWS Well-Architected | 0 | 12 | 12 |
+| 22 | [Observability](patterns/22-observability/) | OpenTelemetry, RED and USE methods | 0 | 8 | 8 |
+| 23 | [Workflow and Orchestration](patterns/23-workflow-orchestration/) | Durable execution literature | 0 | 6 | 6 |
+| 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 0 | 8 | 8 |
+| 25 | [MLOps](patterns/25-mlops/) | Google ML design patterns | 0 | 9 | 9 |
+| 26 | [Interaction and HCI](patterns/26-interaction-hci/) | Tidwell, Designing Interfaces | 0 | 10 | 10 |
+| 27 | [Mobile Architecture](patterns/27-mobile-architecture/) | Official Android/iOS architecture guidance | 0 | 12 | 12 |
+| 28 | [Embedded and Hardware-Software](patterns/28-embedded-hardware/) | Embedded systems engineering literature | 0 | 14 | 14 |
+| 29 | [Real-Time Simulation](patterns/29-realtime-simulation/) | Nystrom, Game Programming Patterns | 0 | 9 | 9 |
 
 Family 04 is named Principles and Laws rather than patterns, because SOLID,
 CAP, and Conway's Law are principles and laws, not patterns. They live here
@@ -127,8 +148,12 @@ Nothing merges without passing all of these.
 | Structure | `tools/check-structure.py` | A missing dimension, bad frontmatter, fewer than three code languages, under 1200 prose words |
 | Citations | `tools/validate-refs.py` | Any cited URL that does not resolve |
 | Prose | `tools/check-prose.py` | Em dashes, en dashes, AI slop vocabulary, emojis, triple-dash separators |
-| Links | `tools/check-links.py` | Broken internal links, orphaned entries |
-| Code | Per language linters | Non-compiling examples |
+| Markdown | `markdownlint-cli2` | Malformed markdown, emphasis used as a heading |
+| Code | `tools/check-code.py` | Non-compiling examples (Python, TypeScript, Java, Go, Rust, Swift) |
+| Catalogue status | `tools/gen-catalogue-status.py` | A README, `docs/PROGRESS.md`, or `dist/` export that has drifted from real repository state |
+
+A per-file internal link checker does not exist yet. It is tracked in
+`docs/GOVERNANCE-AUDIT-2026-08-03.md` as open work, not claimed as done.
 
 Run the whole set locally.
 
