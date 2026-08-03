@@ -2,13 +2,26 @@
 
 Origin. Richardson
 
-5 entries, 37,212 words. Every entry carries all 18
+8 entries, 59,461 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Data Query
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [API Composition](api-composition.md) | canonical | 9,045 | A client, whether a mobile app, a web frontend, or another service, needs a single response that draws on data owned by more than one microservice, and no single service holds all ... |
+
+## Integration
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Shared Database](shared-database.md) | contested | 6,110 | A codebase is being decomposed into services, or several teams are building services that need to see overlapping pieces of business data. |
 
 ## Structural
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Database per Service](database-per-service.md) | canonical | 7,094 | A team is decomposing a monolith into services, or is designing a new system as microservices from the start, per Decompose by Business Capability or Decompose by Subdomain. |
 | [Decompose by Business Capability](decompose-by-business-capability.md) | canonical | 6,765 | A team owns a monolith, or is building a new system, and needs to draw service boundaries. |
 | [Decompose by Subdomain](decompose-by-subdomain.md) | established | 7,192 | A team owns a system that has grown past the point where one deployable, one shared database, and one release train can move at the speed the business needs. |
 | [Self-Contained Service](self-contained-service.md) | established | 6,998 | A team owns a piece of business capability end to end, say "product catalog" or "checkout" or "order history", and wants to release a change to that capability without asking ... |
