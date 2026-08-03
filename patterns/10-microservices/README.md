@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-2 entries, 13,957 words. Every entry carries all 18
+5 entries, 37,212 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
@@ -11,6 +11,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Decompose by Business Capability](decompose-by-business-capability.md) | canonical | 6,765 | A team owns a monolith, or is building a new system, and needs to draw service boundaries. |
 | [Decompose by Subdomain](decompose-by-subdomain.md) | established | 7,192 | A team owns a system that has grown past the point where one deployable, one shared database, and one release train can move at the speed the business needs. |
+| [Self-Contained Service](self-contained-service.md) | established | 6,998 | A team owns a piece of business capability end to end, say "product catalog" or "checkout" or "order history", and wants to release a change to that capability without asking ... |
+| [Service per Team](service-per-team.md) | canonical | 7,510 | A system has been split into services, using Decompose by Business Capability or Decompose by Subdomain or simply by growing that way over years. |
+| [Strangler Application](strangler-application.md) | canonical | 8,747 | A team owns a monolithic application that has become expensive to change. |
 
 ## Reading order
 
