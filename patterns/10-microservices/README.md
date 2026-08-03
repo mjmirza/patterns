@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-32 entries, 237,353 words. Every entry carries all 18
+35 entries, 262,112 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -90,6 +90,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Application Metrics](application-metrics.md) | canonical | 7,589 | A monolith has one process. When something is slow or wrong, an engineer attaches a profiler, reads a thread dump, or greps one log file, and the whole picture of the system's ... |
+| [Distributed Tracing](distributed-tracing.md) | canonical | 7,640 | A single user-facing request in a microservice architecture fans out into a call graph. |
+| [Exception Tracking](exception-tracking.md) | established | 8,433 | A request arrives at a service instance and, partway through handling it, code raises an exception the calling frames do not catch. |
 | [Log Aggregation](log-aggregation.md) | canonical | 8,736 | A service in a microservices system emits log lines to its own local standard output or to a file inside its own container. |
 
 ## Reliability
@@ -102,6 +104,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Audit Logging](audit-logging.md) | canonical | 8,686 | A system holds state that changes over time, and more than one actor, whether a human, a service account, or another microservice, can trigger those changes. |
 | [Database per Service](database-per-service.md) | canonical | 7,094 | A team is decomposing a monolith into services, or is designing a new system as microservices from the start, per Decompose by Business Capability or Decompose by Subdomain. |
 | [Decompose by Business Capability](decompose-by-business-capability.md) | canonical | 6,765 | A team owns a monolith, or is building a new system, and needs to draw service boundaries. |
 | [Decompose by Subdomain](decompose-by-subdomain.md) | established | 7,192 | A team owns a system that has grown past the point where one deployable, one shared database, and one release train can move at the speed the business needs. |
