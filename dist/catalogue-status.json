@@ -1,0 +1,311 @@
+{
+  "generated_by": "tools/gen-catalogue-status.py",
+  "published_total": 89,
+  "target_total": 887,
+  "families_total": 29,
+  "families_complete": 2,
+  "rows": [
+    {
+      "family": "01-gof",
+      "name": "Design Patterns (GoF)",
+      "origin": "Gamma, Helm, Johnson, Vlissides 1994",
+      "published": 23,
+      "planned": 0,
+      "target": 23,
+      "percent": 100.0,
+      "maturity": {
+        "canonical": 22,
+        "contested": 1
+      }
+    },
+    {
+      "family": "02-code-smells",
+      "name": "Code Smells",
+      "origin": "Fowler and Beck, Refactoring",
+      "published": 3,
+      "planned": 25,
+      "target": 28,
+      "percent": 10.7,
+      "maturity": {
+        "canonical": 3
+      }
+    },
+    {
+      "family": "03-refactoring",
+      "name": "Refactoring Techniques",
+      "origin": "Fowler, Refactoring 2nd ed",
+      "published": 0,
+      "planned": 66,
+      "target": 66,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "04-principles-and-laws",
+      "name": "Principles and Laws",
+      "origin": "Martin, Larman, Brewer, Conway",
+      "published": 0,
+      "planned": 50,
+      "target": 50,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "05-architectural",
+      "name": "Architectural Patterns",
+      "origin": "Buschmann POSA 1, Bass SEI",
+      "published": 0,
+      "planned": 43,
+      "target": 43,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "06-poeaa",
+      "name": "Enterprise Application Architecture",
+      "origin": "Fowler, PoEAA",
+      "published": 0,
+      "planned": 50,
+      "target": 50,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "07-integration",
+      "name": "Enterprise Integration",
+      "origin": "Hohpe and Woolf",
+      "published": 0,
+      "planned": 57,
+      "target": 57,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "08-cloud-distributed",
+      "name": "Cloud and Distributed",
+      "origin": "Azure Architecture Center",
+      "published": 42,
+      "planned": 0,
+      "target": 42,
+      "percent": 100.0,
+      "maturity": {
+        "canonical": 34,
+        "established": 8
+      }
+    },
+    {
+      "family": "09-concurrency",
+      "name": "Concurrency and Parallelism",
+      "origin": "Schmidt POSA 2",
+      "published": 0,
+      "planned": 40,
+      "target": 40,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "10-microservices",
+      "name": "Microservices",
+      "origin": "Richardson",
+      "published": 0,
+      "planned": 50,
+      "target": 50,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "11-ddd",
+      "name": "Domain-Driven Design",
+      "origin": "Evans, Vernon",
+      "published": 0,
+      "planned": 37,
+      "target": 37,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "12-data-storage",
+      "name": "Data and Storage",
+      "origin": "Kleppmann",
+      "published": 0,
+      "planned": 43,
+      "target": 43,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "13-frontend-ui",
+      "name": "Frontend and UI",
+      "origin": "Framework documentation",
+      "published": 0,
+      "planned": 34,
+      "target": 34,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "14-testing",
+      "name": "Testing",
+      "origin": "Meszaros, xUnit Test Patterns",
+      "published": 0,
+      "planned": 30,
+      "target": 30,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "15-security",
+      "name": "Security",
+      "origin": "OWASP ASVS",
+      "published": 0,
+      "planned": 38,
+      "target": 38,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "16-functional",
+      "name": "Functional Programming",
+      "origin": "Category theory in practice",
+      "published": 0,
+      "planned": 40,
+      "target": 40,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "17-ai-agentic",
+      "name": "AI and Agentic",
+      "origin": "Papers and vendor engineering, 2023 to 2026",
+      "published": 21,
+      "planned": 34,
+      "target": 55,
+      "percent": 38.2,
+      "maturity": {
+        "established": 11,
+        "emerging": 4,
+        "canonical": 6
+      }
+    },
+    {
+      "family": "18-anti-patterns",
+      "name": "Anti-Patterns",
+      "origin": "Brown et al, AntiPatterns",
+      "published": 0,
+      "planned": 53,
+      "target": 53,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "19-api-design",
+      "name": "API and Interface Design",
+      "origin": "REST, GraphQL, gRPC specifications",
+      "published": 0,
+      "planned": 10,
+      "target": 10,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "20-release-deployment",
+      "name": "Release and Deployment",
+      "origin": "Humble and Farley",
+      "published": 0,
+      "planned": 10,
+      "target": 10,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "21-sre-operations",
+      "name": "SRE and Operations",
+      "origin": "Google SRE, AWS Well-Architected",
+      "published": 0,
+      "planned": 12,
+      "target": 12,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "22-observability",
+      "name": "Observability",
+      "origin": "OpenTelemetry, RED and USE methods",
+      "published": 0,
+      "planned": 8,
+      "target": 8,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "23-workflow-orchestration",
+      "name": "Workflow and Orchestration",
+      "origin": "Durable execution literature",
+      "published": 0,
+      "planned": 6,
+      "target": 6,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "24-stream-processing",
+      "name": "Stream Processing",
+      "origin": "Dataflow model, Kafka docs",
+      "published": 0,
+      "planned": 8,
+      "target": 8,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "25-mlops",
+      "name": "MLOps",
+      "origin": "Google ML design patterns",
+      "published": 0,
+      "planned": 9,
+      "target": 9,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "26-interaction-hci",
+      "name": "Interaction and HCI",
+      "origin": "Tidwell, Designing Interfaces",
+      "published": 0,
+      "planned": 10,
+      "target": 10,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "27-mobile-architecture",
+      "name": "Mobile Architecture",
+      "origin": "Official Android/iOS architecture guidance",
+      "published": 0,
+      "planned": 12,
+      "target": 12,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "28-embedded-hardware",
+      "name": "Embedded and Hardware-Software",
+      "origin": "Embedded systems engineering literature",
+      "published": 0,
+      "planned": 14,
+      "target": 14,
+      "percent": 0.0,
+      "maturity": {}
+    },
+    {
+      "family": "29-realtime-simulation",
+      "name": "Real-Time Simulation",
+      "origin": "Nystrom, Game Programming Patterns",
+      "published": 0,
+      "planned": 9,
+      "target": 9,
+      "percent": 0.0,
+      "maturity": {}
+    }
+  ]
+}

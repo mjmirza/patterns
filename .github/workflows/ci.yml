@@ -33,6 +33,15 @@ jobs:
             echo "Family indexes are stale. Run tools/gen-indexes.py and commit."
             exit 1
           }
+      - name: Catalogue status generator tests
+        run: python3 tools/gen-catalogue-status-test.py
+      - name: Catalogue status is current
+        run: |
+          python3 tools/gen-catalogue-status.py
+          git diff --exit-code -- README.md docs/PROGRESS.md dist/ || {
+            echo "Catalogue status is stale. Run tools/gen-catalogue-status.py and commit."
+            exit 1
+          }
 
   code:
     name: code samples compile

@@ -1,0 +1,30 @@
+family,name,published,planned,target,percent
+01-gof,Design Patterns (GoF),23,0,23,100.0
+02-code-smells,Code Smells,3,25,28,10.7
+03-refactoring,Refactoring Techniques,0,66,66,0.0
+04-principles-and-laws,Principles and Laws,0,50,50,0.0
+05-architectural,Architectural Patterns,0,43,43,0.0
+06-poeaa,Enterprise Application Architecture,0,50,50,0.0
+07-integration,Enterprise Integration,0,57,57,0.0
+08-cloud-distributed,Cloud and Distributed,42,0,42,100.0
+09-concurrency,Concurrency and Parallelism,0,40,40,0.0
+10-microservices,Microservices,0,50,50,0.0
+11-ddd,Domain-Driven Design,0,37,37,0.0
+12-data-storage,Data and Storage,0,43,43,0.0
+13-frontend-ui,Frontend and UI,0,34,34,0.0
+14-testing,Testing,0,30,30,0.0
+15-security,Security,0,38,38,0.0
+16-functional,Functional Programming,0,40,40,0.0
+17-ai-agentic,AI and Agentic,21,34,55,38.2
+18-anti-patterns,Anti-Patterns,0,53,53,0.0
+19-api-design,API and Interface Design,0,10,10,0.0
+20-release-deployment,Release and Deployment,0,10,10,0.0
+21-sre-operations,SRE and Operations,0,12,12,0.0
+22-observability,Observability,0,8,8,0.0
+23-workflow-orchestration,Workflow and Orchestration,0,6,6,0.0
+24-stream-processing,Stream Processing,0,8,8,0.0
+25-mlops,MLOps,0,9,9,0.0
+26-interaction-hci,Interaction and HCI,0,10,10,0.0
+27-mobile-architecture,Mobile Architecture,0,12,12,0.0
+28-embedded-hardware,Embedded and Hardware-Software,0,14,14,0.0
+29-realtime-simulation,Real-Time Simulation,0,9,9,0.0

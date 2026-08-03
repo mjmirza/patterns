@@ -5339,5 +5339,712 @@
     "category": "interaction and HCI",
     "path": "patterns/26-interaction-hci/optimistic-undo.md",
     "focus": ""
+  },
+  {
+    "name": "Change Function Declaration",
+    "slug": "change-function-declaration",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/change-function-declaration.md",
+    "focus": ""
+  },
+  {
+    "name": "Change Reference to Value",
+    "slug": "change-reference-to-value",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/change-reference-to-value.md",
+    "focus": ""
+  },
+  {
+    "name": "Change Value to Reference",
+    "slug": "change-value-to-reference",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/change-value-to-reference.md",
+    "focus": ""
+  },
+  {
+    "name": "Collapse Hierarchy",
+    "slug": "collapse-hierarchy",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/collapse-hierarchy.md",
+    "focus": ""
+  },
+  {
+    "name": "Combine Functions into Class",
+    "slug": "combine-functions-into-class",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/combine-functions-into-class.md",
+    "focus": ""
+  },
+  {
+    "name": "Combine Functions into Transform",
+    "slug": "combine-functions-into-transform",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/combine-functions-into-transform.md",
+    "focus": ""
+  },
+  {
+    "name": "Consolidate Conditional Expression",
+    "slug": "consolidate-conditional-expression",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/consolidate-conditional-expression.md",
+    "focus": ""
+  },
+  {
+    "name": "Decompose Conditional",
+    "slug": "decompose-conditional",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/decompose-conditional.md",
+    "focus": ""
+  },
+  {
+    "name": "Encapsulate Collection",
+    "slug": "encapsulate-collection",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/encapsulate-collection.md",
+    "focus": ""
+  },
+  {
+    "name": "Encapsulate Record",
+    "slug": "encapsulate-record",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/encapsulate-record.md",
+    "focus": ""
+  },
+  {
+    "name": "Encapsulate Variable",
+    "slug": "encapsulate-variable",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/encapsulate-variable.md",
+    "focus": ""
+  },
+  {
+    "name": "Extract Class",
+    "slug": "extract-class",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/extract-class.md",
+    "focus": ""
+  },
+  {
+    "name": "Extract Function",
+    "slug": "extract-function",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/extract-function.md",
+    "focus": ""
+  },
+  {
+    "name": "Extract Superclass",
+    "slug": "extract-superclass",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/extract-superclass.md",
+    "focus": ""
+  },
+  {
+    "name": "Extract Variable",
+    "slug": "extract-variable",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/extract-variable.md",
+    "focus": ""
+  },
+  {
+    "name": "Hide Delegate",
+    "slug": "hide-delegate",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/hide-delegate.md",
+    "focus": ""
+  },
+  {
+    "name": "Inline Class",
+    "slug": "inline-class",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/inline-class.md",
+    "focus": ""
+  },
+  {
+    "name": "Inline Function",
+    "slug": "inline-function",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/inline-function.md",
+    "focus": ""
+  },
+  {
+    "name": "Inline Variable",
+    "slug": "inline-variable",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/inline-variable.md",
+    "focus": ""
+  },
+  {
+    "name": "Introduce Assertion",
+    "slug": "introduce-assertion",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/introduce-assertion.md",
+    "focus": ""
+  },
+  {
+    "name": "Introduce Parameter Object",
+    "slug": "introduce-parameter-object",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/introduce-parameter-object.md",
+    "focus": ""
+  },
+  {
+    "name": "Introduce Special Case",
+    "slug": "introduce-special-case",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/introduce-special-case.md",
+    "focus": ""
+  },
+  {
+    "name": "Move Field",
+    "slug": "move-field",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/move-field.md",
+    "focus": ""
+  },
+  {
+    "name": "Move Function",
+    "slug": "move-function",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/move-function.md",
+    "focus": ""
+  },
+  {
+    "name": "Move Statements into Function",
+    "slug": "move-statements-into-function",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/move-statements-into-function.md",
+    "focus": ""
+  },
+  {
+    "name": "Move Statements to Callers",
+    "slug": "move-statements-to-callers",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/move-statements-to-callers.md",
+    "focus": ""
+  },
+  {
+    "name": "Parameterize Function",
+    "slug": "parameterize-function",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/parameterize-function.md",
+    "focus": ""
+  },
+  {
+    "name": "Preserve Whole Object",
+    "slug": "preserve-whole-object",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/preserve-whole-object.md",
+    "focus": ""
+  },
+  {
+    "name": "Pull Up Constructor Body",
+    "slug": "pull-up-constructor-body",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/pull-up-constructor-body.md",
+    "focus": ""
+  },
+  {
+    "name": "Pull Up Field",
+    "slug": "pull-up-field",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/pull-up-field.md",
+    "focus": ""
+  },
+  {
+    "name": "Pull Up Method",
+    "slug": "pull-up-method",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/pull-up-method.md",
+    "focus": ""
+  },
+  {
+    "name": "Push Down Field",
+    "slug": "push-down-field",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/push-down-field.md",
+    "focus": ""
+  },
+  {
+    "name": "Push Down Method",
+    "slug": "push-down-method",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/push-down-method.md",
+    "focus": ""
+  },
+  {
+    "name": "Remove Dead Code",
+    "slug": "remove-dead-code",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/remove-dead-code.md",
+    "focus": ""
+  },
+  {
+    "name": "Remove Flag Argument",
+    "slug": "remove-flag-argument",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/remove-flag-argument.md",
+    "focus": ""
+  },
+  {
+    "name": "Remove Middle Man",
+    "slug": "remove-middle-man",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/remove-middle-man.md",
+    "focus": ""
+  },
+  {
+    "name": "Remove Setting Method",
+    "slug": "remove-setting-method",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/remove-setting-method.md",
+    "focus": ""
+  },
+  {
+    "name": "Remove Subclass",
+    "slug": "remove-subclass",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/remove-subclass.md",
+    "focus": ""
+  },
+  {
+    "name": "Rename Field",
+    "slug": "rename-field",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/rename-field.md",
+    "focus": ""
+  },
+  {
+    "name": "Rename Variable",
+    "slug": "rename-variable",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/rename-variable.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Command with Function",
+    "slug": "replace-command-with-function",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-command-with-function.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Conditional with Polymorphism",
+    "slug": "replace-conditional-with-polymorphism",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-conditional-with-polymorphism.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Constructor with Factory Function",
+    "slug": "replace-constructor-with-factory-function",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-constructor-with-factory-function.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Control Flag with Break",
+    "slug": "replace-control-flag-with-break",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-control-flag-with-break.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Derived Variable with Query",
+    "slug": "replace-derived-variable-with-query",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-derived-variable-with-query.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Error Code with Exception",
+    "slug": "replace-error-code-with-exception",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-error-code-with-exception.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Exception with Precheck",
+    "slug": "replace-exception-with-precheck",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-exception-with-precheck.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Function with Command",
+    "slug": "replace-function-with-command",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-function-with-command.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Inline Code with Function Call",
+    "slug": "replace-inline-code-with-function-call",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-inline-code-with-function-call.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Loop with Pipeline",
+    "slug": "replace-loop-with-pipeline",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-loop-with-pipeline.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Magic Literal",
+    "slug": "replace-magic-literal",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-magic-literal.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Nested Conditional with Guard Clauses",
+    "slug": "replace-nested-conditional-with-guard-clauses",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Parameter with Query",
+    "slug": "replace-parameter-with-query",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-parameter-with-query.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Primitive with Object",
+    "slug": "replace-primitive-with-object",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-primitive-with-object.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Query with Parameter",
+    "slug": "replace-query-with-parameter",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-query-with-parameter.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Subclass with Delegate",
+    "slug": "replace-subclass-with-delegate",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-subclass-with-delegate.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Superclass with Delegate",
+    "slug": "replace-superclass-with-delegate",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-superclass-with-delegate.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Temp with Query",
+    "slug": "replace-temp-with-query",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-temp-with-query.md",
+    "focus": ""
+  },
+  {
+    "name": "Replace Type Code with Subclasses",
+    "slug": "replace-type-code-with-subclasses",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/replace-type-code-with-subclasses.md",
+    "focus": ""
+  },
+  {
+    "name": "Return Modified Value",
+    "slug": "return-modified-value",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/return-modified-value.md",
+    "focus": ""
+  },
+  {
+    "name": "Separate Query from Modifier",
+    "slug": "separate-query-from-modifier",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/separate-query-from-modifier.md",
+    "focus": ""
+  },
+  {
+    "name": "Slide Statements",
+    "slug": "slide-statements",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/slide-statements.md",
+    "focus": ""
+  },
+  {
+    "name": "Split Loop",
+    "slug": "split-loop",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/split-loop.md",
+    "focus": ""
+  },
+  {
+    "name": "Split Phase",
+    "slug": "split-phase",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/split-phase.md",
+    "focus": ""
+  },
+  {
+    "name": "Split Variable",
+    "slug": "split-variable",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/split-variable.md",
+    "focus": ""
+  },
+  {
+    "name": "Substitute Algorithm",
+    "slug": "substitute-algorithm",
+    "category": "refactoring technique",
+    "path": "patterns/03-refactoring/substitute-algorithm.md",
+    "focus": ""
+  },
+  {
+    "name": "MVVM-C (Model-View-ViewModel-Coordinator)",
+    "slug": "mvvm-c",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/mvvm-c.md",
+    "focus": ""
+  },
+  {
+    "name": "Coordinator Pattern",
+    "slug": "coordinator-pattern",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/coordinator-pattern.md",
+    "focus": ""
+  },
+  {
+    "name": "Model-View-Intent (MVI)",
+    "slug": "model-view-intent",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/model-view-intent.md",
+    "focus": ""
+  },
+  {
+    "name": "Unidirectional Data Flow (Mobile)",
+    "slug": "unidirectional-data-flow",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/unidirectional-data-flow.md",
+    "focus": ""
+  },
+  {
+    "name": "Repository Pattern (Mobile Offline-First)",
+    "slug": "repository-pattern",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/repository-pattern.md",
+    "focus": ""
+  },
+  {
+    "name": "ViewModel with State Hoisting",
+    "slug": "viewmodel-with-state-hoisting",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md",
+    "focus": ""
+  },
+  {
+    "name": "Feature Modules",
+    "slug": "feature-modules",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/feature-modules.md",
+    "focus": ""
+  },
+  {
+    "name": "Deep Link Router",
+    "slug": "deep-link-router",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/deep-link-router.md",
+    "focus": ""
+  },
+  {
+    "name": "Offline-First Sync",
+    "slug": "offline-first-sync",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/offline-first-sync.md",
+    "focus": ""
+  },
+  {
+    "name": "Single Activity Architecture",
+    "slug": "single-activity-architecture",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/single-activity-architecture.md",
+    "focus": ""
+  },
+  {
+    "name": "Clean Architecture (Mobile)",
+    "slug": "clean-architecture",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/clean-architecture.md",
+    "focus": ""
+  },
+  {
+    "name": "Redux-for-Mobile (Unidirectional Store)",
+    "slug": "redux-for-mobile",
+    "category": "mobile architecture",
+    "path": "patterns/27-mobile-architecture/redux-for-mobile.md",
+    "focus": ""
+  },
+  {
+    "name": "Hardware Abstraction Layer (HAL)",
+    "slug": "hardware-abstraction-layer",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/hardware-abstraction-layer.md",
+    "focus": ""
+  },
+  {
+    "name": "Interrupt Service Routine",
+    "slug": "interrupt-service-routine",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/interrupt-service-routine.md",
+    "focus": ""
+  },
+  {
+    "name": "Watchdog Timer",
+    "slug": "watchdog-timer",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/watchdog-timer.md",
+    "focus": ""
+  },
+  {
+    "name": "State Machine (Embedded)",
+    "slug": "state-machine",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/state-machine.md",
+    "focus": ""
+  },
+  {
+    "name": "Double Buffering",
+    "slug": "double-buffering",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/double-buffering.md",
+    "focus": ""
+  },
+  {
+    "name": "Ring Buffer",
+    "slug": "ring-buffer",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/ring-buffer.md",
+    "focus": ""
+  },
+  {
+    "name": "Memory Pool (Fixed Block Allocator)",
+    "slug": "memory-pool",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/memory-pool.md",
+    "focus": ""
+  },
+  {
+    "name": "Polling Loop",
+    "slug": "polling-loop",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/polling-loop.md",
+    "focus": ""
+  },
+  {
+    "name": "Bootloader Pattern",
+    "slug": "bootloader-pattern",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/bootloader-pattern.md",
+    "focus": ""
+  },
+  {
+    "name": "Rate Monotonic Scheduling",
+    "slug": "rate-monotonic-scheduling",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/rate-monotonic-scheduling.md",
+    "focus": ""
+  },
+  {
+    "name": "Earliest Deadline First Scheduling",
+    "slug": "earliest-deadline-first-scheduling",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md",
+    "focus": ""
+  },
+  {
+    "name": "Hardware-in-the-Loop Testing",
+    "slug": "hardware-in-the-loop-testing",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/hardware-in-the-loop-testing.md",
+    "focus": ""
+  },
+  {
+    "name": "Producer-Consumer (Embedded)",
+    "slug": "producer-consumer",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/producer-consumer.md",
+    "focus": ""
+  },
+  {
+    "name": "Device Driver Pattern",
+    "slug": "device-driver-pattern",
+    "category": "embedded and hardware-software",
+    "path": "patterns/28-embedded-hardware/device-driver-pattern.md",
+    "focus": ""
+  },
+  {
+    "name": "Game Loop",
+    "slug": "game-loop",
+    "category": "real-time simulation",
+    "path": "patterns/29-realtime-simulation/game-loop.md",
+    "focus": ""
+  },
+  {
+    "name": "Entity-Component-System",
+    "slug": "entity-component-system",
+    "category": "real-time simulation",
+    "path": "patterns/29-realtime-simulation/entity-component-system.md",
+    "focus": ""
+  },
+  {
+    "name": "Spatial Partitioning",
+    "slug": "spatial-partitioning",
+    "category": "real-time simulation",
+    "path": "patterns/29-realtime-simulation/spatial-partitioning.md",
+    "focus": ""
+  },
+  {
+    "name": "Object Pool (Real-Time Simulation)",
+    "slug": "object-pool",
+    "category": "real-time simulation",
+    "path": "patterns/29-realtime-simulation/object-pool.md",
+    "focus": ""
+  },
+  {
+    "name": "Dirty Flag",
+    "slug": "dirty-flag",
+    "category": "real-time simulation",
+    "path": "patterns/29-realtime-simulation/dirty-flag.md",
+    "focus": ""
+  },
+  {
+    "name": "Update Method",
+    "slug": "update-method",
+    "category": "real-time simulation",
+    "path": "patterns/29-realtime-simulation/update-method.md",
+    "focus": ""
+  },
+  {
+    "name": "Type Object",
+    "slug": "type-object",
+    "category": "real-time simulation",
+    "path": "patterns/29-realtime-simulation/type-object.md",
+    "focus": ""
+  },
+  {
+    "name": "Data Locality (Real-Time Simulation)",
+    "slug": "data-locality",
+    "category": "real-time simulation",
+    "path": "patterns/29-realtime-simulation/data-locality.md",
+    "focus": ""
+  },
+  {
+    "name": "Event Queue (Real-Time Simulation)",
+    "slug": "event-queue",
+    "category": "real-time simulation",
+    "path": "patterns/29-realtime-simulation/event-queue.md",
+    "focus": ""
   }
 ]

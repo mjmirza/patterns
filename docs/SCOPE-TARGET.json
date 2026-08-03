@@ -1,0 +1,11 @@
+{
+  "recorded_target": 900,
+  "recorded_at": "2026-08-02",
+  "recorded_source": "docs/ENTRY-TEMPLATE.md, Scope decision section",
+  "true_total_last_reconciled": 887,
+  "reconciled_at": "2026-08-03",
+  "gap_to_target": 13,
+  "gap_reason": "900 was a round estimate recorded before any per-family sourcing was complete. On 2026-08-03 the owner flagged three real categorical gaps: family 03 refactoring techniques was unsourced, and mobile / embedded-hardware / real-time-simulation had no coverage at all. All three were closed with real, independently-verifiable named patterns: family 03 (66 entries, Fowler Refactoring 2nd ed catalog), family 27 mobile architecture (12 entries), family 28 embedded and hardware-software (14 entries), family 29 real-time simulation (9 entries). True total rose from 763 to 887. The remaining 13-entry gap to the round 900 has no identified real source yet; inventing entries to close it would violate the repo's own no-fabrication rule and is refused.",
+  "families": 29,
+  "note": "This file is the single source of truth for the recorded target vs the true, sourced total. tools/check-catalogue-status.py enforces that the two numbers never silently diverge again without this file being updated in the same commit, and flags loudly (never silently) whenever true_total < recorded_target."
+}
