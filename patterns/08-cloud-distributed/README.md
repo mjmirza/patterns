@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-23 entries, 211,411 words. Every entry carries all 18
+25 entries, 227,669 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud Distributed
@@ -67,6 +67,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Choreography](choreography.md) | established | 9,041 | A business process spans more than one service, and each service owns a slice of state that no other service is allowed to touch directly, because that is the entire point of ... |
 | [Claim Check](claim-check.md) | canonical | 8,847 | A service publishes a message that needs to carry a large piece of data, a scanned document, a video file, a full order history export, a machine learning feature vector, a ... |
 | [Publisher-Subscriber](publisher-subscriber.md) | canonical | 8,855 | A component in a system needs to tell other components that something happened, and it does not know, and should not need to know, who those other components are. |
 
@@ -93,6 +94,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Competing Consumers](competing-consumers.md) | canonical | 7,217 | A system produces units of work faster, or in bursts larger, than a single consumer process can absorb, and the units of work are independent of one another, meaning any one of ... |
 | [Queue-Based Load Leveling](queue-based-load-leveling.md) | canonical | 9,730 | A system accepts work at a rate that varies over time, sometimes sharply, while the component that actually performs the work has a roughly fixed processing capacity per unit time. |
 | [Rate Limiting](rate-limiting.md) | canonical | 10,988 | A service exposes an operation that costs something to perform. |
 | [Throttling](throttling.md) | canonical | 10,477 | A service exposes an operation that costs something to run. |
