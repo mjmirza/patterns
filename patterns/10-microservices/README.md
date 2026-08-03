@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-14 entries, 103,159 words. Every entry carries all 18
+17 entries, 123,347 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -16,6 +16,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Remote Procedure Invocation](remote-procedure-invocation.md) | canonical | 6,005 | A microservice architecture splits a system into many independently deployable services, and almost every non-trivial request touches more than one of them. |
+
+## Communication Style
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Messaging](messaging.md) | canonical | 5,733 | A microservice architecture splits one application into many independently deployable services, and Richardson is explicit that this decomposition alone does not remove the need ... |
 
 ## Data
 
@@ -46,6 +52,18 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Shared Database](shared-database.md) | contested | 6,110 | A codebase is being decomposed into services, or several teams are building services that need to see overlapping pieces of business data. |
+
+## Microservices
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [API Gateway](api-gateway.md) | canonical | 7,645 | A client of a microservices system, whether a mobile app, a single-page web application, or a third-party integration, needs data or an action that in a monolith would have been a ... |
+
+## Reliability
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Idempotent Consumer](idempotent-consumer.md) | canonical | 6,810 | A service consumes messages or events from a broker, whether that is Kafka, Amazon SQS, RabbitMQ, Azure Service Bus, Google Pub/Sub, or an HTTP webhook delivered by another ... |
 
 ## Structural
 
