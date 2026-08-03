@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 122,
+  "published_total": 125,
   "target_total": 887,
   "families_total": 29,
-  "families_complete": 2,
+  "families_complete": 3,
   "stale_entries": 0,
-  "references_checked": 919,
+  "references_checked": 929,
   "rows": [
     {
       "family": "01-gof",
@@ -109,11 +109,14 @@
       "family": "10-microservices",
       "name": "Microservices",
       "origin": "Richardson",
-      "published": 0,
-      "planned": 50,
+      "published": 2,
+      "planned": 48,
       "target": 50,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 4.0,
+      "maturity": {
+        "canonical": 1,
+        "established": 1
+      }
     },
     {
       "family": "11-ddd",
@@ -179,12 +182,12 @@
       "family": "17-ai-agentic",
       "name": "AI and Agentic",
       "origin": "Papers and vendor engineering, 2023 to 2026",
-      "published": 54,
-      "planned": 1,
+      "published": 55,
+      "planned": 0,
       "target": 55,
-      "percent": 98.2,
+      "percent": 100.0,
       "maturity": {
-        "established": 37,
+        "established": 38,
         "emerging": 8,
         "canonical": 9
       }
