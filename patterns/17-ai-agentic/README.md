@@ -2,8 +2,14 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-6 entries, 51,426 words. Every entry carries all 18
+9 entries, 74,487 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## AI Agentic
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Self-Consistency](self-consistency.md) | established | 6,441 | A large language model generating a chain-of-thought answer with standard greedy decoding commits to one path through the reasoning space, token by token, and never reconsiders. |
 
 ## AI and Agentic
 
@@ -15,6 +21,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Plan and Execute](plan-execute.md) | canonical | 7,815 | A language model asked to solve a task that takes many steps, and that must call external tools along the way, faces a tension between two failure modes. |
 | [ReAct](react.md) | canonical | 7,775 | A language model asked to answer a multi-hop factual question, or to complete a task that spans several tool calls, has two failure modes when it is prompted with only one of the ... |
 | [Reflexion](reflexion.md) | emerging | 8,450 | An LLM agent that tries a task once and stops inherits every mistake in that one attempt permanently. |
 
@@ -29,6 +36,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Orchestrator-Worker](orchestrator-worker.md) | established | 10,095 | A task arrives whose internal shape cannot be known until the model has already looked at it. |
+
+## Reasoning
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Chain of Thought](chain-of-thought.md) | canonical | 8,805 | A large language model predicts its next token from everything that came before it in the same context. |
 
 ## Workflow
 
