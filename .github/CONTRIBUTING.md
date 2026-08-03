@@ -76,9 +76,22 @@ first. Rebase onto a different, unclaimed entry from the queue instead.
 ## Review
 
 Every pull request goes through CI (structure, prose, code compile,
-citations, markdown style) before a maintainer reviews it. A red CI is never
-merged. See `.github/PULL_REQUEST_TEMPLATE.md` for what the description
-should contain.
+citations, markdown style, claim check, security check) before a maintainer
+reviews it. A red CI is never merged. See `.github/PULL_REQUEST_TEMPLATE.md`
+for what the description should contain.
+
+## Security
+
+A `security check` job scans every PR. Any secret in the diff fails closed.
+A PR touching a CI-controlling path (a workflow file, or any `tools/check-*.py`
+script) is blocked by default, even if every other gate is green. That block
+lifts only when a maintainer reads the diff and applies the
+`security-reviewed` label, which nobody but a maintainer can do. This means
+a pull request can never quietly disable the checks that are supposed to be
+judging it. A note about instruction-override phrasing or unusual Unicode
+in the diff is advisory only, since this repository's own subject matter
+(the `prompt-injection-defense` and `input-guardrails` entries) legitimately
+discusses those exact strings.
 
 ## License
 
