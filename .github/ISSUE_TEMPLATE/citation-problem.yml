@@ -1,0 +1,29 @@
+name: Citation problem
+description: A cited source does not actually support the claim it is attached to.
+title: "[citation]: "
+labels: ["citation"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+      description: Path to the entry.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Citation URL
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: The source does not say what the entry claims it says, is a low-quality source, or is the wrong kind of source for this claim.
+    validations:
+      required: true
+  - type: input
+    id: better-source
+    attributes:
+      label: A better source, if you know one

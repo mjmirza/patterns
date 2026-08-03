@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question / propose an entry not yet queued
+    url: https://github.com/mjmirza/patterns/discussions
+    about: For open-ended discussion before it becomes a scoped issue.

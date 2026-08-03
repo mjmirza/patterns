@@ -1,5 +1,9 @@
 # Entry Template. The Master Level Contract
 
+Schema version 1.0. This version number changes only when a dimension is
+added, removed, or its required shape changes, and `tools/check-structure.py`
+is updated to match in the same commit.
+
 Every pattern entry in this repository carries all 18 dimensions below. An entry
 missing a dimension is not finished. This is the single difference between a
 master reference and a getting started overview, and it is enforced by

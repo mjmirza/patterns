@@ -1,0 +1,25 @@
+name: Classification dispute
+description: An entry's family, maturity level, or category assignment looks wrong.
+title: "[classification]: "
+labels: ["classification"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+    validations:
+      required: true
+  - type: input
+    id: current
+    attributes:
+      label: Current classification
+      description: Current family and/or maturity value from the frontmatter.
+    validations:
+      required: true
+  - type: textarea
+    id: dispute
+    attributes:
+      label: What you think it should be, and why
+      description: Cite the reasoning, and a source if the family taxonomy itself needs to change.
+    validations:
+      required: true

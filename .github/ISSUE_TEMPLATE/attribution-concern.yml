@@ -1,0 +1,24 @@
+name: Attribution concern
+description: Prose or a code sample looks copied rather than original, or a source is uncredited.
+title: "[attribution]: "
+labels: ["attribution"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: The source you believe it was copied from
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: What matches
+      description: Quote the overlapping text or code, and where it appears in the source.
+    validations:
+      required: true

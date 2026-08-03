@@ -1,0 +1,24 @@
+name: Security concern
+description: A non-sensitive security issue -- an insecure code sample, a risky script. For a sensitive report, use the Security tab's private advisory instead.
+title: "[security]: "
+labels: ["security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If this is a live exploit or could leak a credential, do not file it
+        here. Use this repository's Security tab, "Report a vulnerability."
+        This template is for non-sensitive issues, such as an insecure code
+        sample presented as best practice.
+  - type: input
+    id: location
+    attributes:
+      label: File or entry
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: The issue
+    validations:
+      required: true

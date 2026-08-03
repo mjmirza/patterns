@@ -1,0 +1,40 @@
+name: New pattern proposal
+description: Propose a pattern that is not yet in the catalogue or the authoring queue.
+title: "[new pattern]: "
+labels: ["new-pattern"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Pattern name
+      description: The name you would give the entry, plus any common aliases.
+    validations:
+      required: true
+  - type: input
+    id: family
+    attributes:
+      label: Family
+      description: Which family under patterns/ does this belong to, or is it a new family?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem it solves
+      description: One or two sentences on the situation that creates the need for this pattern.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources
+      description: Where does this pattern come from? A book, a paper, a vendor engineering doc. Link it.
+    validations:
+      required: true
+  - type: checkboxes
+    id: not-duplicate
+    attributes:
+      label: Confirmation
+      options:
+        - label: I checked the published entries and docs/AUTHORING-QUEUE.json and this is not already covered.
+          required: true

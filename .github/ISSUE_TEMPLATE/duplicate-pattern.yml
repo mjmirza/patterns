@@ -1,0 +1,24 @@
+name: Duplicate or overlapping pattern
+description: Two entries cover substantially the same thing under different names.
+title: "[duplicate]: "
+labels: ["duplicate"]
+body:
+  - type: input
+    id: entry-a
+    attributes:
+      label: First entry
+    validations:
+      required: true
+  - type: input
+    id: entry-b
+    attributes:
+      label: Second entry
+    validations:
+      required: true
+  - type: textarea
+    id: overlap
+    attributes:
+      label: What overlaps
+      description: Where the two entries genuinely describe the same pattern, versus where a real, citable distinction exists that should be kept as two entries.
+    validations:
+      required: true
