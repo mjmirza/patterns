@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-39 entries, 335,467 words. Every entry carries all 18
+42 entries, 361,556 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -37,6 +37,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Agent Memory](agent-memory.md) | established | 8,301 | An agent that runs a single request and returns an answer does not need this pattern. |
+| [Token Budget](token-budget.md) | established | 8,914 | An agent loop calls a model repeatedly, and every call carries a system prompt, a set of tool definitions, some retrieved documents, and the conversation so far. |
 
 ## Agentic
 
@@ -77,6 +78,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Cost Guard](cost-guard.md) | established | 8,728 | A call to a hosted large language model is metered and billed per token, and an agentic system does not make one call, it makes an unbounded and data-dependent number of calls. |
+| [Fallback Chain](fallback-chain.md) | established | 8,447 | A system calls a large language model as part of serving a real request. |
 | [LLM Circuit Breaker](llm-circuit-breaker.md) | established | 9,660 | A team ships an agent or a chat feature that calls out to a large language model. |
 
 ## Retrieval
