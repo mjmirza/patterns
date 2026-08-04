@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-34 entries, 278,426 words. Every entry carries all 18
+37 entries, 304,876 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -22,10 +22,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [N+1 Query](n+1-query.md) | canonical | 8,916 | The shape appears the moment code needs to display, process, or serialize a list of parent records together with one piece of data that lives on a related table or a related ... |
 | [No Caching](no-caching.md) | established | 6,450 | A system computes or fetches a value that is expensive relative to how often it is actually needed fresh, and it does that computation or fetch again, in full, on every single ... |
 | [Poltergeist](poltergeist.md) | canonical | 8,669 | A codebase accumulates classes whose entire behaviour is to be constructed, make one or two calls into a different, more permanent class, and then be discarded. |
+| [Premature Optimization](premature-optimization.md) | canonical | 8,762 | The situation that produces this anti-pattern looks the same across languages, teams, and decades, because it comes from a mismatch between how programmers reason about code and ... |
 | [Retry Storm](retry-storm.md) | canonical | 8,440 | A service calls a downstream dependency over the network. |
 | [Sequential Coupling](sequential-coupling.md) | canonical | 8,982 | An object accumulates behavior across its public surface the way most long-lived classes do, one method added at a time as new requirements arrive. |
 | [Singleton Abuse](singleton-abuse.md) | canonical | 8,029 | A codebase reaches for Singleton Abuse in a specific, recognizable moment. |
 | [Spaghetti Code](spaghetti-code.md) | canonical | 9,313 | A program begins as a short, linear sequence of statements that a single author can hold entirely in their head. |
+| [Synchronous I/O](synchronous-i-o.md) | established | 9,421 | Picture a request-handling process that serves many clients from a bounded number of execution contexts, whether that bound is a fixed thread pool, a single event loop thread, or ... |
 | [Thundering Herd](thundering-herd.md) | canonical | 7,680 | Picture a cached product page. Ten thousand requests a second hit a CDN edge or an application cache for the same product. |
 | [Yo-yo Problem](yo-yo-problem.md) | canonical | 9,233 | The situation announces itself the same way every time. |
 
@@ -42,6 +44,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Improper Instantiation](improper-instantiation.md) | established | 9,564 | A type in the codebase is expensive, or moderately expensive, or genuinely expensive, to construct. |
 | [Service Locator](service-locator.md) | contested | 6,102 | A component needs a collaborator to do its work, a repository, a logger, a payment gateway client, a feature-flag reader, and it does not want to be handed a concrete instance by ... |
 | [Vendor Lock-in](vendor-lock-in.md) | established | 8,019 | A team building a system needs to store data, run compute, send messages, authenticate users, and observe the running system. |
+
+## Anti-pattern (Messaging and Concurrency)
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Poison Pill](poison-pill.md) | established | 8,267 | Every worker-pool or message-consumer system faces two separate but related questions that get answered by the same mechanism if the designer is not careful. |
 
 ## Architectural
 
