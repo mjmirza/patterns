@@ -2,7 +2,7 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-26 entries, 187,268 words. Every entry carries all 18
+29 entries, 209,683 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Test Data
@@ -37,9 +37,11 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Contract Test](contract-test.md) | canonical | 8,408 | A team splits a monolith into services, or simply has two teams shipping two deployables that talk over HTTP, gRPC, or a message queue. |
 | [Fault Injection](fault-injection.md) | established | 7,609 | Software that talks to another process over a network, a disk, a database connection, or any other boundary will eventually see that boundary fail. |
 | [Fresh Fixture](fresh-fixture.md) | canonical | 7,305 | A test needs an environment in which to run its assertions, objects to act on, data in a database, files on disk, a running process. |
+| [Fuzz Testing](fuzz-testing.md) | canonical | 9,710 | A function, parser, decoder or protocol handler accepts input from outside the program's control, and the person who wrote it can only imagine a finite set of test cases by hand. |
 | [Given-When-Then](given-when-then.md) | canonical | 7,476 | A test file with no shape reads as an undifferentiated block of setup calls, one action, and a pile of assertions, and a reader cannot tell at a glance which lines are ... |
 | [Golden Master](golden-master.md) | established | 7,989 | A piece of code produces output that is expensive or awkward to specify by hand, one field at a time, and a person needs confidence that a change to the code did not alter that ... |
 | [Humble Object](humble-object.md) | canonical | 7,022 | Some classes are hard to unit test not because their logic is hard, but because constructing or invoking them at all requires something a fast, isolated test cannot or should not ... |
+| [Metamorphic Testing](metamorphic-testing.md) | established | 6,215 | Some programs have no practical way to check whether a single output is correct. |
 | [Mutation Test](mutation-test.md) | canonical | 8,102 | A test suite that exercises every line and every branch of a program can still fail to notice when the program is wrong. |
 | [Object Mother](object-mother.md) | established | 6,582 | A test needs an object in a known, valid state before it can exercise the behavior under test. |
 | [Prebuilt Fixture](prebuilt-fixture.md) | canonical | 7,102 | A test needs the system under test to start from a known state before its assertions can mean anything. |
@@ -55,6 +57,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Test Pyramid](test-pyramid.md) | established | 7,148 | A team writes automated tests without a stated distribution, and the suite drifts toward whatever is easiest to write in the moment rather than what is cheapest to run and ... |
+| [Test Trophy](test-trophy.md) | established | 6,490 | A team writing automated tests eventually has to decide, consciously or by accretion, how much of its testing effort should sit at each level of isolation, from fully isolated ... |
 
 ## Reading order
 
