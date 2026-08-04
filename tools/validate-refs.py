@@ -45,6 +45,7 @@ ALLOW_UNREACHABLE = {
     "www.etsy.com",
     "careersatdoordash.com",
     "www.iso20022.org",
+    "medium.com",
 }
 
 

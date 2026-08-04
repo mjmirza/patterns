@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 194,
+  "published_total": 197,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 3,
   "stale_entries": 0,
-  "references_checked": 1281,
+  "references_checked": 1307,
   "rows": [
     {
       "family": "01-gof",
@@ -123,12 +123,13 @@
       "family": "11-ddd",
       "name": "Domain-Driven Design",
       "origin": "Evans, Vernon",
-      "published": 27,
-      "planned": 10,
+      "published": 29,
+      "planned": 8,
       "target": 37,
-      "percent": 73.0,
+      "percent": 78.4,
       "maturity": {
-        "canonical": 27
+        "canonical": 27,
+        "established": 2
       }
     },
     {
@@ -199,11 +200,13 @@
       "family": "18-anti-patterns",
       "name": "Anti-Patterns",
       "origin": "Brown et al, AntiPatterns",
-      "published": 0,
-      "planned": 53,
+      "published": 1,
+      "planned": 52,
       "target": 53,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 1.9,
+      "maturity": {
+        "canonical": 1
+      }
     },
     {
       "family": "19-api-design",
