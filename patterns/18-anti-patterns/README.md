@@ -2,19 +2,21 @@
 
 Origin. Brown et al, AntiPatterns
 
-22 entries, 180,443 words. Every entry carries all 18
+25 entries, 206,062 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Busy Database](busy-database.md) | canonical | 8,380 | The context is any system with a client tier, an application or service tier, and a database tier, where the database engine exposes a facility for running code close to the data ... |
 | [Call Super](call-super.md) | canonical | 8,627 | A base class method does two things at once. |
 | [Copy-Paste Programming](copy-paste-programming.md) | canonical | 7,082 | A developer needs behavior that is almost, but not quite, identical to behavior that already exists somewhere else in the codebase. |
 | [God Object](god-object.md) | canonical | 8,493 | A system starts with a reasonable class boundary. |
 | [Golden Hammer](golden-hammer.md) | canonical | 7,387 | A developer or a team becomes highly proficient with one tool, a database, a framework, a data structure, a language feature, a deployment platform, or a design pattern. |
 | [Inner-Platform Effect](inner-platform-effect.md) | canonical | 9,693 | The situation always starts with a genuine and reasonable business requirement, that end users, who are not programmers, need to change how the system behaves without waiting on a ... |
 | [Magic Numbers](magic-numbers.md) | canonical | 6,525 | A magic number is a numeric literal that appears directly in executable code, in a comparison, an arithmetic expression, an array size, a loop bound, or a function argument ... |
+| [N+1 Query](n+1-query.md) | canonical | 8,916 | The shape appears the moment code needs to display, process, or serialize a list of parent records together with one piece of data that lives on a related table or a related ... |
 | [Poltergeist](poltergeist.md) | canonical | 8,669 | A codebase accumulates classes whose entire behaviour is to be constructed, make one or two calls into a different, more permanent class, and then be discarded. |
 | [Sequential Coupling](sequential-coupling.md) | canonical | 8,982 | An object accumulates behavior across its public surface the way most long-lived classes do, one method added at a time as new requirements arrive. |
 | [Singleton Abuse](singleton-abuse.md) | canonical | 8,029 | A codebase reaches for Singleton Abuse in a specific, recognizable moment. |
@@ -37,6 +39,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Chatty I/O](chatty-i-o.md) | established | 8,323 | Chatty I/O appears the moment a piece of code that used to run against in-process memory starts running against something on the far side of a boundary that has real per-call cost. |
 | [Distributed Monolith](distributed-monolith.md) | established | 8,553 | A team decomposes a monolith, or designs a new system, into a set of services with separate repositories, separate deployment pipelines, and separate runtime processes, expecting ... |
 | [Stovepipe System](stovepipe-system.md) | canonical | 8,168 | An organization builds its second system, its second department's application, or its second bounded capability, and the fastest path to delivery is to start from a blank slate ... |
 
