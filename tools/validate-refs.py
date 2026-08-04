@@ -43,6 +43,7 @@ ALLOW_UNREACHABLE = {
     "queue.acm.org",
     "dev.mysql.com",
     "www.etsy.com",
+    "careersatdoordash.com",
 }
 
 
