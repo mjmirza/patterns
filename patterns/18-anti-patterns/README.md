@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-1 entries, 9,287 words. Every entry carries all 18
+4 entries, 33,924 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -10,6 +10,19 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Big Ball of Mud](big-ball-of-mud.md) | canonical | 9,287 | A reader can recognize this problem without ever hearing the pattern's name. |
+| [Entity Service](entity-service.md) | contested | 8,323 | A team decomposes a monolith, or designs a new distributed system from scratch, and reaches for the most obvious axis of decomposition available. |
+
+## Architectural
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Distributed Monolith](distributed-monolith.md) | established | 8,553 | A team decomposes a monolith, or designs a new system, into a set of services with separate repositories, separate deployment pipelines, and separate runtime processes, expecting ... |
+
+## Architectural (Distributed Systems)
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Nanoservices](nanoservices.md) | contested | 7,761 | A team adopts microservices with the correct instinct that a monolith with too many concerns bundled into one deployable is hard to change safely, and the guidance they read tells ... |
 
 ## Reading order
 
