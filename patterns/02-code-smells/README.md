@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-8 entries, 62,680 words. Every entry carries all 18
+11 entries, 89,337 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -11,6 +11,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Data Clumps](data-clumps.md) | canonical | 5,832 | The smell shows up first in method signatures. |
 | [Duplicate Code](duplicate-code.md) | canonical | 8,029 | The same idea is written down twice, or more, in a codebase, so that changing the idea means finding and editing every copy. |
+| [Large Class](large-class.md) | canonical | 9,844 | A class keeps absorbing new fields and new methods until it is doing the job of what should have been five or six separate collaborators. |
 
 ## Change Preventers
 
@@ -36,6 +37,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Feature Envy](feature-envy.md) | canonical | 7,482 | A method sits on class A. Most of its logic reads or computes from the fields and accessor methods of class B, an object it was handed as a parameter, an instance variable, or ... |
+| [Inappropriate Intimacy](inappropriate-intimacy.md) | canonical | 8,379 | Two classes end up knowing far more about each other's insides than either one's public contract admits to. |
+| [Incomplete Library Class](incomplete-library-class.md) | canonical | 8,434 | A team depends on a class, module, or type that ships from outside the codebase they control. |
 
 ## Object-Orientation Abusers
 

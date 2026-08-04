@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 272,
+  "published_total": 275,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 4,
   "stale_entries": 0,
-  "references_checked": 1686,
+  "references_checked": 1703,
   "rows": [
     {
       "family": "01-gof",
@@ -24,12 +24,12 @@
       "family": "02-code-smells",
       "name": "Code Smells",
       "origin": "Fowler and Beck, Refactoring",
-      "published": 8,
-      "planned": 20,
+      "published": 11,
+      "planned": 17,
       "target": 28,
-      "percent": 28.6,
+      "percent": 39.3,
       "maturity": {
-        "canonical": 8
+        "canonical": 11
       }
     },
     {
