@@ -12,11 +12,11 @@ family,name,published,planned,target,percent
 11-ddd,Domain-Driven Design,29,8,37,78.4
 12-data-storage,Data and Storage,0,43,43,0.0
 13-frontend-ui,Frontend and UI,0,34,34,0.0
-14-testing,Testing,0,30,30,0.0
+14-testing,Testing,2,28,30,6.7
 15-security,Security,0,38,38,0.0
 16-functional,Functional Programming,0,40,40,0.0
 17-ai-agentic,AI and Agentic,55,0,55,100.0
-18-anti-patterns,Anti-Patterns,40,13,53,75.5
+18-anti-patterns,Anti-Patterns,41,12,53,77.4
 19-api-design,API and Interface Design,0,10,10,0.0
 20-release-deployment,Release and Deployment,0,10,10,0.0
 21-sre-operations,SRE and Operations,0,12,12,0.0

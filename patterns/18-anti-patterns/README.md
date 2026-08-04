@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-40 entries, 327,886 words. Every entry carries all 18
+41 entries, 335,063 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -24,6 +24,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Monolithic Persistence](monolithic-persistence.md) | canonical | 6,491 | A system starts with one team, one codebase, and one database, and the fit is genuinely good. |
 | [N+1 Query](n+1-query.md) | canonical | 8,916 | The shape appears the moment code needs to display, process, or serialize a list of parent records together with one piece of data that lives on a related table or a related ... |
 | [No Caching](no-caching.md) | established | 6,450 | A system computes or fetches a value that is expensive relative to how often it is actually needed fresh, and it does that computation or fetch again, in full, on every single ... |
+| [Not Invented Here](not-invented-here.md) | canonical | 7,177 | A team needs a capability another party has already built. |
 | [Poltergeist](poltergeist.md) | canonical | 8,669 | A codebase accumulates classes whose entire behaviour is to be constructed, make one or two calls into a different, more permanent class, and then be discarded. |
 | [Premature Optimization](premature-optimization.md) | canonical | 8,762 | The situation that produces this anti-pattern looks the same across languages, teams, and decades, because it comes from a mismatch between how programmers reason about code and ... |
 | [Retry Storm](retry-storm.md) | canonical | 8,440 | A service calls a downstream dependency over the network. |

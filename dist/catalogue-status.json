@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 236,
+  "published_total": 239,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 3,
   "stale_entries": 0,
-  "references_checked": 1516,
+  "references_checked": 1530,
   "rows": [
     {
       "family": "01-gof",
@@ -156,11 +156,13 @@
       "family": "14-testing",
       "name": "Testing",
       "origin": "Meszaros, xUnit Test Patterns",
-      "published": 0,
-      "planned": 30,
+      "published": 2,
+      "planned": 28,
       "target": 30,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 6.7,
+      "maturity": {
+        "canonical": 2
+      }
     },
     {
       "family": "15-security",
@@ -200,12 +202,12 @@
       "family": "18-anti-patterns",
       "name": "Anti-Patterns",
       "origin": "Brown et al, AntiPatterns",
-      "published": 40,
-      "planned": 13,
+      "published": 41,
+      "planned": 12,
       "target": 53,
-      "percent": 75.5,
+      "percent": 77.4,
       "maturity": {
-        "canonical": 28,
+        "canonical": 29,
         "established": 9,
         "contested": 3
       }
