@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-24 entries, 179,862 words. Every entry carries all 18
+27 entries, 203,806 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -10,6 +10,18 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Big Ball of Mud](big-ball-of-mud.md) | canonical | 8,391 | A system starts small. One person, or a small team under real time pressure, writes code that solves the problem in front of them using whatever shortcut gets a working result ... |
+
+## Architectural
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Layered Architecture](layered-architecture.md) | canonical | 8,385 | A system has several kinds of work happening inside it at once, work that talks to a person through a screen or an API, work that decides what the business rules say should ... |
+
+## Behavioral
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Process Manager](process-manager.md) | canonical | 8,296 | A business process spans more than one service, more than one aggregate, or more than one external system, and it cannot complete in a single local transaction. |
 
 ## Domain-Driven Design
 
@@ -67,6 +79,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Domain Primitive](domain-primitive.md) | canonical | 7,263 | A codebase accretes validation logic at the edges and loses track of where the truth lives. |
 | [Entity](entity.md) | canonical | 7,973 | Every large domain contains two very different kinds of things, and conflating them is one of the most common sources of subtle correctness bugs in business software. |
 
 ## Reading order
