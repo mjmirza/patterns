@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 188,
+  "published_total": 191,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 3,
   "stale_entries": 0,
-  "references_checked": 1259,
+  "references_checked": 1271,
   "rows": [
     {
       "family": "01-gof",
@@ -123,12 +123,12 @@
       "family": "11-ddd",
       "name": "Domain-Driven Design",
       "origin": "Evans, Vernon",
-      "published": 21,
-      "planned": 16,
+      "published": 24,
+      "planned": 13,
       "target": 37,
-      "percent": 56.8,
+      "percent": 64.9,
       "maturity": {
-        "canonical": 21
+        "canonical": 24
       }
     },
     {
