@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-5 entries, 39,681 words. Every entry carries all 18
+8 entries, 62,680 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -10,6 +10,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Data Clumps](data-clumps.md) | canonical | 5,832 | The smell shows up first in method signatures. |
+| [Duplicate Code](duplicate-code.md) | canonical | 8,029 | The same idea is written down twice, or more, in a codebase, so that changing the idea means finding and editing every copy. |
+
+## Change Preventers
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Divergent Change](divergent-change.md) | canonical | 7,488 | A single class keeps needing edits, and the edits have nothing to do with each other. |
 
 ## Code Smell
 
@@ -23,6 +30,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Alternative Classes with Different Interfaces](alternative-classes-with-different-interfaces.md) | canonical | 8,373 | Two classes exist in the same codebase that do, in substance, the same job. |
+
+## Coupling
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Feature Envy](feature-envy.md) | canonical | 7,482 | A method sits on class A. Most of its logic reads or computes from the fields and accessor methods of class B, an object it was handed as a parameter, an instance variable, or ... |
 
 ## Object-Orientation Abusers
 
