@@ -2,16 +2,19 @@
 
 Origin. Brown et al, AntiPatterns
 
-13 entries, 107,864 words. Every entry carries all 18
+16 entries, 130,140 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Copy-Paste Programming](copy-paste-programming.md) | canonical | 7,082 | A developer needs behavior that is almost, but not quite, identical to behavior that already exists somewhere else in the codebase. |
 | [God Object](god-object.md) | canonical | 8,493 | A system starts with a reasonable class boundary. |
 | [Golden Hammer](golden-hammer.md) | canonical | 7,387 | A developer or a team becomes highly proficient with one tool, a database, a framework, a data structure, a language feature, a deployment platform, or a design pattern. |
 | [Inner-Platform Effect](inner-platform-effect.md) | canonical | 9,693 | The situation always starts with a genuine and reasonable business requirement, that end users, who are not programmers, need to change how the system behaves without waiting on a ... |
+| [Magic Numbers](magic-numbers.md) | canonical | 6,525 | A magic number is a numeric literal that appears directly in executable code, in a comparison, an arithmetic expression, an array size, a loop bound, or a function argument ... |
+| [Poltergeist](poltergeist.md) | canonical | 8,669 | A codebase accumulates classes whose entire behaviour is to be constructed, make one or two calls into a different, more permanent class, and then be discarded. |
 | [Spaghetti Code](spaghetti-code.md) | canonical | 9,313 | A program begins as a short, linear sequence of statements that a single author can hold entirely in their head. |
 
 ## Anti-pattern
