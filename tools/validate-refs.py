@@ -50,6 +50,7 @@ ALLOW_UNREACHABLE = {
     "www.gao.gov",
     "www.researchgate.net",
     "callbackhell.com",
+    "www.sec.gov",
 }
 
 
