@@ -16,7 +16,7 @@ family,name,published,planned,target,percent
 15-security,Security,0,38,38,0.0
 16-functional,Functional Programming,0,40,40,0.0
 17-ai-agentic,AI and Agentic,55,0,55,100.0
-18-anti-patterns,Anti-Patterns,28,25,53,52.8
+18-anti-patterns,Anti-Patterns,31,22,53,58.5
 19-api-design,API and Interface Design,0,10,10,0.0
 20-release-deployment,Release and Deployment,0,10,10,0.0
 21-sre-operations,SRE and Operations,0,12,12,0.0
