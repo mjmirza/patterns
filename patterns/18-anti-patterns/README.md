@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-16 entries, 130,140 words. Every entry carries all 18
+19 entries, 156,732 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -15,7 +15,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Inner-Platform Effect](inner-platform-effect.md) | canonical | 9,693 | The situation always starts with a genuine and reasonable business requirement, that end users, who are not programmers, need to change how the system behaves without waiting on a ... |
 | [Magic Numbers](magic-numbers.md) | canonical | 6,525 | A magic number is a numeric literal that appears directly in executable code, in a comparison, an arithmetic expression, an array size, a loop bound, or a function argument ... |
 | [Poltergeist](poltergeist.md) | canonical | 8,669 | A codebase accumulates classes whose entire behaviour is to be constructed, make one or two calls into a different, more permanent class, and then be discarded. |
+| [Singleton Abuse](singleton-abuse.md) | canonical | 8,029 | A codebase reaches for Singleton Abuse in a specific, recognizable moment. |
 | [Spaghetti Code](spaghetti-code.md) | canonical | 9,313 | A program begins as a short, linear sequence of statements that a single author can hold entirely in their head. |
+| [Yo-yo Problem](yo-yo-problem.md) | canonical | 9,233 | The situation announces itself the same way every time. |
 
 ## Anti-pattern
 
@@ -24,6 +26,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Anemic Domain Model](anemic-domain-model.md) | canonical | 8,622 | A codebase reaches for persistence early. |
 | [Big Ball of Mud](big-ball-of-mud.md) | canonical | 9,287 | A reader can recognize this problem without ever hearing the pattern's name. |
 | [Boat Anchor](boat-anchor.md) | established | 7,077 | A team adds a piece of code, an API, a dependency, a database table, a configuration flag, or a whole service for a reason that was real at the time. |
+| [Circular Dependency](circular-dependency.md) | canonical | 9,330 | A codebase grows by adding files, packages, or services, and each new unit imports whatever it needs from its neighbours. |
 | [Entity Service](entity-service.md) | contested | 8,323 | A team decomposes a monolith, or designs a new distributed system from scratch, and reaches for the most obvious axis of decomposition available. |
 | [Vendor Lock-in](vendor-lock-in.md) | established | 8,019 | A team building a system needs to store data, run compute, send messages, authenticate users, and observe the running system. |
 
