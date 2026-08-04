@@ -44,6 +44,7 @@ ALLOW_UNREACHABLE = {
     "dev.mysql.com",
     "www.etsy.com",
     "careersatdoordash.com",
+    "www.iso20022.org",
 }
 
 
