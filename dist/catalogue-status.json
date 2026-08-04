@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 248,
+  "published_total": 251,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 3,
   "stale_entries": 0,
-  "references_checked": 1558,
+  "references_checked": 1572,
   "rows": [
     {
       "family": "01-gof",
@@ -156,12 +156,13 @@
       "family": "14-testing",
       "name": "Testing",
       "origin": "Meszaros, xUnit Test Patterns",
-      "published": 11,
-      "planned": 19,
+      "published": 14,
+      "planned": 16,
       "target": 30,
-      "percent": 36.7,
+      "percent": 46.7,
       "maturity": {
-        "canonical": 11
+        "canonical": 13,
+        "established": 1
       }
     },
     {
