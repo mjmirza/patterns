@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-31 entries, 253,260 words. Every entry carries all 18
+34 entries, 278,426 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -11,6 +11,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Busy Database](busy-database.md) | canonical | 8,380 | The context is any system with a client tier, an application or service tier, and a database tier, where the database engine exposes a facility for running code close to the data ... |
 | [Busy Front End](busy-front-end.md) | canonical | 8,025 | The context is a server-side application built as, or converged into over time, a single deployable process that does two structurally different jobs at once, accepting and ... |
+| [Cache Stampede](cache-stampede.md) | canonical | 8,736 | The shape that produces this anti-pattern is almost always the same three ingredients arriving together. |
 | [Call Super](call-super.md) | canonical | 8,627 | A base class method does two things at once. |
 | [Copy-Paste Programming](copy-paste-programming.md) | canonical | 7,082 | A developer needs behavior that is almost, but not quite, identical to behavior that already exists somewhere else in the codebase. |
 | [God Object](god-object.md) | canonical | 8,493 | A system starts with a reasonable class boundary. |
@@ -25,6 +26,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Sequential Coupling](sequential-coupling.md) | canonical | 8,982 | An object accumulates behavior across its public surface the way most long-lived classes do, one method added at a time as new requirements arrive. |
 | [Singleton Abuse](singleton-abuse.md) | canonical | 8,029 | A codebase reaches for Singleton Abuse in a specific, recognizable moment. |
 | [Spaghetti Code](spaghetti-code.md) | canonical | 9,313 | A program begins as a short, linear sequence of statements that a single author can hold entirely in their head. |
+| [Thundering Herd](thundering-herd.md) | canonical | 7,680 | Picture a cached product page. Ten thousand requests a second hit a CDN edge or an application cache for the same product. |
 | [Yo-yo Problem](yo-yo-problem.md) | canonical | 9,233 | The situation announces itself the same way every time. |
 
 ## Anti-pattern
@@ -54,6 +56,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Nanoservices](nanoservices.md) | contested | 7,761 | A team adopts microservices with the correct instinct that a monolith with too many concerns bundled into one deployable is hard to change safely, and the guidance they read tells ... |
+
+## Distributed Systems Anti-Pattern
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Split Brain](split-brain.md) | canonical | 8,750 | A system replicates state, or elects a leader, across more than one node so that it survives the failure of any single node. |
 
 ## Software Development Anti-pattern
 
