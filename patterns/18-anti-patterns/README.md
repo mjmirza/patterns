@@ -2,14 +2,16 @@
 
 Origin. Brown et al, AntiPatterns
 
-7 entries, 57,952 words. Every entry carries all 18
+10 entries, 84,306 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [God Object](god-object.md) | canonical | 8,493 | A system starts with a reasonable class boundary. |
 | [Golden Hammer](golden-hammer.md) | canonical | 7,387 | A developer or a team becomes highly proficient with one tool, a database, a framework, a data structure, a language feature, a deployment platform, or a design pattern. |
+| [Inner-Platform Effect](inner-platform-effect.md) | canonical | 9,693 | The situation always starts with a genuine and reasonable business requirement, that end users, who are not programmers, need to change how the system behaves without waiting on a ... |
 
 ## Anti-pattern
 
@@ -25,6 +27,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Distributed Monolith](distributed-monolith.md) | established | 8,553 | A team decomposes a monolith, or designs a new system, into a set of services with separate repositories, separate deployment pipelines, and separate runtime processes, expecting ... |
+| [Stovepipe System](stovepipe-system.md) | canonical | 8,168 | An organization builds its second system, its second department's application, or its second bounded capability, and the fastest path to delivery is to start from a blank slate ... |
 
 ## Architectural (Distributed Systems)
 
