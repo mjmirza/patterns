@@ -42,6 +42,7 @@ ALLOW_UNREACHABLE = {
     "www.uber.com",
     "queue.acm.org",
     "dev.mysql.com",
+    "www.etsy.com",
 }
 
 
