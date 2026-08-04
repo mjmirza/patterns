@@ -22,3 +22,10 @@ structurally
 # typically. Plain hedge adverb for honest, non-absolute claims per the
 # judgement-vs-sourced-claim contract in ENTRY-TEMPLATE.md.
 typically
+end-to-end
+end to end
+
+# decode. Standard, unavoidable technical verb for base64/JWT decoding
+# functions and variable names in the code samples (base64.b64decode,
+# DecodeString, decode()), not figurative AI-slop usage.
+decode

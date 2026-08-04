@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-38 entries, 284,234 words. Every entry carries all 18
+41 entries, 305,188 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -107,6 +107,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Idempotent Consumer](idempotent-consumer.md) | canonical | 6,810 | A service consumes messages or events from a broker, whether that is Kafka, Amazon SQS, RabbitMQ, Azure Service Bus, Google Pub/Sub, or an HTTP webhook delivered by another ... |
 
+## Security
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Access Token](access-token.md) | canonical | 7,999 | A microservice architecture replaces one perimeter, the monolith's process boundary, with dozens or hundreds of network boundaries, one between every pair of services that call ... |
+
 ## Structural
 
 | Pattern | Maturity | Words | Intent |
@@ -126,6 +132,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Consumer-Driven Contract Test](consumer-driven-contract-test.md) | established | 6,565 | A consumer service calls a provider service over HTTP, gRPC, or an asynchronous message. |
+| [Consumer-Side Contract Test](consumer-side-contract-test.md) | canonical | 6,390 | A team owns a service that calls another team's service over HTTP, gRPC, or an asynchronous message channel. |
 | [Service Component Test](service-component-test.md) | established | 7,162 | A team owns one service inside a system decomposed into many services, for example an Order Service that, in the course of handling a single request, calls a Customer Service to ... |
 
 ## Reading order
