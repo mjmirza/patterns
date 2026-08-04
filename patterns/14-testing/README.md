@@ -2,7 +2,7 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-23 entries, 165,889 words. Every entry carries all 18
+26 entries, 187,268 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Test Data
@@ -35,6 +35,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Arrange-Act-Assert](arrange-act-assert.md) | canonical | 6,255 | A test that has no imposed shape tends to accrete in whatever order the writer thought of things. |
 | [Characterization Test](characterization-test.md) | canonical | 6,420 | A team inherits a module, a service, or a whole codebase with no tests, or with tests too sparse to trust. |
 | [Contract Test](contract-test.md) | canonical | 8,408 | A team splits a monolith into services, or simply has two teams shipping two deployables that talk over HTTP, gRPC, or a message queue. |
+| [Fault Injection](fault-injection.md) | established | 7,609 | Software that talks to another process over a network, a disk, a database connection, or any other boundary will eventually see that boundary fail. |
 | [Fresh Fixture](fresh-fixture.md) | canonical | 7,305 | A test needs an environment in which to run its assertions, objects to act on, data in a database, files on disk, a running process. |
 | [Given-When-Then](given-when-then.md) | canonical | 7,476 | A test file with no shape reads as an undifferentiated block of setup calls, one action, and a pile of assertions, and a reader cannot tell at a glance which lines are ... |
 | [Golden Master](golden-master.md) | established | 7,989 | A piece of code produces output that is expensive or awkward to specify by hand, one field at a time, and a person needs confidence that a change to the code did not alter that ... |
@@ -47,6 +48,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Snapshot Test](snapshot-test.md) | established | 9,149 | A function, a component, or an API endpoint produces an output that is correct today, and the author knows it is correct today because they looked at it, ran it, or eyeballed a ... |
 | [Spy](spy.md) | canonical | 7,242 | A unit under test collaborates with something outside itself, a payment gateway, an email service, a logger, an event bus, a cache. |
 | [Test Data Builder](test-data-builder.md) | canonical | 6,941 | A domain object has enough constructor parameters, or enough invariants, that constructing one directly in a test is either impossible without a long argument list or actively ... |
+| [Testcontainers](testcontainers.md) | canonical | 6,622 | A test that exercises code talking to a database, a message broker, a cache, or another networked service has three unhappy default choices. |
+
+## Testing Strategy
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Test Pyramid](test-pyramid.md) | established | 7,148 | A team writes automated tests without a stated distribution, and the suite drifts toward whatever is easiest to write in the moment rather than what is cheapest to run and ... |
 
 ## Reading order
 
