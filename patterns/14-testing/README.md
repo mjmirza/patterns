@@ -2,7 +2,7 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-14 entries, 97,798 words. Every entry carries all 18
+17 entries, 119,042 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Test Data
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Derived Value](derived-value.md) | canonical | 5,157 | A test needs data. Every object under test, and every collaborator it talks to, has fields that must be filled in before the test can run, and the overwhelming majority of those ... |
+| [Generated Value](generated-value.md) | canonical | 6,233 | A fixture object almost always has more fields than the test actually cares about. |
 
 ## Test Double
 
@@ -33,6 +34,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Arrange-Act-Assert](arrange-act-assert.md) | canonical | 6,255 | A test that has no imposed shape tends to accrete in whatever order the writer thought of things. |
 | [Fresh Fixture](fresh-fixture.md) | canonical | 7,305 | A test needs an environment in which to run its assertions, objects to act on, data in a database, files on disk, a running process. |
 | [Given-When-Then](given-when-then.md) | canonical | 7,476 | A test file with no shape reads as an undifferentiated block of setup calls, one action, and a pile of assertions, and a reader cannot tell at a glance which lines are ... |
+| [Golden Master](golden-master.md) | established | 7,989 | A piece of code produces output that is expensive or awkward to specify by hand, one field at a time, and a person needs confidence that a change to the code did not alter that ... |
+| [Humble Object](humble-object.md) | canonical | 7,022 | Some classes are hard to unit test not because their logic is hard, but because constructing or invoking them at all requires something a fast, isolated test cannot or should not ... |
 | [Object Mother](object-mother.md) | established | 6,582 | A test needs an object in a known, valid state before it can exercise the behavior under test. |
 | [Prebuilt Fixture](prebuilt-fixture.md) | canonical | 7,102 | A test needs the system under test to start from a known state before its assertions can mean anything. |
 | [Shared Fixture](shared-fixture.md) | canonical | 8,501 | A test needs a fixture. The object under test needs collaborators wired up, a database needs rows in it that match the scenario, a file needs to exist on disk, an external service ... |
