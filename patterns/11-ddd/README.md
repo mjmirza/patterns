@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-27 entries, 203,806 words. Every entry carries all 18
+29 entries, 220,132 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -21,6 +21,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Event Storming](event-storming.md) | established | 8,206 | A team is about to build software for a business domain nobody on the team fully understands alone. |
 | [Process Manager](process-manager.md) | canonical | 8,296 | A business process spans more than one service, more than one aggregate, or more than one external system, and it cannot complete in a single local transaction. |
 
 ## Domain-Driven Design
@@ -52,6 +53,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Domain Storytelling](domain-storytelling.md) | established | 8,120 | A team building software for a business domain needs an accurate, shared picture of how work actually happens before it can decide what the software should do. |
 | [Generic Subdomain](generic-subdomain.md) | canonical | 6,775 | A team building a real product spends real engineering time on things the business does not actually compete on. |
 | [Ubiquitous Language](ubiquitous-language.md) | canonical | 6,581 | A software team building a system for a business domain sits between two worlds that speak differently about the same reality. |
 
