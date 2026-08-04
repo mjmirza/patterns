@@ -2,8 +2,14 @@
 
 Origin. Evans, Vernon
 
-12 entries, 85,741 words. Every entry carries all 18
+15 entries, 111,355 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Anti-pattern
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Big Ball of Mud](big-ball-of-mud.md) | canonical | 8,391 | A system starts small. One person, or a small team under real time pressure, writes code that solves the problem in front of them using whatever shortcut gets a working result ... |
 
 ## Domain-Driven Design, Strategic
 
@@ -34,8 +40,15 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Core Domain](core-domain.md) | canonical | 6,670 | A team building a non-trivial system faces a resource allocation problem long before it faces a technical one. |
 | [Customer-Supplier](customer-supplier.md) | canonical | 7,914 | Any system large enough to be split across more than one Bounded Context, see the bounded-context entry in this repository, produces integration points where one context's model ... |
 | [Open Host Service](open-host-service.md) | canonical | 9,358 | A bounded context that has real internal complexity attracts multiple downstream consumers over time. |
+| [Separate Ways](separate-ways.md) | canonical | 9,250 | A team splits a system into more than one Bounded Context for good reasons, because two departments' vocabularies genuinely diverge, because two teams cannot coordinate closely ... |
 | [Shared Kernel](shared-kernel.md) | canonical | 7,408 | Two Bounded Contexts model a piece of the domain in a compatible way, not because either team designed it that way on purpose, but because the concept genuinely is the same ... |
 | [Supporting Subdomain](supporting-subdomain.md) | canonical | 6,681 | A team building a system of real size eventually owns far more functionality than any one part of the business actually differentiates on. |
+
+## Tactical Modeling
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Entity](entity.md) | canonical | 7,973 | Every large domain contains two very different kinds of things, and conflating them is one of the most common sources of subtle correctness bugs in business software. |
 
 ## Reading order
 
