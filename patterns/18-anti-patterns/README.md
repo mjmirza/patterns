@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-10 entries, 84,306 words. Every entry carries all 18
+13 entries, 107,864 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -12,6 +12,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [God Object](god-object.md) | canonical | 8,493 | A system starts with a reasonable class boundary. |
 | [Golden Hammer](golden-hammer.md) | canonical | 7,387 | A developer or a team becomes highly proficient with one tool, a database, a framework, a data structure, a language feature, a deployment platform, or a design pattern. |
 | [Inner-Platform Effect](inner-platform-effect.md) | canonical | 9,693 | The situation always starts with a genuine and reasonable business requirement, that end users, who are not programmers, need to change how the system behaves without waiting on a ... |
+| [Spaghetti Code](spaghetti-code.md) | canonical | 9,313 | A program begins as a short, linear sequence of statements that a single author can hold entirely in their head. |
 
 ## Anti-pattern
 
@@ -19,6 +20,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Anemic Domain Model](anemic-domain-model.md) | canonical | 8,622 | A codebase reaches for persistence early. |
 | [Big Ball of Mud](big-ball-of-mud.md) | canonical | 9,287 | A reader can recognize this problem without ever hearing the pattern's name. |
+| [Boat Anchor](boat-anchor.md) | established | 7,077 | A team adds a piece of code, an API, a dependency, a database table, a configuration flag, or a whole service for a reason that was real at the time. |
 | [Entity Service](entity-service.md) | contested | 8,323 | A team decomposes a monolith, or designs a new distributed system from scratch, and reaches for the most obvious axis of decomposition available. |
 | [Vendor Lock-in](vendor-lock-in.md) | established | 8,019 | A team building a system needs to store data, run compute, send messages, authenticate users, and observe the running system. |
 
@@ -34,6 +36,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Nanoservices](nanoservices.md) | contested | 7,761 | A team adopts microservices with the correct instinct that a monolith with too many concerns bundled into one deployable is hard to change safely, and the guidance they read tells ... |
+
+## Software Development Anti-pattern
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Lava Flow](lava-flow.md) | canonical | 7,168 | A codebase under real deadline pressure accretes exploratory code, spike solutions, feature-flagged experiments, half-finished rewrites, region-specific branches for a market the ... |
 
 ## Reading order
 

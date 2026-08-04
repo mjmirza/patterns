@@ -49,6 +49,7 @@ ALLOW_UNREACHABLE = {
     "academic.oup.com",
     "www.gao.gov",
     "www.researchgate.net",
+    "callbackhell.com",
 }
 
 

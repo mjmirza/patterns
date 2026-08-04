@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 206,
+  "published_total": 209,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 3,
   "stale_entries": 0,
-  "references_checked": 1365,
+  "references_checked": 1389,
   "rows": [
     {
       "family": "01-gof",
@@ -200,13 +200,13 @@
       "family": "18-anti-patterns",
       "name": "Anti-Patterns",
       "origin": "Brown et al, AntiPatterns",
-      "published": 10,
-      "planned": 43,
+      "published": 13,
+      "planned": 40,
       "target": 53,
-      "percent": 18.9,
+      "percent": 24.5,
       "maturity": {
-        "canonical": 6,
-        "established": 2,
+        "canonical": 8,
+        "established": 3,
         "contested": 2
       }
     },
