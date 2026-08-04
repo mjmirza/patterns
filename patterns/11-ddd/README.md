@@ -2,8 +2,20 @@
 
 Origin. Evans, Vernon
 
-9 entries, 62,706 words. Every entry carries all 18
+12 entries, 85,741 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Domain-Driven Design, Strategic
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Published Language](published-language.md) | canonical | 6,457 | Two or more bounded contexts need to exchange information, and at least one of the following is true. |
+
+## Integration
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Anticorruption Layer](anticorruption-layer.md) | canonical | 7,220 | A team owns a domain model they have deliberately shaped to match the Ubiquitous Language of their Bounded Context, see patterns/11-ddd/ubiquitous-language.md and ... |
 
 ## Strategic
 
@@ -21,6 +33,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Context Map](context-map.md) | canonical | 7,312 | A system reaches a certain size and a certain number of contributing teams before a single, internally consistent domain model stops being achievable. |
 | [Core Domain](core-domain.md) | canonical | 6,670 | A team building a non-trivial system faces a resource allocation problem long before it faces a technical one. |
 | [Customer-Supplier](customer-supplier.md) | canonical | 7,914 | Any system large enough to be split across more than one Bounded Context, see the bounded-context entry in this repository, produces integration points where one context's model ... |
+| [Open Host Service](open-host-service.md) | canonical | 9,358 | A bounded context that has real internal complexity attracts multiple downstream consumers over time. |
 | [Shared Kernel](shared-kernel.md) | canonical | 7,408 | Two Bounded Contexts model a piece of the domain in a compatible way, not because either team designed it that way on purpose, but because the concept genuinely is the same ... |
 | [Supporting Subdomain](supporting-subdomain.md) | canonical | 6,681 | A team building a system of real size eventually owns far more functionality than any one part of the business actually differentiates on. |
 
