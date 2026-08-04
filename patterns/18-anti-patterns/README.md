@@ -2,15 +2,23 @@
 
 Origin. Brown et al, AntiPatterns
 
-4 entries, 33,924 words. Every entry carries all 18
+7 entries, 57,952 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Anti-Pattern
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Golden Hammer](golden-hammer.md) | canonical | 7,387 | A developer or a team becomes highly proficient with one tool, a database, a framework, a data structure, a language feature, a deployment platform, or a design pattern. |
 
 ## Anti-pattern
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Anemic Domain Model](anemic-domain-model.md) | canonical | 8,622 | A codebase reaches for persistence early. |
 | [Big Ball of Mud](big-ball-of-mud.md) | canonical | 9,287 | A reader can recognize this problem without ever hearing the pattern's name. |
 | [Entity Service](entity-service.md) | contested | 8,323 | A team decomposes a monolith, or designs a new distributed system from scratch, and reaches for the most obvious axis of decomposition available. |
+| [Vendor Lock-in](vendor-lock-in.md) | established | 8,019 | A team building a system needs to store data, run compute, send messages, authenticate users, and observe the running system. |
 
 ## Architectural
 
