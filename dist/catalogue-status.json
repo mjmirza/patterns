@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 266,
+  "published_total": 269,
   "target_total": 887,
   "families_total": 29,
-  "families_complete": 3,
+  "families_complete": 4,
   "stale_entries": 0,
-  "references_checked": 1656,
+  "references_checked": 1671,
   "rows": [
     {
       "family": "01-gof",
@@ -24,12 +24,12 @@
       "family": "02-code-smells",
       "name": "Code Smells",
       "origin": "Fowler and Beck, Refactoring",
-      "published": 3,
-      "planned": 25,
+      "published": 5,
+      "planned": 23,
       "target": 28,
-      "percent": 10.7,
+      "percent": 17.9,
       "maturity": {
-        "canonical": 3
+        "canonical": 5
       }
     },
     {
@@ -156,12 +156,12 @@
       "family": "14-testing",
       "name": "Testing",
       "origin": "Meszaros, xUnit Test Patterns",
-      "published": 29,
-      "planned": 1,
+      "published": 30,
+      "planned": 0,
       "target": 30,
-      "percent": 96.7,
+      "percent": 100.0,
       "maturity": {
-        "established": 8,
+        "established": 9,
         "canonical": 21
       }
     },
