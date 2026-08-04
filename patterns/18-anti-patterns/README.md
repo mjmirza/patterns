@@ -2,19 +2,21 @@
 
 Origin. Brown et al, AntiPatterns
 
-19 entries, 156,732 words. Every entry carries all 18
+22 entries, 180,443 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Call Super](call-super.md) | canonical | 8,627 | A base class method does two things at once. |
 | [Copy-Paste Programming](copy-paste-programming.md) | canonical | 7,082 | A developer needs behavior that is almost, but not quite, identical to behavior that already exists somewhere else in the codebase. |
 | [God Object](god-object.md) | canonical | 8,493 | A system starts with a reasonable class boundary. |
 | [Golden Hammer](golden-hammer.md) | canonical | 7,387 | A developer or a team becomes highly proficient with one tool, a database, a framework, a data structure, a language feature, a deployment platform, or a design pattern. |
 | [Inner-Platform Effect](inner-platform-effect.md) | canonical | 9,693 | The situation always starts with a genuine and reasonable business requirement, that end users, who are not programmers, need to change how the system behaves without waiting on a ... |
 | [Magic Numbers](magic-numbers.md) | canonical | 6,525 | A magic number is a numeric literal that appears directly in executable code, in a comparison, an arithmetic expression, an array size, a loop bound, or a function argument ... |
 | [Poltergeist](poltergeist.md) | canonical | 8,669 | A codebase accumulates classes whose entire behaviour is to be constructed, make one or two calls into a different, more permanent class, and then be discarded. |
+| [Sequential Coupling](sequential-coupling.md) | canonical | 8,982 | An object accumulates behavior across its public surface the way most long-lived classes do, one method added at a time as new requirements arrive. |
 | [Singleton Abuse](singleton-abuse.md) | canonical | 8,029 | A codebase reaches for Singleton Abuse in a specific, recognizable moment. |
 | [Spaghetti Code](spaghetti-code.md) | canonical | 9,313 | A program begins as a short, linear sequence of statements that a single author can hold entirely in their head. |
 | [Yo-yo Problem](yo-yo-problem.md) | canonical | 9,233 | The situation announces itself the same way every time. |
@@ -28,6 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Boat Anchor](boat-anchor.md) | established | 7,077 | A team adds a piece of code, an API, a dependency, a database table, a configuration flag, or a whole service for a reason that was real at the time. |
 | [Circular Dependency](circular-dependency.md) | canonical | 9,330 | A codebase grows by adding files, packages, or services, and each new unit imports whatever it needs from its neighbours. |
 | [Entity Service](entity-service.md) | contested | 8,323 | A team decomposes a monolith, or designs a new distributed system from scratch, and reaches for the most obvious axis of decomposition available. |
+| [Service Locator](service-locator.md) | contested | 6,102 | A component needs a collaborator to do its work, a repository, a logger, a payment gateway client, a feature-flag reader, and it does not want to be handed a concrete instance by ... |
 | [Vendor Lock-in](vendor-lock-in.md) | established | 8,019 | A team building a system needs to store data, run compute, send messages, authenticate users, and observe the running system. |
 
 ## Architectural
