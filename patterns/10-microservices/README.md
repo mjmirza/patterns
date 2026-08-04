@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-41 entries, 305,188 words. Every entry carries all 18
+44 entries, 327,442 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -74,6 +74,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Schema Registry](schema-registry.md) | canonical | 7,196 | A team owns an order service that publishes an OrderPlaced event to a Kafka topic. |
 | [Shared Database](shared-database.md) | contested | 6,110 | A codebase is being decomposed into services, or several teams are building services that need to see overlapping pieces of business data. |
 
 ## Microservices
@@ -90,6 +91,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Health Check API](health-check-api.md) | canonical | 5,516 | A running process is not the same thing as a working service. |
+
+## Microservices, Resilience
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Retry Budget](retry-budget.md) | established | 7,645 | A service client calls a downstream dependency over the network. |
 
 ## Observability
 
@@ -125,6 +132,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Self-Contained Service](self-contained-service.md) | established | 6,998 | A team owns a piece of business capability end to end, say "product catalog" or "checkout" or "order history", and wants to release a change to that capability without asking ... |
 | [Service Mesh](service-mesh.md) | established | 6,980 | A system decomposed into many independently deployable services, following Decompose by Business Capability or Decompose by Subdomain, replaces in-process method calls with ... |
 | [Service per Team](service-per-team.md) | canonical | 7,510 | A system has been split into services, using Decompose by Business Capability or Decompose by Subdomain or simply by growing that way over years. |
+| [Sidecar Proxy](sidecar-proxy.md) | canonical | 7,413 | A service needs a set of platform capabilities that have nothing to do with its business logic. |
 | [Strangler Application](strangler-application.md) | canonical | 8,747 | A team owns a monolithic application that has become expensive to change. |
 | [Transactional Outbox](transactional-outbox.md) | canonical | 7,548 | A service owns its own database, as the Database per Service pattern in this same family requires. |
 
