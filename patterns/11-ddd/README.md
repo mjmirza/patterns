@@ -2,13 +2,14 @@
 
 Origin. Evans, Vernon
 
-3 entries, 20,720 words. Every entry carries all 18
+6 entries, 40,846 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Strategic
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Generic Subdomain](generic-subdomain.md) | canonical | 6,775 | A team building a real product spends real engineering time on things the business does not actually compete on. |
 | [Ubiquitous Language](ubiquitous-language.md) | canonical | 6,581 | A software team building a system for a business domain sits between two worlds that speak differently about the same reality. |
 
 ## Strategic Design
@@ -17,6 +18,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Bounded Context](bounded-context.md) | canonical | 6,827 | A software system of any real size accumulates more than one team, more than one department's worldview, and more than one legitimate meaning for the same word. |
 | [Context Map](context-map.md) | canonical | 7,312 | A system reaches a certain size and a certain number of contributing teams before a single, internally consistent domain model stops being achievable. |
+| [Core Domain](core-domain.md) | canonical | 6,670 | A team building a non-trivial system faces a resource allocation problem long before it faces a technical one. |
+| [Supporting Subdomain](supporting-subdomain.md) | canonical | 6,681 | A team building a system of real size eventually owns far more functionality than any one part of the business actually differentiates on. |
 
 ## Reading order
 
