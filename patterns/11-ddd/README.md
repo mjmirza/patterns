@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-6 entries, 40,846 words. Every entry carries all 18
+9 entries, 62,706 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Strategic
@@ -17,8 +17,11 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Bounded Context](bounded-context.md) | canonical | 6,827 | A software system of any real size accumulates more than one team, more than one department's worldview, and more than one legitimate meaning for the same word. |
+| [Conformist](conformist.md) | canonical | 6,538 | Two bounded contexts need to exchange data or invoke each other's behaviour, and one of the two, the upstream, owns a model neither side is free to renegotiate. |
 | [Context Map](context-map.md) | canonical | 7,312 | A system reaches a certain size and a certain number of contributing teams before a single, internally consistent domain model stops being achievable. |
 | [Core Domain](core-domain.md) | canonical | 6,670 | A team building a non-trivial system faces a resource allocation problem long before it faces a technical one. |
+| [Customer-Supplier](customer-supplier.md) | canonical | 7,914 | Any system large enough to be split across more than one Bounded Context, see the bounded-context entry in this repository, produces integration points where one context's model ... |
+| [Shared Kernel](shared-kernel.md) | canonical | 7,408 | Two Bounded Contexts model a piece of the domain in a compatible way, not because either team designed it that way on purpose, but because the concept genuinely is the same ... |
 | [Supporting Subdomain](supporting-subdomain.md) | canonical | 6,681 | A team building a system of real size eventually owns far more functionality than any one part of the business actually differentiates on. |
 
 ## Reading order
