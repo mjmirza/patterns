@@ -2,14 +2,21 @@
 
 Origin. Fowler and Beck, Refactoring
 
-3 entries, 24,376 words. Every entry carries all 18
+5 entries, 39,681 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Bloaters
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Data Clumps](data-clumps.md) | canonical | 5,832 | The smell shows up first in method signatures. |
 
 ## Code Smell
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Comments](comments.md) | canonical | 8,795 | A comment is a message from one point in time to a later reader, and it is never checked by anything that runs. |
+| [Dead Code](dead-code.md) | canonical | 9,473 | Dead code accumulates as an ordinary, unavoidable byproduct of change. |
 
 ## Code Smell, Object-Oriented Abusers
 
