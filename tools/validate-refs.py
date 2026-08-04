@@ -47,6 +47,8 @@ ALLOW_UNREACHABLE = {
     "www.iso20022.org",
     "medium.com",
     "academic.oup.com",
+    "www.gao.gov",
+    "www.researchgate.net",
 }
 
 
