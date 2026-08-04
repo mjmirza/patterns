@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-28 entries, 231,879 words. Every entry carries all 18
+31 entries, 253,260 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -17,8 +17,11 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Golden Hammer](golden-hammer.md) | canonical | 7,387 | A developer or a team becomes highly proficient with one tool, a database, a framework, a data structure, a language feature, a deployment platform, or a design pattern. |
 | [Inner-Platform Effect](inner-platform-effect.md) | canonical | 9,693 | The situation always starts with a genuine and reasonable business requirement, that end users, who are not programmers, need to change how the system behaves without waiting on a ... |
 | [Magic Numbers](magic-numbers.md) | canonical | 6,525 | A magic number is a numeric literal that appears directly in executable code, in a comparison, an arithmetic expression, an array size, a loop bound, or a function argument ... |
+| [Monolithic Persistence](monolithic-persistence.md) | canonical | 6,491 | A system starts with one team, one codebase, and one database, and the fit is genuinely good. |
 | [N+1 Query](n+1-query.md) | canonical | 8,916 | The shape appears the moment code needs to display, process, or serialize a list of parent records together with one piece of data that lives on a related table or a related ... |
+| [No Caching](no-caching.md) | established | 6,450 | A system computes or fetches a value that is expensive relative to how often it is actually needed fresh, and it does that computation or fetch again, in full, on every single ... |
 | [Poltergeist](poltergeist.md) | canonical | 8,669 | A codebase accumulates classes whose entire behaviour is to be constructed, make one or two calls into a different, more permanent class, and then be discarded. |
+| [Retry Storm](retry-storm.md) | canonical | 8,440 | A service calls a downstream dependency over the network. |
 | [Sequential Coupling](sequential-coupling.md) | canonical | 8,982 | An object accumulates behavior across its public surface the way most long-lived classes do, one method added at a time as new requirements arrive. |
 | [Singleton Abuse](singleton-abuse.md) | canonical | 8,029 | A codebase reaches for Singleton Abuse in a specific, recognizable moment. |
 | [Spaghetti Code](spaghetti-code.md) | canonical | 9,313 | A program begins as a short, linear sequence of statements that a single author can hold entirely in their head. |
