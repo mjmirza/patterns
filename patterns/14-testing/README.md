@@ -2,8 +2,14 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-11 entries, 79,118 words. Every entry carries all 18
+14 entries, 97,798 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Test Data
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Derived Value](derived-value.md) | canonical | 5,157 | A test needs data. Every object under test, and every collaborator it talks to, has fields that must be filled in before the test can run, and the overwhelming majority of those ... |
 
 ## Test Double
 
@@ -27,9 +33,11 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Arrange-Act-Assert](arrange-act-assert.md) | canonical | 6,255 | A test that has no imposed shape tends to accrete in whatever order the writer thought of things. |
 | [Fresh Fixture](fresh-fixture.md) | canonical | 7,305 | A test needs an environment in which to run its assertions, objects to act on, data in a database, files on disk, a running process. |
 | [Given-When-Then](given-when-then.md) | canonical | 7,476 | A test file with no shape reads as an undifferentiated block of setup calls, one action, and a pile of assertions, and a reader cannot tell at a glance which lines are ... |
+| [Object Mother](object-mother.md) | established | 6,582 | A test needs an object in a known, valid state before it can exercise the behavior under test. |
 | [Prebuilt Fixture](prebuilt-fixture.md) | canonical | 7,102 | A test needs the system under test to start from a known state before its assertions can mean anything. |
 | [Shared Fixture](shared-fixture.md) | canonical | 8,501 | A test needs a fixture. The object under test needs collaborators wired up, a database needs rows in it that match the scenario, a file needs to exist on disk, an external service ... |
 | [Spy](spy.md) | canonical | 7,242 | A unit under test collaborates with something outside itself, a payment gateway, an email service, a logger, an event bus, a cache. |
+| [Test Data Builder](test-data-builder.md) | canonical | 6,941 | A domain object has enough constructor parameters, or enough invariants, that constructing one directly in a test is either impossible without a long argument list or actively ... |
 
 ## Reading order
 
