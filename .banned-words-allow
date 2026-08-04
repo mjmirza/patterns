@@ -29,3 +29,7 @@ end to end
 # functions and variable names in the code samples (base64.b64decode,
 # DecodeString, decode()), not figurative AI-slop usage.
 decode
+
+# SagaTestHarness. Real MassTransit API class name, cited verbatim because
+# renaming a documented library identifier would misquote the source.
+SagaTestHarness
