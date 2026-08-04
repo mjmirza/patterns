@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-15 entries, 111,355 words. Every entry carries all 18
+18 entries, 135,371 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -10,6 +10,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Big Ball of Mud](big-ball-of-mud.md) | canonical | 8,391 | A system starts small. One person, or a small team under real time pressure, writes code that solves the problem in front of them using whatever shortcut gets a working result ... |
+
+## Domain-Driven Design
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Aggregate Root](aggregate-root.md) | canonical | 8,677 | A domain model accumulates Entities and Value Objects that reference one another. |
+| [Value Object](value-object.md) | canonical | 7,547 | A domain model accumulates concepts that are not things, they are measurements, descriptions, or quantities. |
 
 ## Domain-Driven Design, Strategic
 
@@ -43,6 +50,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Separate Ways](separate-ways.md) | canonical | 9,250 | A team splits a system into more than one Bounded Context for good reasons, because two departments' vocabularies genuinely diverge, because two teams cannot coordinate closely ... |
 | [Shared Kernel](shared-kernel.md) | canonical | 7,408 | Two Bounded Contexts model a piece of the domain in a compatible way, not because either team designed it that way on purpose, but because the concept genuinely is the same ... |
 | [Supporting Subdomain](supporting-subdomain.md) | canonical | 6,681 | A team building a system of real size eventually owns far more functionality than any one part of the business actually differentiates on. |
+
+## Tactical
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Domain Event](domain-event.md) | canonical | 7,792 | A codebase modeling a real domain accumulates behavior that has to happen "because something else happened," and that dependency keeps landing in the wrong place. |
 
 ## Tactical Modeling
 
