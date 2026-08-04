@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-25 entries, 206,062 words. Every entry carries all 18
+28 entries, 231,879 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Busy Database](busy-database.md) | canonical | 8,380 | The context is any system with a client tier, an application or service tier, and a database tier, where the database engine exposes a facility for running code close to the data ... |
+| [Busy Front End](busy-front-end.md) | canonical | 8,025 | The context is a server-side application built as, or converged into over time, a single deployable process that does two structurally different jobs at once, accepting and ... |
 | [Call Super](call-super.md) | canonical | 8,627 | A base class method does two things at once. |
 | [Copy-Paste Programming](copy-paste-programming.md) | canonical | 7,082 | A developer needs behavior that is almost, but not quite, identical to behavior that already exists somewhere else in the codebase. |
 | [God Object](god-object.md) | canonical | 8,493 | A system starts with a reasonable class boundary. |
@@ -32,6 +33,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Boat Anchor](boat-anchor.md) | established | 7,077 | A team adds a piece of code, an API, a dependency, a database table, a configuration flag, or a whole service for a reason that was real at the time. |
 | [Circular Dependency](circular-dependency.md) | canonical | 9,330 | A codebase grows by adding files, packages, or services, and each new unit imports whatever it needs from its neighbours. |
 | [Entity Service](entity-service.md) | contested | 8,323 | A team decomposes a monolith, or designs a new distributed system from scratch, and reaches for the most obvious axis of decomposition available. |
+| [Extraneous Fetching](extraneous-fetching.md) | established | 8,228 | A piece of code needs three fields from a record, a page needs the title and the thumbnail of a hundred articles, a mobile screen needs a user's display name and avatar. |
+| [Improper Instantiation](improper-instantiation.md) | established | 9,564 | A type in the codebase is expensive, or moderately expensive, or genuinely expensive, to construct. |
 | [Service Locator](service-locator.md) | contested | 6,102 | A component needs a collaborator to do its work, a repository, a logger, a payment gateway client, a feature-flag reader, and it does not want to be handed a concrete instance by ... |
 | [Vendor Lock-in](vendor-lock-in.md) | established | 8,019 | A team building a system needs to store data, run compute, send messages, authenticate users, and observe the running system. |
 
