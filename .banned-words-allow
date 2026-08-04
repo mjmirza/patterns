@@ -33,3 +33,8 @@ decode
 # SagaTestHarness. Real MassTransit API class name, cited verbatim because
 # renaming a documented library identifier would misquote the source.
 SagaTestHarness
+# encompass. Verbatim inside a direct quote from the Azure Architecture
+# Center Busy Front End antipattern page ("...the term resource can
+# encompass many things..."), cited word for word per the original-prose
+# and citation rules in ENTRY-TEMPLATE.md.
+encompass
