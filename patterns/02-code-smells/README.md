@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-17 entries, 132,722 words. Every entry carries all 18
+20 entries, 157,163 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -30,6 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Dead Code](dead-code.md) | canonical | 9,473 | Dead code accumulates as an ordinary, unavoidable byproduct of change. |
 | [Long Parameter List](long-parameter-list.md) | canonical | 7,502 | A function, method, or constructor accumulates parameters over its lifetime, usually one at a time, usually each addition individually reasonable, until the call site becomes ... |
 | [Middle Man](middle-man.md) | canonical | 7,237 | The smell shows up during evolution, almost never at the moment a class is first written. |
+| [Primitive Obsession](primitive-obsession.md) | canonical | 7,378 | A codebase represents a concept from its domain, a monetary amount, a telephone number, a temperature, an email address, a percentage, a date range, a currency code, using the ... |
 
 ## Code Smell, Object-Oriented Abusers
 
@@ -45,12 +46,14 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Inappropriate Intimacy](inappropriate-intimacy.md) | canonical | 8,379 | Two classes end up knowing far more about each other's insides than either one's public contract admits to. |
 | [Incomplete Library Class](incomplete-library-class.md) | canonical | 8,434 | A team depends on a class, module, or type that ships from outside the codebase they control. |
 | [Message Chains](message-chains.md) | canonical | 6,586 | A client asks one object for a second object, then immediately asks that second object for a third, and continues down the line until it finally reads or calls the field it ... |
+| [Shotgun Surgery](shotgun-surgery.md) | canonical | 7,839 | A team ships a single logical concept, adding a new payment method, adding a new shipping carrier, adding a new order status, renaming a field that a dozen call sites read. |
 
 ## Object-Orientation Abusers
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Data Class](data-class.md) | canonical | 7,208 | A class is created to represent something, usually because a database table, an external API payload, or a domain noun needs a type. |
+| [Refused Bequest](refused-bequest.md) | canonical | 9,224 | The smell shows up the moment someone writes a subclass that extends a base class not because the subclass genuinely wants to honor the base class's whole public contract, but ... |
 
 ## Reading order
 
