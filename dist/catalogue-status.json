@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 308,
+  "published_total": 311,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 5,
   "stale_entries": 0,
-  "references_checked": 1849,
+  "references_checked": 1860,
   "rows": [
     {
       "family": "01-gof",
@@ -56,13 +56,13 @@
       "family": "05-architectural",
       "name": "Architectural Patterns",
       "origin": "Buschmann POSA 1, Bass SEI",
-      "published": 16,
-      "planned": 27,
+      "published": 19,
+      "planned": 24,
       "target": 43,
-      "percent": 37.2,
+      "percent": 44.2,
       "maturity": {
-        "canonical": 9,
-        "established": 6,
+        "established": 8,
+        "canonical": 10,
         "contested": 1
       }
     },

@@ -38,3 +38,8 @@ SagaTestHarness
 # encompass many things..."), cited word for word per the original-prose
 # and citation rules in ENTRY-TEMPLATE.md.
 encompass
+
+# Apache Ignite. Proper noun, the name of a real Apache Software
+# Foundation project, cited as a named production use per ENTRY-TEMPLATE.md.
+# Not the verb "ignite" used figuratively.
+ignite
