@@ -2,14 +2,17 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-1 entries, 7,640 words. Every entry carries all 18
+4 entries, 34,171 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Clean Architecture](clean-architecture.md) | canonical | 7,521 | A non-trivial application accumulates business rules that answer questions no framework, database, or user interface technology can answer for it. |
+| [Hexagonal Architecture](hexagonal-architecture.md) | canonical | 10,373 | A codebase reaches a specific, recognizable moment. |
 | [Layered Architecture](layered-architecture.md) | canonical | 7,640 | A non-trivial application has at least three concerns that change for different reasons and at different rates. |
+| [Onion Architecture](onion-architecture.md) | canonical | 8,637 | A team builds a business application against a specific database, a specific web framework, and a specific set of third party integrations, because those are the concrete ... |
 
 ## Reading order
 
