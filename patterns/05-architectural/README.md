@@ -2,13 +2,15 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-16 entries, 127,769 words. Every entry carries all 18
+19 entries, 149,846 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Blackboard Architecture](blackboard-architecture.md) | established | 7,034 | A recognizable class of problems has no known algorithm that transforms input directly into output. |
+| [Broker](broker-architecture.md) | canonical | 8,041 | A distributed system is made of components running in separate processes, often on separate machines, that need to call on each other's services. |
 | [Clean Architecture](clean-architecture.md) | canonical | 7,521 | A non-trivial application accumulates business rules that answer questions no framework, database, or user interface technology can answer for it. |
 | [Event-Driven Architecture](event-driven-architecture.md) | canonical | 9,420 | A system built from several independently deployable components needs to react to things that happen elsewhere in the system, without each component knowing the internal state ... |
 | [Hexagonal Architecture](hexagonal-architecture.md) | canonical | 10,373 | A codebase reaches a specific, recognizable moment. |
@@ -24,6 +26,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Pipes and Filters](pipes-filters.md) | canonical | 7,870 | A system must transform a stream of data through several independent processing steps, and the set of steps, their order, or the data source itself is expected to change over the ... |
 | [Serverless Architecture](serverless-architecture.md) | established | 8,896 | A team owns a backend that must handle a workload with two properties that are hard to satisfy at once with a conventional server fleet, the load is spiky or unpredictable, and ... |
 | [Service-Oriented Architecture](service-oriented-architecture.md) | contested | 6,727 | A monolithic application starts as the fastest way to ship. |
+| [Space-Based Architecture](space-based-architecture.md) | established | 7,002 | A system built as a stateless application tier in front of a single relational database scales the application tier easily and the database tier badly. |
 | [VIPER](viper.md) | established | 8,403 | A screen in a UIKit or AppKit application tends to accumulate three kinds of code inside one view controller, code that lays out and updates the user interface, code that decides ... |
 
 ## Reading order
