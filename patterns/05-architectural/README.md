@@ -2,7 +2,7 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-13 entries, 103,927 words. Every entry carries all 18
+16 entries, 127,769 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
@@ -14,12 +14,15 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Hexagonal Architecture](hexagonal-architecture.md) | canonical | 10,373 | A codebase reaches a specific, recognizable moment. |
 | [Layered Architecture](layered-architecture.md) | canonical | 7,640 | A non-trivial application has at least three concerns that change for different reasons and at different rates. |
 | [Microkernel](microkernel.md) | canonical | 8,103 | A team is building a system whose core purpose is settled and small, but whose surrounding behavior is not. |
+| [Microservices Architecture](microservices-architecture.md) | established | 7,028 | A single deployable application, however well factored internally, eventually runs into three problems that module boundaries inside one process cannot solve. |
 | [Model View ViewModel](model-view-viewmodel.md) | canonical | 6,834 | A user interface has three kinds of code tangled together whenever it is built without a discipline. |
 | [Model-View-Controller](model-view-controller.md) | canonical | 6,733 | The problem MVC solves is separation of concerns in a system where a person is directly manipulating a live data structure through a graphical interface, and the interface must ... |
 | [Model-View-Intent](model-view-intent.md) | established | 7,956 | A View that mutates its own local, mutable fields in response to individual events accumulates state that nobody can reconstruct from a single snapshot. |
 | [Model-View-Presenter](model-view-presenter.md) | established | 7,710 | A screen, form, or activity has to do three jobs at once. |
+| [Modular Monolith](modular-monolith.md) | established | 7,918 | A team is building a system that will run as one process, or one small cluster of identical processes behind a load balancer, and deploys as one unit. |
 | [Onion Architecture](onion-architecture.md) | canonical | 8,637 | A team builds a business application against a specific database, a specific web framework, and a specific set of third party integrations, because those are the concrete ... |
 | [Pipes and Filters](pipes-filters.md) | canonical | 7,870 | A system must transform a stream of data through several independent processing steps, and the set of steps, their order, or the data source itself is expected to change over the ... |
+| [Serverless Architecture](serverless-architecture.md) | established | 8,896 | A team owns a backend that must handle a workload with two properties that are hard to satisfy at once with a conventional server fleet, the load is spiky or unpredictable, and ... |
 | [Service-Oriented Architecture](service-oriented-architecture.md) | contested | 6,727 | A monolithic application starts as the fastest way to ship. |
 | [VIPER](viper.md) | established | 8,403 | A screen in a UIKit or AppKit application tends to accumulate three kinds of code inside one view controller, code that lays out and updates the user interface, code that decides ... |
 
