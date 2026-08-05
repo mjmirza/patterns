@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 290,
+  "published_total": 293,
   "target_total": 887,
   "families_total": 29,
-  "families_complete": 4,
+  "families_complete": 5,
   "stale_entries": 0,
-  "references_checked": 1761,
+  "references_checked": 1772,
   "rows": [
     {
       "family": "01-gof",
@@ -24,12 +24,12 @@
       "family": "02-code-smells",
       "name": "Code Smells",
       "origin": "Fowler and Beck, Refactoring",
-      "published": 26,
-      "planned": 2,
+      "published": 28,
+      "planned": 0,
       "target": 28,
-      "percent": 92.9,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 26
+        "canonical": 28
       }
     },
     {
@@ -56,11 +56,13 @@
       "family": "05-architectural",
       "name": "Architectural Patterns",
       "origin": "Buschmann POSA 1, Bass SEI",
-      "published": 0,
-      "planned": 43,
+      "published": 1,
+      "planned": 42,
       "target": 43,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 2.3,
+      "maturity": {
+        "canonical": 1
+      }
     },
     {
       "family": "06-poeaa",
