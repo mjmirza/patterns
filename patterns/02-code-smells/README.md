@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-23 entries, 181,826 words. Every entry carries all 18
+26 entries, 205,382 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -20,6 +20,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Divergent Change](divergent-change.md) | canonical | 7,488 | A single class keeps needing edits, and the edits have nothing to do with each other. |
+| [Mutable Data](mutable-data.md) | canonical | 6,860 | A piece of mutable data becomes a smell the moment two conditions hold at once. |
 | [Parallel Inheritance Hierarchies](parallel-inheritance-hierarchies.md) | canonical | 6,677 | The smell appears whenever a codebase has two or more class hierarchies where subclassing one forces a matching subclass to be added to the other, over and over, for as long as ... |
 
 ## Code Smell
@@ -29,6 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Comments](comments.md) | canonical | 8,795 | A comment is a message from one point in time to a later reader, and it is never checked by anything that runs. |
 | [Dead Code](dead-code.md) | canonical | 9,473 | Dead code accumulates as an ordinary, unavoidable byproduct of change. |
 | [Long Parameter List](long-parameter-list.md) | canonical | 7,502 | A function, method, or constructor accumulates parameters over its lifetime, usually one at a time, usually each addition individually reasonable, until the call site becomes ... |
+| [Loops](loops.md) | canonical | 8,826 | A loop is the most flexible construct available in an imperative language. |
 | [Middle Man](middle-man.md) | canonical | 7,237 | The smell shows up during evolution, almost never at the moment a class is first written. |
 | [Primitive Obsession](primitive-obsession.md) | canonical | 7,378 | A codebase represents a concept from its domain, a monetary amount, a telephone number, a temperature, an email address, a percentage, a date range, a currency code, using the ... |
 
@@ -43,6 +45,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Feature Envy](feature-envy.md) | canonical | 7,482 | A method sits on class A. Most of its logic reads or computes from the fields and accessor methods of class B, an object it was handed as a parameter, an instance variable, or ... |
+| [Global Data](global-data.md) | canonical | 7,870 | A program needs some piece of information in more than one place. |
 | [Inappropriate Intimacy](inappropriate-intimacy.md) | canonical | 8,379 | Two classes end up knowing far more about each other's insides than either one's public contract admits to. |
 | [Incomplete Library Class](incomplete-library-class.md) | canonical | 8,434 | A team depends on a class, module, or type that ships from outside the codebase they control. |
 | [Message Chains](message-chains.md) | canonical | 6,586 | A client asks one object for a second object, then immediately asks that second object for a third, and continues down the line until it finally reads or calls the field it ... |
