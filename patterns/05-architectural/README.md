@@ -2,7 +2,7 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-4 entries, 34,171 words. Every entry carries all 18
+7 entries, 55,448 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
@@ -12,6 +12,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Clean Architecture](clean-architecture.md) | canonical | 7,521 | A non-trivial application accumulates business rules that answer questions no framework, database, or user interface technology can answer for it. |
 | [Hexagonal Architecture](hexagonal-architecture.md) | canonical | 10,373 | A codebase reaches a specific, recognizable moment. |
 | [Layered Architecture](layered-architecture.md) | canonical | 7,640 | A non-trivial application has at least three concerns that change for different reasons and at different rates. |
+| [Model View ViewModel](model-view-viewmodel.md) | canonical | 6,834 | A user interface has three kinds of code tangled together whenever it is built without a discipline. |
+| [Model-View-Controller](model-view-controller.md) | canonical | 6,733 | The problem MVC solves is separation of concerns in a system where a person is directly manipulating a live data structure through a graphical interface, and the interface must ... |
+| [Model-View-Presenter](model-view-presenter.md) | established | 7,710 | A screen, form, or activity has to do three jobs at once. |
 | [Onion Architecture](onion-architecture.md) | canonical | 8,637 | A team builds a business application against a specific database, a specific web framework, and a specific set of third party integrations, because those are the concrete ... |
 
 ## Reading order
