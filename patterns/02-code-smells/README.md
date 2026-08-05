@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-20 entries, 157,163 words. Every entry carries all 18
+23 entries, 181,826 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -54,6 +54,14 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Data Class](data-class.md) | canonical | 7,208 | A class is created to represent something, usually because a database table, an external API payload, or a domain noun needs a type. |
 | [Refused Bequest](refused-bequest.md) | canonical | 9,224 | The smell shows up the moment someone writes a subclass that extends a base class not because the subclass genuinely wants to honor the base class's whole public contract, but ... |
+| [Switch Statements](switch-statements.md) | canonical | 8,919 | The problem starts small and grows by exactly the mechanism the smell is named for, switching. |
+| [Temporary Field](temporary-field.md) | canonical | 9,246 | The smell appears when a class has a method that implements a complex, multi-step algorithm, and that algorithm needs several intermediate values threaded through more than one ... |
+
+## Structural
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Speculative Generality](speculative-generality.md) | canonical | 6,498 | The smell shows up at the moment a developer, while building the one feature actually requested, imagines a family of features that might follow it and builds the software to ... |
 
 ## Reading order
 
