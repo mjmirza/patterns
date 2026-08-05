@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-26 entries, 205,382 words. Every entry carries all 18
+28 entries, 221,178 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -48,6 +48,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Global Data](global-data.md) | canonical | 7,870 | A program needs some piece of information in more than one place. |
 | [Inappropriate Intimacy](inappropriate-intimacy.md) | canonical | 8,379 | Two classes end up knowing far more about each other's insides than either one's public contract admits to. |
 | [Incomplete Library Class](incomplete-library-class.md) | canonical | 8,434 | A team depends on a class, module, or type that ships from outside the codebase they control. |
+| [Insider Trading](insider-trading.md) | canonical | 8,077 | Two modules were designed to talk to each other through a small, deliberate interface, and over time they grew a second, informal interface nobody designed. |
 | [Message Chains](message-chains.md) | canonical | 6,586 | A client asks one object for a second object, then immediately asks that second object for a third, and continues down the line until it finally reads or calls the field it ... |
 | [Shotgun Surgery](shotgun-surgery.md) | canonical | 7,839 | A team ships a single logical concept, adding a new payment method, adding a new shipping carrier, adding a new order status, renaming a field that a dozen call sites read. |
 
@@ -57,6 +58,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Data Class](data-class.md) | canonical | 7,208 | A class is created to represent something, usually because a database table, an external API payload, or a domain noun needs a type. |
 | [Refused Bequest](refused-bequest.md) | canonical | 9,224 | The smell shows up the moment someone writes a subclass that extends a base class not because the subclass genuinely wants to honor the base class's whole public contract, but ... |
+| [Repeated Switches](repeated-switches.md) | canonical | 7,719 | A codebase accumulates a type code, an enum, a string discriminant, or a kind field on a tagged union, that represents a small closed family of variants a business actually cares ... |
 | [Switch Statements](switch-statements.md) | canonical | 8,919 | The problem starts small and grows by exactly the mechanism the smell is named for, switching. |
 | [Temporary Field](temporary-field.md) | canonical | 9,246 | The smell appears when a class has a method that implements a complex, multi-step algorithm, and that algorithm needs several intermediate values threaded through more than one ... |
 
