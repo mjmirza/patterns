@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-332%20published%20%2F%20887%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-335%20published%20%2F%20887%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -14,10 +14,10 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-332-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-555-lightgrey)
-![Catalogue completion](https://img.shields.io/badge/completion-37.4%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-1960-brightgreen)
+![Published entries](https://img.shields.io/badge/published-335-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-552-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-37.8%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-1972-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
@@ -91,7 +91,7 @@ README does not claim they are implemented.
 | 01 | [Design Patterns (GoF)](patterns/01-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 23 | 0 | 23 |
 | 02 | [Code Smells](patterns/02-code-smells/) | Fowler and Beck, Refactoring | 28 | 0 | 28 |
 | 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 0 | 66 | 66 |
-| 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 13 | 37 | 50 |
+| 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 16 | 34 | 50 |
 | 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 27 | 16 | 43 |
 | 06 | [Enterprise Application Architecture](patterns/06-poeaa/) | Fowler, PoEAA | 0 | 50 | 50 |
 | 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 0 | 57 | 57 |
