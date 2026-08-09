@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-7 entries, 51,107 words. Every entry carries all 18
+10 entries, 73,294 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -15,9 +15,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Controller](controller.md) | canonical | 6,874 | A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system ... |
 | [Creator](creator.md) | canonical | 7,514 | Every object-oriented system eventually needs a new object of type A to come into existence somewhere, and the code that calls the constructor has to live in some class B. |
+| [High Cohesion](high-cohesion.md) | canonical | 8,014 | A team splits a system into modules, classes, packages, or services, and almost every split is defensible on some axis. |
 | [Information Expert](information-expert.md) | canonical | 7,089 | A team building an object model reaches a point, usually within the first design session, where a piece of business logic needs a home. |
 | [Interface Segregation Principle](interface-segregation-principle.md) | canonical | 9,180 | The problem ISP names is specific and recognizable once you have seen it. |
+| [Low Coupling](low-coupling.md) | canonical | 7,299 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
 | [Open Closed Principle](open-closed-principle.md) | canonical | 5,600 | A piece of software that ships once and never changes does not need this principle. |
 | [Single Responsibility Principle](single-responsibility-principle.md) | canonical | 8,417 | The problem SRP names is a specific, recognizable shape of decay. |
 
