@@ -2,7 +2,7 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-22 entries, 174,650 words. Every entry carries all 18
+25 entries, 198,359 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
@@ -11,8 +11,10 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Blackboard Architecture](blackboard-architecture.md) | established | 7,034 | A recognizable class of problems has no known algorithm that transforms input directly into output. |
 | [Broker](broker-architecture.md) | canonical | 8,041 | A distributed system is made of components running in separate processes, often on separate machines, that need to call on each other's services. |
+| [Cell-Based Architecture](cell-based-architecture.md) | established | 8,424 | A service that runs as one shared, horizontally-scaled deployment behind one load balancer has a property that is invisible on a calm day and catastrophic on a bad one. |
 | [Clean Architecture](clean-architecture.md) | canonical | 7,521 | A non-trivial application accumulates business rules that answer questions no framework, database, or user interface technology can answer for it. |
 | [Client-Server](client-server.md) | canonical | 8,189 | An application needs to let more than one user, device, or process operate on data or capability that must be shared, kept consistent, and protected from direct, uncoordinated ... |
+| [Event-Carried State Transfer](event-carried-state-transfer.md) | established | 7,462 | A system grows a second consumer that needs data owned by a first system. |
 | [Event-Driven Architecture](event-driven-architecture.md) | canonical | 9,420 | A system built from several independently deployable components needs to react to things that happen elsewhere in the system, without each component knowing the internal state ... |
 | [Hexagonal Architecture](hexagonal-architecture.md) | canonical | 10,373 | A codebase reaches a specific, recognizable moment. |
 | [Layered Architecture](layered-architecture.md) | canonical | 7,640 | A non-trivial application has at least three concerns that change for different reasons and at different rates. |
@@ -26,6 +28,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Onion Architecture](onion-architecture.md) | canonical | 8,637 | A team builds a business application against a specific database, a specific web framework, and a specific set of third party integrations, because those are the concrete ... |
 | [Peer-to-Peer](peer-to-peer.md) | canonical | 8,950 | A system needs many participants to exchange data or share work, and at least one of the following forces makes a single, dedicated server the wrong place to put that coordination. |
 | [Pipes and Filters](pipes-filters.md) | canonical | 7,870 | A system must transform a stream of data through several independent processing steps, and the set of steps, their order, or the data source itself is expected to change over the ... |
+| [Plugin Architecture](plugin-architecture.md) | canonical | 7,823 | An application needs to support a set of behaviours that is open-ended, unknown at the time the core is built, and likely to be supplied by parties who are not the core's own ... |
 | [Primary-Replica](primary-replica.md) | canonical | 7,665 | A single database instance handling both writes and reads eventually hits a ceiling on at least one of three axes, read throughput, availability, and geographic latency. |
 | [Serverless Architecture](serverless-architecture.md) | established | 8,896 | A team owns a backend that must handle a workload with two properties that are hard to satisfy at once with a conventional server fleet, the load is spiky or unpredictable, and ... |
 | [Service-Oriented Architecture](service-oriented-architecture.md) | contested | 6,727 | A monolithic application starts as the fastest way to ship. |
