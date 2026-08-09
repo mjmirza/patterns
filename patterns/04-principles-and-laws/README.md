@@ -2,14 +2,22 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-1 entries, 8,417 words. Every entry carries all 18
+4 entries, 29,407 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Principle
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Interface Segregation Principle](interface-segregation-principle.md) | canonical | 9,180 | The problem ISP names is specific and recognizable once you have seen it. |
+| [Open Closed Principle](open-closed-principle.md) | canonical | 5,600 | A piece of software that ships once and never changes does not need this principle. |
 | [Single Responsibility Principle](single-responsibility-principle.md) | canonical | 8,417 | The problem SRP names is a specific, recognizable shape of decay. |
+
+## Principles and Laws
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Liskov Substitution Principle](liskov-substitution-principle.md) | canonical | 6,210 | Object-oriented languages let a caller hold a reference typed as a base class or an interface and receive, at runtime, any one of several concrete subtypes. |
 
 ## Reading order
 
