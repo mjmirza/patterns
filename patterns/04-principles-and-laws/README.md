@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-13 entries, 96,854 words. Every entry carries all 18
+16 entries, 119,542 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -17,12 +17,15 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Controller](controller.md) | canonical | 6,874 | A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system ... |
 | [Creator](creator.md) | canonical | 7,514 | Every object-oriented system eventually needs a new object of type A to come into existence somewhere, and the code that calls the constructor has to live in some class B. |
+| [Do Not Repeat Yourself](do-not-repeat-yourself.md) | canonical | 6,449 | A single fact about the system, a tax rate, a validation rule, a URL, a unit conversion, a business rule about who is allowed to approve a refund, gets written down in more than ... |
 | [High Cohesion](high-cohesion.md) | canonical | 8,014 | A team splits a system into modules, classes, packages, or services, and almost every split is defensible on some axis. |
 | [Indirection](indirection.md) | canonical | 8,493 | Two parts of a system need to interact, but binding them together directly creates a cost that shows up later rather than now. |
 | [Information Expert](information-expert.md) | canonical | 7,089 | A team building an object model reaches a point, usually within the first design session, where a piece of business logic needs a home. |
 | [Interface Segregation Principle](interface-segregation-principle.md) | canonical | 9,180 | The problem ISP names is specific and recognizable once you have seen it. |
+| [Keep It Simple](keep-it-simple.md) | canonical | 8,079 | Every non-trivial piece of software accretes complexity over its lifetime, and that accretion happens in two very different ways that are easy to conflate. |
 | [Low Coupling](low-coupling.md) | canonical | 7,299 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
 | [Open Closed Principle](open-closed-principle.md) | canonical | 5,600 | A piece of software that ships once and never changes does not need this principle. |
+| [Protected Variations](protected-variations.md) | canonical | 8,160 | A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ... |
 | [Pure Fabrication](pure-fabrication.md) | canonical | 7,604 | A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. |
 | [Single Responsibility Principle](single-responsibility-principle.md) | canonical | 8,417 | The problem SRP names is a specific, recognizable shape of decay. |
 
