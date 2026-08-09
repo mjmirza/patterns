@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-19 entries, 143,244 words. Every entry carries all 18
+22 entries, 170,946 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -29,7 +29,10 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Open Closed Principle](open-closed-principle.md) | canonical | 5,600 | A piece of software that ships once and never changes does not need this principle. |
 | [Protected Variations](protected-variations.md) | canonical | 8,160 | A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ... |
 | [Pure Fabrication](pure-fabrication.md) | canonical | 7,604 | A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. |
+| [Separation of Concerns](separation-of-concerns.md) | canonical | 10,250 | A codebase grows by accretion. A new requirement lands, and the fastest way to satisfy it is to add a few lines wherever the relevant data already sits in memory. |
 | [Single Responsibility Principle](single-responsibility-principle.md) | canonical | 8,417 | The problem SRP names is a specific, recognizable shape of decay. |
+| [Single Source of Truth](single-source-of-truth.md) | canonical | 8,258 | A fact about the world gets written down more than once, in more than one system, in more than one file, or in more than one variable, because writing it again was faster than ... |
+| [Tell, Don't Ask](tell-do-not-ask.md) | canonical | 9,194 | The problem this principle answers shows up the first time a codebase grows past the size where one person holds the whole design in their head. |
 | [You Aren't Gonna Need It](you-are-not-gonna-need-it.md) | canonical | 8,862 | A developer sits inside a piece of work that is genuinely needed today, and partway through, notices a plausible future requirement. |
 
 ## Principles and Laws
