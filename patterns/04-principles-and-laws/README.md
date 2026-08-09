@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-16 entries, 119,542 words. Every entry carries all 18
+19 entries, 143,244 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -15,6 +15,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Composition over Inheritance](composition-over-inheritance.md) | canonical | 6,930 | A designer needs an object to have several independent, combinable behaviours, and reaches for a single class hierarchy to express all of them. |
 | [Controller](controller.md) | canonical | 6,874 | A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system ... |
 | [Creator](creator.md) | canonical | 7,514 | Every object-oriented system eventually needs a new object of type A to come into existence somewhere, and the code that calls the constructor has to live in some class B. |
 | [Do Not Repeat Yourself](do-not-repeat-yourself.md) | canonical | 6,449 | A single fact about the system, a tax rate, a validation rule, a URL, a unit conversion, a business rule about who is allowed to approve a refund, gets written down in more than ... |
@@ -23,11 +24,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Information Expert](information-expert.md) | canonical | 7,089 | A team building an object model reaches a point, usually within the first design session, where a piece of business logic needs a home. |
 | [Interface Segregation Principle](interface-segregation-principle.md) | canonical | 9,180 | The problem ISP names is specific and recognizable once you have seen it. |
 | [Keep It Simple](keep-it-simple.md) | canonical | 8,079 | Every non-trivial piece of software accretes complexity over its lifetime, and that accretion happens in two very different ways that are easy to conflate. |
+| [Law of Demeter](law-of-demeter.md) | canonical | 7,910 | A method reaches through an object it was handed to get at a second object, then calls a method on that second object. |
 | [Low Coupling](low-coupling.md) | canonical | 7,299 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
 | [Open Closed Principle](open-closed-principle.md) | canonical | 5,600 | A piece of software that ships once and never changes does not need this principle. |
 | [Protected Variations](protected-variations.md) | canonical | 8,160 | A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ... |
 | [Pure Fabrication](pure-fabrication.md) | canonical | 7,604 | A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. |
 | [Single Responsibility Principle](single-responsibility-principle.md) | canonical | 8,417 | The problem SRP names is a specific, recognizable shape of decay. |
+| [You Aren't Gonna Need It](you-are-not-gonna-need-it.md) | canonical | 8,862 | A developer sits inside a piece of work that is genuinely needed today, and partway through, notices a plausible future requirement. |
 
 ## Principles and Laws
 
