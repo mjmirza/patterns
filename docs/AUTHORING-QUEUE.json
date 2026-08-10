@@ -2373,13 +2373,6 @@
     "focus": ""
   },
   {
-    "name": "Shared Kernel Architecture",
-    "slug": "shared-kernel-architecture",
-    "category": "architectural",
-    "path": "patterns/05-architectural/shared-kernel-architecture.md",
-    "focus": ""
-  },
-  {
     "name": "Plugin Sandbox",
     "slug": "plugin-sandbox",
     "category": "architectural",
