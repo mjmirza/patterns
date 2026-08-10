@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-31 entries, 243,556 words. Every entry carries all 18
+34 entries, 267,843 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -23,6 +23,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [ACID](acid.md) | canonical | 7,029 | A database serves many concurrent operations against shared, durable state. |
+| [BASE](base.md) | canonical | 8,219 | A system holds one logical piece of data on more than one physical machine, because a single machine cannot serve the read and write volume, cannot survive its own failure, or ... |
 | [CAP Theorem](cap-theorem.md) | canonical | 7,623 | A system holds one piece of mutable state that more than one machine can read and write, and those machines are connected by a network that is not perfectly reliable. |
 | [Common Closure Principle](common-closure-principle.md) | canonical | 7,574 | A codebase reaches the size where a single flat namespace of classes stops being a unit anyone can reason about, and the team splits it into smaller compilation and deployment ... |
 | [Composition over Inheritance](composition-over-inheritance.md) | canonical | 6,930 | A designer needs an object to have several independent, combinable behaviours, and reaches for a single class hierarchy to express all of them. |
@@ -38,6 +40,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Law of Demeter](law-of-demeter.md) | canonical | 7,910 | A method reaches through an object it was handed to get at a second object, then calls a method on that second object. |
 | [Low Coupling](low-coupling.md) | canonical | 7,299 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
 | [Open Closed Principle](open-closed-principle.md) | canonical | 5,600 | A piece of software that ships once and never changes does not need this principle. |
+| [PACELC Theorem](pacelc-theorem.md) | canonical | 9,039 | A team picks a distributed database, reads that it is "AP" or "CP" under CAP, and believes that single letter fully describes how the system will behave in production. |
 | [Principle of Least Astonishment](principle-of-least-astonishment.md) | canonical | 9,080 | A person interacts with a piece of software, whether by reading its code, by calling its API, by typing a command at a shell, or by clicking a button in a user interface, and ... |
 | [Protected Variations](protected-variations.md) | canonical | 8,160 | A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ... |
 | [Pure Fabrication](pure-fabrication.md) | canonical | 7,604 | A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. |
