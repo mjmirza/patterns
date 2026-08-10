@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-34 entries, 267,843 words. Every entry carries all 18
+37 entries, 292,154 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Acyclic Dependencies Principle](acyclic-dependencies-principle.md) | canonical | 8,479 | A codebase of any real size is not one file. |
+| [Composable](composable.md) | canonical | 7,680 | Every system with more than one moving part eventually needs behavior that no single unit provides on its own. |
 | [Dependency Inversion Principle](dependency-inversion-principle.md) | canonical | 7,097 | A codebase grows outward from a small number of policy decisions, what the system does, in what order, and why. |
 | [Stable Abstractions Principle](stable-abstractions-principle.md) | canonical | 8,095 | A codebase accumulates two kinds of code over its life. |
 
@@ -29,6 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Common Closure Principle](common-closure-principle.md) | canonical | 7,574 | A codebase reaches the size where a single flat namespace of classes stops being a unit anyone can reason about, and the team splits it into smaller compilation and deployment ... |
 | [Composition over Inheritance](composition-over-inheritance.md) | canonical | 6,930 | A designer needs an object to have several independent, combinable behaviours, and reaches for a single class hierarchy to express all of them. |
 | [Controller](controller.md) | canonical | 6,874 | A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system ... |
+| [Conway's Law](conway-law.md) | canonical | 7,740 | A team is asked to build a system with several distinct concerns. |
 | [Creator](creator.md) | canonical | 7,514 | Every object-oriented system eventually needs a new object of type A to come into existence somewhere, and the code that calls the constructor has to live in some class B. |
 | [Do Not Repeat Yourself](do-not-repeat-yourself.md) | canonical | 6,449 | A single fact about the system, a tax rate, a validation rule, a URL, a unit conversion, a business rule about who is allowed to approve a refund, gets written down in more than ... |
 | [Fail Fast](fail-fast.md) | established | 7,090 | A running program encounters a state it was not written to handle correctly. |
@@ -41,6 +43,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Low Coupling](low-coupling.md) | canonical | 7,299 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
 | [Open Closed Principle](open-closed-principle.md) | canonical | 5,600 | A piece of software that ships once and never changes does not need this principle. |
 | [PACELC Theorem](pacelc-theorem.md) | canonical | 9,039 | A team picks a distributed database, reads that it is "AP" or "CP" under CAP, and believes that single letter fully describes how the system will behave in production. |
+| [Postel's Law](postel-law.md) | contested | 8,891 | Two or more parties implement the same open, published specification independently, without coordinating their release schedules, their source code, or in most cases even knowing ... |
 | [Principle of Least Astonishment](principle-of-least-astonishment.md) | canonical | 9,080 | A person interacts with a piece of software, whether by reading its code, by calling its API, by typing a command at a shell, or by clicking a button in a user interface, and ... |
 | [Protected Variations](protected-variations.md) | canonical | 8,160 | A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ... |
 | [Pure Fabrication](pure-fabrication.md) | canonical | 7,604 | A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. |
