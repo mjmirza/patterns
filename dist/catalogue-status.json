@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 359,
+  "published_total": 362,
   "target_total": 859,
   "families_total": 29,
-  "families_complete": 5,
+  "families_complete": 6,
   "stale_entries": 0,
-  "references_checked": 2130,
+  "references_checked": 2143,
   "rows": [
     {
       "family": "01-gof",
@@ -46,12 +46,12 @@
       "family": "04-principles-and-laws",
       "name": "Principles and Laws",
       "origin": "Martin, Larman, Brewer, Conway",
-      "published": 40,
-      "planned": 1,
+      "published": 41,
+      "planned": 0,
       "target": 41,
-      "percent": 97.6,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 37,
+        "canonical": 38,
         "established": 2,
         "contested": 1
       }
@@ -60,13 +60,13 @@
       "family": "05-architectural",
       "name": "Architectural Patterns",
       "origin": "Buschmann POSA 1, Bass SEI",
-      "published": 27,
-      "planned": 7,
+      "published": 29,
+      "planned": 5,
       "target": 34,
-      "percent": 79.4,
+      "percent": 85.3,
       "maturity": {
         "established": 10,
-        "canonical": 16,
+        "canonical": 18,
         "contested": 1
       }
     },
