@@ -2324,48 +2324,6 @@
     "focus": ""
   },
   {
-    "name": "Controller (GRASP)",
-    "slug": "controller-grasp",
-    "category": "design principle",
-    "path": "patterns/04-principles-and-laws/controller-grasp.md",
-    "focus": ""
-  },
-  {
-    "name": "Polymorphism (GRASP)",
-    "slug": "polymorphism-grasp",
-    "category": "design principle",
-    "path": "patterns/04-principles-and-laws/polymorphism-grasp.md",
-    "focus": ""
-  },
-  {
-    "name": "DRY",
-    "slug": "dry",
-    "category": "design principle",
-    "path": "patterns/04-principles-and-laws/dry.md",
-    "focus": ""
-  },
-  {
-    "name": "KISS",
-    "slug": "kiss",
-    "category": "design principle",
-    "path": "patterns/04-principles-and-laws/kiss.md",
-    "focus": ""
-  },
-  {
-    "name": "YAGNI",
-    "slug": "yagni",
-    "category": "design principle",
-    "path": "patterns/04-principles-and-laws/yagni.md",
-    "focus": ""
-  },
-  {
-    "name": "Tell Dont Ask",
-    "slug": "tell-dont-ask",
-    "category": "design principle",
-    "path": "patterns/04-principles-and-laws/tell-dont-ask.md",
-    "focus": ""
-  },
-  {
     "name": "Composable",
     "slug": "composable",
     "category": "design principle",
@@ -2401,13 +2359,6 @@
     "focus": ""
   },
   {
-    "name": "Reuse-Release Equivalence Principle",
-    "slug": "reuse-release-equivalence-principle",
-    "category": "design principle",
-    "path": "patterns/04-principles-and-laws/reuse-release-equivalence-principle.md",
-    "focus": ""
-  },
-  {
     "name": "Conways Law",
     "slug": "conways-law",
     "category": "design principle",
@@ -2422,45 +2373,10 @@
     "focus": ""
   },
   {
-    "name": "MVC",
-    "slug": "mvc",
-    "category": "architectural",
-    "path": "patterns/05-architectural/mvc.md",
-    "focus": ""
-  },
-  {
-    "name": "MVP",
-    "slug": "mvp",
-    "category": "architectural",
-    "path": "patterns/05-architectural/mvp.md",
-    "focus": ""
-  },
-  {
-    "name": "MVVM",
-    "slug": "mvvm",
-    "category": "architectural",
-    "path": "patterns/05-architectural/mvvm.md",
-    "focus": ""
-  },
-  {
-    "name": "MVI",
-    "slug": "mvi",
-    "category": "architectural",
-    "path": "patterns/05-architectural/mvi.md",
-    "focus": ""
-  },
-  {
     "name": "Microkernel Architecture",
     "slug": "microkernel-architecture",
     "category": "architectural",
     "path": "patterns/05-architectural/microkernel-architecture.md",
-    "focus": ""
-  },
-  {
-    "name": "Pipes and Filters",
-    "slug": "pipes-and-filters",
-    "category": "architectural",
-    "path": "patterns/05-architectural/pipes-and-filters.md",
     "focus": ""
   },
   {
@@ -2513,13 +2429,6 @@
     "focus": ""
   },
   {
-    "name": "Backend for Frontend",
-    "slug": "backend-for-frontend",
-    "category": "architectural",
-    "path": "patterns/05-architectural/backend-for-frontend.md",
-    "focus": ""
-  },
-  {
     "name": "Shared Kernel Architecture",
     "slug": "shared-kernel-architecture",
     "category": "architectural",
@@ -2552,13 +2461,6 @@
     "slug": "table-module",
     "category": "enterprise application architecture",
     "path": "patterns/06-poeaa/table-module.md",
-    "focus": ""
-  },
-  {
-    "name": "Service Layer",
-    "slug": "service-layer",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/service-layer.md",
     "focus": ""
   },
   {
@@ -2898,13 +2800,6 @@
     "focus": ""
   },
   {
-    "name": "Publish-Subscribe Channel",
-    "slug": "publish-subscribe-channel",
-    "category": "enterprise integration",
-    "path": "patterns/07-integration/publish-subscribe-channel.md",
-    "focus": ""
-  },
-  {
     "name": "Datatype Channel",
     "slug": "datatype-channel",
     "category": "enterprise integration",
@@ -3101,13 +2996,6 @@
     "focus": ""
   },
   {
-    "name": "Message Broker",
-    "slug": "message-broker",
-    "category": "enterprise integration",
-    "path": "patterns/07-integration/message-broker.md",
-    "focus": ""
-  },
-  {
     "name": "Envelope Wrapper",
     "slug": "envelope-wrapper",
     "category": "enterprise integration",
@@ -3210,13 +3098,6 @@
     "slug": "durable-subscriber",
     "category": "enterprise integration",
     "path": "patterns/07-integration/durable-subscriber.md",
-    "focus": ""
-  },
-  {
-    "name": "Idempotent Receiver",
-    "slug": "idempotent-receiver",
-    "category": "enterprise integration",
-    "path": "patterns/07-integration/idempotent-receiver.md",
     "focus": ""
   },
   {
@@ -3570,13 +3451,6 @@
     "focus": ""
   },
   {
-    "name": "Client-side Discovery",
-    "slug": "client-side-discovery",
-    "category": "microservices",
-    "path": "patterns/10-microservices/client-side-discovery.md",
-    "focus": ""
-  },
-  {
     "name": "Server-side Discovery",
     "slug": "server-side-discovery",
     "category": "microservices",
@@ -3619,13 +3493,6 @@
     "focus": ""
   },
   {
-    "name": "Layered Architecture (DDD)",
-    "slug": "layered-architecture-ddd",
-    "category": "domain-driven design",
-    "path": "patterns/11-ddd/layered-architecture-ddd.md",
-    "focus": ""
-  },
-  {
     "name": "Subdomain Discovery",
     "slug": "subdomain-discovery",
     "category": "domain-driven design",
@@ -3644,13 +3511,6 @@
     "slug": "partnership",
     "category": "domain-driven design",
     "path": "patterns/11-ddd/partnership.md",
-    "focus": ""
-  },
-  {
-    "name": "Policy",
-    "slug": "policy",
-    "category": "domain-driven design",
-    "path": "patterns/11-ddd/policy.md",
     "focus": ""
   },
   {
@@ -3738,13 +3598,6 @@
     "focus": ""
   },
   {
-    "name": "Outbox Pattern",
-    "slug": "outbox-pattern",
-    "category": "data and storage",
-    "path": "patterns/12-data-storage/outbox-pattern.md",
-    "focus": ""
-  },
-  {
     "name": "Write-Ahead Log",
     "slug": "write-ahead-log",
     "category": "data and storage",
@@ -3777,13 +3630,6 @@
     "slug": "quorum",
     "category": "data and storage",
     "path": "patterns/12-data-storage/quorum.md",
-    "focus": ""
-  },
-  {
-    "name": "Leader-Follower Replication",
-    "slug": "leader-follower-replication",
-    "category": "data and storage",
-    "path": "patterns/12-data-storage/leader-follower-replication.md",
     "focus": ""
   },
   {
@@ -4757,13 +4603,6 @@
     "slug": "service-locator-antipattern",
     "category": "anti-pattern",
     "path": "patterns/18-anti-patterns/service-locator-antipattern.md",
-    "focus": ""
-  },
-  {
-    "name": "N+1 Query",
-    "slug": "n-1-query",
-    "category": "anti-pattern",
-    "path": "patterns/18-anti-patterns/n-1-query.md",
     "focus": ""
   },
   {
