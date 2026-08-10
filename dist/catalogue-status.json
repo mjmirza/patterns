@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 362,
+  "published_total": 365,
   "target_total": 855,
   "families_total": 29,
-  "families_complete": 6,
+  "families_complete": 7,
   "stale_entries": 0,
-  "references_checked": 2143,
+  "references_checked": 2169,
   "rows": [
     {
       "family": "01-gof",
@@ -60,12 +60,12 @@
       "family": "05-architectural",
       "name": "Architectural Patterns",
       "origin": "Buschmann POSA 1, Bass SEI",
-      "published": 29,
-      "planned": 1,
+      "published": 30,
+      "planned": 0,
       "target": 30,
-      "percent": 96.7,
+      "percent": 100.0,
       "maturity": {
-        "established": 10,
+        "established": 11,
         "canonical": 18,
         "contested": 1
       }
@@ -74,11 +74,13 @@
       "family": "06-poeaa",
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
-      "published": 0,
-      "planned": 49,
+      "published": 2,
+      "planned": 47,
       "target": 49,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 4.1,
+      "maturity": {
+        "canonical": 2
+      }
     },
     {
       "family": "07-integration",
