@@ -2,14 +2,22 @@
 
 Origin. Fowler, PoEAA
 
-2 entries, 16,250 words. Every entry carries all 18
+5 entries, 38,198 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Data Source Architectural
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Row Data Gateway](row-data-gateway.md) | canonical | 8,173 | A codebase has business logic that needs to read a single row from a relational table, change some of its columns, and write the row back. |
+| [Table Data Gateway](table-data-gateway.md) | canonical | 7,315 | An application needs to read and write rows in a table, and the two paths that seem obvious both go wrong at scale. |
 
 ## Domain Logic
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Domain Model](domain-model.md) | canonical | 7,665 | An enterprise application accumulates business rules over its life, pricing tiers, discount eligibility, order-state transitions, tax jurisdictions, credit limits, cancellation ... |
+| [Table Module](table-module.md) | established | 6,460 | A team is building a business application against a relational database using a technology stack whose native data-access layer hands back an in-memory, table-shaped structure ... |
 | [Transaction Script](transaction-script.md) | canonical | 8,585 | A team is building a business application, an order system, a billing system, a claims processor, anything where the software's job is to carry out operations that a business ... |
 
 ## Reading order
