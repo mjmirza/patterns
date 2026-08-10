@@ -2359,20 +2359,6 @@
     "focus": ""
   },
   {
-    "name": "Conways Law",
-    "slug": "conways-law",
-    "category": "design principle",
-    "path": "patterns/04-principles-and-laws/conways-law.md",
-    "focus": ""
-  },
-  {
-    "name": "Postels Law",
-    "slug": "postels-law",
-    "category": "design principle",
-    "path": "patterns/04-principles-and-laws/postels-law.md",
-    "focus": ""
-  },
-  {
     "name": "Microkernel Architecture",
     "slug": "microkernel-architecture",
     "category": "architectural",
