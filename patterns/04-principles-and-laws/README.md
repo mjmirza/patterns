@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-40 entries, 314,238 words. Every entry carries all 18
+41 entries, 322,492 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -64,6 +64,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Liskov Substitution Principle](liskov-substitution-principle.md) | canonical | 6,210 | Object-oriented languages let a caller hold a reference typed as a base class or an interface and receive, at runtime, any one of several concrete subtypes. |
 | [Polymorphism](polymorphism.md) | canonical | 7,463 | A piece of client code needs to perform an operation, render a shape, calculate a price, serialize a value, and it needs to do so uniformly over a collection of things that are ... |
+
+## Structural principle
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Domain-based](domain-based.md) | canonical | 8,254 | A system of any real size grows two kinds of edges as it is built. |
 
 ## Reading order
 

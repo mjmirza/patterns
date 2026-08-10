@@ -67,3 +67,10 @@ robust
 # whole (Go ecosystem, Rust ecosystem, Python ecosystem), the subject
 # matter of the "Idiomatic" principle itself. Not figurative startup slop.
 ecosystem
+
+# maximize/minimize. Verbatim inside a direct quote from Jimmy Bogard's
+# "Vertical Slice Architecture" ("minimize coupling between slices, and
+# maximize coupling in a slice"), cited word for word per the original-prose
+# and citation rules in ENTRY-TEMPLATE.md.
+maximize
+minimize
