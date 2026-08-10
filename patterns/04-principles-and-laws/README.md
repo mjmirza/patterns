@@ -2,19 +2,27 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-25 entries, 195,437 words. Every entry carries all 18
+28 entries, 218,957 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Acyclic Dependencies Principle](acyclic-dependencies-principle.md) | canonical | 8,479 | A codebase of any real size is not one file. |
 | [Dependency Inversion Principle](dependency-inversion-principle.md) | canonical | 7,097 | A codebase grows outward from a small number of policy decisions, what the system does, in what order, and why. |
+
+## Package and Component Design
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Common Reuse Principle](common-reuse-principle.md) | canonical | 7,467 | A team ships a library, an internal package, or a service client as one deployable unit. |
 
 ## Principle
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Common Closure Principle](common-closure-principle.md) | canonical | 7,574 | A codebase reaches the size where a single flat namespace of classes stops being a unit anyone can reason about, and the team splits it into smaller compilation and deployment ... |
 | [Composition over Inheritance](composition-over-inheritance.md) | canonical | 6,930 | A designer needs an object to have several independent, combinable behaviours, and reaches for a single class hierarchy to express all of them. |
 | [Controller](controller.md) | canonical | 6,874 | A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system ... |
 | [Creator](creator.md) | canonical | 7,514 | Every object-oriented system eventually needs a new object of type A to come into existence somewhere, and the code that calls the constructor has to live in some class B. |
