@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-37 entries, 292,154 words. Every entry carries all 18
+40 entries, 314,238 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -12,7 +12,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Acyclic Dependencies Principle](acyclic-dependencies-principle.md) | canonical | 8,479 | A codebase of any real size is not one file. |
 | [Composable](composable.md) | canonical | 7,680 | Every system with more than one moving part eventually needs behavior that no single unit provides on its own. |
 | [Dependency Inversion Principle](dependency-inversion-principle.md) | canonical | 7,097 | A codebase grows outward from a small number of policy decisions, what the system does, in what order, and why. |
+| [Predictable](predictable.md) | canonical | 9,475 | A caller who invokes an operation, reads an API's documentation, or pulls a dependency's published version needs to know, before acting, what is going to happen. |
 | [Stable Abstractions Principle](stable-abstractions-principle.md) | canonical | 8,095 | A codebase accumulates two kinds of code over its life. |
+| [Unix Philosophy (CUPID)](unix-philosophy-cupid.md) | established | 5,536 | A function, class, module, or service accumulates responsibility over time because adding one more branch to something that already exists is almost always locally cheaper than ... |
 
 ## Package and Component Design
 
@@ -35,6 +37,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Do Not Repeat Yourself](do-not-repeat-yourself.md) | canonical | 6,449 | A single fact about the system, a tax rate, a validation rule, a URL, a unit conversion, a business rule about who is allowed to approve a refund, gets written down in more than ... |
 | [Fail Fast](fail-fast.md) | established | 7,090 | A running program encounters a state it was not written to handle correctly. |
 | [High Cohesion](high-cohesion.md) | canonical | 8,014 | A team splits a system into modules, classes, packages, or services, and almost every split is defensible on some axis. |
+| [Idiomatic](idiomatic.md) | canonical | 7,073 | A person who learns to program in one language carries that language's mental model into every language learned afterward. |
 | [Indirection](indirection.md) | canonical | 8,493 | Two parts of a system need to interact, but binding them together directly creates a cost that shows up later rather than now. |
 | [Information Expert](information-expert.md) | canonical | 7,089 | A team building an object model reaches a point, usually within the first design session, where a piece of business logic needs a home. |
 | [Interface Segregation Principle](interface-segregation-principle.md) | canonical | 9,180 | The problem ISP names is specific and recognizable once you have seen it. |

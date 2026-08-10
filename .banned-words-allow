@@ -61,3 +61,9 @@ basically
 # this entry. Renaming the title would misquote the source, per the
 # original-prose and citation rules in ENTRY-TEMPLATE.md.
 robust
+
+# ecosystem. Plain, unavoidable technical term for the idiomatic.md entry,
+# denoting a language's community, standard library, and tooling as a
+# whole (Go ecosystem, Rust ecosystem, Python ecosystem), the subject
+# matter of the "Idiomatic" principle itself. Not figurative startup slop.
+ecosystem
