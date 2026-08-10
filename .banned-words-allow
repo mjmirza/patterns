@@ -49,3 +49,9 @@ ignite
 # Programming Explained. Embrace Change, cited as a source in multiple
 # entries. Renaming the title would misquote the source.
 embrace
+
+# basically. Not figurative filler. Literal first word of the pattern's own
+# canonical name, the BASE acronym (Basically Available, Soft state,
+# Eventually consistent), coined by Dan Pritchett, ACM Queue 2008. The
+# pattern cannot be named or explained without this exact term of art.
+basically
