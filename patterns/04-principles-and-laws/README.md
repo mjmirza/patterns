@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-22 entries, 170,946 words. Every entry carries all 18
+25 entries, 195,437 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -19,6 +19,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Controller](controller.md) | canonical | 6,874 | A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system ... |
 | [Creator](creator.md) | canonical | 7,514 | Every object-oriented system eventually needs a new object of type A to come into existence somewhere, and the code that calls the constructor has to live in some class B. |
 | [Do Not Repeat Yourself](do-not-repeat-yourself.md) | canonical | 6,449 | A single fact about the system, a tax rate, a validation rule, a URL, a unit conversion, a business rule about who is allowed to approve a refund, gets written down in more than ... |
+| [Fail Fast](fail-fast.md) | established | 7,090 | A running program encounters a state it was not written to handle correctly. |
 | [High Cohesion](high-cohesion.md) | canonical | 8,014 | A team splits a system into modules, classes, packages, or services, and almost every split is defensible on some axis. |
 | [Indirection](indirection.md) | canonical | 8,493 | Two parts of a system need to interact, but binding them together directly creates a cost that shows up later rather than now. |
 | [Information Expert](information-expert.md) | canonical | 7,089 | A team building an object model reaches a point, usually within the first design session, where a piece of business logic needs a home. |
@@ -27,8 +28,10 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Law of Demeter](law-of-demeter.md) | canonical | 7,910 | A method reaches through an object it was handed to get at a second object, then calls a method on that second object. |
 | [Low Coupling](low-coupling.md) | canonical | 7,299 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
 | [Open Closed Principle](open-closed-principle.md) | canonical | 5,600 | A piece of software that ships once and never changes does not need this principle. |
+| [Principle of Least Astonishment](principle-of-least-astonishment.md) | canonical | 9,080 | A person interacts with a piece of software, whether by reading its code, by calling its API, by typing a command at a shell, or by clicking a button in a user interface, and ... |
 | [Protected Variations](protected-variations.md) | canonical | 8,160 | A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ... |
 | [Pure Fabrication](pure-fabrication.md) | canonical | 7,604 | A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. |
+| [Release Reuse Equivalence](release-reuse-equivalence.md) | canonical | 8,321 | The problem REP addresses shows up the moment more than one piece of software wants to depend on the same piece of source code. |
 | [Separation of Concerns](separation-of-concerns.md) | canonical | 10,250 | A codebase grows by accretion. A new requirement lands, and the fastest way to satisfy it is to add a few lines wherever the relevant data already sits in memory. |
 | [Single Responsibility Principle](single-responsibility-principle.md) | canonical | 8,417 | The problem SRP names is a specific, recognizable shape of decay. |
 | [Single Source of Truth](single-source-of-truth.md) | canonical | 8,258 | A fact about the world gets written down more than once, in more than one system, in more than one file, or in more than one variable, because writing it again was faster than ... |

@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 341,
+  "published_total": 344,
   "target_total": 887,
   "families_total": 29,
   "families_complete": 5,
   "stale_entries": 0,
-  "references_checked": 2006,
+  "references_checked": 2032,
   "rows": [
     {
       "family": "01-gof",
@@ -46,12 +46,13 @@
       "family": "04-principles-and-laws",
       "name": "Principles and Laws",
       "origin": "Martin, Larman, Brewer, Conway",
-      "published": 22,
-      "planned": 28,
+      "published": 25,
+      "planned": 25,
       "target": 50,
-      "percent": 44.0,
+      "percent": 50.0,
       "maturity": {
-        "canonical": 22
+        "canonical": 24,
+        "established": 1
       }
     },
     {
