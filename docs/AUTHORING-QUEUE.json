@@ -2373,27 +2373,6 @@
     "focus": ""
   },
   {
-    "name": "CQRS as Architecture",
-    "slug": "cqrs-as-architecture",
-    "category": "architectural",
-    "path": "patterns/05-architectural/cqrs-as-architecture.md",
-    "focus": ""
-  },
-  {
-    "name": "Service Mesh",
-    "slug": "service-mesh",
-    "category": "architectural",
-    "path": "patterns/05-architectural/service-mesh.md",
-    "focus": ""
-  },
-  {
-    "name": "API Gateway",
-    "slug": "api-gateway",
-    "category": "architectural",
-    "path": "patterns/05-architectural/api-gateway.md",
-    "focus": ""
-  },
-  {
     "name": "Shared Kernel Architecture",
     "slug": "shared-kernel-architecture",
     "category": "architectural",
