@@ -2359,20 +2359,6 @@
     "focus": ""
   },
   {
-    "name": "Microkernel Architecture",
-    "slug": "microkernel-architecture",
-    "category": "architectural",
-    "path": "patterns/05-architectural/microkernel-architecture.md",
-    "focus": ""
-  },
-  {
-    "name": "Peer-to-Peer Architecture",
-    "slug": "peer-to-peer-architecture",
-    "category": "architectural",
-    "path": "patterns/05-architectural/peer-to-peer-architecture.md",
-    "focus": ""
-  },
-  {
     "name": "Client-Server Architecture",
     "slug": "client-server-architecture",
     "category": "architectural",
