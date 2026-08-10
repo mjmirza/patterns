@@ -55,3 +55,9 @@ embrace
 # Eventually consistent), coined by Dan Pritchett, ACM Queue 2008. The
 # pattern cannot be named or explained without this exact term of art.
 basically
+
+# robust. Verbatim inside the real title of RFC 9413, "Maintaining Robust
+# Protocols" (Thomson and Schinazi, IETF/IAB, 2023), cited as a source in
+# this entry. Renaming the title would misquote the source, per the
+# original-prose and citation rules in ENTRY-TEMPLATE.md.
+robust
