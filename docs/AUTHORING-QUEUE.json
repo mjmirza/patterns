@@ -2359,13 +2359,6 @@
     "focus": ""
   },
   {
-    "name": "Client-Server Architecture",
-    "slug": "client-server-architecture",
-    "category": "architectural",
-    "path": "patterns/05-architectural/client-server-architecture.md",
-    "focus": ""
-  },
-  {
     "name": "Leader-Follower Architecture",
     "slug": "leader-follower-architecture",
     "category": "architectural",
