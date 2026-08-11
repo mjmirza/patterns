@@ -2,13 +2,21 @@
 
 Origin. Fowler, PoEAA
 
-32 entries, 237,382 words. Every entry carries all 18
+35 entries, 259,092 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Base Patterns
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Client Session State](client-session-state.md) | canonical | 7,810 | HTTP, as originally specified, is a stateless request-response protocol. |
 
 ## Concurrency
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Coarse-Grained Lock](coarse-grained-lock.md) | canonical | 7,165 | An object graph in an enterprise application is rarely a single row. |
+| [Implicit Lock](implicit-lock.md) | canonical | 6,735 | Optimistic Offline Lock and Pessimistic Offline Lock both solve the problem of detecting or preventing conflicting concurrent business transactions, but both share a second ... |
 | [Optimistic Offline Lock](optimistic-offline-lock.md) | canonical | 6,892 | A business transaction in an enterprise application often spans more than one system transaction. |
 | [Pessimistic Offline Lock](pessimistic-offline-lock.md) | canonical | 7,612 | A business transaction in an enterprise application routinely spans more than one system-level request. |
 

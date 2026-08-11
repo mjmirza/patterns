@@ -74,3 +74,9 @@ ecosystem
 # and citation rules in ENTRY-TEMPLATE.md.
 maximize
 minimize
+
+# decoding/decoded. Same standard technical verb as "decode" above, inflected
+# forms used for the same base64/JWT/session-token verification functions in
+# this entry's code samples and prose. Not figurative AI-slop usage.
+decoding
+decoded
