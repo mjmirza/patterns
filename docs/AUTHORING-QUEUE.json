@@ -2534,13 +2534,6 @@
     "focus": ""
   },
   {
-    "name": "Repository",
-    "slug": "repository",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/repository.md",
-    "focus": ""
-  },
-  {
     "name": "Page Controller",
     "slug": "page-controller",
     "category": "enterprise application architecture",
