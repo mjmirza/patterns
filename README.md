@@ -86,6 +86,10 @@ README does not claim they are implemented.
 
 ## The families
 
+This table is the source of truth for family folder names under `patterns/`.
+A folder's slug always matches the slug linked here, enforced in CI. See
+[docs/FAMILY-NAMING.md](docs/FAMILY-NAMING.md).
+
 | # | Family | Origin | Published | Planned | Target |
 |---|---|---|---|---|---|
 | 01 | [Design Patterns (GoF)](patterns/01-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 23 | 0 | 23 |

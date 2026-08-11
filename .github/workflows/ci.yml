@@ -24,6 +24,8 @@ jobs:
           python-version: "3.12"
       - name: Structural gate
         run: python3 tools/check-structure.py
+      - name: Family folder naming gate
+        run: python3 tools/check-family-names.py
       - name: Prose gate
         run: python3 tools/check-prose.py
       - name: Indexes are current
