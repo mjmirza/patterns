@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-5 entries, 38,198 words. Every entry carries all 18
+8 entries, 60,111 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Source Architectural
@@ -19,6 +19,19 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Domain Model](domain-model.md) | canonical | 7,665 | An enterprise application accumulates business rules over its life, pricing tiers, discount eligibility, order-state transitions, tax jurisdictions, credit limits, cancellation ... |
 | [Table Module](table-module.md) | established | 6,460 | A team is building a business application against a relational database using a technology stack whose native data-access layer hands back an in-memory, table-shaped structure ... |
 | [Transaction Script](transaction-script.md) | canonical | 8,585 | A team is building a business application, an order system, a billing system, a claims processor, anything where the software's job is to carry out operations that a business ... |
+
+## Object-Relational Behavioral
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Data Mapper](data-mapper.md) | canonical | 5,831 | An application has a domain model made of objects with behavior, and a relational database made of tables, rows, and columns with no behavior. |
+| [Unit of Work](unit-of-work.md) | canonical | 8,827 | An operation touches several objects that came from, or are destined for, a database. |
+
+## Object-Relational Metadata Mapping Pattern
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Active Record](active-record.md) | canonical | 7,255 | An application needs to load rows from a relational table, let a caller read and mutate the fields as ordinary object properties, validate the values, and persist changes back ... |
 
 ## Reading order
 
