@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-44 entries, 328,869 words. Every entry carries all 18
+47 entries, 351,712 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -28,6 +28,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Gateway](gateway.md) | canonical | 7,526 | An application needs to talk to something outside its own object model. |
 | [Registry](registry.md) | canonical | 7,696 | An object, buried several calls deep inside a request, a batch job, or a background worker, needs something it was not given directly. |
 | [Separated Interface](separated-interface.md) | canonical | 7,304 | A component in one part of a system needs to call a component in another part, but the natural, obvious dependency direction is backward from where the architecture wants it to be. |
+| [Service Stub](service-stub.md) | canonical | 7,445 | An enterprise system routinely depends on a service it does not own and cannot fully control. |
+| [Special Case](special-case.md) | canonical | 7,750 | A piece of client code asks a collaborator for information and then has to decide what to do about a boundary condition before it can use the answer. |
 
 ## Concurrency
 
@@ -122,6 +124,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Data Transfer Object](data-transfer-object.md) | canonical | 7,710 | Two processes, or two tiers within the same process boundary that are treated as independently deployable, need to exchange structured data, and the cost or the coupling of ... |
+| [Plugin](plugin.md) | canonical | 7,648 | An application has a piece of behavior that legitimately differs across deployments, and the difference is not a business rule that changes with input, it is a difference in which ... |
 
 ## Web Presentation
 
