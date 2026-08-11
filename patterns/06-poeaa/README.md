@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-14 entries, 100,418 words. Every entry carries all 18
+17 entries, 123,388 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Source Architectural
@@ -47,12 +47,20 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Dependent Mapping](dependent-mapping.md) | canonical | 8,415 | Data Mapper separates the in-memory domain model from the database schema by giving each persistent class a mapper responsible for moving its state to and from rows. |
 | [Foreign Key Mapping](foreign-key-mapping.md) | canonical | 6,300 | An object model represents an association between two entities as a direct object reference. |
+| [Serialized LOB](serialized-lob.md) | established | 6,028 | Object models are good at representing composite structures. |
 
 ## Object-Relational Structural Pattern
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Embedded Value](embedded-value.md) | canonical | 7,871 | An application's domain model routinely needs small objects that group a handful of related fields into one meaningful unit. |
 | [Identity Field](identity-field.md) | canonical | 6,033 | An in-memory object system and a relational database use two different, and incompatible, notions of identity. |
+
+## Object-Relational Structural Patterns
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Single Table Inheritance](single-table-inheritance.md) | canonical | 9,071 | An object model has a natural inheritance hierarchy. |
 
 ## Reading order
 
