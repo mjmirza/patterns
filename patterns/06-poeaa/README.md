@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-8 entries, 60,111 words. Every entry carries all 18
+11 entries, 79,781 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Source Architectural
@@ -25,6 +25,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Data Mapper](data-mapper.md) | canonical | 5,831 | An application has a domain model made of objects with behavior, and a relational database made of tables, rows, and columns with no behavior. |
+| [Identity Map](identity-map.md) | canonical | 6,353 | An object-relational mapping layer loads rows from a database and turns them into in-memory objects. |
+| [Lazy Load](lazy-load.md) | canonical | 7,284 | An object graph persisted in a relational database is, by its nature, larger than any single query needs. |
 | [Unit of Work](unit-of-work.md) | canonical | 8,827 | An operation touches several objects that came from, or are destined for, a database. |
 
 ## Object-Relational Metadata Mapping Pattern
@@ -32,6 +34,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Active Record](active-record.md) | canonical | 7,255 | An application needs to load rows from a relational table, let a caller read and mutate the fields as ordinary object properties, validate the values, and persist changes back ... |
+
+## Object-Relational Structural Pattern
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Identity Field](identity-field.md) | canonical | 6,033 | An in-memory object system and a relational database use two different, and incompatible, notions of identity. |
 
 ## Reading order
 
