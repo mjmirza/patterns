@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-11 entries, 79,781 words. Every entry carries all 18
+14 entries, 100,418 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Source Architectural
@@ -34,6 +34,19 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Active Record](active-record.md) | canonical | 7,255 | An application needs to load rows from a relational table, let a caller read and mutate the fields as ordinary object properties, validate the values, and persist changes back ... |
+
+## Object-Relational Metadata Mapping Patterns
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Association Table Mapping](association-table-mapping.md) | canonical | 5,922 | An application built with an object model needs to persist a relationship where either side can be associated with more than one instance of the other. |
+
+## Object-Relational Structural
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Dependent Mapping](dependent-mapping.md) | canonical | 8,415 | Data Mapper separates the in-memory domain model from the database schema by giving each persistent class a mapper responsible for moving its state to and from rows. |
+| [Foreign Key Mapping](foreign-key-mapping.md) | canonical | 6,300 | An object model represents an association between two entities as a direct object reference. |
 
 ## Object-Relational Structural Pattern
 
