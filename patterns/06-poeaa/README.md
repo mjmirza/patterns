@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-17 entries, 123,388 words. Every entry carries all 18
+20 entries, 146,668 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Source Architectural
@@ -45,6 +45,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Class Table Inheritance](class-table-inheritance.md) | canonical | 6,805 | A domain model built with proper object-oriented inheritance, a Player base class with Pitcher and Fielder subclasses each carrying fields the other does not need, sits naturally ... |
 | [Dependent Mapping](dependent-mapping.md) | canonical | 8,415 | Data Mapper separates the in-memory domain model from the database schema by giving each persistent class a mapper responsible for moving its state to and from rows. |
 | [Foreign Key Mapping](foreign-key-mapping.md) | canonical | 6,300 | An object model represents an association between two entities as a direct object reference. |
 | [Serialized LOB](serialized-lob.md) | established | 6,028 | Object models are good at representing composite structures. |
@@ -60,6 +61,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Concrete Table Inheritance](concrete-table-inheritance.md) | canonical | 8,078 | An application's domain model contains a base type with several concrete subtypes, each subtype adding its own fields, and the persistence layer must map that hierarchy onto ... |
+| [Inheritance Mappers](inheritance-mappers.md) | canonical | 8,397 | A domain model with an inheritance hierarchy, a base Employee class with SalariedEmployee, CommissionedEmployee, and HourlyEmployee subclasses, needs a persistence layer that can ... |
 | [Single Table Inheritance](single-table-inheritance.md) | canonical | 9,071 | An object model has a natural inheritance hierarchy. |
 
 ## Reading order

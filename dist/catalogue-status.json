@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 380,
+  "published_total": 383,
   "target_total": 855,
   "families_total": 29,
   "families_complete": 7,
   "stale_entries": 0,
-  "references_checked": 2228,
+  "references_checked": 2239,
   "rows": [
     {
       "family": "01-gof",
@@ -74,12 +74,12 @@
       "family": "06-poeaa",
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
-      "published": 17,
-      "planned": 32,
+      "published": 20,
+      "planned": 29,
       "target": 49,
-      "percent": 34.7,
+      "percent": 40.8,
       "maturity": {
-        "canonical": 15,
+        "canonical": 18,
         "established": 2
       }
     },
