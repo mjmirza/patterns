@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-41 entries, 304,137 words. Every entry carries all 18
+44 entries, 328,869 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -10,6 +10,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Layer Supertype](layer-supertype.md) | canonical | 8,735 | An enterprise application is organized into layers, most often domain logic, data source access, and presentation, and each layer accumulates many sibling types over the life of ... |
+| [Money](money.md) | canonical | 8,631 | A system that touches prices, balances, fees, taxes, discounts, refunds, or payroll needs to represent a quantity of currency and do arithmetic on it. |
+| [Value Object](value-object.md) | canonical | 8,405 | A domain concept, an amount of money, a date range, a phone number, a geographic coordinate, a color, has more than one primitive field and a rule about how those fields combine ... |
 
 ## Base Pattern, Object-Relational Behavioral
 
@@ -24,6 +26,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Client Session State](client-session-state.md) | canonical | 7,810 | HTTP, as originally specified, is a stateless request-response protocol. |
 | [Database Session State](database-session-state.md) | canonical | 7,361 | A web application needs to remember something about a user across more than one HTTP request, a shopping cart, an authenticated identity, a wizard's partial answers, a rate-limit ... |
 | [Gateway](gateway.md) | canonical | 7,526 | An application needs to talk to something outside its own object model. |
+| [Registry](registry.md) | canonical | 7,696 | An object, buried several calls deep inside a request, a batch job, or a background worker, needs something it was not given directly. |
 | [Separated Interface](separated-interface.md) | canonical | 7,304 | A component in one part of a system needs to call a component in another part, but the natural, obvious dependency direction is backward from where the architecture wants it to be. |
 
 ## Concurrency
