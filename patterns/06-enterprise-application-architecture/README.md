@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-26 entries, 191,742 words. Every entry carries all 18
+29 entries, 215,168 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Source Architectural
@@ -12,6 +12,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Query Object](query-object.md) | canonical | 9,067 | An application needs to ask its data source for a set of objects that satisfy some condition, and the condition is not known ahead of time. |
 | [Row Data Gateway](row-data-gateway.md) | canonical | 8,173 | A codebase has business logic that needs to read a single row from a relational table, change some of its columns, and write the row back. |
 | [Table Data Gateway](table-data-gateway.md) | canonical | 7,315 | An application needs to read and write rows in a table, and the two paths that seem obvious both go wrong at scale. |
+
+## Distribution
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Remote Facade](remote-facade.md) | canonical | 8,710 | A well-factored domain model in a single process is built from many small, single-purpose objects. |
 
 ## Domain Logic
 
@@ -76,10 +82,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Application Controller](application-controller.md) | established | 8,471 | The problem shows up first in an application with more than one screen that share the same underlying process. |
 | [Front Controller](front-controller.md) | canonical | 8,011 | A web application grows past a handful of pages. |
 | [Page Controller](page-controller.md) | canonical | 5,225 | A web application must translate an incoming HTTP request into a specific piece of server-side behavior and a specific response. |
 | [Template View](template-view.md) | canonical | 7,530 | A system has finished computing a result, a customer record, a list of orders, a search result set, and now has to turn that result into an HTML document a browser can render. |
 | [Transform View](transform-view.md) | established | 7,578 | An application has assembled everything it needs to render a response. |
+| [Two Step View](two-step-view.md) | canonical | 6,245 | A web application with more than a handful of pages needs every page to share a consistent visual identity. |
 
 ## Reading order
 
