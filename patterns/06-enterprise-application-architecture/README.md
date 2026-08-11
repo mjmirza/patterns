@@ -2,8 +2,15 @@
 
 Origin. Fowler, PoEAA
 
-29 entries, 215,168 words. Every entry carries all 18
+32 entries, 237,382 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Concurrency
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Optimistic Offline Lock](optimistic-offline-lock.md) | canonical | 6,892 | A business transaction in an enterprise application often spans more than one system transaction. |
+| [Pessimistic Offline Lock](pessimistic-offline-lock.md) | canonical | 7,612 | A business transaction in an enterprise application routinely spans more than one system-level request. |
 
 ## Data Source Architectural
 
@@ -77,6 +84,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Concrete Table Inheritance](concrete-table-inheritance.md) | canonical | 8,078 | An application's domain model contains a base type with several concrete subtypes, each subtype adding its own fields, and the persistence layer must map that hierarchy onto ... |
 | [Inheritance Mappers](inheritance-mappers.md) | canonical | 8,397 | A domain model with an inheritance hierarchy, a base Employee class with SalariedEmployee, CommissionedEmployee, and HourlyEmployee subclasses, needs a persistence layer that can ... |
 | [Single Table Inheritance](single-table-inheritance.md) | canonical | 9,071 | An object model has a natural inheritance hierarchy. |
+
+## Structural
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Data Transfer Object](data-transfer-object.md) | canonical | 7,710 | Two processes, or two tiers within the same process boundary that are treated as independently deployable, need to exchange structured data, and the cost or the coupling of ... |
 
 ## Web Presentation
 
