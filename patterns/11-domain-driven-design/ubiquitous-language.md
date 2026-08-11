@@ -1,7 +1,7 @@
 ---
 name: Ubiquitous Language
 slug: ubiquitous-language
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic
 aliases: [Common Language, Shared Domain Vocabulary]
 first_described: "Evans 2003"

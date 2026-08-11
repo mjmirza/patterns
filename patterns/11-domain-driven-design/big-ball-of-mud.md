@@ -1,7 +1,7 @@
 ---
 name: Big Ball of Mud
 slug: big-ball-of-mud
-family: 11-ddd
+family: 11-domain-driven-design
 category: Anti-pattern
 aliases: [Spaghetti Architecture, Mud Ball]
 first_described: "Foote, Yoder 1997"

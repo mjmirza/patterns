@@ -990,203 +990,203 @@
     "name": "Ubiquitous Language",
     "slug": "ubiquitous-language",
     "category": "ddd",
-    "path": "patterns/11-ddd/ubiquitous-language.md",
+    "path": "patterns/11-domain-driven-design/ubiquitous-language.md",
     "focus": ""
   },
   {
     "name": "Bounded Context",
     "slug": "bounded-context",
     "category": "ddd",
-    "path": "patterns/11-ddd/bounded-context.md",
+    "path": "patterns/11-domain-driven-design/bounded-context.md",
     "focus": ""
   },
   {
     "name": "Context Map",
     "slug": "context-map",
     "category": "ddd",
-    "path": "patterns/11-ddd/context-map.md",
+    "path": "patterns/11-domain-driven-design/context-map.md",
     "focus": ""
   },
   {
     "name": "Core Domain",
     "slug": "core-domain",
     "category": "ddd",
-    "path": "patterns/11-ddd/core-domain.md",
+    "path": "patterns/11-domain-driven-design/core-domain.md",
     "focus": ""
   },
   {
     "name": "Generic Subdomain",
     "slug": "generic-subdomain",
     "category": "ddd",
-    "path": "patterns/11-ddd/generic-subdomain.md",
+    "path": "patterns/11-domain-driven-design/generic-subdomain.md",
     "focus": ""
   },
   {
     "name": "Supporting Subdomain",
     "slug": "supporting-subdomain",
     "category": "ddd",
-    "path": "patterns/11-ddd/supporting-subdomain.md",
+    "path": "patterns/11-domain-driven-design/supporting-subdomain.md",
     "focus": ""
   },
   {
     "name": "Shared Kernel",
     "slug": "shared-kernel",
     "category": "ddd",
-    "path": "patterns/11-ddd/shared-kernel.md",
+    "path": "patterns/11-domain-driven-design/shared-kernel.md",
     "focus": ""
   },
   {
     "name": "Customer Supplier",
     "slug": "customer-supplier",
     "category": "ddd",
-    "path": "patterns/11-ddd/customer-supplier.md",
+    "path": "patterns/11-domain-driven-design/customer-supplier.md",
     "focus": ""
   },
   {
     "name": "Conformist",
     "slug": "conformist",
     "category": "ddd",
-    "path": "patterns/11-ddd/conformist.md",
+    "path": "patterns/11-domain-driven-design/conformist.md",
     "focus": ""
   },
   {
     "name": "Anticorruption Layer",
     "slug": "anticorruption-layer",
     "category": "ddd",
-    "path": "patterns/11-ddd/anticorruption-layer.md",
+    "path": "patterns/11-domain-driven-design/anticorruption-layer.md",
     "focus": ""
   },
   {
     "name": "Open Host Service",
     "slug": "open-host-service",
     "category": "ddd",
-    "path": "patterns/11-ddd/open-host-service.md",
+    "path": "patterns/11-domain-driven-design/open-host-service.md",
     "focus": ""
   },
   {
     "name": "Published Language",
     "slug": "published-language",
     "category": "ddd",
-    "path": "patterns/11-ddd/published-language.md",
+    "path": "patterns/11-domain-driven-design/published-language.md",
     "focus": ""
   },
   {
     "name": "Separate Ways",
     "slug": "separate-ways",
     "category": "ddd",
-    "path": "patterns/11-ddd/separate-ways.md",
+    "path": "patterns/11-domain-driven-design/separate-ways.md",
     "focus": ""
   },
   {
     "name": "Big Ball of Mud",
     "slug": "big-ball-of-mud",
     "category": "ddd",
-    "path": "patterns/11-ddd/big-ball-of-mud.md",
+    "path": "patterns/11-domain-driven-design/big-ball-of-mud.md",
     "focus": ""
   },
   {
     "name": "Entity",
     "slug": "entity",
     "category": "ddd",
-    "path": "patterns/11-ddd/entity.md",
+    "path": "patterns/11-domain-driven-design/entity.md",
     "focus": ""
   },
   {
     "name": "Value Object",
     "slug": "value-object",
     "category": "ddd",
-    "path": "patterns/11-ddd/value-object.md",
+    "path": "patterns/11-domain-driven-design/value-object.md",
     "focus": ""
   },
   {
     "name": "Aggregate Root",
     "slug": "aggregate-root",
     "category": "ddd",
-    "path": "patterns/11-ddd/aggregate-root.md",
+    "path": "patterns/11-domain-driven-design/aggregate-root.md",
     "focus": ""
   },
   {
     "name": "Domain Event",
     "slug": "domain-event",
     "category": "ddd",
-    "path": "patterns/11-ddd/domain-event.md",
+    "path": "patterns/11-domain-driven-design/domain-event.md",
     "focus": ""
   },
   {
     "name": "Repository",
     "slug": "repository",
     "category": "ddd",
-    "path": "patterns/11-ddd/repository.md",
+    "path": "patterns/11-domain-driven-design/repository.md",
     "focus": ""
   },
   {
     "name": "Factory",
     "slug": "factory",
     "category": "ddd",
-    "path": "patterns/11-ddd/factory.md",
+    "path": "patterns/11-domain-driven-design/factory.md",
     "focus": ""
   },
   {
     "name": "Domain Service",
     "slug": "domain-service",
     "category": "ddd",
-    "path": "patterns/11-ddd/domain-service.md",
+    "path": "patterns/11-domain-driven-design/domain-service.md",
     "focus": ""
   },
   {
     "name": "Application Service",
     "slug": "application-service",
     "category": "ddd",
-    "path": "patterns/11-ddd/application-service.md",
+    "path": "patterns/11-domain-driven-design/application-service.md",
     "focus": ""
   },
   {
     "name": "Module",
     "slug": "module",
     "category": "ddd",
-    "path": "patterns/11-ddd/module.md",
+    "path": "patterns/11-domain-driven-design/module.md",
     "focus": ""
   },
   {
     "name": "Specification",
     "slug": "specification",
     "category": "ddd",
-    "path": "patterns/11-ddd/specification.md",
+    "path": "patterns/11-domain-driven-design/specification.md",
     "focus": ""
   },
   {
     "name": "Layered Architecture",
     "slug": "layered-architecture",
     "category": "ddd",
-    "path": "patterns/11-ddd/layered-architecture.md",
+    "path": "patterns/11-domain-driven-design/layered-architecture.md",
     "focus": ""
   },
   {
     "name": "Process Manager",
     "slug": "process-manager",
     "category": "ddd",
-    "path": "patterns/11-ddd/process-manager.md",
+    "path": "patterns/11-domain-driven-design/process-manager.md",
     "focus": ""
   },
   {
     "name": "Domain Primitive",
     "slug": "domain-primitive",
     "category": "ddd",
-    "path": "patterns/11-ddd/domain-primitive.md",
+    "path": "patterns/11-domain-driven-design/domain-primitive.md",
     "focus": ""
   },
   {
     "name": "Event Storming",
     "slug": "event-storming",
     "category": "ddd",
-    "path": "patterns/11-ddd/event-storming.md",
+    "path": "patterns/11-domain-driven-design/event-storming.md",
     "focus": ""
   },
   {
     "name": "Domain Storytelling",
     "slug": "domain-storytelling",
     "category": "ddd",
-    "path": "patterns/11-ddd/domain-storytelling.md",
+    "path": "patterns/11-domain-driven-design/domain-storytelling.md",
     "focus": ""
   },
   {
@@ -3412,42 +3412,42 @@
     "name": "Open Host Service and Published Language",
     "slug": "open-host-service-and-published-language",
     "category": "domain-driven design",
-    "path": "patterns/11-ddd/open-host-service-and-published-language.md",
+    "path": "patterns/11-domain-driven-design/open-host-service-and-published-language.md",
     "focus": ""
   },
   {
     "name": "Aggregate",
     "slug": "aggregate",
     "category": "domain-driven design",
-    "path": "patterns/11-ddd/aggregate.md",
+    "path": "patterns/11-domain-driven-design/aggregate.md",
     "focus": ""
   },
   {
     "name": "Subdomain Discovery",
     "slug": "subdomain-discovery",
     "category": "domain-driven design",
-    "path": "patterns/11-ddd/subdomain-discovery.md",
+    "path": "patterns/11-domain-driven-design/subdomain-discovery.md",
     "focus": ""
   },
   {
     "name": "Context Canvas",
     "slug": "context-canvas",
     "category": "domain-driven design",
-    "path": "patterns/11-ddd/context-canvas.md",
+    "path": "patterns/11-domain-driven-design/context-canvas.md",
     "focus": ""
   },
   {
     "name": "Partnership",
     "slug": "partnership",
     "category": "domain-driven design",
-    "path": "patterns/11-ddd/partnership.md",
+    "path": "patterns/11-domain-driven-design/partnership.md",
     "focus": ""
   },
   {
     "name": "Saga versus Process Manager",
     "slug": "saga-versus-process-manager",
     "category": "domain-driven design",
-    "path": "patterns/11-ddd/saga-versus-process-manager.md",
+    "path": "patterns/11-domain-driven-design/saga-versus-process-manager.md",
     "focus": ""
   },
   {

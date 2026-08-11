@@ -25,7 +25,7 @@ FAMILY_TITLES = {
     ),
     "09-concurrency": ("Concurrency and Parallelism", "Schmidt POSA 2"),
     "10-microservices": ("Microservices", "Richardson"),
-    "11-ddd": ("Domain-Driven Design", "Evans, Vernon"),
+    "11-domain-driven-design": ("Domain-Driven Design", "Evans, Vernon"),
     "12-data-storage": ("Data and Storage", "Kleppmann"),
     "13-frontend-ui": ("Frontend and UI", "Framework documentation"),
     "14-testing": ("Testing", "Meszaros, xUnit Test Patterns"),

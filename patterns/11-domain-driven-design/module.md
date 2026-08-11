@@ -1,7 +1,7 @@
 ---
 name: Module
 slug: module
-family: 11-ddd
+family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Package, Namespace, Bounded Context Internal Grouping]
 first_described: "Evans 2003"

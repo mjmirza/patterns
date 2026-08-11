@@ -1,7 +1,7 @@
 ---
 name: Domain Storytelling
 slug: domain-storytelling
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic
 aliases: [Domain Story Modeling, Pictographic Domain Modeling]
 first_described: "Hofer and Schwentner 2021"

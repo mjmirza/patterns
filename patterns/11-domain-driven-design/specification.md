@@ -1,7 +1,7 @@
 ---
 name: Specification
 slug: specification
-family: 11-ddd
+family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Specification Pattern, Query Object composed with predicates, Business Rule Object]
 first_described: "Evans and Fowler 2002 (Specifications paper), Evans 2004"

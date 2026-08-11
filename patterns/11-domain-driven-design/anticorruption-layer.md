@@ -1,7 +1,7 @@
 ---
 name: Anticorruption Layer
 slug: anticorruption-layer
-family: 11-ddd
+family: 11-domain-driven-design
 category: Integration
 aliases: [ACL, Anti-Corruption Layer, Translation Layer]
 first_described: "Eric Evans 2003"
@@ -54,8 +54,8 @@ it reads as a design.
 
 A team owns a domain model they have deliberately shaped to match the
 Ubiquitous Language of their Bounded Context, see
-`patterns/11-ddd/ubiquitous-language.md` and
-`patterns/11-ddd/bounded-context.md`. That model must exchange data with
+`patterns/11-domain-driven-design/ubiquitous-language.md` and
+`patterns/11-domain-driven-design/bounded-context.md`. That model must exchange data with
 another system whose model was shaped by a different team, a different era, or
 a different vendor, and was never designed to agree with the local one.
 
@@ -77,10 +77,10 @@ The situation shows up in three recurring shapes.
   inside the same company, built by different teams, each with a coherent
   internal model, need to exchange information, and neither model was
   designed with the other in mind. This is the case the Customer-Supplier and
-  Conformist relationships in `patterns/11-ddd/context-map.md` also address,
+  Conformist relationships in `patterns/11-domain-driven-design/context-map.md` also address,
   and Anticorruption Layer is the choice when the downstream team has neither
   the standing nor the willingness to adopt the upstream team's model
-  wholesale, see `patterns/11-ddd/conformist.md`.
+  wholesale, see `patterns/11-domain-driven-design/conformist.md`.
 
 In all three shapes the naive move is to let the foreign model's types, field
 names, and invariants flow straight through the boundary and into the domain
@@ -122,7 +122,7 @@ the forces genuinely favour it, see dimension 4.
 - **Organisational trust and negotiating power.** This force is not covered
   well by most catalog descriptions, but it decides whether Anticorruption
   Layer, Conformist, or Customer-Supplier is the right relationship on a
-  Context Map, see `patterns/11-ddd/context-map.md`. When the downstream team
+  Context Map, see `patterns/11-domain-driven-design/context-map.md`. When the downstream team
   cannot influence the upstream model, either because it is a vendor, a legacy
   system with no active owner, or an upstream team that will not
   collaborate, an ACL is close to mandatory. When the two teams can negotiate
@@ -146,7 +146,7 @@ Reach for an Anticorruption Layer when the following hold together.
   model. This includes vendor APIs, legacy systems slated for eventual
   replacement, and upstream teams unwilling to accommodate the downstream
   team's needs, the Conformist and Customer-Supplier relationships in
-  `patterns/11-ddd/context-map.md` cover the alternative postures when this
+  `patterns/11-domain-driven-design/context-map.md` cover the alternative postures when this
   condition does not hold.
 - The integration is expected to persist long enough, or matter enough, to
   justify writing and maintaining a translation layer instead of accepting the
@@ -160,7 +160,7 @@ Do NOT reach for an Anticorruption Layer in these situations.
 - **The two models genuinely agree, or agreement is achievable at low cost.**
   If a shared model across two Bounded Contexts is not only possible but
   actually cheaper to maintain than two models plus a translator, Shared
-  Kernel is the correct relationship, see `patterns/11-ddd/shared-kernel.md`.
+  Kernel is the correct relationship, see `patterns/11-domain-driven-design/shared-kernel.md`.
   Building an ACL to translate between two models that could simply be one
   model is pure overhead with no protective benefit, and it is incompatible
   with a Shared Kernel relationship for exactly this reason, the two patterns
@@ -171,7 +171,7 @@ Do NOT reach for an Anticorruption Layer in these situations.
   nothing from a translation layer, because there is no local conceptual
   integrity at risk. Adopting the upstream model directly, the Conformist
   relationship, is cheaper and honestly reflects the situation, see
-  `patterns/11-ddd/conformist.md`.
+  `patterns/11-domain-driven-design/conformist.md`.
 - **The integration is short-lived by design.** A one-off data migration
   script that runs once and is deleted does not need the ongoing maintenance
   investment an ACL represents. A single Adapter or a throwaway mapping
@@ -495,28 +495,28 @@ from.
 | Approach | Model purity | Coupling to foreign changes | Upfront cost | Ongoing maintenance | When it wins |
 |---|---|---|---|---|---|
 | Anticorruption Layer | High, domain never sees foreign types | Low, absorbed at one boundary | High, Facade, Adapter, Translator, tests | Ongoing, must track foreign side | Foreign model genuinely conflicts and the team has no influence over it |
-| Conformist (`patterns/11-ddd/conformist.md`) | None, domain adopts upstream model wholesale | High, every upstream change is a downstream change | Low, no translation to build | Low day to day, high if upstream changes often | Upstream will not collaborate and translation is not worth its cost |
-| Customer-Supplier (`patterns/11-ddd/context-map.md`) | High, downstream negotiates its own model | Managed, upstream accounts for downstream needs | Moderate, requires ongoing coordination | Moderate, relationship must be actively maintained | Both teams are in the same organisation and can negotiate priorities |
-| Shared Kernel (`patterns/11-ddd/shared-kernel.md`) | Deliberately merged, not separate | Very high by design, shared code is shared risk | Low to start, one model instead of two | High coordination cost as both sides change it together | The two contexts genuinely should evolve as one model, closely-collaborating teams |
+| Conformist (`patterns/11-domain-driven-design/conformist.md`) | None, domain adopts upstream model wholesale | High, every upstream change is a downstream change | Low, no translation to build | Low day to day, high if upstream changes often | Upstream will not collaborate and translation is not worth its cost |
+| Customer-Supplier (`patterns/11-domain-driven-design/context-map.md`) | High, downstream negotiates its own model | Managed, upstream accounts for downstream needs | Moderate, requires ongoing coordination | Moderate, relationship must be actively maintained | Both teams are in the same organisation and can negotiate priorities |
+| Shared Kernel (`patterns/11-domain-driven-design/shared-kernel.md`) | Deliberately merged, not separate | Very high by design, shared code is shared risk | Low to start, one model instead of two | High coordination cost as both sides change it together | The two contexts genuinely should evolve as one model, closely-collaborating teams |
 | Plain Adapter (`patterns/01-gof/adapter.md`) alone | Low, converts interface shape but not deeper model conflicts | Partial, absorbs interface mismatch, not conceptual mismatch | Low, a single class | Low | The mismatch is purely structural, method signatures differ but concepts agree |
 
 ## 13. Related and incompatible patterns
 
-- **Bounded Context, `patterns/11-ddd/bounded-context.md`.** The Anticorruption
+- **Bounded Context, `patterns/11-domain-driven-design/bounded-context.md`.** The Anticorruption
   Layer only makes sense at the seam between two Bounded Contexts, or between
   a Bounded Context and a system outside the organisation's modelling
   authority entirely. Without a defined, protected context on the inside,
   there is nothing for the layer to protect.
-- **Context Map, `patterns/11-ddd/context-map.md`.** The Context Map is where
+- **Context Map, `patterns/11-domain-driven-design/context-map.md`.** The Context Map is where
   a team decides, per relationship, whether Anticorruption Layer, Conformist,
   Customer-Supplier, or Shared Kernel governs a given seam. The ACL is one
   entry in that map, not a universal default.
-- **Conformist, `patterns/11-ddd/conformist.md`.** The direct alternative when
+- **Conformist, `patterns/11-domain-driven-design/conformist.md`.** The direct alternative when
   the downstream team decides translation is not worth its cost and instead
   adopts the upstream model as-is. Choosing between the two is a judgement
   about the cost of translation versus the cost of foreign concepts leaking
   in, discussed in dimension 3 and dimension 4.
-- **Customer-Supplier, `patterns/11-ddd/customer-supplier.md`.** A softer
+- **Customer-Supplier, `patterns/11-domain-driven-design/customer-supplier.md`.** A softer
   relationship for when the two teams can negotiate, sometimes used alongside
   a lighter ACL that mainly handles versioning rather than deep semantic
   conflict.
@@ -532,7 +532,7 @@ from.
   seam, protecting newly extracted services from the legacy system that has
   not yet been fully replaced, and is removed once the migration completes,
   as seen in both the Michelin case and the AWS sample repository.
-- **Shared Kernel, `patterns/11-ddd/shared-kernel.md`, incompatible.** These
+- **Shared Kernel, `patterns/11-domain-driven-design/shared-kernel.md`, incompatible.** These
   two patterns express opposite decisions about the same question, should the
   two models converge into one, or should they be kept deliberately separate
   with translation at the boundary. A codebase cannot honestly claim both for

@@ -1,7 +1,7 @@
 ---
 name: Customer-Supplier
 slug: customer-supplier
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Customer/Supplier Development Teams, Customer-Supplier Development Team Relationship, Customer-Supplier Context Relationship]
 first_described: "Evans 2003"

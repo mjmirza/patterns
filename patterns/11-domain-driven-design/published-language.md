@@ -1,7 +1,7 @@
 ---
 name: Published Language
 slug: published-language
-family: 11-ddd
+family: 11-domain-driven-design
 category: Domain-Driven Design, Strategic
 aliases: [Common Language for Integration, Canonical Exchange Format]
 first_described: "Evans 2003"

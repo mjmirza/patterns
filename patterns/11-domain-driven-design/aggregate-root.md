@@ -1,7 +1,7 @@
 ---
 name: Aggregate Root
 slug: aggregate-root
-family: 11-ddd
+family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Root Entity, Aggregate Boundary, Consistency Boundary]
 first_described: "Evans 2003"

@@ -1,7 +1,7 @@
 ---
 name: Open Host Service
 slug: open-host-service
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic Design
 aliases: [OHS, Public Host Interface, Open API Context Relationship]
 first_described: "Evans 2003"

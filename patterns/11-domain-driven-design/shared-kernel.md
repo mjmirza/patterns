@@ -1,7 +1,7 @@
 ---
 name: Shared Kernel
 slug: shared-kernel
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Shared Kernel Context, Kernel Sharing]
 first_described: "Evans 2003"

@@ -1,7 +1,7 @@
 ---
 name: Application Service
 slug: application-service
-family: 11-ddd
+family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Service Layer, Use Case Interactor, Application Layer Service]
 first_described: "Evans 2003"

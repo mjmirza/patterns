@@ -1,7 +1,7 @@
 ---
 name: Process Manager
 slug: process-manager
-family: 11-ddd
+family: 11-domain-driven-design
 category: Behavioral
 aliases: [Orchestrator, Saga Orchestrator, Central Coordinator]
 first_described: "Hohpe, Woolf 2003"

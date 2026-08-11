@@ -1,7 +1,7 @@
 ---
 name: Domain Primitive
 slug: domain-primitive
-family: 11-ddd
+family: 11-domain-driven-design
 category: Tactical Modeling
 aliases: [Tiny Type, Wrapper Type, Strong Type, Notification-Aware Value Object]
 first_described: "Fowler and Yegor Bugayenko, popularized by Dan Bergh Johnsson and Daniel Deogun 2019"

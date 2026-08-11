@@ -1,7 +1,7 @@
 ---
 name: Value Object
 slug: value-object
-family: 11-ddd
+family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Value Type, Immutable Value, Whole Value]
 first_described: "Fowler and Evans, 2002 to 2003"

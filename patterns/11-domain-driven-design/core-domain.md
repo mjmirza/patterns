@@ -1,7 +1,7 @@
 ---
 name: Core Domain
 slug: core-domain
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Core Domain Distillation, Domain Classification, Subdomain Triage]
 first_described: "Eric Evans 2003"
