@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-35 entries, 259,092 words. Every entry carries all 18
+38 entries, 282,698 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Patterns
@@ -10,6 +10,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Client Session State](client-session-state.md) | canonical | 7,810 | HTTP, as originally specified, is a stateless request-response protocol. |
+| [Database Session State](database-session-state.md) | canonical | 7,361 | A web application needs to remember something about a user across more than one HTTP request, a shopping cart, an authenticated identity, a wizard's partial answers, a rate-limit ... |
+| [Gateway](gateway.md) | canonical | 7,526 | An application needs to talk to something outside its own object model. |
 
 ## Concurrency
 
@@ -92,6 +94,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Concrete Table Inheritance](concrete-table-inheritance.md) | canonical | 8,078 | An application's domain model contains a base type with several concrete subtypes, each subtype adding its own fields, and the persistence layer must map that hierarchy onto ... |
 | [Inheritance Mappers](inheritance-mappers.md) | canonical | 8,397 | A domain model with an inheritance hierarchy, a base Employee class with SalariedEmployee, CommissionedEmployee, and HourlyEmployee subclasses, needs a persistence layer that can ... |
 | [Single Table Inheritance](single-table-inheritance.md) | canonical | 9,071 | An object model has a natural inheritance hierarchy. |
+
+## Session State
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Server Session State](server-session-state.md) | canonical | 8,719 | HTTP is stateless. Each request arrives at the server with no memory of the request before it, and the connection that carried it may already be closed by the time the response ... |
 
 ## Structural
 
