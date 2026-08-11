@@ -2,13 +2,14 @@
 
 Origin. Fowler, PoEAA
 
-20 entries, 146,668 words. Every entry carries all 18
+23 entries, 168,623 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Source Architectural
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Query Object](query-object.md) | canonical | 9,067 | An application needs to ask its data source for a set of objects that satisfy some condition, and the condition is not known ahead of time. |
 | [Row Data Gateway](row-data-gateway.md) | canonical | 8,173 | A codebase has business logic that needs to read a single row from a relational table, change some of its columns, and write the row back. |
 | [Table Data Gateway](table-data-gateway.md) | canonical | 7,315 | An application needs to read and write rows in a table, and the two paths that seem obvious both go wrong at scale. |
 
@@ -28,6 +29,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Identity Map](identity-map.md) | canonical | 6,353 | An object-relational mapping layer loads rows from a database and turns them into in-memory objects. |
 | [Lazy Load](lazy-load.md) | canonical | 7,284 | An object graph persisted in a relational database is, by its nature, larger than any single query needs. |
 | [Unit of Work](unit-of-work.md) | canonical | 8,827 | An operation touches several objects that came from, or are destined for, a database. |
+
+## Object-Relational Behavioral Patterns
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Metadata Mapping](metadata-mapping.md) | canonical | 7,663 | An object-relational mapper needs to know, for every persistent class, which table it corresponds to, which column each field maps to, how associations between classes translate ... |
 
 ## Object-Relational Metadata Mapping Pattern
 
@@ -64,6 +71,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Concrete Table Inheritance](concrete-table-inheritance.md) | canonical | 8,078 | An application's domain model contains a base type with several concrete subtypes, each subtype adding its own fields, and the persistence layer must map that hierarchy onto ... |
 | [Inheritance Mappers](inheritance-mappers.md) | canonical | 8,397 | A domain model with an inheritance hierarchy, a base Employee class with SalariedEmployee, CommissionedEmployee, and HourlyEmployee subclasses, needs a persistence layer that can ... |
 | [Single Table Inheritance](single-table-inheritance.md) | canonical | 9,071 | An object model has a natural inheritance hierarchy. |
+
+## Web Presentation
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Page Controller](page-controller.md) | canonical | 5,225 | A web application must translate an incoming HTTP request into a specific piece of server-side behavior and a specific response. |
 
 ## Reading order
 
