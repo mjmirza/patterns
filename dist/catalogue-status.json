@@ -1,7 +1,7 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
   "published_total": 383,
-  "target_total": 855,
+  "target_total": 854,
   "families_total": 29,
   "families_complete": 7,
   "stale_entries": 0,
@@ -75,9 +75,9 @@
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
       "published": 20,
-      "planned": 29,
-      "target": 49,
-      "percent": 40.8,
+      "planned": 28,
+      "target": 48,
+      "percent": 41.7,
       "maturity": {
         "canonical": 18,
         "established": 2

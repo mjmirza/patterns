@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-383%20published%20%2F%20855%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-383%20published%20%2F%20854%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -15,7 +15,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
 ![Published entries](https://img.shields.io/badge/published-383-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-472-lightgrey)
+![Planned entries](https://img.shields.io/badge/planned-471-lightgrey)
 ![Catalogue completion](https://img.shields.io/badge/completion-44.8%25-yellow)
 ![References checked](https://img.shields.io/badge/references%20checked-2239-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
@@ -93,7 +93,7 @@ README does not claim they are implemented.
 | 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 0 | 66 | 66 |
 | 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 41 | 0 | 41 |
 | 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 30 | 0 | 30 |
-| 06 | [Enterprise Application Architecture](patterns/06-poeaa/) | Fowler, PoEAA | 20 | 29 | 49 |
+| 06 | [Enterprise Application Architecture](patterns/06-poeaa/) | Fowler, PoEAA | 20 | 28 | 48 |
 | 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 0 | 54 | 54 |
 | 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 | 0 | 42 |
 | 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 0 | 40 | 40 |
