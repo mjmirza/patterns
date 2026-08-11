@@ -2,8 +2,20 @@
 
 Origin. Fowler, PoEAA
 
-38 entries, 282,698 words. Every entry carries all 18
+41 entries, 304,137 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Base Pattern
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Layer Supertype](layer-supertype.md) | canonical | 8,735 | An enterprise application is organized into layers, most often domain logic, data source access, and presentation, and each layer accumulates many sibling types over the life of ... |
+
+## Base Pattern, Object-Relational Behavioral
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Mapper](mapper.md) | canonical | 5,400 | Two subsystems need to exchange information, but neither one should hold a compile time or a conceptual dependency on the other's shape. |
 
 ## Base Patterns
 
@@ -12,6 +24,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Client Session State](client-session-state.md) | canonical | 7,810 | HTTP, as originally specified, is a stateless request-response protocol. |
 | [Database Session State](database-session-state.md) | canonical | 7,361 | A web application needs to remember something about a user across more than one HTTP request, a shopping cart, an authenticated identity, a wizard's partial answers, a rate-limit ... |
 | [Gateway](gateway.md) | canonical | 7,526 | An application needs to talk to something outside its own object model. |
+| [Separated Interface](separated-interface.md) | canonical | 7,304 | A component in one part of a system needs to call a component in another part, but the natural, obvious dependency direction is backward from where the architecture wants it to be. |
 
 ## Concurrency
 
