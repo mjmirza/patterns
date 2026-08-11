@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-47 entries, 351,712 words. Every entry carries all 18
+48 entries, 358,966 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -47,6 +47,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Query Object](query-object.md) | canonical | 9,067 | An application needs to ask its data source for a set of objects that satisfy some condition, and the condition is not known ahead of time. |
 | [Row Data Gateway](row-data-gateway.md) | canonical | 8,173 | A codebase has business logic that needs to read a single row from a relational table, change some of its columns, and write the row back. |
 | [Table Data Gateway](table-data-gateway.md) | canonical | 7,315 | An application needs to read and write rows in a table, and the two paths that seem obvious both go wrong at scale. |
+
+## Data Source Architectural Patterns
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Record Set](record-set.md) | established | 7,254 | A team is building a screen, or a report, or a batch step, that needs to work with data shaped exactly like a SQL query result. |
 
 ## Distribution
 
