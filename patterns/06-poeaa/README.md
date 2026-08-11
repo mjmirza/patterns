@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-23 entries, 168,623 words. Every entry carries all 18
+26 entries, 191,742 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Source Architectural
@@ -76,7 +76,10 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Front Controller](front-controller.md) | canonical | 8,011 | A web application grows past a handful of pages. |
 | [Page Controller](page-controller.md) | canonical | 5,225 | A web application must translate an incoming HTTP request into a specific piece of server-side behavior and a specific response. |
+| [Template View](template-view.md) | canonical | 7,530 | A system has finished computing a result, a customer record, a list of orders, a search result set, and now has to turn that result into an HTML document a browser can render. |
+| [Transform View](transform-view.md) | established | 7,578 | An application has assembled everything it needs to render a response. |
 
 ## Reading order
 
