@@ -1,7 +1,7 @@
 ---
 name: Unit of Work
 slug: unit-of-work
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Behavioral
 aliases: [Change Tracker, Transaction Manager Object, Session]
 first_described: "Fowler 2003"

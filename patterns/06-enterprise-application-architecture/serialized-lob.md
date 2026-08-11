@@ -1,7 +1,7 @@
 ---
 name: Serialized LOB
 slug: serialized-lob
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Structural
 aliases: [Serialized Large Object, Blob Serialization, Object Graph Serialization]
 first_described: "Fowler 2002"

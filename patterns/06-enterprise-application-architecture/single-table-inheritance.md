@@ -1,7 +1,7 @@
 ---
 name: Single Table Inheritance
 slug: single-table-inheritance
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Structural Patterns
 aliases: [STI, Discriminator Column Inheritance, Type Column Inheritance]
 first_described: "Fowler 2002"

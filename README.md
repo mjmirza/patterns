@@ -93,7 +93,7 @@ README does not claim they are implemented.
 | 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 0 | 66 | 66 |
 | 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 41 | 0 | 41 |
 | 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 30 | 0 | 30 |
-| 06 | [Enterprise Application Architecture](patterns/06-poeaa/) | Fowler, PoEAA | 26 | 22 | 48 |
+| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 26 | 22 | 48 |
 | 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 0 | 54 | 54 |
 | 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 | 0 | 42 |
 | 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 0 | 40 | 40 |

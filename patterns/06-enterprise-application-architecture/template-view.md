@@ -1,7 +1,7 @@
 ---
 name: Template View
 slug: template-view
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Server Page, Scripted Page]
 first_described: "Fowler 2002"

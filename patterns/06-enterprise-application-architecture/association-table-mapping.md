@@ -1,7 +1,7 @@
 ---
 name: Association Table Mapping
 slug: association-table-mapping
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Metadata Mapping Patterns
 aliases: [Join Table, Junction Table, Link Table, Bridge Table, Relation Table]
 first_described: "Fowler 2002, Patterns of Enterprise Application Architecture"

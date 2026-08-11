@@ -1,7 +1,7 @@
 ---
 name: Inheritance Mappers
 slug: inheritance-mappers
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Structural Patterns
 aliases: [Mapper Hierarchy, Polymorphic Mapper]
 first_described: "Fowler 2002"

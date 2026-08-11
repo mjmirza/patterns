@@ -17,7 +17,7 @@ FAMILY_TITLES = {
     "03-refactoring": ("Refactoring Techniques", "Fowler, Refactoring 2nd edition"),
     "04-principles-and-laws": ("Principles and Laws", "Martin, Larman, Brewer, Conway"),
     "05-architectural": ("Architectural Patterns", "Buschmann POSA 1, Bass SEI"),
-    "06-poeaa": ("Enterprise Application Architecture", "Fowler, PoEAA"),
+    "06-enterprise-application-architecture": ("Enterprise Application Architecture", "Fowler, PoEAA"),
     "07-integration": ("Enterprise Integration", "Hohpe and Woolf"),
     "08-cloud-distributed": (
         "Cloud and Distributed",

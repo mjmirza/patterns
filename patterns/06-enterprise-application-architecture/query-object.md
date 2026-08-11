@@ -1,7 +1,7 @@
 ---
 name: Query Object
 slug: query-object
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Data Source Architectural
 aliases: [Criteria Object, Fluent Query Builder]
 first_described: "Fowler 2002"

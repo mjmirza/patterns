@@ -1,7 +1,7 @@
 ---
 name: Table Data Gateway
 slug: table-data-gateway
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Data Source Architectural
 aliases: [Table Gateway]
 first_described: "Fowler 2002"

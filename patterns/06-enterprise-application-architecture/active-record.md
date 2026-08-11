@@ -1,7 +1,7 @@
 ---
 name: Active Record
 slug: active-record
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Metadata Mapping Pattern
 aliases: [ActiveRecord, Model as Row]
 first_described: "Fowler 2002"
