@@ -1,7 +1,7 @@
 ---
 name: Transaction Script
 slug: transaction-script
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Domain Logic
 aliases: [Script, Procedural Domain Logic]
 first_described: "Fowler 2002"

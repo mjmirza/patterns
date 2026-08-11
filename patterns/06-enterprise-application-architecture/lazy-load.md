@@ -1,7 +1,7 @@
 ---
 name: Lazy Load
 slug: lazy-load
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Behavioral
 aliases: [Lazy Initialization, Virtual Proxy, Value Holder, Ghost]
 first_described: "Fowler 2002"

@@ -1,7 +1,7 @@
 ---
 name: Data Mapper
 slug: data-mapper
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Behavioral
 aliases: [Mapper, Object-Relational Mapper Layer, Persistence Mapper]
 first_described: "Fowler 2002"

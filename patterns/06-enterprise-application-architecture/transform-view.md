@@ -1,7 +1,7 @@
 ---
 name: Transform View
 slug: transform-view
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Element-by-Element Transform, XSLT View]
 first_described: "Fowler 2002"

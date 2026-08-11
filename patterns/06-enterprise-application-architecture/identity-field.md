@@ -1,7 +1,7 @@
 ---
 name: Identity Field
 slug: identity-field
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Structural Pattern
 aliases: [Surrogate Key Field, Primary Key Property, ID Field]
 first_described: "Fowler 2002"

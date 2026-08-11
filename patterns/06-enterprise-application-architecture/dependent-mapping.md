@@ -1,7 +1,7 @@
 ---
 name: Dependent Mapping
 slug: dependent-mapping
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Structural
 aliases: [Owned Entity Mapping, Privately Owned Association]
 first_described: "Fowler 2003"

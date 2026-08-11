@@ -1,7 +1,7 @@
 ---
 name: Front Controller
 slug: front-controller
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: []
 first_described: "Alur, Crupi, Malks 2001; Fowler 2003"

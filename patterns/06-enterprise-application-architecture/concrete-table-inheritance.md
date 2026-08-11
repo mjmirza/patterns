@@ -1,7 +1,7 @@
 ---
 name: Concrete Table Inheritance
 slug: concrete-table-inheritance
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Structural Patterns
 aliases: [CTI, Table Per Concrete Type, TPC, Leaf Table Inheritance]
 first_described: "Fowler 2002"

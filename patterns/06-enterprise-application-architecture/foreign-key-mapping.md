@@ -1,7 +1,7 @@
 ---
 name: Foreign Key Mapping
 slug: foreign-key-mapping
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Structural
 aliases: [Association Mapping, Reference Mapping]
 first_described: "Fowler 2002"

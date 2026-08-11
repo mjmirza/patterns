@@ -1,7 +1,7 @@
 ---
 name: Domain Model
 slug: domain-model
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Domain Logic
 aliases: [Rich Domain Model, Object Model]
 first_described: "Fowler 2002"

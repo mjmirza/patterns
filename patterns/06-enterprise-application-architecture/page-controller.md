@@ -1,7 +1,7 @@
 ---
 name: Page Controller
 slug: page-controller
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Page-per-Controller, Action Servlet (loosely, when misapplied)]
 first_described: "Fowler 2003"

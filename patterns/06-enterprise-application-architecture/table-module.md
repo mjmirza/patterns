@@ -1,7 +1,7 @@
 ---
 name: Table Module
 slug: table-module
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Domain Logic
 aliases: [Table Module Pattern]
 first_described: "Fowler 2003"

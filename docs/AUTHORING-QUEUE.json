@@ -2383,336 +2383,336 @@
     "name": "Transaction Script",
     "slug": "transaction-script",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/transaction-script.md",
+    "path": "patterns/06-enterprise-application-architecture/transaction-script.md",
     "focus": ""
   },
   {
     "name": "Domain Model",
     "slug": "domain-model",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/domain-model.md",
+    "path": "patterns/06-enterprise-application-architecture/domain-model.md",
     "focus": ""
   },
   {
     "name": "Table Module",
     "slug": "table-module",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/table-module.md",
+    "path": "patterns/06-enterprise-application-architecture/table-module.md",
     "focus": ""
   },
   {
     "name": "Table Data Gateway",
     "slug": "table-data-gateway",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/table-data-gateway.md",
+    "path": "patterns/06-enterprise-application-architecture/table-data-gateway.md",
     "focus": ""
   },
   {
     "name": "Row Data Gateway",
     "slug": "row-data-gateway",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/row-data-gateway.md",
+    "path": "patterns/06-enterprise-application-architecture/row-data-gateway.md",
     "focus": ""
   },
   {
     "name": "Active Record",
     "slug": "active-record",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/active-record.md",
+    "path": "patterns/06-enterprise-application-architecture/active-record.md",
     "focus": ""
   },
   {
     "name": "Data Mapper",
     "slug": "data-mapper",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/data-mapper.md",
+    "path": "patterns/06-enterprise-application-architecture/data-mapper.md",
     "focus": ""
   },
   {
     "name": "Unit of Work",
     "slug": "unit-of-work",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/unit-of-work.md",
+    "path": "patterns/06-enterprise-application-architecture/unit-of-work.md",
     "focus": ""
   },
   {
     "name": "Identity Map",
     "slug": "identity-map",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/identity-map.md",
+    "path": "patterns/06-enterprise-application-architecture/identity-map.md",
     "focus": ""
   },
   {
     "name": "Lazy Load",
     "slug": "lazy-load",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/lazy-load.md",
+    "path": "patterns/06-enterprise-application-architecture/lazy-load.md",
     "focus": ""
   },
   {
     "name": "Identity Field",
     "slug": "identity-field",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/identity-field.md",
+    "path": "patterns/06-enterprise-application-architecture/identity-field.md",
     "focus": ""
   },
   {
     "name": "Foreign Key Mapping",
     "slug": "foreign-key-mapping",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/foreign-key-mapping.md",
+    "path": "patterns/06-enterprise-application-architecture/foreign-key-mapping.md",
     "focus": ""
   },
   {
     "name": "Association Table Mapping",
     "slug": "association-table-mapping",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/association-table-mapping.md",
+    "path": "patterns/06-enterprise-application-architecture/association-table-mapping.md",
     "focus": ""
   },
   {
     "name": "Dependent Mapping",
     "slug": "dependent-mapping",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/dependent-mapping.md",
+    "path": "patterns/06-enterprise-application-architecture/dependent-mapping.md",
     "focus": ""
   },
   {
     "name": "Embedded Value",
     "slug": "embedded-value",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/embedded-value.md",
+    "path": "patterns/06-enterprise-application-architecture/embedded-value.md",
     "focus": ""
   },
   {
     "name": "Serialized LOB",
     "slug": "serialized-lob",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/serialized-lob.md",
+    "path": "patterns/06-enterprise-application-architecture/serialized-lob.md",
     "focus": ""
   },
   {
     "name": "Single Table Inheritance",
     "slug": "single-table-inheritance",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/single-table-inheritance.md",
+    "path": "patterns/06-enterprise-application-architecture/single-table-inheritance.md",
     "focus": ""
   },
   {
     "name": "Class Table Inheritance",
     "slug": "class-table-inheritance",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/class-table-inheritance.md",
+    "path": "patterns/06-enterprise-application-architecture/class-table-inheritance.md",
     "focus": ""
   },
   {
     "name": "Concrete Table Inheritance",
     "slug": "concrete-table-inheritance",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/concrete-table-inheritance.md",
+    "path": "patterns/06-enterprise-application-architecture/concrete-table-inheritance.md",
     "focus": ""
   },
   {
     "name": "Inheritance Mappers",
     "slug": "inheritance-mappers",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/inheritance-mappers.md",
+    "path": "patterns/06-enterprise-application-architecture/inheritance-mappers.md",
     "focus": ""
   },
   {
     "name": "Metadata Mapping",
     "slug": "metadata-mapping",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/metadata-mapping.md",
+    "path": "patterns/06-enterprise-application-architecture/metadata-mapping.md",
     "focus": ""
   },
   {
     "name": "Query Object",
     "slug": "query-object",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/query-object.md",
+    "path": "patterns/06-enterprise-application-architecture/query-object.md",
     "focus": ""
   },
   {
     "name": "Page Controller",
     "slug": "page-controller",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/page-controller.md",
+    "path": "patterns/06-enterprise-application-architecture/page-controller.md",
     "focus": ""
   },
   {
     "name": "Front Controller",
     "slug": "front-controller",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/front-controller.md",
+    "path": "patterns/06-enterprise-application-architecture/front-controller.md",
     "focus": ""
   },
   {
     "name": "Template View",
     "slug": "template-view",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/template-view.md",
+    "path": "patterns/06-enterprise-application-architecture/template-view.md",
     "focus": ""
   },
   {
     "name": "Transform View",
     "slug": "transform-view",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/transform-view.md",
+    "path": "patterns/06-enterprise-application-architecture/transform-view.md",
     "focus": ""
   },
   {
     "name": "Two Step View",
     "slug": "two-step-view",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/two-step-view.md",
+    "path": "patterns/06-enterprise-application-architecture/two-step-view.md",
     "focus": ""
   },
   {
     "name": "Application Controller",
     "slug": "application-controller",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/application-controller.md",
+    "path": "patterns/06-enterprise-application-architecture/application-controller.md",
     "focus": ""
   },
   {
     "name": "Remote Facade",
     "slug": "remote-facade",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/remote-facade.md",
+    "path": "patterns/06-enterprise-application-architecture/remote-facade.md",
     "focus": ""
   },
   {
     "name": "Data Transfer Object",
     "slug": "data-transfer-object",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/data-transfer-object.md",
+    "path": "patterns/06-enterprise-application-architecture/data-transfer-object.md",
     "focus": ""
   },
   {
     "name": "Optimistic Offline Lock",
     "slug": "optimistic-offline-lock",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/optimistic-offline-lock.md",
+    "path": "patterns/06-enterprise-application-architecture/optimistic-offline-lock.md",
     "focus": ""
   },
   {
     "name": "Pessimistic Offline Lock",
     "slug": "pessimistic-offline-lock",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/pessimistic-offline-lock.md",
+    "path": "patterns/06-enterprise-application-architecture/pessimistic-offline-lock.md",
     "focus": ""
   },
   {
     "name": "Coarse-Grained Lock",
     "slug": "coarse-grained-lock",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/coarse-grained-lock.md",
+    "path": "patterns/06-enterprise-application-architecture/coarse-grained-lock.md",
     "focus": ""
   },
   {
     "name": "Implicit Lock",
     "slug": "implicit-lock",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/implicit-lock.md",
+    "path": "patterns/06-enterprise-application-architecture/implicit-lock.md",
     "focus": ""
   },
   {
     "name": "Client Session State",
     "slug": "client-session-state",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/client-session-state.md",
+    "path": "patterns/06-enterprise-application-architecture/client-session-state.md",
     "focus": ""
   },
   {
     "name": "Server Session State",
     "slug": "server-session-state",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/server-session-state.md",
+    "path": "patterns/06-enterprise-application-architecture/server-session-state.md",
     "focus": ""
   },
   {
     "name": "Database Session State",
     "slug": "database-session-state",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/database-session-state.md",
+    "path": "patterns/06-enterprise-application-architecture/database-session-state.md",
     "focus": ""
   },
   {
     "name": "Gateway",
     "slug": "gateway",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/gateway.md",
+    "path": "patterns/06-enterprise-application-architecture/gateway.md",
     "focus": ""
   },
   {
     "name": "Mapper",
     "slug": "mapper",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/mapper.md",
+    "path": "patterns/06-enterprise-application-architecture/mapper.md",
     "focus": ""
   },
   {
     "name": "Layer Supertype",
     "slug": "layer-supertype",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/layer-supertype.md",
+    "path": "patterns/06-enterprise-application-architecture/layer-supertype.md",
     "focus": ""
   },
   {
     "name": "Separated Interface",
     "slug": "separated-interface",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/separated-interface.md",
+    "path": "patterns/06-enterprise-application-architecture/separated-interface.md",
     "focus": ""
   },
   {
     "name": "Registry",
     "slug": "registry",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/registry.md",
+    "path": "patterns/06-enterprise-application-architecture/registry.md",
     "focus": ""
   },
   {
     "name": "Value Object",
     "slug": "value-object",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/value-object.md",
+    "path": "patterns/06-enterprise-application-architecture/value-object.md",
     "focus": ""
   },
   {
     "name": "Money",
     "slug": "money",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/money.md",
+    "path": "patterns/06-enterprise-application-architecture/money.md",
     "focus": ""
   },
   {
     "name": "Special Case",
     "slug": "special-case",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/special-case.md",
+    "path": "patterns/06-enterprise-application-architecture/special-case.md",
     "focus": ""
   },
   {
     "name": "Plugin",
     "slug": "plugin",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/plugin.md",
+    "path": "patterns/06-enterprise-application-architecture/plugin.md",
     "focus": ""
   },
   {
     "name": "Service Stub",
     "slug": "service-stub",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/service-stub.md",
+    "path": "patterns/06-enterprise-application-architecture/service-stub.md",
     "focus": ""
   },
   {
     "name": "Record Set",
     "slug": "record-set",
     "category": "enterprise application architecture",
-    "path": "patterns/06-poeaa/record-set.md",
+    "path": "patterns/06-enterprise-application-architecture/record-set.md",
     "focus": ""
   },
   {

@@ -1,7 +1,7 @@
 ---
 name: Class Table Inheritance
 slug: class-table-inheritance
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Structural
 aliases: [Table Per Subclass, Joined Table Inheritance, Table Per Type, Multi-Table Inheritance]
 first_described: "Fowler 2002"

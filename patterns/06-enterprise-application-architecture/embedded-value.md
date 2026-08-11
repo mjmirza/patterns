@@ -1,7 +1,7 @@
 ---
 name: Embedded Value
 slug: embedded-value
-family: 06-poeaa
+family: 06-enterprise-application-architecture
 category: Object-Relational Structural Pattern
 aliases: [Value Object Mapping, Composed Of, Component Mapping, Inlined Value Object]
 first_described: "Fowler 2002"
