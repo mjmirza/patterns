@@ -1,7 +1,7 @@
 ---
 name: Event Storming
 slug: event-storming
-family: 11-ddd
+family: 11-domain-driven-design
 category: Behavioral
 aliases: [EventStorming, Big Picture EventStorming, Process Modeling EventStorming, Design Level EventStorming]
 first_described: "Alberto Brandolini 2013"

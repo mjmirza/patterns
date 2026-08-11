@@ -47,7 +47,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Anticorruption Layer](anticorruption-layer.md) | canonical | 7,220 | A team owns a domain model they have deliberately shaped to match the Ubiquitous Language of their Bounded Context, see patterns/11-ddd/ubiquitous-language.md and ... |
+| [Anticorruption Layer](anticorruption-layer.md) | canonical | 7,220 | A team owns a domain model they have deliberately shaped to match the Ubiquitous Language of their Bounded Context, see patterns/11-domain-driven-design/ubiquitous-language.md and ... |
 
 ## Strategic
 

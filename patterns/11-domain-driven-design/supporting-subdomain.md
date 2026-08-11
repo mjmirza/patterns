@@ -1,7 +1,7 @@
 ---
 name: Supporting Subdomain
 slug: supporting-subdomain
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Supporting Domain, Supporting Component]
 first_described: "Evans 2003, formalized as a three-way split by Vernon 2013"

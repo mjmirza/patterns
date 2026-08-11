@@ -1,7 +1,7 @@
 ---
 name: Layered Architecture
 slug: layered-architecture
-family: 11-ddd
+family: 11-domain-driven-design
 category: Architectural
 aliases: [N-tier Architecture, Multilayer Architecture, Tiered Architecture, Presentation-Domain-Data Layering]
 first_described: "Buschmann, Meunier, Rohnert, Sommerlad, Stal 1996 (Pattern-Oriented Software Architecture, Volume 1)"

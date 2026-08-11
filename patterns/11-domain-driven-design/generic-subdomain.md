@@ -1,7 +1,7 @@
 ---
 name: Generic Subdomain
 slug: generic-subdomain
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic
 aliases: [Generic Domain, Commodity Subdomain, Buy-not-Build Subdomain]
 first_described: "Evans 2003"

@@ -1,7 +1,7 @@
 ---
 name: Domain Service
 slug: domain-service
-family: 11-ddd
+family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Service Object, Stateless Domain Operation]
 first_described: "Evans 2003"

@@ -1,7 +1,7 @@
 ---
 name: Separate Ways
 slug: separate-ways
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic Design
 aliases: [SW, No Integration, Cut the Strings]
 first_described: "Evans 2003"

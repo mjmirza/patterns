@@ -1,7 +1,7 @@
 ---
 name: Repository
 slug: repository
-family: 11-ddd
+family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Repository Pattern, Persistence Repository, Collection-Oriented Repository]
 first_described: "Evans 2003 (Domain-Driven Design); Fowler, Rice, Foemmel, Hieatt, Mee, Stafford 2002 (Patterns of Enterprise Application Architecture)"

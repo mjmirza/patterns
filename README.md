@@ -98,7 +98,7 @@ README does not claim they are implemented.
 | 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 | 0 | 42 |
 | 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 0 | 40 | 40 |
 | 10 | [Microservices](patterns/10-microservices/) | Richardson | 44 | 5 | 49 |
-| 11 | [Domain-Driven Design](patterns/11-ddd/) | Evans, Vernon | 29 | 6 | 35 |
+| 11 | [Domain-Driven Design](patterns/11-domain-driven-design/) | Evans, Vernon | 29 | 6 | 35 |
 | 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 0 | 41 | 41 |
 | 13 | [Frontend and UI](patterns/13-frontend-ui/) | Framework documentation | 0 | 34 | 34 |
 | 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 30 | 0 | 30 |

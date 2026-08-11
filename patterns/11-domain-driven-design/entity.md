@@ -1,7 +1,7 @@
 ---
 name: Entity
 slug: entity
-family: 11-ddd
+family: 11-domain-driven-design
 category: Tactical Modeling
 aliases: [Domain Entity, Identity Object, Reference Object]
 first_described: "Evans 2003"

@@ -1,7 +1,7 @@
 ---
 name: Conformist
 slug: conformist
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic Design
 aliases: [CF, Conformist Relationship]
 first_described: "Evans 2003"
@@ -532,7 +532,7 @@ against real alternatives rather than a strawman.
 - **Core Domain.** A Conformist relationship rarely belongs anywhere near a
   Core Domain, because letting a vendor's vocabulary define the part of the
   system that differentiates the business trades away the one thing a Core
-  Domain exists to protect. See `patterns/11-ddd/core-domain.md` in this
+  Domain exists to protect. See `patterns/11-domain-driven-design/core-domain.md` in this
   repository for the fuller argument.
 
 ## 14. Refactoring path in and out
@@ -691,8 +691,8 @@ dimensions 3 and 10, not a separate concern.
     verified 2026-08-02, cited for the Anticorruption Layer comparison in
     dimensions 12 and 13, and for its own attribution of the pattern to
     Eric Evans.
-12. `patterns/11-ddd/context-map.md`, `patterns/11-ddd/bounded-context.md`,
-    and `patterns/11-ddd/core-domain.md`, this repository, for the internal
+12. `patterns/11-domain-driven-design/context-map.md`, `patterns/11-domain-driven-design/bounded-context.md`,
+    and `patterns/11-domain-driven-design/core-domain.md`, this repository, for the internal
     cross-references in dimensions 13 and 4.
 
 ## Code examples

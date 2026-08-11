@@ -1,7 +1,7 @@
 ---
 name: Bounded Context
 slug: bounded-context
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Context Boundary, Model Boundary]
 first_described: "Evans 2003"

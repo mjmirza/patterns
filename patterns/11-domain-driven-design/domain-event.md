@@ -1,7 +1,7 @@
 ---
 name: Domain Event
 slug: domain-event
-family: 11-ddd
+family: 11-domain-driven-design
 category: Tactical
 aliases: [Business Event, Domain Notification]
 first_described: "Evans 2003, formalized by Fowler 2005 and Vernon 2013"

@@ -1,7 +1,7 @@
 ---
 name: Context Map
 slug: context-map
-family: 11-ddd
+family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Bounded Context Map, Context Mapping]
 first_described: "Evans 2003"

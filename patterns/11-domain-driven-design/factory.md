@@ -1,7 +1,7 @@
 ---
 name: Factory
 slug: factory
-family: 11-ddd
+family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Domain Factory, Aggregate Factory, Factory Method on Aggregate Root]
 first_described: "Evans 2003"
