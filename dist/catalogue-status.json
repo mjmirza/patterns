@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 425,
+  "published_total": 428,
   "target_total": 854,
   "families_total": 29,
   "families_complete": 8,
   "stale_entries": 0,
-  "references_checked": 2424,
+  "references_checked": 2433,
   "rows": [
     {
       "family": "01-gof",
@@ -87,12 +87,12 @@
       "family": "07-integration",
       "name": "Enterprise Integration",
       "origin": "Hohpe and Woolf",
-      "published": 14,
-      "planned": 40,
+      "published": 17,
+      "planned": 37,
       "target": 54,
-      "percent": 25.9,
+      "percent": 31.5,
       "maturity": {
-        "canonical": 14
+        "canonical": 17
       }
     },
     {
