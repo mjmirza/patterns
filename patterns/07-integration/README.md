@@ -2,8 +2,14 @@
 
 Origin. Hohpe and Woolf
 
-2 entries, 12,705 words. Every entry carries all 18
+5 entries, 36,389 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Enterprise Integration, Messaging Channels
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Datatype Channel](datatype-channel.md) | canonical | 7,421 | A consumer reads a message off a channel and must decide how to process it before it can do anything with the payload. |
 
 ## Integration
 
@@ -15,6 +21,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Dead Letter Channel](dead-letter-channel.md) | canonical | 8,100 | A message oriented system moves work between components through channels rather than through direct calls. |
+| [Invalid Message Channel](invalid-message-channel.md) | canonical | 8,163 | A receiver on a messaging channel is written against an expectation. |
 | [Point-to-Point Channel](point-to-point-channel.md) | canonical | 6,697 | A system decouples a producer of work from a consumer of work using asynchronous messaging instead of a direct call, for the usual reasons. |
 
 ## Reading order
