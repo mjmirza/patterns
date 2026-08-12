@@ -2,8 +2,14 @@
 
 Origin. Hohpe and Woolf
 
-5 entries, 36,389 words. Every entry carries all 18
+8 entries, 56,757 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Enterprise Integration
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Messaging Bridge](messaging-bridge.md) | canonical | 6,489 | An enterprise settles on messaging as the way applications talk to each other, and that decision solves the coupling problem inside one messaging technology. |
 
 ## Enterprise Integration, Messaging Channels
 
@@ -17,6 +23,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Message Channel](message-channel.md) | canonical | 6,008 | Two independently deployed pieces of software need to exchange information, and the team building them does not want a synchronous, point-to-point network call between them. |
 
+## Messaging
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Guaranteed Delivery](guaranteed-delivery.md) | canonical | 6,068 | A service publishes an event or sends a command onto a channel and then proceeds as if the message is on its way. |
+
 ## Messaging Channels
 
 | Pattern | Maturity | Words | Intent |
@@ -24,6 +36,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Dead Letter Channel](dead-letter-channel.md) | canonical | 8,100 | A message oriented system moves work between components through channels rather than through direct calls. |
 | [Invalid Message Channel](invalid-message-channel.md) | canonical | 8,163 | A receiver on a messaging channel is written against an expectation. |
 | [Point-to-Point Channel](point-to-point-channel.md) | canonical | 6,697 | A system decouples a producer of work from a consumer of work using asynchronous messaging instead of a direct call, for the usual reasons. |
+
+## Messaging Endpoints
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Channel Adapter](channel-adapter.md) | canonical | 7,811 | An application was written to be called, to poll a database, to read a file, or to raise an in-process event. |
 
 ## Reading order
 
