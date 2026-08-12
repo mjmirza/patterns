@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-8 entries, 56,757 words. Every entry carries all 18
+11 entries, 77,358 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -21,6 +21,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Command Message](command-message.md) | canonical | 6,014 | An application wants another application, or another component in the same system, to perform a specific piece of work. |
+| [Message](message.md) | canonical | 6,901 | Two applications need to exchange information without either one blocking on the other's availability, without either one dictating the other's internal data model, and without a ... |
+| [Message Bus](message-bus.md) | canonical | 7,686 | A system starts with two applications that need to exchange data, and a direct point-to-point integration, a script that reads from one database and writes to another, or a ... |
 | [Message Channel](message-channel.md) | canonical | 6,008 | Two independently deployed pieces of software need to exchange information, and the team building them does not want a synchronous, point-to-point network call between them. |
 
 ## Messaging
