@@ -5,7 +5,7 @@ family,name,published,planned,target,percent
 04-principles-and-laws,Principles and Laws,41,0,41,100.0
 05-architectural,Architectural Patterns,30,0,30,100.0
 06-enterprise-application-architecture,Enterprise Application Architecture,48,0,48,100.0
-07-integration,Enterprise Integration,14,40,54,25.9
+07-integration,Enterprise Integration,17,37,54,31.5
 08-cloud-distributed,Cloud and Distributed,42,0,42,100.0
 09-concurrency,Concurrency and Parallelism,0,40,40,0.0
 10-microservices,Microservices,44,5,49,89.8
