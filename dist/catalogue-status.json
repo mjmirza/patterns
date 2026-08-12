@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 410,
+  "published_total": 413,
   "target_total": 854,
   "families_total": 29,
-  "families_complete": 7,
+  "families_complete": 8,
   "stale_entries": 0,
-  "references_checked": 2371,
+  "references_checked": 2381,
   "rows": [
     {
       "family": "01-gof",
@@ -74,24 +74,26 @@
       "family": "06-enterprise-application-architecture",
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
-      "published": 47,
-      "planned": 1,
+      "published": 48,
+      "planned": 0,
       "target": 48,
-      "percent": 97.9,
+      "percent": 100.0,
       "maturity": {
         "canonical": 43,
-        "established": 4
+        "established": 5
       }
     },
     {
       "family": "07-integration",
       "name": "Enterprise Integration",
       "origin": "Hohpe and Woolf",
-      "published": 0,
-      "planned": 54,
+      "published": 2,
+      "planned": 52,
       "target": 54,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 3.7,
+      "maturity": {
+        "canonical": 2
+      }
     },
     {
       "family": "08-cloud-distributed",
