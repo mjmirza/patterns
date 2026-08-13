@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-50 entries, 353,405 words. Every entry carries all 18
+53 entries, 379,219 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -12,8 +12,10 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Aggregator](aggregator.md) | canonical | 5,808 | A system receives several messages that only make sense together, and no single message carries enough information to act on. |
 | [Composed Message Processor](composed-message-processor.md) | canonical | 6,044 | A message arrives that logically represents one unit of work, but different parts of that unit of work belong to different, independent systems, and none of those systems can ... |
 | [Message History](message-history.md) | canonical | 7,341 | A message-driven or event-driven system is built, on purpose, so that a producer does not know who its consumers are and a consumer does not know who produced the message it just ... |
+| [Message Store](message-store.md) | canonical | 8,466 | A messaging system built well is, by design, hard to see into from any one place. |
 | [Messaging Bridge](messaging-bridge.md) | canonical | 6,489 | An enterprise settles on messaging as the way applications talk to each other, and that decision solves the coupling problem inside one messaging technology. |
 | [Selective Consumer](selective-consumer.md) | canonical | 8,243 | A consuming application is attached to a message channel that carries a heterogeneous stream. |
+| [Smart Proxy](smart-proxy.md) | canonical | 9,654 | A team wants the same operational visibility into a Request-Reply exchange that a Wire Tap already gives them on any ordinary point-to-point channel, a copy of every message going ... |
 | [Wire Tap](wire-tap.md) | canonical | 6,396 | A message flows from a producer, through a channel, to a consumer, and the system needs visibility into that traffic for a purpose that has nothing to do with the business logic ... |
 
 ## Enterprise Integration Pattern
@@ -124,6 +126,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Process Manager](process-manager.md) | canonical | 6,457 | Picture an order fulfillment system built from independently owned services. |
+| [Test Message](test-message.md) | canonical | 7,694 | A messaging system is built from components that receive a message, do work on it, and emit a message. |
 
 ## Reading order
 
