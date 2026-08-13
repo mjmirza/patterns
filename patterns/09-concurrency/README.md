@@ -2,13 +2,16 @@
 
 Origin. Schmidt POSA 2
 
-2 entries, 15,766 words. Every entry carries all 18
+5 entries, 40,675 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Active Object](active-object.md) | canonical | 7,829 | An object's public methods are typically called synchronously. |
+| [Half-Sync/Half-Async](half-sync-half-async.md) | canonical | 8,046 | A concurrent system that talks to the outside world, over a network, a disk, a device driver, or another process, has two kinds of code living inside it at once, and the two kinds ... |
+| [Leader/Followers](leader-followers.md) | canonical | 9,034 | A server, or any concurrent program, has a set of event sources, such as socket handles for connected clients, and it must service events that arrive on those sources with as many ... |
 | [Proactor](proactor.md) | canonical | 7,282 | A server, or any program, needs to service many concurrent long-running operations, most commonly network reads and writes, disk I/O, or timers, without paying the cost of one ... |
 | [Reactor](reactor.md) | canonical | 8,484 | A server accepts many concurrent client connections, and at any instant almost all of them are idle. |
 
