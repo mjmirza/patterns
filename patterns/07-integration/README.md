@@ -2,13 +2,14 @@
 
 Origin. Hohpe and Woolf
 
-23 entries, 162,171 words. Every entry carries all 18
+26 entries, 182,140 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Aggregator](aggregator.md) | canonical | 5,808 | A system receives several messages that only make sense together, and no single message carries enough information to act on. |
 | [Messaging Bridge](messaging-bridge.md) | canonical | 6,489 | An enterprise settles on messaging as the way applications talk to each other, and that decision solves the coupling problem inside one messaging technology. |
 
 ## Enterprise Integration, Messaging Channels
@@ -33,6 +34,18 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Message Expiration](message-expiration.md) | canonical | 6,898 | A message carries a request or a piece of data across an asynchronous boundary. |
 | [Message Filter](message-filter.md) | canonical | 7,478 | A component sits on a message channel and receives every message that flows past, but it only knows how to handle a subset of them. |
 | [Message Sequence](message-sequence.md) | canonical | 6,955 | A producer has one logical unit of data to move across a messaging channel, and the unit is larger than the channel, the broker, or the receiving application can accept as a ... |
+
+## Integration (Message Routing)
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Resequencer](resequencer.md) | canonical | 7,556 | A producer emits a series of related units, each carrying an explicit position in a sequence, a timestamp, or an ordinal, and the units are meant to be consumed, displayed, or ... |
+
+## Message Routing
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Splitter](splitter.md) | canonical | 6,605 | A message arrives that is a container for several logically independent units of work, and the downstream processing needs to happen per unit, not per container. |
 
 ## Messaging
 
