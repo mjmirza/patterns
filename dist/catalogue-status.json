@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 464,
+  "published_total": 467,
   "target_total": 854,
   "families_total": 29,
-  "families_complete": 8,
+  "families_complete": 9,
   "stale_entries": 0,
-  "references_checked": 2579,
+  "references_checked": 2600,
   "rows": [
     {
       "family": "01-gof",
@@ -87,12 +87,12 @@
       "family": "07-integration",
       "name": "Enterprise Integration",
       "origin": "Hohpe and Woolf",
-      "published": 53,
-      "planned": 1,
+      "published": 54,
+      "planned": 0,
       "target": 54,
-      "percent": 98.1,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 53
+        "canonical": 54
       }
     },
     {
@@ -112,11 +112,13 @@
       "family": "09-concurrency",
       "name": "Concurrency and Parallelism",
       "origin": "Schmidt POSA 2",
-      "published": 0,
-      "planned": 40,
+      "published": 2,
+      "planned": 38,
       "target": 40,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 5.0,
+      "maturity": {
+        "canonical": 2
+      }
     },
     {
       "family": "10-microservices",
