@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-38 entries, 268,725 words. Every entry carries all 18
+41 entries, 288,435 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -38,6 +38,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Document Message](document-message.md) | canonical | 7,022 | Two systems need to exchange a structured record, such as a customer record, a purchase order, a lab result, or a shipment manifest. |
 | [Dynamic Router](dynamic-router.md) | canonical | 7,649 | A message-routing component in a system needs to send a message onward, and the set of places it might send that message to is not fixed at the time the router is built, deployed ... |
 | [Event Message](event-message.md) | canonical | 7,042 | An application performs an action that other applications, possibly ones the first application has never heard of and will never know about, need to react to. |
+| [Event-Driven Consumer](event-driven-consumer.md) | canonical | 6,039 | A service needs to react when something happens elsewhere in the system, a payment is captured, an order is placed, a file lands in a bucket, a row is updated in another team's ... |
 | [Format Indicator](format-indicator.md) | canonical | 6,130 | A message travels from a producer to a consumer, and at some point the consumer must decide how to parse the bytes it received. |
 | [Message](message.md) | canonical | 6,901 | Two applications need to exchange information without either one blocking on the other's availability, without either one dictating the other's internal data model, and without a ... |
 | [Message Bus](message-bus.md) | canonical | 7,686 | A system starts with two applications that need to exchange data, and a direct point-to-point integration, a script that reads from one database and writes to another, or a ... |
@@ -82,6 +83,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Recipient List](recipient-list.md) | canonical | 7,463 | A single message must reach more than one downstream consumer at once, and the exact SET of consumers that should receive a given message is not fixed at design time. |
 | [Request-Reply](request-reply.md) | canonical | 6,624 | A component needs an answer from another component before it can continue, and the two components do not share a process, a thread, or a call stack. |
 | [Return Address](return-address.md) | canonical | 7,269 | A requestor sends a message into an asynchronous channel and needs an answer back. |
+| [Transactional Client](transactional-client.md) | canonical | 7,869 | A client sends or receives several messages that belong together as one unit of work, and the messaging system offers no help unless the client asks for it explicitly. |
 
 ## Messaging Channels
 
@@ -96,6 +98,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Channel Adapter](channel-adapter.md) | canonical | 7,811 | An application was written to be called, to poll a database, to read a file, or to raise an in-process event. |
+| [Polling Consumer](polling-consumer.md) | canonical | 5,802 | An application needs to consume messages from a channel, a queue, a topic partition, or any buffered source of work items, but it needs to control the timing and the volume of ... |
 
 ## System Management
 
