@@ -51,6 +51,8 @@ ALLOW_UNREACHABLE = {
     "www.researchgate.net",
     "callbackhell.com",
     "www.sec.gov",
+    "doi.org",
+    "www.semanticscholar.org",
 }
 
 
