@@ -80,3 +80,18 @@ minimize
 # this entry's code samples and prose. Not figurative AI-slop usage.
 decoding
 decoded
+
+# reshape/reshapes/reshaping/reshaped. Plain, unavoidable technical verb for
+# the Normalizer and Message Translator pattern family, describing the act
+# of converting a message from one structural shape to another. Not
+# figurative AI-slop usage, this is the literal subject matter of the entry.
+reshape
+reshapes
+reshaping
+reshaped
+
+# ceiling. Plain technical term for an upper scaling bound (a format-count
+# ceiling, a throughput ceiling), used extensively elsewhere in this repo
+# (throttling.md, retry-budget.md, deployment-stamps.md, and more). Not
+# figurative AI-slop usage.
+ceiling
