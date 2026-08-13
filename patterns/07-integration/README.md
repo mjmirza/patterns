@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-35 entries, 246,617 words. Every entry carries all 18
+38 entries, 268,725 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -29,6 +29,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Canonical Data Model](canonical-data-model.md) | canonical | 7,238 | An enterprise with N independently developed systems that must exchange data pairwise needs, in the worst case, N times (N minus one) point-to-point translators if each system ... |
 | [Claim Check](claim-check.md) | canonical | 8,722 | A component in a message-based system needs to communicate a large amount of data, an image, a video, a document, a bulk export, a machine learning feature vector, a full customer ... |
 | [Command Message](command-message.md) | canonical | 6,014 | An application wants another application, or another component in the same system, to perform a specific piece of work. |
 | [Content Enricher](content-enricher.md) | canonical | 6,840 | A message arrives at an integration point carrying less data than the next step needs. |
@@ -44,6 +45,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Message Expiration](message-expiration.md) | canonical | 6,898 | A message carries a request or a piece of data across an asynchronous boundary. |
 | [Message Filter](message-filter.md) | canonical | 7,478 | A component sits on a message channel and receives every message that flows past, but it only knows how to handle a subset of them. |
 | [Message Sequence](message-sequence.md) | canonical | 6,955 | A producer has one logical unit of data to move across a messaging channel, and the unit is larger than the channel, the broker, or the receiving application can accept as a ... |
+| [Messaging Gateway](messaging-gateway.md) | canonical | 7,408 | An application needs to send and receive messages through a messaging system, a message queue, an event bus, a Kafka topic, an AMQP exchange, but the team does not want every part ... |
 | [Normalizer](normalizer.md) | canonical | 6,910 | A system receives messages that all describe the same real-world fact, an order was placed, a patient was admitted, a trade was executed, but the messages arrive in several ... |
 | [Routing Slip](routing-slip.md) | canonical | 7,757 | A message needs to pass through a chain of processing steps, and the exact membership and order of that chain differs per message, per tenant, or per business rule, rather than ... |
 
@@ -58,6 +60,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Envelope Wrapper](envelope-wrapper.md) | canonical | 6,361 | An application was built to produce and consume data in its own native format, a flat file, a fixed-width record, a plain XML document with no messaging-specific fields, a CSV row. |
+
+## Message Endpoint
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Messaging Mapper](messaging-mapper.md) | canonical | 7,462 | An application has a domain model, the classes that hold its business state and enforce its business rules, an Order, a Customer, a ShipmentPlan. |
 
 ## Message Routing
 
