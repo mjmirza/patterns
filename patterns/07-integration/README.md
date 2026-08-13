@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-44 entries, 310,125 words. Every entry carries all 18
+47 entries, 331,748 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -19,6 +19,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Scatter-Gather](scatter-gather.md) | canonical | 6,922 | A caller needs an answer that no single system holds in full. |
+
+## Enterprise Integration Pattern, System Management
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Control Bus](control-bus.md) | canonical | 7,404 | Picture an order processing system built from a dozen independently deployed services, connected by message queues, spread across two data centers and a handful of partner ... |
 
 ## Enterprise Integration, Messaging Channels
 
@@ -82,6 +88,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Competing Consumers](competing-consumers.md) | canonical | 6,366 | A producer or a set of producers places units of work onto a channel faster, or in bursts faster, than a single consumer can process them. |
 | [Content-Based Router](content-based-router.md) | canonical | 6,816 | A single logical message stream must be handled by more than one downstream consumer, and which consumer handles a given message depends on data inside that message, not on which ... |
+| [Durable Subscriber](durable-subscriber.md) | canonical | 6,834 | A publisher broadcasts events on a topic. |
 | [Guaranteed Delivery](guaranteed-delivery.md) | canonical | 6,068 | A service publishes an event or sends a command onto a channel and then proceeds as if the message is on its way. |
 | [Recipient List](recipient-list.md) | canonical | 7,463 | A single message must reach more than one downstream consumer at once, and the exact SET of consumers that should receive a given message is not fixed at design time. |
 | [Request-Reply](request-reply.md) | canonical | 6,624 | A component needs an answer from another component before it can continue, and the two components do not share a process, a thread, or a call stack. |
@@ -95,6 +102,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Dead Letter Channel](dead-letter-channel.md) | canonical | 8,100 | A message oriented system moves work between components through channels rather than through direct calls. |
 | [Invalid Message Channel](invalid-message-channel.md) | canonical | 8,163 | A receiver on a messaging channel is written against an expectation. |
 | [Point-to-Point Channel](point-to-point-channel.md) | canonical | 6,697 | A system decouples a producer of work from a consumer of work using asynchronous messaging instead of a direct call, for the usual reasons. |
+
+## Messaging Endpoint
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Service Activator](service-activator.md) | canonical | 7,385 | A piece of business logic already exists as an ordinary method call, a pricing calculator, an order validator, a shipment scheduler, written and tested with no idea that a message ... |
 
 ## Messaging Endpoints
 
