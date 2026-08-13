@@ -95,3 +95,10 @@ reshaped
 # (throttling.md, retry-budget.md, deployment-stamps.md, and more). Not
 # figurative AI-slop usage.
 ceiling
+
+# unlocking/unlocked. Inflected forms of "unlock", already allowed above.
+# Literal technical term for mutex release, the exact subject matter of the
+# Scoped Locking entry (lock acquisition and release discipline). Not
+# figurative AI-slop usage.
+unlocking
+unlocked

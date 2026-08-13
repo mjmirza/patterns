@@ -2,7 +2,7 @@
 
 Origin. Schmidt POSA 2
 
-5 entries, 40,675 words. Every entry carries all 18
+8 entries, 66,176 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency
@@ -12,8 +12,11 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Active Object](active-object.md) | canonical | 7,829 | An object's public methods are typically called synchronously. |
 | [Half-Sync/Half-Async](half-sync-half-async.md) | canonical | 8,046 | A concurrent system that talks to the outside world, over a network, a disk, a device driver, or another process, has two kinds of code living inside it at once, and the two kinds ... |
 | [Leader/Followers](leader-followers.md) | canonical | 9,034 | A server, or any concurrent program, has a set of event sources, such as socket handles for connected clients, and it must service events that arrive on those sources with as many ... |
+| [Monitor Object](monitor-object.md) | canonical | 6,457 | An object holds mutable state that more than one thread will call methods on concurrently. |
 | [Proactor](proactor.md) | canonical | 7,282 | A server, or any program, needs to service many concurrent long-running operations, most commonly network reads and writes, disk I/O, or timers, without paying the cost of one ... |
 | [Reactor](reactor.md) | canonical | 8,484 | A server accepts many concurrent client connections, and at any instant almost all of them are idle. |
+| [Scoped Locking](scoped-locking.md) | canonical | 8,785 | A piece of code acquires a lock to protect a critical section, and every path out of that critical section, the normal return, the early return, the thrown exception, the break ... |
+| [Thread-Specific Storage](thread-specific-storage.md) | canonical | 10,259 | A piece of state is logically global, in the sense that every function in a call chain wants to read or write it through one shared name, and yet the state must physically differ ... |
 
 ## Reading order
 
