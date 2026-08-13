@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-29 entries, 202,863 words. Every entry carries all 18
+32 entries, 222,521 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -30,6 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Command Message](command-message.md) | canonical | 6,014 | An application wants another application, or another component in the same system, to perform a specific piece of work. |
+| [Content Enricher](content-enricher.md) | canonical | 6,840 | A message arrives at an integration point carrying less data than the next step needs. |
 | [Correlation Identifier](correlation-identifier.md) | canonical | 7,467 | A process sends a message and does not receive its answer over the same connection it used to send it. |
 | [Document Message](document-message.md) | canonical | 7,022 | Two systems need to exchange a structured record, such as a customer record, a purchase order, a lab result, or a shipment manifest. |
 | [Dynamic Router](dynamic-router.md) | canonical | 7,649 | A message-routing component in a system needs to send a message onward, and the set of places it might send that message to is not fixed at the time the router is built, deployed ... |
@@ -48,6 +49,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Resequencer](resequencer.md) | canonical | 7,556 | A producer emits a series of related units, each carrying an explicit position in a sequence, a timestamp, or an ordinal, and the units are meant to be consumed, displayed, or ... |
+
+## Message Construction
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Envelope Wrapper](envelope-wrapper.md) | canonical | 6,361 | An application was built to produce and consume data in its own native format, a flat file, a fixed-width record, a plain XML document with no messaging-specific fields, a CSV row. |
 
 ## Message Routing
 
@@ -78,6 +85,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Channel Adapter](channel-adapter.md) | canonical | 7,811 | An application was written to be called, to poll a database, to read a file, or to raise an in-process event. |
+
+## System Management
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Process Manager](process-manager.md) | canonical | 6,457 | Picture an order fulfillment system built from independently owned services. |
 
 ## Reading order
 
