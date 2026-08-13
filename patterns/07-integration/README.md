@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-32 entries, 222,521 words. Every entry carries all 18
+35 entries, 246,617 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -29,8 +29,10 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Claim Check](claim-check.md) | canonical | 8,722 | A component in a message-based system needs to communicate a large amount of data, an image, a video, a document, a bulk export, a machine learning feature vector, a full customer ... |
 | [Command Message](command-message.md) | canonical | 6,014 | An application wants another application, or another component in the same system, to perform a specific piece of work. |
 | [Content Enricher](content-enricher.md) | canonical | 6,840 | A message arrives at an integration point carrying less data than the next step needs. |
+| [Content Filter](content-filter.md) | canonical | 8,464 | A consumer receives a message that is far larger, richer, or more deeply nested than anything it needs, and forwarding or storing that full message creates real cost. |
 | [Correlation Identifier](correlation-identifier.md) | canonical | 7,467 | A process sends a message and does not receive its answer over the same connection it used to send it. |
 | [Document Message](document-message.md) | canonical | 7,022 | Two systems need to exchange a structured record, such as a customer record, a purchase order, a lab result, or a shipment manifest. |
 | [Dynamic Router](dynamic-router.md) | canonical | 7,649 | A message-routing component in a system needs to send a message onward, and the set of places it might send that message to is not fixed at the time the router is built, deployed ... |
@@ -42,6 +44,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Message Expiration](message-expiration.md) | canonical | 6,898 | A message carries a request or a piece of data across an asynchronous boundary. |
 | [Message Filter](message-filter.md) | canonical | 7,478 | A component sits on a message channel and receives every message that flows past, but it only knows how to handle a subset of them. |
 | [Message Sequence](message-sequence.md) | canonical | 6,955 | A producer has one logical unit of data to move across a messaging channel, and the unit is larger than the channel, the broker, or the receiving application can accept as a ... |
+| [Normalizer](normalizer.md) | canonical | 6,910 | A system receives messages that all describe the same real-world fact, an order was placed, a patient was admitted, a trade was executed, but the messages arrive in several ... |
 | [Routing Slip](routing-slip.md) | canonical | 7,757 | A message needs to pass through a chain of processing steps, and the exact membership and order of that chain differs per message, per tenant, or per business rule, rather than ... |
 
 ## Integration (Message Routing)
