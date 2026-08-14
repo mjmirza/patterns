@@ -88,6 +88,12 @@ EMOJI = re.compile(
     "]"
 )
 
+BANNED_PHRASES = [w for w in BANNED_WORDS if " " in w]
+BANNED_SINGLE_WORDS = [w for w in BANNED_WORDS if " " not in w]
+BANNED_SINGLE_RE = re.compile(
+    r"\b(?:" + "|".join(map(re.escape, BANNED_SINGLE_WORDS)) + r")\b"
+)
+
 
 def prose_lines(text: str) -> list[tuple[int, str]]:
     # Returns prose lines with 1-based numbers. Fences and frontmatter removed.
@@ -129,12 +135,12 @@ def check(path: Path) -> list[str]:
         if EMOJI.search(line):
             errors.append(f"line {lineno}: emoji")
 
-        for word in BANNED_WORDS:
-            if " " in word:
-                if word in low:
-                    errors.append(f"line {lineno}: banned phrase '{word}'")
-            elif re.search(rf"\b{re.escape(word)}\b", low):
-                errors.append(f"line {lineno}: banned word '{word}'")
+        for phrase in BANNED_PHRASES:
+            if phrase in low:
+                errors.append(f"line {lineno}: banned phrase '{phrase}'")
+
+        for m in BANNED_SINGLE_RE.finditer(low):
+            errors.append(f"line {lineno}: banned word '{m.group(0)}'")
 
         if raw.strip() == "---":
             errors.append(f"line {lineno}: triple-dash used as separator")
