@@ -102,3 +102,9 @@ ceiling
 # figurative AI-slop usage.
 unlocking
 unlocked
+
+# Spark/spark. Proper noun, Apache Spark, the Apache Software Foundation
+# project cited as a named production use and implementation variant
+# throughout patterns/09-concurrency/map-reduce.md, per ENTRY-TEMPLATE.md.
+# Not the figurative AI-slop verb "spark" (to spark curiosity).
+spark
