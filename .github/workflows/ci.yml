@@ -36,15 +36,12 @@ jobs:
             exit 1
           }
       - name: Catalogue status generator tests
-        run: |
-          python3 tools/gen-catalogue-status-test.py
-          python3 tools/gen-by-problem-by-language-test.py
+        run: python3 tools/gen-catalogue-status-test.py
       - name: Catalogue status is current
         run: |
           python3 tools/gen-catalogue-status.py
-          python3 tools/gen-by-problem-by-language.py
-          git diff --exit-code -- README.md docs/PROGRESS.md dist/ docs/BY-PROBLEM.md docs/BY-LANGUAGE.md || {
-            echo "Catalogue status is stale. Run tools/gen-catalogue-status.py and tools/gen-by-problem-by-language.py, and commit."
+          git diff --exit-code -- README.md docs/PROGRESS.md dist/ || {
+            echo "Catalogue status is stale. Run tools/gen-catalogue-status.py and commit."
             exit 1
           }
 

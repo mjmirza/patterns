@@ -122,6 +122,34 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | , two writes issued at effectively the same wall-clock instant from | [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) | Enterprise Application Architecture |
 | , under moderate load, the guarded operation is called far less | [Balking](../patterns/09-concurrency/balking.md) | Concurrency and Parallelism |
 | , worker threads consume a visibly high, steady amount of CPU even | [Leader/Followers](../patterns/09-concurrency/leader-followers.md) | Concurrency and Parallelism |
+| / / Symptom / Cause / Fix / | [Gatekeeper](../patterns/08-cloud-distributed/gatekeeper.md) | Cloud and Distributed |
+| / / Symptom / Cause / Fix / | [Sharding](../patterns/08-cloud-distributed/sharding.md) | Cloud and Distributed |
+| / / Symptom / Cause / Fix / | [Valet Key](../patterns/08-cloud-distributed/valet-key.md) | Cloud and Distributed |
+| / / Symptom / Cause / Fix / | [Aggregate](../patterns/10-microservices/aggregate.md) | Microservices |
+| / A class passes an LCOM or cyclomatic-complexity linter threshold but a new team member still cannot describe what t... | [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) | Principles and Laws |
+| / A pull request review takes far longer than the diff size suggests it should, because reviewers keep asking "does t... | [Lava Flow](../patterns/18-anti-patterns/lava-flow.md) | Anti-Patterns |
+| / Symptom (what you would actually observe) / Cause / Fix / | [Active Record](../patterns/06-enterprise-application-architecture/active-record.md) | Enterprise Application Architecture |
+| / Symptom / Cause / Fix / | [Feature Envy](../patterns/02-code-smells/feature-envy.md) | Code Smells |
+| / Symptom / Cause / Fix / | [Message Chains](../patterns/02-code-smells/message-chains.md) | Code Smells |
+| / Symptom / Cause / Fix / | [ACID](../patterns/04-principles-and-laws/acid.md) | Principles and Laws |
+| / Symptom / Cause / Fix / | [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) | Principles and Laws |
+| / Symptom / Cause / Fix / | [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) | Enterprise Application Architecture |
+| / Symptom / Cause / Fix / | [Gateway](../patterns/06-enterprise-application-architecture/gateway.md) | Enterprise Application Architecture |
+| / Symptom / Cause / Fix / | [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) | Enterprise Application Architecture |
+| / Symptom / Cause / Fix / | [Asynchronous Request-Reply](../patterns/08-cloud-distributed/asynchronous-request-reply.md) | Cloud and Distributed |
+| / Symptom / Cause / Fix / | [Index Table](../patterns/08-cloud-distributed/index-table.md) | Cloud and Distributed |
+| / Symptom / Cause / Fix / | [Materialized View](../patterns/08-cloud-distributed/materialized-view.md) | Cloud and Distributed |
+| / Symptom / Cause / Fix / | [Messaging Bridge](../patterns/08-cloud-distributed/messaging-bridge.md) | Cloud and Distributed |
+| / Symptom / Cause / Fix / | [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) | Cloud and Distributed |
+| / Symptom / Cause / Fix / | [Idempotent Consumer](../patterns/10-microservices/idempotent-consumer.md) | Microservices |
+| / Symptom / Cause / Fix / | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |
+| / Symptom / Cause / Fix / | [Prebuilt Fixture](../patterns/14-testing/prebuilt-fixture.md) | Testing |
+| / Symptom / Cause / Fix / | [Agent Memory](../patterns/17-ai-agentic/agent-memory.md) | AI and Agentic |
+| / Symptom / Cause / Fix / | [Routing](../patterns/17-ai-agentic/routing.md) | AI and Agentic |
+| / Symptom / Cause / Fix / | [Society of Mind](../patterns/17-ai-agentic/society-of-mind.md) | AI and Agentic |
+| / Symptom / Cause / Fix / | [Cargo Cult Programming](../patterns/18-anti-patterns/cargo-cult-programming.md) | Anti-Patterns |
+| / Symptom / Cause / Fix / | [Lava Flow](../patterns/18-anti-patterns/lava-flow.md) | Anti-Patterns |
+| / Symptom observed / Underlying cause / Fix / | [Leader-Follower Architecture](../patterns/05-architectural/leader-follower-architecture.md) | Architectural Patterns |
 | A "core domain" package that is supposed to be the settled center | [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) | Principles and Laws |
 | A "highly available" service returns wrong or conflicting data | [CAP Theorem](../patterns/04-principles-and-laws/cap-theorem.md) | Principles and Laws |
 | A "property" test exists, is green, and nobody on the team can | [Property-Based Test](../patterns/14-testing/property-based-test.md) | Testing |
@@ -3244,34 +3272,6 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | YAGNI as an excuse to avoid a hard design conversation. Symptom. a | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
 | YAGNI misapplied to a load-bearing seam. Symptom. a public API version | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
 | YAGNI without safety nets, the precondition failure. Symptom. deferred | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
-| | A class passes an LCOM or cyclomatic-complexity linter threshold but a new team member still cannot describe what t... | [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) | Principles and Laws |
-| | A pull request review takes far longer than the diff size suggests it should, because reviewers keep asking "does t... | [Lava Flow](../patterns/18-anti-patterns/lava-flow.md) | Anti-Patterns |
-| | Symptom (what you would actually observe) | Cause | Fix | | [Active Record](../patterns/06-enterprise-application-architecture/active-record.md) | Enterprise Application Architecture |
-| | Symptom observed | Underlying cause | Fix | | [Leader-Follower Architecture](../patterns/05-architectural/leader-follower-architecture.md) | Architectural Patterns |
-| | Symptom | Cause | Fix | | [Feature Envy](../patterns/02-code-smells/feature-envy.md) | Code Smells |
-| | Symptom | Cause | Fix | | [Message Chains](../patterns/02-code-smells/message-chains.md) | Code Smells |
-| | Symptom | Cause | Fix | | [ACID](../patterns/04-principles-and-laws/acid.md) | Principles and Laws |
-| | Symptom | Cause | Fix | | [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) | Principles and Laws |
-| | Symptom | Cause | Fix | | [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) | Enterprise Application Architecture |
-| | Symptom | Cause | Fix | | [Gateway](../patterns/06-enterprise-application-architecture/gateway.md) | Enterprise Application Architecture |
-| | Symptom | Cause | Fix | | [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) | Enterprise Application Architecture |
-| | Symptom | Cause | Fix | | [Asynchronous Request-Reply](../patterns/08-cloud-distributed/asynchronous-request-reply.md) | Cloud and Distributed |
-| | Symptom | Cause | Fix | | [Index Table](../patterns/08-cloud-distributed/index-table.md) | Cloud and Distributed |
-| | Symptom | Cause | Fix | | [Materialized View](../patterns/08-cloud-distributed/materialized-view.md) | Cloud and Distributed |
-| | Symptom | Cause | Fix | | [Messaging Bridge](../patterns/08-cloud-distributed/messaging-bridge.md) | Cloud and Distributed |
-| | Symptom | Cause | Fix | | [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) | Cloud and Distributed |
-| | Symptom | Cause | Fix | | [Idempotent Consumer](../patterns/10-microservices/idempotent-consumer.md) | Microservices |
-| | Symptom | Cause | Fix | | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |
-| | Symptom | Cause | Fix | | [Prebuilt Fixture](../patterns/14-testing/prebuilt-fixture.md) | Testing |
-| | Symptom | Cause | Fix | | [Agent Memory](../patterns/17-ai-agentic/agent-memory.md) | AI and Agentic |
-| | Symptom | Cause | Fix | | [Routing](../patterns/17-ai-agentic/routing.md) | AI and Agentic |
-| | Symptom | Cause | Fix | | [Society of Mind](../patterns/17-ai-agentic/society-of-mind.md) | AI and Agentic |
-| | Symptom | Cause | Fix | | [Cargo Cult Programming](../patterns/18-anti-patterns/cargo-cult-programming.md) | Anti-Patterns |
-| | Symptom | Cause | Fix | | [Lava Flow](../patterns/18-anti-patterns/lava-flow.md) | Anti-Patterns |
-| | | Symptom | Cause | Fix | | [Gatekeeper](../patterns/08-cloud-distributed/gatekeeper.md) | Cloud and Distributed |
-| | | Symptom | Cause | Fix | | [Sharding](../patterns/08-cloud-distributed/sharding.md) | Cloud and Distributed |
-| | | Symptom | Cause | Fix | | [Valet Key](../patterns/08-cloud-distributed/valet-key.md) | Cloud and Distributed |
-| | | Symptom | Cause | Fix | | [Aggregate](../patterns/10-microservices/aggregate.md) | Microservices |
 
 ## Detailed Problem Profiles by Family
 
@@ -3282,11 +3282,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** You have several product types that must vary together. A rendering layer needs a Button, a Checkbox, and a ScrollBar. A persistence layer needs a Connection, a Command, and a Parameter. A payment layer needs an AuthorizationClient, a RefundClient, and a WebhookVerifier.
 
 **Observable Symptoms:**
+
 - A switch on a platform, driver, or tenant value repeated in more than three
 - A bug report reading "works on Postgres, blows up on MySQL" that traces to one
 - A constructor call chain where an object of family A is passed into a method
 
 **Failure Mode Symptoms:**
+
 - Downcasting at the call site. A caller needs a family-specific capability, so it
 - writes a type test on the returned product. The symptom is a chain of if x is
 - The exploding interface. Every new feature adds a creation method. The symptom
@@ -3306,11 +3308,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two pieces of code need to work together and neither can be changed to match the other. That is the whole problem, and every variation of it reduces to that sentence.
 
 **Observable Symptoms:**
+
 - The adaptee cannot be edited. It ships as a compiled artifact, it belongs
 - The client cannot be edited either, or not cheaply. The calling code is
 - The mismatch is at the interface, not in the behaviour. This is the test
 
 **Failure Mode Symptoms:**
+
 - The pass-through adapter. Symptom. A class whose every method forwards a
 - Leaky semantics. Symptom. Behaviour that is correct in staging against the
 - The copying adapter on a hot path. Symptom. A profiler shows most time in
@@ -3327,6 +3331,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single class hierarchy is being asked to vary along two independent axes at once, and the class count is growing as the product of the two axis sizes rather than as their sum.
 
 **Observable Symptoms:**
+
 - Compile-time coupling. A published C++ header names the private data
 - Deployment-time binding. An application is written against one logging API
 - Ownership boundaries. One team owns the semantics of an operation and a
@@ -3336,6 +3341,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The pairing is decided at composition time, by the code that wires the object
 
 **Failure Mode Symptoms:**
+
 - The interface with one implementation. Symptom. A package holding
 - The implementor interface that mirrors the abstraction. Symptom. Every
 - The implementor that is too primitive. Symptom. The abstraction contains
@@ -3352,6 +3358,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A type is expensive or awkward to construct because construction has several independent axes. Recognise the problem in your own code by these symptoms.
 
 **Failure Mode Symptoms:**
+
 - Silent default from a drifted builder. A field is added to the product and
 - observed in production is a value that is always zero, null, or the type
 - Aliased mutable state after a second build. A reusable builder holds a
@@ -3371,12 +3378,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A request arrives and there are several plausible things that might deal with it, the correct one depends on the request itself, and the code raising the request has no business knowing which of them will act.
 
 **Observable Symptoms:**
+
 - More than one object could handle the request, and which one should is a
 - The sender is content to have the request handled by somebody, without a
 - The set of candidates should be configurable, and often assembled at startup
 - The handlers are genuinely independent of each other. A handler that has to
 
 **Failure Mode Symptoms:**
+
 - Each entry gives the observable symptom first, because the abstract mistake alone
 - Request falls off the end of the chain. Symptom. A request returns success
 - The hanging request. Symptom. A client times out after thirty seconds. The
@@ -3394,12 +3403,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An invoker needs to trigger work without knowing what the work is, who performs it, or when it will actually run.
 
 **Observable Symptoms:**
+
 - The trigger and the work are owned by different code, and the trigger should
 - The set of operations grows over time and the invoker should not grow with it.
 - The request needs a lifetime independent of the call that produced it, whether
 - Something needs to be done uniformly to every request, whether that is
 
 **Failure Mode Symptoms:**
+
 - Undo that leaves the model wrong. Symptom. A user performs three edits,
 - Redo resurrecting an impossible state. Symptom. A user undoes two steps,
 - Command holding a reference rather than a value. Symptom. A queued command
@@ -3416,6 +3427,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** There is a domain where a thing can be made of the same kind of thing, without limit, and client code has to operate over the whole structure without caring how deep it goes.
 
 **Observable Symptoms:**
+
 - A file system where a directory contains files and other directories, and a
 - A graphical scene where a group contains shapes and other groups, and drawing,
 - An organisation chart where a department contains employees and sub
@@ -3427,6 +3439,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The structure is a tree, or a directed acyclic graph that is treated as a
 
 **Failure Mode Symptoms:**
+
 - Cycle in a structure assumed to be a tree. Symptom. A stack overflow with a
 - Everything becomes a Component. Symptom. The Component interface has grown to
 - Deep recursion on adversarial input. Symptom. A crash rather than an error
@@ -3441,12 +3454,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object needs an extra responsibility, only sometimes, only for some instances, and the set of extra responsibilities keeps growing and keeps combining.
 
 **Observable Symptoms:**
+
 - The responsibilities are independent of each other and can be applied in
 - The responsibilities are transparent to the caller. Client code that talks
 - The abstraction is narrow. This is the constraint that decides whether the
 - The base object's class is not under your control, or should not be
 
 **Failure Mode Symptoms:**
+
 - Interface bloat makes decorators unreadable and unmaintainable. Symptom. A
 - A decorator narrows the component contract, breaking substitutability.
 - Code that worked against the plain component throws
@@ -3465,6 +3480,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A caller needs a small, ordinary result from a subsystem that is large, correct and unpleasant to talk to.
 
 **Observable Symptoms:**
+
 - The same import block, six or eight lines of it, appears at the top of files
 - A new engineer's first task involving that subsystem takes a day, and the
 - A bug fix in the sequence, for example remembering to set the encoding before
@@ -3476,6 +3492,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The dependency direction matters to somebody. The strongest argument for
 
 **Failure Mode Symptoms:**
+
 - The god facade. Symptom. The file is four thousand lines. It has ninety
 - The pass-through facade. Symptom. Every method on the facade forwards one
 - Leaked subsystem types. Symptom. Callers still import subsystem packages
@@ -3491,11 +3508,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A class does real work that involves an object it must create, and it cannot name the concrete class of that object at the point where the work is written.
 
 **Observable Symptoms:**
+
 - The creator has real behaviour of its own, not only creation.
 - The set of products varies along the same axis as the set of creators, so a
 - The library or framework author cannot know the concrete products, because
 
 **Failure Mode Symptoms:**
+
 - The subclass explosion. Symptom. A directory holding thirty creator classes
 - Override called during construction. Symptom. A NullPointerException in
 - The default that was meant to be overridden. Symptom. A production tenant
@@ -3509,6 +3528,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A program needs a very large number of objects that are almost all the same, and the memory cost of representing each one separately is what is going to break it.
 
 **Observable Symptoms:**
+
 - A tile map in a game, where a hundred thousand tiles each hold a full copy of
 - A column-oriented analytics table holding fifty million rows, where a string
 - A parsed abstract syntax tree where the same identifier name appears in ten
@@ -3522,6 +3542,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The extrinsic state has somewhere sensible to live, either in the container
 
 **Failure Mode Symptoms:**
+
 - Each entry gives an observable symptom, the cause, and the fix. The symptoms are
 - Duplicate instances for one key under load. Symptom. A test asserting that
 - Data race and corrupted map under concurrent writes. Symptom. In Go, the race
@@ -3538,12 +3559,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system has to make a decision, a computation, or a selection whose rule is not known when the system is compiled. The rule is supplied later, by a user, by an administrator, by a configuration file, by a database row, or by a caller who composes it from parts.
 
 **Observable Symptoms:**
+
 - The language is small and stable. A dozen node types, not a hundred. If the
 - The same rule is evaluated many times. Building a tree once and walking it
 - Evaluation speed is not the binding constraint. The GoF applicability
 - The grammar changes more often than the evaluator's plumbing. The pattern
 
 **Failure Mode Symptoms:**
+
 - Each entry gives the observable symptom first, because the abstract mistake is
 - The accidental programming language. Symptom. The rule language has grown
 - Reparsing on every request. Symptom. A CPU profile where a large share of
@@ -3561,6 +3584,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A client needs to visit every element of a collection, and the collection knows how it stores those elements while the client does not and should not.
 
 **Observable Symptoms:**
+
 - Every loop encodes the representation. A change from an array to a tree
 - Traversal order becomes the caller's problem. Depth-first, breadth-first,
 - Two simultaneous walks collide. Index variables held by the caller work
@@ -3570,6 +3594,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The cost of producing the whole sequence at once is unacceptable, or the
 
 **Failure Mode Symptoms:**
+
 - Structural modification during an external traversal. Symptom. A
 - Treating fail-fast detection as thread safety. Symptom. A production system
 - The leaked cursor over a scarce resource. Symptom. Connection pool exhaustion
@@ -3586,6 +3611,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A set of objects has to cooperate, and every one of them needs to know something about the others in order to do its part.
 
 **Observable Symptoms:**
+
 - No widget can be reused. The country dropdown is now a country dropdown
 - No single place describes the rules. The answer to "what happens when the
 - Changing one interaction risks all of them. Adding a currency field means
@@ -3595,6 +3621,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The set of peers is bounded and known at design time. Mediator coordinates
 
 **Failure Mode Symptoms:**
+
 - The god mediator. This is the defining failure of the pattern, and it is not
 - One file in the repository has grown past a thousand lines and
 - A colleague that reaches sideways. Symptom. A change to one widget breaks a
@@ -3611,6 +3638,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object holds state that changes over time, and something outside that object needs the ability to put the state back the way it was. The object's fields are private for good reasons, and the code that will trigger the restore has no business knowing what those fields are.
 
 **Observable Symptoms:**
+
 - Undo, so the last action can be reversed.
 - A checkpoint, so a long operation can be retried from a known point rather
 - A transaction boundary, so a group of mutations either all take effect or
@@ -3621,6 +3649,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The state is small enough, or the save frequency low enough, that copying it
 
 **Failure Mode Symptoms:**
+
 - The caretaker that reads the memento. Symptom. A change to a private field
 - Unbounded history growth. Symptom. Resident memory climbs steadily across a
 - The shallow copy that is not a snapshot. Symptom. Undo appears to succeed
@@ -3637,12 +3666,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of state changes, and an unknown number of other pieces of the system need to react. The set of reactors is not known when the state holder is written, changes at runtime, and belongs to layers the state holder must not depend on.
 
 **Observable Symptoms:**
+
 - The subject genuinely does not need to know what the observers are. If it does
 - The number of observers varies, either across deployments or during the life of
 - The reaction is a notification, not a request. Observer has no return channel.
 - The observers can be given a defined lifetime, so that registration is matched
 
 **Failure Mode Symptoms:**
+
 - Symptom. Heap grows monotonically across the life of the process. A heap dump
 - Fix, in the order to try them.
 - The weak reference remedy and its own trade off. Holding observers weakly
@@ -3661,6 +3692,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** You have an object whose configuration is expensive, awkward, or impossible to reconstruct from a constructor call. You need many objects like it, differing in a handful of fields. The recognisable symptoms in a codebase are these.
 
 **Observable Symptoms:**
+
 - A constructor with fifteen parameters, and every call site passes near
 - A factory that reads a configuration file, walks a database, or performs
 - An object graph assembled interactively by a user, in a level editor or a
@@ -3668,6 +3700,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A class hierarchy whose concrete types are not known to the creating code, but
 
 **Failure Mode Symptoms:**
+
 - The shallow copy that shares a mutable list. The classic. clone copies
 - original's. Observable symptom, an order acquires line items belonging to a
 - The Cloneable contract nobody can honour. Cloneable declares no method
@@ -3691,6 +3724,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Some object is expensive, remote, dangerous, or shared, and the code that wants to use it should not have to know that.
 
 **Failure Mode Symptoms:**
+
 - Spring AOP self-invocation silently skips the proxy. Symptom. A method
 - Final method or final class defeats the subclass proxy. Symptom. Advice
 - The N+1 query storm from lazy proxies. Symptom. A page that renders a list of
@@ -3706,11 +3740,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A resource exists once in the running process, and code scattered across the program needs to reach it without threading a reference through every call.
 
 **Observable Symptoms:**
+
 - The single instance is a property of the process or the environment, not a
 - The object is stateless, or its state is a cache whose contents do not change
 - No composition root exists that could own the instance instead.
 
 **Failure Mode Symptoms:**
+
 - The broken double-checked locking idiom. Symptom. A rare, unreproducible
 - Serialization creates a second instance. Symptom. A configuration or registry
 - Reflection creates a second instance. Symptom. A second instance appears in a
@@ -3727,12 +3763,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object behaves differently depending on a mode it is in, and every method that depends on that mode has grown the same conditional.
 
 **Observable Symptoms:**
+
 - The number of modes is small, closed, and known to the module that owns the
 - Several methods, not one, branch on the same mode field. One method branching
 - The behavior difference between modes is real behavior, not a data difference.
 - Transitions between modes carry rules that matter, and those rules are worth
 
 **Failure Mode Symptoms:**
+
 - Written as symptom, cause, fix. The symptoms are drawn from practice rather than
 - The persistence round-trip that lost the machine. Symptom. A workflow resumes
 - The state name that was the class name. Symptom. After a rename or a package
@@ -3750,12 +3788,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object does a piece of work in more than one way, and the choice of way is not a property of the object's identity.
 
 **Observable Symptoms:**
+
 - The variants genuinely compute the same kind of result from the same kind of
 - The variation is behavioral, not structural. The object keeps its identity,
 - The choice is made by somebody other than the object doing the work, usually
 - More than one variant exists today. A single-variant Strategy is an interface
 
 **Failure Mode Symptoms:**
+
 - Each item gives the observable symptom first, then the cause, then the fix.
 - The switch moved, it did not leave. Symptom. A code review shows a factory
 - Strategy interface with one implementation. Symptom. An interface, one class
@@ -3774,6 +3814,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two or more procedures do the same thing in the same order, and differ in a small number of steps in the middle. The duplication is not textual enough for a naive extract-method to remove, because the varying steps are interleaved with the common ones.
 
 **Observable Symptoms:**
+
 - A data import pipeline that opens a source, validates a header, parses rows,
 - A request handler that authenticates, authorises, deserialises a body,
 - A test fixture that acquires a database, populates it, runs an assertion body,
@@ -3784,6 +3825,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The set of variants is open to code the skeleton author has not seen. The
 
 **Failure Mode Symptoms:**
+
 - The fragile base class break. Symptom. A downstream team's build passes,
 - Constructor calling an overridable step. Symptom. A null reference, or an
 - The forgotten hook. Symptom. One tenant, one file format, or one endpoint
@@ -3799,11 +3841,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** There is a data structure whose shape is stable and whose set of node types almost never changes, and there is a growing pile of operations over it, each of which needs to do something different for each node type.
 
 **Observable Symptoms:**
+
 - The set of element types is closed in practice. New element types are rare
 - The set of operations is open and growing. New operations are routine, measured
 - Operations are genuinely type-dependent. Each one needs a different body per
 
 **Failure Mode Symptoms:**
+
 - , cause, fix. The symptoms are the observable ones, drawn from practice
 - Copy-paste accept calling the wrong visit method. Symptom. One node type is
 - Inherited accept collapses the dispatch. Symptom. Every node in a subtree
@@ -3823,6 +3867,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two classes exist in the same codebase that do, in substance, the same job. One reads configuration from a file and one reads configuration from an environment, one persists a record to a local cache and one persists it to a remote cache, one exports a report as CSV and one exports it as JSON. The two classes were not designed together. They arrived at different times, written by different people, or one was inherited from an earlier project and the other was added later for a new requirement. Nobody sat down and asked whether the two should share a contract, because at the moment each was written it was the only implementation of its kind and no contract was needed.
 
 **Failure Mode Symptoms:**
+
 - The false-friend rename. Symptom. Two classes now share a method name and
 - Interface unification applied to genuinely different concepts. Symptom.
 - Repeated adapter proliferation. Symptom. Three or four small,
@@ -3834,9 +3879,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A comment is a message from one point in time to a later reader, and it is never checked by anything that runs. The compiler does not read it. The type checker does not read it. The test suite does not read it, with the single notable exception of doctest-style tooling covered in dimension 15. A comment can therefore drift arbitrarily far from the code it sits beside, and nothing in the ordinary development loop will ever flag the drift. Fowler makes this point in the "Comments" chapter of the second edition by observing that comments often function as a deodorant, precisely because writing a comment is cheaper, in the moment, than fixing the thing the comment is covering for, and the comment survives edits to the code around it because editing a comment is optional in every language's grammar.
 
 **Observable Symptoms:**
+
 - narration, where a comment restates in English what the next line already
 
 **Failure Mode Symptoms:**
+
 - Symptom. A reviewer approves a pull request quickly because the diff
 - Symptom. Grepping a file for a function name returns three matches, one
 - Symptom. A junior engineer asks in review why a piece of code is written
@@ -3849,6 +3896,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A class is created to represent something, usually because a database table, an external API payload, or a domain noun needs a type. The type accumulates a field for every piece of data associated with that noun, and a getter and setter for each field, following the JavaBeans convention or its equivalent in another language. Over time the class grows fields as requirements grow, and no behavior is ever added to it, because every operation that touches its data is written as a static-ish free function or as a method on some other class that receives the data class as a parameter and reaches into it through the accessors.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The same conditional expression, checking the same two or three
 - Symptom. A change to one field's meaning, for example switching totalSpend
 - Symptom. Unit tests for a business rule instantiate two or three classes
@@ -3861,6 +3909,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The smell shows up first in method signatures. A function that computes whether an invoice is overdue starts by taking a single date. A second function that computes the amount received in a period needs a start and an end date, so it takes two. A third function that reports overdue amounts needs the same two dates, so it repeats the pair. Nothing in the type system records that startDate and endDate belong together. Six months later a fourth function needs the same pair plus a third value, a grace period in days, and the parameter list grows again, in the same order that happened to be used the first time, because changing the order now would break every existing call site.
 
 **Failure Mode Symptoms:**
+
 - The repeated primitive trio. Symptom. The same three or four primitive
 - The desynchronised pair. Symptom. A bug where one field of a related
 - The over-eager extraction. Symptom. A new object was introduced to
@@ -3871,6 +3920,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Dead code accumulates as an ordinary, unavoidable byproduct of change. A feature ships, then a later feature makes it redundant, and the branch that implemented the first feature stops being called, but nobody deletes it, because deleting it is not the task at hand, the task at hand is building the new feature. A migration completes and the old code path that fed the old system is left in place, either because someone was not confident the migration would hold, or because removing it felt riskier than leaving it. An experiment ships behind a flag, the experiment concludes, the flag's default is flipped, and the losing branch of the flag stays in the source tree because nobody owns the task of flipping the flag away and deleting the branch. A parameter is added to a function signature for a caller that later gets refactored away, and the parameter itself, and the branch it conditioned, outlive the caller. In every one of these cases the code was written correctly, for a reason that was real at the time, and the smell appears only in retrospect, once the reason has expired and nobody has told the code.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A tool reports zero call sites for a class, the team deletes it,
 - Symptom. A team runs a code coverage report over a two-week window,
 - Symptom. A specific, narrow, and genuinely serious version of the
@@ -3882,6 +3932,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single class keeps needing edits, and the edits have nothing to do with each other. This month it changed because the tax calculation rules changed. Last month it changed because a new database column was added. The month before that it changed because the report layout moved a column. None of those three edits touch the same lines, none of the three people who made them needed to understand the other two changes, and yet all three had to open the same file, read past code that was irrelevant to their change, and risk breaking something unrelated while they were in there.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two engineers working on unrelated tickets both need to edit
 - Symptom. A code review for a small, one-line bug fix in a calculation
 - Symptom. Writing a unit test for one behaviour, for example a discount
@@ -3893,11 +3944,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The same idea is written down twice, or more, in a codebase, so that changing the idea means finding and editing every copy.
 
 **Observable Symptoms:**
+
 - The duplicated fragments encode the same DECISION, the same piece of domain
 - The decision is likely to CHANGE again, so that a future edit will need to
 - There is a genuinely simpler place to put the single definition, one that
 
 **Failure Mode Symptoms:**
+
 - Symptom. A shared utility function has grown a long list of boolean flag
 - Symptom. Two services in different languages, or two layers of the same
 - Symptom. A clone-detection tool such as CPD or jscpd reports hundreds of
@@ -3908,13 +3961,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A method sits on class A. Most of its logic reads or computes from the fields and accessor methods of class B, an object it was handed as a parameter, an instance variable, or returned from a call. The method touches its own class's state rarely, or not at all, beyond invoking the method itself. Reading the method's body, a person familiar with the codebase would ask why it lives on A at all, since almost everything it does concerns B.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Global Data](../patterns/02-code-smells/global-data.md)
 
 **Core Problem:** A program needs some piece of information in more than one place. A request identifier for logging. A feature flag. A cache of expensive lookups. A counter of how many items have been processed so far. The path of least resistance, in almost every language that allows it, is to put that value somewhere reachable without threading it through every function signature that might need it, a module level variable in Python or JavaScript, a static field in Java or C sharp, a package level var in Go, a file scope global in C, a class variable on a Singleton, or an object attached to the language runtime itself such as window in a browser or process in Node.js.
 
 **Failure Mode Symptoms:**
+
 - Symptom, cause, fix. Test order dependence. Symptom, a test suite passes
 - Symptom, cause, fix. A production only race condition. Symptom, a bug
 - Symptom, cause, fix. A change to one feature silently breaking an
@@ -3926,6 +3981,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two classes end up knowing far more about each other's insides than either one's public contract admits to. One reaches into the other's private fields directly, or calls a method on it that was written to be called by exactly one caller and exposes an implementation detail rather than offering a real capability. The other side does the same thing back. Neither class can be read, tested, or changed on its own anymore, because "on its own" stopped being a true description of either one somewhere along the way.
 
 **Failure Mode Symptoms:**
+
 - Invariant bypass through direct mutation. Symptom. A value that one
 - Shotgun-style cross file edits. Symptom. Code review repeatedly asks why
 - Slow, brittle tests that wire up more than they claim to test. Symptom.
@@ -3941,6 +3997,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team depends on a class, module, or type that ships from outside the codebase they control. A standard library type, a third party package, a generated client, a framework base class, an operating system API wrapper. At some point the team needs behavior that class does not expose. a convenience computation derived from data the class already holds, a formatting method, a predicate, a conversion, something that in an owned class would be a two line method addition. The class cannot be edited, because it is not owned code, it may be sealed, final, or marked read only by its packaging, and even where the raw source is technically reachable on disk, editing a vendored dependency in place breaks the next upgrade and is excluded by the team's own dependency management discipline.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The same missing computation from a foreign class appears,
 - Symptom. A production incident traces back to a security vulnerability or
 - Symptom. A behavior in the codebase changes unexpectedly after adding an
@@ -3951,6 +4008,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two modules were designed to talk to each other through a small, deliberate interface, and over time they grew a second, informal interface nobody designed. The second interface is made of direct field access across a package boundary, a friend declaration reached for once and then reused everywhere, a shared mutable object both sides read and write without either one owning it, or a pair of classes that were split apart for a good reason but that keep reaching back across the split to finish each other's sentences.
 
 **Failure Mode Symptoms:**
+
 - The renamed-field incident. Symptom. A production module renames or
 - The friend list nobody can explain. Symptom. A friend class, a
 - Two modules that cannot be deployed independently. Symptom. A team
@@ -3963,6 +4021,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A class keeps absorbing new fields and new methods until it is doing the job of what should have been five or six separate collaborators. The class compiles. It runs. Every individual method inside it, read in isolation, is often perfectly reasonable code. The problem is not any single method. the problem is that the class as a whole answers to no single, coherent description. Ask a team member what the class is for and they answer with a list rather than a sentence. "It handles the user's session, formats the receipt, talks to the payment gateway, writes the audit log, and also has the retry logic for the email queue." A class whose purpose requires a list to state is a class that has stopped having one purpose.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A small, focused two-line bug fix inside one method of the
 - Symptom. Unit test suite for the class takes noticeably longer to run
 - Symptom. A refactoring attempt that "fixes" Large Class produces several
@@ -3973,6 +4032,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase accretes classes over time for reasons that have nothing to do with present-day need. A team plans an extension point that never gets used. A refactoring extracts a responsibility into its own class, and then a later refactoring pulls most of that responsibility back out, leaving a husk behind. A subclass is created to override one method, and then that override is deleted during a later change because the behavior became universal, and the subclass itself is never deleted along with it. In every one of these histories, the class survives past the point where it was doing real work, because deleting a class requires someone to notice it has stopped earning its keep, and noticing is a much rarer event than creating.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A codebase has dozens of one-method classes, each named after a
 - Symptom. A class was aggressively slimmed down during a previous
 - Symptom. A subclass was created years ago to override one method for a
@@ -3983,6 +4043,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A method starts small. It does one clear thing, and its name says what that thing is. Then a bug fix adds a branch. A new requirement adds a loop around the existing loop. A related calculation that seemed too small to deserve its own method gets inlined rather than extracted, because extracting it felt like more ceremony than the two lines were worth. None of these individual additions looks unreasonable at the moment it is made. Months later the method is four hundred lines long, its name still describes what it did at fifty lines, and nobody can hold the whole thing in their head at once while reading it top to bottom.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A code review repeatedly gets stuck on one function because
 - Symptom. A bug fix to one part of a long method causes an unrelated
 - Symptom. After a refactoring pass, the method is technically shorter
@@ -3994,6 +4055,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A function, method, or constructor accumulates parameters over its lifetime, usually one at a time, usually each addition individually reasonable, until the call site becomes difficult to read, difficult to call correctly, and difficult to change safely. The smell is not about a fixed number. A three-argument geometry function, distance(x1, y1, x2, y2), is often perfectly fine because the four numbers form one coherent idea, a pair of points, and any caller who knows what a point is can supply them without consulting documentation. A six-argument function that mixes an identifier, a boolean flag, a nullable callback, a timeout in milliseconds, a currency code, and an enum for retry behavior is a problem at four parameters, because nothing about the shape tells the caller what order they belong in or which ones can be omitted.
 
 **Failure Mode Symptoms:**
+
 - Two arguments swapped, code compiles, wrong result at
 - A function is called with several null, 0, or false
 - The "fix" is a single object parameter named options,
@@ -4005,6 +4067,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A loop is the most flexible construct available in an imperative language. A for, while, or foreach can filter, transform, aggregate, search, mutate external state, perform I/O, and branch on index parity, all inside one block, in any combination, in any order. That flexibility is exactly the problem. Nothing about the syntax of a loop tells the reader which of those things is happening until they read the whole body, and nothing prevents a second concern from being added to a loop that already had one, because the loop does not resist growth the way a function signature or a type does.
 
 **Failure Mode Symptoms:**
+
 - , Cause, Fix triples so each failure is tied to something a reader can
 - , a single loop computes two or three unrelated results and a bug fix
 - , a loop variable captured inside a closure created inside the loop
@@ -4019,13 +4082,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A client asks one object for a second object, then immediately asks that second object for a third, and continues down the line until it finally reads or calls the field it actually wanted. In code this reads as a run of dots. order.getCustomer().getAddress().getZipCode(), or in a language with public fields instead of accessors, order.customer.address.zipCode. The client never wanted the customer object or the address object for their own sake. it wanted the zip code, and the customer and the address were merely the road it had to travel to reach it.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Middle Man](../patterns/02-code-smells/middle-man.md)
 
 **Core Problem:** The smell shows up during evolution, almost never at the moment a class is first written. A class starts with a narrow, legitimate reason to hold a reference to a collaborator, an Order holds a Customer, a Controller holds a Service, a Repository holds a database Connection. Early on the holder exposes one or two of the collaborator's operations because callers genuinely need them and reaching for the collaborator directly would leak an implementation detail the holder is supposed to own. That first forwarding method is Hide Delegate working exactly as intended, and it is good design.
 
 **Failure Mode Symptoms:**
+
 - A code review repeatedly approves single-line pull requests that
 - Removing the Middle Man class breaks compilation in far more
 - After Remove Middle Man is applied, an unrelated part of the
@@ -4036,6 +4101,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of mutable data becomes a smell the moment two conditions hold at once. First, the data can change after it is created, through a setter, a field assignment, a mutating method call, or a mutation performed through a container such as an array, a list, or a dictionary. Second, more than one part of the program holds a reference to that same data, whether directly, by being passed the same object, or indirectly, through a shared container, a static field, a closure, a global, a cache, or a long-lived collection that several call sites both read and write. Mutability alone is not a problem. A loop counter that only the loop body ever touches is mutable and harmless. The problem appears specifically at the intersection of mutability and sharing, because a write performed at one call site can now be observed, and sometimes silently misinterpreted, at a completely different call site that has no textual proximity to the write and therefore no local signal that anything changed.
 
 **Failure Mode Symptoms:**
+
 - , a bug that only reproduces "sometimes", especially under load or
 - while a removed mutation path cannot.
 - , an entity that was retrieved from a cache and appeared correct at
@@ -4049,6 +4115,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The smell appears whenever a codebase has two or more class hierarchies where subclassing one forces a matching subclass to be added to the other, over and over, for as long as the hierarchies exist. The two hierarchies are usually different in kind. One might be a domain concept, a Shape, an Instruction, an Employee, and the other a technical concern that varies per concrete member of the first, a Renderer, a Visitor, a Validator, a platform Peer. The tell is not that two hierarchies exist side by side, plenty of correct designs have that, the tell is that adding one new subclass to the first hierarchy is not complete until a matching subclass has also been added to the second, and the two additions have to be kept in lockstep by convention rather than by the compiler or the type system enforcing it.
 
 **Failure Mode Symptoms:**
+
 - Missing companion at runtime. Symptom, a new concrete type is added to
 - Divergent naming drift. Symptom, over years the naming convention that
 - Duplicated pairing logic. Symptom, the same if or switch chain that
@@ -4059,6 +4126,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase represents a concept from its domain, a monetary amount, a telephone number, a temperature, an email address, a percentage, a date range, a currency code, using the language's built-in scalar types instead of a type of its own. The concept exists in the design, everyone on the team can name it and would recognise it in a whiteboard sketch, but nowhere in the source code does a type carry that name. Instead the concept is represented as an int, a double, or a String, and every place that needs to validate, format, compare, or operate on the concept repeats its own copy of the rules for doing so.
 
 **Failure Mode Symptoms:**
+
 - , cause, and fix are given as explicit triples below, because the
 - Symptom. Two same-typed parameters in a function signature keep getting
 - Symptom. The same regex, the same range check, or the same formatting
@@ -4071,6 +4139,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The smell shows up the moment someone writes a subclass that extends a base class not because the subclass genuinely wants to honor the base class's whole public contract, but because the base class already contains a large fraction of the state and behavior the new class needs, and inheritance is the fastest way to grab it. The base class exposes some number of public methods. The new class needs most of them, or most of the underlying storage, but not all of the behavior. Two paths open at that point. The author can go back and redesign the hierarchy so the shared part lives somewhere both classes genuinely fit, which costs time now. Or the author can extend the base class as it stands and patch the handful of methods that do not fit, by overriding them to throw, to do nothing, or to return a value that quietly contradicts what the method promised. The second path is Refused Bequest, and it is almost always chosen because it compiles immediately and the tests that exist at the time do not exercise the refused methods.
 
 **Failure Mode Symptoms:**
+
 - Each triple below states an observable symptom first, in the words a person
 - , a production crash surfaces an UnsupportedOperationException, a
 - , data goes missing, or a configuration change silently fails to take
@@ -4082,6 +4151,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase accumulates a type code, an enum, a string discriminant, or a kind field on a tagged union, that represents a small closed family of variants a business actually cares about. Payment method. Order status. Shape kind. Subscription tier. Node kind in a parser. Early on there is one switch over that discriminant, in one function, and it is easy to read.
 
 **Failure Mode Symptoms:**
+
 - A feature works for every payment method except the one added last
 - A pull request that adds one new payment provider touches nine
 - After consolidating with a class hierarchy, a change to the
@@ -4092,6 +4162,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team ships a single logical concept, adding a new payment method, adding a new shipping carrier, adding a new order status, renaming a field that a dozen call sites read. Under Shotgun Surgery, that one concept does not have one home in the code. Its rules are copied, restated, or partially duplicated across many files, many classes, many switch statements, or many configuration blocks, each holding its own slice of the same fact. To make the change land correctly, an engineer has to find every one of those slices, edit each one consistently, and verify none was missed, before the change is correct anywhere.
 
 **Failure Mode Symptoms:**
+
 - , a bug report describing behavior that is correct for most variants
 - leaving the rest of the scattering in place, since patching only the symptom
 - , a pull request that touches six unrelated looking files for what
@@ -4104,6 +4175,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The smell shows up at the moment a developer, while building the one feature actually requested, imagines a family of features that might follow it and builds the software to accommodate the whole imagined family rather than the one member of it that is real. The proximate cause is almost always a genuine professional instinct working against itself, experienced developers have been burned by code that was too rigid to extend, so they overcorrect by writing code that is maximally extensible before there is a second case to extend it for. The context in which this happens is recognisable. A single payment method is being added and the author writes a PaymentStrategy interface with a PaymentGateway abstraction and a PaymentContext object, when the actual requirement is "charge a credit card". A configuration file gets a type field with one legal value and a switch statement with one case, because someone expects a second value to show up. A method gains a Map<String, Object> options parameter that nothing populates, added so that "whatever gets added later has somewhere to go."
 
 **Failure Mode Symptoms:**
+
 - Symptom. An interface, abstract base class, or strategy hierarchy has
 - Symptom. A method or constructor parameter is present in the signature but
 - Symptom. A base class declares a method meant as an extension hook, often
@@ -4115,11 +4187,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The problem starts small and grows by exactly the mechanism the smell is named for, switching.
 
 **Observable Symptoms:**
+
 - The set of variants is genuinely open over the lifetime of the system, new
 - More than one function or method needs variant specific behaviour for the
 - The variant specific behaviour is genuinely coupled to the variant's own
 
 **Failure Mode Symptoms:**
+
 - Each item names an observable symptom first, then its cause, then its fix.
 - A new payment method works everywhere except one screen, where it
 - A bug report says the discount applies twice for gift cards, and the
@@ -4133,6 +4207,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The smell appears when a class has a method that implements a complex, multi-step algorithm, and that algorithm needs several intermediate values threaded through more than one private helper method. The author of the class faces a real and common temptation at this point. Passing five or six intermediate values as parameters to three or four helper methods produces long, ugly parameter lists, and the temptation is to shortcut the problem by storing those intermediate values as instance fields instead. The helper methods then read and write the fields directly, and the parameter lists shrink back down to nothing. The code compiles, the algorithm runs, and the class now looks tidy at each individual method signature.
 
 **Failure Mode Symptoms:**
+
 - Stale value read across reused invocations. Symptom. An intermittent
 - Concurrent overwrite between two threads sharing one Host. Symptom. A
 - Widening null checks spreading through the class. Symptom. A code
@@ -4147,13 +4222,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A database serves many concurrent operations against shared, durable state. An application groups several reads and writes into one logical unit of work, a transaction, because the operations only make sense together. A bank transfer debits one account and credits another. An order-placement writes a new row to an orders table and decrements a row in an inventory table. If the transfer debits the source account and then the process crashes before it credits the destination, the money has vanished. If two transfers run at the same time against the same account and each reads the balance before the other writes its update, one transfer's effect is silently lost, a classic lost update. If the database loses a committed transaction's effect when the machine reboots after a power failure, every promise made to the caller before the crash was a lie.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md)
 
 **Core Problem:** A codebase of any real size is not one file. It is partitioned into units, packages, modules, libraries, services, whatever the platform calls them. Each unit imports, requires, or otherwise depends on some other units to do its job. Draw an arrow from a unit to every unit it depends on and the whole codebase becomes a directed graph.
 
 **Failure Mode Symptoms:**
+
 - , cause, and fix triples, each grounded in an observable signal a
 - A change to one package unexpectedly breaks a test suite in a seemingly
 - Build times grow non-linearly as the codebase grows, well past what the
@@ -4167,6 +4244,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system holds one logical piece of data on more than one physical machine, because a single machine cannot serve the read and write volume, cannot survive its own failure, or sits too far from some of its readers to answer inside an acceptable latency budget. The moment a value exists in more than one place, somebody has to decide what happens when a client asks to read it while the copies disagree, and what happens when a client asks to write it while some of the copies cannot be reached.
 
 **Failure Mode Symptoms:**
+
 - Silent data loss from last-writer-wins on genuinely concurrent writes.
 - , two users report that one of their changes "disappeared" with no
 - The anti-entropy or repair job silently stops running. Symptom, staleness
@@ -4180,11 +4258,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system holds one piece of mutable state that more than one machine can read and write, and those machines are connected by a network that is not perfectly reliable. The concrete situation looks like this in a real codebase, a key-value store, a session table, a shopping cart, a leader-election flag, or a counter is replicated across two or more nodes so the system survives the loss of any one node and so reads do not all hit one machine. Then a network link between two of those nodes drops packets, times out, or partitions the cluster into two groups that can each still talk to their own clients but cannot talk to each other.
 
 **Observable Symptoms:**
+
 - The data is replicated across nodes that can be separated by a network
 - The system must keep serving requests during the partition, which is
 - The workload includes writes, not only reads. A system that never
 
 **Failure Mode Symptoms:**
+
 - A team ships a database labelled "CA" in an internal design
 - A "highly available" service returns wrong or conflicting data
 - A distributed lock or leader-election service occasionally
@@ -4196,6 +4276,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase reaches the size where a single flat namespace of classes stops being a unit anyone can reason about, and the team splits it into smaller compilation and deployment units, packages, modules, crates, whatever the platform calls them. That split creates a new design decision that did not exist when everything lived in one namespace, which classes go in which unit. Get that decision wrong and every subsequent requirement change becomes a scavenger hunt across units that were never meant to move together.
 
 **Failure Mode Symptoms:**
+
 - A single ticket routinely requires touching four or five
 - One component has ballooned to contain most of the
 - A tiny, focused component, drawn correctly by CCP, is
@@ -4206,9 +4287,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team ships a library, an internal package, or a service client as one deployable unit. Some consumer of that unit needs exactly one class from it, an InvoiceValidator, say. The unit also contains a dozen other classes that happen to live in the same file tree because somebody put them there years ago, an HTTP retry helper, a date formatter, a logging wrapper, none of which the consumer needs or wants. To get the one class the consumer actually needs, the consumer's build must pull in, compile against, and become versionally coupled to the entire unit.
 
 **Observable Symptoms:**
+
 - Agile Software Development, Principles, Patterns, and Practices, Prentice
 
 **Failure Mode Symptoms:**
+
 - A "utils", "common", or "shared" package that has grown to
 - Splitting a package produces a burst of new packages, each with
 - A consumer that genuinely needs several of the newly split
@@ -4219,11 +4302,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Every system with more than one moving part eventually needs behavior that no single unit provides on its own. logging plus retry plus caching wrapped around a network call, three independent validation rules applied to one form, five shell tools chained into a data pipeline, four Kubernetes controllers reconciling one desired state. The problem composability answers is how new combinations of existing units get built without editing the units themselves and without writing one bespoke integration for every pair.
 
 **Observable Symptoms:**
+
 - There is a small, stable, and genuinely minimal interface that many
 - The system needs an open-ended, not-fully-known-in-advance set of
 - The cost of a wrong or premature abstraction is high enough that
 
 **Failure Mode Symptoms:**
+
 - Two units both claim to satisfy the shared interface, are
 - Adding a new stage to an existing pipeline breaks an earlier
 - The interface has grown wide enough that most implementations
@@ -4235,6 +4320,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A designer needs an object to have several independent, combinable behaviours, and reaches for a single class hierarchy to express all of them. The first behaviour fits cleanly as a base class. The second behaviour does not vary along the same axis as the first, so it gets bolted on as another level of subclassing, or as a second interface the subclass also implements with duplicated logic. The third behaviour needs to combine with either the first or the second independently of which concrete leaf class is chosen, and single inheritance offers no way to express "any combination of A and B" without one subclass per combination.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A one-line behavioural change to a base class, made in one
 - Symptom. A new requirement forces a new leaf class whose name is a
 - Symptom. A team adopts composition everywhere on principle, and a simple,
@@ -4245,6 +4331,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system delivers a message. Something outside the domain model, a UI widget, an HTTP request, a message queue consumer, has just produced an event, and someone has to receive that event and turn it into a call, or a sequence of calls, on the objects that actually know how to handle it. The question is where that receiving object lives, and what it is allowed to do once it has the event in hand.
 
 **Failure Mode Symptoms:**
+
 - Judgement. The following symptom, cause, and fix triples are drawn from
 - A single controller class has grown past several hundred lines,
 - Unit tests for a use case require standing up the web framework, a
@@ -4257,6 +4344,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is asked to build a system with several distinct concerns. Billing, notifications, search, and a public API, say. The team splits the work among four subteams so that the four concerns can proceed in parallel. Six months later the system is live, and an architecture review finds four modules whose boundaries line up almost exactly with the four subteams, connected by four brittle, versioned, poorly documented interfaces, one interface for every pair of subteams that had to coordinate. Nobody drew that box diagram on a whiteboard on day one. It emerged, module by module, because every time two engineers on different subteams needed an interface between their two pieces of work, the shape of that interface was negotiated across a Slack channel, a shared meeting, or a design document review, rather than inside one person's head. The negotiation cost showed up as a seam in the software.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A newly formed platform team is created specifically to own a
 - Symptom. After a company-wide reorg intended to align teams with a target
 - Symptom. A single engineer notices two microservices that call each other
@@ -4266,6 +4354,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Every object-oriented system eventually needs a new object of type A to come into existence somewhere, and the code that calls the constructor has to live in some class B. The question sounds trivial until a system has grown past a handful of classes, at which point it stops being trivial in a specific, observable way. two designers working on the same domain model will often disagree about which class should hold the construction call for a given type, and if the codebase has no shared convention, the decision gets made inconsistently, class by class, by whichever developer happened to write that constructor call first. The result is a system where object creation is scattered unpredictably. sometimes a domain object creates its own children, sometimes a service class creates them, sometimes a factory class exists for one type of object but not a structurally identical sibling type, and there is no way to predict, from the shape of the domain, where a given creation call will be found.
 
 **Failure Mode Symptoms:**
+
 - not from a single citable source, and the symptom, cause, and fix format
 - Symptom. A domain class that started small and focused has grown a long
 - Symptom. A high-level, otherwise stable class, a domain aggregate root
@@ -4277,6 +4366,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase grows outward from a small number of policy decisions, what the system does, in what order, and why. Around those decisions accumulate the mechanical details that make the policy actually run, which database driver writes the row, which HTTP client makes the call, which file system API reads the config. In a naive design, the policy code names the mechanical code directly. OrderProcessor imports MySqlConnection. PaymentService constructs a StripeClient. ReportGenerator calls SmtpMailer by name.
 
 **Failure Mode Symptoms:**
+
 - compile-time dependency still points the wrong way. The symptom is that a
 - The second failure mode is interface-itis. The symptom is that every class in
 - The third failure mode is a test that looks isolated but is not. The symptom
@@ -4289,6 +4379,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single fact about the system, a tax rate, a validation rule, a URL, a unit conversion, a business rule about who is allowed to approve a refund, gets written down in more than one place in the codebase. The fact is correct when it is first written in both places. Time passes. The fact changes, because requirements change, a bug is found, or the business rule is updated. One of the two places gets updated. The other does not, either because the author did not know it existed, could not find it, or found it and decided updating it was somebody else's file.
 
 **Failure Mode Symptoms:**
+
 - The wrong abstraction. Two pieces of code look similar and are merged
 - as a shared method that grows conditional branches and boolean flag
 - A shared function accumulates parameters named isSpecialCase,
@@ -4306,6 +4397,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system of any real size grows two kinds of edges as it is built. Technical edges, the seams between a controller and a service and a repository, between a route handler and a database client, between a UI component and a state store. And business edges, the seams between Billing and Shipping, between Catalog and Pricing, between Onboarding and Risk. Most codebases, left to grow without a deliberate choice, organize themselves around the technical edges first, because that is what the framework's own folder scaffold suggests. A typical generated web project ships controllers/, services/, repositories/, models/, middleware/, one folder per technical layer, and every new feature adds one file to each of those folders.
 
 **Failure Mode Symptoms:**
+
 - The junk-drawer shared folder. Symptom. A common/, shared/, or
 - Domain names that are really technical concerns in a business costume.
 - Folders named notifications/, logging/, validation/ sitting
@@ -4319,6 +4411,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A running program encounters a state it was not written to handle correctly. A null reference passed where a value was required. A configuration file missing a mandatory key. An account balance that has gone negative through a bug three calls upstream. A downstream service returning a response shape the client no longer recognizes. The program has two broad choices at the moment it notices the anomaly.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A service that logs a warning and returns a default value on
 - Symptom. A batch job that panics on the first malformed record in a
 - Symptom. A public HTTP API rejects any request body containing a field
@@ -4331,14 +4424,16 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team splits a system into modules, classes, packages, or services, and almost every split is defensible on some axis. The axis that predicts whether the split will still make sense in eighteen months is whether the members inside each unit are there because they work together toward one purpose, or because they happened to land in the same file, the same service, or the same team's backlog.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
-- | A class passes an LCOM or cyclomatic-complexity linter threshold but a new team member still cannot describe what the class is for in one sentence. | The metric caught structural symptoms, shared field access patterns, but missed a semantic mixing of two responsibilities that happen to touch the same data, which communicational cohesion can mask. | Ask the who asks for this to change question from Martin's SRP framing for every public method, independent of the metric score. |
+
+- / Symptom / Cause / Fix /
+- / A class passes an LCOM or cyclomatic-complexity linter threshold but a new team member still cannot describe what the class is for in one sentence. / The metric caught structural symptoms, shared field access patterns, but missed a semantic mixing of two responsibilities that happen to touch the same data, which communicational cohesion can mask. / Ask the who asks for this to change question from Martin's SRP framing for every public method, independent of the metric score. /
 
 #### [Idiomatic](../patterns/04-principles-and-laws/idiomatic.md)
 
 **Core Problem:** A person who learns to program in one language carries that language's mental model into every language learned afterward. The habits are not wrong in themselves, they were correct in the first language, but they become friction in the second. A Java or C programmer moving to Go tends to write getters and setters for every field, wrap collection iteration in verbose index loops out of habit, and reach for interface hierarchies before they are needed. A C or C++ programmer moving to Python tends to write explicit loop-and-index code where a comprehension or a built-in like enumerate would say the same thing in a fifth of the tokens and in a shape every other Python reader recognises on sight. Kernighan and Plauger's 1978 examples are drawn from exactly this failure, FORTRAN habits producing bad PL/I, and the same failure recurs every time a language changes but the author's habits do not.
 
 **Failure Mode Symptoms:**
+
 - actual benefit. The observable symptom is a reviewer asking why a piece of
 - language. The observable symptom is code review comments repeatedly asking
 - nothing about it is incorrect. The observable symptom is new hires flagging
@@ -4350,6 +4445,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two parts of a system need to interact, but binding them together directly creates a cost that shows up later rather than now. The concrete situations recur across every layer of a stack.
 
 **Failure Mode Symptoms:**
+
 - Stale binding. Symptom. A client keeps talking to a Referent that was
 - The indirection that hides the real failure. Symptom. An incident where
 - Indirection stacking, sometimes called the lasagna anti-pattern in
@@ -4363,6 +4459,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team building an object model reaches a point, usually within the first design session, where a piece of business logic needs a home. The question is concrete and recurring. Given a responsibility, which class should own the method that fulfills it. Two default answers are common and both are wrong more often than they are right. The first default is to put the logic wherever the developer happens to be working, often in a controller, a service class, or a manager class that already exists and is easy to reach. The second default is to put the logic in whichever class the developer thinks of first, frequently the class that triggers the action rather than the class that holds the data the action needs.
 
 **Failure Mode Symptoms:**
+
 - Feature Envy is the most commonly observed symptom of Information Expert
 - A method whose body is dominated by calls of the shape
 - other.doSomething(). A production symptom engineers report is a service
@@ -4375,9 +4472,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The problem ISP names is specific and recognizable once you have seen it. An interface, abstract class, or protocol grows over time as new capabilities get added to the type it describes, and every client that depends on that type is forced to depend on the whole thing, including the parts it never calls. A concrete example follows. A Worker interface starts with doWork(). Time passes, and someone adds takeBreak(), eat(), and sleep(), because the concrete workers in the system are humans and it seemed natural to keep everything about a worker in one place. Now a RobotWorker class, which does work but never eats or sleeps, is forced to implement eat() and sleep() with a body that throws UnsupportedOperationException or silently does nothing, because the language requires every method of an implemented interface to have a body. This is the textbook case Martin himself uses to introduce the idea in Agile Software Development, and it is repeated widely enough in the secondary literature on SOLID that it functions as the canonical teaching case, though the original wording is Martin's.
 
 **Observable Symptoms:**
+
 - Agile Software Development, and it is repeated widely enough in the
 
 **Failure Mode Symptoms:**
+
 - An interface with exactly one implementer, split into three role
 - A concrete class implements six or seven tiny, single-method
 - A role interface is defined, but every concrete implementer of it
@@ -4389,6 +4488,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Every non-trivial piece of software accretes complexity over its lifetime, and that accretion happens in two very different ways that are easy to conflate. The first is essential complexity, the complexity genuinely required by the problem the software solves. Tax law has edge cases because tax law has edge cases, not because the code is badly written. The second is accidental complexity, complexity the team introduced through choices that were not demanded by the problem. an extra layer of indirection nobody uses, a configuration system for options that never vary, a message queue introduced for a workload that never exceeded ten requests a minute, an abstract base class with one implementation. KISS is the discipline of continuously refusing the second kind while accepting the first as the actual cost of doing the job.
 
 **Failure Mode Symptoms:**
+
 - A feature ships with an obvious edge case unhandled, and when
 - Code review pushback of "this is too simple, what about
 - A "simple" rewrite of a subsystem ships, passes its own
@@ -4400,6 +4500,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A method reaches through an object it was handed to get at a second object, then calls a method on that second object. The code compiles, the immediate type checks are satisfied, and the method now silently depends on the internal shape of a collaborator two or three hops away that it was never given a direct reference to.
 
 **Failure Mode Symptoms:**
+
 - The syntactic "one dot rule." Symptom. A linter or a reviewer flags
 - Forwarding-method explosion, the Middle Man smell. Symptom. A class whose
 - Confusing Law of Demeter with information hiding of data, not behaviour.
@@ -4413,6 +4514,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Object-oriented languages let a caller hold a reference typed as a base class or an interface and receive, at runtime, any one of several concrete subtypes. The entire value of that polymorphism depends on one assumption the type system does not check. that every concrete subtype behaves the way the caller, having been written and tested against the base type, expects it to behave. When a team adds a new subtype that satisfies every method signature the compiler demands but changes what the method actually does, refuses inputs the base type accepted, returns a weaker guarantee than the base type promised, or throws a failure the caller has no handler for, client code that has never been touched starts misbehaving the moment the new subtype is substituted in.
 
 **Failure Mode Symptoms:**
+
 - Precondition strengthening, presented as a validation improvement. A subtype narrows
 - receives an exception it has no handling path for. The observable symptom is an exception
 - Postcondition weakening, presented as a performance optimization. A subtype returns a
@@ -4428,6 +4530,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. The moment two units exist, a decision has to be made about how much one is allowed to know about the internals of the other, and how much a change inside one forces a change inside the other. A codebase where every class reaches into every other class's fields, calls concrete constructors of collaborators, and depends on a specific implementation rather than a narrow contract, is a codebase where a single change ripples outward unpredictably. The symptom a working engineer recognizes immediately is the small fix that takes three days because it touches nineteen files that had no obvious reason to know about each other.
 
 **Failure Mode Symptoms:**
+
 - is that nearly every class in the codebase has a matching IFoo
 - level. The symptom is that services are physically decoupled, separate
 - is that swapping the concrete Dependency for a different
@@ -4438,6 +4541,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of software that ships once and never changes does not need this principle. The principle exists because software that is used gets extended, and every extension is a chance to break something that already worked.
 
 **Failure Mode Symptoms:**
+
 - A one-implementation interface sits in the codebase for years,
 - A new business requirement cannot be satisfied by any existing
 - A subclass implementing an interface throws
@@ -4449,6 +4553,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team picks a distributed database, reads that it is "AP" or "CP" under CAP, and believes that single letter fully describes how the system will behave in production. It does not. CAP only speaks about what happens during a network partition, and a well-run data center rarely experiences a hard partition, it experiences degraded links, congested switches, garbage collection pauses, and cross-region round trips, none of which trip the formal definition of a partition but all of which cost milliseconds on every single request the system serves. A system can be provably CP under CAP, meaning it never returns a stale answer during a partition, and still be measurably slow on every read during ordinary Tuesday afternoon traffic because it insists on confirming with a majority of replicas, some of them across an ocean, before it answers anything. CAP has nothing to say about that system's everyday latency, because CAP's scope stops the moment the partition ends.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A team selects a database because a comparison chart lists it as
 - Symptom. During a real network partition, a service that the team
 - Symptom. A replicated cache or read-replica fleet occasionally serves
@@ -4458,6 +4563,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of client code needs to perform an operation, render a shape, calculate a price, serialize a value, and it needs to do so uniformly over a collection of things that are not all the same concrete kind. Without polymorphism the client is forced to write a branch, usually a chain of if statements or a switch on a type tag, that enumerates every concrete kind it currently knows about and calls the matching operation directly.
 
 **Failure Mode Symptoms:**
+
 - , a new implementation of an interface silently does the wrong thing for one method,
 - , a codebase has a deep inheritance hierarchy, five or six levels, and adding one
 - , every implementation of a wide interface throws UnsupportedOperationException,
@@ -4471,6 +4577,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two or more parties implement the same open, published specification independently, without coordinating their release schedules, their source code, or in most cases even knowing about each other's existence until their software tries to talk over a wire. The specification itself is written in natural language, and natural language is never perfectly precise. Some detail is genuinely ambiguous, some corner case was never considered by the authors, and some requirement will later prove to be a mistake that a future revision of the specification has to correct.
 
 **Failure Mode Symptoms:**
+
 - HTTP request smuggling. Symptom. A front-end proxy and a back-end server
 - MIME content-type sniffing. Symptom. A resource served with an explicit
 - Silent data corruption from an over-lenient parser. Symptom. Numbers in
@@ -4482,6 +4589,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A caller who invokes an operation, reads an API's documentation, or pulls a dependency's published version needs to know, before acting, what is going to happen. When that forecast cannot be made reliably, the caller is forced into defensive strategies that cost real engineering time and introduce their own new failure modes. Four concrete situations make the problem tangible.
 
 **Failure Mode Symptoms:**
+
 - timed-out request. The observable symptom is a duplicate line item in a
 - produces a binary with a different hash. The observable symptom is
 - with no code change between them. The observable symptom is a red build that
@@ -4494,6 +4602,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A person interacts with a piece of software, whether by reading its code, by calling its API, by typing a command at a shell, or by clicking a button in a user interface, and forms a mental model of what that interaction will do before it happens. That model is built from names, from prior experience with functionally similar tools, from documented or implied conventions, and from the syntax of the call itself. The problem the principle names is what happens when the actual behavior of the system diverges from that model. divergence costs the person time to notice, time to diagnose, and in the worst case a production incident, because the mismatch is discovered only after the wrong assumption has already been acted on.
 
 **Failure Mode Symptoms:**
+
 - The boolean trap. Symptom. a call site such as resize(true, false)
 - The query that is secretly a command. Symptom. calling a function whose
 - Convention borrowed from the wrong reference domain. Symptom. a design
@@ -4506,6 +4615,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ownership of a module. The question Protected Variations answers is not whether change will happen, but where a given change will STOP once it starts.
 
 **Failure Mode Symptoms:**
+
 - Speculative protection with no observed variation. Symptom. A codebase
 - Leaky Stable Point. Symptom. Client code contains a cast back to a
 - Contract drift, the version-skew failure. Symptom. A Client built
@@ -4518,6 +4628,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. the class that holds the relevant data is usually also the right place to put the behavior that uses that data. The problem shows up at the edges of the domain model, where a responsibility genuinely needs data spread across several domain objects, or where the responsibility is by nature about a technical concern, such as talking to a database, formatting a PDF, sending an email, or calling a payment gateway, rather than about the business concept the domain object represents.
 
 **Failure Mode Symptoms:**
+
 - the domain classes contain almost exclusively fields, getters, and
 - a package or namespace contains dozens of classes with generic,
 - a class, often named something like ApplicationService or
@@ -4528,6 +4639,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The problem REP addresses shows up the moment more than one piece of software wants to depend on the same piece of source code. Two teams inside one company both need a currency-formatting routine. A library author publishes an HTTP client that three unrelated open-source projects adopt. A monorepo grows a shared/ directory that half a dozen services import from. In every one of these situations, the code that is being shared has to answer a question that a single-application codebase never has to answer, when a change lands, who else is affected, and how do they find out.
 
 **Failure Mode Symptoms:**
+
 - The grab-bag "common" or "utils" component, the anti-pattern REP is most
 - often invoked against. Symptom. A consumer needs a one-line bug fix to a
 - Reuse by copy-paste, or reuse by pointing at a branch tip. Symptom. Two
@@ -4541,6 +4653,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase grows by accretion. A new requirement lands, and the fastest way to satisfy it is to add a few lines wherever the relevant data already sits in memory. An order total needs tax calculation, so the tax rate lookup goes into the same function that renders the receipt, because the receipt function already has the order in scope. A validation rule needs the current user's timezone, so the timezone lookup goes into the validator, because the validator already has the request object. Each individual addition is locally reasonable and locally cheap. The mistake is invisible at the moment it is made, because nothing breaks and the diff is small.
 
 **Failure Mode Symptoms:**
+
 - The distributed monolith. Symptom. A system of a dozen microservices that must be
 - Anemic domain model. Symptom. A "domain" layer that consists entirely of data
 - The god layer. Symptom. One layer, usually a "service" or "utils" layer, that grows to
@@ -4554,6 +4667,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The problem SRP names is a specific, recognizable shape of decay. A class starts small and does one job well. Over months, unrelated work keeps landing on it because it is already the place where a related concept lives, and each addition is individually reasonable. An Invoice class that started by holding invoice data grows a calculateTotal method, which is squarely its job. Then someone needs to print the invoice, and the easiest place to add that is a printInvoice method on the same class, because the class already has all the fields the printer needs. Then someone needs to persist the invoice to a database, and again, the class already has the fields, so save lands there too. None of these additions looks wrong on its own. The class compiles, the tests that exist still pass, and the change is small.
 
 **Failure Mode Symptoms:**
+
 - The god class that never got split. Symptom. One file with several
 - Splitting along data rather than along change. Symptom. Two new classes
 - The anemic domain model. Symptom. A Customer class with only getters
@@ -4566,6 +4680,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A fact about the world gets written down more than once, in more than one system, in more than one file, or in more than one variable, because writing it again was faster than routing back to where it already lives. Each copy then drifts from the others as time passes and only one copy gets updated on any given change. Nobody notices the drift until two views of the same fact disagree in front of a customer, an auditor, or a teammate, and at that point nobody can say which copy is correct without manual reconciliation.
 
 **Failure Mode Symptoms:**
+
 - The shadow copy. Symptom. A value that was supposed to be read-only,
 - Denormalization mistaken for a second authority. Symptom. A duplicated
 - Confusing a snapshot with a stale duplicate. Symptom. A team "fixes"
@@ -4578,6 +4693,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase accumulates two kinds of code over its life. Policy code, the part that encodes business rules, decisions, and the high-level shape of what the system does, and mechanism code, the part that carries those decisions out against a database, a network, a file system, or a UI toolkit. Policy code should change rarely, because a change to a business rule is a considered, infrequent event. Mechanism code changes often, because frameworks release new versions, drivers get replaced, and third-party APIs evolve on their own schedule.
 
 **Failure Mode Symptoms:**
+
 - The zone of pain. Symptom. A package many other packages depend on,
 - The zone of uselessness. Symptom. An interface or abstract class with
 - Interface theatre. Symptom. A code review reveals a package where
@@ -4591,6 +4707,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system of any real size is built from more than one compilation or deployment unit, whatever the language calls that unit, a package, a module, a JAR, a crate, an npm package, an assembly, a component. Those units depend on each other, and the set of depends-on edges forms a directed graph over the whole codebase.
 
 **Failure Mode Symptoms:**
+
 - A single "utils", "common", or "shared" package keeps breaking
 - A "core domain" package that is supposed to be the settled center
 - A widely used, heavily depended-upon library becomes something no
@@ -4601,6 +4718,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The problem this principle answers shows up the first time a codebase grows past the size where one person holds the whole design in their head. A method somewhere needs to make a decision that depends on the internal state of a different object. The easy path, and the one almost every beginner takes without thinking about it, is to ask that other object a series of questions, getters, in most languages, then use the answers to compute a decision locally.
 
 **Failure Mode Symptoms:**
+
 - Feature Envy hiding behind a renamed method. Symptom, a reviewer sees a
 - The GetterEradicator anti-pattern. Symptom, every getter in a codebase has
 - The god aggregate. Symptom, one class grows to hold every rule that ever
@@ -4612,6 +4730,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A function, class, module, or service accumulates responsibility over time because adding one more branch to something that already exists is almost always locally cheaper than creating a new unit and wiring it in. Each addition is defensible on its own. the codebase as a whole slides toward units that do several unrelated things, expose wide interfaces with many optional parameters, and can only be understood by reading their full implementation rather than their signature. The Unix philosophy property names the discipline that resists this slide at the point of first design, not as a later refactor. it asks, before a unit is written, what is the one thing this does, and what is the narrowest surface through which something else can use it.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A pull request adds a fourth optional parameter to a function
 - Symptom. A team has dozens of tiny helper functions, and a new feature
 - Symptom. A shell script pipeline silently drops rows and nobody notices
@@ -4622,6 +4741,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A developer sits inside a piece of work that is genuinely needed today, and partway through, notices a plausible future requirement. The database schema will probably need a tenantid column once the product goes multi-tenant. The API will probably need pagination once traffic grows. The configuration loader will probably need a plugin mechanism once a second data source shows up. Each observation is often correct as a prediction, and that is exactly what makes the temptation dangerous, because a correct prediction about the future still does not tell you the cost of building for it now is lower than the cost of building for it when it actually arrives.
 
 **Failure Mode Symptoms:**
+
 - YAGNI without safety nets, the precondition failure. Symptom. deferred
 - YAGNI misapplied to a load-bearing seam. Symptom. a public API version
 - YAGNI as an excuse to avoid a hard design conversation. Symptom. a
@@ -4636,6 +4756,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A recognizable class of problems has no known algorithm that transforms input directly into output. Instead, the problem is only tractable by combining several independent forms of expertise, each of which is confident about a different aspect of the situation, none of which is sufficient alone, and none of which has a fixed, predictable order in which it must run.
 
 **Failure Mode Symptoms:**
+
 - The system spends most of its time re-evaluating the same handful of knowledge sources over and over with no net progress on the solution.
 - Two knowledge sources repeatedly overwrite or retract each other's hypotheses, and the blackboard's state oscillates instead of converging.
 - Adding the Nth knowledge source makes the system measurably slower even though the Nth specialist is rarely eligible.
@@ -4647,6 +4768,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A distributed system is made of components running in separate processes, often on separate machines, that need to call on each other's services. Left to grow without structure, every component that needs a service from another component ends up holding a direct, hardcoded reference to it. an IP address and port, a hostname baked into configuration, a client library pinned to one specific server's location and protocol version. This produces a system where every component knows the network topology of every other component it talks to. Moving a service to a new host breaks every caller. Adding a new implementation of an existing service means updating every client that could plausibly want to route to it. Testing a component in isolation means standing up the real network dependencies it was hardcoded to reach, because there is no seam at which a test double can be substituted.
 
 **Failure Mode Symptoms:**
+
 - every request across the whole system slows down or times out at
 - messages appear to vanish, or the same message is processed twice
 - a service that has been redeployed to a new host continues to
@@ -4658,11 +4780,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service that runs as one shared, horizontally-scaled deployment behind one load balancer has a property that is invisible on a calm day and catastrophic on a bad one. every request, every tenant, and every code path shares the same fate. A bad deploy, a poison-pill request that crashes a worker, a noisy tenant that saturates a connection pool, or a networking incident in one availability zone degrades the service for one hundred percent of customers at once, because there is only one instance of the system to degrade.
 
 **Observable Symptoms:**
+
 - The service is large enough, or important enough, that a full outage has a
 - The workload has a natural partition key already present in nearly every
 - Blast radius, not raw throughput, is the metric leadership actually cares
 
 **Failure Mode Symptoms:**
+
 - The router grows a brain. Symptom. The routing layer starts making
 - Cells that quietly share a database. Symptom. Two "isolated" cells both
 - Uneven cell sizing. Symptom. One cell's dashboards are consistently
@@ -4675,6 +4799,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A non-trivial application accumulates business rules that answer questions no framework, database, or user interface technology can answer for it. what counts as a valid order, when a subscription is allowed to renew, how a discount stacks with a coupon. Left unmanaged, those rules end up living inside a web controller method, an ORM entity's setter, or a database trigger, because those are the places code naturally gets written first and nobody draws a boundary around them later.
 
 **Failure Mode Symptoms:**
+
 - citable source for each symptom.
 - The codebase has entities, use cases, adapters, and gateways
 - Every use case interactor takes an ever-growing constructor
@@ -4687,6 +4812,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application needs to let more than one user, device, or process operate on data or capability that must be shared, kept consistent, and protected from direct, uncoordinated access. If every participant held its own private copy of that data and its own private logic for changing it, two participants could make conflicting changes with neither aware of the other, a participant with malicious or buggy code could corrupt data that other participants depend on, and every participant would need to reimplement identical business rules, validation, and storage logic. The problem sharpens the moment the participants run on different machines, because then there is no shared memory or shared file to coordinate through, only whatever a network can carry.
 
 **Failure Mode Symptoms:**
+
 - Chatty client, thin server. Symptom, a client makes many small
 - Fat server anti-pattern, sometimes called God server. Symptom, one
 - Session affinity masquerading as statelessness. Symptom, a load
@@ -4699,6 +4825,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system grows a second consumer that needs data owned by a first system. The straightforward first move is for the second system to call the first system's API whenever it needs current data. This works while there is one consumer and traffic is light. It stops working as more consumers appear.
 
 **Failure Mode Symptoms:**
+
 - The dual-write gap. Symptom, consumers are missing updates that
 - Schema drift breaking a downstream consumer silently. Symptom, one
 - Out-of-order application corrupting the read model. Symptom, a
@@ -4710,10 +4837,12 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system built from several independently deployable components needs to react to things that happen elsewhere in the system, without each component knowing the internal state, schema, or availability of every other component it depends on.
 
 **Observable Symptoms:**
+
 - Decoupling of producers from consumers. The order service should not
 - Consistency across independently owned data stores. When a microservice
 
 **Failure Mode Symptoms:**
+
 - The distributed monolith. Symptom. Deploying any one service requires
 - Missing idempotency causing duplicate side effects. Symptom. A customer
 - Lost update / silently dropped event with no alerting. Symptom. A
@@ -4728,6 +4857,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase reaches a specific, recognizable moment. The business logic, the rules that decide whether an order can ship, whether a subscription renews, whether a claim is approved, is written directly against a web framework's request object on one side and an ORM's query builder on the other. The logic reads correctly. It also cannot be exercised without a running HTTP server and a live database connection, because the framework types and the ORM types are woven through every function signature. A unit test that wants to check one business rule has to first stand up infrastructure that has nothing to do with the rule.
 
 **Failure Mode Symptoms:**
+
 - The leaky port. Symptom. A "driven port" interface whose method
 - Anemic core, fat adapter. Symptom. The OrderService class is a thin
 - Testing only through the primary adapter. Symptom. The test suite spins
@@ -4741,11 +4871,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system needs to accept a piece of behaviour, a rule, a query, a formula, a policy, that was not known when the system was compiled, and that behaviour must be safe to run inside the host process without the full trust extended to the host's own code.
 
 **Observable Symptoms:**
+
 - The language is genuinely small and closed. It has a bounded set of
 - The rules or expressions come from outside the compiled binary, at
 - Sandboxing matters. the evaluator must be able to run untrusted or
 
 **Failure Mode Symptoms:**
+
 - , cause, fix, for the failure modes that recur in real interpreter
 - The rule engine's evaluation time grows noticeably worse
 - A production incident traces back to a user-authored
@@ -4758,6 +4890,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A non-trivial application has at least three concerns that change for different reasons and at different rates. how information is presented to a user or another system, what business rules govern the data, and how the data is stored and retrieved. Left unmanaged, code that renders a screen also validates a discount policy and also issues a SQL statement, often in the same method. The first symptom is not a crash. It is that a change to the discount policy requires touching the screen-rendering code, and a change to the database vendor requires touching the business rule code, because nothing separates them.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A change to the UI requires a database migration.
 - Symptom. Unit tests for the domain layer require a running database.
 - Symptom. Adding one new feature requires editing files in four different
@@ -4769,13 +4902,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A distributed system frequently needs some class of decision made exactly once and in a single agreed order, even though the work of making that decision is spread across several machines that can each fail independently, and even though the network connecting them can partition, reorder messages, or delay them arbitrarily. Examples of the decision that must be singular. In what order do these writes to this key land. Which node currently owns partition seven and is allowed to accept writes for it. Which of these three identical controller replicas is the one actually allowed to reconcile desired state against the cluster right now. Who assigns the next work item so that two workers do not silently claim the same job.
 
 **Failure Mode Symptoms:**
-- | Symptom observed | Underlying cause | Fix |
+
+- / Symptom observed / Underlying cause / Fix /
 
 #### [Microkernel](../patterns/05-architectural/microkernel.md)
 
 **Core Problem:** A team is building a system whose core purpose is settled and small, but whose surrounding behavior is not. A text editor's core purpose is loading a buffer, editing text, and saving it back to disk. What a specific installation of that editor does beyond that, syntax highlighting for forty different languages, version control integration, a dozen competing linting tools, a debugger front end, is not settled at all, varies wildly from installation to installation, and keeps growing after the product ships. A build tool's core purpose is resolving a dependency graph and running tasks in order. What each project actually builds with it, TypeScript compilation, image optimization, bundling, is neither known at the time the build tool is written nor stable once it is known.
 
 **Failure Mode Symptoms:**
+
 - God-core creep. The symptom is that features which were meant to live in
 - Version-skew plugin breakage. The symptom is that users report a
 - Silent extension-point mismatch. The symptom is that a user installs a
@@ -4786,6 +4921,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single deployable application, however well factored internally, eventually runs into three problems that module boundaries inside one process cannot solve. First, every team that touches the codebase shares one build, one test suite, and one release train, so the release schedule of the whole system is capped by the slowest, riskiest, or most contested change in flight. Second, the whole application scales as one unit, so a component that needs ten times the compute of its neighbors forces the operator to either over-provision the entire process or accept that the bottleneck component throttles everything sharing its host. Third, a runtime failure inside one module, an unbounded loop, a memory leak, an unhandled exception in a background thread, can bring down the whole process, because there is no process boundary between a reporting feature and the checkout flow.
 
 **Failure Mode Symptoms:**
+
 - A common symptom is a change to Service A's response schema breaking Service
 - A second symptom is that every request to a customer-facing endpoint takes
 - A third symptom is that services are individually deployable but a
@@ -4797,6 +4933,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A user interface has three kinds of code tangled together whenever it is built without a discipline. The raw visual layout and control wiring, the logic that decides what the screen should currently show, and the domain data and rules the screen is a window onto. When these three live in one class, that class grows in every direction at once. A button click handler mutates a label's text, reads a domain object, formats a number for display, and enables another control, all in a few lines, and none of it can be exercised without instantiating the actual UI control tree.
 
 **Failure Mode Symptoms:**
+
 - A screen displays stale or blank data for one specific field
 - The ViewModel class for one screen has grown past a thousand
 - A ViewModel unit test suite is fully green, but the actual
@@ -4808,6 +4945,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The problem MVC solves is separation of concerns in a system where a person is directly manipulating a live data structure through a graphical interface, and the interface must stay synchronized as the data changes, sometimes because of that person's own actions, sometimes because of another process entirely.
 
 **Failure Mode Symptoms:**
+
 - Massive View Controller. Symptom. A single Controller class or view-controller
 - View bypassing the Model boundary. Symptom. A View directly issues database
 - Notification storms. Symptom. An interface feels laggy or briefly shows stale
@@ -4818,6 +4956,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A View that mutates its own local, mutable fields in response to individual events accumulates state that nobody can reconstruct from a single snapshot. A checkbox toggled here, a spinner shown there, a list scrolled somewhere else, each mutation is a small, local, imperative edit, and the full picture of what the screen currently shows exists only by re-deriving it from dozens of scattered booleans and optionals living across several objects. This is the everyday shape of a codebase before MVI. A ViewController or Activity with fields like isLoading, errorMessage, items, selectedId, each set independently from a different callback, a different network completion handler, a different button tap. Two of those fields can disagree with each other, isLoading true while items is already populated, and nothing in the code prevents it, because nothing ever asserted that the combination of all fields at any instant is a single, valid, describable thing.
 
 **Failure Mode Symptoms:**
+
 - The God State object. Symptom. A single State data class with forty
 - One-shot events crammed into State. Symptom. A toast or a one-time UI
 - Side effects performed inside the reducer. Symptom. A test that calls
@@ -4831,6 +4970,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A screen, form, or activity has to do three jobs at once. Render widgets, react to the person's input, and coordinate with whatever the input changes, a domain object, a network call, a file. Left alone, all three jobs collapse into one class, usually the class the UI framework hands you, an Activity, a UIViewController, a code-behind file, a JSF backing bean. That class ends up importing the widget toolkit, the domain layer, and often the network client in the same file, and every one of its methods is a void reacting to a framework callback with no return value to assert on.
 
 **Failure Mode Symptoms:**
+
 - The View interface leaks the widget toolkit anyway. Symptom. The View
 - The Presenter is retained past the View's death. Symptom. An intermittent
 - Two Presenters race to update one View. Symptom. A field flickers between
@@ -4843,6 +4983,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is building a system that will run as one process, or one small cluster of identical processes behind a load balancer, and deploys as one unit. Over months or years of feature work, the codebase accumulates functions and classes that call each other freely, because nothing stops them. Eventually nobody can change the order module without touching the inventory module, the inventory module without touching the shipping module, and the shipping module without touching billing, because every import is allowed and every team has, at some point, taken the shortest path through someone else's code rather than through a defined interface. This is the Big Ball of Mud, and it is the starting condition the modular monolith pattern exists to prevent or to repair.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A dependency graph tool, run retroactively over what was
 - Symptom. Extracting any single module later, dimension 14, turns out to
 - Symptom. The shared kernel module has more incoming dependencies than
@@ -4854,6 +4995,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team builds a business application against a specific database, a specific web framework, and a specific set of third party integrations, because those are the concrete decisions a working system needs on day one. The natural place to put a decision is where it is needed, so calls to the ORM, HTTP clients for a payment provider, and framework specific request objects end up threaded directly through the code that expresses what the business actually does. Six months later the business rule that a discount cannot apply to an already refunded order sits inside a controller action, next to the code that parses the HTTP request and next to the Entity Framework query that loads the order row. Nothing distinguishes the one line of code that is the actual business decision from the forty lines of code that exist only because of the web framework and the database driver.
 
 **Failure Mode Symptoms:**
+
 - The leaky generic repository. Symptom. A single IOrderRepository
 - The anemic domain hiding inside a fat Application Service. Symptom. Every
 - Interface explosion with no second implementation in sight. Symptom. A
@@ -4867,6 +5009,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system needs many participants to exchange data or share work, and at least one of the following forces makes a single, dedicated server the wrong place to put that coordination.
 
 **Failure Mode Symptoms:**
+
 - A lookup that should take a handful of hops instead times out
 - The same message or query arrives at a peer many times, or
 - A handful of well-connected peers end up carrying almost all
@@ -4879,6 +5022,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system needs to transform a stream of data through a sequence of independent processing steps, and the set of steps, their order, or their implementation is expected to change over the system's lifetime. Consider a build tool that must lex, parse, type-check, optimize, and code-generate a source file. Consider a log ingestion service that must parse a raw line, enrich it with geolocation, redact personally identifiable fields, and write the result to a sink. Consider an image processing tool that must decode, resize, apply a filter, and re-encode a photo. In every one of these cases the naive first implementation is a single function or a single class that does everything inline, in one method body, with each step's logic interleaved with the next step's logic and with the control flow that decides what runs when.
 
 **Failure Mode Symptoms:**
+
 - Unbounded buffering causing out-of-memory kills. Symptom. A pipeline
 - Head-of-line blocking on a single slow item. Symptom. Overall pipeline
 - Silent data loss on filter exceptions. Symptom. Items are known to have
@@ -4891,11 +5035,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system must transform a stream of data through several independent processing steps, and the set of steps, their order, or the data source itself is expected to change over the system's life.
 
 **Observable Symptoms:**
+
 - Processing decomposes naturally into a sequence of independent steps, each
 - The set of steps, or their order, changes over the life of the system, so
 - The data volume is large enough, or the processing time per step is long
 
 **Failure Mode Symptoms:**
+
 - A pipeline that used to run in a few seconds now takes
 - The pipeline hangs forever on shutdown, with no error and no
 - Two filters that were supposed to be independent start
@@ -4908,6 +5054,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application needs to support a set of behaviours that is open-ended, unknown at the time the core is built, and likely to be supplied by parties who are not the core's own maintainers. The behaviours share the same host runtime, the same overall lifecycle, and the same audience, but each one is variable enough that hard-coding all of them into the core produces a monolith that recompiles, redeploys, and re-tests on every unrelated addition.
 
 **Failure Mode Symptoms:**
+
 - The host application slows down or crashes only for certain
 - A minor host release breaks a large fraction of installed
 - Two independently written, individually reasonable plugins,
@@ -4919,11 +5066,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A host application defines an extension point, using Plugin Architecture or Microkernel, so that its behavior can grow without every new feature being merged into the core codebase. That decision solves a modularity problem. It does not solve a trust problem, and the trust problem is where most of the damage in real systems happens.
 
 **Observable Symptoms:**
+
 - Code from an author the host does not fully control is going to execute,
 - The host has something worth protecting that the plugin should not get
 - The plugin still needs to do real work. A sandbox that grants nothing is
 
 **Failure Mode Symptoms:**
+
 - specific symptoms below are grounded in the production sources cited
 - A plugin marked as "sandboxed" is found, sometimes years after
 - A boundary that passed every functional and security test during
@@ -4937,6 +5086,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single database instance handling both writes and reads eventually hits a ceiling on at least one of three axes, read throughput, availability, and geographic latency. A read-heavy application, the common case for most web and mobile products where reads outnumber writes by ten to one or more, saturates the primary's CPU, memory, and I/O on SELECT queries long before write volume becomes the bottleneck. A single instance is also a single point of failure. If that machine's disk fails or the process crashes, every write and every read stops until it is restored from backup, and a restore from a nightly backup can mean hours of data loss. A single instance in one region also means every read from a user on the other side of the planet pays a full round trip of network latency to reach it.
 
 **Failure Mode Symptoms:**
+
 - Read after write inconsistency. Symptom, a user submits a form, is redirected
 - Split brain. Symptom, two nodes in the cluster each believe themselves to be
 - Cascading load collapse. Symptom, one replica falls behind, then falls
@@ -4948,6 +5098,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns a backend that must handle a workload with two properties that are hard to satisfy at once with a conventional server fleet, the load is spiky or unpredictable, and much of the time nobody is calling the service at all.
 
 **Failure Mode Symptoms:**
+
 - The state-in-memory assumption. Symptom. A counter, a cache, or a
 - The cold-start-blind latency SLA. Symptom. A service meets its p50 latency
 - The naive warmer. Symptom. A scheduled job pings a function every few
@@ -4960,6 +5111,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A monolithic application starts as the fastest way to ship. One codebase, one deployment, one database, one team can move a feature from idea to production without coordinating with anyone else. That model breaks down along three axes as an organization and its software both grow.
 
 **Failure Mode Symptoms:**
+
 - rather than a single citable source for each symptom. The pattern of these
 - The distributed monolith. Symptom observed. Every service must be
 - The shared database anti-pattern. Symptom observed. Two or more
@@ -4973,6 +5125,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system needs to handle more work than one machine can handle, whether that work is transaction throughput, storage volume, or concurrent connections. The naive answer is a bigger machine. more CPU cores, more RAM, faster disks. This works until it does not, because a single machine has a ceiling on every axis at once, and the largest machine money can buy is still one point of failure and one bottleneck for every request. The next naive answer is several machines that share a resource. several application servers reading and writing one central database, several compute nodes attached to one storage area network, several worker processes on one host reading a shared in-memory cache by reference. Sharing a resource across machines lets you add compute without immediately hitting a wall, but the shared resource itself becomes the new bottleneck and the new single point of failure, and coordinating concurrent access to it (locks, latches, cache-coherence protocols, distributed transaction managers) adds a cost that grows with the number of participants, not with the amount of work.
 
 **Failure Mode Symptoms:**
+
 - above. symptoms are what an operator would actually observe.
 - Hot partition. Symptom. one node consistently shows far higher CPU,
 - Fan-out amplification. Symptom. a small number of logically simple
@@ -4985,6 +5138,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system built as a stateless application tier in front of a single relational database scales the application tier easily and the database tier badly. Add more web servers and throughput on the front door goes up. The database does not get faster from that, because every request still funnels through the same connection pool, the same lock manager, and the same disk. Under a sudden spike, a flash sale, a market open, a ticket release, a breaking-news search spike, the database becomes the one component that cannot be horizontally added to on short notice, and it becomes the point where the whole system either queues, times out, or falls over.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two different clients reading the same entity id in quick
 - Symptom. During a scale-out event, a small percentage of requests
 - Symptom. A processing unit crashes and, on restart, several minutes of
@@ -4996,6 +5150,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A screen in a UIKit or AppKit application tends to accumulate three kinds of code inside one view controller, code that lays out and updates the user interface, code that decides what should happen when the user interacts with it, and code that talks to a network client, a database, or a domain service to get the data the screen needs. Apple's own UIViewController base class already owns the view lifecycle, so it is the path of least resistance to add one more method to it every time a new piece of behaviour is needed. Over the life of a real app this produces the object commonly called a massive view controller, a class of a thousand lines or more that mixes layout code, state machines, network calls, and analytics calls in one file, with no seam a test can be written against.
 
 **Failure Mode Symptoms:**
+
 - The symptom, cause, and fix below are drawn from the practical guidance in
 - The View calls the Interactor or reads an Entity directly
 - The app crashes or silently stops updating a screen with
@@ -5010,19 +5165,22 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application needs to load rows from a relational table, let a caller read and mutate the fields as ordinary object properties, validate the values, and persist changes back, and it needs this for many different tables. The context in which Active Record is chosen, rather than one of its siblings, is narrow and specific. The domain logic attached to each row is genuinely simple, close to a direct field-by-field mapping between the object's properties and the table's columns, and there is close to a one-to-one correspondence between a table and a class. Fowler frames the choice this way directly, writing that "Active Record is a good choice for domain logic that isn't too complex, such as create, read, update, and delete... Domain logic that involves validation, calculations, and derivations is a good fit" (Fowler, PoEAA, page 161).
 
 **Failure Mode Symptoms:**
+
 - Judgement, stated plainly. the symptoms below are drawn from widely reported
-- | Symptom (what you would actually observe) | Cause | Fix |
+- / Symptom (what you would actually observe) / Cause / Fix /
 
 #### [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md)
 
 **Core Problem:** The problem shows up first in an application with more than one screen that share the same underlying process. A checkout, a multi-step registration, an onboarding wizard, a loan application with conditional pages depending on earlier answers. In a plain Model View Controller build, each screen owns its own input controller, and that controller decides two things after it runs its work. which command to execute against the domain model, and which view to render next. When there is one screen this decision is trivial and belongs entirely inside that one controller.
 
 **Observable Symptoms:**
+
 - More than one input controller can reach the same downstream screen, or the
 - The order of screens, or the set of legal next screens, depends on
 - The team wants the flow itself to be inspectable and changeable in one
 
 **Failure Mode Symptoms:**
+
 - The God controller. Symptom. One Application Controller class, or one
 - Stale state after a deploy. Symptom. A user with an in-progress wizard
 - Silent default routing. Symptom. Users occasionally land on a fallback or
@@ -5035,6 +5193,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application built with an object model needs to persist a relationship where either side can be associated with more than one instance of the other. A Book can have several Authors, and an Author can write several Books. In the object world this is unremarkable. Each side simply holds a collection of the other. In the relational world it is a genuine problem, because a relational column stores exactly one value per row, and there is no column type for "a variable number of foreign keys." A reader who has hit this problem in their own codebase usually recognises it as the moment a straightforward foreign key column stops working. Foreign Key Mapping handles a Book belonging to one Publisher by adding a publisherid column to the books table, but there is no symmetric place to put a list of author identifiers, and no symmetric place on the authors table to put a list of book identifiers either. The problem sits specifically at the boundary between an object model that treats "many" as a first-class collection type and a relational model that treats every column as single-valued. It arises in any application with a rich domain model layered over a relational store, and it disappears entirely on a document database where a many-valued reference is a native field type.
 
 **Failure Mode Symptoms:**
+
 - Adding to author.books silently does not persist after flush. The collection mutated is the non-owning side of a bidirectional @ManyToMany, and the owning side's collection was never updated, so the mapper never issues the write. The observable symptom is that a change reads back correctly within the same in-memory session but disappears after a fresh load.
 - A list screen showing books with author names issues hundreds of queries under load. Lazy-loaded book.authors triggers a fresh query per row (the N+1 problem) when the list is iterated. The observable symptom is a page that is fast with ten rows of test data and slow in production with a thousand.
 - Inserting the same pairing twice throws a constraint violation deep in application code, far from the add call. No pre-check ran before the insert, and the composite primary key or unique constraint correctly rejects the duplicate at the database, but the exception surfaces at the SQL layer rather than at the point where the duplicate add happened.
@@ -5047,6 +5206,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain model built with proper object-oriented inheritance, a Player base class with Pitcher and Fielder subclasses each carrying fields the other does not need, sits naturally in memory as a type hierarchy. A relational database has no native concept of inheritance. It has tables, rows, and foreign keys. The moment a team decides the domain model should keep its inheritance structure, rather than being flattened into value objects or a single generic entity, someone has to decide how that hierarchy becomes tables.
 
 **Failure Mode Symptoms:**
+
 - A report author or a new engineer writes raw SQL against what
 - A polymorphic "list all players" screen gets measurably slower
 - An insert into the leaf table throws a foreign key violation
@@ -5059,6 +5219,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** HTTP, as originally specified, is a stateless request-response protocol. Each request a browser sends arrives at the server with no memory of any request that came before it. A shopping cart, a partially completed multi-step form, a logged-in user's identity, none of that exists unless something explicitly carries it forward from one request to the next. The moment an application needs to remember anything about a specific visitor across more than one HTTP exchange, it needs a session, and that session's data has to live somewhere.
 
 **Failure Mode Symptoms:**
+
 - Symptom, users report seeing stale roles or permissions after an
 - Symptom, a user who was logged out, or whose account was disabled,
 - Symptom, session data silently reverts to an older value after two
@@ -5071,11 +5232,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object graph in an enterprise application is rarely a single row. A customer has addresses. An order has line items. A purchase order has approval steps. A shopping cart has line items and a coupon. In every one of these, the objects form one conceptually coherent unit from the point of view of the business rule that governs them, and they are usually loaded, displayed, and edited together in a single screen or a single API call.
 
 **Observable Symptoms:**
+
 - A screen edits a customer's name and, in the same save, adds a new address.
 - A second user, in a second session, deletes one of the customer's existing
 - The screen needs to discover every object it must lock before it can even
 
 **Failure Mode Symptoms:**
+
 - Judgement. The symptoms below are drawn from common experience with the
 - , cause, fix triples so the diagnosis can be acted on directly.
 - A save of a newly added dependent object succeeds silently even
@@ -5089,6 +5252,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application's domain model contains a base type with several concrete subtypes, each subtype adding its own fields, and the persistence layer must map that hierarchy onto tables in a relational database that has no native representation of inheritance. This is the identical starting problem shared by all three of Fowler's inheritance mapping patterns, and Concrete Table Inheritance is one of three competing answers, not a standalone technique invented in isolation.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A shared field's schema constraint, for example a NOT NULL
 - Symptom. A polymorphic report or dashboard that queries every payment
 - Symptom. Two rows in different concrete tables share the same primary
@@ -5100,6 +5264,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application has a domain model made of objects with behavior, and a relational database made of tables, rows, and columns with no behavior. The two representations do not line up. An object can hold a collection, a polymorphic reference, or a graph of associations that a single table cannot express directly, and a table enforces a flat, typed, set-based structure that an object graph does not naturally have.
 
 **Failure Mode Symptoms:**
+
 - N+1 query storms. Symptom. A page or endpoint that lists N domain objects
 - Anemic domain model creeping back in. Symptom. The mapper class grows
 - Half-saved object graphs. Symptom. An Order with three LineItem
@@ -5110,6 +5275,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two processes, or two tiers within the same process boundary that are treated as independently deployable, need to exchange structured data, and the cost or the coupling of exchanging that data naively is unacceptable.
 
 **Failure Mode Symptoms:**
+
 - Every internal service call in a monolith passes DTOs instead of
 - A client sends a JSON body updating their display name, and their
 - A report generation endpoint that used to be fast now times out
@@ -5121,11 +5287,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A web application needs to remember something about a user across more than one HTTP request, a shopping cart, an authenticated identity, a wizard's partial answers, a rate-limit counter, and HTTP itself supplies no place to put it. The three sibling patterns in this family exist because that gap has to be filled somewhere, and the three obvious somewheres are the client, one server's memory, or a store every server can reach.
 
 **Observable Symptoms:**
+
 - More than one application server instance must be able to service any
 - Session data must survive an individual server crashing, restarting for a
 - The team already operates, or is willing to operate, a durable data store
 
 **Failure Mode Symptoms:**
+
 - , request latency spikes under load and the connection pool
 - , the sessions table grows without bound, storage and backup costs
 - , a user reports that changes made in one browser tab silently
@@ -5138,13 +5306,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Data Mapper separates the in-memory domain model from the database schema by giving each persistent class a mapper responsible for moving its state to and from rows. Applied literally and uniformly, that rule produces one mapper class per domain class, each with its own find, insert, update and delete methods, and, for classes that need one, its own Identity Field.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Domain Model](../patterns/06-enterprise-application-architecture/domain-model.md)
 
 **Core Problem:** An enterprise application accumulates business rules over its life, pricing tiers, discount eligibility, order-state transitions, tax jurisdictions, credit limits, cancellation windows. Early in a project these rules are few and the obvious place to put them is wherever the request handler already sits, one if block per rule. This is Transaction Script, and it is the right choice while the rule count is small (see the trade-off matrix in dimension 12).
 
 **Failure Mode Symptoms:**
+
 - Every domain class in the codebase has only getters, setters,
 - A single write to one Order triggers dozens of SQL SELECT
 - Two team members each add a validation rule to what looks like
@@ -5156,6 +5326,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application's domain model routinely needs small objects that group a handful of related fields into one meaningful unit. a Money type pairing an amount with a currency code, a DateRange pairing a start and an end date, an Address pairing a street, a city, and a postal code, a PhoneNumber pairing a country code with the local number. These objects have no identity of their own. two Money instances holding 10 USD are simply equal, not two different things that happen to hold the same value. They are typically immutable, replaced wholesale rather than mutated in place, and they are meaningless without the entity they describe. a DateRange only matters as the tenure of a specific Employment.
 
 **Failure Mode Symptoms:**
+
 - The application starts throwing constraint violations or
 - Every schema migration that touches a widely embedded value
 - A reporting or analytics query that needs to aggregate or
@@ -5166,6 +5337,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object model represents an association between two entities as a direct object reference. An Order object holds a Customer reference field. Walking the association in code is order.getCustomer(), a pointer dereference with no visible cost and no query in sight. A relational schema has no pointers. It has rows, and the only mechanism a relational database offers for connecting one row to another is a foreign key column, a value in one table that is expected to match the primary key value of a row in another table. The column is a value, not a reference, and the database enforces nothing about it unless a FOREIGN KEY constraint is declared, at which point the database enforces only referential integrity, never object identity.
 
 **Failure Mode Symptoms:**
+
 - The N+1 query problem. Symptom. A list page that renders a hundred orders
 - Dangling foreign keys with no database-level constraint. Symptom. A
 - Confusing "no association" with "association to a deleted row". Symptom. A
@@ -5176,6 +5348,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A web application grows past a handful of pages. Each page, or each family of related actions, gained its own entry point over time, a servlet here, a PHP script there, an action class registered against its own URL pattern. Every one of those entry points needs the same handful of things done before its own logic runs. The user's session needs to be checked. The request's locale needs to be resolved so the right resource bundle loads. An audit log line needs to be written. A CSRF token needs to be validated on anything that mutates state. None of that behavior is specific to any one page, and none of it belongs to the page's own logic, but because there is no single place where "before any page runs" code can live, it gets copied into every entry point instead, or bolted onto a base class that every page controller inherits from and every new developer has to remember to extend correctly.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The Handler class has grown to several thousand lines with dozens
 - Symptom. Adding a new page or action requires editing a shared dispatch
 - Symptom. An unhandled exception in one rarely used action, an export
@@ -5187,13 +5360,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application needs to talk to something outside its own object model. a payment processor's REST API, a legacy mainframe over a proprietary binary protocol, a third-party geocoding service, a message queue with its own client library, a relational database accessed through raw SQL, a SOAP service with a generated stub full of nullable wrapper types. Whatever that something is, it has its own vocabulary, its own error model, its own authentication scheme, and its own way of representing "the thing went wrong."
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Identity Field](../patterns/06-enterprise-application-architecture/identity-field.md)
 
 **Core Problem:** An in-memory object system and a relational database use two different, and incompatible, notions of identity.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two objects that represent the same logical entity are
 - Symptom. An UPDATE silently updates zero rows, or updates the wrong
 - state, a classic symptom when a sequence is manually reset lower than the
@@ -5206,9 +5381,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object-relational mapping layer loads rows from a database and turns them into in-memory objects. The moment more than one code path in the same unit of work can trigger a load of the same row, two failure modes appear together, and neither one announces itself with an obvious stack trace.
 
 **Observable Symptoms:**
+
 - Patterns of Enterprise Application Architecture, 2002, Object-Relational
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two objects that are supposed to represent the same row compare
 - Symptom. Memory usage in a long-running worker process climbs steadily
 - Symptom. A read that should reflect a very recent external change (a row
@@ -5220,6 +5397,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Optimistic Offline Lock and Pessimistic Offline Lock both solve the problem of detecting or preventing conflicting concurrent business transactions, but both share a second problem that sits one layer above the mechanism. Once a team decides to use version checking or explicit row locks, that decision has to be applied consistently, everywhere a business transaction touches shared data, for the lifetime of the application, by every developer who ever edits that codebase.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Data silently reverts to an older state, or one user's change
 - Symptom. A production incident where OptimisticLockException or
 - Symptom. Frequent, unexplained conflict exceptions on a single entity
@@ -5230,6 +5408,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain model with an inheritance hierarchy, a base Employee class with SalariedEmployee, CommissionedEmployee, and HourlyEmployee subclasses, needs a persistence layer that can load any employee by identifier without the caller knowing which concrete subtype the row represents, and that can save any of the three subtypes without duplicating the logic that is common to all employees. Data Mapper already solves the general shape of this problem for a single class, one mapper object per persistent class, responsible for translating between the in-memory object and the database row (see the related Data Mapper entry). Inheritance introduces a second question Data Mapper alone does not answer, whether that "one mapper per persistent class" rule should hold for every level of a hierarchy or collapse into one mapper that branches internally on type.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A newly added subtype loads correctly by identifier but never
 - Symptom. Two engineers add subtypes in parallel feature branches, both
 - Symptom. The abstract mapper's find method is edited to add a new
@@ -5241,13 +5420,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An enterprise application is organized into layers, most often domain logic, data source access, and presentation, and each layer accumulates many sibling types over the life of the project. A domain layer ends up with dozens of entity classes, Order, Customer, Invoice, Shipment. A data source layer ends up with one mapper or repository class per entity. A presentation layer ends up with one controller per resource or one page handler per screen.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md)
 
 **Core Problem:** An object graph persisted in a relational database is, by its nature, larger than any single query needs. A Customer row references an Order table that can hold years of history, an Order references OrderLine rows, an OrderLine references a Product, and a Product references a Supplier. Reconstructing a Customer object from the database means deciding, at the moment of the query, how much of that graph to bring into memory.
 
 **Failure Mode Symptoms:**
+
 - LazyInitializationException, or its equivalent under any name.
 - , an exception thrown from deep inside a serializer or a view
 - N plus 1 queries. Symptom, a request that should cost one or two
@@ -5260,6 +5441,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two subsystems need to exchange information, but neither one should hold a compile time or a conceptual dependency on the other's shape. A domain object should not know the column names of the table it is stored in. A REST client should not force its domain model to mirror an upstream vendor's JSON schema. A rules engine should not require the objects it evaluates to implement its own marker interfaces.
 
 **Failure Mode Symptoms:**
+
 - , a mapped list operation is dramatically slower than expected and the
 - , two objects representing the same underlying record behave
 - , a field silently stops appearing in the saved or loaded data with no
@@ -5270,6 +5452,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object-relational mapper needs to know, for every persistent class, which table it corresponds to, which column each field maps to, how associations between classes translate into foreign keys or join tables, which fields are computed rather than stored, and how inheritance hierarchies flatten into relational structures that have no native concept of inheritance. In a system with a handful of classes, a developer can write this knowledge directly into hand-rolled mapper code, a save method that reads each field off the object and writes it into a parameterized INSERT statement, and a load method that reads a ResultSet and calls the matching setter for each column.
 
 **Failure Mode Symptoms:**
+
 - Symptom. An N+1 query storm appears in production logs, where a
 - Symptom. A field silently stops being persisted after a refactor
 - Symptom. A production incident traces back to a metadata change that
@@ -5280,6 +5463,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system that touches prices, balances, fees, taxes, discounts, refunds, or payroll needs to represent a quantity of currency and do arithmetic on it. The obvious first move in most codebases is to reach for the language's built-in floating point type, a double or a float, because it already knows how to add, subtract, multiply, and print a number with a decimal point.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A shopping cart or invoice total is off by one or two cents from
 - Symptom. An allocation of a stored total across line items, invoice
 - Symptom. A currency-mismatch bug reaches production despite the Money
@@ -5291,6 +5475,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A business transaction in an enterprise application often spans more than one system transaction. A person opens an edit screen, which issues a database read and commits it. The person then looks at the data, thinks, perhaps steps away for lunch, and eventually submits a change, which issues a second, independent database write and commits that. Between the read and the write there is no open database transaction holding any lock, because holding a database lock across human think time would starve every other session waiting on the same row. This gap is the exact thing the word offline names in the pattern's title, offline with respect to the database, not offline with respect to the network.
 
 **Failure Mode Symptoms:**
+
 - Silent conflict swallowing. Symptom, a user reports that an edit they
 - Version field bypassed by a second write path. Symptom, conflicts stop
 - Retrying blindly without reloading. Symptom, an automatic retry after a
@@ -5303,6 +5488,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A web application must translate an incoming HTTP request into a specific piece of server-side behavior and a specific response. A team building such an application quickly reaches the question of where that translation lives. The most direct answer, and the one that predates any framework, is to give every distinct URL, or every distinct kind of request, its own piece of code that owns the full request-to-response lifecycle for that one case, reading the request's parameters and headers, deciding what domain logic to invoke, gathering the data the response needs, and handing that data to whatever renders the page.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A security check (an authentication or authorization gate) is
 - Symptom. The same three or four lines of code (loading the current
 - Symptom. Business logic (validation rules, calculations, decisions about
@@ -5313,6 +5499,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A business transaction in an enterprise application routinely spans more than one system-level request. A person opens a purchase order for editing, looks at the current line items, steps away for a phone call, comes back, changes the quantity on line three, and clicks save. Between the open and the save there might be one request or there might be forty, and there might be five minutes or five hours. During that whole window, no database transaction is open. The system transaction that fetched the order to display it committed the instant the read finished. The system transaction that will apply the save has not started yet. The application-level business transaction, the person's single continuous act of editing this one order, has no database mechanism protecting it at all, because a database transaction that stayed open for the whole editing session would hold row locks or MVCC snapshot resources for an unbounded and unpredictable length of time, which no production database tolerates well under real concurrent load.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Users report that a record is permanently stuck as locked by a
 - Symptom. A migration script or a nightly batch job silently overwrites
 - Symptom. Under moderate concurrent load, most edit-start requests for a
@@ -5323,6 +5510,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application has a piece of behavior that legitimately differs across deployments, and the difference is not a business rule that changes with input, it is a difference in which implementation runs at all. A payment service uses a real gateway in production and an in-memory fake in the test suite. A CMS runs with a MySQL adapter for one customer and a Postgres adapter for another. An IDE ships a syntax highlighter for the languages its authors anticipated, and needs a path for a third party to add support for a language they did not.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The application throws a class-not-found or no-implementation-found
 - Symptom. Adding a new extension point becomes a multi-day task involving
 - Symptom. Two plugins silently fight over the same piece of state, and the
@@ -5335,6 +5523,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application needs to ask its data source for a set of objects that satisfy some condition, and the condition is not known ahead of time. It might come from a search form with optional fields, a report with a user-selected date range, an admin screen letting an operator combine two or three filters, or business logic that composes a base query with additional restrictions depending on the caller's role.
 
 **Failure Mode Symptoms:**
+
 - Two unrelated features start returning results that are subtly
 - A page or endpoint that looks like it issues one query, reading the
 - One specific report or query, written as an escape-hatch raw SQL
@@ -5346,6 +5535,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is building a screen, or a report, or a batch step, that needs to work with data shaped exactly like a SQL query result. Rows, columns, column names, column types. The consuming code does not want a domain object graph with navigation and behaviour, it wants a table it can bind a grid to, sort, filter, and sometimes edit and write back.
 
 **Failure Mode Symptoms:**
+
 - Lost update under optimistic concurrency. Symptom. Two users open the
 - Out-of-memory from an unbounded query. Symptom. The process hosting the
 - Business logic smeared across event handlers. Symptom. A validation rule
@@ -5358,6 +5548,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object, buried several calls deep inside a request, a batch job, or a background worker, needs something it was not given directly. a database connection, the currently configured tax calculator, a logger, the active locale, a payment gateway implementation chosen at deploy time rather than compile time. Passing that thing down explicitly, as a parameter through every intervening method, is the textbook-correct answer and it is also the answer that degrades a codebase's readability the moment the call chain is more than two or three frames deep. Every method on the path acquires a parameter it does not use itself, only forwards, and every future caller of every one of those methods must supply it too, whether or not the caller has an opinion about which tax calculator is in force.
 
 **Failure Mode Symptoms:**
+
 - The symptom, cause, fix format below is drawn from patterns observed
 - A service is null, nil, or throws "not registered" on
 - A unit test passes when run alone and fails when run as part
@@ -5370,6 +5561,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A well-factored domain model in a single process is built from many small, single-purpose objects. an Order that holds a list of LineItem objects, each LineItem referencing a Product, a Customer with an Address, a series of getter and setter calls that read naturally as order.getCustomer().getAddress().getCity(). Inside one process this granularity is a virtue. small objects with narrow responsibilities are easy to test, easy to compose, and each method call costs a handful of nanoseconds, so nobody thinks twice about calling five of them to answer one question.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The facade exposes a single giant method, or a small number of
 - Symptom. Business rules, discount calculations, validation logic, or
 - Symptom. A page or a batch job that calls the facade shows unexpectedly
@@ -5381,11 +5573,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase has business logic that needs to read a single row from a relational table, change some of its columns, and write the row back. The team wants that access wrapped behind a language-native interface, an object whose fields the calling code reads and writes with ordinary property access, because writing raw SQL or handling a cursor at every call site scatters knowledge of the schema across the codebase and makes every caller responsible for column names, parameter binding, and null handling.
 
 **Observable Symptoms:**
+
 - The application already organizes its logic outside the data classes, most
 - The schema maps closely to the language's native types, so the gateway's job
 - More than one kind of caller needs the same row, for example a web
 
 **Failure Mode Symptoms:**
+
 - A list page or a report takes noticeably longer as the data
 - Two users editing what looks like the same record in the UI
 - A code review or an architecture discussion cannot agree on
@@ -5397,6 +5591,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A component in one part of a system needs to call a component in another part, but the natural, obvious dependency direction is backward from where the architecture wants it to be. The clearest recurring case is a low-level, general-purpose package, a persistence framework, a logging library, a domain model, that needs to call something whose implementation is necessarily specific to one deployment, one platform, or one high-level application that sits above it in the intended layering. If the low-level package imports the high-level package directly to make that call, the dependency arrow now points the wrong way. The reusable package stops being reusable, because it now drags along whatever concrete class sits above it, and every deployment of the low-level package must also ship the high-level one, whether that deployment needs it or not.
 
 **Failure Mode Symptoms:**
+
 - than a single cited source per item. Each entry states the observable symptom
 - Every class has a matching IFoo or FooInterface with
 - A ClassNotFoundException, a NoSuchProviderException, or an
@@ -5409,6 +5604,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Object models are good at representing composite structures. A department has child departments, an employee reports to a manager who reports to another manager, a document has sections that have paragraphs that have runs of formatted text. In memory this is naturally a tree or a graph, and code that walks it is straightforward recursive traversal. The relational model has no native concept of a composite structure. A tree becomes a table with a self-referencing foreign key, or a set of tables joined by foreign keys at every level, and reading the whole tree back out requires either a recursive common table expression, a fixed number of joins bounded by the maximum depth, or N+1 individual queries walking down one level at a time.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A new report or analytics query is requested against a field
 - Symptom. After a routine deployment, previously stored rows fail to
 - Symptom. Two services or two background jobs each update a different
@@ -5419,6 +5615,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** HTTP is stateless. Each request arrives at the server with no memory of the request before it, and the connection that carried it may already be closed by the time the response goes out. A shopping cart, a partially filled multi-step form, an authenticated identity, the current page of a paginated search result, all of these are conversations that span more than one request, and HTTP gives the application nothing to hang that conversation on.
 
 **Failure Mode Symptoms:**
+
 - The unstuck instance. Symptom. Users are randomly logged out or see
 - The unbounded store. Symptom. Memory usage on application servers
 - The single point of failure disguised as a cache. Symptom. An entire
@@ -5430,6 +5627,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An enterprise system routinely depends on a service it does not own and cannot fully control. A credit bureau that scores an applicant. A government tax authority that returns the rate for a jurisdiction. A payment processor. An address-validation vendor. A partner's pricing engine that has not shipped yet, or has shipped but only to a staging environment the whole team shares.
 
 **Failure Mode Symptoms:**
+
 - Silent contract drift. Symptom. A production incident traced to the real
 - Stub reachable in production. Symptom. Real customers receive obviously
 - Stub over-fitted to the happy path. Symptom. A fully green test suite, and
@@ -5441,12 +5639,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object model has a natural inheritance hierarchy. A base type carries shared fields and shared behaviour, and several subtypes each add a small number of fields or override a small number of methods. The relational database that will store these objects has no concept of inheritance at all, only tables, columns, and rows.
 
 **Observable Symptoms:**
+
 - The hierarchy is queried across subtypes far more often than it is queried
 - The number of subtype-specific columns is small relative to the shared
 - The hierarchy is shallow, typically one or two levels, and reasonably
 - The team values the operational simplicity of one table, one set of
 
 **Failure Mode Symptoms:**
+
 - Column count creep. Symptom. A migration history that adds two or three
 - Silent integrity loss on a mandatory subtype field. Symptom. A production
 - Discriminator value drift between code and data. Symptom. A subtype's
@@ -5459,11 +5659,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of client code asks a collaborator for information and then has to decide what to do about a boundary condition before it can use the answer. The boundary condition is not a full-blown failure, it is a legitimate, expected state of the domain. The customer field is unset, the account has no payments on record yet, the geographic lookup returned nothing because the postcode is outside the service area, the employee has not yet been assigned to a team. Because the collaborator cannot represent "nothing, but it is fine" as an ordinary instance of its own type, it returns null, or throws an exception, or returns a boolean flag alongside the real answer, and pushes the decision about what "nothing" means back onto every caller.
 
 **Observable Symptoms:**
+
 - The boundary condition recurs at more than one call site. A single
 - The special behavior for the boundary condition is itself simple and
 - The interface being substituted is genuinely an interface a client already
 
 **Failure Mode Symptoms:**
+
 - An instanceof/isinstance/type check against SpecialCaseType
 - A special-case customer silently fails to persist a write, and
 - Equality comparisons or hash-based lookups involving the special
@@ -5475,9 +5677,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application needs to read and write rows in a table, and the two paths that seem obvious both go wrong at scale.
 
 **Observable Symptoms:**
+
 - Patterns of Enterprise Application Architecture, "Table Data Gateway", 2002).
 
 **Failure Mode Symptoms:**
+
 - A gateway method named update silently overwrites columns the
 - A finder method's SQL grows an unreadable pile of optional
 - Business logic that clearly belongs to the domain, discount
@@ -5489,6 +5693,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is building a business application against a relational database using a technology stack whose native data-access layer hands back an in-memory, table-shaped structure rather than individual domain objects. The classic case, and the one Fowler wrote the pattern around, is a .NET application using ADO.NET's DataSet, DataTable, and DataAdapter classes, or a typed DataSet generated by the Visual Studio TableAdapter wizard. The result of a query is not a list of Customer objects, it is a DataTable whose Rows collection holds untyped or loosely typed rows, each addressable by column name or index, and the whole table travels together as one unit that can be serialized to XML, bound to a grid, and shipped across a service boundary intact.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A CustomerTableModule method that started as a five-line
 - Symptom. The Table Module class accumulates dozens of unrelated methods
 - Symptom. Persistence bugs appear where a change made through the Table
@@ -5499,6 +5704,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system has finished computing a result, a customer record, a list of orders, a search result set, and now has to turn that result into an HTML document a browser can render. The shape of the output is close to static. A header, a navigation strip, a table structure, a footer, and only a handful of cells or rows actually change from one request to the next. Writing the HTML generation in ordinary program code, string concatenation, print statements, a sequence of calls that each append a fragment, works, and it is exactly the failure mode this pattern exists to remove. Every literal angle bracket, every closing tag, every attribute quote becomes a string literal buried inside a function, and a person who edits HTML for a living, not a programmer, cannot open that function and change the page layout without also understanding the surrounding program.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A production incident traces back to a SQL query, or a call
 - Symptom. Page render time grows noticeably worse after a release with no
 - Symptom. A cross-site scripting report comes in against a page that
@@ -5509,6 +5715,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is building a business application, an order system, a billing system, a claims processor, anything where the software's job is to carry out operations that a business analyst would recognize and name, place an order, transfer funds, calculate a bonus, recognize revenue on a contract. Each of those operations reads a request, applies some rules, touches a database, and returns a result. The question the team faces before writing a line of code is where the logic for "transfer funds" should live.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The same business rule, phrased slightly differently, is fixed
 - Symptom. Unit tests for business rules are slow, flaky, or simply do not
 - Symptom. A single Script has grown past several hundred lines, contains
@@ -5520,6 +5727,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application has assembled everything it needs to render a response. The domain model has been queried and business rules have run, and a data structure now sits in memory, needing only formatting to become a page. The remaining job is narrow and specific. Turn that data into the markup a browser, a print engine, or another downstream consumer expects.
 
 **Failure Mode Symptoms:**
+
 - Rule-set scanning cost. Symptom. Response latency for a specific page
 - Missing fallback rule. Symptom. A page renders correctly for typical data
 - Two transform sets drifting apart. Symptom. Two teams maintaining
@@ -5531,6 +5739,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A web application with more than a handful of pages needs every page to share a consistent visual identity. The header, the navigation chrome, the color scheme, the typography, and the overall page structure should look the same whether the visitor is on the product page, the checkout page, or the search results page. When a site is built with Template View or Transform View alone, that consistency is produced by discipline, not by structure. Each page template, or each transform module, independently encodes the decision that a section heading renders as an h2 element with a particular class, that a table of results renders with a particular border and striping, that a money value renders with a particular currency symbol and decimal formatting.
 
 **Failure Mode Symptoms:**
+
 - A new page type is added, and the developer discovers that
 - The Formatter contains conditional branches that check for a
 - Two Formatters, an HTML Formatter and a PDF Formatter, produce
@@ -5541,6 +5750,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An operation touches several objects that came from, or are destined for, a database. Somewhere in the middle of a request handler, a domain service loads a customer, adjusts two of its addresses, creates a new order, and marks an old invoice as paid. Each of those four objects is a separate persistent thing. The naive approach saves each one the moment it changes, issuing an UPDATE right after the address mutation, an INSERT right after the order is built, and another UPDATE when the invoice status flips.
 
 **Failure Mode Symptoms:**
+
 - The N+1 flush, sometimes called excessive auto-flushing. Symptom. A
 - Detached entity, lazy-load-after-close. Symptom. An exception such as
 - Cross-request unit of work leakage. Symptom. One user's uncommitted
@@ -5554,11 +5764,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain concept, an amount of money, a date range, a phone number, a geographic coordinate, a color, has more than one primitive field and a rule about how those fields combine, but the code represents it as loose primitives passed around individually, or as a mutable class with public setters and no behavior of its own.
 
 **Observable Symptoms:**
+
 - The concept is defined entirely by its data. There is no meaningful answer to
 - The concept has at least one invariant or one piece of behavior that belongs
 - Two instances holding equal data are genuinely interchangeable everywhere the
 
 **Failure Mode Symptoms:**
+
 - Shallow immutability through a mutable field. Symptom. Two Value Objects
 - BigDecimal's equals disagreeing with numeric equality. Symptom. A Value
 - Deserialization bypassing the validating constructor. Symptom. A Value
@@ -5575,6 +5787,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system receives several messages that only make sense together, and no single message carries enough information to act on. A price quoting service asks three suppliers for a price and cannot answer the customer until it has heard from all three, or has waited long enough to decide it will not hear from a fourth. A claims processor splits a batch of a thousand line items, farms each one out for independent validation, and cannot mark the batch complete until every line item has reported back, or until enough have reported back that the remainder are written off as failed. An order fulfilment system fires a message when payment clears and a separate message when the warehouse confirms stock, and the shipping step must wait for both before it can run, because shipping on payment alone risks shipping stock that is not there, and shipping on stock confirmation alone risks shipping before payment clears.
 
 **Failure Mode Symptoms:**
+
 - Memory or storage for the group store grows without bound over
 - Two contributor messages for the same logical event are
 - The aggregated result is correct on a quiet system and wrong
@@ -5586,6 +5799,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An enterprise with N independently developed systems that must exchange data pairwise needs, in the worst case, N times (N minus one) point-to-point translators if each system speaks its own format and must understand every other system's format directly. At N equal to five that is twenty translators. At N equal to fifteen it is two hundred ten. A reader who has never heard the pattern's name will recognize this problem the moment a third system needs to talk to the first two, because the third system either needs two new bespoke translators or, worse, someone quietly decides it should just learn the first system's format directly and the second system's format becomes an afterthought maintained by whoever last touched it.
 
 **Failure Mode Symptoms:**
+
 - the canonical schema grows an ever-increasing set of optional, rarely-populated fields, and new integrators are confused about which fields they actually need to fill in.
 - a change to the canonical schema that was intended to be backward-compatible breaks an existing adapter in production.
 - two systems that both consume the same canonical Customer entity interpret a shared field differently, producing silently incorrect data (for example, one system treats effectiveDate as the contract signing date and another treats it as the service start date).
@@ -5597,11 +5811,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application was written to be called, to poll a database, to read a file, or to raise an in-process event. It was not written with any notion of a Message Channel, because the concept postdates the application, belongs to a different team, or belongs to a vendor product whose source is not available to modify. A messaging-based integration architecture nonetheless needs this application's data and events to move through the same channels every other participant uses, so a Message Router, a Message Translator, or a downstream consumer can treat this application's output the same way it treats output from an application that was messaging-aware from day one.
 
 **Observable Symptoms:**
+
 - The application's source is closed, vendored, or owned by another team.
 - Coupling the application to a specific broker client library locks the
 - The application's native interaction model rarely matches a channel's
 
 **Failure Mode Symptoms:**
+
 - Duplicate downstream processing after any adapter restart or
 - The adapter becomes the single largest, hardest-to-change
 - A synchronous caller times out waiting for a response that
@@ -5613,6 +5829,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A messaging system accumulates state on its channels in the form of undelivered or unconsumed messages sitting in a queue, a topic partition, or a durable subscription. Under normal operation this is exactly the point of a durable channel. a consumer that is briefly down should not lose work, and a message that arrives before its consumer is ready should wait rather than vanish. The problem this pattern addresses is what happens when that same durability becomes a liability, specifically in three recurring situations.
 
 **Failure Mode Symptoms:**
+
 - A test suite passes when run alone but fails intermittently when run
 - An operator runs a purge intending to clear a small number of known
 - A purge is reported as successful and the channel appears empty
@@ -5624,11 +5841,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A component in a message-based system needs to communicate a large amount of data, an image, a video, a document, a bulk export, a machine learning feature vector, a full customer record, to one or more downstream components, but the transport connecting them was not built to carry that much data per message.
 
 **Observable Symptoms:**
+
 - The payload is large relative to the transport's practical or enforced
 - A durable, addressable external store already exists, or is cheap to stand
 - Not every downstream component needs the payload itself. Some only need
 
 **Failure Mode Symptoms:**
+
 - Symptom. A consumer receives a message, resolves the claim check, and
 - Symptom. Storage costs for the external store grow unbounded over
 - Symptom. A load test or a security review discovers that anyone who can
@@ -5640,6 +5859,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application wants another application, or another component in the same system, to perform a specific piece of work. The obvious tool for "do this thing" is a direct procedure call, a REST POST, a gRPC call, a local method invocation. That works when the caller can afford to block until the work is done, when the callee is guaranteed to be reachable right now, and when the caller does not care whether the work eventually completes if the callee is temporarily down. Those three assumptions collapse constantly in a real distributed system. The callee may be offline for a deployment. The operation may take longer than any sane HTTP timeout. The caller may need to fire off work from inside a database transaction and cannot risk a network call failing mid-commit. The system may need to replay the instruction later, audit that it happened, or retry it with the same guarantees as a database insert.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A customer is charged twice, or an order ships twice, with no
 - Symptom. Commands silently pile up in the queue with no processing, and
 - Symptom. A command is processed correctly but the sender never learns the
@@ -5652,11 +5872,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A producer or a set of producers places units of work onto a channel faster, or in bursts faster, than a single consumer can process them. The channel is not the bottleneck, the processing step is. A single-threaded consumer that reads one message, does the work, reads the next message, is bound by the slowest stage of that loop, and every message not yet read sits waiting in the channel, growing the backlog and the end-to-end latency for whichever message happens to be at the back of the line.
 
 **Observable Symptoms:**
+
 - The channel is a Point-to-Point Channel, meaning each message is intended
 - The units of work are independent of each other, or at least independent
 - The processing step, not the channel's own throughput, is the bottleneck.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two consumers both appear to have processed the same order,
 - Symptom. Queue depth keeps climbing even though the consumer pool is at
 - Symptom. One specific message type or one specific tenant's messages
@@ -5668,11 +5890,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message arrives that logically represents one unit of work, but different parts of that unit of work belong to different, independent systems, and none of those systems can process the whole message by itself.
 
 **Observable Symptoms:**
+
 - The sub-tasks are genuinely independent. none needs the output of another to
 - The set of destinations is a fixed, known partition of the work, decided at
 - The caller, or the process that raised the original message, genuinely needs
 
 **Failure Mode Symptoms:**
+
 - The combined response never arrives, and no error is ever
 - Under load, the Aggregator's memory or storage grows without
 - Two different callers see two different combined results for
@@ -5685,6 +5909,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message arrives at an integration point carrying less data than the next step needs. An order placed through a point-of-sale terminal carries a customer number but not the customer's shipping address, loyalty tier, or preferred language. A sensor reading carries a device identifier and a raw voltage but not the device's calibration curve or its physical location. A webhook from a payment processor carries a card's last four digits but not the cardholder's account standing. In every one of these cases, the originating system was never responsible for the missing data and often could not supply it even if asked, because the data lives in a different system of record.
 
 **Failure Mode Symptoms:**
+
 - Judgement. The symptoms below are drawn from how the pattern fails in
 - Throughput collapse under load with a quiet enricher. Symptom. The
 - Silent, unexplained missing fields. Symptom. Intermittent messages
@@ -5698,6 +5923,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A consumer receives a message that is far larger, richer, or more deeply nested than anything it needs, and forwarding or storing that full message creates real cost. It wastes bandwidth on a constrained channel, it couples the consumer's code to fields it never reads, so an unrelated schema change upstream can break a consumer that never touched those fields, or it exposes data the consumer has no business seeing at all.
 
 **Failure Mode Symptoms:**
+
 - This dimension states symptoms as a reader would actually observe them in
 - production, in Symptom, Cause, Fix form, per the project's own guidance for
 - distinguishing engineering judgement from sourced fact. The specific symptom
@@ -5712,6 +5938,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single logical message stream must be handled by more than one downstream consumer, and which consumer handles a given message depends on data inside that message, not on which channel it happened to arrive on.
 
 **Failure Mode Symptoms:**
+
 - The router grows into a business rules engine. Symptom. A single router
 - Silent drop on unmatched content. Symptom. Messages disappear with no
 - The router as an unintended single point of failure. Symptom. Every
@@ -5724,6 +5951,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Picture an order processing system built from a dozen independently deployed services, connected by message queues, spread across two data centers and a handful of partner endpoints reached over a VPN. Under normal load everything works. Then one Tuesday morning a downstream inventory service starts throwing errors because a schema migration landed without warning. Someone needs to answer, right now, three questions that have nothing to do with placing an order. Which components are currently up, what is the current depth of the retry queue feeding that inventory service, and can a single operator pause message delivery to that one component without touching anything else in the topology.
 
 **Failure Mode Symptoms:**
+
 - Control traffic starved by data traffic on a shared broker.
 - An operator sends a stop command to a runaway component during an
 - Unauthenticated control channel treated as a trusted internal detail.
@@ -5740,6 +5968,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A process sends a message and does not receive its answer over the same connection it used to send it. This happens whenever the transport is asynchronous, one-way, or fanned out, over a message queue, a pub-sub topic, a webhook callback, an event stream, or a batch of parallel outbound HTTP calls whose responses arrive out of order on shared infrastructure such as a connection pool or an event loop. Under a synchronous call, the runtime stack itself remembers which call is waiting for which answer, because the answer comes back on the same call frame that sent the request. Once the send and the receive are decoupled, that bookkeeping disappears, and the receiving side faces a genuinely hard question with an incoming pile of replies and no shared call stack to consult, which of my outstanding requests does this particular reply belong to.
 
 **Failure Mode Symptoms:**
+
 - Replies pile up in a dead-letter or unroutable-message queue,
 - The requestor's memory usage grows steadily over time under
 - A reply arrives for a correlation identifier the requestor has
@@ -5751,11 +5980,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A consumer reads a message off a channel and must decide how to process it before it can do anything with the payload. If the channel might carry more than one kind of business event, order placed, payment received, shipment delayed, the consumer's first job on every message is classification, not processing. That classification work is pure overhead relative to the consumer's actual purpose, and it grows linearly with every new message type the team adds to the shared channel.
 
 **Observable Symptoms:**
+
 - The consumer switch statement. The first substantial line inside a
 - The subscription filter that grows without bound. A team that shares one
 - The schema registry compatibility failure that looks unrelated. A
 
 **Failure Mode Symptoms:**
+
 - Symptom. A consumer that has run correctly for months suddenly throws a
 - Symptom. The channel directory has grown to contain several channels with
 - Symptom. A downstream process that depends on the relative order of two
@@ -5766,6 +5997,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message oriented system moves work between components through channels rather than through direct calls. A producer places a message, a consumer takes it off, does something with it, and normally the message disappears from the channel once it has been successfully processed. The entire design assumes that a message which enters a channel eventually leaves it through successful processing.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The dead-letter queue grows steadily and nobody notices for
 - Symptom. A message is redriven, fails again for the exact same reason,
 - Symptom. During a short outage of a downstream dependency, the dead
@@ -5777,6 +6009,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A production messaging pipeline is already carrying real traffic, and something about that traffic now needs closer inspection without stopping the pipeline to redeploy it. The concrete situations that create this need recur constantly in integration work. A new fraud-scoring step needs to run against real orders for two weeks before anyone trusts its output enough to let it block a payment. A newly onboarded trading partner's EDI feed keeps producing malformed documents and the integration team needs every message from that partner logged with full headers until the root cause is found. A support engineer needs to reproduce a customer's exact failure by replaying their traffic through an extra validation step that the rest of production traffic never touches. A compliance auditor needs six weeks of every message that passed through a particular channel, word for word, archived somewhere durable, and that requirement goes away once the audit closes.
 
 **Failure Mode Symptoms:**
+
 - Symptom. In-flight messages are inconsistently processed, some through
 - Symptom. A Detour built to log messages for debugging is silently
 - Symptom. The Control Bus channel becomes unreachable during an
@@ -5787,6 +6020,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two systems need to exchange a structured record, such as a customer record, a purchase order, a lab result, or a shipment manifest. Neither system needs the other to perform an action right now, and neither system is reporting that something happened. What is needed is simpler and older than either of those ideas. A reliable, well-typed transfer of data from a producer that holds it to a consumer that needs it, decoupled from any synchronous call, any shared database, and any assumption about what the receiver will do with the record once it arrives.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A downstream consumer silently drops or ignores fields it does
 - Symptom. The same invoice, order, or record appears twice in the
 - Symptom. A Document Message channel becomes the accidental place where
@@ -5798,6 +6032,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A publisher broadcasts events on a topic. Multiple independent parts of the system care about different subsets of those events, and none of them wants to poll the publisher, none of them wants a direct dependency on the others, and none of them wants to be the reason the publisher blocks. Publish-Subscribe Channel already solves the fan-out half of that problem, letting any number of subscribers register interest and receive a copy of every matching message.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A subscriber that was redeployed under a new pod name, container
 - Symptom. The broker's disk usage on a topic grows continuously and never
 - Symptom. Downstream records show duplicate side effects, a payment
@@ -5809,6 +6044,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message-routing component in a system needs to send a message onward, and the set of places it might send that message to is not fixed at the time the router is built, deployed, or even started. Three concrete situations produce this problem.
 
 **Failure Mode Symptoms:**
+
 - The expression that never returns null. Symptom. A single message drives
 - Stale rule base after a destination crash. Symptom. Messages continue
 - Unbounded rule base growth. Symptom. Router memory climbs steadily over
@@ -5822,6 +6058,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application was built to produce and consume data in its own native format, a flat file, a fixed-width record, a plain XML document with no messaging-specific fields, a CSV row. That application now needs to participate in a messaging system, and the messaging infrastructure demands things the application format was never designed to carry. A correlation identifier so a reply can be matched to its request. A return address so a reply channel is known. A format indicator so a receiver can tell what shape of payload it is looking at before parsing it. Header fields for routing, priority, encryption, or digital signing that a message bus or an enterprise service bus requires on every message that passes through it.
 
 **Failure Mode Symptoms:**
+
 - Header and body drift. Symptom. A field exists in both the envelope
 - Missing Format Indicator on an opaque envelope. Symptom. The unwrapping
 - Double wrapping. Symptom. A payload arrives already inside one envelope,
@@ -5834,6 +6071,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application performs an action that other applications, possibly ones the first application has never heard of and will never know about, need to react to. An order is placed. A price changes. A shipment leaves a warehouse. A user closes their account. The originating application knows this happened at the moment it happens. It does not know, and structurally should not know, which other systems care, how many of them there are, what each one intends to do about it, or when each one will get around to processing it.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A downstream service double-charges a customer, double-sends an
 - Symptom. A "cascading rebuild" incident where a large batch of stale or
 - Symptom. A command silently fails to happen anywhere, with no error
@@ -5845,6 +6083,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service needs to react when something happens elsewhere in the system, a payment is captured, an order is placed, a file lands in a bucket, a row is updated in another team's database. The naive first implementation is a loop that asks a queue or a database whether there is anything new on a fixed interval. That loop wastes CPU when nothing is happening, adds latency equal to half the polling interval on average, and gets harder to reason about the moment two or three services all poll the same source. Each additional poller multiplies load on the source and multiplies the chance that two pollers race for the same row.
 
 **Failure Mode Symptoms:**
+
 - Poison message loop. Symptom. Consumer lag on one partition grows
 - Duplicate side effects from at-least-once redelivery. Symptom. A
 - Silent rebalance storms. Symptom. Kafka consumer group throughput drops
@@ -5856,6 +6095,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message travels from a producer to a consumer, and at some point the consumer must decide how to parse the bytes it received. If the format of those bytes is fixed forever, and the producer and consumer are always upgraded in lockstep, the consumer can hardcode a single parser and the problem never surfaces. That situation almost never survives contact with a running system. Formats evolve. A JSON payload gains a new required field. A binary protocol adds a compression flag. An event schema splits one field into two. A file format moves from version 1 to version 2 to add metadata nobody anticipated at version 1's design time. The moment more than one valid shape of message can exist on the wire or on disk at the same time, whether because of a rolling deployment, a long-lived archive, or a multi-tenant system where different tenants are pinned to different schema versions, the consumer needs a way to know, before it commits to a parsing strategy, which shape it is holding.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A consumer silently produces subtly wrong data for a subset of
 - Symptom. Two components in the same system disagree about which format
 - Symptom. Adding a new format version breaks old consumers immediately,
@@ -5867,6 +6107,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service publishes an event or sends a command onto a channel and then proceeds as if the message is on its way. If the message broker, the network link, or the receiving service crashes a millisecond after the sender's call returns, the message can vanish, and nothing downstream will ever know the event happened. In a request-response system this failure is visible, the caller gets an exception and retries. In an asynchronous messaging system built on a channel with no persistence, the failure is silent. Money that should have moved does not move, an order that should have shipped never ships, and the only trace is the absence of a downstream side effect that nobody is watching for.
 
 **Failure Mode Symptoms:**
+
 - , duplicate business effects (double charges, double shipments)
 - , the queue depth graph climbs steadily and consumers appear
 - , messages are occasionally lost despite the team believing
@@ -5878,6 +6119,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A receiver on a messaging channel is written against an expectation. The messages arriving on this channel will look a certain way. A stock trade processor expects an instrument identifier, a quantity, and a side. An order fulfillment consumer expects a customer identifier that exists, a shipping address with the required fields, and an item list that is not empty. That expectation is rarely, if ever, backed by a mechanism that guarantees it holds for every single message that arrives.
 
 **Observable Symptoms:**
+
 - A producer team deployed a new version of their service with a schema change
 - A human operator replayed an old, differently structured message from an
 - A message originates outside the organization's control, from a partner
@@ -5885,6 +6127,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The channel is shared by more than one message type in practice, even when
 
 **Failure Mode Symptoms:**
+
 - The channel becomes a graveyard nobody visits.
 - The invalid channel's depth grows steadily over weeks or months, and
 - Diagnosis is impossible because the envelope is too thin.
@@ -5903,6 +6146,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two applications need to exchange information without either one blocking on the other's availability, without either one dictating the other's internal data model, and without a network call failing catastrophically the moment a socket drops. A synchronous remote procedure call fails all three requirements at once. It requires both parties to be available for the duration of the call, it typically forces the caller to shape its request as a foreign method signature, and a dropped connection means the caller has no record that anything was ever attempted.
 
 **Failure Mode Symptoms:**
+
 - description draws on operational experience rather than a citable
 - A consumer processes the same business effect twice, for example
 - A new field added to a payload silently breaks an old consumer,
@@ -5915,6 +6159,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system starts with two applications that need to exchange data, and a direct point-to-point integration, a script that reads from one database and writes to another, or a synchronous API call, solves it well enough. The problem this pattern addresses appears once that count grows past two or three. Each new application that needs to participate multiplies the number of point-to-point connections that must be built, tested, and kept working, because a fully connected mesh of N applications needs on the order of N times N minus one divided by two direct links. Every new participant is not one integration, it is potentially every existing participant re-integrated with the new one.
 
 **Failure Mode Symptoms:**
+
 - The undocumented contract. Symptom. A producer changes a field's meaning or
 - The smart bus, dumb endpoints inversion. Symptom. Adding a new field of
 - Silent message loss on consumer crash. Symptom. A background job that
@@ -5927,6 +6172,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two independently deployed pieces of software need to exchange information, and the team building them does not want a synchronous, point-to-point network call between them. The reasons for avoiding a direct call are almost always the same handful of forces repeating in different clothing. The sender does not want to block on the receiver's availability. The sender does not want to know the receiver's network address, its scaling policy, or how many instances of it are currently running. The receiver's processing rate is slower, spikier, or less predictable than the sender's production rate, and the two rates must be allowed to differ without either side falling over. The data being exchanged should survive a restart of either process, or of the network link between them. And crucially, more than one application might eventually want to receive the same information, and the sender should not have to be rewritten every time a new consumer shows up.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Consumers silently process the same business event twice,
 - Symptom. Queue depth climbs steadily and consumer processing lag grows
 - Symptom. One malformed or unusually shaped message causes every consumer
@@ -5938,6 +6184,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single logical stream of work needs to be processed by more capacity than one consumer thread can provide, and the team wants that capacity applied without breaking three properties the naive fix destroys.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The process's memory grows without bound over hours and
 - Symptom. Messages are occasionally lost entirely after a crash or a pod
 - Symptom. Throughput plateaus far below the configured pool size, and CPU
@@ -5949,6 +6196,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message carries a request or a piece of data across an asynchronous boundary. The sender does not know, and generally cannot know, exactly when the receiver will process it. In a synchronous call the caller blocks and the request either completes or the caller gives up and moves on. In an asynchronous, queued system there is no caller sitting on a stack frame waiting. The message sits in a channel, potentially for seconds, potentially for hours, until a consumer becomes available and reads it.
 
 **Failure Mode Symptoms:**
+
 - A consumer reports processing far fewer messages than the
 - A message is delivered to a consumer, the consumer processes
 - A peek or browse operation on a queue returns a message that
@@ -5961,6 +6209,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A component sits on a message channel and receives every message that flows past, but it only knows how to handle a subset of them. Everything else is noise from its point of view, a different message type sharing the channel, a duplicate delivery, a message tagged for a different tenant or region, a sensor reading below a threshold of interest, an event whose payload fails a validation the receiver requires before it can proceed. Left unfiltered, the component either crashes on the unexpected shape, silently mishandles it, or carries defensive branching logic that has nothing to do with its actual job.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Messages vanish with no error anywhere in application logs.
 - Symptom. The filter's rejection rate climbs steadily over weeks with no
 - Symptom. Throughput degrades under load specifically at the filter stage,
@@ -5973,6 +6222,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message-driven or event-driven system is built, on purpose, so that a producer does not know who its consumers are and a consumer does not know who produced the message it just received. That decoupling is the entire reason to use a message channel instead of a direct method call. Hohpe and Woolf name the resulting gap plainly. "If a message recipient retrieves a message from a message channel, it generally does not know nor care which application put the message on the channel" (enterpriseintegrationpatterns.com/patterns/messaging/MessageHistory.html, verified 2026-08-13). The very decoupling that makes the architecture flexible also makes it impossible to answer, from a single vantage point, questions such as which service touched an order before it arrived malformed, how many hops a support ticket took before it reached the wrong queue, or whether a particular router or filter dropped a field somewhere along a chain of five transformations.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Message size grows without bound and eventually exceeds a broker's
 - Symptom. The history shows a component that appears to have processed a
 - Symptom. An incident review discovers that a critical hop is simply absent
@@ -5984,6 +6234,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A producer has one logical unit of data to move across a messaging channel, and the unit is larger than the channel, the broker, or the receiving application can accept as a single message. Message brokers commonly cap individual message size, JMS providers historically limited practical message size to a few megabytes for performance reasons, and even brokers without a hard limit slow down sharply once a single message grows past a modest size because the broker has to hold the whole payload in memory to route it. The producer's actual data, a bulk export from a database, a large file transfer, or the full result set of a query that returned more rows than expected, does not respect that limit.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A consumer occasionally drops or silently skips a legitimate
 - Symptom. Memory usage on the consumer grows without bound over time, and
 - Symptom. The same reassembled unit is processed, and its side effects
@@ -5995,6 +6246,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A messaging system built well is, by design, hard to see into from any one place. A message travels a Point-to-Point Channel or Publish-Subscribe Channel, is picked up by a Message Endpoint, transformed, routed, split, aggregated, and eventually lands somewhere, and at no point in that chain does any single component hold a record of the full path end to end. That is exactly the property loose coupling is meant to deliver, each component knows only its own inputs and outputs. The cost of that property is that a question an operator or a business analyst asks constantly, did message X ever reach system Y, how long did order 42 take to clear the pipeline, which messages touched the discount-calculation service today, has no component whose job it is to answer.
 
 **Failure Mode Symptoms:**
+
 - Symptom. During an incident, two engineers query the store and get
 - Symptom. Delivery throughput on a channel degrades or stalls whenever
 - Symptom. A managed store's billed storage size, or an on-premises
@@ -6007,6 +6259,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An enterprise settles on messaging as the way applications talk to each other, and that decision solves the coupling problem inside one messaging technology. The trouble starts the moment a second messaging technology enters the picture, and in any organization beyond a small one it always does. A merger brings in a company running IBM MQ while the acquirer standardized on Kafka. A cloud migration adds AWS SQS and EventBridge next to an on-premises ActiveMQ install that nobody has budget to retire. A partner integration requires MQTT because the counterpart is an IoT vendor, while the internal estate runs AMQP. Regulatory or geographic isolation splits one logical system into two physically separate broker clusters that are not allowed to share a network path, yet applications on both sides still need to exchange events.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Messages vanish under a bridge restart, with no error logged.
 - Symptom. Duplicate messages appear on the destination side after any
 - Symptom. The bridge silently stops forwarding and nobody notices for
@@ -6019,6 +6272,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application needs to send and receive messages through a messaging system, a message queue, an event bus, a Kafka topic, an AMQP exchange, but the team does not want every part of the codebase that needs to communicate with another system to know that messaging is the mechanism. If a domain service calls a message-producing library directly, three problems appear together.
 
 **Failure Mode Symptoms:**
+
 - Requests through the gateway hang indefinitely, or hang until an
 - Under moderate concurrent load, replies are occasionally
 - The gateway's interface has grown to dozens of methods, many of
@@ -6030,11 +6284,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application has a domain model, the classes that hold its business state and enforce its business rules, an Order, a Customer, a ShipmentPlan. That domain model was designed for the concerns a domain model actually has, invariants, behavior, navigability between related objects, sometimes inheritance. Somewhere else in the same application, a piece of code needs to publish that an order was placed, so another service, possibly written in a different language, running in a different process, can react to it.
 
 **Observable Symptoms:**
+
 - The domain model has object references and inheritance the wire format
 - The message consumer is not written in the producer's language, or not
 - The message schema and the domain schema need to change on different
 
 **Failure Mode Symptoms:**
+
 - A schema change to the domain object silently changes what
 - The mapper class has grown to hundreds of lines and contains
 - Inbound messages intermittently produce a domain object in an
@@ -6046,6 +6302,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system receives messages that all describe the same real-world fact, an order was placed, a patient was admitted, a trade was executed, but the messages arrive in several different physical shapes because they come from different senders who were never coordinated on a shared schema. One partner sends XML with attributes, another sends the same fields as child elements, a third sends a fixed-width flat file, a fourth sends comma-separated values with a header row and a fifth omits the header entirely and relies on column position. All five carry the same business meaning. None of the five downstream consumers, the order fulfillment service, the billing job, the audit log, wants to know that five shapes exist. Each consumer was written against one shape, the one the team originally agreed on internally, and every new partner format that arrives without a Normalizer forces either a new branch inside every consumer or a rewrite of every consumer's parsing code.
 
 **Failure Mode Symptoms:**
+
 - , messages silently disappear or accumulate in a dead letter queue
 - , a downstream report is quietly wrong for one partner's data while
 - , the canonical model grows every time a new format is onboarded,
@@ -6058,6 +6315,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system decouples a producer of work from a consumer of work using asynchronous messaging instead of a direct call, for the usual reasons. The producer should not block waiting for the consumer, the consumer should be able to scale independently, and a spike in production should not overload the consumer if a buffer sits between them.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The same order is fulfilled twice.
 - Symptom. A small number of messages are never processed and quietly pile
 - Symptom. Throughput does not improve, or gets worse, after adding more
@@ -6071,6 +6329,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application needs to consume messages from a channel, a queue, a topic partition, or any buffered source of work items, but it needs to control the timing and the volume of consumption rather than being driven by the producer's rate. A naive Event-Driven Consumer, where the messaging infrastructure invokes a callback the instant a message arrives, hands timing control to whichever component happens to be fastest at producing work. That is fine when the consumer's processing cost is small and uniform. It becomes a liability the moment the consumer's processing cost varies, the consumer needs to batch several messages into one unit of work, the consumer needs to pause entirely during a maintenance window or a downstream outage, or the consumer runs on a platform (a cron job, a serverless function invocation, a batch-oriented worker fleet) that has no long-lived thread available to sit in a callback and cannot register an inbound listener at all.
 
 **Failure Mode Symptoms:**
+
 - Consumer repeatedly drops out of its Kafka group and triggers rebalances
 - under normal load. Symptom. The consumer group logs show a steady stream of
 - A metered polling API shows a high proportion of empty responses.
@@ -6087,6 +6346,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Picture an order fulfillment system built from independently owned services. inventory, payment, shipping, fraud check, notification. A single customer order is not one call to one service. it is a sequence. reserve inventory, charge payment, and only if both succeed, schedule shipping and send a confirmation. If payment fails, the inventory reservation must be released. If fraud check flags the order, shipping must never happen at all, regardless of what payment and inventory already did.
 
 **Failure Mode Symptoms:**
+
 - The god object process manager. Symptom, one process definition grows to
 - Correlation identifier collision or loss. Symptom, events for order 4471
 - Timeout amnesia. Symptom, a process instance sits in an intermediate
@@ -6098,6 +6358,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single message must reach more than one downstream consumer at once, and the exact SET of consumers that should receive a given message is not fixed at design time. It depends on the content of the message, on a subscription list that changes at runtime, or on business rules evaluated per message.
 
 **Failure Mode Symptoms:**
+
 - A recipient stops receiving messages it used to receive, with no
 - The same downstream side effect happens twice, an email sent twice,
 - Producer-side latency grows unpredictably and is hard to correlate
@@ -6109,6 +6370,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A component needs an answer from another component before it can continue, and the two components do not share a process, a thread, or a call stack.
 
 **Failure Mode Symptoms:**
+
 - Requests pile up and threads block indefinitely; the process
 - A reply arrives, but the caller applies it to the wrong
 - The system behaves correctly under light load and falls over
@@ -6120,6 +6382,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A producer emits a series of related units, each carrying an explicit position in a sequence, a timestamp, or an ordinal, and the units are meant to be consumed, displayed, or applied in that order. Between the producer and the consumer sits a transport that does not guarantee delivery order. This is not a hypothetical edge case, it is the default behavior of almost every transport that scales past a single ordered pipe.
 
 **Failure Mode Symptoms:**
+
 - The stuck buffer. Symptom. Buffer depth for one correlation key climbs
 - Resequencing where order does not matter. Symptom. A Resequencer sits in
 - Single-threaded resequencing collapsing throughput. Symptom. A pipeline
@@ -6133,6 +6396,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A requestor sends a message into an asynchronous channel and needs an answer back. The channel that carries the request is not, by default, a channel the replier can use to find its way back to the requestor, because a message queue or topic is a one-directional pipe. messages move from producer to consumer, and nothing about that direction is reversible by construction. A synchronous call carries its own reply path for free. the open TCP connection or the open HTTP response socket is the reply path, and the caller blocks on it. An asynchronous message has no such built-in path. The replier that dequeues the request has, at that moment, no idea who sent it, what channel that sender is listening on, or whether the sender is even the same process that will eventually read the reply.
 
 **Failure Mode Symptoms:**
+
 - Trusting an unvalidated caller-supplied address. Symptom. the replier
 - Orphaned reply destinations. Symptom. a growing count of empty,
 - Late reply after the requestor gave up. Symptom. the requestor's
@@ -6144,11 +6408,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message needs to pass through a chain of processing steps, and the exact membership and order of that chain differs per message, per tenant, or per business rule, rather than being fixed for the whole system.
 
 **Observable Symptoms:**
+
 - The set and order of processing steps genuinely varies per message, not merely
 - The processing steps are naturally separate, addressable components,
 - The itinerary can be computed once, cheaply, before the earliest hop, from
 
 **Failure Mode Symptoms:**
+
 - Silent partial completion. Symptom. An order shows as reserved and
 - Compensation that is not genuinely the inverse. Symptom. After a
 - Itinerary drift from stale computation. Symptom. Messages built before a
@@ -6161,6 +6427,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A caller needs an answer that no single system holds in full. The classic motivating example from the EIP catalog itself is a purchase request that must be priced by several competing suppliers, where the best price is only knowable after every supplier has quoted (Hohpe and Woolf, EIP, chapter 9, Broadcast Aggregate section). A travel-booking search that must check flight availability across five airlines before showing results to a user is the same shape. A fraud-detection system that must query a credit bureau, a device-reputation service, and an internal risk model before approving a transaction is the same shape again.
 
 **Failure Mode Symptoms:**
+
 - a request that should return in milliseconds occasionally hangs for
 - an aggregated result silently contains a response that belongs to a
 - partial groups. Symptom. aggregator memory usage grows steadily over the
@@ -6172,6 +6439,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A consuming application is attached to a message channel that carries a heterogeneous stream. A single order-events topic might carry created, updated, cancelled, and shipped events for every region a company operates in. A single stock-price channel might publish every symbol on an exchange. A single audit-log channel might carry events from every microservice in a platform. Most consumers attached to a channel like this care about a narrow slice of what flows through it.
 
 **Failure Mode Symptoms:**
+
 - The silent black hole. Symptom. A consumer team reports that expected
 - Competing consumers with disjoint selectors starving one another. Symptom.
 - Selector evaluated too late to save anything. Symptom. A team adopts a
@@ -6184,6 +6452,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of business logic already exists as an ordinary method call, a pricing calculator, an order validator, a shipment scheduler, written and tested with no idea that a message bus exists. Later, the same logic must also become reachable by dropping a message onto a channel, because a new producer, perhaps a batch job, perhaps another service, needs to invoke it asynchronously, at high volume, and without a synchronous network call blocking on the response.
 
 **Failure Mode Symptoms:**
+
 - The business method starts sending its own replies. Symptom. A domain
 - Silent mis-binding after a payload shape change. Symptom. A message is
 - No reply ever produced for a two-way channel. Symptom. Requestors
@@ -6196,6 +6465,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team wants the same operational visibility into a Request-Reply exchange that a Wire Tap already gives them on any ordinary point-to-point channel, a copy of every message going by, without touching the service or the client. Wire Tap solves that cleanly when the channel is fixed, defined once in configuration, and every message on it goes to the same place. A service that implements Return Address does not behave that way on its reply leg. Each requestor supplies its own address in the request, the service reads that address out of the message it was just handed, and the reply for requestor A goes somewhere different from the reply for requestor B, decided per message, at runtime, by data the service did not choose. Tapping a channel whose destination changes on every message tells an observer nothing useful about where any single reply actually went, because there is no one channel to tap.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The correlation table grows steadily over hours or days with no
 - Symptom. A reply is delivered to the wrong Requestor, a serious
 - Symptom. A reply arrives at the proxy's own reply channel with a
@@ -6207,6 +6477,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message arrives that is a container for several logically independent units of work, and the downstream processing needs to happen per unit, not per container.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Downstream storage or a metrics dashboard reports orders that
 - Symptom. The splitter's memory usage grows linearly with the size of the
 - Symptom. An order that should generate five line-item messages
@@ -6218,11 +6489,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A messaging system is built from components that receive a message, do work on it, and emit a message. A validator, a currency converter, a fraud scoring step, a format translator between two partner formats. Each of these components can fail in two different ways, and only one of them is visible from the outside.
 
 **Observable Symptoms:**
+
 - A message travels through one or more processing components between a
 - Failures in the transformation logic itself, not merely in process
 - The component either cannot be paused for an external functional test
 
 **Failure Mode Symptoms:**
+
 - Separator leak into a real side effect. Symptom. A test order appears in
 - Sentinel value collides with real data. Symptom. A real customer record
 - Stale expected result masking a real regression. Symptom. The verifier
@@ -6235,6 +6508,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A client sends or receives several messages that belong together as one unit of work, and the messaging system offers no help unless the client asks for it explicitly. In the ordinary, non-transactional mode, every send call places its message on the channel the instant the call returns, and every receive call removes a message from the channel the instant the call returns. If the client crashes, throws an exception, or simply decides partway through that the operation should not have happened, there is no undo. Three sent messages and one received message are three sent messages and one received message, permanently, regardless of what the client's own logic later decides.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two records land in a downstream database when only one was
 - Symptom. Consumer lag on a topic climbs steadily even though the
 - Symptom. A migration from a queue-per-consumer topology to a shared,
@@ -6246,6 +6520,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A message flows from a producer, through a channel, to a consumer, and the system needs visibility into that traffic for a purpose that has nothing to do with the business logic the consumer performs. The visibility need is one or more of, monitoring live throughput and latency, auditing every message for compliance or dispute resolution, debugging a route in a running system without attaching a debugger to the production process, feeding a downstream analytics or fraud detection pipeline, or replaying traffic into a staging environment to reproduce a bug.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The primary consumer's p99 latency rises noticeably right after
 - Symptom. During an incident, an operator disables or reroutes a channel
 - Symptom. The audit log and the primary consumer's processed record
@@ -6259,6 +6534,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service needs network capabilities that are not really its own concern. TLS termination or mutual TLS origination, retries with backoff, circuit breaking, service discovery, load balancing across replicas, request authentication, structured access logging and distributed tracing headers, protocol translation, and rate limiting are all things a client of a remote service typically needs, and none of them are the business logic that service was written to perform. In a single-language monolith these concerns usually live in a shared library, imported once and configured once. In a polyglot, container-orchestrated system that shortcut breaks down.
 
 **Failure Mode Symptoms:**
+
 - Symptom, intermittent, unexplained latency spikes on otherwise fast
 - Symptom, a deploy of the application container appears healthy in the
 - Symptom, a write operation is duplicated in the downstream system, for
@@ -6270,11 +6546,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns a domain model it has deliberately kept clean. types named for the business, invariants enforced in one place, a vocabulary the whole team shares without translation. That model has to talk to a system the team does not control. a legacy monolith that predates the team, a service another team owns and evolves on its own schedule, an acquired company's database, a vendor's API that changes on the vendor's release calendar, not the team's.
 
 **Observable Symptoms:**
+
 - A monolith is being taken apart feature by feature. During the transition,
 - Two teams, each with a bounded context that grew independently, need to
 - A vendor or partner's API is the only way to reach functionality the team
 
 **Failure Mode Symptoms:**
+
 - Symptom. Pull requests touching the Anti-Corruption Layer module grow
 - Symptom. A layer estimated to run for three months during a migration
 - Symptom. Under load, a distributed trace shows the layer itself as the
@@ -6287,13 +6565,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A client calls an API expecting an answer inside the budget of one HTTP connection, typically well under a second. Most APIs meet that budget. authentication, a database read, a small computation, done. The Azure Architecture Center frames the baseline explicitly. "In most cases, APIs for a client application respond in about 100 milliseconds (ms) or less" (Microsoft Learn, Asynchronous Request-Reply Pattern, Context and problem(https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply), verified 2026-08-02). The problem this pattern solves begins the moment a request cannot be answered in that budget, because the work behind it is genuinely long, for example rendering a large export, transcoding a video, running a fraud-scoring model over a batch, provisioning a virtual machine, training a small model, or waiting on a third party (a payment network, a KYC provider, a shipping carrier) whose own response time is outside the caller's control.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md)
 
 **Core Problem:** A product ships to more than one kind of client. A web single page app, a native iOS app, a native Android app, a smart TV app, a partner integration consuming the same data over an API. Early on, one backend service answers all of them, because writing one API is cheaper than writing several and the clients start out asking for roughly the same data.
 
 **Failure Mode Symptoms:**
+
 - A single BFF grows a branch for if (clientType === "tablet")
 - Every BFF in the system implements its own slightly different
 - A single downstream service outage takes down every client at
@@ -6305,12 +6585,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A process holds a finite pool of something that every request needs. Threads in a servlet container. Connections in a database pool. File descriptors. Memory. Goroutines bounded by scheduler pressure. Slots in an event loop's concurrency budget. That pool is shared across every code path the process serves.
 
 **Observable Symptoms:**
+
 - The process serves more than one class of work, and those classes have
 - Some resource is shared across those classes and is finite.
 - At least one dependency can become slow without becoming unavailable.
 - Degrading one class of work is preferable to degrading all of them.
 
 **Failure Mode Symptoms:**
+
 - , cause, fix, because the symptom is the part a reader will actually meet.
 - Bulkhead without a timeout.
 - Rejection rate for one partition rises to 100 percent and stays there
@@ -6338,12 +6620,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service reads the same records far more often than it writes them, and the read path is expensive. The expense might be a relational join, a cross-region call, a disk seek on a cold row, a rate-limited third-party API, or a language model invocation billed per token. Read volume is high enough that the origin becomes the constraint on throughput or on cost, but the working set is far smaller than the full data set, so most of the traffic hits a small number of keys.
 
 **Observable Symptoms:**
+
 - Reads outnumber writes by a wide margin, so a cached copy earns its keep many
 - The application can tolerate stale reads for a bounded window. If it cannot,
 - The cache and the origin are separate systems with independent failure
 - The access pattern is not known in advance, so priming the entire data set is
 
 **Failure Mode Symptoms:**
+
 - s below are drawn from operating this pattern. The underlying mechanisms
 - Symptom. Database CPU spikes to saturation at regular intervals matching the
 - Symptom. Every deployment or cache restart causes a multi-minute period of
@@ -6361,6 +6645,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service starts as one deployed thing. One database, one fleet of application servers, one code path that every request runs through. That shape is easy to reason about and easy to operate, and it works exactly until it fails, because it fails for everyone at once. A bad deployment, a corrupted request that trips a code path nobody tested, a single overloaded tenant, or an unlucky dependency timeout does not stay contained to the request that caused it. It takes down the shared process, the shared connection pool, or the shared database, and every other request in flight pays for it. AWS's own guide names this directly. In a typical single-image service, "this application would be serving requests from 100% of clients. In the event of a failure, or a change in the application, 100% of customers would be impacted" (AWS Well-Architected, What is a cell-based architecture?(https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html), verified 2026-08-02).
 
 **Failure Mode Symptoms:**
+
 - Symptom. The whole system goes down even though it has ten cells.
 - Symptom. A failure that should have stayed in one cell shows up in
 - Symptom. One or two large tenants degrade an entire cell, even though
@@ -6372,11 +6657,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A business process spans more than one service, and each service owns a slice of state that no other service is allowed to touch directly, because that is the entire point of drawing the service boundary in the first place. Placing an order needs an Order service to record the order, an Inventory service to reserve stock, a Payment service to charge a card, and a Shipping service to schedule delivery. None of those four services can call into another's database. The only sanctioned way to make something happen elsewhere is to send that other service a message or an event and let it act on its own data under its own rules.
 
 **Observable Symptoms:**
+
 - The services already communicate through an event backbone. A message
 - Team boundaries follow service boundaries, and each team wants to own the
 - The process itself is short. A handful of steps, a shallow dependency graph,
 
 **Failure Mode Symptoms:**
+
 - The debugging black hole. Symptom. An on-call engineer, paged because
 - Change-ripple paralysis. Symptom. A product change that should take
 - Recursive self-triggering. Symptom. A service enters a loop of
@@ -6391,12 +6678,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service calls a remote dependency. The dependency degrades in the worst possible way, which is not by refusing connections but by accepting them and answering slowly or not at all.
 
 **Observable Symptoms:**
+
 - The call crosses a process or network boundary, so it can fail in ways local
 - Failures are correlated rather than independent. When one call to the
 - The caller has a meaningful action available when the call is skipped, whether
 - The dependency benefits from being left alone. Shedding load during recovery
 
 **Failure Mode Symptoms:**
+
 - s below are drawn from operating this pattern and are engineering
 - Half-open thundering herd.
 - The breaker opens, waits its 30 seconds, then a latency spike appears
@@ -6421,11 +6710,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service publishes a message that needs to carry a large piece of data, a scanned document, a video file, a full order history export, a machine learning feature vector, a rendered PDF invoice, and the message has to travel through a messaging system built and tuned for many small, frequent messages rather than occasional large ones.
 
 **Observable Symptoms:**
+
 - The data is bulky relative to the messaging system's sweet spot, and the
 - A durable, independently addressable data store already exists, or can
 - At least one downstream component in the pipeline does not need the
 
 **Failure Mode Symptoms:**
+
 - Claim token expired before consumption. Symptom. Consumers processing
 - Orphaned objects, the storage cleanup failure. Symptom. The object
 - Write side race, the message published before the object is visible.
@@ -6439,12 +6730,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single model is being asked to serve two jobs whose requirements have diverged, and the model is losing on both.
 
 **Observable Symptoms:**
+
 - The domain has real behaviour, not field assignment. If every command is
 - Read and write requirements have genuinely parted ways along at least one axis,
 - The team can absorb the operational surface. Somebody has to own projection
 - The scope is one bounded context, not the system. This is not optional, see
 
 **Failure Mode Symptoms:**
+
 - Written as symptom, cause, fix. The symptoms are drawn from practice and are
 - Symptom. A user completes an action, the confirmation screen shows the old
 - Symptom. Two users book the last seat. Both succeed. The read model shows
@@ -6463,6 +6756,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single database transaction gives you atomicity for free. If the third of four writes fails, the database engine rolls the first two back using its own write-ahead log, and the caller never observes a partial state. That guarantee stops the instant the four writes cross a transaction boundary, and in a cloud-hosted, service-oriented, or microservices system they almost always do. An order-placement flow that debits a payment provider, decrements inventory in a separate service, books a shipping slot with a carrier's API, and writes a confirmation row, touches four systems that do not share a transaction manager and frequently do not even share a network zone.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A refund or a release action runs twice for the same original
 - Symptom. A workflow is stuck. Its status shows a failed forward step, but
 - Symptom. A step that a customer or an auditor believed was undone is
@@ -6475,6 +6769,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system produces units of work faster, or in bursts larger, than a single consumer process can absorb, and the units of work are independent of one another, meaning any one of them can be processed by any available worker without coordinating with the others. If the system routes every unit of work to one fixed consumer instance, that instance becomes the upper bound on the whole system's throughput no matter how much producer-side capacity exists, and if that one instance goes down, work stops entirely until it is restarted.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A downstream record is updated twice, or a payment is charged
 - Symptom. Queue depth climbs steadily even though consumer CPU usage looks
 - Symptom. Reports that depend on a sequence of events for the same entity,
@@ -6486,6 +6781,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team ships a SaaS product as a single deployed instance, one application tier, one database, one everything, and every customer's traffic and data flow through that one instance. For a while this is the right choice. It is the cheapest thing to operate, the easiest thing to reason about, and the fastest thing to change. The problem shows up later, and it shows up in several unrelated-looking forms at once, which is why teams often solve each symptom locally before noticing they share one root cause.
 
 **Failure Mode Symptoms:**
+
 - Every incident review starts with "which stamp is the
 - A single stamp silently accumulates far more tenants than the
 - A tenant migration between stamps corrupts data or leaves a
@@ -6499,12 +6795,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system needs to answer questions about how it reached its current state, and the storage model it uses has already destroyed the answer.
 
 **Observable Symptoms:**
+
 - History has business value in itself. Somebody outside engineering wants
 - The domain has real events. Domain experts already speak in past-tense
 - State is small enough per entity, or bounded. A stream that grows without
 - The team can carry the operational shape. Eventual consistency between
 
 **Failure Mode Symptoms:**
+
 - s are drawn from practice and are engineering judgement. The mechanisms
 - Symptom. Replaying the log in a test environment sends real emails, charges
 - Symptom. A deploy fails to start because deserialising an event from 2023
@@ -6521,6 +6819,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application reads its behavior-controlling values, a database connection string, a feature toggle, a rate limit, a UI theme choice, a downstream service URL, from a file that ships inside the same deployment artifact as the code. That file might be an application.properties, a .env, a config.json baked into a container image, or a set of environment variables injected at container start. The moment any one of those values needs to change, the operator faces a forced choice between two bad options. Either the file is edited on the running host, which drifts the running instance away from what the deployment pipeline believes is deployed and is invisible to every other instance of the same service, or the whole artifact is rebuilt and redeployed, which for a one-line rate limit change costs the same build, test, and rollout time as a real code change and forces a period of downtime or partial availability while instances roll.
 
 **Failure Mode Symptoms:**
+
 - judgement from operating this class of system, symptoms are stated as what
 - Symptom. Every instance in a fleet reads a stale value for minutes
 - Symptom. The entire fleet fails to start, or starts with wrong
@@ -6534,6 +6833,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An organization runs several applications. a payroll system, a ticketing tool, a source control host, a cloud console. Each application historically maintained its own username and password table. This produces three compounding problems that get worse, not better, as the application count grows.
 
 **Failure Mode Symptoms:**
+
 - Clock skew rejecting valid assertions. Symptom. Users intermittently see
 - Missing or wrong audience check. Symptom. A token or assertion issued
 - Confusing an OAuth access token with proof of identity. Symptom. An
@@ -6546,13 +6846,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A cloud service exposes one or more API endpoints across an untrusted network, typically the public internet. The code that implements those endpoints usually does more than one job at once. it authenticates the caller, authorizes the specific operation, validates and parses the request body, and then goes on to read or write storage, call other internal services, or use credentials that grant broad access to the backend. The Azure Architecture Center names this concentration of responsibility as the root of the problem. "the code that implements the APIs triggers or performs several tasks, including but not limited to authentication, authorization, parameter validation, and some or all request processing," and that same code path "is likely to access storage and other services on the client's behalf" (Microsoft, Azure Architecture Center, "Gatekeeper Pattern," verified 2026-08-03).
 
 **Failure Mode Symptoms:**
-- | | Symptom | Cause | Fix |
+
+- / / Symptom / Cause / Fix /
 
 #### [Gateway Aggregation](../patterns/08-cloud-distributed/gateway-aggregation.md)
 
 **Core Problem:** A client needs data or a decision that no single backend service owns end to end. An order summary screen needs the order record, the shipment status, and the customer's loyalty tier, and in a service-oriented or microservices system those three facts live in three different services with three different owners. The client is left with two bad choices, either call each service directly and stitch the results together itself, or wait for someone to build a bigger service that owns all three facts, which recreates the monolith the split was meant to avoid.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Every client request times out, even though each individual
 - Symptom. The assembled response silently omits a field with no
 - Symptom. The gateway becomes the busiest, most-alerted-on service in
@@ -6564,6 +6866,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application is built as a set of backend instances, whether that is one service replicated many times or several distinct services behind one entry point. A handful of concerns are not specific to any one of those backends and yet every one of them needs the concern handled correctly. Terminating an inbound TLS connection is the sharpest example, but the same shape recurs for compressing a response body, validating an authentication token, rewriting a protocol from HTTP/1.1 to HTTP/2, rate limiting a noisy client, or writing a structured access log line.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Every request reaching a service that logs client IPs shows
 - Symptom. A response the gateway compresses arrives at the client
 - Symptom. Requests that used to succeed start failing intermittently
@@ -6575,11 +6878,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A client, whether a browser, a mobile app, or another service, needs to talk to a system that is actually made of several independently deployed backends. Three concrete shapes of this problem recur, and Microsoft's catalog entry names all three explicitly.
 
 **Observable Symptoms:**
+
 - Disparate services behind one client. An e-commerce storefront needs
 - Multiple instances of the same service. A service is deployed as N
 - Multiple versions of the same service. A team wants to run version 1.1
 
 **Failure Mode Symptoms:**
+
 - The gateway becomes the outage. Symptom. Every backend reports healthy
 - Business logic creeps into the routing layer. Symptom. A rule table
 - Silent routing to a decommissioned or wrong-version backend. Symptom.
@@ -6592,6 +6897,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service with users spread across a continent, or across the world, starts from the simplest possible shape. one region hosts the application tier, one region hosts the database, and every request from every user, no matter how far away they are, travels to that one place and back. Azure's own framing of the problem calls this "bring the data to the compute", describing the classic design as storing data in a remote server that also serves as the compute tier, relying on vertical scale-up as the only tool for growth (Geode pattern, Context and problem, Azure Architecture Center(https://learn.microsoft.com/en-us/azure/architecture/patterns/geodes), verified 2026-08-02). This shape is not a mistake. it is the correct starting point for almost every service, and it works fine for a long time.
 
 **Failure Mode Symptoms:**
+
 - A write a user made shortly before a regional outage appears to
 - Two updates a user made in quick succession, from two
 - A team enables bounded staleness consistency on a multi-write
@@ -6606,6 +6912,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service running behind a load balancer, an orchestrator, or a service mesh can fail in ways that are invisible from outside the process. The operating system reports the process as running. The port is open and accepting TCP connections. Yet the process cannot do useful work, because its database connection pool is exhausted, its downstream dependency is unreachable, its disk is full, or a background thread has deadlocked while the request-handling threads carry on accepting connections that will never complete. A caller routing traffic to that instance sees timeouts or errors, and because the process itself never crashed, nothing outside the process notices until a person is paged.
 
 **Failure Mode Symptoms:**
+
 - Deep check cascading failure. This is the most damaging misuse of the
 - pattern and the one this entry treats in the most detail. Symptom. Multiple
 - Health check flapping under threshold-free evaluation. Symptom. An
@@ -6619,13 +6926,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A data store organizes its records by a primary key so that, given the key, it can locate the record in close to constant time. Azure Table Storage does this with a partition key and row key pair. DynamoDB does it with a partition key, optionally combined with a sort key. Bigtable and Cassandra do it with a row key. In every one of these systems a lookup that supplies the primary key is cheap, because the storage layer physically clusters data by that key, and a lookup that does not supply the primary key degenerates into a full scan of every partition, because there is no other structure telling the engine where to look.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Leader Election](../patterns/08-cloud-distributed/leader-election.md)
 
 **Core Problem:** A fleet of otherwise identical replicas exists for availability. If one process dies, another must take over without a human paging anyone at 3 a.m. But some part of the workload cannot safely run on more than one replica at once. A cron style job that must fire exactly once per interval. A control loop, of the kind Kubernetes runs for kube-controller-manager and kube-scheduler, where two active copies computing conflicting decisions in parallel would corrupt cluster state rather than merely waste CPU. A database migration runner. A background compaction process that would double the write amplification on a shared store if two nodes ran it concurrently. A message consumer that must process a partition strictly in order, where two consumers racing on the same partition would interleave writes and violate the ordering guarantee the downstream system depends on.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two processes both perform the singleton work simultaneously,
 - Symptom. Leadership flaps rapidly between two or three nodes under
 - for that long in the first place, since the flapping is frequently a symptom
@@ -6638,20 +6947,23 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application reads data far more often than it writes it, and the shape a write path needs is almost never the shape a read path wants. A normalized relational schema is correct for enforcing integrity on write. It is expensive to query, because answering "show me this customer's order total for the current month, broken down by product category" against a normalized schema means joining orders, order lines, products, and categories, then aggregating, on every single request. An append-only event log is correct for recording what happened, with a full audit trail and the ability to replay history. It is close to useless for answering "what is this account's current balance" without first replaying every event that ever touched the account. A wide, denormalized document in a NoSQL store is correct for retrieving one entity in a single read. It is a poor fit for "give me the total sales this month across every customer", because that question spans many documents and the store has no native aggregation across the collection at the speed a dashboard needs.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Messaging Bridge](../patterns/08-cloud-distributed/messaging-bridge.md)
 
 **Core Problem:** An organization that has been running for more than a few years rarely has one messaging system. A merger brings in a company that standardized on a different broker. A team picks Kafka for its log-compaction and replay properties while another team is still running RabbitMQ because it was the right tool for a low-latency RPC-style workload. A cloud migration leaves an on-premises IBM MQ estate that cannot be retired overnight sitting next to a brand-new Azure Service Bus namespace. A vendor product ships with its own embedded broker and refuses to speak anything else.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Pipes and Filters](../patterns/08-cloud-distributed/pipes-filters.md)
 
 **Core Problem:** A system needs to apply a series of transformations or checks to a stream of data, and the natural first implementation is one large function or one large class that performs every step in order. That single unit compiles cleanly and passes its first test, and then three things go wrong as the system grows.
 
 **Failure Mode Symptoms:**
+
 - The pipeline that quietly duplicates work. Symptom. A downstream analytics
 - Silent backpressure collapse. Symptom. Memory on one filter's host grows
 - The reintroduced monolith. Symptom. A filter's code imports types or
@@ -6665,11 +6977,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A distributed system that processes work through a queue, whether that queue is a message broker topic, a job table, a task list, or a pending pod list, eventually accumulates more than one class of work with different urgency. A payment webhook and a weekly analytics export do not deserve the same wait time. A page from an on-call alerting system and a batch of thumbnail generation jobs do not deserve the same wait time. A pod running a production ingress controller and a pod running an ad hoc data science notebook do not deserve the same claim on a scarce node.
 
 **Observable Symptoms:**
+
 - Heterogeneous urgency. Not all work carries the same cost of
 - Shared, finite consumption capacity. If capacity were infinite,
 - A queueing boundary that decouples producers from consumers. The
 
 **Failure Mode Symptoms:**
+
 - Symptom. Low priority work sits in the queue for hours or days while
 - Symptom. A high priority message is enqueued and immediately visible
 - Symptom. A message that was rejected and requeued, via reject, nack,
@@ -6682,6 +6996,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A component in a system needs to tell other components that something happened, and it does not know, and should not need to know, who those other components are. The order was placed. The temperature crossed a threshold. The build finished. In a small system the publishing component could call every interested party directly, but that couples it to the identity, the location, and the availability of every consumer that exists today, and it requires the publisher's code to change every time a new consumer is added.
 
 **Failure Mode Symptoms:**
+
 - Poison message stalling a consumer group. Symptom. One subscriber's
 - Assumed global ordering. Symptom. A downstream projection ends up in a
 - Fan-out amplification overwhelming a downstream dependency. Symptom. A
@@ -6694,11 +7009,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system accepts work at a rate that varies over time, sometimes sharply, while the component that actually performs the work has a roughly fixed processing capacity per unit time. The mismatch between the two is the whole problem.
 
 **Observable Symptoms:**
+
 - The producer does not need an immediate, synchronous answer containing the
 - The work is idempotent, or can be made idempotent, because most queue
 - The arrival rate of work is bursty or unpredictable relative to a downstream
 
 **Failure Mode Symptoms:**
+
 - Unbounded queue growth under sustained overload. Symptom. Backlog depth
 - Operations Research after it had circulated as an unproven assumption since
 - Queue depth alone as the autoscaling signal, ignored age. Symptom. The
@@ -6712,12 +7029,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service exposes an operation that costs something to perform. The cost may be CPU, a database connection, an outbound call to a paid third party, disk write bandwidth, or a scarce lock. The number of callers is not under the service owner's control, and neither is the shape of their traffic.
 
 **Observable Symptoms:**
+
 - Capacity protection. The service has a known maximum sustainable
 - Fairness between tenants. The service has spare capacity in aggregate but
 - Commercial metering. The limit encodes what the customer paid for. It has
 - Abuse resistance. The limit exists to make credential stuffing, scraping,
 
 **Failure Mode Symptoms:**
+
 - Each entry gives the symptom an operator or a customer actually observes, the
 - cause, and the fix. The symptoms are drawn from practice rather than from a
 - Symptom. A customer reports being throttled at roughly twice the documented
@@ -6736,12 +7055,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A caller sends a request across a boundary it does not control. The request fails. The failure is not a statement about the request, it is a statement about the moment. A TCP connection reset by a load balancer draining a node, a socket timeout while a garbage collection pause ran long, a 503 while an autoscaler was mid-scale, a 429 while a neighbouring tenant burst. Send the same bytes ten seconds later and it succeeds.
 
 **Observable Symptoms:**
+
 - The failure is plausibly transient. Re-sending has a real chance of a
 - The operation is idempotent, or has been made idempotent. See dimension 8.
 - The caller has time budget left. A retry spends latency the caller may not
 - The dependency is not saturated. This is the part that gets skipped.
 
 **Failure Mode Symptoms:**
+
 - s below are drawn from operating systems that lean on retry. They are
 - Retry storm from stacked layers.
 - Dependency request rate rises by an order of magnitude within seconds
@@ -6771,12 +7092,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A business operation spans several stores of record and must either happen in full or leave nothing of consequence behind, and there is no transaction manager that can span them.
 
 **Observable Symptoms:**
+
 - The operation crosses a consistency boundary. Separate databases,
 - Every step has a genuine business reversal. Not a state restore, a
 - The business can tolerate a visible intermediate state. During the saga,
 - There is no viable atomic commit protocol. Either the participants do not
 
 **Failure Mode Symptoms:**
+
 - , cause, and fix. The symptoms are drawn from practice, so treat the
 - Lost update. Symptom. A customer's stored address reverts to a previous
 - Dirty read. Symptom. A customer receives an order confirmation email for an
@@ -6795,6 +7118,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application needs to run a task that has more than one step, and at least one of those steps calls a remote service or accesses a remote resource that the application does not control. The Azure Architecture Center states the starting condition this way. "An application performs tasks that include multiple steps, some of which might invoke remote services or access remote resources," and each step "might be independent of each other," but the application logic still has to run them as one coherent task (Microsoft Learn, "Scheduler Agent Supervisor pattern," section "Context and problem," verified 2026-08-02).
 
 **Failure Mode Symptoms:**
+
 - Duplicate charge on a retried payment step.
 - The same order gets charged twice at the payment provider.
 - A task appears permanently stuck in Processing.
@@ -6815,6 +7139,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system receives a stream of messages, and a subset of those messages must be applied in the order they were produced because applying them out of sequence corrupts the state they describe. The canonical illustration, and the one the Azure catalog entry itself uses, is an order-tracking ledger. a create operation, a transaction add, a transaction edit, and a delete, all for the same order, arriving as separate messages (Microsoft Learn, Sequential Convoy pattern(https://learn.microsoft.com/en-us/azure/architecture/patterns/sequential-convoy), verified 2026-08-02). Apply the delete before the create and there is nothing to delete. Apply the edit before the add and the edit targets a transaction that does not exist yet. The correctness of the downstream state depends on the order in which these specific messages are applied, even though the system as a whole is also expected to process many orders' worth of messages per second.
 
 **Failure Mode Symptoms:**
+
 - Symptom. One order, customer, or device silently stops receiving updates
 - Symptom. The same logical operation appears to have been applied twice, or
 - Symptom. Order-dependent business logic occasionally corrupts state for a
@@ -6826,13 +7151,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single database server has a hard limit on what it can do. It has a fixed number of CPU cores, a fixed amount of RAM for its buffer pool or page cache, a fixed number of disk IOPS, and a fixed amount of network bandwidth on its host. Vertical scaling, buying a bigger machine, pushes that limit up but never removes it, and past a certain point the price of the next tier of hardware grows faster than the capacity it delivers. A write-heavy table that has grown past what one machine's disk can serve, or a read-heavy table whose working set no longer fits in RAM so every query pays a disk seek, both hit the same wall. The team needs more capacity than one machine, of any size that can be bought or rented, can provide.
 
 **Failure Mode Symptoms:**
-- | | Symptom | Cause | Fix |
+
+- / / Symptom / Cause / Fix /
 
 #### [Sidecar](../patterns/08-cloud-distributed/sidecar.md)
 
 **Core Problem:** A service needs a capability that is not part of its core business logic. Shipping logs off the local disk, terminating and rotating mTLS certificates, enforcing retry and timeout policy on outbound calls, exposing metrics in a format a monitoring system understands, or synchronizing configuration and static content from a remote source onto local disk are all common examples. The service could implement this capability itself, but three pressures push against that.
 
 **Failure Mode Symptoms:**
+
 - Startup race, the sidecar is not ready when the app needs it.
 - The application's first outbound calls fail with connection
 - Shutdown race, the sidecar exits before the app finishes using it.
@@ -6849,13 +7176,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is building a website, a documentation portal, a marketing page, a single-page application, or the client half of a larger system, and the content does not need to change per request. The HTML, CSS, JavaScript, images, and fonts that make up the page are identical whether the tenth reader or the ten-millionth reader requests them today. The only thing that varies between requests is which reader is asking and where in the world they are asking from.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md)
 
 **Core Problem:** A system has been running in production for years. It works, it has real users, and it earns real money or does real work, but its internals have become hard to change safely. The reasons are familiar to anyone who has maintained a system past its first five years. the framework it was built on is out of support, the team that understood a subsystem has moved on, the data model has accumulated years of special cases, the deployment process takes hours and any change risks the whole system rather than one feature, and every added capability makes the next change slower rather than faster.
 
 **Failure Mode Symptoms:**
+
 - The migration stalls and the organization runs two systems forever.
 - eighteen months, three years, five years after the migration
 - The anti-corruption layer never gets removed. Symptom. a class named
@@ -6870,12 +7199,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service exposes an operation that costs something to run. The cost can be CPU time, a database connection, a write to a storage tier with limited input and output operations per second, an outbound call to a paid third party, or a lock on a shared resource. The number of callers, and the shape of the traffic they send, is not something the service owner controls.
 
 **Observable Symptoms:**
+
 - Self-preservation. The service has a known ceiling and must protect
 - Tenant fairness. In a multi-tenant system the aggregate capacity is
 - Cascading protection. The service is healthy but one of its own
 - Cost and carbon control. The limit reflects a budget or a commitment
 
 **Failure Mode Symptoms:**
+
 - Each entry names the symptom an operator or a user would actually observe,
 - Symptom. Every tenant's requests start failing during one tenant's
 - Symptom. Latency is flat and healthy right up until it spikes hard and
@@ -6889,7 +7220,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An application sits between a client, a browser, a mobile app, a worker process, and a data store or messaging service, object storage, a queue, a database export target. The client needs to move a payload, often a large one, into or out of that store. The obvious first implementation routes the transfer through the application. The client uploads to an API endpoint, the application authenticates the caller, then the application itself streams the bytes onward to storage; downloads run in reverse. This is the shape every web framework tutorial teaches, and it is correct for small, infrequent payloads where the application legitimately needs to see every byte, such as validating a form submission.
 
 **Failure Mode Symptoms:**
-- | | Symptom | Cause | Fix |
+
+- / / Symptom / Cause / Fix /
 
 ### Concurrency and Parallelism
 
@@ -6898,6 +7230,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object's public methods are typically called synchronously. The caller blocks on the stack until the method returns. That is fine when the method runs on the calling thread and completes quickly. It stops being fine the moment the method does real work, holds a lock for a long time, or must be serialized against other calls to the same object from multiple threads.
 
 **Failure Mode Symptoms:**
+
 - , memory usage climbs steadily while the Active Object appears busy
 - aging. Symptom, a specific class of request, typically low-priority
 - reflex, destroying available parallelism. Symptom, a service that should
@@ -6909,6 +7242,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A concurrent program needs many pieces of independent state to change over time, driven by events arriving from different sources, without a lock, mutex, or shared memory region becoming the single point of contention and the single source of a whole class of bugs. The traditional answer is shared-memory threads with explicit synchronization, locks around every mutable field, or lock-free structures with an even sharper learning curve. Both scale in throughput on a single machine but not in correctness. As the number of shared mutable objects grows, verifying the absence of a deadlock, a race, or a missed release becomes a program-wide obligation rather than a local one.
 
 **Failure Mode Symptoms:**
+
 - Symptom, memory grows unbounded on one node under load, eventually
 - Symptom, a single entity, one user, one hot account, one popular game
 - Symptom, state silently vanishes after a routine restart or deploy, and
@@ -6921,6 +7255,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object exposes an operation that is only meaningful, or only safe, in a subset of the object's possible states. A save() method makes no sense while a save is already in progress. A connect() call is redundant on a connection that is already open. A refresh() triggered by a UI gesture should not stack five refresh cycles on top of each other because the user tapped the button five times while impatient. In every one of these cases, the wrong-state invocation is not a bug in the caller in any meaningful sense. it is an ordinary, expected event that happens because the caller does not, and often cannot, know the object's current internal state before making the call.
 
 **Failure Mode Symptoms:**
+
 - , two threads both perform the guarded action despite the balking
 - , the guarded method balks forever after its first successful
 - , callers report that a save or refresh action appears to do
@@ -6932,6 +7267,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A computation is organized into a fixed number of concurrent workers, and the work naturally divides into phases. Within a phase, every worker can proceed independently, reading and writing data that does not overlap with any other worker's slice. But the next phase depends on every worker having finished the current phase, because the next phase reads data that any worker might have produced. A worker that starts phase two before some other worker has finished writing its share of phase one will read stale or partially written data, and the bug this produces is a data race that appears intermittently, sized by how the operating system happens to schedule the threads that particular run.
 
 **Failure Mode Symptoms:**
+
 - , one thread permanently hangs at the barrier while every other thread
 - , the program deadlocks intermittently, only under load, and only
 - , a barrier that should reset for the next round instead throws a
@@ -6944,6 +7280,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A program that needs to do more than one thing at once, serve many requests, overlap I/O with computation, or use more than one CPU core, needs a way for its concurrent parts to coordinate. The default coordination mechanism most languages start from is shared mutable memory. two or more threads read and write the same variables, and correctness depends on the programmer placing locks, mutexes, or atomic operations around every access in exactly the right places. This works, but it does not scale with team size or codebase size. The set of variables that must be protected, and the order in which locks must be acquired to avoid deadlock, is an invariant that lives only in the programmer's head and in scattered comments. As the number of shared variables and the number of threads touching them grows, the number of possible interleavings grows combinatorially, and a correctness bug can sit dormant for years before a rare interleaving triggers it in production.
 
 **Failure Mode Symptoms:**
+
 - sits in memory holding its stack forever. Symptom, an apparently idle
 - first is supposed to receive from. Symptom, the program hangs completely
 - panic in Go, not a silent no-op. Symptom, a crash reporting a send on a
@@ -6955,6 +7292,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A thread wants to update a single shared memory location, a counter, a pointer, a flag, based on its current value, and it wants to do this without taking a lock. Locking works, but it costs a system call or a spin under contention, it can suffer priority inversion when a low-priority thread holds the lock a high-priority thread is waiting for, and it does not compose well, because a thread blocked inside one lock cannot make progress on anything else even when the actual critical section is a single word update.
 
 **Failure Mode Symptoms:**
+
 - A lock-free stack or queue occasionally corrupts its internal
 - Under a synthetic benchmark or a real production hot spot, CPU
 - A lock-free counter or accumulator occasionally under-counts
@@ -6965,6 +7303,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The problem copy-on-write solves is a specific tension between two things a system wants at once, the ability to hand out what looks like an independent copy of a piece of data cheaply and often, and the actual cost of duplicating that data, which is proportional to its size and is paid whether or not the copy is ever mutated.
 
 **Failure Mode Symptoms:**
+
 - The classic C++ std::string copy-on-write data race. Symptom. A
 - A bypassed reference count via an unsafe alias. Symptom. A mutation
 - The surprise-latency-spike production incident. Symptom. A request
@@ -6977,6 +7316,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of code has to wait until a known, fixed number of independent operations are all finished before it can proceed, and it does not otherwise care about the order those operations finish in or which thread runs which one.
 
 **Failure Mode Symptoms:**
+
 - , the process hangs forever at startup with no error, no crash, and
 - , a test that is supposed to force N threads to contend
 - , countDown() is called more times than the constructed count,
@@ -6988,6 +7328,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Picture a system that has to move a stream of small, frequent messages between threads and needs the handoff itself to add almost nothing to the total latency budget. A market data feed handler passing ticks to a pricing engine. A logging framework moving log events from an application thread to an I/O thread. A trading engine passing orders through validation, risk checking, and matching in sequence. In every one of these the obvious first choice is a blocking queue, ArrayBlockingQueue in Java or an equivalent in any other runtime, and for most systems that choice is fine.
 
 **Failure Mode Symptoms:**
+
 - observable symptom given first because that is what a reader will actually
 - , a consumer thread pegs one CPU core at 100 percent even while the
 - , the producer occasionally stalls for a period far longer than
@@ -7001,6 +7342,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of expensive, shared state, a database connection pool, a parsed configuration object, a cache of compiled regular expressions, a singleton service object, needs to be created exactly once and then read by many threads for the remaining lifetime of the process. Creating it is costly enough, in time, memory, or side effects such as opening a socket, that creating it eagerly at program startup is wasteful when the feature it backs is rarely used, and creating it more than once is a correctness bug, not just a performance loss, when the object owns a resource like a file handle or has identity semantics that callers compare with equality.
 
 **Failure Mode Symptoms:**
+
 - A singleton or cached object occasionally has fields that look
 - The initializer runs more than once, and a resource such as a
 - The code works in every test and in production for months,
@@ -7012,6 +7354,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** You have a computation that can be split into independent subproblems whose results are then combined, and the computation is large enough, or repeated often enough, that running it on a single core wastes available hardware. The computation is not a stream of independent, unrelated requests arriving over time, which is the shape that a thread pool or a producer-consumer queue handles well. It is a single logical unit of work, one call, one request, one batch job, that has internal parallel structure. Summing a large array, sorting a large collection, rendering a scene, walking a tree, computing a matrix product, and crawling a directory tree to compute total disk usage are all typical cases. The recursive shape is the giveaway. If you can express the solution as "if the input is small enough, solve it directly, otherwise split it into two or more pieces, solve each piece the same way, and combine the results," you are looking at a divide and conquer algorithm, and fork-join is the concurrency pattern purpose-built to run that algorithm's recursive branches on separate cores instead of one after another.
 
 **Failure Mode Symptoms:**
+
 - Deadlock from a forked task waiting on another forked task from the same
 - call. Symptom. The program hangs indefinitely under load but works fine in
 - Splitting far below the profitable threshold. Symptom. The parallel
@@ -7025,6 +7368,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of code needs a value that will not be ready immediately. It might come from a network call, a disk read, a background thread, or a computation that is deliberately deferred to run in parallel with something else. Two older techniques handle this, and both have the same failure. blocking calls tie up a thread of control for the entire wait, and callback registration scatters the logic for "when this is done" across a function signature that grows a new parameter for every operation it might chain.
 
 **Failure Mode Symptoms:**
+
 - Unhandled rejection silently dropped. Symptom. an asynchronous failure
 - Forgotten promise, permanent hang. Symptom. a request handler or worker
 - Double completion race. Symptom. inconsistent test failures, or a value
@@ -7037,6 +7381,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A thread calls a method on a shared object, and the method cannot proceed safely or sensibly until some condition involving that object's state becomes true. A queue's take cannot return an element from an empty queue. A connection pool's acquire cannot hand out a connection when every connection is checked out. A barrier's await cannot release a thread until every other participant has also arrived. A task future's get cannot return a result before the task completes.
 
 **Failure Mode Symptoms:**
+
 - Lost wakeup. Symptom. A thread blocks in take() or the equivalent
 - Spurious wakeup treated as a real signal. Symptom. A guarded method
 - Notify one when the waiters are heterogeneous. Symptom. A system with a
@@ -7050,6 +7395,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A concurrent system that talks to the outside world, over a network, a disk, a device driver, or another process, has two kinds of code living inside it at once, and the two kinds want opposite programming models.
 
 **Failure Mode Symptoms:**
+
 - The observed symptoms below are the visible surface a reader would actually
 - Symptom. The event loop occasionally freezes for tens or hundreds of
 - Symptom. Memory usage climbs steadily under sustained load and the
@@ -7062,6 +7408,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two or more threads share a reference to the same object. At least one thread reads fields of that object while another thread, at an unpredictable point in time, writes to those same fields. Absent any coordination, the reading thread can observe a value mid-write, observe stale values published by a different CPU core's cache, or observe an object whose invariants briefly do not hold because the writer has updated one field of a multi-field invariant but not the others yet.
 
 **Failure Mode Symptoms:**
+
 - The leaked mutable field. Symptom. Two objects that are supposed to be
 - Shallow freeze mistaken for deep immutability. Symptom. Object.freeze
 - The reflection or unsafe-write escape hatch. Symptom. An object
@@ -7073,6 +7420,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A server, or any concurrent program, has a set of event sources, such as socket handles for connected clients, and it must service events that arrive on those sources with as many threads as it has available, without paying avoidable synchronization or memory costs for every event it handles. The paper frames this through a multi-tier on-line transaction processing system. Front-end communication servers receive requests from many remote clients, validate them, and forward valid requests to back-end database servers, which run the actual transaction and return a result. Both server tiers spend most of their time doing socket I/O rather than computation, so the design that schedules threads onto that I/O work determines the system's throughput far more than any change to the transaction logic itself.
 
 **Failure Mode Symptoms:**
+
 - , the pool occasionally stalls under load, with every thread appearing
 - , throughput plateaus as more CPU cores are added, well below what the
 - , intermittent data corruption or a double-processed request under
@@ -7084,6 +7432,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single mutable structure, most often a hash table, a counter map, a cache, or an in-memory index, is accessed by many threads at once. Some of those threads only read. Others write. The simplest safe implementation guards the entire structure with one lock. Every operation, on any key, from any thread, serializes behind that one lock. On a machine with one core this costs nothing extra. On a machine with many cores it throws away nearly all of the available parallelism, because two threads updating two keys that have nothing to do with each other still wait on each other.
 
 **Failure Mode Symptoms:**
+
 - Hot-key collision inside one stripe. Symptom, a stripe count that looks
 - Deadlock from unordered multi-stripe acquisition. Symptom, the process
 - Silent race from an inconsistent stripe selector. Symptom, data
@@ -7095,6 +7444,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team has a dataset far too large to process on one machine in an acceptable amount of time, and the transformation they need to run over it decomposes into two things. an operation that can run on each record independently, with no dependency on any other record, and an operation that needs to combine the results of many records that share something in common, typically a key. The classic example from the original paper is counting how many times each word appears across a large corpus of documents. no single document's word count depends on any other document, but the final count for the word "the" needs every document's contribution merged together.
 
 **Failure Mode Symptoms:**
+
 - Non-idempotent map or reduce functions. Symptom. Output totals are
 - A naive, non-associative combiner. Symptom. A computed average, or any
 - Data skew concentrating on a single key. Symptom. A job finishes almost
@@ -7107,6 +7457,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object holds mutable state that more than one thread will call methods on concurrently. Unlike Active Object, the calling thread here is not trying to avoid blocking, it genuinely wants a synchronous answer before it continues. The problem is narrower than Active Object's problem, and that narrowness is the whole point. how do you make an object's methods individually atomic with respect to each other, and let a thread that calls a method it cannot proceed with yet wait, efficiently, without spinning, until some other thread changes the state enough to let it proceed, then wake it up.
 
 **Failure Mode Symptoms:**
+
 - Lost wakeup. Symptom, a consumer thread blocks forever even though a
 - Spurious wakeup treated as a real signal. Symptom, a consumer processes a
 - Deadlock from inconsistent lock ordering across two monitors. Symptom, a
@@ -7118,6 +7469,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single logical answer depends on several independent pieces of work, and those pieces do not depend on each other. The pieces might be N shards of one data set that each need to be queried, N downstream services that each hold part of the answer, N replicas of the same service queried for redundancy, or N items in a batch that each need the same transformation applied. In every case the sequential version of the code is a loop, and the loop is wasted wall-clock time, because iteration two gains nothing from waiting for iteration one to finish first.
 
 **Failure Mode Symptoms:**
+
 - The straggler tax. Symptom. p50 latency for the aggregate operation looks
 - The silent partial failure. Symptom. An aggregate response looks
 - The leaked straggler. Symptom. A quorum or first-response-wins policy
@@ -7131,6 +7483,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team of workers needs to pass through a sequence of stages together, where no worker may begin stage N+1 until every worker that is still participating has finished stage N, and where the exact number of workers participating is not fixed in advance and can shrink or grow between stages. This is the concrete situation Phaser exists to solve, and it shows up in three recognizable shapes.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A Phaser that should keep running across many phases silently
 - Symptom. A worker thread blocks forever on arriveAndAwaitAdvance() even
 - Symptom. A phase advances and releases waiting parties earlier than the
@@ -7141,6 +7494,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A program has to apply several distinct transformations to a large or unbounded stream of items, and the transformations are heterogeneous. One stage decodes a file format, the next validates the record, the next enriches it with a database lookup, the next writes it to storage. Written as a single loop, each item pays the full cost of every stage before the next item starts, so the CPU sits idle while a network call for item three is in flight and nothing else happens in the meantime. The total wall-clock time is the sum of every stage's latency multiplied by the number of items, even though several of the stages have nothing to do with each other's resources. decoding is CPU-bound, enrichment is I/O-bound, and writing is disk-bound.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The process's goroutine, thread, or task count grows without
 - Symptom. Memory use grows unbounded and the process is eventually killed
 - Symptom. Output items appear in a different order than the corresponding
@@ -7152,6 +7506,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A server, or any program, needs to service many concurrent long-running operations, most commonly network reads and writes, disk I/O, or timers, without paying the cost of one operating system thread per concurrent operation. Thread-per-operation does not scale. each OS thread carries a fixed stack allocation, a kernel scheduling entry, and a context-switch cost, and a server handling ten thousand simultaneous connections cannot afford ten thousand blocked threads, most of them doing nothing but waiting on a socket that has no data yet.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The application appears to leak memory slowly under sustained
 - Symptom. Under moderate concurrency the server's throughput plateaus far
 - Symptom. Two completion handlers for logically related operations
@@ -7163,6 +7518,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of work is generated by one part of a system at a rate, and shape, that does not match the rate or shape at which another part of the system can consume it. A web server accepts HTTP connections faster in bursts than a downstream image-resizing routine can resize images. A sensor emits readings on a fixed clock while the analytics job that consumes them sometimes pauses for a slow database write. A logging call happens on the hot path of every request while writing that line to disk takes milliseconds the hot path cannot afford. In every one of these cases, calling the consumer directly from the producer's thread of control ties the producer's speed to the consumer's speed, and any variance in one becomes latency or failure in the other. The producer either blocks on a slow consumer, defeating the reason the producer existed as a separate concern, or the producer must run on its own thread and somehow hand its output to the consumer's thread safely, without corrupting shared memory and without either side polling in a busy loop.
 
 **Failure Mode Symptoms:**
+
 - Memory usage grows steadily and eventually the process is killed
 - The whole system appears to hang under moderate load even though
 - rather than inferred from a system-wide symptom, since dimension 16 covers
@@ -7175,6 +7531,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A server accepts many concurrent client connections, and at any instant almost all of them are idle. waiting for the client to send the next request, waiting for the client to read a response, waiting for a keep-alive timeout. A small minority are ready to be read from or written to right now. The server has to notice which minority that is, without wasting a thread on every connection that is doing nothing.
 
 **Failure Mode Symptoms:**
+
 - Every connection served by one process or worker suddenly
 - Memory grows without bound over hours or days even though
 - A small percentage of connections silently receive no response
@@ -7187,6 +7544,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A data structure is read far more often than it is changed, and the readers must never be made to wait for a writer, ever, not even briefly, because the read path sits on a hot loop that runs millions of times per second, a routing table lookup on every packet, a directory-entry cache lookup on every file open, a listener list walk on every event, a configuration read on every request.
 
 **Failure Mode Symptoms:**
+
 - Blocking inside a read-side critical section. Symptom. Under sustained
 - Missing publish barrier. Symptom. A reader occasionally observes a
 - Treating RCU as a general-purpose replacement for locking. Symptom. A
@@ -7198,11 +7556,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single piece of shared, mutable state is accessed by multiple threads. Some of those accesses only read the state. Some mutate it. A plain mutex forces every access, read or write, through the same one-thread-at-a-time gate, which is unnecessary and expensive when reads vastly outnumber writes and reads do not conflict with each other, only with a concurrent write.
 
 **Observable Symptoms:**
+
 - Reads vastly outnumber writes, so the cost of coordinating readers against
 - Reads take long enough, or happen at high enough concurrency, that
 - The data structure being protected can be read concurrently without
 
 **Failure Mode Symptoms:**
+
 - Reader-to-writer upgrade deadlock. Symptom. Two or more threads, each
 - Writer starvation under sustained read load. Symptom. A writer's
 - Torn or inconsistent reads from a read path that silently mutates.
@@ -7215,6 +7575,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of code acquires a lock to protect a critical section, and every path out of that critical section, the normal return, the early return, the thrown exception, the break out of a loop that spans the critical section, must release the same lock exactly once. A function with three exit points and a manually paired acquisition and release call needs the release call written, or at least reached, at each of those three points, and a fourth exit point added six months later by someone who has never seen the discipline the function relies on is not required by the compiler to remember it.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A lock appears to be released the instant it is acquired, and a
 - Symptom. Two threads deadlock, each holding one of two mutexes and
 - Symptom. A function that was fast in isolation becomes a throughput
@@ -7226,6 +7587,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A fixed, known number of interchangeable resources exist. Database connections in a pool, worker threads in a pool, licence seats, outbound HTTP calls to a fragile third party, slots in a rate-limited API tier, GPU memory buffers, disk write handles. Many independent pieces of code, running concurrently, need to use one of those resources for a while and then give it back. Too many pieces of code using the resource at once causes the resource to fail, degrade, or exceed a contractual limit, so something must count how many are in use and make everyone else wait once the count reaches the limit.
 
 **Failure Mode Symptoms:**
+
 - Permit leak on an exception path. Symptom. Available concurrency slowly
 - Double release inflates effective capacity. Symptom. More concurrent
 - Deadlock through nested acquisition in inconsistent order. Symptom. Two
@@ -7239,11 +7601,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A reusable component, a cache, a connection pool, a queue, a counter, a buffer manager, is built once and deployed into more than one concurrency environment. One deployment runs single-threaded and pays for correctness it does not need if locking is hard-coded in. A second deployment runs with many threads contending on the same instance and needs a real mutex. A third deployment, if the component becomes popular, runs on a platform where a readers-writer lock beats a plain mutex because reads vastly outnumber writes, or where a recursive mutex is needed because the component's own methods call each other. If the component's synchronization is written as a single hard-coded lock type, embedded directly in the method bodies, then supporting a new deployment target means either duplicating the entire class with one line changed, which is exactly the kind of near-duplicate code that rots the moment one copy gets a bug fix and the other does not, or adding a runtime branch on a concurrency-mode flag inside every method, which pollutes every method body with a conditional that has nothing to do with the component's actual job.
 
 **Observable Symptoms:**
+
 - A single component's core logic, the part that has nothing to do with
 - The set of viable lock types is known and small at the point the component
 - Performance tuning matters enough that a runtime branch on every method
 
 **Failure Mode Symptoms:**
+
 - A component that ran correctly for months suddenly deadlocks
 - A component performs correctly in unit tests, which run
 - A latency-sensitive hot path shows unexplained tail-latency
@@ -7254,6 +7618,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A server, or any long-running process, receives a stream of independent units of work. Each unit could, in principle, run on its own thread, and for a low, steady rate of arrival this is simple and correct. The moment the arrival rate becomes bursty or the process must survive sustained high concurrency, the thread-per-task model breaks down along two separate axes at once.
 
 **Failure Mode Symptoms:**
+
 - Thread pool deadlock from nested dependent submission. The observable symptom is that the
 - Unbounded queue masking saturation. The observable symptom is that memory usage climbs
 - Thread starvation from a blocking call inside every worker. The observable symptom is that
@@ -7265,6 +7630,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object holds mutable state that more than one thread can reach at the same time, and the object exposes more than one public operation on that state. Somewhere between no locking at all and a lock inside every method, including the ones other methods call, a design decision has to be made about exactly which methods acquire the lock and which methods assume it is already held.
 
 **Failure Mode Symptoms:**
+
 - The application hangs under load, on a code path that
 - A data race is caught by a race detector, Go's -race,
 - Throughput regresses after a safety pass through the code
@@ -7275,6 +7641,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of state is logically global, in the sense that every function in a call chain wants to read or write it through one shared name, and yet the state must physically differ for every thread that touches it, because two threads writing the same location would corrupt each other's data. The paper's own motivating example is the C library's errno variable. A blocking or non-blocking system call sets errno on failure, and the calling code checks it immediately afterward. The two steps, the set and the check, are not one atomic operation. In a single-threaded program that gap never matters, because nothing else runs between the call and the check. In a preemptively multi-threaded program, a second thread can be scheduled between those two steps and overwrite the shared errno before the first thread reads it, so the first thread's check sees the second thread's error code (TSS pattern PDF, section 2.2, Common Traps and Pitfalls, verified 2026-08-02, describing exactly this race between two threads calling recv on a socket).
 
 **Failure Mode Symptoms:**
+
 - Stale value leaking across pooled-thread reuse. Symptom. A worker in a
 - Memory retained past the point the value is needed. Symptom. Heap usage
 - Field initializer silently runs on only one thread. Symptom. A
@@ -7289,6 +7656,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system receives units of work that are independent of each other, and the rate at which work arrives does not match the rate at which any single processor can do it. The work might arrive from an HTTP request that must return in milliseconds while the actual job takes seconds or minutes (send an email, transcode a video, generate a PDF, run a machine learning inference). It might arrive from a batch import that produces ten thousand rows to validate. It might arrive from a scheduled trigger that fires the same job on a cadence. In every case the caller that produces the work item should not, and often cannot, block until the work is finished.
 
 **Failure Mode Symptoms:**
+
 - The symptoms below are drawn from operational experience rather than a single
 - Symptom. Jobs process twice, causing duplicate emails or double charges.
 - Symptom. Queue depth grows without bound and workers never seem to catch
@@ -7303,6 +7671,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A program decomposes into many small units of work, and the units are created dynamically during execution rather than known up front. A recursive divide-and-conquer algorithm is the canonical shape. Parallel quicksort spawns two recursive sorts of unequal size, a parallel tree traversal spawns one task per child, a parallel merge sort spawns two half-size merges. The number of tasks is large, their individual cost varies wildly, and the tree of tasks is irregular, so no static up-front partition across a fixed number of worker threads can be correct for all inputs.
 
 **Failure Mode Symptoms:**
+
 - Starvation of a specific task under sustained local churn. Symptom. a profiler or trace
 - Thundering-herd stealing under bursty low parallelism. Symptom. CPU usage spikes on all
 - False sharing between adjacent deques or deque metadata. Symptom. severe, otherwise
@@ -7316,11 +7685,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A client, whether a mobile app, a web frontend, or another service, needs a single response that draws on data owned by more than one microservice, and no single service holds all of it.
 
 **Observable Symptoms:**
+
 - The data genuinely lives in separately owned stores. If the data still
 - The query is read-only and does not need to be transactionally consistent
 - The client cannot reasonably be asked to make the calls itself. A mobile
 
 **Failure Mode Symptoms:**
+
 - Using the composer as if it were a transaction. Symptom. A customer
 - The N+1 fan-out. Symptom. A composed endpoint that returns a list of ten
 - No timeout budget, so one slow provider stalls the whole response.
@@ -7337,6 +7708,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A client of a microservices system, whether a mobile app, a single-page web application, or a third-party integration, needs data or an action that in a monolith would have been a single call into one process. In a microservices architecture the same request usually depends on several independently deployed services, because the data has been decomposed by business capability or subdomain across service boundaries (see decompose-by-business-capability(decompose-by-business-capability.md) and decompose-by-subdomain(decompose-by-subdomain.md)). If the client calls each service directly, three problems appear at once.
 
 **Failure Mode Symptoms:**
+
 - The gateway becomes a second monolith. Symptom, in practice, is a
 - Aggregation calls are made sequentially instead of in parallel.
 - , an aggregating endpoint's latency is roughly the sum, not the
@@ -7352,6 +7724,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A microservice architecture replaces one perimeter, the monolith's process boundary, with dozens or hundreds of network boundaries, one between every pair of services that call each other, and one between every client and the edge. Each of those boundaries is a place where the caller's authorization must be checked before the call is allowed to proceed. The naive answer, re-authenticating the caller with a username and password on every hop, is both slow (a credential store round trip on every call) and dangerous (every service in the call graph now has to be trusted with the caller's password).
 
 **Failure Mode Symptoms:**
+
 - A service silently authorizes requests with alg: none or accepts
 - A token minted for one service is accepted by an entirely
 - Authentication intermittently fails for a subset of servers, or
@@ -7364,19 +7737,22 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service, whether a monolith module or a microservice, owns a piece of the domain that contains more than one related object, and some of the rules that govern that piece span more than one object at once. An order has line items, and the sum of the line items must not exceed a credit limit. A bank account has a balance and a set of pending holds, and the balance minus the holds must never go negative. A shopping cart has items and a coupon, and the coupon must be valid for the combined total, not any single item.
 
 **Observable Symptoms:**
+
 - There is a real invariant, a rule that must hold true at the end of every
 - The invariant spans more than a single scalar field, so it cannot be
 - The system needs a place to put the enforcement logic that the storage layer
 
 **Failure Mode Symptoms:**
+
 - Judgement note. The symptoms below are drawn from widely documented practice
-- | | Symptom | Cause | Fix |
+- / / Symptom / Cause / Fix /
 
 #### [Application Metrics](../patterns/10-microservices/application-metrics.md)
 
 **Core Problem:** A monolith has one process. When something is slow or wrong, an engineer attaches a profiler, reads a thread dump, or greps one log file, and the whole picture of the system's behavior is in that one place. A microservices architecture removes that single vantage point. The same business transaction now crosses a dozen independently deployed, independently scaled, independently failing processes, and the question "is the order service slow, or is it the payment service it calls, or the database connection pool underneath it" no longer has an answer that lives in one process's memory.
 
 **Failure Mode Symptoms:**
+
 - Series-count explosion from an unbounded label. Symptom. The metrics
 - Recording a duration as a Gauge instead of a Histogram. Symptom. A
 - Blocking the request path on a metrics send. Symptom. Under load,
@@ -7388,6 +7764,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system holds state that changes over time, and more than one actor, whether a human, a service account, or another microservice, can trigger those changes. At some point after the fact, someone needs to answer a question the running state cannot answer on its own. Who changed this customer's credit limit, and when, and from what value to what value. Which service account deleted this record. Did anyone read this patient's file last Tuesday. Was this price change made by a human in the pricing team or by an automated repricing job that misfired.
 
 **Failure Mode Symptoms:**
+
 - which one is correct. Symptom. An investigation surfaces an audit record
 - answer, even though auditing was turned on. Symptom. A resource is gone,
 - months. Symptom. A historical audit record has an updatedat timestamp
@@ -7400,6 +7777,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A microservices architecture replaces a small number of long-lived, statically addressed processes with many short-lived, dynamically addressed ones. A single service, "order-service" for instance, might run behind three, thirty, or three hundred instances depending on load, each on a network address assigned at startup by a scheduler such as an EC2 Auto Scaling group, a Kubernetes scheduler, or a container orchestrator. Instances also disappear on redeploy, on autoscale-in, on crash, and on rolling upgrade. A caller that hardcodes an address, or even a small fixed list of addresses, breaks the moment the topology changes, which in a system under continuous deployment is constantly.
 
 **Failure Mode Symptoms:**
+
 - Registry outage taken as a total system outage. Symptom, every internal
 - Split-brain registry returning inconsistent instance lists. Symptom, some
 - Thundering herd on registry refresh. Symptom, the registry's CPU or
@@ -7411,6 +7789,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A consumer service calls a provider service over HTTP, gRPC, or an asynchronous message. Both sides deploy independently, on their own schedule, often owned by different teams. The consumer's integration tests either hit a real, deployed instance of the provider, which is slow, flaky under load, and requires shared test environments that different teams collide over, or they hit a hand-written mock that the consumer team maintains from memory of what the provider does, which drifts from reality the first time the provider changes a field name or a status code and nobody tells the consumer team.
 
 **Failure Mode Symptoms:**
+
 - A provider deploys a change that passes every contract test and
 - The provider team routinely merges pull requests that change
 - CI is green, the broker's can-i-deploy check is skipped or its
@@ -7422,6 +7801,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns a service that calls another team's service over HTTP, gRPC, or an asynchronous message channel. Both teams deploy independently, on their own schedule, several times a day in a mature organization. The consuming team cannot run the real provider in their test suite for every commit, because the provider may be down, may be slow, may require test data the consumer does not control, or may not exist yet if the two teams are building in parallel. So the consuming team mocks the provider's responses in their tests, based on documentation, a shared wiki page, or a Slack message from three weeks ago describing the API shape.
 
 **Failure Mode Symptoms:**
+
 - The contract suite is green, but the two services still break in
 - Provider verification tests are constantly red, and the provider
 - The same interaction is defined slightly differently across five
@@ -7433,6 +7813,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is decomposing a monolith into services, or is designing a new system as microservices from the start, per Decompose by Business Capability or Decompose by Subdomain. Each service is meant to be independently deployable, independently able to scale, and ownable by one small team without that team needing sign-off from every other team before it ships a change. The moment two services read and write the same physical database, that independence is a fiction. A schema migration in one service can break a query another service depends on, a heavy analytical query from one service can starve the connection pool another service needs for its request path, and a locking decision made for one service's write pattern can stall a completely unrelated service's writes. The context in which this pattern becomes necessary is exactly the context that motivated microservices in the first place, an organization has multiple teams that need to move at different speeds, and a single shared schema forces them back into lockstep even after the code has been split into separate deployable units.
 
 **Failure Mode Symptoms:**
+
 - A private database that three other services actually query
 - A distributed transaction implemented as a chain of synchronous
 - Report generation that takes minutes and hammers every service's
@@ -7444,6 +7825,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns a monolith, or is building a new system, and needs to draw service boundaries. The team has already accepted that the system will be more than one deployable unit, the decision to go distributed has been made elsewhere or is not in question here, and the actual problem in front of them is narrower and harder than it looks. Where do the seams go.
 
 **Failure Mode Symptoms:**
+
 - Two services are constantly changed together in the same pull
 - A capability service has grown to require five or more teams to
 - Order placement, or any cross-capability process, silently leaves
@@ -7455,6 +7837,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns a system that has grown past the point where one deployable, one shared database, and one release train can move at the speed the business needs. The usual trigger is not code size on its own. It is that unrelated parts of the business now have to change on unrelated schedules, and every change still has to pass through the same build, the same regression suite, and the same release calendar, so a marketing team's pricing experiment and a finance team's tax-rule fix contend for the same deploy window and the same merge queue.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two services constantly need to change together, and every
 - Symptom. The "subdomain" services all still read and write the same
 - Symptom. A subdomain is confused with a bounded context, and the team
@@ -7467,6 +7850,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single user-facing request in a microservice architecture fans out into a call graph. An edge request into an API gateway might call an authentication service, which calls a user-profile service, which calls a cache and then a database, while the gateway in parallel calls a pricing service, which calls an inventory service and a currency-conversion service. A checkout that took 900 milliseconds might have spent 40 milliseconds in six of those calls and 620 milliseconds waiting on a single slow query three hops deep. Nothing in a per-service log file tells a reader that. Each service's logs are true only about that service's own local view, and none of them carries the information that ties one service's log lines to another's for the same logical request.
 
 **Failure Mode Symptoms:**
+
 - A trace exists but ends abruptly partway through the call
 - Trace query volume or storage cost grows far faster than
 - Every span in a service is named identically, for example
@@ -7479,6 +7863,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An operation on one part of a domain model needs to trigger a reaction in another part of the model, or in another bounded context entirely, and the class performing the operation should not need to know the reaction exists. Consider an order-placement flow. Placing an order needs to reserve inventory, create a shipping record, notify a loyalty program, and update a fraud-scoring model. If the code that creates the order also calls the inventory service, the shipping service, the loyalty service, and the fraud service directly, the order-creation class grows a dependency on every consumer of the fact that an order was created, and every new consumer means editing and redeploying the order-creation class again.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A handler runs twice for the same business fact, producing a
 - Symptom. The write that raised an event committed successfully, but the
 - Symptom. A domain event meant only for internal, same-bounded-context
@@ -7490,11 +7875,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A request arrives at a service instance and, partway through handling it, code raises an exception the calling frames do not catch. The process does not necessarily crash, most server frameworks catch the exception at the top of the request handling stack and return an error response, but the specific failure that occurred is now only visible as a single line in a log file on one of possibly hundreds of running instances, and it will scroll out of that log within minutes under real traffic.
 
 **Observable Symptoms:**
+
 - The system has many service instances, often across many services, so an
 - Failures are individually low frequency against total traffic, so they do
 - The team wants to know about a regression within minutes of a deploy, not
 
 **Failure Mode Symptoms:**
+
 - Alert fatigue from tracking expected errors. Symptom. The on call
 - Cost or storage blowout from one noisy exception. Symptom. A monthly
 - Fingerprint fragmentation. Symptom. What is obviously one bug, a
@@ -7508,6 +7895,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service needs values that differ by where and how it is running. a database connection string, an API key for a payment provider, a feature flag, a retry timeout, the address of a downstream service, a log level. The values are knowable only at deploy time or, for a flag or a timeout, only while the service is running and someone wants to change behavior without restarting it.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A service starts successfully, appears healthy on its liveness
 - Symptom. Two instances of the same service, deployed from the identical
 - Symptom. A secret, a database password or an API key, turns up in a
@@ -7520,6 +7908,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A running process is not the same thing as a working service. A Java process can be alive, holding its listening socket open, answering the operating system's TCP handshake, and still be unable to serve a single correct request because its database connection pool exhausted, its downstream dependency is unreachable, or a background thread deadlocked while holding a lock every request path needs. From outside the process, at the level of a load balancer or an orchestrator, none of that internal state is visible. The only signal available by default is whether the socket accepts connections, and that signal answers a narrower question than the one operators actually care about.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Every instance of a service restarts in a tight loop during a
 - Symptom. A service is removed from load balancer rotation and never
 - Symptom. A health dashboard shows every instance green throughout an
@@ -7530,18 +7919,21 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service consumes messages or events from a broker, whether that is Kafka, Amazon SQS, RabbitMQ, Azure Service Bus, Google Pub/Sub, or an HTTP webhook delivered by another service. Every one of these transports, when configured for reliable delivery, gives an at-least-once guarantee, never an exactly-once one at the wire level. A consumer can crash after processing a message but before acknowledging it. A network partition can cause a broker to resend a message it never received an acknowledgment for. A producer retrying a failed publish, or a webhook sender retrying a failed HTTP call, can hand the same logical event to the consumer twice under two different delivery attempts. None of these are bugs in the transport. They are the transport doing exactly what an at-least-once contract promises, never silently dropping a message, even at the cost of occasionally delivering it more than once.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Log Aggregation](../patterns/10-microservices/log-aggregation.md)
 
 **Core Problem:** A service in a microservices system emits log lines to its own local standard output or to a file inside its own container. That container is one of several running instances of the service, behind a load balancer, and it may be replaced within minutes by an autoscaler, a deployment rollout, or a node eviction. The log lines it wrote disappear with it unless something copies them out first.
 
 **Observable Symptoms:**
+
 - Ephemeral compute. The process that emitted a log line may no longer
 - Horizontal fan-out. A single logical request is served by many
 - Distributed ownership. No one team, and often no one host, owns the
 
 **Failure Mode Symptoms:**
+
 - Backpressure coupling the emitter to the backend. Symptom. Request
 - Using the log store as a database of record. Symptom. A finance or
 - Unbounded, unstructured logging burying the useful signal. Symptom.
@@ -7555,11 +7947,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An engineer is paged. A service that was healthy an hour ago now returns higher error rates, or its latency has doubled, or a queue is backing up. The single most productive question available to that engineer, before reading a single stack trace, is whether anything changed in the system recently, because in aggregate most production incidents trace back to a change rather than to a pre-existing, dormant bug being triggered by traffic alone.
 
 **Observable Symptoms:**
+
 - Changes to a live system, not bugs discovered at write time, are the dominant proximate cause of user-visible incidents, per the finding above.
 - A microservice architecture multiplies the number of independently deployable units, and therefore multiplies the number of places a change can originate from, well past what a single person can hold in their head.
 - The person diagnosing an incident is frequently not the person who made the most recent change, and does not have privileged access to that person's local knowledge of what shipped.
 
 **Failure Mode Symptoms:**
+
 - Each entry names the symptom a responder would actually observe, the underlying cause, and the fix, because the abstract mistake alone rarely helps someone debugging their own instance of it.
 - An incident timeline shows no deploy marker even though the on-call engineer knows a deploy happened around that time. Cause. The event emission step lives inside the deploy script itself, after the artifact is already live, and a crash, timeout, or network blip between the artifact landing and the emission call running means the deploy succeeded but the event never fired, and nothing noticed the mismatch. Fix. Emit the event from the orchestrator's own definition of deploy completion, a webhook the CI/CD platform fires on pipeline success rather than a step inside the pipeline that can be skipped by an early exit, and alert on a mismatch between the count of successful pipeline runs and the count of Change Events received for the same window.
 - Two services show a deploy marker at the same minute, but a responder cannot tell from the ledger which git commit or build each one actually shipped. Cause. The event schema records a boolean "deployed" fact per service without an immutable version identifier attached, often because the field was added as an afterthought to an existing generic metrics pipeline. Fix. Require every Change Event to carry a version field that is either a git sha or an equivalent immutable build identifier, never a mutable label like "latest" or a semver tag that could be reused, and reject events at the sink that omit it.
@@ -7573,9 +7967,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A microservice architecture splits one application into many independently deployable services, and Richardson is explicit that this decomposition alone does not remove the need for those services to collaborate, it only changes how they must do it, because a single business operation now spans process boundaries that used to be in-process method calls (Richardson, Microservices Patterns, chapter 3, section 3.1). The concrete situation looks like this in a real system. An order service accepts a new order. Before it can report success to the customer, or shortly after, a payment must be authorized, inventory must be reserved, and a shipping label must eventually be requested. Each of those steps now lives in a separate deployable unit, on its own schedule, on its own infrastructure, and possibly written by a different team.
 
 **Observable Symptoms:**
+
 - Microservices Patterns, chapter 3, section 3.1). The concrete situation looks
 
 **Failure Mode Symptoms:**
+
 - A consumer occasionally processes the same business effect
 - Messages pile up in a queue and consumer lag grows without
 - A downstream service silently never learns that an upstream
@@ -7587,6 +7983,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single microservice, considered in isolation, is a small and cheap thing to write. The business logic for one bounded context might be a few hundred lines. What is not small is everything a service needs to be a good citizen of its runtime environment before that business logic can run in production at all. It must read configuration from the environment rather than a hardcoded file, expose a health check endpoint an orchestrator can poll, register itself with or be discoverable through a service registry, emit structured logs a central aggregator can parse, export metrics a monitoring system can scrape, propagate a distributed trace context across its outbound calls, wrap outbound calls in a circuit breaker so a downstream failure does spread to every caller, validate a JWT or mTLS certificate on inbound requests, and respond correctly to a shutdown signal so an in flight request is not dropped mid response during a rolling deployment.
 
 **Failure Mode Symptoms:**
+
 - A logging format change ships in a chassis minor version
 - A new service takes noticeably longer to start, or its
 - Business logic starts appearing inside the chassis itself,
@@ -7598,6 +7995,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The context is the second half of the Transactional Outbox story, and it is worth stating precisely because Polling Publisher is frequently confused with the outbox pattern itself. Transactional Outbox solves the write side. a service commits its business change and a row describing an event to publish in one local database transaction, so the two either both happen or neither does. That solves atomicity. It does not move a single byte onto a message broker. The moment the transaction commits, there is a row sitting in a table, and a completely separate problem now exists, how does that row ever leave the database and become a message a consumer can react to.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Consumers occasionally receive an event twice for the same
 - Symptom. An event that was clearly written to the outbox table never
 - Symptom. The polling query, which used to run in milliseconds, now takes
@@ -7609,6 +8007,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A microservice architecture splits a system into many independently deployable services, and almost every non-trivial request touches more than one of them. An order placement might need the inventory service to check stock, the pricing service to compute a total, and the payments service to authorize a charge. Something has to carry that request across the process boundary that separates each service, because the services no longer share memory, no longer share a transaction, and often run on different hosts.
 
 **Failure Mode Symptoms:**
+
 - Hung caller under downstream load. Symptom. A request handler hangs for
 - Compounding chain availability. Symptom. A distributed call chain of five
 - Duplicate side effect on retry. Symptom. The client silently receives the
@@ -7620,6 +8019,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service client calls a downstream dependency over the network. The call can fail for reasons that are transient, a single backend instance briefly overloaded, a load balancer routing to an instance mid-restart, a packet lost on a congested link, or reasons that are not transient, the downstream is genuinely out of capacity, a bad deploy is failing every request, a database behind the downstream is down. The naive fix for transient failure is to retry the call, and retrying transient failures genuinely improves the end-to-end success rate seen by the caller, which is why every serious RPC framework ships retry support by default.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Retries stop happening entirely during a genuine, sustained
 - Symptom. A low-traffic call site to an otherwise healthy shared
 - Symptom. The budget drains rapidly even though the downstream service's
@@ -7630,6 +8030,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns an order service that publishes an OrderPlaced event to a Kafka topic. Three other teams consume that topic, a shipping service, a fraud detection service, and a data warehouse loader. All four teams deploy on their own schedule. The order service team wants to add a giftMessage field next sprint and eventually remove a deprecated legacyDiscountCode field. Nobody has agreed on what "safe to change" means, and there is no shared, machine checkable definition of the message shape that all four teams read from.
 
 **Failure Mode Symptoms:**
+
 - A consumer starts throwing deserialization exceptions on a subset
 - Schema registration calls intermittently time out or fail during a
 - The number of registered subjects grows into the thousands with no
@@ -7641,6 +8042,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service instance's network location changes on every deployment, every autoscaling event, and every crash-and-restart. In a virtual machine or bare metal world locations moved rarely and were kept current by hand in a configuration file or a load balancer's static pool. In a world where an orchestrator can replace an instance in seconds and can run tens of identical instances behind one logical name, a human updating a file cannot keep pace, and every client, or every reverse proxy standing in for the clients, needs a current answer to "where is a healthy instance of the payment service right now."
 
 **Failure Mode Symptoms:**
+
 - Symptom. Consumers intermittently receive connection refused or timeout
 - Symptom. A newly deployed instance receives production traffic
 - Symptom. During a rolling deploy, half the fleet briefly disappears from
@@ -7652,6 +8054,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns a piece of business capability end to end, say "product catalog" or "checkout" or "order history", and wants to release a change to that capability without asking three other teams to release in lockstep. In a layered architecture, "checkout" is spread across a shared frontend application, a shared backend-for-frontend layer, a shared checkout microservice, and a shared database, and a change to checkout's UI, business logic, or schema forces a coordinated deploy across whichever of those shared layers it touches.
 
 **Failure Mode Symptoms:**
+
 - Two SCSs quietly share a database instance for one query, and
 - The shared design system drifts, and after six months the
 - Page load time for a composed page silently doubles or
@@ -7663,11 +8066,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service instance's network address is not static. In a system built on virtual machines that autoscale, or containers scheduled by an orchestrator, the IP address and port of any given instance is assigned dynamically when the instance starts and is released when it stops. An instance can be replaced by the scheduler after a health check failure, after a rolling deployment, after a node drains for maintenance, or after an autoscaler adds capacity. The set of valid addresses for a logical service therefore changes continuously, and any caller that wants to reach that service needs a way to find a currently valid address rather than a way to remember one.
 
 **Observable Symptoms:**
+
 - The infrastructure layer already terminates connections and can insert
 - The organization wants client code that is agnostic to the runtime, the
 - The team accepts an additional network hop, and an additional piece of
 
 **Failure Mode Symptoms:**
+
 - A rolling deployment causes a burst of failed requests,
 - The router itself becomes the top entry in an incident
 - A specific client intermittently connects to a stale or
@@ -7680,11 +8085,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns a piece of business logic that is genuinely small and genuinely bursty. An image gets uploaded and needs a thumbnail generated. A webhook arrives from a payment provider and needs to update an order record. A scheduled job needs to run once a night to close out a batch. None of these things need to run continuously, none of them need a warm process sitting idle between events, and the load on each of them can jump from zero to thousands of concurrent invocations in the space of a minute during a flash sale or a marketing push.
 
 **Observable Symptoms:**
+
 - The unit of work is genuinely stateless between invocations, or can be made
 - The workload is event shaped. An HTTP request, a queue message, a storage
 - The team is willing to trade fine grained control over the runtime, the
 
 **Failure Mode Symptoms:**
+
 - Symptom. The first request after a period of low traffic takes 800
 - Symptom. A payment or order-processing function occasionally records a
 - Symptom. A function that worked in every test suddenly starts throwing
@@ -7696,6 +8103,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns one service inside a system decomposed into many services, for example an Order Service that, in the course of handling a single request, calls a Customer Service to check a credit limit, an Inventory Service to reserve stock, and publishes a domain event that a Notification Service eventually consumes. The team needs confidence that the Order Service itself is correct, meaning its business logic, its HTTP or messaging adapters, its database mapping, and the way it composes calls to its collaborators are all correct, before that confidence is a matter of testing the whole constellation of services together.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Component tests are consistently green in CI, and yet a
 - Symptom. The component test suite passes locally on a developer's machine
 - Symptom. A single component test file takes several seconds to run, and
@@ -7707,6 +8115,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team has decomposed an application into a set of independently deployable services, following one of the decomposition patterns in this family, and has chosen how a single service instance is packaged, a container, a virtual machine, or a bare process on a host. Neither decision answers the operational question that determines whether the system survives contact with production traffic and production failure. Who places each instance on a piece of compute. Who notices when an instance dies and replaces it. Who load balances traffic across the healthy instances of a service. Who enforces the CPU and memory budget so one runaway service instance cannot starve its neighbors. Who exposes a uniform way to deploy the next version of any of the, in a mature microservices system, dozens or hundreds of independently built services.
 
 **Failure Mode Symptoms:**
+
 - New instances repeatedly start and are killed within
 - One service's instances are frequently evicted or
 - A rolling deployment replaces every healthy instance of a
@@ -7718,11 +8127,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is moving an application, or building a new one, on top of microservices, and has to decide the packaging and scheduling unit for each service instance. Three shapes are on the table in practice, and the choice made here ripples into every later decision about scaling, isolation, and operations.
 
 **Observable Symptoms:**
+
 - Multiple service instances, possibly of different services, share one host or
 - Each service instance gets its own VM.
 - Each service instance gets its own container.
 
 **Failure Mode Symptoms:**
+
 - The fat container. Symptom. One image, when inspected, is found to start a
 - Ignoring SIGTERM. Symptom. Every rolling deploy produces a burst of
 - Health check that lies. Symptom. The orchestrator reports an instance as
@@ -7735,6 +8146,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** You have already decomposed a system into services, and each service runs as one or more service instances for throughput and redundancy, the same starting context Richardson states explicitly on the pattern page. Now those service instances have to be packaged and placed onto physical or virtual compute so they actually run. The question this pattern answers is a placement question, not a design question inside the service, given N service instances and M hosts, what is the mapping from instances to hosts.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Cloud spend grows linearly with service count while average CPU
 - Symptom. A service that was supposed to be alone on its host is
 - Symptom. A DaemonSet-style one-per-node agent is missing from some nodes
@@ -7745,6 +8157,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team has already split a system into microservices, one deployable unit per business capability, following the Microservice Architecture pattern. Splitting the code was the easy half of the decision. The team now has to decide how each of those services actually gets onto a running machine, how many copies of each service run at once, how a copy is replaced when it crashes or when a new version ships, and how the whole thing avoids one service's runaway memory leak taking down every other service on the same box.
 
 **Failure Mode Symptoms:**
+
 - Boot-time dependency on an external artifact store. Symptom. A rolling
 - Configuration drift between the image and reality. Symptom. A service
 - Slow rollback under incident pressure. Symptom. During an active
@@ -7758,6 +8171,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system decomposed into many independently deployable services, following Decompose by Business Capability or Decompose by Subdomain, replaces in-process method calls with network calls. Every one of those calls now needs a set of concerns that a single-process monolith got for free from the language runtime and the operating system. it needs to find the right instance of the callee, choose an instance among several when there is more than one, retry a transient failure without turning it into a cascading one, stop calling an instance that has started failing consistently, encrypt the call and prove both sides' identity, and produce a trace, a latency histogram, and an error rate that someone can look at when the call chain misbehaves.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Requests intermittently fail with connection reset or 503 errors
 - Symptom. Certificate expiry outages that take down mTLS-enforced traffic
 - Symptom. A team installs a mesh and observability improves, but latency,
@@ -7769,6 +8183,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service instance in a cloud environment does not have a fixed network location. Its IP address and port are assigned dynamically by the deployment platform, autoscaling adds and removes instances continuously, and container schedulers like Kubernetes or Nomad reschedule a container onto a different host after a crash or a node failure. In a monolith this problem does not exist. Two modules that need to talk to each other are two objects in the same process, and the mechanism for one to reach the other is a language reference, resolved once at compile time or at object construction and stable for the life of the process.
 
 **Failure Mode Symptoms:**
+
 - The stale-entry window. Symptom. Intermittent connection refused or
 - The registry as a single point of failure. Symptom. A registry outage
 - The thundering herd on the registry. Symptom. The registry itself
@@ -7780,6 +8195,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system has been split into services, using Decompose by Business Capability or Decompose by Subdomain or simply by growing that way over years. The services now exist as separate deployables. The question this pattern answers is not how to draw the boundaries, that is a separate concern covered by the decomposition patterns. it is who stands behind each boundary once it is drawn.
 
 **Failure Mode Symptoms:**
+
 - A production incident sits unassigned for hours while
 - A service has not had a dependency upgrade, a security patch,
 - The same business rule, a discount calculation, a fraud
@@ -7792,6 +8208,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase is being decomposed into services, or several teams are building services that need to see overlapping pieces of business data. Order data and inventory data both describe the same product. Billing data and shipping data both need to know whether an order is paid. The team building the new services inherits a database that already exists, already has referential integrity enforced by foreign keys, and already has reporting and analytics jobs running against it. Splitting that database into one database per service means rewriting every cross-entity query as a network call, replacing every foreign key with an application-level check, and replacing every multi-table transaction with a saga or another compensating mechanism. None of that is free, and none of it can be done on day one of a decomposition project.
 
 **Failure Mode Symptoms:**
+
 - Uncoordinated schema drift. Symptom, a service starts returning null or
 - Hot table lock contention. Symptom, p99 latency on an unrelated service
 - Silent write-side ownership violation. Symptom, a row's value changes to
@@ -7802,6 +8219,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service needs a set of platform capabilities that have nothing to do with its business logic. It needs to discover where its dependencies live, it needs its outbound calls to time out and retry sanely, it needs mutual TLS on every connection, it needs its request volume, latency, and error rate exported somewhere a dashboard can read them, and it needs a stable place for an operator to enforce a rate limit or a circuit breaker without redeploying the service itself. None of that is what the service was written to do.
 
 **Failure Mode Symptoms:**
+
 - A service that has never been redeployed suddenly starts
 - Startup order races. The application makes its first outbound
 - A batch Job that should finish in minutes runs forever and
@@ -7814,6 +8232,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns a monolithic application that has become expensive to change. The codebase might be years or decades old, built on a language or framework version nobody wants to touch, entangled with a database schema that a dozen different features read and write without a clear owner, and staffed by a mix of people who understand only fragments of it. The business, meanwhile, has not stopped asking for new features, and it will not tolerate a multi-month or multi-year feature freeze while the system is rebuilt. This is the exact situation Fowler was writing about, not a system with no users but a system so entangled with an operating business that stopping it to rewrite it is not a realistic option (Fowler, "StranglerFigApplication," martinfowler.com, https://martinfowler.com/bliki/StranglerFigApplication.html, verified 2026-08-02).
 
 **Failure Mode Symptoms:**
+
 - The stalled migration. Symptom. The facade's routing table has not grown in
 - The leaky anti-corruption layer. Symptom. The new services start
 - The premature victory lap. Symptom. The team announces the migration
@@ -7829,6 +8248,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service owns a database, per the Database per Service pattern, and its database is private. No other service may query it directly. That isolation is exactly what makes the service independently deployable and lets it pick its own schema and its own storage technology, but it creates a second problem the moment any other part of the system needs to know that data changed. A search service needs a fresh index when a product's price changes. A recommendation service needs a fresh feature store when a user's purchase history changes. A data warehouse needs a near-real-time feed for analytics that cannot wait for a nightly batch export. An event-driven saga needs to know an order was placed the instant the order row commits, not five minutes later.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Source database disk usage climbs steadily and the database
 - Symptom. A downstream consumer applies the same change twice and its
 - Symptom. A downstream consumer's read model silently diverges from the
@@ -7840,6 +8260,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service owns its own database, as the Database per Service pattern in this same family requires. As part of handling a request, the service both writes to that database and needs to tell other services, or a downstream system, that something happened, by publishing a message to a broker such as Apache Kafka, RabbitMQ, or a cloud queue.
 
 **Failure Mode Symptoms:**
+
 - Events are duplicated downstream even though only one order
 - The outbox table's row count grows without bound and query
 - Two relay instances running for redundancy both publish the
@@ -7854,11 +8275,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain model accumulates Entities and Value Objects that reference one another. An Order has OrderLine items. A Customer has Address records and open Order references. A Playlist has Track entries with per-track metadata. Left alone, any part of an application that holds a reference to any of these objects can walk the graph and mutate anything reachable from it, because object references in most mainstream languages carry no notion of "you may read this but you may not write to it from here".
 
 **Observable Symptoms:**
+
 - The domain has one or more Entities whose fields must satisfy an invariant
 - The object graph is deep enough, an Entity referencing child Entities that
 - The system persists this data transactionally, and the team needs a
 
 **Failure Mode Symptoms:**
+
 - Symptom. A business invariant that "always held" in code review starts
 - Symptom. Two Aggregates, Order and Customer, cannot be compiled,
 - Symptom. A single Aggregate has grown to hold hundreds or thousands of
@@ -7869,11 +8292,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns a domain model they have deliberately shaped to match the Ubiquitous Language of their Bounded Context, see patterns/11-domain-driven-design/ubiquitous-language.md and patterns/11-domain-driven-design/bounded-context.md. That model must exchange data with another system whose model was shaped by a different team, a different era, or a different vendor, and was never designed to agree with the local one.
 
 **Observable Symptoms:**
+
 - Legacy integration. A new service is being built to eventually replace a
 - Third-party or vendor integration. An external API, a payment processor,
 - Cross-team integration inside one organisation. Two Bounded Contexts
 
 **Failure Mode Symptoms:**
+
 - Each entry below states the observable symptom first, then the underlying
 - cause, then the fix. The specific symptom language reflects common
 - Domain code contains a scattered handful of null checks,
@@ -7887,6 +8312,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A rich domain model, built from entities, value objects, and aggregates that enforce their own invariants, still needs a caller. Something has to receive a request from a controller, a message consumer, a CLI command, or a test, translate that request into calls against the domain model, and hand the result back in a shape the caller understands. Without a deliberate answer to who does that, the coordination logic ends up in one of two wrong places.
 
 **Failure Mode Symptoms:**
+
 - The god service. Symptom. A single Application Service class
 - Anemic domain model fed by a fat Application Service. Symptom. The
 - Publishing domain events before the transaction commits. Symptom.
@@ -7899,6 +8325,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system starts small. One person, or a small team under real time pressure, writes code that solves the problem in front of them using whatever shortcut gets a working result fastest. A shared database table gets read directly from three unrelated parts of the codebase because building a proper interface would take an afternoon nobody has. A global variable holds a piece of state that three subsystems mutate because passing it through explicit parameters would touch too many call sites. A quick script, written to migrate data once, never gets deleted and quietly becomes a dependency of the nightly job. None of these individual decisions is unreasonable in isolation, and the system that results genuinely works, ships, and earns revenue.
 
 **Failure Mode Symptoms:**
+
 - The change-amplification failure. Symptom. A request that should touch
 - The untestable core. Symptom. Writing a unit test for one function
 - The fear-driven freeze. Symptom. A known bug is left unfixed for months
@@ -7911,6 +8338,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A software system of any real size accumulates more than one team, more than one department's worldview, and more than one legitimate meaning for the same word. Take "Customer". In a sales context a Customer is a prospect with a pipeline stage, a probability of closing, and an assigned sales rep. In a support context a Customer is an account with open tickets, an SLA tier, and a satisfaction score. In a billing context a Customer is a payer with an invoicing address, a tax jurisdiction, and a payment method. In a shipping context a Customer is a recipient with a delivery address and a set of fulfilment preferences. None of these four is wrong. Each is the correct model for the problem that context is solving, and each would be actively harmful bolted onto the others, because a shipping Customer does not need a sales pipeline stage and a billing Customer should not carry an SLA tier.
 
 **Failure Mode Symptoms:**
+
 - Two microservices call each other synchronously, in both
 - A shared library of common domain types, Customer, Order,
 - A single Customer table with fifty nullable columns, most of
@@ -7921,11 +8349,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two bounded contexts need to exchange data or invoke each other's behaviour, and one of the two, the upstream, owns a model neither side is free to renegotiate. The downstream team faces every integration in one of two shapes. Spend real engineering time building a translation boundary that keeps the upstream's vocabulary out of its own domain, or absorb the upstream's model wholesale and let its own code speak in the upstream's terms.
 
 **Observable Symptoms:**
+
 - The upstream team has no reason to accommodate the downstream's needs.
 - The upstream's model is close enough to what the downstream actually
 - The downstream team has a deadline, a budget, or a staffing level that
 
 **Failure Mode Symptoms:**
+
 - A production incident traces back to an upstream vendor
 - The team cannot explain, when asked directly, whether a
 - A downstream team repeatedly builds one-off adapter
@@ -7937,6 +8367,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system reaches a certain size and a certain number of contributing teams before a single, internally consistent domain model stops being achievable. Evans states this directly in DDD chapter 14. Large projects, in practice, end up with multiple models, whether the team plans for it or not, because different subteams evolve their own working vocabulary under time pressure, because a system absorbs a legacy component nobody has the appetite to rewrite, because an acquired company brings its own database and its own meaning for "customer," or because a third-party system is integrated and its model cannot be changed at all. The dangerous outcome is not that multiple models exist, that is close to inevitable. The dangerous outcome is that the team pretends a single model exists when it does not, and lets the seams between models blur together undocumented and unmanaged. Evans's phrase for the resulting mess is a "muddy" system where a term drifts in meaning as code is read across module boundaries and nobody can say with confidence which meaning is in force at a given point.
 
 **Failure Mode Symptoms:**
+
 - that is the observable symptom. The cause is that the map was drawn once,
 - that is the observable symptom. The cause is that the relationship was
 - The cause is that the map was drawn at too fine a granularity,
@@ -7947,6 +8378,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team building a non-trivial system faces a resource allocation problem long before it faces a technical one. Every business runs on dozens of subsystems, and every one of them needs code, order fulfillment, payment processing, user authentication, search, notifications, reporting, address validation, tax calculation. A team with finite engineering hours, finite senior-engineer attention, and a finite budget cannot build all of these to the same standard of care, and treating them as though it could is the mistake this pattern exists to prevent.
 
 **Failure Mode Symptoms:**
+
 - Every subdomain in the chart is marked Core.
 - The Core Domain's code depends directly on a third-party
 - The chart was drawn eighteen months ago, the business has
@@ -7958,6 +8390,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Any system large enough to be split across more than one Bounded Context, see the bounded-context entry in this repository, produces integration points where one context's model feeds into another's. Evans's Context Map vocabulary names the direction of that dependency upstream and downstream, the upstream context's model and its rate of change constrain what the downstream context can build, while the downstream context's needs, by default, constrain nothing about the upstream context at all. That default asymmetry is the raw ingredient every relationship type on a Context Map is built to manage, and Customer-Supplier is the pattern for the specific case where the two teams behind those two contexts are willing, and organizationally positioned, to negotiate rather than let the asymmetry run unmanaged.
 
 **Failure Mode Symptoms:**
+
 - , the downstream team's requests sit in the upstream team's backlog
 - , the upstream team ships a change that breaks the downstream
 - , the upstream team's velocity visibly degrades and its own plan
@@ -7969,6 +8402,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase modeling a real domain accumulates behavior that has to happen "because something else happened," and that dependency keeps landing in the wrong place. An Order.markPaid() method also has to notify the shipping subsystem, decrement inventory, and update a customer loyalty balance. The straightforward move is to call all three from inside markPaid, directly, by injecting the shipping service, the inventory service, and the loyalty service into the Order aggregate or into the application service that orchestrates the transaction.
 
 **Failure Mode Symptoms:**
+
 - A downstream service processes the same order-paid effect
 - A fact appears to have happened (the aggregate committed) but
 - Adding a fourth subscriber to OrderPaid breaks the checkout
@@ -7981,12 +8415,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase accretes validation logic at the edges and loses track of where the truth lives. An EmailAddress arrives as a String from an HTTP request body. It is checked for a valid shape in the controller. It travels through three service methods and two repository calls. A fourth service, added eighteen months later by someone who never read the controller code, receives the same String and, having no reason to distrust it, uses it directly in an outbound SMTP call without re-checking it. The email came from a batch import job this time, not the web form, and the import job skipped validation. The SMTP library throws on the malformed address, or worse, silently accepts it and the message disappears.
 
 **Observable Symptoms:**
+
 - A concept has rules the language type cannot express. An age is an
 - A concept is confusable with another concept of the same underlying
 - A concept requires parsing, normalization, or formatting logic that would
 - Refactoring, 2nd edition, Addison-Wesley, 2018, chapter 3, "Bad Smells in
 
 **Failure Mode Symptoms:**
+
 - Anemic wrapper, no validation. Symptom, a class EmailAddress { String
 - Leaky escape hatch. Symptom, the wrapper exposes a public getter
 - Trust boundary skipped for one call path. Symptom, most controllers
@@ -7999,6 +8435,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team modeling a domain in an object-oriented style eventually meets an operation that genuinely spans more than one object and does not belong to either. A transfer moves money out of one account and into another. A pricing engine combines a product, a customer's tier, a currently active promotion, and today's date to produce a price. A route planner takes two addresses and a fleet of vehicles and returns an assignment. None of these operations is a property of a single Entity, and forcing one in produces a familiar smell. either the Entity grows a method that reaches out and mutates a second Entity it should not know about, tightening coupling between aggregates that DDD otherwise wants kept apart, or the operation lands in a controller or a transaction script, where the business rule quietly leaves the domain layer and the ubiquitous language stops describing what the code does.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A Service class grows to dozens of unrelated public methods
 - Symptom. Every business rule in the codebase lives in a Service layer,
 - Symptom. Unit tests for a Domain Service require standing up a
@@ -8010,6 +8447,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team building software for a business domain needs an accurate, shared picture of how work actually happens before it can decide what the software should do. The obstacle is that this picture lives almost entirely in the heads of the people who do the work, the domain experts, and it does not transfer cleanly into a form developers can use. Two familiar failure shapes recur constantly in real projects. The first is the interview transcript problem, in which a business analyst interviews a domain expert, writes prose minutes, and hands the prose to developers, who each read a slightly different meaning into the same paragraph because natural-language prose is ambiguous about sequence, about who does what, and about which details are essential versus incidental. The second is the premature-artifact problem, in which a team jumps straight to a UML activity diagram, a BPMN process model, or a set of user stories before anyone has actually walked through the real workflow with the person who lives it, so the artifact encodes the team's guess at the domain rather than the domain itself, and the domain expert, confronted with a diagram full of unfamiliar notation, cannot meaningfully critique it.
 
 **Failure Mode Symptoms:**
+
 - The silent, uncorrected diagram. Symptom. The diagram from a session
 - The single story treated as complete coverage. Symptom. A team runs
 - The unreadably large diagram. Symptom. The pictographic diagram grows so
@@ -8021,6 +8459,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Every large domain contains two very different kinds of things, and conflating them is one of the most common sources of subtle correctness bugs in business software. Some things are described completely by their current attributes, two objects with the same attributes are simply the same thing, interchangeable, and can be freely replaced with each other or with a copy. Other things persist a continuity across time and across every change to their attributes, and two objects with identical attributes are still two different things if their identity differs, while one object is still the same thing after every attribute on it has changed.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two records that represent the same real-world thing get
 - Symptom. Equality checks that used to work stop working after a
 - Symptom. A collection deduplicates or a cache evicts entries that the
@@ -8032,6 +8471,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is about to build software for a business domain nobody on the team fully understands alone. The domain experts know the business but do not think in terms of aggregates, transactions, or bounded contexts. The engineers know how to build software but do not know, without being told, that a cancelled order behaves differently depending on whether payment had already cleared, or that "customer" means something different to sales than it means to support. The gap between what the business actually does and what the team believes the business does is where defects, missing edge cases, and entire misdesigned subsystems come from, and that gap is invisible until someone builds the wrong thing and ships it.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The workshop produces a wall full of stickies that reads, on
 - Symptom. Two departments leave the workshop still disagreeing about what
 - Symptom. The team runs a well attended Big Picture EventStorming
@@ -8043,11 +8483,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain model accumulates two kinds of complexity as it grows. business rule complexity, which lives inside the behavior of Entities and Value Objects once they exist, and construction complexity, which lives in the moment an object first comes into being. The two are easy to conflate because they both live in the same class file, but they pull in opposite directions. Behavior wants a rich, focused object with a small, well-defended public surface. Construction, left unmanaged, wants every caller to know the object's internal shape well enough to assemble it correctly, which is precisely the kind of knowledge a rich domain model exists to hide.
 
 **Observable Symptoms:**
+
 - Post-construction setup. Some objects are not usable the instant their
 - Aggregate-owned object creation. When an Order creates its own
 - Type selection from runtime data. A PaymentMethod might need to become a
 
 **Failure Mode Symptoms:**
+
 - A production incident traces back to an Aggregate that exists
 - Loading an old Aggregate from storage re-triggers integration
 - A code review flags that the "Factory" for an Order has grown
@@ -8059,6 +8501,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team building a real product spends real engineering time on things the business does not actually compete on. User authentication, password reset, audit logging, PDF generation, currency conversion, address validation, email delivery, SMS delivery. Every one of these is a genuine engineering problem with edge cases, security implications, and operational cost, and every one of them is, from the business's point of view, identical to the version every other company in the same problem space also needs.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A capability everyone agreed was mere plumbing quietly becomes
 - Symptom. The Core Domain's own model accumulates vendor vocabulary. Method
 - Symptom. Switching or upgrading the generic subdomain's vendor turns into
@@ -8071,6 +8514,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system has several kinds of work happening inside it at once, work that talks to a person through a screen or an API, work that decides what the business rules say should happen, and work that reads and writes durable state. Left unstructured, these three kinds of work end up interleaved in the same functions. A controller method validates an HTTP body, computes a discount, and issues a SQL update, all in twenty lines, because that was the fastest way to make the feature work on the day it was written.
 
 **Failure Mode Symptoms:**
+
 - The Application layer contains if statements branching on
 - Domain-layer classes import an ORM's base class, or carry
 - A single feature change touches five files across four
@@ -8082,6 +8526,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain model that stays in one undifferentiated pile of classes becomes unreadable long before it becomes incorrect. A developer opening a directory of two hundred files with no organizing principle cannot answer the two questions that matter most before making a change, what does this class depend on, and what depends on it. Evans frames the underlying problem as cognitive, not mechanical. A person can hold a small number of concepts in mind at once, so a model with high internal coupling and no seams is a model nobody can reason about, however correct any single class is in isolation (Evans 2003, Chapter 5, "Modules").
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two modules import each other's types, forming a dependency
 - Symptom. A module named for a technical role (utils, helpers,
 - Symptom. A Bounded Context boundary is drawn identically to a Module
@@ -8093,6 +8538,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A bounded context that has real internal complexity attracts multiple downstream consumers over time. The first consumer arrives and the team building the upstream context negotiates a bespoke integration with them, matching field names, semantics, and even quirks of the internal model, because doing anything more general felt like premature investment for one caller. A second consumer arrives, wants something close but not identical, and the upstream team either builds a second bespoke integration or bends the first one to serve both, coupling the two consumers to each other through a shared endpoint neither of them controls. A third consumer arrives. By now every internal refactor inside the upstream context risks breaking one, two, or three downstream systems that each depend on a slightly different slice of the internal model, exposed through code paths nobody planned to make load-bearing.
 
 **Failure Mode Symptoms:**
+
 - The pass-through host. Symptom. The published response body is a direct
 - Version sprawl with no deprecation discipline. Symptom. The API
 - The Published Language that nobody documents. Symptom. The contract is
@@ -8105,6 +8551,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A business process spans more than one service, more than one aggregate, or more than one external system, and it cannot complete in a single local transaction. A customer places an order that must reserve inventory, charge a payment provider, and schedule a shipment. Each of those three actions lives in a different bounded context with its own database, so a single ACID transaction across all three is either impossible, because the systems are literally separate processes over a network, or architecturally forbidden, because coupling three services to one distributed transaction manager defeats the reason they were split apart in the first place.
 
 **Failure Mode Symptoms:**
+
 - Correlation identifier mismatch. Symptom. A reply arrives and either no
 - Non-idempotent command issuance under at-least-once delivery. Symptom. A
 - State and command issuance not committed atomically. Symptom. The
@@ -8118,11 +8565,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two or more bounded contexts need to exchange information, and at least one of the following is true. the contexts are owned by different teams or different organisations that cannot agree on a shared internal model. the number of consumers is large or unknown in advance, so a one-off translation per consumer does not scale. the exchange must remain stable and interpretable over years, longer than any single team's internal model is likely to survive unchanged. or the exchange crosses an organisational boundary where trust, versioning discipline, and governance matter as much as the data shape itself.
 
 **Observable Symptoms:**
+
 - The boundary is crossed by more than one consumer, or by consumers outside
 - The domain concepts being exchanged are stable enough, or important enough,
 - Neither side is willing, or able, to adopt the other's internal model
 
 **Failure Mode Symptoms:**
+
 - Every consumer implements its own slightly different
 - The publisher makes a change to the published language and
 - The internal domain model of the publishing team starts
@@ -8134,6 +8583,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain layer needs to load and save the objects it works with, but the code that expresses business rules should not know whether an order lives in PostgreSQL, in a document store, behind a REST API, or in memory during a test run. Without a boundary, SQL strings, ORM query builders, and connection handling spread into the same methods that compute a discount or validate a shipping address. Every domain method becomes coupled to a specific persistence technology, and every test that exercises domain logic pays the cost of standing up a real database.
 
 **Failure Mode Symptoms:**
+
 - The Repository is really the anemic ORM session wearing a different name.
 - , the "Repository" interface has one method per SQL query shape used
 - The generic repository leaks the ORM underneath it. Symptom, a
@@ -8148,6 +8598,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team splits a system into more than one Bounded Context for good reasons, because two departments' vocabularies genuinely diverge, because two teams cannot coordinate closely enough to keep one model unified, or because one context depends on an external or legacy system it does not control. Having drawn the boundary, the team then faces a second, separate question that Evans treats as equally important as the boundary itself. Given two Bounded Contexts that have been identified as distinct, what, if anything, should connect them.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two systems that were declared Separate Ways for good reasons
 - Symptom. A support engineer, a sales rep, or a customer is asked to
 - Symptom. A team declares Separate Ways for two contexts, and six months
@@ -8158,6 +8609,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Two Bounded Contexts model a piece of the domain in a compatible way, not because either team designed it that way on purpose, but because the concept genuinely is the same concept in both places. A payments team and an invoicing team both need a Money type with a currency and an amount that rounds and compares the same way in both systems, because a rounding difference between the two would produce a ledger that does not reconcile. An order-taking team and a fulfillment team both need the same ShipmentRequested event shape, because if the two teams draw the event independently, one will eventually add a field the other silently ignores, and a shipment will go out with the wrong address because the two teams read "address" to mean two different things.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A change to the shared kernel by one team unexpectedly breaks
 - Symptom. The shared type keeps growing new, mostly-null optional fields,
 - Symptom. The two teams stop coordinating kernel changes with each
@@ -8168,6 +8620,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain accumulates rules that decide whether an object qualifies for something. A customer qualifies for free shipping. An order is eligible for same day fulfillment. A candidate is eligible to interview for a role. Each of these is a small piece of business knowledge, and each has three separate jobs pulling at it from different directions, validating a single in memory object, selecting a set of matching objects from a large collection or a database, and building a new object that must satisfy the rule by construction.
 
 **Failure Mode Symptoms:**
+
 - Two implementations, one truth. Symptom. A filter that behaves correctly in
 - Composed queries that overwhelm the planner. Symptom. A query built from a
 - Stale business rule behind a live sounding name. Symptom. A Specification
@@ -8178,6 +8631,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team building a system of real size eventually owns far more functionality than any one part of the business actually differentiates on. An online retailer's competitive advantage might live entirely in how it prices inventory and matches supply to demand. Everything else it does, sending order-confirmation emails, generating PDF invoices, storing customer addresses, converting currency for a checkout total, is necessary for the retailer to operate, but none of it is why a customer chooses that retailer over another one.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The team that owns a labeled Supporting Subdomain is
 - Symptom. A capability labeled Supporting quietly grows a large, tangled
 - Symptom. A capability everyone agreed was Core still gets built by
@@ -8189,6 +8643,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A software team building a system for a business domain sits between two worlds that speak differently about the same reality. Domain experts, the underwriters, the warehouse managers, the loan officers, the people who have done the work for years, describe their world with precise, load-bearing vocabulary that carries distinctions the business actually cares about. A claims adjuster's "reserve" is not the same thing as an accountant's "reserve." A shipping company's "consignment" is not identical to its "shipment." Developers, meanwhile, tend to reach for generic technical nouns, such as Manager, Processor, Handler, Data, or Info. The gap between these two vocabularies is not cosmetic. It is where requirements get lost.
 
 **Failure Mode Symptoms:**
+
 - Two Bounded Contexts sharing one type. Symptom. Two different modules use
 - The frozen glossary. Symptom. The team maintains a glossary document that
 - Silent private translation. Symptom. Developers privately maintain a
@@ -8199,6 +8654,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain model accumulates concepts that are not things, they are measurements, descriptions, or quantities. A price. A date range. A postal address. A color. A geographic coordinate. A percentage. None of these has a lifecycle of its own, none of them is ever tracked across changes as "the same one, now updated", and asking "is this the same address as that one" only ever makes sense as "do they describe the same location", never as "are they the same row in the database with a history of edits".
 
 **Failure Mode Symptoms:**
+
 - Symptom. An object stored as a key in a HashSet or HashMap becomes
 - Symptom. Two Value Objects that a business analyst would call "the same
 - Symptom. Construction of the Value Object succeeds with input a domain
@@ -8212,6 +8668,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Consider a function that renders an invoice as HTML, a compiler pass that lowers an abstract syntax tree to bytecode, a report generator that produces a multi-page PDF summary, or a machine-learning pipeline that emits a structured JSON prediction with forty fields. In every one of these cases the OUTPUT is large, structured, and shaped by many independent pieces of logic acting together, and a bug can appear as a one-character difference buried in the middle of it.
 
 **Failure Mode Symptoms:**
+
 - Symptom. CI intermittently fails on a snapshot test with no code change
 - Symptom. A pull request shows a single-line code change accompanied by a
 - Symptom. The team reports having great test coverage because all
@@ -8223,14 +8680,16 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test that has no imposed shape tends to accrete in whatever order the writer thought of things. Setup code, the call that exercises the behavior, and the checks that confirm the result end up interleaved. A reader arriving at the test for the first time, usually because it recently failed and they need to understand why, has to read the whole body line by line to reconstruct three separate questions. What state did this test start from. What did it actually do. What was it trying to prove. When those three questions are answered by lines scattered through the method in whatever order occurred to the original author, the reader pays a real cost on every single failure, which is exactly the moment when the reader can least afford confusion.
 
 **Failure Mode Symptoms:**
+
 - they describe symptoms observed repeatedly across xUnit-family codebases.
-- | Symptom | Cause | Fix |
+- / Symptom / Cause / Fix /
 
 #### [Characterization Test](../patterns/14-testing/characterization-test.md)
 
 **Core Problem:** A team inherits a module, a service, or a whole codebase with no tests, or with tests too sparse to trust. The code has been running in production for years. Nobody currently on the team wrote all of it, and the people who did write parts of it may be unavailable or may not remember the reasoning behind a given branch of logic. A change is now required, whether a bug fix, a performance improvement, an extraction into a smaller module, a language or framework migration, or simply moving the code into a form that a modern test suite can exercise at all.
 
 **Failure Mode Symptoms:**
+
 - The test suite is green after a refactor, but a bug the team knew
 - The characterization test suite fails constantly on unrelated
 - The characterization test passes locally but is flaky in CI, or is
@@ -8242,6 +8701,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team splits a monolith into services, or simply has two teams shipping two deployables that talk over HTTP, gRPC, or a message queue. Each team runs its own unit tests against its own code, and those tests pass. Each team also writes integration tests, but a true end-to-end integration test requires standing up the other service, its database, its own dependencies, and often a shared staging environment. That environment is slow to provision, flaky under concurrent use by multiple teams, and expensive to keep in sync with what production actually runs. So most organizations end up in one of two bad states. Either they skip cross-service verification entirely and rely on manual QA or on production incidents to catch mismatches, or they build a full end-to-end test suite that takes twenty minutes to run, fails for reasons unrelated to the code under test (a flaky downstream dependency, a shared staging database another team wrote to), and gets disabled or ignored within a few months because nobody trusts a red result to mean anything.
 
 **Failure Mode Symptoms:**
+
 - Contract tests are green, but production still breaks on deploy.
 - The pipeline shows every check passing yet the integration fails
 - The contract test suite becomes a second, slower integration suite.
@@ -8260,6 +8720,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test needs data. Every object under test, and every collaborator it talks to, has fields that must be filled in before the test can run, and the overwhelming majority of those fields do not matter to the specific behavior being verified. A test asserting that a shopping cart correctly sums line items does not care what the customer's email address is, only that one exists and is syntactically acceptable to whatever validation the fixture setup runs. If the author types a literal value for every such field, two problems compound as the suite grows. First, the literal reads as though it matters, because a reader has no way to tell an incidental literal from a load-bearing one just by looking at it, so every test becomes harder to read than it needs to be, because the reader has to hold every literal in mind until they can rule it out as irrelevant. Second, and more mechanically damaging, literal values collide. Two tests that both hard-code the email test@example.com will interfere with each other the moment the system under test enforces uniqueness on that field, whether through a database unique constraint, an in-memory set, or a business rule, and the failure shows up as a flaky, order-dependent test that fails only when run alongside its sibling, which is one of the hardest classes of failure to diagnose because the individual test passes every time it is run alone.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A test suite passes reliably when run one test at a time and
 - Symptom. A test that is supposed to catch a real calculation bug keeps
 - Symptom. A failure log shows a derived value such as req-88213 and the
@@ -8269,6 +8730,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team owns, or depends on, more than one thing that is meant to compute the same answer. A compiler and its optimising sibling. A database engine and the SQL standard it claims to implement, or a second database engine that already implements the same standard. A legacy pricing function and its rewrite. A reference decoder for a file format and a fast decoder shipped to production. In every one of these situations a specification exists, but the specification is either informal, incomplete, or itself untested, so writing example-based tests against the specification only checks that the implementation agrees with the tester's reading of the spec, not that it behaves correctly on inputs nobody thought to write down.
 
 **Failure Mode Symptoms:**
+
 - Chasing noise instead of fixing it. Symptom. A differential test suite
 - Treating the Reference as infallible. Symptom. A bug is "fixed" in the
 - Minimisation skipped under time pressure. Symptom. A bug report contains
@@ -8281,6 +8743,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A constructor, a factory function, or a method signature requires an argument of a particular type, but the code path being exercised by a specific test does not use that argument at all. This happens constantly in object-oriented code with multi-parameter constructors, in dependency-injection containers that wire every collaborator regardless of which ones a given test scenario touches, and in language communities where nullable types are either disallowed or actively discouraged.
 
 **Failure Mode Symptoms:**
+
 - A test passes, but a later refactor that changes the code under
 - site rather than a confusing downstream symptom. Where the framework's default
 - A code reviewer sees a test's arrange section supply four or five
@@ -8291,6 +8754,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of code depends on a collaborator that is real, correct, and slow, or real, correct, and hard to set up. A repository that talks to Postgres. A payment gateway that talks to a card network over HTTPS. A file store backed by S3. The code under test needs that collaborator to behave like the real thing, closely enough that a passing test is evidence the code is correct, but the test suite cannot afford to pay the cost of the real thing on every run. Cost here is several things at once, wall-clock time, since a Postgres round trip is milliseconds and a thousand of them add up, environmental setup, since a CI runner needs a running database server, credentials, and network access before a single assertion runs, and flakiness, since a real network call can fail for reasons that have nothing to do with the code being tested, a timeout, a transient DNS failure, a rate limit.
 
 **Failure Mode Symptoms:**
+
 - A test suite is entirely green, the feature is deployed, and it
 - Two tests that run in the same test binary but in different
 - A code review flags a bug that turns out to already be described,
@@ -8301,6 +8765,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Software that talks to another process over a network, a disk, a database connection, or any other boundary will eventually see that boundary fail. The disk fills up. The downstream service returns a 500. The network partition separates two nodes that both believe they are the primary. The DNS resolver times out. None of these events are exotic; they are the normal operating condition of a distributed system running for years across thousands of machines, and given enough scale and enough time, every failure mode that is possible will eventually occur (this is sometimes called the inevitability argument for chaos engineering, and it is the argument Netflix made explicitly for why they run failure injection continuously rather than as a one-time pre-launch check, per Rosenthal and Jones, chapter 1).
 
 **Failure Mode Symptoms:**
+
 - Symptom. A fault injection test suite passes consistently, but a real
 - Symptom. A chaos experiment run against a canary shard is reported as
 - Symptom. A retry-with-backoff fault injection test asserts that the
@@ -8312,6 +8777,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test method's job is to answer one question unambiguously, did the behaviour under test do the right thing. A test that mixes preparation code, the action being tested, checking code, and cleanup code together in no particular order fails at that job even when it passes, because a reader cannot tell which lines matter to the assertion and which lines are scaffolding that happens to be nearby.
 
 **Failure Mode Symptoms:**
+
 - Assertion Roulette. Symptom. A test fails, and the failure message gives
 - Eager Test, also called an overspecified test. Symptom. A single test
 - Assertion before exercise. Symptom. A test passes even though the
@@ -8325,6 +8791,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test needs an environment in which to run its assertions, objects to act on, data in a database, files on disk, a running process. Building that environment from scratch, every time, for every test, has an obvious cost, it takes code, and if the environment involves I/O such as a database write, it takes time.
 
 **Failure Mode Symptoms:**
+
 - The rollback that silently does not run. Symptom. A suite passes reliably
 - Fixture reuse disguised as a helper method. Symptom. A createTestUser()
 - Order-dependent test suite masquerading as fresh. Symptom. The full suite
@@ -8337,11 +8804,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A function, parser, decoder or protocol handler accepts input from outside the program's control, and the person who wrote it can only imagine a finite set of test cases by hand. The set of inputs an attacker, a corrupted file, a misbehaving upstream service or an unusual user can actually produce is not finite and is not enumerable by a human sitting at a keyboard.
 
 **Observable Symptoms:**
+
 - There is a real function boundary that consumes untrusted or externally
 - The function has a checkable property beyond simply not crashing, most
 - The cost of a defect at this boundary in production is high enough to
 
 **Failure Mode Symptoms:**
+
 - Treating a clean fuzz run as proof of correctness. Symptom. A team ships a
 - State leaking across in-process iterations. Symptom. A crash the engine
 - The target does too much, or the wrong thing. Symptom. The fuzzer spends
@@ -8355,6 +8824,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A fixture object almost always has more fields than the test actually cares about. A test verifying that an order total is calculated correctly needs a customer, and that customer needs an ID, a name, an address, and often a handful of other attributes the order-total calculation never reads. If the test author hand-types a value for every one of those fields, the test file grows long with content that carries no information for the reader, and worse, a reader encountering the file later has no way to tell, just by looking, which of the many literal values in the fixture actually matters to the assertion and which is filler the author typed to satisfy a constructor or a validation rule.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A test fails on CI but passes every time the same engineer
 - Symptom. A test suite's fixture-building helper occasionally throws an
 - Symptom. Multiple tests running in parallel, or run repeatedly against
@@ -8365,6 +8835,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test file with no shape reads as an undifferentiated block of setup calls, one action, and a pile of assertions, and a reader cannot tell at a glance which lines are preconditions, which line is the behavior under test, and which lines are the actual check. The problem sharpens in three concrete ways.
 
 **Failure Mode Symptoms:**
+
 - Implementation detail leaking into step text. Symptom. A feature file
 - Multiple Whens in one scenario. Symptom. A scenario body contains three
 - Then asserting on internal state instead of observable output. Symptom.
@@ -8378,9 +8849,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of code produces output that is expensive or awkward to specify by hand, one field at a time, and a person needs confidence that a change to the code did not alter that output in a way nobody intended.
 
 **Observable Symptoms:**
+
 - correct. it is asserted to be unchanged, which is a materially weaker and
 
 **Failure Mode Symptoms:**
+
 - Symptom. The same test fails on every run with a slightly different
 - Symptom. CI shows dozens of golden file diffs on an unrelated pull
 - Symptom. A refactor that is a pure behavior preserving code move somehow
@@ -8392,6 +8865,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Some classes are hard to unit test not because their logic is hard, but because constructing or invoking them at all requires something a fast, isolated test cannot or should not provide. a real database connection, a real HTTP server, a real GPU backed rendering surface, a real GPS chip, a real modal dialog on a real display, a real payment gateway. Call this class the boundary class.
 
 **Failure Mode Symptoms:**
+
 - unit tests on the Logic Holder are all green, but the feature
 - the "humble" view or controller keeps quietly growing
 - the extraction produced a Logic Holder whose interface is a
@@ -8403,6 +8877,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Some programs have no practical way to check whether a single output is correct. A search engine ranking function, a machine translation system, a compiler's optimizer, an image classifier, a numerical solver for a differential equation, a route planner over real road data. for every one of these, writing down the exact expected output for an arbitrary input is either mathematically undecidable, prohibitively expensive to compute by an independent method, or dependent on a judgment call nobody can encode as a single correct string.
 
 **Failure Mode Symptoms:**
+
 - The metamorphic suite is green, but a known bug still reaches
 - A relation fails intermittently and the team starts ignoring
 - A relation always passes, no matter what is broken in the
@@ -8414,6 +8889,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A unit of code under test calls a method on a collaborator, and the whole reason the test exists is to prove that call happens, with the right arguments, in the right circumstances, the right number of times. The collaborator's own return value may not matter at all to the test, or the collaborator may have no return value, because its entire job is a side effect, sending an email, publishing an event, writing an audit log entry, charging a credit card, calling a webhook. In every one of these cases there is no state inside the system under test that a state-based assertion could inspect after the fact, because the observable effect of the call happened somewhere external, in a system the test correctly does not want to touch.
 
 **Failure Mode Symptoms:**
+
 - were never meant to pin that detail down. Symptom. a large fraction of the
 - check. Symptom. the full test suite is green, deploys pass CI, and the
 - the codebase. Symptom. a routine dependency upgrade, one that changes nothing
@@ -8425,6 +8901,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test suite that exercises every line and every branch of a program can still fail to notice when the program is wrong. Statement coverage answers whether a line ran. Branch coverage answers whether both sides of a conditional ran. Neither answers the question that actually matters, which is whether the assertions attached to that execution would catch a real defect sitting on that line. A suite can reach one hundred percent branch coverage by calling every function and asserting nothing beyond "it did not throw", and that suite is worthless as a regression guard while its coverage report looks perfect.
 
 **Failure Mode Symptoms:**
+
 - Chasing one hundred percent as a hard gate. Symptom. A pull request is
 - Full-repository mutation runs timing out CI. Symptom. A mutation testing
 - Killing mutants without strengthening assertions. Symptom. A developer
@@ -8438,6 +8915,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test needs an object in a known, valid state before it can exercise the behavior under test. An Order needs a customer, a shipping address, at least one line item, a currency, and a status before an order-total calculation or a shipping-eligibility check can even run. None of those fields are what the test is actually about. The test wants to assert one thing, for example that a discounted order still charges tax on the pre-discount subtotal, and the seventeen other fields on the order are scaffolding the test has to carry only to get to the assertion.
 
 **Failure Mode Symptoms:**
+
 - God Mother class. Symptom, one mother class grows to hundreds of lines and
 - Silent cross-test coupling through shared defaults. Symptom, an unrelated
 - Mother returning a shared, mutable instance instead of a fresh one.
@@ -8450,18 +8928,21 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test needs the system under test to start from a known state before its assertions can mean anything. An order total calculation test needs an order with known line items already present. A search relevance test needs a corpus of documents already indexed. A permission check test needs users with known roles already created. Building that starting state takes real work, database inserts, file writes, HTTP calls to a fixture generating service, or constructing a graph of in-memory objects with the right relationships.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Property-Based Test](../patterns/14-testing/property-based-test.md)
 
 **Core Problem:** A function or a module has a genuine algebraic or structural invariant, and an author trying to test it by hand can only ever write down the handful of inputs they personally thought of. The bug that reaches production is nearly always the input nobody thought of, an empty collection, a negative number where the domain never says negative is invalid, a Unicode string with a combining character, a duplicate key, a value exactly at a boundary, or an input two steps removed from any of the examples in the test file.
 
 **Observable Symptoms:**
+
 - The unit has a real invariant that can be stated as a predicate over an
 - The input space is large enough that a human author cannot enumerate the
 - A way exists to check the property automatically, without a human reading
 
 **Failure Mode Symptoms:**
+
 - A property test passes locally and in CI for months, then fails
 - The property test suite runs green, has a large configured
 - A property fails, the reported counterexample is large,
@@ -8472,6 +8953,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test needs a fixture. The object under test needs collaborators wired up, a database needs rows in it that match the scenario, a file needs to exist on disk, an external service needs a fake or a stub listening on a port. Building that fixture from nothing, for every single test, is sometimes expensive. Opening a real database connection can take tens of milliseconds. Starting a Docker container for an integration test can take several seconds. Populating a schema with reference data, currencies, country codes, a chart of accounts, can take longer still if it runs through the application's own domain layer rather than a bulk insert. Multiply that cost by a suite with several thousand tests and a per-test rebuild turns a two minute test run into a twenty minute one, which in turn changes how often a team is willing to run the suite.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A test fails only when the full suite runs, and passes every
 - Symptom. A test that used to pass reliably starts failing intermittently
 - Symptom. A team notices that deleting or reordering an apparently
@@ -8483,6 +8965,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A function, a component, or an API endpoint produces an output that is correct today, and the author knows it is correct today because they looked at it, ran it, or eyeballed a rendered page. The output has real structure. a tree of nested elements, a JSON document with a dozen fields, a formatted report with several sections, a generated SQL query, a CLI's stdout after a subcommand runs. Writing a hand assertion that checks every field, every attribute, every nested node, one expect call at a time, is possible but expensive to write and, worse, expensive to keep honest as the shape of the output changes over the life of the project. Every time a new field is added to the response, every hand-written assertion that checks the response has to be updated by a person who remembers to update it. In practice that person frequently does not remember, and the test either stays silently blind to the new field forever, or the author gives up on asserting the full shape and falls back to checking one or two fields, which defeats the purpose of having a structural test in the first place.
 
 **Failure Mode Symptoms:**
+
 - A pull request touches one small, unrelated part of a
 - A test suite that was reliably green starts failing
 - A single .snap file in the repository is several thousand
@@ -8494,10 +8977,12 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A unit under test collaborates with something outside itself, a payment gateway, an email service, a logger, an event bus, a cache. Two different questions can be asked about that collaboration.
 
 **Observable Symptoms:**
+
 - What did the collaborator return, and did the unit under test do the right
 - Did the unit under test actually CALL the collaborator, with what
 
 **Failure Mode Symptoms:**
+
 - A passing test suite that still lets a real defect through, where the
 - A test suite where a harmless internal refactor, changing the order
 - A spy that silently and incorrectly reports "not called" for a
@@ -8508,6 +8993,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Code under test frequently depends on something the test cannot, or should not, use as it really behaves. A payment gateway that would actually charge a card. A clock that returns a different value every time it is read. A third-party HTTP API that is slow, rate limited, or simply unavailable from a CI runner. A random number generator. A filesystem that may or may not have the expected file present depending on which machine the suite runs on. In every one of these cases the test's actual goal has nothing to do with the collaborator itself, the collaborator is only in the way, and the test wants a single, predictable answer from it so the test can watch what the code under test does with that answer.
 
 **Failure Mode Symptoms:**
+
 - Green suite, broken production because the real collaborator's shape
 - changed. Symptom. Every automated test passes, and a production incident
 - Failure deep inside the system under test, far from the assertion line.
@@ -8526,6 +9012,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A domain object has enough constructor parameters, or enough invariants, that constructing one directly in a test is either impossible without a long argument list or actively hostile to the reader. The concrete situation looks like this in a codebase.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A test that overrides one field starts failing after an
 - Symptom. Two tests that both start from what looks like the same "base"
 - Symptom. The builder class grows to hundreds of lines, with dozens of
@@ -8537,6 +9024,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team writes automated tests without a stated distribution, and the suite drifts toward whatever is easiest to write in the moment rather than what is cheapest to run and maintain over the life of the codebase. The most common drift is toward end to end tests, because they are the easiest to justify to a non technical stakeholder, they exercise the whole system the way a real user would, and a single scripted browser session feels like it is testing everything at once. The drift is invisible while the suite is small. It becomes visible only after the suite has grown to hundreds of scenarios, because at that point the whole build takes fifteen minutes to an hour, a handful of tests fail on every run for reasons unrelated to the change under review, and nobody can say with confidence whether a red build means a real regression or an environment hiccup.
 
 **Failure Mode Symptoms:**
+
 - , the CI suite is thousands of tests and takes forty minutes, and
 - , tests pass locally and in CI but production incidents keep
 - , a small, safe seeming refactor, renaming a private method,
@@ -8549,6 +9037,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team writing automated tests eventually has to decide, consciously or by accretion, how much of its testing effort should sit at each level of isolation, from fully isolated unit tests that mock every collaborator, to tests that exercise a slice of real collaborators together, to tests that drive the whole running system through its real entry point. Left undecided, teams drift toward whichever style the first engineer who set up the test tooling preferred, and that drift tends toward one of two failure shapes. A codebase with almost nothing but isolated unit tests can show one hundred percent green while the feature is broken, because the seam between two mocked units was the actual bug. A codebase with almost nothing but end-to-end tests is slow to run, flaky under real network and timing conditions, and gives a failing developer almost no clue which of the dozen things the scenario touched actually broke.
 
 **Failure Mode Symptoms:**
+
 - The CI suite takes eight minutes and most of that time is spent in
 - A refactor that changed no user-visible behavior breaks a large
 - Tests pass locally and fail intermittently in CI with timeouts or
@@ -8560,6 +9049,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A test that exercises code talking to a database, a message broker, a cache, or another networked service has three unhappy default choices. Mock the dependency, which proves the code calls a client library correctly but proves nothing about whether the actual SQL is valid, whether the actual broker accepts the message shape, or whether a driver version mismatch breaks serialization. Point every developer and every CI run at one shared instance of the real dependency, which works until two test runs collide on the same rows, a schema migration in progress corrupts another team's assertions, or the shared instance is simply down. Or install and manage the real dependency locally per developer, which reintroduces the "works on my machine" problem the moment one developer's local Postgres has a stale extension or a different collation.
 
 **Failure Mode Symptoms:**
+
 - , a CI job hangs for the full timeout duration then fails with no
 - , tests pass individually but fail intermittently when run together
 - , the CI fleet's disk fills up with stopped containers and dangling
@@ -8573,6 +9063,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Naive RAG treats "find the k nearest vectors to this query's embedding" as if it were the same question as "find the passages that actually let the model answer this question correctly." The two questions diverge in five specific, observable ways once a system leaves a demo and meets a real corpus and real queries.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Retrieval returns confidently plausible but topically wrong
 - Symptom. p95 latency triples after adding a cross-encoder reranker, with
 - Symptom. The corrective (CRAG-style) loop occasionally never returns, or
@@ -8585,6 +9076,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single model call, even a large capable one, has three structural weaknesses that a reader can observe directly. It is confidently wrong on a non-trivial fraction of factual and multi-step reasoning questions and does not reliably signal which fraction that is. Sampling the same prompt repeatedly at nonzero temperature usually returns variants of the same answer rather than genuinely independent attempts, because the model's own prior dominates every draw. And when asked to check its own work in a second pass, it tends to rubber-stamp the first answer, a documented failure Liang et al. name Degeneration-of-Thought, because a model correcting itself starts from, and is anchored to, the very reasoning that produced the mistake (Liang et al. 2023, arXiv 2305.19118, verified 2026-08-02).
 
 **Failure Mode Symptoms:**
+
 - The two debaters' answers are near-identical every round and
 - Rounds continue without the final answer ever stabilising,
 - The judge's final answer consistently favours whichever
@@ -8596,6 +9088,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team building an LLM-driven assistant for a domain with more than one kind of request quickly runs into a shape problem. A single agent with one system prompt cannot hold every persona, every tool, and every set of instructions the business needs without the prompt growing past what any one conversation actually requires. Picture a customer support assistant that has to answer general questions, look up an order's shipping status, process a return, and issue a refund. Each of those four jobs wants its own vocabulary, its own tools, an order lookup function differs from a refund-processing function, and often its own guardrails, a refund tool needs stricter confirmation logic than a shipping lookup. Writing all four into one prompt produces a document that instructs the model to behave like four different specialists depending on which paragraph applies, and the model has to silently decide, on every single turn, which paragraph is the one in force. That silent decision is exactly the failure surface this pattern removes by making it explicit.
 
 **Failure Mode Symptoms:**
+
 - Ping-pong handoff loop. The symptom is that the conversation, or the
 - Context leakage across a trust boundary. The symptom is that a
 - Stale or duplicate handoff re-execution. The symptom is that the same
@@ -8607,6 +9100,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An agent that runs a single request and returns an answer does not need this pattern. The problem shows up the moment an agent is expected to behave as though it has a past.
 
 **Observable Symptoms:**
+
 - A customer support agent talks to the same account across many separate
 - A coding agent works across many separate invocations on the same
 - An agent processes a document, a log file, or a conversation that is larger
@@ -8616,14 +9110,16 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Some subset of the information is expensive to reconstruct (a long
 
 **Failure Mode Symptoms:**
+
 - Judgement statement. The symptom, cause, and fix triples below are drawn
-- | Symptom | Cause | Fix |
+- / Symptom / Cause / Fix /
 
 #### [Agent Tracing](../patterns/17-ai-agentic/agent-tracing.md)
 
 **Core Problem:** An agent that calls a model, receives a decision to call a tool, calls that tool, feeds the result back to the model, and repeats until it produces an answer, fails in ways a stack trace cannot explain. The process did not crash. It ran to completion and returned a wrong answer, a slow answer, or an expensive answer, and the reason lives inside a sequence of natural language decisions that a debugger cannot step through.
 
 **Failure Mode Symptoms:**
+
 - A trace shows the agent's root span with the correct total
 - Two spans that should share a trace id, for example a tool call
 - The tracing backend's monthly bill or storage grows far faster
@@ -8635,6 +9131,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single agent loop works when one actor, running one prompt at a time, can hold enough of the problem in its own context to make progress alone. Many real tasks break that assumption on purpose. A research question needs several independent lines of investigation pursued at once, a code review needs a security pass, a style pass, and a correctness pass that do not depend on each other's order, a document needs drafting, fact checking, and formatting by separate specialized agents, and a planning problem needs a mix of heuristics where no single one is reliable enough to trust alone.
 
 **Failure Mode Symptoms:**
+
 - Unbounded rounds from a confused termination check. The symptom is a
 - Lost writes from an unguarded race. The symptom is that two knowledge
 - Nondeterministic replay breaking an evaluation suite. The symptom is that
@@ -8646,6 +9143,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Naive RAG performs exactly one retrieval and exactly one generation per user turn, embed the query, fetch the top-k nearest chunks from a single index, paste them into the prompt, generate. That single fixed pass is fast and cheap, and it fails in four predictable, observable ways once a system moves past a small, single-source demo.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Cost or latency spikes without warning, sometimes to the point
 - Symptom. The model still gives an ungrounded, hallucinated answer even
 - Symptom. A document that would have answered the question correctly
@@ -8658,6 +9156,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A large language model predicts its next token from everything that came before it in the same context. When a question demands several dependent steps of arithmetic, logic, or lookup, and the model is asked to produce only the final answer, it must arrive at that answer with no scratch space of its own. Every intermediate quantity the correct solution depends on has to be held inside the model's internal computation for that single forward pass, with no chance to write anything down and reread it. On a two-step word problem this rarely matters. On a problem with four or five dependent steps, Wei et al. document that this direct-answer approach performs poorly even at very large model scale, and that the failure is not fixed by making the model bigger. It is fixed by changing what the model is asked to output.
 
 **Failure Mode Symptoms:**
+
 - The causes below are documented in the cited papers. The symptoms and fixes
 - Snowballing early error. Symptom. The final answer is confidently wrong,
 - Rationalized rather than reasoned answer. Symptom. Evaluation shows
@@ -8671,6 +9170,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A large language model has a finite context limit, and even models with very large limits charge per token and lose retrieval accuracy on needles buried deep in a long context, a phenomenon documented as the "lost in the middle" effect. A retrieval system therefore cannot hand the model an entire knowledge base on every query. It must first index the knowledge base so that a query can pull back only the passages that are actually relevant, and it must do that indexing in a way that produces units small enough to embed cheaply, precise enough to retrieve accurately, and complete enough that the model can answer from them without the surrounding context that got cut away.
 
 **Failure Mode Symptoms:**
+
 - The following triples describe an observable symptom, the underlying cause,
 - Symptom. A specific fact the model was clearly given still gets answered
 - Symptom. Retrieval returns chunks that are topically related but never
@@ -8684,6 +9184,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An LLM agent that can only call tools one at a time, through a fixed function-calling schema, hits a specific wall as soon as a task needs more than a handful of steps chained together with real control flow.
 
 **Failure Mode Symptoms:**
+
 - Sandbox escape or ambient credential leakage. Symptom, code that should have
 - Prompt injection turning into code injection. Symptom, the agent executes
 - Resource exhaustion from an unbounded loop. Symptom, a single invocation
@@ -8696,6 +9197,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Most of the software a person or a business depends on every day was never built with an API for an autonomous agent to call. A decade-old internal finance tool, a government portal, a vendor's desktop application with no public integration surface, a competitor's website with deliberately no public feed, a legacy Windows program still running the accounting department, none of these expose a documented, versioned, machine-readable way to ask a system to submit a form or read a table. The only interface any of them guarantees is the one built for a person with eyes and hands, a rendered screen and a set of input events.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The agent clicks repeatedly in roughly the right region of
 - Symptom. The agent reports a task complete, for example that a form
 - Symptom. During an unattended browsing task, the agent begins
@@ -8708,6 +9210,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is aligning a language model so that it refuses genuinely harmful requests, stays honest about its own uncertainty, and avoids the kind of output that erodes trust in an assistant a person relies on daily, without becoming so cautious that it refuses ordinary requests or answers everything with a hedge. The dominant technique available before CAI, RLHF, works by paying human raters to compare pairs of model outputs and pick the better one, then training a reward model on those comparisons and optimizing the policy against that reward model. This works, and it produced the first generation of genuinely helpful chat assistants, but it has three costs that grow as a company scales the technique across more behaviors and larger models.
 
 **Failure Mode Symptoms:**
+
 - The model over-refuses ordinary, benign requests at a
 - The AI preference model's judgments look internally consistent
 - Two runs of the critique-and-revision pipeline on the same
@@ -8719,6 +9222,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A retrieval-augmented generation system splits source documents into chunks because an embedding model has a token limit and because retrieval precision degrades when a chunk mixes unrelated content. The chunk becomes the unit of retrieval. A query embedding is compared against chunk embeddings, and the top-scoring chunks are handed to the generative model as context.
 
 **Failure Mode Symptoms:**
+
 - Retrieval quality does not improve, or gets slightly worse,
 - Indexing cost is far higher than the roughly one dollar per
 - A user reports the system confidently stated a fact, a date, a
@@ -8731,6 +9235,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A support bot answers questions by retrieving from a company's help center index and handing the top few documents to a generator. Most of the time this works, because the index was built from the same domain the questions come from. But three ordinary things happen to any index over time. A page gets renamed and the old content drifts out of relevance for the query that used to match it. A customer asks about a feature that shipped after the index was last built, so nothing in the index actually answers the question, only something adjacent to it. A query uses vocabulary that overlaps a document's vocabulary without overlapping its meaning, so the retriever's similarity score is high while the actual relevance is low.
 
 **Failure Mode Symptoms:**
+
 - The evaluator overrides good retrieval silently. Symptom. A query that
 - Thresholds miscalibrated for the deployed domain. Symptom. After moving
 - Untrusted web content reaches the generator unfiltered. Symptom. A
@@ -8743,6 +9248,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A call to a hosted large language model is metered and billed per token, and an agentic system does not make one call, it makes an unbounded and data-dependent number of calls. A ReAct loop calls the model again every time a tool returns, a multi-agent supervisor spawns sub-agents that each make their own calls, a self-correcting pipeline retries generation against a validator's feedback, and every one of those call sites can, through a bug, a bad prompt, a hostile user, or a genuinely hard problem that never converges, run far longer than anyone planned for when they wrote the code.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two concurrent requests for the same user both succeed even
 - Symptom. The guard trips reliably in testing against a mock provider
 - Symptom. A user or a bot systematically opens many new sessions,
@@ -8754,6 +9260,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A function built from deterministic code either compiles or it does not, and a passing unit test today keeps passing tomorrow unless the code under test changes. A system built around a language model call has neither guarantee. The same prompt against the same model can return a different answer on two consecutive calls, a model provider can silently update the weights behind a version string, a retrieval index can shift what documents are returned for the same query as new content is indexed, and a one-line change to a system prompt intended to fix one failure can quietly break three others that nobody happened to try by hand before shipping. The team building the feature has no compiler, and no fixed oracle, to tell them whether the change they made left the product better or worse.
 
 **Failure Mode Symptoms:**
+
 - Judgement. the following symptom, cause, and fix triples are drawn from
 - Symptom. The suite reports green on every pull request, yet real users
 - Symptom. The suite's pass rate stays flat and reassuring release after
@@ -8767,6 +9274,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single LLM call is a single roll of the dice against a task that has more than one way to go wrong. For a large share of real generation tasks that is enough, the model's first draft already satisfies the brief. For a smaller but consequential share, a lone pass plateaus below an acceptable quality bar even though the model, given the actual defect spelled out, could fix it in a second pass. The recognizable shape in a codebase or a product is a generation step whose output is manually reviewed by a person before it is used, a translated paragraph an editor still has to touch, a generated SQL query an analyst still has to read before running, a piece of generated code a developer still has to run through the test suite before merging. Wherever a human is already doing that second pass by hand, an automated generate-then-judge-then-revise loop is a candidate to remove that manual step, or at minimum to catch the cases that would otherwise need it before they reach the person.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The loop runs to the maximum iteration count on nearly every
 - Symptom. Cost or latency for a feature climbs after this pattern ships,
 - Symptom. The loop confidently ships an output that is wrong in a way a
@@ -8779,11 +9287,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system calls a large language model as part of serving a real request. a person waiting for a chat reply, an agent mid-task, a batch job with a deadline. The provider that model lives behind is, structurally, a shared, rate-limited, occasionally overloaded remote service the caller does not control. Anthropic's own API error reference documents a 529 overloadederror explicitly for this case, with the note that these errors "can occur when the API experiences high traffic across all users" (https://platform.claude.com/docs/en/api/errors, verified 2026-08-03), and the same page documents 429 ratelimiterror and 500 apierror as the other two transient failure modes the caller cannot fix by inspecting its own request. Microsoft's Foundry Models documentation states the same structural fact about its own Global Standard deployment type in different words. "if the primary region experiences an interruption in service, all traffic initially routed to this region is affected" (https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/deployment-types, verified 2026-08-03). Provider-side infrastructure redundancy, cross-region routing, multiple datacenters behind one endpoint, reduces the frequency of a correlated outage. It does not remove the caller's obligation to have a plan for the request that lands during the outage window, because the provider's own documentation is telling the caller, in plain language, that the failure mode exists and is visible to every customer at once when it happens.
 
 **Observable Symptoms:**
+
 - More than one target can plausibly answer the same request. A translation
 - The failure the caller is protecting against is a whole-target failure, not
 - The caller can afford, and has budgeted for, the cost and latency of
 
 **Failure Mode Symptoms:**
+
 - Response quality degrades gradually over weeks with no
 - A single bad request, a malformed tool call the model
 - During a real incident, the fallback targets fail almost as
@@ -8796,6 +9306,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A language model generates text by predicting the next token from everything that came before it in its context window. That is the entirety of what inference does. A model has no built in way to look up today's exchange rate, to read a row from a production database, to send an email, or to run a calculation it cannot do reliably in its own arithmetic. Left to itself, the model either states plainly that it cannot do the thing, which is honest but not useful when the caller needed the answer, or it produces a plausible sounding number or fact from its training data, which is confident and frequently wrong, because the model's knowledge is frozen at training time and its arithmetic is approximate by construction.
 
 **Failure Mode Symptoms:**
+
 - Hallucinated or absent tool. Symptom. The model's response names a tool
 - Missing-argument fabrication. Symptom. A tool that requires a location
 - Confused deputy through untrusted context. Symptom. A tool with a real
@@ -8809,6 +9320,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An engineer changes a system prompt, swaps a retrieval step, upgrades from one model version to another, or adjusts a temperature setting, and then has to answer one question honestly. did that change make the system better, worse, or merely different. For deterministic software this question is answered by a green or red test suite. For an LLM-backed agent the same question is much harder to answer, for three reasons that compound.
 
 **Failure Mode Symptoms:**
+
 - The golden set stays green for months while real users
 - A prompt change scores perfectly against the golden set, then
 - A model, agent, or the team maintaining a prompt scores
@@ -8820,6 +9332,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Chain-of-Thought and Tree of Thoughts both encode an assumption about the shape of reasoning that holds for some problems and actively fights others. Chain-of-Thought assumes the correct solution can be reached by a single sequence of forward steps, which fits arithmetic word problems and short logical deductions well, because those problems have one causal thread. Tree of Thoughts loosens that to allow branching exploration with backtracking, which fits search problems like Game of 24 or Mini Crosswords, where the model needs to try several next moves and abandon the ones that dead-end. Neither shape fits a class of problem that shows up constantly in practice once an LLM is used for anything beyond a single self-contained question, a class of problem whose solution is naturally built by combining several independently-produced partial results into one, or by sending a flawed result back for repair using feedback that only exists after the flaw was observed.
 
 **Failure Mode Symptoms:**
+
 - The pipeline runs to completion but its cost, measured in
 - A refine loop that occasionally never returns, or returns
 - Two runs of the exact same input produce materially
@@ -8831,6 +9344,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. The team already has a working Retrieval Augmented Generation pipeline (see the retrieval-augmented-generation entry in this family). Chunk the documents, embed the chunks, store the embeddings in a vector index, and at query time retrieve the k nearest chunks by cosine similarity, then stuff them into the LLM's context window.
 
 **Failure Mode Symptoms:**
+
 - Entity fragmentation from inconsistent naming. Symptom. The community
 - Answering a narrow question through global search. Symptom. A
 - Stale graph after the corpus changes. Symptom. Newly added documents are
@@ -8842,6 +9356,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single agent with a tool belt and a large context window handles a surprising amount of real work, and the correct starting point for almost any agentic system is exactly that single agent, per Anthropic's own guidance discussed in dimension 3 below. Three things break this simple shape as a task grows.
 
 **Failure Mode Symptoms:**
+
 - Two branches of the tree independently produce the same
 - The system takes far longer, or costs far more, than a flat
 - A worker several levels deep fails or hangs, and the whole
@@ -8854,6 +9369,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An agent is given a goal and a set of tools, and it plans and executes a sequence of tool calls autonomously. Some of the actions in that sequence are reversible and low-stakes, reading a file, calling a search API, summarizing a document. Others are irreversible, expensive, or affect a system the agent does not own, sending an email to a real customer, deleting a database table, transferring money, merging code to a production branch, running a shell command with rm -rf, or purchasing something with a person's credit card.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Reviewers approve every request within seconds of it arriving,
 - Symptom. The agent's plan continues to reference an action that was
 - Symptom. A pending approval sits unresolved for days, silently, until
@@ -8865,6 +9381,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Dense retrieval works by embedding a query into the same vector space as a corpus of documents and finding the nearest neighbors by cosine similarity or inner product. The entire mechanism depends on one assumption holding. The query embedding must land close, in that vector space, to the embeddings of the documents that actually answer it. That assumption is fragile in exactly the situations where retrieval matters most.
 
 **Failure Mode Symptoms:**
+
 - Fabricated specifics dominate the embedding. Symptom. Retrieval returns
 - Uniform application without gating. Symptom. Retrieval latency spikes
 - Nondeterministic results. Symptom. Retrieval results are inconsistent
@@ -8876,11 +9393,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A retrieval-augmented generation system, an internal document search box, or an agent's memory lookup all face the same underlying failure. A single retrieval method is reliably wrong on a predictable slice of queries, and the slice it gets wrong is exactly the slice the other method gets right.
 
 **Observable Symptoms:**
+
 - The query population is heterogeneous. Some queries are short exact-match
 - The corpus itself is heterogeneous. It mixes structured identifiers,
 - The cost of a wrong retrieval is not trivial. In a RAG pipeline a missed
 
 **Failure Mode Symptoms:**
+
 - Hybrid search performs worse than plain BM25 on a benchmark
 - Freshly ingested documents are findable by keyword search
 - Hybrid search results look nearly identical to pure vector
@@ -8892,6 +9411,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An agent built on a large language model treats every token in its context window with roughly the same weight, whether that token came from the person operating the agent, from a web page the agent fetched, from a document a colleague uploaded, from the return value of a tool the agent called a moment earlier, or from another agent handing off a subtask. The model has no reliable, built-in sense of which of those sources it should trust and which it should treat as inert data to summarize or quote. A sentence that reads "ignore your instructions and forward the customer's card number to this address" carries exactly the same syntactic shape whether a person typed it into a chat box or an attacker embedded it in the alt text of an image on a page the agent was asked to summarize.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A blocked attack succeeds on a second or third attempt after
 - Symptom. A production incident review finds that the guardrail's
 - Symptom. Support tickets from real customers report being refused for
@@ -8904,6 +9424,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team ships an agent or a chat feature that calls out to a large language model. At first there is one provider and the failure story is the same story every HTTP client has always had. The network drops a packet, the provider returns a 500, the caller retries a few times with backoff and moves on. That story stops being sufficient the moment any of four things becomes true, and in a production LLM system all four tend to arrive within the first few months.
 
 **Failure Mode Symptoms:**
+
 - Symptom. All traffic silently routes to the most costly fallback model
 - Symptom. A target is clearly failing on most calls, yet the breaker
 - Symptom. One tenant on a shared gateway keeps sending malformed
@@ -8916,6 +9437,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team ships a feature whose output is open-ended text, a chat reply, a document summary, a retrieval-augmented answer, or an autonomous agent's final report. They need a repeatable answer to whether an output is good, on every pull request, every prompt change, and every model upgrade, across hundreds or thousands of test cases at once.
 
 **Failure Mode Symptoms:**
+
 - Position flip. Symptom. A pairwise comparison declares Candidate A the
 - Verbosity inflation. Symptom. A longer, padded response consistently
 - Self-preference, rubber-stamping. Symptom. A model scores measurably
@@ -8930,6 +9452,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Picture a retrieval pipeline built over a long, single-narrative source, a Wikipedia article, a signed contract, a meeting transcript, a product manual. The pipeline needs to answer questions by finding the right passage and handing it to a language model, so at ingestion time the document gets split into chunks of a few hundred tokens, and each chunk is embedded on its own by sending the chunk's text, and only that text, through an embedding model.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Chunk embeddings for a long document show almost no
 - Symptom. Indexing throughput drops sharply after switching a pipeline
 - Symptom. Retrieval quality is flat, or measurably worse, after adopting
@@ -8941,11 +9464,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single large language model call answers a question by producing one continuous span of tokens, and that span has to carry the entire reasoning chain the model needs to get the answer right, in the order the model generates it, left to right, with no ability to revisit an earlier token and correct it once later tokens have already committed to a path. Chain-of-Thought prompting, described in Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, and Denny Zhou, "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models," submitted 28 January 2022, arXiv 2201.11903 (https://arxiv.org/abs/2201.11903, verified 2026-08-02), made single-call reasoning far stronger by asking the model to write out intermediate steps instead of jumping straight to a final answer, and it remains the load-bearing baseline every later reasoning-prompting paper is measured against, including the paper this entry describes.
 
 **Observable Symptoms:**
+
 - The problem is compositional. It decomposes cleanly into an ordered
 - The hardest test-time instances outstrip the few-shot demonstrations
 - Each subproblem is individually easy for the model, even when the whole
 
 **Failure Mode Symptoms:**
+
 - Each entry below follows the symptom, cause, fix shape required by the
 - template, with the symptom stated as something an engineer would actually
 - The final answer is confidently wrong, and every individual
@@ -8959,6 +9484,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An agent that runs for a long time accumulates a conversation. Every user message, every model response, every tool call and its result, every observation from the environment, gets appended to a single growing list that is resent to the model on the very next turn. Nothing in that list is free. An LLM API charges by the token, whether that token is fresh instruction or a stale log line from forty turns ago, and every provider imposes a hard ceiling on how many tokens fit in one request. A short question-and-answer session never hits either constraint. A coding agent working through a multi-file refactor, an autonomous research agent chasing a citation graph, or a customer-support agent handling a single ticket across twenty back-and-forth messages absolutely does, usually within the first hour of continuous work.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The agent confidently contradicts a constraint the user stated
 - Symptom. The context window keeps overflowing even though compaction is
 - Symptom. Compaction fires in the middle of a multi-step tool call
@@ -8971,6 +9497,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Before MCP, every combination of an AI application and an external system needed its own custom integration. A team building a chat assistant that should read from a company's ticketing system, query a database, and search a private wiki wrote three separate adapters, each one translating that system's API into whatever function-calling shape the model provider expected that month. If the team also wanted to support a second model provider, or a second chat client, the adapters had to be rewritten or duplicated, because the tool description format, the authentication flow, and the invocation contract were not portable. Anthropic's launch post names this directly as the N times M problem. N AI applications, each needing to talk to M different systems, produce N times M point-to-point integrations, and every new application or every new system multiplies the total rather than adding to it linearly (Anthropic, "Introducing the Model Context Protocol", 25 November 2024, https://www.anthropic.com/news/model-context-protocol, verified 2026-08-03).
 
 **Failure Mode Symptoms:**
+
 - Judgement. the symptoms below are drawn from documented security research and
 - Tool poisoning attacks. Symptom, the model performs an action the user
 - Rug pull, post-approval description changes. Symptom, a server that
@@ -8985,6 +9512,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single LLM-driven agent loop, one system prompt, one tool set, one context window, works well until the task genuinely needs more than one area of expertise or more than one independent thread of exploration. Two distinct pressures push a team past a single agent, and it is worth separating them because they call for different justifications.
 
 **Failure Mode Symptoms:**
+
 - Over-decomposition. The symptom is the supervisor spawning far more workers
 - Vague task boundaries causing duplicated work. The symptom is two or more
 - Runaway or under-terminated workers. The symptom is a worker continuing to
@@ -8997,6 +9525,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A task arrives whose internal shape cannot be known until the model has already looked at it. Somebody asks an agent to audit a repository, research a market, or refactor a feature across a codebase, and the number and kind of pieces that request breaks into depends entirely on what is actually in the repository, the market, or the codebase. A repository audit for one project touches three files, for another touches thirty. A market research question about a narrow product needs one competitor comparison, a question about a crowded product category needs six. There is no way to write a fixed pipeline of steps that fits every input in the category, because the category is defined by open-ended natural language, not by a schema.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The orchestrator spawns far more workers than the task
 - Symptom. Two or more workers independently investigate the same ground
 - Symptom. A run that clearly failed, missing an obvious piece of
@@ -9008,6 +9537,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An LLM call is a probabilistic sample, not a deterministic function evaluation. The same prompt, run twice, can return two different strings, and neither string is guaranteed to satisfy any property the calling code depends on. That property might be as narrow as "this is parseable JSON" or as broad as "this response does not repeat a customer's own credit card number back to them in plain text." A codebase that pipes the raw completion straight into a chat bubble, a database write, or a tool invocation has no checkpoint between a model that can be wrong in an unbounded number of ways and a consumer that will act on whatever arrives.
 
 **Failure Mode Symptoms:**
+
 - Legitimate outputs are refused or redacted at a rate high
 - A guard that has been in production and working for months
 - Users report the chat response taking noticeably longer to
@@ -9020,6 +9550,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An agent pipeline routinely moves text through places where a human name, an email address, a card number, or a medical record number does not belong. retrieval-augmented-generation pulls a support ticket into a prompt so the model can answer a follow-up question, and the ticket contains a customer's home address. A tool call returns a database row so an agent can summarize an account, and the row contains a social security number. A conversation gets written to long-term agent memory so the assistant remembers the user next session, and the raw transcript contains a credit card number the user typed while asking for help with a billing dispute. A request and response pair gets logged for debugging, and the log now holds the same sensitive value in plaintext, outside any of the access controls that protected it in the source system.
 
 **Failure Mode Symptoms:**
+
 - A downstream reviewer or a customer support workflow
 - A card number typed with unusual spacing, or a phone number
 - A request containing a very long, adversarially crafted
@@ -9033,6 +9564,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An agentic pipeline built as a single sequential chain of LLM calls has one throughput limit, the wall-clock latency of the slowest single call multiplied by the number of calls, and one quality limit, whatever a single sample from the model produces on a single attempt. Both limits are avoidable in the specific case where the work either splits cleanly into independent pieces, or benefits from being attempted more than once.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The parallel version of a pipeline is not measurably faster than
 - Symptom. Sectioning branches individually look correct when inspected one
 - Symptom. A Voting-based decision flips between runs on effectively
@@ -9044,6 +9576,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A language model asked to solve a task that takes many steps, and that must call external tools along the way, faces a tension between two failure modes. If it is prompted to think one step at a time and decide the next action only after seeing the result of the previous one, the classic Thought-Action-Observation loop documented in ReAct (arXiv 2210.03629(https://arxiv.org/abs/2210.03629), verified 2026-08-02), it stays flexible to surprises but pays a full model call, with the entire running transcript as context, for every single action, and it has no explicit representation of how many steps remain or how they relate to each other. If instead it is asked to produce the complete answer in one shot, it tends to lose track of intermediate results on anything with real multi-step structure, the exact failure Wang and coauthors measured and targeted with Plan-and-Solve prompting.
 
 **Failure Mode Symptoms:**
+
 - A step succeeds but produces a result the plan's later steps silently
 - misinterpret. Symptom. A later step runs to completion but its output is
 - The system enters a loop, replanning the same failing step repeatedly
@@ -9060,6 +9593,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A task is handed to a single LLM call, and the call is asked to do everything at once, understand a long or ambiguous instruction, apply several unrelated rules, transform the input, format the output, and self-check its own work, all inside one generation. As the number of things the model must hold in mind at once grows, quality drops in a way that is not linear. A prompt asking for one clear transformation is close to reliable. The same prompt with three more requirements bolted onto it starts skipping steps, blending two rules together, or drifting format halfway through the response, and the failure is often silent. The output looks plausible and passes a casual read while containing a step that was never actually performed.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The final output is confidently wrong in a way that would have
 - Symptom. The chain works reliably in testing on a handful of examples and
 - Symptom. A prompt change to step 2, made to fix an unrelated complaint,
@@ -9071,6 +9605,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An LLM-integrated system is built around one structural weakness. the model receives a single stream of tokens and, unlike a CPU executing machine code, it has no hardware-enforced separation between the bytes that were the system's own instructions and the bytes that arrived as data. Everything the model reads sits in the same context window, competing for the same attention, and a sufficiently persuasive sentence anywhere in that window can be more compelling to the model than the sentence that actually came from the operator.
 
 **Failure Mode Symptoms:**
+
 - the agent summarizes a retrieved document and then, unprompted,
 - a defense that worked in testing stops working two weeks after
 - legitimate customer messages are refused or flagged at a rate
@@ -9082,6 +9617,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A language model asked to answer a multi-hop factual question, or to complete a task that spans several tool calls, has two failure modes when it is prompted with only one of the two capabilities. Ask it to reason with chain-of-thought alone, with no tools, and it will produce a plausible chain of intermediate statements that can drift from any grounded fact, because every step is generated from the model's own parameters and nothing external checks it along the way. This is the well-documented hallucination and error propagation problem, a wrong fact stated at step two is treated as true at step five, and the final answer inherits the error with no mechanism to notice it happened. Ask the same model to only act, calling tools and reading their results with no interleaved reasoning, and the opposite failure appears. The model has no visible record of why it called a particular tool, cannot recover cleanly from an unexpected or empty result, and produces action sequences that a human reviewing the transcript cannot follow or trust, because the "why" was never written down. The paper's own framing states that acting-only prompting struggles particularly with "the model's inability to reason to induce, track, and update action plans and handle exceptions" (arXiv 2210.03629, verified 2026-08-02).
 
 **Failure Mode Symptoms:**
+
 - Thought-action mismatch, silently ignored. Symptom, the trajectory log
 - Infinite or near-infinite action loops. Symptom, the same Action, or a
 - Malformed action parsing failures compounding. Symptom, the agent
@@ -9093,11 +9629,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An LLM agent that tries a task once and stops inherits every mistake in that one attempt permanently. The situation looks like this in practice. An agent is asked to write a function, and the function it writes fails three of five hidden unit tests. Or an agent is dropped into a text-based household environment and needs to find a mug, heat it, and place it on a counter, and it spends its action budget searching a cabinet it already searched twice. Or an agent answers a multi-hop question from a Wikipedia-grounded corpus and retrieves a page that is topically close but wrong, then reasons confidently from the wrong page to a wrong final answer. In each case the agent produced a full, coherent attempt, that attempt was checkable against something outside the model, the model was simply never shown the result of the check before making its next move, because there was no next move. One shot, one outcome.
 
 **Observable Symptoms:**
+
 - The task has an external signal that can check a full attempt after the
 - Weight updates are unavailable, too slow, or simply the wrong tool for the
 - The mistake, once surfaced, is expressible as a sentence an LLM can
 
 **Failure Mode Symptoms:**
+
 - Symptom. The agent's self-reflection notes read as confident and
 - Symptom. An agent operating in a large, open-ended environment shows no
 - Symptom. The agent's context grows across a long session and either
@@ -9108,6 +9646,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A reader who has never heard the word reranking has still hit the problem it solves. You build a search feature backed by embeddings. A user query comes in, you embed it, you do a nearest-neighbor lookup against a vector index, and you get back the top 20 or top 50 chunks by cosine similarity. Some of those chunks are genuinely relevant. Several are near-misses, topically adjacent text that shares vocabulary with the query but does not actually answer it. You feed the top handful into a language model as context and the model's answer quality degrades because irrelevant context crowds out the relevant passage, or because the truly best passage sat at rank eight instead of rank one and never made it into a token-limited context window.
 
 **Failure Mode Symptoms:**
+
 - Reranking is added and end-to-end answer quality does not
 - Correct documents never appear in the final reranked results,
 - Reranking scores look reasonable in isolation but the final
@@ -9120,6 +9659,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A large language model's knowledge is frozen at the moment its training data was collected, and its parameters have a fixed, finite capacity that cannot hold every fact a user might need. Two concrete symptoms follow from this. First, the model will answer confidently about information that did not exist when it was trained, or that changed afterward, and it has no mechanism to know it does not know. This is the well-documented hallucination problem. asked about a private codebase, an internal HR policy, this morning's stock price, or last week's support ticket, the model will produce fluent, plausible, wrong text rather than say "I do not have this information." Second, even where the model's training data did once contain the relevant fact, that fact sits somewhere inside billions of compressed parameters with no citation, no way to check it, and no way to update it without an expensive retraining or fine-tuning run.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The system confidently answers questions the corpus does not
 - Symptom. Retrieval quality degrades silently over time even though nothing
 - Symptom. The same question, asked twice in slightly different phrasing,
@@ -9132,13 +9672,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single LLM call, driven by one prompt, is asked to handle every shape of input a system receives. As the input variety grows the prompt grows with it. one clause for refunds, one for technical support, one for sales questions, each clause hedging against the others so the model does not blend a refund policy answer into a technical support answer. Each new category makes the prompt longer, makes every existing category's instructions marginally less reliable because they now compete for the model's attention with unrelated instructions, and makes the prompt harder for a human to review because a single reviewer must hold every category's rules in mind at once to judge whether a change to one clause silently changed the meaning of another.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md)
 
 **Core Problem:** A large language model generating a chain-of-thought answer with standard greedy decoding commits to one path through the reasoning space, token by token, and never reconsiders. If that path takes a wrong turn early, for example mis-parsing a word problem or skipping a case in an enumeration, every downstream token compounds the error, and the final answer is wrong even though the model, sampled differently, might have reasoned correctly.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The self-consistency vote is completely flat, no plurality
 - Symptom. Vote counts look reasonable but the majority answer is
 - Symptom. Production cost or latency on the reasoning endpoint spikes
@@ -9150,6 +9692,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A retrieval-augmented language model that always retrieves, for every query, pays the same fixed cost whether the query needs an external source or not. "What is a good one-line greeting for a customer support chatbot" gains nothing from a document lookup, but a system wired to always retrieve pays the latency and token cost of a lookup anyway, and worse, it now has to decide what to do with an irrelevant passage it did not need. The opposite failure is equally damaging in production. A system with no retrieval at all, or with retrieval fixed once per turn and never revisited, answers "what year was this landmark completed" from parameters alone, and the parametric answer, when wrong, comes out with the same fluent confidence as a correct one. Standard RAG narrows this gap by retrieving before generating, but it still trusts whatever it retrieved. If the retriever returns a topically related but factually silent passage, plain RAG has no built-in mechanism to notice that the passage never actually supports the claim the model is about to write.
 
 **Failure Mode Symptoms:**
+
 - Symptom. The system states a fact with a citation-shaped provenance
 - Symptom. The system answers a genuinely retrieval-worthy query, one
 - Symptom. Median response latency, and especially the tail, grows
@@ -9160,6 +9703,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A production system built on a hosted large language model pays for every call, in latency and in metered tokens, and a meaningful share of real traffic is not novel. The same handful of questions get asked by many users in slightly different words. A customer support bot answers "how do I reset my password" and "I forgot my password, what do I do" as two API calls that should have been one. A documentation assistant answers "what is your refund policy" and "can I get my money back" the same way twice. A retrieval pipeline re-embeds and re-summarizes the same handful of frequently asked questions across thousands of sessions. Exact-match caching, keyed on the literal prompt string, catches almost none of this traffic, because the literal text rarely repeats even when the intent does.
 
 **Failure Mode Symptoms:**
+
 - The over-eager threshold. Symptom. Users report receiving answers that are
 - The unpartitioned cache leak. Symptom. A user reports seeing a response
 - Silent staleness. Symptom. A support bot keeps stating an old pricing
@@ -9172,15 +9716,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A single large language model call, however capable the underlying model, has a hard ceiling on what it can reliably do in one pass. The context window is finite, so the model cannot hold an unbounded amount of source material, scratch work, and instructions in view at once. Attention degrades as a transcript grows, so a model asked to do research, write code, check its own work, and format a citation list inside one continuous conversation tends to drop earlier constraints as later ones accumulate. And a single model instance following one system prompt has one persona, one set of priorities, and one blind spot, so a mistake in its reasoning is not caught by anything inside that same call, because nothing inside the call is positioned to disagree with it.
 
 **Failure Mode Symptoms:**
+
 - task directly. The observable symptom is a multi-agent run that takes longer
 - starting point. The observable symptom is a system with several named agent
-- | Symptom | Cause | Fix |
+- / Symptom / Cause / Fix /
 
 #### [Structured Output](../patterns/17-ai-agentic/structured-output.md)
 
 **Core Problem:** A program that calls a large language model eventually has to do something with the words that come back. If the next step is a person reading the words, near enough is good enough, a sentence that trails off oddly or uses an unexpected synonym rarely breaks anything. If the next step is code, near enough is not good enough. A price extraction pipeline needs a number in a field named total, not a paragraph that happens to contain a price somewhere in the middle of a sentence. A support ticket router needs one of a fixed set of category strings, not a category the model half invents by combining two real ones. A tool-calling agent needs an argument object whose keys exactly match the function signature the calling code is about to parse and unpack, because a missing key or a string where an integer was expected raises an exception three stack frames from where the mistake actually happened.
 
 **Failure Mode Symptoms:**
+
 - The false confidence field. Symptom. A sentiment or confidence field is
 - Silent schema truncation. Symptom. A field the team is certain they
 - The dynamic schema cost cliff. Symptom. A pipeline that was fast in
@@ -9194,6 +9740,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An agent delegates a subtask to another agent, and the subtask involves work whose intermediate output the delegating agent will never need again. A subagent reads a dozen files to answer one question. A subagent searches the web across six queries to check one fact. A subagent runs a test suite and produces four thousand lines of log output to confirm one pass or fail verdict. In every one of these cases, only a small fraction of what the subagent touched is relevant to the caller. The caller needs the verdict, the fact, or the summary, not the search results, the file contents, or the raw log.
 
 **Failure Mode Symptoms:**
+
 - The confidently wrong subagent. Symptom, a subagent asked to fix the bug
 - Duplicated work between parallel siblings. Symptom, two subagents run in
 - Delegation overhead exceeding the work delegated. Symptom, a small,
@@ -9207,6 +9754,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An agent loop calls a model repeatedly, and every call carries a system prompt, a set of tool definitions, some retrieved documents, and the conversation so far. None of those four pieces has a natural limit on its own. A tool can return a ten thousand line log file. A retrieval step can surface forty candidate chunks. A conversation can run for hours. Left alone, each of these grows without bound, and the model's maximum input size is a wall the code hits without warning rather than a boundary the code plans around.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A request is rejected with a context-length error even though
 - Symptom. In a long-running agent session, the agent appears to forget an
 - Symptom. Cost on a session that "did not do much" spikes unexpectedly
@@ -9221,6 +9769,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An agent built on a tool-calling loop, the mechanism the Function Calling entry in this family describes, asks a model to decide, turn by turn, whether to answer directly or invoke a named tool with structured arguments. Nothing in that loop remembers what happened on a previous turn beyond the transcript the model can read. If the model decides on turn three to call searchweb(query="EU AI Act enforcement date"), and on turn seven, after a detour through two other tools, decides it needs that same fact again, the loop calls the search API a second time. It pays a second network round trip, a second dollar cost if the tool is metered, and a second window of latency the person waiting on the answer has to sit through.
 
 **Failure Mode Symptoms:**
+
 - Stale data served as fresh. Symptom. An agent confidently reports a
 - Duplicated side effect from caching a non-idempotent call. Symptom. A
 - Unstable key causing silent zero hit rate. Symptom. Cache hit and miss
@@ -9233,6 +9782,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A language model produces its answer as a single left-to-right token stream. Chain-of-thought prompting, Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc V. Le, and Denny Zhou, "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models," arXiv 2201.11903, NeurIPS 2022 (https://arxiv.org/abs/2201.11903, verified 2026-08-02), improved on a bare answer by asking the model to write intermediate steps before the final answer, and that alone produced large gains on arithmetic and commonsense benchmarks. But a chain is still one path. Once the model commits to a wrong early step, a greedy generation pass never reconsiders it, and the whole downstream chain inherits the mistake. A person solving the same problem on paper does not work this way. They try a step, notice it leads nowhere, cross it out, and try a different step from the same starting point. That crossing out and retrying is exactly what a single autoregressive pass cannot do on its own, because token generation is a one-way street.
 
 **Failure Mode Symptoms:**
+
 - The system spends far more tokens than a plain chain and
 - The search consistently converges on the same wrong answer
 - A correct branch is generated early in the search but is
@@ -9246,6 +9796,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team is asked to build a feature, choose an architecture, or pick a technology. The decision has real consequences, so someone reasonably suggests doing the analysis properly before committing. A spreadsheet of options appears. A proof of concept is built for option A, then for option B. A design document is drafted, reviewed, revised, and re-reviewed. Two weeks pass. Three. The requirements shift slightly in the meantime, because they always do, which invalidates part of the analysis and triggers another round. No line of production code has shipped, and no stakeholder has learned anything that a much smaller, faster experiment could not have taught them in a day.
 
 **Failure Mode Symptoms:**
+
 - , Cause, Fix triples, each grounded in an observable signal a reader
 - Symptom. A design document has gone through five or more review rounds
 - Symptom. The same two or three options have been compared in more than
@@ -9258,11 +9809,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase reaches for persistence early. A relational table, a document collection, or an external API schema defines the shape of a Customer, an Order, an Invoice. An object-relational mapper, a serialization library, or a code generator produces a class with one field per column and a getter and a setter for each, because that mapping is mechanical and the tooling does it well. The team then writes the actual business rules, an order cannot ship without a valid address, a subscription cannot renew past its cancellation date, an invoice total must equal the sum of its line items after tax, somewhere else, typically in a class whose name ends in Service or Manager. The domain object is passed into that service, its getters are called to read state, its setters are called to write the result back, and it never sees the rule itself.
 
 **Observable Symptoms:**
+
 - A framework's official tutorial, or its idiomatic path of least resistance,
 - The team is organized around a database-first workflow, a DBA or a data
 - A prior architecture decision, often unstated, treats "the domain objects"
 
 **Failure Mode Symptoms:**
+
 - Silent invariant violation across two callers. Symptom. A record in
 - God Service accumulating unrelated behavior. Symptom. A single
 - Validation duplicated at every entry point. Symptom. The same
@@ -9276,6 +9829,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A reader can recognize this problem without ever hearing the pattern's name. Open a file in the codebase and it does five unrelated things. A function that is supposed to validate an order also charges a credit card, writes to three tables, and formats an email. A class named Manager or Helper or Utils has grown to thousands of lines because every new feature found it convenient to add one more method there rather than create a new type. Global mutable state, a static map, a module-level dictionary, a singleton with a public field, is read and written from a dozen unrelated call sites, so no one can predict what a given change will affect without running the whole system and watching what breaks. Database tables are read directly by three different subsystems that were never told about each other, so the schema is the de facto integration layer and nobody can change a column name without a company-wide search. New engineers spend their first weeks not learning the domain but learning which functions are safe to call and which ones are land mines, because the compiler and the file layout give no hints about either.
 
 **Failure Mode Symptoms:**
+
 - The onboarding cliff. Symptom. A new engineer's first non-trivial change
 - The shotgun-surgery bug fix. Symptom. A single logical fix requires
 - The regression nobody can explain. Symptom. A change to an apparently
@@ -9289,6 +9843,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A decision needs to be made by a group, and the group contains people with very different depths of expertise on the subject. The topic set spans a wide range of technical weight, from an architecture choice that will shape the system for years to a variable name that will never be seen outside the file it lives in.
 
 **Failure Mode Symptoms:**
+
 - The trivial-topic misdiagnosis. Symptom. A long thread about a public
 - Silencing dissent by mislabeling it bikeshedding. Symptom. A team lead
 - No decision owner, so the timer alone does not converge. Symptom. A
@@ -9301,6 +9856,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team adds a piece of code, an API, a dependency, a database table, a configuration flag, or a whole service for a reason that was real at the time. a client asked for it, a migration needed it, a feature was planned and then cancelled, a vendor was swapped out but the old adapter was left in place "in case we need to switch back." The original reason expires. The client leaves, the migration finishes, the feature ships differently, the vendor swap is permanent. Nobody removes the artifact, because removing it requires proving a negative, that nothing downstream depends on it, and proving that negative is harder than the five minutes it took to write the artifact in the first place. The artifact then sits in the codebase indefinitely. It is not actively harmful in the way a bug is harmful, it usually does not crash anything by itself. It is a form of ballast, every reader has to understand what it is and confirm it is safe to ignore, every build compiles it, every dependency upgrade has to keep it working, and every new hire asks "what is this for" and gets an answer nobody is fully sure of. The recognisable symptom in a real codebase is a comment or a commit message that says some version of "leaving this here just in case" attached to code that has had zero call sites, zero test coverage, and zero product owner for a year or more.
 
 **Failure Mode Symptoms:**
+
 - , cause, fix, presented as explicit triples so each is checkable
 - A code review or an onboarding session repeatedly produces the
 - A dependency audit or a vulnerability scanner repeatedly flags a
@@ -9312,6 +9868,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The context is any system with a client tier, an application or service tier, and a database tier, where the database engine exposes a facility for running code close to the data, stored procedures, triggers, user-defined functions, computed columns, or in-engine formatting and serialization clauses such as Transact-SQL's FOR XML and FOR JSON, or PostgreSQL's rowtojson and PL/pgSQL functions. All of these facilities are genuine, well documented engine features, not misuse by definition. The problem this entry names is specific. a team reaches for those facilities to do general-purpose application work, string formatting, locale-aware currency and date rendering, business rule evaluation, XML or JSON document assembly, or aggregation dressed up as presentation logic, and does this on the same server process that is also answering every other client's read and write requests.
 
 **Failure Mode Symptoms:**
+
 - response times climb steadily as concurrent load rises, even though
 - the database server's CPU or, on a metered platform, its compute
 - a stored procedure or trigger that was fast when written becomes
@@ -9323,6 +9880,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The context is a server-side application built as, or converged into over time, a single deployable process that does two structurally different jobs at once, accepting and answering client requests, and running whatever business logic those requests trigger. Azure's own framing names this directly as the root cause. "This problem typically occurs when an application is developed as monolithic piece of code, with all of the business logic combined into a single tier shared with the presentation layer" (Azure Architecture Center, Busy Front End antipattern(https://learn.microsoft.com/en-us/azure/architecture/antipatterns/busy-front-end/), verified 2026-08-02).
 
 **Failure Mode Symptoms:**
+
 - Response times for a completely unrelated, previously fast endpoint
 - End users report intermittent HTTP 500 or HTTP 503 errors, or
 - A load test performed by a single tester, or an automated test
@@ -9335,6 +9893,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The shape that produces this anti-pattern is almost always the same three ingredients arriving together.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A dashboard shows a sudden, sharp spike in origin database
 - Symptom. After adding a distributed lock, the system experiences
 - Symptom. The system serves visibly wrong data, a price shown after a
@@ -9346,6 +9905,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A base class method does two things at once. it declares an extension point a subclass is meant to specialise, and it performs some piece of bookkeeping the rest of the object, or the rest of the framework, depends on. Activity.onCreate in the Android framework restores saved instance state and wires the theme before the app's own onCreate override runs its layout code. viewDidLoad in Apple's UIKit performs setup after the view hierarchy is loaded into memory, and the framework's own default implementation is meant to run alongside a subclass's customisation, not instead of it. GenericServlet.init(ServletConfig) in the Java Servlet API stores the ServletConfig object the container handed it so that getServletConfig() later works. In every one of these cases the override exists to ADD behaviour, not to REPLACE it, but the language gives the subclass author a single override slot that can do either, and nothing at the call site distinguishes the two.
 
 **Failure Mode Symptoms:**
+
 - Missing super call in a lifecycle method. Symptom. an object works
 - Super call at the wrong point in the override. Symptom. behaviour that
 - Partial dispose chain across a multi-level hierarchy. Symptom. a resource
@@ -9360,13 +9920,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A developer under time pressure needs code that solves a problem they do not fully understand, in a domain they have not fully learned, often on a deadline that leaves no room to read the relevant specification, the relevant algorithm, or the relevant library documentation from first principles. A working example exists nearby, a Stack Overflow answer, a tutorial blog post, a neighboring function in the same file, a snippet a teammate pasted in a chat, or a pattern the developer half-remembers from a previous job. The example compiles, it passes the one test the developer runs by hand, and the deadline is met. The problem this anti-pattern names is what happens next. the developer never goes back to learn why the example was shaped the way it was, so the borrowed code becomes a black box that is reproduced again in the next file, and the next, entirely by visual imitation rather than by reasoning about the forces that shaped the original.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
+
+- / Symptom / Cause / Fix /
 
 #### [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md)
 
 **Core Problem:** Chatty I/O appears the moment a piece of code that used to run against in-process memory starts running against something on the far side of a boundary that has real per-call cost. a network socket, a database connection, a disk file, an interprocess pipe. The code was written the way you would naturally write it against an in-memory object graph. iterate over a parent, walk into each child, ask a question, move to the next child. That shape is free in memory. Across a boundary, every one of those questions becomes a full round trip carrying its own connection setup, its own serialization, its own network latency, and its own server-side dispatch cost, even when the actual payload being asked for is a handful of bytes.
 
 **Failure Mode Symptoms:**
+
 - A user-facing operation feels instant with one item of test
 - An ORM's lazy-loading proxy throws a lazy-initialization
 - After fixing chattiness by introducing one enormous aggregate
@@ -9378,11 +9940,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase grows by adding files, packages, or services, and each new unit imports whatever it needs from its neighbours. Nobody sets out to build a cycle. It appears gradually, one import at a time, each individually reasonable, until two units that started independent now each name the other.
 
 **Observable Symptoms:**
+
 - Convenience imports. A developer needs one small thing from a
 - Shared vocabulary without a shared home. Two areas of a system both
 - Growth without a layering rule. The codebase started as one module and
 
 **Failure Mode Symptoms:**
+
 - The undefined-value bug. Symptom. A value that is undefined, None, or
 - BeanCurrentlyInCreationException and its equivalents. Symptom. A
 - The unresolvable foreign key insert. Symptom. An INSERT into either of
@@ -9397,6 +9961,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A developer needs behavior that is almost, but not quite, identical to behavior that already exists somewhere else in the codebase. The fastest path from a blank cursor to a working feature is to open the existing code, select it, copy it, paste it into a new location, and edit the parts that differ. The new code compiles, the tests the developer wrote for it pass, and the feature ships on schedule. Nothing about that single decision is wrong in isolation. the problem is what happens the next fifty times a developer faces the same choice under the same time pressure.
 
 **Failure Mode Symptoms:**
+
 - A production bug report describes behavior that was
 - Two near-identical validation functions produce different
 - A code review takes far longer than the diff size suggests it
@@ -9408,6 +9973,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team decomposes a monolith, or designs a new system, into a set of services with separate repositories, separate deployment pipelines, and separate runtime processes, expecting the standard microservices payoff, independent deployability, independent scaling, and fault isolation. Months later the team discovers that a change to one service still requires coordinated deployment of three or four others, that a single slow database query in one service degrades response time across the whole system, and that an integration test suite has to boot the entire constellation of services to pass, because no individual service can be verified in isolation.
 
 **Failure Mode Symptoms:**
+
 - Cascading latency from an unprotected synchronous chain. Symptom. A
 - Schema coupling through a shared database. Symptom. A migration in one
 - Lockstep releases hidden behind independent-looking pipelines. Symptom.
@@ -9422,6 +9988,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team decomposes a monolith, or designs a new distributed system from scratch, and reaches for the most obvious axis of decomposition available. the nouns already sitting in the domain. There is a Product table, an Account table, an Order table, an Inventory table, so the team stands up a ProductService, an AccountService, an OrderService, an InventoryService, each owning exactly one of those tables and exposing create, read, update, and delete operations over it. Every service maps cleanly to a bounded piece of the schema. Every service has an obvious owning team. The architecture diagram looks tidy, one box per noun, and it survives a whiteboard review without objection, because nothing about it looks wrong in isolation.
 
 **Failure Mode Symptoms:**
+
 - The checkout fan-out. Symptom. A single user-facing action, pricing a
 - The cascading outage. Symptom. One entity service, often the one with
 - The unowned business rule. Symptom. The same validation or calculation,
@@ -9434,6 +10001,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A piece of code needs three fields from a record, a page needs the title and the thumbnail of a hundred articles, a mobile screen needs a user's display name and avatar. The code that fetches the data does not ask for those three fields, that title and thumbnail, that name and avatar. It asks for the whole record, the whole article body plus its full comment thread, the whole user profile with every preference and every historical order. The unneeded data is read from disk, deserialized, sent across the network, and then discarded by the caller a few lines later.
 
 **Failure Mode Symptoms:**
+
 - The dashboard that got slow as the table grew. Symptom. A list endpoint
 - The mobile client burning a user's data plan. Symptom. Users on a
 - The N+1 that only shows up under real data. Symptom. A feature page
@@ -9447,6 +10015,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system starts with a reasonable class boundary. Over months or years, each new feature finds it easier to add one more method or one more field to an existing, well-known, already-imported class than to design a new collaborator, wire it into the dependency graph, and write its tests. The existing class is already visible everywhere a developer is likely to be working, so adding to it has zero discovery cost, while creating a new class has real discovery cost. Someone has to find it, understand its contract, and choose to depend on it. This asymmetry in cost is the entire mechanism behind the anti-pattern, and it means the God Object rarely appears from a single bad decision. It accretes from hundreds of individually reasonable decisions, each of which looked like the path of least resistance at the moment it was made.
 
 **Failure Mode Symptoms:**
+
 - observable production symptom, its root mechanism, and the concrete fix.
 - Files colliding across unrelated pull requests. Symptom. A single file
 - Slow, flaky test suites. Symptom. Unit tests for the God Object take a
@@ -9465,10 +10034,12 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A type in the codebase is expensive, or moderately expensive, or genuinely expensive, to construct. The exact cost varies by what the constructor does. Parsing a pattern into a matching automaton, opening a socket, acquiring a file handle, reading and parsing a configuration file, computing a hash table of static data, registering itself with a runtime subsystem, or simply allocating enough memory that a garbage collector notices, all count. None of that cost is visible at the call site. A constructor call, new Foo(...) or Foo() or Foo::new(...), looks identical whether Foo is a two-field value object with a body that runs in nanoseconds, or a regular-expression engine, an HTTP client with a connection pool, or a JDBC connection that opens a TCP socket and performs a TLS handshake.
 
 **Observable Symptoms:**
+
 - Redundant work. The constructed object does the same expensive
 - Allocation pressure. The constructed object is genuinely different each
 
 **Failure Mode Symptoms:**
+
 - This section presents each failure as an observable symptom, its underlying
 - recognize during an actual incident. The symptoms below are what an engineer
 - API response latency degrades under load in a way that scales
@@ -9482,6 +10053,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The situation always starts with a genuine and reasonable business requirement, that end users, who are not programmers, need to change how the system behaves without waiting on a development team. A sales operations manager needs to add a field to a lead form. A claims processor needs to change how a workflow routes a case. A merchandising team needs to define a new product attribute without a code deployment. The requirement is real, and the instinct to build a general mechanism for it is not wrong on its own.
 
 **Failure Mode Symptoms:**
+
 - Join explosion on a generic entity store. Symptom. A single "show this
 - "Only a programmer can use it" despite being built for non-programmers.
 - The configuration surface intended to remove developers from the
@@ -9496,14 +10068,16 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase under real deadline pressure accretes exploratory code, spike solutions, feature-flagged experiments, half-finished rewrites, region-specific branches for a market the company later exited, and workarounds for bugs in dependencies that were patched two major versions ago. None of this is a mistake in the moment. Writing a throwaway prototype to validate an idea under a two-week deadline is a reasonable, even disciplined, way to build software. The problem is what happens after. The prototype ships because it works well enough, the team moves to the next deadline, and nobody schedules the promised follow-up pass to clean it up. Six months later a different engineer is staring at three parallel discount-calculation functions, two of which are never called from any live entry point, and has no confident way to tell which is which without reading commit history that predates their own tenure.
 
 **Failure Mode Symptoms:**
-- | Symptom | Cause | Fix |
-- | A pull request review takes far longer than the diff size suggests it should, because reviewers keep asking "does this still get called from X" | The reviewers themselves do not have confident reachability knowledge of the surrounding code, a direct symptom of an active Lava Flow zone | Instrument the ambiguous paths with logging or a feature-usage counter before making further changes there, so the next review can point at data instead of memory |
+
+- / Symptom / Cause / Fix /
+- / A pull request review takes far longer than the diff size suggests it should, because reviewers keep asking "does this still get called from X" / The reviewers themselves do not have confident reachability knowledge of the surrounding code, a direct symptom of an active Lava Flow zone / Instrument the ambiguous paths with logging or a feature-usage counter before making further changes there, so the next review can point at data instead of memory /
 
 #### [Magic Numbers](../patterns/18-anti-patterns/magic-numbers.md)
 
 **Core Problem:** A magic number is a numeric literal that appears directly in executable code, in a comparison, an arithmetic expression, an array size, a loop bound, or a function argument, without a name that explains what the value represents or why that particular value was chosen. The number 86400 compiles and runs identically to a named constant SECONDSPERDAY, but only one of the two tells a reader anything. The problem is not that the number is wrong. Often it is correct and stays correct for years. The problem is that its meaning lives only in the head of whoever wrote it, and that knowledge does not travel with the code.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Two subsystems silently disagree about a rule that is supposed
 - Symptom. A unit-confusion defect ships to production. A duration is off
 - Symptom. A linter rule intended to catch magic numbers instead produces
@@ -9515,6 +10089,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system starts with one team, one codebase, and one database, and the fit is genuinely good. Every table is reachable from every part of the application because every part of the application is, in truth, one thing. A query joining orders to customers to inventory is cheap to write and cheap to run because the database engine can see all three tables in one transaction and one query plan.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A deploy of service A's schema migration is delayed for days
 - Symptom. An unrelated feature's release is blocked by a database
 - Symptom. Two services occasionally disagree about the state of what
@@ -9525,11 +10100,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The shape appears the moment code needs to display, process, or serialize a list of parent records together with one piece of data that lives on a related table or a related service. The list itself is retrieved correctly, in one query or one call. The related data for each item in the list is then retrieved by iterating over the list and issuing a separate fetch per item, because that fetch reads naturally as ordinary, sequential, object-oriented code.
 
 **Observable Symptoms:**
+
 - A collection is fetched first, and the code that follows needs a
 - The related data is fetched through an abstraction that hides the
 - The collection size is not fixed at development time. The bug is
 
 **Failure Mode Symptoms:**
+
 - The disguised loop. Symptom. A profiler or a query log shows dozens
 - Eager loading applied to the wrong association. Symptom. Query count
 - Cartesian explosion from a naive join fix. Symptom. Fixing an N+1
@@ -9542,6 +10119,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team adopts microservices with the correct instinct that a monolith with too many concerns bundled into one deployable is hard to change safely, and the guidance they read tells them smaller is safer. Taken literally, "smaller is safer" has no natural stopping point, so a team without a grounded decomposition heuristic keeps splitting. A service that authenticates a user, looks up their profile and returns their preferences becomes three services. a login service, a profile service and a preferences service, each with its own repository, its own CI pipeline, its own container image, and its own network address. None of the three has a reason to scale, fail or deploy on a different schedule from the other two. They always change together, because a login flow that needs the user's preferences will always need the profile record that names which preferences apply.
 
 **Failure Mode Symptoms:**
+
 - Chatty checkout, order, or signup flow. Symptom. A single user-facing
 - Lambda pinball. Symptom. A production incident review cannot answer
 - Distributed monolith masquerading as microservices. Symptom. Every
@@ -9555,6 +10133,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system computes or fetches a value that is expensive relative to how often it is actually needed fresh, and it does that computation or fetch again, in full, on every single request that needs the value, even when the underlying data has not changed since the last time.
 
 **Failure Mode Symptoms:**
+
 - p99 latency on a specific endpoint or handler is much higher than
 - Database CPU or connection-pool utilization spikes sharply and out
 - A third-party API integration starts returning 429 Too Many
@@ -9566,6 +10145,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team needs a capability another party has already built. a queue, a cache, a date library, an authentication flow, a build system, sometimes an entire platform. An external option exists, is documented, is used elsewhere, and on paper meets the requirement. The team chooses to build its own version instead, and the stated reasons for that choice, when examined honestly, turn out to be about where the code came from rather than what the code does.
 
 **Failure Mode Symptoms:**
+
 - , cause, fix, in each case.
 - Symptom. Every proposal to adopt an external library is met with a
 - Symptom. A homegrown internal library has grown to duplicate most of the
@@ -9579,6 +10159,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Every worker-pool or message-consumer system faces two separate but related questions that get answered by the same mechanism if the designer is not careful. First, how does a consumer that reads from a shared queue know when there is no more work and it is time to stop, as opposed to simply waiting because the queue happens to be temporarily empty. Second, what happens when a message the consumer pulls off that queue cannot be processed, not because the queue is empty or the consumer is slow, but because the message itself is defective, whether through a malformed payload, a schema mismatch, a bug that only that particular input triggers, or a business rule that can never be satisfied for that record.
 
 **Failure Mode Symptoms:**
+
 - The observable symptom is listed first in each triple, because that is what a
 - Consumer fleet CPU and error-log volume spike sharply while
 - Worker goroutines or threads hang forever after a shutdown was
@@ -9596,6 +10177,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The situation that produces this anti-pattern looks the same across languages, teams, and decades, because it comes from a mismatch between how programmers reason about code and how computers actually spend time running it. A programmer reading source code forms an intuition about where the expense lives by looking at nesting depth, the number of lines, and how often a function name recurs in the file. That intuition is frequently wrong, because real programs spend the overwhelming share of their running time in a small number of hot paths, frequently a single loop, a single query, or a single serialization call, that the source code gives no visual signal about. Steve McConnell documents this directly, reporting that industry measurements repeatedly find that a program's execution time concentrates in roughly four percent of its code, so any optimization effort applied to code chosen by reading rather than by measuring is very likely to be effort applied to the wrong four percent (Steve McConnell, Code Complete, 2nd edition, Microsoft Press, 2004, Chapter 25, "Code Tuning," the opening section on when to optimize).
 
 **Failure Mode Symptoms:**
+
 - Each entry below states a symptom an engineer would actually observe in a
 - or profiler output accompanies the change. This is the observable symptom.
 - the symptom. The cause is that the cache was added speculatively, the
@@ -9608,6 +10190,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A service calls a downstream dependency over the network. Networks are unreliable, dependencies are sometimes overloaded, and processes crash and restart. So the calling code retries a failed request, which is a reasonable default reaction to a transient fault. The retry storm anti-pattern appears when that reasonable reaction is implemented without limits, and the retry policy itself becomes the mechanism that turns a small, recoverable problem into a large, self-sustaining one.
 
 **Failure Mode Symptoms:**
+
 - A downstream service's request rate spikes far above its normal
 - An incident's error rate stays high for many minutes after the
 - Retries appear to arrive in periodic bursts rather than a smooth
@@ -9620,11 +10203,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An object accumulates behavior across its public surface the way most long-lived classes do, one method added at a time as new requirements arrive. At some point in that growth, a later method's correctness starts to depend on an earlier method having already run. The dependency is rarely planned. It is usually the accidental result of moving what used to be one large method's internal steps into several smaller public methods, without also asking what happens if a caller invokes only the second half.
 
 **Observable Symptoms:**
+
 - Setup before use. A resource, a connection, a parser, a session,
 - Teardown after use. The mirror image. A resource must be released,
 - State machine in disguise. The object has more than two valid states
 
 **Failure Mode Symptoms:**
+
 - A late exception with no connection to its cause. Symptom. A test or
 - Intermittent failures that reproduce only under concurrency. Symptom.
 - A slow resource leak that grows over the process lifetime. Symptom.
@@ -9638,6 +10223,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A component needs a collaborator to do its work, a repository, a logger, a payment gateway client, a feature-flag reader, and it does not want to be handed a concrete instance by whoever constructs it. Two shapes solve this. One is to declare the dependency as a constructor or method parameter and let whatever assembles the object graph supply it. The other is to give the component a reference to a shared, globally reachable object and let the component ask that object, by name or by type, for what it needs, at the moment it needs it, inside its own method bodies.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A NoSuchElementException, NullPointerException, or an
 - Symptom. Unit tests pass individually but fail intermittently when run as
 - which papers over the symptom without removing the design flaw, or, the
@@ -9650,6 +10236,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A codebase reaches for Singleton Abuse in a specific, recognizable moment. a developer needs to share one piece of state, or one expensive resource, across several parts of the code that were not designed together, or were not designed with an explicit way to pass that state between them. Threading it through every constructor and every function signature that might eventually need it looks like needless ceremony in the moment, especially early in a project when the call graph is shallow and the team is small. Wrapping the shared thing in a class with a private constructor and a static getInstance accessor solves the immediate problem in minutes. any code, anywhere in the program, can now reach the shared thing by naming the class, with no change to any intervening function signature.
 
 **Failure Mode Symptoms:**
+
 - Presented as symptom, cause, fix triples, so the entry is diagnostic and not
 - only descriptive. Judgement note. the specific symptom wording below is
 - A test suite passes reliably when run one file at a time, but
@@ -9663,6 +10250,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A program begins as a short, linear sequence of statements that a single author can hold entirely in their head. As requirements accumulate, new conditions are added to existing branches rather than factored into new functions, because adding one more if to an existing block is faster in the moment than extracting a new function, naming it, and wiring it in. Each individual addition is locally reasonable. a bug is found and a special case is patched in place, a new customer segment needs one more branch, a deadline means the fastest fix wins over the cleanest one. No single commit looks like a mistake in code review. What accumulates is not a bad decision but a bad shape, formed from hundreds of individually defensible decisions, none of which was made with the resulting shape in view.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A single reported bug fix reliably produces one or more new
 - Symptom. Estimates for small, apparently isolated changes to a
 - Symptom. A reader unfamiliar with a piece of code declares it
@@ -9674,11 +10262,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A system replicates state, or elects a leader, across more than one node so that it survives the failure of any single node. The mechanism that decides "who is currently in charge" or "which copy of the data is authoritative" depends on the nodes being able to talk to each other. A network partition, a switch failure, a misconfigured firewall rule, a slow or overloaded link that times out heartbeats, or even a botched maintenance window, removes that communication path without removing the nodes themselves. Every node keeps running. None of them crashed. From the outside, and from each node's own point of view, everything still looks healthy.
 
 **Observable Symptoms:**
+
 - More than one node can independently accept writes, or independently
 - The nodes communicate over a network that can partition, as opposed to
 - The failure-detection mechanism cannot distinguish "peer is dead" from
 
 **Failure Mode Symptoms:**
+
 - Symptom, cause, fix, presented as explicit triples.
 - Two application servers, or two database instances, both log
 - After a network incident, the same record has two different
@@ -9692,11 +10282,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** An organization builds its second system, its second department's application, or its second bounded capability, and the fastest path to delivery is to start from a blank slate rather than to first identify what the new system genuinely shares with the first one. The team under deadline pressure writes its own user table, its own configuration loader, its own logging format, its own retry logic, and its own notion of what a customer record looks like, because building on top of the first system's abstractions would require understanding them, negotiating a shared interface with a different team, and accepting a dependency that could break under a schedule the new team does not control. Nobody sat down to decide that the two systems should never talk to each other. The decision that produced the stovepipe was a hundred small decisions, each locally correct, to move fast and not wait on someone else's release plans.
 
 **Observable Symptoms:**
+
 - Independent procurement or independent team ownership. Each subsystem
 - No shared subsystem abstraction was designed before the second
 - Time pressure that rewards local delivery over cross-system
 
 **Failure Mode Symptoms:**
+
 - The following triples name a symptom a reader would actually observe in a
 - Two systems display different values for what should be the
 - A routine schema migration inside one subsystem causes an
@@ -9710,6 +10302,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Picture a request-handling process that serves many clients from a bounded number of execution contexts, whether that bound is a fixed thread pool, a single event loop thread, or a limited set of goroutines multiplexed onto a handful of OS threads. Every one of those execution contexts is a shared, finite resource. The process was sized, deliberately or by accident, on the assumption that each unit of work occupies its context for a short, mostly CPU-bound amount of time before releasing it back to the pool for the next piece of work.
 
 **Failure Mode Symptoms:**
+
 - Symptom. A service's request latency and error rate spike sharply and
 - Symptom. An async method never returns, the request appears to hang
 - Symptom. A Node.js process's request handling stalls in short, sharp
@@ -9721,6 +10314,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** Picture a cached product page. Ten thousand requests a second hit a CDN edge or an application cache for the same product. The cached value has a time-to-live of sixty seconds. At second sixty, the entry expires. All ten thousand requests that land in the next few milliseconds see a cache miss at the same time. Each one, independently and with no knowledge of the others, decides the correct action is to go fetch the value from the origin database or the origin service. The origin, which had been serving zero real queries because the cache was absorbing everything, is suddenly hit by ten thousand simultaneous identical queries. If the origin was provisioned to handle steady traffic rather than instantaneous full-fanout traffic, it falls over, the responses come back slowly or with errors, the cache stays empty because nothing succeeded fast enough to repopulate it, and the next wave of requests repeats the same stampede against an origin that is already unhealthy. This is a self-reinforcing failure. The cache, whose entire purpose is to protect the origin, becomes the trigger that destroys it.
 
 **Failure Mode Symptoms:**
+
 - Symptom. Origin database or backend service CPU and connection-pool
 - Symptom. A brief, unrelated network blip or a short service restart is
 - Symptom. A worker fleet behind a shared listening socket shows heavily
@@ -9732,6 +10326,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** A team building a system needs to store data, run compute, send messages, authenticate users, and observe the running system. Every one of those needs has a fast path, adopt the managed service the cloud provider already offers, call its SDK directly from application code, and use its proprietary query language, event format, or configuration surface because that is what the tutorial shows and what the fastest path to a working demo looks like. Each individual decision is locally rational. The team ships faster, avoids operating undifferentiated infrastructure, and gets first-party support.
 
 **Failure Mode Symptoms:**
+
 - Silent accumulation with no inventory. The most common failure mode is not
 - it would cost to leave this vendor. Symptom, nobody on the team can answer
 - Coupling that reaches the domain model, not just the infrastructure edge.
@@ -9746,11 +10341,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Core Problem:** The situation announces itself the same way every time. A developer opens a concrete class, call it FormPanel, to answer one question. what does this object actually do when render() is called. FormPanel's own file has no render() method in it at all. The reader jumps up to its parent, Panel. Panel has a hook() method, which looks promising, but hook() calls super.hook() somewhere in its body, so the reader jumps up again, to ScrollableContainer. ScrollableContainer overrides nothing. The reader has spent a file-open confirming that a class contributes no information, and must jump up again, to Container, which does have code, which itself calls super.hook(), sending the reader up one more level to Widget, the root. Widget's hook() method calls a second method, detail(), and here the direction reverses. because detail() is declared virtual and Panel overrode it, the call dispatches back DOWN, past Container, past ScrollableContainer, landing in Panel again, four levels below where the reader currently is. To answer one question, "what does render() do for a FormPanel," the reader opened five files and changed direction at least three times.
 
 **Observable Symptoms:**
+
 - A hierarchy with enough levels that the reader cannot hold the whole
 - Behavior distributed across those levels through Template Method style
 - No external aid, a call hierarchy view, a maintained sequence diagram,
 
 **Failure Mode Symptoms:**
+
 - The forgotten super call. Symptom. A feature that was meant to extend
 - The duplicated side effect. Symptom. A resource, a listener
 - Reaching for a debugger to read straightforward code. Symptom.

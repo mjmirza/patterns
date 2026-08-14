@@ -514,12 +514,14 @@ This matrix tracks which patterns provide runnable code examples in each languag
 ### C++
 
 #### Implemented in C++
+
 These patterns contain runnable code examples written in C++:
 
 - [Bridge](../patterns/01-gof/bridge.md) (Design Patterns (GoF))
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 
 #### Changes Shape in C++
+
 These patterns have unique implementation variants or change their design structure specifically when built using C++ features (documented in Dimension 8):
 
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
@@ -530,6 +532,7 @@ These patterns have unique implementation variants or change their design struct
 - [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) (Concurrency and Parallelism)
 
 #### Made Unnecessary or Alternative in C++
+
 These patterns have native features in C++ that make the pattern unnecessary, or require an alternative design approach (documented in Dimension 4):
 
 No language-level redundancies recorded.
@@ -537,12 +540,14 @@ No language-level redundancies recorded.
 ### C#
 
 #### Implemented in C#
+
 These patterns contain runnable code examples written in C#:
 
 - [Memento](../patterns/01-gof/memento.md) (Design Patterns (GoF))
 - [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) (Enterprise Application Architecture)
 
 #### Changes Shape in C#
+
 These patterns have unique implementation variants or change their design structure specifically when built using C# features (documented in Dimension 8):
 
 - [Active Object](../patterns/09-concurrency/active-object.md) (Concurrency and Parallelism)
@@ -622,6 +627,7 @@ These patterns have unique implementation variants or change their design struct
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 
 #### Made Unnecessary or Alternative in C#
+
 These patterns have native features in C# that make the pattern unnecessary, or require an alternative design approach (documented in Dimension 4):
 
 - [Builder](../patterns/01-gof/builder.md) (Design Patterns (GoF))
@@ -639,6 +645,7 @@ These patterns have native features in C# that make the pattern unnecessary, or 
 ### Go
 
 #### Implemented in Go
+
 These patterns contain runnable code examples written in Go:
 
 - [ACID](../patterns/04-principles-and-laws/acid.md) (Principles and Laws)
@@ -1091,6 +1098,7 @@ These patterns contain runnable code examples written in Go:
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
 
 #### Changes Shape in Go
+
 These patterns have unique implementation variants or change their design structure specifically when built using Go features (documented in Dimension 8):
 
 - [Abstract Factory](../patterns/01-gof/abstract-factory.md) (Design Patterns (GoF))
@@ -1302,6 +1310,7 @@ These patterns have unique implementation variants or change their design struct
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 
 #### Made Unnecessary or Alternative in Go
+
 These patterns have native features in Go that make the pattern unnecessary, or require an alternative design approach (documented in Dimension 4):
 
 - [Abstract Factory](../patterns/01-gof/abstract-factory.md) (Design Patterns (GoF))
@@ -1361,6 +1370,7 @@ These patterns have native features in Go that make the pattern unnecessary, or 
 ### Java
 
 #### Implemented in Java
+
 These patterns contain runnable code examples written in Java:
 
 - [Abstract Factory](../patterns/01-gof/abstract-factory.md) (Design Patterns (GoF))
@@ -1447,6 +1457,7 @@ These patterns contain runnable code examples written in Java:
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
 #### Changes Shape in Java
+
 These patterns have unique implementation variants or change their design structure specifically when built using Java features (documented in Dimension 8):
 
 - [API Gateway](../patterns/10-microservices/api-gateway.md) (Microservices)
@@ -1646,6 +1657,7 @@ These patterns have unique implementation variants or change their design struct
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 
 #### Made Unnecessary or Alternative in Java
+
 These patterns have native features in Java that make the pattern unnecessary, or require an alternative design approach (documented in Dimension 4):
 
 - [Aggregator](../patterns/07-integration/aggregator.md) (Enterprise Integration)
@@ -1691,12 +1703,14 @@ These patterns have native features in Java that make the pattern unnecessary, o
 ### Kotlin
 
 #### Implemented in Kotlin
+
 These patterns contain runnable code examples written in Kotlin:
 
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 
 #### Changes Shape in Kotlin
+
 These patterns have unique implementation variants or change their design structure specifically when built using Kotlin features (documented in Dimension 8):
 
 - [Active Record](../patterns/06-enterprise-application-architecture/active-record.md) (Enterprise Application Architecture)
@@ -1762,6 +1776,7 @@ These patterns have unique implementation variants or change their design struct
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
 #### Made Unnecessary or Alternative in Kotlin
+
 These patterns have native features in Kotlin that make the pattern unnecessary, or require an alternative design approach (documented in Dimension 4):
 
 - [Adapter](../patterns/01-gof/adapter.md) (Design Patterns (GoF))
@@ -1785,6 +1800,7 @@ These patterns have native features in Kotlin that make the pattern unnecessary,
 ### Python
 
 #### Implemented in Python
+
 These patterns contain runnable code examples written in Python:
 
 - [ACID](../patterns/04-principles-and-laws/acid.md) (Principles and Laws)
@@ -2268,6 +2284,7 @@ These patterns contain runnable code examples written in Python:
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
 
 #### Changes Shape in Python
+
 These patterns have unique implementation variants or change their design structure specifically when built using Python features (documented in Dimension 8):
 
 - [Abstract Factory](../patterns/01-gof/abstract-factory.md) (Design Patterns (GoF))
@@ -2469,6 +2486,7 @@ These patterns have unique implementation variants or change their design struct
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
 #### Made Unnecessary or Alternative in Python
+
 These patterns have native features in Python that make the pattern unnecessary, or require an alternative design approach (documented in Dimension 4):
 
 - [Abstract Factory](../patterns/01-gof/abstract-factory.md) (Design Patterns (GoF))
@@ -2508,6 +2526,7 @@ These patterns have native features in Python that make the pattern unnecessary,
 ### Rust
 
 #### Implemented in Rust
+
 These patterns contain runnable code examples written in Rust:
 
 - [Abstract Factory](../patterns/01-gof/abstract-factory.md) (Design Patterns (GoF))
@@ -2614,6 +2633,7 @@ These patterns contain runnable code examples written in Rust:
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 
 #### Changes Shape in Rust
+
 These patterns have unique implementation variants or change their design structure specifically when built using Rust features (documented in Dimension 8):
 
 - [Abstract Factory](../patterns/01-gof/abstract-factory.md) (Design Patterns (GoF))
@@ -2739,6 +2759,7 @@ These patterns have unique implementation variants or change their design struct
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
 #### Made Unnecessary or Alternative in Rust
+
 These patterns have native features in Rust that make the pattern unnecessary, or require an alternative design approach (documented in Dimension 4):
 
 - [Adapter](../patterns/01-gof/adapter.md) (Design Patterns (GoF))
@@ -2767,6 +2788,7 @@ These patterns have native features in Rust that make the pattern unnecessary, o
 ### Swift
 
 #### Implemented in Swift
+
 These patterns contain runnable code examples written in Swift:
 
 - [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) (Cloud and Distributed)
@@ -2799,6 +2821,7 @@ These patterns contain runnable code examples written in Swift:
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 
 #### Changes Shape in Swift
+
 These patterns have unique implementation variants or change their design structure specifically when built using Swift features (documented in Dimension 8):
 
 - [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) (Enterprise Application Architecture)
@@ -2846,6 +2869,7 @@ These patterns have unique implementation variants or change their design struct
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
 #### Made Unnecessary or Alternative in Swift
+
 These patterns have native features in Swift that make the pattern unnecessary, or require an alternative design approach (documented in Dimension 4):
 
 - [Builder](../patterns/01-gof/builder.md) (Design Patterns (GoF))
@@ -2858,6 +2882,7 @@ These patterns have native features in Swift that make the pattern unnecessary, 
 ### TypeScript
 
 #### Implemented in TypeScript
+
 These patterns contain runnable code examples written in TypeScript:
 
 - [ACID](../patterns/04-principles-and-laws/acid.md) (Principles and Laws)
@@ -3333,6 +3358,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
 
 #### Changes Shape in TypeScript
+
 These patterns have unique implementation variants or change their design structure specifically when built using TypeScript features (documented in Dimension 8):
 
 - [Abstract Factory](../patterns/01-gof/abstract-factory.md) (Design Patterns (GoF))
@@ -3447,6 +3473,7 @@ These patterns have unique implementation variants or change their design struct
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 
 #### Made Unnecessary or Alternative in TypeScript
+
 These patterns have native features in TypeScript that make the pattern unnecessary, or require an alternative design approach (documented in Dimension 4):
 
 - [Adapter](../patterns/01-gof/adapter.md) (Design Patterns (GoF))

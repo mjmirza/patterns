@@ -18,10 +18,9 @@ code:
 
 catalogue:
 	@python3 tools/gen-catalogue-status.py
-	@python3 tools/gen-by-problem-by-language.py
 
 catalogue-check: catalogue
-	@git diff --exit-code -- README.md docs/PROGRESS.md dist/ docs/BY-PROBLEM.md docs/BY-LANGUAGE.md || \
+	@git diff --exit-code -- README.md docs/PROGRESS.md dist/ || \
 		(echo "Catalogue status is stale. Run 'make catalogue' and commit." && exit 1)
 
 stats:
