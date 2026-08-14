@@ -2,7 +2,7 @@
 
 Origin. Schmidt POSA 2
 
-14 entries, 111,748 words. Every entry carries all 18
+17 entries, 133,590 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency
@@ -10,8 +10,11 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Active Object](active-object.md) | canonical | 7,829 | An object's public methods are typically called synchronously. |
+| [Actor Model](actor-model.md) | canonical | 6,038 | A concurrent program needs many pieces of independent state to change over time, driven by events arriving from different sources, without a lock, mutex, or shared memory region ... |
+| [Barrier](barrier.md) | canonical | 8,229 | A computation is organized into a fixed number of concurrent workers, and the work naturally divides into phases. |
 | [Double-Checked Locking](double-checked-locking.md) | contested | 6,147 | A piece of expensive, shared state, a database connection pool, a parsed configuration object, a cache of compiled regular expressions, a singleton service object, needs to be ... |
 | [Fork-Join](fork-join.md) | canonical | 8,083 | You have a computation that can be split into independent subproblems whose results are then combined, and the computation is large enough, or repeated often enough, that running ... |
+| [Future Promise](future-promise.md) | canonical | 7,575 | A piece of code needs a value that will not be ready immediately. |
 | [Half-Sync/Half-Async](half-sync-half-async.md) | canonical | 8,046 | A concurrent system that talks to the outside world, over a network, a disk, a device driver, or another process, has two kinds of code living inside it at once, and the two kinds ... |
 | [Leader/Followers](leader-followers.md) | canonical | 9,034 | A server, or any concurrent program, has a set of event sources, such as socket handles for connected clients, and it must service events that arrive on those sources with as many ... |
 | [Monitor Object](monitor-object.md) | canonical | 6,457 | An object holds mutable state that more than one thread will call methods on concurrently. |

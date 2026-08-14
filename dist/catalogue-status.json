@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 479,
+  "published_total": 482,
   "target_total": 854,
   "families_total": 29,
   "families_complete": 9,
   "stale_entries": 0,
-  "references_checked": 2662,
+  "references_checked": 2691,
   "rows": [
     {
       "family": "01-gof",
@@ -112,12 +112,12 @@
       "family": "09-concurrency",
       "name": "Concurrency and Parallelism",
       "origin": "Schmidt POSA 2",
-      "published": 14,
-      "planned": 26,
+      "published": 17,
+      "planned": 23,
       "target": 40,
-      "percent": 35.0,
+      "percent": 42.5,
       "maturity": {
-        "canonical": 13,
+        "canonical": 16,
         "contested": 1
       }
     },
