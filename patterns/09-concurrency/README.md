@@ -2,7 +2,7 @@
 
 Origin. Schmidt POSA 2
 
-29 entries, 233,077 words. Every entry carries all 18
+32 entries, 256,717 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency
@@ -14,6 +14,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Balking](balking.md) | established | 6,673 | An object exposes an operation that is only meaningful, or only safe, in a subset of the object's possible states. |
 | [Barrier](barrier.md) | canonical | 8,229 | A computation is organized into a fixed number of concurrent workers, and the work naturally divides into phases. |
 | [Communicating Sequential Processes](communicating-sequential-processes.md) | canonical | 7,486 | A program that needs to do more than one thing at once, serve many requests, overlap I/O with computation, or use more than one CPU core, needs a way for its concurrent parts to ... |
+| [Compare-and-Swap Loop](compare-and-swap-loop.md) | canonical | 7,321 | A thread wants to update a single shared memory location, a counter, a pointer, a flag, based on its current value, and it wants to do this without taking a lock. |
 | [Copy-on-Write](copy-on-write.md) | canonical | 8,948 | The problem copy-on-write solves is a specific tension between two things a system wants at once, the ability to hand out what looks like an independent copy of a piece of data ... |
 | [Disruptor](disruptor.md) | established | 8,333 | Picture a system that has to move a stream of small, frequent messages between threads and needs the handoff itself to add almost nothing to the total latency budget. |
 | [Double-Checked Locking](double-checked-locking.md) | contested | 6,147 | A piece of expensive, shared state, a database connection pool, a parsed configuration object, a cache of compiled regular expressions, a singleton service object, needs to be ... |
@@ -23,6 +24,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Half-Sync/Half-Async](half-sync-half-async.md) | canonical | 8,046 | A concurrent system that talks to the outside world, over a network, a disk, a device driver, or another process, has two kinds of code living inside it at once, and the two kinds ... |
 | [Immutable Object](immutable-object.md) | canonical | 7,552 | Two or more threads share a reference to the same object. |
 | [Leader/Followers](leader-followers.md) | canonical | 9,034 | A server, or any concurrent program, has a set of event sources, such as socket handles for connected clients, and it must service events that arrive on those sources with as many ... |
+| [Lock Striping](lock-striping.md) | canonical | 7,978 | A single mutable structure, most often a hash table, a counter map, a cache, or an in-memory index, is accessed by many threads at once. |
 | [Map-Reduce](map-reduce.md) | canonical | 7,927 | A team has a dataset far too large to process on one machine in an acceptable amount of time, and the transformation they need to run over it decomposes into two things. |
 | [Monitor Object](monitor-object.md) | canonical | 6,457 | An object holds mutable state that more than one thread will call methods on concurrently. |
 | [Parallel Scatter-Gather](parallel-scatter-gather.md) | canonical | 9,946 | A single logical answer depends on several independent pieces of work, and those pieces do not depend on each other. |
@@ -33,6 +35,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Read-Copy-Update](read-copy-update.md) | canonical | 9,602 | A data structure is read far more often than it is changed, and the readers must never be made to wait for a writer, ever, not even briefly, because the read path sits on a hot ... |
 | [Read-Write Lock](read-write-lock.md) | canonical | 7,855 | A single piece of shared, mutable state is accessed by multiple threads. |
 | [Scoped Locking](scoped-locking.md) | canonical | 8,785 | A piece of code acquires a lock to protect a critical section, and every path out of that critical section, the normal return, the early return, the thrown exception, the break ... |
+| [Semaphore](semaphore.md) | canonical | 8,341 | A fixed, known number of interchangeable resources exist. |
 | [Strategized Locking](strategized-locking.md) | canonical | 9,066 | A reusable component, a cache, a connection pool, a queue, a counter, a buffer manager, is built once and deployed into more than one concurrency environment. |
 | [Thread Pool](thread-pool.md) | canonical | 7,592 | A server, or any long-running process, receives a stream of independent units of work. |
 | [Thread-Safe Interface](thread-safe-interface.md) | canonical | 8,248 | An object holds mutable state that more than one thread can reach at the same time, and the object exposes more than one public operation on that state. |
