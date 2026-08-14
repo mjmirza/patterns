@@ -2,7 +2,7 @@
 
 Origin. Schmidt POSA 2
 
-20 entries, 155,604 words. Every entry carries all 18
+23 entries, 180,365 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency
@@ -14,10 +14,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Balking](balking.md) | established | 6,673 | An object exposes an operation that is only meaningful, or only safe, in a subset of the object's possible states. |
 | [Barrier](barrier.md) | canonical | 8,229 | A computation is organized into a fixed number of concurrent workers, and the work naturally divides into phases. |
 | [Communicating Sequential Processes](communicating-sequential-processes.md) | canonical | 7,486 | A program that needs to do more than one thing at once, serve many requests, overlap I/O with computation, or use more than one CPU core, needs a way for its concurrent parts to ... |
+| [Copy-on-Write](copy-on-write.md) | canonical | 8,948 | The problem copy-on-write solves is a specific tension between two things a system wants at once, the ability to hand out what looks like an independent copy of a piece of data ... |
 | [Double-Checked Locking](double-checked-locking.md) | contested | 6,147 | A piece of expensive, shared state, a database connection pool, a parsed configuration object, a cache of compiled regular expressions, a singleton service object, needs to be ... |
 | [Fork-Join](fork-join.md) | canonical | 8,083 | You have a computation that can be split into independent subproblems whose results are then combined, and the computation is large enough, or repeated often enough, that running ... |
 | [Future Promise](future-promise.md) | canonical | 7,575 | A piece of code needs a value that will not be ready immediately. |
+| [Guarded Suspension](guarded-suspension.md) | canonical | 8,261 | A thread calls a method on a shared object, and the method cannot proceed safely or sensibly until some condition involving that object's state becomes true. |
 | [Half-Sync/Half-Async](half-sync-half-async.md) | canonical | 8,046 | A concurrent system that talks to the outside world, over a network, a disk, a device driver, or another process, has two kinds of code living inside it at once, and the two kinds ... |
+| [Immutable Object](immutable-object.md) | canonical | 7,552 | Two or more threads share a reference to the same object. |
 | [Leader/Followers](leader-followers.md) | canonical | 9,034 | A server, or any concurrent program, has a set of event sources, such as socket handles for connected clients, and it must service events that arrive on those sources with as many ... |
 | [Monitor Object](monitor-object.md) | canonical | 6,457 | An object holds mutable state that more than one thread will call methods on concurrently. |
 | [Proactor](proactor.md) | canonical | 7,282 | A server, or any program, needs to service many concurrent long-running operations, most commonly network reads and writes, disk I/O, or timers, without paying the cost of one ... |
