@@ -62,11 +62,8 @@ def public_class(src: str) -> str | None:
 
 def check_python(src: str, d: Path) -> tuple[int, str]:
     f = d / "s.py"
-    try:
-        compile(src, str(f), "exec")
-        return 0, ""
-    except Exception as e:
-        return 1, f"{type(e).__name__}: {e}"
+    f.write_text(src)
+    return run([sys.executable, "-m", "py_compile", str(f)], d)
 
 
 def check_java(src: str, d: Path) -> tuple[int, str]:
