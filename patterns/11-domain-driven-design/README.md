@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-34 entries, 256,421 words. Every entry carries all 18
+35 entries, 264,798 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -80,6 +80,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Open Host Service and Published Language](open-host-service-and-published-language.md) | canonical | 6,483 | A bounded context that has valuable capability inside it eventually needs to expose that capability to other bounded contexts, and often to more than one. |
+
+## Structural, Distributed Coordination
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Saga versus Process Manager](saga-versus-process-manager.md) | canonical | 8,377 | The concrete situation is this. A business operation spans more than one service, each service owns its own datastore, and no distributed transaction coordinator is available or ... |
 
 ## Tactical
 
