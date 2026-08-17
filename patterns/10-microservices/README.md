@@ -2,8 +2,14 @@
 
 Origin. Richardson
 
-45 entries, 335,332 words. Every entry carries all 18
+48 entries, 358,191 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Antipattern
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Distributed Transaction Coordinator Antipattern](distributed-transaction-coordinator-antipattern.md) | established | 6,082 | A team is decomposing a monolith, or is starting a new system, along service boundaries chosen so that each service owns its own data, per the Database per ... |
 
 ## Behavioral
 
@@ -53,6 +59,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Multiple Service Instances per Host](multiple-service-instances-per-host.md) | established | 7,478 | A single instance of a service process can only accept as many concurrent connections and use as many CPU cycles as one operating system process gets scheduled. |
 | [Serverless Deployment](serverless-deployment.md) | established | 7,884 | A team owns a piece of business logic that is genuinely small and genuinely bursty. |
 | [Service Deployment Platform](service-deployment-platform.md) | canonical | 7,181 | A team has decomposed an application into a set of independently deployable services, following one of the decomposition patterns in this family, and has chosen how a single ... |
 | [Service Instance per Container](service-instance-per-container.md) | canonical | 8,926 | A team is moving an application, or building a new one, on top of microservices, and has to decide the packaging and scheduling unit for each service instance. |
@@ -84,6 +91,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [API Gateway](api-gateway.md) | canonical | 7,645 | A client of a microservices system, whether a mobile app, a single-page web application, or a third-party integration, needs data or an action that in a monolith would have been a ... |
 | [Self Registration](self-registration.md) | canonical | 6,007 | A service instance's network location changes on every deployment, every autoscaling event, and every crash-and-restart. |
+| [Server-Side Discovery](server-side-discovery.md) | canonical | 9,299 | A monolith calls its own functions in the same process, so there is nothing to discover. |
 | [Server-Side Service Discovery](server-side-service-discovery.md) | canonical | 7,771 | A service instance's network address is not static. |
 | [Service Registry](service-registry.md) | canonical | 6,188 | A service instance in a cloud environment does not have a fixed network location. |
 

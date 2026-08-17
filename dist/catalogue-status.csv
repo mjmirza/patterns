@@ -8,7 +8,7 @@ family,name,published,planned,target,percent
 07-integration,Enterprise Integration,54,0,54,100.0
 08-cloud-distributed,Cloud and Distributed,42,0,42,100.0
 09-concurrency,Concurrency and Parallelism,40,0,40,100.0
-10-microservices,Microservices,45,4,49,91.8
+10-microservices,Microservices,48,1,49,98.0
 11-domain-driven-design,Domain-Driven Design,29,6,35,82.9
 12-data-storage,Data and Storage,0,41,41,0.0
 13-frontend-ui,Frontend and UI,0,34,34,0.0
