@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 518,
+  "published_total": 521,
   "target_total": 854,
   "families_total": 29,
   "families_complete": 12,
   "stale_entries": 0,
-  "references_checked": 2868,
+  "references_checked": 2885,
   "rows": [
     {
       "family": "01-gof",
@@ -153,13 +153,13 @@
       "family": "12-data-storage",
       "name": "Data and Storage",
       "origin": "Kleppmann",
-      "published": 2,
-      "planned": 39,
+      "published": 5,
+      "planned": 36,
       "target": 41,
-      "percent": 4.9,
+      "percent": 12.2,
       "maturity": {
-        "contested": 1,
-        "established": 1
+        "established": 4,
+        "contested": 1
       }
     },
     {
