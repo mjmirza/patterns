@@ -897,7 +897,7 @@ if __name__ == "__main__":
 
 ### Go, kernel-level `SO_REUSEPORT` via `net.ListenConfig`
 
-Built with `go build` and run twice in sequence against port `47602`. Both invocations printed a successful bind, since `syscall.SO_REUSEPORT` is set inside the `Control` callback before the underlying `bind(2)` call the standard library makes on the caller's behalf.
+Built with `go build` and run twice in sequence against port `47602`. Both invocations printed a successful bind, since `soReuseport` is set inside the `Control` callback before the underlying `bind(2)` call the standard library makes on the caller's behalf. Go's `syscall` package exports `SOL_SOCKET` on every platform but does not export `SO_REUSEPORT` on Linux, so the sample below defines the option's Linux numeric value locally rather than depending on `golang.org/x/sys/unix` for one constant.
 
 ```go
 package main
@@ -910,12 +910,16 @@ import (
 	"syscall"
 )
 
+// SO_REUSEPORT is not exported by the standard library's syscall package on
+// Linux. this is its Linux/amd64 numeric value.
+const soReuseport = 0xf
+
 func main() {
 	lc := net.ListenConfig{
 		Control: func(_, _ string, c syscall.RawConn) error {
 			var sockErr error
 			err := c.Control(func(fd uintptr) {
-				sockErr = syscall.SetsockoptInt(int(fd), syscall.SOL_SOCKET, syscall.SO_REUSEPORT, 1)
+				sockErr = syscall.SetsockoptInt(int(fd), syscall.SOL_SOCKET, soReuseport, 1)
 			})
 			if err != nil {
 				return err
