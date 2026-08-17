@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 515,
+  "published_total": 518,
   "target_total": 854,
   "families_total": 29,
-  "families_complete": 11,
+  "families_complete": 12,
   "stale_entries": 0,
-  "references_checked": 2854,
+  "references_checked": 2868,
   "rows": [
     {
       "family": "01-gof",
@@ -140,12 +140,12 @@
       "family": "11-domain-driven-design",
       "name": "Domain-Driven Design",
       "origin": "Evans, Vernon",
-      "published": 34,
-      "planned": 1,
+      "published": 35,
+      "planned": 0,
       "target": 35,
-      "percent": 97.1,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 30,
+        "canonical": 31,
         "established": 4
       }
     },
@@ -153,11 +153,14 @@
       "family": "12-data-storage",
       "name": "Data and Storage",
       "origin": "Kleppmann",
-      "published": 0,
-      "planned": 41,
+      "published": 2,
+      "planned": 39,
       "target": 41,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 4.9,
+      "maturity": {
+        "contested": 1,
+        "established": 1
+      }
     },
     {
       "family": "13-frontend-ui",
