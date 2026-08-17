@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 503,
+  "published_total": 506,
   "target_total": 854,
   "families_total": 29,
-  "families_complete": 9,
+  "families_complete": 10,
   "stale_entries": 0,
-  "references_checked": 2800,
+  "references_checked": 2812,
   "rows": [
     {
       "family": "01-gof",
@@ -112,12 +112,12 @@
       "family": "09-concurrency",
       "name": "Concurrency and Parallelism",
       "origin": "Schmidt POSA 2",
-      "published": 38,
-      "planned": 2,
+      "published": 40,
+      "planned": 0,
       "target": 40,
-      "percent": 95.0,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 33,
+        "canonical": 35,
         "established": 4,
         "contested": 1
       }
@@ -126,12 +126,12 @@
       "family": "10-microservices",
       "name": "Microservices",
       "origin": "Richardson",
-      "published": 44,
-      "planned": 5,
+      "published": 45,
+      "planned": 4,
       "target": 49,
-      "percent": 89.8,
+      "percent": 91.8,
       "maturity": {
-        "canonical": 32,
+        "canonical": 33,
         "established": 11,
         "contested": 1
       }

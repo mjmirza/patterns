@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-44 entries, 327,442 words. Every entry carries all 18
+45 entries, 335,332 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -16,6 +16,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Client-side Service Discovery](client-side-service-discovery.md) | canonical | 5,946 | A microservices architecture replaces a small number of long-lived, statically addressed processes with many short-lived, dynamically addressed ones. |
+| [Domain-Specific Protocol](domain-specific-protocol.md) | canonical | 7,890 | A service in a microservice architecture must communicate with something outside the architecture's own control, and that something already has an established, standardized, or ... |
 | [Remote Procedure Invocation](remote-procedure-invocation.md) | canonical | 6,005 | A microservice architecture splits a system into many independently deployable services, and almost every non-trivial request touches more than one of them. |
 
 ## Communication Style
