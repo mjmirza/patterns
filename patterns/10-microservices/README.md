@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-48 entries, 358,191 words. Every entry carries all 18
+48 entries, 358,249 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Antipattern
@@ -59,7 +59,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Multiple Service Instances per Host](multiple-service-instances-per-host.md) | established | 7,478 | A single instance of a service process can only accept as many concurrent connections and use as many CPU cycles as one operating system process gets scheduled. |
+| [Multiple Service Instances per Host](multiple-service-instances-per-host.md) | established | 7,536 | A single instance of a service process can only accept as many concurrent connections and use as many CPU cycles as one operating system process gets scheduled. |
 | [Serverless Deployment](serverless-deployment.md) | established | 7,884 | A team owns a piece of business logic that is genuinely small and genuinely bursty. |
 | [Service Deployment Platform](service-deployment-platform.md) | canonical | 7,181 | A team has decomposed an application into a set of independently deployable services, following one of the decomposition patterns in this family, and has chosen how a single ... |
 | [Service Instance per Container](service-instance-per-container.md) | canonical | 8,926 | A team is moving an application, or building a new one, on top of microservices, and has to decide the packaging and scheduling unit for each service instance. |
