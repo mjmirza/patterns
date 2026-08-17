@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-48 entries, 358,249 words. Every entry carries all 18
+49 entries, 364,493 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Antipattern
@@ -122,6 +122,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Idempotent Consumer](idempotent-consumer.md) | canonical | 6,810 | A service consumes messages or events from a broker, whether that is Kafka, Amazon SQS, RabbitMQ, Azure Service Bus, Google Pub/Sub, or an HTTP webhook delivered by another ... |
+| [Inbox](inbox.md) | established | 6,244 | A service consumes messages from a broker, a queue, or an event stream, and it must apply the side effect of each message to its own database exactly once, even though the ... |
 
 ## Security
 

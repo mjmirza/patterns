@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-29 entries, 220,132 words. Every entry carries all 18
+31 entries, 234,404 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -28,6 +28,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Aggregate](aggregate.md) | canonical | 7,789 | A domain model contains rules that span more than one object. |
 | [Aggregate Root](aggregate-root.md) | canonical | 8,677 | A domain model accumulates Entities and Value Objects that reference one another. |
 | [Application Service](application-service.md) | canonical | 7,949 | A rich domain model, built from entities, value objects, and aggregates that enforce their own invariants, still needs a caller. |
 | [Domain Service](domain-service.md) | canonical | 7,032 | A team modeling a domain in an object-oriented style eventually meets an operation that genuinely spans more than one object and does not belong to either. |
@@ -70,6 +71,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Separate Ways](separate-ways.md) | canonical | 9,250 | A team splits a system into more than one Bounded Context for good reasons, because two departments' vocabularies genuinely diverge, because two teams cannot coordinate closely ... |
 | [Shared Kernel](shared-kernel.md) | canonical | 7,408 | Two Bounded Contexts model a piece of the domain in a compatible way, not because either team designed it that way on purpose, but because the concept genuinely is the same ... |
 | [Supporting Subdomain](supporting-subdomain.md) | canonical | 6,681 | A team building a system of real size eventually owns far more functionality than any one part of the business actually differentiates on. |
+
+## Structural
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Open Host Service and Published Language](open-host-service-and-published-language.md) | canonical | 6,483 | A bounded context that has valuable capability inside it eventually needs to expose that capability to other bounded contexts, and often to more than one. |
 
 ## Tactical
 

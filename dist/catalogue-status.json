@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 509,
+  "published_total": 512,
   "target_total": 854,
   "families_total": 29,
-  "families_complete": 10,
+  "families_complete": 11,
   "stale_entries": 0,
-  "references_checked": 2827,
+  "references_checked": 2837,
   "rows": [
     {
       "family": "01-gof",
@@ -126,13 +126,13 @@
       "family": "10-microservices",
       "name": "Microservices",
       "origin": "Richardson",
-      "published": 48,
-      "planned": 1,
+      "published": 49,
+      "planned": 0,
       "target": 49,
-      "percent": 98.0,
+      "percent": 100.0,
       "maturity": {
         "canonical": 34,
-        "established": 13,
+        "established": 14,
         "contested": 1
       }
     },
@@ -140,12 +140,12 @@
       "family": "11-domain-driven-design",
       "name": "Domain-Driven Design",
       "origin": "Evans, Vernon",
-      "published": 29,
-      "planned": 6,
+      "published": 31,
+      "planned": 4,
       "target": 35,
-      "percent": 82.9,
+      "percent": 88.6,
       "maturity": {
-        "canonical": 27,
+        "canonical": 29,
         "established": 2
       }
     },
