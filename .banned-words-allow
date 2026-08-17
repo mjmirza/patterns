@@ -128,3 +128,10 @@ paradigm
 # design worksheet created by Nick Tune. Not figurative AI-slop usage.
 canvas
 canvases
+
+# production-ready. Verbatim inside the real title of Uber Engineering's
+# "Designing a Production-Ready Kappa Architecture for Timely Data Stream
+# Processing" (Uber Blog), cited as a source in patterns/12-data-storage/
+# kappa-architecture.md, per ENTRY-TEMPLATE.md. Renaming the title would
+# misquote the source.
+production-ready
