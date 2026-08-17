@@ -2,7 +2,7 @@
 
 Origin. Schmidt POSA 2
 
-35 entries, 278,949 words. Every entry carries all 18
+38 entries, 305,088 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency
@@ -11,6 +11,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Active Object](active-object.md) | canonical | 7,829 | An object's public methods are typically called synchronously. |
 | [Actor Model](actor-model.md) | canonical | 6,038 | A concurrent program needs many pieces of independent state to change over time, driven by events arriving from different sources, without a lock, mutex, or shared memory region ... |
+| [Async Await](async-await.md) | canonical | 9,262 | A function that needs a result from somewhere slow, a network call, a disk read, a timer, a lock, has two honest choices before async/await exists in a language. |
+| [Backpressure](backpressure.md) | canonical | 8,912 | Every pipeline has at least two speeds, the rate at which work arrives and the rate at which work can be processed. |
 | [Balking](balking.md) | established | 6,673 | An object exposes an operation that is only meaningful, or only safe, in a subset of the object's possible states. |
 | [Barrier](barrier.md) | canonical | 8,229 | A computation is organized into a fixed number of concurrent workers, and the work naturally divides into phases. |
 | [Communicating Sequential Processes](communicating-sequential-processes.md) | canonical | 7,486 | A program that needs to do more than one thing at once, serve many requests, overlap I/O with computation, or use more than one CPU core, needs a way for its concurrent parts to ... |
@@ -39,6 +41,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Scoped Locking](scoped-locking.md) | canonical | 8,785 | A piece of code acquires a lock to protect a critical section, and every path out of that critical section, the normal return, the early return, the thrown exception, the break ... |
 | [Semaphore](semaphore.md) | canonical | 8,341 | A fixed, known number of interchangeable resources exist. |
 | [Strategized Locking](strategized-locking.md) | canonical | 9,066 | A reusable component, a cache, a connection pool, a queue, a counter, a buffer manager, is built once and deployed into more than one concurrency environment. |
+| [Structured Concurrency](structured-concurrency.md) | established | 7,965 | A function spawns concurrent work, a network call, a background computation, a fan-out to several services, and returns before that work is guaranteed to be done. |
 | [Thread Pool](thread-pool.md) | canonical | 7,592 | A server, or any long-running process, receives a stream of independent units of work. |
 | [Thread-Safe Interface](thread-safe-interface.md) | canonical | 8,248 | An object holds mutable state that more than one thread can reach at the same time, and the object exposes more than one public operation on that state. |
 | [Thread-Specific Storage](thread-specific-storage.md) | canonical | 10,259 | A piece of state is logically global, in the sense that every function in a call chain wants to read or write it through one shared name, and yet the state must physically differ ... |
