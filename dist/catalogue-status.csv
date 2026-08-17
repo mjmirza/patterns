@@ -9,7 +9,7 @@ family,name,published,planned,target,percent
 08-cloud-distributed,Cloud and Distributed,42,0,42,100.0
 09-concurrency,Concurrency and Parallelism,40,0,40,100.0
 10-microservices,Microservices,49,0,49,100.0
-11-domain-driven-design,Domain-Driven Design,31,4,35,88.6
+11-domain-driven-design,Domain-Driven Design,34,1,35,97.1
 12-data-storage,Data and Storage,0,41,41,0.0
 13-frontend-ui,Frontend and UI,0,34,34,0.0
 14-testing,Testing,30,0,30,100.0
