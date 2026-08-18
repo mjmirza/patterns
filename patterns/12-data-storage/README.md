@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-26 entries, 197,339 words. Every entry carries all 18
+29 entries, 223,926 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Processing
@@ -16,11 +16,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [B-Tree](b-tree.md) | canonical | 7,351 | A program needs to store an ordered collection of keys that is too large to fit in memory, and it needs to look up, insert, delete, and range-scan those keys with a small ... |
+| [Merkle Tree](merkle-tree.md) | canonical | 9,547 | A system holds a large, changing collection of data, and two parties, or two replicas of the same system, need to agree that their copies of the collection are identical, or a ... |
 
 ## Data and Storage
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Bloom Filter](bloom-filter.md) | canonical | 8,876 | A system needs to answer one question over and over, at high volume, with low latency. |
 | [CRDT](crdt.md) | established | 6,106 | A system replicates the same logical data across more than one node, and more than one node accepts writes without first coordinating with the others. |
 | [Change Data Capture](change-data-capture.md) | established | 6,609 | A service owns a database that other services, warehouses, caches, and search indexes need to stay synchronized with. |
 | [Consistent Hashing](consistent-hashing.md) | canonical | 7,705 | A system needs to map a large, high-churn set of keys, cache entries, shard identifiers, session identifiers, onto a smaller, changing set of nodes, caches, database shards, load ... |
@@ -55,6 +57,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Two-Phase Commit](two-phase-commit.md) | canonical | 6,404 | A single database transaction is easy to make atomic because one process holds the log and one process decides. |
+
+## Probabilistic data structure
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [HyperLogLog](hyperloglog.md) | canonical | 8,164 | A system needs to answer "how many distinct X happened" where X might be visitors to a page, IP addresses hitting an API, users who played a song, distinct search queries in a ... |
 
 ## Reading order
 
