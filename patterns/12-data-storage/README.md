@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-35 entries, 267,001 words. Every entry carries all 18
+38 entries, 289,984 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -32,6 +32,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Bloom Filter](bloom-filter.md) | canonical | 8,876 | A system needs to answer one question over and over, at high volume, with low latency. |
 | [CRDT](crdt.md) | established | 6,106 | A system replicates the same logical data across more than one node, and more than one node accepts writes without first coordinating with the others. |
 | [Change Data Capture](change-data-capture.md) | established | 6,609 | A service owns a database that other services, warehouses, caches, and search indexes need to stay synchronized with. |
+| [Columnar Storage](columnar-storage.md) | canonical | 7,452 | A database has to put bytes on disk or in memory in some fixed physical order, and that order is a one-time decision with permanent consequences for every query that runs ... |
 | [Consistent Hashing](consistent-hashing.md) | canonical | 7,705 | A system needs to map a large, high-churn set of keys, cache entries, shard identifiers, session identifiers, onto a smaller, changing set of nodes, caches, database shards, load ... |
 | [Data Mesh](data-mesh.md) | established | 7,417 | A large organization with more than a handful of independent product or business domains eventually runs a central data team whose job is to ingest data from every domain's ... |
 | [Data Vault](data-vault.md) | established | 8,114 | An enterprise data warehouse ingests data from many source systems, an ERP, a CRM, a billing platform, several SaaS tools connected through an API, and often at least one legacy ... |
@@ -43,6 +44,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [LSM Tree](lsm-tree.md) | canonical | 9,064 | A key-value or wide-column store needs to sustain a high rate of writes, including writes that touch keys scattered across the entire key space, while still answering point ... |
 | [Lamport Clock](lamport-clock.md) | canonical | 6,460 | A distributed system has no shared memory and no shared clock. |
 | [Leaderless Replication](leaderless-replication.md) | canonical | 7,925 | A single-leader replicated database routes every write through one node. |
+| [Log Compaction](log-compaction.md) | established | 8,043 | An append-only log is the simplest and most dependable storage primitive a distributed system offers. |
 | [Medallion Architecture](medallion-architecture.md) | established | 7,094 | A data platform ingests information from many upstream systems. |
 | [Multi-Leader Replication](multi-leader-replication.md) | established | 7,906 | A team runs a database that serves write traffic from more than one geographic region, or from more than one autonomous system that must keep working during a network partition ... |
 | [Multiversion Concurrency Control](mvcc.md) | canonical | 7,230 | A database serves many concurrent transactions. |
@@ -52,6 +54,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Snowflake Schema](snowflake-schema.md) | canonical | 7,419 | A team building a data warehouse or a semantic model for business intelligence needs to answer analytical questions fast, total revenue by region and month, units sold by product ... |
 | [Star Schema](star-schema.md) | canonical | 7,771 | An organization accumulates a large volume of business events, orders, shipments, page views, sensor readings, trades. |
 | [Three-Phase Commit](three-phase-commit.md) | established | 8,714 | A coordinator has already run the first two rounds of the classical Two-Phase Commit protocol. |
+| [Tombstone](tombstone.md) | canonical | 7,488 | A system holds more than one copy of the same data, and those copies do not all learn about a delete at the same instant. |
 | [Two-Phase Locking](two-phase-locking.md) | canonical | 8,153 | Multiple transactions run concurrently against a shared database, each one reading and writing rows that another transaction might also be touching at the same instant. |
 | [Vector Clock](vector-clock.md) | canonical | 8,622 | A distributed system has no single authoritative clock. |
 | [Write-Ahead Log](write-ahead-log.md) | canonical | 8,777 | A database, or any system that mutates state on disk, has two competing needs that are difficult to satisfy with the same physical write. |
