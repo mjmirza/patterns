@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-20 entries, 150,111 words. Every entry carries all 18
+23 entries, 171,689 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Processing
@@ -30,6 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [ETL](etl.md) | canonical | 7,257 | An organization has data that lives in one shape, in one place, produced for one purpose, and it needs that data in a different shape, in a different place, usable for a different ... |
 | [Kappa Architecture](kappa-architecture.md) | established | 6,510 | A team running analytics or derived views over an event stream commonly starts with a batch pipeline. |
 | [LSM Tree](lsm-tree.md) | canonical | 9,064 | A key-value or wide-column store needs to sustain a high rate of writes, including writes that touch keys scattered across the entire key space, while still answering point ... |
+| [Lamport Clock](lamport-clock.md) | canonical | 6,460 | A distributed system has no shared memory and no shared clock. |
 | [Leaderless Replication](leaderless-replication.md) | canonical | 7,925 | A single-leader replicated database routes every write through one node. |
 | [Medallion Architecture](medallion-architecture.md) | established | 7,094 | A data platform ingests information from many upstream systems. |
 | [Multi-Leader Replication](multi-leader-replication.md) | established | 7,906 | A team runs a database that serves write traffic from more than one geographic region, or from more than one autonomous system that must keep working during a network partition ... |
@@ -37,8 +38,15 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Slowly Changing Dimensions](slowly-changing-dimensions.md) | canonical | 7,732 | A dimensional data warehouse separates numeric, frequently-recorded facts (an order line, a sensor reading, a page view) from the descriptive dimensions those facts are analyzed ... |
 | [Snowflake Schema](snowflake-schema.md) | canonical | 7,419 | A team building a data warehouse or a semantic model for business intelligence needs to answer analytical questions fast, total revenue by region and month, units sold by product ... |
 | [Star Schema](star-schema.md) | canonical | 7,771 | An organization accumulates a large volume of business events, orders, shipments, page views, sensor readings, trades. |
+| [Three-Phase Commit](three-phase-commit.md) | established | 8,714 | A coordinator has already run the first two rounds of the classical Two-Phase Commit protocol. |
 | [Vector Clock](vector-clock.md) | canonical | 8,622 | A distributed system has no single authoritative clock. |
 | [Write-Ahead Log](write-ahead-log.md) | canonical | 8,777 | A database, or any system that mutates state on disk, has two competing needs that are difficult to satisfy with the same physical write. |
+
+## Distributed Transactions
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Two-Phase Commit](two-phase-commit.md) | canonical | 6,404 | A single database transaction is easy to make atomic because one process holds the log and one process decides. |
 
 ## Reading order
 
