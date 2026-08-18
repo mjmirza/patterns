@@ -2,14 +2,14 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-1 entries, 4,124 words. Every entry carries all 18
+1 entries, 4,133 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Change Function Declaration](change-function-declaration.md) | canonical | 4,124 | A function's declaration, its name and its parameter list, is the single contract every caller depends on. |
+| [Change Function Declaration](change-function-declaration.md) | canonical | 4,133 | A function's declaration, its name and its parameter list, is the single contract every caller depends on. |
 
 ## Reading order
 
