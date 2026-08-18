@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-38 entries, 289,984 words. Every entry carries all 18
+41 entries, 312,891 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -50,6 +50,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Multiversion Concurrency Control](mvcc.md) | canonical | 7,230 | A database serves many concurrent transactions. |
 | [Quorum](quorum.md) | canonical | 7,448 | A system replicates the same piece of data onto several nodes so that the loss of any one node, or the temporary unavailability of any one node, does not lose data or stop the ... |
 | [Read Repair](read-repair.md) | canonical | 6,416 | A system with leaderless, quorum-based replication accepts writes on any of several replicas for a key, and a temporarily unreachable replica, a dropped message, or a slow node ... |
+| [Read-Through Cache](read-through-cache.md) | canonical | 7,970 | An application reads the same piece of data far more often than the data changes. |
 | [Slowly Changing Dimensions](slowly-changing-dimensions.md) | canonical | 7,732 | A dimensional data warehouse separates numeric, frequently-recorded facts (an order line, a sensor reading, a page view) from the descriptive dimensions those facts are analyzed ... |
 | [Snowflake Schema](snowflake-schema.md) | canonical | 7,419 | A team building a data warehouse or a semantic model for business intelligence needs to answer analytical questions fast, total revenue by region and month, units sold by product ... |
 | [Star Schema](star-schema.md) | canonical | 7,771 | An organization accumulates a large volume of business events, orders, shipments, page views, sensor readings, trades. |
@@ -58,6 +59,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Two-Phase Locking](two-phase-locking.md) | canonical | 8,153 | Multiple transactions run concurrently against a shared database, each one reading and writing rows that another transaction might also be touching at the same instant. |
 | [Vector Clock](vector-clock.md) | canonical | 8,622 | A distributed system has no single authoritative clock. |
 | [Write-Ahead Log](write-ahead-log.md) | canonical | 8,777 | A database, or any system that mutates state on disk, has two competing needs that are difficult to satisfy with the same physical write. |
+| [Write-Behind Cache](write-behind-cache.md) | canonical | 6,973 | A service holds hot, frequently mutated state in a fast in-memory or in-cluster cache, and every mutation must eventually reach a durable backing store, typically a relational ... |
+| [Write-Through Cache](write-through-cache.md) | canonical | 7,964 | A service reads the same records far more often than it writes them, and the backing store, whether a relational database, a document store, or a remote API, is the slowest part ... |
 
 ## Distributed Consensus
 
