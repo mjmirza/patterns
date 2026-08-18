@@ -308,6 +308,10 @@ formatDate(new Date(), "short");
 ```java
 // Java: rename via overload (backward compatible)
 
+class Receipt {
+    Receipt(int amount, String currency) {}
+}
+
 public class PaymentService {
     @Deprecated
     public Receipt doPayment(int amount, String currency) {
