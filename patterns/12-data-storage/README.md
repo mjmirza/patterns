@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-8 entries, 58,192 words. Every entry carries all 18
+11 entries, 79,207 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Processing
@@ -15,8 +15,11 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Change Data Capture](change-data-capture.md) | established | 6,609 | A service owns a database that other services, warehouses, caches, and search indexes need to stay synchronized with. |
 | [Data Mesh](data-mesh.md) | established | 7,417 | A large organization with more than a handful of independent product or business domains eventually runs a central data team whose job is to ingest data from every domain's ... |
 | [Data Vault](data-vault.md) | established | 8,114 | An enterprise data warehouse ingests data from many source systems, an ERP, a CRM, a billing platform, several SaaS tools connected through an API, and often at least one legacy ... |
+| [ELT](elt.md) | established | 7,149 | A team needs data from several operational systems, a payments database, a support ticket system, a marketing platform's API, a stream of application events, made available for ... |
+| [ETL](etl.md) | canonical | 7,257 | An organization has data that lives in one shape, in one place, produced for one purpose, and it needs that data in a different shape, in a different place, usable for a different ... |
 | [Kappa Architecture](kappa-architecture.md) | established | 6,510 | A team running analytics or derived views over an event stream commonly starts with a batch pipeline. |
 | [Medallion Architecture](medallion-architecture.md) | established | 7,094 | A data platform ingests information from many upstream systems. |
 | [Slowly Changing Dimensions](slowly-changing-dimensions.md) | canonical | 7,732 | A dimensional data warehouse separates numeric, frequently-recorded facts (an order line, a sensor reading, a page view) from the descriptive dimensions those facts are analyzed ... |
