@@ -2,8 +2,14 @@
 
 Origin. Kleppmann
 
-32 entries, 243,747 words. Every entry carries all 18
+35 entries, 267,001 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Concurrency Control
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Snapshot Isolation](snapshot-isolation.md) | canonical | 7,871 | A transaction needs to read a consistent view of the database while other transactions are concurrently reading and writing the same rows, and the system needs this without making ... |
 
 ## Data Processing
 
@@ -39,12 +45,14 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Leaderless Replication](leaderless-replication.md) | canonical | 7,925 | A single-leader replicated database routes every write through one node. |
 | [Medallion Architecture](medallion-architecture.md) | established | 7,094 | A data platform ingests information from many upstream systems. |
 | [Multi-Leader Replication](multi-leader-replication.md) | established | 7,906 | A team runs a database that serves write traffic from more than one geographic region, or from more than one autonomous system that must keep working during a network partition ... |
+| [Multiversion Concurrency Control](mvcc.md) | canonical | 7,230 | A database serves many concurrent transactions. |
 | [Quorum](quorum.md) | canonical | 7,448 | A system replicates the same piece of data onto several nodes so that the loss of any one node, or the temporary unavailability of any one node, does not lose data or stop the ... |
 | [Read Repair](read-repair.md) | canonical | 6,416 | A system with leaderless, quorum-based replication accepts writes on any of several replicas for a key, and a temporarily unreachable replica, a dropped message, or a slow node ... |
 | [Slowly Changing Dimensions](slowly-changing-dimensions.md) | canonical | 7,732 | A dimensional data warehouse separates numeric, frequently-recorded facts (an order line, a sensor reading, a page view) from the descriptive dimensions those facts are analyzed ... |
 | [Snowflake Schema](snowflake-schema.md) | canonical | 7,419 | A team building a data warehouse or a semantic model for business intelligence needs to answer analytical questions fast, total revenue by region and month, units sold by product ... |
 | [Star Schema](star-schema.md) | canonical | 7,771 | An organization accumulates a large volume of business events, orders, shipments, page views, sensor readings, trades. |
 | [Three-Phase Commit](three-phase-commit.md) | established | 8,714 | A coordinator has already run the first two rounds of the classical Two-Phase Commit protocol. |
+| [Two-Phase Locking](two-phase-locking.md) | canonical | 8,153 | Multiple transactions run concurrently against a shared database, each one reading and writing rows that another transaction might also be touching at the same instant. |
 | [Vector Clock](vector-clock.md) | canonical | 8,622 | A distributed system has no single authoritative clock. |
 | [Write-Ahead Log](write-ahead-log.md) | canonical | 8,777 | A database, or any system that mutates state on disk, has two competing needs that are difficult to satisfy with the same physical write. |
 
