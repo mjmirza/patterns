@@ -924,6 +924,7 @@
  "https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor": 200,
  "https://docs.python.org/3/library/copy.html": 200,
  "https://docs.python.org/3/library/dataclasses.html": 200,
+ "https://docs.python.org/3/library/fractions.html": 200,
  "https://docs.python.org/3/library/functools.html": 200,
  "https://docs.python.org/3/library/http.server.html": 200,
  "https://docs.python.org/3/library/imp.html": 200,
