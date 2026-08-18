@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-11 entries, 79,207 words. Every entry carries all 18
+14 entries, 104,399 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Processing
@@ -10,6 +10,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Lambda Architecture](lambda-architecture.md) | contested | 6,135 | A team needs to answer a query over an ever-growing data set, and the query must be both correct over the full history and current within seconds of the latest event, and no ... |
+
+## Data Structure
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [B-Tree](b-tree.md) | canonical | 7,351 | A program needs to store an ordered collection of keys that is too large to fit in memory, and it needs to look up, insert, delete, and range-scan those keys with a small ... |
 
 ## Data and Storage
 
@@ -21,10 +27,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [ELT](elt.md) | established | 7,149 | A team needs data from several operational systems, a payments database, a support ticket system, a marketing platform's API, a stream of application events, made available for ... |
 | [ETL](etl.md) | canonical | 7,257 | An organization has data that lives in one shape, in one place, produced for one purpose, and it needs that data in a different shape, in a different place, usable for a different ... |
 | [Kappa Architecture](kappa-architecture.md) | established | 6,510 | A team running analytics or derived views over an event stream commonly starts with a batch pipeline. |
+| [LSM Tree](lsm-tree.md) | canonical | 9,064 | A key-value or wide-column store needs to sustain a high rate of writes, including writes that touch keys scattered across the entire key space, while still answering point ... |
 | [Medallion Architecture](medallion-architecture.md) | established | 7,094 | A data platform ingests information from many upstream systems. |
 | [Slowly Changing Dimensions](slowly-changing-dimensions.md) | canonical | 7,732 | A dimensional data warehouse separates numeric, frequently-recorded facts (an order line, a sensor reading, a page view) from the descriptive dimensions those facts are analyzed ... |
 | [Snowflake Schema](snowflake-schema.md) | canonical | 7,419 | A team building a data warehouse or a semantic model for business intelligence needs to answer analytical questions fast, total revenue by region and month, units sold by product ... |
 | [Star Schema](star-schema.md) | canonical | 7,771 | An organization accumulates a large volume of business events, orders, shipments, page views, sensor readings, trades. |
+| [Write-Ahead Log](write-ahead-log.md) | canonical | 8,777 | A database, or any system that mutates state on disk, has two competing needs that are difficult to satisfy with the same physical write. |
 
 ## Reading order
 
