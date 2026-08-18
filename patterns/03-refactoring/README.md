@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-3 entries, 11,262 words. Every entry carries all 18
+3 entries, 11,265 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -11,7 +11,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Change Function Declaration](change-function-declaration.md) | canonical | 4,133 | A function's declaration, its name and its parameter list, is the single contract every caller depends on. |
 | [Change Reference to Value](change-reference-to-value.md) | canonical | 3,516 | You have a reference object, an object whose identity matters and which is shared among multiple callers, but the sharing is producing more problems than it solves. |
-| [Change Value to Reference](change-value-to-reference.md) | canonical | 3,613 | You have a value object, an object whose identity is defined by its field values and which is immutable, but the immutability and the value semantics are producing more problems ... |
+| [Change Value to Reference](change-value-to-reference.md) | canonical | 3,616 | You have a value object, an object whose identity is defined by its field values and which is immutable, but the immutability and the value semantics are producing more problems ... |
 
 ## Reading order
 
