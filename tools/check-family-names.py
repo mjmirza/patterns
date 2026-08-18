@@ -16,13 +16,17 @@ TABLE_HEADER = "## The families"
 LINK_RE = re.compile(r"\[([^\]]+)\]\(patterns/([^/)]+)/\)")
 
 
-def parse_table_slugs() -> dict[str, str]:
-    # Return {slug: family_title} for every row in the families table.
-    content = README.read_text()
+def parse_table_slugs(readme_path: Path = README) -> tuple[dict[str, str], str | None]:
+    """Return ({slug: family_title}, error_message).
+    If header missing or file unreadable, error_message is set."""
+    if not readme_path.exists():
+        return {}, f"file not found: {readme_path}"
+
+    content = readme_path.read_text(encoding="utf-8", errors="replace")
     idx = content.find(TABLE_HEADER)
     if idx == -1:
-        print(f"ERROR: '{TABLE_HEADER}' section not found in README.md")
-        sys.exit(1)
+        return {}, f"'{TABLE_HEADER}' section not found in {readme_path.name}"
+
     # Table runs until the next '##' heading or EOF.
     rest = content[idx:]
     end = rest.find("\n## ", 4)
@@ -41,16 +45,27 @@ def parse_table_slugs() -> dict[str, str]:
         if m:
             title, slug = m.group(1), m.group(2)
             slugs[slug] = title
-    return slugs
+
+    if not slugs:
+        return {}, "no family rows parsed from README.md families table"
+
+    return slugs, None
 
 
-def main() -> int:
-    table_slugs = parse_table_slugs()
-    if not table_slugs:
-        print("ERROR: no family rows parsed from README.md families table")
-        return 1
+def verify_family_names(
+    patterns_dir: Path = PATTERNS, readme_path: Path = README
+) -> tuple[int, list[str]]:
+    """Check family directory names against README table.
+    Returns (status_code, output_lines).
+    0 = pass, 1 = fail."""
+    table_slugs, err = parse_table_slugs(readme_path)
+    if err or not table_slugs:
+        return 1, [f"ERROR: {err}"]
 
-    actual_dirs = sorted(p.name for p in PATTERNS.iterdir() if p.is_dir())
+    if not patterns_dir.exists():
+        return 1, [f"ERROR: patterns directory not found: {patterns_dir}"]
+
+    actual_dirs = sorted(p.name for p in patterns_dir.iterdir() if p.is_dir())
     table_slug_set = set(table_slugs)
 
     problems: list[str] = []
@@ -65,20 +80,28 @@ def main() -> int:
             )
 
     if problems:
-        print("FAIL: family folder names do not match README.md families table\n")
+        lines = [
+            "FAIL: family folder names do not match README.md families table\n"
+        ]
         for p in problems:
-            print(f"  - {p}")
-        print(
+            lines.append(f"  - {p}")
+        lines.append(
             "\nThe README '## The families' table is the single source of "
             "truth for family folder naming in this repo. See "
             "docs/FAMILY-NAMING.md."
         )
-        return 1
+        return 1, lines
 
-    print(
+    return 0, [
         f"{len(actual_dirs)} family folder(s) on disk, all match README.md families table"
-    )
-    return 0
+    ]
+
+
+def main() -> int:
+    code, lines = verify_family_names()
+    for line in lines:
+        print(line)
+    return code
 
 
 if __name__ == "__main__":
