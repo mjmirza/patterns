@@ -286,6 +286,9 @@ class Customer {
 ```java
 // Java: reference object via identity map
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CustomerRegistry {
     private final Map<String, Customer> identityMap = new HashMap<>();
 
@@ -294,7 +297,7 @@ public class CustomerRegistry {
     }
 }
 
-public class Customer {
+class Customer {
     private String name;
     private String rating;
 
