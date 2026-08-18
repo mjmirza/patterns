@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-23 entries, 171,689 words. Every entry carries all 18
+26 entries, 197,339 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Processing
@@ -28,6 +28,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Data Vault](data-vault.md) | established | 8,114 | An enterprise data warehouse ingests data from many source systems, an ERP, a CRM, a billing platform, several SaaS tools connected through an API, and often at least one legacy ... |
 | [ELT](elt.md) | established | 7,149 | A team needs data from several operational systems, a payments database, a support ticket system, a marketing platform's API, a stream of application events, made available for ... |
 | [ETL](etl.md) | canonical | 7,257 | An organization has data that lives in one shape, in one place, produced for one purpose, and it needs that data in a different shape, in a different place, usable for a different ... |
+| [Gossip Protocol](gossip-protocol.md) | canonical | 9,789 | A set of processes, potentially numbering in the hundreds or thousands, needs to keep a piece of shared state consistent, or needs to agree on who is currently alive, without a ... |
 | [Kappa Architecture](kappa-architecture.md) | established | 6,510 | A team running analytics or derived views over an event stream commonly starts with a batch pipeline. |
 | [LSM Tree](lsm-tree.md) | canonical | 9,064 | A key-value or wide-column store needs to sustain a high rate of writes, including writes that touch keys scattered across the entire key space, while still answering point ... |
 | [Lamport Clock](lamport-clock.md) | canonical | 6,460 | A distributed system has no shared memory and no shared clock. |
@@ -41,6 +42,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Three-Phase Commit](three-phase-commit.md) | established | 8,714 | A coordinator has already run the first two rounds of the classical Two-Phase Commit protocol. |
 | [Vector Clock](vector-clock.md) | canonical | 8,622 | A distributed system has no single authoritative clock. |
 | [Write-Ahead Log](write-ahead-log.md) | canonical | 8,777 | A database, or any system that mutates state on disk, has two competing needs that are difficult to satisfy with the same physical write. |
+
+## Distributed Consensus
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Paxos](paxos.md) | canonical | 7,747 | A group of machines needs to agree on one value, and any one of them can crash or become unreachable at any moment, including in the middle of trying to get everyone to agree. |
+| [Raft](raft.md) | canonical | 8,114 | A distributed system that holds state a client cares about, a key-value store, a lock service, a piece of cluster metadata, a leader pointer for another system, needs that state ... |
 
 ## Distributed Transactions
 
