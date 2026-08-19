@@ -170,14 +170,19 @@ def process(order):
 ```typescript
 // TypeScript: before (opaque name)
 
-function process(order: Order): number {
+interface Order {
+    quantity: number;
+    unitPrice: number;
+}
+
+function processOrderBefore(order: Order): number {
     const a = order.quantity * order.unitPrice;
     return a > 1000 ? a * 0.9 : a;
 }
 
 // TypeScript: after (renamed)
 
-function process(order: Order): number {
+function processOrder(order: Order): number {
     const totalCharge = order.quantity * order.unitPrice;
     return totalCharge > 1000 ? totalCharge * 0.9 : totalCharge;
 }
@@ -186,22 +191,37 @@ function process(order: Order): number {
 ```java
 // Java: before (opaque name)
 
-public double process(Order order) {
-    double a = order.getQuantity() * order.getUnitPrice();
-    if (a > 1000) {
-        a *= 0.9;
+class Order {
+    private final double quantity;
+    private final double unitPrice;
+
+    public Order(double quantity, double unitPrice) {
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
     }
-    return a;
+
+    public double getQuantity() { return quantity; }
+    public double getUnitPrice() { return unitPrice; }
 }
 
-// Java: after (renamed)
-
-public double process(Order order) {
-    double totalCharge = order.getQuantity() * order.getUnitPrice();
-    if (totalCharge > 1000) {
-        totalCharge *= 0.9;
+public class PricingService {
+    public double processBefore(Order order) {
+        double a = order.getQuantity() * order.getUnitPrice();
+        if (a > 1000) {
+            a *= 0.9;
+        }
+        return a;
     }
-    return totalCharge;
+
+    // Java: after (renamed)
+
+    public double process(Order order) {
+        double totalCharge = order.getQuantity() * order.getUnitPrice();
+        if (totalCharge > 1000) {
+            totalCharge *= 0.9;
+        }
+        return totalCharge;
+    }
 }
 ```
 
@@ -210,7 +230,7 @@ public double process(Order order) {
 **IntelliJ IDEA's "Rename Variable" refactoring** automates the rename by
 finding every reference within the variable's scope and updating it
 ([JetBrains Rename refactoring](https://www.jetbrains.com/help/idea/rename-refactorings.html),
-verified 2026-08-13).
+verified 2026-08-20).
 
 **Eclipse's "Rename Local Variable" refactoring** provides the same
 automation for Java local variables

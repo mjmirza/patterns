@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-596%20published%20%2F%20854%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-597%20published%20%2F%20854%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -14,10 +14,10 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-596-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-258-lightgrey)
-![Catalogue completion](https://img.shields.io/badge/completion-69.8%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-3139-brightgreen)
+![Published entries](https://img.shields.io/badge/published-597-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-257-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-69.9%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-3140-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
