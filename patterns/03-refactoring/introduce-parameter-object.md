@@ -231,15 +231,21 @@ def create_order(
 ```
 
 ```typescript
+interface Order {
+    customerId: number;
+}
+
 // TypeScript: before (long parameter list)
 
-function createOrder(
+function createOrderBefore(
     customerId: number,
     shipStreet: string, shipCity: string,
     shipState: string, shipZip: string,
     billStreet: string, billCity: string,
     billState: string, billZip: string,
-): Order { ... }
+): Order {
+    throw new Error("not implemented");
+}
 
 // TypeScript: after (parameter object via class)
 
@@ -256,22 +262,33 @@ function createOrder(
     customerId: number,
     shipping: Address,
     billing: Address,
-): Order { ... }
+): Order {
+    throw new Error("not implemented");
+}
 ```
 
 ```java
-// Java: after (parameter object via record)
+class Order {
+    int customerId;
+}
 
-public record Address(
+record Address(
     String street, String city,
     String state, String zip
 ) {}
 
-public Order createOrder(
-    int customerId,
-    Address shipping,
-    Address billing
-) { ... }
+// Java: after (parameter object via record)
+
+public class OrderFactory {
+
+    public Order createOrder(
+        int customerId,
+        Address shipping,
+        Address billing
+    ) {
+        throw new UnsupportedOperationException();
+    }
+}
 ```
 
 ## 9. Known production uses
