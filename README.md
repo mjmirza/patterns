@@ -94,16 +94,16 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 |---|---|---|---|---|---|
 | 01 | [Design Patterns (GoF)](patterns/01-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 23 | 0 | 23 |
 | 02 | [Code Smells](patterns/02-code-smells/) | Fowler and Beck, Refactoring | 28 | 0 | 28 |
-| 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 0 | 66 | 66 |
+| 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 34 | 32 | 66 |
 | 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 41 | 0 | 41 |
 | 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 30 | 0 | 30 |
-| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 32 | 16 | 48 |
-| 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 0 | 54 | 54 |
+| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 48 | 0 | 48 |
+| 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 54 | 0 | 54 |
 | 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 | 0 | 42 |
-| 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 0 | 40 | 40 |
-| 10 | [Microservices](patterns/10-microservices/) | Richardson | 44 | 5 | 49 |
-| 11 | [Domain-Driven Design](patterns/11-domain-driven-design/) | Evans, Vernon | 29 | 6 | 35 |
-| 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 0 | 41 | 41 |
+| 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 40 | 0 | 40 |
+| 10 | [Microservices](patterns/10-microservices/) | Richardson | 49 | 0 | 49 |
+| 11 | [Domain-Driven Design](patterns/11-domain-driven-design/) | Evans, Vernon | 35 | 0 | 35 |
+| 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 41 | 0 | 41 |
 | 13 | [Frontend and UI](patterns/13-frontend-ui/) | Framework documentation | 0 | 34 | 34 |
 | 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 30 | 0 | 30 |
 | 15 | [Security](patterns/15-security/) | OWASP ASVS | 0 | 38 | 38 |
