@@ -246,9 +246,19 @@ def disability_amount(person):
 ```
 
 ```typescript
+interface Person {
+    age: number;
+    contributions: number;
+    isRetired: boolean;
+}
+
+function calculateAmount(person: Person): number {
+    return person.contributions * 0.1;
+}
+
 // TypeScript: before (separate checks)
 
-function disabilityAmount(person: Person): number {
+function disabilityAmountBefore(person: Person): number {
     if (person.age < 18) return 0;
     if (person.contributions === 0) return 0;
     if (person.isRetired) return 0;
@@ -257,7 +267,7 @@ function disabilityAmount(person: Person): number {
 
 // TypeScript: after (consolidated)
 
-function disabilityAmount(person: Person): number {
+function disabilityAmountAfter(person: Person): number {
     if (person.age < 18 || person.contributions === 0 || person.isRetired) {
         return 0;
     }
@@ -266,30 +276,46 @@ function disabilityAmount(person: Person): number {
 ```
 
 ```java
-// Java: before (separate checks with AND for guards)
+class Person {
+    private int age;
+    private double contributions;
+    private boolean retired;
 
-public double disabilityAmount(Person person) {
-    if (person.getAge() >= 18
-            && person.getContributions() > 0
-            && !person.isRetired()) {
-        return calculateAmount(person);
-    }
-    return 0;
+    public int getAge() { return age; }
+    public double getContributions() { return contributions; }
+    public boolean isRetired() { return retired; }
 }
 
-// Java: after (extracted named method)
-
-private boolean isEligible(Person person) {
-    return person.getAge() >= 18
-            && person.getContributions() > 0
-            && !person.isRetired();
-}
-
-public double disabilityAmount(Person person) {
-    if (isEligible(person)) {
-        return calculateAmount(person);
+class Main {
+    private double calculateAmount(Person person) {
+        return person.getContributions() * 0.1;
     }
-    return 0;
+
+    // Java: before (separate checks with AND for guards)
+
+    public double disabilityAmountBefore(Person person) {
+        if (person.getAge() >= 18
+                && person.getContributions() > 0
+                && !person.isRetired()) {
+            return calculateAmount(person);
+        }
+        return 0;
+    }
+
+    // Java: after (extracted named method)
+
+    private boolean isEligible(Person person) {
+        return person.getAge() >= 18
+                && person.getContributions() > 0
+                && !person.isRetired();
+    }
+
+    public double disabilityAmountAfter(Person person) {
+        if (isEligible(person)) {
+            return calculateAmount(person);
+        }
+        return 0;
+    }
 }
 ```
 
@@ -309,8 +335,8 @@ use to apply it.
 pattern where two nested `if` statements can be collapsed into one, and
 it is the inspection that catches the case where the conditions are
 nested rather than sequential
-([SonarSource rule S1066](https://rules.sonarsource.com/java/rspec-S1066/),
-verified 2026-08-13). The rule is the complementary inspection to the
+([SonarSource rule S1066](https://web.archive.org/web/20260116132058/https://rules.sonarsource.com/typescript/rspec-1066/),
+verified 2026-08-19). The rule is the complementary inspection to the
 OR consolidation variant, because it handles the AND case where two
 nested conditions are combined.
 
@@ -496,8 +522,8 @@ unchanged.
   [https://www.jetbrains.com/help/idea/code-inspection.html](https://www.jetbrains.com/help/idea/code-inspection.html),
   verified 2026-08-13.
 - SonarSource, "Collapsible if statements," rule S1066,
-  [https://rules.sonarsource.com/java/rspec-S1066/](https://rules.sonarsource.com/java/rspec-S1066/),
-  verified 2026-08-13.
+  [https://web.archive.org/web/20260116132058/https://rules.sonarsource.com/typescript/rspec-1066/](https://web.archive.org/web/20260116132058/https://rules.sonarsource.com/typescript/rspec-1066/),
+  verified 2026-08-19.
 - Martin Fowler, "Refactoring Catalog,"
   [https://refactoring.com/catalog/](https://refactoring.com/catalog/),
   verified 2026-08-13.
