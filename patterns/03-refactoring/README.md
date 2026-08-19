@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-12 entries, 40,406 words. Every entry carries all 18
+13 entries, 43,449 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -21,6 +21,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Encapsulate Record](encapsulate-record.md) | canonical | 3,025 | You have a data record, a structure with public fields and no behaviour, that callers read and write directly. |
 | [Encapsulate Variable](encapsulate-variable.md) | canonical | 3,123 | You have a variable, typically a public field on a class or a module level variable, that callers read and write directly. |
 | [Extract Class](extract-class.md) | canonical | 3,113 | You have a class that has grown to the point where it does two things that should be separate. |
+| [Extract Function](extract-function.md) | canonical | 3,043 | You have a function that does two or more things, or a function that does one thing but is long enough that a reader cannot hold the whole function in their head. |
 
 ## Reading order
 
