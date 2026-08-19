@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-29 entries, 81,092 words. Every entry carries all 18
+30 entries, 82,866 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -38,6 +38,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Parameterize Function](parameterize-function.md) | canonical | 1,755 | You have two or more functions that perform the same operation with different constant values. |
 | [Preserve Whole Object](preserve-whole-object.md) | canonical | 2,026 | A function takes several parameters that are all fields of the same object. |
 | [Pull Up Constructor Body](pull-up-constructor-body.md) | canonical | 1,881 | Two or more subclasses have constructors that share the same initialisation logic. |
+| [Pull Up Field](pull-up-field.md) | canonical | 1,774 | Two or more subclasses have the same field, with the same type and the same meaning. |
 
 ## Reading order
 

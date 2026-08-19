@@ -222,7 +222,7 @@ public class Person {
     public String getName() { return name; }
 }
 
-public class Employee extends Person {
+class Employee extends Person {
     private final int salary;
 
     public Employee(String name, int salary) {
@@ -231,7 +231,7 @@ public class Employee extends Person {
     }
 }
 
-public class Customer extends Person {
+class Customer extends Person {
     private final double discount;
 
     public Customer(String name, double discount) {
