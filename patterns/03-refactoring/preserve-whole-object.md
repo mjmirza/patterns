@@ -235,8 +235,10 @@ public class Room {
     public double getTaxRate() { return taxRate; }
 }
 
-public double charge(Room room) {
-    return room.getNights() * room.getRate() * (1 + room.getTaxRate());
+class BillingService {
+    public double charge(Room room) {
+        return room.getNights() * room.getRate() * (1 + room.getTaxRate());
+    }
 }
 ```
 
@@ -252,12 +254,13 @@ application of Preserve Whole Object in a design pattern
 verified 2026-08-13).
 
 **Spring's `ModelAttribute` annotation** binds a whole form object to a
-controller method, rather than extracting individual form fields as
-separate parameters. The Spring documentation states that `@ModelAttribute`
-exposes the object to the web view, which is the whole object being
-preserved across the request boundary
-([Spring ModelAttribute](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/modelattribute.html),
-verified 2026-08-13).
+controller method parameter, rather than extracting individual form
+fields as separate parameters. The Spring documentation states that
+`@ModelAttribute` on a method parameter binds request parameters, URI
+path variables, and request headers onto that single object, which is
+the whole object being preserved across the request boundary
+([Spring ModelAttribute method arguments](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/modelattrib-method-args.html),
+verified 2026-08-19).
 
 ## 10. Consequences
 
@@ -356,9 +359,9 @@ that should be reviewed.
 - Joshua Kerievsky, *Refactoring to Patterns*, Addison-Wesley, 2004.
 - Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, *Design
   Patterns*, Addison-Wesley, 1995, "Visitor."
-- Spring, "ModelAttribute,"
-  [https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/modelattribute.html](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/modelattribute.html),
-  verified 2026-08-13.
+- Spring, "ModelAttribute method arguments,"
+  [https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/modelattrib-method-args.html](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/modelattrib-method-args.html),
+  verified 2026-08-19.
 - Martin Fowler, "Refactoring Catalog,"
   [https://refactoring.com/catalog/](https://refactoring.com/catalog/),
   verified 2026-08-13.
