@@ -158,7 +158,7 @@ class Account {
 ```java
 // Java: after (subclass removed, interface preserves type)
 
-public interface SavingsAccount {}
+interface SavingsAccount {}
 
 public class Account implements SavingsAccount {
     private double balance;
