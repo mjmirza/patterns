@@ -1098,6 +1098,7 @@
  "https://e2b.dev": 200,
  "https://egon.io": 200,
  "https://en.bitcoin.it/wiki/Protocol_documentation": 200,
+ "https://en.cppreference.com/w/cpp/language/inline": "403 then HTTPError",
  "https://en.cppreference.com/w/cpp/thread/future": 200,
  "https://en.cppreference.com/w/cpp/thread/promise/set_value": 200,
  "https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Non-Virtual_Interface": 200,

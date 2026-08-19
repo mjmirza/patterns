@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-17 entries, 54,449 words. Every entry carries all 18
+18 entries, 56,977 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -26,6 +26,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Extract Variable](extract-variable.md) | canonical | 2,799 | You have an expression that is hard to read because it combines several subexpressions into one statement. |
 | [Hide Delegate](hide-delegate.md) | canonical | 2,863 | A client calls a method on an object it reaches through another object, forming a chain of access. |
 | [Inline Class](inline-class.md) | canonical | 2,513 | You have a class that no longer earns its place. |
+| [Inline Function](inline-function.md) | canonical | 2,528 | You have a function whose body is as clear as its name, or clearer. |
 
 ## Reading order
 
