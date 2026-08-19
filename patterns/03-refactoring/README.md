@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-9 entries, 31,145 words. Every entry carries all 18
+10 entries, 34,170 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -18,6 +18,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Consolidate Conditional Expression](consolidate-conditional-expression.md) | canonical | 3,243 | You have a series of conditional checks, each of which leads to the same result or the same action. |
 | [Decompose Conditional](decompose-conditional.md) | canonical | 3,393 | You have a conditional whose complexity lies not in the branching but in the readability of its parts. |
 | [Encapsulate Collection](encapsulate-collection.md) | canonical | 3,249 | A class has a collection field, typically a list or a map, that is exposed to callers. |
+| [Encapsulate Record](encapsulate-record.md) | canonical | 3,025 | You have a data record, a structure with public fields and no behaviour, that callers read and write directly. |
 
 ## Reading order
 
