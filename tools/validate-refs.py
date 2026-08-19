@@ -51,6 +51,7 @@ ALLOW_UNREACHABLE = {
     "www.researchgate.net",
     "callbackhell.com",
     "www.sec.gov",
+    "en.cppreference.com",
 }
 
 
