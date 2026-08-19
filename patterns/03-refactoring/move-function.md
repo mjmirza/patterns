@@ -289,7 +289,7 @@ public class AccountType {
     }
 }
 
-public class Account {
+class Account {
     private final AccountType type;
     private final int daysOverdrawn;
 
@@ -306,13 +306,13 @@ public class Account {
 
 ## 9. Known production uses
 
-**IntelliJ IDEA's "Move Method" refactoring** automates the move by
-analysing the function's dependencies, creating the function on the
-target, adjusting the body, and replacing the source with a delegation
-call. JetBrains documents that the tool determines the target class by
-analysing which class's fields the function accesses most
-([JetBrains Move refactoring](https://www.jetbrains.com/help/idea/move-refactorings.html),
-verified 2026-08-13).
+**IntelliJ IDEA's Move refactoring** automates moving an instance method
+to a different class. JetBrains documents that the list of move targets
+includes the method parameters' classes and fields' classes in the
+current class, and that the person picks the destination and a parameter
+name for the reference back to the original class
+([JetBrains Move documentation](https://www.jetbrains.com/help/idea/move-refactorings.html),
+verified 2026-08-19).
 
 **Eclipse's "Move" refactoring** provides the same automation for Java
 methods
@@ -440,9 +440,9 @@ stronger access control, which is a positive security signal.
   edition, Addison-Wesley, 1999, chapter 7, "Move Method."
 - Rebecca Wirfs Brock and Brian Wilkerson, "Object-Oriented Design: A
   Responsibility Driven Approach," 1989.
-- JetBrains, "Move refactoring,"
+- JetBrains, "Move,"
   [https://www.jetbrains.com/help/idea/move-refactorings.html](https://www.jetbrains.com/help/idea/move-refactorings.html),
-  verified 2026-08-13.
+  verified 2026-08-19.
 - Eclipse Foundation, "Moving,"
   [https://help.eclipse.org/latest/topic/org.eclipse.jdt.doc.user/tasks/task-moving.html](https://help.eclipse.org/latest/topic/org.eclipse.jdt.doc.user/tasks/task-moving.html),
   verified 2026-08-13.
