@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-5 entries, 17,982 words. Every entry carries all 18
+6 entries, 21,260 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -14,6 +14,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Change Value to Reference](change-value-to-reference.md) | canonical | 3,616 | You have a value object, an object whose identity is defined by its field values and which is immutable, but the immutability and the value semantics are producing more problems ... |
 | [Collapse Hierarchy](collapse-hierarchy.md) | canonical | 3,138 | A subclass and its superclass have diverged or, more commonly, have converged to the point where the hierarchy level adds no value. |
 | [Combine Functions into Class](combine-functions-into-class.md) | canonical | 3,579 | You have a set of functions, typically free functions in a module, that all operate on the same data structure or the same set of parameters. |
+| [Combine Functions into Transform](combine-functions-into-transform.md) | canonical | 3,278 | You have a pipeline of functions, each taking the output of the previous and producing input for the next, forming a chain of transformations. |
 
 ## Reading order
 
