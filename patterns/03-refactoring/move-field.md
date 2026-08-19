@@ -249,7 +249,7 @@ public class Order {
     }
 }
 
-public class Customer {
+class Customer {
     private String name;
 
     public Customer(String name) {
@@ -263,13 +263,12 @@ public class Customer {
 
 ## 9. Known production uses
 
-**IntelliJ IDEA's "Move Member" refactoring** automates the move by
-creating the field on the target, updating every access site, and
-removing the field from the source. JetBrains documents that the tool
-analyses every reference to the field and updates them to access the
-target class
-([JetBrains Move refactoring](https://www.jetbrains.com/help/idea/move-refactorings.html),
-verified 2026-08-13).
+**IntelliJ IDEA's Move refactoring** automates this move at the tooling
+level. JetBrains documents that the Move refactoring moves class members,
+including fields, to other classes, the exact mechanic this pattern
+performs by hand
+([JetBrains Move documentation](https://www.jetbrains.com/help/idea/move-refactorings.html),
+verified 2026-08-19).
 
 **Eclipse's "Move" refactoring** provides the same automation for Java
 fields and methods
@@ -386,9 +385,9 @@ which is a positive security signal.
   edition, Addison-Wesley, 1999, chapter 7, "Move Field."
 - Grady Booch, *Object-Oriented Analysis and Design with Applications*,
   Benjamin Cummings, 2nd edition, 1994.
-- JetBrains, "Move refactoring,"
+- JetBrains, "Move,"
   [https://www.jetbrains.com/help/idea/move-refactorings.html](https://www.jetbrains.com/help/idea/move-refactorings.html),
-  verified 2026-08-13.
+  verified 2026-08-19.
 - Eclipse Foundation, "Moving,"
   [https://help.eclipse.org/latest/topic/org.eclipse.jdt.doc.user/tasks/task-moving.html](https://help.eclipse.org/latest/topic/org.eclipse.jdt.doc.user/tasks/task-moving.html),
   verified 2026-08-13.
