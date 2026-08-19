@@ -189,7 +189,11 @@ def calculate_discount(order):
 ```typescript
 // TypeScript: before (const adds no clarity)
 
-function calculateDiscount(order: Order): number {
+interface Order {
+    basePrice: number;
+}
+
+function calculateDiscountBefore(order: Order): number {
     const basePrice = order.basePrice;
     if (basePrice > 1000) {
         return 0.05;
@@ -208,34 +212,43 @@ function calculateDiscount(order: Order): number {
 ```
 
 ```java
-// Java: before (final variable adds no clarity)
-
-public double calculateDiscount(Order order) {
-    final double basePrice = order.getBasePrice();
-    if (basePrice > 1000) {
-        return 0.05;
-    }
-    return 0.0;
+class Order {
+    double getBasePrice() { return 0; }
 }
 
-// Java: after (inlined)
+public class DiscountCalculator {
 
-public double calculateDiscount(Order order) {
-    if (order.getBasePrice() > 1000) {
-        return 0.05;
+    // Java: before (final variable adds no clarity)
+
+    public double calculateDiscountBefore(Order order) {
+        final double basePrice = order.getBasePrice();
+        if (basePrice > 1000) {
+            return 0.05;
+        }
+        return 0.0;
     }
-    return 0.0;
+
+    // Java: after (inlined)
+
+    public double calculateDiscount(Order order) {
+        if (order.getBasePrice() > 1000) {
+            return 0.05;
+        }
+        return 0.0;
+    }
 }
 ```
 
 ## 9. Known production uses
 
-**IntelliJ IDEA's "Inline Variable" refactoring** automates the inlining
-by replacing every reference to the selected variable with its initialiser
-and removing the declaration. JetBrains documents that the tool verifies
-the variable is not reassigned before allowing the inline
-([JetBrains Inline refactoring](https://www.jetbrains.com/help/idea/inline-refactoring.html),
-verified 2026-08-13).
+**IntelliJ IDEA's Inline Variable refactoring** automates the inlining by
+replacing references to the selected variable with its initialiser and
+removing the declaration. JetBrains documents that if the variable's
+initial value is modified elsewhere in the code, only the occurrences
+before that modification are inlined, so a reassigned variable is handled
+selectively rather than refused outright
+([JetBrains Inline documentation](https://www.jetbrains.com/help/idea/inline.html),
+verified 2026-08-19).
 
 **The TypeScript compiler's const inlining** is a compile time
 optimisation where the compiler replaces const variable references with
@@ -355,9 +368,9 @@ boundary by a reader, where the variable name made it visible.
   edition, Addison-Wesley, 2018, chapter 6, "Inline Variable."
 - Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 1st
   edition, Addison-Wesley, 1999, chapter 6, "Inline Temp."
-- JetBrains, "Inline refactoring,"
-  [https://www.jetbrains.com/help/idea/inline-refactoring.html](https://www.jetbrains.com/help/idea/inline-refactoring.html),
-  verified 2026-08-13.
+- JetBrains, "Inline,"
+  [https://www.jetbrains.com/help/idea/inline.html](https://www.jetbrains.com/help/idea/inline.html),
+  verified 2026-08-19.
 - TypeScript, "Variable Declarations,"
   [https://www.typescriptlang.org/docs/handbook/variable-declarations.html](https://www.typescriptlang.org/docs/handbook/variable-declarations.html),
   verified 2026-08-13.
