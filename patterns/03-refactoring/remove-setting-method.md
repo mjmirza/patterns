@@ -180,7 +180,7 @@ class Order:
 ```typescript
 // TypeScript: before (mutable with setter)
 
-class Order {
+class OrderBefore {
     private _customerId: number = 0;
 
     set customerId(id: number) { this._customerId = id; }

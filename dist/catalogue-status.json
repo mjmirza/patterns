@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 593,
+  "published_total": 594,
   "target_total": 854,
   "families_total": 29,
   "families_complete": 13,
   "stale_entries": 0,
-  "references_checked": 3135,
+  "references_checked": 3136,
   "rows": [
     {
       "family": "01-gof",
@@ -36,12 +36,12 @@
       "family": "03-refactoring",
       "name": "Refactoring Techniques",
       "origin": "Fowler, Refactoring 2nd ed",
-      "published": 36,
-      "planned": 30,
+      "published": 37,
+      "planned": 29,
       "target": 66,
-      "percent": 54.5,
+      "percent": 56.1,
       "maturity": {
-        "canonical": 36
+        "canonical": 37
       }
     },
     {
