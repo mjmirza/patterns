@@ -247,6 +247,8 @@ customer.charge(50.0)  # safe, even for unknown
 ```
 
 ```typescript
+declare const database: Record<number, string>;
+
 // TypeScript: after (special case implements interface)
 
 interface Customer {
@@ -292,7 +294,7 @@ public class Customer {
     }
 }
 
-public class UnknownCustomer extends Customer {
+class UnknownCustomer extends Customer {
     private static final UnknownCustomer INSTANCE = new UnknownCustomer();
 
     public static UnknownCustomer getInstance() { return INSTANCE; }
@@ -305,10 +307,14 @@ public class UnknownCustomer extends Customer {
     }
 }
 
-public Customer findCustomer(int id) {
-    return database.containsKey(id)
-        ? new Customer(database.get(id))
-        : UnknownCustomer.getInstance();
+class CustomerRepository {
+    private final java.util.Map<Integer, String> database = new java.util.HashMap<>();
+
+    public Customer findCustomer(int id) {
+        return database.containsKey(id)
+            ? new Customer(database.get(id))
+            : UnknownCustomer.getInstance();
+    }
 }
 ```
 
