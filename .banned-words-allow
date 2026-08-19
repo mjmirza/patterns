@@ -95,3 +95,43 @@ reshaped
 # (throttling.md, retry-budget.md, deployment-stamps.md, and more). Not
 # figurative AI-slop usage.
 ceiling
+
+# unlocking/unlocked. Inflected forms of "unlock", already allowed above.
+# Literal technical term for mutex release, the exact subject matter of the
+# Scoped Locking entry (lock acquisition and release discipline). Not
+# figurative AI-slop usage.
+unlocking
+unlocked
+
+# Spark/spark. Proper noun, Apache Spark, the Apache Software Foundation
+# project cited as a named production use and implementation variant
+# throughout patterns/09-concurrency/map-reduce.md, per ENTRY-TEMPLATE.md.
+# Not the figurative AI-slop verb "spark" (to spark curiosity).
+spark
+
+# Pivotal. Proper noun, Pivotal Software Inc., one of the named companies
+# whose engineers formed the Reactive Streams initiative in 2013, cited as
+# part of the pattern's real lineage per ENTRY-TEMPLATE.md dimension 1. Not
+# the figurative AI-slop adjective "pivotal moment".
+pivotal
+
+# paradigms. Verbatim inside the real subtitle of Brendan Burns'
+# Designing Distributed Systems ("Patterns and Paradigms for Scalable,
+# Reliable Services"), cited as a source in this entry. Renaming the
+# title would misquote the source, per the original-prose and citation
+# rules in ENTRY-TEMPLATE.md.
+paradigms
+paradigm
+
+# canvas/canvases. Plain noun, the literal name and subject matter of the
+# Context Canvas (Bounded Context Canvas) entry, a named DDD strategic
+# design worksheet created by Nick Tune. Not figurative AI-slop usage.
+canvas
+canvases
+
+# production-ready. Verbatim inside the real title of Uber Engineering's
+# "Designing a Production-Ready Kappa Architecture for Timely Data Stream
+# Processing" (Uber Blog), cited as a source in patterns/12-data-storage/
+# kappa-architecture.md, per ENTRY-TEMPLATE.md. Renaming the title would
+# misquote the source.
+production-ready
