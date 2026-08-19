@@ -17,7 +17,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 ![Published entries](https://img.shields.io/badge/published-567-brightgreen)
 ![Planned entries](https://img.shields.io/badge/planned-287-lightgrey)
 ![Catalogue completion](https://img.shields.io/badge/completion-66.4%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-3101-brightgreen)
+![References checked](https://img.shields.io/badge/references%20checked-3103-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
