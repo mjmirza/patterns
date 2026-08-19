@@ -997,6 +997,7 @@
  "https://docs.spring.io/spring-data/commons/reference/repositories/core-domain-events.html": 200,
  "https://docs.spring.io/spring-data/jpa/reference/jpa/specifications.html": 200,
  "https://docs.spring.io/spring-data/jpa/reference/repositories/core-concepts.html": 200,
+ "https://docs.spring.io/spring-data/jpa/reference/repositories/definition.html": 200,
  "https://docs.spring.io/spring-data/relational/reference/jdbc/domain-driven-design.html": 200,
  "https://docs.spring.io/spring-data/relational/reference/jdbc/domain-driven-design.html.": "404 then HTTPError",
  "https://docs.spring.io/spring-data/rest/reference/index.html": 200,

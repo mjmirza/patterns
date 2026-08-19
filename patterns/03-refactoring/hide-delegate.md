@@ -229,21 +229,25 @@ class Person:
 ```typescript
 // TypeScript: before (chain of access)
 
-class Person {
-    constructor(private department: Department) {}
+class PersonBefore {
+    constructor(private _department: DepartmentBefore) {}
 
-    get department(): Department { return this.department; }
+    get department(): DepartmentBefore { return this._department; }
 }
 
-class Department {
-    constructor(private manager: Person) {}
+class DepartmentBefore {
+    constructor(private _manager: PersonBefore) {}
 
-    get manager(): Person { return this.manager; }
+    get manager(): PersonBefore { return this._manager; }
 }
 
 // client: person.department.manager  (chain)
 
 // TypeScript: after (delegating property)
+
+class Department {
+    manager!: Person;
+}
 
 class Person {
     constructor(private _department: Department) {}
@@ -271,7 +275,7 @@ public class Person {
     }
 }
 
-public class Department {
+class Department {
     private final Person manager;
 
     public Department(Person manager) {
