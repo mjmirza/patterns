@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-32 entries, 86,433 words. Every entry carries all 18
+33 entries, 88,152 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -41,6 +41,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Pull Up Field](pull-up-field.md) | canonical | 1,774 | Two or more subclasses have the same field, with the same type and the same meaning. |
 | [Pull Up Method](pull-up-method.md) | canonical | 1,714 | Two or more subclasses have the same method, with the same body and the same signature. |
 | [Push Down Field](push-down-field.md) | canonical | 1,853 | A field on the superclass is only used by one subclass. |
+| [Push Down Method](push-down-method.md) | canonical | 1,719 | A method on the superclass is only called by one subclass, or its behaviour only makes sense for one subclass. |
 
 ## Reading order
 
