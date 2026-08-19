@@ -185,6 +185,8 @@ charge_for(7)
 ```
 
 ```typescript
+declare const RATE: number;
+
 // TypeScript: before
 
 function chargeFor5(): number { return 5 * RATE; }
@@ -198,16 +200,22 @@ function chargeFor(units: number): number {
 ```
 
 ```java
-// Java: after (parameterized)
+public class Pricing {
+    private static final double RATE = 1.5;
 
-public double chargeFor(int units) {
-    return units * RATE;
+    // Java: after (parameterized)
+
+    public double chargeFor(int units) {
+        return units * RATE;
+    }
+
+    // caller:
+    public void run() {
+        chargeFor(5);
+        chargeFor(10);
+        chargeFor(7);
+    }
 }
-
-// caller:
-chargeFor(5);
-chargeFor(10);
-chargeFor(7);
 ```
 
 ## 9. Known production uses
