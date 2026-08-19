@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-7 entries, 24,503 words. Every entry carries all 18
+8 entries, 27,896 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -16,6 +16,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Combine Functions into Class](combine-functions-into-class.md) | canonical | 3,579 | You have a set of functions, typically free functions in a module, that all operate on the same data structure or the same set of parameters. |
 | [Combine Functions into Transform](combine-functions-into-transform.md) | canonical | 3,278 | You have a pipeline of functions, each taking the output of the previous and producing input for the next, forming a chain of transformations. |
 | [Consolidate Conditional Expression](consolidate-conditional-expression.md) | canonical | 3,243 | You have a series of conditional checks, each of which leads to the same result or the same action. |
+| [Decompose Conditional](decompose-conditional.md) | canonical | 3,393 | You have a conditional whose complexity lies not in the branching but in the readability of its parts. |
 
 ## Reading order
 
