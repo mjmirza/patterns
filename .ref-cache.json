@@ -952,6 +952,7 @@
  "https://docs.python.org/3/library/queue.html": 200,
  "https://docs.python.org/3/library/random.html": 200,
  "https://docs.python.org/3/library/selectors.html": 200,
+ "https://docs.python.org/3/library/sqlite3.html": 200,
  "https://docs.python.org/3/library/stdtypes.html#iterator-types": 200,
  "https://docs.python.org/3/library/sys.html": 200,
  "https://docs.python.org/3/library/sys.html#sys.excepthook": 200,
