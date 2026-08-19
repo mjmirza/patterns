@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-34 entries, 89,916 words. Every entry carries all 18
+35 entries, 91,531 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -43,6 +43,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Push Down Field](push-down-field.md) | canonical | 1,853 | A field on the superclass is only used by one subclass. |
 | [Push Down Method](push-down-method.md) | canonical | 1,719 | A method on the superclass is only called by one subclass, or its behaviour only makes sense for one subclass. |
 | [Remove Dead Code](remove-dead-code.md) | canonical | 1,764 | A method or a block of code is not called by anything. |
+| [Remove Flag Argument](remove-flag-argument.md) | canonical | 1,615 | A function takes a boolean parameter that selects between two different behaviours. |
 
 ## Reading order
 

@@ -211,30 +211,30 @@ function sendNormalNotification(recipient: string): void {
 ```java
 // Java: after (two methods)
 
-public void sendUrgentNotification(String recipient) {
-    System.out.println("URGENT: notifying " + recipient);
-}
+public class NotificationService {
+    public void sendUrgentNotification(String recipient) {
+        System.out.println("URGENT: notifying " + recipient);
+    }
 
-public void sendNormalNotification(String recipient) {
-    System.out.println("notifying " + recipient);
+    public void sendNormalNotification(String recipient) {
+        System.out.println("notifying " + recipient);
+    }
+    // caller: sendUrgentNotification("alice");
 }
-// caller: sendUrgentNotification("alice");
 ```
 
 ## 9. Known production uses
 
-**SonarQube's rule S1788, "Boolean methods should not be named with
-negating prefixes"** detects the pattern this refactoring targets and
-suggests splitting. SonarSource documents that boolean parameters
-complicate method calls and that named methods are clearer
-([SonarSource rule S1788](https://rules.sonarsource.com/java/rspec-S1788/),
-verified 2026-08-13).
-
-**JetBrains' inspection "Boolean parameter is passed as literal"**
-detects call sites where a boolean literal is passed and suggests
-extracting a named function or using a named argument
-([JetBrains Inspections](https://www.jetbrains.com/help/idea/code-inspection.html),
-verified 2026-08-13).
+**JetBrains' IntelliJ IDEA inspection "'public' method with 'boolean'
+parameter"** detects the pattern this refactoring targets. The
+Inspectopedia documentation states that it is almost always bad
+practice to add a boolean parameter to a public method that is not a
+setter, and it recommends replacing the boolean parameter with an
+enum, because a boolean argument creates a boolean trap where the
+caller cannot tell what the value means without reading the method's
+source or documentation
+([JetBrains Inspectopedia, "'public' method with 'boolean' parameter"](https://www.jetbrains.com/help/inspectopedia/BooleanParameter.html),
+verified 2026-08-19).
 
 ## 10. Consequences
 
@@ -313,12 +313,9 @@ change the security surface.
 - Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
   edition, Addison-Wesley, 2018, chapter 11, "Remove Flag Argument."
 - Robert C. Martin, *Clean Code*, Prentice Hall, 2008, chapter 3.
-- SonarSource, "Boolean method names," rule S1788,
-  [https://rules.sonarsource.com/java/rspec-S1788/](https://rules.sonarsource.com/java/rspec-S1788/),
-  verified 2026-08-13.
-- JetBrains, "Code Inspection,"
-  [https://www.jetbrains.com/help/idea/code-inspection.html](https://www.jetbrains.com/help/idea/code-inspection.html),
-  verified 2026-08-13.
+- JetBrains, "'public' method with 'boolean' parameter,"
+  [https://www.jetbrains.com/help/inspectopedia/BooleanParameter.html](https://www.jetbrains.com/help/inspectopedia/BooleanParameter.html),
+  verified 2026-08-19.
 - Martin Fowler, "Refactoring Catalog,"
   [https://refactoring.com/catalog/](https://refactoring.com/catalog/),
   verified 2026-08-13.
