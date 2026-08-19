@@ -215,14 +215,14 @@ public abstract class Account {
     public abstract double calculateOverdraftFee();
 }
 
-public class CheckingAccount extends Account {
+class CheckingAccount extends Account {
     @Override
     public double calculateOverdraftFee() {
         return Math.max(0, -balance) * 0.10;
     }
 }
 
-public class SavingsAccount extends Account {
+class SavingsAccount extends Account {
     @Override
     public double calculateOverdraftFee() {
         return 0;  // no overdraft for savings
