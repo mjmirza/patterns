@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-38 entries, 96,029 words. Every entry carries all 18
+39 entries, 97,554 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -47,6 +47,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Remove Middle Man](remove-middle-man.md) | canonical | 1,516 | A class has methods that do nothing but forward to another class. |
 | [Remove Setting Method](remove-setting-method.md) | canonical | 1,581 | A class has a setter for a field that should not change after construction. |
 | [Remove Subclass](remove-subclass.md) | canonical | 1,401 | A subclass exists but adds no value over its superclass. |
+| [Rename Field](rename-field.md) | canonical | 1,525 | A field has a name that does not communicate what the field represents. |
 
 ## Reading order
 

@@ -162,7 +162,7 @@ class Order:
 ```typescript
 // TypeScript: before (misleading name)
 
-class Order {
+class OrderBefore {
     constructor(public data: string) {} // actually billing address
 }
 
@@ -186,11 +186,12 @@ public class Order {
 
 ## 9. Known production uses
 
-**IntelliJ IDEA's "Rename Field" refactoring** automates the rename by
-finding every reference and updating it, including accessors,
-serialisation annotations, and database mappings
+**IntelliJ IDEA's "Rename" refactoring** automates the rename. The
+JetBrains documentation states that Rename changes the names of
+symbols, files, directories, packages, and modules, and updates all
+the references to them throughout the code
 ([JetBrains Rename refactoring](https://www.jetbrains.com/help/idea/rename-refactorings.html),
-verified 2026-08-13).
+verified 2026-08-20).
 
 **Java's `@JsonProperty` annotation** is the serialisation alias
 mechanism. The field is renamed in Java, and the annotation maps the new
@@ -286,7 +287,7 @@ the security implications of the field, which is a minor positive.
 - Kent Beck, *Smalltalk Best Practice Patterns*, Prentice Hall, 1997.
 - JetBrains, "Rename refactoring,"
   [https://www.jetbrains.com/help/idea/rename-refactorings.html](https://www.jetbrains.com/help/idea/rename-refactorings.html),
-  verified 2026-08-13.
+  verified 2026-08-20.
 - Jackson, "jackson-annotations,"
   [https://github.com/FasterXML/jackson-annotations](https://github.com/FasterXML/jackson-annotations),
   verified 2026-08-13.
