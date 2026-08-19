@@ -275,9 +275,15 @@ def calculate_charge(date, quantity):
 ```
 
 ```typescript
+const SUMMER_START = new Date(2026, 5, 1);
+const SUMMER_END = new Date(2026, 7, 31);
+const winterRate = 2.4;
+const winterServiceFee = 1.15;
+const summerRate = 1.8;
+
 // TypeScript: before (complex conditional inline)
 
-function calculateCharge(date: Date, quantity: number): number {
+function calculateChargeBefore(date: Date, quantity: number): number {
     if (date < SUMMER_START || date > SUMMER_END) {
         return quantity * winterRate * winterServiceFee;
     } else {
@@ -299,7 +305,7 @@ function summerCharge(quantity: number): number {
     return quantity * summerRate;
 }
 
-function calculateCharge(date: Date, quantity: number): number {
+function calculateChargeAfter(date: Date, quantity: number): number {
     return isWinter(date)
         ? winterCharge(quantity)
         : summerCharge(quantity);
@@ -309,9 +315,14 @@ function calculateCharge(date: Date, quantity: number): number {
 ```java
 // Java: decomposed into methods
 
+import java.time.LocalDate;
+
 public class ChargeCalculator {
     private static final LocalDate SUMMER_START = LocalDate.of(2026, 6, 1);
     private static final LocalDate SUMMER_END = LocalDate.of(2026, 8, 31);
+    private static final double winterRate = 2.4;
+    private static final double winterServiceFee = 1.15;
+    private static final double summerRate = 1.8;
 
     public double calculateCharge(LocalDate date, int quantity) {
         if (isWinter(date)) {
