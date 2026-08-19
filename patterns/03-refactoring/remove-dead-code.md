@@ -172,7 +172,7 @@ class Service:
 ```typescript
 // TypeScript: before (dead method)
 
-class Service {
+class ServiceBefore {
     process(data: string): string {
         return data.toUpperCase();
     }
@@ -195,7 +195,7 @@ class Service {
 ```java
 // Java: before (dead method)
 
-public class Service {
+class ServiceBefore {
     public String process(String data) {
         return data.toUpperCase();
     }
@@ -217,12 +217,13 @@ public class Service {
 
 ## 9. Known production uses
 
-**SonarQube's "Dead Code" rule** detects unreachable code across
-multiple languages. SonarSource documents that the rule identifies code
-that cannot be executed because no execution path reaches it, and that
-the code should be removed because it is a maintenance burden
-([SonarSource Dead Code](https://rules.sonarsource.com/java/rspec-S125/),
-verified 2026-08-13).
+**ESLint's `no-unreachable` rule** detects unreachable code in
+JavaScript and TypeScript. The ESLint documentation states that the rule
+disallows unreachable code after `return`, `throw`, `continue`, and
+`break` statements, because a statement placed after one of these
+control-flow exits cannot be executed on any path
+([ESLint no-unreachable](https://eslint.org/docs/latest/rules/no-unreachable),
+verified 2026-08-19).
 
 **The Rust compiler's dead code analysis** is a language level
 implementation. The Rust compiler reports `dead_code` warnings for
@@ -324,9 +325,9 @@ signal.
   edition, Addison-Wesley, 1999, chapter 6, "Remove Dead Code."
 - Brian Kernighan and P.J. Plauger, *Software Tools*, Addison-Wesley,
   1976.
-- SonarSource, "Dead Code," rule S125,
-  [https://rules.sonarsource.com/java/rspec-S125/](https://rules.sonarsource.com/java/rspec-S125/),
-  verified 2026-08-13.
+- ESLint, "no-unreachable,"
+  [https://eslint.org/docs/latest/rules/no-unreachable](https://eslint.org/docs/latest/rules/no-unreachable),
+  verified 2026-08-19.
 - Rust, "dead_code lint,"
   [https://doc.rust-lang.org/rustc/lints/listing/allowed-by-default.html#dead-code](https://doc.rust-lang.org/rustc/lints/listing/allowed-by-default.html#dead-code),
   verified 2026-08-13.
