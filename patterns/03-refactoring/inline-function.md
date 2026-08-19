@@ -205,11 +205,18 @@ def report(late_deliveries: int) -> str:
 ```typescript
 // TypeScript: before (wrapper adds no clarity)
 
+interface Application {
+    age: number;
+    contributions: number;
+}
+
+function approve(app: Application): void {}
+
 function isEligible(age: number, contributions: number): boolean {
     return age >= 18 && contributions > 0;
 }
 
-function processApplication(app: Application): void {
+function processApplicationBefore(app: Application): void {
     if (isEligible(app.age, app.contributions)) {
         approve(app);
     }
@@ -225,34 +232,40 @@ function processApplication(app: Application): void {
 ```
 
 ```java
-// Java: before (one-line method called once)
-
-public int getRating() {
-    return driver.getLateDeliveries() > 5 ? 2 : 1;
+class Driver {
+    int getLateDeliveries() { return 0; }
 }
 
-public String report() {
-    int rating = getRating();
-    return "Rating: " + rating;
-}
+public class DriverReport {
+    private final Driver driver = new Driver();
 
-// Java: after (inlined)
+    // Java: before (one-line method called once)
 
-public String report() {
-    int rating = driver.getLateDeliveries() > 5 ? 2 : 1;
-    return "Rating: " + rating;
+    public int getRatingBefore() {
+        return driver.getLateDeliveries() > 5 ? 2 : 1;
+    }
+
+    public String reportBefore() {
+        int rating = getRatingBefore();
+        return "Rating: " + rating;
+    }
+
+    // Java: after (inlined)
+
+    public String report() {
+        int rating = driver.getLateDeliveries() > 5 ? 2 : 1;
+        return "Rating: " + rating;
+    }
 }
 ```
 
 ## 9. Known production uses
 
-**IntelliJ IDEA's "Inline Method" refactoring** automates the inlining by
-replacing every call to the selected method with the method body and
-deleting the method. JetBrains documents that the tool handles parameters,
-return values, and multiple call sites, and that it verifies no
-polymorphic dispatch is broken before allowing the inline
-([JetBrains Inline refactoring](https://www.jetbrains.com/help/idea/inline-refactoring.html),
-verified 2026-08-13).
+**IntelliJ IDEA's Inline Method refactoring** places a method's body
+directly into the body of its caller or callers, automating the exact
+mechanic this pattern describes by hand
+([JetBrains Inline documentation](https://www.jetbrains.com/help/idea/inline.html),
+verified 2026-08-19).
 
 **The C++ `inline` keyword** is the language level mechanism for compile
 time function inlining. The C++ standard states that an inline function
@@ -394,9 +407,9 @@ minor security readability loss.
   edition, Addison-Wesley, 1999, chapter 6, "Inline Method."
 - Kent Beck, *Smalltalk Best Practice Patterns*, Prentice Hall, 1997,
   "Composed Method" pattern.
-- JetBrains, "Inline refactoring,"
-  [https://www.jetbrains.com/help/idea/inline-refactoring.html](https://www.jetbrains.com/help/idea/inline-refactoring.html),
-  verified 2026-08-13.
+- JetBrains, "Inline,"
+  [https://www.jetbrains.com/help/idea/inline.html](https://www.jetbrains.com/help/idea/inline.html),
+  verified 2026-08-19.
 - cppreference, "inline specifier,"
   [https://en.cppreference.com/w/cpp/language/inline](https://en.cppreference.com/w/cpp/language/inline),
   verified 2026-08-13.
