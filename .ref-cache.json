@@ -940,6 +940,7 @@
  "https://docs.python.org/3/library/dataclasses.html#post-init-processing": 200,
  "https://docs.python.org/3/library/fractions.html": 200,
  "https://docs.python.org/3/library/functions.html#property": 200,
+ "https://docs.python.org/3/library/functions.html#super": 200,
  "https://docs.python.org/3/library/functools.html": 200,
  "https://docs.python.org/3/library/functools.html#functools.partial": 200,
  "https://docs.python.org/3/library/functools.html#functools.reduce": 200,
