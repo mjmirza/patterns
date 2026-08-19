@@ -833,6 +833,7 @@
  "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/ReentrantReadWriteLock.html": 200,
  "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/package-summary.html": 200,
  "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html": 200,
+ "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Component.html": 200,
  "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Container.html": 200,
  "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Insets.html": 200,
  "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Toolkit.html": 200,
