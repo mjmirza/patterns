@@ -253,6 +253,10 @@ def print_owing(name: str, expenses: list) -> None:
 ```
 
 ```typescript
+interface Expense {
+    amount: number;
+}
+
 // TypeScript: after (extracted arrow functions)
 
 const printBanner = (): void => {
@@ -277,6 +281,12 @@ function printOwing(name: string, expenses: Expense[]): void {
 ```
 
 ```java
+import java.util.List;
+
+class Expense {
+    int amount;
+}
+
 // Java: after (extracted methods on a class)
 
 public class InvoicePrinter {
