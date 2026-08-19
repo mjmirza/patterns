@@ -22,8 +22,6 @@ TRAILING = ".,;:!?"
 
 UA = "Mozilla/5.0 (compatible; patterns-ref-validator/1.0; +https://github.com/mjmirza/patterns)"
 
-VALID_STATUSES = {"200", "202", "204", "301", "302", "303", "307", "308"}
-
 ALLOW_UNREACHABLE = {
     # Publishers that block automated HEAD requests but are stable citations.
     "dl.acm.org",
@@ -78,16 +76,6 @@ def strip_fences(text: str) -> str:
     return "\n".join(out)
 
 
-def is_cached(url: str, cache: dict) -> bool:
-    st = str(cache.get(url, ""))
-    if st in VALID_STATUSES:
-        return True
-    host = url.split("/")[2] if "://" in url else ""
-    if host in ALLOW_UNREACHABLE and url in cache:
-        return True
-    return False
-
-
 def collect() -> dict[str, list[str]]:
     found: dict[str, list[str]] = {}
     for f in sorted(PATTERNS.rglob("*.md")):
@@ -140,7 +128,7 @@ def main() -> int:
         return 0
 
     cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
-    todo = [u for u in urls if not is_cached(u, cache)]
+    todo = [u for u in urls if str(cache.get(u)) not in {"200", "301", "302"}]
     print(f"{len(urls)} distinct citations, {len(todo)} to probe")
 
     bad: list[tuple[str, object, list[str]]] = []
@@ -148,7 +136,7 @@ def main() -> int:
         for url, status in ex.map(lambda u: probe(u, args.timeout), todo):
             cache[url] = status
             host = url.split("/")[2] if "://" in url else ""
-            ok = str(status) in VALID_STATUSES
+            ok = status in (200, 202, 204, 301, 302, 303, 307, 308)
             if not ok and host not in ALLOW_UNREACHABLE:
                 bad.append((url, status, urls[url]))
 
