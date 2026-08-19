@@ -299,7 +299,7 @@ public abstract class Person {
     }
 }
 
-public class Employee extends Person {
+class Employee extends Person {
     private int salary;
 
     public Employee(String name, int salary) {
@@ -308,7 +308,7 @@ public class Employee extends Person {
     }
 }
 
-public class Customer extends Person {
+class Customer extends Person {
     private double discount;
 
     public Customer(String name, double discount) {
