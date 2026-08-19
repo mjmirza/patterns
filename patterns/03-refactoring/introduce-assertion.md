@@ -212,7 +212,7 @@ def calculate_speed(distance: float, time: float) -> float:
 ```typescript
 // TypeScript: before (assumption not checked)
 
-function getItem(items: string[], index: number): string {
+function getItemBefore(items: string[], index: number): string {
     return items[index]; // assumes index is in range
 }
 
@@ -226,11 +226,14 @@ function getItem(items: string[], index: number): string {
 ```
 
 ```java
-// Java: after (assertion with message)
+public class SpeedCalculator {
 
-public double calculateSpeed(double distance, double time) {
-    assert time != 0 : "time must be non-zero, got " + time;
-    return distance / time;
+    // Java: after (assertion with message)
+
+    public double calculateSpeed(double distance, double time) {
+        assert time != 0 : "time must be non-zero, got " + time;
+        return distance / time;
+    }
 }
 
 // Java: assertions must be enabled with -ea flag at runtime
