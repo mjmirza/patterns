@@ -233,7 +233,7 @@ def calculate_price(base: float, tax: float,
 ```typescript
 // TypeScript: before (nested ternary)
 
-function getLabel(score: number): string {
+function getLabelBefore(score: number): string {
     return score > 90 ? "A" : score > 80 ? "B" : score > 70 ? "C" : "F";
 }
 
@@ -248,23 +248,33 @@ function getLabel(score: number): string {
 ```
 
 ```java
-// Java: before (complex expression in a conditional)
-
-public boolean isEligible(Person person) {
-    return person.getAge() >= 18
-        && person.getContributions() > 0
-        && !person.isRetired()
-        && person.getYearsOfService() >= 5;
+class Person {
+    int getAge() { return 0; }
+    int getContributions() { return 0; }
+    boolean isRetired() { return false; }
+    int getYearsOfService() { return 0; }
 }
 
-// Java: after (extracted variables)
+public class EligibilityChecker {
 
-public boolean isEligible(Person person) {
-    final boolean isAdult = person.getAge() >= 18;
-    final boolean hasContributed = person.getContributions() > 0;
-    final boolean isNotRetired = !person.isRetired();
-    final boolean hasService = person.getYearsOfService() >= 5;
-    return isAdult && hasContributed && isNotRetired && hasService;
+    // Java: before (complex expression in a conditional)
+
+    public boolean isEligibleBefore(Person person) {
+        return person.getAge() >= 18
+            && person.getContributions() > 0
+            && !person.isRetired()
+            && person.getYearsOfService() >= 5;
+    }
+
+    // Java: after (extracted variables)
+
+    public boolean isEligible(Person person) {
+        final boolean isAdult = person.getAge() >= 18;
+        final boolean hasContributed = person.getContributions() > 0;
+        final boolean isNotRetired = !person.isRetired();
+        final boolean hasService = person.getYearsOfService() >= 5;
+        return isAdult && hasContributed && isNotRetired && hasService;
+    }
 }
 ```
 
