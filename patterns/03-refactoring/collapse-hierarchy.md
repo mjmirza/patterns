@@ -232,19 +232,14 @@ class Account:
 ```
 
 ```typescript
-// TypeScript: before (empty subclass)
-
-class Account {
-    constructor(public balance: number) {}
-
-    deposit(amount: number): void {
-        this.balance += amount;
-    }
-}
-
-class SavingsAccount extends Account {
-    // no fields, no methods
-}
+// TypeScript: before, an empty subclass added nothing.
+//   class Account {
+//       constructor(public balance: number) {}
+//       deposit(amount: number): void { this.balance += amount; }
+//   }
+//   class SavingsAccount extends Account {
+//       // no fields, no methods
+//   }
 
 // TypeScript: after (collapsed, interface preserves type)
 
@@ -266,21 +261,20 @@ function createSavings(): Account & SavingsAccountType {
 
 ```java
 // Java: collapse with interface preservation
+//
+// before, an empty subclass added nothing:
+//   public class Account {
+//       private int balance;
+//       public void deposit(int amount) { balance += amount; }
+//   }
+//   public class SavingsAccount extends Account {
+//       // empty
+//   }
 
-// before
-public class Account {
-    private int balance;
-    public void deposit(int amount) { balance += amount; }
-}
+// after: an interface preserves the type label, the subclass is deleted
+interface SavingsAccountType {}
 
-public class SavingsAccount extends Account {
-    // empty
-}
-
-// after: interface preserves the type, class is deleted
-public interface SavingsAccount {}
-
-public class Account implements SavingsAccount {
+public class Account implements SavingsAccountType {
     private int balance;
     public void deposit(int amount) { balance += amount; }
 }
@@ -297,12 +291,13 @@ no longer needed
 verified 2026-08-13). The tool performs a compile time safety check and
 reports every call site that references the collapsed class.
 
-**IntelliJ IDEA's "Inline to Superclass" refactoring** automates the
-collapse by moving every member of the subclass up to the superclass and
-deleting the subclass. JetBrains documents that the tool verifies no
-external code depends on the subclass name before allowing the collapse
-([JetBrains Inline refactoring](https://www.jetbrains.com/help/idea/inline-refactoring.html),
-verified 2026-08-13). This is the production variant used in Java
+**IntelliJ IDEA's "Inline Superclass" refactoring** automates the
+collapse in the other direction, pushing every member of the superclass
+down into the class that uses it and deleting the superclass. JetBrains
+documents this as a collapse operation for a hierarchy that has become
+unnecessary
+([JetBrains Inline refactoring](https://www.jetbrains.com/help/idea/inline.html),
+verified 2026-08-18). This is the production variant used in Java
 codebases where the IDE finds every call site.
 
 ## 10. Consequences
@@ -474,8 +469,8 @@ is silent on data handling.
   [https://help.eclipse.org/latest/topic/org.eclipse.jdt.doc.user/tasks/task-using_refactoring.htm](https://help.eclipse.org/latest/topic/org.eclipse.jdt.doc.user/tasks/task-using_refactoring.htm),
   verified 2026-08-13.
 - JetBrains, "Inline refactoring,"
-  [https://www.jetbrains.com/help/idea/inline-refactoring.html](https://www.jetbrains.com/help/idea/inline-refactoring.html),
-  verified 2026-08-13.
+  [https://www.jetbrains.com/help/idea/inline.html](https://www.jetbrains.com/help/idea/inline.html),
+  verified 2026-08-18.
 - Martin Fowler, "Refactoring Catalog,"
   [https://refactoring.com/catalog/](https://refactoring.com/catalog/),
   verified 2026-08-13.
