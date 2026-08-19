@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-19 entries, 59,090 words. Every entry carries all 18
+20 entries, 61,747 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -28,6 +28,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Inline Class](inline-class.md) | canonical | 2,513 | You have a class that no longer earns its place. |
 | [Inline Function](inline-function.md) | canonical | 2,528 | You have a function whose body is as clear as its name, or clearer. |
 | [Inline Variable](inline-variable.md) | canonical | 2,113 | You have a variable whose initialiser is as clear as the variable name, or clearer. |
+| [Introduce Assertion](introduce-assertion.md) | canonical | 2,657 | A section of code makes an assumption about the state of the program at that point, for example that a divisor is not zero, that a list is not empty, or that a temperature is in a ... |
 
 ## Reading order
 
