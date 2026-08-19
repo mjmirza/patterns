@@ -257,7 +257,7 @@ class ConnectionConfig:
 ```typescript
 // TypeScript: before (public fields)
 
-class ConnectionConfig {
+class ConnectionConfigBefore {
     constructor(
         public host: string = "",
         public port: number = 0,
