@@ -264,7 +264,7 @@ class Course:
 ```typescript
 // TypeScript: before (exposed array)
 
-class Course {
+class CourseBefore {
     attendees: string[] = [];
 }
 
