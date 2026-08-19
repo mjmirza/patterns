@@ -212,13 +212,13 @@ public class Person {
     }
 }
 
-public class Employee extends Person {
+class Employee extends Person {
     public Employee(String name, int salary) {
         super(name);
     }
 }
 
-public class Customer extends Person {
+class Customer extends Person {
     public Customer(String name, double discount) {
         super(name);
     }
