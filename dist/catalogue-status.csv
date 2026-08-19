@@ -1,7 +1,7 @@
 family,name,published,planned,target,percent
 01-gof,Design Patterns (GoF),23,0,23,100.0
 02-code-smells,Code Smells,28,0,28,100.0
-03-refactoring,Refactoring Techniques,34,32,66,51.5
+03-refactoring,Refactoring Techniques,35,31,66,53.0
 04-principles-and-laws,Principles and Laws,41,0,41,100.0
 05-architectural,Architectural Patterns,30,0,30,100.0
 06-enterprise-application-architecture,Enterprise Application Architecture,48,0,48,100.0
