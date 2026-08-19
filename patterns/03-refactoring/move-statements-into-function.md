@@ -184,6 +184,12 @@ emit("world")
 ```
 
 ```typescript
+declare const conn: {
+    open(): void;
+    send(line: string): void;
+    close(): void;
+};
+
 // TypeScript: after (moved into function)
 
 function emit(line: string): void {
@@ -198,17 +204,33 @@ emit("world");
 ```
 
 ```java
-// Java: after (moved into function, try-with-resources)
+class Connection implements AutoCloseable {
+    void send(String line) {}
 
-public void emit(String line) {
-    try (Connection conn = openConnection()) {
-        conn.send(line);
-    }  // close is automatic
+    @Override
+    public void close() {}
 }
 
-// caller:
-emit("hello");
-emit("world");
+public class EmitService {
+
+    private Connection openConnection() {
+        return new Connection();
+    }
+
+    // Java: after (moved into function, try-with-resources)
+
+    public void emit(String line) {
+        try (Connection conn = openConnection()) {
+            conn.send(line);
+        }  // close is automatic
+    }
+
+    // caller:
+    public void run() {
+        emit("hello");
+        emit("world");
+    }
+}
 ```
 
 ## 9. Known production uses
