@@ -249,7 +249,7 @@ class Person:
 ```typescript
 // TypeScript: before (public field)
 
-class Person {
+class PersonBefore {
     constructor(public name: string = "") {}
 }
 
@@ -273,7 +273,7 @@ class Person {
 ```java
 // Java: before (public field)
 
-public class Person {
+class PersonBefore {
     public String name = "";
 }
 

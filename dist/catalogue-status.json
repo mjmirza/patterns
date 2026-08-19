@@ -1,6 +1,6 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 567,
+  "published_total": 568,
   "target_total": 854,
   "families_total": 29,
   "families_complete": 13,
@@ -36,12 +36,12 @@
       "family": "03-refactoring",
       "name": "Refactoring Techniques",
       "origin": "Fowler, Refactoring 2nd ed",
-      "published": 10,
-      "planned": 56,
+      "published": 11,
+      "planned": 55,
       "target": 66,
-      "percent": 15.2,
+      "percent": 16.7,
       "maturity": {
-        "canonical": 10
+        "canonical": 11
       }
     },
     {
