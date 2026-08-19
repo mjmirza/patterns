@@ -226,7 +226,7 @@ public class Person {
     public String getName() { return name; }
 }
 
-public class Employee extends Person {
+class Employee extends Person {
     private final double interestRate;
 
     public Employee(String name, double interestRate) {
@@ -239,8 +239,12 @@ public class Employee extends Person {
     }
 }
 
-public class Customer extends Person {
+class Customer extends Person {
     // no interestRate field
+
+    public Customer(String name) {
+        super(name);
+    }
 }
 ```
 
