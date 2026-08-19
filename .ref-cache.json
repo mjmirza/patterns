@@ -925,6 +925,7 @@
  "https://docs.python.org/3/library/asyncio-task.html#asyncio.gather": 200,
  "https://docs.python.org/3/library/asyncio-task.html#task-groups": 200,
  "https://docs.python.org/3/library/collections.abc.html": 200,
+ "https://docs.python.org/3/library/collections.html#collections.UserString": 200,
  "https://docs.python.org/3/library/concurrent.futures.html": 200,
  "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.wait": 200,
  "https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor": 200,

@@ -197,7 +197,7 @@ implemented directly on the receiving class. This variant is the inverse
 of Hide Delegate.
 
 ```python
-// Python: before (PhoneNumber class with one field and one method)
+# Python: before (PhoneNumber class with one field and one method)
 
 class PhoneNumber:
     def __init__(self, raw: str):
@@ -206,7 +206,7 @@ class PhoneNumber:
     def get_raw(self) -> str:
         return self._raw
 
-class Person:
+class PersonBefore:
     def __init__(self, name: str, phone: PhoneNumber):
         self.name = name
         self.phone = phone
@@ -214,7 +214,7 @@ class Person:
     def get_phone(self) -> str:
         return self.phone.get_raw()
 
-// Python: after (PhoneNumber inlined into Person)
+# Python: after (PhoneNumber inlined into Person)
 
 class Person:
     def __init__(self, name: str, phone: str):
@@ -234,7 +234,7 @@ class PhoneNumber {
     get value(): string { return this.raw; }
 }
 
-class Person {
+class PersonBefore {
     constructor(
         public name: string,
         private phone: PhoneNumber
@@ -284,13 +284,13 @@ public class Person {
 
 ## 9. Known production uses
 
-**IntelliJ IDEA's "Inline Class" refactoring** automates the merge by
-moving every member of the selected class to a target class and updating
-every call site. JetBrains documents that the tool analyses the class's
-members, determines which can be moved and which must be converted, and
-deletes the source class after the move
-([JetBrains Inline refactoring](https://www.jetbrains.com/help/idea/inline-refactoring.html),
-verified 2026-08-13).
+**IntelliJ IDEA's Inline refactoring family** automates the manual steps of
+this pattern one member at a time. inlining a field, a method, or a
+constructor folds that member's usages into its caller and removes the
+original declaration, which is the same move-then-delete mechanic applied
+across every member of a class being inlined
+([JetBrains Inline documentation](https://www.jetbrains.com/help/idea/inline.html),
+verified 2026-08-19).
 
 **Python's standard library inlined the `UserString` class's role** when
 the `str` type gained the methods that `UserString` previously provided
@@ -427,9 +427,9 @@ boundary. This is a security relevant change that should be reviewed.
   edition, Addison-Wesley, 1999, chapter 7, "Inline Class."
 - Robert C. Martin, *Agile Software Development. Principles, Patterns,
   and Practices*, Prentice Hall, 2002, chapter 8.
-- JetBrains, "Inline refactoring,"
-  [https://www.jetbrains.com/help/idea/inline-refactoring.html](https://www.jetbrains.com/help/idea/inline-refactoring.html),
-  verified 2026-08-13.
+- JetBrains, "Inline,"
+  [https://www.jetbrains.com/help/idea/inline.html](https://www.jetbrains.com/help/idea/inline.html),
+  verified 2026-08-19.
 - Python Software Foundation, "collections.UserString,"
   [https://docs.python.org/3/library/collections.html#collections.UserString](https://docs.python.org/3/library/collections.html#collections.UserString),
   verified 2026-08-13.
