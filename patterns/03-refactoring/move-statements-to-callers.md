@@ -169,6 +169,20 @@ log(result)
 ```
 
 ```typescript
+interface Order {
+    id: number;
+}
+
+interface Result {
+    total: number;
+}
+
+declare function compute(order: Order): Result;
+declare function beginTransaction(): unknown;
+declare function commit(tx: unknown): void;
+declare function log(result: Result): void;
+declare const order: Order;
+
 // TypeScript: after (caller manages transaction)
 
 function processOrder(order: Order): Result {
@@ -183,17 +197,44 @@ log(result);
 ```
 
 ```java
-// Java: after (caller manages transaction)
-
-public Result processOrder(Order order) {
-    return compute(order);
+class Order {
+    int id;
 }
 
-// caller:
-Transaction tx = beginTransaction();
-Result result = processOrder(order);
-tx.commit();
-log(result);
+class Result {
+    double total;
+}
+
+class Transaction {
+    void commit() {}
+}
+
+public class OrderProcessor {
+
+    private Result compute(Order order) {
+        return new Result();
+    }
+
+    private Transaction beginTransaction() {
+        return new Transaction();
+    }
+
+    private void log(Result result) {}
+
+    // Java: after (caller manages transaction)
+
+    public Result processOrder(Order order) {
+        return compute(order);
+    }
+
+    // caller:
+    public void run(Order order) {
+        Transaction tx = beginTransaction();
+        Result result = processOrder(order);
+        tx.commit();
+        log(result);
+    }
+}
 ```
 
 ## 9. Known production uses

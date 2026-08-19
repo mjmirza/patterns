@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-25 entries, 73,831 words. Every entry carries all 18
+26 entries, 75,430 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -34,6 +34,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Move Field](move-field.md) | canonical | 2,268 | A field is on a class that does not use it, or that uses it less than another class does. |
 | [Move Function](move-function.md) | canonical | 2,436 | A function is on a class or module that does not use it, or that uses it less than another class does. |
 | [Move Statements into Function](move-statements-into-function.md) | canonical | 1,717 | You have a function that is called from multiple places, and every caller performs the same statements immediately before or after the call. |
+| [Move Statements to Callers](move-statements-to-callers.md) | canonical | 1,599 | A function performs statements that vary by caller or that are not the function's responsibility. |
 
 ## Reading order
 
