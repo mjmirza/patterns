@@ -1,16 +1,16 @@
 family,name,published,planned,target,percent
 01-gof,Design Patterns (GoF),23,0,23,100.0
 02-code-smells,Code Smells,28,0,28,100.0
-03-refactoring,Refactoring Techniques,0,66,66,0.0
+03-refactoring,Refactoring Techniques,17,49,66,25.8
 04-principles-and-laws,Principles and Laws,41,0,41,100.0
 05-architectural,Architectural Patterns,30,0,30,100.0
 06-enterprise-application-architecture,Enterprise Application Architecture,48,0,48,100.0
-07-integration,Enterprise Integration,44,10,54,81.5
+07-integration,Enterprise Integration,54,0,54,100.0
 08-cloud-distributed,Cloud and Distributed,42,0,42,100.0
-09-concurrency,Concurrency and Parallelism,0,40,40,0.0
-10-microservices,Microservices,44,5,49,89.8
-11-domain-driven-design,Domain-Driven Design,29,6,35,82.9
-12-data-storage,Data and Storage,0,41,41,0.0
+09-concurrency,Concurrency and Parallelism,40,0,40,100.0
+10-microservices,Microservices,49,0,49,100.0
+11-domain-driven-design,Domain-Driven Design,35,0,35,100.0
+12-data-storage,Data and Storage,41,0,41,100.0
 13-frontend-ui,Frontend and UI,0,34,34,0.0
 14-testing,Testing,30,0,30,100.0
 15-security,Security,0,38,38,0.0
