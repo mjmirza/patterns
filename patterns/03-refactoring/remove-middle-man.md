@@ -182,6 +182,10 @@ class Person:
 ```typescript
 // TypeScript: after (delegate exposed)
 
+class Department {
+    constructor(public manager: string, public name: string) {}
+}
+
 class Person {
     constructor(private department: Department) {}
 
@@ -194,6 +198,19 @@ class Person {
 
 ```java
 // Java: after (delegate exposed)
+
+class Department {
+    private final String manager;
+    private final String name;
+
+    public Department(String manager, String name) {
+        this.manager = manager;
+        this.name = name;
+    }
+
+    public String getManager() { return manager; }
+    public String getName() { return name; }
+}
 
 public class Person {
     private final Department department;
@@ -212,13 +229,6 @@ public class Person {
 ```
 
 ## 9. Known production uses
-
-**The "Middle Man" code smell** is documented by SonarSource as a
-detectable pattern. SonarQube's code smell detection identifies classes
-where most methods are pure delegation, which is the pattern this
-refactoring targets
-([SonarSource Code Smells](https://rules.sonarsource.com/java/),
-verified 2026-08-13).
 
 **Java's `Collections.unmodifiableList`** is an example of a deliberate
 middle man that is not removed, because it adds behaviour: it throws
@@ -308,9 +318,6 @@ should be reviewed.
   edition, Addison-Wesley, 2018, chapter 9, "Remove Middle Man."
 - Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 1st
   edition, Addison-Wesley, 1999, chapter 7, "Remove Middle Man."
-- SonarSource, "Code Smells,"
-  [https://rules.sonarsource.com/java/](https://rules.sonarsource.com/java/),
-  verified 2026-08-13.
 - Oracle, "Collections.unmodifiableList,"
   [https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html#unmodifiableList(java.util.List)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html#unmodifiableList(java.util.List)),
   verified 2026-08-13.

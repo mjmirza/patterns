@@ -2080,7 +2080,7 @@
  "https://martinfowler.com/bliki/ConwaysLaw.html": 200,
  "https://martinfowler.com/bliki/DDD_Aggregate.html": 200,
  "https://martinfowler.com/bliki/EvansClassification.html": 200,
- "https://martinfowler.com/bliki/FailFast.html": "HTTPError",
+ "https://martinfowler.com/bliki/FailFast.html": "404 then HTTPError",
  "https://martinfowler.com/bliki/FluentInterface.html": 200,
  "https://martinfowler.com/bliki/GivenWhenThen.html": 200,
  "https://martinfowler.com/bliki/HumbleObject.html": 200,
