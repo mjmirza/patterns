@@ -307,7 +307,7 @@ class Person {
 ```java
 // Java: after (extracted with reference)
 
-public class Office {
+class Office {
     private String building;
     private int floor;
     private String desk;
