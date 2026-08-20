@@ -535,16 +535,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Test Pyramid](../patterns/14-testing/test-pyramid.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Test Trophy](../patterns/14-testing/test-trophy.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Testcontainers](../patterns/14-testing/testcontainers.md) | Testing |  |  | Yes | Yes |  |  |  |  | Yes |
-| [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
-| [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
-| [Fail Securely](../patterns/15-security/fail-securely.md) | Security |  |  | Yes |  |  | Yes | Yes |  |  |
-| [Least Privilege](../patterns/15-security/least-privilege.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
-| [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Secrets Management](../patterns/15-security/secrets-management.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
-| [Secure by Default](../patterns/15-security/secure-by-default.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
-| [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
-| [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
-| [Zero Trust](../patterns/15-security/zero-trust.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Advanced RAG](../patterns/17-ai-agentic/advanced-rag.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Agent Debate](../patterns/17-ai-agentic/agent-debate.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -887,7 +878,6 @@ These patterns contain runnable code examples written in Go:
 - [Compensating Transaction](../patterns/08-cloud-distributed/compensating-transaction.md) (Cloud and Distributed)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) (Cloud and Distributed)
-- [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composable](../patterns/04-principles-and-laws/composable.md) (Principles and Laws)
 - [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) (Enterprise Integration)
 - [Composite](../patterns/01-gof/composite.md) (Design Patterns (GoF))
@@ -933,7 +923,6 @@ These patterns contain runnable code examples written in Go:
 - [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) (Microservices)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-gof/decorator.md) (Design Patterns (GoF))
-- [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
 - [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) (Cloud and Distributed)
@@ -978,7 +967,6 @@ These patterns contain runnable code examples written in Go:
 - [Facade](../patterns/01-gof/facade.md) (Design Patterns (GoF))
 - [Factory](../patterns/11-domain-driven-design/factory.md) (Domain-Driven Design)
 - [Fail Fast](../patterns/04-principles-and-laws/fail-fast.md) (Principles and Laws)
-- [Fail Securely](../patterns/15-security/fail-securely.md) (Security)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) (AI and Agentic)
 - [Fault Injection](../patterns/14-testing/fault-injection.md) (Testing)
@@ -1055,7 +1043,6 @@ These patterns contain runnable code examples written in Go:
 - [Leader-Follower Architecture](../patterns/05-architectural/leader-follower-architecture.md) (Architectural Patterns)
 - [Leader/Followers](../patterns/09-concurrency/leader-followers.md) (Concurrency and Parallelism)
 - [Leaderless Replication](../patterns/12-data-storage/leaderless-replication.md) (Data and Storage)
-- [Least Privilege](../patterns/15-security/least-privilege.md) (Security)
 - [Least to Most](../patterns/17-ai-agentic/least-to-most.md) (AI and Agentic)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
 - [Lock Striping](../patterns/09-concurrency/lock-striping.md) (Concurrency and Parallelism)
@@ -1112,7 +1099,6 @@ These patterns contain runnable code examples written in Go:
 - [No Caching](../patterns/18-anti-patterns/no-caching.md) (Anti-Patterns)
 - [Normalizer](../patterns/07-integration/normalizer.md) (Enterprise Integration)
 - [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) (Anti-Patterns)
-- [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
@@ -1221,7 +1207,6 @@ These patterns contain runnable code examples written in Go:
 - [Schema Registry](../patterns/10-microservices/schema-registry.md) (Microservices)
 - [Scoped Locking](../patterns/09-concurrency/scoped-locking.md) (Concurrency and Parallelism)
 - [Secrets Management](../patterns/15-security/secrets-management.md) (Security)
-- [Secure by Default](../patterns/15-security/secure-by-default.md) (Security)
 - [Selective Consumer](../patterns/07-integration/selective-consumer.md) (Enterprise Integration)
 - [Self Registration](../patterns/10-microservices/self-registration.md) (Microservices)
 - [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) (AI and Agentic)
@@ -1233,7 +1218,6 @@ These patterns contain runnable code examples written in Go:
 - [Separate Ways](../patterns/11-domain-driven-design/separate-ways.md) (Domain-Driven Design)
 - [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) (Enterprise Application Architecture)
 - [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) (Principles and Laws)
-- [Separation of Duties](../patterns/15-security/separation-of-duties.md) (Security)
 - [Sequential Convoy](../patterns/08-cloud-distributed/sequential-convoy.md) (Cloud and Distributed)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
@@ -1316,7 +1300,6 @@ These patterns contain runnable code examples written in Go:
 - [Throttling](../patterns/08-cloud-distributed/throttling.md) (Cloud and Distributed)
 - [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) (Anti-Patterns)
 - [Token Budget](../patterns/17-ai-agentic/token-budget.md) (AI and Agentic)
-- [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
 - [Transaction Log Tailing](../patterns/10-microservices/transaction-log-tailing.md) (Microservices)
@@ -1341,7 +1324,6 @@ These patterns contain runnable code examples written in Go:
 - [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) (Data and Storage)
 - [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) (Data and Storage)
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
-- [Zero Trust](../patterns/15-security/zero-trust.md) (Security)
 
 #### Changes Shape in Go
 
@@ -1390,7 +1372,6 @@ These patterns have unique implementation variants or change their design struct
 - [Compare-and-Swap Loop](../patterns/09-concurrency/compare-and-swap-loop.md) (Concurrency and Parallelism)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) (Cloud and Distributed)
-- [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composable](../patterns/04-principles-and-laws/composable.md) (Principles and Laws)
 - [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) (Enterprise Integration)
 - [Composite](../patterns/01-gof/composite.md) (Design Patterns (GoF))
@@ -1547,7 +1528,6 @@ These patterns have unique implementation variants or change their design struct
 - [Separate Ways](../patterns/11-domain-driven-design/separate-ways.md) (Domain-Driven Design)
 - [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) (Enterprise Application Architecture)
 - [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) (Principles and Laws)
-- [Separation of Duties](../patterns/15-security/separation-of-duties.md) (Security)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Serverless Deployment](../patterns/10-microservices/serverless-deployment.md) (Microservices)
 - [Service Instance per Container](../patterns/10-microservices/service-instance-per-container.md) (Microservices)
@@ -2331,7 +2311,6 @@ These patterns contain runnable code examples written in Python:
 - [Compensating Transaction](../patterns/08-cloud-distributed/compensating-transaction.md) (Cloud and Distributed)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) (Cloud and Distributed)
-- [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composable](../patterns/04-principles-and-laws/composable.md) (Principles and Laws)
 - [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) (Enterprise Integration)
 - [Composite](../patterns/01-gof/composite.md) (Design Patterns (GoF))
@@ -2378,7 +2357,6 @@ These patterns contain runnable code examples written in Python:
 - [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) (Microservices)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-gof/decorator.md) (Design Patterns (GoF))
-- [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
 - [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) (Cloud and Distributed)
@@ -2432,7 +2410,6 @@ These patterns contain runnable code examples written in Python:
 - [Factory Method](../patterns/01-gof/factory-method.md) (Design Patterns (GoF))
 - [Factory](../patterns/11-domain-driven-design/factory.md) (Domain-Driven Design)
 - [Fail Fast](../patterns/04-principles-and-laws/fail-fast.md) (Principles and Laws)
-- [Fail Securely](../patterns/15-security/fail-securely.md) (Security)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) (AI and Agentic)
 - [Fault Injection](../patterns/14-testing/fault-injection.md) (Testing)
@@ -2528,7 +2505,6 @@ These patterns contain runnable code examples written in Python:
 - [Leader-Follower Architecture](../patterns/05-architectural/leader-follower-architecture.md) (Architectural Patterns)
 - [Leader/Followers](../patterns/09-concurrency/leader-followers.md) (Concurrency and Parallelism)
 - [Leaderless Replication](../patterns/12-data-storage/leaderless-replication.md) (Data and Storage)
-- [Least Privilege](../patterns/15-security/least-privilege.md) (Security)
 - [Least to Most](../patterns/17-ai-agentic/least-to-most.md) (AI and Agentic)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
 - [Log Aggregation](../patterns/10-microservices/log-aggregation.md) (Microservices)
@@ -2591,7 +2567,6 @@ These patterns contain runnable code examples written in Python:
 - [No Caching](../patterns/18-anti-patterns/no-caching.md) (Anti-Patterns)
 - [Normalizer](../patterns/07-integration/normalizer.md) (Enterprise Integration)
 - [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) (Anti-Patterns)
-- [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
@@ -2723,7 +2698,6 @@ These patterns contain runnable code examples written in Python:
 - [Schema Registry](../patterns/10-microservices/schema-registry.md) (Microservices)
 - [Scoped Locking](../patterns/09-concurrency/scoped-locking.md) (Concurrency and Parallelism)
 - [Secrets Management](../patterns/15-security/secrets-management.md) (Security)
-- [Secure by Default](../patterns/15-security/secure-by-default.md) (Security)
 - [Selective Consumer](../patterns/07-integration/selective-consumer.md) (Enterprise Integration)
 - [Self Registration](../patterns/10-microservices/self-registration.md) (Microservices)
 - [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) (AI and Agentic)
@@ -2735,7 +2709,6 @@ These patterns contain runnable code examples written in Python:
 - [Separate Ways](../patterns/11-domain-driven-design/separate-ways.md) (Domain-Driven Design)
 - [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) (Enterprise Application Architecture)
 - [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) (Principles and Laws)
-- [Separation of Duties](../patterns/15-security/separation-of-duties.md) (Security)
 - [Sequential Convoy](../patterns/08-cloud-distributed/sequential-convoy.md) (Cloud and Distributed)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
 - [Server Session State](../patterns/06-enterprise-application-architecture/server-session-state.md) (Enterprise Application Architecture)
@@ -2822,7 +2795,6 @@ These patterns contain runnable code examples written in Python:
 - [Throttling](../patterns/08-cloud-distributed/throttling.md) (Cloud and Distributed)
 - [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) (Anti-Patterns)
 - [Token Budget](../patterns/17-ai-agentic/token-budget.md) (AI and Agentic)
-- [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
 - [Transaction Log Tailing](../patterns/10-microservices/transaction-log-tailing.md) (Microservices)
@@ -2851,7 +2823,6 @@ These patterns contain runnable code examples written in Python:
 - [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) (Data and Storage)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
-- [Zero Trust](../patterns/15-security/zero-trust.md) (Security)
 
 #### Changes Shape in Python
 
@@ -2899,7 +2870,6 @@ These patterns have unique implementation variants or change their design struct
 - [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) (Principles and Laws)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) (Cloud and Distributed)
-- [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composable](../patterns/04-principles-and-laws/composable.md) (Principles and Laws)
 - [Consolidate Conditional Expression](../patterns/03-refactoring/consolidate-conditional-expression.md) (Refactoring Techniques)
 - [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) (Domain-Driven Design)
@@ -3081,7 +3051,6 @@ These patterns have unique implementation variants or change their design struct
 - [Semaphore](../patterns/09-concurrency/semaphore.md) (Concurrency and Parallelism)
 - [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) (Refactoring Techniques)
 - [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) (Enterprise Application Architecture)
-- [Separation of Duties](../patterns/15-security/separation-of-duties.md) (Security)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
 - [Serverless Deployment](../patterns/10-microservices/serverless-deployment.md) (Microservices)
@@ -3219,7 +3188,6 @@ These patterns contain runnable code examples written in Rust:
 - [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) (Cloud and Distributed)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
 - [Fail Fast](../patterns/04-principles-and-laws/fail-fast.md) (Principles and Laws)
-- [Fail Securely](../patterns/15-security/fail-securely.md) (Security)
 - [Flyweight](../patterns/01-gof/flyweight.md) (Design Patterns (GoF))
 - [Fork-Join](../patterns/09-concurrency/fork-join.md) (Concurrency and Parallelism)
 - [Future Promise](../patterns/09-concurrency/future-promise.md) (Concurrency and Parallelism)
@@ -3735,7 +3703,6 @@ These patterns contain runnable code examples written in TypeScript:
 - [Compensating Transaction](../patterns/08-cloud-distributed/compensating-transaction.md) (Cloud and Distributed)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) (Cloud and Distributed)
-- [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composable](../patterns/04-principles-and-laws/composable.md) (Principles and Laws)
 - [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) (Enterprise Integration)
 - [Composite](../patterns/01-gof/composite.md) (Design Patterns (GoF))
@@ -3779,7 +3746,6 @@ These patterns contain runnable code examples written in TypeScript:
 - [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) (Microservices)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-gof/decorator.md) (Design Patterns (GoF))
-- [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
 - [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) (Cloud and Distributed)
@@ -3923,7 +3889,6 @@ These patterns contain runnable code examples written in TypeScript:
 - [Leader Election](../patterns/08-cloud-distributed/leader-election.md) (Cloud and Distributed)
 - [Leader-Follower Architecture](../patterns/05-architectural/leader-follower-architecture.md) (Architectural Patterns)
 - [Leaderless Replication](../patterns/12-data-storage/leaderless-replication.md) (Data and Storage)
-- [Least Privilege](../patterns/15-security/least-privilege.md) (Security)
 - [Least to Most](../patterns/17-ai-agentic/least-to-most.md) (AI and Agentic)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
 - [Lock Striping](../patterns/09-concurrency/lock-striping.md) (Concurrency and Parallelism)
@@ -3986,7 +3951,6 @@ These patterns contain runnable code examples written in TypeScript:
 - [No Caching](../patterns/18-anti-patterns/no-caching.md) (Anti-Patterns)
 - [Normalizer](../patterns/07-integration/normalizer.md) (Enterprise Integration)
 - [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) (Anti-Patterns)
-- [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
@@ -4115,7 +4079,6 @@ These patterns contain runnable code examples written in TypeScript:
 - [Schema Registry](../patterns/10-microservices/schema-registry.md) (Microservices)
 - [Scoped Locking](../patterns/09-concurrency/scoped-locking.md) (Concurrency and Parallelism)
 - [Secrets Management](../patterns/15-security/secrets-management.md) (Security)
-- [Secure by Default](../patterns/15-security/secure-by-default.md) (Security)
 - [Selective Consumer](../patterns/07-integration/selective-consumer.md) (Enterprise Integration)
 - [Self Registration](../patterns/10-microservices/self-registration.md) (Microservices)
 - [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) (AI and Agentic)
@@ -4126,7 +4089,6 @@ These patterns contain runnable code examples written in TypeScript:
 - [Separate Ways](../patterns/11-domain-driven-design/separate-ways.md) (Domain-Driven Design)
 - [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) (Enterprise Application Architecture)
 - [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) (Principles and Laws)
-- [Separation of Duties](../patterns/15-security/separation-of-duties.md) (Security)
 - [Sequential Convoy](../patterns/08-cloud-distributed/sequential-convoy.md) (Cloud and Distributed)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
@@ -4211,7 +4173,6 @@ These patterns contain runnable code examples written in TypeScript:
 - [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) (Data and Storage)
 - [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) (Anti-Patterns)
 - [Token Budget](../patterns/17-ai-agentic/token-budget.md) (AI and Agentic)
-- [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
 - [Transaction Log Tailing](../patterns/10-microservices/transaction-log-tailing.md) (Microservices)
@@ -4239,7 +4200,6 @@ These patterns contain runnable code examples written in TypeScript:
 - [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) (Data and Storage)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
-- [Zero Trust](../patterns/15-security/zero-trust.md) (Security)
 
 #### Changes Shape in TypeScript
 
@@ -4273,7 +4233,6 @@ These patterns have unique implementation variants or change their design struct
 - [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) (Refactoring Techniques)
 - [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) (Cloud and Distributed)
 - [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) (Principles and Laws)
-- [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composition over Inheritance](../patterns/04-principles-and-laws/composition-over-inheritance.md) (Principles and Laws)
 - [Conformist](../patterns/11-domain-driven-design/conformist.md) (Domain-Driven Design)
 - [Consolidate Conditional Expression](../patterns/03-refactoring/consolidate-conditional-expression.md) (Refactoring Techniques)
@@ -4397,7 +4356,6 @@ These patterns have unique implementation variants or change their design struct
 - [Saga](../patterns/08-cloud-distributed/saga.md) (Cloud and Distributed)
 - [Scoped Locking](../patterns/09-concurrency/scoped-locking.md) (Concurrency and Parallelism)
 - [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) (Refactoring Techniques)
-- [Separation of Duties](../patterns/15-security/separation-of-duties.md) (Security)
 - [Serverless Deployment](../patterns/10-microservices/serverless-deployment.md) (Microservices)
 - [Slide Statements](../patterns/03-refactoring/slide-statements.md) (Refactoring Techniques)
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)

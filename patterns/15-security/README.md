@@ -2,28 +2,14 @@
 
 Origin. OWASP ASVS
 
-10 entries, 63,896 words. Every entry carries all 18
+1 entries, 2,742 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
-
-## Authorization
-
-| Pattern | Maturity | Words | Intent |
-|---|---|---|---|
-| [OAuth 2.1 Flows](oauth-2-1-flows.md) | established | 7,011 | A service needs to let software access protected resources without giving that software the resource owner's primary credential. |
 
 ## Security
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Complete Mediation](complete-mediation.md) | canonical | 7,097 | A system contains objects that are not public. |
-| [Defense in Depth](defense-in-depth.md) | canonical | 6,502 | A system has assets that must remain confidential, correct, and available while being exposed to users, code, networks, dependencies, administrators, build systems, and other ... |
-| [Fail Securely](fail-securely.md) | established | 6,856 | A program must make a decision that protects a resource, but the information needed for that decision can be absent, stale, malformed, contradictory, late, or produced by a ... |
-| [Least Privilege](least-privilege.md) | canonical | 6,389 | A system needs trusted actions to happen, but the code, user, service account, container, or job that performs those actions can also fail, be tricked, or be taken over. |
 | [Secrets Management](secrets-management.md) | established | 2,742 | An application needs credentials to call a database, sign a token, decrypt a record, publish to a queue, or call a third-party API. |
-| [Secure by Default](secure-by-default.md) | established | 6,822 | A system has settings, generated files, API defaults, permission rules, feature switches, installation steps, or project scaffolds. |
-| [Separation of Duties](separation-of-duties.md) | canonical | 6,652 | A system has operations where one trusted actor can cause damage and hide it. |
-| [Token-based Authentication](token-based-authentication.md) | established | 7,183 | The problem appears when a system must authenticate repeated requests without asking the caller to resend a long-lived secret, such as a password, private key, or root cloud ... |
-| [Zero Trust](zero-trust.md) | established | 6,642 | A system has users, services, jobs, devices, and partners that need access to resources from many networks. |
 
 ## Reading order
 

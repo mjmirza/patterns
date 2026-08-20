@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-643%20published%20%2F%20853%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-634%20published%20%2F%20853%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -14,10 +14,10 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-643-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-210-lightgrey)
-![Catalogue completion](https://img.shields.io/badge/completion-75.4%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-3500-brightgreen)
+![Published entries](https://img.shields.io/badge/published-634-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-219-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-74.3%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-3414-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
@@ -106,7 +106,7 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 | 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 41 | 0 | 41 |
 | 13 | [Frontend and UI](patterns/13-frontend-ui/) | Framework documentation | 0 | 34 | 34 |
 | 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 30 | 0 | 30 |
-| 15 | [Security](patterns/15-security/) | OWASP ASVS | 10 | 28 | 38 |
+| 15 | [Security](patterns/15-security/) | OWASP ASVS | 1 | 37 | 38 |
 | 16 | [Functional Programming](patterns/16-functional/) | Category theory in practice | 0 | 40 | 40 |
 | 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 55 | 0 | 55 |
 | 18 | [Anti-Patterns](patterns/18-anti-patterns/) | Brown et al, AntiPatterns | 51 | 0 | 51 |
