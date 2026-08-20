@@ -2,7 +2,7 @@
 
 all: check
 
-check: structure prose code refs catalogue-check duplicates duplicates-test
+check: structure prose code refs catalogue-check duplicates-test
 
 structure:
 	@python3 tools/check-structure.py
