@@ -1,0 +1,11 @@
+# Reviewed false positives only. Each entry is a gitleaks Fingerprint
+# (commit:file:rule:line) for a finding that was investigated, confirmed to
+# be illustrative example content (never a real credential), and fixed
+# forward in a later commit. The original commit is kept in history rather
+# than rewritten, so the fingerprint stays and is allowlisted here instead.
+#
+# 69a1aa3: patterns/15-security/webhook-signature-verification.md line 457
+# had a realistic-looking hex literal assigned to `secret_value` in the
+# Slack HMAC demo. It was never a live credential. Replaced with an
+# obviously fake placeholder in a follow-up commit on the same PR.
+69a1aa3db3a3bafad7b9adb857efff5d7450b9ce:patterns/15-security/webhook-signature-verification.md:generic-api-key:457
