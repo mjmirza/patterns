@@ -2,7 +2,7 @@
 
 Origin. OWASP ASVS
 
-10 entries, 63,896 words. Every entry carries all 18
+19 entries, 122,861 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Authorization
@@ -11,19 +11,38 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [OAuth 2.1 Flows](oauth-2-1-flows.md) | established | 7,011 | A service needs to let software access protected resources without giving that software the resource owner's primary credential. |
 
+## Injection Defense
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Parameterized Query](parameterized-query.md) | canonical | 7,342 | An application must issue a query whose predicate values come from runtime state: a user id, tenant id, search term, date range, account status, cursor, or authorization scope. |
+
 ## Security
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [CSRF Token](csrf-token.md) | established | 6,821 | A web application uses browser-sent ambient credentials for authentication. |
 | [Complete Mediation](complete-mediation.md) | canonical | 7,097 | A system contains objects that are not public. |
+| [Content Security Policy](content-security-policy.md) | established | 6,848 | A web page runs with large ambient power. |
 | [Defense in Depth](defense-in-depth.md) | canonical | 6,502 | A system has assets that must remain confidential, correct, and available while being exposed to users, code, networks, dependencies, administrators, build systems, and other ... |
+| [Envelope Encryption](envelope-encryption.md) | established | 6,273 | A system must encrypt many records, objects, files, messages, volumes, or tenant datasets. |
 | [Fail Securely](fail-securely.md) | established | 6,856 | A program must make a decision that protects a resource, but the information needed for that decision can be absent, stale, malformed, contradictory, late, or produced by a ... |
+| [Input Validation](input-validation.md) | canonical | 6,182 | A program accepts bytes, strings, numbers, objects, headers, files, paths, identifiers, query parameters, form fields, JSON bodies, environment variables, messages, or records ... |
+| [JWT](jwt.md) | established | 6,076 | A resource server needs to accept repeated calls without contacting the issuer for every request, yet it still needs an issuer, subject, audience, expiry, possibly scopes, and a ... |
 | [Least Privilege](least-privilege.md) | canonical | 6,389 | A system needs trusted actions to happen, but the code, user, service account, container, or job that performs those actions can also fail, be tricked, or be taken over. |
+| [OpenID Connect](openid-connect.md) | established | 7,015 | The problem appears when an application needs to sign in users through an external identity system without copying passwords, duplicating multi-factor logic, or inventing its own ... |
+| [Output Encoding](output-encoding.md) | established | 6,294 | A program has data that may contain characters with special meaning in the output grammar. |
 | [Secrets Management](secrets-management.md) | established | 2,742 | An application needs credentials to call a database, sign a token, decrypt a record, publish to a queue, or call a third-party API. |
 | [Secure by Default](secure-by-default.md) | established | 6,822 | A system has settings, generated files, API defaults, permission rules, feature switches, installation steps, or project scaffolds. |
 | [Separation of Duties](separation-of-duties.md) | canonical | 6,652 | A system has operations where one trusted actor can cause damage and hide it. |
 | [Token-based Authentication](token-based-authentication.md) | established | 7,183 | The problem appears when a system must authenticate repeated requests without asking the caller to resend a long-lived secret, such as a password, private key, or root cloud ... |
 | [Zero Trust](zero-trust.md) | established | 6,642 | A system has users, services, jobs, devices, and partners that need access to resources from many networks. |
+
+## Web Security
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Session Management](session-management.md) | established | 6,114 | HTTP requests arrive independently. A user signs in on one request, then clicks through pages, posts forms, uploads data, and calls APIs on later requests. |
 
 ## Reading order
 
