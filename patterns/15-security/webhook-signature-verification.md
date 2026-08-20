@@ -454,7 +454,7 @@ def verify_slack(secret: str, body: bytes, timestamp: str, header: str) -> bool:
 
 now = str(int(time.time()))
 payload = b"token=xyzz&team_id=T1"
-secret_value = "8f742231b10e8888abcd99yyyzzz85a5"
+secret_value = "example-webhook-shared-secret-not-real"
 base_string = b"v0:" + now.encode("ascii") + b":" + payload
 sig = "v0=" + hmac.new(
     secret_value.encode("utf-8"), base_string, hashlib.sha256
