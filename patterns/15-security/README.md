@@ -2,7 +2,7 @@
 
 Origin. OWASP ASVS
 
-25 entries, 160,983 words. Every entry carries all 18
+34 entries, 217,631 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Authorization
@@ -32,17 +32,31 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Idempotency Key](idempotency-key.md) | established | 6,606 | A client sends a mutating request and then loses the answer. |
 | [Input Validation](input-validation.md) | canonical | 6,182 | A program accepts bytes, strings, numbers, objects, headers, files, paths, identifiers, query parameters, form fields, JSON bodies, environment variables, messages, or records ... |
 | [JWT](jwt.md) | established | 6,076 | A resource server needs to accept repeated calls without contacting the issuer for every request, yet it still needs an issuer, subject, audience, expiry, possibly scopes, and a ... |
+| [Key Rotation](key-rotation.md) | established | 6,762 | A system depends on secret material that cannot be treated as permanent. |
 | [Least Privilege](least-privilege.md) | canonical | 6,389 | A system needs trusted actions to happen, but the code, user, service account, container, or job that performs those actions can also fail, be tricked, or be taken over. |
 | [Mutual TLS](mutual-tls.md) | established | 6,027 | A service accepts network calls from other machines. |
 | [OpenID Connect](openid-connect.md) | established | 7,015 | The problem appears when an application needs to sign in users through an external identity system without copying passwords, duplicating multi-factor logic, or inventing its own ... |
 | [Output Encoding](output-encoding.md) | established | 6,294 | A program has data that may contain characters with special meaning in the output grammar. |
+| [Passkeys and WebAuthn](passkeys-and-webauthn.md) | established | 6,513 | A web service needs strong user authentication, but passwords have become the wrong primitive. |
+| [Passwordless Authentication](passwordless-authentication.md) | established | 6,470 | A user-facing system needs to authenticate people without making a reusable shared secret the center of the login ceremony. |
 | [Relationship-Based Access Control](rebac.md) | established | 6,005 | A collaborative system grants access because of how a subject is related to a particular object. |
 | [Role-Based Access Control](rbac.md) | canonical | 6,897 | A system has many people, services, jobs, and automated agents, and each one needs different authority over many objects. |
+| [STRIDE](stride.md) | established | 6,084 | A team has an architecture sketch, a data flow, a new feature, or a service boundary, and needs a disciplined way to ask security questions before the design becomes expensive to ... |
 | [Secrets Management](secrets-management.md) | established | 2,742 | An application needs credentials to call a database, sign a token, decrypt a record, publish to a queue, or call a third-party API. |
 | [Secure by Default](secure-by-default.md) | established | 6,822 | A system has settings, generated files, API defaults, permission rules, feature switches, installation steps, or project scaffolds. |
 | [Separation of Duties](separation-of-duties.md) | canonical | 6,652 | A system has operations where one trusted actor can cause damage and hide it. |
+| [Supply Chain SBOM](supply-chain-sbom.md) | established | 6,110 | A software artifact enters production with code from many origins. |
+| [Threat Modeling](threat-modeling.md) | established | 6,225 | A software team is making a design choice that changes who can reach which asset, what data crosses which boundary, what authority a component holds, or what a failed control ... |
+| [Token Binding and DPoP](token-binding-and-dpop.md) | established | 6,233 | Bearer tokens are convenient because a resource server can authorize a request by checking the token. |
 | [Token-based Authentication](token-based-authentication.md) | established | 7,183 | The problem appears when a system must authenticate repeated requests without asking the caller to resend a long-lived secret, such as a password, private key, or root cloud ... |
+| [Webhook Signature Verification](webhook-signature-verification.md) | established | 6,038 | A webhook endpoint receives requests from the public internet, usually without a browser session, an OAuth bearer token, or a mutual TLS client certificate. |
 | [Zero Trust](zero-trust.md) | established | 6,642 | A system has users, services, jobs, devices, and partners that need access to resources from many networks. |
+
+## Transport Security
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Certificate Pinning](certificate-pinning.md) | established | 6,213 | TLS authenticates a server by building and validating a certificate chain from the server's leaf certificate to a trusted root. |
 
 ## Web Security
 
