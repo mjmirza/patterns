@@ -2,8 +2,21 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-49 entries, 154,857 words. Every entry carries all 18
+58 entries, 212,310 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Data Organization
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Replace Primitive with Object](replace-primitive-with-object.md) | canonical | 6,571 | A primitive has started to carry a domain concept that the language type cannot express. |
+
+## Dealing with Inheritance
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Replace Subclass with Delegate](replace-subclass-with-delegate.md) | canonical | 6,357 | A class hierarchy has started to carry more variation than inheritance can represent cleanly. |
+| [Replace Superclass with Delegate](replace-superclass-with-delegate.md) | canonical | 6,036 | A class extends a superclass to reuse behavior, but the subclass is not truly a special case of that superclass. |
 
 ## Refactoring
 
@@ -58,6 +71,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Replace Exception with Precheck](replace-exception-with-precheck.md) | canonical | 6,541 | A function calls an operation that can throw, catches one expected exception, and treats that catch block as a normal branch. |
 | [Replace Function with Command](replace-function-with-command.md) | canonical | 6,127 | A function has outgrown the flat shape that once made it clear. |
 | [Replace Inline Code with Function Call](replace-inline-code-with-function-call.md) | canonical | 5,030 | You have inline code that duplicates behavior already named elsewhere. |
+| [Replace Loop with Pipeline](replace-loop-with-pipeline.md) | established | 6,272 | The problem begins with a loop that has stopped being a small control-flow device and has become an unnamed data transformation. |
+| [Replace Magic Literal](replace-magic-literal.md) | canonical | 6,411 | A literal value appears in executable code, configuration assembly, tests, or queries, and the value has domain meaning that is not visible at the use site. |
+| [Replace Nested Conditional with Guard Clauses](replace-nested-conditional-with-guard-clauses.md) | canonical | 6,654 | A function has a normal path, but that path is buried inside a pyramid of conditionals. |
+| [Replace Parameter with Query](replace-parameter-with-query.md) | canonical | 6,421 | A caller computes a value, then passes that value to a function that already has access to the data needed to compute the same value. |
+| [Replace Query with Parameter](replace-query-with-parameter.md) | canonical | 6,092 | A function obtains information by reaching outward to something it can see: global state, ambient process state, a receiver field, a singleton, a service locator, a thread local ... |
+| [Replace Temp with Query](replace-temp-with-query.md) | canonical | 6,639 | A method calculates an intermediate value, stores it in a local variable, then uses that variable in one or more later statements. |
 
 ## Reading order
 
