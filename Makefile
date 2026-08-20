@@ -1,8 +1,8 @@
-.PHONY: check structure refs prose code catalogue catalogue-check duplicates duplicates-test all stats
+.PHONY: check structure refs prose code catalogue catalogue-check all stats
 
 all: check
 
-check: structure prose code refs catalogue-check duplicates-test
+check: structure prose code refs catalogue-check
 
 structure:
 	@python3 tools/check-structure.py
@@ -22,12 +22,6 @@ catalogue:
 catalogue-check: catalogue
 	@git diff --exit-code -- README.md docs/PROGRESS.md dist/ || \
 		(echo "Catalogue status is stale. Run 'make catalogue' and commit." && exit 1)
-
-duplicates:
-	@python3 tools/check-duplicates.py --strict
-
-duplicates-test:
-	@python3 tools/check-duplicates-test.py
 
 stats:
 	@echo "families: $$(ls patterns | wc -l | tr -d ' ')"

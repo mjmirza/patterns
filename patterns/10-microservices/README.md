@@ -2,14 +2,8 @@
 
 Origin. Richardson
 
-49 entries, 364,493 words. Every entry carries all 18
+44 entries, 327,442 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
-
-## Antipattern
-
-| Pattern | Maturity | Words | Intent |
-|---|---|---|---|
-| [Distributed Transaction Coordinator Antipattern](distributed-transaction-coordinator-antipattern.md) | established | 6,082 | A team is decomposing a monolith, or is starting a new system, along service boundaries chosen so that each service owns its own data, per the Database per ... |
 
 ## Behavioral
 
@@ -22,7 +16,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Client-side Service Discovery](client-side-service-discovery.md) | canonical | 5,946 | A microservices architecture replaces a small number of long-lived, statically addressed processes with many short-lived, dynamically addressed ones. |
-| [Domain-Specific Protocol](domain-specific-protocol.md) | canonical | 7,890 | A service in a microservice architecture must communicate with something outside the architecture's own control, and that something already has an established, standardized, or ... |
 | [Remote Procedure Invocation](remote-procedure-invocation.md) | canonical | 6,005 | A microservice architecture splits a system into many independently deployable services, and almost every non-trivial request touches more than one of them. |
 
 ## Communication Style
@@ -59,7 +52,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Multiple Service Instances per Host](multiple-service-instances-per-host.md) | established | 7,536 | A single instance of a service process can only accept as many concurrent connections and use as many CPU cycles as one operating system process gets scheduled. |
 | [Serverless Deployment](serverless-deployment.md) | established | 7,884 | A team owns a piece of business logic that is genuinely small and genuinely bursty. |
 | [Service Deployment Platform](service-deployment-platform.md) | canonical | 7,181 | A team has decomposed an application into a set of independently deployable services, following one of the decomposition patterns in this family, and has chosen how a single ... |
 | [Service Instance per Container](service-instance-per-container.md) | canonical | 8,926 | A team is moving an application, or building a new one, on top of microservices, and has to decide the packaging and scheduling unit for each service instance. |
@@ -91,7 +83,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [API Gateway](api-gateway.md) | canonical | 7,645 | A client of a microservices system, whether a mobile app, a single-page web application, or a third-party integration, needs data or an action that in a monolith would have been a ... |
 | [Self Registration](self-registration.md) | canonical | 6,007 | A service instance's network location changes on every deployment, every autoscaling event, and every crash-and-restart. |
-| [Server-Side Discovery](server-side-discovery.md) | canonical | 9,299 | A monolith calls its own functions in the same process, so there is nothing to discover. |
 | [Server-Side Service Discovery](server-side-service-discovery.md) | canonical | 7,771 | A service instance's network address is not static. |
 | [Service Registry](service-registry.md) | canonical | 6,188 | A service instance in a cloud environment does not have a fixed network location. |
 
@@ -122,7 +113,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Idempotent Consumer](idempotent-consumer.md) | canonical | 6,810 | A service consumes messages or events from a broker, whether that is Kafka, Amazon SQS, RabbitMQ, Azure Service Bus, Google Pub/Sub, or an HTTP webhook delivered by another ... |
-| [Inbox](inbox.md) | established | 6,244 | A service consumes messages from a broker, a queue, or an event stream, and it must apply the side effect of each message to its own database exactly once, even though the ... |
 
 ## Security
 

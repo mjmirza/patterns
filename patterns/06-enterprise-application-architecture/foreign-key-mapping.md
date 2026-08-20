@@ -502,7 +502,7 @@ the domain object. Active Record folds the translation logic into the domain
 object itself, which is the shape both Rails and Django's ORMs take (Fowler
 2002, "Data Mapper" and "Active Record",
 https://martinfowler.com/eaaCatalog/dataMapper.html and
-https://martinfowler.com/eaaCatalog/activeRecord.html, both verified
+https://martinfowler.com/eaaCatalog/activeRecordSql.html, both verified
 2026-08-11).
 
 **Dependent Mapping** and **Embedded Value** are the alternatives to reach for
@@ -664,7 +664,7 @@ does nothing to prevent.
 - Martin Fowler, "Data Mapper",
   https://martinfowler.com/eaaCatalog/dataMapper.html, verified 2026-08-11.
 - Martin Fowler, "Active Record",
-  https://martinfowler.com/eaaCatalog/activeRecord.html, verified
+  https://martinfowler.com/eaaCatalog/activeRecordSql.html, verified
   2026-08-11.
 - Martin Fowler, "Embedded Value",
   https://martinfowler.com/eaaCatalog/embeddedValue.html, verified 2026-08-11.

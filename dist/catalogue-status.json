@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 598,
+  "published_total": 500,
   "target_total": 854,
   "families_total": 29,
-  "families_complete": 13,
+  "families_complete": 9,
   "stale_entries": 0,
-  "references_checked": 3146,
+  "references_checked": 2779,
   "rows": [
     {
       "family": "01-gof",
@@ -36,13 +36,11 @@
       "family": "03-refactoring",
       "name": "Refactoring Techniques",
       "origin": "Fowler, Refactoring 2nd ed",
-      "published": 40,
-      "planned": 26,
+      "published": 0,
+      "planned": 66,
       "target": 66,
-      "percent": 60.6,
-      "maturity": {
-        "canonical": 40
-      }
+      "percent": 0.0,
+      "maturity": {}
     },
     {
       "family": "04-principles-and-laws",
@@ -114,13 +112,13 @@
       "family": "09-concurrency",
       "name": "Concurrency and Parallelism",
       "origin": "Schmidt POSA 2",
-      "published": 40,
-      "planned": 0,
+      "published": 35,
+      "planned": 5,
       "target": 40,
-      "percent": 100.0,
+      "percent": 87.5,
       "maturity": {
-        "canonical": 35,
-        "established": 4,
+        "canonical": 31,
+        "established": 3,
         "contested": 1
       }
     },
@@ -128,13 +126,13 @@
       "family": "10-microservices",
       "name": "Microservices",
       "origin": "Richardson",
-      "published": 49,
-      "planned": 0,
+      "published": 44,
+      "planned": 5,
       "target": 49,
-      "percent": 100.0,
+      "percent": 89.8,
       "maturity": {
-        "canonical": 34,
-        "established": 14,
+        "canonical": 32,
+        "established": 11,
         "contested": 1
       }
     },
@@ -142,28 +140,24 @@
       "family": "11-domain-driven-design",
       "name": "Domain-Driven Design",
       "origin": "Evans, Vernon",
-      "published": 35,
-      "planned": 0,
+      "published": 29,
+      "planned": 6,
       "target": 35,
-      "percent": 100.0,
+      "percent": 82.9,
       "maturity": {
-        "canonical": 31,
-        "established": 4
+        "canonical": 27,
+        "established": 2
       }
     },
     {
       "family": "12-data-storage",
       "name": "Data and Storage",
       "origin": "Kleppmann",
-      "published": 41,
-      "planned": 0,
+      "published": 0,
+      "planned": 41,
       "target": 41,
-      "percent": 100.0,
-      "maturity": {
-        "canonical": 30,
-        "established": 10,
-        "contested": 1
-      }
+      "percent": 0.0,
+      "maturity": {}
     },
     {
       "family": "13-frontend-ui",
@@ -192,13 +186,11 @@
       "family": "15-security",
       "name": "Security",
       "origin": "OWASP ASVS",
-      "published": 1,
-      "planned": 37,
+      "published": 0,
+      "planned": 38,
       "target": 38,
-      "percent": 2.6,
-      "maturity": {
-        "established": 1
-      }
+      "percent": 0.0,
+      "maturity": {}
     },
     {
       "family": "16-functional",
