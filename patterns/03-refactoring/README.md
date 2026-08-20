@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-40 entries, 99,268 words. Every entry carries all 18
+49 entries, 154,857 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Refactoring
@@ -49,6 +49,15 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Remove Subclass](remove-subclass.md) | canonical | 1,401 | A subclass exists but adds no value over its superclass. |
 | [Rename Field](rename-field.md) | canonical | 1,525 | A field has a name that does not communicate what the field represents. |
 | [Rename Variable](rename-variable.md) | canonical | 1,714 | A local variable has a name that does not communicate what the value represents. |
+| [Replace Command with Function](replace-command-with-function.md) | canonical | 6,061 | A codebase has a class whose only purpose is to perform one calculation or one small action. |
+| [Replace Conditional with Polymorphism](replace-conditional-with-polymorphism.md) | established | 6,051 | The problem begins with a conditional that asks the same object, value, or type code what kind it is, then runs different behavior for each answer. |
+| [Replace Constructor with Factory Function](replace-constructor-with-factory-function.md) | canonical | 6,808 | A constructor is too narrow for the creation contract the type now needs. |
+| [Replace Control Flag with Break](replace-control-flag-with-break.md) | canonical | 6,155 | A loop is doing a search, scan, parse, validation pass, import pass, or accumulation. |
+| [Replace Derived Variable with Query](replace-derived-variable-with-query.md) | canonical | 6,534 | You have two facts in memory. One is source data. |
+| [Replace Error Code with Exception](replace-error-code-with-exception.md) | canonical | 6,282 | A function reports failure by returning a value from the same channel it uses to report success. |
+| [Replace Exception with Precheck](replace-exception-with-precheck.md) | canonical | 6,541 | A function calls an operation that can throw, catches one expected exception, and treats that catch block as a normal branch. |
+| [Replace Function with Command](replace-function-with-command.md) | canonical | 6,127 | A function has outgrown the flat shape that once made it clear. |
+| [Replace Inline Code with Function Call](replace-inline-code-with-function-call.md) | canonical | 5,030 | You have inline code that duplicates behavior already named elsewhere. |
 
 ## Reading order
 
