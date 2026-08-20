@@ -53,6 +53,7 @@ ALLOW_UNREACHABLE = {
     "www.sec.gov",
     "doi.org",
     "www.semanticscholar.org",
+    "en.cppreference.com",
 }
 
 
