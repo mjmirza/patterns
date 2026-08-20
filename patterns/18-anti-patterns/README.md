@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-41 entries, 335,063 words. Every entry carries all 18
+51 entries, 398,699 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -18,19 +18,25 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Cargo Cult Programming](cargo-cult-programming.md) | canonical | 8,232 | A developer under time pressure needs code that solves a problem they do not fully understand, in a domain they have not fully learned, often on a deadline that leaves no room to ... |
 | [Copy-Paste Programming](copy-paste-programming.md) | canonical | 7,082 | A developer needs behavior that is almost, but not quite, identical to behavior that already exists somewhere else in the codebase. |
 | [God Object](god-object.md) | canonical | 8,493 | A system starts with a reasonable class boundary. |
+| [Golden Dataset Leakage](golden-dataset-leakage.md) | established | 6,470 | A team builds a golden dataset to make model, prompt, ranking, or agent changes measurable. |
 | [Golden Hammer](golden-hammer.md) | canonical | 7,387 | A developer or a team becomes highly proficient with one tool, a database, a framework, a data structure, a language feature, a deployment platform, or a design pattern. |
 | [Inner-Platform Effect](inner-platform-effect.md) | canonical | 9,693 | The situation always starts with a genuine and reasonable business requirement, that end users, who are not programmers, need to change how the system behaves without waiting on a ... |
 | [Magic Numbers](magic-numbers.md) | canonical | 6,525 | A magic number is a numeric literal that appears directly in executable code, in a comparison, an arithmetic expression, an array size, a loop bound, or a function argument ... |
 | [Monolithic Persistence](monolithic-persistence.md) | canonical | 6,491 | A system starts with one team, one codebase, and one database, and the fit is genuinely good. |
 | [N+1 Query](n+1-query.md) | canonical | 8,916 | The shape appears the moment code needs to display, process, or serialize a list of parent records together with one piece of data that lives on a related table or a related ... |
 | [No Caching](no-caching.md) | established | 6,450 | A system computes or fetches a value that is expensive relative to how often it is actually needed fresh, and it does that computation or fetch again, in full, on every single ... |
-| [Not Invented Here](not-invented-here.md) | canonical | 7,177 | A team needs a capability another party has already built. |
+| [No Caching Strategy](no-caching-strategy.md) | established | 6,703 | A service becomes slower or more expensive as traffic grows. |
+| [Not Invented Here](not-invented-here.md) | canonical | 7,174 | A team needs a capability another party has already built. |
+| [Over-Agentification](over-agentification.md) | emerging | 6,451 | A team needs to add an LLM feature. The first working prototype is impressive, so the architecture grows around the most exciting shape rather than the simplest working shape. |
 | [Poltergeist](poltergeist.md) | canonical | 8,669 | A codebase accumulates classes whose entire behaviour is to be constructed, make one or two calls into a different, more permanent class, and then be discarded. |
 | [Premature Optimization](premature-optimization.md) | canonical | 8,762 | The situation that produces this anti-pattern looks the same across languages, teams, and decades, because it comes from a mismatch between how programmers reason about code and ... |
+| [Reinventing the Wheel](reinventing-the-wheel.md) | canonical | 6,382 | A team needs a capability that is already present in a language, standard library, mature package, platform service, protocol, database, operating system, or well-understood ... |
 | [Retry Storm](retry-storm.md) | canonical | 8,440 | A service calls a downstream dependency over the network. |
 | [Sequential Coupling](sequential-coupling.md) | canonical | 8,982 | An object accumulates behavior across its public surface the way most long-lived classes do, one method added at a time as new requirements arrive. |
+| [Shared Database Microservices](shared-database-microservices.md) | established | 6,531 | A team extracts code from a monolith into several independently deployed services. |
 | [Singleton Abuse](singleton-abuse.md) | canonical | 8,029 | A codebase reaches for Singleton Abuse in a specific, recognizable moment. |
 | [Spaghetti Code](spaghetti-code.md) | canonical | 9,313 | A program begins as a short, linear sequence of statements that a single author can hold entirely in their head. |
+| [Synchronous I O Antipattern](synchronous-i-o-antipattern.md) | established | 6,049 | A service, UI, or runtime handles many independent tasks through a bounded number of execution contexts. |
 | [Synchronous I/O](synchronous-i-o.md) | established | 9,421 | Picture a request-handling process that serves many clients from a bounded number of execution contexts, whether that bound is a fixed thread pool, a single event loop thread, or ... |
 | [Thundering Herd](thundering-herd.md) | canonical | 7,680 | Picture a cached product page. Ten thousand requests a second hit a CDN edge or an application cache for the same product. |
 | [Yo-yo Problem](yo-yo-problem.md) | canonical | 9,233 | The situation announces itself the same way every time. |
@@ -47,6 +53,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Extraneous Fetching](extraneous-fetching.md) | established | 8,228 | A piece of code needs three fields from a record, a page needs the title and the thumbnail of a hundred articles, a mobile screen needs a user's display name and avatar. |
 | [Improper Instantiation](improper-instantiation.md) | established | 9,564 | A type in the codebase is expensive, or moderately expensive, or genuinely expensive, to construct. |
 | [Service Locator](service-locator.md) | contested | 6,102 | A component needs a collaborator to do its work, a repository, a logger, a payment gateway client, a feature-flag reader, and it does not want to be handed a concrete instance by ... |
+| [Service Locator Antipattern](service-locator-antipattern.md) | contested | 6,301 | A component needs collaborators to perform its work. |
 | [Vendor Lock-in](vendor-lock-in.md) | established | 8,019 | A team building a system needs to store data, run compute, send messages, authenticate users, and observe the running system. |
 
 ## Anti-pattern (Messaging and Concurrency)
@@ -74,6 +81,24 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Split Brain](split-brain.md) | canonical | 8,750 | A system replicates state, or elects a leader, across more than one node so that it survives the failure of any single node. |
+
+## Messaging
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Poison Pill Message](poison-pill-message.md) | established | 6,111 | A messaging system exists to decouple producers from consumers. |
+
+## Project Management
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Death March](death-march.md) | established | 6,071 | A delivery organization commits to a software outcome whose scope, deadline, staffing, budget, risk, or quality bar cannot fit inside the available capacity. |
+
+## Security
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Prompt Injection Sink](prompt-injection-sink.md) | emerging | 6,570 | A prompt injection sink appears when an application lets untrusted text flow into a model context and then lets the model's interpretation of that text drive a privileged ... |
 
 ## Software Development Anti-pattern
 
