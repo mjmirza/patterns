@@ -3,7 +3,7 @@ name: Not Invented Here
 slug: not-invented-here
 family: 18-anti-patterns
 category: Anti-Pattern
-aliases: [NIH Syndrome, Reinventing the Wheel, Homegrown Everything]
+aliases: [NIH Syndrome, Homegrown Everything]
 first_described: "Katz, Allen 1982"
 maturity: canonical
 related: [golden-hammer, boat-anchor, vendor-lock-in, cargo-cult-programming, big-ball-of-mud]

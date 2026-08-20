@@ -4522,13 +4522,6 @@
     "focus": ""
   },
   {
-    "name": "Entity Service Antipattern",
-    "slug": "entity-service-antipattern",
-    "category": "anti-pattern",
-    "path": "patterns/18-anti-patterns/entity-service-antipattern.md",
-    "focus": ""
-  },
-  {
     "name": "Service Locator Antipattern",
     "slug": "service-locator-antipattern",
     "category": "anti-pattern",
