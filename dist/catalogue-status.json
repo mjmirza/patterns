@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 643,
+  "published_total": 652,
   "target_total": 853,
   "families_total": 29,
   "families_complete": 15,
   "stale_entries": 0,
-  "references_checked": 3500,
+  "references_checked": 3596,
   "rows": [
     {
       "family": "01-gof",
@@ -193,13 +193,13 @@
       "family": "15-security",
       "name": "Security",
       "origin": "OWASP ASVS",
-      "published": 10,
-      "planned": 28,
+      "published": 19,
+      "planned": 19,
       "target": 38,
-      "percent": 26.3,
+      "percent": 50.0,
       "maturity": {
-        "canonical": 4,
-        "established": 6
+        "canonical": 6,
+        "established": 13
       }
     },
     {
