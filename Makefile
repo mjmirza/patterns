@@ -1,8 +1,8 @@
-.PHONY: check structure refs prose code catalogue catalogue-check duplicates duplicates-test all stats
+.PHONY: check structure refs prose code catalogue catalogue-check by-problem-by-language by-problem-by-language-check duplicates duplicates-test test all stats
 
 all: check
 
-check: structure prose code refs catalogue-check duplicates-test
+check: test structure prose code refs catalogue-check by-problem-by-language-check duplicates-test
 
 structure:
 	@python3 tools/check-structure.py
@@ -22,6 +22,20 @@ catalogue:
 catalogue-check: catalogue
 	@git diff --exit-code -- README.md docs/PROGRESS.md dist/ || \
 		(echo "Catalogue status is stale. Run 'make catalogue' and commit." && exit 1)
+
+by-problem-by-language:
+	@python3 tools/gen-by-problem-by-language.py
+
+by-problem-by-language-check: by-problem-by-language
+	@git diff --exit-code -- docs/BY-PROBLEM.md docs/BY-LANGUAGE.md || \
+		(echo "Discovery pathway indexes are stale. Run 'make by-problem-by-language' and commit." && exit 1)
+
+test:
+	@python3 tools/check-structure-test.py
+	@python3 tools/check-family-names-test.py
+	@python3 tools/gen-by-problem-by-language-test.py
+	@python3 tools/gen-catalogue-status-test.py
+	@python3 tools/check-code-test.py
 
 duplicates:
 	@python3 tools/check-duplicates.py --strict
