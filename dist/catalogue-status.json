@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 539,
+  "published_total": 598,
   "target_total": 854,
   "families_total": 29,
-  "families_complete": 12,
+  "families_complete": 13,
   "stale_entries": 0,
-  "references_checked": 2972,
+  "references_checked": 3146,
   "rows": [
     {
       "family": "01-gof",
@@ -36,11 +36,13 @@
       "family": "03-refactoring",
       "name": "Refactoring Techniques",
       "origin": "Fowler, Refactoring 2nd ed",
-      "published": 0,
-      "planned": 66,
+      "published": 40,
+      "planned": 26,
       "target": 66,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 60.6,
+      "maturity": {
+        "canonical": 40
+      }
     },
     {
       "family": "04-principles-and-laws",
@@ -153,13 +155,13 @@
       "family": "12-data-storage",
       "name": "Data and Storage",
       "origin": "Kleppmann",
-      "published": 23,
-      "planned": 18,
+      "published": 41,
+      "planned": 0,
       "target": 41,
-      "percent": 56.1,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 13,
-        "established": 9,
+        "canonical": 30,
+        "established": 10,
         "contested": 1
       }
     },
@@ -190,11 +192,13 @@
       "family": "15-security",
       "name": "Security",
       "origin": "OWASP ASVS",
-      "published": 0,
-      "planned": 38,
+      "published": 1,
+      "planned": 37,
       "target": 38,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 2.6,
+      "maturity": {
+        "established": 1
+      }
     },
     {
       "family": "16-functional",
