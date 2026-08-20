@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-29 entries, 220,132 words. Every entry carries all 18
+35 entries, 264,798 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -28,6 +28,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Aggregate](aggregate.md) | canonical | 7,789 | A domain model contains rules that span more than one object. |
 | [Aggregate Root](aggregate-root.md) | canonical | 8,677 | A domain model accumulates Entities and Value Objects that reference one another. |
 | [Application Service](application-service.md) | canonical | 7,949 | A rich domain model, built from entities, value objects, and aggregates that enforce their own invariants, still needs a caller. |
 | [Domain Service](domain-service.md) | canonical | 7,032 | A team modeling a domain in an object-oriented style eventually meets an operation that genuinely spans more than one object and does not belong to either. |
@@ -63,13 +64,28 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Bounded Context](bounded-context.md) | canonical | 6,827 | A software system of any real size accumulates more than one team, more than one department's worldview, and more than one legitimate meaning for the same word. |
 | [Conformist](conformist.md) | canonical | 6,538 | Two bounded contexts need to exchange data or invoke each other's behaviour, and one of the two, the upstream, owns a model neither side is free to renegotiate. |
+| [Context Canvas](context-canvas.md) | established | 7,622 | A team has decided, usually from an Event Storming session or from a Context Map already in hand, that a particular slice of the domain deserves its own bounded context. |
 | [Context Map](context-map.md) | canonical | 7,312 | A system reaches a certain size and a certain number of contributing teams before a single, internally consistent domain model stops being achievable. |
 | [Core Domain](core-domain.md) | canonical | 6,670 | A team building a non-trivial system faces a resource allocation problem long before it faces a technical one. |
 | [Customer-Supplier](customer-supplier.md) | canonical | 7,914 | Any system large enough to be split across more than one Bounded Context, see the bounded-context entry in this repository, produces integration points where one context's model ... |
 | [Open Host Service](open-host-service.md) | canonical | 9,358 | A bounded context that has real internal complexity attracts multiple downstream consumers over time. |
+| [Partnership](partnership.md) | canonical | 7,024 | Two teams each own a Bounded Context, and the two Contexts must integrate, but neither team can honestly claim to be upstream of the other. |
 | [Separate Ways](separate-ways.md) | canonical | 9,250 | A team splits a system into more than one Bounded Context for good reasons, because two departments' vocabularies genuinely diverge, because two teams cannot coordinate closely ... |
 | [Shared Kernel](shared-kernel.md) | canonical | 7,408 | Two Bounded Contexts model a piece of the domain in a compatible way, not because either team designed it that way on purpose, but because the concept genuinely is the same ... |
+| [Subdomain Discovery](subdomain-discovery.md) | established | 7,371 | A team about to build or re-architect a nontrivial system faces a boundary problem before it faces a single line of code. |
 | [Supporting Subdomain](supporting-subdomain.md) | canonical | 6,681 | A team building a system of real size eventually owns far more functionality than any one part of the business actually differentiates on. |
+
+## Structural
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Open Host Service and Published Language](open-host-service-and-published-language.md) | canonical | 6,483 | A bounded context that has valuable capability inside it eventually needs to expose that capability to other bounded contexts, and often to more than one. |
+
+## Structural, Distributed Coordination
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Saga versus Process Manager](saga-versus-process-manager.md) | canonical | 8,377 | The concrete situation is this. A business operation spans more than one service, each service owns its own datastore, and no distributed transaction coordinator is available or ... |
 
 ## Tactical
 
