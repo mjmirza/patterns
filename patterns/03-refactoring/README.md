@@ -2,8 +2,14 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-58 entries, 212,310 words. Every entry carries all 18
+66 entries, 262,770 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Composing Functions
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Return Modified Value](return-modified-value.md) | established | 6,195 | A function changes a value that lives outside the function boundary. |
 
 ## Data Organization
 
@@ -63,7 +69,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Rename Field](rename-field.md) | canonical | 1,525 | A field has a name that does not communicate what the field represents. |
 | [Rename Variable](rename-variable.md) | canonical | 1,714 | A local variable has a name that does not communicate what the value represents. |
 | [Replace Command with Function](replace-command-with-function.md) | canonical | 6,061 | A codebase has a class whose only purpose is to perform one calculation or one small action. |
-| [Replace Conditional with Polymorphism](replace-conditional-with-polymorphism.md) | established | 6,051 | The problem begins with a conditional that asks the same object, value, or type code what kind it is, then runs different behavior for each answer. |
+| [Replace Conditional with Polymorphism](replace-conditional-with-polymorphism.md) | established | 6,052 | The problem begins with a conditional that asks the same object, value, or type code what kind it is, then runs different behavior for each answer. |
 | [Replace Constructor with Factory Function](replace-constructor-with-factory-function.md) | canonical | 6,808 | A constructor is too narrow for the creation contract the type now needs. |
 | [Replace Control Flag with Break](replace-control-flag-with-break.md) | canonical | 6,155 | A loop is doing a search, scan, parse, validation pass, import pass, or accumulation. |
 | [Replace Derived Variable with Query](replace-derived-variable-with-query.md) | canonical | 6,534 | You have two facts in memory. One is source data. |
@@ -77,6 +83,18 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Replace Parameter with Query](replace-parameter-with-query.md) | canonical | 6,421 | A caller computes a value, then passes that value to a function that already has access to the data needed to compute the same value. |
 | [Replace Query with Parameter](replace-query-with-parameter.md) | canonical | 6,092 | A function obtains information by reaching outward to something it can see: global state, ambient process state, a receiver field, a singleton, a service locator, a thread local ... |
 | [Replace Temp with Query](replace-temp-with-query.md) | canonical | 6,639 | A method calculates an intermediate value, stores it in a local variable, then uses that variable in one or more later statements. |
+| [Separate Query from Modifier](separate-query-from-modifier.md) | canonical | 6,536 | A method is used like a question but behaves like an action. |
+| [Slide Statements](slide-statements.md) | established | 6,068 | A function contains statements that are related by data, intent, or later extraction, but those statements are separated by other work. |
+| [Split Loop](split-loop.md) | canonical | 6,781 | A loop walks one collection and performs two or more independent pieces of work. |
+| [Split Phase](split-phase.md) | established | 6,241 | A single block of code does two jobs in a fixed order, and the local variables from the first job leak through the second job. |
+| [Split Variable](split-variable.md) | canonical | 6,511 | A variable is assigned once, used for one idea, then assigned again and used for a different idea. |
+| [Substitute Algorithm](substitute-algorithm.md) | established | 6,110 | A function uses an algorithm that has become the wrong way to express its behavior. |
+
+## Simplifying Conditional Logic
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Replace Type Code with Subclasses](replace-type-code-with-subclasses.md) | canonical | 6,017 | A field, enum, string, integer, or symbolic constant says what kind of thing an object is. |
 
 ## Reading order
 

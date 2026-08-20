@@ -6,7 +6,7 @@ category: Refactoring
 aliases: [Replace Switch with Strategy]
 first_described: "Fowler 1999"
 maturity: established
-related: [consolidate-conditional-expression, decompose-conditional, introduce-special-case, remove-subclass, replace-command-with-function, strategy, state, template-method]
+related: [consolidate-conditional-expression, decompose-conditional, introduce-special-case, remove-subclass, replace-command-with-function, replace-type-code-with-subclasses, strategy, state, template-method]
 incompatible_with: [remove-subclass]
 verified: 2026-08-02
 ---
