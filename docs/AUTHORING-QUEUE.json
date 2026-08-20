@@ -4116,27 +4116,6 @@
     "focus": ""
   },
   {
-    "name": "Gatekeeper",
-    "slug": "gatekeeper",
-    "category": "security",
-    "path": "patterns/15-security/gatekeeper.md",
-    "focus": ""
-  },
-  {
-    "name": "Valet Key",
-    "slug": "valet-key",
-    "category": "security",
-    "path": "patterns/15-security/valet-key.md",
-    "focus": ""
-  },
-  {
-    "name": "Federated Identity",
-    "slug": "federated-identity",
-    "category": "security",
-    "path": "patterns/15-security/federated-identity.md",
-    "focus": ""
-  },
-  {
     "name": "RBAC",
     "slug": "rbac",
     "category": "security",
