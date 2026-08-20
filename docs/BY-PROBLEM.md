@@ -175,6 +175,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A "thin" Presenter becomes a god object. Symptom. One Presenter class | [Model-View-Presenter](../patterns/05-architectural/model-view-presenter.md) | Architectural Patterns |
 | A "unit" test suspiciously takes eight seconds. Symptom. A test file | [Stub](../patterns/14-testing/stub.md) | Testing |
 | A "utils", "common", or "shared" package that has grown to | [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) | Principles and Laws |
+| A backup exists but recovery fails under incident pressure. | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | A batch job or an administrative script bypasses the application's | [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) | Enterprise Application Architecture |
 | A batch job publishes ten thousand events in one second, and every | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | A batch Job that should finish in minutes runs forever and | [Sidecar Proxy](../patterns/10-microservices/sidecar-proxy.md) | Microservices |
@@ -228,6 +229,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A colleague that reaches sideways. Symptom. A change to one widget breaks a | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | A collection is fetched first, and the code that follows needs a | [N+1 Query](../patterns/18-anti-patterns/n+1-query.md) | Anti-Patterns |
 | A column-oriented analytics table holding fifty million rows, where a string | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
+| A command-line tool asks users to paste passwords or access | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | A common symptom is a change to Service A's response schema breaking Service | [Microservices Architecture](../patterns/05-architectural/microservices-architecture.md) | Architectural Patterns |
 | A component performs correctly in unit tests, which run | [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) | Concurrency and Parallelism |
 | A component that ran correctly for months suddenly deadlocks | [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) | Concurrency and Parallelism |
@@ -266,7 +268,9 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A dependency-scanning or license-compliance tool flags code | [Copy-Paste Programming](../patterns/18-anti-patterns/copy-paste-programming.md) | Anti-Patterns |
 | A developer changes the Interface's method signature and the | [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) | Enterprise Application Architecture |
 | A developer converts a slow, synchronous endpoint to async and | [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) | Anti-Patterns |
+| A developer or automation tool needs API access and receives a personal or | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | A developer reaches for storage-engine tombstones to implement | [Tombstone](../patterns/12-data-storage/tombstone.md) | Data and Storage |
+| A direct object storage URL works after the app marks the file | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | A distributed lock or leader-election service occasionally | [CAP Theorem](../patterns/04-principles-and-laws/cap-theorem.md) | Principles and Laws |
 | A distributed mutual exclusion or ordering algorithm built on Lamport | [Lamport Clock](../patterns/12-data-storage/lamport-clock.md) | Data and Storage |
 | A distributed transaction implemented as a chain of synchronous | [Database per Service](../patterns/10-microservices/database-per-service.md) | Microservices |
@@ -304,6 +308,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A function is called with several null, 0, or false | [Long Parameter List](../patterns/02-code-smells/long-parameter-list.md) | Code Smells |
 | A function or class with configuration options, hooks, or | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | A function's parameter list did shrink to one parameter | [Long Parameter List](../patterns/02-code-smells/long-parameter-list.md) | Code Smells |
+| A gateway denies /private, yet /public/../private reaches the | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | A gateway implementation swallows send failures silently. the | [Messaging Gateway](../patterns/07-integration/messaging-gateway.md) | Enterprise Integration |
 | A gateway method named update silently overwrites columns the | [Table Data Gateway](../patterns/06-enterprise-application-architecture/table-data-gateway.md) | Enterprise Application Architecture |
 | A genuinely breaking provider change slips through, because | [Consumer-Side Contract Test](../patterns/10-microservices/consumer-side-contract-test.md) | Microservices |
@@ -347,6 +352,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A mid-level team lead's own subtree keeps growing another level | [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) | AI and Agentic |
 | A migration ACL, originally scoped as temporary, is still in | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | A migration off the upstream vendor, or a major upgrade to a | [Conformist](../patterns/11-domain-driven-design/conformist.md) | Domain-Driven Design |
+| A migration script repairs production data by connecting as a | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | A minor host release breaks a large fraction of installed | [Plugin Architecture](../patterns/05-architectural/plugin-architecture.md) | Architectural Patterns |
 | A model, agent, or the team maintaining a prompt scores | [Golden Dataset](../patterns/17-ai-agentic/golden-dataset.md) | AI and Agentic |
 | A monolith is being taken apart feature by feature. During the transition, | [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) | Cloud and Distributed |
@@ -362,6 +368,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A new engineer, asked to write a unit test for code that depends | [Fake](../patterns/14-testing/fake.md) | Testing |
 | A new engineer, reading a class's constructor to understand | [Singleton Abuse](../patterns/18-anti-patterns/singleton-abuse.md) | Anti-Patterns |
 | A new field added to a payload silently breaks an old consumer, | [Message](../patterns/07-integration/message.md) | Enterprise Integration |
+| A new microservice launches with weaker security than older | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | A new page type is added, and the developer discovers that | [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) | Enterprise Application Architecture |
 | A new payment method works everywhere except one screen, where it | [Switch Statements](../patterns/02-code-smells/switch-statements.md) | Code Smells |
 | A new service takes noticeably longer to start, or its | [Microservice Chassis](../patterns/10-microservices/microservice-chassis.md) | Microservices |
@@ -381,6 +388,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A payload that was valid JSON when sent triggers a parse error at | [Message](../patterns/07-integration/message.md) | Enterprise Integration |
 | A peek or browse operation on a queue returns a message that | [Message Expiration](../patterns/07-integration/message-expiration.md) | Enterprise Integration |
 | A peer-to-peer network distributes a large file or a large set of records | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
+| A penetration test bypasses every security layer through one | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | A permission rule where an AllOf rule contains other rules, and evaluation | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | A person who built one of the ad hoc bridges leaves the | [Stovepipe System](../patterns/18-anti-patterns/stovepipe-system.md) | Anti-Patterns |
 | A pipeline of five or ten sequential jobs, each reading the previous | [Map-Reduce](../patterns/09-concurrency/map-reduce.md) | Concurrency and Parallelism |
@@ -457,6 +465,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A request handler that authenticates, authorises, deserialises a body, | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | a request that should return in milliseconds occasionally hangs for | [Scatter-Gather](../patterns/07-integration/scatter-gather.md) | Enterprise Integration |
 | A reranker chained after hybrid fusion barely changes the top | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |
+| A resource server accepts a token minted for a different API. | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
+| A resource server must accept delegated access from multiple clients. | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | A restored backup silently brings deleted rows back to life. | [Tombstone](../patterns/12-data-storage/tombstone.md) | Data and Storage |
 | A revoked user, or a user who has logged out, continues to | [Access Token](../patterns/10-microservices/access-token.md) | Microservices |
 | A ring boundary violation through a shared utility project. Symptom. A | [Onion Architecture](../patterns/05-architectural/onion-architecture.md) | Architectural Patterns |
@@ -480,6 +490,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A security review finds that the token vault, meant to be | [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) | AI and Agentic |
 | A serialization or persistence layer chokes on the Special Case | [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) | Enterprise Application Architecture |
 | A serialized snapshot of the Host, taken for caching, logging, | [Temporary Field](../patterns/02-code-smells/temporary-field.md) | Code Smells |
+| A service calls another service without a human in the loop, and the callee | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | A service has not had a dependency upgrade, a security patch, | [Service per Team](../patterns/10-microservices/service-per-team.md) | Microservices |
 | A service is null, nil, or throws "not registered" on | [Registry](../patterns/06-enterprise-application-architecture/registry.md) | Enterprise Application Architecture |
 | A service is technically a separate deployable and has its own | [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) | Microservices |
@@ -527,7 +538,9 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A stable 3x on error-path traffic to one endpoint, and every retry | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | A stateful aggregate, built from a sequence of events on a channel, | [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) | Enterprise Integration |
 | A step succeeds but produces a result the plan's later steps silently | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
+| A stolen authorization code can be exchanged from another | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | A stolen or leaked token found in a log file, a browser history, | [Access Token](../patterns/10-microservices/access-token.md) | Microservices |
+| A stolen service token can read far more data than the service | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | a stored procedure or trigger that was fast when written becomes | [Busy Database](../patterns/18-anti-patterns/busy-database.md) | Anti-Patterns |
 | A subclass changes a protected query and breaks a base method. | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
 | A subclass implementing an interface throws | [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) | Principles and Laws |
@@ -598,8 +611,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A UI screen that only ever needs to display a denormalised | [Layered Architecture](../patterns/11-domain-driven-design/layered-architecture.md) | Domain-Driven Design |
 | A unit test for a single business rule requires standing up a | [Domain Model](../patterns/06-enterprise-application-architecture/domain-model.md) | Enterprise Application Architecture |
 | A unit test passes when run alone and fails when run as part | [Registry](../patterns/06-enterprise-application-architecture/registry.md) | Enterprise Application Architecture |
+| A user can fetch another tenant's record by changing an id in a | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | A user reports receiving a duplicate notification, a | [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) | AI and Agentic |
 | A user reports the system confidently stated a fact, a date, a | [Contextual Retrieval](../patterns/17-ai-agentic/contextual-retrieval.md) | AI and Agentic |
+| A user signs in through an authorization server, and an application calls an | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | A user-facing operation feels instant with one item of test | [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) | Anti-Patterns |
 | A value that a client wrote, and that other clients concurrently | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
 | A vendor or partner's API is the only way to reach functionality the team | [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) | Cloud and Distributed |
@@ -611,6 +626,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A way exists to check the property automatically, without a human reading | [Property-Based Test](../patterns/14-testing/property-based-test.md) | Testing |
 | A widely used, heavily depended-upon library becomes something no | [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) | Principles and Laws |
 | A worker several levels deep fails or hangs, and the whole | [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) | AI and Agentic |
+| A workload running on a platform needs access to a control plane or cloud | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | A write a user made shortly before a regional outage appears to | [Geode](../patterns/08-cloud-distributed/geode.md) | Cloud and Distributed |
 | A wrong answer with no exception at all. Symptom. A report shows zero | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
 | ability to enforce the invariant. The symptom is a source class that can | [Move Field](../patterns/03-refactoring/move-field.md) | Refactoring Techniques |
@@ -619,6 +635,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Abstraction leak at the call site. Symptom. Casts from Product back to a | [Factory Method](../patterns/01-gof/factory-method.md) | Design Patterns (GoF) |
 | Abuse resistance. The limit exists to make credential stuffing, scraping, | [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) | Cloud and Distributed |
 | Access after the proxy's context is gone. Symptom. A template or serialiser | [Proxy](../patterns/01-gof/proxy.md) | Design Patterns (GoF) |
+| Access can be represented as scopes, audiences, claims, or server-side token | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Accessor that adds no value. The getter returns the field and the | [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) | Refactoring Techniques |
 | Accessor that leaks the mutable internal state. The getter returns a | [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) | Refactoring Techniques |
 | Accidental serialization of independent work. Symptom, an endpoint or | [Async Await](../patterns/09-concurrency/async-await.md) | Concurrency and Parallelism |
@@ -672,6 +689,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | already owned by one team. Symptom. A process with three straight-line | [Choreography](../patterns/08-cloud-distributed/choreography.md) | Cloud and Distributed |
 | also the symptom produced when the event that should propagate the change | [Aggregate](../patterns/11-domain-driven-design/aggregate.md) | Domain-Driven Design |
 | An abandoned Agent call eventually does complete, long after the | [Scheduler Agent Supervisor](../patterns/08-cloud-distributed/scheduler-agent-supervisor.md) | Cloud and Distributed |
+| An admin loses a role but retains admin access until logging out. | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | An agent is meant to improve at a recurring task over repeated attempts, by | [Agent Memory](../patterns/17-ai-agentic/agent-memory.md) | AI and Agentic |
 | An agent processes a document, a log file, or a conversation that is larger | [Agent Memory](../patterns/17-ai-agentic/agent-memory.md) | AI and Agentic |
 | An aggregate silently undercounts or overcounts when two fact tables | [Star Schema](../patterns/12-data-storage/star-schema.md) | Data and Storage |
@@ -722,6 +740,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Answering a narrow question through global search. Symptom. A | [GraphRAG](../patterns/17-ai-agentic/graphrag.md) | AI and Agentic |
 | anywhere. Symptom, seen above. Cause, the source database rotated away a | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
 | API response latency degrades under load in a way that scales | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
+| API routes are protected, but CSV export, search index, or report | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | appears to hang on startup. Symptom. Startup after a crash takes minutes | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | Application data silently loses updates after a network | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
 | Applying BASE to an operation that requires a hard invariant. Symptom, an | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
@@ -747,6 +766,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Async facade that still blocks. Symptom. Callers await a function that | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
 | At least one dependency can become slow without becoming unavailable. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | At least one downstream component in the pipeline does not need the | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
+| Attack tests can start a flow in one browser session and finish | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Authentication intermittently fails for a subset of servers, or | [Access Token](../patterns/10-microservices/access-token.md) | Microservices |
 | Authorization remains bundled. Symptom. A user with read permission can | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Autoboxing identity surprise. Symptom. A comparison of two boxed integers | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
@@ -787,6 +807,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Both axes are expected to keep growing. A pattern that converts N times M into | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | Boundary theatre. Symptom. A beautifully filled worksheet for a context | [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) | Domain-Driven Design |
 | boundary. Symptom. A presentation-layer controller has a catch | [Application Service](../patterns/11-domain-driven-design/application-service.md) | Domain-Driven Design |
+| Break-glass becomes routine. Symptom. Many requests are approved through an | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Breaker outside the timeout. | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | Breaker used to hide a real error. | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | Breaking callers of a public API. The class is part of a public API, | [Extract Class](../patterns/03-refactoring/extract-class.md) | Refactoring Techniques |
@@ -795,6 +816,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Broad catch translated into broad guard. Symptom. The code stops throwing, | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
 | Broken correlation across a fan-out. Symptom. A request is wrapped, | [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) | Enterprise Integration |
 | Broken substitutability discovered late. Symptom. A downstream module no | [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) | Refactoring Techniques |
+| Browser apps keep access tokens in local storage for long | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Budget exhausted by a healthy client. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | Build times grow non-linearly as the codebase grows, well past what the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | Builder as an escape hatch for a god object. A builder with thirty-five | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
@@ -818,6 +840,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Cache stampede at cold start. Symptom. A newly deployed service instance, | [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) | Data and Storage |
 | Cache used where exact reuse was actually needed. Symptom. A tool-calling | [Semantic Caching](../patterns/17-ai-agentic/semantic-caching.md) | AI and Agentic |
 | Cache write fails after the store write already succeeded. Symptom. The | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
+| Cached allow outlives revocation. Symptom. A user remains able to perform an | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | caches by key and the key collides. The symptom is a cross contamination | [Change Value to Reference](../patterns/03-refactoring/change-value-to-reference.md) | Refactoring Techniques |
 | call and a definition that are more ceremony than clarity. The symptom is | [Extract Function](../patterns/03-refactoring/extract-function.md) | Refactoring Techniques |
 | call. Symptom. The program hangs indefinitely under load but works fine in | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
@@ -948,6 +971,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Confusing the rule with a ban on method chaining in general. Symptom. A | [Law of Demeter](../patterns/04-principles-and-laws/law-of-demeter.md) | Principles and Laws |
 | Confusing the worksheet for the contract. Symptom. A downstream team | [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) | Domain-Driven Design |
 | Confusing YAGNI with refusing necessary design work. Symptom. a codebase | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
+| Consent screens grant broad access that users do not understand. | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Consistency across independently owned data stores. When a microservice | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | Consolidating conditions with different bodies. The bodies appear | [Consolidate Conditional Expression](../patterns/03-refactoring/consolidate-conditional-expression.md) | Refactoring Techniques |
 | Consolidating conditions with side effects. A condition calls a | [Consolidate Conditional Expression](../patterns/03-refactoring/consolidate-conditional-expression.md) | Refactoring Techniques |
@@ -1007,7 +1031,9 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Cross-service DRY via a shared library. Two independently deployable | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | Cross-team integration inside one organisation. Two Bounded Contexts | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | Cross-tenant data leak through a shared cache. Symptom. One customer's | [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) | AI and Agentic |
+| Cross-tenant read. Symptom: a token stolen from one service can read | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | Cross-zone or cross-region hop hiding in the routing table. Symptom. A | [Server-Side Discovery](../patterns/10-microservices/server-side-discovery.md) | Microservices |
+| Custom role sprawl. Symptom: custom roles multiply until nobody can review | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | Customers report stale or missing data. Dashboards are green because | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | Cycle in a structure assumed to be a tree. Symptom. A stack overflow with a | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | Dangling foreign keys with no database-level constraint. Symptom. A | [Foreign Key Mapping](../patterns/06-enterprise-application-architecture/foreign-key-mapping.md) | Enterprise Application Architecture |
@@ -1036,6 +1062,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Deep hierarchy. The extraction adds a level, and subsequent | [Extract Superclass](../patterns/03-refactoring/extract-superclass.md) | Refactoring Techniques |
 | Deep recursion on adversarial input. Symptom. A crash rather than an error | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | Deep-link bypass. Symptom. A user bookmarks, or manually types, the URL | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
+| Default deny with no operator signal. Symptom. Customers see generic errors | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Defect bankruptcy. Symptom. The bug tracker has hundreds of stale defects, | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Degenerate dimension modeled as a full dimension table. Symptom. A | [Star Schema](../patterns/12-data-storage/star-schema.md) | Data and Storage |
 | Degrading one class of work is preferable to degrading all of them. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -1048,6 +1075,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Deleting a Book also deletes Author rows that are still referenced by other books. An automatic-removal rule was appl... | [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) | Enterprise Application Architecture |
 | Deleting a root-level record silently fails with a foreign key | [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md) | Enterprise Application Architecture |
 | Denormalization mistaken for a second authority. Symptom. A duplicated | [Single Source of Truth](../patterns/04-principles-and-laws/single-source-of-truth.md) | Principles and Laws |
+| Deny happens after the side effect. Symptom. Audit says a request was denied | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
+| Deny rule blocks critical platform traffic. Symptom. After default deny | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Dependency request rate rises by an order of magnitude within seconds | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | dependents, which is legal under ADP alone. This symptom is a Stable | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | Deploying a fix to one service requires bumping and redeploying the | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
@@ -1059,7 +1088,9 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Design changes fanning out across every rule. Symptom. A change to | [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) | Enterprise Application Architecture |
 | Detached collection mutation exceptions. Symptom, adding or removing an | [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md) | Enterprise Application Architecture |
 | Detached entity, lazy-load-after-close. Symptom. An exception such as | [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) | Enterprise Application Architecture |
+| Developers disable local security checks to get work done, then | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Developers start skipping the fast contract suite because it now | [Contract Test](../patterns/14-testing/contract-test.md) | Testing |
+| Device posture as a single truth source. Symptom. A compliant but infected | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | Diagnosing a failed relation takes far longer than diagnosing | [Metamorphic Testing](../patterns/14-testing/metamorphic-testing.md) | Testing |
 | Diagnosis is impossible because the envelope is too thin. | [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) | Enterprise Integration |
 | Did the unit under test actually CALL the collaborator, with what | [Spy](../patterns/14-testing/spy.md) | Testing |
@@ -1147,6 +1178,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | edit to the manifest. Symptom, wide case. A consumer's range is wide enough | [Release Reuse Equivalence](../patterns/04-principles-and-laws/release-reuse-equivalence.md) | Principles and Laws |
 | eighteen months, three years, five years after the migration | [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md) | Cloud and Distributed |
 | Election storms under repeated partial failure. Symptom. CPU and | [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) | Data and Storage |
+| Emergency access used during an incident remains active for | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Encapsulation without invariant enforcement. The collection is | [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) | Refactoring Techniques |
 | encapsulation. The symptom is a class with public fields and no methods. | [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) | Refactoring Techniques |
 | Encoder mismatch between corpus and hypothetical document. Symptom. The | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |
@@ -1163,6 +1195,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Engineering judgement. These triples are written as operational symptoms, not | [Golden Dataset Leakage](../patterns/18-anti-patterns/golden-dataset-leakage.md) | Anti-Patterns |
 | Engineering judgement. These triples name observable symptoms, likely causes, | [Poison Pill Message](../patterns/18-anti-patterns/poison-pill-message.md) | Anti-Patterns |
 | Engineering judgement. These triples name symptoms an operator, reviewer, or | [Shared Database Microservices](../patterns/18-anti-patterns/shared-database-microservices.md) | Anti-Patterns |
+| Engineering judgement: each item below is a symptom, cause, fix triple because | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
+| Engineering judgement: each item names an observable symptom, a likely cause, | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Engineers cite "CAP theorem" to justify a design decision that | [CAP Theorem](../patterns/04-principles-and-laws/cap-theorem.md) | Principles and Laws |
 | Engineers stop looking at the deploy markers on the dashboard within a few weeks of the feature launching. Cause. The... | [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) | Microservices |
 | enough to justify the class. The symptom is a parameter object with two | [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) | Refactoring Techniques |
@@ -1216,6 +1250,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Expected value derived from the code under test. Symptom. A regression | [Four-Phase Test](../patterns/14-testing/four-phase-test.md) | Testing |
 | Exposing a mutable delegate. The delegate is mutable, and exposing it | [Remove Middle Man](../patterns/03-refactoring/remove-middle-man.md) | Refactoring Techniques |
 | extensively. The symptom is a reader who must navigate through five | [Extract Class](../patterns/03-refactoring/extract-class.md) | Refactoring Techniques |
+| External error leaks internal state. Symptom. A caller learns policy names, | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Extracted methods still need many parameters. Cause. The | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
 | Extracting a branch that is not single purpose. The then branch does | [Decompose Conditional](../patterns/03-refactoring/decompose-conditional.md) | Refactoring Techniques |
 | Extracting a class that is just a data bag. The extracted class has | [Extract Class](../patterns/03-refactoring/extract-class.md) | Refactoring Techniques |
@@ -1232,8 +1267,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Fact table storing a rate or a ratio as a measure. Symptom. A sum of a | [Star Schema](../patterns/12-data-storage/star-schema.md) | Data and Storage |
 | factory instead. Observable symptom, a CloneNotSupportedException from a | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
 | Fail-closed on cache infrastructure trouble. Symptom. A vector index or | [Semantic Caching](../patterns/17-ai-agentic/semantic-caching.md) | AI and Agentic |
+| Fail-open decision outage. Symptom. During an identity or policy outage, | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | Failure deep inside the system under test, far from the assertion line. | [Stub](../patterns/14-testing/stub.md) | Testing |
 | failure mode. Symptom. A team attempts to fix the God Object by splitting | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
+| Failure must be explicit. A rejected redirect, wrong state value, reused | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Failures are correlated rather than independent. When one call to the | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | Failures are individually low frequency against total traffic, so they do | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
 | Failures in the transformation logic itself, not merely in process | [Test Message](../patterns/07-integration/test-message.md) | Enterprise Integration |
@@ -1271,6 +1308,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Fixture reuse disguised as a helper method. Symptom. A createTestUser() | [Fresh Fixture](../patterns/14-testing/fresh-fixture.md) | Testing |
 | Flaky comparator from non-deterministic systems under test. Symptom. The | [Differential Testing](../patterns/14-testing/differential-testing.md) | Testing |
 | Flaky tests corrupting the score. Symptom. The same mutant is reported as | [Mutation Test](../patterns/14-testing/mutation-test.md) | Testing |
+| Flat network behind a new front door. Symptom. A compromised host can scan | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | Fleet-wide staleness from a paused patch pipeline. Symptom. A security | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
 | Flyweight applied without measurement, then defended. Symptom. A code review | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Folders named notifications/, logging/, validation/ sitting | [Domain-based](../patterns/04-principles-and-laws/domain-based.md) | Principles and Laws |
@@ -1334,6 +1372,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Hidden cost invites the N plus one. Symptom. A page that renders one hundred | [Facade](../patterns/01-gof/facade.md) | Design Patterns (GoF) |
 | Hidden dependency between concerns. Symptom. The second pass produces | [Split Loop](../patterns/03-refactoring/split-loop.md) | Refactoring Techniques |
 | Hidden global lookup. Symptom. Tests pass alone but fail in a suite because | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
+| Hidden inheritance. Symptom: a narrow role later becomes broad without | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | Hidden mutation preserved. Symptom. The function returns one value, but | [Replace Command with Function](../patterns/03-refactoring/replace-command-with-function.md) | Refactoring Techniques |
 | Hidden ordering dependency. Symptom. Reordering two apparently unrelated | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | Hidden performance regression. Symptom. CPU time doubles on large inputs | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
@@ -1417,6 +1456,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Interface widened for one implementor. Symptom. Several concrete strategies | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | Intermittent corruption or an assertion failure observed only under | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Intermittent failures that reproduce only under concurrency. Symptom. | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
+| Intermittent invalid token errors appear after key rotation. | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Intrinsic state. The fields whose values are shared by many objects and do | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Introducing Clean Architecture to a genuinely small | [Clean Architecture](../patterns/05-architectural/clean-architecture.md) | Architectural Patterns |
 | Invariant bypass through direct mutation. Symptom. A value that one | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
@@ -1455,6 +1495,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Judgement. The following symptom, cause, and fix triples are drawn from | [Controller](../patterns/04-principles-and-laws/controller.md) | Principles and Laws |
 | Judgement. the following symptom, cause, and fix triples are drawn from | [Evaluation Suite](../patterns/17-ai-agentic/evaluation-suite.md) | AI and Agentic |
 | Judgement. The following triples are phrased as observable symptoms so reviewers | [Reinventing the Wheel](../patterns/18-anti-patterns/reinventing-the-wheel.md) | Anti-Patterns |
+| Judgement. The following triples are phrased as production symptoms first | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Judgement. The following triples describe production symptoms, likely causes, | [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) | Refactoring Techniques |
 | Judgement. The symptoms below are drawn from common experience with the | [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) | Enterprise Application Architecture |
 | Judgement. the symptoms below are drawn from documented security research and | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
@@ -1497,6 +1538,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Loader with a hidden side effect. Symptom. A metric, a counter, or a | [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) | Data and Storage |
 | Loading an old Aggregate from storage re-triggers integration | [Factory](../patterns/11-domain-driven-design/factory.md) | Domain-Driven Design |
 | Loading and mutating two aggregates in one transaction. Symptom. | [Application Service](../patterns/11-domain-driven-design/application-service.md) | Domain-Driven Design |
+| Local data copies. Symptom: developers copy production data to local | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | Local development and CI schema checks pass, but production | [Schema Registry](../patterns/10-microservices/schema-registry.md) | Microservices |
 | local integration tests pass reliably but the same code fails | [Broker](../patterns/05-architectural/broker-architecture.md) | Architectural Patterns |
 | Lock contention on the factory. Symptom. Throughput plateaus well below the | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
@@ -1507,6 +1549,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Log line changes data. Symptom. Adding a log, metric label, template | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | logic. Symptom. A change to one product team's composed endpoint requires a | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | Logs and traces from inside the dependency call carry the wrong or a | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
+| Logs contain Authorization: Bearer values or URL query strings | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Logs say phase two failed, but the input that caused the failure | [Split Phase](../patterns/03-refactoring/split-phase.md) | Refactoring Techniques |
 | Long-held read locks starving writers. Symptom. A reporting query that | [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) | Data and Storage |
 | Losing buffered state on restart. Symptom. Every deployment or pod | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
@@ -1661,6 +1704,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No cross-cell observability. Symptom. An operator can see that overall | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | No cycle is ever reported by CI, yet developers still describe the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | No decision owner, so the timer alone does not converge. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
+| No emergency path. Symptom: an admin loses access during an incident. Cause: | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | No external aid, a call hierarchy view, a maintained sequence diagram, | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | No oracle beyond survival. Symptom. A fuzz campaign runs for weeks, finds | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | No reply ever produced for a two-way channel. Symptom. Requestors | [Service Activator](../patterns/07-integration/service-activator.md) | Enterprise Integration |
@@ -1724,6 +1768,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | One tenant's traffic spike still degrades other tenants, despite a | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | One-shot events crammed into State. Symptom. A toast or a one-time UI | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
 | only descriptive. Judgement note. the specific symptom wording below is | [Singleton Abuse](../patterns/18-anti-patterns/singleton-abuse.md) | Anti-Patterns |
+| Opaque denials. Symptom. Users retry, open support tickets, or find unsafe | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
+| Opaque denials. Symptom: denial logs contain no useful fields. Cause: the | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | Operations are genuinely type-dependent. Each one needs a different body per | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | operations patterns. Named API claims are cited elsewhere; the symptom, cause, | [Replace Loop with Pipeline](../patterns/03-refactoring/replace-loop-with-pipeline.md) | Refactoring Techniques |
 | Operations Research after it had circulated as an unproven assumption since | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
@@ -1731,6 +1777,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Operator pileup. Symptom. A reviewer cannot explain a twelve-stage chain | [Replace Loop with Pipeline](../patterns/03-refactoring/replace-loop-with-pipeline.md) | Refactoring Techniques |
 | Operator sets that generate mostly equivalent mutants for a given | [Mutation Test](../patterns/14-testing/mutation-test.md) | Testing |
 | Operators cannot explain a decision made by the new path. | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
+| Operators cannot tell why a request returned 403. Cause. | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
+| Operators see a surge of HTTP 403 responses but cannot tell | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | Optimistic lock exception surfacing at the wrong layer. Symptom. A user | [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) | Enterprise Application Architecture |
 | or a lagging consumer, surfaces before the symptom, a full disk, does. | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | or Method.invoke in Java. The symptom is a runtime error that appears | [Remove Dead Code](../patterns/03-refactoring/remove-dead-code.md) | Refactoring Techniques |
@@ -1831,6 +1879,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | PII appears in a request log or a cache entry even though | [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) | AI and Agentic |
 | Pimpl performance regression. Symptom. A profile showing cache misses and | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | Ping-pong handoff loop. The symptom is that the conversation, or the | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |
+| Pipeline overreach. Symptom: a CI job can alter production infrastructure. | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | place on purpose. Symptom. A member is genuinely, deliberately private, and a | [Insider Trading](../patterns/02-code-smells/insider-trading.md) | Code Smells |
 | Poison message loop. Symptom. A single message is processed, fails, becomes | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | Poison message loop. Symptom. Consumer lag on one partition grows | [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) | Enterprise Integration |
@@ -1838,6 +1887,9 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Poison message stalling a consumer group. Symptom. One subscriber's | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Poison message stalling an entire partition or queue. Symptom. Throughput | [Message Bus](../patterns/07-integration/message-bus.md) | Enterprise Integration |
 | policies, but because both paths remain available. The observable symptom is a | [Replace Query with Parameter](../patterns/03-refactoring/replace-query-with-parameter.md) | Refactoring Techniques |
+| Policy drift across enforcement points. Symptom. The same user can reach a | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
+| Policy exception pileup. Symptom. Denials fall after rollout, but the allow | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
+| Policy load failure starts the service. Symptom. After a deploy, all users | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Polymorphic count and aggregate queries returning wrong totals. Symptom. | [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) | Enterprise Application Architecture |
 | polymorphic dispatch. The symptom is a call site that no longer dispatches | [Inline Function](../patterns/03-refactoring/inline-function.md) | Refactoring Techniques |
 | Pool entry count equal to occurrence count. Symptom. Memory use after | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
@@ -1872,6 +1924,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | product or a connection. The symptom is a data race or a leaked authentication | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Production incidents cannot be reconstructed. Cause. Prompt | [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) | Anti-Patterns |
 | production, in Symptom, Cause, Fix form, per the project's own guidance for | [Content Filter](../patterns/07-integration/content-filter.md) | Enterprise Integration |
+| Production-only denials. Symptom: a workload receives 403 errors only in | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | production. Symptom. A field the consumer reads in a rarely-exercised code | [Contract Test](../patterns/14-testing/contract-test.md) | Testing |
 | Prompt injection through judged content. Symptom. A candidate response | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |
 | Prompt injection through observation content. Symptom, the agent's | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |
@@ -1882,6 +1935,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Provider verification is flaky, sometimes passing and sometimes | [Consumer-Driven Contract Test](../patterns/10-microservices/consumer-driven-contract-test.md) | Microservices |
 | Provider verification tests are constantly red, and the provider | [Consumer-Side Contract Test](../patterns/10-microservices/consumer-side-contract-test.md) | Microservices |
 | Proxy identity confusion. Symptom, an equality check or a type check | [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md) | Enterprise Application Architecture |
+| Proxy-only rollout. Symptom. The dashboard says the application is behind a | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | public type. The symptom is a compile error in consumer code that is only | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
 | Published in name, internal in fact. Symptom. A consuming team builds | [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) | Domain-Driven Design |
 | Publishing domain events before the transaction commits. Symptom. | [Application Service](../patterns/11-domain-driven-design/application-service.md) | Domain-Driven Design |
@@ -1918,6 +1972,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Read after write inconsistency. Symptom, a user submits a form, is redirected | [Primary-Replica](../patterns/05-architectural/primary-replica.md) | Architectural Patterns |
 | Read and write requirements have genuinely parted ways along at least one axis, | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Read latency spikes, specifically on the tail (p99, p99.9), that | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
+| Read role with write effects. Symptom: a read-only support role changes | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | Read staleness from a partitioned former leader. Symptom. A client | [Raft](../patterns/12-data-storage/raft.md) | Data and Storage |
 | Read-modify-write races bypass the cache entirely. Symptom. Two | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | read-your-writes handling." Symptom, a user submits a form, is redirected to | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
@@ -1954,6 +2009,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reflection used to route around a private keyword the author left in | [Insider Trading](../patterns/02-code-smells/insider-trading.md) | Code Smells |
 | Reflection-based equals and hashCode drifting from the intended field | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
 | reflex, destroying available parallelism. Symptom, a service that should | [Active Object](../patterns/09-concurrency/active-object.md) | Concurrency and Parallelism |
+| Refresh token replay goes unnoticed and both the attacker and | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Registry memory leak. The registry holds strong references to every | [Change Value to Reference](../patterns/03-refactoring/change-value-to-reference.md) | Refactoring Techniques |
 | Registry outage taken as a total system outage. Symptom, every internal | [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) | Microservices |
 | Rejection rate for one partition rises to 100 percent and stays there | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -1988,6 +2044,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Replication between two leaders silently stops making progress, | [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) | Data and Storage |
 | Replies pile up in a dead-letter or unroutable-message queue, | [Correlation Identifier](../patterns/07-integration/correlation-identifier.md) | Enterprise Integration |
 | Report generation that takes minutes and hammers every service's | [Database per Service](../patterns/10-microservices/database-per-service.md) | Microservices |
+| Report-only becomes permanent. Symptom. Dashboards show that a new operation | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Reporting on the blocking path. Symptom. Under load, request latency | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
 | Repository per entity instead of per Aggregate root. Symptom, an | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
 | Representation chosen too early. Symptom. Money wraps a decimal amount, | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
@@ -2042,6 +2099,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Root obtained from an untrusted source. Symptom. Verification always | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
 | Rounds continue without the final answer ever stabilising, | [Agent Debate](../patterns/17-ai-agentic/agent-debate.md) | AI and Agentic |
 | Router misclassification. The symptom is a user request being routed to the | [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) | AI and Agentic |
+| Routine break-glass use. Symptom: a break-glass account is used for routine | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | Rug pull, post-approval description changes. Symptom, a server that | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
 | Rule ordering bugs in first-match-wins engines. Symptom. A newly added | [Content-Based Router](../patterns/07-integration/content-based-router.md) | Enterprise Integration |
 | Rule-set scanning cost. Symptom. Response latency for a specific page | [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) | Enterprise Application Architecture |
@@ -2061,6 +2119,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | s below are drawn from operating this pattern. The underlying mechanisms | [Cache-Aside](../patterns/08-cloud-distributed/cache-aside.md) | Cloud and Distributed |
 | s persist unchanged, because the coupling channel, the shared database | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
 | s, causes, and fixes. | [Replace Constructor with Factory Function](../patterns/03-refactoring/replace-constructor-with-factory-function.md) | Refactoring Techniques |
+| Safe default differs by caller. Symptom. The web API denies a malformed | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Sagas without idempotent participants. Symptom. A customer's inventory | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
 | Sandbox escape or ambient credential leakage. Symptom, code that should have | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
 | Sandboxing matters. the evaluator must be able to run untrusted or | [Interpreter Architecture](../patterns/05-architectural/interpreter-architecture.md) | Architectural Patterns |
@@ -2079,6 +2138,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Scope fog. Symptom. Nobody can say which features are launch blockers, beta | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Search still scans everything. Symptom. A test with a spy input shows that | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | Second-preimage attack via missing domain separation. Symptom. Two | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
+| Secret extraction through workload creation. Symptom: a user with no Secret | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
+| Security review debates tools, not risks. Cause. The layer | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Security review discovers that a real share of | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
 | Selector coupling breaking on a routine schema change. Symptom. A | [Selective Consumer](../patterns/07-integration/selective-consumer.md) | Enterprise Integration |
 | Selector evaluated too late to save anything. Symptom. A team adopts a | [Selective Consumer](../patterns/07-integration/selective-consumer.md) | Enterprise Integration |
@@ -2104,6 +2165,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Series-count explosion from an unbounded label. Symptom. The metrics | [Application Metrics](../patterns/10-microservices/application-metrics.md) | Microservices |
 | Service A calls service B, and B's audit log records the request | [Access Token](../patterns/10-microservices/access-token.md) | Microservices |
 | Service locator disguised as dependency injection. Symptom. A class | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
+| Service logs cannot answer whether a request represented a user, | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Session affinity assumed but not configured. Symptom. A user | [Server-Side Discovery](../patterns/10-microservices/server-side-discovery.md) | Microservices |
 | Session affinity masquerading as statelessness. Symptom, a load | [Client-Server](../patterns/05-architectural/client-server.md) | Architectural Patterns |
 | Session data must survive an individual server crashing, restarting for a | [Database Session State](../patterns/06-enterprise-application-architecture/database-session-state.md) | Enterprise Application Architecture |
@@ -2128,6 +2190,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Shared mutable state in the tree. Symptom. Intermittent wrong results under | [Interpreter](../patterns/01-gof/interpreter.md) | Design Patterns (GoF) |
 | Shared mutable state leaking across the isolation boundary. The symptom | [Microkernel](../patterns/05-architectural/microkernel.md) | Architectural Patterns |
 | Shared mutable strategy under concurrency. Symptom. Wrong results that appear | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
+| Shared service identity. Symptom. Audit logs show backend-service for | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | Shared vocabulary without a shared home. Two areas of a system both | [Circular Dependency](../patterns/18-anti-patterns/circular-dependency.md) | Anti-Patterns |
 | Shared, finite consumption capacity. If capacity were infinite, | [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) | Cloud and Distributed |
 | Short-circuit hidden inside a handler. Symptom. A handler far down the chain | [Chain of Responsibility](../patterns/01-gof/chain-of-responsibility.md) | Design Patterns (GoF) |
@@ -2337,6 +2400,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A blocked attack succeeds on a second or third attempt after | [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) | AI and Agentic |
 | Symptom. A Bounded Context boundary is drawn identically to a Module | [Module](../patterns/11-domain-driven-design/module.md) | Domain-Driven Design |
 | Symptom. A branch now performs work that used to happen only on one path. | [Slide Statements](../patterns/03-refactoring/slide-statements.md) | Refactoring Techniques |
+| Symptom. A break-glass role becomes the normal way to do release work. | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | Symptom. A brief, unrelated network blip or a short service restart is | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |
 | Symptom. A browser agent repeatedly reaches a strange domain after reading | [Prompt Injection Sink](../patterns/18-anti-patterns/prompt-injection-sink.md) | Anti-Patterns |
 | Symptom. A bug fix needs the same edit in twelve variant classes. Cause. | [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) | Refactoring Techniques |
@@ -2395,6 +2459,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A consumer silently produces subtly wrong data for a subset of | [Format Indicator](../patterns/07-integration/format-indicator.md) | Enterprise Integration |
 | Symptom. A consumer that has run correctly for months suddenly throws a | [Datatype Channel](../patterns/07-integration/datatype-channel.md) | Enterprise Integration |
 | Symptom. A consumer that previously received a field, or a newly | [Content Filter](../patterns/07-integration/content-filter.md) | Enterprise Integration |
+| Symptom. A copied URL grants API access. | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | Symptom. A counter increments fewer times after the replacement, or a mock | [Replace Inline Code with Function Call](../patterns/03-refactoring/replace-inline-code-with-function-call.md) | Refactoring Techniques |
 | Symptom. A cross-site scripting report comes in against a page that | [Template View](../patterns/06-enterprise-application-architecture/template-view.md) | Enterprise Application Architecture |
 | Symptom. A cross-subdomain business operation regularly ends up half | [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) | Microservices |
@@ -2409,6 +2474,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A dashboard shows a sudden, sharp spike in origin database | [Cache Stampede](../patterns/18-anti-patterns/cache-stampede.md) | Anti-Patterns |
 | Symptom. A dashboard shows the daily unique count as smaller than the sum | [HyperLogLog](../patterns/12-data-storage/hyperloglog.md) | Data and Storage |
 | Symptom. A dashboard silently shows stale numbers with no error anywhere. | [ETL](../patterns/12-data-storage/etl.md) | Data and Storage |
+| Symptom. A database administrator can delete or rewrite the approval table | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | Symptom. A database backup, a change-data-capture stream, or a DBA | [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) | Enterprise Application Architecture |
 | Symptom. A database query count rises after a small signature cleanup. | [Replace Parameter with Query](../patterns/03-refactoring/replace-parameter-with-query.md) | Refactoring Techniques |
 | Symptom. A database row with a new discriminator crashes only after a later | [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) | Refactoring Techniques |
@@ -2458,6 +2524,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A function used to orchestrate several downstream steps grows | [Serverless Deployment](../patterns/10-microservices/serverless-deployment.md) | Microservices |
 | Symptom. A gate keeps failing on the same input, and the retry logic | [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) | AI and Agentic |
 | Symptom. A gateway configuration change, meant to add a new discount | [Gateway Offloading](../patterns/08-cloud-distributed/gateway-offloading.md) | Cloud and Distributed |
+| Symptom. A generated role works for every feature but also grants future | [Secure by Default](../patterns/15-security/secure-by-default.md) | Security |
 | Symptom. A Generic capability, something a vendor product would solve in | [Supporting Subdomain](../patterns/11-domain-driven-design/supporting-subdomain.md) | Domain-Driven Design |
 | Symptom. A generic subdomain integration works fine in isolation, but the | [Generic Subdomain](../patterns/11-domain-driven-design/generic-subdomain.md) | Domain-Driven Design |
 | Symptom. A generic subdomain, something like tax calculation or address | [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) | Microservices |
@@ -2497,6 +2564,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A long-running Completion Handler causes visible latency spikes | [Proactor](../patterns/09-concurrency/proactor.md) | Concurrency and Parallelism |
 | Symptom. A low-traffic call site to an otherwise healthy shared | [Retry Budget](../patterns/10-microservices/retry-budget.md) | Microservices |
 | Symptom. A magic number silently changes meaning across a codebase's | [Magic Numbers](../patterns/18-anti-patterns/magic-numbers.md) | Anti-Patterns |
+| Symptom. A major version upgrade breaks clients because anonymous read is | [Secure by Default](../patterns/15-security/secure-by-default.md) | Security |
 | Symptom. A managed store's billed storage size, or an on-premises | [Message Store](../patterns/07-integration/message-store.md) | Enterprise Integration |
 | Symptom. A memory graph shows many objects retained by a map inside the | [Replace Constructor with Factory Function](../patterns/03-refactoring/replace-constructor-with-factory-function.md) | Refactoring Techniques |
 | Symptom. A merged controller-and-view page (a JSP full of scriptlets, a | [Page Controller](../patterns/06-enterprise-application-architecture/page-controller.md) | Enterprise Application Architecture |
@@ -2533,6 +2601,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A new subtype works in the main screen but is absent from one | [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) | Refactoring Techniques |
 | Symptom. A new variant works in one workflow but fails in another with a | [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) | Refactoring Techniques |
 | Symptom. A newly added subtype loads correctly by identifier but never | [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) | Enterprise Application Architecture |
+| Symptom. A newly created service exposes an internal admin endpoint on a | [Secure by Default](../patterns/15-security/secure-by-default.md) | Security |
 | Symptom. A newly deployed instance receives production traffic | [Self Registration](../patterns/10-microservices/self-registration.md) | Microservices |
 | Symptom. A newly formed platform team is created specifically to own a | [Conway's Law](../patterns/04-principles-and-laws/conway-law.md) | Principles and Laws |
 | Symptom. A newly written feature ships with only a golden master test, | [Golden Master](../patterns/14-testing/golden-master.md) | Testing |
@@ -2606,6 +2675,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A review becomes a debate about style instead of behavior. Cause. | [Slide Statements](../patterns/03-refactoring/slide-statements.md) | Refactoring Techniques |
 | Symptom. A reviewer approves a pull request quickly because the diff | [Comments](../patterns/02-code-smells/comments.md) | Code Smells |
 | Symptom. A rewrite or a redesign project has been "in design" or "in | [Analysis Paralysis](../patterns/18-anti-patterns/analysis-paralysis.md) | Anti-Patterns |
+| Symptom. A role admin creates a new role with forbidden permissions, then | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | Symptom. A run that clearly failed, missing an obvious piece of | [Orchestrator-Worker](../patterns/17-ai-agentic/orchestrator-worker.md) | AI and Agentic |
 | Symptom. A Rust borrow checker error appears after moving a declaration | [Slide Statements](../patterns/03-refactoring/slide-statements.md) | Refactoring Techniques |
 | Symptom. A secret, a database password or an API key, turns up in a | [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) | Microservices |
@@ -2616,8 +2686,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A security incident traces back to a homegrown implementation | [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) | Anti-Patterns |
 | Symptom. A security or compliance review finds personal data inside the | [Message Store](../patterns/07-integration/message-store.md) | Enterprise Integration |
 | Symptom. A security review blocks release because a custom token format or | [Reinventing the Wheel](../patterns/18-anti-patterns/reinventing-the-wheel.md) | Anti-Patterns |
+| Symptom. A security team believes every service has CSRF protection, but | [Secure by Default](../patterns/15-security/secure-by-default.md) | Security |
 | Symptom. A sequence that was clearly complete in the producer's logs | [Message Sequence](../patterns/07-integration/message-sequence.md) | Enterprise Integration |
 | Symptom. A service accepts "prod" in one endpoint and "production" in | [Replace Magic Literal](../patterns/03-refactoring/replace-magic-literal.md) | Refactoring Techniques |
+| Symptom. A service account both creates infrastructure and grants itself the | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
+| Symptom. A service account token keeps working after a pod is gone. | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | Symptom. A service appears to have effectively no retry protection at | [Retry Budget](../patterns/10-microservices/retry-budget.md) | Microservices |
 | Symptom. A service cannot scale independently even after compute replicas | [Shared Database Microservices](../patterns/18-anti-patterns/shared-database-microservices.md) | Anti-Patterns |
 | Symptom. A Service class grows to dozens of unrelated public methods | [Domain Service](../patterns/11-domain-driven-design/domain-service.md) | Domain-Driven Design |
@@ -2691,6 +2764,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A team runs a code coverage report over a two-week window, | [Dead Code](../patterns/02-code-smells/dead-code.md) | Code Smells |
 | Symptom. A team selects a database because a comparison chart lists it as | [PACELC Theorem](../patterns/04-principles-and-laws/pacelc-theorem.md) | Principles and Laws |
 | Symptom. A team's static analysis dashboard reports full doc comment | [Comments](../patterns/02-code-smells/comments.md) | Code Smells |
+| Symptom. A tenant reads another tenant's data after a new feature launches, | [Secure by Default](../patterns/15-security/secure-by-default.md) | Security |
 | Symptom. A tenant with a documented limit of 1,000 requests per minute is | [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) | Cloud and Distributed |
 | Symptom. A test fails on CI but passes every time the same engineer | [Generated Value](../patterns/14-testing/generated-value.md) | Testing |
 | Symptom. A test fails only when the full suite runs, and passes every | [Shared Fixture](../patterns/14-testing/shared-fixture.md) | Testing |
@@ -2710,6 +2784,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A third Bounded Context, owned by a third team, starts | [Shared Kernel](../patterns/11-domain-driven-design/shared-kernel.md) | Domain-Driven Design |
 | Symptom. A timeout change has no effect in production after deployment. | [Replace Magic Literal](../patterns/03-refactoring/replace-magic-literal.md) | Refactoring Techniques |
 | Symptom. A TODO comment is found during a codebase audit that references | [Comments](../patterns/02-code-smells/comments.md) | Code Smells |
+| Symptom. A token from one API works against another API. | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
+| Symptom. A token with alg=none or a wrong algorithm is accepted in tests | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | Symptom. A tool reports zero call sites for a class, the team deletes it, | [Dead Code](../patterns/02-code-smells/dead-code.md) | Code Smells |
 | Symptom. A transfer half-completes in production. money leaves one | [Domain Service](../patterns/11-domain-driven-design/domain-service.md) | Domain-Driven Design |
 | Symptom. A transform step passes locally on a developer's laptop but fails | [ETL](../patterns/12-data-storage/etl.md) | Data and Storage |
@@ -2718,6 +2794,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. A unit-confusion defect ships to production. A duration is off | [Magic Numbers](../patterns/18-anti-patterns/magic-numbers.md) | Anti-Patterns |
 | Symptom. A user completes an action, the confirmation screen shows the old | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Symptom. A user or a bot systematically opens many new sessions, | [Cost Guard](../patterns/17-ai-agentic/cost-guard.md) | AI and Agentic |
+| Symptom. A user receives an approval request for their own change, or the | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | Symptom. A user updates a record, the update is confirmed, and the record | [Cache-Aside](../patterns/08-cloud-distributed/cache-aside.md) | Cloud and Distributed |
 | Symptom. A user's session data, shopping cart contents, or | [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) | Microservices |
 | Symptom. A variant method throws "not supported" for several operations. | [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) | Refactoring Techniques |
@@ -2779,6 +2856,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. An unhandled exception in one rarely used action, an export | [Front Controller](../patterns/06-enterprise-application-architecture/front-controller.md) | Enterprise Application Architecture |
 | Symptom. An unrelated feature's release is blocked by a database | [Monolithic Persistence](../patterns/18-anti-patterns/monolithic-persistence.md) | Anti-Patterns |
 | Symptom. An UPDATE silently updates zero rows, or updates the wrong | [Identity Field](../patterns/06-enterprise-application-architecture/identity-field.md) | Enterprise Application Architecture |
+| Symptom. API returns 500 for malformed tokens. | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | Symptom. Application code is littered with direct calls to the | [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) | Cloud and Distributed |
 | Symptom. Assertions removed from a codebase entirely after a production | [Fail Fast](../patterns/04-principles-and-laws/fail-fast.md) | Principles and Laws |
 | Symptom. Attempting to add late chunking against a third-party hosted | [Late Chunking](../patterns/17-ai-agentic/late-chunking.md) | AI and Agentic |
@@ -2867,12 +2945,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. Every proposal to adopt an external library is met with a | [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) | Anti-Patterns |
 | Symptom. Every request reaching a service that logs client IPs shows | [Gateway Offloading](../patterns/08-cloud-distributed/gateway-offloading.md) | Cloud and Distributed |
 | Symptom. Every tenant's requests start failing during one tenant's | [Throttling](../patterns/08-cloud-distributed/throttling.md) | Cloud and Distributed |
+| Symptom. Expired tokens pass on one node and fail on another. | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | Symptom. Extracting any single module later, dimension 14, turns out to | [Modular Monolith](../patterns/05-architectural/modular-monolith.md) | Architectural Patterns |
 | Symptom. Frequent, unexplained conflict exceptions on a single entity | [Implicit Lock](../patterns/06-enterprise-application-architecture/implicit-lock.md) | Enterprise Application Architecture |
 | Symptom. GraphRAG or RAPTOR answers a broad, thematic question well but | [Advanced RAG](../patterns/17-ai-agentic/advanced-rag.md) | AI and Agentic |
 | Symptom. Grepping a file for a function name returns three matches, one | [Comments](../patterns/02-code-smells/comments.md) | Code Smells |
 | Symptom. Handling one event produces another that triggers the first, and | [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) | Cloud and Distributed |
 | Symptom. Heap grows monotonically across the life of the process. A heap dump | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
+| Symptom. High-risk requests pass review in seconds with identical approval | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | Symptom. Hybrid search with RRF performs worse than dense-only retrieval | [Advanced RAG](../patterns/17-ai-agentic/advanced-rag.md) | AI and Agentic |
 | Symptom. In a horizontally scaled gateway fleet, roughly half the pods | [LLM Circuit Breaker](../patterns/17-ai-agentic/llm-circuit-breaker.md) | AI and Agentic |
 | Symptom. In a long-running agent session, the agent appears to forget an | [Token Budget](../patterns/17-ai-agentic/token-budget.md) | AI and Agentic |
@@ -2915,6 +2995,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. Offline score rises release after release, while live complaint | [Golden Dataset Leakage](../patterns/18-anti-patterns/golden-dataset-leakage.md) | Anti-Patterns |
 | Symptom. On-call cannot tell whether the system is healthy, only whether | [Cell-Based Architecture](../patterns/08-cloud-distributed/cell-based-architecture.md) | Cloud and Distributed |
 | Symptom. One bad record is skipped and later records for the same account | [Poison Pill Message](../patterns/18-anti-patterns/poison-pill-message.md) | Anti-Patterns |
+| Symptom. One broad personal token appears in many CI jobs. | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | Symptom. One customer's page takes eleven seconds to load and the rest take | [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) | Cloud and Distributed |
 | Symptom. One malformed event and the entire read model stops updating. Every | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Symptom. One malformed or unusually shaped message causes every consumer | [Message Channel](../patterns/07-integration/message-channel.md) | Enterprise Integration |
@@ -2943,6 +3024,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. Point-lookup latency degrades gradually over weeks or months | [LSM Tree](../patterns/12-data-storage/lsm-tree.md) | Data and Storage |
 | Symptom. Private phase methods must be called in a hidden order, and a | [Replace Function with Command](../patterns/03-refactoring/replace-function-with-command.md) | Refactoring Techniques |
 | Symptom. Production cost or latency on the reasoning endpoint spikes | [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) | AI and Agentic |
+| Symptom. Production deploys stall because every approver group contains | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | Symptom. Production incidents where the on-call engineer sees a wall of | [Fail Fast](../patterns/04-principles-and-laws/fail-fast.md) | Principles and Laws |
 | Symptom. Production metrics show a sudden rise in DefaultPlan or | [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) | Refactoring Techniques |
 | Symptom. Projection lag rises steadily over hours, never recovers, and | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
@@ -2954,6 +3036,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. Queue depth climbs steadily even though consumer CPU usage looks | [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) | Cloud and Distributed |
 | Symptom. Queue depth grows without bound and workers never seem to catch | [Work Queue](../patterns/09-concurrency/work-queue.md) | Concurrency and Parallelism |
 | Symptom. Queue depth keeps climbing even though the consumer pool is at | [Competing Consumers](../patterns/07-integration/competing-consumers.md) | Enterprise Integration |
+| Symptom. Random 401 spikes begin after key rotation. | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | Symptom. Read model queries are fast in isolation and slow in production, | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Symptom. Redis memory climbs until eviction begins, then hit rate drops and | [No Caching Strategy](../patterns/18-anti-patterns/no-caching-strategy.md) | Anti-Patterns |
 | Symptom. Rejections cluster on one tenant that did nothing unusual, while a | [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) | Cloud and Distributed |
@@ -2990,8 +3073,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. Startup time grows noticeably as the number of mapped classes | [Metadata Mapping](../patterns/06-enterprise-application-architecture/metadata-mapping.md) | Enterprise Application Architecture |
 | Symptom. Storage costs for the external store grow unbounded over | [Claim Check](../patterns/07-integration/claim-check.md) | Enterprise Integration |
 | Symptom. Support tickets from real customers report being refused for | [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) | AI and Agentic |
+| Symptom. Support tickets include full Authorization headers. | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | Symptom. Switching or upgrading the generic subdomain's vendor turns into | [Generic Subdomain](../patterns/11-domain-driven-design/generic-subdomain.md) | Domain-Driven Design |
 | Symptom. Team adopts Data Vault for a first warehouse with one or two | [Data Vault](../patterns/12-data-storage/data-vault.md) | Data and Storage |
+| Symptom. Teams add allowhttp = true to many services to make local | [Secure by Default](../patterns/15-security/secure-by-default.md) | Security |
 | Symptom. Teams provision a new dedicated host for every new service | [Service Instance per Host](../patterns/10-microservices/service-instance-per-host.md) | Microservices |
 | Symptom. Tests assert private helper methods or inspect internal fields. | [Replace Function with Command](../patterns/03-refactoring/replace-function-with-command.md) | Refactoring Techniques |
 | Symptom. Tests of a single Aggregate method are slow, flaky, or require an | [Domain Event](../patterns/10-microservices/domain-event.md) | Microservices |
@@ -3078,6 +3163,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. The pass rate on a feature that has run unchanged for months | [Evaluator-Optimizer](../patterns/17-ai-agentic/evaluator-optimizer.md) | AI and Agentic |
 | Symptom. The pattern is applied to an open-ended writing or | [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) | AI and Agentic |
 | Symptom. The pipeline deadlocks entirely, every stage's worker is blocked, | [Pipeline Parallelism](../patterns/09-concurrency/pipeline-parallelism.md) | Concurrency and Parallelism |
+| Symptom. The policy works for one application, but a linked downstream | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | Symptom. The polling query, which used to run in milliseconds, now takes | [Polling Publisher](../patterns/10-microservices/polling-publisher.md) | Microservices |
 | Symptom. The primary consumer's p99 latency rises noticeably right after | [Wire Tap](../patterns/07-integration/wire-tap.md) | Enterprise Integration |
 | Symptom. The primary key column is used as if it carries business | [Identity Field](../patterns/06-enterprise-application-architecture/identity-field.md) | Enterprise Application Architecture |
@@ -3161,6 +3247,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. Two concurrent requests for the same user both succeed even | [Cost Guard](../patterns/17-ai-agentic/cost-guard.md) | AI and Agentic |
 | Symptom. Two consumers both appear to have processed the same order, | [Competing Consumers](../patterns/07-integration/competing-consumers.md) | Enterprise Integration |
 | Symptom. Two departments leave the workshop still disagreeing about what | [Event Storming](../patterns/11-domain-driven-design/event-storming.md) | Domain-Driven Design |
+| Symptom. Two different accounts satisfy requester and approver, but logs | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | Symptom. Two different clients reading the same entity id in quick | [Space-Based Architecture](../patterns/05-architectural/space-based-architecture.md) | Architectural Patterns |
 | Symptom. Two different compaction runs on the same underlying history | [Memory Compaction](../patterns/17-ai-agentic/memory-compaction.md) | AI and Agentic |
 | Symptom. Two different consumers of the same claim check retrieve two | [Claim Check](../patterns/07-integration/claim-check.md) | Enterprise Integration |
@@ -3227,8 +3314,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom. Unit tests for the domain layer require a running database. | [Layered Architecture](../patterns/05-architectural/layered-architecture.md) | Architectural Patterns |
 | Symptom. Unit tests pass by asserting subclass names, while behavior still | [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) | Refactoring Techniques |
 | Symptom. Unit tests pass individually but fail intermittently when run as | [Service Locator](../patterns/18-anti-patterns/service-locator.md) | Anti-Patterns |
+| Symptom. Users can bypass the UI approval flow by calling an internal API or | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
+| Symptom. Users keep access for minutes or hours after being disabled. | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | Symptom. Users report that a record is permanently stuck as locked by a | [Pessimistic Offline Lock](../patterns/06-enterprise-application-architecture/pessimistic-offline-lock.md) | Enterprise Application Architecture |
 | Symptom. Users see an old profile photo, price, feature flag, or article | [No Caching Strategy](../patterns/18-anti-patterns/no-caching-strategy.md) | Anti-Patterns |
+| Symptom. Users see TLS failures after a certificate automation feature was | [Secure by Default](../patterns/15-security/secure-by-default.md) | Security |
 | Symptom. Values in the cache are correct for one deployment and wrong or | [Cache-Aside](../patterns/08-cloud-distributed/cache-aside.md) | Cloud and Distributed |
 | Symptom. Vote counts look reasonable but the majority answer is | [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) | AI and Agentic |
 | Symptom. Write latency, previously sub-millisecond, suddenly spikes to | [LSM Tree](../patterns/12-data-storage/lsm-tree.md) | Data and Storage |
@@ -3245,6 +3335,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Teams stop upgrading the chassis, and six months later half | [Microservice Chassis](../patterns/10-microservices/microservice-chassis.md) | Microservices |
 | Teardown after use. The mirror image. A resource must be released, | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
 | Teardown that silently never runs. Symptom. Test suite state leaks | [Four-Phase Test](../patterns/14-testing/four-phase-test.md) | Testing |
+| Telemetry without retention rules. Symptom. Access logs contain device IDs, | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | template, with the symptom stated as something an engineer would actually | [Least to Most](../patterns/17-ai-agentic/least-to-most.md) | AI and Agentic |
 | Tenant fairness. In a multi-tenant system the aggregate capacity is | [Throttling](../patterns/08-cloud-distributed/throttling.md) | Cloud and Distributed |
 | Test pollution from process-wide mutable state. Symptom. A test that passes | [Singleton](../patterns/01-gof/singleton.md) | Design Patterns (GoF) |
@@ -3302,6 +3393,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The application's source is closed, vendored, or owned by another team. | [Channel Adapter](../patterns/07-integration/channel-adapter.md) | Enterprise Integration |
 | The arrival rate of work is bursty or unpredictable relative to a downstream | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | The authority nobody agreed on. Symptom. Two teams both believe their own | [Single Source of Truth](../patterns/04-principles-and-laws/single-source-of-truth.md) | Principles and Laws |
+| The authorization server can centralize consent, policy, client | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | The base object's class is not under your control, or should not be | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
 | The behavior difference between modes is real behavior, not a data difference. | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | The benchmark improved but p95 latency worsened. Cause. The | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
@@ -3351,6 +3443,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The CI suite takes eight minutes and most of that time is spent in | [Test Trophy](../patterns/14-testing/test-trophy.md) | Testing |
 | The class fills with one-line private methods that no caller | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
 | The classic C++ std::string copy-on-write data race. Symptom. A | [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) | Concurrency and Parallelism |
+| The client can make HTTP requests and can be classified by its ability to | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | The client cannot be edited either, or not cheaply. The calling code is | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | The client cannot reasonably be asked to make the calls itself. A mobile | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | The Cloneable contract nobody can honour. Cloneable declares no method | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
@@ -3385,13 +3478,16 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The Core Domain's code depends directly on a third-party | [Core Domain](../patterns/11-domain-driven-design/core-domain.md) | Domain-Driven Design |
 | The corpus itself is heterogeneous. It mixes structured identifiers, | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |
 | The cosmetic Facade. Symptom. A proposed fix introduces a Facade or | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
+| The cost of a breach, destructive error, privacy exposure, or long outage is | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | The cost of a defect at this boundary in production is high enough to | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
+| The cost of a failed or captured subject is high enough that the added | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | The cost of a wrong or premature abstraction is high enough that | [Composable](../patterns/04-principles-and-laws/composable.md) | Principles and Laws |
 | The cost of a wrong retrieval is not trivial. In a RAG pipeline a missed | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |
 | The cost of producing the whole sequence at once is unacceptable, or the | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
 | The counter overflows or grows unexpectedly large. | [Lamport Clock](../patterns/12-data-storage/lamport-clock.md) | Data and Storage |
 | The creator has real behaviour of its own, not only creation. | [Factory Method](../patterns/01-gof/factory-method.md) | Design Patterns (GoF) |
 | The crust that outlives its purpose. Symptom. A facade or adapter that | [Big Ball of Mud](../patterns/11-domain-driven-design/big-ball-of-mud.md) | Domain-Driven Design |
+| The dashboard is green during an incident that users report. | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | The dashboard that got slow as the table grew. Symptom. A list endpoint | [Extraneous Fetching](../patterns/18-anti-patterns/extraneous-fetching.md) | Anti-Patterns |
 | The data genuinely lives in separately owned stores. If the data still | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | The data is bulky relative to the messaging system's sweet spot, and the | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
@@ -3435,6 +3531,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The dynamic schema cost cliff. Symptom. A pipeline that was fast in | [Structured Output](../patterns/17-ai-agentic/structured-output.md) | AI and Agentic |
 | The elements are consumed one at a time, in sequence, with no need for random | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
 | The empty intermediate class trap. Symptom. A reader tracing a bug | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
+| The enforcement point can compare actors, roles, groups, or attributes across | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
+| The enforcement point can form a request context rich enough for the policy. | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | The evaluator overrides good retrieval silently. Symptom. A query that | [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) | AI and Agentic |
 | The event log for one aggregate grows into millions of rows | [Domain Event](../patterns/11-domain-driven-design/domain-event.md) | Domain-Driven Design |
 | the event. The symptom is a handler that fires reliably and then silently never | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
@@ -3604,6 +3702,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The orchestrator as an accidental god object. Symptom. The order saga | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
 | The order is a real constraint, not a coincidence. If the steps could be | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | The order of screens, or the set of legal next screens, depends on | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
+| The organization accepts the added queueing cost when an action waits for a | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | The organization wants client code that is agnostic to the runtime, the | [Server-Side Service Discovery](../patterns/10-microservices/server-side-service-discovery.md) | Microservices |
 | The outbox table is used as a general-purpose message queue | [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) | Microservices |
 | The outbox table's row count grows without bound and query | [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) | Microservices |
@@ -3636,6 +3735,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The platform's control plane itself becomes slow or | [Service Deployment Platform](../patterns/10-microservices/service-deployment-platform.md) | Microservices |
 | The platform's plugin ecosystem stagnates, or a large share of | [Plugin Sandbox](../patterns/05-architectural/plugin-sandbox.md) | Architectural Patterns |
 | The plugin still needs to do real work. A sandbox that grants nothing is | [Plugin Sandbox](../patterns/05-architectural/plugin-sandbox.md) | Architectural Patterns |
+| The policy says "manager can approve expense," but managers can | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | The polling loop silently stops making progress with no crash and no | [Polling Consumer](../patterns/07-integration/polling-consumer.md) | Enterprise Integration |
 | The predicate and the operation observe the same state closely enough that the | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
 | The premature narrowing that nobody asked for. Symptom. A code review | [Extraneous Fetching](../patterns/18-anti-patterns/extraneous-fetching.md) | Anti-Patterns |
@@ -3694,6 +3794,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The rules are stateful or conditional, so they cannot be reduced to a | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | The rules or expressions come from outside the compiled binary, at | [Interpreter Architecture](../patterns/05-architectural/interpreter-architecture.md) | Architectural Patterns |
 | The saga that should have been a transaction. Symptom. Two services always | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
+| The same authorization code produces more than one access | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | The same business rule, a discount calculation, a fraud | [Service per Team](../patterns/10-microservices/service-per-team.md) | Microservices |
 | The same change is applied twice downstream, producing duplicate side | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
 | The same collaborator is spied on inside dozens of unrelated tests | [Spy](../patterns/14-testing/spy.md) | Testing |
@@ -3714,6 +3815,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The search consistently converges on the same wrong answer | [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) | AI and Agentic |
 | The second failure mode is interface-itis. The symptom is that every class in | [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) | Principles and Laws |
 | The sender is content to have the request handled by somebody, without a | [Chain of Responsibility](../patterns/01-gof/chain-of-responsibility.md) | Design Patterns (GoF) |
+| The sensitive action can be decomposed into named duties. | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | The service is large enough, or important enough, that a full outage has a | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | The services already communicate through an event backbone. A message | [Choreography](../patterns/08-cloud-distributed/choreography.md) | Cloud and Distributed |
 | The serving layer's data appears to jump backward, a number | [Lambda Architecture](../patterns/12-data-storage/lambda-architecture.md) | Data and Storage |
@@ -3792,6 +3894,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The system asks users for information already stored in account | [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) | Anti-Patterns |
 | The system behaves correctly under light load and falls over | [Request-Reply](../patterns/07-integration/request-reply.md) | Enterprise Integration |
 | The system behaves unpredictably from run to run on what looks | [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) | AI and Agentic |
+| The system can identify the actor for each duty with enough confidence for | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
+| The system can tolerate the cost of repeated checks, or can cache decisions | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | The system enters a loop, replanning the same failing step repeatedly | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
 | The system has many service instances, often across many services, so an | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
 | The system is technically correct on every benchmark | [Least to Most](../patterns/17-ai-agentic/least-to-most.md) | AI and Agentic |
@@ -3814,6 +3918,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The team calls their architecture Blackboard but really built a plain event bus with a handful of independent event h... | [Blackboard Architecture](../patterns/05-architectural/blackboard-architecture.md) | Architectural Patterns |
 | The team can absorb the operational surface. Somebody has to own projection | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | The team can carry the operational shape. Eventual consistency between | [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) | Cloud and Distributed |
+| The team can decide what each layer is meant to do: prevent, detect, slow, | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
+| The team can learn what authority the work requires, either from design, | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | The team cannot explain why a specific request was slow, and | [Sidecar Proxy](../patterns/10-microservices/sidecar-proxy.md) | Microservices |
 | The team cannot explain, when asked directly, whether a | [Conformist](../patterns/11-domain-driven-design/conformist.md) | Domain-Driven Design |
 | The team deployed the pattern for two or three customers and | [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) | Cloud and Distributed |
@@ -3887,10 +3993,13 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The zone of uselessness. Symptom. An interface or abstract class with | [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) | Principles and Laws |
 | Then asserting on internal state instead of observable output. Symptom. | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
 | then finding the correctness cost outweighed the benefit. Symptom. | [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) | Data and Storage |
+| There are multiple points where a request, actor, artifact, or data item can | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | There is a genuinely simpler place to put the single definition, one that | [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) | Code Smells |
+| There is a policy enforcement point that can distinguish subjects, actions, | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | There is a real function boundary that consumes untrusted or externally | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | There is a real invariant, a rule that must hold true at the end of every | [Aggregate](../patterns/10-microservices/aggregate.md) | Microservices |
 | There is a small, stable, and genuinely minimal interface that many | [Composable](../patterns/04-principles-and-laws/composable.md) | Principles and Laws |
+| There is a stable place where every access path can be forced through a | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | There is no viable atomic commit protocol. Either the participants do not | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
 | they describe symptoms observed repeatedly across xUnit-family codebases. | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |
 | Third-party or vendor integration. An external API, a payment processor, | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
@@ -3898,6 +4007,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | this is the N plus 1 query pattern, a loop-shaped symptom with a | [Loops](../patterns/02-code-smells/loops.md) | Code Smells |
 | This section presents each failure as an observable symptom, its underlying | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
 | This-escape during construction. Symptom. A thread other than the one | [Immutable Object](../patterns/09-concurrency/immutable-object.md) | Concurrency and Parallelism |
+| Those points can fail in different ways. If they all depend on the same | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Thought-action mismatch, silently ignored. Symptom, the trajectory log | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |
 | Thread pool deadlock from nested dependent submission. The observable symptom is that the | [Thread Pool](../patterns/09-concurrency/thread-pool.md) | Concurrency and Parallelism |
 | Thread pool starvation. Symptom. Request latency climbs, health checks time | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
@@ -3922,6 +4032,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Timeboxing applied to a genuinely hard, high-stakes topic. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | timed-out request. The observable symptom is a duplicate line item in a | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
 | Timeout amnesia. Symptom, a process instance sits in an intermediate | [Process Manager](../patterns/07-integration/process-manager.md) | Enterprise Integration |
+| Timeout becomes allow. Symptom. Access spikes during policy-service latency | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Timeout mutants masking a real infinite loop bug. Symptom. A mutant that | [Mutation Test](../patterns/14-testing/mutation-test.md) | Testing |
 | timeout. Symptom. batchTimeout gets tuned down repeatedly to chase lower | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
 | to fix where measured. Fix. Revert to the simple wide accessor, | [Extraneous Fetching](../patterns/18-anti-patterns/extraneous-fetching.md) | Anti-Patterns |
@@ -4032,6 +4143,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Two Scheduler instances race on the same order. | [Scheduler Agent Supervisor](../patterns/08-cloud-distributed/scheduler-agent-supervisor.md) | Cloud and Distributed |
 | Two screens showing what should be the same underlying data | [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) | Architectural Patterns |
 | Two SCSs quietly share a database instance for one query, and | [Self-Contained Service](../patterns/10-microservices/self-contained-service.md) | Microservices |
+| Two security tools create the same finding and both are ignored. | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Two services are constantly changed together in the same pull | [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) | Microservices |
 | Two services show a deploy marker at the same minute, but a responder cannot tell from the ledger which git commit or... | [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) | Microservices |
 | Two services silently disagree about the same real-world fact, for | [Database per Service](../patterns/10-microservices/database-per-service.md) | Microservices |
@@ -4114,10 +4226,12 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Uniform partition sizes on skewed traffic. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Unit tests for a use case require standing up the web framework, a | [Controller](../patterns/04-principles-and-laws/controller.md) | Principles and Laws |
 | unit tests on the Logic Holder are all green, but the feature | [Humble Object](../patterns/14-testing/humble-object.md) | Testing |
+| Unit tests pass for policy rules, but a new endpoint ships | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | Unit tests pass, but production behavior shifts after a prompt | [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) | Anti-Patterns |
 | Units of work arrive faster, or in greater number, than can each get a | [Scheduler](../patterns/09-concurrency/scheduler.md) | Concurrency and Parallelism |
 | Units of work have different priorities, deadlines, or fairness | [Scheduler](../patterns/09-concurrency/scheduler.md) | Concurrency and Parallelism |
 | Units of work need to run at a specific future time, or repeatedly on an | [Scheduler](../patterns/09-concurrency/scheduler.md) | Concurrency and Parallelism |
+| Unknown enum becomes allow. Symptom. A new action such as EXPORT or | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Unreachable key after the owning module is unloaded. Symptom. A native | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
 | Unrelated merge conflicts. Symptom. Two developers, working on | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
 | unrelated one. Symptom, a developer changes the shape or the meaning of a | [Global Data](../patterns/02-code-smells/global-data.md) | Code Smells |
@@ -4129,6 +4243,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Users abandon the flow because the agent explains its process | [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) | Anti-Patterns |
 | Users click through every permission prompt without reading them, | [Plugin Sandbox](../patterns/05-architectural/plugin-sandbox.md) | Architectural Patterns |
 | Users report the chat response taking noticeably longer to | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
+| Users return from the authorization server and land on an error | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Using a saga where a single aggregate would do. Symptom. A team builds | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
 | Using an event where a command was needed. Symptom. A "PaymentRequested" | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | Using Routing Slip where Dynamic Router was needed. Symptom. Step | [Routing Slip](../patterns/07-integration/routing-slip.md) | Enterprise Integration |
@@ -4165,6 +4280,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Visitor reused across traversals. Symptom. The second report contains the | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Visitor used to fake a missing feature. Symptom. A visitor interface with two | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Vocabulary drift between the document and the code. Symptom. A message | [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) | Domain-Driven Design |
+| Websocket clients keep receiving events after tenant removal. | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | Weight updates are unavailable, too slow, or simply the wrong tool for the | [Reflexion](../patterns/17-ai-agentic/reflexion.md) | AI and Agentic |
 | were never meant to pin that detail down. Symptom. a large fraction of the | [Mock](../patterns/14-testing/mock.md) | Testing |
 | What did the collaborator return, and did the unit under test do the right | [Spy](../patterns/14-testing/spy.md) | Testing |
@@ -4174,6 +4290,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Whole-structure operations treated as if they were still atomic. Symptom, | [Lock Striping](../patterns/09-concurrency/lock-striping.md) | Concurrency and Parallelism |
 | Why the pattern is thought to be rarely used, and when that judgement is | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | Widening null checks spreading through the class. Symptom. A code | [Temporary Field](../patterns/02-code-smells/temporary-field.md) | Code Smells |
+| Wildcard creep. Symptom: every denial is fixed by adding another wildcard. | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | wire format vanish from the copy. Observable symptom, a copied object works in | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
 | with different defaults. The symptom is a behaviour change that is | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
 | with no code change between them. The observable symptom is a red build that | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
@@ -11710,6 +11827,125 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 ### Security
 
+#### [Complete Mediation](../patterns/15-security/complete-mediation.md)
+
+**Core Problem:** A system contains objects that are not public. Users, services, jobs, or processes need to act on those objects. The authority behind an action can change while the system is running: a role is revoked, a session expires, a device becomes non-compliant, a record changes owner, an account crosses a spending limit, or a feature flag removes a path from public use. If code checks authority once and then treats later accesses as safe, the system can carry stale authority long after the reason for access has disappeared.
+
+**Observable Symptoms:**
+
+- There is a stable place where every access path can be forced through a
+- The enforcement point can form a request context rich enough for the policy.
+- The system can tolerate the cost of repeated checks, or can cache decisions
+
+**Failure Mode Symptoms:**
+
+- A user can fetch another tenant's record by changing an id in a
+- An admin loses a role but retains admin access until logging out.
+- API routes are protected, but CSV export, search index, or report
+- Websocket clients keep receiving events after tenant removal.
+- A gateway denies /private, yet /public/../private reaches the
+- Operators see a surge of HTTP 403 responses but cannot tell
+- A direct object storage URL works after the app marks the file
+- A migration script repairs production data by connecting as a
+- The policy says "manager can approve expense," but managers can
+- Unit tests pass for policy rules, but a new endpoint ships
+
+#### [Defense in Depth](../patterns/15-security/defense-in-depth.md)
+
+**Core Problem:** A system has assets that must remain confidential, correct, and available while being exposed to users, code, networks, dependencies, administrators, build systems, and other systems. Any one control can fail. A firewall rule can be misconfigured. A token can leak. A parser can accept hostile input. A package can ship a vulnerable transitive dependency. A service account can gain a broad role during an emergency and never lose it. A monitoring rule can miss the early stage of an attack. A backup can exist but fail restore when the incident arrives.
+
+**Observable Symptoms:**
+
+- There are multiple points where a request, actor, artifact, or data item can
+- Those points can fail in different ways. If they all depend on the same
+- The team can decide what each layer is meant to do: prevent, detect, slow,
+- The cost of a breach, destructive error, privacy exposure, or long outage is
+
+**Failure Mode Symptoms:**
+
+- Engineering judgement: each item names an observable symptom, a likely cause,
+- A penetration test bypasses every security layer through one
+- Operators cannot tell why a request returned 403. Cause.
+- The dashboard is green during an incident that users report.
+- A new microservice launches with weaker security than older
+- Emergency access used during an incident remains active for
+- Two security tools create the same finding and both are ignored.
+- Developers disable local security checks to get work done, then
+- A stolen service token can read far more data than the service
+- A backup exists but recovery fails under incident pressure.
+- Security review debates tools, not risks. Cause. The layer
+
+#### [Fail Securely](../patterns/15-security/fail-securely.md)
+
+**Core Problem:** A program must make a decision that protects a resource, but the information needed for that decision can be absent, stale, malformed, contradictory, late, or produced by a dependency that is currently down. The request is still in front of the system. The code can permit it, deny it, retry it, queue it, or return an error. If the default path permits it, a missing policy, failed lookup, parsing bug, network timeout, or unexpected enum value turns into a security bypass.
+
+**Failure Mode Symptoms:**
+
+- Timeout becomes allow. Symptom. Access spikes during policy-service latency
+- Unknown enum becomes allow. Symptom. A new action such as EXPORT or
+- Policy load failure starts the service. Symptom. After a deploy, all users
+- Deny happens after the side effect. Symptom. Audit says a request was denied
+- Cached allow outlives revocation. Symptom. A user remains able to perform an
+- Default deny with no operator signal. Symptom. Customers see generic errors
+- Break-glass becomes routine. Symptom. Many requests are approved through an
+- Deny rule blocks critical platform traffic. Symptom. After default deny
+- External error leaks internal state. Symptom. A caller learns policy names,
+- Report-only becomes permanent. Symptom. Dashboards show that a new operation
+- Safe default differs by caller. Symptom. The web API denies a malformed
+
+#### [Least Privilege](../patterns/15-security/least-privilege.md)
+
+**Core Problem:** A system needs trusted actions to happen, but the code, user, service account, container, or job that performs those actions can also fail, be tricked, or be taken over. The common failure is not that access control is absent. The common failure is that access is wider than the operation needs. A report service has write access because read-only setup took more time. A batch job can delete every bucket because the first policy used . A Kubernetes controller can read all Secrets because a cluster-level binding was faster than a namespace RoleBinding. A human administrator uses one broad role for daily work because role switching feels annoying.
+
+**Observable Symptoms:**
+
+- There is a policy enforcement point that can distinguish subjects, actions,
+- The team can learn what authority the work requires, either from design,
+- The cost of a failed or captured subject is high enough that the added
+
+**Failure Mode Symptoms:**
+
+- Production-only denials. Symptom: a workload receives 403 errors only in
+- Cross-tenant read. Symptom: a token stolen from one service can read
+- Wildcard creep. Symptom: every denial is fixed by adding another wildcard.
+- Secret extraction through workload creation. Symptom: a user with no Secret
+- Read role with write effects. Symptom: a read-only support role changes
+- Routine break-glass use. Symptom: a break-glass account is used for routine
+- Custom role sprawl. Symptom: custom roles multiply until nobody can review
+- Pipeline overreach. Symptom: a CI job can alter production infrastructure.
+- No emergency path. Symptom: an admin loses access during an incident. Cause:
+- Opaque denials. Symptom: denial logs contain no useful fields. Cause: the
+- Hidden inheritance. Symptom: a narrow role later becomes broad without
+- Local data copies. Symptom: developers copy production data to local
+
+#### [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md)
+
+**Core Problem:** A service needs to let software access protected resources without giving that software the resource owner's primary credential. The caller might be a web application acting for a signed-in user, a mobile application that cannot hide a client secret, a command-line tool with no browser surface, or a daemon acting as itself. The protected resource might be a profile endpoint, source-code API, payment API, calendar API, or internal service API. The common mistake is to model all of those cases as "login" and pass a password, API key, or long-lived token through every layer.
+
+**Observable Symptoms:**
+
+- A resource server must accept delegated access from multiple clients.
+- The authorization server can centralize consent, policy, client
+- The client can make HTTP requests and can be classified by its ability to
+- Access can be represented as scopes, audiences, claims, or server-side token
+- Failure must be explicit. A rejected redirect, wrong state value, reused
+
+**Failure Mode Symptoms:**
+
+- Judgement. The following triples are phrased as production symptoms first
+- Users return from the authorization server and land on an error
+- Attack tests can start a flow in one browser session and finish
+- A stolen authorization code can be exchanged from another
+- The same authorization code produces more than one access
+- A resource server accepts a token minted for a different API.
+- Logs contain Authorization: Bearer values or URL query strings
+- Refresh token replay goes unnoticed and both the attacker and
+- A command-line tool asks users to paste passwords or access
+- Service logs cannot answer whether a request represented a user,
+- Consent screens grant broad access that users do not understand.
+- Intermittent invalid token errors appear after key rotation.
+- Browser apps keep access tokens in local storage for long
+
 #### [Secrets Management](../patterns/15-security/secrets-management.md)
 
 **Core Problem:** An application needs credentials to call a database, sign a token, decrypt a record, publish to a queue, or call a third-party API. Those credentials must be available to the running program, but they must not be readable by every developer, logged by every process, copied into every build artifact, or left alive after they are no longer needed.
@@ -11719,6 +11955,85 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - prod/, the vault is only a different filesystem. The symptom is a breach
 - pool. The symptom is a rotation that looks successful from the vault and fails
 - and prints the full configuration object. The symptom is an incident where the
+
+#### [Secure by Default](../patterns/15-security/secure-by-default.md)
+
+**Core Problem:** A system has settings, generated files, API defaults, permission rules, feature switches, installation steps, or project scaffolds. Most users accept those defaults. They rarely inspect every generated header, network binding, permission grant, storage scope, cookie flag, or service token before first use. In many organizations, a default that ships in a template becomes the production baseline within days.
+
+**Failure Mode Symptoms:**
+
+- Symptom. A newly created service exposes an internal admin endpoint on a
+- Symptom. A tenant reads another tenant's data after a new feature launches,
+- Symptom. Users see TLS failures after a certificate automation feature was
+- Symptom. Teams add allowhttp = true to many services to make local
+- Symptom. A major version upgrade breaks clients because anonymous read is
+- Symptom. A security team believes every service has CSRF protection, but
+- Symptom. A generated role works for every feature but also grants future
+
+#### [Separation of Duties](../patterns/15-security/separation-of-duties.md)
+
+**Core Problem:** A system has operations where one trusted actor can cause damage and hide it. The actor may be a person, service account, CI job, controller, administrator, or vendor support session. The sensitive operation may be payment release, production deployment, audit log deletion, role assignment, key rotation, data export, backup destruction, policy change, or access approval. The danger is not that the actor has no job to do. The danger is that the same actor can do too many linked jobs in one chain.
+
+**Observable Symptoms:**
+
+- The sensitive action can be decomposed into named duties.
+- The system can identify the actor for each duty with enough confidence for
+- The enforcement point can compare actors, roles, groups, or attributes across
+- The organization accepts the added queueing cost when an action waits for a
+
+**Failure Mode Symptoms:**
+
+- Engineering judgement: each item below is a symptom, cause, fix triple because
+- Symptom. A user receives an approval request for their own change, or the
+- Symptom. Two different accounts satisfy requester and approver, but logs
+- Symptom. Production deploys stall because every approver group contains
+- Symptom. High-risk requests pass review in seconds with identical approval
+- Symptom. A break-glass role becomes the normal way to do release work.
+- Symptom. A database administrator can delete or rewrite the approval table
+- Symptom. A service account both creates infrastructure and grants itself the
+- Symptom. Users can bypass the UI approval flow by calling an internal API or
+- Symptom. The policy works for one application, but a linked downstream
+- Symptom. A role admin creates a new role with forbidden permissions, then
+
+#### [Token-based Authentication](../patterns/15-security/token-based-authentication.md)
+
+**Core Problem:** The problem appears when a system must authenticate repeated requests without asking the caller to resend a long-lived secret, such as a password, private key, or root cloud credential. The resource server needs enough evidence to decide who is calling, what access has been granted, whether the grant is still valid, and which tenant, audience, or workload the request is meant for. At the same time, the caller needs a credential that can be attached to each request without blocking on an interactive sign-in flow.
+
+**Observable Symptoms:**
+
+- A user signs in through an authorization server, and an application calls an
+- A service calls another service without a human in the loop, and the callee
+- A workload running on a platform needs access to a control plane or cloud
+- A developer or automation tool needs API access and receives a personal or
+
+**Failure Mode Symptoms:**
+
+- Symptom. A token from one API works against another API.
+- Symptom. Users keep access for minutes or hours after being disabled.
+- Symptom. Support tickets include full Authorization headers.
+- Symptom. Random 401 spikes begin after key rotation.
+- Symptom. A copied URL grants API access.
+- Symptom. A token with alg=none or a wrong algorithm is accepted in tests
+- Symptom. Expired tokens pass on one node and fail on another.
+- Symptom. A service account token keeps working after a pod is gone.
+- Symptom. One broad personal token appears in many CI jobs.
+- Symptom. API returns 500 for malformed tokens.
+
+#### [Zero Trust](../patterns/15-security/zero-trust.md)
+
+**Core Problem:** A system has users, services, jobs, devices, and partners that need access to resources from many networks. Some run from offices, some from homes, some from cloud workloads, and some from third-party environments. The old boundary says "inside the network is trusted, outside the network is hostile." That boundary does not match the system anymore. NIST names remote users, bring your own device, and cloud assets outside an enterprise-owned network as drivers for zero trust, and says the resource, not the network segment, becomes the focus of protection (NIST SP 800-207(https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf), verified 2026-08-02).
+
+**Failure Mode Symptoms:**
+
+- Proxy-only rollout. Symptom. The dashboard says the application is behind a
+- Flat network behind a new front door. Symptom. A compromised host can scan
+- Shared service identity. Symptom. Audit logs show backend-service for
+- Policy exception pileup. Symptom. Denials fall after rollout, but the allow
+- Device posture as a single truth source. Symptom. A compliant but infected
+- Fail-open decision outage. Symptom. During an identity or policy outage,
+- Opaque denials. Symptom. Users retry, open support tickets, or find unsafe
+- Policy drift across enforcement points. Symptom. The same user can reach a
+- Telemetry without retention rules. Symptom. Access logs contain device IDs,
 
 ### AI and Agentic
 
