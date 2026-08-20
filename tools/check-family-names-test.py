@@ -4,6 +4,7 @@ Uses standard library unittest and temporary directories to verify table parsing
 
 from __future__ import annotations
 
+import importlib.util
 import sys
 import tempfile
 import unittest
@@ -11,8 +12,6 @@ from pathlib import Path
 
 TOOLS = Path(__file__).resolve().parent
 sys.path.insert(0, str(TOOLS))
-
-import importlib.util
 
 spec = importlib.util.spec_from_file_location(
     "check_family_names", TOOLS / "check-family-names.py"
@@ -81,9 +80,7 @@ class TestCheckFamilyNames(unittest.TestCase):
         (self.patterns / "01-gof").mkdir()
         (self.patterns / "02-code-smells").mkdir()
 
-        code, lines = check_family_names.verify_family_names(
-            self.patterns, self.readme
-        )
+        code, lines = check_family_names.verify_family_names(self.patterns, self.readme)
         self.assertEqual(code, 0)
         self.assertEqual(
             lines, ["2 family folder(s) on disk, all match README.md families table"]
@@ -100,18 +97,16 @@ class TestCheckFamilyNames(unittest.TestCase):
         (self.patterns / "01-gof").mkdir()
         (self.patterns / "99-unlisted").mkdir()
 
-        code, lines = check_family_names.verify_family_names(
-            self.patterns, self.readme
-        )
+        code, lines = check_family_names.verify_family_names(self.patterns, self.readme)
         self.assertEqual(code, 1)
         output = "\n".join(lines)
-        self.assertIn("patterns/99-unlisted/ exists on disk but is NOT declared", output)
+        self.assertIn(
+            "patterns/99-unlisted/ exists on disk but is NOT declared", output
+        )
 
     def test_verify_family_names_missing_patterns_dir(self):
         self.readme.write_text(
-            "## The families\n\n"
-            "| 01 | [GoF](patterns/01-gof/) |\n\n"
-            "## Next\n"
+            "## The families\n\n| 01 | [GoF](patterns/01-gof/) |\n\n## Next\n"
         )
         nonexistent_patterns = self.tmp / "nonexistent_patterns"
 
