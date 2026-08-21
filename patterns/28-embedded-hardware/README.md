@@ -2,7 +2,7 @@
 
 Origin. Embedded systems engineering literature
 
-12 entries, 42,698 words. Every entry carries all 18
+13 entries, 46,205 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -25,6 +25,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Hardware Abstraction Layer](hardware-abstraction-layer.md) | canonical | 3,424 | Firmware written directly against one microcontroller's raw registers is tied to that exact chip, so porting it to a different microcontroller, even one from the same family ... |
 | [Hardware-in-the-Loop Testing](hardware-in-the-loop-testing.md) | canonical | 3,608 | An embedded controller's firmware needs to be validated against the real physical system it will eventually control, such as an engine, a braking system, or an aircraft actuator ... |
 | [Memory Pool (Fixed Block Allocator)](memory-pool.md) | canonical | 3,489 | A general-purpose heap allocator serves requests of arbitrary size, and repeated allocation and release of differently-sized chunks carves the heap into a patchwork of used and ... |
+| [Producer-Consumer (Embedded)](producer-consumer.md) | canonical | 3,507 | An interrupt handler frequently needs to hand data off to code that runs later, at task or thread level, such as a received UART byte, a completed ADC conversion, or a network ... |
 | [Ring Buffer](ring-buffer.md) | canonical | 3,654 | Passing data from one execution context to another, most critically from an interrupt context to a task, needs a hand-off mechanism that is genuinely safe under concurrent access ... |
 
 ## Reading order

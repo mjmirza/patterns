@@ -893,6 +893,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Assuming every handler resumes exactly once. Symptom. Code written | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Assuming Server Functions dispatch and complete in true parallel | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | Assuming stealing preserves ordering. Symptom. intermittent, load-dependent bugs where | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
+| Assuming the general, task-level Producer-Consumer pattern's | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
 | Async and continuation-based frameworks silently losing the value across a | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
 | Async facade that still blocks. Symptom. Callers await a function that | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
 | Async wrapper pileup. Symptom. The code contains Promise<Result<T,E>>, | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
@@ -1808,6 +1809,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Intermittent corruption or an assertion failure observed only under | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Intermittent failures that reproduce only under concurrency. Symptom. | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
 | Intermittent invalid token errors appear after key rotation. | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
+| interrupt handler. Symptom. Code that would be entirely correct for | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
 | interrupt path without measuring its real overhead. Symptom. An | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
 | Intrinsic state. The fields whose values are shared by many objects and do | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Introducing Clean Architecture to a genuinely small | [Clean Architecture](../patterns/05-architectural/clean-architecture.md) | Architectural Patterns |
@@ -2522,6 +2524,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reads outnumber writes by a wide margin, so a cached copy earns its keep many | [Cache-Aside](../patterns/08-cloud-distributed/cache-aside.md) | Cloud and Distributed |
 | Reads take long enough, or happen at high enough concurrency, that | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Reads vastly outnumber writes, so the cost of coordinating readers against | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
+| real, sustained load. Symptom. Data is genuinely lost during real | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
 | real-time feedback, such as a live drag-position indicator. Symptom. | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Reasoning about the system's design-time behavior as if task | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software |
 | Reasoning trigger fighting a trained reasoning model. Symptom. Adding an | [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) | AI and Agentic |
@@ -2890,6 +2893,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Sized from average load rather than from Little's Law. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Sizing the buffer's capacity without measuring the real rate | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | Sizing the fixed block to the largest observed request rather than | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
+| Sizing the queue too small for the real timing gap between | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
 | Skeleton with one implementation. Symptom. An abstract class and exactly one | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Skipped cleanup. Symptom. File handles, locks, spans, database transactions, | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | Skipped tail work. Symptom. A counter, audit call, buffer append, or cleanup | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
@@ -4676,6 +4680,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The system can identify the actor for each duty with enough confidence for | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | The system can tolerate the cost of repeated checks, or can cache decisions | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | The system enters a loop, replanning the same failing step repeatedly | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
+| The system hangs or misses real, time-critical interrupts | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
 | The system has a policy enforcement point on every protected operation. RBAC | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | The system has many service instances, often across many services, so an | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
 | The system is technically correct on every benchmark | [Least to Most](../patterns/17-ai-agentic/least-to-most.md) | AI and Agentic |
@@ -5087,6 +5092,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Users report the chat response taking noticeably longer to | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
 | Users return from the authorization server and land on an error | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Users see error messages in a confusing order, changing between | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
+| Using a blocking wait on the producer side inside an interrupt | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
 | Using a busy-wait polling loop for a genuinely long or unpredictable | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software |
 | Using a generic spinner as a suspense boundary's fallback instead | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Using a plain ring buffer with more than one producer or more than | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
@@ -16007,6 +16013,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - peripheral at the same time. Symptom. Data is lost, corrupted, or
 - Using a busy-wait polling loop for a genuinely long or unpredictable
 - Other tasks in the system become unresponsive or miss their
+
+#### [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md)
+
+**Core Problem:** An interrupt handler frequently needs to hand data off to code that runs later, at task or thread level, such as a received UART byte, a completed ADC conversion, or a network packet, but an interrupt handler cannot use the blocking synchronization primitives, mutexes, semaphores that wait, or condition variables, that the general Producer-Consumer pattern relies on, since blocking inside an interrupt context would stall the entire system. Producer-Consumer (Embedded) solves this by using a queue whose producer-side operation is always non-blocking, immediately succeeding or immediately failing, never waiting, so an interrupt handler can safely act as the producer. Zephyr's own documentation shows this directly, a producer using kmsgqput(&mymsgq, &data, KNOWAIT) to send without blocking, "KNOWAIT" being exactly the non-blocking discipline an ISR-safe producer requires.
+
+**Failure Mode Symptoms:**
+
+- Using a blocking wait on the producer side inside an interrupt
+- The system hangs or misses real, time-critical interrupts
+- Sizing the queue too small for the real timing gap between
+- real, sustained load. Symptom. Data is genuinely lost during real
+- Assuming the general, task-level Producer-Consumer pattern's
+- interrupt handler. Symptom. Code that would be entirely correct for
 
 #### [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md)
 

@@ -757,6 +757,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -780,6 +781,7 @@ These patterns contain runnable code examples written in C++:
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
 - [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) (Embedded and Hardware-Software)
 - [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) (Embedded and Hardware-Software)
+- [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) (Embedded and Hardware-Software)
 - [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) (Embedded and Hardware-Software)
 - [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
 - [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
@@ -2946,6 +2948,7 @@ These patterns contain runnable code examples written in Python:
 - [Proactor](../patterns/09-concurrency/proactor.md) (Concurrency and Parallelism)
 - [Process Manager](../patterns/07-integration/process-manager.md) (Enterprise Integration)
 - [Process Manager](../patterns/11-domain-driven-design/process-manager.md) (Domain-Driven Design)
+- [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) (Embedded and Hardware-Software)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
@@ -4007,6 +4010,7 @@ These patterns contain runnable code examples written in Swift:
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) (Embedded and Hardware-Software)
+- [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) (Embedded and Hardware-Software)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) (Frontend and UI)
