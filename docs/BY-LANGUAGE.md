@@ -505,6 +505,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2460,6 +2461,7 @@ These patterns contain runnable code examples written in Python:
 - [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) (Enterprise Application Architecture)
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
 - [Asynchronous Request-Reply](../patterns/08-cloud-distributed/asynchronous-request-reply.md) (Cloud and Distributed)
+- [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) (Frontend and UI)
 - [Attribute-Based Access Control](../patterns/15-security/abac.md) (Security)
 - [Audit Log](../patterns/15-security/audit-log.md) (Security)
 - [Audit Logging](../patterns/10-microservices/audit-logging.md) (Microservices)
@@ -3875,6 +3877,7 @@ These patterns contain runnable code examples written in Swift:
 - [Approval Test](../patterns/14-testing/approval-test.md) (Testing)
 - [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) (Enterprise Application Architecture)
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
+- [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) (Frontend and UI)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
@@ -4071,6 +4074,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) (Enterprise Application Architecture)
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
 - [Asynchronous Request-Reply](../patterns/08-cloud-distributed/asynchronous-request-reply.md) (Cloud and Distributed)
+- [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) (Frontend and UI)
 - [Audit Log](../patterns/15-security/audit-log.md) (Security)
 - [Audit Logging](../patterns/10-microservices/audit-logging.md) (Microservices)
 - [B-Tree](../patterns/12-data-storage/b-tree.md) (Data and Storage)

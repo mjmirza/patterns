@@ -833,6 +833,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Anemic wrapper, no validation. Symptom, a class EmailAddress { String | [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) | Domain-Driven Design |
 | answer, even though auditing was turned on. Symptom. A resource is gone, | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
 | Answering a narrow question through global search. Symptom. A | [GraphRAG](../patterns/17-ai-agentic/graphrag.md) | AI and Agentic |
+| any work can proceed. Symptom. Design and development reviews spend | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | anywhere. Symptom, seen above. Cause, the source database rotated away a | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
 | API response latency degrades under load in a way that scales | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
 | API routes are protected, but CSV export, search index, or report | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
@@ -937,6 +938,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Builder used where a record belongs. Symptom is a code review comment | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Building a bespoke protocol and calling it domain-specific. Symptom. A | [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) | Microservices |
 | Building a machine so large and hierarchical that no single person | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
+| Building a molecule or an organism that secretly depends on a | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Bulkhead placed on the wrong side of the buffer. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Bulkhead without a timeout. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -1539,6 +1541,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | for reasons nobody understands. Symptom. Local test runs are green, yet | [Contract Test](../patterns/14-testing/contract-test.md) | Testing |
 | for that long in the first place, since the flapping is frequently a symptom | [Leader Election](../patterns/08-cloud-distributed/leader-election.md) | Cloud and Distributed |
 | Forced third dimension. Symptom, a second axis of variation appears, | [Parallel Inheritance Hierarchies](../patterns/02-code-smells/parallel-inheritance-hierarchies.md) | Code Smells |
+| Forcing every component into a strict, single, agreed level before | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Forgetting to update a caller that mutated in place. A caller that did | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
 | Forgotten boundary conversion. Symptom. Invalid input is rejected by one API | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Forgotten promise, permanent hang. Symptom. a request handler or worker | [Future Promise](../patterns/09-concurrency/future-promise.md) | Concurrency and Parallelism |
@@ -3872,9 +3875,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom: sensitive metadata survives after merging a redacted and an | [Semigroup](../patterns/16-functional/semigroup.md) | Functional Programming |
 | Synchronous chaining disguised as orchestration. Symptom, the "process | [Process Manager](../patterns/07-integration/process-manager.md) | Enterprise Integration |
 | Synthesis losing information. The symptom is the final answer omitting or | [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) | AI and Agentic |
+| system governance. Symptom. A component library is neatly organized | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Table lock contention from schema migrations on a hot table. Symptom. A | [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) | Enterprise Application Architecture |
 | Table size grows continuously and never shrinks, disk usage | [Multiversion Concurrency Control](../patterns/12-data-storage/mvcc.md) | Data and Storage |
 | task directly. The observable symptom is a multi-agent run that takes longer | [Society of Mind](../patterns/17-ai-agentic/society-of-mind.md) | AI and Agentic |
+| taxonomy is meant to guarantee. Symptom. A molecule that appears | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Team boundaries follow service boundaries, and each team wants to own the | [Choreography](../patterns/08-cloud-distributed/choreography.md) | Cloud and Distributed |
 | Team-wide flake from a shared local stub. Symptom. An identical commit | [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) | Enterprise Application Architecture |
 | Teams adopt the pattern, then quietly abandon it within a year. | [Consumer-Side Contract Test](../patterns/10-microservices/consumer-side-contract-test.md) | Microservices |
@@ -4676,6 +4681,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating RCU as a general-purpose replacement for locking. Symptom. A | [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) | Concurrency and Parallelism |
 | Treating the bus as a database. Symptom. A new consumer needs historical | [Message Bus](../patterns/07-integration/message-bus.md) | Enterprise Integration |
 | Treating the event stream as a durable system of record. Symptom, a team | [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) | Architectural Patterns |
+| Treating the five-level taxonomy as a substitute for actual design | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Treating the gateway as a database. Symptom, the gateway starts | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | Treating the internal model as already the Published Language. Symptom. | [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) | Domain-Driven Design |
 | Treating the network as reliable. Symptom. A code review, or an incident | [Remote Procedure Invocation](../patterns/10-microservices/remote-procedure-invocation.md) | Microservices |
@@ -12086,6 +12092,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Cache hit ratio for genuinely hot keys degrades over time, and cache
 
 ### Frontend and UI
+
+#### [Atomic Design](../patterns/13-frontend-ui/atomic-design.md)
+
+**Core Problem:** Before Atomic Design, a component library commonly organized components by feature or by page, a folder for the checkout flow next to a folder for the settings page, which left no explicit, shared vocabulary for talking about how small a given component actually is relative to the rest of the system, and no natural place for a truly tiny, reusable primitive such as a button or a label to live independent of any specific feature. Atomic Design solves this by defining five explicit levels of composition, atoms, molecules, organisms, templates, and pages, each level built only from the level directly below it, giving every component in the system a well-defined size and a well-defined place, independent of which feature happens to use it.
+
+**Failure Mode Symptoms:**
+
+- Forcing every component into a strict, single, agreed level before
+- any work can proceed. Symptom. Design and development reviews spend
+- Building a molecule or an organism that secretly depends on a
+- taxonomy is meant to guarantee. Symptom. A molecule that appears
+- Treating the five-level taxonomy as a substitute for actual design
+- system governance. Symptom. A component library is neatly organized
 
 #### [Compound Components](../patterns/13-frontend-ui/compound-components.md)
 

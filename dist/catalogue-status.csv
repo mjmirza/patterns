@@ -11,7 +11,7 @@ family,name,published,planned,target,percent
 10-microservices,Microservices,49,0,49,100.0
 11-domain-driven-design,Domain-Driven Design,35,0,35,100.0
 12-data-storage,Data and Storage,41,0,41,100.0
-13-frontend-ui,Frontend and UI,10,24,34,29.4
+13-frontend-ui,Frontend and UI,11,23,34,32.4
 14-testing,Testing,30,0,30,100.0
 15-security,Security,35,0,35,100.0
 16-functional,Functional Programming,39,0,39,100.0

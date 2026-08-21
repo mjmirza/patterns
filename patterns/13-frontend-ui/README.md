@@ -2,8 +2,14 @@
 
 Origin. Framework documentation
 
-10 entries, 36,084 words. Every entry carries all 18
+11 entries, 39,774 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Component Architecture
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Atomic Design](atomic-design.md) | established | 3,690 | Before Atomic Design, a component library commonly organized components by feature or by page, a folder for the checkout flow next to a folder for the settings page, which left no ... |
 
 ## Component Composition
 
