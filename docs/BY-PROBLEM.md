@@ -868,6 +868,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | At least one downstream component in the pipeline does not need the | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
 | Attack tests can start a flow in one browser session and finish | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Attempting a move past the edge without checking. Symptom. A | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
+| Attempting to use a client-only interactive API, such as useState, | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Attestation policy breakage. Symptom. A rollout blocks consumer passkeys | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | Attribute name collision. Symptom. A policy that was meant for project tags | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
 | Audit cannot tell what data a compromised key protected. Cause. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
@@ -1034,6 +1035,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Class that is a namespace. The functions are grouped into a class, but | [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) | Refactoring Techniques |
 | Class with one method. The refactoring is applied to a single function | [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) | Refactoring Techniques |
 | Client certificate reused too widely. Symptom. Logs show the same | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
+| Client Component that only needs a small piece of it. Symptom. The | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Client errors counted as dependency failures. | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | Client library drift across services. Symptom, different services in the | [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) | Microservices |
 | Client-side-only validation. Symptom. The browser blocks a bad value during | [Input Validation](../patterns/15-security/input-validation.md) | Security |
@@ -1266,6 +1268,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | different symptom, and the same fix applies. The Anti-Corruption Layer is not | [Generic Subdomain](../patterns/11-domain-driven-design/generic-subdomain.md) | Domain-Driven Design |
 | direct getter-and-setter encoding. Symptom. New team members cannot | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Direct grants bypass the role model. Symptom. Removing a role does not | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
+| directly inside a Server Component. Symptom. The component fails to | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Dirty read. Symptom. A customer receives an order confirmation email for an | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
 | Discriminator value drift between code and data. Symptom. A subtype's | [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) | Enterprise Application Architecture |
 | Disk fills up unexpectedly, database goes read-only or crashes. Symptom. | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
@@ -1703,6 +1706,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | instead of delegating. Symptom, two different teams' services disagree | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | Integration cliff. Symptom. Local demos work, but the first full environment | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Intent explosion mirroring every UI callback one-to-one. Symptom. An | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
+| interactivity. Symptom. The page ships JavaScript for a component | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Interceptor-only escaping. Symptom. Server-rendered HTML looks safe, but DOM | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
 | Interface bloat makes decorators unreadable and unmaintainable. Symptom. A | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
 | Interface explosion with no second implementation in sight. Symptom. A | [Onion Architecture](../patterns/05-architectural/onion-architecture.md) | Architectural Patterns |
@@ -1867,6 +1871,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Many breaks in a broad loop. Symptom. A reviewer has to search an entire | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | many times they retry. The observable symptom is an incident marked "cannot | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
 | Mapping identity changes the object, metadata, order, counter, | [Functor](../patterns/16-functional/functor.md) | Functional Programming |
+| Marking a component as a Client Component reflexively, out of habit | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Marking every component on the page as an island, defeating the | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | masks a programming error. The symptom is a function that produces no | [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) | Refactoring Techniques |
 | Massive View Controller. Symptom. A single Controller class or view-controller | [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) | Architectural Patterns |
@@ -2211,6 +2216,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Partial dispose chain across a multi-level hierarchy. Symptom. a resource | [Call Super](../patterns/18-anti-patterns/call-super.md) | Anti-Patterns |
 | partial groups. Symptom. aggregator memory usage grows steadily over the | [Scatter-Gather](../patterns/07-integration/scatter-gather.md) | Enterprise Integration |
 | Participants argue for ten minutes about whether a scenario is | [STRIDE](../patterns/15-security/stride.md) | Security |
+| Passing a large amount of server-only data through props into a | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Passing a large object that gives too much access. The function | [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) | Refactoring Techniques |
 | Passing a mutable object that gets modified. The function modifies | [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) | Refactoring Techniques |
 | Passing a new inline function on every render, defeating | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
@@ -12241,6 +12247,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - memoisation. Symptom. A state-owning component wrapped in a
 - Reaching for a render prop in a codebase where a custom hook would
 - serve identically, with less nesting. Symptom. A team continues
+
+#### [Server Components](../patterns/13-frontend-ui/server-components.md)
+
+**Core Problem:** A component tree rendered entirely on the client, even one that is server-side rendered for the initial HTML, ships every component's own JavaScript to the browser for hydration, including components that only ever fetch and display static or server-only data and never need any client-side interactivity at all. This forces a real amount of unnecessary JavaScript, and the libraries those components depend on, to be downloaded, parsed, and hydrated by the browser, and forces any component that needs server-only data, a database query, a file-system read, to either expose that data through a separate API endpoint or fetch it client-side after the component has already mounted, introducing a data-fetching waterfall. Server Components solve this by letting a component render ahead of time in a server-only environment, with direct access to a data layer with no API to build, and shipping to the browser only the component's rendered output, none of the component's own JavaScript or its server-only dependencies.
+
+**Failure Mode Symptoms:**
+
+- Marking a component as a Client Component reflexively, out of habit
+- interactivity. Symptom. The page ships JavaScript for a component
+- Attempting to use a client-only interactive API, such as useState,
+- directly inside a Server Component. Symptom. The component fails to
+- Passing a large amount of server-only data through props into a
+- Client Component that only needs a small piece of it. Symptom. The
 
 #### [Signals](../patterns/13-frontend-ui/signals.md)
 

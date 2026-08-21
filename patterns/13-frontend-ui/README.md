@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-13 entries, 47,111 words. Every entry carries all 18
+14 entries, 50,945 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -33,6 +33,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Islands Architecture](islands-architecture.md) | established | 3,638 | A single-page application that hydrates its entire page as one monolithic JavaScript bundle ships and executes JavaScript for every part of the page, including large static ... |
+| [Server Components](server-components.md) | canonical | 3,834 | A component tree rendered entirely on the client, even one that is server-side rendered for the initial HTML, ships every component's own JavaScript to the browser for hydration ... |
 
 ## State Management
 
