@@ -1020,6 +1020,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | called printInvoiceDetails. The symptom is a function whose name must | [Extract Function](../patterns/03-refactoring/extract-function.md) | Refactoring Techniques |
 | caller, producing large classes with many responsibilities. The symptom | [Inline Class](../patterns/03-refactoring/inline-class.md) | Refactoring Techniques |
 | Callers should ask for a meaningful creation operation, not for storage layout. | [Replace Constructor with Factory Function](../patterns/03-refactoring/replace-constructor-with-factory-function.md) | Refactoring Techniques |
+| Calling a concrete driver's own internal function directly from | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software |
 | Calling a hook conditionally or inside a loop. Symptom. A | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |
 | Calling a non-FromISR API function from inside an interrupt context. | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software |
 | can hold its full behavior in their head. Symptom. Understanding a | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
@@ -1282,6 +1283,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Debug log mistaken for audit log. Symptom. Reviewers search for | [Audit Log](../patterns/15-security/audit-log.md) | Security |
 | Debugging takes longer because intermediate values no longer | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
 | Decision log leaks data. Symptom. Audit logs contain sensitive resource | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
+| Declaring a driver's initialization level or priority incorrectly, | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software |
 | Decoded but not verified. Symptom. A user can change sub, role, or | [JWT](../patterns/15-security/jwt.md) | Security |
 | Decorator used where Proxy was meant, and the object is never really there. | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
 | Decoupling of producers from consumers. The order service should not | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
@@ -1313,6 +1315,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Denylist as contract. Symptom. Logs show blocked strings such as <script> | [Input Validation](../patterns/15-security/input-validation.md) | Security |
 | Dependency request rate rises by an order of magnitude within seconds | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | dependents, which is legal under ADP alone. This symptom is a Stable | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
+| depends on has itself finished initializing. Symptom. The driver's | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software |
 | Deploying a fix to one service requires bumping and redeploying the | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | Deploying a task set whose real total utilization exceeds the Liu | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
 | Deploying an EDF system with no admission control, allowing total | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software |
@@ -2316,6 +2319,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Overtime as schedule math. Symptom. The plan assumes nights or weekends | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Overwrapping a purely technical value. Symptom, a codebase has a | [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) | Domain-Driven Design |
 | overwriting a newer one. Symptom, seen above. Cause, the sink connector is | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
+| own documentation defines. Symptom. A value that should never change | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software |
 | own fallback rendering path. Symptom. A failure inside the fallback | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | own legitimate worst-case processing time. Symptom. The watchdog | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | Ownership boundaries. One team owns the semantics of an operation and a | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
@@ -2989,6 +2993,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Storage or message size for the CRDT grows without bound over | [CRDT](../patterns/12-data-storage/crdt.md) | Data and Storage |
 | Store write fails but the cache write already happened. Symptom. The | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | Stored failure freezes a transient outage. Symptom. Retrying with the same | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |
+| Storing build-time-only information in the data struct, or runtime, | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software |
 | Storing every piece of application state in Redux, including state | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | Strategy allocated per call in a hot path. Symptom. Allocation rate and | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | Strategy explosion by combination. Symptom. Class names that stack three | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
@@ -4799,6 +4804,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Third-party or vendor integration. An external API, a payment processor, | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | This dimension states symptoms as a reader would actually observe them in | [Content Filter](../patterns/07-integration/content-filter.md) | Enterprise Integration |
 | this is the N plus 1 query pattern, a loop-shaped symptom with a | [Loops](../patterns/02-code-smells/loops.md) | Code Smells |
+| this pattern exists to avoid. Symptom. Application code that was | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software |
 | This section presents each failure as an observable symptom, its underlying | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
 | This-escape during construction. Symptom. A thread other than the one | [Immutable Object](../patterns/09-concurrency/immutable-object.md) | Concurrency and Parallelism |
 | Those points can fail in different ways. If they all depend on the same | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
@@ -15922,6 +15928,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - bootloader. Symptom. A legitimate firmware update is rejected by the
 - A swap operation interrupted by a power loss at a point the swap
 - unhandled edge case in the recovery logic itself. Symptom. A device
+
+#### [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md)
+
+**Core Problem:** An embedded system supports several different concrete peripherals of the same general type, such as more than one UART or I2C controller on a chip, or the same peripheral type across several different chip families a codebase must support, and application code needs a single, consistent way to talk to any of them without being rewritten for each concrete device. The Device Driver Pattern solves this by defining one generic, function-pointer API per peripheral type, and having every concrete driver implementation fill that same struct in with its own functions, so application code calls through the generic struct and never touches a driver's own internals directly. Zephyr's own documentation shows the mechanism directly, a generic API struct shape, "typedef int (subsystemdothist)(const struct device dev, int foo, int bar);" paired with a struct of such function pointers, "subsystem struct subsystemdriverapi { subsystemdothist dothis; subsystemdothatt dothat; };"
+
+**Failure Mode Symptoms:**
+
+- Declaring a driver's initialization level or priority incorrectly,
+- depends on has itself finished initializing. Symptom. The driver's
+- Storing build-time-only information in the data struct, or runtime,
+- own documentation defines. Symptom. A value that should never change
+- Calling a concrete driver's own internal function directly from
+- this pattern exists to avoid. Symptom. Application code that was
 
 #### [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md)
 

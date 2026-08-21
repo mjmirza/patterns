@@ -5334,13 +5334,6 @@
     "focus": ""
   },
   {
-    "name": "Device Driver Pattern",
-    "slug": "device-driver-pattern",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/device-driver-pattern.md",
-    "focus": ""
-  },
-  {
     "name": "Game Loop",
     "slug": "game-loop",
     "category": "real-time simulation",
