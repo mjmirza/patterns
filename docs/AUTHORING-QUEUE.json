@@ -5334,13 +5334,6 @@
     "focus": ""
   },
   {
-    "name": "Bootloader Pattern",
-    "slug": "bootloader-pattern",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/bootloader-pattern.md",
-    "focus": ""
-  },
-  {
     "name": "Rate Monotonic Scheduling",
     "slug": "rate-monotonic-scheduling",
     "category": "embedded and hardware-software",
