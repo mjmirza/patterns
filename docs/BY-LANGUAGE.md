@@ -750,6 +750,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
+| [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -2366,6 +2367,7 @@ These patterns contain runnable code examples written in Kotlin:
 
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
+- [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 
 #### Changes Shape in Kotlin
@@ -2830,6 +2832,7 @@ These patterns contain runnable code examples written in Python:
 - [Long Parameter List](../patterns/02-code-smells/long-parameter-list.md) (Code Smells)
 - [Loops](../patterns/02-code-smells/loops.md) (Code Smells)
 - [Low Coupling](../patterns/04-principles-and-laws/low-coupling.md) (Principles and Laws)
+- [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Magic Numbers](../patterns/18-anti-patterns/magic-numbers.md) (Anti-Patterns)
 - [Map-Reduce](../patterns/09-concurrency/map-reduce.md) (Concurrency and Parallelism)
 - [Mapper](../patterns/06-enterprise-application-architecture/mapper.md) (Enterprise Application Architecture)
@@ -4007,6 +4010,7 @@ These patterns contain runnable code examples written in Swift:
 - [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [JWT](../patterns/15-security/jwt.md) (Security)
 - [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) (Enterprise Application Architecture)
+- [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) (Embedded and Hardware-Software)
 - [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) (Frontend and UI)
 - [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) (Architectural Patterns)

@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "MVVM-C (Model-View-ViewModel-Coordinator)",
-    "slug": "mvvm-c",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/mvvm-c.md",
-    "focus": ""
-  },
-  {
     "name": "Model-View-Intent (MVI)",
     "slug": "model-view-intent",
     "category": "mobile architecture",
