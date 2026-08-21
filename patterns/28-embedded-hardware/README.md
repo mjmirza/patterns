@@ -2,13 +2,14 @@
 
 Origin. Embedded systems engineering literature
 
-10 entries, 35,584 words. Every entry carries all 18
+11 entries, 39,090 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Earliest Deadline First Scheduling](earliest-deadline-first-scheduling.md) | canonical | 3,506 | Rate Monotonic Scheduling assigns a fixed priority to every task from its period and, per its own Liu and Layland utilization bound, can only guarantee every deadline is met up to ... |
 | [Interrupt Service Routine](interrupt-service-routine.md) | canonical | 3,752 | A hardware interrupt genuinely must be handled with the smallest possible delay, since the processor stops whatever it was doing the instant the interrupt fires, and every other ... |
 | [Polling Loop](polling-loop.md) | canonical | 3,231 | A peripheral such as a UART, an ADC, or a GPIO pin reports its status through a hardware register, and code needs to know the moment that status changes, such as when a ... |
 | [Rate Monotonic Scheduling](rate-monotonic-scheduling.md) | canonical | 3,531 | A real-time system runs several periodic tasks, each with its own period and its own deadline, and the system needs every task to finish its work within its deadline, every single ... |

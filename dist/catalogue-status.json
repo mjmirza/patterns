@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 751,
+  "published_total": 752,
   "target_total": 848,
   "families_total": 29,
   "families_complete": 18,
   "stale_entries": 0,
-  "references_checked": 4135,
+  "references_checked": 4137,
   "rows": [
     {
       "family": "01-gof",
@@ -344,12 +344,12 @@
       "family": "28-embedded-hardware",
       "name": "Embedded and Hardware-Software",
       "origin": "Embedded systems engineering literature",
-      "published": 10,
-      "planned": 4,
+      "published": 11,
+      "planned": 3,
       "target": 14,
-      "percent": 71.4,
+      "percent": 78.6,
       "maturity": {
-        "canonical": 10
+        "canonical": 11
       }
     },
     {
