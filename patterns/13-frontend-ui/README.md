@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-25 entries, 91,484 words. Every entry carries all 18
+26 entries, 94,953 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -33,6 +33,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Headless Component](headless-component.md) | established | 3,488 | A component that bundles its behavior and its visual markup together forces every consumer to accept both, even when a consumer genuinely needs the same behavior, an accessible ... |
+| [Slot and Children as API](slot-and-children-as-api.md) | canonical | 3,469 | A component that hard-codes every piece of its own content forces a consumer to accept exactly that content, or to duplicate the entire component only to change one piece of it. |
 
 ## Delivery Strategy
 

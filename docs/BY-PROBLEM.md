@@ -260,6 +260,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | a constellation of empty classes that are each used once. The symptom is | [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) | Refactoring Techniques |
 | A constructor call chain where an object of family A is passed into a method | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | A constructor with fifteen parameters, and every call site passes near | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
+| A consumer nests the wrong number, or the wrong shape, of | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
 | A consumer occasionally processes the same business effect | [Messaging](../patterns/10-microservices/messaging.md) | Microservices |
 | A consumer processes the same business effect twice, for example | [Message](../patterns/07-integration/message.md) | Enterprise Integration |
 | A consumer replaying from the beginning sees fewer records than expected, | [Log Compaction](../patterns/12-data-storage/log-compaction.md) | Data and Storage |
@@ -1499,6 +1500,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Expired certificate outage. Symptom. Calls begin failing at the same time | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | explicit coordination mechanism between them. Symptom. Interacting | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Exposing a mutable delegate. The delegate is mutable, and exposing it | [Remove Middle Man](../patterns/03-refactoring/remove-middle-man.md) | Refactoring Techniques |
+| Exposing a slot for content that only ever varies across a small, | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
 | Exposing internal state or handlers that leak implementation | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | extensively. The symptom is a reader who must navigate through five | [Extract Class](../patterns/03-refactoring/extract-class.md) | Refactoring Techniques |
 | External error leaks internal state. Symptom. A caller learns policy names, | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
@@ -1810,6 +1812,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Key rotation race. Symptom. A deployment suddenly returns many 401 errors | [JWT](../patterns/15-security/jwt.md) | Security |
 | Killing mutants without strengthening assertions. Symptom. A developer | [Mutation Test](../patterns/14-testing/mutation-test.md) | Testing |
 | Knowledge refinement discards a fact the generator needed. Symptom. An | [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) | AI and Agentic |
+| known set of options. Symptom. Every consumer ends up passing nearly | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
 | Lambda pinball. Symptom. A production incident review cannot answer | [Nanoservices](../patterns/18-anti-patterns/nanoservices.md) | Anti-Patterns |
 | language. The observable symptom is code review comments repeatedly asking | [Idiomatic](../patterns/04-principles-and-laws/idiomatic.md) | Principles and Laws |
 | Large or endless sequences cannot be handled at all. Materialising a | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
@@ -1834,6 +1837,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Leaky raw accessor. Symptom. Most call sites immediately call .value, | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Leaky semantics. Symptom. Behaviour that is correct in staging against the | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | Leaky Stable Point. Symptom. Client code contains a cast back to a | [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) | Principles and Laws |
+| leave empty. Symptom. A component renders visibly broken or empty | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
 | leaves the page. The observable symptom is a policy that keeps getting longer | [Content Security Policy](../patterns/15-security/content-security-policy.md) | Security |
 | Leaving no loading state for the route transition a lazily loaded | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | leaving the rest of the scattering in place, since patching only the symptom | [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) | Code Smells |
@@ -2372,6 +2376,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Prototype used as a Singleton bypass. A registry exemplar is handed out | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
 | Provider verification is flaky, sometimes passing and sometimes | [Consumer-Driven Contract Test](../patterns/10-microservices/consumer-driven-contract-test.md) | Microservices |
 | Provider verification tests are constantly red, and the provider | [Consumer-Side Contract Test](../patterns/10-microservices/consumer-side-contract-test.md) | Microservices |
+| Providing no fallback content for a slot a consumer may reasonably | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
 | Proxy identity confusion. Symptom, an equality check or a type check | [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md) | Enterprise Application Architecture |
 | Proxy-only rollout. Symptom. The dashboard says the application is behind a | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | Public clients start constructing internal states that should | [Prism](../patterns/16-functional/prism.md) | Functional Programming |
@@ -2527,6 +2532,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Requests pile up and threads block indefinitely; the process | [Request-Reply](../patterns/07-integration/request-reply.md) | Enterprise Integration |
 | Requests through the gateway hang indefinitely, or hang until an | [Messaging Gateway](../patterns/07-integration/messaging-gateway.md) | Enterprise Integration |
 | Required field missed until runtime. The Java HttpRequest.Builder throws | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
+| Requiring a specific number or exact structure of children without | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
 | Reranking is added and end-to-end answer quality does not | [Reranking](../patterns/17-ai-agentic/reranking.md) | AI and Agentic |
 | Reranking scores look reasonable in isolation but the final | [Reranking](../patterns/17-ai-agentic/reranking.md) | AI and Agentic |
 | Resequencing where order does not matter. Symptom. A Resequencer sits in | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
@@ -12468,6 +12474,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - arrival. Symptom. The page visibly jumps or reflows the moment the
 - Wrapping a component in a suspense boundary while its actual data
 - Suspense does not detect. Symptom. The boundary's fallback never
+
+#### [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md)
+
+**Core Problem:** A component that hard-codes every piece of its own content forces a consumer to accept exactly that content, or to duplicate the entire component only to change one piece of it. A card component that renders a fixed heading and a fixed body, for instance, cannot be reused for a card whose content genuinely differs from consumer to consumer without either parameterizing every possible piece of content through props, which grows unwieldy as the variety of possible content grows, or duplicating the component's structural markup for each variant. Slot and Children as API solves this by letting the component own its structural shell, the wrapper, the layout, the styling, while leaving specific positions within that shell open for the consumer to fill with whatever content they actually need, MDN's own documentation calls this "composing different DOM trees together."
+
+**Failure Mode Symptoms:**
+
+- Exposing a slot for content that only ever varies across a small,
+- known set of options. Symptom. Every consumer ends up passing nearly
+- Providing no fallback content for a slot a consumer may reasonably
+- leave empty. Symptom. A component renders visibly broken or empty
+- Requiring a specific number or exact structure of children without
+- A consumer nests the wrong number, or the wrong shape, of
 
 #### [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md)
 
