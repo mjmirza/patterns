@@ -499,6 +499,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A read-modify-write sequence under snapshot isolation | [Multiversion Concurrency Control](../patterns/12-data-storage/mvcc.md) | Data and Storage |
 | a reader must traverse to understand a single class. The symptom is a | [Extract Superclass](../patterns/03-refactoring/extract-superclass.md) | Refactoring Techniques |
 | a real object from a special case. The symptom is a debugger session | [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) | Refactoring Techniques |
+| A real share of users never discover the action exists | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
 | A Receiver processes the message almost immediately after | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
 | A recipient stops receiving messages it used to receive, with no | [Recipient List](../patterns/07-integration/recipient-list.md) | Enterprise Integration |
 | A recognisable majority of callers want the same small subset of the | [Facade](../patterns/01-gof/facade.md) | Design Patterns (GoF) |
@@ -966,6 +967,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Building a skeleton whose dimensions do not match the real | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Building the enhanced, JavaScript-dependent experience first, and | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
+| Building the palette overlay without correct, reliable focus | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
 | Building two islands that silently depend on shared state with no | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Bulkhead placed on the wrong side of the buffer. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Bulkhead without a timeout. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -1097,6 +1099,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | comfortable. Symptom is that no call site ever uses more than six of the | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Command holding a reference rather than a value. Symptom. A queued command | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
 | Command-query confusion. Symptom. A method called in an expression also | [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) | Refactoring Techniques |
+| Commands the user expected to stay visible disappear or | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
 | Commercial metering. The limit encodes what the customer paid for. It has | [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) | Cloud and Distributed |
 | Commit latency degrades under load with no CPU or lock contention visible. | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | Comparator treated as returning a boolean. Symptom. Code that calls a | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
@@ -1561,6 +1564,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | fields are not initialised when the subclass fields are set. The symptom | [Pull Up Constructor Body](../patterns/03-refactoring/pull-up-constructor-body.md) | Refactoring Techniques |
 | fields it does not need. The symptom is a parameter object whose fields | [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) | Refactoring Techniques |
 | Files colliding across unrelated pull requests. Symptom. A single file | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
+| Filtering and sorting the palette's command list in a way that | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
 | Filters that secretly depend on their neighbor's identity or internal | [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) | Architectural Patterns |
 | Final method or final class defeats the subclass proxy. Symptom. Advice | [Proxy](../patterns/01-gof/proxy.md) | Design Patterns (GoF) |
 | Fine-grained event payloads that still leak the producer's internal | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
@@ -2730,6 +2734,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Shared vocabulary without a shared home. Two areas of a system both | [Circular Dependency](../patterns/18-anti-patterns/circular-dependency.md) | Anti-Patterns |
 | Shared, finite consumption capacity. If capacity were infinite, | [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) | Cloud and Distributed |
 | Shared-device surprise. Symptom. A family member or coworker signs in as the | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
+| Shipping a command palette as the primary, or only, way to reach an | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
 | Shipping a duplicated copy of a large shared framework in every | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | Shipping a headless component whose exposed interface makes it easy | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | Shipping release builds with debug bypasses. Debug CA behavior must be tied | [Certificate Pinning](../patterns/15-security/certificate-pinning.md) | Security |
@@ -4763,6 +4768,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Transformer stack opacity. Symptom. A compiler error mentions several | [Reader Monad](../patterns/16-functional/reader-monad.md) | Functional Programming |
 | Transition during iteration. Symptom. A ConcurrentModificationException, a | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | Transitions between modes carry rules that matter, and those rules are worth | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
+| trapping. Symptom. A keyboard user tabbing through the open palette | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
 | Traversal order becomes the caller's problem. Depth-first, breadth-first, | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
 | Treating "eventually consistent" as "consistent enough to skip | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
 | Treating "shared nothing" as "no coordination anywhere". Symptom. two | [Shared Nothing](../patterns/05-architectural/shared-nothing.md) | Architectural Patterns |
@@ -12232,6 +12238,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - page, with no prefetch hint to soften the delay. Symptom.
 - Splitting so finely that the number of chunks, and their combined
 - The total time to load and become interactive is not
+
+#### [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md)
+
+**Core Problem:** An application with many features, settings, and navigation destinations forces a user relying purely on visual menus and clicks to remember where each specific action lives, and to physically move through nested menus to reach it. For a user who already knows what they want to do, this visual hunting is real, repeated friction, especially compared to how quickly a keyboard-only user can type the name of the thing they want. A Command Palette UI solves this by giving the user a single, keyboard-invoked entry point where typing a few characters of an action's name, cmdk's own documentation states, filters and sorts the available items automatically, letting the user reach almost any feature or destination in the application through one consistent, fast, typed interaction rather than a different visual path for each one.
+
+**Failure Mode Symptoms:**
+
+- Building the palette overlay without correct, reliable focus
+- trapping. Symptom. A keyboard user tabbing through the open palette
+- Shipping a command palette as the primary, or only, way to reach an
+- A real share of users never discover the action exists
+- Filtering and sorting the palette's command list in a way that
+- Commands the user expected to stay visible disappear or
 
 #### [Compound Components](../patterns/13-frontend-ui/compound-components.md)
 
