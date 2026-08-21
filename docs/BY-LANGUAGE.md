@@ -505,6 +505,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -2524,6 +2525,7 @@ These patterns contain runnable code examples written in Python:
 - [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) (Enterprise Integration)
 - [Composite](../patterns/01-gof/composite.md) (Design Patterns (GoF))
 - [Composition over Inheritance](../patterns/04-principles-and-laws/composition-over-inheritance.md) (Principles and Laws)
+- [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
 - [Computer Use](../patterns/17-ai-agentic/computer-use.md) (AI and Agentic)
 - [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md) (Enterprise Application Architecture)
 - [Conformist](../patterns/11-domain-driven-design/conformist.md) (Domain-Driven Design)
@@ -3859,6 +3861,7 @@ These patterns contain runnable code examples written in Swift:
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
 - [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) (Frontend and UI)
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
@@ -4113,6 +4116,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) (Enterprise Integration)
 - [Composite](../patterns/01-gof/composite.md) (Design Patterns (GoF))
 - [Composition over Inheritance](../patterns/04-principles-and-laws/composition-over-inheritance.md) (Principles and Laws)
+- [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
 - [Computer Use](../patterns/17-ai-agentic/computer-use.md) (AI and Agentic)
 - [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md) (Enterprise Application Architecture)
 - [Conformist](../patterns/11-domain-driven-design/conformist.md) (Domain-Driven Design)

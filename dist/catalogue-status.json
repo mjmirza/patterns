@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 708,
+  "published_total": 709,
   "target_total": 848,
   "families_total": 29,
   "families_complete": 17,
   "stale_entries": 0,
-  "references_checked": 4058,
+  "references_checked": 4060,
   "rows": [
     {
       "family": "01-gof",
@@ -170,11 +170,12 @@
       "family": "13-frontend-ui",
       "name": "Frontend and UI",
       "origin": "Framework documentation",
-      "published": 1,
-      "planned": 33,
+      "published": 2,
+      "planned": 32,
       "target": 34,
-      "percent": 2.9,
+      "percent": 5.9,
       "maturity": {
+        "established": 1,
         "deprecated": 1
       }
     },
