@@ -505,6 +505,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Characterization Test](../patterns/14-testing/characterization-test.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -2531,6 +2532,7 @@ These patterns contain runnable code examples written in Python:
 - [Constitutional AI](../patterns/17-ai-agentic/constitutional-ai.md) (AI and Agentic)
 - [Consumer-Driven Contract Test](../patterns/10-microservices/consumer-driven-contract-test.md) (Microservices)
 - [Consumer-Side Contract Test](../patterns/10-microservices/consumer-side-contract-test.md) (Microservices)
+- [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) (Frontend and UI)
 - [Content Enricher](../patterns/07-integration/content-enricher.md) (Enterprise Integration)
 - [Content Filter](../patterns/07-integration/content-filter.md) (Enterprise Integration)
 - [Content Security Policy](../patterns/15-security/content-security-policy.md) (Security)
@@ -3857,6 +3859,7 @@ These patterns contain runnable code examples written in Swift:
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) (Frontend and UI)
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
@@ -4117,6 +4120,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Constitutional AI](../patterns/17-ai-agentic/constitutional-ai.md) (AI and Agentic)
 - [Consumer-Driven Contract Test](../patterns/10-microservices/consumer-driven-contract-test.md) (Microservices)
 - [Consumer-Side Contract Test](../patterns/10-microservices/consumer-side-contract-test.md) (Microservices)
+- [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) (Frontend and UI)
 - [Content Enricher](../patterns/07-integration/content-enricher.md) (Enterprise Integration)
 - [Content Filter](../patterns/07-integration/content-filter.md) (Enterprise Integration)
 - [Content Security Policy](../patterns/15-security/content-security-policy.md) (Security)
