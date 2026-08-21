@@ -844,6 +844,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | API routes are protected, but CSV export, search index, or report | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | appears to hang on startup. Symptom. Startup after a crash takes minutes | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | Application data silently loses updates after a network | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
+| applied. Symptom. Different consumers of the same headless | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | Applying a JavaScript enhancement without checking whether the | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Applying BASE to an operation that requires a hard invariant. Symptom, an | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
 | Applying Infinite Scroll to content the user genuinely needs to | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
@@ -953,6 +954,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Builder as an escape hatch for a god object. A builder with thirty-five | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Builder used where a record belongs. Symptom is a code review comment | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Building a bespoke protocol and calling it domain-specific. Symptom. A | [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) | Microservices |
+| Building a headless abstraction for behavior that only ever needs | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | Building a machine so large and hierarchical that no single person | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Building a molecule or an organism that secretly depends on a | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
@@ -1278,6 +1280,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Design changes fanning out across every rule. Symptom. A change to | [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) | Enterprise Application Architecture |
 | Detached collection mutation exceptions. Symptom, adding or removing an | [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md) | Enterprise Application Architecture |
 | Detached entity, lazy-load-after-close. Symptom. An exception such as | [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) | Enterprise Application Architecture |
+| details the consumer should not need to know about. Symptom. A | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | Developers avoid a module because type errors mention profunctor | [Optics](../patterns/16-functional/optics.md) | Functional Programming |
 | Developers avoid adding cases because every operation needs | [Pattern Matching](../patterns/16-functional/pattern-matching.md) | Functional Programming |
 | Developers disable local security checks to get work done, then | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
@@ -1496,6 +1499,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Expired certificate outage. Symptom. Calls begin failing at the same time | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | explicit coordination mechanism between them. Symptom. Interacting | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Exposing a mutable delegate. The delegate is mutable, and exposing it | [Remove Middle Man](../patterns/03-refactoring/remove-middle-man.md) | Refactoring Techniques |
+| Exposing internal state or handlers that leak implementation | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | extensively. The symptom is a reader who must navigate through five | [Extract Class](../patterns/03-refactoring/extract-class.md) | Refactoring Techniques |
 | External error leaks internal state. Symptom. A caller learns policy names, | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Extracted methods still need many parameters. Cause. The | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
@@ -2146,6 +2150,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | One store calling into another store's update logic directly. | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | One tenant's traffic spike still degrades other tenants, despite a | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | One value used as a fake list. Symptom. A query where id in (?) returns no | [Parameterized Query](../patterns/15-security/parameterized-query.md) | Security |
+| one visual presentation. Symptom. The application carries the | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | one, with no prefetch hint to soften the delay. Symptom. Moving | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | One-shot events crammed into State. Symptom. A toast or a one-time UI | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
 | One-shot iterator treated as Traversable. Symptom. The first pass succeeds, | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |
@@ -2706,6 +2711,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Shared, finite consumption capacity. If capacity were infinite, | [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) | Cloud and Distributed |
 | Shared-device surprise. Symptom. A family member or coworker signs in as the | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | Shipping a duplicated copy of a large shared framework in every | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
+| Shipping a headless component whose exposed interface makes it easy | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | Shipping release builds with debug bypasses. Debug CA behavior must be tied | [Certificate Pinning](../patterns/15-security/certificate-pinning.md) | Security |
 | Short-circuit hidden inside a handler. Symptom. A handler far down the chain | [Chain of Responsibility](../patterns/01-gof/chain-of-responsibility.md) | Design Patterns (GoF) |
 | Shotgun surgery across supposedly separated concerns. Symptom. A single conceptual | [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) | Principles and Laws |
@@ -12248,6 +12254,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Updating one store causes an unexpected chain of changes
 - Adopting the archived original Flux library on a new project
 - instead of a maintained successor. Symptom. A new codebase depends
+
+#### [Headless Component](../patterns/13-frontend-ui/headless-component.md)
+
+**Core Problem:** A component that bundles its behavior and its visual markup together forces every consumer to accept both, even when a consumer genuinely needs the same behavior, an accessible dropdown's open and close logic, a form field's validation state, but wants an entirely different visual presentation than the one the component happens to ship with. Duplicating the behavior for each new visual variant repeats real, often subtle logic, keyboard handling, focus management, accessibility attributes, that is easy to get wrong the second time even when the first implementation was correct. The Headless Component pattern solves this by drawing a clean boundary between the two concerns, the component owns the behavior and state, while exposing that state and the functions to change it through a plain interface the consumer's own markup can use however it needs to.
+
+**Failure Mode Symptoms:**
+
+- Building a headless abstraction for behavior that only ever needs
+- one visual presentation. Symptom. The application carries the
+- Exposing internal state or handlers that leak implementation
+- details the consumer should not need to know about. Symptom. A
+- Shipping a headless component whose exposed interface makes it easy
+- applied. Symptom. Different consumers of the same headless
 
 #### [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md)
 

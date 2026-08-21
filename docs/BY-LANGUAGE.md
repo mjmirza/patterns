@@ -511,6 +511,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2694,6 +2695,7 @@ These patterns contain runnable code examples written in Python:
 - [GraphRAG](../patterns/17-ai-agentic/graphrag.md) (AI and Agentic)
 - [Guaranteed Delivery](../patterns/07-integration/guaranteed-delivery.md) (Enterprise Integration)
 - [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) (Concurrency and Parallelism)
+- [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
 - [Health Check API](../patterns/10-microservices/health-check-api.md) (Microservices)
 - [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) (Cloud and Distributed)
 - [Hexagonal Architecture](../patterns/05-architectural/hexagonal-architecture.md) (Architectural Patterns)
@@ -3920,6 +3922,7 @@ These patterns contain runnable code examples written in Swift:
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
 - [Golden Master](../patterns/14-testing/golden-master.md) (Testing)
+- [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
 - [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
@@ -4320,6 +4323,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [GraphRAG](../patterns/17-ai-agentic/graphrag.md) (AI and Agentic)
 - [Guaranteed Delivery](../patterns/07-integration/guaranteed-delivery.md) (Enterprise Integration)
 - [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) (Concurrency and Parallelism)
+- [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
 - [Health Check API](../patterns/10-microservices/health-check-api.md) (Microservices)
 - [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) (Cloud and Distributed)
 - [Hexagonal Architecture](../patterns/05-architectural/hexagonal-architecture.md) (Architectural Patterns)
