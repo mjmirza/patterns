@@ -735,6 +735,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Accuracy on a new task domain is far below the numbers | [Least to Most](../patterns/17-ai-agentic/least-to-most.md) | AI and Agentic |
 | across more than three files. Fix, the same consolidation, but this symptom | [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) | Code Smells |
 | actual benefit. The observable symptom is a reviewer asking why a piece of | [Idiomatic](../patterns/04-principles-and-laws/idiomatic.md) | Principles and Laws |
+| actually use the application. Symptom. A session that visits route | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | Adapter used where the target has one implementation. Symptom. An interface | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | Adapter-to-adapter shortcuts. Symptom. A driving HTTP adapter calls a | [Hexagonal Architecture](../patterns/05-architectural/hexagonal-architecture.md) | Architectural Patterns |
 | Adapting a broken abstraction upward. Symptom. The target interface grows | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
@@ -1246,6 +1247,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Deep-link bypass. Symptom. A user bookmarks, or manually types, the URL | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
 | Default deny with no operator signal. Symptom. Customers see generic errors | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Defect bankruptcy. Symptom. The bug tracker has hundreds of stale defects, | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
+| Deferring a chunk the user needs immediately after the initial | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | Defining transitions implicitly through scattered conditional | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Degenerate dimension modeled as a full dimension table. Symptom. A | [Star Schema](../patterns/12-data-storage/star-schema.md) | Data and Storage |
 | Degrading one class of work is preferable to degrading all of them. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -2230,6 +2232,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | p99 latency for the composed endpoint occasionally spikes to several | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | p99 latency on a specific endpoint or handler is much higher than | [No Caching](../patterns/18-anti-patterns/no-caching.md) | Anti-Patterns |
 | Page load time for a composed page silently doubles or | [Self-Contained Service](../patterns/10-microservices/self-contained-service.md) | Microservices |
+| page, with no prefetch hint to soften the delay. Symptom. | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | panic in Go, not a silent no-op. Symptom, a crash reporting a send on a | [Communicating Sequential Processes](../patterns/09-concurrency/communicating-sequential-processes.md) | Concurrency and Parallelism |
 | Parallel pipeline with ordered state. Symptom. Windowed output or running | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
 | Parallel race. Symptom. A parallel stream or distributed transform produces | [Replace Loop with Pipeline](../patterns/03-refactoring/replace-loop-with-pipeline.md) | Refactoring Techniques |
@@ -2809,9 +2812,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Splitting a package produces a burst of new packages, each with | [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) | Principles and Laws |
 | Splitting a parameterized function. The parameter is not a flag but | [Remove Flag Argument](../patterns/03-refactoring/remove-flag-argument.md) | Refactoring Techniques |
 | Splitting a small, single-team application into several micro | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
+| Splitting along a boundary that does not correspond to how sessions | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | Splitting along data rather than along change. Symptom. Two new classes | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
 | Splitting every component into container and presentational halves | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Splitting far below the profitable threshold. Symptom. The parallel | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
+| Splitting so finely that the number of chunks, and their combined | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | Spring AOP self-invocation silently skips the proxy. Symptom. A method | [Proxy](../patterns/01-gof/proxy.md) | Design Patterns (GoF) |
 | Spurious wakeup treated as a real signal. Symptom, a consumer processes a | [Monitor Object](../patterns/09-concurrency/monitor-object.md) | Concurrency and Parallelism |
 | Spurious wakeup treated as a real signal. Symptom. A guarded method | [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) | Concurrency and Parallelism |
@@ -4599,6 +4604,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The thundering herd on a popular new question. Symptom. A sudden spike in | [Semantic Caching](../patterns/17-ai-agentic/semantic-caching.md) | AI and Agentic |
 | The thundering herd on the registry. Symptom. The registry itself | [Service Registry](../patterns/10-microservices/service-registry.md) | Microservices |
 | The torn transition under concurrency. Symptom. An order that is both shipped | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
+| The total time to load and become interactive is not | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | The tracing backend's monthly bill or storage grows far faster | [Agent Tracing](../patterns/17-ai-agentic/agent-tracing.md) | AI and Agentic |
 | The translator file has grown into the largest, most feared | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | The trigger and the work are owned by different code, and the trigger should | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
@@ -12165,6 +12171,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - taxonomy is meant to guarantee. Symptom. A molecule that appears
 - Treating the five-level taxonomy as a substitute for actual design
 - system governance. Symptom. A component library is neatly organized
+
+#### [Code Splitting](../patterns/13-frontend-ui/code-splitting.md)
+
+**Core Problem:** A JavaScript application that bundles its entire codebase into a single file forces every visitor to download, parse, and evaluate code for every feature the application has, even the parts of a page, or an entire route, that visitor never uses in that session. On a constrained device or a slow connection, this delay is not abstract, it directly pushes back the moment the page becomes interactive, since the browser's main thread stays busy parsing and running code the current view does not need before it can respond to the user at all. Code Splitting solves this by breaking the single bundle into multiple, independently loadable pieces, so a page fetches only the code its current view actually requires, and defers the rest until, or unless, it is genuinely needed.
+
+**Failure Mode Symptoms:**
+
+- Splitting along a boundary that does not correspond to how sessions
+- actually use the application. Symptom. A session that visits route
+- Deferring a chunk the user needs immediately after the initial
+- page, with no prefetch hint to soften the delay. Symptom.
+- Splitting so finely that the number of chunks, and their combined
+- The total time to load and become interactive is not
 
 #### [Compound Components](../patterns/13-frontend-ui/compound-components.md)
 
