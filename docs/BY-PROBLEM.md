@@ -875,6 +875,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Associativity violation in parallel reduction. Symptom. Sequential tests | [Foldable](../patterns/16-functional/foldable.md) | Functional Programming |
 | Assumed global ordering. Symptom. A downstream projection ends up in a | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Assuming a session survives across HTTP requests without checking. | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
+| Assuming an Error Boundary catches an error thrown inside an event | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Assuming every handler resumes exactly once. Symptom. Code written | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Assuming Server Functions dispatch and complete in true parallel | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | Assuming stealing preserves ordering. Symptom. intermittent, load-dependent bugs where | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
@@ -1635,6 +1636,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | halves. Symptom. The container passes a long, growing list of props | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Hand-written cursor state that drifts from the container. Symptom. A | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
 | Handler with a side effect that runs twice. Symptom. Duplicate audit rows or | [Chain of Responsibility](../patterns/01-gof/chain-of-responsibility.md) | Design Patterns (GoF) |
+| handler, such as an onClick callback. Symptom. The error is not | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Handoff used where delegation was needed. The symptom is that work that | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |
 | Hard-to-reproduce stale data. Symptom. An occasional message carries stale | [Content Enricher](../patterns/07-integration/content-enricher.md) | Enterprise Integration |
 | Head-of-line blocking on a single slow item. Symptom. Overall pipeline | [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) | Architectural Patterns |
@@ -2090,6 +2092,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No decision owner, so the timer alone does not converge. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | No emergency path. Symptom: an admin loses access during an incident. Cause: | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | No external aid, a call hierarchy view, a maintained sequence diagram, | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
+| no more granular boundaries inside it. Symptom. Any rendering error | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | No oracle beyond survival. Symptom. A fuzz campaign runs for weeks, finds | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | No reauthentication path. Symptom. A user signed in by magic link can | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | No reply ever produced for a two-way channel. Symptom. Requestors | [Service Activator](../patterns/07-integration/service-activator.md) | Enterprise Integration |
@@ -2250,6 +2253,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Overtime as schedule math. Symptom. The plan assumes nights or weekends | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Overwrapping a purely technical value. Symptom, a codebase has a | [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) | Domain-Driven Design |
 | overwriting a newer one. Symptom, seen above. Cause, the sink connector is | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
+| own fallback rendering path. Symptom. A failure inside the fallback | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Ownership boundaries. One team owns the semantics of an operation and a | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | Ownership confusion over a resource. Symptom. Either a closed connection | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | p99 latency for the composed endpoint occasionally spikes to several | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
@@ -2314,6 +2318,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Pipeline overreach. Symptom: a CI job can alter production infrastructure. | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | place on purpose. Symptom. A member is genuinely, deliberately private, and a | [Insider Trading](../patterns/02-code-smells/insider-trading.md) | Code Smells |
 | Placing a footer or other important, reachable content directly | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
+| Placing a single Error Boundary around the entire application with | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Poison message loop. Symptom. A single message is processed, fails, becomes | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | Poison message loop. Symptom. Consumer lag on one partition grows | [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) | Enterprise Integration |
 | Poison message replay. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
@@ -5068,6 +5073,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Writing a reducer function with side effects, such as a network | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | Writing a selector that returns a new object or array reference on | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Writing a Server Action's mutation logic without verifying | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
+| Writing complex, error-prone logic directly inside the boundary's | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Written as symptom, cause, fix. The symptoms are drawn from practice and are | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Written as symptom, cause, fix. The symptoms are drawn from practice rather than | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | Wrong append order. Symptom. Explanation steps appear backward or grouped | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
@@ -12278,6 +12284,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - matters, such as a search-as-you-type box. Symptom. The handler
 - Creating a new debounced or throttled function on every render or
 - every call, instead of a single, stable, reused instance. Symptom.
+
+#### [Error Boundary](../patterns/13-frontend-ui/error-boundary.md)
+
+**Core Problem:** React's own documentation states the default behavior a rendering error causes plainly. "By default, if your application throws an error during rendering, React will remove its UI from the screen." Without an Error Boundary, a single component failing to render, from a bug, an unexpected data shape, or any other rendering-time error, takes down the entire surrounding application rather than only the part that actually failed. This is a harsh, all-or-nothing outcome for what is often a localized problem. Error Boundary solves this by letting a developer wrap a specific part of the UI so a rendering error inside that part is caught there, showing a fallback for only that part, while the rest of the application, everything outside the boundary, keeps working normally.
+
+**Failure Mode Symptoms:**
+
+- Assuming an Error Boundary catches an error thrown inside an event
+- handler, such as an onClick callback. Symptom. The error is not
+- Writing complex, error-prone logic directly inside the boundary's
+- own fallback rendering path. Symptom. A failure inside the fallback
+- Placing a single Error Boundary around the entire application with
+- no more granular boundaries inside it. Symptom. Any rendering error
 
 #### [Flux](../patterns/13-frontend-ui/flux.md)
 

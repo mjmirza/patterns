@@ -511,6 +511,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2639,6 +2640,7 @@ These patterns contain runnable code examples written in Python:
 - [Entity](../patterns/11-domain-driven-design/entity.md) (Domain-Driven Design)
 - [Envelope Encryption](../patterns/15-security/envelope-encryption.md) (Security)
 - [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) (Enterprise Integration)
+- [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
 - [Evaluation Suite](../patterns/17-ai-agentic/evaluation-suite.md) (AI and Agentic)
 - [Evaluator-Optimizer](../patterns/17-ai-agentic/evaluator-optimizer.md) (AI and Agentic)
 - [Event Message](../patterns/07-integration/event-message.md) (Enterprise Integration)
@@ -3927,6 +3929,7 @@ These patterns contain runnable code examples written in Swift:
 - [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
 - [Domain Service](../patterns/11-domain-driven-design/domain-service.md) (Domain-Driven Design)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
+- [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
@@ -4281,6 +4284,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Entity](../patterns/11-domain-driven-design/entity.md) (Domain-Driven Design)
 - [Envelope Encryption](../patterns/15-security/envelope-encryption.md) (Security)
 - [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) (Enterprise Integration)
+- [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
 - [Evaluation Suite](../patterns/17-ai-agentic/evaluation-suite.md) (AI and Agentic)
 - [Evaluator-Optimizer](../patterns/17-ai-agentic/evaluator-optimizer.md) (AI and Agentic)
 - [Event Message](../patterns/07-integration/event-message.md) (Enterprise Integration)

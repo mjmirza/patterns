@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-29 entries, 105,833 words. Every entry carries all 18
+30 entries, 109,389 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -46,6 +46,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Progressive Enhancement](progressive-enhancement.md) | canonical | 3,686 | Before Progressive Enhancement was named, a common alternative approach, graceful degradation, started from the richest possible experience, built for the most capable browsers ... |
+
+## Error Handling
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Error Boundary](error-boundary.md) | canonical | 3,556 | React's own documentation states the default behavior a rendering error causes plainly. |
 
 ## Event Handling
 
