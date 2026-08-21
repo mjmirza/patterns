@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-7 entries, 25,176 words. Every entry carries all 18
+8 entries, 28,805 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Component Composition
@@ -20,6 +20,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Flux](flux.md) | deprecated | 3,629 | Traditional MVC-style architectures let a view update a model directly, and let multiple models observe and update one another, which becomes difficult to reason about as an ... |
 | [Signals](signals.md) | established | 3,294 | A component-based UI framework built on a virtual DOM diff and re-render cycle, such as React, re-runs an entire component function whenever any piece of its state changes, then ... |
 
 ## Reading order
