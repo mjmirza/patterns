@@ -520,6 +520,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2965,6 +2966,7 @@ These patterns contain runnable code examples written in Python:
 - [Request-Reply](../patterns/07-integration/request-reply.md) (Enterprise Integration)
 - [Reranking](../patterns/17-ai-agentic/reranking.md) (AI and Agentic)
 - [Resequencer](../patterns/07-integration/resequencer.md) (Enterprise Integration)
+- [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) (Frontend and UI)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
 - [Retrieval Augmented Generation](../patterns/17-ai-agentic/retrieval-augmented-generation.md) (AI and Agentic)
 - [Retry Budget](../patterns/10-microservices/retry-budget.md) (Microservices)
@@ -3936,6 +3938,7 @@ These patterns contain runnable code examples written in Swift:
 - [Render Props](../patterns/13-frontend-ui/render-props.md) (Frontend and UI)
 - [Replace Error Code with Exception](../patterns/03-refactoring/replace-error-code-with-exception.md) (Refactoring Techniques)
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
+- [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) (Frontend and UI)
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
@@ -4573,6 +4576,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Request-Reply](../patterns/07-integration/request-reply.md) (Enterprise Integration)
 - [Reranking](../patterns/17-ai-agentic/reranking.md) (AI and Agentic)
 - [Resequencer](../patterns/07-integration/resequencer.md) (Enterprise Integration)
+- [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) (Frontend and UI)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
 - [Retrieval Augmented Generation](../patterns/17-ai-agentic/retrieval-augmented-generation.md) (AI and Agentic)
 - [Retry Budget](../patterns/10-microservices/retry-budget.md) (Microservices)
