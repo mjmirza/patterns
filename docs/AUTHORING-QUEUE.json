@@ -5341,13 +5341,6 @@
     "focus": ""
   },
   {
-    "name": "Ring Buffer",
-    "slug": "ring-buffer",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/ring-buffer.md",
-    "focus": ""
-  },
-  {
     "name": "Memory Pool (Fixed Block Allocator)",
     "slug": "memory-pool",
     "category": "embedded and hardware-software",
