@@ -751,6 +751,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 
@@ -766,6 +767,7 @@ These patterns contain runnable code examples written in C++:
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
+- [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
 - [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
 
@@ -3006,6 +3008,7 @@ These patterns contain runnable code examples written in Python:
 - [Retry](../patterns/08-cloud-distributed/retry.md) (Cloud and Distributed)
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
+- [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
 - [Role-Based Access Control](../patterns/15-security/rbac.md) (Security)
 - [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
 - [Routing Slip](../patterns/07-integration/routing-slip.md) (Enterprise Integration)
@@ -3990,6 +3993,7 @@ These patterns contain runnable code examples written in Swift:
 - [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) (Frontend and UI)
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
+- [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
 - [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [Server Action](../patterns/13-frontend-ui/server-action.md) (Frontend and UI)

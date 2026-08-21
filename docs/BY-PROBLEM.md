@@ -1058,6 +1058,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Choosing an eager hydration directive for an island that is rarely | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Choosing choreography for a process that needed a single owner. Symptom. | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
+| Choosing the overflow policy without a deliberate decision about | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | Choreography and orchestration mixed for the same process. Symptom. Part | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | Choreography cycle. Symptom. A deployment of one service causes an event | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
 | Choreography drift, the silently broken implicit contract. Symptom. A | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
@@ -1997,6 +1998,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Misapplied choreography for a strictly sequential, few-branch process | [Choreography](../patterns/08-cloud-distributed/choreography.md) | Cloud and Distributed |
 | Misconfigured election timeout relative to network latency. Symptom. | [Raft](../patterns/12-data-storage/raft.md) | Data and Storage |
 | misinterpret. Symptom. A later step runs to completion but its output is | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
+| mismatch between the producer and the consumer. Symptom. The buffer | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | Mismatched payload is accepted. Symptom. A retry with the same key but a | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |
 | Missed call site in a dynamic language. A Python or JavaScript rename | [Change Function Declaration](../patterns/03-refactoring/change-function-declaration.md) | Refactoring Techniques |
 | Missed events between construction and registration. Symptom. An observer | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
@@ -2185,6 +2187,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | One breaker in front of many independent backends. | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | One class per operation for operations with one caller. Symptom. A directory | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
 | One component has ballooned to contain most of the | [Common Closure Principle](../patterns/04-principles-and-laws/common-closure-principle.md) | Principles and Laws |
+| one consumer, with no additional lock. Symptom. Data written by two | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | One core dependency, small, single-purpose, and widely | [Composable](../patterns/04-principles-and-laws/composable.md) | Principles and Laws |
 | One database shard, one region or one tenant degrades, and the | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | One destination silently receives traffic meant for another, | [Dynamic Router](../patterns/07-integration/dynamic-router.md) | Enterprise Integration |
@@ -2853,6 +2856,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | sits in memory holding its stack forever. Symptom, an apparently idle | [Communicating Sequential Processes](../patterns/09-concurrency/communicating-sequential-processes.md) | Concurrency and Parallelism |
 | Sized for the average case, not the tail. Symptom. The system runs fine | [Semaphore](../patterns/09-concurrency/semaphore.md) | Concurrency and Parallelism |
 | Sized from average load rather than from Little's Law. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
+| Sizing the buffer's capacity without measuring the real rate | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | Skeleton with one implementation. Symptom. An abstract class and exactly one | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Skipped cleanup. Symptom. File handles, locks, spans, database transactions, | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | Skipped tail work. Symptom. A counter, audit call, buffer append, or cleanup | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
@@ -2952,6 +2956,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Strategy allocated per call in a hot path. Symptom. Allocation rate and | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | Strategy explosion by combination. Symptom. Class names that stack three | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | Strategy interface with one implementation. Symptom. An interface, one class | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
+| stream. Symptom. Either genuinely important data is silently | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | STRIDE karaoke. Symptom. The team chants each STRIDE word for every box and | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | String interpolation before the safe API. Symptom. A call appears to use | [Parameterized Query](../patterns/15-security/parameterized-query.md) | Security |
 | Stringly diagnostic soup. Symptom. Callers search for substrings in Writer | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
@@ -5043,6 +5048,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Users return from the authorization server and land on an error | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Users see error messages in a confusing order, changing between | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
 | Using a generic spinner as a suspense boundary's fallback instead | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
+| Using a plain ring buffer with more than one producer or more than | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | Using a saga where a single aggregate would do. Symptom. A team builds | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
 | Using a zipper as a substitute for an index. Symptom. A hot path that | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | Using an event where a command was needed. Symptom. A "PaymentRequested" | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
@@ -15881,6 +15887,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - context instead of deferring it. Symptom. Other, unrelated
 - Building a hand-off mechanism between the interrupt context and the
 - deferred task with no genuine data-race protection. Symptom. The
+
+#### [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md)
+
+**Core Problem:** Passing data from one execution context to another, most critically from an interrupt context to a task, needs a hand-off mechanism that is genuinely safe under concurrent access without the cost, and the interrupt-context incompatibility, of a full lock. A Ring Buffer solves this specifically for the single-producer, single-consumer case, where Zephyr's own documentation states the safety guarantee directly. "A single producer and a single consumer running in separate execution contexts, for example two threads, or one thread and one ISR, may use the same ring buffer concurrently without additional locking." The structure achieves this safety not through a lock but through a careful division of which side owns which piece of shared state, letting an interrupt context feed data into the buffer and a task consume it without either side ever blocking the other.
+
+**Failure Mode Symptoms:**
+
+- Using a plain ring buffer with more than one producer or more than
+- one consumer, with no additional lock. Symptom. Data written by two
+- Choosing the overflow policy without a deliberate decision about
+- stream. Symptom. Either genuinely important data is silently
+- Sizing the buffer's capacity without measuring the real rate
+- mismatch between the producer and the consumer. Symptom. The buffer
 
 #### [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md)
 

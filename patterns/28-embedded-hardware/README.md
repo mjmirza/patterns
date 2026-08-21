@@ -2,7 +2,7 @@
 
 Origin. Embedded systems engineering literature
 
-4 entries, 14,490 words. Every entry carries all 18
+5 entries, 18,144 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -18,6 +18,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Hardware Abstraction Layer](hardware-abstraction-layer.md) | canonical | 3,424 | Firmware written directly against one microcontroller's raw registers is tied to that exact chip, so porting it to a different microcontroller, even one from the same family ... |
+| [Ring Buffer](ring-buffer.md) | canonical | 3,654 | Passing data from one execution context to another, most critically from an interrupt context to a task, needs a hand-off mechanism that is genuinely safe under concurrent access ... |
 
 ## Reading order
 
