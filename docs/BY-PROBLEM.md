@@ -674,6 +674,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A third symptom is that services are individually deployable but a | [Microservices Architecture](../patterns/05-architectural/microservices-architecture.md) | Architectural Patterns |
 | A third-party API integration starts returning 429 Too Many | [No Caching](../patterns/18-anti-patterns/no-caching.md) | Anti-Patterns |
 | A thread pool's worker threads accumulate, each parked forever on a | [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) | Concurrency and Parallelism |
+| A thread that allocates a block and never releases it, exhausting | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
 | A tile map in a game, where a hundred thousand tiles each hold a full copy of | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | A tiny, focused component, drawn correctly by CCP, is | [Common Closure Principle](../patterns/04-principles-and-laws/common-closure-principle.md) | Principles and Laws |
 | A token minted for one service is accepted by an entirely | [Access Token](../patterns/10-microservices/access-token.md) | Microservices |
@@ -786,6 +787,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | all if each variant lived in its own file, a symptom of the Divergent | [Switch Statements](../patterns/02-code-smells/switch-statements.md) | Code Smells |
 | all. Symptom. The task completes, every step reports success, and the | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
 | Allocation pressure. The constructed object is genuinely different each | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
+| allocation. Symptom. The system runs low on available blocks, or | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
 | allowing duplicate form submissions. Symptom. A user, uncertain | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
 | allows the client to modify it without the class's knowledge. The symptom | [Remove Middle Man](../patterns/03-refactoring/remove-middle-man.md) | Refactoring Techniques |
 | alone in a long retention audit store. Symptom. A security review of the | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
@@ -1060,6 +1062,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Choosing choreography for a process that needed a single owner. Symptom. | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | Choosing full double buffering on a system with genuinely | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
+| Choosing the internal-bookkeeping memory slab variant for a buffer | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
 | Choosing the overflow policy without a deliberate decision about | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | Choreography and orchestration mixed for the same process. Symptom. Part | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | Choreography cycle. Symptom. A deployment of one service causes an event | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
@@ -2861,6 +2864,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Sized for the average case, not the tail. Symptom. The system runs fine | [Semaphore](../patterns/09-concurrency/semaphore.md) | Concurrency and Parallelism |
 | Sized from average load rather than from Little's Law. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Sizing the buffer's capacity without measuring the real rate | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
+| Sizing the fixed block to the largest observed request rather than | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
 | Skeleton with one implementation. Symptom. An abstract class and exactly one | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Skipped cleanup. Symptom. File handles, locks, spans, database transactions, | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | Skipped tail work. Symptom. A counter, audit call, buffer append, or cleanup | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
@@ -4054,6 +4058,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Tests, examples, traces, or captured production cases can compare old and new | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
 | than a genuine mutation. Symptom. The application carries a | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | than a single cited source per item. Each entry states the observable symptom | [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) | Enterprise Application Architecture |
+| that genuinely needs to be power-cycled independently. Symptom. The | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
 | that is disconnected from the persistence layer. The symptom is a call to a | [Change Value to Reference](../patterns/03-refactoring/change-value-to-reference.md) | Refactoring Techniques |
 | that is genuinely local to one component. Symptom. Simple, | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | that is the observable symptom. The cause is that the map was drawn once, | [Context Map](../patterns/11-domain-driven-design/context-map.md) | Domain-Driven Design |
@@ -4465,6 +4470,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The plugin still needs to do real work. A sandbox that grants nothing is | [Plugin Sandbox](../patterns/05-architectural/plugin-sandbox.md) | Architectural Patterns |
 | The policy says "manager can approve expense," but managers can | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | The polling loop silently stops making progress with no crash and no | [Polling Consumer](../patterns/07-integration/polling-consumer.md) | Enterprise Integration |
+| the pool over the system's running lifetime. Symptom. Over time, | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
 | The predicate and the operation observe the same state closely enough that the | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
 | The premature narrowing that nobody asked for. Symptom. A code review | [Extraneous Fetching](../patterns/18-anti-patterns/extraneous-fetching.md) | Anti-Patterns |
 | The premature victory lap. Symptom. The team announces the migration | [Strangler Application](../patterns/10-microservices/strangler-application.md) | Microservices |
@@ -15906,6 +15912,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - context instead of deferring it. Symptom. Other, unrelated
 - Building a hand-off mechanism between the interrupt context and the
 - deferred task with no genuine data-race protection. Symptom. The
+
+#### [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md)
+
+**Core Problem:** A general-purpose heap allocator serves requests of arbitrary size, and repeated allocation and release of differently-sized chunks carves the heap into a patchwork of used and free regions over time, a condition commonly called fragmentation, where the heap may hold enough total free memory to satisfy a request yet have no single free region large enough to satisfy it. A Memory Pool solves this by constraining every block to one fixed size, so a released block is always immediately reusable by the next allocation request of that same size, with no possibility of the free space becoming too small or too scattered to serve a future request. Zephyr's own documentation states this benefit directly, that fixed-size blocks allow memory to be allocated and released efficiently, "avoiding memory fragmentation concerns."
+
+**Failure Mode Symptoms:**
+
+- Sizing the fixed block to the largest observed request rather than
+- allocation. Symptom. The system runs low on available blocks, or
+- A thread that allocates a block and never releases it, exhausting
+- the pool over the system's running lifetime. Symptom. Over time,
+- Choosing the internal-bookkeeping memory slab variant for a buffer
+- that genuinely needs to be power-cycled independently. Symptom. The
 
 #### [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md)
 
