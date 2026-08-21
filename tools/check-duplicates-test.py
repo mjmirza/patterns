@@ -20,6 +20,7 @@ spec.loader.exec_module(check_duplicates)
 normalize_term = check_duplicates.normalize_term
 tokenize_text = check_duplicates.tokenize_text
 analyze_repository = check_duplicates.analyze_repository
+fetch_historical_proposals = check_duplicates.fetch_historical_proposals
 
 
 class TestCheckDuplicates(unittest.TestCase):
@@ -32,6 +33,19 @@ class TestCheckDuplicates(unittest.TestCase):
         self.assertEqual(normalize_term("Pipes and Filters"), "pipesandfilters")
         self.assertEqual(normalize_term("Rate Limiting"), "ratelimiting")
         self.assertEqual(normalize_term("Throttling"), "throttling")
+
+    def test_parenthetical_qualifiers_normalization(self):
+        self.assertEqual(normalize_term("Producer-Consumer (Embedded)"), "producerconsumer")
+        self.assertEqual(normalize_term("Repository Pattern (Mobile Offline-First)"), "repository")
+        self.assertEqual(
+            normalize_term("Model-View-Intent (MVI)"),
+            normalize_term("Model-View-Intent"),
+        )
+
+    def test_distinct_near_neighbors(self):
+        self.assertNotEqual(normalize_term("Rate Limiting"), normalize_term("Throttling"))
+        self.assertNotEqual(normalize_term("Circuit Breaker"), normalize_term("Bulkhead"))
+        self.assertNotEqual(normalize_term("Strangler Fig"), normalize_term("Branch by Abstraction"))
 
     def test_tokenize_text(self):
         tokens = tokenize_text(
@@ -51,6 +65,15 @@ class TestCheckDuplicates(unittest.TestCase):
         self.assertGreater(results["published_count"], 0)
         self.assertGreater(results["queue_count"], 0)
         self.assertIsInstance(results["collisions"], list)
+
+    def test_historical_proposal_detection(self):
+        history = fetch_historical_proposals()
+        self.assertIsInstance(history, list)
+        self.assertGreater(len(history), 0)
+        queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
+        results = analyze_repository(queue_file)
+        historical_collisions = [c for c in results["collisions"] if c.get("type") == "HISTORICAL_PROPOSAL_COLLISION"]
+        self.assertGreater(len(historical_collisions), 0)
 
 
 if __name__ == "__main__":

@@ -57,6 +57,8 @@ jobs:
             echo "Catalogue status is stale. Run tools/gen-catalogue-status.py and commit."
             exit 1
           }
+      - name: Duplicate detector tests
+        run: python3 tools/check-duplicates-test.py
 
   code:
     name: code samples compile

@@ -38,6 +38,7 @@ def normalize_term(term: str) -> str:
     """Normalize names/aliases: lowercase, strip generic suffixes/stopwords, remove non-alphanumeric."""
     s = term.lower().strip()
     s = re.sub(r"'s\b", "", s)
+    s = re.sub(r"\(.*?\)", "", s)
     words = [w for w in re.split(r"\W+", s) if w and w not in GENERIC_PATTERN_TERMS]
     s_clean = "".join(words)
     return s_clean or re.sub(r"\W+", "", term.lower())
@@ -197,6 +198,38 @@ def analyze_repository(queue_path: Path) -> dict:
                 })
 
     history = fetch_historical_proposals()
+    published_paths = {p["path"] for p in published}
+
+    # Map historical terms for entries not currently published
+    history_norm_map: dict[str, list[dict]] = {}
+    for h in history:
+        if h["path"] not in published_paths:
+            norm = normalize_term(h["slug"])
+            if norm:
+                history_norm_map.setdefault(norm, []).append(h)
+
+    # Queue vs Historical Proposal Collisions (Pass 5)
+    for q in queue:
+        q_path = q.get("path", "")
+        q_slug = q.get("slug", "")
+        q_name = q.get("name", "")
+        q_aliases = q.get("aliases", [])
+
+        q_terms = [q_name, q_slug] + list(q_aliases)
+        for term in q_terms:
+            norm = normalize_term(term)
+            if norm in history_norm_map:
+                for hist in history_norm_map[norm]:
+                    if hist["path"] != q_path:
+                        collisions.append({
+                            "type": "HISTORICAL_PROPOSAL_COLLISION",
+                            "queue_path": q_path,
+                            "historical_path": hist["path"],
+                            "matched_term": term,
+                            "normalized_key": norm,
+                            "queue_name": q_name,
+                            "historical_slug": hist["slug"],
+                        })
 
     return {
         "published_count": len(published),
@@ -223,10 +256,16 @@ def main() -> int:
         print(f"\nFound {len(collisions)} potential duplicate/collision pairs:")
         seen = set()
         for c in collisions:
-            pair_key = (c["queue_path"], c["published_path"], c["normalized_key"])
-            if pair_key not in seen:
-                seen.add(pair_key)
-                print(f"  [QUEUE COLLISION] {c['queue_path']} ({c['queue_name']}) <-> Published: {c['published_path']} ({c['published_name']}) via '{c['matched_term']}'")
+            if c["type"] == "HISTORICAL_PROPOSAL_COLLISION":
+                pair_key = (c["queue_path"], c["historical_path"], c["normalized_key"])
+                if pair_key not in seen:
+                    seen.add(pair_key)
+                    print(f"  [HISTORICAL COLLISION] {c['queue_path']} ({c['queue_name']}) <-> Historic: {c['historical_path']} ({c['historical_slug']}) via '{c['matched_term']}'")
+            else:
+                pair_key = (c["queue_path"], c["published_path"], c["normalized_key"])
+                if pair_key not in seen:
+                    seen.add(pair_key)
+                    print(f"  [QUEUE COLLISION] {c['queue_path']} ({c['queue_name']}) <-> Published: {c['published_path']} ({c['published_name']}) via '{c['matched_term']}'")
 
     if semantic:
         print(f"\nFound {len(semantic)} high semantic overlap published pairs:")
