@@ -515,6 +515,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2845,6 +2846,7 @@ These patterns contain runnable code examples written in Python:
 - [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) (Anti-Patterns)
 - [PACELC Theorem](../patterns/04-principles-and-laws/pacelc-theorem.md) (Principles and Laws)
 - [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) (AI and Agentic)
+- [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) (Frontend and UI)
 - [Page Controller](../patterns/06-enterprise-application-architecture/page-controller.md) (Enterprise Application Architecture)
 - [Parallel Inheritance Hierarchies](../patterns/02-code-smells/parallel-inheritance-hierarchies.md) (Code Smells)
 - [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) (Concurrency and Parallelism)
@@ -3922,6 +3924,7 @@ These patterns contain runnable code examples written in Swift:
 - [Model-View-Presenter](../patterns/05-architectural/model-view-presenter.md) (Architectural Patterns)
 - [Money](../patterns/06-enterprise-application-architecture/money.md) (Enterprise Application Architecture)
 - [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) (Frontend and UI)
+- [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) (Frontend and UI)
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
@@ -4456,6 +4459,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) (Anti-Patterns)
 - [PACELC Theorem](../patterns/04-principles-and-laws/pacelc-theorem.md) (Principles and Laws)
 - [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) (AI and Agentic)
+- [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) (Frontend and UI)
 - [Page Controller](../patterns/06-enterprise-application-architecture/page-controller.md) (Enterprise Application Architecture)
 - [Parallel Inheritance Hierarchies](../patterns/02-code-smells/parallel-inheritance-hierarchies.md) (Code Smells)
 - [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) (Concurrency and Parallelism)

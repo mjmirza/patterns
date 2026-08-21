@@ -751,6 +751,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Adding to author.books silently does not persist after flush. The collection mutated is the non-owning side of a bidi... | [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) | Enterprise Application Architecture |
 | adjusting the scope. Symptom. Code written against academic Fidge or | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
 | Adopting multi-leader replication for a low-write-latency requirement, | [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) | Data and Storage |
+| Adopting preload, render, and lazy load, but never building or | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | Adopting the archived original Flux library on a new project | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | After a deployment or a brief network blip, one service's | [Distributed Transaction Coordinator Antipattern](../patterns/10-microservices/distributed-transaction-coordinator-antipattern.md) | Microservices |
 | After a network incident, the same record has two different | [Split Brain](../patterns/18-anti-patterns/split-brain.md) | Anti-Patterns |
@@ -1807,6 +1808,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Law tests fail after adding logging inside the combining | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
 | Lawless instance. Symptom. traverse(pure) changes metadata, increments a | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |
 | Lazy accumulator leak. Symptom. Memory rises with input size and work | [Foldable](../patterns/16-functional/foldable.md) | Functional Programming |
+| Lazy loading a route the user needs immediately after the initial | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | LazyInitializationException, or its equivalent under any name. | [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md) | Enterprise Application Architecture |
 | Leaf pretending to be a composite for convenience. Symptom. A node type that | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | Leaf serialization ambiguity across implementations. Symptom. Two | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
@@ -1886,6 +1888,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Low hit rate making the cache a net negative. Symptom. P99 latency for | [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) | Data and Storage |
 | Machine-to-machine APIs. A caller is a service, job runner, device, node, | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | Magic-link replay. Symptom. A login link works twice, or works after being | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
+| maintaining the service worker. Symptom. First visits feel fine, but | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | maintenance patterns. Each item names a visible symptom, a likely cause, and a | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | Making core content or functionality depend on JavaScript running | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Malformed action parsing failures compounding. Symptom, the agent | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |
@@ -2131,6 +2134,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | One store calling into another store's update logic directly. | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | One tenant's traffic spike still degrades other tenants, despite a | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | One value used as a fake list. Symptom. A query where id in (?) returns no | [Parameterized Query](../patterns/15-security/parameterized-query.md) | Security |
+| one, with no prefetch hint to soften the delay. Symptom. Moving | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | One-shot events crammed into State. Symptom. A toast or a one-time UI | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
 | One-shot iterator treated as Traversable. Symptom. The first pass succeeds, | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |
 | only descriptive. Judgement note. the specific symptom wording below is | [Singleton Abuse](../patterns/18-anti-patterns/singleton-abuse.md) | Anti-Patterns |
@@ -2304,6 +2308,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Precheck duplicates incomplete rules. Symptom. The branch says input is | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
 | Precondition strengthening, presented as a validation improvement. A subtype narrows | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
 | Predictable or over privileged claim tokens. Symptom. A security | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
+| Preloading resources the initial route does not actually need. | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | Premature abstraction. One family, one implementation, a full interface, and a | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Premature extraction with only one actor so far. Symptom. A codebase | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
 | Premature microservices. Symptom. A team of five engineers running twenty services, each | [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) | Principles and Laws |
@@ -4171,6 +4176,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The final answer is confidently wrong, and every individual | [Least to Most](../patterns/17-ai-agentic/least-to-most.md) | AI and Agentic |
 | The first attempt fails and every retry fails immediately with an | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | The first real degradation produces a full outage anyway, and the | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
+| The first render is not noticeably faster, and on a | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | The fixed part carries obligation. Transaction commit, resource release, | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | The flag-day failure. Symptom. A newly written, strictly conformant | [Postel's Law](../patterns/04-principles-and-laws/postel-law.md) | Principles and Laws |
 | The following triples describe an observable symptom, the underlying cause, | [Chunking Strategies](../patterns/17-ai-agentic/chunking-strategies.md) | AI and Agentic |
@@ -12266,6 +12272,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - differently. Symptom. The optimistic state frequently disagrees
 - Losing track of which pieces of interface state are optimistic and
 - a later, unrelated render. Symptom. A prediction from an earlier
+
+#### [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md)
+
+**Core Problem:** A web application's first visit on a slow or metered mobile network faces a real tension. The user expects the page to appear and become usable quickly, but a typical application bundles far more JavaScript, CSS, and route logic than the current route actually needs, and fetching all of it before rendering anything delays the moment the user sees usable content. A returning visit faces a related but distinct problem, since even a previously visited application still re-fetches assets from the network unless something has cached them for offline or repeat use. Naming and combining the specific techniques that address each half of this problem, what to fetch first, what to render first, what to cache for next time, and what to defer until actually needed, gives a team a shared vocabulary for reasoning about loading performance as a whole, rather than tuning each technique in isolation with no sense of how the pieces fit together.
+
+**Failure Mode Symptoms:**
+
+- Preloading resources the initial route does not actually need.
+- The first render is not noticeably faster, and on a
+- Adopting preload, render, and lazy load, but never building or
+- maintaining the service worker. Symptom. First visits feel fine, but
+- Lazy loading a route the user needs immediately after the initial
+- one, with no prefetch hint to soften the delay. Symptom. Moving
 
 #### [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md)
 
