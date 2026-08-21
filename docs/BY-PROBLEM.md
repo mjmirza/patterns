@@ -564,6 +564,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | a service that has been redeployed to a new host continues to | [Broker](../patterns/05-architectural/broker-architecture.md) | Architectural Patterns |
 | A service that has never been redeployed suddenly starts | [Sidecar Proxy](../patterns/10-microservices/sidecar-proxy.md) | Microservices |
 | A service thread stays busy for too long while handling one huge | [Tail Call Optimization](../patterns/16-functional/tail-call-optimization.md) | Functional Programming |
+| A session left open for a long time accumulates enough | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | A set followed by view does not return the value that was | [Optics](../patterns/16-functional/optics.md) | Functional Programming |
 | A shadow comparison reports too many mismatches to triage. | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
 | A shared function accumulates parameters named isSpecialCase, | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
@@ -694,6 +695,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A user reports receiving a duplicate notification, a | [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) | AI and Agentic |
 | A user reports the system confidently stated a fact, a date, a | [Contextual Retrieval](../patterns/17-ai-agentic/contextual-retrieval.md) | AI and Agentic |
 | A user signs in through an authorization server, and an application calls an | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
+| A user undoes an action in the application's own UI, and the | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
+| A user undoes an action, then takes a different, new action, | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | A user-facing operation feels instant with one item of test | [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) | Anti-Patterns |
 | A validation endpoint reports several errors but also performs | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
 | A validation error appears after an authorization decision has | [Lazy Evaluation](../patterns/16-functional/lazy-evaluation.md) | Functional Programming |
@@ -1864,6 +1867,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Legacy integration. A new service is being built to eventually replace a | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | legitimate customer messages are refused or flagged at a rate | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |
 | Legitimate outputs are refused or redacted at a rate high | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
+| Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | level, and the consumer's build breaks the same day. The observable symptom | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
 | level. The symptom is that services are physically decoupled, separate | [Low Coupling](../patterns/04-principles-and-laws/low-coupling.md) | Principles and Laws |
 | lifetime. This is the symptom. The cause is speculative indexing, a specific | [Premature Optimization](../patterns/18-anti-patterns/premature-optimization.md) | Anti-Patterns |
@@ -2130,6 +2134,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Nondeterministic replay breaking an evaluation suite. The symptom is that | [Agentic Blackboard](../patterns/17-ai-agentic/agentic-blackboard.md) | AI and Agentic |
 | Nondeterministic results. Symptom. Retrieval results are inconsistent | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |
 | Normalization damages user data. Symptom. A user's name, address, title, or | [Input Validation](../patterns/15-security/input-validation.md) | Security |
+| Not clearing the future when a genuinely new action is taken. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Not every downstream component needs the payload itself. Some only need | [Claim Check](../patterns/07-integration/claim-check.md) | Enterprise Integration |
 | not from a single citable source, and the symptom, cause, and fix format | [Creator](../patterns/04-principles-and-laws/creator.md) | Principles and Laws |
 | nothing about it is incorrect. The observable symptom is new hires flagging | [Idiomatic](../patterns/04-principles-and-laws/idiomatic.md) | Principles and Laws |
@@ -4786,6 +4791,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating a data-validation matrix as narrative scenarios. Symptom. Twelve | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
 | Treating a distributed system's clock as a reliable version source. | [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) | Enterprise Application Architecture |
 | Treating a Form Action as identical to a Server Action, and | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
+| Treating a genuinely irreversible, external action as undoable. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Treating a job as a low-latency service. Symptom. A user-facing feature | [Map-Reduce](../patterns/09-concurrency/map-reduce.md) | Concurrency and Parallelism |
 | Treating a local acknowledgement as final delivery. Symptom. A | [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) | Microservices |
 | Treating a lock timeout as a correctness signal. Symptom. Application | [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) | Data and Storage |
@@ -12633,6 +12639,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - checks instead of an explicit transition table. Symptom. The
 - Building a machine so large and hierarchical that no single person
 - can hold its full behavior in their head. Symptom. Understanding a
+
+#### [Undo Stack](../patterns/13-frontend-ui/undo-stack.md)
+
+**Core Problem:** An interactive application where every user action mutates state irreversibly forces a user who makes a mistake, whether a wrong edit, an accidental delete, or a change they simply reconsider, to either manually reconstruct the prior state by hand or lose the work entirely. An Undo Stack solves this by recording every reversible action as it happens, in an ordered history, so a single undo command can step the application back to the state immediately before that action, and a redo command can step forward again if the user changes their mind a second time. A widely used implementation states the resulting state shape directly, wrapping the underlying state as "past," "present," and "future," which names exactly what the pattern tracks, everything already undone into the past, the current state, and everything available to redo back out of that past.
+
+**Failure Mode Symptoms:**
+
+- Treating a genuinely irreversible, external action as undoable.
+- A user undoes an action in the application's own UI, and the
+- Letting the history grow unbounded in a long-running session.
+- A session left open for a long time accumulates enough
+- Not clearing the future when a genuinely new action is taken.
+- A user undoes an action, then takes a different, new action,
 
 #### [Virtual List](../patterns/13-frontend-ui/virtual-list.md)
 

@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-33 entries, 120,212 words. Every entry carries all 18
+34 entries, 123,823 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -10,6 +10,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Micro Frontends](micro-frontends.md) | established | 3,699 | A large, single frontend codebase shared by several teams commonly becomes a bottleneck as the organization grows, every team's change must pass through the same build pipeline ... |
+
+## Behavioral
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Undo Stack](undo-stack.md) | canonical | 3,611 | An interactive application where every user action mutates state irreversibly forces a user who makes a mistake, whether a wrong edit, an accidental delete, or a change they ... |
 
 ## Component Architecture
 
