@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-15 entries, 54,631 words. Every entry carries all 18
+16 entries, 58,254 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -33,6 +33,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Progressive Enhancement](progressive-enhancement.md) | canonical | 3,686 | Before Progressive Enhancement was named, a common alternative approach, graceful degradation, started from the richest possible experience, built for the most capable browsers ... |
+
+## Interaction Pattern
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Optimistic UI](optimistic-ui.md) | established | 3,623 | A user action that triggers a network request, liking a post, sending a message, adding an item to a list, commonly leaves the interface showing its prior, unchanged state until ... |
 
 ## Rendering Strategy
 

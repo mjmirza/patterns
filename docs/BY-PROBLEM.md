@@ -364,6 +364,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | a latency spike or an outage in the facade layer takes down both the | [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md) | Cloud and Distributed |
 | A latency-sensitive hot path shows unexplained tail-latency | [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) | Concurrency and Parallelism |
 | A later, legitimate change to one of the two locations is blocked | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
+| a later, unrelated render. Symptom. A prediction from an earlier | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | A list combination unexpectedly returns many more rows than the | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
 | A list mapping step silently removes records or adds records. | [Functor](../patterns/16-functional/functor.md) | Functional Programming |
 | A list page or a report takes noticeably longer as the data | [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) | Enterprise Application Architecture |
@@ -842,6 +843,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Applying a JavaScript enhancement without checking whether the | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Applying BASE to an operation that requires a hard invariant. Symptom, an | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
 | Applying it to a pair that never needed it. Symptom. Two teams that | [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) | Domain-Driven Design |
+| Applying Optimistic UI to an action with a real chance of | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | Applying REP where no second consumer exists. Symptom. A team spends | [Release Reuse Equivalence](../patterns/04-principles-and-laws/release-reuse-equivalence.md) | Principles and Laws |
 | Applying write-through to a high-cardinality, rarely-read write stream. | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | architecture discussions. Symptom. Tracing a single request requires reading | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
@@ -1269,6 +1271,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Diagnosis is impossible because the envelope is too thin. | [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) | Enterprise Integration |
 | Did the unit under test actually CALL the collaborator, with what | [Spy](../patterns/14-testing/spy.md) | Testing |
 | different symptom, and the same fix applies. The Anti-Corruption Layer is not | [Generic Subdomain](../patterns/11-domain-driven-design/generic-subdomain.md) | Domain-Driven Design |
+| differently. Symptom. The optimistic state frequently disagrees | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | direct getter-and-setter encoding. Symptom. New team members cannot | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Direct grants bypass the role model. Symptom. Removing a role does not | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | directly inside a Server Component. Symptom. The component fails to | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
@@ -1496,6 +1499,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Fail-fast where accumulation was required. Symptom. A form response shows | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |
 | Fail-open authorization. Symptom. When the role store is down, requests | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | Fail-open decision outage. Symptom. During an identity or policy outage, | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
+| failing, without a genuine, tested rollback path. Symptom. When the | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | Failure deep inside the system under test, far from the assertion line. | [Stub](../patterns/14-testing/stub.md) | Testing |
 | failure mode. Symptom. A team attempts to fix the God Object by splitting | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
 | Failure must be explicit. A rejected redirect, wrong state value, reused | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
@@ -1848,6 +1852,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Losing the original stack trace across an await boundary in older | [Async Await](../patterns/09-concurrency/async-await.md) | Concurrency and Parallelism |
 | Losing the tail of the walk. Symptom. A caller calls root on a | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | Losing track of which handler is installed at a given perform | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
+| Losing track of which pieces of interface state are optimistic and | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | Loss of type-based authorization. Symptom. A guard that formerly rejected | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
 | Lost adjacency after extraction. Symptom. A reader finds one pass near the | [Split Loop](../patterns/03-refactoring/split-loop.md) | Refactoring Techniques |
 | Lost auditability. Symptom. A compliance check asks which operations a | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
@@ -2132,6 +2137,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Operators cannot tell why a request returned 403. Cause. | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Operators see a surge of HTTP 403 responses but cannot tell | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | Optimistic lock exception surfacing at the wrong layer. Symptom. A user | [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) | Enterprise Application Architecture |
+| Optimistically predicting a result the server is actually likely to | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | Optional certificate drift. Symptom. A protected route accepts traffic from | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | or a lagging consumer, surfaces before the symptom, a full disk, does. | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | or Method.invoke in Java. The symptom is a runtime error that appears | [Remove Dead Code](../patterns/03-refactoring/remove-dead-code.md) | Refactoring Techniques |
@@ -12216,6 +12222,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - producing a visibly inconsistent end-user experience. Symptom.
 - Shipping a duplicated copy of a large shared framework in every
 - micro frontend, without deduplication. Symptom. The total
+
+#### [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md)
+
+**Core Problem:** A user action that triggers a network request, liking a post, sending a message, adding an item to a list, commonly leaves the interface showing its prior, unchanged state until the request resolves, forcing the user to wait, sometimes for a noticeable duration on a slow connection, before seeing any visible confirmation that their action registered at all. This makes an interface feel sluggish even when the underlying operation is likely to succeed the overwhelming majority of the time. Optimistic UI solves this by updating the interface immediately with the expected result the moment the user acts, rendering that expected state while the real request is still in flight, and reconciling the display with the actual server response only once it arrives, either confirming the optimistic state was correct or rolling it back if the request ultimately failed.
+
+**Failure Mode Symptoms:**
+
+- Applying Optimistic UI to an action with a real chance of
+- failing, without a genuine, tested rollback path. Symptom. When the
+- Optimistically predicting a result the server is actually likely to
+- differently. Symptom. The optimistic state frequently disagrees
+- Losing track of which pieces of interface state are optimistic and
+- a later, unrelated render. Symptom. A prediction from an earlier
 
 #### [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md)
 
