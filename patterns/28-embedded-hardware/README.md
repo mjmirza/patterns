@@ -2,7 +2,7 @@
 
 Origin. Embedded systems engineering literature
 
-9 entries, 32,053 words. Every entry carries all 18
+10 entries, 35,584 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -11,6 +11,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Interrupt Service Routine](interrupt-service-routine.md) | canonical | 3,752 | A hardware interrupt genuinely must be handled with the smallest possible delay, since the processor stops whatever it was doing the instant the interrupt fires, and every other ... |
 | [Polling Loop](polling-loop.md) | canonical | 3,231 | A peripheral such as a UART, an ADC, or a GPIO pin reports its status through a hardware register, and code needs to know the moment that status changes, such as when a ... |
+| [Rate Monotonic Scheduling](rate-monotonic-scheduling.md) | canonical | 3,531 | A real-time system runs several periodic tasks, each with its own period and its own deadline, and the system needs every task to finish its work within its deadline, every single ... |
 | [State Machine (Embedded)](state-machine.md) | canonical | 3,715 | Event-driven embedded code that tracks context using an accumulation of variables and flags, without a formal state model, degrades as the number of events and the history that ... |
 | [Watchdog Timer](watchdog-timer.md) | canonical | 3,599 | Embedded software can genuinely hang, an infinite loop, a deadlock, a stuck wait on hardware that never responds, and once it hangs there is often no human present to notice and ... |
 

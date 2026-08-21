@@ -755,6 +755,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -775,6 +776,7 @@ These patterns contain runnable code examples written in C++:
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
 - [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) (Embedded and Hardware-Software)
 - [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) (Embedded and Hardware-Software)
+- [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) (Embedded and Hardware-Software)
 - [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
 - [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
@@ -2963,6 +2965,7 @@ These patterns contain runnable code examples written in Python:
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
+- [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) (Embedded and Hardware-Software)
 - [ReAct](../patterns/17-ai-agentic/react.md) (AI and Agentic)
 - [Reactor](../patterns/09-concurrency/reactor.md) (Concurrency and Parallelism)
 - [Read Repair](../patterns/12-data-storage/read-repair.md) (Data and Storage)
@@ -3999,6 +4002,7 @@ These patterns contain runnable code examples written in Swift:
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) (Frontend and UI)
+- [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) (Embedded and Hardware-Software)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) (Frontend and UI)
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
