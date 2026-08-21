@@ -44,26 +44,33 @@ def published_on_main(path: str) -> bool:
 
 
 def sibling_pr_paths(this_pr: str) -> dict[str, int]:
-    try:
-        prs = json.loads(
-            subprocess.run(
-                ["gh", "pr", "list", "--state", "open", "--json", "number,files"],
-                capture_output=True,
-                text=True,
-                cwd=ROOT,
-                check=False,
-            ).stdout
-            or "[]"
-        )
-    except Exception:
-        return {}
+    prs = json.loads(
+        subprocess.run(
+            ["gh", "pr", "list", "--state", "open", "--json", "number"],
+            capture_output=True,
+            text=True,
+            cwd=ROOT,
+            check=False,
+        ).stdout
+        or "[]"
+    )
     claims: dict[str, int] = {}
     for pr in prs:
         num = pr.get("number")
         if num is None or str(num) == str(this_pr):
             continue
-        for f in pr.get("files", []):
-            p = f.get("path", "") if isinstance(f, dict) else ""
+        files = json.loads(
+            subprocess.run(
+                ["gh", "pr", "view", str(num), "--json", "files"],
+                capture_output=True,
+                text=True,
+                cwd=ROOT,
+                check=False,
+            ).stdout
+            or '{"files": []}'
+        )
+        for f in files.get("files", []):
+            p = f.get("path", "")
             if p.startswith("patterns/") and p.endswith(".md"):
                 claims[p] = num
     return claims

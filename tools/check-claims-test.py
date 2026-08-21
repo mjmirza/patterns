@@ -44,31 +44,17 @@ class TestCheckClaims(unittest.TestCase):
 
     @patch("subprocess.run")
     def test_sibling_pr_paths(self, mock_run):
-        gh_output = json.dumps([
-            {
-                "number": 10,
-                "files": [
-                    {"path": "patterns/01-gof/singleton.md"},
-                    {"path": "README.md"},
-                ],
-            },
-            {
-                "number": 12,
-                "files": [
-                    {"path": "patterns/02-code-smells/feature-envy.md"},
-                ],
-            },
-        ])
-        mock_run.return_value = MagicMock(stdout=gh_output)
+        prs_output = json.dumps([{"number": 10}, {"number": 12}])
+        pr10_files = json.dumps({"files": [{"path": "patterns/01-gof/singleton.md"}, {"path": "README.md"}]})
+        pr12_files = json.dumps({"files": [{"path": "patterns/02-code-smells/feature-envy.md"}]})
+
+        mock_run.side_effect = [
+            MagicMock(stdout=prs_output),
+            MagicMock(stdout=pr12_files),
+        ]
         siblings = check_claims.sibling_pr_paths(this_pr="10")
         self.assertNotIn("patterns/01-gof/singleton.md", siblings)
         self.assertEqual(siblings.get("patterns/02-code-smells/feature-envy.md"), 12)
-
-    @patch("subprocess.run")
-    def test_sibling_pr_paths_exception(self, mock_run):
-        mock_run.side_effect = Exception("gh command failed")
-        siblings = check_claims.sibling_pr_paths(this_pr="10")
-        self.assertEqual(siblings, {})
 
     @patch.object(check_claims, "added_paths")
     def test_main_no_added_paths(self, mock_added):
