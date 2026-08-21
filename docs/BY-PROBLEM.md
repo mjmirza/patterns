@@ -850,6 +850,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Applying it to a pair that never needed it. Symptom. Two teams that | [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) | Domain-Driven Design |
 | Applying Optimistic UI to an action with a real chance of | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | Applying REP where no second consumer exists. Symptom. A team spends | [Release Reuse Equivalence](../patterns/04-principles-and-laws/release-reuse-equivalence.md) | Principles and Laws |
+| Applying route-based splitting to an application with few routes, | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | Applying Virtual List to a list small enough that it was never | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |
 | Applying write-through to a high-cardinality, rarely-read write stream. | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | architecture discussions. Symptom. Tracing a single request requires reading | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
@@ -1037,6 +1038,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Choreography and orchestration mixed for the same process. Symptom. Part | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | Choreography cycle. Symptom. A deployment of one service causes an event | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
 | Choreography drift, the silently broken implicit contract. Symptom. A | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
+| chunk introduces. Symptom. Moving to a route the user has not | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | CI is green, the broker's can-i-deploy check is skipped or its | [Consumer-Driven Contract Test](../patterns/10-microservices/consumer-driven-contract-test.md) | Microservices |
 | Circuit breaker defeated by the retry. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | Circular dependency errors appear between the Interface | [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) | Enterprise Application Architecture |
@@ -1827,6 +1829,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Leaky semantics. Symptom. Behaviour that is correct in staging against the | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | Leaky Stable Point. Symptom. Client code contains a cast back to a | [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) | Principles and Laws |
 | leaves the page. The observable symptom is a policy that keeps getting longer | [Content Security Policy](../patterns/15-security/content-security-policy.md) | Security |
+| Leaving no loading state for the route transition a lazily loaded | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | leaving the rest of the scattering in place, since patching only the symptom | [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) | Code Smells |
 | Legacy integration. A new service is being built to eventually replace a | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | legitimate customer messages are refused or flagged at a rate | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |
@@ -2162,6 +2165,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Optional certificate drift. Symptom. A protected route accepts traffic from | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | or a lagging consumer, surfaces before the symptom, a full disk, does. | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | or Method.invoke in Java. The symptom is a runtime error that appears | [Remove Dead Code](../patterns/03-refactoring/remove-dead-code.md) | Refactoring Techniques |
+| or one whose sessions nearly always visit all of them. Symptom. The | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | or profiler output accompanies the change. This is the observable symptom. | [Premature Optimization](../patterns/18-anti-patterns/premature-optimization.md) | Anti-Patterns |
 | Order dependence that is not in the contract. Symptom. A rendering or a total | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | Order placement, or any cross-capability process, silently leaves | [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) | Microservices |
@@ -2388,6 +2392,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Query writes to shared cache. Symptom. A supposedly read-only endpoint | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Queue depth alone as the autoscaling signal, ignored age. Symptom. The | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | Queue depth used as the only bound. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
+| quick succession. Symptom. Moving through a multi-step nested flow | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | Quorum miscalculation after a topology change. Symptom. A cluster that | [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) | Data and Storage |
 | Race after a split. Symptom. A caller checks availability, then the action | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Race between check and use. Symptom. Logs show "file not found", | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
@@ -2816,6 +2821,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Splitting along data rather than along change. Symptom. Two new classes | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
 | Splitting every component into container and presentational halves | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Splitting far below the profitable threshold. Symptom. The parallel | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
+| Splitting nested routes so finely that a single user flow through | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | Splitting so finely that the number of chunks, and their combined | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | Spring AOP self-invocation silently skips the proxy. Symptom. A method | [Proxy](../patterns/01-gof/proxy.md) | Design Patterns (GoF) |
 | Spurious wakeup treated as a real signal. Symptom, a consumer processes a | [Monitor Object](../patterns/09-concurrency/monitor-object.md) | Concurrency and Parallelism |
@@ -12373,6 +12379,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - is to click it. Symptom. A real amount of bandwidth is spent
 - Confusing preconnect's connection-level cost with preload's
 - any real request. Symptom. The connection opened by a preconnect
+
+#### [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md)
+
+**Core Problem:** A multi-route application whose routes are all bundled together forces every visitor to fetch and evaluate the code for every route, even the ones that specific visit never touches, since a typical session visits only a fraction of an application's full route set. Generic Code Splitting solves the underlying problem, but still leaves open the question of where exactly to draw a split boundary, and a route is often the single clearest, most naturally self-contained unit an application already has, since a route's code is already scoped to a specific URL and a specific view the rest of the application does not directly depend on. Route-based Lazy Loading answers that question directly. draw the split boundary at the route level, so each route becomes its own independently loadable chunk, fetched only when a visitor's own path actually reaches it.
+
+**Failure Mode Symptoms:**
+
+- Applying route-based splitting to an application with few routes,
+- or one whose sessions nearly always visit all of them. Symptom. The
+- Leaving no loading state for the route transition a lazily loaded
+- chunk introduces. Symptom. Moving to a route the user has not
+- Splitting nested routes so finely that a single user flow through
+- quick succession. Symptom. Moving through a multi-step nested flow
 
 #### [Server Components](../patterns/13-frontend-ui/server-components.md)
 

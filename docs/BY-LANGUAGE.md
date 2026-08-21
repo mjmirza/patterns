@@ -522,6 +522,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2977,6 +2978,7 @@ These patterns contain runnable code examples written in Python:
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [Role-Based Access Control](../patterns/15-security/rbac.md) (Security)
+- [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
 - [Routing Slip](../patterns/07-integration/routing-slip.md) (Enterprise Integration)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
 - [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) (Enterprise Application Architecture)
@@ -3944,6 +3946,7 @@ These patterns contain runnable code examples written in Swift:
 - [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) (Frontend and UI)
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
+- [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
@@ -4589,6 +4592,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [Role-Based Access Control](../patterns/15-security/rbac.md) (Security)
+- [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
 - [Routing Slip](../patterns/07-integration/routing-slip.md) (Enterprise Integration)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
 - [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) (Enterprise Application Architecture)

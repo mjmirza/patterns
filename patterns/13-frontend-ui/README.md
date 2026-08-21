@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-22 entries, 80,750 words. Every entry carries all 18
+23 entries, 84,327 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -48,6 +48,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Infinite Scroll](infinite-scroll.md) | established | 3,738 | A traditional, paginated list requires the user to explicitly click a next-page control and wait for a full page reload, or a partial page update, to see more content, an ... |
 | [PRPL Pattern](prpl-pattern.md) | established | 3,773 | A web application's first visit on a slow or metered mobile network faces a real tension. |
 | [Resource Hints](resource-hints.md) | canonical | 3,923 | A browser discovers most of a page's resources by parsing its HTML and CSS as it goes, which means a resource referenced deep in a stylesheet, or fetched only after a script runs ... |
+| [Route-based Lazy Loading](route-based-lazy-loading.md) | canonical | 3,577 | A multi-route application whose routes are all bundled together forces every visitor to fetch and evaluate the code for every route, even the ones that specific visit never ... |
 | [Skeleton and Suspense](skeleton-and-suspense.md) | canonical | 3,597 | A component whose data has not yet loaded commonly renders nothing at all, an empty region of the page, or a generic, centered spinner with no relation to the content that will ... |
 
 ## Rendering Strategy
