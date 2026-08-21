@@ -4459,13 +4459,6 @@
     "focus": ""
   },
   {
-    "name": "Algebraic Effects",
-    "slug": "algebraic-effects",
-    "category": "functional programming",
-    "path": "patterns/16-functional/algebraic-effects.md",
-    "focus": ""
-  },
-  {
     "name": "Service Locator Antipattern",
     "slug": "service-locator-antipattern",
     "category": "anti-pattern",

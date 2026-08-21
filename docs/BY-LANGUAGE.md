@@ -570,6 +570,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) | Functional Programming |  |  |  |  |  | Yes | Yes | Yes | Yes |
+| [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
 | [Continuation](../patterns/16-functional/continuation.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -2431,6 +2432,7 @@ These patterns contain runnable code examples written in Python:
 - [Aggregate](../patterns/11-domain-driven-design/aggregate.md) (Domain-Driven Design)
 - [Aggregator](../patterns/07-integration/aggregator.md) (Enterprise Integration)
 - [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
+- [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) (Functional Programming)
 - [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) (Code Smells)
 - [Ambassador](../patterns/08-cloud-distributed/ambassador.md) (Cloud and Distributed)
 - [Analysis Paralysis](../patterns/18-anti-patterns/analysis-paralysis.md) (Anti-Patterns)
@@ -3845,6 +3847,7 @@ These patterns have native features in Rust that make the pattern unnecessary, o
 These patterns contain runnable code examples written in Swift:
 
 - [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
+- [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) (Functional Programming)
 - [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) (Cloud and Distributed)
 - [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) (Enterprise Application Architecture)
 - [Approval Test](../patterns/14-testing/approval-test.md) (Testing)
@@ -4019,6 +4022,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Aggregate](../patterns/11-domain-driven-design/aggregate.md) (Domain-Driven Design)
 - [Aggregator](../patterns/07-integration/aggregator.md) (Enterprise Integration)
 - [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
+- [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) (Functional Programming)
 - [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) (Code Smells)
 - [Ambassador](../patterns/08-cloud-distributed/ambassador.md) (Cloud and Distributed)
 - [Analysis Paralysis](../patterns/18-anti-patterns/analysis-paralysis.md) (Anti-Patterns)
