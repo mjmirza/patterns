@@ -3738,13 +3738,6 @@
     "focus": ""
   },
   {
-    "name": "Context Selector",
-    "slug": "context-selector",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/context-selector.md",
-    "focus": ""
-  },
-  {
     "name": "Server Action",
     "slug": "server-action",
     "category": "frontend and UI",

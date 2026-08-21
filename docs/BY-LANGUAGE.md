@@ -509,6 +509,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2568,6 +2569,7 @@ These patterns contain runnable code examples written in Python:
 - [Content-Based Router](../patterns/07-integration/content-based-router.md) (Enterprise Integration)
 - [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) (Domain-Driven Design)
 - [Context Map](../patterns/11-domain-driven-design/context-map.md) (Domain-Driven Design)
+- [Context Selector](../patterns/13-frontend-ui/context-selector.md) (Frontend and UI)
 - [Contextual Retrieval](../patterns/17-ai-agentic/contextual-retrieval.md) (AI and Agentic)
 - [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) (Functional Programming)
 - [Continuation](../patterns/16-functional/continuation.md) (Functional Programming)
@@ -3915,6 +3917,7 @@ These patterns contain runnable code examples written in Swift:
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
 - [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) (Frontend and UI)
+- [Context Selector](../patterns/13-frontend-ui/context-selector.md) (Frontend and UI)
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
@@ -4208,6 +4211,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Content-Based Router](../patterns/07-integration/content-based-router.md) (Enterprise Integration)
 - [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) (Domain-Driven Design)
 - [Context Map](../patterns/11-domain-driven-design/context-map.md) (Domain-Driven Design)
+- [Context Selector](../patterns/13-frontend-ui/context-selector.md) (Frontend and UI)
 - [Contextual Retrieval](../patterns/17-ai-agentic/contextual-retrieval.md) (AI and Agentic)
 - [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) (Functional Programming)
 - [Continuation](../patterns/16-functional/continuation.md) (Functional Programming)
