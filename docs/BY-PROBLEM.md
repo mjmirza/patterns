@@ -847,6 +847,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Application data silently loses updates after a network | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
 | applied. Symptom. Different consumers of the same headless | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | Applying a JavaScript enhancement without checking whether the | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
+| Applying a reducer to a component with only a small number of | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | Applying BASE to an operation that requires a hard invariant. Symptom, an | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
 | Applying Infinite Scroll to content the user genuinely needs to | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | Applying it to a pair that never needed it. Symptom. Two teams that | [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) | Domain-Driven Design |
@@ -1300,6 +1301,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Disk fills up unexpectedly, database goes read-only or crashes. Symptom. | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | Disparate services behind one client. An e-commerce storefront needs | [Gateway Routing](../patterns/08-cloud-distributed/gateway-routing.md) | Cloud and Distributed |
 | dispatching an action. Symptom. A store's state changes with no | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
+| Dispatching many small, granular actions for what is conceptually | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | distinguishing engineering judgement from sourced fact. The specific symptom | [Content Filter](../patterns/07-integration/content-filter.md) | Enterprise Integration |
 | Distributed god mediator. Symptom. A workflow orchestration service sits on | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | Distributed monolith masquerading as microservices. Symptom. Every | [Nanoservices](../patterns/18-anti-patterns/nanoservices.md) | Anti-Patterns |
@@ -1741,6 +1743,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | instead of delegating. Symptom, two different teams' services disagree | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | Integration cliff. Symptom. Local demos work, but the first full environment | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Intent explosion mirroring every UI callback one-to-one. Symptom. An | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
+| intent. Symptom. Understanding what actually happened from reading | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | interactivity. Symptom. The page ships JavaScript for a component | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Interceptor-only escaping. Symptom. Server-rendered HTML looks safe, but DOM | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
 | Interface bloat makes decorators unreadable and unmaintainable. Symptom. A | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
@@ -2528,6 +2531,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Request falls off the end of the chain. Symptom. A request returns success | [Chain of Responsibility](../patterns/01-gof/chain-of-responsibility.md) | Design Patterns (GoF) |
 | Request latency rises and CPU samples show the same calculation | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
 | request threads. Symptom is field values from one request appearing in another | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
+| request, directly inside it. Symptom. The reducer's behavior becomes | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | Requests are dropped mid-shutdown during a rolling deploy, | [Sidecar Proxy](../patterns/10-microservices/sidecar-proxy.md) | Microservices |
 | Requests pile up and threads block indefinitely; the process | [Request-Reply](../patterns/07-integration/request-reply.md) | Enterprise Integration |
 | Requests through the gateway hang indefinitely, or hang until an | [Messaging Gateway](../patterns/07-integration/messaging-gateway.md) | Enterprise Integration |
@@ -2788,6 +2792,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Silent write-side ownership violation. Symptom, a row's value changes to | [Shared Database](../patterns/10-microservices/shared-database.md) | Microservices |
 | Silent, unexplained missing fields. Symptom. Intermittent messages | [Content Enricher](../patterns/07-integration/content-enricher.md) | Enterprise Integration |
 | Silently swallowed or delayed exceptions. Symptom. A forked branch fails, | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
+| simple, independent state updates. Symptom. The component now | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | Single-threaded resequencing collapsing throughput. Symptom. A pipeline | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
 | single-threaded synchronization context. Symptom, a UI application or an | [Async Await](../patterns/09-concurrency/async-await.md) | Concurrency and Parallelism |
 | Single-use source consumed twice. Symptom. The first result is correct and | [Split Loop](../patterns/03-refactoring/split-loop.md) | Refactoring Techniques |
@@ -5050,6 +5055,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Writer starvation under sustained read load. Symptom. A writer's | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | writes a type test on the returned product. The symptom is a chain of if x is | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Writes start failing with a "not enough replicas" or | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
+| Writing a reducer function with side effects, such as a network | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | Written as symptom, cause, fix. The symptoms are drawn from practice and are | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Written as symptom, cause, fix. The symptoms are drawn from practice rather than | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | Wrong append order. Symptom. Explanation steps appear backward or grouped | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
@@ -12385,6 +12391,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - render. Symptom. Every consumer of a context re-renders on every
 - Stacking many unrelated contexts, each wrapping the same
 - subtree. Symptom. The application's root component grows a visibly
+
+#### [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md)
+
+**Core Problem:** A component whose state updates are spread across many individual event handlers, each directly calling its own state setter, becomes hard to reason about as the number of related updates grows, since understanding how the state can change means reading every handler individually rather than reading one place that governs every transition. React's own documentation names the debugging cost of this scattered approach directly, that when a bug with individually scattered state setters occurs, it is difficult to tell where the state was set incorrectly and why. A reducer solves this by collecting every possible state transition into a single function, so the answer to "how can this state change" is always found in one place, and the answer to "why did it change this way" is always found in the specific action that was dispatched to trigger it.
+
+**Failure Mode Symptoms:**
+
+- Applying a reducer to a component with only a small number of
+- simple, independent state updates. Symptom. The component now
+- Writing a reducer function with side effects, such as a network
+- request, directly inside it. Symptom. The reducer's behavior becomes
+- Dispatching many small, granular actions for what is conceptually
+- intent. Symptom. Understanding what actually happened from reading
 
 #### [Redux](../patterns/13-frontend-ui/redux.md)
 

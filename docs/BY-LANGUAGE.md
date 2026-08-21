@@ -521,6 +521,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2934,6 +2935,7 @@ These patterns contain runnable code examples written in Python:
 - [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) (Enterprise Application Architecture)
+- [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) (Frontend and UI)
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
 - [Reflexion](../patterns/17-ai-agentic/reflexion.md) (AI and Agentic)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
@@ -3946,6 +3948,7 @@ These patterns contain runnable code examples written in Swift:
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) (Frontend and UI)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
+- [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) (Frontend and UI)
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
 - [Render Props](../patterns/13-frontend-ui/render-props.md) (Frontend and UI)
@@ -4555,6 +4558,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
 - [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
+- [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) (Frontend and UI)
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
 - [Reflexion](../patterns/17-ai-agentic/reflexion.md) (AI and Agentic)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
