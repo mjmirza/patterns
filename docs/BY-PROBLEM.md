@@ -846,6 +846,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | appears to hang on startup. Symptom. Startup after a crash takes minutes | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | Application data silently loses updates after a network | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
 | applied. Symptom. Different consumers of the same headless | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
+| Applying a context selector to a context whose value is already | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Applying a JavaScript enhancement without checking whether the | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Applying a reducer to a component with only a small number of | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | Applying BASE to an operation that requires a hard invariant. Symptom, an | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
@@ -1021,6 +1022,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Changed evaluation order. Symptom. A test fails only when arguments call | [Replace Command with Function](../patterns/03-refactoring/replace-command-with-function.md) | Refactoring Techniques |
 | Changed null behavior. Symptom. A migrated loop throws on a missing value or | [Replace Loop with Pipeline](../patterns/03-refactoring/replace-loop-with-pipeline.md) | Refactoring Techniques |
 | changed. Symptom. Every automated test passes, and a production incident | [Stub](../patterns/14-testing/stub.md) | Testing |
+| changed. Symptom. The consumer re-renders on every provider update | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Changes to a live system, not bugs discovered at write time, are the dominant proximate cause of user-visible inciden... | [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) | Microservices |
 | Changing one interaction risks all of them. Adding a currency field means | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | Chasing noise instead of fixing it. Symptom. A differential test suite | [Differential Testing](../patterns/14-testing/differential-testing.md) | Testing |
@@ -2811,6 +2813,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Slow, brittle tests that wire up more than they claim to test. Symptom. | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
 | Slow, flaky test suites. Symptom. Unit tests for the God Object take a | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
 | Slow-start restart loop. Symptom. A service that takes tens of seconds | [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) | Cloud and Distributed |
+| small and fully needed by every consumer. Symptom. The application | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Small, frequent write operations (single-row inserts) are slow, | [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) | Data and Storage |
 | Snapshot installation racing an election or a new leader. Symptom. A | [Raft](../patterns/12-data-storage/raft.md) | Data and Storage |
 | Snapshot rewritten by live data. Symptom. Old invoices change total after a | [Replace Derived Variable with Query](../patterns/03-refactoring/replace-derived-variable-with-query.md) | Refactoring Techniques |
@@ -2837,6 +2840,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Splitting a component into compound pieces with no real, independent | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
 | Splitting a package produces a burst of new packages, each with | [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) | Principles and Laws |
 | Splitting a parameterized function. The parameter is not a flag but | [Remove Flag Argument](../patterns/03-refactoring/remove-flag-argument.md) | Refactoring Techniques |
+| Splitting a single context's data across several selector-derived | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Splitting a small, single-team application into several micro | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | Splitting along a boundary that does not correspond to how sessions | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | Splitting along data rather than along change. Symptom. Two new classes | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
@@ -4967,6 +4971,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Untrusted web content reaches the generator unfiltered. Symptom. A | [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) | AI and Agentic |
 | Unused range index. Symptom observed. a range query that should be fast | [B-Tree](../patterns/12-data-storage/b-tree.md) | Data and Storage |
 | Unvalidated judge shipped to production. Symptom. The evaluation | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |
+| updates efficiently. Symptom. Individual consumers now re-render | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Updating one store causes an unexpected chain of changes | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | Updating through a composed optic changes no data and does not | [Optics](../patterns/16-functional/optics.md) | Functional Programming |
 | Updating through a lens sometimes does nothing because the path | [Lens](../patterns/16-functional/lens.md) | Functional Programming |
@@ -5056,6 +5061,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | writes a type test on the returned product. The symptom is a chain of if x is | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Writes start failing with a "not enough replicas" or | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
 | Writing a reducer function with side effects, such as a network | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
+| Writing a selector that returns a new object or array reference on | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Written as symptom, cause, fix. The symptoms are drawn from practice and are | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Written as symptom, cause, fix. The symptoms are drawn from practice rather than | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | Wrong append order. Symptom. Explanation steps appear backward or grouped | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
@@ -12240,6 +12246,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - logic. Symptom. Over time, a presentational component that started
 - Prop-drilling an unmanageable number of fields between the two
 - halves. Symptom. The container passes a long, growing list of props
+
+#### [Context Selector](../patterns/13-frontend-ui/context-selector.md)
+
+**Core Problem:** React's own documentation states plainly how context re-rendering works. "React automatically re-renders all the children that use a particular context starting from the provider that receives a different value," comparing the previous and next values with a reference check, and noting directly that "skipping re-renders with memo does not prevent the children receiving fresh context values." This means a component reading even a small, unrelated slice of a large context value re-renders every time any part of that context changes, regardless of whether the specific slice that component actually reads was affected at all. For a context whose value bundles many independent pieces of state together, this causes real, unnecessary re-rendering across every consumer, proportional to how often any piece of the bundled value changes rather than how often the specific piece a given consumer cares about changes. Context Selector solves this by letting each consumer declare exactly which derived slice of the context value it needs, and re-rendering that consumer only when that specific slice's value actually changes.
+
+**Failure Mode Symptoms:**
+
+- Writing a selector that returns a new object or array reference on
+- changed. Symptom. The consumer re-renders on every provider update
+- Applying a context selector to a context whose value is already
+- small and fully needed by every consumer. Symptom. The application
+- Splitting a single context's data across several selector-derived
+- updates efficiently. Symptom. Individual consumers now re-render
 
 #### [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md)
 
