@@ -1320,6 +1320,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Direct grants bypass the role model. Symptom. Removing a role does not | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | directly inside a Server Component. Symptom. The component fails to | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Dirty read. Symptom. A customer receives an order confirmation email for an | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
+| Disabling the watchdog during development and forgetting to | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | Discriminator value drift between code and data. Symptom. A subtype's | [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) | Enterprise Application Architecture |
 | Disk fills up unexpectedly, database goes read-only or crashes. Symptom. | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | Disparate services behind one client. An e-commerce storefront needs | [Gateway Routing](../patterns/08-cloud-distributed/gateway-routing.md) | Cloud and Distributed |
@@ -1576,6 +1577,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Feature Envy hiding behind a renamed method. Symptom, a reviewer sees a | [Tell, Don't Ask](../patterns/04-principles-and-laws/tell-do-not-ask.md) | Principles and Laws |
 | feature envy in the other direction. The symptom is the same smell in the | [Move Function](../patterns/03-refactoring/move-function.md) | Refactoring Techniques |
 | Feature Envy is the most commonly observed symptom of Information Expert | [Information Expert](../patterns/04-principles-and-laws/information-expert.md) | Principles and Laws |
+| Feeding the watchdog with no real condition attached, from an interrupt or timer with | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | fewer total model calls in the common case. Symptom. Total spend or | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
 | Field initializer silently runs on only one thread. Symptom. A | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
 | fields are not initialised when the subclass fields are set. The symptom | [Pull Up Constructor Body](../patterns/03-refactoring/pull-up-constructor-body.md) | Refactoring Techniques |
@@ -2117,6 +2119,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No decision owner, so the timer alone does not converge. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | No emergency path. Symptom: an admin loses access during an incident. Cause: | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | No external aid, a call hierarchy view, a maintained sequence diagram, | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
+| no genuine connection to application health. Symptom. The | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | no more granular boundaries inside it. Symptom. Any rendering error | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | No oracle beyond survival. Symptom. A fuzz campaign runs for weeks, finds | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | No reauthentication path. Symptom. A user signed in by magic link can | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
@@ -2280,6 +2283,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Overwrapping a purely technical value. Symptom, a codebase has a | [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) | Domain-Driven Design |
 | overwriting a newer one. Symptom, seen above. Cause, the sink connector is | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
 | own fallback rendering path. Symptom. A failure inside the fallback | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
+| own legitimate worst-case processing time. Symptom. The watchdog | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | Ownership boundaries. One team owns the semantics of an operation and a | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | Ownership confusion over a resource. Symptom. Either a closed connection | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | p99 latency for the composed endpoint occasionally spikes to several | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
@@ -2456,6 +2460,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | rather than inferred from a system-wide symptom, since dimension 16 covers | [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) | Concurrency and Parallelism |
 | Rationalized rather than reasoned answer. Symptom. Evaluation shows | [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) | AI and Agentic |
 | Raw HTML escape hatch drift. Symptom. A search for innerHTML, | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
+| re-enable it before shipping. Symptom. A device shipped to | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | Re-entrancy corruption. Symptom. Nested processing produces interleaved or | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Reaching for a debugger to read straightforward code. Symptom. | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | Reaching for a hand-rolled continuation-passing encoding purely to | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
@@ -2736,6 +2741,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | setters, half at build(). Symptom is inconsistent error timing, where some | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Setting a TTL on an existing, already-populated RabbitMQ queue | [Message Expiration](../patterns/07-integration/message-expiration.md) | Enterprise Integration |
 | Setting the currently viewed value still changes the whole. | [Lens](../patterns/16-functional/lens.md) | Functional Programming |
+| Setting the watchdog's timeout window too short for the application's | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | Setup before use. A resource, a connection, a parser, a session, | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
 | Several commands or event handlers update the source values. | [Replace Derived Variable with Query](../patterns/03-refactoring/replace-derived-variable-with-query.md) | Refactoring Techniques |
 | Several methods, not one, branch on the same mode field. One method branching | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
@@ -15869,5 +15875,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - context instead of deferring it. Symptom. Other, unrelated
 - Building a hand-off mechanism between the interrupt context and the
 - deferred task with no genuine data-race protection. Symptom. The
+
+#### [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md)
+
+**Core Problem:** Embedded software can genuinely hang, an infinite loop, a deadlock, a stuck wait on hardware that never responds, and once it hangs there is often no human present to notice and power-cycle the device, since a huge share of embedded systems run unattended for months or years. A Watchdog Timer solves this by placing a countdown entirely outside the application's own control, in hardware or in a dedicated, independent timer, so that the application's own hang cannot prevent the corrective action from firing. Zephyr's own documentation states the consequence of a genuine hang directly. "If the software got stuck and does not manage to feed the watchdog anymore, the corrective action is triggered to bring the system back to normal operation." The watchdog does not detect what went wrong, it only detects that the application stopped doing the one thing a working application reliably does, feed it on schedule.
+
+**Failure Mode Symptoms:**
+
+- Feeding the watchdog with no real condition attached, from an interrupt or timer with
+- no genuine connection to application health. Symptom. The
+- Setting the watchdog's timeout window too short for the application's
+- own legitimate worst-case processing time. Symptom. The watchdog
+- Disabling the watchdog during development and forgetting to
+- re-enable it before shipping. Symptom. A device shipped to
 
 Generated by `tools/gen-by-problem-by-language.py`. Do not edit by hand.
