@@ -2,7 +2,7 @@
 
 Origin. Embedded systems engineering literature
 
-5 entries, 18,144 words. Every entry carries all 18
+6 entries, 21,684 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -17,6 +17,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Double Buffering](double-buffering.md) | canonical | 3,540 | Writing new content directly into the same buffer a display is actively reading from produces a visible defect, since the display reads the buffer's contents continuously and can ... |
 | [Hardware Abstraction Layer](hardware-abstraction-layer.md) | canonical | 3,424 | Firmware written directly against one microcontroller's raw registers is tied to that exact chip, so porting it to a different microcontroller, even one from the same family ... |
 | [Ring Buffer](ring-buffer.md) | canonical | 3,654 | Passing data from one execution context to another, most critically from an interrupt context to a task, needs a hand-off mechanism that is genuinely safe under concurrent access ... |
 

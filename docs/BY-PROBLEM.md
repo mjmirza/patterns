@@ -963,6 +963,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Browser apps keep access tokens in local storage for long | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Browser feature detection blocks valid flows. Symptom. Users on Linux, | [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) | Security |
 | Budget exhausted by a healthy client. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
+| buffer, due to a bookkeeping error in which buffer is which. Symptom. | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
 | Build times grow non-linearly as the codebase grows, well past what the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | Builder as an escape hatch for a god object. A builder with thirty-five | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Builder used where a record belongs. Symptom is a code review comment | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
@@ -1058,6 +1059,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Choosing an eager hydration directive for an island that is rarely | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Choosing choreography for a process that needed a single owner. Symptom. | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
+| Choosing full double buffering on a system with genuinely | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
 | Choosing the overflow policy without a deliberate decision about | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | Choreography and orchestration mixed for the same process. Symptom. Part | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | Choreography cycle. Symptom. A deployment of one service causes an event | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
@@ -1636,6 +1638,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Generating provenance at a self-reported level the build | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
 | Generating provenance that nothing downstream ever verifies. | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
 | Generator refuses to speculate. Symptom. The generator refuses to | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |
+| genuinely finished. Symptom. The display shows a partially-drawn | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
 | get the pattern in a language without built-in support. Symptom. A | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Given block silently performing the action under test. Symptom. A test | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
 | Global application state modelled as one screen's local MVI State. | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
@@ -1774,6 +1777,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Instant cutover instead of graceful drain. Symptom. Draining an unhealthy | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | instead of a maintained successor. Symptom. A new codebase depends | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | instead of delegating. Symptom, two different teams' services disagree | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
+| insufficient memory for two complete buffers. Symptom. The system | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
 | Integration cliff. Symptom. Local demos work, but the first full environment | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Intent explosion mirroring every UI callback one-to-one. Symptom. An | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
 | intent. Symptom. Understanding what actually happened from reading | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
@@ -2981,6 +2985,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Swallowed causes in error translation. Symptom. A production alert with a | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | Swallowed exceptions that never reach any capture point. Symptom. A | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
 | Swallowed sibling errors. Symptom. Two children fail, but only one error | [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) | Concurrency and Parallelism |
+| Swapping the buffers before the write to the back buffer has | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
 | Sweeping without ever coming back. Symptom. A quarantine layer, an | [Big Ball of Mud](../patterns/18-anti-patterns/big-ball-of-mud.md) | Anti-Patterns |
 | switch-statement structure alone as the pattern. Symptom. The | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Symptom (judgement, drawn from operating this pattern). A sidecar that | [Sidecar Proxy](../patterns/10-microservices/sidecar-proxy.md) | Microservices |
@@ -5128,6 +5133,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Writing a selector that returns a new object or array reference on | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Writing a Server Action's mutation logic without verifying | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | Writing complex, error-prone logic directly inside the boundary's | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
+| Writing to the buffer currently being shown, rather than the back | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
 | Written as symptom, cause, fix. The symptoms are drawn from practice and are | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Written as symptom, cause, fix. The symptoms are drawn from practice rather than | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | Wrong append order. Symptom. Explanation steps appear backward or grouped | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
@@ -15861,6 +15867,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The empty intermediate class trap. Symptom. A reader tracing a bug
 
 ### Embedded and Hardware-Software
+
+#### [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md)
+
+**Core Problem:** Writing new content directly into the same buffer a display is actively reading from produces a visible defect, since the display reads the buffer's contents continuously and can capture it mid-write, showing a frame that is part old content and part new content, a defect commonly called tearing. Double Buffering solves this by never writing into the buffer the display is currently reading from, writing new content into a separate buffer instead, and only exposing that new content to the display once it is genuinely complete. LVGL's own documentation names the resulting benefit directly, describing how "DMA or other hardware should be used to transfer data to the display so the MCU can continue drawing," so that "the rendering and refreshing of the display become parallel operations," rather than the display ever being shown a buffer mid-write.
+
+**Failure Mode Symptoms:**
+
+- Swapping the buffers before the write to the back buffer has
+- genuinely finished. Symptom. The display shows a partially-drawn
+- Choosing full double buffering on a system with genuinely
+- insufficient memory for two complete buffers. Symptom. The system
+- Writing to the buffer currently being shown, rather than the back
+- buffer, due to a bookkeeping error in which buffer is which. Symptom.
 
 #### [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md)
 

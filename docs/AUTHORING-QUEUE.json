@@ -5334,13 +5334,6 @@
     "focus": ""
   },
   {
-    "name": "Double Buffering",
-    "slug": "double-buffering",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/double-buffering.md",
-    "focus": ""
-  },
-  {
     "name": "Memory Pool (Fixed Block Allocator)",
     "slug": "memory-pool",
     "category": "embedded and hardware-software",
