@@ -5334,13 +5334,6 @@
     "focus": ""
   },
   {
-    "name": "Polling Loop",
-    "slug": "polling-loop",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/polling-loop.md",
-    "focus": ""
-  },
-  {
     "name": "Bootloader Pattern",
     "slug": "bootloader-pattern",
     "category": "embedded and hardware-software",
