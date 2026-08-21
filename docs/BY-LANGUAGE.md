@@ -507,6 +507,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Characterization Test](../patterns/14-testing/characterization-test.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -2911,6 +2912,7 @@ These patterns contain runnable code examples written in Python:
 - [Remove Subclass](../patterns/03-refactoring/remove-subclass.md) (Refactoring Techniques)
 - [Rename Field](../patterns/03-refactoring/rename-field.md) (Refactoring Techniques)
 - [Rename Variable](../patterns/03-refactoring/rename-variable.md) (Refactoring Techniques)
+- [Render Props](../patterns/13-frontend-ui/render-props.md) (Frontend and UI)
 - [Replace Command with Function](../patterns/03-refactoring/replace-command-with-function.md) (Refactoring Techniques)
 - [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) (Refactoring Techniques)
 - [Replace Constructor with Factory Function](../patterns/03-refactoring/replace-constructor-with-factory-function.md) (Refactoring Techniques)
@@ -3885,6 +3887,7 @@ These patterns contain runnable code examples written in Swift:
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
+- [Render Props](../patterns/13-frontend-ui/render-props.md) (Frontend and UI)
 - [Replace Error Code with Exception](../patterns/03-refactoring/replace-error-code-with-exception.md) (Refactoring Techniques)
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
@@ -4483,6 +4486,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Remove Subclass](../patterns/03-refactoring/remove-subclass.md) (Refactoring Techniques)
 - [Rename Field](../patterns/03-refactoring/rename-field.md) (Refactoring Techniques)
 - [Rename Variable](../patterns/03-refactoring/rename-variable.md) (Refactoring Techniques)
+- [Render Props](../patterns/13-frontend-ui/render-props.md) (Frontend and UI)
 - [Repeated Switches](../patterns/02-code-smells/repeated-switches.md) (Code Smells)
 - [Replace Command with Function](../patterns/03-refactoring/replace-command-with-function.md) (Refactoring Techniques)
 - [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) (Refactoring Techniques)
