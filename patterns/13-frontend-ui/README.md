@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-14 entries, 50,945 words. Every entry carries all 18
+15 entries, 54,631 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -27,6 +27,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Hooks](hooks.md) | canonical | 3,577 | Before Hooks, a function component in React could not hold its own state or run a side effect, so any component needing state, a lifecycle-tied effect, or access to context had to ... |
 | [Provider Pattern](provider-pattern.md) | canonical | 3,428 | A value needed by several components scattered across a component tree, an authenticated user, a UI theme, a locale, a Redux store, would otherwise need to be passed as a prop ... |
 | [Render Props](render-props.md) | established | 3,717 | A piece of stateful or side-effecting logic, tracking mouse position, managing a form field's validation state, fetching data, is often needed by more than one component, each of ... |
+
+## Delivery Strategy
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Progressive Enhancement](progressive-enhancement.md) | canonical | 3,686 | Before Progressive Enhancement was named, a common alternative approach, graceful degradation, started from the richest possible experience, built for the most capable browsers ... |
 
 ## Rendering Strategy
 
