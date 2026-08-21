@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-19 entries, 69,391 words. Every entry carries all 18
+20 entries, 73,164 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -45,6 +45,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Infinite Scroll](infinite-scroll.md) | established | 3,738 | A traditional, paginated list requires the user to explicitly click a next-page control and wait for a full page reload, or a partial page update, to see more content, an ... |
+| [PRPL Pattern](prpl-pattern.md) | established | 3,773 | A web application's first visit on a slow or metered mobile network faces a real tension. |
 | [Skeleton and Suspense](skeleton-and-suspense.md) | canonical | 3,597 | A component whose data has not yet loaded commonly renders nothing at all, an empty region of the page, or a generic, centered spinner with no relation to the content that will ... |
 
 ## Rendering Strategy
