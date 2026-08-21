@@ -750,6 +750,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 
 ## Language Reference Guides
 
@@ -762,6 +763,7 @@ These patterns contain runnable code examples written in C++:
 - [Bridge](../patterns/01-gof/bridge.md) (Design Patterns (GoF))
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
+- [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
 
 #### Changes Shape in C++
 
@@ -2755,6 +2757,7 @@ These patterns contain runnable code examples written in Python:
 - [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) (Principles and Laws)
 - [Interpreter Architecture](../patterns/05-architectural/interpreter-architecture.md) (Architectural Patterns)
 - [Interpreter](../patterns/01-gof/interpreter.md) (Design Patterns (GoF))
+- [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
 - [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) (Refactoring Techniques)
 - [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) (Refactoring Techniques)
 - [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) (Refactoring Techniques)
@@ -3955,6 +3958,7 @@ These patterns contain runnable code examples written in Swift:
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Immutable Object](../patterns/09-concurrency/immutable-object.md) (Concurrency and Parallelism)
 - [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) (Frontend and UI)
+- [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
 - [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [JWT](../patterns/15-security/jwt.md) (Security)
 - [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) (Enterprise Application Architecture)

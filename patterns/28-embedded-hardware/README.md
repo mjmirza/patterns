@@ -2,8 +2,14 @@
 
 Origin. Embedded systems engineering literature
 
-1 entries, 3,424 words. Every entry carries all 18
+2 entries, 7,176 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Behavioral
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Interrupt Service Routine](interrupt-service-routine.md) | canonical | 3,752 | A hardware interrupt genuinely must be handled with the smallest possible delay, since the processor stops whatever it was doing the instant the interrupt fires, and every other ... |
 
 ## Structural
 
