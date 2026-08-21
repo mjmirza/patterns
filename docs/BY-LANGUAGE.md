@@ -506,6 +506,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2527,6 +2528,7 @@ These patterns contain runnable code examples written in Python:
 - [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) (Microservices)
 - [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) (Enterprise Application Architecture)
 - [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) (AI and Agentic)
+- [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) (Refactoring Techniques)
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
 - [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) (Refactoring Techniques)
@@ -3900,6 +3902,7 @@ These patterns contain runnable code examples written in Swift:
 - [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) (Frontend and UI)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
 - [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) (Frontend and UI)
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
@@ -4155,6 +4158,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) (Microservices)
 - [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) (Enterprise Application Architecture)
 - [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) (AI and Agentic)
+- [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) (Refactoring Techniques)
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
 - [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) (Refactoring Techniques)
