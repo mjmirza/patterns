@@ -558,6 +558,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Relationship-Based Access Control](../patterns/15-security/rebac.md) | Security |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
+| [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |  |  |  |  |  | Yes |  | Yes | Yes |
 | [STRIDE](../patterns/15-security/stride.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Secrets Management](../patterns/15-security/secrets-management.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Secure by Default](../patterns/15-security/secure-by-default.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -2940,6 +2941,7 @@ These patterns contain runnable code examples written in Python:
 - [Routing Slip](../patterns/07-integration/routing-slip.md) (Enterprise Integration)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
 - [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) (Enterprise Application Architecture)
+- [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [STRIDE](../patterns/15-security/stride.md) (Security)
 - [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) (Domain-Driven Design)
 - [Saga](../patterns/08-cloud-distributed/saga.md) (Cloud and Distributed)
@@ -3881,6 +3883,7 @@ These patterns contain runnable code examples written in Swift:
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
+- [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
@@ -4506,6 +4509,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Routing Slip](../patterns/07-integration/routing-slip.md) (Enterprise Integration)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
 - [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) (Enterprise Application Architecture)
+- [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [STRIDE](../patterns/15-security/stride.md) (Security)
 - [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) (Domain-Driven Design)
 - [Saga](../patterns/08-cloud-distributed/saga.md) (Cloud and Distributed)

@@ -4214,13 +4214,6 @@
     "focus": ""
   },
   {
-    "name": "SLSA Provenance",
-    "slug": "slsa-provenance",
-    "category": "security",
-    "path": "patterns/15-security/slsa-provenance.md",
-    "focus": ""
-  },
-  {
     "name": "Functor",
     "slug": "functor",
     "category": "functional programming",
