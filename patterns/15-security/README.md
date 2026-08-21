@@ -2,7 +2,7 @@
 
 Origin. OWASP ASVS
 
-34 entries, 217,631 words. Every entry carries all 18
+35 entries, 221,559 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Authorization
@@ -51,6 +51,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Token-based Authentication](token-based-authentication.md) | established | 7,183 | The problem appears when a system must authenticate repeated requests without asking the caller to resend a long-lived secret, such as a password, private key, or root cloud ... |
 | [Webhook Signature Verification](webhook-signature-verification.md) | established | 6,038 | A webhook endpoint receives requests from the public internet, usually without a browser session, an OAuth bearer token, or a mutual TLS client certificate. |
 | [Zero Trust](zero-trust.md) | established | 6,642 | A system has users, services, jobs, devices, and partners that need access to resources from many networks. |
+
+## Supply Chain Security
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [SLSA Provenance](slsa-provenance.md) | emerging | 3,928 | A person or a system consuming a software artifact, a compiled binary, a container image, a published package, has no way to answer a basic question from the artifact alone. |
 
 ## Transport Security
 

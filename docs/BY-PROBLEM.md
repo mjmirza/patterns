@@ -467,6 +467,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A production stack trace shows pipe, compose, or an | [Point-free Style](../patterns/16-functional/point-free-style.md) | Functional Programming |
 | A production trace says only pipe or compose failed. | [Function Composition](../patterns/16-functional/function-composition.md) | Functional Programming |
 | A profiler shows a hot loop spending measurable time in a chain of | [Switch Statements](../patterns/02-code-smells/switch-statements.md) | Code Smells |
+| A project publishes signed provenance for every release, and | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
 | A prompt change scores perfectly against the golden set, then | [Golden Dataset](../patterns/17-ai-agentic/golden-dataset.md) | AI and Agentic |
 | A property fails, the reported counterexample is large, | [Property-Based Test](../patterns/14-testing/property-based-test.md) | Testing |
 | A property read unexpectedly hits the database. Cause. The | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
@@ -1541,6 +1542,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Functions are passed to other functions, such as map, filter, fold, | [Currying](../patterns/16-functional/currying.md) | Functional Programming |
 | functions with no named steps. The symptom is a function that is a wall | [Inline Function](../patterns/03-refactoring/inline-function.md) | Refactoring Techniques |
 | Future chain hides sequential work that should be parallel. Symptom. code | [Future Promise](../patterns/09-concurrency/future-promise.md) | Concurrency and Parallelism |
+| Generating provenance at a self-reported level the build | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
+| Generating provenance that nothing downstream ever verifies. | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
 | Generator refuses to speculate. Symptom. The generator refuses to | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |
 | get the pattern in a language without built-in support. Symptom. A | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Given block silently performing the action under test. Symptom. A test | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
@@ -1655,6 +1658,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | indirection that hides the name from a text search. The symptom is a | [Change Function Declaration](../patterns/03-refactoring/change-function-declaration.md) | Refactoring Techniques |
 | Infinite notification loop. Symptom. Stack overflow, or a UI that pegs a core | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | Infinite or near-infinite action loops. Symptom, the same Action, or a | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |
+| infrastructure cannot actually back up. Symptom. A project claims a | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
 | Inherited accept collapses the dispatch. Symptom. Every node in a subtree | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Initial backfill of a large table takes down the source database or | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
 | Inlining a class that is reused. The class is called from multiple | [Inline Class](../patterns/03-refactoring/inline-class.md) | Refactoring Techniques |
@@ -1712,6 +1716,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Iteration while holding a lock. Symptom. Latency spikes and thread pool | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
 | Itinerary drift from stale computation. Symptom. Messages built before a | [Routing Slip](../patterns/07-integration/routing-slip.md) | Enterprise Integration |
 | Its value can be expressed as a deterministic calculation over nearby source | [Replace Derived Variable with Query](../patterns/03-refactoring/replace-derived-variable-with-query.md) | Refactoring Techniques |
+| itself is safe. Symptom. A team accepts an artifact because its | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
 | Java overload resolution picks the base overload. Symptom. The same silent | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | JavaScript-readable session secret. Symptom. After an XSS report, logs show | [Session Management](../patterns/15-security/session-management.md) | Security |
 | Join explosion on a generic entity store. Symptom. A single "show this | [Inner-Platform Effect](../patterns/18-anti-patterns/inner-platform-effect.md) | Anti-Patterns |
@@ -4612,6 +4617,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating a missing or failed provider as a hard failure by accident. | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | Treating a shared, interned instance as though identity mattered. | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
 | Treating a tool call argument object as pre-validated for safety, not just | [Structured Output](../patterns/17-ai-agentic/structured-output.md) | AI and Agentic |
+| Treating a valid provenance signature as proof the source code | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
 | Treating batch-mode latency as a bug to route around with a smaller | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
 | Treating code execution as an approval mechanism. Symptom, a consequential | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
 | Treating fail-fast detection as thread safety. Symptom. A production system | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
@@ -12887,6 +12893,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Fail-open authorization. Symptom. When the role store is down, requests
 - UI-only enforcement. Symptom. Buttons disappear in the browser, but direct
 - Role names used as business truth. Symptom. Code branches on
+
+#### [SLSA Provenance](../patterns/15-security/slsa-provenance.md)
+
+**Core Problem:** A person or a system consuming a software artifact, a compiled binary, a container image, a published package, has no way to answer a basic question from the artifact alone. where did this actually come from, which source code produced it, on which build system, following which build steps, and was that build tampered with along the way. A malicious actor who compromises a build system, a source repository, or a package registry can insert code into an artifact that looks identical to the legitimate one, and nothing in the artifact itself proves otherwise.
+
+**Failure Mode Symptoms:**
+
+- Generating provenance that nothing downstream ever verifies.
+- A project publishes signed provenance for every release, and
+- Generating provenance at a self-reported level the build
+- infrastructure cannot actually back up. Symptom. A project claims a
+- Treating a valid provenance signature as proof the source code
+- itself is safe. Symptom. A team accepts an artifact because its
 
 #### [STRIDE](../patterns/15-security/stride.md)
 
