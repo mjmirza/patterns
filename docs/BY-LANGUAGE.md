@@ -751,6 +751,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 
 ## Language Reference Guides
 
@@ -764,6 +765,7 @@ These patterns contain runnable code examples written in C++:
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
+- [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
 
 #### Changes Shape in C++
 
@@ -3158,6 +3160,7 @@ These patterns contain runnable code examples written in Python:
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
+- [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
@@ -4003,6 +4006,7 @@ These patterns contain runnable code examples written in Swift:
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
+- [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
 
 #### Changes Shape in Swift
 

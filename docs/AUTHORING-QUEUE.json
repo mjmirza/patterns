@@ -5334,13 +5334,6 @@
     "focus": ""
   },
   {
-    "name": "Watchdog Timer",
-    "slug": "watchdog-timer",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/watchdog-timer.md",
-    "focus": ""
-  },
-  {
     "name": "State Machine (Embedded)",
     "slug": "state-machine",
     "category": "embedded and hardware-software",

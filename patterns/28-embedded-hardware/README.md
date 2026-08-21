@@ -2,7 +2,7 @@
 
 Origin. Embedded systems engineering literature
 
-2 entries, 7,176 words. Every entry carries all 18
+3 entries, 10,775 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Interrupt Service Routine](interrupt-service-routine.md) | canonical | 3,752 | A hardware interrupt genuinely must be handled with the smallest possible delay, since the processor stops whatever it was doing the instant the interrupt fires, and every other ... |
+| [Watchdog Timer](watchdog-timer.md) | canonical | 3,599 | Embedded software can genuinely hang, an infinite loop, a deadlock, a stuck wait on hardware that never responds, and once it hangs there is often no human present to notice and ... |
 
 ## Structural
 
