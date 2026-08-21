@@ -2,7 +2,7 @@
 
 Origin. Embedded systems engineering literature
 
-13 entries, 46,205 words. Every entry carries all 18
+14 entries, 49,879 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -21,6 +21,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Bootloader Pattern](bootloader-pattern.md) | canonical | 3,649 | An embedded device shipped to the field needs a way to receive new firmware after it has left the factory, and that update must never leave the device permanently unable to boot ... |
+| [Device Driver Pattern](device-driver-pattern.md) | canonical | 3,674 | An embedded system supports several different concrete peripherals of the same general type, such as more than one UART or I2C controller on a chip, or the same peripheral type ... |
 | [Double Buffering](double-buffering.md) | canonical | 3,540 | Writing new content directly into the same buffer a display is actively reading from produces a visible defect, since the display reads the buffer's contents continuously and can ... |
 | [Hardware Abstraction Layer](hardware-abstraction-layer.md) | canonical | 3,424 | Firmware written directly against one microcontroller's raw registers is tied to that exact chip, so porting it to a different microcontroller, even one from the same family ... |
 | [Hardware-in-the-Loop Testing](hardware-in-the-loop-testing.md) | canonical | 3,608 | An embedded controller's firmware needs to be validated against the real physical system it will eventually control, such as an engine, a braking system, or an aircraft actuator ... |

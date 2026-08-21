@@ -750,6 +750,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -773,6 +774,7 @@ These patterns contain runnable code examples written in C++:
 
 - [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [Bridge](../patterns/01-gof/bridge.md) (Design Patterns (GoF))
+- [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) (Embedded and Hardware-Software)
 - [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) (Embedded and Hardware-Software)
@@ -2643,6 +2645,7 @@ These patterns contain runnable code examples written in Python:
 - [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) (Cloud and Distributed)
 - [Derived Value](../patterns/14-testing/derived-value.md) (Testing)
 - [Detour](../patterns/07-integration/detour.md) (Enterprise Integration)
+- [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) (Embedded and Hardware-Software)
 - [Differential Testing](../patterns/14-testing/differential-testing.md) (Testing)
 - [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) (Anti-Patterns)
 - [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) (Microservices)
@@ -3976,6 +3979,7 @@ These patterns contain runnable code examples written in Swift:
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
+- [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) (Embedded and Hardware-Software)
 - [Domain Service](../patterns/11-domain-driven-design/domain-service.md) (Domain-Driven Design)
 - [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) (Embedded and Hardware-Software)
