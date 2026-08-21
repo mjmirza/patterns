@@ -1853,6 +1853,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Mediator used where Observer was needed. Symptom. The mediator's rule table | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | Megamorphic call site slowdown. Symptom. A traversal that benchmarks well on | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Memento used where Command was needed. Symptom. Editing a large document | [Memento](../patterns/01-gof/memento.md) | Design Patterns (GoF) |
+| memoisation. Symptom. A state-owning component wrapped in a | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | Memoization hides mutation. Symptom. A selector keeps returning an old list | [Replace Derived Variable with Query](../patterns/03-refactoring/replace-derived-variable-with-query.md) | Refactoring Techniques |
 | Memory grows with input depth until the process pauses or dies. | [Trampolining](../patterns/16-functional/trampolining.md) | Functional Programming |
 | Memory grows without bound over hours or days even though | [Reactor](../patterns/09-concurrency/reactor.md) | Concurrency and Parallelism |
@@ -1993,6 +1994,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Nested effects left unflipped. Symptom. Callers receive | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |
 | Nested result stacks. Symptom. Signatures contain shapes like | [Result Either](../patterns/16-functional/result-either.md) | Functional Programming |
 | Nested result. Symptom. Types such as Result<Result<Order, Error>, Error> | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
+| Nesting several render props until the JSX becomes genuinely hard to | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | Network split without latency budget. Symptom. An endpoint doubles its p95 | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | New instances repeatedly start and are killed within | [Service Deployment Platform](../patterns/10-microservices/service-deployment-platform.md) | Microservices |
 | new system exhibits the same symptoms as the old one. Cause. The rewrite | [Big Ball of Mud](../patterns/18-anti-patterns/big-ball-of-mud.md) | Anti-Patterns |
@@ -2182,6 +2184,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Participants argue for ten minutes about whether a scenario is | [STRIDE](../patterns/15-security/stride.md) | Security |
 | Passing a large object that gives too much access. The function | [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) | Refactoring Techniques |
 | Passing a mutable object that gets modified. The function modifies | [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) | Refactoring Techniques |
+| Passing a new inline function on every render, defeating | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | patch with a comment. A comment describing hidden dependencies is a symptom | [Service Locator](../patterns/18-anti-patterns/service-locator.md) | Anti-Patterns |
 | Path-copy bug. Symptom. An update disappears, appears under the wrong key, | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
 | Path-matching ambiguity produces the wrong backend. Symptom. A request | [Gateway Routing](../patterns/08-cloud-distributed/gateway-routing.md) | Cloud and Distributed |
@@ -2321,6 +2324,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Re-entrancy corruption. Symptom. Nested processing produces interleaved or | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Reaching for a debugger to read straightforward code. Symptom. | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | Reaching for a hand-rolled continuation-passing encoding purely to | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
+| Reaching for a render prop in a codebase where a custom hook would | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | Reaching for Profunctor when only one direction is needed. Symptom. | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Reaching for the Monad instance and expecting accumulation anyway. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Reaching for unsafePerformIO to avoid restructuring a function | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
@@ -2517,6 +2521,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Sandboxing matters. the evaluator must be able to run untrusted or | [Interpreter Architecture](../patterns/05-architectural/interpreter-architecture.md) | Architectural Patterns |
 | satisfying the method signature. The observable symptom is a sort routine that enters an | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
 | Save is called from inside a loop over query results, defeating | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
+| scan. Symptom. A component's return statement grows several levels | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | scenarios. Symptom. A widely imported test-helper module holds one giant | [Stub](../patterns/14-testing/stub.md) | Testing |
 | Scheduler affinity breach. Symptom. A UI update runs on a worker thread, an | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
 | Schema coupling through a shared database. Symptom. A migration in one | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
@@ -2567,6 +2572,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Serialization incompatibility. Symptom. Stored objects or wire payloads from | [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) | Refactoring Techniques |
 | Serialization or persistence accidentally capturing scratch state. | [Temporary Field](../patterns/02-code-smells/temporary-field.md) | Code Smells |
 | Series-count explosion from an unbounded label. Symptom. The metrics | [Application Metrics](../patterns/10-microservices/application-metrics.md) | Microservices |
+| serve identically, with less nesting. Symptom. A team continues | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | Service A calls service B, and B's audit log records the request | [Access Token](../patterns/10-microservices/access-token.md) | Microservices |
 | Service locator disguised as dependency injection. Symptom. A class | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
 | Service logs cannot answer whether a request represented a user, | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
@@ -12071,6 +12077,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - logic. Symptom. Over time, a presentational component that started
 - Prop-drilling an unmanageable number of fields between the two
 - halves. Symptom. The container passes a long, growing list of props
+
+#### [Render Props](../patterns/13-frontend-ui/render-props.md)
+
+**Core Problem:** A piece of stateful or side-effecting logic, tracking mouse position, managing a form field's validation state, fetching data, is often needed by more than one component, each of which wants to render that shared behaviour differently. Duplicating the logic in every component that needs it is wasteful and error-prone. wrapping it in a Higher- Order Component works, but couples the logic to a specific way of injecting props, and stacking several HOCs to combine several pieces of shared behaviour produces a hard-to-trace wrapper chain, where a prop's origin is not visible from the component that ultimately renders it.
+
+**Failure Mode Symptoms:**
+
+- Nesting several render props until the JSX becomes genuinely hard to
+- scan. Symptom. A component's return statement grows several levels
+- Passing a new inline function on every render, defeating
+- memoisation. Symptom. A state-owning component wrapped in a
+- Reaching for a render prop in a codebase where a custom hook would
+- serve identically, with less nesting. Symptom. A team continues
 
 ### Testing
 
