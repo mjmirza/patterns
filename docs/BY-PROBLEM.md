@@ -2189,6 +2189,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Passing a large object that gives too much access. The function | [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) | Refactoring Techniques |
 | Passing a mutable object that gets modified. The function modifies | [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) | Refactoring Techniques |
 | Passing a new inline function on every render, defeating | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
+| Passing a new object literal as the provider's value on every | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |
 | patch with a comment. A comment describing hidden dependencies is a symptom | [Service Locator](../patterns/18-anti-patterns/service-locator.md) | Anti-Patterns |
 | Path-copy bug. Symptom. An update disappears, appears under the wrong key, | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
 | Path-matching ambiguity produces the wrong backend. Symptom. A request | [Gateway Routing](../patterns/08-cloud-distributed/gateway-routing.md) | Cloud and Distributed |
@@ -2410,7 +2411,9 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Renaming only one side. Symptom. DivergentClassA is renamed to match | [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) | Code Smells |
 | Renaming to a name that is only temporarily better. The new name is | [Rename Field](../patterns/03-refactoring/rename-field.md) | Refactoring Techniques |
 | Renaming to a name that is only temporarily better. The new name is | [Rename Variable](../patterns/03-refactoring/rename-variable.md) | Refactoring Techniques |
+| render. Symptom. Every consumer of a context re-renders on every | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |
 | Rendering a child sub-component outside its expected parent. | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
+| Rendering a consumer with no matching provider above it. Symptom. | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |
 | Reopening a settled decision under a new cosmetic pretext. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | Repair takes dramatically longer to complete than expected, or | [Anti-Entropy](../patterns/12-data-storage/anti-entropy.md) | Data and Storage |
 | Repair writes appear in write-side metrics and logs at a volume the | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
@@ -2744,6 +2747,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Stack overflow on deep input. Symptom. A StackOverflowError or a segfault | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Stack traces contain several frames named lambda, anonymous, | [Currying](../patterns/16-functional/currying.md) | Functional Programming |
 | Stacking IO with other effects through nested transformers until the | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
+| Stacking many unrelated contexts, each wrapping the same | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |
 | Stale authorization. Symptom. A removed user or disabled service account | [JWT](../patterns/15-security/jwt.md) | Security |
 | Stale binding. Symptom. A client keeps talking to a Referent that was | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
 | Stale business rule behind a live sounding name. Symptom. A Specification | [Specification](../patterns/11-domain-driven-design/specification.md) | Domain-Driven Design |
@@ -2801,6 +2805,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | subclasses accidentally inherit instead of overriding. The symptom is a | [Pull Up Method](../patterns/03-refactoring/pull-up-method.md) | Refactoring Techniques |
 | subclasses, and pulling it up gives every subclass the field. The symptom | [Pull Up Field](../patterns/03-refactoring/pull-up-field.md) | Refactoring Techniques |
 | Subscriber lag becoming an unbounded backlog. Symptom. Broker disk usage | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
+| subtree. Symptom. The application's root component grows a visibly | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |
 | Success type does not refine. Symptom. Every step accepts and returns the | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
 | Super call at the wrong point in the override. Symptom. behaviour that | [Call Super](../patterns/18-anti-patterns/call-super.md) | Anti-Patterns |
 | Super call duplicated across a diamond-shaped mixin or trait hierarchy. | [Call Super](../patterns/18-anti-patterns/call-super.md) | Anti-Patterns |
@@ -12107,6 +12112,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - An incomplete dependency array capturing a stale value. Symptom.
 - Reaching for useEffect to synchronize derived state that could be
 - computed directly during render. Symptom. A component renders
+
+#### [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md)
+
+**Core Problem:** A value needed by several components scattered across a component tree, an authenticated user, a UI theme, a locale, a Redux store, would otherwise need to be passed as a prop from the top of the tree down to every consumer, through every intermediate component along the way, even when those intermediate components have no use for the value themselves. This is the problem widely known as prop drilling, and it grows worse as the tree deepens or as more shared values need threading through. The Provider Pattern solves this by wrapping the part of the tree that needs the value in a provider component, which makes the value available to any descendant that asks for it directly, with no intermediate component needing to pass it along.
+
+**Failure Mode Symptoms:**
+
+- Rendering a consumer with no matching provider above it. Symptom.
+- Passing a new object literal as the provider's value on every
+- render. Symptom. Every consumer of a context re-renders on every
+- Stacking many unrelated contexts, each wrapping the same
+- subtree. Symptom. The application's root component grows a visibly
 
 #### [Render Props](../patterns/13-frontend-ui/render-props.md)
 

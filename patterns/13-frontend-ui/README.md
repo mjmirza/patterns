@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-5 entries, 18,454 words. Every entry carries all 18
+6 entries, 21,882 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Component Composition
@@ -13,6 +13,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Container Presentational](container-presentational.md) | deprecated | 3,861 | A component that both fetches data, manages loading and error state, and renders the resulting markup mixes two genuinely different concerns in one place. |
 | [Higher-Order Component](higher-order-component.md) | established | 3,455 | Several components in a codebase often need the same cross-cutting behavior applied to them, subscribing to a data source, checking authentication before rendering, logging every ... |
 | [Hooks](hooks.md) | canonical | 3,577 | Before Hooks, a function component in React could not hold its own state or run a side effect, so any component needing state, a lifecycle-tied effect, or access to context had to ... |
+| [Provider Pattern](provider-pattern.md) | canonical | 3,428 | A value needed by several components scattered across a component tree, an authenticated user, a UI theme, a locale, a Redux store, would otherwise need to be passed as a prop ... |
 | [Render Props](render-props.md) | established | 3,717 | A piece of stateful or side-effecting logic, tracking mouse position, managing a form field's validation state, fetching data, is often needed by more than one component, each of ... |
 
 ## Reading order

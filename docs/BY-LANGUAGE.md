@@ -509,6 +509,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -2878,6 +2879,7 @@ These patterns contain runnable code examples written in Python:
 - [Property-Based Test](../patterns/14-testing/property-based-test.md) (Testing)
 - [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) (Principles and Laws)
 - [Prototype](../patterns/01-gof/prototype.md) (Design Patterns (GoF))
+- [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) (Frontend and UI)
 - [Proxy](../patterns/01-gof/proxy.md) (Design Patterns (GoF))
 - [Published Language](../patterns/11-domain-driven-design/published-language.md) (Domain-Driven Design)
 - [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) (Cloud and Distributed)
@@ -3891,6 +3893,7 @@ These patterns contain runnable code examples written in Swift:
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
+- [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) (Frontend and UI)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
 - [Render Props](../patterns/13-frontend-ui/render-props.md) (Frontend and UI)
@@ -4456,6 +4459,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Property-Based Test](../patterns/14-testing/property-based-test.md) (Testing)
 - [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) (Principles and Laws)
 - [Prototype](../patterns/01-gof/prototype.md) (Design Patterns (GoF))
+- [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) (Frontend and UI)
 - [Proxy](../patterns/01-gof/proxy.md) (Design Patterns (GoF))
 - [Published Language](../patterns/11-domain-driven-design/published-language.md) (Domain-Driven Design)
 - [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) (Cloud and Distributed)
