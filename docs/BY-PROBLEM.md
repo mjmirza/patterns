@@ -783,6 +783,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | all if each variant lived in its own file, a symptom of the Divergent | [Switch Statements](../patterns/02-code-smells/switch-statements.md) | Code Smells |
 | all. Symptom. The task completes, every step reports success, and the | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
 | Allocation pressure. The constructed object is genuinely different each | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
+| allowing duplicate form submissions. Symptom. A user, uncertain | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
 | allows the client to modify it without the class's knowledge. The symptom | [Remove Middle Man](../patterns/03-refactoring/remove-middle-man.md) | Refactoring Techniques |
 | alone in a long retention audit store. Symptom. A security review of the | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
 | already clear. The symptom is a codebase full of one line functions that | [Decompose Conditional](../patterns/03-refactoring/decompose-conditional.md) | Refactoring Techniques |
@@ -961,6 +962,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Builder as an escape hatch for a god object. A builder with thirty-five | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Builder used where a record belongs. Symptom is a code review comment | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Building a bespoke protocol and calling it domain-specific. Symptom. A | [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) | Microservices |
+| Building a form-action function whose signature does not actually | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
 | Building a headless abstraction for behavior that only ever needs | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | Building a machine so large and hierarchical that no single person | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Building a molecule or an organism that secretly depends on a | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
@@ -1134,6 +1136,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Configuration drift between the image and reality. Symptom. A service | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
 | Configuration naming a strategy that no longer exists. Symptom. A service | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | Conflated liveness and readiness. Symptom. The platform restarts pods | [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) | Cloud and Distributed |
+| conflating their responsibilities. Symptom. A team assumes wiring a | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
 | Confused deputy through untrusted context. Symptom. A tool with a real | [Function Calling](../patterns/17-ai-agentic/function-calling.md) | AI and Agentic |
 | Confused for a Service Locator, and blamed for its problems. Symptom. A | [Dynamic Router](../patterns/07-integration/dynamic-router.md) | Enterprise Integration |
 | Confusing "no association" with "association to a deleted row". Symptom. A | [Foreign Key Mapping](../patterns/06-enterprise-application-architecture/foreign-key-mapping.md) | Enterprise Application Architecture |
@@ -1706,6 +1709,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Ignoring or bulk-dismissing findings. Symptom. The fuzzer's crash-reports | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | Ignoring SIGTERM. Symptom. Every rolling deploy produces a burst of | [Service Instance per Container](../patterns/10-microservices/service-instance-per-container.md) | Microservices |
 | Ignoring the accessibility gap the technique introduces, leaving | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |
+| Ignoring the pending state the companion hook already provides, and | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
 | Ignoring the warning signs of a deteriorating vendor relationship. | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |
 | Illegal pairings at runtime. Symptom. A production error reading | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | IllegalStateException at build() when the URI was never set. Symptom is a | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
@@ -1931,6 +1935,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Marking every component on the page as an island, defeating the | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | masks a programming error. The symptom is a function that produces no | [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) | Refactoring Techniques |
 | Massive View Controller. Symptom. A single Controller class or view-controller | [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) | Architectural Patterns |
+| match what the form supplies. Symptom. The action function throws, | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
 | matters, such as a search-as-you-type box. Symptom. The handler | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Meaningless name. The variable is named temp or result or x, | [Extract Variable](../patterns/03-refactoring/extract-variable.md) | Refactoring Techniques |
 | Mediator as a covert global. Symptom. Colleagues acquire the mediator from a | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
@@ -4776,6 +4781,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating a compacted topic as an audit log is a category misuse. A team | [Log Compaction](../patterns/12-data-storage/log-compaction.md) | Data and Storage |
 | Treating a data-validation matrix as narrative scenarios. Symptom. Twelve | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
 | Treating a distributed system's clock as a reliable version source. | [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) | Enterprise Application Architecture |
+| Treating a Form Action as identical to a Server Action, and | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
 | Treating a job as a low-latency service. Symptom. A user-facing feature | [Map-Reduce](../patterns/09-concurrency/map-reduce.md) | Concurrency and Parallelism |
 | Treating a local acknowledgement as final delivery. Symptom. A | [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) | Microservices |
 | Treating a lock timeout as a correctness signal. Symptom. Application | [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) | Data and Storage |
@@ -12329,6 +12335,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Updating one store causes an unexpected chain of changes
 - Adopting the archived original Flux library on a new project
 - instead of a maintained successor. Symptom. A new codebase depends
+
+#### [Form Action](../patterns/13-frontend-ui/form-action.md)
+
+**Core Problem:** A form submitted the traditional way moves the browser to a new URL and reloads the whole page, while a form submitted through raw client-side JavaScript needs the developer to manually intercept the submit event, read every field out of it, build and send the request by hand, and manage the pending and error state of that request themselves. A Form Action solves this by letting the form's own action attribute be given a function directly, a function React's own documentation states is "called with a single argument containing the form data of the submitted form," so the framework itself handles gathering the submitted fields, running the function as a proper transition, and, when paired with the companion state hook, tracking whether that function is still running and what it most recently returned, without the developer wiring any of that plumbing by hand.
+
+**Failure Mode Symptoms:**
+
+- Treating a Form Action as identical to a Server Action, and
+- conflating their responsibilities. Symptom. A team assumes wiring a
+- Ignoring the pending state the companion hook already provides, and
+- allowing duplicate form submissions. Symptom. A user, uncertain
+- Building a form-action function whose signature does not actually
+- match what the form supplies. Symptom. The action function throws,
 
 #### [Headless Component](../patterns/13-frontend-ui/headless-component.md)
 

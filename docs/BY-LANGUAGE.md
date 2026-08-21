@@ -514,6 +514,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2674,6 +2675,7 @@ These patterns contain runnable code examples written in Python:
 - [Foldable](../patterns/16-functional/foldable.md) (Functional Programming)
 - [Foreign Key Mapping](../patterns/06-enterprise-application-architecture/foreign-key-mapping.md) (Enterprise Application Architecture)
 - [Fork-Join](../patterns/09-concurrency/fork-join.md) (Concurrency and Parallelism)
+- [Form Action](../patterns/13-frontend-ui/form-action.md) (Frontend and UI)
 - [Format Indicator](../patterns/07-integration/format-indicator.md) (Enterprise Integration)
 - [Four-Phase Test](../patterns/14-testing/four-phase-test.md) (Testing)
 - [Free Monad](../patterns/16-functional/free-monad.md) (Functional Programming)
@@ -3935,6 +3937,7 @@ These patterns contain runnable code examples written in Swift:
 - [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
+- [Form Action](../patterns/13-frontend-ui/form-action.md) (Frontend and UI)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
 - [Golden Master](../patterns/14-testing/golden-master.md) (Testing)
 - [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
@@ -4318,6 +4321,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Flyweight](../patterns/01-gof/flyweight.md) (Design Patterns (GoF))
 - [Foldable](../patterns/16-functional/foldable.md) (Functional Programming)
 - [Foreign Key Mapping](../patterns/06-enterprise-application-architecture/foreign-key-mapping.md) (Enterprise Application Architecture)
+- [Form Action](../patterns/13-frontend-ui/form-action.md) (Frontend and UI)
 - [Format Indicator](../patterns/07-integration/format-indicator.md) (Enterprise Integration)
 - [Fresh Fixture](../patterns/14-testing/fresh-fixture.md) (Testing)
 - [Front Controller](../patterns/06-enterprise-application-architecture/front-controller.md) (Enterprise Application Architecture)
