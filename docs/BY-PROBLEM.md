@@ -1201,6 +1201,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | CPU-bound work mistaken for I/O-bound work. Symptom. Fanning out N tasks | [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) | Concurrency and Parallelism |
 | CQS theater. Symptom. The code has query classes and command classes, but | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | created before the assignment. Observable symptom, a method's behaviour changes | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
+| Creating a new debounced or throttled function on every render or | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Creating a new signal on every render instead of once. Symptom. | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
 | Creation with hidden side effects. Symptom. A retry loop or a test helper | [Factory Method](../patterns/01-gof/factory-method.md) | Design Patterns (GoF) |
 | Credential ID stored as text incorrectly. Symptom. Some users can register | [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) | Security |
@@ -1455,6 +1456,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Events that clearly happened after the restart compare as earlier | [Lamport Clock](../patterns/12-data-storage/lamport-clock.md) | Data and Storage |
 | Eventual consistency treated as a bug. Symptom. A support ticket reports | [Single Source of Truth](../patterns/04-principles-and-laws/single-source-of-truth.md) | Principles and Laws |
 | Every BFF in the system implements its own slightly different | [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md) | Cloud and Distributed |
+| every call, instead of a single, stable, reused instance. Symptom. | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Every class has a matching IFoo or FooInterface with | [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) | Enterprise Application Architecture |
 | every configuration value. The symptom is a function with ten parameters, | [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) | Refactoring Techniques |
 | Every connection served by one process or worker suddenly | [Reactor](../patterns/09-concurrency/reactor.md) | Concurrency and Parallelism |
@@ -1908,6 +1910,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Marking every component on the page as an island, defeating the | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | masks a programming error. The symptom is a function that produces no | [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) | Refactoring Techniques |
 | Massive View Controller. Symptom. A single Controller class or view-controller | [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) | Architectural Patterns |
+| matters, such as a search-as-you-type box. Symptom. The handler | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Meaningless name. The variable is named temp or result or x, | [Extract Variable](../patterns/03-refactoring/extract-variable.md) | Refactoring Techniques |
 | Mediator as a covert global. Symptom. Colleagues acquire the mediator from a | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | Mediator used where Observer was needed. Symptom. The mediator's rule table | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
@@ -2429,6 +2432,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reads outnumber writes by a wide margin, so a cached copy earns its keep many | [Cache-Aside](../patterns/08-cloud-distributed/cache-aside.md) | Cloud and Distributed |
 | Reads take long enough, or happen at high enough concurrency, that | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Reads vastly outnumber writes, so the cost of coordinating readers against | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
+| real-time feedback, such as a live drag-position indicator. Symptom. | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Reasoning trigger fighting a trained reasoning model. Symptom. Adding an | [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) | AI and Agentic |
 | Rebuilding on every step instead of only at the end. Symptom. A | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | receives an exception it has no handling path for. The observable symptom is an exception | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
@@ -4964,10 +4968,12 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Using a saga where a single aggregate would do. Symptom. A team builds | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
 | Using a zipper as a substitute for an index. Symptom. A hot path that | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | Using an event where a command was needed. Symptom. A "PaymentRequested" | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
+| Using debounce for a scenario the user experiences as ongoing, | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Using Routing Slip where Dynamic Router was needed. Symptom. Step | [Routing Slip](../patterns/07-integration/routing-slip.md) | Enterprise Integration |
 | Using the composer as if it were a transaction. Symptom. A customer | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | Using the control bus as a covert data channel. | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | Using the log store as a database of record. Symptom. A finance or | [Log Aggregation](../patterns/10-microservices/log-aggregation.md) | Microservices |
+| Using throttle for a scenario where only the final, settled state | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Vague task boundaries causing duplicated work. The symptom is two or more | [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) | AI and Agentic |
 | Validate before decode. Symptom. A path, tag, or identifier passes the first | [Input Validation](../patterns/15-security/input-validation.md) | Security |
 | Validation duplicated at every entry point. Symptom. The same | [Anemic Domain Model](../patterns/18-anti-patterns/anemic-domain-model.md) | Anti-Patterns |
@@ -12216,6 +12222,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - logic. Symptom. Over time, a presentational component that started
 - Prop-drilling an unmanageable number of fields between the two
 - halves. Symptom. The container passes a long, growing list of props
+
+#### [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md)
+
+**Core Problem:** An event such as a keystroke, a scroll, or a window resize can fire many times in rapid succession, and attaching an expensive handler directly to that event, a network request, a heavy recalculation, a large re-render, runs that expensive work far more often than the application actually needs. A search box that fires a network request on every keystroke sends far more requests than the number of times the user actually pauses to see a result, and a scroll handler that recalculates a layout on every scroll event runs that recalculation far more often than the user can perceive a difference. Debounce and throttle solve this problem in two different, precise ways, debounce by waiting for the rapid succession of events to genuinely stop before running the handler once, and throttle by running the handler at a bounded, regular rate regardless of how fast the underlying events keep firing.
+
+**Failure Mode Symptoms:**
+
+- Using debounce for a scenario the user experiences as ongoing,
+- real-time feedback, such as a live drag-position indicator. Symptom.
+- Using throttle for a scenario where only the final, settled state
+- matters, such as a search-as-you-type box. Symptom. The handler
+- Creating a new debounced or throttled function on every render or
+- every call, instead of a single, stable, reused instance. Symptom.
 
 #### [Flux](../patterns/13-frontend-ui/flux.md)
 
