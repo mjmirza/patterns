@@ -507,6 +507,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2541,6 +2542,7 @@ These patterns contain runnable code examples written in Python:
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
 - [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) (Refactoring Techniques)
 - [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) (Refactoring Techniques)
+- [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) (Frontend and UI)
 - [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) (Cloud and Distributed)
 - [Command](../patterns/01-gof/command.md) (Design Patterns (GoF))
 - [Comments](../patterns/02-code-smells/comments.md) (Code Smells)
@@ -3919,6 +3921,7 @@ These patterns contain runnable code examples written in Swift:
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
+- [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) (Frontend and UI)
 - [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
 - [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) (Frontend and UI)
 - [Context Selector](../patterns/13-frontend-ui/context-selector.md) (Frontend and UI)
@@ -4188,6 +4191,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) (Refactoring Techniques)
 - [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) (Refactoring Techniques)
 - [Command Message](../patterns/07-integration/command-message.md) (Enterprise Integration)
+- [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) (Frontend and UI)
 - [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) (Cloud and Distributed)
 - [Command](../patterns/01-gof/command.md) (Design Patterns (GoF))
 - [Comments](../patterns/02-code-smells/comments.md) (Code Smells)
