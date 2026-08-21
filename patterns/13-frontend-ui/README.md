@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-9 entries, 32,468 words. Every entry carries all 18
+10 entries, 36,084 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Component Composition
@@ -23,6 +23,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Flux](flux.md) | deprecated | 3,629 | Traditional MVC-style architectures let a view update a model directly, and let multiple models observe and update one another, which becomes difficult to reason about as an ... |
 | [Redux](redux.md) | canonical | 3,663 | Flux's original architecture solved unidirectional data flow with several independent stores, each holding its own slice of state and its own update logic, which worked but left ... |
 | [Signals](signals.md) | established | 3,294 | A component-based UI framework built on a virtual DOM diff and re-render cycle, such as React, re-runs an entire component function whenever any piece of its state changes, then ... |
+| [State Machine UI](state-machine-ui.md) | established | 3,616 | A component with several loading, error, and success conditions is commonly modeled with several independent boolean flags, such as isLoading, isError, and hasData, tracked as ... |
 
 ## Reading order
 
