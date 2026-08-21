@@ -4459,13 +4459,6 @@
     "focus": ""
   },
   {
-    "name": "IO Monad",
-    "slug": "io-monad",
-    "category": "functional programming",
-    "path": "patterns/16-functional/io-monad.md",
-    "focus": ""
-  },
-  {
     "name": "Algebraic Effects",
     "slug": "algebraic-effects",
     "category": "functional programming",

@@ -578,6 +578,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Free Monad](../patterns/16-functional/free-monad.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Function Composition](../patterns/16-functional/function-composition.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Functor](../patterns/16-functional/functor.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes | Yes |  |
+| [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Immutability](../patterns/16-functional/immutability.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
 | [Lazy Evaluation](../patterns/16-functional/lazy-evaluation.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Lens](../patterns/16-functional/lens.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  | Yes |
@@ -2672,6 +2673,7 @@ These patterns contain runnable code examples written in Python:
 - [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) (AI and Agentic)
 - [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) (AI and Agentic)
 - [HyperLogLog](../patterns/12-data-storage/hyperloglog.md) (Data and Storage)
+- [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Idempotency Key](../patterns/15-security/idempotency-key.md) (Security)
 - [Idempotent Consumer](../patterns/10-microservices/idempotent-consumer.md) (Microservices)
 - [Identity Field](../patterns/06-enterprise-application-architecture/identity-field.md) (Enterprise Application Architecture)
@@ -3859,6 +3861,7 @@ These patterns contain runnable code examples written in Swift:
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
 - [Golden Master](../patterns/14-testing/golden-master.md) (Testing)
+- [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Immutable Object](../patterns/09-concurrency/immutable-object.md) (Concurrency and Parallelism)
 - [JWT](../patterns/15-security/jwt.md) (Security)
 - [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) (Enterprise Application Architecture)
@@ -4244,6 +4247,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) (AI and Agentic)
 - [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) (AI and Agentic)
 - [HyperLogLog](../patterns/12-data-storage/hyperloglog.md) (Data and Storage)
+- [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Idempotency Key](../patterns/15-security/idempotency-key.md) (Security)
 - [Idempotent Consumer](../patterns/10-microservices/idempotent-consumer.md) (Microservices)
 - [Identity Field](../patterns/06-enterprise-application-architecture/identity-field.md) (Enterprise Application Architecture)
