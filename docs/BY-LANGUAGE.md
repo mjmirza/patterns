@@ -591,6 +591,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Persistent Data Structures](../patterns/16-functional/persistent-data-structures.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Point-free Style](../patterns/16-functional/point-free-style.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prism](../patterns/16-functional/prism.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
+| [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Reader Monad](../patterns/16-functional/reader-monad.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Result Either](../patterns/16-functional/result-either.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  | Yes |
@@ -603,6 +604,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
 | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Advanced RAG](../patterns/17-ai-agentic/advanced-rag.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Agent Debate](../patterns/17-ai-agentic/agent-debate.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1447,6 +1449,7 @@ These patterns contain runnable code examples written in Go:
 - [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) (Data and Storage)
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
 - [Zero Trust](../patterns/15-security/zero-trust.md) (Security)
+- [Zipper](../patterns/16-functional/zipper.md) (Functional Programming)
 
 #### Changes Shape in Go
 
@@ -2853,6 +2856,7 @@ These patterns contain runnable code examples written in Python:
 - [Process Manager](../patterns/07-integration/process-manager.md) (Enterprise Integration)
 - [Process Manager](../patterns/11-domain-driven-design/process-manager.md) (Domain-Driven Design)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
+- [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
 - [Prompt Injection Sink](../patterns/18-anti-patterns/prompt-injection-sink.md) (Anti-Patterns)
@@ -3083,6 +3087,7 @@ These patterns contain runnable code examples written in Python:
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
 - [Zero Trust](../patterns/15-security/zero-trust.md) (Security)
+- [Zipper](../patterns/16-functional/zipper.md) (Functional Programming)
 
 #### Changes Shape in Python
 
@@ -3784,6 +3789,7 @@ These patterns have unique implementation variants or change their design struct
 - [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) (Data and Storage)
 - [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
+- [Zipper](../patterns/16-functional/zipper.md) (Functional Programming)
 
 #### Made Unnecessary or Alternative in Rust
 
@@ -3826,6 +3832,7 @@ These patterns have native features in Rust that make the pattern unnecessary, o
 - [Tagless Final](../patterns/16-functional/tagless-final.md) (Functional Programming)
 - [Template Method](../patterns/01-gof/template-method.md) (Design Patterns (GoF))
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
+- [Zipper](../patterns/16-functional/zipper.md) (Functional Programming)
 
 ### Swift
 
@@ -3859,6 +3866,7 @@ These patterns contain runnable code examples written in Swift:
 - [Money](../patterns/06-enterprise-application-architecture/money.md) (Enterprise Application Architecture)
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
+- [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
 - [Replace Error Code with Exception](../patterns/03-refactoring/replace-error-code-with-exception.md) (Refactoring Techniques)
@@ -4408,6 +4416,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Process Manager](../patterns/07-integration/process-manager.md) (Enterprise Integration)
 - [Process Manager](../patterns/11-domain-driven-design/process-manager.md) (Domain-Driven Design)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
+- [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
 - [Prompt Injection Sink](../patterns/18-anti-patterns/prompt-injection-sink.md) (Anti-Patterns)
@@ -4634,6 +4643,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
 - [Zero Trust](../patterns/15-security/zero-trust.md) (Security)
+- [Zipper](../patterns/16-functional/zipper.md) (Functional Programming)
 
 #### Changes Shape in TypeScript
 
