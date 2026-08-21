@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -764,6 +765,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 These patterns contain runnable code examples written in C++:
 
 - [Bridge](../patterns/01-gof/bridge.md) (Design Patterns (GoF))
+- [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
@@ -2640,6 +2642,7 @@ These patterns contain runnable code examples written in Python:
 - [Domain Storytelling](../patterns/11-domain-driven-design/domain-storytelling.md) (Domain-Driven Design)
 - [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) (Microservices)
 - [Domain-based](../patterns/04-principles-and-laws/domain-based.md) (Principles and Laws)
+- [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
@@ -3952,6 +3955,7 @@ These patterns contain runnable code examples written in Swift:
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
 - [Domain Service](../patterns/11-domain-driven-design/domain-service.md) (Domain-Driven Design)
+- [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
 - [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
