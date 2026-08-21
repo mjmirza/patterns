@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -766,6 +767,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 
 These patterns contain runnable code examples written in C++:
 
+- [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [Bridge](../patterns/01-gof/bridge.md) (Design Patterns (GoF))
 - [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
@@ -2515,6 +2517,7 @@ These patterns contain runnable code examples written in Python:
 - [Blackboard Architecture](../patterns/05-architectural/blackboard-architecture.md) (Architectural Patterns)
 - [Bloom Filter](../patterns/12-data-storage/bloom-filter.md) (Data and Storage)
 - [Boat Anchor](../patterns/18-anti-patterns/boat-anchor.md) (Anti-Patterns)
+- [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [Bounded Context](../patterns/11-domain-driven-design/bounded-context.md) (Domain-Driven Design)
 - [Bridge](../patterns/01-gof/bridge.md) (Design Patterns (GoF))
 - [Broker](../patterns/05-architectural/broker-architecture.md) (Architectural Patterns)
@@ -3948,6 +3951,7 @@ These patterns contain runnable code examples written in Swift:
 - [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) (Enterprise Application Architecture)
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
 - [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) (Frontend and UI)
+- [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)

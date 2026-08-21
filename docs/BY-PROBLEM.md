@@ -625,6 +625,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A support engineer or auditor asks for the history of one | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
 | A supposedly data-last API needs placeholders in most examples. | [Currying](../patterns/16-functional/currying.md) | Functional Programming |
 | A supposedly tail-recursive function still grows the stack after | [Tail Call Optimization](../patterns/16-functional/tail-call-optimization.md) | Functional Programming |
+| A swap operation interrupted by a power loss at a point the swap | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | A switch on a platform, driver, or tenant value repeated in more than three | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | A synchronous caller times out waiting for a response that | [Channel Adapter](../patterns/07-integration/channel-adapter.md) | Enterprise Integration |
 | A Tab or TabPanel rendered without a wrapping Tabs parent | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
@@ -832,6 +833,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | An operator sends a stop command to a runaway component during an | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | An organisation chart where a department contains employees and sub | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | An ORM's lazy-loading proxy throws a lazy-initialization | [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) | Anti-Patterns |
+| An update process that writes a new image without properly signing | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | An upstream caller times out at exactly its own deadline while the | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | and add and remove methods that the class does not need. The symptom is a | [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) | Refactoring Techniques |
 | and prints the full configuration object. The symptom is an incident where the | [Secrets Management](../patterns/15-security/secrets-management.md) | Security |
@@ -948,6 +950,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Boilerplate call sequences copied across every call site. Symptom. | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
 | Boolean renamed but not removed. Symptom. The diff changes done to | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | Boot-time dependency on an external artifact store. Symptom. A rolling | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
+| bootloader. Symptom. A legitimate firmware update is rejected by the | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | Both axes are expected to keep growing. A pattern that converts N times M into | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | Boundary leakage. Symptom. HTTP status codes, translated user messages, or | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
 | Boundary theatre. Symptom. A beautifully filled worksheet for a context | [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) | Domain-Driven Design |
@@ -1598,6 +1601,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Fingerprint fragmentation. Symptom. What is obviously one bug, a | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
 | Fingerprint over merging. Symptom. One Issue's occurrence graph looks | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
 | Fire-and-forget task swallowing an exception. Symptom, an error that | [Async Await](../patterns/09-concurrency/async-await.md) | Concurrency and Parallelism |
+| firmware update leaves the device permanently unbootable. Symptom. | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | first is supposed to receive from. Symptom, the program hangs completely | [Communicating Sequential Processes](../patterns/09-concurrency/communicating-sequential-processes.md) | Concurrency and Parallelism |
 | First validation error only. Symptom. A form with five invalid fields returns | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
 | Fix, in the order to try them. | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
@@ -2783,6 +2787,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Shared, finite consumption capacity. If capacity were infinite, | [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) | Cloud and Distributed |
 | Shared-device surprise. Symptom. A family member or coworker signs in as the | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | Shipping a command palette as the primary, or only, way to reach an | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
+| Shipping a device with no automatic rollback, so a genuinely bad | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | Shipping a duplicated copy of a large shared framework in every | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | Shipping a headless component whose exposed interface makes it easy | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | Shipping release builds with debug bypasses. Debug CA behavior must be tied | [Certificate Pinning](../patterns/15-security/certificate-pinning.md) | Security |
@@ -5019,6 +5024,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Undo that leaves the model wrong. Symptom. A user performs three edits, | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
 | Undo, so the last action can be reversed. | [Memento](../patterns/01-gof/memento.md) | Design Patterns (GoF) |
 | Uneven cell sizing. Symptom. One cell's dashboards are consistently | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
+| unhandled edge case in the recovery logic itself. Symptom. A device | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | Unhandled error event terminating the process. Symptom. A Node service exits | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
 | Unhandled fault crossing the boundary. Symptom, a subagent that throws an | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
 | Unhandled rejection silently dropped. Symptom. an asynchronous failure | [Future Promise](../patterns/09-concurrency/future-promise.md) | Concurrency and Parallelism |
@@ -15879,6 +15885,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The empty intermediate class trap. Symptom. A reader tracing a bug
 
 ### Embedded and Hardware-Software
+
+#### [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md)
+
+**Core Problem:** An embedded device shipped to the field needs a way to receive new firmware after it has left the factory, and that update must never leave the device permanently unable to boot, even if the new firmware is genuinely broken or the update itself is interrupted, such as by a power loss partway through writing the new image. A Bootloader Pattern solves this by keeping the update logic in a small, separate piece of code that runs first, verifies the firmware image before handing off control, and can revert to the previous working image if the new one fails. MCUboot's own documentation states the resulting benefit directly, that "test swaps are supported to provide a rollback mechanism to prevent devices from becoming 'bricked' by bad firmware."
+
+**Failure Mode Symptoms:**
+
+- Shipping a device with no automatic rollback, so a genuinely bad
+- firmware update leaves the device permanently unbootable. Symptom.
+- An update process that writes a new image without properly signing
+- bootloader. Symptom. A legitimate firmware update is rejected by the
+- A swap operation interrupted by a power loss at a point the swap
+- unhandled edge case in the recovery logic itself. Symptom. A device
 
 #### [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md)
 

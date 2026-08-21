@@ -1033,6 +1033,8 @@
  "https://docs.libuv.org/en/v1.x/threadpool.html": 200,
  "https://docs.litellm.ai/docs/proxy/users": 200,
  "https://docs.litellm.ai/docs/routing": 200,
+ "https://docs.mcuboot.com/design.html": 200,
+ "https://docs.mcuboot.com/readme-zephyr.html": 200,
  "https://docs.mulesoft.com/mule-runtime/latest/scatter-gather-concept": 200,
  "https://docs.mulesoft.com/object-store/": 200,
  "https://docs.nats.io/nats-concepts/overview": 200,
