@@ -3745,13 +3745,6 @@
     "focus": ""
   },
   {
-    "name": "Hydration Island",
-    "slug": "hydration-island",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/hydration-island.md",
-    "focus": ""
-  },
-  {
     "name": "Command Palette UI",
     "slug": "command-palette-ui",
     "category": "frontend and UI",

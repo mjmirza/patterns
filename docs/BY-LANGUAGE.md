@@ -516,6 +516,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2716,6 +2717,7 @@ These patterns contain runnable code examples written in Python:
 - [Humble Object](../patterns/14-testing/humble-object.md) (Testing)
 - [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) (AI and Agentic)
 - [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) (AI and Agentic)
+- [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) (Frontend and UI)
 - [HyperLogLog](../patterns/12-data-storage/hyperloglog.md) (Data and Storage)
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Idempotency Key](../patterns/15-security/idempotency-key.md) (Security)
@@ -3937,6 +3939,7 @@ These patterns contain runnable code examples written in Swift:
 - [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
 - [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
+- [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) (Frontend and UI)
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Immutable Object](../patterns/09-concurrency/immutable-object.md) (Concurrency and Parallelism)
 - [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) (Frontend and UI)
@@ -4354,6 +4357,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Humble Object](../patterns/14-testing/humble-object.md) (Testing)
 - [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) (AI and Agentic)
 - [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) (AI and Agentic)
+- [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) (Frontend and UI)
 - [HyperLogLog](../patterns/12-data-storage/hyperloglog.md) (Data and Storage)
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Idempotency Key](../patterns/15-security/idempotency-key.md) (Security)

@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-30 entries, 109,389 words. Every entry carries all 18
+31 entries, 112,953 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -70,6 +70,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Code Splitting](code-splitting.md) | canonical | 3,663 | A JavaScript application that bundles its entire codebase into a single file forces every visitor to download, parse, and evaluate code for every feature the application has, even ... |
+| [Hydration Island](hydration-island.md) | established | 3,564 | Even once a page has been structured into islands, a real choice remains for each individual island, exactly when its JavaScript should load and hydrate. |
 | [Infinite Scroll](infinite-scroll.md) | established | 3,738 | A traditional, paginated list requires the user to explicitly click a next-page control and wait for a full page reload, or a partial page update, to see more content, an ... |
 | [PRPL Pattern](prpl-pattern.md) | established | 3,773 | A web application's first visit on a slow or metered mobile network faces a real tension. |
 | [Resource Hints](resource-hints.md) | canonical | 3,923 | A browser discovers most of a page's resources by parsing its HTML and CSS as it goes, which means a resource referenced deep in a stylesheet, or fetched only after a script runs ... |

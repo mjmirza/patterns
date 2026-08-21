@@ -1,6 +1,6 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 737,
+  "published_total": 738,
   "target_total": 848,
   "families_total": 29,
   "families_complete": 17,
@@ -170,12 +170,12 @@
       "family": "13-frontend-ui",
       "name": "Frontend and UI",
       "origin": "Framework documentation",
-      "published": 30,
-      "planned": 4,
+      "published": 31,
+      "planned": 3,
       "target": 34,
-      "percent": 88.2,
+      "percent": 91.2,
       "maturity": {
-        "established": 13,
+        "established": 14,
         "canonical": 15,
         "deprecated": 2
       }

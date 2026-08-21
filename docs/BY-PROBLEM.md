@@ -851,6 +851,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Applying a JavaScript enhancement without checking whether the | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Applying a reducer to a component with only a small number of | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | Applying BASE to an operation that requires a hard invariant. Symptom, an | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
+| Applying client:idle or client:visible uniformly to every | [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) | Frontend and UI |
 | Applying Infinite Scroll to content the user genuinely needs to | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | Applying it to a pair that never needed it. Symptom. Two teams that | [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) | Domain-Driven Design |
 | Applying Optimistic UI to an action with a real chance of | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
@@ -1260,6 +1261,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Default deny with no operator signal. Symptom. Customers see generic errors | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Defect bankruptcy. Symptom. The bug tracker has hundreds of stale defects, | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Deferring a chunk the user needs immediately after the initial | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
+| Deferring an above-the-fold, immediately needed interactive | [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) | Frontend and UI |
 | Defining transitions implicitly through scattered conditional | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Degenerate dimension modeled as a full dimension table. Symptom. A | [Star Schema](../patterns/12-data-storage/star-schema.md) | Data and Storage |
 | Degrading one class of work is preferable to degrading all of them. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -1399,6 +1401,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | efficient, off-main-thread mechanism. Symptom. Scrolling through | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | eighteen months, three years, five years after the migration | [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md) | Cloud and Distributed |
 | Election storms under repeated partial failure. Symptom. CPU and | [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) | Data and Storage |
+| element with client:idle or client:visible. Symptom. A user who | [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) | Frontend and UI |
 | Email used as the account key. Symptom. A user loses access after changing | [OpenID Connect](../patterns/15-security/openid-connect.md) | Security |
 | Emergency access used during an incident remains active for | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Emergency rotation disables the attacker and the production app. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
@@ -4386,6 +4389,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The over-eager threshold. Symptom. Users report receiving answers that are | [Semantic Caching](../patterns/17-ai-agentic/semantic-caching.md) | AI and Agentic |
 | The overly narrow range, or the overly wide one. Symptom, narrow case. A | [Release Reuse Equivalence](../patterns/04-principles-and-laws/release-reuse-equivalence.md) | Principles and Laws |
 | The oversized dependency bundle. Symptom. Cold start duration for a | [Serverless Architecture](../patterns/05-architectural/serverless-architecture.md) | Architectural Patterns |
+| The page's overall interactivity feels inconsistent and | [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) | Frontend and UI |
 | The pairing is decided at composition time, by the code that wires the object | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | The partition key is wrong. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | The partitioned split-brain commit. Symptom. Two disjoint sets of | [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) | Data and Storage |
@@ -4985,6 +4989,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Updating through a composed optic changes no data and does not | [Optics](../patterns/16-functional/optics.md) | Functional Programming |
 | Updating through a lens sometimes does nothing because the path | [Lens](../patterns/16-functional/lens.md) | Functional Programming |
 | URI mismatch behind a proxy. Symptom. Valid clients receive intermittent | [Token Binding and DPoP](../patterns/15-security/token-binding-and-dpop.md) | Security |
+| useful content on the server. Symptom. The user sees nothing at all | [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) | Frontend and UI |
 | User enumeration. Symptom. The "check your email" screen appears faster or | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | User verification policy drift. Symptom. A privileged action is approved by | [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) | Security |
 | User-controlled attribute grant. Symptom. A user gains access after editing | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
@@ -4999,6 +5004,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Using a saga where a single aggregate would do. Symptom. A team builds | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
 | Using a zipper as a substitute for an index. Symptom. A hot path that | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | Using an event where a command was needed. Symptom. A "PaymentRequested" | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
+| Using client:only for a component that could usefully render | [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) | Frontend and UI |
 | Using debounce for a scenario the user experiences as ongoing, | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Using Routing Slip where Dynamic Router was needed. Symptom. Step | [Routing Slip](../patterns/07-integration/routing-slip.md) | Enterprise Integration |
 | Using the composer as if it were a transaction. Symptom. A customer | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
@@ -12345,6 +12351,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - An incomplete dependency array capturing a stale value. Symptom.
 - Reaching for useEffect to synchronize derived state that could be
 - computed directly during render. Symptom. A component renders
+
+#### [Hydration Island](../patterns/13-frontend-ui/hydration-island.md)
+
+**Core Problem:** Even once a page has been structured into islands, a real choice remains for each individual island, exactly when its JavaScript should load and hydrate. An island positioned prominently at the top of the page genuinely needs to become interactive as soon as possible, while an island far down the page, one the user may never scroll to in a given session, gains nothing from hydrating immediately and only costs bandwidth and main-thread time doing so. A single, uniform hydration timing for every island wastes resources on islands that do not need to be interactive yet, or ever, in a given visit. Hydration Island directives solve this by letting a developer declare, per island, the specific condition, immediately, when the browser is idle, when the island scrolls into view, when a media query matches, or never on the server at all, under which that specific island's JavaScript should actually load and hydrate.
+
+**Failure Mode Symptoms:**
+
+- Deferring an above-the-fold, immediately needed interactive
+- element with client:idle or client:visible. Symptom. A user who
+- Applying client:idle or client:visible uniformly to every
+- The page's overall interactivity feels inconsistent and
+- Using client:only for a component that could usefully render
+- useful content on the server. Symptom. The user sees nothing at all
 
 #### [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md)
 
