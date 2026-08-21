@@ -5334,13 +5334,6 @@
     "focus": ""
   },
   {
-    "name": "State Machine (Embedded)",
-    "slug": "state-machine",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/state-machine.md",
-    "focus": ""
-  },
-  {
     "name": "Double Buffering",
     "slug": "double-buffering",
     "category": "embedded and hardware-software",

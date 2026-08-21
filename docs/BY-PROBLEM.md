@@ -974,6 +974,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Building a molecule or an organism that secretly depends on a | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Building a skeleton whose dimensions do not match the real | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
+| Building a state machine with no real upfront design, treating the | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Building the enhanced, JavaScript-dependent experience first, and | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Building the palette overlay without correct, reliable focus | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
 | Building two islands that silently depend on shared state with no | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
@@ -1696,6 +1697,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Hidden synchronous resume. Symptom. A caller observes state changed before | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
 | Hiding a Feature Envy problem instead of fixing it. Symptom. A method | [Law of Demeter](../patterns/04-principles-and-laws/law-of-demeter.md) | Principles and Laws |
 | Hiding the wrong delegate. The delegate is a different architectural | [Hide Delegate](../patterns/03-refactoring/hide-delegate.md) | Refactoring Techniques |
+| hierarchical variant. Symptom. Many states end up duplicating nearly | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | hierarchy. The symptom is a subclass override that is no longer called. | [Move Function](../patterns/03-refactoring/move-function.md) | Refactoring Techniques |
 | High CPU and I/O on brokers correlated with a specific compacted topic. | [Log Compaction](../patterns/12-data-storage/log-compaction.md) | Data and Storage |
 | Hinted-handoff storage grows without bound and eventually fills | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
@@ -1873,12 +1875,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Leaky Stable Point. Symptom. Client code contains a cast back to a | [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) | Principles and Laws |
 | leave empty. Symptom. A component renders visibly broken or empty | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
 | leaves the page. The observable symptom is a policy that keeps getting longer | [Content Security Policy](../patterns/15-security/content-security-policy.md) | Security |
+| Leaving an event with no defined transition in a given state | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Leaving no loading state for the route transition a lazily loaded | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | leaving the rest of the scattering in place, since patching only the symptom | [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) | Code Smells |
 | Legacy integration. A new service is being built to eventually replace a | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | legitimate customer messages are refused or flagged at a rate | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |
 | Legitimate outputs are refused or redacted at a rate high | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
 | Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
+| Letting the number of states grow without periodically reassessing | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | level, and the consumer's build breaks the same day. The observable symptom | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
 | level. The symptom is that services are physically decoupled, separate | [Low Coupling](../patterns/04-principles-and-laws/low-coupling.md) | Principles and Laws |
 | lifetime. This is the symptom. The cause is speculative indexing, a specific | [Premature Optimization](../patterns/18-anti-patterns/premature-optimization.md) | Anti-Patterns |
@@ -2973,6 +2977,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Swallowed exceptions that never reach any capture point. Symptom. A | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
 | Swallowed sibling errors. Symptom. Two children fail, but only one error | [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) | Concurrency and Parallelism |
 | Sweeping without ever coming back. Symptom. A quarantine layer, an | [Big Ball of Mud](../patterns/18-anti-patterns/big-ball-of-mud.md) | Anti-Patterns |
+| switch-statement structure alone as the pattern. Symptom. The | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Symptom (judgement, drawn from operating this pattern). A sidecar that | [Sidecar Proxy](../patterns/10-microservices/sidecar-proxy.md) | Microservices |
 | Symptom, a deploy of the application container appears healthy in the | [Ambassador](../patterns/08-cloud-distributed/ambassador.md) | Cloud and Distributed |
 | Symptom, a penetration test finds that swapping a signed cookie captured | [Client Session State](../patterns/06-enterprise-application-architecture/client-session-state.md) | Enterprise Application Architecture |
@@ -4996,6 +5001,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Unhandled error event terminating the process. Symptom. A Node service exits | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
 | Unhandled fault crossing the boundary. Symptom, a subagent that throws an | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
 | Unhandled rejection silently dropped. Symptom. an asynchronous failure | [Future Promise](../patterns/09-concurrency/future-promise.md) | Concurrency and Parallelism |
+| unhandled, with no deliberate policy. Symptom. The system receives an | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Uniform application without gating. Symptom. Retrieval latency spikes | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |
 | Uniform partition sizes on skewed traffic. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Unit tests assert a final state with many incidental fields. | [State Monad](../patterns/16-functional/state-monad.md) | Functional Programming |
@@ -15875,6 +15881,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - context instead of deferring it. Symptom. Other, unrelated
 - Building a hand-off mechanism between the interrupt context and the
 - deferred task with no genuine data-race protection. Symptom. The
+
+#### [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md)
+
+**Core Problem:** Event-driven embedded code that tracks context using an accumulation of variables and flags, without a formal state model, degrades as the number of events and the history that matters grows. state-machine.com names this failure mode directly. "The traditional techniques handle the context manually by storing the history of past events in a multitude of variables and flags. But this results in code riddled with a disproportionate amount of convoluted conditional logic that programmers call 'spaghetti' code." A State Machine solves this by making the relevant history explicit, as a small, named set of states, so that "event handling" becomes "explicitly dependent on both the nature of the event and on the context, state, of the system," rather than an implicit tangle the programmer must reconstruct from scattered flags every time a new event handler is added.
+
+**Failure Mode Symptoms:**
+
+- Building a state machine with no real upfront design, treating the
+- switch-statement structure alone as the pattern. Symptom. The
+- Leaving an event with no defined transition in a given state
+- unhandled, with no deliberate policy. Symptom. The system receives an
+- Letting the number of states grow without periodically reassessing
+- hierarchical variant. Symptom. Many states end up duplicating nearly
 
 #### [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md)
 

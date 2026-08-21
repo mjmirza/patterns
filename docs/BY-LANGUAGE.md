@@ -751,6 +751,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 
 ## Language Reference Guides
@@ -765,6 +766,7 @@ These patterns contain runnable code examples written in C++:
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
+- [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
 
 #### Changes Shape in C++
@@ -3092,6 +3094,7 @@ These patterns contain runnable code examples written in Python:
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [Star Schema](../patterns/12-data-storage/star-schema.md) (Data and Storage)
+- [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
@@ -3995,6 +3998,7 @@ These patterns contain runnable code examples written in Swift:
 - [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
 - [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) (Frontend and UI)
 - [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) (Frontend and UI)
+- [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
