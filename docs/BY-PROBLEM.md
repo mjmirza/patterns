@@ -851,6 +851,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Associativity violation in parallel reduction. Symptom. Sequential tests | [Foldable](../patterns/16-functional/foldable.md) | Functional Programming |
 | Assumed global ordering. Symptom. A downstream projection ends up in a | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Assuming a session survives across HTTP requests without checking. | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
+| Assuming every handler resumes exactly once. Symptom. Code written | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Assuming stealing preserves ordering. Symptom. intermittent, load-dependent bugs where | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
 | Async and continuation-based frameworks silently losing the value across a | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
 | Async facade that still blocks. Symptom. Callers await a function that | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
@@ -1541,6 +1542,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | functions with no named steps. The symptom is a function that is a wall | [Inline Function](../patterns/03-refactoring/inline-function.md) | Refactoring Techniques |
 | Future chain hides sequential work that should be parallel. Symptom. code | [Future Promise](../patterns/09-concurrency/future-promise.md) | Concurrency and Parallelism |
 | Generator refuses to speculate. Symptom. The generator refuses to | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |
+| get the pattern in a language without built-in support. Symptom. A | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Given block silently performing the action under test. Symptom. A test | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
 | Global application state modelled as one screen's local MVI State. | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
 | Global state reached through the pattern breaks unit test isolation. | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
@@ -1805,6 +1807,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Losing the causal chain across the queue. Symptom. An operator can see that a | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
 | Losing the original stack trace across an await boundary in older | [Async Await](../patterns/09-concurrency/async-await.md) | Concurrency and Parallelism |
 | Losing the tail of the walk. Symptom. A caller calls root on a | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
+| Losing track of which handler is installed at a given perform | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Loss of type-based authorization. Symptom. A guard that formerly rejected | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
 | Lost adjacency after extraction. Symptom. A reader finds one pass near the | [Split Loop](../patterns/03-refactoring/split-loop.md) | Refactoring Techniques |
 | Lost auditability. Symptom. A compliance check asks which operations a | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
@@ -2304,6 +2307,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Raw HTML escape hatch drift. Symptom. A search for innerHTML, | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
 | Re-entrancy corruption. Symptom. Nested processing produces interleaved or | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Reaching for a debugger to read straightforward code. Symptom. | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
+| Reaching for a hand-rolled continuation-passing encoding purely to | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Reaching for Profunctor when only one direction is needed. Symptom. | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Reaching for the Monad instance and expecting accumulation anyway. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Reaching for unsafePerformIO to avoid restructuring a function | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
@@ -2664,6 +2668,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Singleton factory holding mutable state. A shared factory instance caches a | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Singleton the pattern used where singleton lifetime was wanted. Symptom. A | [Singleton](../patterns/01-gof/singleton.md) | Design Patterns (GoF) |
 | site rather than a confusing downstream symptom. Where the framework's default | [Dummy](../patterns/14-testing/dummy.md) | Testing |
+| site. Symptom. A perform call's behaviour is genuinely hard to | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | sits in memory holding its stack forever. Symptom, an apparently idle | [Communicating Sequential Processes](../patterns/09-concurrency/communicating-sequential-processes.md) | Concurrency and Parallelism |
 | Sized for the average case, not the tail. Symptom. The system runs fine | [Semaphore](../patterns/09-concurrency/semaphore.md) | Concurrency and Parallelism |
 | Sized from average load rather than from Little's Law. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -13082,6 +13087,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Teams avoid the ADT and pass raw strings through side channels.
 - Pattern matches panic on recursive input or overflow the stack.
 - Metrics cannot distinguish business failures from technical
+
+#### [Algebraic Effects](../patterns/16-functional/algebraic-effects.md)
+
+**Core Problem:** A program built from the IO Monad or a stack of monad transformers gets real benefits, effects are visible in the type, and composition follows well-understood laws. But combining several effects, error handling, state, non-determinism, async, into one computation usually means nesting monad transformers, and each new effect added to the stack means touching every layer already there. The resulting type signatures grow long, and adding one new effect can mean rewriting the lifting code through every existing layer.
+
+**Failure Mode Symptoms:**
+
+- Assuming every handler resumes exactly once. Symptom. Code written
+- Reaching for a hand-rolled continuation-passing encoding purely to
+- get the pattern in a language without built-in support. Symptom. A
+- Losing track of which handler is installed at a given perform
+- site. Symptom. A perform call's behaviour is genuinely hard to
 
 #### [Applicative](../patterns/16-functional/applicative.md)
 

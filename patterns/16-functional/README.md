@@ -2,7 +2,7 @@
 
 Origin. Category theory in practice
 
-38 entries, 236,627 words. Every entry carries all 18
+39 entries, 240,732 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Composition
@@ -24,6 +24,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Algebraic Effects](algebraic-effects.md) | emerging | 4,105 | A program built from the IO Monad or a stack of monad transformers gets real benefits, effects are visible in the type, and composition follows well-understood laws. |
 | [IO Monad](io-monad.md) | canonical | 4,053 | A purely functional language gives every function a strong guarantee. |
 
 ## Error Handling
