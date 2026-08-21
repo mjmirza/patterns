@@ -514,6 +514,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Characterization Test](../patterns/14-testing/characterization-test.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -3037,6 +3038,7 @@ These patterns contain runnable code examples written in Python:
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [Star Schema](../patterns/12-data-storage/star-schema.md) (Data and Storage)
+- [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
 - [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) (Cloud and Distributed)
@@ -3912,6 +3914,7 @@ These patterns contain runnable code examples written in Swift:
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
+- [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
@@ -4621,6 +4624,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [Star Schema](../patterns/12-data-storage/star-schema.md) (Data and Storage)
+- [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
 - [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) (Cloud and Distributed)
@@ -4884,6 +4888,7 @@ These patterns have unique implementation variants or change their design struct
 - [Split Phase](../patterns/03-refactoring/split-phase.md) (Refactoring Techniques)
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
+- [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [Strategy](../patterns/01-gof/strategy.md) (Design Patterns (GoF))
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)

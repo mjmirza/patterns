@@ -936,6 +936,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Builder as an escape hatch for a god object. A builder with thirty-five | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Builder used where a record belongs. Symptom is a code review comment | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Building a bespoke protocol and calling it domain-specific. Symptom. A | [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) | Microservices |
+| Building a machine so large and hierarchical that no single person | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Bulkhead placed on the wrong side of the buffer. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Bulkhead without a timeout. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -968,6 +969,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | caller, producing large classes with many responsibilities. The symptom | [Inline Class](../patterns/03-refactoring/inline-class.md) | Refactoring Techniques |
 | Callers should ask for a meaningful creation operation, not for storage layout. | [Replace Constructor with Factory Function](../patterns/03-refactoring/replace-constructor-with-factory-function.md) | Refactoring Techniques |
 | Calling a hook conditionally or inside a loop. Symptom. A | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |
+| can hold its full behavior in their head. Symptom. Understanding a | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | can observe. The symptom is a transform that passes all tests but produces | [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) | Refactoring Techniques |
 | Capacity protection. The service has a known maximum sustainable | [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) | Cloud and Distributed |
 | Captured environment leak. Symptom. Heap snapshots show request objects, | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
@@ -1007,6 +1009,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Chatty synchronous calls masquerading as SSOT. Symptom. A service makes a | [Single Source of Truth](../patterns/04-principles-and-laws/single-source-of-truth.md) | Principles and Laws |
 | check. Symptom. the full test suite is green, deploys pass CI, and the | [Mock](../patterns/14-testing/mock.md) | Testing |
 | Checkbox model. Symptom. The repository contains a filled template, but no | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
+| checks instead of an explicit transition table. Symptom. The | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | checks that are not load bearing. The symptom is a function that is more | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
 | Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Choosing choreography for a process that needed a single owner. Symptom. | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
@@ -1074,6 +1077,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Competing consumers with disjoint selectors starving one another. Symptom. | [Selective Consumer](../patterns/07-integration/selective-consumer.md) | Enterprise Integration |
 | Compile-time coupling. A published C++ header names the private data | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | compile-time dependency still points the wrong way. The symptom is that a | [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) | Principles and Laws |
+| component is in. Symptom. The machine's context grows to hold | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | component receives family A while its collaborator receives family B. The symptom is | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Composed queries that overwhelm the planner. Symptom. A query built from a | [Specification](../patterns/11-domain-driven-design/specification.md) | Domain-Driven Design |
 | Composition order reversed. Symptom. A pipeline emits different values than | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
@@ -1219,6 +1223,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Deep-link bypass. Symptom. A user bookmarks, or manually types, the URL | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
 | Default deny with no operator signal. Symptom. Customers see generic errors | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Defect bankruptcy. Symptom. The bug tracker has hundreds of stale defects, | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
+| Defining transitions implicitly through scattered conditional | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Degenerate dimension modeled as a full dimension table. Symptom. A | [Star Schema](../patterns/12-data-storage/star-schema.md) | Data and Storage |
 | Degrading one class of work is preferable to degrading all of them. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Delayed exception. Symptom. A function returns a pipeline successfully, but | [Replace Loop with Pipeline](../patterns/03-refactoring/replace-loop-with-pipeline.md) | Refactoring Techniques |
@@ -1946,6 +1951,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Model drift. Symptom. The model says the service stores no personal data, | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | model. Symptom. A consumer service breaks whenever the producer changes an | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
 | Modeling a branching workflow as a pipeline anyway. Symptom. A "filter" | [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) | Architectural Patterns |
+| Modeling every piece of component state as part of the machine, | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Modifier returns a disguised query. Symptom. New code calls sendBill() in | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Modifying a matching value drops metadata from the original | [Prism](../patterns/16-functional/prism.md) | Functional Programming |
 | Monad transformer pile. Symptom. Type errors mention several transformer | [Monad](../patterns/16-functional/monad.md) | Functional Programming |
@@ -12190,6 +12196,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Mixing signal-based and component-render-based state for the same
 - value. Symptom. A value appears to update in one part of the UI but
 - Creating a new signal on every render instead of once. Symptom.
+
+#### [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md)
+
+**Core Problem:** A component with several loading, error, and success conditions is commonly modeled with several independent boolean flags, such as isLoading, isError, and hasData, tracked as separate pieces of state. As the number of flags grows, so does the number of combinations the code technically allows, most of which are impossible in practice, isLoading true at the same time as hasData true, for example, and none of those impossible combinations are prevented by the type system or the code itself. State Machine UI solves this by replacing the pile of independent booleans with one explicit set of named states, idle, loading, success, error, and a defined set of events that transition between them, so an impossible combination cannot be represented at all, since the component can only ever be in exactly one named state at a time.
+
+**Failure Mode Symptoms:**
+
+- Modeling every piece of component state as part of the machine,
+- component is in. Symptom. The machine's context grows to hold
+- Defining transitions implicitly through scattered conditional
+- checks instead of an explicit transition table. Symptom. The
+- Building a machine so large and hierarchical that no single person
+- can hold its full behavior in their head. Symptom. Understanding a
 
 ### Testing
 
