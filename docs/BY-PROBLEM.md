@@ -448,6 +448,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A polymorphic "list all players" screen gets measurably slower | [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md) | Enterprise Application Architecture |
 | A post-incident review discovers that any service with network | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | A predicate exists, or can be extracted, that answers the condition without | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
+| A presentational component quietly gaining its own data-fetching | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | A prior architecture decision, often unstated, treats "the domain objects" | [Anemic Domain Model](../patterns/18-anti-patterns/anemic-domain-model.md) | Anti-Patterns |
 | A privacy review cannot tell whether redaction happens before | [Function Composition](../patterns/16-functional/function-composition.md) | Functional Programming |
 | A private database that three other services actually query | [Database per Service](../patterns/10-microservices/database-per-service.md) | Microservices |
@@ -945,6 +946,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Business rules ("only active customers", "only orders placed within | [Query Object](../patterns/06-enterprise-application-architecture/query-object.md) | Enterprise Application Architecture |
 | Business rules disagree between parse-time validation and | [Split Phase](../patterns/03-refactoring/split-phase.md) | Refactoring Techniques |
 | but the caller forgets to use the return value. The symptom is a silent | [Extract Function](../patterns/03-refactoring/extract-function.md) | Refactoring Techniques |
+| by default, in a codebase with Hooks available. Symptom. The | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Bypass drift. Symptom. The facade exists, and half the codebase does not use | [Facade](../patterns/01-gof/facade.md) | Design Patterns (GoF) |
 | Cache eviction turns duplicates into new commands. Symptom. Duplicate side | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |
 | Cache hit ratio for genuinely hot keys degrades over time, and cache | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
@@ -1566,6 +1568,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Half-open thundering herd. | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | Half-saved object graphs. Symptom. An Order with three LineItem | [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) | Enterprise Application Architecture |
 | Hallucinated or absent tool. Symptom. The model's response names a tool | [Function Calling](../patterns/17-ai-agentic/function-calling.md) | AI and Agentic |
+| halves. Symptom. The container passes a long, growing list of props | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Hand-written cursor state that drifts from the container. Symptom. A | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
 | Handler with a side effect that runs twice. Symptom. Duplicate audit rows or | [Chain of Responsibility](../patterns/01-gof/chain-of-responsibility.md) | Design Patterns (GoF) |
 | Handoff used where delegation was needed. The symptom is that work that | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |
@@ -1796,6 +1799,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Log line changes data. Symptom. Adding a log, metric label, template | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Logger replacement mistake. Symptom. Production dashboards show no events | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
 | logic. Symptom. A change to one product team's composed endpoint requires a | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
+| logic. Symptom. Over time, a presentational component that started | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Logout deletes only the browser cookie. Symptom. A copied cookie works from | [Session Management](../patterns/15-security/session-management.md) | Security |
 | Logs and traces from inside the dependency call carry the wrong or a | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Logs contain Authorization: Bearer values or URL query strings | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
@@ -2270,6 +2274,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Prompt injection through observation content. Symptom, the agent's | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |
 | Prompt injection turning into code injection. Symptom, the agent executes | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
 | Proof format does not encode left-right sidedness. Symptom. A | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
+| Prop-drilling an unmanageable number of fields between the two | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Protected-field trap. Symptom. The refactoring stalls because the child read | [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) | Refactoring Techniques |
 | Prototype used as a Singleton bypass. A registry exemplar is handed out | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
 | Provider verification is flaky, sometimes passing and sometimes | [Consumer-Driven Contract Test](../patterns/10-microservices/consumer-driven-contract-test.md) | Microservices |
@@ -2710,6 +2715,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Splitting a package produces a burst of new packages, each with | [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) | Principles and Laws |
 | Splitting a parameterized function. The parameter is not a flag but | [Remove Flag Argument](../patterns/03-refactoring/remove-flag-argument.md) | Refactoring Techniques |
 | Splitting along data rather than along change. Symptom. Two new classes | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
+| Splitting every component into container and presentational halves | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Splitting far below the profitable threshold. Symptom. The parallel | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
 | Spring AOP self-invocation silently skips the proxy. Symptom. A method | [Proxy](../patterns/01-gof/proxy.md) | Design Patterns (GoF) |
 | Spurious wakeup treated as a real signal. Symptom, a consumer processes a | [Monitor Object](../patterns/09-concurrency/monitor-object.md) | Concurrency and Parallelism |
@@ -12031,6 +12037,21 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Batched writer loses the per-write acknowledgement boundary. Symptom. A
 - Applying write-through to a high-cardinality, rarely-read write stream.
 - Cache hit ratio for genuinely hot keys degrades over time, and cache
+
+### Frontend and UI
+
+#### [Container Presentational](../patterns/13-frontend-ui/container-presentational.md)
+
+**Core Problem:** A component that both fetches data, manages loading and error state, and renders the resulting markup mixes two genuinely different concerns in one place. the logic that decides WHAT to show, and the markup that decides HOW to show it. Mixing them makes the component harder to reuse, since the rendering cannot be reused without also pulling in the specific data-fetching logic it happens to be bundled with, and harder to test, since testing the rendering requires setting up the same state management the logic needs.
+
+**Failure Mode Symptoms:**
+
+- Splitting every component into container and presentational halves
+- by default, in a codebase with Hooks available. Symptom. The
+- A presentational component quietly gaining its own data-fetching
+- logic. Symptom. Over time, a presentational component that started
+- Prop-drilling an unmanageable number of fields between the two
+- halves. Symptom. The container passes a long, growing list of props
 
 ### Testing
 
