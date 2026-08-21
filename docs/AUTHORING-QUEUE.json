@@ -4459,27 +4459,6 @@
     "focus": ""
   },
   {
-    "name": "Kleisli Composition",
-    "slug": "kleisli-composition",
-    "category": "functional programming",
-    "path": "patterns/16-functional/kleisli-composition.md",
-    "focus": ""
-  },
-  {
-    "name": "Zipper",
-    "slug": "zipper",
-    "category": "functional programming",
-    "path": "patterns/16-functional/zipper.md",
-    "focus": ""
-  },
-  {
-    "name": "Profunctor",
-    "slug": "profunctor",
-    "category": "functional programming",
-    "path": "patterns/16-functional/profunctor.md",
-    "focus": ""
-  },
-  {
     "name": "Validation Applicative",
     "slug": "validation-applicative",
     "category": "functional programming",
@@ -4778,13 +4757,6 @@
     "slug": "multi-site-active-active",
     "category": "SRE and operations",
     "path": "patterns/21-sre-operations/multi-site-active-active.md",
-    "focus": ""
-  },
-  {
-    "name": "Cell-Based Architecture",
-    "slug": "cell-based-architecture",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/cell-based-architecture.md",
     "focus": ""
   },
   {

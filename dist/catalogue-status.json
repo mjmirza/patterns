@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 701,
-  "target_total": 850,
+  "published_total": 703,
+  "target_total": 848,
   "families_total": 29,
   "families_complete": 15,
   "stale_entries": 0,
-  "references_checked": 4033,
+  "references_checked": 4043,
   "rows": [
     {
       "family": "01-gof",
@@ -206,12 +206,12 @@
       "family": "16-functional",
       "name": "Functional Programming",
       "origin": "Category theory in practice",
-      "published": 34,
-      "planned": 6,
-      "target": 40,
-      "percent": 85.0,
+      "published": 36,
+      "planned": 3,
+      "target": 39,
+      "percent": 92.3,
       "maturity": {
-        "canonical": 18,
+        "canonical": 20,
         "established": 16
       }
     },
@@ -269,8 +269,8 @@
       "name": "SRE and Operations",
       "origin": "Google SRE, AWS Well-Architected",
       "published": 0,
-      "planned": 12,
-      "target": 12,
+      "planned": 11,
+      "target": 11,
       "percent": 0.0,
       "maturity": {}
     },
