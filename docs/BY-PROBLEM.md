@@ -2016,6 +2016,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No timeout budget, so one slow provider stalls the whole response. | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | no visible symptom until a customer complains weeks later. Fix. Treat every | [Choreography](../patterns/08-cloud-distributed/choreography.md) | Cloud and Distributed |
 | No widget can be reused. The country dropdown is now a country dropdown | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
+| no wrapper component. Symptom. A codebase that has otherwise adopted | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |
 | Noisy audit class. Symptom. Review tools show millions of low-risk reads | [Audit Log](../patterns/15-security/audit-log.md) | Security |
 | non-applicability list. Symptom, a new special case has to be bolted onto | [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) | Code Smells |
 | Non-deterministic routing under retry. Symptom. The same message, resent | [Content-Based Router](../patterns/07-integration/content-based-router.md) | Enterprise Integration |
@@ -2280,6 +2281,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Prompt injection through observation content. Symptom, the agent's | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |
 | Prompt injection turning into code injection. Symptom, the agent executes | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
 | Proof format does not encode left-right sidedness. Symptom. A | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
+| Prop name collisions between stacked HOCs. Symptom. A component | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |
 | Prop-drilling an unmanageable number of fields between the two | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Protected-field trap. Symptom. The refactoring stalls because the child read | [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) | Refactoring Techniques |
 | Prototype used as a Singleton bypass. A registry exemplar is handed out | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
@@ -2324,6 +2326,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Re-entrancy corruption. Symptom. Nested processing produces interleaved or | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Reaching for a debugger to read straightforward code. Symptom. | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | Reaching for a hand-rolled continuation-passing encoding purely to | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
+| Reaching for a HOC where a custom hook would serve identically, with | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |
 | Reaching for a render prop in a codebase where a custom hook would | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | Reaching for Profunctor when only one direction is needed. Symptom. | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Reaching for the Monad instance and expecting accumulation anyway. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
@@ -4914,6 +4917,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Wrapper flood. Symptom. A code review contains new classes named | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Wrapper order bug. Symptom. Metrics show retries as separate top-level | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
 | Wrapping component becomes a bottleneck. Symptom. Throughput degrades | [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) | Enterprise Integration |
+| Wrapping inside another component's render method. Symptom. The | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |
 | Writable replica drift. Symptom, data present on a replica is absent, or | [Primary-Replica](../patterns/05-architectural/primary-replica.md) | Architectural Patterns |
 | Write side race, the message published before the object is visible. | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
 | Writer starvation under sustained read load. Symptom. A writer's | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
@@ -12077,6 +12081,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - logic. Symptom. Over time, a presentational component that started
 - Prop-drilling an unmanageable number of fields between the two
 - halves. Symptom. The container passes a long, growing list of props
+
+#### [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md)
+
+**Core Problem:** Several components in a codebase often need the same cross-cutting behavior applied to them, subscribing to a data source, checking authentication before rendering, logging every prop change, injecting a piece of shared state. Copying that behavior into every component that needs it duplicates logic and risks each copy drifting out of sync as the behavior evolves. A Higher-Order Component solves this by wrapping a component in a function that adds the shared behavior once, producing a new component with the original component's own rendering untouched, so any component can gain the shared behavior by being passed through the same wrapping function.
+
+**Failure Mode Symptoms:**
+
+- Prop name collisions between stacked HOCs. Symptom. A component
+- Wrapping inside another component's render method. Symptom. The
+- Reaching for a HOC where a custom hook would serve identically, with
+- no wrapper component. Symptom. A codebase that has otherwise adopted
 
 #### [Render Props](../patterns/13-frontend-ui/render-props.md)
 
