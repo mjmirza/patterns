@@ -1432,6 +1432,7 @@
  "https://docs.weaviate.io/weaviate/search/hybrid": 200,
  "https://docs.zendframework.com/zend-db/table-gateway/": 200,
  "https://docs.zephyrproject.org/latest/doxygen/html/group__watchdog__interface.html": 200,
+ "https://docs.zephyrproject.org/latest/hardware/peripherals/uart.html": 200,
  "https://docs.zephyrproject.org/latest/kernel/data_structures/ring_buffers.html": 200,
  "https://docs.zephyrproject.org/latest/kernel/drivers/index.html": 200,
  "https://docs.zephyrproject.org/latest/kernel/memory_management/slabs.html": 200,

@@ -448,6 +448,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A plugin causes severe host slowdown, or exhausts host memory, | [Plugin Sandbox](../patterns/05-architectural/plugin-sandbox.md) | Architectural Patterns |
 | A plugin marked as "sandboxed" is found, sometimes years after | [Plugin Sandbox](../patterns/05-architectural/plugin-sandbox.md) | Architectural Patterns |
 | A plugin, once installed, is discovered to be reading or | [Plugin Architecture](../patterns/05-architectural/plugin-architecture.md) | Architectural Patterns |
+| A polling loop with no bounded timeout that can hang indefinitely if | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software |
 | A polymorphic "list all players" screen gets measurably slower | [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md) | Enterprise Application Architecture |
 | A post-incident review discovers that any service with network | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | A predicate exists, or can be extracted, that answers the condition without | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
@@ -2055,6 +2056,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Mitigation without verification. Symptom. A threat is marked closed because | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | Mixed failure protocol. Symptom. Callers contain checks for null, false, | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | Mixing signal-based and component-render-based state for the same | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
+| Mixing the polling API and the interrupt-driven API on the same | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software |
 | Mocking seam removed. Symptom. Tests that used to replace a command class | [Replace Command with Function](../patterns/03-refactoring/replace-command-with-function.md) | Refactoring Techniques |
 | Model drift. Symptom. The model says the service stores no personal data, | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | model. Symptom. A consumer service breaks whenever the producer changes an | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
@@ -2249,6 +2251,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | ORM SELECT cost on a very wide table. Symptom. A hierarchy that | [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) | Enterprise Application Architecture |
 | Orphaned objects, the storage cleanup failure. Symptom. The object | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
 | Orphaned reply destinations. Symptom. a growing count of empty, | [Return Address](../patterns/07-integration/return-address.md) | Enterprise Integration |
+| Other tasks in the system become unresponsive or miss their | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software |
 | other.doSomething(). A production symptom engineers report is a service | [Information Expert](../patterns/04-principles-and-laws/information-expert.md) | Principles and Laws |
 | Out-of-memory from an unbounded query. Symptom. The process hosting the | [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) | Enterprise Application Architecture |
 | Out-of-order application corrupting the read model. Symptom, a | [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) | Architectural Patterns |
@@ -2344,6 +2347,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Performance regression on hot paths. The refactoring turns a single | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
 | Performance surprise. Symptom. CPU time or cache misses rise after a clean | [Split Loop](../patterns/03-refactoring/split-loop.md) | Refactoring Techniques |
 | Performance tuning matters enough that a runtime branch on every method | [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) | Concurrency and Parallelism |
+| peripheral at the same time. Symptom. Data is lost, corrupted, or | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software |
 | Permanent in-progress rows. Symptom. Clients keep receiving 409 or | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |
 | Permission leakage through a shared tool allowlist. Symptom, a subagent | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
 | Permit gauge is well below maximum, yet the process runs out of memory | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -4109,6 +4113,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The arrival rate of work is bursty or unpredictable relative to a downstream | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | The authority nobody agreed on. Symptom. Two teams both believe their own | [Single Source of Truth](../patterns/04-principles-and-laws/single-source-of-truth.md) | Principles and Laws |
 | The authorization server can centralize consent, policy, client | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
+| the awaited hardware condition never actually occurs. Symptom. The | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software |
 | The base object's class is not under your control, or should not be | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
 | The behavior difference between modes is real behavior, not a data difference. | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | The benchmark improved but p95 latency worsened. Cause. The | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
@@ -5058,6 +5063,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Users report the chat response taking noticeably longer to | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
 | Users return from the authorization server and land on an error | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Users see error messages in a confusing order, changing between | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
+| Using a busy-wait polling loop for a genuinely long or unpredictable | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software |
 | Using a generic spinner as a suspense boundary's fallback instead | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Using a plain ring buffer with more than one producer or more than | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | Using a saga where a single aggregate would do. Symptom. A team builds | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
@@ -15925,6 +15931,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - the pool over the system's running lifetime. Symptom. Over time,
 - Choosing the internal-bookkeeping memory slab variant for a buffer
 - that genuinely needs to be power-cycled independently. Symptom. The
+
+#### [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md)
+
+**Core Problem:** A peripheral such as a UART, an ADC, or a GPIO pin reports its status through a hardware register, and code needs to know the moment that status changes, such as when a transmitted character has genuinely left the UART or a conversion has genuinely completed. A Polling Loop solves this by having the code itself repeatedly read that status register in a loop, checking on every iteration whether the awaited condition has become true, and only proceeding once it has. Zephyr's own documentation states the read function's behavior directly, that uartpollin() "is a non-blocking function and returns a character or -1 when no valid data is available," so the calling code is the one responsible for looping and re-checking until data genuinely arrives.
+
+**Failure Mode Symptoms:**
+
+- A polling loop with no bounded timeout that can hang indefinitely if
+- the awaited hardware condition never actually occurs. Symptom. The
+- Mixing the polling API and the interrupt-driven API on the same
+- peripheral at the same time. Symptom. Data is lost, corrupted, or
+- Using a busy-wait polling loop for a genuinely long or unpredictable
+- Other tasks in the system become unresponsive or miss their
 
 #### [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md)
 

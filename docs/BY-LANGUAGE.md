@@ -753,6 +753,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -771,6 +772,7 @@ These patterns contain runnable code examples written in C++:
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
 - [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) (Embedded and Hardware-Software)
+- [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) (Embedded and Hardware-Software)
 - [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
 - [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
@@ -2916,6 +2918,7 @@ These patterns contain runnable code examples written in Python:
 - [Poison Pill Message](../patterns/18-anti-patterns/poison-pill-message.md) (Anti-Patterns)
 - [Poison Pill](../patterns/18-anti-patterns/poison-pill.md) (Anti-Patterns)
 - [Polling Consumer](../patterns/07-integration/polling-consumer.md) (Enterprise Integration)
+- [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) (Embedded and Hardware-Software)
 - [Polling Publisher](../patterns/10-microservices/polling-publisher.md) (Microservices)
 - [Poltergeist](../patterns/18-anti-patterns/poltergeist.md) (Anti-Patterns)
 - [Polymorphism](../patterns/04-principles-and-laws/polymorphism.md) (Principles and Laws)
@@ -3988,6 +3991,7 @@ These patterns contain runnable code examples written in Swift:
 - [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) (Frontend and UI)
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
+- [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) (Embedded and Hardware-Software)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) (Frontend and UI)
