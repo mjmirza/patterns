@@ -507,6 +507,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -2675,6 +2676,7 @@ These patterns contain runnable code examples written in Python:
 - [Hide Delegate](../patterns/03-refactoring/hide-delegate.md) (Refactoring Techniques)
 - [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) (AI and Agentic)
 - [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) (Principles and Laws)
+- [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hinted Handoff](../patterns/12-data-storage/hinted-handoff.md) (Data and Storage)
 - [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) (AI and Agentic)
 - [Humble Object](../patterns/14-testing/humble-object.md) (Testing)
@@ -3874,6 +3876,7 @@ These patterns contain runnable code examples written in Swift:
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
 - [Golden Master](../patterns/14-testing/golden-master.md) (Testing)
+- [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Immutable Object](../patterns/09-concurrency/immutable-object.md) (Concurrency and Parallelism)
 - [JWT](../patterns/15-security/jwt.md) (Security)
@@ -4259,6 +4262,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Hide Delegate](../patterns/03-refactoring/hide-delegate.md) (Refactoring Techniques)
 - [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) (AI and Agentic)
 - [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) (Principles and Laws)
+- [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hinted Handoff](../patterns/12-data-storage/hinted-handoff.md) (Data and Storage)
 - [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) (AI and Agentic)
 - [Humble Object](../patterns/14-testing/humble-object.md) (Testing)
