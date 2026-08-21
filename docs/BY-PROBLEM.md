@@ -1794,6 +1794,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | instead of a maintained successor. Symptom. A new codebase depends | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | instead of delegating. Symptom, two different teams' services disagree | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | insufficient memory for two complete buffers. Symptom. The system | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
+| insufficient. Symptom. A controller passes every HIL test and is | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
 | Integration cliff. Symptom. Local demos work, but the first full environment | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Intent explosion mirroring every UI callback one-to-one. Symptom. An | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
 | intent. Symptom. Understanding what actually happened from reading | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
@@ -1904,6 +1905,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Legitimate outputs are refused or redacted at a rate high | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
 | Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Letting the number of states grow without periodically reassessing | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
+| Letting the plant simulation's model drift out of sync with the | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
 | level, and the consumer's build breaks the same day. The observable symptom | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
 | level. The symptom is that services are physically decoupled, separate | [Low Coupling](../patterns/04-principles-and-laws/low-coupling.md) | Principles and Laws |
 | lifetime. This is the symptom. The cause is speculative indexing, a specific | [Premature Optimization](../patterns/18-anti-patterns/premature-optimization.md) | Anti-Patterns |
@@ -2425,6 +2427,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Privilege accretion. Symptom. A user with an ordinary role can perform an | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | Probe permit leak. | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | problem and merges anyway. Symptom. A red verification result sits for | [Contract Test](../patterns/14-testing/contract-test.md) | Testing |
+| process to keep them aligned. Symptom. HIL test results that were | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
 | Processing decomposes naturally into a sequence of independent steps, each | [Pipes and Filters](../patterns/05-architectural/pipes-filters.md) | Architectural Patterns |
 | prod/, the vault is only a different filesystem. The symptom is a breach | [Secrets Management](../patterns/15-security/secrets-management.md) | Security |
 | Producer-side latency grows unpredictably and is hard to correlate | [Recipient List](../patterns/07-integration/recipient-list.md) | Enterprise Integration |
@@ -2684,6 +2687,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Runaway retries against a permanently broken dependency. | [Scheduler Agent Supervisor](../patterns/08-cloud-distributed/scheduler-agent-supervisor.md) | Cloud and Distributed |
 | Running an expensive check regardless of earlier results. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | running branches. Symptom. Results are occasionally wrong, in a way that | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
+| Running the plant simulation with real-time compute that cannot | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
 | Runtime exceptions mention missing keys inside path code. | [Optics](../patterns/16-functional/optics.md) | Functional Programming |
 | runtime failure. The symptom is a bug that is caught in development but | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
 | runtime, which is the structural symptom of this antipattern regardless | [Distributed Transaction Coordinator Antipattern](../patterns/10-microservices/distributed-transaction-coordinator-antipattern.md) | Microservices |
@@ -4213,6 +4217,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The Context reference cycle. Symptom. Steadily growing memory in a | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | The contract suite is green, but the two services still break in | [Consumer-Side Contract Test](../patterns/10-microservices/consumer-side-contract-test.md) | Microservices |
 | The contract test suite becomes a second, slower integration suite. | [Contract Test](../patterns/14-testing/contract-test.md) | Testing |
+| The controller behaves incorrectly during a HIL test in a way | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
 | The convenience default that silently depends on ambient state. Symptom. | [Principle of Least Astonishment](../patterns/04-principles-and-laws/principle-of-least-astonishment.md) | Principles and Laws |
 | The coordinator that quietly regrows the god class. Symptom. After a | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
 | The copying adapter on a hot path. Symptom. A profiler shows most time in | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
@@ -4884,6 +4889,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Trusted intermediary to origin. A reverse proxy, CDN, gateway, or service | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | Trusted type laundering. Symptom. A wrapper named SafeHtml appears around | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
 | Trusting a destination's self-reported routing conditions unchecked. | [Dynamic Router](../patterns/07-integration/dynamic-router.md) | Enterprise Integration |
+| Trusting a HIL test result as equivalent to real physical-system | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
 | Trusting an unvalidated caller-supplied address. Symptom. the replier | [Return Address](../patterns/07-integration/return-address.md) | Enterprise Integration |
 | Trusting an unverified alg field. Symptom. A forged token with a | [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) | Cloud and Distributed |
 | Trusting the client for authorization decisions. Symptom, an attacker | [Client-Server](../patterns/05-architectural/client-server.md) | Architectural Patterns |
@@ -15949,6 +15955,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - interrupt path without measuring its real overhead. Symptom. An
 - Assuming a vendor's HAL implementation behaves identically across
 - chip revisions without verifying it. Symptom. Firmware that worked
+
+#### [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md)
+
+**Core Problem:** An embedded controller's firmware needs to be validated against the real physical system it will eventually control, such as an engine, a braking system, or an aircraft actuator, but testing directly against that real physical system during development is often expensive, slow, or genuinely dangerous, since a firmware bug under test could damage costly equipment or injure someone. Hardware-in-the-Loop Testing solves this by keeping the real controller hardware and real firmware in the test loop, exactly as it would run in production, but replacing the real physical system with a real-time software model that responds to the controller's outputs the way the real system would. Wikipedia's own reference states the resulting benefit directly, HIL is preferred over testing on the real physical system because it avoids "testing at or beyond the range of certain ECU parameters" that would create hazardous conditions for test engineers, and because a real plant, such as a jet engine, is genuinely "more expensive than a high fidelity, real-time simulator."
+
+**Failure Mode Symptoms:**
+
+- Trusting a HIL test result as equivalent to real physical-system
+- insufficient. Symptom. A controller passes every HIL test and is
+- Running the plant simulation with real-time compute that cannot
+- The controller behaves incorrectly during a HIL test in a way
+- Letting the plant simulation's model drift out of sync with the
+- process to keep them aligned. Symptom. HIL test results that were
 
 #### [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md)
 
