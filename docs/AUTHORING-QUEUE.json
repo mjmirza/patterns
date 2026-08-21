@@ -4459,13 +4459,6 @@
     "focus": ""
   },
   {
-    "name": "Validation Applicative",
-    "slug": "validation-applicative",
-    "category": "functional programming",
-    "path": "patterns/16-functional/validation-applicative.md",
-    "focus": ""
-  },
-  {
     "name": "IO Monad",
     "slug": "io-monad",
     "category": "functional programming",

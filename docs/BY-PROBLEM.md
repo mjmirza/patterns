@@ -690,6 +690,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A user-facing operation feels instant with one item of test | [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) | Anti-Patterns |
 | A validation endpoint reports several errors but also performs | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
 | A validation error appears after an authorization decision has | [Lazy Evaluation](../patterns/16-functional/lazy-evaluation.md) | Functional Programming |
+| A validation pass against a large batch of records runs | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | A validator changes behaviour after a config reload even though | [Currying](../patterns/16-functional/currying.md) | Functional Programming |
 | A value that a client wrote, and that other clients concurrently | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
 | A vendor or partner's API is the only way to reach functionality the team | [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) | Cloud and Distributed |
@@ -886,6 +887,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | because the copy is independent. The symptom is a silent logic error | [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) | Refactoring Techniques |
 | Behavior distributed across those levels through Template Method style | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | behavior, rather than asserting the public behavior itself. Symptom. a | [Mock](../patterns/14-testing/mock.md) | Testing |
+| behaviour change. Symptom. Code that worked correctly as a Validation | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | behaviour. The symptom is a class whose every method is a one line | [Hide Delegate](../patterns/03-refactoring/hide-delegate.md) | Refactoring Techniques |
 | BigDecimal's equals disagreeing with numeric equality. Symptom. A Value | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
 | Binder misconfiguration at deploy time. Symptom. A production incident | [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) | Principles and Laws |
@@ -996,6 +998,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | check. Symptom. the full test suite is green, deploys pass CI, and the | [Mock](../patterns/14-testing/mock.md) | Testing |
 | Checkbox model. Symptom. The repository contains a filled template, but no | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | checks that are not load bearing. The symptom is a function that is more | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
+| Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Choosing choreography for a process that needed a single owner. Symptom. | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | Choreography and orchestration mixed for the same process. Symptom. Part | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | Choreography cycle. Symptom. A deployment of one service causes an event | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
@@ -1124,6 +1127,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Control vocabulary drift across components on different release | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | Convenience imports. A developer needs one small thing from a | [Circular Dependency](../patterns/18-anti-patterns/circular-dependency.md) | Anti-Patterns |
 | Convention borrowed from the wrong reference domain. Symptom. a design | [Principle of Least Astonishment](../patterns/04-principles-and-laws/principle-of-least-astonishment.md) | Principles and Laws |
+| Converting between Validation and Either without noticing the | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Cookie accepted outside its intended scope. Symptom. Requests from a sibling | [Session Management](../patterns/15-security/session-management.md) | Security |
 | copy anyway. Symptom. A caller receives what it believes is an independent | [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) | Concurrency and Parallelism |
 | Copy that is mutable. The getter returns a copy of the collection, | [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) | Refactoring Techniques |
@@ -2301,6 +2305,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Re-entrancy corruption. Symptom. Nested processing produces interleaved or | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Reaching for a debugger to read straightforward code. Symptom. | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | Reaching for Profunctor when only one direction is needed. Symptom. | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
+| Reaching for the Monad instance and expecting accumulation anyway. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Read after write inconsistency. Symptom, a user submits a form, is redirected | [Primary-Replica](../patterns/05-architectural/primary-replica.md) | Architectural Patterns |
 | Read and write requirements have genuinely parted ways along at least one axis, | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Read latency spikes, specifically on the tail (p99, p99.9), that | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
@@ -2472,6 +2477,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Runaway or under-terminated workers. The symptom is a worker continuing to | [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) | AI and Agentic |
 | Runaway recursive spawning. Symptom, token or cost usage grows | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
 | Runaway retries against a permanently broken dependency. | [Scheduler Agent Supervisor](../patterns/08-cloud-distributed/scheduler-agent-supervisor.md) | Cloud and Distributed |
+| Running an expensive check regardless of earlier results. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | running branches. Symptom. Results are occasionally wrong, in a way that | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
 | Runtime exceptions mention missing keys inside path code. | [Optics](../patterns/16-functional/optics.md) | Functional Programming |
 | runtime failure. The symptom is a bug that is caught in development but | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
@@ -3845,6 +3851,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The access pattern is not known in advance, so priming the entire data set is | [Cache-Aside](../patterns/08-cloud-distributed/cache-aside.md) | Cloud and Distributed |
 | The accessor with side effects. Symptom. Start-up ordering bugs that move | [Singleton](../patterns/01-gof/singleton.md) | Design Patterns (GoF) |
 | The accidental programming language. Symptom. The rule language has grown | [Interpreter](../patterns/01-gof/interpreter.md) | Design Patterns (GoF) |
+| The accumulate step either fails to compile, or an ad hoc | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | The adaptee cannot be edited. It ships as a compiled artifact, it belongs | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | The adapter becomes the single largest, hardest-to-change | [Channel Adapter](../patterns/07-integration/channel-adapter.md) | Enterprise Integration |
 | the address and needs to access it. The symptom is a class with delegating | [Hide Delegate](../patterns/03-refactoring/hide-delegate.md) | Refactoring Techniques |
@@ -4637,6 +4644,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Two branches of the tree independently produce the same | [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) | AI and Agentic |
 | Two calls to set produce order-dependent data. Cause. The | [Lens](../patterns/16-functional/lens.md) | Functional Programming |
 | Two capability services both maintain their own copy of what | [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) | Microservices |
+| Two chained validations both fail, but only the first error | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Two clearly related requests, for example a synchronous HTTP | [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) | Microservices |
 | Two clients observe different current values for the same key | [Anti-Entropy](../patterns/12-data-storage/anti-entropy.md) | Data and Storage |
 | Two consumers of the "same" log see different results for | [Kappa Architecture](../patterns/12-data-storage/kappa-architecture.md) | Data and Storage |
@@ -13623,6 +13631,21 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - One-shot iterator treated as Traversable. Symptom. The first pass succeeds,
 - Lawless instance. Symptom. traverse(pure) changes metadata, increments a
 - Nested effects left unflipped. Symptom. Callers receive
+
+#### [Validation Applicative](../patterns/16-functional/validation-applicative.md)
+
+**Core Problem:** A form, a configuration file, or an API request body carries several independent fields, and each field has its own validation rule, a required field, a numeric range, a format check, a cross-field constraint. The obvious approach chains the checks with an ordinary Either or Result type using monadic bind, so the first failing check short-circuits the rest.
+
+**Failure Mode Symptoms:**
+
+- Reaching for the Monad instance and expecting accumulation anyway.
+- Two chained validations both fail, but only the first error
+- Choosing an error type with no sensible combine operation.
+- The accumulate step either fails to compile, or an ad hoc
+- Running an expensive check regardless of earlier results.
+- A validation pass against a large batch of records runs
+- Converting between Validation and Either without noticing the
+- behaviour change. Symptom. Code that worked correctly as a Validation
 
 #### [Writer Monad](../patterns/16-functional/writer-monad.md)
 

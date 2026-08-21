@@ -603,6 +603,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Trampolining](../patterns/16-functional/trampolining.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
+| [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Advanced RAG](../patterns/17-ai-agentic/advanced-rag.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -3071,6 +3072,7 @@ These patterns contain runnable code examples written in Python:
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
+- [Validation Applicative](../patterns/16-functional/validation-applicative.md) (Functional Programming)
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Vector Clock](../patterns/12-data-storage/vector-clock.md) (Data and Storage)
@@ -3879,6 +3881,7 @@ These patterns contain runnable code examples written in Swift:
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
 - [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) (Concurrency and Parallelism)
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
+- [Validation Applicative](../patterns/16-functional/validation-applicative.md) (Functional Programming)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 
@@ -4628,6 +4631,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
+- [Validation Applicative](../patterns/16-functional/validation-applicative.md) (Functional Programming)
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
