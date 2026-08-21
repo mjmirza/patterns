@@ -753,6 +753,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -775,6 +776,7 @@ These patterns contain runnable code examples written in C++:
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) (Embedded and Hardware-Software)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
+- [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) (Embedded and Hardware-Software)
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
 - [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) (Embedded and Hardware-Software)
 - [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) (Embedded and Hardware-Software)
@@ -2734,6 +2736,7 @@ These patterns contain runnable code examples written in Python:
 - [Guaranteed Delivery](../patterns/07-integration/guaranteed-delivery.md) (Enterprise Integration)
 - [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) (Concurrency and Parallelism)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
+- [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) (Embedded and Hardware-Software)
 - [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
 - [Health Check API](../patterns/10-microservices/health-check-api.md) (Microservices)
 - [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) (Cloud and Distributed)
@@ -3981,6 +3984,7 @@ These patterns contain runnable code examples written in Swift:
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
 - [Golden Master](../patterns/14-testing/golden-master.md) (Testing)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
+- [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) (Embedded and Hardware-Software)
 - [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
 - [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
