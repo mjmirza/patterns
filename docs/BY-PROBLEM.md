@@ -842,6 +842,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Application data silently loses updates after a network | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
 | Applying a JavaScript enhancement without checking whether the | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Applying BASE to an operation that requires a hard invariant. Symptom, an | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
+| Applying Infinite Scroll to content the user genuinely needs to | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | Applying it to a pair that never needed it. Symptom. Two teams that | [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) | Domain-Driven Design |
 | Applying Optimistic UI to an action with a real chance of | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | Applying REP where no second consumer exists. Symptom. A team spends | [Release Reuse Equivalence](../patterns/04-principles-and-laws/release-reuse-equivalence.md) | Principles and Laws |
@@ -904,6 +905,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | behavior, rather than asserting the public behavior itself. Symptom. a | [Mock](../patterns/14-testing/mock.md) | Testing |
 | behaviour change. Symptom. Code that worked correctly as a Validation | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | behaviour. The symptom is a class whose every method is a one line | [Hide Delegate](../patterns/03-refactoring/hide-delegate.md) | Refactoring Techniques |
+| below a feed that continuously appends more items. Symptom. A user | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | benefit. Symptom. The codebase carries the technique's full | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |
 | benefit. Symptom. The loading state gives the user no sense of what | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | BigDecimal's equals disagreeing with numeric equality. Symptom. A Value | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
@@ -1374,6 +1376,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Early termination ignored. Symptom. A take 10 style transformation still | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
 | edit to the manifest. Symptom, wide case. A consumer's range is wide enough | [Release Reuse Equivalence](../patterns/04-principles-and-laws/release-reuse-equivalence.md) | Principles and Laws |
 | Effect ownership confusion. Symptom. Connections, file handles, or spans | [Reader Monad](../patterns/16-functional/reader-monad.md) | Functional Programming |
+| efficient, off-main-thread mechanism. Symptom. Scrolling through | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | eighteen months, three years, five years after the migration | [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md) | Cloud and Distributed |
 | Election storms under repeated partial failure. Symptom. CPU and | [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) | Data and Storage |
 | Email used as the account key. Symptom. A user loses access after changing | [OpenID Connect](../patterns/15-security/openid-connect.md) | Security |
@@ -1679,6 +1682,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Illegal pairings at runtime. Symptom. A production error reading | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | IllegalStateException at build() when the URI was never set. Symptom is a | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Implementation detail leaking into step text. Symptom. A feature file | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
+| Implementing the loading trigger by polling scroll position and | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | Implementor calling back into the abstraction. Symptom. A cyclic dependency | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | Implicit interpreter surprise. Symptom. The same test passes in one package | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
 | Import cycles in languages that enforce an acyclic module graph. Symptom. | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
@@ -2275,6 +2279,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Pinning without backup pins. This converts every unplanned key change into a | [Certificate Pinning](../patterns/15-security/certificate-pinning.md) | Security |
 | Pipeline overreach. Symptom: a CI job can alter production infrastructure. | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | place on purpose. Symptom. A member is genuinely, deliberately private, and a | [Insider Trading](../patterns/02-code-smells/insider-trading.md) | Code Smells |
+| Placing a footer or other important, reachable content directly | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | Poison message loop. Symptom. A single message is processed, fails, becomes | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | Poison message loop. Symptom. Consumer lag on one partition grows | [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) | Enterprise Integration |
 | Poison message replay. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
@@ -2516,6 +2521,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Results contain the right items but appear in a different order. | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
 | Results depend on import order or local implicits. | [Monoid](../patterns/16-functional/monoid.md) | Functional Programming |
 | Results differ between two enumerations of the same query. | [Lazy Evaluation](../patterns/16-functional/lazy-evaluation.md) | Functional Programming |
+| results list. Symptom. A user who leaves the page and returns, or | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | Retain cycle or listener leak. Symptom. Memory grows across screen | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | Retained environment leak. Symptom. Heap grows with request count, and heap | [Continuation](../patterns/16-functional/continuation.md) | Functional Programming |
 | Retries appear to arrive in periodic bursts rather than a smooth | [Retry Storm](../patterns/18-anti-patterns/retry-storm.md) | Anti-Patterns |
@@ -12208,6 +12214,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - An incomplete dependency array capturing a stale value. Symptom.
 - Reaching for useEffect to synchronize derived state that could be
 - computed directly during render. Symptom. A component renders
+
+#### [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md)
+
+**Core Problem:** A traditional, paginated list requires the user to explicitly click a next-page control and wait for a full page reload, or a partial page update, to see more content, an interaction that interrupts the otherwise continuous act of browsing a feed or a list. Detecting when a user has scrolled near the end of the currently loaded content historically needed repeatedly calling a layout-measuring function on the main thread on every scroll event, an approach expensive enough to cause its own performance problems on a long or frequently scrolling page. Infinite Scroll solves the interaction problem by loading and appending more content automatically as the user approaches the end of what is currently loaded, removing the explicit pagination click, and the modern implementation solves the detection problem by using a dedicated browser API to observe when a sentinel element near the bottom of the list enters the viewport, off the main thread, rather than polling scroll position by hand.
+
+**Failure Mode Symptoms:**
+
+- Implementing the loading trigger by polling scroll position and
+- efficient, off-main-thread mechanism. Symptom. Scrolling through
+- Placing a footer or other important, reachable content directly
+- below a feed that continuously appends more items. Symptom. A user
+- Applying Infinite Scroll to content the user genuinely needs to
+- results list. Symptom. A user who leaves the page and returns, or
 
 #### [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md)
 
