@@ -509,6 +509,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2592,6 +2593,7 @@ These patterns contain runnable code examples written in Python:
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Dead Letter Channel](../patterns/07-integration/dead-letter-channel.md) (Enterprise Integration)
 - [Death March](../patterns/18-anti-patterns/death-march.md) (Anti-Patterns)
+- [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
 - [Decompose Conditional](../patterns/03-refactoring/decompose-conditional.md) (Refactoring Techniques)
 - [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) (Microservices)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
@@ -3911,6 +3913,7 @@ These patterns contain runnable code examples written in Swift:
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
+- [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
 - [Domain Service](../patterns/11-domain-driven-design/domain-service.md) (Domain-Driven Design)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
@@ -4222,6 +4225,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Datatype Channel](../patterns/07-integration/datatype-channel.md) (Enterprise Integration)
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Dead Letter Channel](../patterns/07-integration/dead-letter-channel.md) (Enterprise Integration)
+- [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
 - [Decompose Conditional](../patterns/03-refactoring/decompose-conditional.md) (Refactoring Techniques)
 - [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) (Microservices)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)

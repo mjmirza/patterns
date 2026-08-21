@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-23 entries, 84,327 words. Every entry carries all 18
+24 entries, 87,996 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -33,6 +33,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Progressive Enhancement](progressive-enhancement.md) | canonical | 3,686 | Before Progressive Enhancement was named, a common alternative approach, graceful degradation, started from the richest possible experience, built for the most capable browsers ... |
+
+## Event Handling
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Debounce and Throttle](debounce-and-throttle.md) | canonical | 3,669 | An event such as a keystroke, a scroll, or a window resize can fire many times in rapid succession, and attaching an expensive handler directly to that event, a network request, a ... |
 
 ## Interaction Pattern
 
