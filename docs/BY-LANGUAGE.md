@@ -511,6 +511,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2724,6 +2725,7 @@ These patterns contain runnable code examples written in Python:
 - [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) (Refactoring Techniques)
 - [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) (Refactoring Techniques)
 - [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) (Enterprise Integration)
+- [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [Iterator](../patterns/01-gof/iterator.md) (Design Patterns (GoF))
 - [JWT](../patterns/15-security/jwt.md) (Security)
 - [Kappa Architecture](../patterns/12-data-storage/kappa-architecture.md) (Data and Storage)
@@ -3896,6 +3898,7 @@ These patterns contain runnable code examples written in Swift:
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Immutable Object](../patterns/09-concurrency/immutable-object.md) (Concurrency and Parallelism)
+- [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [JWT](../patterns/15-security/jwt.md) (Security)
 - [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) (Enterprise Application Architecture)
 - [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) (Architectural Patterns)
@@ -4324,6 +4327,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) (Refactoring Techniques)
 - [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) (Refactoring Techniques)
 - [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) (Enterprise Integration)
+- [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [Iterator](../patterns/01-gof/iterator.md) (Design Patterns (GoF))
 - [Kappa Architecture](../patterns/12-data-storage/kappa-architecture.md) (Data and Storage)
 - [Keep It Simple](../patterns/04-principles-and-laws/keep-it-simple.md) (Principles and Laws)
