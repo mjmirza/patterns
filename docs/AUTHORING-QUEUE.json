@@ -3738,13 +3738,6 @@
     "focus": ""
   },
   {
-    "name": "Islands Architecture",
-    "slug": "islands-architecture",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/islands-architecture.md",
-    "focus": ""
-  },
-  {
     "name": "Micro Frontends",
     "slug": "micro-frontends",
     "category": "frontend and UI",

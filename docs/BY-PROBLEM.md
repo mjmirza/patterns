@@ -940,6 +940,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Building a machine so large and hierarchical that no single person | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Building a molecule or an organism that secretly depends on a | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
+| Building two islands that silently depend on shared state with no | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Bulkhead placed on the wrong side of the buffer. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Bulkhead without a timeout. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Business exceptions swallowed as messaging failures. Symptom. A | [Service Activator](../patterns/07-integration/service-activator.md) | Enterprise Integration |
@@ -1013,6 +1014,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Checkbox model. Symptom. The repository contains a filled template, but no | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | checks instead of an explicit transition table. Symptom. The | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | checks that are not load bearing. The symptom is a function that is more | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
+| Choosing an eager hydration directive for an island that is rarely | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Choosing choreography for a process that needed a single owner. Symptom. | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | Choreography and orchestration mixed for the same process. Symptom. Part | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
@@ -1463,6 +1465,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Excessive process overhead on genuinely low-stakes teams. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | Expected value derived from the code under test. Symptom. A regression | [Four-Phase Test](../patterns/14-testing/four-phase-test.md) | Testing |
 | Expired certificate outage. Symptom. Calls begin failing at the same time | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
+| explicit coordination mechanism between them. Symptom. Interacting | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Exposing a mutable delegate. The delegate is mutable, and exposing it | [Remove Middle Man](../patterns/03-refactoring/remove-middle-man.md) | Refactoring Techniques |
 | extensively. The symptom is a reader who must navigate through five | [Extract Class](../patterns/03-refactoring/extract-class.md) | Refactoring Techniques |
 | External error leaks internal state. Symptom. A caller learns policy names, | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
@@ -1862,6 +1865,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Many breaks in a broad loop. Symptom. A reviewer has to search an entire | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | many times they retry. The observable symptom is an incident marked "cannot | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
 | Mapping identity changes the object, metadata, order, counter, | [Functor](../patterns/16-functional/functor.md) | Functional Programming |
+| Marking every component on the page as an island, defeating the | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | masks a programming error. The symptom is a function that produces no | [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) | Refactoring Techniques |
 | Massive View Controller. Symptom. A single Controller class or view-controller | [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) | Architectural Patterns |
 | Meaningless name. The variable is named temp or result or x, | [Extract Variable](../patterns/03-refactoring/extract-variable.md) | Refactoring Techniques |
@@ -2324,6 +2328,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Pulling up subclass specific fields. The field is only used by one | [Pull Up Constructor Body](../patterns/03-refactoring/pull-up-constructor-body.md) | Refactoring Techniques |
 | Pulling up too much. The superclass constructor becomes a god | [Pull Up Constructor Body](../patterns/03-refactoring/pull-up-constructor-body.md) | Refactoring Techniques |
 | Pulling up with wrong super call order. The subclass constructor | [Pull Up Constructor Body](../patterns/03-refactoring/pull-up-constructor-body.md) | Refactoring Techniques |
+| purpose of the pattern. Symptom. The page ships nearly as much | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Pushing down a field that is part of the contract. The field is | [Push Down Field](../patterns/03-refactoring/push-down-field.md) | Refactoring Techniques |
 | Pushing down a field used by multiple subclasses. The field is used | [Push Down Field](../patterns/03-refactoring/push-down-field.md) | Refactoring Techniques |
 | Pushing down a method used by multiple subclasses. The method is | [Push Down Method](../patterns/03-refactoring/push-down-method.md) | Refactoring Techniques |
@@ -2576,6 +2581,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Secret map exposure. Symptom. A broad group can read a model containing | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | Security review debates tools, not risks. Cause. The layer | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Security review discovers that a real share of | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
+| seen or rarely interacted with. Symptom. The page's initial load | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Selector coupling breaking on a routine schema change. Symptom. A | [Selective Consumer](../patterns/07-integration/selective-consumer.md) | Enterprise Integration |
 | Selector evaluated too late to save anything. Symptom. A team adopts a | [Selective Consumer](../patterns/07-integration/selective-consumer.md) | Enterprise Integration |
 | Selector expression injection. Symptom. A consumer that builds its | [Selective Consumer](../patterns/07-integration/selective-consumer.md) | Enterprise Integration |
@@ -12166,6 +12172,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - An incomplete dependency array capturing a stale value. Symptom.
 - Reaching for useEffect to synchronize derived state that could be
 - computed directly during render. Symptom. A component renders
+
+#### [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md)
+
+**Core Problem:** A single-page application that hydrates its entire page as one monolithic JavaScript bundle ships and executes JavaScript for every part of the page, including large static regions such as an article's body text or a marketing page's hero section that never need interactivity at all. Since JavaScript is among the slowest assets to download, parse, and execute per byte, shipping a full framework runtime and hydrating an entire page for the sake of one small interactive widget, a like button or a comment form, wastes a real amount of the browser's time on work the page did not need. Islands Architecture solves this by rendering the page as static HTML by default and marking only the specific, genuinely interactive regions as islands, so JavaScript is downloaded, parsed, and hydrated only for the parts of the page that actually need it.
+
+**Failure Mode Symptoms:**
+
+- Marking every component on the page as an island, defeating the
+- purpose of the pattern. Symptom. The page ships nearly as much
+- Building two islands that silently depend on shared state with no
+- explicit coordination mechanism between them. Symptom. Interacting
+- Choosing an eager hydration directive for an island that is rarely
+- seen or rarely interacted with. Symptom. The page's initial load
 
 #### [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md)
 
