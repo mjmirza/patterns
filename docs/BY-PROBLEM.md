@@ -436,6 +436,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A penetration test bypasses every security layer through one | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | A permission rule where an AllOf rule contains other rules, and evaluation | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | A person who built one of the ad hoc bridges leaves the | [Stovepipe System](../patterns/18-anti-patterns/stovepipe-system.md) | Anti-Patterns |
+| A piece of UI renders the signal's initial value once and | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
 | A pipeline of five or ten sequential jobs, each reading the previous | [Map-Reduce](../patterns/09-concurrency/map-reduce.md) | Concurrency and Parallelism |
 | A pipeline that processes personally identifiable data leaks | [Pipes and Filters](../patterns/05-architectural/pipes-filters.md) | Architectural Patterns |
 | A pipeline that used to run in a few seconds now takes | [Pipes and Filters](../patterns/05-architectural/pipes-filters.md) | Architectural Patterns |
@@ -1169,6 +1170,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | CPU-bound work mistaken for I/O-bound work. Symptom. Fanning out N tasks | [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) | Concurrency and Parallelism |
 | CQS theater. Symptom. The code has query classes and command classes, but | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | created before the assignment. Observable symptom, a method's behaviour changes | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
+| Creating a new signal on every render instead of once. Symptom. | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
 | Creation with hidden side effects. Symptom. A retry loop or a test helper | [Factory Method](../patterns/01-gof/factory-method.md) | Design Patterns (GoF) |
 | Credential ID stored as text incorrectly. Symptom. Some users can register | [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) | Security |
 | Cross-domain imports that bypass the published interface. Symptom. A | [Domain-based](../patterns/04-principles-and-laws/domain-based.md) | Principles and Laws |
@@ -1936,6 +1938,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Misuse. Using the pattern's aggregation step as a substitute for | [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) | Enterprise Integration |
 | Mitigation without verification. Symptom. A threat is marked closed because | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | Mixed failure protocol. Symptom. Callers contain checks for null, false, | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
+| Mixing signal-based and component-render-based state for the same | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
 | Mocking seam removed. Symptom. Tests that used to replace a command class | [Replace Command with Function](../patterns/03-refactoring/replace-command-with-function.md) | Refactoring Techniques |
 | Model drift. Symptom. The model says the service stores no personal data, | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | model. Symptom. A consumer service breaks whenever the producer changes an | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
@@ -2346,6 +2349,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reader where a parameter should be. Symptom. A new contributor searches for | [Reader Monad](../patterns/16-functional/reader-monad.md) | Functional Programming |
 | Reader-to-writer upgrade deadlock. Symptom. Two or more threads, each | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Readers can tolerate a named intermediate callable between configuration and | [Partial Application](../patterns/16-functional/partial-application.md) | Functional Programming |
+| Reading a signal's value outside a tracked reactive context. | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
 | Reads already query more than one replica to satisfy a quorum, so the | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
 | Reads intermittently return an older value than a write the | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
 | reads it. Symptom. A change made through the meta-schema editor, adding a | [Inner-Platform Effect](../patterns/18-anti-patterns/inner-platform-effect.md) | Anti-Patterns |
@@ -4881,6 +4885,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Validation that is too strict. The constructor rejects values that | [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) | Refactoring Techniques |
 | Value equality that ignores a field. The equals method compares | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
 | Value Object explosion with no invariant behind any of them. Symptom. A | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
+| value. Symptom. A value appears to update in one part of the UI but | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
 | Variable that is reassigned. The variable is declared as mutable, and | [Extract Variable](../patterns/03-refactoring/extract-variable.md) | Refactoring Techniques |
 | Variable that restates the expression. The variable is named | [Extract Variable](../patterns/03-refactoring/extract-variable.md) | Refactoring Techniques |
 | Vector clock confused with, or substituted for, a version vector without | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
@@ -12137,6 +12142,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - memoisation. Symptom. A state-owning component wrapped in a
 - Reaching for a render prop in a codebase where a custom hook would
 - serve identically, with less nesting. Symptom. A team continues
+
+#### [Signals](../patterns/13-frontend-ui/signals.md)
+
+**Core Problem:** A component-based UI framework built on a virtual DOM diff and re-render cycle, such as React, re-runs an entire component function whenever any piece of its state changes, then diffs the result against the previous render to find what actually changed in the DOM. For frequently updating values, this re-run-then-diff cycle repeats work a framework could otherwise avoid entirely if it knew, in advance, precisely which piece of the UI a specific value change would affect. Signals solve this by making a value itself the unit of reactivity. a signal wraps a value, and any place that reads the signal's .value becomes a subscriber, so updating the signal updates exactly the subscribers that read it, with no need to re-run an entire enclosing component function to discover what changed.
+
+**Failure Mode Symptoms:**
+
+- Reading a signal's value outside a tracked reactive context.
+- A piece of UI renders the signal's initial value once and
+- Mixing signal-based and component-render-based state for the same
+- value. Symptom. A value appears to update in one part of the UI but
+- Creating a new signal on every render instead of once. Symptom.
 
 ### Testing
 

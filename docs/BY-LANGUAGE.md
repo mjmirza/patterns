@@ -511,6 +511,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Characterization Test](../patterns/14-testing/characterization-test.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -3005,6 +3006,7 @@ These patterns contain runnable code examples written in Python:
 - [Shared Kernel](../patterns/11-domain-driven-design/shared-kernel.md) (Domain-Driven Design)
 - [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) (Code Smells)
 - [Sidecar](../patterns/08-cloud-distributed/sidecar.md) (Cloud and Distributed)
+- [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
 - [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) (Principles and Laws)
 - [Single Source of Truth](../patterns/04-principles-and-laws/single-source-of-truth.md) (Principles and Laws)
 - [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) (Enterprise Application Architecture)
@@ -3903,6 +3905,7 @@ These patterns contain runnable code examples written in Swift:
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
+- [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
@@ -4586,6 +4589,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) (Code Smells)
 - [Sidecar Proxy](../patterns/10-microservices/sidecar-proxy.md) (Microservices)
 - [Sidecar](../patterns/08-cloud-distributed/sidecar.md) (Cloud and Distributed)
+- [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
 - [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) (Principles and Laws)
 - [Single Source of Truth](../patterns/04-principles-and-laws/single-source-of-truth.md) (Principles and Laws)
 - [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) (Enterprise Application Architecture)
