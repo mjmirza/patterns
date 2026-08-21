@@ -537,6 +537,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -3140,6 +3141,7 @@ These patterns contain runnable code examples written in Python:
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) (Data and Storage)
 - [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) (Domain-Driven Design)
+- [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
@@ -3987,6 +3989,7 @@ These patterns contain runnable code examples written in Swift:
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
 - [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) (Concurrency and Parallelism)
+- [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
 - [Validation Applicative](../patterns/16-functional/validation-applicative.md) (Functional Programming)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
@@ -4770,6 +4773,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) (Domain-Driven Design)
+- [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
