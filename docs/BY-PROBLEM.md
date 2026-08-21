@@ -799,6 +799,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | An idempotent-looking retry or saga compensation message | [Message Expiration](../patterns/07-integration/message-expiration.md) | Enterprise Integration |
 | An incident timeline shows no deploy marker even though the on-call engineer knows a deploy happened around that time... | [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) | Microservices |
 | An incident's error rate stays high for many minutes after the | [Retry Storm](../patterns/18-anti-patterns/retry-storm.md) | Anti-Patterns |
+| An incomplete dependency array capturing a stale value. Symptom. | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |
 | An innocuous field addition needed by one context, for example a | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | An insert into the leaf table throws a foreign key violation | [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md) | Enterprise Application Architecture |
 | An instanceof/isinstance/type check against SpecialCaseType | [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) | Enterprise Application Architecture |
@@ -964,6 +965,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | called printInvoiceDetails. The symptom is a function whose name must | [Extract Function](../patterns/03-refactoring/extract-function.md) | Refactoring Techniques |
 | caller, producing large classes with many responsibilities. The symptom | [Inline Class](../patterns/03-refactoring/inline-class.md) | Refactoring Techniques |
 | Callers should ask for a meaningful creation operation, not for storage layout. | [Replace Constructor with Factory Function](../patterns/03-refactoring/replace-constructor-with-factory-function.md) | Refactoring Techniques |
+| Calling a hook conditionally or inside a loop. Symptom. A | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |
 | can observe. The symptom is a transform that passes all tests but produces | [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) | Refactoring Techniques |
 | Capacity protection. The service has a known maximum sustainable | [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) | Cloud and Distributed |
 | Captured environment leak. Symptom. Heap snapshots show request objects, | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
@@ -1075,6 +1077,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Composition order reversed. Symptom. A pipeline emits different values than | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
 | Composition root mistakenly abstracted. Symptom. A team applies SAP to | [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) | Principles and Laws |
 | Compounding chain availability. Symptom. A distributed call chain of five | [Remote Procedure Invocation](../patterns/10-microservices/remote-procedure-invocation.md) | Microservices |
+| computed directly during render. Symptom. A component renders | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |
 | Concurrency contention. Symptom observed. a long-running range scan | [B-Tree](../patterns/12-data-storage/b-tree.md) | Data and Storage |
 | Concurrency policy applied uniformly regardless of stake. Symptom. A saga | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
 | Concurrent edits at different levels colliding silently. Symptom. Two | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
@@ -2331,6 +2334,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reaching for Profunctor when only one direction is needed. Symptom. | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Reaching for the Monad instance and expecting accumulation anyway. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Reaching for unsafePerformIO to avoid restructuring a function | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
+| Reaching for useEffect to synchronize derived state that could be | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |
 | Read after write inconsistency. Symptom, a user submits a form, is redirected | [Primary-Replica](../patterns/05-architectural/primary-replica.md) | Architectural Patterns |
 | Read and write requirements have genuinely parted ways along at least one axis, | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Read latency spikes, specifically on the tail (p99, p99.9), that | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
@@ -12092,6 +12096,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Wrapping inside another component's render method. Symptom. The
 - Reaching for a HOC where a custom hook would serve identically, with
 - no wrapper component. Symptom. A codebase that has otherwise adopted
+
+#### [Hooks](../patterns/13-frontend-ui/hooks.md)
+
+**Core Problem:** Before Hooks, a function component in React could not hold its own state or run a side effect, so any component needing state, a lifecycle-tied effect, or access to context had to be rewritten as a class component. Sharing stateful logic between class components needed either a Higher-Order Component or a Render Prop, both of which introduce an extra layer in the rendered tree and, when several are combined, a nesting or wrapper chain that becomes hard to trace, a problem the community had already named wrapper hell. Hooks solve this by letting a plain function component call a small set of built-in functions, useState, useEffect, useContext, and others, to opt into exactly the React features it needs, and by letting a developer extract and share stateful logic as a plain function, a custom hook, with no wrapper component and no change to the component tree at all.
+
+**Failure Mode Symptoms:**
+
+- Calling a hook conditionally or inside a loop. Symptom. A
+- An incomplete dependency array capturing a stale value. Symptom.
+- Reaching for useEffect to synchronize derived state that could be
+- computed directly during render. Symptom. A component renders
 
 #### [Render Props](../patterns/13-frontend-ui/render-props.md)
 
