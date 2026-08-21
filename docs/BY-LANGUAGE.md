@@ -511,6 +511,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2715,6 +2716,7 @@ These patterns contain runnable code examples written in Python:
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Index Table](../patterns/08-cloud-distributed/index-table.md) (Cloud and Distributed)
 - [Indirection](../patterns/04-principles-and-laws/indirection.md) (Principles and Laws)
+- [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) (Frontend and UI)
 - [Information Expert](../patterns/04-principles-and-laws/information-expert.md) (Principles and Laws)
 - [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) (Enterprise Application Architecture)
 - [Inline Class](../patterns/03-refactoring/inline-class.md) (Refactoring Techniques)
@@ -3910,6 +3912,7 @@ These patterns contain runnable code examples written in Swift:
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Immutable Object](../patterns/09-concurrency/immutable-object.md) (Concurrency and Parallelism)
+- [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) (Frontend and UI)
 - [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [JWT](../patterns/15-security/jwt.md) (Security)
 - [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) (Enterprise Application Architecture)
@@ -4329,6 +4332,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Index Table](../patterns/08-cloud-distributed/index-table.md) (Cloud and Distributed)
 - [Indirection](../patterns/04-principles-and-laws/indirection.md) (Principles and Laws)
+- [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) (Frontend and UI)
 - [Information Expert](../patterns/04-principles-and-laws/information-expert.md) (Principles and Laws)
 - [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) (Enterprise Application Architecture)
 - [Inline Class](../patterns/03-refactoring/inline-class.md) (Refactoring Techniques)
