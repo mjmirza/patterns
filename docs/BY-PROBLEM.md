@@ -790,6 +790,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | all. Symptom. The task completes, every step reports success, and the | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
 | Allocation pressure. The constructed object is genuinely different each | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
 | allocation. Symptom. The system runs low on available blocks, or | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
+| Allowing a single misbehaving task to consume far more execution | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software |
 | allowing duplicate form submissions. Symptom. A user, uncertain | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
 | allows the client to modify it without the class's knowledge. The symptom | [Remove Middle Man](../patterns/03-refactoring/remove-middle-man.md) | Refactoring Techniques |
 | alone in a long retention audit store. Symptom. A security review of the | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
@@ -953,6 +954,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Boot-time dependency on an external artifact store. Symptom. A rolling | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
 | bootloader. Symptom. A legitimate firmware update is rejected by the | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | Both axes are expected to keep growing. A pattern that converts N times M into | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
+| bound. Symptom. One task's real execution time overrun causes other, | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software |
 | Boundary leakage. Symptom. HTTP status codes, translated user messages, or | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
 | Boundary theatre. Symptom. A beautifully filled worksheet for a context | [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) | Domain-Driven Design |
 | boundary. Symptom. A presentation-layer controller has a catch | [Application Service](../patterns/11-domain-driven-design/application-service.md) | Domain-Driven Design |
@@ -1154,6 +1156,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Concurrent overwrite between two threads sharing one Host. Symptom. A | [Temporary Field](../patterns/02-code-smells/temporary-field.md) | Code Smells |
 | Concurrent use of one builder. A builder cached in a field and shared across | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Condition performs the action twice. Symptom. Code such as | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
+| condition. Symptom. Multiple, otherwise-unrelated tasks miss their | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software |
 | Conditional logic inside verify. Symptom. A test contains an if | [Four-Phase Test](../patterns/14-testing/four-phase-test.md) | Testing |
 | Configuration drift between the image and reality. Symptom. A service | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
 | Configuration naming a strategy that no longer exists. Symptom. A service | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
@@ -1311,6 +1314,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | dependents, which is legal under ADP alone. This symptom is a Stable | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | Deploying a fix to one service requires bumping and redeploying the | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | Deploying a task set whose real total utilization exceeds the Liu | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
+| Deploying an EDF system with no admission control, allowing total | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software |
 | Deployment-time binding. An application is written against one logging API | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | described in dimensions 6 through 8, presented as Symptom, Cause, Fix | [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) | Microservices |
 | description draws on operational experience rather than a citable | [Message](../patterns/07-integration/message.md) | Enterprise Integration |
@@ -2516,6 +2520,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reads take long enough, or happen at high enough concurrency, that | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Reads vastly outnumber writes, so the cost of coordinating readers against | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | real-time feedback, such as a live drag-position indicator. Symptom. | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
+| Reasoning about the system's design-time behavior as if task | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software |
 | Reasoning trigger fighting a trained reasoning model. Symptom. Adding an | [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) | AI and Agentic |
 | Rebuilding on every step instead of only at the end. Symptom. A | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | receives an exception it has no handling path for. The observable symptom is an exception | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
@@ -2702,6 +2707,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | scenarios. Symptom. A widely imported test-helper module holds one giant | [Stub](../patterns/14-testing/stub.md) | Testing |
 | schedulability analysis for the new period set. Symptom. A task set | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
 | Scheduler affinity breach. Symptom. A UI update runs on a worker thread, an | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
+| Scheduling. Symptom. A safety or timing analysis performed as if one | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software |
 | Schema coupling through a shared database. Symptom. A migration in one | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
 | Schema covers shape but not meaning. Symptom. A JSON body passes schema | [Input Validation](../patterns/15-security/input-validation.md) | Security |
 | Schema drift breaking a consumer nobody remembered existed. Symptom. A | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
@@ -15917,6 +15923,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - insufficient memory for two complete buffers. Symptom. The system
 - Writing to the buffer currently being shown, rather than the back
 - buffer, due to a bookkeeping error in which buffer is which. Symptom.
+
+#### [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md)
+
+**Core Problem:** Rate Monotonic Scheduling assigns a fixed priority to every task from its period and, per its own Liu and Layland utilization bound, can only guarantee every deadline is met up to roughly 69.3 percent CPU utilization as the task count grows, leaving real capacity unused. Earliest Deadline First Scheduling solves this by recomputing priority continuously, always running whichever ready task's deadline is genuinely closest, rather than committing to a fixed period-derived ranking in advance. Wikipedia's own reference states the resulting benefit directly, "EDF has a utilization bound of 100%" for periodic tasks whose deadline equals their period, so a task set can be scheduled correctly all the way up to full CPU utilization, not merely up to the more conservative fixed-priority bound.
+
+**Failure Mode Symptoms:**
+
+- Deploying an EDF system with no admission control, allowing total
+- condition. Symptom. Multiple, otherwise-unrelated tasks miss their
+- Reasoning about the system's design-time behavior as if task
+- Scheduling. Symptom. A safety or timing analysis performed as if one
+- Allowing a single misbehaving task to consume far more execution
+- bound. Symptom. One task's real execution time overrun causes other,
 
 #### [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md)
 

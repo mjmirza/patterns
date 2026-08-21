@@ -5334,13 +5334,6 @@
     "focus": ""
   },
   {
-    "name": "Earliest Deadline First Scheduling",
-    "slug": "earliest-deadline-first-scheduling",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md",
-    "focus": ""
-  },
-  {
     "name": "Hardware-in-the-Loop Testing",
     "slug": "hardware-in-the-loop-testing",
     "category": "embedded and hardware-software",
