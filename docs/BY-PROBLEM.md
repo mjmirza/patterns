@@ -2306,6 +2306,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reaching for a debugger to read straightforward code. Symptom. | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | Reaching for Profunctor when only one direction is needed. Symptom. | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Reaching for the Monad instance and expecting accumulation anyway. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
+| Reaching for unsafePerformIO to avoid restructuring a function | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
 | Read after write inconsistency. Symptom, a user submits a form, is redirected | [Primary-Replica](../patterns/05-architectural/primary-replica.md) | Architectural Patterns |
 | Read and write requirements have genuinely parted ways along at least one axis, | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Read latency spikes, specifically on the tail (p99, p99.9), that | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
@@ -2603,6 +2604,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Sign counter treated as a hard universal rule. Symptom. Legitimate synced | [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) | Security |
 | Signaling before mutating, or forgetting to signal at all. Symptom, a | [Monitor Object](../patterns/09-concurrency/monitor-object.md) | Concurrency and Parallelism |
 | Signalling the wrong condition, or forgetting to signal at all. Symptom. | [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) | Concurrency and Parallelism |
+| signature. Symptom. A function that looks pure from its signature | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
 | Silencing dissent by mislabeling it bikeshedding. Symptom. A team lead | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | Silent accumulation with no inventory. The most common failure mode is not | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |
 | Silent backpressure collapse. Symptom. Memory on one filter's host grows | [Pipes and Filters](../patterns/08-cloud-distributed/pipes-filters.md) | Cloud and Distributed |
@@ -2707,6 +2709,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Stack overflow from a nested rule. Symptom. The process terminates rather | [Interpreter](../patterns/01-gof/interpreter.md) | Design Patterns (GoF) |
 | Stack overflow on deep input. Symptom. A StackOverflowError or a segfault | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Stack traces contain several frames named lambda, anonymous, | [Currying](../patterns/16-functional/currying.md) | Functional Programming |
+| Stacking IO with other effects through nested transformers until the | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
 | Stale authorization. Symptom. A removed user or disabled service account | [JWT](../patterns/15-security/jwt.md) | Security |
 | Stale binding. Symptom. A client keeps talking to a Referent that was | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
 | Stale business rule behind a live sounding name. Symptom. A Specification | [Specification](../patterns/11-domain-driven-design/specification.md) | Domain-Driven Design |
@@ -4608,6 +4611,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating code execution as an approval mechanism. Symptom, a consequential | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
 | Treating fail-fast detection as thread safety. Symptom. A production system | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
 | Treating GraphRAG as a strict upgrade over plain RAG. Symptom. A team | [GraphRAG](../patterns/17-ai-agentic/graphrag.md) | AI and Agentic |
+| Treating IO composition as ordinary sequential statements. Symptom. | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
 | Treating RCU as a general-purpose replacement for locking. Symptom. A | [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) | Concurrency and Parallelism |
 | Treating the bus as a database. Symptom. A new consumer needs historical | [Message Bus](../patterns/07-integration/message-bus.md) | Enterprise Integration |
 | Treating the event stream as a durable system of record. Symptom, a team | [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) | Architectural Patterns |
@@ -4717,6 +4721,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Type errors mention a composed expression far from the actual | [Point-free Style](../patterns/16-functional/point-free-style.md) | Functional Programming |
 | Type inference errors mention higher-kinded types, arity, or | [Functor](../patterns/16-functional/functor.md) | Functional Programming |
 | Type selection from runtime data. A PaymentMethod might need to become a | [Factory](../patterns/11-domain-driven-design/factory.md) | Domain-Driven Design |
+| type signatures become unreadable. Symptom. A function's type | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
 | Type-level lock-in. Symptom. A feature that would be easy with one concrete | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
 | Typed global environment. Symptom. Tests build a huge fake environment with | [Reader Monad](../patterns/16-functional/reader-monad.md) | Functional Programming |
 | TypeScript reports no error after a union grows. Cause. The | [Pattern Matching](../patterns/16-functional/pattern-matching.md) | Functional Programming |
@@ -13215,6 +13220,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Production traces show one long anonymous pipeline and no clue
 - Type inference errors mention higher-kinded types, arity, or
 - Sensitive fields appear in logs after an otherwise harmless
+
+#### [IO Monad](../patterns/16-functional/io-monad.md)
+
+**Core Problem:** A purely functional language gives every function a strong guarantee. calling it twice with the same arguments produces the same result, and calling it produces no observable change anywhere else. That guarantee is what makes equational reasoning, safe reordering, and referential transparency possible.
+
+**Failure Mode Symptoms:**
+
+- Reaching for unsafePerformIO to avoid restructuring a function
+- signature. Symptom. A function that looks pure from its signature
+- Treating IO composition as ordinary sequential statements. Symptom.
+- Stacking IO with other effects through nested transformers until the
+- type signatures become unreadable. Symptom. A function's type
 
 #### [Immutability](../patterns/16-functional/immutability.md)
 

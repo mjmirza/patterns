@@ -2,7 +2,7 @@
 
 Origin. Category theory in practice
 
-37 entries, 232,574 words. Every entry carries all 18
+38 entries, 236,627 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Composition
@@ -19,6 +19,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Persistent Data Structures](persistent-data-structures.md) | canonical | 6,890 | A program needs snapshots of data across time, but a normal mutable collection has one current shape. |
 | [Structural Sharing](structural-sharing.md) | canonical | 6,098 | A program wants old and new versions of a large value at the same time. |
 | [Zipper](zipper.md) | canonical | 7,113 | A program holds an immutable, recursively defined structure, most often a tree but sometimes a list, and it needs to walk to an arbitrary position inside that structure, read or ... |
+
+## Effects
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [IO Monad](io-monad.md) | canonical | 4,053 | A purely functional language gives every function a strong guarantee. |
 
 ## Error Handling
 
