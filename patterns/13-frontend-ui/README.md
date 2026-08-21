@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-24 entries, 87,996 words. Every entry carries all 18
+25 entries, 91,484 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -27,6 +27,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Hooks](hooks.md) | canonical | 3,577 | Before Hooks, a function component in React could not hold its own state or run a side effect, so any component needing state, a lifecycle-tied effect, or access to context had to ... |
 | [Provider Pattern](provider-pattern.md) | canonical | 3,428 | A value needed by several components scattered across a component tree, an authenticated user, a UI theme, a locale, a Redux store, would otherwise need to be passed as a prop ... |
 | [Render Props](render-props.md) | established | 3,717 | A piece of stateful or side-effecting logic, tracking mouse position, managing a form field's validation state, fetching data, is often needed by more than one component, each of ... |
+
+## Composition
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Headless Component](headless-component.md) | established | 3,488 | A component that bundles its behavior and its visual markup together forces every consumer to accept both, even when a consumer genuinely needs the same behavior, an accessible ... |
 
 ## Delivery Strategy
 
