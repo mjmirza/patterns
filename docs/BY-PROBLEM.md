@@ -1989,6 +1989,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Mutable shared state assumed to be safe because construction was made safe. | [Singleton](../patterns/01-gof/singleton.md) | Design Patterns (GoF) |
 | Mutable value object. Symptom. A value used as a dictionary, map, or set key | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Mutating a store's state directly from a view instead of | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
+| Mutating state directly inside a reducer instead of returning a new | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | mutex. Observable symptom, a double close, a "bad file descriptor" error, or a | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
 | Mystery Guest. Symptom. A test fails intermittently or only in a shared | [Four-Phase Test](../patterns/14-testing/four-phase-test.md) | Testing |
 | N plus 1 queries. Symptom, a request that should cost one or two | [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md) | Enterprise Application Architecture |
@@ -2319,6 +2320,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Pushing down a method used by multiple subclasses. The method is | [Push Down Method](../patterns/03-refactoring/push-down-method.md) | Refactoring Techniques |
 | Pushing down a polymorphic method. The method is called through the | [Push Down Method](../patterns/03-refactoring/push-down-method.md) | Refactoring Techniques |
 | Pushing down speculatively. The field is pushed down because it | [Push Down Field](../patterns/03-refactoring/push-down-field.md) | Refactoring Techniques |
+| Putting asynchronous logic directly inside a reducer. Symptom. | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | Python matching sometimes calls slow or unsafe methods. Cause. | [Pattern Matching](../patterns/16-functional/pattern-matching.md) | Functional Programming |
 | Quality gate laundering. Symptom. A failed load test, security review, or | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Query turns into a command. Symptom. Reading total writes a cache row, | [Replace Derived Variable with Query](../patterns/03-refactoring/replace-derived-variable-with-query.md) | Refactoring Techniques |
@@ -2787,6 +2789,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | State is small enough per entity, or bounded. A stream that grows without | [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) | Cloud and Distributed |
 | State leaking across in-process iterations. Symptom. A crash the engine | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | State machine in disguise. The object has more than two valid states | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
+| state object. Symptom. State updates behave unpredictably, | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | state, a classic symptom when a sequence is manually reset lower than the | [Identity Field](../patterns/06-enterprise-application-architecture/identity-field.md) | Enterprise Application Architecture |
 | state. Symptom. Reordering two filters that look independent, or | [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) | Architectural Patterns |
 | Static analysis reports a cyclic dependency between two modules that ought not | [Facade](../patterns/01-gof/facade.md) | Design Patterns (GoF) |
@@ -2799,6 +2802,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Storage or message size for the CRDT grows without bound over | [CRDT](../patterns/12-data-storage/crdt.md) | Data and Storage |
 | Store write fails but the cache write already happened. Symptom. The | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | Stored failure freezes a transient outage. Symptom. Retrying with the same | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |
+| Storing every piece of application state in Redux, including state | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | Strategy allocated per call in a hot path. Symptom. Allocation rate and | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | Strategy explosion by combination. Symptom. Class names that stack three | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | Strategy interface with one implementation. Symptom. An interface, one class | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
@@ -3890,6 +3894,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Tests, examples, traces, or captured production cases can compare old and new | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
 | than a single cited source per item. Each entry states the observable symptom | [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) | Enterprise Application Architecture |
 | that is disconnected from the persistence layer. The symptom is a call to a | [Change Value to Reference](../patterns/03-refactoring/change-value-to-reference.md) | Refactoring Techniques |
+| that is genuinely local to one component. Symptom. Simple, | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | that is the observable symptom. The cause is that the map was drawn once, | [Context Map](../patterns/11-domain-driven-design/context-map.md) | Domain-Driven Design |
 | that is the observable symptom. The cause is that the relationship was | [Context Map](../patterns/11-domain-driven-design/context-map.md) | Domain-Driven Design |
 | that produce runtime errors later. The symptom is the same confusing | [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) | Refactoring Techniques |
@@ -12148,6 +12153,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - render. Symptom. Every consumer of a context re-renders on every
 - Stacking many unrelated contexts, each wrapping the same
 - subtree. Symptom. The application's root component grows a visibly
+
+#### [Redux](../patterns/13-frontend-ui/redux.md)
+
+**Core Problem:** Flux's original architecture solved unidirectional data flow with several independent stores, each holding its own slice of state and its own update logic, which worked but left every application re-inventing how a store subscribes to the dispatcher, how a store's change event propagates to views, and how several stores compose into one coherent picture of application state. Redux solves this by collapsing Flux's several independent stores into one centralized store holding the entire application's state as a single object tree, updated only by pure reducer functions that take the previous state and a dispatched action and return the next state, with no store-side mutation and no imperative update logic to write by hand for each store.
+
+**Failure Mode Symptoms:**
+
+- Mutating state directly inside a reducer instead of returning a new
+- state object. Symptom. State updates behave unpredictably,
+- Putting asynchronous logic directly inside a reducer. Symptom.
+- Storing every piece of application state in Redux, including state
+- that is genuinely local to one component. Symptom. Simple,
 
 #### [Render Props](../patterns/13-frontend-ui/render-props.md)
 
