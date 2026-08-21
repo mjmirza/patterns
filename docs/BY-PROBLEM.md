@@ -839,6 +839,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | API routes are protected, but CSV export, search index, or report | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | appears to hang on startup. Symptom. Startup after a crash takes minutes | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | Application data silently loses updates after a network | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
+| Applying a JavaScript enhancement without checking whether the | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Applying BASE to an operation that requires a hard invariant. Symptom, an | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
 | Applying it to a pair that never needed it. Symptom. Two teams that | [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) | Domain-Driven Design |
 | Applying REP where no second consumer exists. Symptom. A team spends | [Release Reuse Equivalence](../patterns/04-principles-and-laws/release-reuse-equivalence.md) | Principles and Laws |
@@ -931,6 +932,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Broken correlation across a fan-out. Symptom. A request is wrapped, | [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) | Enterprise Integration |
 | Broken reload path. Symptom. New certificate files appear on disk, but the | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | Broken substitutability discovered late. Symptom. A downstream module no | [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) | Refactoring Techniques |
+| browser actually supports the API it depends on. Symptom. The | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Browser apps keep access tokens in local storage for long | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Browser feature detection blocks valid flows. Symptom. Users on Linux, | [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) | Security |
 | Budget exhausted by a healthy client. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
@@ -941,6 +943,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Building a machine so large and hierarchical that no single person | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Building a molecule or an organism that secretly depends on a | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
+| Building the enhanced, JavaScript-dependent experience first, and | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Building two islands that silently depend on shared state with no | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Bulkhead placed on the wrong side of the buffer. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Bulkhead without a timeout. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -1587,6 +1590,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Green suite, broken production because the real collaborator's shape | [Stub](../patterns/14-testing/stub.md) | Testing |
 | Group claim treated as current authorization truth. Symptom. A removed | [OpenID Connect](../patterns/15-security/openid-connect.md) | Security |
 | Growth without a layering rule. The codebase started as one module and | [Circular Dependency](../patterns/18-anti-patterns/circular-dependency.md) | Anti-Patterns |
+| guarantee. Symptom. A user with JavaScript disabled or a | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Guard wall. Symptom. The top of the function becomes twenty checks long and | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | Half-migrated mutation. Symptom. The caller assigns the returned value, but | [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) | Refactoring Techniques |
 | Half-migrated rich model that reintroduces the setter it just removed. | [Anemic Domain Model](../patterns/18-anti-patterns/anemic-domain-model.md) | Anti-Patterns |
@@ -1867,6 +1871,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Machine-to-machine APIs. A caller is a service, job runner, device, node, | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | Magic-link replay. Symptom. A login link works twice, or works after being | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | maintenance patterns. Each item names a visible symptom, a likely cause, and a | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
+| Making core content or functionality depend on JavaScript running | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Malformed action parsing failures compounding. Symptom, the agent | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |
 | Many breaks in a broad loop. Symptom. A reviewer has to search an entire | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | many times they retry. The observable symptom is an incident marked "cannot | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
@@ -2313,6 +2318,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Production-only denials. Symptom: a workload receives 403 errors only in | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | production. Symptom. A field the consumer reads in a rarely-exercised code | [Contract Test](../patterns/14-testing/contract-test.md) | Testing |
 | Profiling shows branch-heavy reducers spending time in optic | [Prism](../patterns/16-functional/prism.md) | Functional Programming |
+| Progressive Enhancement. Symptom. The supposed baseline is broken | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Prompt injection through judged content. Symptom. A candidate response | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |
 | Prompt injection through observation content. Symptom, the agent's | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |
 | Prompt injection turning into code injection. Symptom, the agent executes | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
@@ -12210,6 +12216,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - producing a visibly inconsistent end-user experience. Symptom.
 - Shipping a duplicated copy of a large shared framework in every
 - micro frontend, without deduplication. Symptom. The total
+
+#### [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md)
+
+**Core Problem:** Before Progressive Enhancement was named, a common alternative approach, graceful degradation, started from the richest possible experience, built for the most capable browsers, and then attempted to strip features back for users on older or less capable browsers, an approach Champeon himself characterized as building from an assumed baseline browser and treating everyone else as an afterthought. This left users on an older browser, a slow connection, or assistive technology with a degraded, sometimes broken experience, since the richest version was the one actually designed and tested first. Progressive Enhancement solves this by inverting the starting point entirely, building a genuinely working experience from semantic HTML content first, verified to work for every user with no CSS and no JavaScript at all, and only then layering CSS for presentation and JavaScript for behavior on top, so a user without either still gets a working, if plainer, experience.
+
+**Failure Mode Symptoms:**
+
+- Building the enhanced, JavaScript-dependent experience first, and
+- Progressive Enhancement. Symptom. The supposed baseline is broken
+- Applying a JavaScript enhancement without checking whether the
+- browser actually supports the API it depends on. Symptom. The
+- Making core content or functionality depend on JavaScript running
+- guarantee. Symptom. A user with JavaScript disabled or a
 
 #### [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md)
 

@@ -513,6 +513,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2885,6 +2886,7 @@ These patterns contain runnable code examples written in Python:
 - [Process Manager](../patterns/11-domain-driven-design/process-manager.md) (Domain-Driven Design)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
+- [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
 - [Prompt Injection Sink](../patterns/18-anti-patterns/prompt-injection-sink.md) (Anti-Patterns)
@@ -3913,6 +3915,7 @@ These patterns contain runnable code examples written in Swift:
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
+- [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) (Frontend and UI)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
@@ -4481,6 +4484,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Process Manager](../patterns/11-domain-driven-design/process-manager.md) (Domain-Driven Design)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
+- [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
 - [Prompt Injection Sink](../patterns/18-anti-patterns/prompt-injection-sink.md) (Anti-Patterns)
