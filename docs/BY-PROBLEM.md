@@ -881,6 +881,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Associativity violation in parallel reduction. Symptom. Sequential tests | [Foldable](../patterns/16-functional/foldable.md) | Functional Programming |
 | Assumed global ordering. Symptom. A downstream projection ends up in a | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Assuming a session survives across HTTP requests without checking. | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
+| Assuming a vendor's HAL implementation behaves identically across | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
 | Assuming an Error Boundary catches an error thrown inside an event | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Assuming every handler resumes exactly once. Symptom. Code written | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Assuming Server Functions dispatch and complete in true parallel | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
@@ -991,6 +992,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | but the caller forgets to use the return value. The symptom is a silent | [Extract Function](../patterns/03-refactoring/extract-function.md) | Refactoring Techniques |
 | by default, in a codebase with Hooks available. Symptom. The | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Bypass drift. Symptom. The facade exists, and half the codebase does not use | [Facade](../patterns/01-gof/facade.md) | Design Patterns (GoF) |
+| Bypassing the abstraction layer for a direct register write in | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
 | Cache eviction turns duplicates into new commands. Symptom. Duplicate side | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |
 | Cache hit ratio for genuinely hot keys degrades over time, and cache | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | Cache stampede at cold start. Symptom. A newly deployed service instance, | [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) | Data and Storage |
@@ -1049,6 +1051,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Checkbox model. Symptom. The repository contains a filled template, but no | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | checks instead of an explicit transition table. Symptom. The | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | checks that are not load bearing. The symptom is a function that is more | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
+| chip revisions without verifying it. Symptom. Firmware that worked | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
 | Choosing an eager hydration directive for an island that is rarely | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Choosing choreography for a process that needed a single owner. Symptom. | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
@@ -1774,6 +1777,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Intermittent corruption or an assertion failure observed only under | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Intermittent failures that reproduce only under concurrency. Symptom. | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
 | Intermittent invalid token errors appear after key rotation. | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
+| interrupt path without measuring its real overhead. Symptom. An | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
 | Intrinsic state. The fields whose values are shared by many objects and do | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Introducing Clean Architecture to a genuinely small | [Clean Architecture](../patterns/05-architectural/clean-architecture.md) | Architectural Patterns |
 | Introducing profunctor optics to a team with no prior exposure to the | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
@@ -2336,6 +2340,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | place on purpose. Symptom. A member is genuinely, deliberately private, and a | [Insider Trading](../patterns/02-code-smells/insider-trading.md) | Code Smells |
 | Placing a footer or other important, reachable content directly | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | Placing a single Error Boundary around the entire application with | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
+| Placing the abstraction layer on a genuinely cycle-critical | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
 | Poison message loop. Symptom. A single message is processed, fails, becomes | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | Poison message loop. Symptom. Consumer lag on one partition grows | [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) | Enterprise Integration |
 | Poison message replay. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
@@ -2403,6 +2408,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Prop-drilling an unmanageable number of fields between the two | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Protected-field trap. Symptom. The refactoring stalls because the child read | [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) | Refactoring Techniques |
 | Prototype used as a Singleton bypass. A registry exemplar is handed out | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
+| provide. Symptom. Porting the firmware to a different | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
 | Provider verification is flaky, sometimes passing and sometimes | [Consumer-Driven Contract Test](../patterns/10-microservices/consumer-driven-contract-test.md) | Microservices |
 | Provider verification tests are constantly red, and the provider | [Consumer-Side Contract Test](../patterns/10-microservices/consumer-side-contract-test.md) | Microservices |
 | Providing no fallback content for a slot a consumer may reasonably | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
@@ -15829,5 +15835,20 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Concurrent edits at different levels colliding silently. Symptom. Two
 - Fragile base class breakage from reordering. Symptom. An apparently
 - The empty intermediate class trap. Symptom. A reader tracing a bug
+
+### Embedded and Hardware-Software
+
+#### [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md)
+
+**Core Problem:** Firmware written directly against one microcontroller's raw registers is tied to that exact chip, so porting it to a different microcontroller, even one from the same family, means rewriting every register access by hand, and even switching to a newer revision of the same chip can silently change register offsets under code that assumed a fixed memory layout. A Hardware Abstraction Layer solves this by placing a standardized set of functions and definitions between the application and the hardware. ARM's own CMSIS documentation states the resulting benefit directly, standardized header organization gives developers "methods to organize header files that makes it easy to learn new Cortex-M microcontroller products and improve software portability." Code written against the abstraction layer's API works unchanged across every microcontroller whose vendor implements that same layer, because the application never touches a register address directly.
+
+**Failure Mode Symptoms:**
+
+- Bypassing the abstraction layer for a direct register write in
+- provide. Symptom. Porting the firmware to a different
+- Placing the abstraction layer on a genuinely cycle-critical
+- interrupt path without measuring its real overhead. Symptom. An
+- Assuming a vendor's HAL implementation behaves identically across
+- chip revisions without verifying it. Symptom. Firmware that worked
 
 Generated by `tools/gen-by-problem-by-language.py`. Do not edit by hand.

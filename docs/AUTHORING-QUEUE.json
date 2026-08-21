@@ -5334,13 +5334,6 @@
     "focus": ""
   },
   {
-    "name": "Hardware Abstraction Layer (HAL)",
-    "slug": "hardware-abstraction-layer",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/hardware-abstraction-layer.md",
-    "focus": ""
-  },
-  {
     "name": "Interrupt Service Routine",
     "slug": "interrupt-service-routine",
     "category": "embedded and hardware-software",
