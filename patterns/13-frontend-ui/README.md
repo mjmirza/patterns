@@ -2,13 +2,14 @@
 
 Origin. Framework documentation
 
-1 entries, 3,861 words. Every entry carries all 18
+2 entries, 7,705 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Component Composition
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Compound Components](compound-components.md) | established | 3,844 | A component with several configurable parts, a tab strip with a list of tabs and a panel of content, an accordion with several expandable sections, a select box with a list of ... |
 | [Container Presentational](container-presentational.md) | deprecated | 3,861 | A component that both fetches data, manages loading and error state, and renders the resulting markup mixes two genuinely different concerns in one place. |
 
 ## Reading order

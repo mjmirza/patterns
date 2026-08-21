@@ -621,6 +621,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A supposedly tail-recursive function still grows the stack after | [Tail Call Optimization](../patterns/16-functional/tail-call-optimization.md) | Functional Programming |
 | A switch on a platform, driver, or tenant value repeated in more than three | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | A synchronous caller times out waiting for a response that | [Channel Adapter](../patterns/07-integration/channel-adapter.md) | Enterprise Integration |
+| A Tab or TabPanel rendered without a wrapping Tabs parent | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
 | A task appears permanently stuck in Processing. | [Scheduler Agent Supervisor](../patterns/08-cloud-distributed/scheduler-agent-supervisor.md) | Cloud and Distributed |
 | A task appears permanently stuck in the running state, and the | [Scheduler Agent Supervisor](../patterns/08-cloud-distributed/scheduler-agent-supervisor.md) | Cloud and Distributed |
 | a team "fixes" a slow, chatty client by adding a single stored | [Busy Database](../patterns/18-anti-patterns/busy-database.md) | Anti-Patterns |
@@ -841,6 +842,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | architecture discussions. Symptom. Tracing a single request requires reading | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
 | are long and hard to read. The symptom is a function with no named | [Inline Variable](../patterns/03-refactoring/inline-variable.md) | Refactoring Techniques |
 | are not. The symptom is incorrect equality that surfaces only when the | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
+| arrangement need. Symptom. A component gains a parent and several | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
 | as a shared method that grows conditional branches and boolean flag | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | as described in dimension 8, removes the symptom's most visible surface | [Spaghetti Code](../patterns/18-anti-patterns/spaghetti-code.md) | Anti-Patterns |
 | as Dynamo does, and monitor for the specific symptom (a version accepted as | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
@@ -2193,6 +2195,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Peer list convergence to a small clique. Symptom. A subset of nodes | [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) | Data and Storage |
 | Per-target retry inside the chain is set generously, and a | [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) | AI and Agentic |
 | Performance degrades specifically on the customer or order table, | [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) | Enterprise Application Architecture |
+| performance or correctness suffers. Symptom. A context-based | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
 | Performance profiles show many short-lived closures or deep | [Function Composition](../patterns/16-functional/function-composition.md) | Functional Programming |
 | Performance regression from copying. Symptom. CPU and allocation profiles | [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) | Refactoring Techniques |
 | Performance regression on hot paths. The refactoring turns a single | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
@@ -2396,6 +2399,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Renaming only one side. Symptom. DivergentClassA is renamed to match | [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) | Code Smells |
 | Renaming to a name that is only temporarily better. The new name is | [Rename Field](../patterns/03-refactoring/rename-field.md) | Refactoring Techniques |
 | Renaming to a name that is only temporarily better. The new name is | [Rename Variable](../patterns/03-refactoring/rename-variable.md) | Refactoring Techniques |
+| Rendering a child sub-component outside its expected parent. | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
 | Reopening a settled decision under a new cosmetic pretext. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | Repair takes dramatically longer to complete than expected, or | [Anti-Entropy](../patterns/12-data-storage/anti-entropy.md) | Data and Storage |
 | Repair writes appear in write-side metrics and logs at a volume the | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
@@ -2712,6 +2716,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Split-brain from independently converging gossip islands. Symptom. Two | [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) | Data and Storage |
 | Split-brain registry returning inconsistent instance lists. Symptom, some | [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) | Microservices |
 | Split-brain rule bases across router replicas. Symptom. The same message | [Dynamic Router](../patterns/07-integration/dynamic-router.md) | Enterprise Integration |
+| Splitting a component into compound pieces with no real, independent | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
 | Splitting a package produces a burst of new packages, each with | [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) | Principles and Laws |
 | Splitting a parameterized function. The parameter is not a flag but | [Remove Flag Argument](../patterns/03-refactoring/remove-flag-argument.md) | Refactoring Techniques |
 | Splitting along data rather than along change. Symptom. Two new classes | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
@@ -4568,6 +4573,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Thread-local context lost on migration to thread pool isolation. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Thread-local state leaking across unrelated tasks. The observable symptom is that a task | [Thread Pool](../patterns/09-concurrency/thread-pool.md) | Concurrency and Parallelism |
 | Thread-unsafe lazy initialisation. Symptom. Duplicate rows, two open | [Proxy](../patterns/01-gof/proxy.md) | Design Patterns (GoF) |
+| Threading the implicit state through so many nested layers that | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
 | Three-or-more-way Partnership sprawl. Symptom. A "partnership" meeting | [Partnership](../patterns/11-domain-driven-design/partnership.md) | Domain-Driven Design |
 | Three-phase commit that is actually two-phase commit with a redundant | [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) | Data and Storage |
 | Thresholds miscalibrated for the deployed domain. Symptom. After moving | [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) | AI and Agentic |
@@ -12039,6 +12045,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Cache hit ratio for genuinely hot keys degrades over time, and cache
 
 ### Frontend and UI
+
+#### [Compound Components](../patterns/13-frontend-ui/compound-components.md)
+
+**Core Problem:** A component with several configurable parts, a tab strip with a list of tabs and a panel of content, an accordion with several expandable sections, a select box with a list of options, can be built as one large component accepting a long list of configuration props, an array of tab labels, an array of panel contents, a callback for the active selection. This works, but it forces every possible layout and content variation to be expressed through that one component's prop API, and adding a new capability, a badge on one tab, a disabled state on one option, means growing the prop API further.
+
+**Failure Mode Symptoms:**
+
+- Rendering a child sub-component outside its expected parent.
+- A Tab or TabPanel rendered without a wrapping Tabs parent
+- Splitting a component into compound pieces with no real, independent
+- arrangement need. Symptom. A component gains a parent and several
+- Threading the implicit state through so many nested layers that
+- performance or correctness suffers. Symptom. A context-based
 
 #### [Container Presentational](../patterns/13-frontend-ui/container-presentational.md)
 
