@@ -883,6 +883,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Assertion Roulette. Symptom. A test fails, and the failure message gives | [Four-Phase Test](../patterns/14-testing/four-phase-test.md) | Testing |
 | Assertion that is disabled in production. The assertion catches errors | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
 | Assertion with a bad message. The assertion fires with a message like | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
+| Assigning priority by a criterion other than period, such as | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
 | Associativity violation in parallel reduction. Symptom. Sequential tests | [Foldable](../patterns/16-functional/foldable.md) | Functional Programming |
 | Assumed global ordering. Symptom. A downstream projection ends up in a | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Assuming a session survives across HTTP requests without checking. | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
@@ -1047,6 +1048,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | changed. Symptom. Every automated test passes, and a production incident | [Stub](../patterns/14-testing/stub.md) | Testing |
 | changed. Symptom. The consumer re-renders on every provider update | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Changes to a live system, not bugs discovered at write time, are the dominant proximate cause of user-visible inciden... | [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) | Microservices |
+| Changing a task's period at runtime without re-running the | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
 | Changing one interaction risks all of them. Adding a currency field means | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | Chasing noise instead of fixing it. Symptom. A differential test suite | [Differential Testing](../patterns/14-testing/differential-testing.md) | Testing |
 | Chasing one hundred percent as a hard gate. Symptom. A pull request is | [Mutation Test](../patterns/14-testing/mutation-test.md) | Testing |
@@ -1308,6 +1310,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Dependency request rate rises by an order of magnitude within seconds | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | dependents, which is legal under ADP alone. This symptom is a Stable | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | Deploying a fix to one service requires bumping and redeploying the | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
+| Deploying a task set whose real total utilization exceeds the Liu | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
 | Deployment-time binding. An application is written against one logging API | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | described in dimensions 6 through 8, presented as Symptom, Cause, Fix | [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) | Microservices |
 | description draws on operational experience rather than a citable | [Message](../patterns/07-integration/message.md) | Enterprise Integration |
@@ -1604,6 +1607,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | firmware update leaves the device permanently unbootable. Symptom. | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | first is supposed to receive from. Symptom, the program hangs completely | [Communicating Sequential Processes](../patterns/09-concurrency/communicating-sequential-processes.md) | Concurrency and Parallelism |
 | First validation error only. Symptom. A form with five invalid fields returns | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
+| first, assuming it will still meet every deadline. Symptom. A task | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
 | Fix, in the order to try them. | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
 | Fix: introduce policy wrappers or pass an explicit semigroup object. | [Semigroup](../patterns/16-functional/semigroup.md) | Functional Programming |
 | Fix: keep the semigroup as the correctness contract, then add a batched or | [Semigroup](../patterns/16-functional/semigroup.md) | Functional Programming |
@@ -2071,6 +2075,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Monad transformer pile. Symptom. Type errors mention several transformer | [Monad](../patterns/16-functional/monad.md) | Functional Programming |
 | monolithic test, because that treats the symptom rather than the | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
 | Monotonic key hot spot. Symptom observed. inserts that were fast at | [B-Tree](../patterns/12-data-storage/b-tree.md) | Data and Storage |
+| Monotonic Scheduling. Symptom. The schedulability guarantee the | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
 | months. Symptom. A historical audit record has an updatedat timestamp | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
 | More than one application server instance must be able to service any | [Database Session State](../patterns/06-enterprise-application-architecture/database-session-state.md) | Enterprise Application Architecture |
 | More than one function or method needs variant specific behaviour for the | [Switch Statements](../patterns/02-code-smells/switch-statements.md) | Code Smells |
@@ -2695,6 +2700,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Save is called from inside a loop over query results, defeating | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
 | scan. Symptom. A component's return statement grows several levels | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | scenarios. Symptom. A widely imported test-helper module holds one giant | [Stub](../patterns/14-testing/stub.md) | Testing |
+| schedulability analysis for the new period set. Symptom. A task set | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
 | Scheduler affinity breach. Symptom. A UI update runs on a worker thread, an | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
 | Schema coupling through a shared database. Symptom. A migration in one | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
 | Schema covers shape but not meaning. Symptom. A JSON body passes schema | [Input Validation](../patterns/15-security/input-validation.md) | Security |
@@ -15963,6 +15969,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - peripheral at the same time. Symptom. Data is lost, corrupted, or
 - Using a busy-wait polling loop for a genuinely long or unpredictable
 - Other tasks in the system become unresponsive or miss their
+
+#### [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md)
+
+**Core Problem:** A real-time system runs several periodic tasks, each with its own period and its own deadline, and the system needs every task to finish its work within its deadline, every single period, with no exceptions. Choosing task priorities arbitrarily, or by some other criterion such as code complexity or perceived importance, gives no principled guarantee that every task will actually meet its deadline under worst-case timing. Rate Monotonic Scheduling solves this by deriving priority directly and mechanically from period, and pairing that assignment with a mathematically provable schedulability test. Barr Group's own reference states the resulting optimality directly, "if a task set cannot be scheduled using the RMA algorithm, it cannot be scheduled using any static-priority algorithm."
+
+**Failure Mode Symptoms:**
+
+- Deploying a task set whose real total utilization exceeds the Liu
+- first, assuming it will still meet every deadline. Symptom. A task
+- Assigning priority by a criterion other than period, such as
+- Monotonic Scheduling. Symptom. The schedulability guarantee the
+- Changing a task's period at runtime without re-running the
+- schedulability analysis for the new period set. Symptom. A task set
 
 #### [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md)
 

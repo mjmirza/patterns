@@ -5334,13 +5334,6 @@
     "focus": ""
   },
   {
-    "name": "Rate Monotonic Scheduling",
-    "slug": "rate-monotonic-scheduling",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/rate-monotonic-scheduling.md",
-    "focus": ""
-  },
-  {
     "name": "Earliest Deadline First Scheduling",
     "slug": "earliest-deadline-first-scheduling",
     "category": "embedded and hardware-software",
