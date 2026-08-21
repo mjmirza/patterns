@@ -17,7 +17,10 @@ FAMILY_TITLES = {
     "03-refactoring": ("Refactoring Techniques", "Fowler, Refactoring 2nd edition"),
     "04-principles-and-laws": ("Principles and Laws", "Martin, Larman, Brewer, Conway"),
     "05-architectural": ("Architectural Patterns", "Buschmann POSA 1, Bass SEI"),
-    "06-enterprise-application-architecture": ("Enterprise Application Architecture", "Fowler, PoEAA"),
+    "06-enterprise-application-architecture": (
+        "Enterprise Application Architecture",
+        "Fowler, PoEAA",
+    ),
     "07-integration": ("Enterprise Integration", "Hohpe and Woolf"),
     "08-cloud-distributed": (
         "Cloud and Distributed",
@@ -47,6 +50,18 @@ FAMILY_TITLES = {
     ),
     "25-mlops": ("MLOps", "Google ML design patterns"),
     "26-interaction-hci": ("Interaction and HCI", "Tidwell, Designing Interfaces"),
+    "27-mobile-architecture": (
+        "Mobile Architecture",
+        "Official Android/iOS architecture guidance",
+    ),
+    "28-embedded-hardware": (
+        "Embedded and Hardware-Software",
+        "Embedded systems engineering literature",
+    ),
+    "29-realtime-simulation": (
+        "Real-Time Simulation",
+        "Nystrom, Game Programming Patterns",
+    ),
 }
 
 FRONTMATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)

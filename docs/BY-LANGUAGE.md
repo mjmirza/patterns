@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 
 ## Language Reference Guides
 
@@ -760,6 +761,7 @@ These patterns contain runnable code examples written in C++:
 
 - [Bridge](../patterns/01-gof/bridge.md) (Design Patterns (GoF))
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
+- [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 
 #### Changes Shape in C++
 
@@ -2708,6 +2710,7 @@ These patterns contain runnable code examples written in Python:
 - [GraphRAG](../patterns/17-ai-agentic/graphrag.md) (AI and Agentic)
 - [Guaranteed Delivery](../patterns/07-integration/guaranteed-delivery.md) (Enterprise Integration)
 - [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) (Concurrency and Parallelism)
+- [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
 - [Health Check API](../patterns/10-microservices/health-check-api.md) (Microservices)
 - [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) (Cloud and Distributed)
@@ -3944,6 +3947,7 @@ These patterns contain runnable code examples written in Swift:
 - [Form Action](../patterns/13-frontend-ui/form-action.md) (Frontend and UI)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
 - [Golden Master](../patterns/14-testing/golden-master.md) (Testing)
+- [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
 - [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)

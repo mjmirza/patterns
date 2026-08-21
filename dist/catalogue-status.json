@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 741,
+  "published_total": 742,
   "target_total": 848,
   "families_total": 29,
   "families_complete": 18,
   "stale_entries": 0,
-  "references_checked": 4118,
+  "references_checked": 4120,
   "rows": [
     {
       "family": "01-gof",
@@ -344,11 +344,13 @@
       "family": "28-embedded-hardware",
       "name": "Embedded and Hardware-Software",
       "origin": "Embedded systems engineering literature",
-      "published": 0,
-      "planned": 14,
+      "published": 1,
+      "planned": 13,
       "target": 14,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 7.1,
+      "maturity": {
+        "canonical": 1
+      }
     },
     {
       "family": "29-realtime-simulation",
