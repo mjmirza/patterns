@@ -522,6 +522,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Characterization Test](../patterns/14-testing/characterization-test.md) | Testing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -3117,6 +3118,7 @@ These patterns contain runnable code examples written in Python:
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Vector Clock](../patterns/12-data-storage/vector-clock.md) (Data and Storage)
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
+- [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
@@ -3943,6 +3945,7 @@ These patterns contain runnable code examples written in Swift:
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
 - [Validation Applicative](../patterns/16-functional/validation-applicative.md) (Functional Programming)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
+- [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 
 #### Changes Shape in Swift
@@ -4715,6 +4718,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
+- [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
