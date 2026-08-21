@@ -569,6 +569,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) | Functional Programming |  |  |  |  |  | Yes | Yes | Yes | Yes |
 | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
 | [Continuation](../patterns/16-functional/continuation.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -584,18 +585,24 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Monad](../patterns/16-functional/monad.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
 | [Monoid](../patterns/16-functional/monoid.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Optics](../patterns/16-functional/optics.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Option Maybe](../patterns/16-functional/option-maybe.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Partial Application](../patterns/16-functional/partial-application.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
+| [Pattern Matching](../patterns/16-functional/pattern-matching.md) | Functional Programming |  |  |  |  |  | Yes | Yes | Yes | Yes |
 | [Persistent Data Structures](../patterns/16-functional/persistent-data-structures.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Point-free Style](../patterns/16-functional/point-free-style.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prism](../patterns/16-functional/prism.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
 | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  | Yes |
+| [Reader Monad](../patterns/16-functional/reader-monad.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Result Either](../patterns/16-functional/result-either.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Semigroup](../patterns/16-functional/semigroup.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
+| [State Monad](../patterns/16-functional/state-monad.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Tail Call Optimization](../patterns/16-functional/tail-call-optimization.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
 | [Trampolining](../patterns/16-functional/trampolining.md) | Functional Programming |  |  | Yes |  |  | Yes | Yes |  | Yes |
+| [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |  |  |  |  |  | Yes | Yes |  | Yes |
+| [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Advanced RAG](../patterns/17-ai-agentic/advanced-rag.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Agent Debate](../patterns/17-ai-agentic/agent-debate.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1195,6 +1202,7 @@ These patterns contain runnable code examples written in Go:
 - [OpenID Connect](../patterns/15-security/openid-connect.md) (Security)
 - [Optics](../patterns/16-functional/optics.md) (Functional Programming)
 - [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) (Enterprise Application Architecture)
+- [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Orchestrator-Worker](../patterns/17-ai-agentic/orchestrator-worker.md) (AI and Agentic)
 - [Output Encoding](../patterns/15-security/output-encoding.md) (Security)
 - [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) (AI and Agentic)
@@ -1257,6 +1265,7 @@ These patterns contain runnable code examples written in Go:
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) (Data and Storage)
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
+- [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) (Enterprise Application Architecture)
 - [Reflexion](../patterns/17-ai-agentic/reflexion.md) (AI and Agentic)
@@ -1369,6 +1378,7 @@ These patterns contain runnable code examples written in Go:
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [Star Schema](../patterns/12-data-storage/star-schema.md) (Data and Storage)
+- [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
 - [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) (Cloud and Distributed)
 - [Stovepipe System](../patterns/18-anti-patterns/stovepipe-system.md) (Anti-Patterns)
@@ -1416,6 +1426,7 @@ These patterns contain runnable code examples written in Go:
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
 - [Transactional Client](../patterns/07-integration/transactional-client.md) (Enterprise Integration)
 - [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) (Microservices)
+- [Transducer](../patterns/16-functional/transducer.md) (Functional Programming)
 - [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) (Enterprise Application Architecture)
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
@@ -1452,6 +1463,7 @@ These patterns have unique implementation variants or change their design struct
 - [Agentic Blackboard](../patterns/17-ai-agentic/agentic-blackboard.md) (AI and Agentic)
 - [Aggregate Root](../patterns/11-domain-driven-design/aggregate-root.md) (Domain-Driven Design)
 - [Aggregator](../patterns/07-integration/aggregator.md) (Enterprise Integration)
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) (Code Smells)
 - [Ambassador](../patterns/08-cloud-distributed/ambassador.md) (Cloud and Distributed)
 - [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) (Cloud and Distributed)
@@ -1597,6 +1609,7 @@ These patterns have unique implementation variants or change their design struct
 - [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) (Domain-Driven Design)
 - [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) (Domain-Driven Design)
 - [Optics](../patterns/16-functional/optics.md) (Functional Programming)
+- [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Output Encoding](../patterns/15-security/output-encoding.md) (Security)
 - [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) (Concurrency and Parallelism)
 - [Parallelization](../patterns/17-ai-agentic/parallelization.md) (AI and Agentic)
@@ -1626,6 +1639,7 @@ These patterns have unique implementation variants or change their design struct
 - [Reactor](../patterns/09-concurrency/reactor.md) (Concurrency and Parallelism)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
+- [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
 - [Registry](../patterns/06-enterprise-application-architecture/registry.md) (Enterprise Application Architecture)
@@ -1677,6 +1691,7 @@ These patterns have unique implementation variants or change their design struct
 - [Spy](../patterns/14-testing/spy.md) (Testing)
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
+- [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
 - [Strategy](../patterns/01-gof/strategy.md) (Design Patterns (GoF))
@@ -1702,6 +1717,7 @@ These patterns have unique implementation variants or change their design struct
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
+- [Transducer](../patterns/16-functional/transducer.md) (Functional Programming)
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
@@ -1710,6 +1726,7 @@ These patterns have unique implementation variants or change their design struct
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 - [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) (Data and Storage)
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 
 #### Made Unnecessary or Alternative in Go
 
@@ -1772,6 +1789,7 @@ These patterns have native features in Go that make the pattern unnecessary, or 
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Service-Oriented Architecture](../patterns/05-architectural/service-oriented-architecture.md) (Architectural Patterns)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
+- [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [Strangler Application](../patterns/10-microservices/strangler-application.md) (Microservices)
 - [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) (AI and Agentic)
 - [Supporting Subdomain](../patterns/11-domain-driven-design/supporting-subdomain.md) (Domain-Driven Design)
@@ -1917,6 +1935,7 @@ These patterns contain runnable code examples written in Java:
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
 #### Changes Shape in Java
@@ -1931,6 +1950,7 @@ These patterns have unique implementation variants or change their design struct
 - [Agentic Blackboard](../patterns/17-ai-agentic/agentic-blackboard.md) (AI and Agentic)
 - [Aggregate Root](../patterns/11-domain-driven-design/aggregate-root.md) (Domain-Driven Design)
 - [Aggregator](../patterns/07-integration/aggregator.md) (Enterprise Integration)
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) (Code Smells)
 - [Anemic Domain Model](../patterns/18-anti-patterns/anemic-domain-model.md) (Anti-Patterns)
 - [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) (Domain-Driven Design)
@@ -2097,6 +2117,7 @@ These patterns have unique implementation variants or change their design struct
 - [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) (Domain-Driven Design)
 - [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) (Domain-Driven Design)
 - [Optics](../patterns/16-functional/optics.md) (Functional Programming)
+- [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Page Controller](../patterns/06-enterprise-application-architecture/page-controller.md) (Enterprise Application Architecture)
 - [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) (Concurrency and Parallelism)
 - [Parameterize Function](../patterns/03-refactoring/parameterize-function.md) (Refactoring Techniques)
@@ -2182,6 +2203,7 @@ These patterns have unique implementation variants or change their design struct
 - [Split Variable](../patterns/03-refactoring/split-variable.md) (Refactoring Techniques)
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
+- [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
 - [Strategy](../patterns/01-gof/strategy.md) (Design Patterns (GoF))
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
@@ -2206,6 +2228,7 @@ These patterns have unique implementation variants or change their design struct
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 
 #### Made Unnecessary or Alternative in Java
 
@@ -2279,6 +2302,7 @@ These patterns contain runnable code examples written in Kotlin:
 These patterns have unique implementation variants or change their design structure specifically when built using Kotlin features (documented in Dimension 8):
 
 - [Active Record](../patterns/06-enterprise-application-architecture/active-record.md) (Enterprise Application Architecture)
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Application Metrics](../patterns/10-microservices/application-metrics.md) (Microservices)
 - [Arrange-Act-Assert](../patterns/14-testing/arrange-act-assert.md) (Testing)
 - [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) (Enterprise Application Architecture)
@@ -2401,6 +2425,7 @@ These patterns contain runnable code examples written in Python:
 - [Aggregate](../patterns/10-microservices/aggregate.md) (Microservices)
 - [Aggregate](../patterns/11-domain-driven-design/aggregate.md) (Domain-Driven Design)
 - [Aggregator](../patterns/07-integration/aggregator.md) (Enterprise Integration)
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) (Code Smells)
 - [Ambassador](../patterns/08-cloud-distributed/ambassador.md) (Cloud and Distributed)
 - [Analysis Paralysis](../patterns/18-anti-patterns/analysis-paralysis.md) (Anti-Patterns)
@@ -2775,6 +2800,7 @@ These patterns contain runnable code examples written in Python:
 - [OpenID Connect](../patterns/15-security/openid-connect.md) (Security)
 - [Optics](../patterns/16-functional/optics.md) (Functional Programming)
 - [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) (Enterprise Application Architecture)
+- [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Orchestrator-Worker](../patterns/17-ai-agentic/orchestrator-worker.md) (AI and Agentic)
 - [Output Encoding](../patterns/15-security/output-encoding.md) (Security)
 - [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) (AI and Agentic)
@@ -2791,6 +2817,7 @@ These patterns contain runnable code examples written in Python:
 - [Partnership](../patterns/11-domain-driven-design/partnership.md) (Domain-Driven Design)
 - [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) (Security)
 - [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) (Security)
+- [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Paxos](../patterns/12-data-storage/paxos.md) (Data and Storage)
 - [Peer-to-Peer](../patterns/05-architectural/peer-to-peer.md) (Architectural Patterns)
 - [Persistent Data Structures](../patterns/16-functional/persistent-data-structures.md) (Functional Programming)
@@ -2852,6 +2879,7 @@ These patterns contain runnable code examples written in Python:
 - [Read Repair](../patterns/12-data-storage/read-repair.md) (Data and Storage)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) (Data and Storage)
+- [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) (Enterprise Application Architecture)
 - [Reflexion](../patterns/17-ai-agentic/reflexion.md) (AI and Agentic)
@@ -2980,6 +3008,7 @@ These patterns contain runnable code examples written in Python:
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [Star Schema](../patterns/12-data-storage/star-schema.md) (Data and Storage)
+- [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
 - [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) (Cloud and Distributed)
 - [Stovepipe System](../patterns/18-anti-patterns/stovepipe-system.md) (Anti-Patterns)
@@ -3027,6 +3056,7 @@ These patterns contain runnable code examples written in Python:
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
 - [Transactional Client](../patterns/07-integration/transactional-client.md) (Enterprise Integration)
 - [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) (Microservices)
+- [Transducer](../patterns/16-functional/transducer.md) (Functional Programming)
 - [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) (Enterprise Application Architecture)
 - [Traversable](../patterns/16-functional/traversable.md) (Functional Programming)
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
@@ -3049,6 +3079,7 @@ These patterns contain runnable code examples written in Python:
 - [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) (Data and Storage)
 - [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) (Data and Storage)
 - [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) (Data and Storage)
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
 - [Zero Trust](../patterns/15-security/zero-trust.md) (Security)
@@ -3066,6 +3097,7 @@ These patterns have unique implementation variants or change their design struct
 - [Agent Memory](../patterns/17-ai-agentic/agent-memory.md) (AI and Agentic)
 - [Agentic Blackboard](../patterns/17-ai-agentic/agentic-blackboard.md) (AI and Agentic)
 - [Aggregator](../patterns/07-integration/aggregator.md) (Enterprise Integration)
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) (Code Smells)
 - [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) (Cloud and Distributed)
 - [Application Metrics](../patterns/10-microservices/application-metrics.md) (Microservices)
@@ -3223,6 +3255,7 @@ These patterns have unique implementation variants or change their design struct
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
 - [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) (Domain-Driven Design)
 - [Optics](../patterns/16-functional/optics.md) (Functional Programming)
+- [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Output Encoding](../patterns/15-security/output-encoding.md) (Security)
 - [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) (AI and Agentic)
 - [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) (Anti-Patterns)
@@ -3231,6 +3264,7 @@ These patterns have unique implementation variants or change their design struct
 - [Parameterize Function](../patterns/03-refactoring/parameterize-function.md) (Refactoring Techniques)
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Partial Application](../patterns/16-functional/partial-application.md) (Functional Programming)
+- [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) (Architectural Patterns)
 - [Pipeline Parallelism](../patterns/09-concurrency/pipeline-parallelism.md) (Concurrency and Parallelism)
 - [Pipes and Filters](../patterns/05-architectural/pipes-filters.md) (Architectural Patterns)
@@ -3257,6 +3291,7 @@ These patterns have unique implementation variants or change their design struct
 - [Reactor](../patterns/09-concurrency/reactor.md) (Concurrency and Parallelism)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
+- [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) (Enterprise Application Architecture)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
@@ -3321,6 +3356,7 @@ These patterns have unique implementation variants or change their design struct
 - [Split Phase](../patterns/03-refactoring/split-phase.md) (Refactoring Techniques)
 - [Spy](../patterns/14-testing/spy.md) (Testing)
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
+- [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
 - [Strategy](../patterns/01-gof/strategy.md) (Design Patterns (GoF))
@@ -3346,12 +3382,14 @@ These patterns have unique implementation variants or change their design struct
 - [Throttling](../patterns/08-cloud-distributed/throttling.md) (Cloud and Distributed)
 - [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) (Anti-Patterns)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
+- [Transducer](../patterns/16-functional/transducer.md) (Functional Programming)
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
 #### Made Unnecessary or Alternative in Python
@@ -3385,6 +3423,7 @@ These patterns have native features in Python that make the pattern unnecessary,
 - [Memento](../patterns/01-gof/memento.md) (Design Patterns (GoF))
 - [Modular Monolith](../patterns/05-architectural/modular-monolith.md) (Architectural Patterns)
 - [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) (AI and Agentic)
+- [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) (Concurrency and Parallelism)
 - [Partial Application](../patterns/16-functional/partial-application.md) (Functional Programming)
 - [Poison Pill](../patterns/18-anti-patterns/poison-pill.md) (Anti-Patterns)
@@ -3418,6 +3457,7 @@ These patterns contain runnable code examples written in Rust:
 - [Agent Memory](../patterns/17-ai-agentic/agent-memory.md) (AI and Agentic)
 - [Aggregate Root](../patterns/11-domain-driven-design/aggregate-root.md) (Domain-Driven Design)
 - [Aggregate](../patterns/11-domain-driven-design/aggregate.md) (Domain-Driven Design)
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Anti-Entropy](../patterns/12-data-storage/anti-entropy.md) (Data and Storage)
 - [Applicative](../patterns/16-functional/applicative.md) (Functional Programming)
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
@@ -3492,7 +3532,9 @@ These patterns contain runnable code examples written in Rust:
 - [Mutation Test](../patterns/14-testing/mutation-test.md) (Testing)
 - [No Caching Strategy](../patterns/18-anti-patterns/no-caching-strategy.md) (Anti-Patterns)
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
+- [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Partial Application](../patterns/16-functional/partial-application.md) (Functional Programming)
+- [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Persistent Data Structures](../patterns/16-functional/persistent-data-structures.md) (Functional Programming)
 - [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) (Architectural Patterns)
 - [Pipeline Parallelism](../patterns/09-concurrency/pipeline-parallelism.md) (Concurrency and Parallelism)
@@ -3572,6 +3614,7 @@ These patterns have unique implementation variants or change their design struct
 - [Adapter](../patterns/01-gof/adapter.md) (Design Patterns (GoF))
 - [Aggregate Root](../patterns/11-domain-driven-design/aggregate-root.md) (Domain-Driven Design)
 - [Aggregate](../patterns/11-domain-driven-design/aggregate.md) (Domain-Driven Design)
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) (Enterprise Application Architecture)
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
 - [Backpressure](../patterns/09-concurrency/backpressure.md) (Concurrency and Parallelism)
@@ -3657,8 +3700,10 @@ These patterns have unique implementation variants or change their design struct
 - [Mutation Test](../patterns/14-testing/mutation-test.md) (Testing)
 - [Observer](../patterns/01-gof/observer.md) (Design Patterns (GoF))
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
+- [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) (Concurrency and Parallelism)
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
+- [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Paxos](../patterns/12-data-storage/paxos.md) (Data and Storage)
 - [Persistent Data Structures](../patterns/16-functional/persistent-data-structures.md) (Functional Programming)
 - [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) (Architectural Patterns)
@@ -3730,12 +3775,14 @@ These patterns have unique implementation variants or change their design struct
 - [Thread-Safe Interface](../patterns/09-concurrency/thread-safe-interface.md) (Concurrency and Parallelism)
 - [Throttling](../patterns/08-cloud-distributed/throttling.md) (Cloud and Distributed)
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
+- [Transducer](../patterns/16-functional/transducer.md) (Functional Programming)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 - [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) (Data and Storage)
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
 #### Made Unnecessary or Alternative in Rust
@@ -3786,6 +3833,7 @@ These patterns have native features in Rust that make the pattern unnecessary, o
 
 These patterns contain runnable code examples written in Swift:
 
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) (Cloud and Distributed)
 - [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) (Enterprise Application Architecture)
 - [Approval Test](../patterns/14-testing/approval-test.md) (Testing)
@@ -3810,6 +3858,7 @@ These patterns contain runnable code examples written in Swift:
 - [Model-View-Presenter](../patterns/05-architectural/model-view-presenter.md) (Architectural Patterns)
 - [Money](../patterns/06-enterprise-application-architecture/money.md) (Enterprise Application Architecture)
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
+- [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
 - [Replace Error Code with Exception](../patterns/03-refactoring/replace-error-code-with-exception.md) (Refactoring Techniques)
@@ -3829,6 +3878,7 @@ These patterns contain runnable code examples written in Swift:
 
 These patterns have unique implementation variants or change their design structure specifically when built using Swift features (documented in Dimension 8):
 
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) (Enterprise Application Architecture)
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
 - [Bridge](../patterns/01-gof/bridge.md) (Design Patterns (GoF))
@@ -3864,7 +3914,9 @@ These patterns have unique implementation variants or change their design struct
 - [Observer](../patterns/01-gof/observer.md) (Design Patterns (GoF))
 - [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) (Domain-Driven Design)
 - [Optics](../patterns/16-functional/optics.md) (Functional Programming)
+- [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Parallelization](../patterns/17-ai-agentic/parallelization.md) (AI and Agentic)
+- [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Point-free Style](../patterns/16-functional/point-free-style.md) (Functional Programming)
 - [Polymorphism](../patterns/04-principles-and-laws/polymorphism.md) (Principles and Laws)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
@@ -3900,8 +3952,10 @@ These patterns have unique implementation variants or change their design struct
 - [Tagless Final](../patterns/16-functional/tagless-final.md) (Functional Programming)
 - [Template Method](../patterns/01-gof/template-method.md) (Design Patterns (GoF))
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
+- [Transducer](../patterns/16-functional/transducer.md) (Functional Programming)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
 #### Made Unnecessary or Alternative in Swift
@@ -3950,6 +4004,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Aggregate](../patterns/10-microservices/aggregate.md) (Microservices)
 - [Aggregate](../patterns/11-domain-driven-design/aggregate.md) (Domain-Driven Design)
 - [Aggregator](../patterns/07-integration/aggregator.md) (Enterprise Integration)
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) (Code Smells)
 - [Ambassador](../patterns/08-cloud-distributed/ambassador.md) (Cloud and Distributed)
 - [Analysis Paralysis](../patterns/18-anti-patterns/analysis-paralysis.md) (Anti-Patterns)
@@ -4322,6 +4377,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Partnership](../patterns/11-domain-driven-design/partnership.md) (Domain-Driven Design)
 - [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) (Security)
 - [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) (Security)
+- [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Paxos](../patterns/12-data-storage/paxos.md) (Data and Storage)
 - [Peer-to-Peer](../patterns/05-architectural/peer-to-peer.md) (Architectural Patterns)
 - [Pessimistic Offline Lock](../patterns/06-enterprise-application-architecture/pessimistic-offline-lock.md) (Enterprise Application Architecture)
@@ -4380,6 +4436,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) (Data and Storage)
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
+- [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Reflexion](../patterns/17-ai-agentic/reflexion.md) (AI and Agentic)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
@@ -4504,6 +4561,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [Star Schema](../patterns/12-data-storage/star-schema.md) (Data and Storage)
+- [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
 - [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) (Cloud and Distributed)
 - [Stovepipe System](../patterns/18-anti-patterns/stovepipe-system.md) (Anti-Patterns)
@@ -4550,6 +4608,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
 - [Transactional Client](../patterns/07-integration/transactional-client.md) (Enterprise Integration)
 - [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) (Microservices)
+- [Transducer](../patterns/16-functional/transducer.md) (Functional Programming)
 - [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) (Enterprise Application Architecture)
 - [Traversable](../patterns/16-functional/traversable.md) (Functional Programming)
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
@@ -4571,6 +4630,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) (Data and Storage)
 - [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) (Data and Storage)
 - [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) (Data and Storage)
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
 - [Zero Trust](../patterns/15-security/zero-trust.md) (Security)
@@ -4586,6 +4646,7 @@ These patterns have unique implementation variants or change their design struct
 - [Agentic Blackboard](../patterns/17-ai-agentic/agentic-blackboard.md) (AI and Agentic)
 - [Aggregate Root](../patterns/11-domain-driven-design/aggregate-root.md) (Domain-Driven Design)
 - [Aggregate](../patterns/11-domain-driven-design/aggregate.md) (Domain-Driven Design)
+- [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) (Code Smells)
 - [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) (Cloud and Distributed)
 - [Application Service](../patterns/11-domain-driven-design/application-service.md) (Domain-Driven Design)
@@ -4701,6 +4762,7 @@ These patterns have unique implementation variants or change their design struct
 - [Parameterize Function](../patterns/03-refactoring/parameterize-function.md) (Refactoring Techniques)
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Partnership](../patterns/11-domain-driven-design/partnership.md) (Domain-Driven Design)
+- [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Pipes and Filters](../patterns/05-architectural/pipes-filters.md) (Architectural Patterns)
 - [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) (AI and Agentic)
 - [Polling Consumer](../patterns/07-integration/polling-consumer.md) (Enterprise Integration)
@@ -4718,6 +4780,7 @@ These patterns have unique implementation variants or change their design struct
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
+- [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
 - [Registry](../patterns/06-enterprise-application-architecture/registry.md) (Enterprise Application Architecture)
@@ -4759,6 +4822,7 @@ These patterns have unique implementation variants or change their design struct
 - [Split Phase](../patterns/03-refactoring/split-phase.md) (Refactoring Techniques)
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
+- [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [Strategy](../patterns/01-gof/strategy.md) (Design Patterns (GoF))
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
 - [Stub](../patterns/14-testing/stub.md) (Testing)
@@ -4776,11 +4840,13 @@ These patterns have unique implementation variants or change their design struct
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
+- [Transducer](../patterns/16-functional/transducer.md) (Functional Programming)
 - [Traversable](../patterns/16-functional/traversable.md) (Functional Programming)
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 
 #### Made Unnecessary or Alternative in TypeScript
 
@@ -4800,9 +4866,11 @@ These patterns have native features in TypeScript that make the pattern unnecess
 - [Replace Function with Command](../patterns/03-refactoring/replace-function-with-command.md) (Refactoring Techniques)
 - [Replace Magic Literal](../patterns/03-refactoring/replace-magic-literal.md) (Refactoring Techniques)
 - [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) (Refactoring Techniques)
+- [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [Table Module](../patterns/06-enterprise-application-architecture/table-module.md) (Enterprise Application Architecture)
 - [Tagless Final](../patterns/16-functional/tagless-final.md) (Functional Programming)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
+- [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 
 Generated by `tools/gen-by-problem-by-language.py`. Do not edit by hand.

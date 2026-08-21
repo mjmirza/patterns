@@ -2,7 +2,7 @@
 
 Origin. Category theory in practice
 
-27 entries, 172,279 words. Every entry carries all 18
+34 entries, 215,383 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data and State
@@ -17,6 +17,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Algebraic Data Type](algebraic-data-type.md) | canonical | 6,311 | A domain value often has several legitimate shapes, but ordinary object or record modeling makes those shapes look like one bag of optional fields. |
 | [Applicative](applicative.md) | canonical | 6,000 | A program often has several values that are not plain values. |
 | [Continuation](continuation.md) | canonical | 6,344 | A computation cannot finish by returning to its immediate caller, because the rest of the work must be selected, stored, resumed, aborted, retried, scheduled, or exposed as a ... |
 | [Continuation-Passing Style](continuation-passing-style.md) | canonical | 6,152 | A computation has a next step that matters as much as the value being computed. |
@@ -31,16 +32,22 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Monad](monad.md) | canonical | 6,350 | A program has computations that return values inside a policy, and later computations depend on the successful, present, parsed, or completed result of earlier computations. |
 | [Monoid](monoid.md) | canonical | 6,362 | A codebase has many places that reduce many values into one value. |
 | [Optics](optics.md) | established | 6,315 | A program owns nested, value-oriented data and must repeatedly access parts of it without turning every access into hand-written plumbing. |
+| [Option Maybe](option-maybe.md) | established | 6,033 | A function can legitimately have no value to return. |
 | [Partial Application](partial-application.md) | canonical | 6,334 | A program repeatedly calls the same operation with a stable prefix of arguments. |
+| [Pattern Matching](pattern-matching.md) | established | 5,354 | A program receives a value whose exact case, shape, or constructor determines the next computation. |
 | [Point-free Style](point-free-style.md) | established | 6,347 | A function often mentions an argument only to feed it into another function. |
 | [Prism](prism.md) | established | 6,263 | A program models alternatives. A payment can be pending, authorized, captured, or failed. |
 | [Railway-Oriented Programming](railway-oriented-programming.md) | established | 6,631 | A program has a sequence of operations where each later operation should run only if earlier operations succeeded. |
+| [Reader Monad](reader-monad.md) | established | 6,589 | A program has many functions that need the same read-only context. |
 | [Result Either](result-either.md) | established | 6,041 | A program has operations that can fail in expected, meaningful ways. |
 | [Semigroup](semigroup.md) | canonical | 6,298 | A codebase needs to combine values that are already present. |
+| [State Monad](state-monad.md) | established | 6,386 | A computation needs a current value that changes after each step, and later steps depend on the changed value. |
 | [Tagless Final](tagless-final.md) | established | 6,329 | A team has an operation vocabulary that many programs should use, but the team does not want those programs tied to one concrete runtime. |
 | [Tail Call Optimization](tail-call-optimization.md) | established | 6,508 | A program has a call that is the last action of a function. |
 | [Trampolining](trampolining.md) | established | 6,453 | A program expresses repetition, descent, or mutual recursion through function calls. |
+| [Transducer](transducer.md) | established | 6,385 | A codebase has the same element transformations repeated across several data contexts. |
 | [Traversable](traversable.md) | canonical | 6,123 | A program has a structure of values and a function that validates, parses, loads, checks, or annotates one value at a time. |
+| [Writer Monad](writer-monad.md) | established | 6,046 | A computation has a primary result and also produces append-only side output that should remain available to the caller. |
 
 ## Reading order
 
