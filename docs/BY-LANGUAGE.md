@@ -512,6 +512,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
@@ -2788,6 +2789,7 @@ These patterns contain runnable code examples written in Python:
 - [Messaging](../patterns/10-microservices/messaging.md) (Microservices)
 - [Metadata Mapping](../patterns/06-enterprise-application-architecture/metadata-mapping.md) (Enterprise Application Architecture)
 - [Metamorphic Testing](../patterns/14-testing/metamorphic-testing.md) (Testing)
+- [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) (Frontend and UI)
 - [Microkernel](../patterns/05-architectural/microkernel.md) (Architectural Patterns)
 - [Microservice Chassis](../patterns/10-microservices/microservice-chassis.md) (Microservices)
 - [Microservices Architecture](../patterns/05-architectural/microservices-architecture.md) (Architectural Patterns)
@@ -3901,6 +3903,7 @@ These patterns contain runnable code examples written in Swift:
 - [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [JWT](../patterns/15-security/jwt.md) (Security)
 - [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) (Enterprise Application Architecture)
+- [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) (Frontend and UI)
 - [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) (Architectural Patterns)
 - [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) (Architectural Patterns)
 - [Model-View-Presenter](../patterns/05-architectural/model-view-presenter.md) (Architectural Patterns)
@@ -4385,6 +4388,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Messaging Mapper](../patterns/07-integration/messaging-mapper.md) (Enterprise Integration)
 - [Messaging](../patterns/10-microservices/messaging.md) (Microservices)
 - [Metadata Mapping](../patterns/06-enterprise-application-architecture/metadata-mapping.md) (Enterprise Application Architecture)
+- [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) (Frontend and UI)
 - [Microkernel](../patterns/05-architectural/microkernel.md) (Architectural Patterns)
 - [Microservice Chassis](../patterns/10-microservices/microservice-chassis.md) (Microservices)
 - [Microservices Architecture](../patterns/05-architectural/microservices-architecture.md) (Architectural Patterns)

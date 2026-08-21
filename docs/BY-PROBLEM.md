@@ -1084,6 +1084,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | component is in. Symptom. The machine's context grows to hold | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | component receives family A while its collaborator receives family B. The symptom is | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Composed queries that overwhelm the planner. Symptom. A query built from a | [Specification](../patterns/11-domain-driven-design/specification.md) | Domain-Driven Design |
+| Composing several micro frontends with no shared design system, | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | Composition order reversed. Symptom. A pipeline emits different values than | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
 | Composition root mistakenly abstracted. Symptom. A team applies SAP to | [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) | Principles and Laws |
 | Compounding chain availability. Symptom. A distributed call chain of five | [Remote Procedure Invocation](../patterns/10-microservices/remote-procedure-invocation.md) | Microservices |
@@ -1557,6 +1558,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Fresh fixture, stale environment. Symptom. Tests pass locally and fail | [Fresh Fixture](../patterns/14-testing/fresh-fixture.md) | Testing |
 | Freshly ingested documents are findable by keyword search | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |
 | from. The symptom is a crash in production for a condition that should have | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
+| frontends purely to follow the pattern's popularity. Symptom. The | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | Fsync-bound commits slow down and the slowdown does not correlate | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | Full in-memory tree exhausting heap. Symptom. An XSLT-based Transform | [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) | Enterprise Application Architecture |
 | Full-repository mutation runs timing out CI. Symptom. A mutation testing | [Mutation Test](../patterns/14-testing/mutation-test.md) | Testing |
@@ -1896,6 +1898,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Metrics aggregate several failures under one operation name. | [Point-free Style](../patterns/16-functional/point-free-style.md) | Functional Programming |
 | Metrics cannot distinguish business failures from technical | [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) | Functional Programming |
 | Metrics show high fallback counts after a deploy, but no error | [Pattern Matching](../patterns/16-functional/pattern-matching.md) | Functional Programming |
+| micro frontend, without deduplication. Symptom. The total | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | Microservices Patterns, chapter 3, section 3.1). The concrete situation looks | [Messaging](../patterns/10-microservices/messaging.md) | Microservices |
 | Middle man explosion. Every method on the delegate is forwarded to | [Hide Delegate](../patterns/03-refactoring/hide-delegate.md) | Refactoring Techniques |
 | Middle man regression. Symptom. Call stacks and traces gain a layer, but | [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) | Refactoring Techniques |
@@ -2294,6 +2297,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | prod/, the vault is only a different filesystem. The symptom is a breach | [Secrets Management](../patterns/15-security/secrets-management.md) | Security |
 | Producer-side latency grows unpredictably and is hard to correlate | [Recipient List](../patterns/07-integration/recipient-list.md) | Enterprise Integration |
 | produces a binary with a different hash. The observable symptom is | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
+| producing a visibly inconsistent end-user experience. Symptom. | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | product or a connection. The symptom is a data race or a leaked authentication | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Production incidents cannot be reconstructed. Cause. Prompt | [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) | Anti-Patterns |
 | Production logs show a state update failed, but not which field | [Lens](../patterns/16-functional/lens.md) | Functional Programming |
@@ -2647,6 +2651,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Shared vocabulary without a shared home. Two areas of a system both | [Circular Dependency](../patterns/18-anti-patterns/circular-dependency.md) | Anti-Patterns |
 | Shared, finite consumption capacity. If capacity were infinite, | [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) | Cloud and Distributed |
 | Shared-device surprise. Symptom. A family member or coworker signs in as the | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
+| Shipping a duplicated copy of a large shared framework in every | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | Shipping release builds with debug bypasses. Debug CA behavior must be tied | [Certificate Pinning](../patterns/15-security/certificate-pinning.md) | Security |
 | Short-circuit hidden inside a handler. Symptom. A handler far down the chain | [Chain of Responsibility](../patterns/01-gof/chain-of-responsibility.md) | Design Patterns (GoF) |
 | Shotgun surgery across supposedly separated concerns. Symptom. A single conceptual | [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) | Principles and Laws |
@@ -2761,6 +2766,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Splitting a component into compound pieces with no real, independent | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
 | Splitting a package produces a burst of new packages, each with | [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) | Principles and Laws |
 | Splitting a parameterized function. The parameter is not a flag but | [Remove Flag Argument](../patterns/03-refactoring/remove-flag-argument.md) | Refactoring Techniques |
+| Splitting a small, single-team application into several micro | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | Splitting along data rather than along change. Symptom. Two new classes | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
 | Splitting every component into container and presentational halves | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Splitting far below the profitable threshold. Symptom. The parallel | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
@@ -12185,6 +12191,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - explicit coordination mechanism between them. Symptom. Interacting
 - Choosing an eager hydration directive for an island that is rarely
 - seen or rarely interacted with. Symptom. The page's initial load
+
+#### [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md)
+
+**Core Problem:** A large, single frontend codebase shared by several teams commonly becomes a bottleneck as the organization grows, every team's change must pass through the same build pipeline, the same test suite, and the same release process, so one team's slow or risky change can block every other team's release, and the codebase's own size and shared dependencies make it steadily harder for any one team to reason about the whole. Micro Frontends solves this by splitting the frontend into several independently deliverable applications, one per team or one per feature area, each built, tested, and deployed on its own schedule, composed together into a single experience only at render time or at build time, rather than sharing one monolithic codebase, build pipeline, and release schedule.
+
+**Failure Mode Symptoms:**
+
+- Splitting a small, single-team application into several micro
+- frontends purely to follow the pattern's popularity. Symptom. The
+- Composing several micro frontends with no shared design system,
+- producing a visibly inconsistent end-user experience. Symptom.
+- Shipping a duplicated copy of a large shared framework in every
+- micro frontend, without deduplication. Symptom. The total
 
 #### [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md)
 

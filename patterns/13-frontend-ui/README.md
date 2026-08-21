@@ -2,8 +2,14 @@
 
 Origin. Framework documentation
 
-12 entries, 43,412 words. Every entry carries all 18
+13 entries, 47,111 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Application Architecture
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Micro Frontends](micro-frontends.md) | established | 3,699 | A large, single frontend codebase shared by several teams commonly becomes a bottleneck as the organization grows, every team's change must pass through the same build pipeline ... |
 
 ## Component Architecture
 

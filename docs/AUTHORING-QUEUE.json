@@ -3738,13 +3738,6 @@
     "focus": ""
   },
   {
-    "name": "Micro Frontends",
-    "slug": "micro-frontends",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/micro-frontends.md",
-    "focus": ""
-  },
-  {
     "name": "Server Components",
     "slug": "server-components",
     "category": "frontend and UI",
