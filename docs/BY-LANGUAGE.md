@@ -516,6 +516,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
@@ -2991,6 +2992,7 @@ These patterns contain runnable code examples written in Python:
 - [Separation of Duties](../patterns/15-security/separation-of-duties.md) (Security)
 - [Sequential Convoy](../patterns/08-cloud-distributed/sequential-convoy.md) (Cloud and Distributed)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
+- [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)
 - [Server Session State](../patterns/06-enterprise-application-architecture/server-session-state.md) (Enterprise Application Architecture)
 - [Server-Side Discovery](../patterns/10-microservices/server-side-discovery.md) (Microservices)
 - [Server-Side Service Discovery](../patterns/10-microservices/server-side-service-discovery.md) (Microservices)
@@ -3921,6 +3923,7 @@ These patterns contain runnable code examples written in Swift:
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
+- [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
 - [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
@@ -4585,6 +4588,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Sequential Convoy](../patterns/08-cloud-distributed/sequential-convoy.md) (Cloud and Distributed)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
+- [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)
 - [Server Session State](../patterns/06-enterprise-application-architecture/server-session-state.md) (Enterprise Application Architecture)
 - [Server-Side Discovery](../patterns/10-microservices/server-side-discovery.md) (Microservices)
 - [Server-Side Service Discovery](../patterns/10-microservices/server-side-service-discovery.md) (Microservices)
