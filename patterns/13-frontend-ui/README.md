@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-16 entries, 58,254 words. Every entry carries all 18
+17 entries, 61,851 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -39,6 +39,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Optimistic UI](optimistic-ui.md) | established | 3,623 | A user action that triggers a network request, liking a post, sending a message, adding an item to a list, commonly leaves the interface showing its prior, unchanged state until ... |
+
+## Loading Strategy
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Skeleton and Suspense](skeleton-and-suspense.md) | canonical | 3,597 | A component whose data has not yet loaded commonly renders nothing at all, an empty region of the page, or a generic, centered spinner with no relation to the content that will ... |
 
 ## Rendering Strategy
 

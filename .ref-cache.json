@@ -3107,6 +3107,7 @@
  "https://react.dev/learn/your-first-component": 200,
  "https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html": 200,
  "https://react.dev/reference/react/Component": 200,
+ "https://react.dev/reference/react/Suspense": 200,
  "https://react.dev/reference/react/cache": 200,
  "https://react.dev/reference/react/createContext": 200,
  "https://react.dev/reference/react/createElement": 200,

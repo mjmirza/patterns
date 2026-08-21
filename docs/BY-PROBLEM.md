@@ -850,6 +850,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | are long and hard to read. The symptom is a function with no named | [Inline Variable](../patterns/03-refactoring/inline-variable.md) | Refactoring Techniques |
 | are not. The symptom is incorrect equality that surfaces only when the | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
 | arrangement need. Symptom. A component gains a parent and several | [Compound Components](../patterns/13-frontend-ui/compound-components.md) | Frontend and UI |
+| arrival. Symptom. The page visibly jumps or reflows the moment the | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | as a shared method that grows conditional branches and boolean flag | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | as described in dimension 8, removes the symptom's most visible surface | [Spaghetti Code](../patterns/18-anti-patterns/spaghetti-code.md) | Anti-Patterns |
 | as Dynamo does, and monitor for the specific symptom (a version accepted as | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
@@ -902,6 +903,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | behavior, rather than asserting the public behavior itself. Symptom. a | [Mock](../patterns/14-testing/mock.md) | Testing |
 | behaviour change. Symptom. Code that worked correctly as a Validation | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | behaviour. The symptom is a class whose every method is a one line | [Hide Delegate](../patterns/03-refactoring/hide-delegate.md) | Refactoring Techniques |
+| benefit. Symptom. The loading state gives the user no sense of what | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | BigDecimal's equals disagreeing with numeric equality. Symptom. A Value | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
 | Binder misconfiguration at deploy time. Symptom. A production incident | [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) | Principles and Laws |
 | Binding checked after authorization. Symptom. Business logs show denied | [Token Binding and DPoP](../patterns/15-security/token-binding-and-dpop.md) | Security |
@@ -945,6 +947,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Building a machine so large and hierarchical that no single person | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Building a molecule or an organism that secretly depends on a | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
+| Building a skeleton whose dimensions do not match the real | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Building the enhanced, JavaScript-dependent experience first, and | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Building two islands that silently depend on shared state with no | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Bulkhead placed on the wrong side of the buffer. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -2865,6 +2868,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Support tickets about double charges or duplicate records, with | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | supposed to prevent. The symptom is a shared mutation bug in a class that | [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) | Refactoring Techniques |
 | supposed to prevent. The symptom is the same invalid value bug the | [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) | Refactoring Techniques |
+| Suspense does not detect. Symptom. The boundary's fallback never | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Swallowed causes in error translation. Symptom. A production alert with a | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | Swallowed exceptions that never reach any capture point. Symptom. A | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
 | Swallowed sibling errors. Symptom. Two children fail, but only one error | [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) | Concurrency and Parallelism |
@@ -4920,6 +4924,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Users report the chat response taking noticeably longer to | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
 | Users return from the authorization server and land on an error | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Users see error messages in a confusing order, changing between | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
+| Using a generic spinner as a suspense boundary's fallback instead | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Using a saga where a single aggregate would do. Symptom. A team builds | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
 | Using a zipper as a substitute for an index. Symptom. A hot path that | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | Using an event where a command was needed. Symptom. A "PaymentRequested" | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
@@ -4983,6 +4988,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Wrapper fatigue. Symptom. A call passes through four objects, each named for | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
 | Wrapper flood. Symptom. A code review contains new classes named | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Wrapper order bug. Symptom. Metrics show retries as separate top-level | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
+| Wrapping a component in a suspense boundary while its actual data | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Wrapping component becomes a bottleneck. Symptom. Throughput degrades | [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) | Enterprise Integration |
 | Wrapping inside another component's render method. Symptom. The | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |
 | Writable replica drift. Symptom, data present on a replica is absent, or | [Primary-Replica](../patterns/05-architectural/primary-replica.md) | Architectural Patterns |
@@ -12310,6 +12316,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Mixing signal-based and component-render-based state for the same
 - value. Symptom. A value appears to update in one part of the UI but
 - Creating a new signal on every render instead of once. Symptom.
+
+#### [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md)
+
+**Core Problem:** A component whose data has not yet loaded commonly renders nothing at all, an empty region of the page, or a generic, centered spinner with no relation to the content that will eventually appear there. An empty region reads as broken or unfinished, and a generic spinner gives the user no sense of what shape the eventual content will take or how much of the page is still loading. This produces a jarring transition once the real content finally appears, since the layout shifts abruptly from an unrelated placeholder into structured content. Skeleton and Suspense solve this together, a suspense boundary declares where and when a fallback should appear as its children's data loads, and a skeleton screen fills that fallback with a placeholder shaped like the actual content, gray blocks approximating where a heading, an image, and a paragraph will appear, so the loading state visually previews the structure of what is coming rather than either an empty gap or an unrelated spinner.
+
+**Failure Mode Symptoms:**
+
+- Using a generic spinner as a suspense boundary's fallback instead
+- benefit. Symptom. The loading state gives the user no sense of what
+- Building a skeleton whose dimensions do not match the real
+- arrival. Symptom. The page visibly jumps or reflows the moment the
+- Wrapping a component in a suspense boundary while its actual data
+- Suspense does not detect. Symptom. The boundary's fallback never
 
 #### [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md)
 
