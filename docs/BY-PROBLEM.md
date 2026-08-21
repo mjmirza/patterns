@@ -750,6 +750,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Adding to author.books silently does not persist after flush. The collection mutated is the non-owning side of a bidi... | [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) | Enterprise Application Architecture |
 | adjusting the scope. Symptom. Code written against academic Fidge or | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
 | Adopting multi-leader replication for a low-write-latency requirement, | [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) | Data and Storage |
+| Adopting the archived original Flux library on a new project | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | After a deployment or a brief network blip, one service's | [Distributed Transaction Coordinator Antipattern](../patterns/10-microservices/distributed-transaction-coordinator-antipattern.md) | Microservices |
 | After a network incident, the same record has two different | [Split Brain](../patterns/18-anti-patterns/split-brain.md) | Anti-Patterns |
 | After adding retries to a payment or order-creation endpoint, the | [Retry Storm](../patterns/18-anti-patterns/retry-storm.md) | Anti-Patterns |
@@ -1259,6 +1260,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Discriminator value drift between code and data. Symptom. A subtype's | [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) | Enterprise Application Architecture |
 | Disk fills up unexpectedly, database goes read-only or crashes. Symptom. | [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) | Data and Storage |
 | Disparate services behind one client. An e-commerce storefront needs | [Gateway Routing](../patterns/08-cloud-distributed/gateway-routing.md) | Cloud and Distributed |
+| dispatching an action. Symptom. A store's state changes with no | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | distinguishing engineering judgement from sourced fact. The specific symptom | [Content Filter](../patterns/07-integration/content-filter.md) | Enterprise Integration |
 | Distributed god mediator. Symptom. A workflow orchestration service sits on | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | Distributed monolith masquerading as microservices. Symptom. Every | [Nanoservices](../patterns/18-anti-patterns/nanoservices.md) | Anti-Patterns |
@@ -1684,6 +1686,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Inserting the same pairing twice throws a constraint violation deep in application code, far from the add call. No pr... | [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) | Enterprise Application Architecture |
 | Instances are removed from the load balancer during a partial | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Instant cutover instead of graceful drain. Symptom. Draining an unhealthy | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
+| instead of a maintained successor. Symptom. A new codebase depends | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | instead of delegating. Symptom, two different teams' services disagree | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | Integration cliff. Symptom. Local demos work, but the first full environment | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Intent explosion mirroring every UI callback one-to-one. Symptom. An | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
@@ -1985,6 +1988,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Mutable return mistaken for immutable return. Symptom. A caller stores the | [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) | Refactoring Techniques |
 | Mutable shared state assumed to be safe because construction was made safe. | [Singleton](../patterns/01-gof/singleton.md) | Design Patterns (GoF) |
 | Mutable value object. Symptom. A value used as a dictionary, map, or set key | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
+| Mutating a store's state directly from a view instead of | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
+| Mutating state directly inside a reducer instead of returning a new | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | mutex. Observable symptom, a double close, a "bad file descriptor" error, or a | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
 | Mystery Guest. Symptom. A test fails intermittently or only in a shared | [Four-Phase Test](../patterns/14-testing/four-phase-test.md) | Testing |
 | N plus 1 queries. Symptom, a request that should cost one or two | [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md) | Enterprise Application Architecture |
@@ -2081,6 +2086,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | One observer takes down the notification. Symptom. Several downstream effects | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
 | One service's instances are frequently evicted or | [Service Deployment Platform](../patterns/10-microservices/service-deployment-platform.md) | Microservices |
 | One specific report or query, written as an escape-hatch raw SQL | [Query Object](../patterns/06-enterprise-application-architecture/query-object.md) | Enterprise Application Architecture |
+| One store calling into another store's update logic directly. | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | One tenant's traffic spike still degrades other tenants, despite a | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | One value used as a fake list. Symptom. A query where id in (?) returns no | [Parameterized Query](../patterns/15-security/parameterized-query.md) | Security |
 | One-shot events crammed into State. Symptom. A toast or a one-time UI | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
@@ -2314,6 +2320,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Pushing down a method used by multiple subclasses. The method is | [Push Down Method](../patterns/03-refactoring/push-down-method.md) | Refactoring Techniques |
 | Pushing down a polymorphic method. The method is called through the | [Push Down Method](../patterns/03-refactoring/push-down-method.md) | Refactoring Techniques |
 | Pushing down speculatively. The field is pushed down because it | [Push Down Field](../patterns/03-refactoring/push-down-field.md) | Refactoring Techniques |
+| Putting asynchronous logic directly inside a reducer. Symptom. | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | Python matching sometimes calls slow or unsafe methods. Cause. | [Pattern Matching](../patterns/16-functional/pattern-matching.md) | Functional Programming |
 | Quality gate laundering. Symptom. A failed load test, security review, or | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Query turns into a command. Symptom. Reading total writes a cache row, | [Replace Derived Variable with Query](../patterns/03-refactoring/replace-derived-variable-with-query.md) | Refactoring Techniques |
@@ -2782,6 +2789,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | State is small enough per entity, or bounded. A stream that grows without | [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) | Cloud and Distributed |
 | State leaking across in-process iterations. Symptom. A crash the engine | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | State machine in disguise. The object has more than two valid states | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
+| state object. Symptom. State updates behave unpredictably, | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | state, a classic symptom when a sequence is manually reset lower than the | [Identity Field](../patterns/06-enterprise-application-architecture/identity-field.md) | Enterprise Application Architecture |
 | state. Symptom. Reordering two filters that look independent, or | [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) | Architectural Patterns |
 | Static analysis reports a cyclic dependency between two modules that ought not | [Facade](../patterns/01-gof/facade.md) | Design Patterns (GoF) |
@@ -2794,6 +2802,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Storage or message size for the CRDT grows without bound over | [CRDT](../patterns/12-data-storage/crdt.md) | Data and Storage |
 | Store write fails but the cache write already happened. Symptom. The | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | Stored failure freezes a transient outage. Symptom. Retrying with the same | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |
+| Storing every piece of application state in Redux, including state | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | Strategy allocated per call in a hot path. Symptom. Allocation rate and | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | Strategy explosion by combination. Symptom. Class names that stack three | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | Strategy interface with one implementation. Symptom. An interface, one class | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
@@ -3885,6 +3894,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Tests, examples, traces, or captured production cases can compare old and new | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
 | than a single cited source per item. Each entry states the observable symptom | [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) | Enterprise Application Architecture |
 | that is disconnected from the persistence layer. The symptom is a call to a | [Change Value to Reference](../patterns/03-refactoring/change-value-to-reference.md) | Refactoring Techniques |
+| that is genuinely local to one component. Symptom. Simple, | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | that is the observable symptom. The cause is that the map was drawn once, | [Context Map](../patterns/11-domain-driven-design/context-map.md) | Domain-Driven Design |
 | that is the observable symptom. The cause is that the relationship was | [Context Map](../patterns/11-domain-driven-design/context-map.md) | Domain-Driven Design |
 | that produce runtime errors later. The symptom is the same confusing | [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) | Refactoring Techniques |
@@ -4854,6 +4864,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Untrusted web content reaches the generator unfiltered. Symptom. A | [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) | AI and Agentic |
 | Unused range index. Symptom observed. a range query that should be fast | [B-Tree](../patterns/12-data-storage/b-tree.md) | Data and Storage |
 | Unvalidated judge shipped to production. Symptom. The evaluation | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |
+| Updating one store causes an unexpected chain of changes | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | Updating through a composed optic changes no data and does not | [Optics](../patterns/16-functional/optics.md) | Functional Programming |
 | Updating through a lens sometimes does nothing because the path | [Lens](../patterns/16-functional/lens.md) | Functional Programming |
 | URI mismatch behind a proxy. Symptom. Valid clients receive intermittent | [Token Binding and DPoP](../patterns/15-security/token-binding-and-dpop.md) | Security |
@@ -12096,6 +12107,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Prop-drilling an unmanageable number of fields between the two
 - halves. Symptom. The container passes a long, growing list of props
 
+#### [Flux](../patterns/13-frontend-ui/flux.md)
+
+**Core Problem:** Traditional MVC-style architectures let a view update a model directly, and let multiple models observe and update one another, which becomes difficult to reason about as an application grows, since a single user action can trigger a long chain of interdependent updates whose order and cause are hard to trace. Facebook found this particularly painful in a large, real-time application with many interconnected pieces of state. Flux solves this by enforcing a single direction for data to travel. a user action is dispatched through one central dispatcher to every store, each store updates its own state in response, and every view affected by that state re-renders, with no view ever mutating a store directly and no store ever calling another store to update it.
+
+**Failure Mode Symptoms:**
+
+- Mutating a store's state directly from a view instead of
+- dispatching an action. Symptom. A store's state changes with no
+- One store calling into another store's update logic directly.
+- Updating one store causes an unexpected chain of changes
+- Adopting the archived original Flux library on a new project
+- instead of a maintained successor. Symptom. A new codebase depends
+
 #### [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md)
 
 **Core Problem:** Several components in a codebase often need the same cross-cutting behavior applied to them, subscribing to a data source, checking authentication before rendering, logging every prop change, injecting a piece of shared state. Copying that behavior into every component that needs it duplicates logic and risks each copy drifting out of sync as the behavior evolves. A Higher-Order Component solves this by wrapping a component in a function that adds the shared behavior once, producing a new component with the original component's own rendering untouched, so any component can gain the shared behavior by being passed through the same wrapping function.
@@ -12129,6 +12153,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - render. Symptom. Every consumer of a context re-renders on every
 - Stacking many unrelated contexts, each wrapping the same
 - subtree. Symptom. The application's root component grows a visibly
+
+#### [Redux](../patterns/13-frontend-ui/redux.md)
+
+**Core Problem:** Flux's original architecture solved unidirectional data flow with several independent stores, each holding its own slice of state and its own update logic, which worked but left every application re-inventing how a store subscribes to the dispatcher, how a store's change event propagates to views, and how several stores compose into one coherent picture of application state. Redux solves this by collapsing Flux's several independent stores into one centralized store holding the entire application's state as a single object tree, updated only by pure reducer functions that take the previous state and a dispatched action and return the next state, with no store-side mutation and no imperative update logic to write by hand for each store.
+
+**Failure Mode Symptoms:**
+
+- Mutating state directly inside a reducer instead of returning a new
+- state object. Symptom. State updates behave unpredictably,
+- Putting asynchronous logic directly inside a reducer. Symptom.
+- Storing every piece of application state in Redux, including state
+- that is genuinely local to one component. Symptom. Simple,
 
 #### [Render Props](../patterns/13-frontend-ui/render-props.md)
 
