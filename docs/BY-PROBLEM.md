@@ -838,6 +838,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Anemic wrapper, no validation. Symptom, a class EmailAddress { String | [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) | Domain-Driven Design |
 | answer, even though auditing was turned on. Symptom. A resource is gone, | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
 | Answering a narrow question through global search. Symptom. A | [GraphRAG](../patterns/17-ai-agentic/graphrag.md) | AI and Agentic |
+| Any client capable of sending a raw POST request to the | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | any real request. Symptom. The connection opened by a preconnect | [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |
 | any work can proceed. Symptom. Design and development reviews spend | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | anywhere. Symptom, seen above. Cause, the source database rotated away a | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
@@ -875,6 +876,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Assumed global ordering. Symptom. A downstream projection ends up in a | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Assuming a session survives across HTTP requests without checking. | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
 | Assuming every handler resumes exactly once. Symptom. Code written | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
+| Assuming Server Functions dispatch and complete in true parallel | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | Assuming stealing preserves ordering. Symptom. intermittent, load-dependent bugs where | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
 | Async and continuation-based frameworks silently losing the value across a | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
 | Async facade that still blocks. Symptom. Callers await a function that | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
@@ -2426,6 +2428,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reaching for a hand-rolled continuation-passing encoding purely to | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Reaching for a HOC where a custom hook would serve identically, with | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |
 | Reaching for a render prop in a codebase where a custom hook would | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
+| Reaching for a Server Action for a pure data-fetching read rather | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | Reaching for Profunctor when only one direction is needed. Symptom. | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Reaching for the Monad instance and expecting accumulation anyway. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Reaching for unsafePerformIO to avoid restructuring a function | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
@@ -3994,6 +3997,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Tests pass locally and fail intermittently in CI with timeouts or | [Test Trophy](../patterns/14-testing/test-trophy.md) | Testing |
 | Tests require large fixtures with unrelated fields set to dummy | [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) | Functional Programming |
 | Tests, examples, traces, or captured production cases can compare old and new | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
+| than a genuine mutation. Symptom. The application carries a | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | than a single cited source per item. Each entry states the observable symptom | [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) | Enterprise Application Architecture |
 | that is disconnected from the persistence layer. The symptom is a call to a | [Change Value to Reference](../patterns/03-refactoring/change-value-to-reference.md) | Refactoring Techniques |
 | that is genuinely local to one component. Symptom. Simple, | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
@@ -5036,6 +5040,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Weight updates are unavailable, too slow, or simply the wrong tool for the | [Reflexion](../patterns/17-ai-agentic/reflexion.md) | AI and Agentic |
 | were never meant to pin that detail down. Symptom. a large fraction of the | [Mock](../patterns/14-testing/mock.md) | Testing |
 | What did the collaborator return, and did the unit under test do the right | [Spy](../patterns/14-testing/spy.md) | Testing |
+| when several are called close together. Symptom. A sequence of | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | which one is correct. Symptom. An investigation surfaces an audit record | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
 | which papers over the symptom without removing the design flaw, or, the | [Service Locator](../patterns/18-anti-patterns/service-locator.md) | Anti-Patterns |
 | while a removed mutation path cannot. | [Mutable Data](../patterns/02-code-smells/mutable-data.md) | Code Smells |
@@ -5062,6 +5067,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Writes start failing with a "not enough replicas" or | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
 | Writing a reducer function with side effects, such as a network | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
 | Writing a selector that returns a new object or array reference on | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
+| Writing a Server Action's mutation logic without verifying | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | Written as symptom, cause, fix. The symptoms are drawn from practice and are | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Written as symptom, cause, fix. The symptoms are drawn from practice rather than | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | Wrong append order. Symptom. Explanation steps appear backward or grouped | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
@@ -12474,6 +12480,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - chunk introduces. Symptom. Moving to a route the user has not
 - Splitting nested routes so finely that a single user flow through
 - quick succession. Symptom. Moving through a multi-step nested flow
+
+#### [Server Action](../patterns/13-frontend-ui/server-action.md)
+
+**Core Problem:** A traditional client-server data mutation needs a developer to build and maintain a separate API endpoint, wire a client-side fetch call to that endpoint, and manually keep the request and response shapes in sync between the two, real coordination overhead for what is conceptually a single operation, calling a function that happens to need to run on the server. A Server Action removes that coordination overhead by letting a developer write one async function, mark it to run on the server with the use server directive, and call it directly from client code as if it were a local function, with React itself handling the network request and response underneath. React's own documentation names the mechanism directly. "React will send a request to the server to execute the function, and return the result," collapsing the separate endpoint, fetch call, and manual shape-syncing into one function a developer writes and calls once.
+
+**Failure Mode Symptoms:**
+
+- Writing a Server Action's mutation logic without verifying
+- Any client capable of sending a raw POST request to the
+- Reaching for a Server Action for a pure data-fetching read rather
+- than a genuine mutation. Symptom. The application carries a
+- Assuming Server Functions dispatch and complete in true parallel
+- when several are called close together. Symptom. A sequence of
 
 #### [Server Components](../patterns/13-frontend-ui/server-components.md)
 
