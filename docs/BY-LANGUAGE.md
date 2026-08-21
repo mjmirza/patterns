@@ -528,6 +528,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Approval Test](../patterns/14-testing/approval-test.md) | Testing |  |  | Yes |  |  | Yes |  | Yes | Yes |
@@ -3047,6 +3048,7 @@ These patterns contain runnable code examples written in Python:
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 - [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) (Frontend and UI)
 - [Slide Statements](../patterns/03-refactoring/slide-statements.md) (Refactoring Techniques)
+- [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) (Frontend and UI)
 - [Slowly Changing Dimensions](../patterns/12-data-storage/slowly-changing-dimensions.md) (Data and Storage)
 - [Smart Proxy](../patterns/07-integration/smart-proxy.md) (Enterprise Integration)
 - [Snapshot Isolation](../patterns/12-data-storage/snapshot-isolation.md) (Data and Storage)
@@ -3958,6 +3960,7 @@ These patterns contain runnable code examples written in Swift:
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
 - [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) (Frontend and UI)
+- [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) (Frontend and UI)
 - [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
@@ -4665,6 +4668,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Singleton Abuse](../patterns/18-anti-patterns/singleton-abuse.md) (Anti-Patterns)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 - [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) (Frontend and UI)
+- [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) (Frontend and UI)
 - [Slowly Changing Dimensions](../patterns/12-data-storage/slowly-changing-dimensions.md) (Data and Storage)
 - [Smart Proxy](../patterns/07-integration/smart-proxy.md) (Enterprise Integration)
 - [Snapshot Isolation](../patterns/12-data-storage/snapshot-isolation.md) (Data and Storage)
