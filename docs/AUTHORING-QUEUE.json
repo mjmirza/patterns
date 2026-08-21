@@ -3738,13 +3738,6 @@
     "focus": ""
   },
   {
-    "name": "Virtual List",
-    "slug": "virtual-list",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/virtual-list.md",
-    "focus": ""
-  },
-  {
     "name": "Infinite Scroll",
     "slug": "infinite-scroll",
     "category": "frontend and UI",
