@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 694,
+  "published_total": 701,
   "target_total": 850,
   "families_total": 29,
   "families_complete": 15,
   "stale_entries": 0,
-  "references_checked": 3965,
+  "references_checked": 4033,
   "rows": [
     {
       "family": "01-gof",
@@ -206,13 +206,13 @@
       "family": "16-functional",
       "name": "Functional Programming",
       "origin": "Category theory in practice",
-      "published": 27,
-      "planned": 13,
+      "published": 34,
+      "planned": 6,
       "target": 40,
-      "percent": 67.5,
+      "percent": 85.0,
       "maturity": {
-        "canonical": 17,
-        "established": 10
+        "canonical": 18,
+        "established": 16
       }
     },
     {
