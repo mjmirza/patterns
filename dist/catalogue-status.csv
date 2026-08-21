@@ -14,7 +14,7 @@ family,name,published,planned,target,percent
 13-frontend-ui,Frontend and UI,0,34,34,0.0
 14-testing,Testing,30,0,30,100.0
 15-security,Security,34,1,35,97.1
-16-functional,Functional Programming,18,22,40,45.0
+16-functional,Functional Programming,27,13,40,67.5
 17-ai-agentic,AI and Agentic,55,0,55,100.0
 18-anti-patterns,Anti-Patterns,51,0,51,100.0
 19-api-design,API and Interface Design,0,10,10,0.0
