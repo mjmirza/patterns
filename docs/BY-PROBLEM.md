@@ -708,6 +708,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A value that a client wrote, and that other clients concurrently | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
 | A vendor or partner's API is the only way to reach functionality the team | [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) | Cloud and Distributed |
 | A version control system, or any content addressed store, needs a way to | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
+| A view controller that was genuinely reusable across | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | A view model class defined in the Interface Adapters ring is | [Clean Architecture](../patterns/05-architectural/clean-architecture.md) | Architectural Patterns |
 | A ViewModel is instantiated fresh, and expensive, every time | [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) | Architectural Patterns |
 | A ViewModel unit test suite is fully green, but the actual | [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) | Architectural Patterns |
@@ -1067,6 +1068,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Checkbox model. Symptom. The repository contains a filled template, but no | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | checks instead of an explicit transition table. Symptom. The | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | checks that are not load bearing. The symptom is a function that is more | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
+| childCoordinators array. Symptom. The finished coordinator, and | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | chip revisions without verifying it. Symptom. Firmware that worked | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
 | Choosing an eager hydration directive for an island that is rarely | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
@@ -1246,6 +1248,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | created before the assignment. Observable symptom, a method's behaviour changes | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
 | Creating a new debounced or throttled function on every render or | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
 | Creating a new signal on every render instead of once. Symptom. | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
+| Creating one coordinator per individual screen rather than per | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | Creation with hidden side effects. Symptom. A retry loop or a test helper | [Factory Method](../patterns/01-gof/factory-method.md) | Design Patterns (GoF) |
 | Credential ID stored as text incorrectly. Symptom. Some users can register | [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) | Security |
 | Cross-domain imports that bypass the published interface. Symptom. A | [Domain-based](../patterns/04-principles-and-laws/domain-based.md) | Principles and Laws |
@@ -1635,6 +1638,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | for that long in the first place, since the flapping is frequently a symptom | [Leader Election](../patterns/08-cloud-distributed/leader-election.md) | Cloud and Distributed |
 | Forced third dimension. Symptom, a second axis of variation appears, | [Parallel Inheritance Hierarchies](../patterns/02-code-smells/parallel-inheritance-hierarchies.md) | Code Smells |
 | Forcing every component into a strict, single, agreed level before | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
+| Forgetting to remove a finished child coordinator from its parent's | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | Forgetting to update a caller that mutated in place. A caller that did | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
 | Forgotten boundary conversion. Symptom. Invalid input is rejected by one API | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Forgotten promise, permanent hang. Symptom. a request handler or worker | [Future Promise](../patterns/09-concurrency/future-promise.md) | Concurrency and Parallelism |
@@ -1793,6 +1797,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Inlining an expression with side effects. The variable's initialiser | [Inline Variable](../patterns/03-refactoring/inline-variable.md) | Refactoring Techniques |
 | Inlining too aggressively. Every helper class is inlined into its | [Inline Class](../patterns/03-refactoring/inline-class.md) | Refactoring Techniques |
 | Inserting the same pairing twice throws a constraint violation deep in application code, far from the add call. No pr... | [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) | Enterprise Application Architecture |
+| inside the coordinator layer instead of removing it. Symptom. The | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | Instances are removed from the load balancer during a partial | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Instant cutover instead of graceful drain. Symptom. Draining an unhealthy | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | instead of a maintained successor. Symptom. A new codebase depends | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
@@ -1908,6 +1913,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Legacy integration. A new service is being built to eventually replace a | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | legitimate customer messages are refused or flagged at a rate | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |
 | Legitimate outputs are refused or redacted at a rate high | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
+| Letting a view controller reach directly into its coordinator's | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Letting the number of states grow without periodically reassessing | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Letting the plant simulation's model drift out of sync with the | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
@@ -15913,6 +15919,21 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Concurrent edits at different levels colliding silently. Symptom. Two
 - Fragile base class breakage from reordering. Symptom. An apparently
 - The empty intermediate class trap. Symptom. A reader tracing a bug
+
+### Mobile Architecture
+
+#### [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md)
+
+**Core Problem:** A view controller that decides what happens after a button tap, whether to push a new screen, present a modal, or pop back, is a view controller that knows about the rest of the app's navigation graph, not only its own screen. Khanlou names the resulting failure mode directly, a view controller "is now grabbing its parent, because remember, these view controllers exist in a hierarchy, and then it's sending a precise message to its parent about what to do. It's bossing its parent around." As an app grows, this spreads navigation logic across every view controller that can trigger a transition, and Khanlou names the concrete symptom, "your navigation flow is now spread among three different objects" for even a short user-facing flow, making the real flow of screens hard to see, hard to test, and hard to change without touching several unrelated view controllers.
+
+**Failure Mode Symptoms:**
+
+- Forgetting to remove a finished child coordinator from its parent's
+- childCoordinators array. Symptom. The finished coordinator, and
+- Letting a view controller reach directly into its coordinator's
+- A view controller that was genuinely reusable across
+- Creating one coordinator per individual screen rather than per
+- inside the coordinator layer instead of removing it. Symptom. The
 
 ### Embedded and Hardware-Software
 

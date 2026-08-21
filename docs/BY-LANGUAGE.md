@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -2364,6 +2365,7 @@ These patterns have native features in Java that make the pattern unnecessary, o
 These patterns contain runnable code examples written in Kotlin:
 
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 
 #### Changes Shape in Kotlin
@@ -2613,6 +2615,7 @@ These patterns contain runnable code examples written in Python:
 - [Control Bus](../patterns/07-integration/control-bus.md) (Enterprise Integration)
 - [Controller](../patterns/04-principles-and-laws/controller.md) (Principles and Laws)
 - [Conway's Law](../patterns/04-principles-and-laws/conway-law.md) (Principles and Laws)
+- [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [Copy-Paste Programming](../patterns/18-anti-patterns/copy-paste-programming.md) (Anti-Patterns)
 - [Core Domain](../patterns/11-domain-driven-design/core-domain.md) (Domain-Driven Design)
 - [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) (AI and Agentic)
@@ -3974,6 +3977,7 @@ These patterns contain runnable code examples written in Swift:
 - [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
 - [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) (Frontend and UI)
 - [Context Selector](../patterns/13-frontend-ui/context-selector.md) (Frontend and UI)
+- [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)

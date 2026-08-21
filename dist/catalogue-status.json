@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 755,
+  "published_total": 756,
   "target_total": 848,
   "families_total": 29,
   "families_complete": 19,
   "stale_entries": 0,
-  "references_checked": 4142,
+  "references_checked": 4143,
   "rows": [
     {
       "family": "01-gof",
@@ -334,11 +334,13 @@
       "family": "27-mobile-architecture",
       "name": "Mobile Architecture",
       "origin": "Official Android/iOS architecture guidance",
-      "published": 0,
-      "planned": 12,
+      "published": 1,
+      "planned": 11,
       "target": 12,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 8.3,
+      "maturity": {
+        "canonical": 1
+      }
     },
     {
       "family": "28-embedded-hardware",

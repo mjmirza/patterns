@@ -5257,13 +5257,6 @@
     "focus": ""
   },
   {
-    "name": "Coordinator Pattern",
-    "slug": "coordinator-pattern",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/coordinator-pattern.md",
-    "focus": ""
-  },
-  {
     "name": "Model-View-Intent (MVI)",
     "slug": "model-view-intent",
     "category": "mobile architecture",
