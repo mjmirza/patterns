@@ -857,6 +857,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | At least one dependency can become slow without becoming unavailable. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | At least one downstream component in the pipeline does not need the | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
 | Attack tests can start a flow in one browser session and finish | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
+| Attempting a move past the edge without checking. Symptom. A | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | Attestation policy breakage. Symptom. A rollout blocks consumer passkeys | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | Attribute name collision. Symptom. A policy that was meant for project tags | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
 | Audit cannot tell what data a compromised key protected. Cause. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
@@ -925,6 +926,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Builder as an escape hatch for a god object. A builder with thirty-five | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Builder used where a record belongs. Symptom is a code review comment | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Building a bespoke protocol and calling it domain-specific. Symptom. A | [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) | Microservices |
+| Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Bulkhead placed on the wrong side of the buffer. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Bulkhead without a timeout. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
 | Business exceptions swallowed as messaging failures. Symptom. A | [Service Activator](../patterns/07-integration/service-activator.md) | Enterprise Integration |
@@ -1087,6 +1089,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Confusing copy-on-write with true immutability, and mutating the "shared" | [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) | Concurrency and Parallelism |
 | Confusing Law of Demeter with information hiding of data, not behaviour. | [Law of Demeter](../patterns/04-principles-and-laws/law-of-demeter.md) | Principles and Laws |
 | Confusing SRP with "one method per class." Symptom. A codebase where | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
+| Confusing the direction of contravariance. Symptom. An adapting | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Confusing the rule with a ban on method chaining in general. Symptom. A | [Law of Demeter](../patterns/04-principles-and-laws/law-of-demeter.md) | Principles and Laws |
 | Confusing the worksheet for the contract. Symptom. A downstream team | [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) | Domain-Driven Design |
 | Confusing YAGNI with refusing necessary design work. Symptom. a codebase | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
@@ -1109,6 +1112,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Consuming a one-pass iterator twice. Symptom. A function that logs a count of | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
 | Context leakage across a trust boundary. The symptom is that a | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |
 | Context split across concatenation. Symptom. A template compiler escapes a | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
+| Context type explosion in a typed language. Symptom. A codebase | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | Continuation after cancellation. Symptom. A cancelled request still writes to | [Continuation](../patterns/16-functional/continuation.md) | Functional Programming |
 | Continuation called after cancellation. Symptom. A cancelled request still | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
 | Continuation exposed across trust boundary. Symptom. A plugin skips audit | [Continuation](../patterns/16-functional/continuation.md) | Functional Programming |
@@ -1234,6 +1238,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Diagnosis is impossible because the envelope is too thin. | [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) | Enterprise Integration |
 | Did the unit under test actually CALL the collaborator, with what | [Spy](../patterns/14-testing/spy.md) | Testing |
 | different symptom, and the same fix applies. The Anti-Corruption Layer is not | [Generic Subdomain](../patterns/11-domain-driven-design/generic-subdomain.md) | Domain-Driven Design |
+| direct getter-and-setter encoding. Symptom. New team members cannot | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Direct grants bypass the role model. Symptom. Removing a role does not | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | Dirty read. Symptom. A customer receives an order confirmation email for an | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
 | Discriminator value drift between code and data. Symptom. A subtype's | [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) | Enterprise Application Architecture |
@@ -1673,6 +1678,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Intermittent invalid token errors appear after key rotation. | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Intrinsic state. The fields whose values are shared by many objects and do | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Introducing Clean Architecture to a genuinely small | [Clean Architecture](../patterns/05-architectural/clean-architecture.md) | Architectural Patterns |
+| Introducing profunctor optics to a team with no prior exposure to the | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Invalid local encoding. Symptom. A Go or TypeScript value has both value | [Result Either](../patterns/16-functional/result-either.md) | Functional Programming |
 | Invariant bypass through direct mutation. Symptom. A value that one | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
 | is a class with dozens of accessor methods, each returning a piece | [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) | Refactoring Techniques |
@@ -1794,6 +1800,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Losing buffered state on restart. Symptom. Every deployment or pod | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
 | Losing the causal chain across the queue. Symptom. An operator can see that a | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
 | Losing the original stack trace across an await boundary in older | [Async Await](../patterns/09-concurrency/async-await.md) | Concurrency and Parallelism |
+| Losing the tail of the walk. Symptom. A caller calls root on a | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | Loss of type-based authorization. Symptom. A guard that formerly rejected | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
 | Lost adjacency after extraction. Symptom. A reader finds one pass near the | [Split Loop](../patterns/03-refactoring/split-loop.md) | Refactoring Techniques |
 | Lost auditability. Symptom. A compliance check asks which operations a | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
@@ -2293,6 +2300,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Raw HTML escape hatch drift. Symptom. A search for innerHTML, | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
 | Re-entrancy corruption. Symptom. Nested processing produces interleaved or | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Reaching for a debugger to read straightforward code. Symptom. | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
+| Reaching for Profunctor when only one direction is needed. Symptom. | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Read after write inconsistency. Symptom, a user submits a form, is redirected | [Primary-Replica](../patterns/05-architectural/primary-replica.md) | Architectural Patterns |
 | Read and write requirements have genuinely parted ways along at least one axis, | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Read latency spikes, specifically on the tail (p99, p99.9), that | [Read Repair](../patterns/12-data-storage/read-repair.md) | Data and Storage |
@@ -2310,6 +2318,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reads take long enough, or happen at high enough concurrency, that | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Reads vastly outnumber writes, so the cost of coordinating readers against | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Reasoning trigger fighting a trained reasoning model. Symptom. Adding an | [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) | AI and Agentic |
+| Rebuilding on every step instead of only at the end. Symptom. A | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | receives an exception it has no handling path for. The observable symptom is an exception | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
 | recognize during an actual incident. The symptoms below are what an engineer | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
 | Reconciler regenerates SQL for unchanged rows. Symptom. A save operation | [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) | Enterprise Application Architecture |
@@ -2745,6 +2754,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Stub over-fitted to the happy path. Symptom. A fully green test suite, and | [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) | Enterprise Application Architecture |
 | Stub reachable in production. Symptom. Real customers receive obviously | [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) | Enterprise Application Architecture |
 | stub. Symptom. Two engineers disagree in code review about whether the | [Stub](../patterns/14-testing/stub.md) | Testing |
+| subclass a use case needs. Symptom. An attempt to define a Lens over a | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | subclasses accidentally inherit instead of overriding. The symptom is a | [Pull Up Method](../patterns/03-refactoring/pull-up-method.md) | Refactoring Techniques |
 | subclasses, and pulling it up gives every subclass the field. The symptom | [Pull Up Field](../patterns/03-refactoring/pull-up-field.md) | Refactoring Techniques |
 | Subscriber lag becoming an unbounded backlog. Symptom. Broker disk usage | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
@@ -4242,6 +4252,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The processing steps are naturally separate, addressable components, | [Routing Slip](../patterns/07-integration/routing-slip.md) | Enterprise Integration |
 | The producer does not need an immediate, synchronous answer containing the | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | The program can state the allowed syntax and the domain rules with enough | [Input Validation](../patterns/15-security/input-validation.md) | Security |
+| The program performs a sequence of nearby moves and edits, not one | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | The program still throws RecursionError, StackOverflowError, | [Trampolining](../patterns/16-functional/trampolining.md) | Functional Programming |
 | The property test suite runs green, has a large configured | [Property-Based Test](../patterns/14-testing/property-based-test.md) | Testing |
 | The protected operations can be named and checked. A role that cannot be | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
@@ -4371,6 +4382,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The straggler tax. Symptom. p50 latency for the aggregate operation looks | [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) | Concurrency and Parallelism |
 | The strategy that reaches back. Symptom. The strategy holds a reference to | [Strategy](../patterns/01-gof/strategy.md) | Design Patterns (GoF) |
 | The structure is a tree, or a directed acyclic graph that is treated as a | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
+| The structure is recursively defined and immutable, so an edit must | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
+| The structure is walked by a human or by an algorithm that reasons | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | The stuck buffer. Symptom. Buffer depth for one correlation key climbs | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
 | The sub-tasks are genuinely independent. none needs the output of another to | [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) | Enterprise Integration |
 | The subclass explosion. Symptom. A directory holding thirty creator classes | [Factory Method](../patterns/01-gof/factory-method.md) | Design Patterns (GoF) |
@@ -4797,6 +4810,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Users return from the authorization server and land on an error | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Users see error messages in a confusing order, changing between | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
 | Using a saga where a single aggregate would do. Symptom. A team builds | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
+| Using a zipper as a substitute for an index. Symptom. A hot path that | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 | Using an event where a command was needed. Symptom. A "PaymentRequested" | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | Using Routing Slip where Dynamic Router was needed. Symptom. Step | [Routing Slip](../patterns/07-integration/routing-slip.md) | Enterprise Integration |
 | Using the composer as if it were a transaction. Symptom. A customer | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
@@ -4831,6 +4845,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Versioning by breaking change. Symptom observed. A provider ships a | [Service-Oriented Architecture](../patterns/05-architectural/service-oriented-architecture.md) | Architectural Patterns |
 | View bypassing the Model boundary. Symptom. A View directly issues database | [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) | Architectural Patterns |
 | View that leaks the backing collection. The getter returns an | [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) | Refactoring Techniques |
+| Violating the profunctor laws. Symptom. Composing two dimap calls | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Visitor reused across traversals. Symptom. The second report contains the | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Visitor used to fake a missing feature. Symptom. A visitor interface with two | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Vocabulary drift between the document and the code. Symptom. A message | [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) | Domain-Driven Design |
@@ -4873,6 +4888,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | YAGNI as an excuse to avoid a hard design conversation. Symptom. a | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
 | YAGNI misapplied to a load-bearing seam. Symptom. a public API version | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
 | YAGNI without safety nets, the precondition failure. Symptom. deferred | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
+| Zipper over a structure that is secretly mutated elsewhere. Symptom. | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
 
 ## Detailed Problem Profiles by Family
 
@@ -13412,6 +13428,20 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A type guard prism accepts values on preview but later set
 - Profiling shows branch-heavy reducers spending time in optic
 
+#### [Profunctor](../patterns/16-functional/profunctor.md)
+
+**Core Problem:** A codebase accumulates two families of type constructors that look unrelated on the surface but are secretly the same shape. One family maps only outward, a Functor, used for a producer of values, a stream, a parser's result, a computation's output. The other family maps only inward, a Contravariant functor, used for a consumer of values, a predicate, a comparator, a serialiser, a printer.
+
+**Failure Mode Symptoms:**
+
+- Reaching for Profunctor when only one direction is needed. Symptom.
+- Violating the profunctor laws. Symptom. Composing two dimap calls
+- Confusing the direction of contravariance. Symptom. An adapting
+- Building a profunctor optics library without the Strong or Choice
+- subclass a use case needs. Symptom. An attempt to define a Lens over a
+- Introducing profunctor optics to a team with no prior exposure to the
+- direct getter-and-setter encoding. Symptom. New team members cannot
+
 #### [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md)
 
 **Core Problem:** A program has a sequence of operations where each later operation should run only if earlier operations succeeded. The operations are part of the normal domain flow, not catastrophic process failure. Examples include validating a signup request, loading an account, checking a business rule, applying a state change, saving the result, and returning a response. Each step can fail in a known way. A later step often needs the value produced by the prior step.
@@ -13608,6 +13638,25 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Output inspected too often. Symptom. Code calls listen around many small
 - Stringly diagnostic soup. Symptom. Callers search for substrings in Writer
 - Hidden cost in a hot path. Symptom. Profiling shows allocation around
+
+#### [Zipper](../patterns/16-functional/zipper.md)
+
+**Core Problem:** A program holds an immutable, recursively defined structure, most often a tree but sometimes a list, and it needs to walk to an arbitrary position inside that structure, read or change the value there, and continue walking, all without copying the whole structure on every step and without mutating any node in place.
+
+**Observable Symptoms:**
+
+- The structure is recursively defined and immutable, so an edit must
+- The program performs a sequence of nearby moves and edits, not one
+- The structure is walked by a human or by an algorithm that reasons
+
+**Failure Mode Symptoms:**
+
+- Losing the tail of the walk. Symptom. A caller calls root on a
+- Rebuilding on every step instead of only at the end. Symptom. A
+- Context type explosion in a typed language. Symptom. A codebase
+- Attempting a move past the edge without checking. Symptom. A
+- Zipper over a structure that is secretly mutated elsewhere. Symptom.
+- Using a zipper as a substitute for an index. Symptom. A hot path that
 
 ### AI and Agentic
 
