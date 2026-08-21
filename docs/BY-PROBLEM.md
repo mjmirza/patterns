@@ -746,6 +746,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Adding a new lock strategy to an existing strategized | [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) | Concurrency and Parallelism |
 | Adding a new stage to an existing pipeline breaks an earlier | [Composable](../patterns/04-principles-and-laws/composable.md) | Principles and Laws |
 | Adding a new variant class compiles and passes its own tests, | [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) | Principles and Laws |
+| Adding a preload hint for a resource the browser was already going | [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |
 | Adding a single new method to a system now requires touching a | [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) | Principles and Laws |
 | Adding the Nth knowledge source makes the system measurably slower even though the Nth specialist is rarely eligible. | [Blackboard Architecture](../patterns/05-architectural/blackboard-architecture.md) | Architectural Patterns |
 | Adding to author.books silently does not persist after flush. The collection mutated is the non-owning side of a bidi... | [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) | Enterprise Application Architecture |
@@ -835,6 +836,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Anemic wrapper, no validation. Symptom, a class EmailAddress { String | [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) | Domain-Driven Design |
 | answer, even though auditing was turned on. Symptom. A resource is gone, | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
 | Answering a narrow question through global search. Symptom. A | [GraphRAG](../patterns/17-ai-agentic/graphrag.md) | AI and Agentic |
+| any real request. Symptom. The connection opened by a preconnect | [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |
 | any work can proceed. Symptom. Design and development reviews spend | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | anywhere. Symptom, seen above. Cause, the source database rotated away a | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
 | API response latency degrades under load in a way that scales | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
@@ -1126,6 +1128,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Confusing consistent hashing with sticky sessions. Symptom. A load | [Consistent Hashing](../patterns/12-data-storage/consistent-hashing.md) | Data and Storage |
 | Confusing copy-on-write with true immutability, and mutating the "shared" | [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) | Concurrency and Parallelism |
 | Confusing Law of Demeter with information hiding of data, not behaviour. | [Law of Demeter](../patterns/04-principles-and-laws/law-of-demeter.md) | Principles and Laws |
+| Confusing preconnect's connection-level cost with preload's | [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |
 | Confusing SRP with "one method per class." Symptom. A codebase where | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
 | Confusing the direction of contravariance. Symptom. An adapting | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Confusing the rule with a ban on method chaining in general. Symptom. A | [Law of Demeter](../patterns/04-principles-and-laws/law-of-demeter.md) | Principles and Laws |
@@ -1755,6 +1758,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | is that swapping the concrete Dependency for a different | [Low Coupling](../patterns/04-principles-and-laws/low-coupling.md) | Principles and Laws |
 | is that the abstraction has grown to expose every method the | [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) | Principles and Laws |
 | is the same uncontrolled mutation the refactoring was supposed | [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) | Refactoring Techniques |
+| is to click it. Symptom. A real amount of bandwidth is spent | [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |
 | is wrong for the second value. The symptom is a variable whose name | [Extract Variable](../patterns/03-refactoring/extract-variable.md) | Refactoring Techniques |
 | Isolation and continuation confused for one another. Symptom, a | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
 | Isolation claimed but never tested. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
@@ -2308,6 +2312,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Precheck duplicates incomplete rules. Symptom. The branch says input is | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
 | Precondition strengthening, presented as a validation improvement. A subtype narrows | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
 | Predictable or over privileged claim tokens. Symptom. A security | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
+| Prefetching every link on a page regardless of how likely the user | [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |
 | Preloading resources the initial route does not actually need. | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | Premature abstraction. One family, one implementation, a full interface, and a | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Premature extraction with only one actor so far. Symptom. A codebase | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
@@ -4689,6 +4694,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Timeout becomes allow. Symptom. Access spikes during policy-service latency | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Timeout mutants masking a real infinite loop bug. Symptom. A mutant that | [Mutation Test](../patterns/14-testing/mutation-test.md) | Testing |
 | timeout. Symptom. batchTimeout gets tuned down repeatedly to chase lower | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
+| to discover early through normal parsing. Symptom. No measurable | [Resource Hints](../patterns/13-frontend-ui/resource-hints.md) | Frontend and UI |
 | to fix where measured. Fix. Revert to the simple wide accessor, | [Extraneous Fetching](../patterns/18-anti-patterns/extraneous-fetching.md) | Anti-Patterns |
 | to other calls, still writes a strict, ordered expectation by habit. Symptom. | [Mock](../patterns/14-testing/mock.md) | Testing |
 | to read because every field access goes through a method. The symptom is | [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) | Refactoring Techniques |
@@ -12335,6 +12341,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - memoisation. Symptom. A state-owning component wrapped in a
 - Reaching for a render prop in a codebase where a custom hook would
 - serve identically, with less nesting. Symptom. A team continues
+
+#### [Resource Hints](../patterns/13-frontend-ui/resource-hints.md)
+
+**Core Problem:** A browser discovers most of a page's resources by parsing its HTML and CSS as it goes, which means a resource referenced deep in a stylesheet, or fetched only after a script runs, is not discovered until the browser reaches that specific point in parsing or execution. For a resource the page will need soon, or an origin the page is about to make a request to, waiting for natural discovery wastes real time the browser could have spent connecting or fetching in parallel with everything else already happening. Resource Hints solve this by letting a developer declare, ahead of natural discovery, exactly which resources or origins deserve early attention, and by distinguishing several different kinds of hint, each with a different scope and a different cost, so a developer can pick the narrowest, cheapest hint that actually addresses the specific delay they are trying to remove.
+
+**Failure Mode Symptoms:**
+
+- Adding a preload hint for a resource the browser was already going
+- to discover early through normal parsing. Symptom. No measurable
+- Prefetching every link on a page regardless of how likely the user
+- is to click it. Symptom. A real amount of bandwidth is spent
+- Confusing preconnect's connection-level cost with preload's
+- any real request. Symptom. The connection opened by a preconnect
 
 #### [Server Components](../patterns/13-frontend-ui/server-components.md)
 

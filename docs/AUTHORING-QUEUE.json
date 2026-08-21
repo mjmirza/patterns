@@ -3738,13 +3738,6 @@
     "focus": ""
   },
   {
-    "name": "Resource Hints",
-    "slug": "resource-hints",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/resource-hints.md",
-    "focus": ""
-  },
-  {
     "name": "Code Splitting",
     "slug": "code-splitting",
     "category": "frontend and UI",
