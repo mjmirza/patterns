@@ -2,8 +2,14 @@
 
 Origin. Category theory in practice
 
-34 entries, 215,383 words. Every entry carries all 18
+36 entries, 227,893 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Composition
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Profunctor](profunctor.md) | canonical | 5,397 | A codebase accumulates two families of type constructors that look unrelated on the surface but are secretly the same shape. |
 
 ## Data and State
 
@@ -12,6 +18,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Immutability](immutability.md) | canonical | 6,227 | A program needs to share data across time, calls, threads, retries, or users, but ordinary in-place mutation makes it unclear which version a reader sees. |
 | [Persistent Data Structures](persistent-data-structures.md) | canonical | 6,890 | A program needs snapshots of data across time, but a normal mutable collection has one current shape. |
 | [Structural Sharing](structural-sharing.md) | canonical | 6,098 | A program wants old and new versions of a large value at the same time. |
+| [Zipper](zipper.md) | canonical | 7,113 | A program holds an immutable, recursively defined structure, most often a tree but sometimes a list, and it needs to walk to an arbitrary position inside that structure, read or ... |
 
 ## Functional
 
