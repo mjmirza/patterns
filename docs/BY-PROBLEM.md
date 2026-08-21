@@ -968,6 +968,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Builder used where a record belongs. Symptom is a code review comment | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Building a bespoke protocol and calling it domain-specific. Symptom. A | [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) | Microservices |
 | Building a form-action function whose signature does not actually | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
+| Building a hand-off mechanism between the interrupt context and the | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software |
 | Building a headless abstraction for behavior that only ever needs | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | Building a machine so large and hierarchical that no single person | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Building a molecule or an organism that secretly depends on a | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
@@ -1008,6 +1009,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | caller, producing large classes with many responsibilities. The symptom | [Inline Class](../patterns/03-refactoring/inline-class.md) | Refactoring Techniques |
 | Callers should ask for a meaningful creation operation, not for storage layout. | [Replace Constructor with Factory Function](../patterns/03-refactoring/replace-constructor-with-factory-function.md) | Refactoring Techniques |
 | Calling a hook conditionally or inside a loop. Symptom. A | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |
+| Calling a non-FromISR API function from inside an interrupt context. | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software |
 | can hold its full behavior in their head. Symptom. Understanding a | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | can observe. The symptom is a transform that passes all tests but produces | [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) | Refactoring Techniques |
 | Capacity protection. The service has a known maximum sustainable | [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) | Cloud and Distributed |
@@ -1176,6 +1178,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Consumers process events wildly out of the order they actually | [Messaging](../patterns/10-microservices/messaging.md) | Microservices |
 | Consumers start depending on undocumented, incidental | [Published Language](../patterns/11-domain-driven-design/published-language.md) | Domain-Driven Design |
 | Consuming a one-pass iterator twice. Symptom. A function that logs a count of | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
+| context instead of deferring it. Symptom. Other, unrelated | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software |
 | Context leakage across a trust boundary. The symptom is that a | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |
 | Context split across concatenation. Symptom. A template compiler escapes a | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
 | Context type explosion in a typed language. Symptom. A codebase | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
@@ -1272,6 +1275,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Deep-link bypass. Symptom. A user bookmarks, or manually types, the URL | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
 | Default deny with no operator signal. Symptom. Customers see generic errors | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Defect bankruptcy. Symptom. The bug tracker has hundreds of stale defects, | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
+| deferred task with no genuine data-race protection. Symptom. The | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software |
 | Deferring a chunk the user needs immediately after the initial | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | Deferring an above-the-fold, immediately needed interactive | [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) | Frontend and UI |
 | Defining transitions implicitly through scattered conditional | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
@@ -1332,6 +1336,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Divergent predicates. Symptom. Two passes begin with predicates that look | [Split Loop](../patterns/03-refactoring/split-loop.md) | Refactoring Techniques |
 | Divergent rings during a rollout. Symptom. A brief window after a node | [Consistent Hashing](../patterns/12-data-storage/consistent-hashing.md) | Data and Storage |
 | does. The observable symptom is a new hire familiar with the wider | [Idiomatic](../patterns/04-principles-and-laws/idiomatic.md) | Principles and Laws |
+| Doing substantial, unbounded work directly inside the interrupt | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software |
 | Domain code contains a scattered handful of null checks, | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | Domain logic leaking into the routing decision. Symptom. The Application | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
 | Domain names that are really technical concerns in a business costume. | [Domain-based](../patterns/04-principles-and-laws/domain-based.md) | Principles and Laws |
@@ -4612,6 +4617,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The system asks users for information already stored in account | [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) | Anti-Patterns |
 | The system behaves correctly under light load and falls over | [Request-Reply](../patterns/07-integration/request-reply.md) | Enterprise Integration |
 | The system behaves unpredictably from run to run on what looks | [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) | AI and Agentic |
+| The system behaves unpredictably, crashes, or corrupts state | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software |
 | The system can carry an enrollment and recovery process, because losing every | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | The system can identify the actor for each duty with enough confidence for | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
 | The system can tolerate the cost of repeated checks, or can cache decisions | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
@@ -15850,5 +15856,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - interrupt path without measuring its real overhead. Symptom. An
 - Assuming a vendor's HAL implementation behaves identically across
 - chip revisions without verifying it. Symptom. Firmware that worked
+
+#### [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md)
+
+**Core Problem:** A hardware interrupt genuinely must be handled with the smallest possible delay, since the processor stops whatever it was doing the instant the interrupt fires, and every other pending interrupt is held off for as long as the current one runs. If the response to an interrupt performs substantial work directly inside the handler, that work delays every other time-sensitive event in the system for its entire duration. An Interrupt Service Routine solves this by doing only the minimum work the interrupt genuinely requires immediately, capturing or acknowledging whatever the hardware needs right now, and deferring the rest to a task, following the FreeRTOS Kernel Book's own description of the pattern that lets "the interrupt service routine to exit as quickly as is practical."
+
+**Failure Mode Symptoms:**
+
+- Calling a non-FromISR API function from inside an interrupt context.
+- The system behaves unpredictably, crashes, or corrupts state
+- Doing substantial, unbounded work directly inside the interrupt
+- context instead of deferring it. Symptom. Other, unrelated
+- Building a hand-off mechanism between the interrupt context and the
+- deferred task with no genuine data-race protection. Symptom. The
 
 Generated by `tools/gen-by-problem-by-language.py`. Do not edit by hand.
