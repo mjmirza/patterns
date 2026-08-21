@@ -128,7 +128,15 @@ def ts_project() -> Path | None:
     if not npm or not node:
         _TS_PROJECT = Path("/nonexistent")
         return None
-    proj = Path(tempfile.mkdtemp(prefix="patterns-ts-"))
+
+    cache_dir = Path(tempfile.gettempdir()) / "patterns-ts-project"
+    checker_script = cache_dir / "checker.js"
+    if (cache_dir / "node_modules" / "typescript").exists() and checker_script.exists():
+        _TS_PROJECT = cache_dir
+        return cache_dir
+
+    proj = cache_dir
+    proj.mkdir(parents=True, exist_ok=True)
     (proj / "package.json").write_text('{"name":"scratch","private":true}', encoding="utf-8")
     rc, out = run(
         [npm, "install", "--no-audit", "--no-fund", "typescript@5", "@types/node@22"],
@@ -141,8 +149,6 @@ def ts_project() -> Path | None:
             f"warning: TypeScript scratch project failed: {out[:200]}", file=sys.stderr
         )
         return None
-
-    checker_script = proj / "checker.js"
     checker_script.write_text(
         """const fs = require("fs");
 const path = require("path");
