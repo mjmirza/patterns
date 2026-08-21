@@ -752,6 +752,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -769,6 +770,7 @@ These patterns contain runnable code examples written in C++:
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
+- [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) (Embedded and Hardware-Software)
 - [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
 - [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
@@ -2816,6 +2818,7 @@ These patterns contain runnable code examples written in Python:
 - [Memento](../patterns/01-gof/memento.md) (Design Patterns (GoF))
 - [Memoization](../patterns/16-functional/memoization.md) (Functional Programming)
 - [Memory Compaction](../patterns/17-ai-agentic/memory-compaction.md) (AI and Agentic)
+- [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) (Embedded and Hardware-Software)
 - [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) (Data and Storage)
 - [Message Bus](../patterns/07-integration/message-bus.md) (Enterprise Integration)
 - [Message Chains](../patterns/02-code-smells/message-chains.md) (Code Smells)
@@ -3975,6 +3978,7 @@ These patterns contain runnable code examples written in Swift:
 - [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [JWT](../patterns/15-security/jwt.md) (Security)
 - [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) (Enterprise Application Architecture)
+- [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) (Embedded and Hardware-Software)
 - [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) (Frontend and UI)
 - [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) (Architectural Patterns)
 - [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) (Architectural Patterns)
