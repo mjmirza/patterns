@@ -2,7 +2,7 @@
 
 Origin. Official Android/iOS architecture guidance
 
-3 entries, 11,317 words. Every entry carries all 18
+4 entries, 15,151 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
@@ -11,6 +11,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Coordinator Pattern](coordinator-pattern.md) | canonical | 3,836 | A view controller that decides what happens after a button tap, whether to push a new screen, present a modal, or pop back, is a view controller that knows about the rest of the ... |
 | [MVVM-C (Model-View-ViewModel-Coordinator)](mvvm-c.md) | canonical | 3,602 | Plain MVVM cleanly separates a screen's own presentation logic from its view, per Microsoft's own description, "the view model implements properties and commands to which the view ... |
+| [Repository Pattern (Mobile Offline-First)](repository-pattern.md) | canonical | 3,834 | A mobile app that reads directly from the network whenever a screen needs data genuinely stops working the moment the device loses connectivity, and even with a connection, every ... |
 | [Unidirectional Data Flow (Mobile)](unidirectional-data-flow.md) | canonical | 3,879 | A screen whose state can be changed from more than one direction, a view mutating its own local property directly in one place, and a separate object also updating that same ... |
 
 ## Reading order

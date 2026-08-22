@@ -986,6 +986,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Building a machine so large and hierarchical that no single person | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | Building a molecule or an organism that secretly depends on a | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Building a profunctor optics library without the Strong or Choice | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
+| Building a repository that claims to be offline-first but genuinely | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |
 | Building a skeleton whose dimensions do not match the real | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Building a state machine with no real upfront design, treating the | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Building the enhanced, JavaScript-dependent experience first, and | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
@@ -1676,6 +1677,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | God orchestrator. Symptom. One Process Manager class grows to coordinate | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | God Service accumulating unrelated behavior. Symptom. A single | [Anemic Domain Model](../patterns/18-anti-patterns/anemic-domain-model.md) | Anti-Patterns |
 | God-core creep. The symptom is that features which were meant to live in | [Microkernel](../patterns/05-architectural/microkernel.md) | Architectural Patterns |
+| Google's own described order. Symptom. A real write the user made | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |
 | Gorilla banana problem. The superclass provides a large set of methods, | [Extract Superclass](../patterns/03-refactoring/extract-superclass.md) | Refactoring Techniques |
 | Gossip storm under partial network partition. Symptom. CPU and network | [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) | Data and Storage |
 | Grader hacking during optimization. Symptom. A metric a training or | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |
@@ -1918,6 +1920,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Legacy integration. A new service is being built to eventually replace a | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
 | legitimate customer messages are refused or flagged at a rate | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |
 | Legitimate outputs are refused or redacted at a rate high | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
+| Letting a screen or a view model read directly from the network, | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |
 | Letting a view controller reach directly into its coordinator's | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | Letting a view model perform navigation directly, such as | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | Letting a view read or mutate a piece of local state directly, | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
@@ -2221,6 +2224,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Old signatures remain accepted long after their documented token | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
 | Old webhook signatures start failing at the receiving service. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
 | on an implementation detail of the superclass that changed. The symptom is | [Extract Superclass](../patterns/03-refactoring/extract-superclass.md) | Refactoring Techniques |
+| on every app restart or network loss. Symptom. The app genuinely | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |
 | on the resulting Future. Symptom, the Active Object hangs permanently, and a | [Active Object](../patterns/09-concurrency/active-object.md) | Concurrency and Parallelism |
 | On-call cannot determine which geode actually served a failing | [Geode](../patterns/08-cloud-distributed/geode.md) | Cloud and Distributed |
 | Onboarding a new engineer takes weeks because | [Self-Contained Service](../patterns/10-microservices/self-contained-service.md) | Microservices |
@@ -4606,6 +4610,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The schema maps closely to the language's native types, so the gateway's job | [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) | Enterprise Application Architecture |
 | The schema registry compatibility failure that looks unrelated. A | [Datatype Channel](../patterns/07-integration/datatype-channel.md) | Enterprise Integration |
 | The scope is one bounded context, not the system. This is not optional, see | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
+| The screen genuinely shows data that disagrees with what the | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |
 | The screen needs to discover every object it must lock before it can even | [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) | Enterprise Application Architecture |
 | The screen shows a combination of values that the real, | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
 | The scroll position and scrollbar jump or jitter as the | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |
@@ -5200,6 +5205,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Writing a Server Action's mutation logic without verifying | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | Writing complex, error-prone logic directly inside the boundary's | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Writing to the buffer currently being shown, rather than the back | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
+| Writing to the network first and only updating the local database | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |
 | Written as symptom, cause, fix. The symptoms are drawn from practice and are | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | Written as symptom, cause, fix. The symptoms are drawn from practice rather than | [State](../patterns/01-gof/state.md) | Design Patterns (GoF) |
 | Wrong append order. Symptom. Explanation steps appear backward or grouped | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
@@ -15959,6 +15965,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The user finishes a screen's real task, but the app appears
 - Duplicating the same presentation logic inside both the view model
 - A change to a screen's presentation behavior needs to be made
+
+#### [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md)
+
+**Core Problem:** A mobile app that reads directly from the network whenever a screen needs data genuinely stops working the moment the device loses connectivity, and even with a connection, every screen pays a real network round-trip cost on every read. Reading from two different places, sometimes the network directly, sometimes a local cache, also genuinely creates two competing candidates for "what is the real, current data," a real consistency risk. The Repository Pattern in its offline-first form solves this by making the local database the single, exclusive place the rest of the app ever reads from, per Google's own stated rule, and by making the repository itself responsible for keeping that local database in sync with the network in the background. Google's own description of the resulting requirement is exact, "a repository with network access in an offline-first app must always have a local data source," and the resulting real read and write behavior, per Google, Android Developers, "Build an offline-first app," https://developer.android.com/topic/architecture/data-layer/offline-first, verified 2026-08-22, "in an offline-first app, read operations from repositories read directly from the local data source. Write any updates to the local data source first, so that the local data source updates its consumers since it is observable."
+
+**Failure Mode Symptoms:**
+
+- Letting a screen or a view model read directly from the network,
+- The screen genuinely shows data that disagrees with what the
+- Building a repository that claims to be offline-first but genuinely
+- on every app restart or network loss. Symptom. The app genuinely
+- Writing to the network first and only updating the local database
+- Google's own described order. Symptom. A real write the user made
 
 #### [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md)
 

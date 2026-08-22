@@ -25,6 +25,6 @@ family,name,published,planned,target,percent
 24-stream-processing,Stream Processing,0,8,8,0.0
 25-mlops,MLOps,0,9,9,0.0
 26-interaction-hci,Interaction and HCI,0,10,10,0.0
-27-mobile-architecture,Mobile Architecture,3,8,11,27.3
+27-mobile-architecture,Mobile Architecture,4,7,11,36.4
 28-embedded-hardware,Embedded and Hardware-Software,14,0,14,100.0
 29-realtime-simulation,Real-Time Simulation,0,9,9,0.0
