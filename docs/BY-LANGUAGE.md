@@ -750,6 +750,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2370,6 +2371,7 @@ These patterns contain runnable code examples written in Kotlin:
 
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
+- [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
@@ -2715,6 +2717,7 @@ These patterns contain runnable code examples written in Python:
 - [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) (AI and Agentic)
 - [Fault Injection](../patterns/14-testing/fault-injection.md) (Testing)
 - [Feature Envy](../patterns/02-code-smells/feature-envy.md) (Code Smells)
+- [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) (Cloud and Distributed)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Flyweight](../patterns/01-gof/flyweight.md) (Design Patterns (GoF))
@@ -4003,6 +4006,7 @@ These patterns contain runnable code examples written in Swift:
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
 - [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
+- [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Form Action](../patterns/13-frontend-ui/form-action.md) (Frontend and UI)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)

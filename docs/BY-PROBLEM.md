@@ -1930,6 +1930,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Letting the number of states grow without periodically reassessing | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Letting the plant simulation's model drift out of sync with the | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
+| Letting two feature modules depend on each other directly, so the | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |
 | level, and the consumer's build breaks the same day. The observable symptom | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
 | level. The symptom is that services are physically decoupled, separate | [Low Coupling](../patterns/04-principles-and-laws/low-coupling.md) | Principles and Laws |
 | lifetime. This is the symptom. The cause is speculative indexing, a specific | [Premature Optimization](../patterns/18-anti-patterns/premature-optimization.md) | Anti-Patterns |
@@ -2131,6 +2132,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Moving statements that the function should own. The statements are | [Move Statements to Callers](../patterns/03-refactoring/move-statements-to-callers.md) | Refactoring Techniques |
 | Moving statements that vary by caller. The statements are not the | [Move Statements into Function](../patterns/03-refactoring/move-statements-into-function.md) | Refactoring Techniques |
 | mTLS mistaken for authorization. Symptom. A valid caller can perform | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
+| multi-module structure. Symptom. The real module boundaries add | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |
 | Multi-pointer update mistaken for atomic. Symptom. A reader sees an | [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) | Concurrency and Parallelism |
 | Multiple instances of the same service. A service is deployed as N | [Gateway Routing](../patterns/08-cloud-distributed/gateway-routing.md) | Cloud and Distributed |
 | Multiple providers on the path. Symptom. Logging silently goes to the wrong | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
@@ -2340,6 +2342,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Overtime as schedule math. Symptom. The plan assumes nights or weekends | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Overwrapping a purely technical value. Symptom, a codebase has a | [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) | Domain-Driven Design |
 | overwriting a newer one. Symptom, seen above. Cause, the sink connector is | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
+| own best-practice rule. Symptom. Two features become silently | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |
 | own documentation defines. Symptom. A value that should never change | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software |
 | own fallback rendering path. Symptom. A failure inside the fallback | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | own legitimate worst-case processing time. Symptom. The watchdog | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
@@ -2370,6 +2373,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Passing a mutable object that gets modified. The function modifies | [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) | Refactoring Techniques |
 | Passing a new inline function on every render, defeating | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | Passing a new object literal as the provider's value on every | [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) | Frontend and UI |
+| Passing a real, concrete object as a navigation argument between | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |
 | patch with a comment. A comment describing hidden dependencies is a symptom | [Service Locator](../patterns/18-anti-patterns/service-locator.md) | Anti-Patterns |
 | Path-copy bug. Symptom. An update disappears, appears under the wrong key, | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
 | Path-matching ambiguity produces the wrong backend. Symptom. A request | [Gateway Routing](../patterns/08-cloud-distributed/gateway-routing.md) | Cloud and Distributed |
@@ -2961,6 +2965,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Splitting along data rather than along change. Symptom. Two new classes | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
 | Splitting every component into container and presentational halves | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Splitting far below the profitable threshold. Symptom. The parallel | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
+| Splitting features into modules that genuinely do not have clearly | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |
 | Splitting nested routes so finely that a single user flow through | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | Splitting so finely that the number of chunks, and their combined | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | Splitting two states that genuinely always change together across | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |
@@ -4561,6 +4566,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The query that is secretly a command. Symptom. calling a function whose | [Principle of Least Astonishment](../patterns/04-principles-and-laws/principle-of-least-astonishment.md) | Principles and Laws |
 | The queue drains and every worker exits far earlier than | [Poison Pill](../patterns/18-anti-patterns/poison-pill.md) | Anti-Patterns |
 | The reaction is a notification, not a request. Observer has no return channel. | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
+| The real build genuinely fails to resolve, or the team | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |
 | The recursion is genuinely in the domain, not an artefact of one algorithm. | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | the reduce step. Symptom. callers of the aggregated result cannot tell | [Scatter-Gather](../patterns/07-integration/scatter-gather.md) | Enterprise Integration |
 | The reflection or unsafe-write escape hatch. Symptom. An object | [Immutable Object](../patterns/09-concurrency/immutable-object.md) | Concurrency and Parallelism |
@@ -15958,6 +15964,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A view controller that was genuinely reusable across
 - Creating one coordinator per individual screen rather than per
 - inside the coordinator layer instead of removing it. Symptom. The
+
+#### [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md)
+
+**Core Problem:** A single, undivided app module genuinely forces every real change, however small, to rebuild and recompile the entire codebase, and it genuinely gives every part of the code equal, unrestricted access to every other part, with no real, enforced boundary preventing a screen from reaching into another feature's private internals. Google's own guidance names the resulting cost directly, "by dividing a problem into smaller and easier to solve subproblems, you reduce the complexity of designing and maintaining a large system." Feature Modules solve this by splitting the app along its real feature boundaries, so a real change to one feature only rebuilds that feature's own module, and by making every module's own internals genuinely inaccessible from outside it, per Google's own stated mechanism, "you can mark everything but your public interface as internal or private to prevent it from being used outside the module."
+
+**Failure Mode Symptoms:**
+
+- Letting two feature modules depend on each other directly, so the
+- The real build genuinely fails to resolve, or the team
+- Passing a real, concrete object as a navigation argument between
+- own best-practice rule. Symptom. Two features become silently
+- Splitting features into modules that genuinely do not have clearly
+- multi-module structure. Symptom. The real module boundaries add
 
 #### [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md)
 
