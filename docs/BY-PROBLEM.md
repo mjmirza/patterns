@@ -850,6 +850,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Anemic domain model. Symptom. A "domain" layer that consists entirely of data | [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) | Principles and Laws |
 | Anemic entities mistaken for a rich domain model in a design review. | [Anemic Domain Model](../patterns/18-anti-patterns/anemic-domain-model.md) | Anti-Patterns |
 | Anemic host. Symptom. The host's public methods do nothing except forward | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
+| Anemic use cases. a use case that does nothing but forward a call to a repository with no actual business rule applie... | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |
 | Anemic wrapper, no validation. Symptom, a class EmailAddress { String | [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) | Domain-Driven Design |
 | answer, even though auditing was turned on. Symptom. A resource is gone, | [Audit Logging](../patterns/10-microservices/audit-logging.md) | Microservices |
 | Answering a narrow question through global search. Symptom. A | [GraphRAG](../patterns/17-ai-agentic/graphrag.md) | AI and Agentic |
@@ -1661,6 +1662,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Fragile base class breakage from reordering. Symptom. An apparently | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | Fragile base class. A change to the superclass breaks a subclass in a | [Extract Superclass](../patterns/03-refactoring/extract-superclass.md) | Refactoring Techniques |
 | Frame rate drops or visible jank occurs specifically during | [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) | Anti-Patterns |
+| Framework leakage. a UI framework annotation or lifecycle type quietly imported into the domain layer because it was ... | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |
 | Freeing memory the instant the pointer is swapped. Symptom. A crash or | [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) | Concurrency and Parallelism |
 | Fresh fixture, stale environment. Symptom. Tests pass locally and fail | [Fresh Fixture](../patterns/14-testing/fresh-fixture.md) | Testing |
 | Freshly ingested documents are findable by keyword search | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |
@@ -1684,6 +1686,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | God Mother class. Symptom, one mother class grows to hundreds of lines and | [Object Mother](../patterns/14-testing/object-mother.md) | Testing |
 | God orchestrator. Symptom. One Process Manager class grows to coordinate | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | God Service accumulating unrelated behavior. Symptom. A single | [Anemic Domain Model](../patterns/18-anti-patterns/anemic-domain-model.md) | Anti-Patterns |
+| God use case. a single use case that accumulates unrelated responsibilities over time instead of being split, becomin... | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |
 | God-core creep. The symptom is that features which were meant to live in | [Microkernel](../patterns/05-architectural/microkernel.md) | Architectural Patterns |
 | Google's own described order. Symptom. A real write the user made | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |
 | Gorilla banana problem. The superclass provides a large set of methods, | [Extract Superclass](../patterns/03-refactoring/extract-superclass.md) | Refactoring Techniques |
@@ -1918,6 +1921,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Leaked subsystem types. Symptom. Callers still import subsystem packages | [Facade](../patterns/01-gof/facade.md) | Design Patterns (GoF) |
 | Leaking domain exceptions or the domain objects themselves across the | [Application Service](../patterns/11-domain-driven-design/application-service.md) | Domain-Driven Design |
 | Leaky abstraction at the boundary. Symptom. A repository interface, meant to hide the | [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) | Principles and Laws |
+| Leaky abstraction. a repository interface defined in the domain layer that exposes a data-layer-specific type (a data... | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |
 | Leaky escape hatch. Symptom, the wrapper exposes a public getter | [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) | Domain-Driven Design |
 | Leaky raw accessor. Symptom. Most call sites immediately call .value, | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Leaky semantics. Symptom. Behaviour that is correct in staging against the | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
@@ -2338,6 +2342,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Over-decomposition. The symptom is the supervisor spawning far more workers | [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) | AI and Agentic |
 | Over-fetching because the composer does not know what the client actually | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | Over-generalized reflective or interpreter-driven protection. Symptom. | [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) | Principles and Laws |
+| Over-layering a trivial feature. applying the full three-layer structure to a screen with no real business logic to i... | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |
 | Over-retained secret. Symptom. A secret removed from current state still | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
 | Over-wide error algebra. Symptom. Every function returns | [Result Either](../patterns/16-functional/result-either.md) | Functional Programming |
 | Overbroad break-glass rule. Symptom. Incident responders can read resources | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
@@ -15968,6 +15973,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The empty intermediate class trap. Symptom. A reader tracing a bug
 
 ### Mobile Architecture
+
+#### [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md)
+
+**Core Problem:** Business logic that lives directly inside a ViewController, an Activity, or a ViewModel is coupled to the UI framework whether or not it needs to be. A pricing calculation, a validation rule, or an eligibility check that only manipulates plain data ends up importing UI lifecycle types, framework annotations, or platform-specific classes it has no real dependency on. That coupling makes the logic slow to unit test (it needs a framework-attached test rig instead of a plain unit test), hard to reuse (a rule written for the phone UI cannot be reused for a widget, a watch companion, or a backend job without a rewrite), and fragile against UI or platform changes that have nothing to do with the business rule itself.
+
+**Failure Mode Symptoms:**
+
+- Leaky abstraction. a repository interface defined in the domain layer that exposes a data-layer-specific type (a database row, an HTTP response model) instead of a plain domain type, defeating the whole point of the boundary.
+- Anemic use cases. a use case that does nothing but forward a call to a repository with no actual business rule applied, adding indirection with no real benefit.
+- Framework leakage. a UI framework annotation or lifecycle type quietly imported into the domain layer because it was the path of least resistance under a deadline, silently breaking the dependency rule.
+- Over-layering a trivial feature. applying the full three-layer structure to a screen with no real business logic to isolate, producing ceremony with no corresponding benefit.
+- God use case. a single use case that accumulates unrelated responsibilities over time instead of being split, becoming its own tangled dependency for every ViewModel that calls it.
 
 #### [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md)
 

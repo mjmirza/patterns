@@ -2,13 +2,14 @@
 
 Origin. Official Android/iOS architecture guidance
 
-9 entries, 31,400 words. Every entry carries all 18
+10 entries, 34,207 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Clean Architecture (Mobile)](clean-architecture-mobile.md) | canonical | 2,807 | Business logic that lives directly inside a ViewController, an Activity, or a ViewModel is coupled to the UI framework whether or not it needs to be. |
 | [Coordinator Pattern](coordinator-pattern.md) | canonical | 3,836 | A view controller that decides what happens after a button tap, whether to push a new screen, present a modal, or pop back, is a view controller that knows about the rest of the ... |
 | [Deep Link Router](deep-link-router.md) | canonical | 3,191 | An app receives a link from outside itself. |
 | [Feature Modules](feature-modules.md) | canonical | 3,662 | A single, undivided app module genuinely forces every real change, however small, to rebuild and recompile the entire codebase, and it genuinely gives every part of the code ... |
