@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "Model-View-Intent (MVI)",
-    "slug": "model-view-intent",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/model-view-intent.md",
-    "focus": ""
-  },
-  {
     "name": "Unidirectional Data Flow (Mobile)",
     "slug": "unidirectional-data-flow",
     "category": "mobile architecture",
