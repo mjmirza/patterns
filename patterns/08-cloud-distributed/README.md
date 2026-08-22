@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-42 entries, 379,284 words, 2 more planned, 44 total when the family is complete. Every entry carries all 18
+43 entries, 386,162 words, 1 more planned, 44 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Cloud Distributed
@@ -147,12 +147,17 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Circuit Breaker](circuit-breaker.md) | canonical | 12,004 | A service calls a remote dependency. The dependency degrades in the worst possible way, which is not by refusing connections but by accepting them and answering slowly or not at ... |
 
+## Traffic Distribution
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Load Balancing](load-balancing.md) | canonical | 6,878 | A service running on one machine has a hard ceiling on the traffic it can handle. |
+
 ## Planned
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
 - Autoscaling
-- Load Balancing
 
 ## Reading order
 

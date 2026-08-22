@@ -183,6 +183,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A "thin" Presenter becomes a god object. Symptom. One Presenter class | [Model-View-Presenter](../patterns/05-architectural/model-view-presenter.md) | Architectural Patterns |
 | A "unit" test suspiciously takes eight seconds. Symptom. A test file | [Stub](../patterns/14-testing/stub.md) | Testing |
 | A "utils", "common", or "shared" package that has grown to | [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) | Principles and Laws |
+| A backend looks healthy while failing fast, and gets more traffic for it. | [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) | Cloud and Distributed |
 | A backup exists but recovery fails under incident pressure. | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | A batch job or an administrative script bypasses the application's | [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) | Enterprise Application Architecture |
 | A batch job publishes ten thousand events in one second, and every | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
@@ -1633,6 +1634,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Fail-fast where accumulation was required. Symptom. A form response shows | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |
 | Fail-open authorization. Symptom. When the role store is down, requests | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | Fail-open decision outage. Symptom. During an identity or policy outage, | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
+| Failing open when every backend looks unhealthy. Two independent systems | [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) | Cloud and Distributed |
 | failing, without a genuine, tested rollback path. Symptom. When the | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | Failure deep inside the system under test, far from the assertion line. | [Stub](../patterns/14-testing/stub.md) | Testing |
 | failure mode. Symptom. A team attempts to fix the God Object by splitting | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
@@ -1689,6 +1691,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Flaky tests corrupting the score. Symptom. The same mutant is reported as | [Mutation Test](../patterns/14-testing/mutation-test.md) | Testing |
 | Flat network behind a new front door. Symptom. A compromised host can scan | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | Fleet-wide staleness from a paused patch pipeline. Symptom. A security | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
+| Flooding a newly recovered backend. Covered as a force in dimension 3. | [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) | Cloud and Distributed |
 | Flyweight applied without measurement, then defended. Symptom. A code review | [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) | Design Patterns (GoF) |
 | Folders named notifications/, logging/, validation/ sitting | [Domain-based](../patterns/04-principles-and-laws/domain-based.md) | Principles and Laws |
 | for a narrower case than the record is actually used for. The symptom is | [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) | Refactoring Techniques |
@@ -3145,6 +3148,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Static, IP-based routing that breaks on every deploy. Symptom, routing | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | Step definition explosion and duplicate steps. Symptom. Two step | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
 | step was skipped. Symptom. The composable genuinely cannot be | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |
+| Sticky sessions creating a hot node. A small number of unusually long or | [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) | Cloud and Distributed |
 | Storage cost for the event log grows without bound and | [Kappa Architecture](../patterns/12-data-storage/kappa-architecture.md) | Data and Storage |
 | Storage costs and compressed file sizes are much higher than | [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) | Data and Storage |
 | storage costs for Bronze grow without bound and nobody can | [Medallion Architecture](../patterns/12-data-storage/medallion-architecture.md) | Data and Storage |
@@ -4572,6 +4576,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The leaky generic repository. Symptom. A single IOrderRepository | [Onion Architecture](../patterns/05-architectural/onion-architecture.md) | Architectural Patterns |
 | The leaky port. Symptom. A "driven port" interface whose method | [Hexagonal Architecture](../patterns/05-architectural/hexagonal-architecture.md) | Architectural Patterns |
 | The library or framework author cannot know the concrete products, because | [Factory Method](../patterns/01-design-patterns-gof/factory-method.md) | Design Patterns (GoF) |
+| The load balancer's own control plane fails. On December 24, 2012, AWS's | [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) | Cloud and Distributed |
 | The Logical Page Builder starts importing HTML-specific concepts, a | [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) | Enterprise Application Architecture |
 | The logout that did not log out. Symptom. A user who clicked logout on | [Server Session State](../patterns/06-enterprise-application-architecture/server-session-state.md) | Enterprise Application Architecture |
 | The mapper class has grown to hundreds of lines and contains | [Messaging Mapper](../patterns/07-integration/messaging-mapper.md) | Enterprise Integration |
@@ -10059,6 +10064,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. After a coordination service outage or network partition, no
 - Symptom. The coordination service reports a clean single leader at all
 - Symptom. Election takes an unexpectedly long time to converge on a
+
+#### [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md)
+
+**Core Problem:** A service running on one machine has a hard ceiling on the traffic it can handle. Past that ceiling, requests queue, latency climbs, and eventually the machine refuses new connections outright. Adding a second machine solves the capacity problem only if something decides, for every incoming request, which of the machines should answer it, and only routes to a machine that is actually able to answer.
+
+**Failure Mode Symptoms:**
+
+- The load balancer's own control plane fails. On December 24, 2012, AWS's
+- A backend looks healthy while failing fast, and gets more traffic for it.
+- Flooding a newly recovered backend. Covered as a force in dimension 3.
+- Failing open when every backend looks unhealthy. Two independent systems
+- Sticky sessions creating a hot node. A small number of unusually long or
 
 #### [Materialized View](../patterns/08-cloud-distributed/materialized-view.md)
 
