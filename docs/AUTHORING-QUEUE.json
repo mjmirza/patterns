@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Rolling Deployment",
-    "slug": "rolling-deployment",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/rolling-deployment.md",
-    "focus": ""
-  },
-  {
     "name": "Shadow Traffic",
     "slug": "shadow-traffic",
     "category": "release and deployment",

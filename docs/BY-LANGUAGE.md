@@ -761,6 +761,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2424,6 +2425,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) (SRE and Operations)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
+- [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) (Release and Deployment)
 - [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) (SRE and Operations)
 - [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
 - [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
@@ -3133,6 +3135,7 @@ These patterns contain runnable code examples written in Python:
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
 - [Role-Based Access Control](../patterns/15-security/rbac.md) (Security)
+- [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) (Release and Deployment)
 - [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
 - [Routing Slip](../patterns/07-integration/routing-slip.md) (Enterprise Integration)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
@@ -4160,6 +4163,7 @@ These patterns contain runnable code examples written in Swift:
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
+- [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) (Release and Deployment)
 - [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
 - [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) (SRE and Operations)
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
