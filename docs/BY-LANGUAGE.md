@@ -751,6 +751,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2389,6 +2390,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
 - [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
+- [Toil Automation](../patterns/21-sre-operations/toil-automation.md) (SRE and Operations)
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
 
@@ -3203,6 +3205,7 @@ These patterns contain runnable code examples written in Python:
 - [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) (Data and Storage)
 - [Throttling](../patterns/08-cloud-distributed/throttling.md) (Cloud and Distributed)
 - [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) (Anti-Patterns)
+- [Toil Automation](../patterns/21-sre-operations/toil-automation.md) (SRE and Operations)
 - [Token Binding and DPoP](../patterns/15-security/token-binding-and-dpop.md) (Security)
 - [Token Budget](../patterns/17-ai-agentic/token-budget.md) (AI and Agentic)
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
@@ -4096,6 +4099,7 @@ These patterns contain runnable code examples written in Swift:
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
 - [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) (Concurrency and Parallelism)
+- [Toil Automation](../patterns/21-sre-operations/toil-automation.md) (SRE and Operations)
 - [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)

@@ -4424,13 +4424,6 @@
     "focus": ""
   },
   {
-    "name": "Toil Automation",
-    "slug": "toil-automation",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/toil-automation.md",
-    "focus": ""
-  },
-  {
     "name": "Runbook Automation",
     "slug": "runbook-automation",
     "category": "SRE and operations",
