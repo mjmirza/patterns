@@ -760,6 +760,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Branch by Abstraction](../patterns/20-release-deployment/branch-by-abstraction.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Dark Launch](../patterns/20-release-deployment/dark-launch.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2404,6 +2405,7 @@ These patterns contain runnable code examples written in Kotlin:
 
 - [API Versioning](../patterns/19-api-design/api-versioning.md) (API and Interface Design)
 - [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) (Release and Deployment)
+- [Branch by Abstraction](../patterns/20-release-deployment/branch-by-abstraction.md) (Release and Deployment)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Canary Release](../patterns/20-release-deployment/canary-release.md) (Release and Deployment)
 - [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
@@ -2610,6 +2612,7 @@ These patterns contain runnable code examples written in Python:
 - [Boat Anchor](../patterns/18-anti-patterns/boat-anchor.md) (Anti-Patterns)
 - [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [Bounded Context](../patterns/11-domain-driven-design/bounded-context.md) (Domain-Driven Design)
+- [Branch by Abstraction](../patterns/20-release-deployment/branch-by-abstraction.md) (Release and Deployment)
 - [Bridge](../patterns/01-gof/bridge.md) (Design Patterns (GoF))
 - [Broker](../patterns/05-architectural/broker-architecture.md) (Architectural Patterns)
 - [Builder](../patterns/01-gof/builder.md) (Design Patterns (GoF))
@@ -4086,6 +4089,7 @@ These patterns contain runnable code examples written in Swift:
 - [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) (Frontend and UI)
 - [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) (Release and Deployment)
 - [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
+- [Branch by Abstraction](../patterns/20-release-deployment/branch-by-abstraction.md) (Release and Deployment)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Canary Release](../patterns/20-release-deployment/canary-release.md) (Release and Deployment)

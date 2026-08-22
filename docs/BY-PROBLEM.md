@@ -16207,6 +16207,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Dropped in-flight requests at the switch. a request already in progress at the exact moment of the traffic switch can be lost if the switch is not handled gracefully.
 - Idle environment left stale. a blue environment kept around as the rollback target, but never refreshed or re-verified, can itself be broken by the time it is actually needed for a rollback.
 
+#### [Branch by Abstraction](../patterns/20-release-deployment/branch-by-abstraction.md)
+
 #### [Canary Release](../patterns/20-release-deployment/canary-release.md)
 
 **Core Problem:** Deploying a new release to all production traffic at once means every user is affected the instant a defect ships, and the defect is only discovered once it has already reached everyone. Even careful pre-release testing cannot catch every real-world condition, a traffic pattern, a data shape, an edge case, that only shows up once a release meets genuine production traffic at scale.

@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Branch by Abstraction",
-    "slug": "branch-by-abstraction",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/branch-by-abstraction.md",
-    "focus": ""
-  },
-  {
     "name": "Expand-Contract Migration",
     "slug": "expand-contract-migration",
     "category": "release and deployment",
