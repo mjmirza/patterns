@@ -4284,13 +4284,6 @@
     "focus": ""
   },
   {
-    "name": "Synthetic Monitoring",
-    "slug": "synthetic-monitoring",
-    "category": "observability",
-    "path": "patterns/22-observability/synthetic-monitoring.md",
-    "focus": ""
-  },
-  {
     "name": "Real User Monitoring",
     "slug": "real-user-monitoring",
     "category": "observability",

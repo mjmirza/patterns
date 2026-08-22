@@ -20,7 +20,7 @@ family,name,published,planned,target,percent
 19-api-design,API and Interface Design,10,1,11,90.9
 20-release-deployment,Release and Deployment,10,0,10,100.0
 21-sre-operations,SRE and Operations,11,1,12,91.7
-22-observability,Observability,5,3,8,62.5
+22-observability,Observability,6,2,8,75.0
 23-workflow-orchestration,Workflow and Orchestration,0,6,6,0.0
 24-stream-processing,Stream Processing,0,8,8,0.0
 25-mlops,MLOps,0,9,9,0.0

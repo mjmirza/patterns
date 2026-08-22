@@ -784,6 +784,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [RED Method](../patterns/22-observability/red-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [USE Method](../patterns/22-observability/use-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1517,6 +1518,7 @@ These patterns contain runnable code examples written in Go:
 - [Switch Statements](../patterns/02-code-smells/switch-statements.md) (Code Smells)
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
+- [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) (Observability)
 - [Table Data Gateway](../patterns/06-enterprise-application-architecture/table-data-gateway.md) (Enterprise Application Architecture)
 - [Table Module](../patterns/06-enterprise-application-architecture/table-module.md) (Enterprise Application Architecture)
 - [Tagless Final](../patterns/16-functional/tagless-final.md) (Functional Programming)
@@ -3282,6 +3284,7 @@ These patterns contain runnable code examples written in Python:
 - [Supporting Subdomain](../patterns/11-domain-driven-design/supporting-subdomain.md) (Domain-Driven Design)
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
+- [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) (Observability)
 - [Table Data Gateway](../patterns/06-enterprise-application-architecture/table-data-gateway.md) (Enterprise Application Architecture)
 - [Table Module](../patterns/06-enterprise-application-architecture/table-module.md) (Enterprise Application Architecture)
 - [Tagless Final](../patterns/16-functional/tagless-final.md) (Functional Programming)
@@ -4987,6 +4990,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Switch Statements](../patterns/02-code-smells/switch-statements.md) (Code Smells)
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
+- [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) (Observability)
 - [Table Data Gateway](../patterns/06-enterprise-application-architecture/table-data-gateway.md) (Enterprise Application Architecture)
 - [Table Module](../patterns/06-enterprise-application-architecture/table-module.md) (Enterprise Application Architecture)
 - [Tagless Final](../patterns/16-functional/tagless-final.md) (Functional Programming)
