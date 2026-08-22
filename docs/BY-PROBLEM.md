@@ -1008,6 +1008,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | by default, in a codebase with Hooks available. Symptom. The | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
 | Bypass drift. Symptom. The facade exists, and half the codebase does not use | [Facade](../patterns/01-gof/facade.md) | Design Patterns (GoF) |
 | Bypassing the abstraction layer for a direct register write in | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
+| Bypassing the event or action channel entirely by calling a method | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
 | Cache eviction turns duplicates into new commands. Symptom. Duplicate side | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |
 | Cache hit ratio for genuinely hot keys degrades over time, and cache | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | Cache stampede at cold start. Symptom. A newly deployed service instance, | [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) | Data and Storage |
@@ -1146,6 +1147,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | compile-time dependency still points the wrong way. The symptom is that a | [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) | Principles and Laws |
 | component is in. Symptom. The machine's context grows to hold | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | component receives family A while its collaborator receives family B. The symptom is | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
+| Composable Architecture's own Reducer both require. Symptom. The | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
 | Composed queries that overwhelm the planner. Symptom. A query built from a | [Specification](../patterns/11-domain-driven-design/specification.md) | Domain-Driven Design |
 | Composing several micro frontends with no shared design system, | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | Composition order reversed. Symptom. A pipeline emits different values than | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
@@ -1918,6 +1920,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Legitimate outputs are refused or redacted at a rate high | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
 | Letting a view controller reach directly into its coordinator's | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | Letting a view model perform navigation directly, such as | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
+| Letting a view read or mutate a piece of local state directly, | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
 | Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Letting the number of states grow without periodically reassessing | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Letting the plant simulation's model drift out of sync with the | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
@@ -2142,6 +2145,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | N+1 query storms. Symptom. A page or endpoint that lists N domain objects | [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) | Enterprise Application Architecture |
 | Naive copy-on-write on a large collection. Symptom. A service that | [Immutable Object](../patterns/09-concurrency/immutable-object.md) | Concurrency and Parallelism |
 | Name regression. Symptom. The new function is named executeCharge or | [Replace Command with Function](../patterns/03-refactoring/replace-command-with-function.md) | Refactoring Techniques |
+| named event or action. Symptom. The one-way discipline the pattern | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
 | Named semaphore left behind after a crash. Symptom. After a process | [Semaphore](../patterns/09-concurrency/semaphore.md) | Concurrency and Parallelism |
 | narration, where a comment restates in English what the next line already | [Comments](../patterns/02-code-smells/comments.md) | Code Smells |
 | Navigating to a class named Order shows only fields, getters, and | [Information Expert](../patterns/04-principles-and-laws/information-expert.md) | Principles and Laws |
@@ -2448,6 +2452,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | prod/, the vault is only a different filesystem. The symptom is a breach | [Secrets Management](../patterns/15-security/secrets-management.md) | Security |
 | Producer-side latency grows unpredictably and is hard to correlate | [Recipient List](../patterns/07-integration/recipient-list.md) | Enterprise Integration |
 | produces a binary with a different hash. The observable symptom is | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
+| Producing a new state that is only a partial patch of the previous | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
 | producing a visibly inconsistent end-user experience. Symptom. | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
 | product or a connection. The symptom is a data race or a leaked authentication | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Production incidents cannot be reconstructed. Cause. Prompt | [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) | Anti-Patterns |
@@ -4602,6 +4607,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The schema registry compatibility failure that looks unrelated. A | [Datatype Channel](../patterns/07-integration/datatype-channel.md) | Enterprise Integration |
 | The scope is one bounded context, not the system. This is not optional, see | [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) | Cloud and Distributed |
 | The screen needs to discover every object it must lock before it can even | [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) | Enterprise Application Architecture |
+| The screen shows a combination of values that the real, | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
 | The scroll position and scrollbar jump or jitter as the | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |
 | The search consistently converges on the same wrong answer | [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) | AI and Agentic |
 | The second failure mode is interface-itis. The symptom is that every class in | [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) | Principles and Laws |
@@ -15953,6 +15959,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The user finishes a screen's real task, but the app appears
 - Duplicating the same presentation logic inside both the view model
 - A change to a screen's presentation behavior needs to be made
+
+#### [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md)
+
+**Core Problem:** A screen whose state can be changed from more than one direction, a view mutating its own local property directly in one place, and a separate object also updating that same conceptual state in another place, quickly loses a single, trustworthy answer to "what does the screen actually show right now." Google's own documentation names the benefit UDF restores directly, "there is a single source of truth for the UI." Unidirectional Data Flow solves the multiple-writers problem by making state change origin from exactly one place, and letting the view do only two things, render whatever state it is given, and emit an event describing what the user did, never mutate its own state directly. Google's own description of the resulting cycle is exact, "the ViewModel holds and exposes the state to be consumed by the UI," "the UI notifies the ViewModel of user events," "the ViewModel handles the user actions and updates the state," and "the updated state is fed back to the UI to render."
+
+**Failure Mode Symptoms:**
+
+- Letting a view read or mutate a piece of local state directly,
+- The screen shows a combination of values that the real,
+- Producing a new state that is only a partial patch of the previous
+- Composable Architecture's own Reducer both require. Symptom. The
+- Bypassing the event or action channel entirely by calling a method
+- named event or action. Symptom. The one-way discipline the pattern
 
 ### Embedded and Hardware-Software
 
