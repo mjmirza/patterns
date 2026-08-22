@@ -754,6 +754,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2395,6 +2396,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
 - [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) (SRE and Operations)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
+- [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
@@ -2928,6 +2930,7 @@ These patterns contain runnable code examples written in Python:
 - [Move Statements to Callers](../patterns/03-refactoring/move-statements-to-callers.md) (Refactoring Techniques)
 - [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) (AI and Agentic)
 - [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) (Data and Storage)
+- [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) (Microservices)
 - [Multiversion Concurrency Control](../patterns/12-data-storage/mvcc.md) (Data and Storage)
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
@@ -4082,6 +4085,7 @@ These patterns contain runnable code examples written in Swift:
 - [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) (Architectural Patterns)
 - [Model-View-Presenter](../patterns/05-architectural/model-view-presenter.md) (Architectural Patterns)
 - [Money](../patterns/06-enterprise-application-architecture/money.md) (Enterprise Application Architecture)
+- [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) (Frontend and UI)
 - [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) (Frontend and UI)
