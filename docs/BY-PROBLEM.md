@@ -16232,6 +16232,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 #### [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md)
 
+#### [Warm Standby](../patterns/20-release-deployment/warm-standby.md)
+
 ### SRE and Operations
 
 #### [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md)

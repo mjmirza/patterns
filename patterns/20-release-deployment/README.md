@@ -2,7 +2,7 @@
 
 Origin. Humble and Farley
 
-9 entries, 18,601 words. Every entry carries all 18
+10 entries, 21,200 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Deployment
@@ -18,6 +18,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Feature Toggle](feature-toggle.md) | canonical | 1,996 |  |
 | [Rolling Deployment](rolling-deployment.md) | canonical | 1,825 |  |
 | [Shadow Traffic](shadow-traffic.md) | canonical | 1,908 |  |
+| [Warm Standby](warm-standby.md) | canonical | 2,599 |  |
 
 ## Reading order
 

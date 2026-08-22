@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Warm Standby",
-    "slug": "warm-standby",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/warm-standby.md",
-    "focus": ""
-  },
-  {
     "name": "Correlation ID",
     "slug": "correlation-id",
     "category": "observability",
