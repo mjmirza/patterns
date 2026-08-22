@@ -38,7 +38,7 @@ def claimed_paths() -> dict[str, int]:
     try:
         prs = json.loads(
             subprocess.run(
-                ["gh", "pr", "list", "--state", "open", "--json", "number"],
+                ["gh", "pr", "list", "--state", "open", "--json", "number,files"],
                 capture_output=True,
                 text=True,
                 cwd=ROOT,
@@ -53,21 +53,8 @@ def claimed_paths() -> dict[str, int]:
         num = pr.get("number")
         if num is None:
             continue
-        try:
-            files = json.loads(
-                subprocess.run(
-                    ["gh", "pr", "view", str(num), "--json", "files"],
-                    capture_output=True,
-                    text=True,
-                    cwd=ROOT,
-                    timeout=20,
-                ).stdout
-                or '{"files": []}'
-            )
-        except Exception:
-            continue
-        for f in files.get("files", []):
-            path = f.get("path", "")
+        for f in pr.get("files", []):
+            path = f.get("path", "") if isinstance(f, dict) else ""
             if path.startswith("patterns/") and path.endswith(".md"):
                 claims[path] = num
     return claims
