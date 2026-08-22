@@ -19,6 +19,7 @@ spec.loader.exec_module(check_duplicates)
 
 normalize_term = check_duplicates.normalize_term
 tokenize_text = check_duplicates.tokenize_text
+jaccard_similarity = check_duplicates.jaccard_similarity
 analyze_repository = check_duplicates.analyze_repository
 
 
@@ -44,6 +45,27 @@ class TestCheckDuplicates(unittest.TestCase):
         self.assertNotIn("the", tokens)
         self.assertNotIn("in", tokens)
         self.assertNotIn("architecture", tokens)
+
+    def test_jaccard_similarity(self):
+        self.assertEqual(jaccard_similarity(set(), set()), 0.0)
+        self.assertEqual(jaccard_similarity({"a"}, set()), 0.0)
+        self.assertEqual(jaccard_similarity(set(), {"b"}), 0.0)
+        self.assertEqual(jaccard_similarity({"a", "b"}, {"a", "b"}), 1.0)
+        self.assertEqual(jaccard_similarity({"a", "b"}, {"c", "d"}), 0.0)
+        self.assertAlmostEqual(
+            jaccard_similarity({"a", "b"}, {"a", "c"}), 1.0 / 3.0
+        )
+
+    def test_jaccard_similarity_threshold_pruning(self):
+        # 1 vs 10 elements cannot exceed 0.70 threshold (max 1/10 = 0.10)
+        s1 = {"a"}
+        s2 = {f"item_{i}" for i in range(10)}
+        self.assertEqual(jaccard_similarity(s1, s2, threshold=0.70), 0.0)
+        # Without threshold constraint, 1 vs 10 evaluates normally
+        s1_with_overlap = {"item_0"}
+        self.assertAlmostEqual(
+            jaccard_similarity(s1_with_overlap, s2), 1.0 / 10.0
+        )
 
     def test_analyze_repository(self):
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
