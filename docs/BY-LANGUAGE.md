@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2383,6 +2384,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
+- [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
 - [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
@@ -3112,6 +3114,7 @@ These patterns contain runnable code examples written in Python:
 - [Service Instance per Container](../patterns/10-microservices/service-instance-per-container.md) (Microservices)
 - [Service Instance per Host](../patterns/10-microservices/service-instance-per-host.md) (Microservices)
 - [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) (Microservices)
+- [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
 - [Service Locator Antipattern](../patterns/18-anti-patterns/service-locator-antipattern.md) (Anti-Patterns)
 - [Service Locator](../patterns/18-anti-patterns/service-locator.md) (Anti-Patterns)
 - [Service Mesh](../patterns/10-microservices/service-mesh.md) (Microservices)
@@ -4077,6 +4080,7 @@ These patterns contain runnable code examples written in Swift:
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [Server Action](../patterns/13-frontend-ui/server-action.md) (Frontend and UI)
 - [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)
+- [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
 - [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
