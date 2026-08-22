@@ -1240,6 +1240,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Consolidating unrelated conditions. The conditions have the same | [Consolidate Conditional Expression](../patterns/03-refactoring/consolidate-conditional-expression.md) | Refactoring Techniques |
 | Construction has rules that should live in one place. | [Replace Constructor with Factory Function](../patterns/03-refactoring/replace-constructor-with-factory-function.md) | Refactoring Techniques |
 | Constructor calling an overridable step. Symptom. A null reference, or an | [Template Method](../patterns/01-design-patterns-gof/template-method.md) | Design Patterns (GoF) |
+| Constructor over-injection is the most commonly named misuse, and Mark Seemann is precise about what it actually sign... | [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) | Design Patterns (GoF) |
 | Consumer fleet CPU and error-log volume spike sharply while | [Poison Pill](../patterns/18-anti-patterns/poison-pill.md) | Anti-Patterns |
 | Consumer lag on one ordered partition or FIFO queue grows | [Poison Pill](../patterns/18-anti-patterns/poison-pill.md) | Anti-Patterns |
 | Consumer ordering is wrong. a cancellation event is | [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) | Microservices |
@@ -5627,6 +5628,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Resource lifetime confusion across layers. Symptom. A file handle leaks, or a
 - Decorator used where Proxy was meant, and the object is never really there.
 - An operation that clients believe is local performs a network call, and
+
+#### [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md)
+
+**Core Problem:** Fowler's own running example names the problem precisely. a MovieLister class needs a MovieFinder to look up movies, and "the problem is how can I make that link so that my lister class is ignorant of the implementation class, but can still talk to an instance to do its work" (Martin Fowler, martinfowler.com, verified 2026-08-23). The two competing paths are the ones this pattern always balances. the client constructs or looks up its own collaborator directly, coupling it to a concrete implementation, or a third party hands the client its collaborator from outside, leaving the client aware only of an abstraction.
+
+**Failure Mode Symptoms:**
+
+- Constructor over-injection is the most commonly named misuse, and Mark Seemann is precise about what it actually signals, "Constructor Over-injection is a code smell, not an anti-pattern," and specifically "a symptom that a class is doing too much, that it's violating the Single Responsibility Principle" (Mark Seemann, On Constructor Over-injection, blog.ploeh.dk, 2018-08-27, https://blog.ploeh.dk/2018/08/27/on-constructor-over-injection/, verified 2026-08-23). The observable symptom is a constructor whose parameter list keeps growing, and the fix Seemann names is not abandoning Constructor Injection, it is splitting the class.
 
 #### [Facade](../patterns/01-design-patterns-gof/facade.md)
 

@@ -16,6 +16,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Command](../patterns/01-design-patterns-gof/command.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Composite](../patterns/01-design-patterns-gof/composite.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Decorator](../patterns/01-design-patterns-gof/decorator.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
+| [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Facade](../patterns/01-design-patterns-gof/facade.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Factory Method](../patterns/01-design-patterns-gof/factory-method.md) | Design Patterns (GoF) |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
@@ -1136,6 +1137,7 @@ These patterns contain runnable code examples written in Go:
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-design-patterns-gof/decorator.md) (Design Patterns (GoF))
 - [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
+- [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) (Design Patterns (GoF))
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
 - [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) (Cloud and Distributed)
@@ -1670,6 +1672,7 @@ These patterns have unique implementation variants or change their design struct
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-design-patterns-gof/decorator.md) (Design Patterns (GoF))
+- [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) (Design Patterns (GoF))
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) (Cloud and Distributed)
 - [Detour](../patterns/07-integration/detour.md) (Enterprise Integration)
@@ -2158,6 +2161,7 @@ These patterns have unique implementation variants or change their design struct
 - [Decompose Conditional](../patterns/03-refactoring/decompose-conditional.md) (Refactoring Techniques)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-design-patterns-gof/decorator.md) (Design Patterns (GoF))
+- [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) (Design Patterns (GoF))
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Disruptor](../patterns/09-concurrency/disruptor.md) (Concurrency and Parallelism)
 - [Distributed Transaction Coordinator Antipattern](../patterns/10-microservices/distributed-transaction-coordinator-antipattern.md) (Microservices)
@@ -2789,6 +2793,7 @@ These patterns contain runnable code examples written in Python:
 - [Decorator](../patterns/01-design-patterns-gof/decorator.md) (Design Patterns (GoF))
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
+- [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) (Design Patterns (GoF))
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
 - [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) (Cloud and Distributed)
@@ -3964,6 +3969,7 @@ These patterns have unique implementation variants or change their design struct
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-design-patterns-gof/decorator.md) (Design Patterns (GoF))
+- [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) (Design Patterns (GoF))
 - [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) (Cloud and Distributed)
 - [Disruptor](../patterns/09-concurrency/disruptor.md) (Concurrency and Parallelism)
 - [Divergent Change](../patterns/02-code-smells/divergent-change.md) (Code Smells)
@@ -4567,6 +4573,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-design-patterns-gof/decorator.md) (Design Patterns (GoF))
 - [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
+- [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) (Design Patterns (GoF))
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
 - [Deployment Stamps](../patterns/08-cloud-distributed/deployment-stamps.md) (Cloud and Distributed)
