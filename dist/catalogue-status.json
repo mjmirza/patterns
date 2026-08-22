@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 770,
+  "published_total": 771,
   "target_total": 847,
   "families_total": 29,
   "families_complete": 20,
   "stale_entries": 0,
-  "references_checked": 4164,
+  "references_checked": 4166,
   "rows": [
     {
       "family": "01-gof",
@@ -274,12 +274,12 @@
       "family": "21-sre-operations",
       "name": "SRE and Operations",
       "origin": "Google SRE, AWS Well-Architected",
-      "published": 4,
-      "planned": 7,
+      "published": 5,
+      "planned": 6,
       "target": 11,
-      "percent": 36.4,
+      "percent": 45.5,
       "maturity": {
-        "canonical": 4
+        "canonical": 5
       }
     },
     {

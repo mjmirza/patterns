@@ -326,6 +326,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A file system where a directory contains files and other directories, and a | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | A filter added six months after the pipeline shipped starts | [Pipes and Filters](../patterns/08-cloud-distributed/pipes-filters.md) | Cloud and Distributed |
 | A finder method's SQL grows an unreadable pile of optional | [Table Data Gateway](../patterns/06-enterprise-application-architecture/table-data-gateway.md) | Enterprise Application Architecture |
+| A findings log that is written but never reviewed, so the exercise surfaces real gaps that then sit unfixed until a g... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
 | A flatMap chain overflows even though every branch returns a | [Trampolining](../patterns/16-functional/trampolining.md) | Functional Programming |
 | A fourth symptom is that a single slow or failing downstream dependency | [Microservices Architecture](../patterns/05-architectural/microservices-architecture.md) | Architectural Patterns |
 | A framework depends on reference changes to detect state changes, as React | [Immutability](../patterns/16-functional/immutability.md) | Functional Programming |
@@ -2204,6 +2205,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No cross-cell observability. Symptom. An operator can see that overall | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | No cycle is ever reported by CI, yet developers still describe the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | No decision owner, so the timer alone does not converge. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
+| No defined abort criteria, so a scenario that starts drifting toward a genuine unintended outage has no clear point a... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
 | No emergency path. Symptom: an admin loses access during an incident. Cause: | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | No escalation path, so an automated step set that cannot resolve the condition leaves the incident stuck with nobody ... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | No exception path. a policy with no carve-out for a genuine emergency fix or rollback, which can make an already-bad ... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
@@ -2757,6 +2759,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Runaway retries against a permanently broken dependency. | [Scheduler Agent Supervisor](../patterns/08-cloud-distributed/scheduler-agent-supervisor.md) | Cloud and Distributed |
 | Running an expensive check regardless of earlier results. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | running branches. Symptom. Results are occasionally wrong, in a way that | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
+| Running the exercise with a different team than the one that would handle a real instance of the scenario, testing a ... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
 | Running the plant simulation with real-time compute that cannot | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
 | Runtime exceptions mention missing keys inside path code. | [Optics](../patterns/16-functional/optics.md) | Functional Programming |
 | runtime failure. The symptom is a bug that is caught in development but | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
@@ -2781,6 +2784,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | scenarios. Symptom. A widely imported test-helper module holds one giant | [Stub](../patterns/14-testing/stub.md) | Testing |
 | schedulability analysis for the new period set. Symptom. A task set | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
 | Scheduler affinity breach. Symptom. A UI update runs on a worker thread, an | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
+| Scheduling the exercise so rarely that the findings from the last one are stale by the time the next one runs, missin... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
 | Scheduling. Symptom. A safety or timing analysis performed as if one | [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) | Embedded and Hardware-Software |
 | Schema coupling through a shared database. Symptom. A migration in one | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
 | Schema covers shape but not meaning. Symptom. A JSON body passes schema | [Input Validation](../patterns/15-security/input-validation.md) | Security |
@@ -4950,6 +4954,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating a lock timeout as a correctness signal. Symptom. Application | [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) | Data and Storage |
 | Treating a missing or failed provider as a hard failure by accident. | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | Treating a shared, interned instance as though identity mattered. | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
+| Treating a tabletop-only exercise as equivalent to a real, scoped production exercise, when the two find genuinely di... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
 | Treating a tool call argument object as pre-validated for safety, not just | [Structured Output](../patterns/17-ai-agentic/structured-output.md) | AI and Agentic |
 | Treating a valid provenance signature as proof the source code | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
 | Treating batch-mode latency as a bug to route around with a smaller | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
@@ -16010,6 +16015,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - No exception path. a policy with no carve-out for a genuine emergency fix or rollback, which can make an already-bad incident worse by blocking the fix that would resolve it.
 - Budget attributed to the wrong cause. an outage caused by a dependency or the platform itself charged against a team's own budget, producing a freeze that has nothing to do with that team's actual releases.
 - Reset-boundary gaming. deliberately timing risky releases just after a reset to maximize available budget before the next measurement window begins, which defeats the pattern's intent of steady, ongoing risk discipline.
+
+#### [Game Day](../patterns/21-sre-operations/game-day.md)
+
+**Core Problem:** A system's resilience, a runbook's correctness, and a team's readiness are all assumptions until they are tested against a real failure. Waiting for a genuine disaster to test those assumptions means the first real test happens under the worst possible conditions, with real users affected and no opportunity to pause and reset if something goes wrong.
+
+**Failure Mode Symptoms:**
+
+- No defined abort criteria, so a scenario that starts drifting toward a genuine unintended outage has no clear point at which it gets stopped.
+- Running the exercise with a different team than the one that would handle a real instance of the scenario, testing a plan rather than the actual people and their actual readiness.
+- A findings log that is written but never reviewed, so the exercise surfaces real gaps that then sit unfixed until a genuine incident hits the same gap.
+- Scheduling the exercise so rarely that the findings from the last one are stale by the time the next one runs, missing changes the system has gone through in between.
+- Treating a tabletop-only exercise as equivalent to a real, scoped production exercise, when the two find genuinely different classes of gap.
 
 #### [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md)
 

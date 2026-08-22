@@ -4424,13 +4424,6 @@
     "focus": ""
   },
   {
-    "name": "Game Day",
-    "slug": "game-day",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/game-day.md",
-    "focus": ""
-  },
-  {
     "name": "Chaos Engineering",
     "slug": "chaos-engineering",
     "category": "SRE and operations",
