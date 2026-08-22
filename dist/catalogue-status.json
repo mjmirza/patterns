@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 804,
+  "published_total": 805,
   "target_total": 892,
   "families_total": 29,
-  "families_complete": 13,
+  "families_complete": 14,
   "stale_entries": 0,
-  "references_checked": 4253,
+  "references_checked": 4263,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -49,12 +49,12 @@
       "family": "04-principles-and-laws",
       "name": "Principles and Laws",
       "origin": "Martin, Larman, Brewer, Conway",
-      "published": 41,
-      "planned": 1,
+      "published": 42,
+      "planned": 0,
       "target": 42,
-      "percent": 97.6,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 38,
+        "canonical": 39,
         "established": 2,
         "contested": 1
       }
