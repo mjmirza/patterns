@@ -2030,6 +2030,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Memory usage grows steadily and eventually the process is killed | [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) | Concurrency and Parallelism |
 | Memory usage grows without bound over a long-running | [Pipes and Filters](../patterns/05-architectural/pipes-filters.md) | Architectural Patterns |
 | Merge applied on send instead of receive, or applied to the wrong copy. | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
+| Merge blind spots. a CRDT or merge policy that covers most fields but treats one field (a status enum, a relationship... | [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |
 | merges two responsibilities into one class. The symptom is a class that | [Inline Class](../patterns/03-refactoring/inline-class.md) | Refactoring Techniques |
 | messages appear to vanish, or the same message is processed twice | [Broker](../patterns/05-architectural/broker-architecture.md) | Architectural Patterns |
 | Messages are processed twice after a restart, or a message vanishes | [Polling Consumer](../patterns/07-integration/polling-consumer.md) | Enterprise Integration |
@@ -2761,6 +2762,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Schema drift from the real backend. Symptom. A tool executes without a | [Function Calling](../patterns/17-ai-agentic/function-calling.md) | AI and Agentic |
 | Schema drift on long-lived instances. Symptom. A deployment changes the | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | Schema drift. Symptom. Dashboards break after one service renames target | [Audit Log](../patterns/15-security/audit-log.md) | Security |
+| Schema drift. the local store's shape diverges from the remote API's shape over app versions, and the sync engine eit... | [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |
 | schema migration. Symptom, seen above. Cause, raw table-level CDC was | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
 | Schema registration calls intermittently time out or fail during a | [Schema Registry](../patterns/10-microservices/schema-registry.md) | Microservices |
 | Scope confusion. Symptom. A project administrator can administer another | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
@@ -2877,6 +2879,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Silent data corruption from an over-lenient parser. Symptom. Numbers in | [Postel's Law](../patterns/04-principles-and-laws/postel-law.md) | Principles and Laws |
 | Silent data loss from last-writer-wins on genuinely concurrent writes. | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
 | Silent data loss on filter exceptions. Symptom. Items are known to have | [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) | Architectural Patterns |
+| Silent data loss. a last-write-wins policy by wall-clock time discards a genuinely later edit made on a device whose ... | [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |
 | Silent default from a drifted builder. A field is added to the product and | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Silent default routing. Symptom. Users occasionally land on a fallback or | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
 | Silent drop on capacity overflow. Symptom. Units disappear with no error, | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
@@ -4096,6 +4099,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Symptom: code review debates whether + means addition, append, max, or | [Semigroup](../patterns/16-functional/semigroup.md) | Functional Programming |
 | Symptom: performance worsens after replacing a tuned loop with generic | [Semigroup](../patterns/16-functional/semigroup.md) | Functional Programming |
 | Symptom: sensitive metadata survives after merging a redacted and an | [Semigroup](../patterns/16-functional/semigroup.md) | Functional Programming |
+| Sync storm. a full resync triggered on every reconnect instead of an incremental delta, draining battery and data on ... | [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |
 | Synchronous chaining disguised as orchestration. Symptom, the "process | [Process Manager](../patterns/07-integration/process-manager.md) | Enterprise Integration |
 | Synthesis losing information. The symptom is the final answer omitting or | [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) | AI and Agentic |
 | system governance. Symptom. A component library is neatly organized | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
@@ -5049,6 +5053,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Unbounded caching inside a proxy. Symptom. Heap grows monotonically in a | [Proxy](../patterns/01-gof/proxy.md) | Design Patterns (GoF) |
 | Unbounded challenge store. Symptom. Redis or database rows for login | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | Unbounded concurrency under a traffic spike. Symptom. Downstream | [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) | Enterprise Integration |
+| Unbounded conflict accumulation. a revision-tree model that retains every conflicting branch forever without ever sur... | [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |
 | Unbounded consumption of an unbounded producer. Symptom. A process consuming | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
 | Unbounded distinct on a live stream. Symptom. Heap grows with traffic and | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
 | Unbounded fan-out amplifying an incident. Symptom. One producer's bug | [Message Bus](../patterns/07-integration/message-bus.md) | Enterprise Integration |
@@ -16011,6 +16016,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The user finishes a screen's real task, but the app appears
 - Duplicating the same presentation logic inside both the view model
 - A change to a screen's presentation behavior needs to be made
+
+#### [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md)
+
+**Core Problem:** A mobile device is not always connected. a subway ride, an airplane, a rural area, or simply a flaky cell tower all take the network away mid-session. An app whose every action requires a live request either blocks the person entirely or, worse, appears to work and then silently loses the change when the request fails. Neither is acceptable for anything the person expects to persist, a drafted message, a completed task, a logged workout.
+
+**Failure Mode Symptoms:**
+
+- Silent data loss. a last-write-wins policy by wall-clock time discards a genuinely later edit made on a device whose clock is behind, and the person never sees a warning.
+- Sync storm. a full resync triggered on every reconnect instead of an incremental delta, draining battery and data on a flaky connection that reconnects and drops repeatedly.
+- Unbounded conflict accumulation. a revision-tree model that retains every conflicting branch forever without ever surfacing or pruning them grows storage without bound and never actually resolves anything for the person.
+- Schema drift. the local store's shape diverges from the remote API's shape over app versions, and the sync engine either crashes on an old client's unsynced data or silently drops fields it does not recognize.
+- Merge blind spots. a CRDT or merge policy that covers most fields but treats one field (a status enum, a relationship reference) with plain overwrite semantics, producing an inconsistent result exactly where it matters most.
 
 #### [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md)
 

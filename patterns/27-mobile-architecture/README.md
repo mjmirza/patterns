@@ -2,7 +2,7 @@
 
 Origin. Official Android/iOS architecture guidance
 
-7 entries, 25,521 words. Every entry carries all 18
+8 entries, 28,610 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
@@ -13,6 +13,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Deep Link Router](deep-link-router.md) | canonical | 3,191 | An app receives a link from outside itself. |
 | [Feature Modules](feature-modules.md) | canonical | 3,662 | A single, undivided app module genuinely forces every real change, however small, to rebuild and recompile the entire codebase, and it genuinely gives every part of the code ... |
 | [MVVM-C (Model-View-ViewModel-Coordinator)](mvvm-c.md) | canonical | 3,602 | Plain MVVM cleanly separates a screen's own presentation logic from its view, per Microsoft's own description, "the view model implements properties and commands to which the view ... |
+| [Offline-First Sync](offline-first-sync.md) | canonical | 3,089 | A mobile device is not always connected. |
 | [Repository Pattern (Mobile Offline-First)](repository-pattern.md) | canonical | 3,834 | A mobile app that reads directly from the network whenever a screen needs data genuinely stops working the moment the device loses connectivity, and even with a connection, every ... |
 | [Unidirectional Data Flow (Mobile)](unidirectional-data-flow.md) | canonical | 3,879 | A screen whose state can be changed from more than one direction, a view mutating its own local property directly in one place, and a separate object also updating that same ... |
 | [ViewModel with State Hoisting](viewmodel-with-state-hoisting.md) | canonical | 3,517 | A composable function that declares and mutates its own local state directly is genuinely difficult to reuse, test, or preview, because its behavior depends on state hidden inside ... |
