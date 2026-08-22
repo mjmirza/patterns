@@ -7,13 +7,6 @@
     "focus": ""
   },
   {
-    "name": "Human Task",
-    "slug": "human-task",
-    "category": "workflow orchestration",
-    "path": "patterns/23-workflow-orchestration/human-task.md",
-    "focus": ""
-  },
-  {
     "name": "Compensation Handler",
     "slug": "compensation-handler",
     "category": "workflow orchestration",

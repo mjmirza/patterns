@@ -403,6 +403,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A migration off the upstream vendor, or a major upgrade to a | [Conformist](../patterns/11-domain-driven-design/conformist.md) | Domain-Driven Design |
 | A migration script repairs production data by connecting as a | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
 | A minor host release breaks a large fraction of installed | [Plugin Architecture](../patterns/05-architectural/plugin-architecture.md) | Architectural Patterns |
+| A missing or misconfigured timeout. AWS's own one-year quota, from dimension 3, is | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |
 | A mobile or browser app needs a standard redirect flow with replay defenses, | [OpenID Connect](../patterns/15-security/openid-connect.md) | Security |
 | A model, agent, or the team maintaining a prompt scores | [Golden Dataset](../patterns/17-ai-agentic/golden-dataset.md) | AI and Agentic |
 | A monolith is being taken apart feature by feature. During the transition, | [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) | Cloud and Distributed |
@@ -857,6 +858,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | An operator sends a stop command to a runaway component during an | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | An organisation chart where a department contains employees and sub | [Composite](../patterns/01-design-patterns-gof/composite.md) | Design Patterns (GoF) |
 | An ORM's lazy-loading proxy throws a lazy-initialization | [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) | Anti-Patterns |
+| An unclaimed task with no escalation path. BPMN's Escalation Event is opt-in, not | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |
 | An update process that writes a new image without properly signing | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | An upstream caller times out at exactly its own deadline while the | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | and add and remove methods that the class does not need. The symptom is a | [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) | Refactoring Techniques |
@@ -936,6 +938,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Auth and validation guards run once, centrally, instead of being reimplemented per feature with a risk of one feature... | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |
 | Authentication intermittently fails for a subset of servers, or | [Access Token](../patterns/10-microservices/access-token.md) | Microservices |
 | Authorization behavior changes after refactoring wrappers into | [Tail Call Optimization](../patterns/16-functional/tail-call-optimization.md) | Functional Programming |
+| Authorization bypass at the exact claim or complete boundary. This is not a general | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |
 | Authorization from claims alone. Symptom. A token with scope=admin grants | [JWT](../patterns/15-security/jwt.md) | Security |
 | Authorization remains bundled. Symptom. A user with read permission can | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Autoboxing identity surprise. Symptom. A comparison of two boxed integers | [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) | Design Patterns (GoF) |
@@ -1109,10 +1112,12 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | checks that are not load bearing. The symptom is a function that is more | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
 | childCoordinators array. Symptom. The finished coordinator, and | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | chip revisions without verifying it. Symptom. Firmware that worked | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
+| Choosing a code-shaped tool for a data-shaped problem. A team already committed to | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |
 | Choosing an eager hydration directive for an island that is rarely | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Choosing choreography for a process that needed a single owner. Symptom. | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | Choosing full double buffering on a system with genuinely | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
+| Choosing the deprecated implementation path. Camunda's own migration docs name the | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |
 | Choosing the internal-bookkeeping memory slab variant for a buffer | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
 | Choosing the overflow policy without a deliberate decision about | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
 | Choreography and orchestration mixed for the same process. Symptom. Part | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
@@ -16550,6 +16555,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Errors are checked only for the resource believed to be the problem, rather than for every resource in the sweep, so a genuine error condition on an unrelated resource goes unnoticed.
 
 ### Workflow and Orchestration
+
+#### [Human Task](../patterns/23-workflow-orchestration/human-task.md)
+
+**Core Problem:** AWS states the rationale for pausing a workflow for a human directly, in its own product documentation, as one of exactly three named reasons a callback task exists.
+
+**Failure Mode Symptoms:**
+
+- A missing or misconfigured timeout. AWS's own one-year quota, from dimension 3, is
+- An unclaimed task with no escalation path. BPMN's Escalation Event is opt-in, not
+- Choosing the deprecated implementation path. Camunda's own migration docs name the
+- Authorization bypass at the exact claim or complete boundary. This is not a general
+- Choosing a code-shaped tool for a data-shaped problem. A team already committed to
 
 #### [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md)
 

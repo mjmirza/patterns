@@ -793,6 +793,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [USE Method](../patterns/22-observability/use-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1218,6 +1219,7 @@ These patterns contain runnable code examples written in Go:
 - [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) (AI and Agentic)
 - [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) (Principles and Laws)
 - [Hinted Handoff](../patterns/12-data-storage/hinted-handoff.md) (Data and Storage)
+- [Human Task](../patterns/23-workflow-orchestration/human-task.md) (Workflow and Orchestration)
 - [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) (AI and Agentic)
 - [Humble Object](../patterns/14-testing/humble-object.md) (Testing)
 - [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) (AI and Agentic)
@@ -2899,6 +2901,7 @@ These patterns contain runnable code examples written in Python:
 - [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hinted Handoff](../patterns/12-data-storage/hinted-handoff.md) (Data and Storage)
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
+- [Human Task](../patterns/23-workflow-orchestration/human-task.md) (Workflow and Orchestration)
 - [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) (AI and Agentic)
 - [Humble Object](../patterns/14-testing/humble-object.md) (Testing)
 - [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) (AI and Agentic)
@@ -4649,6 +4652,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hinted Handoff](../patterns/12-data-storage/hinted-handoff.md) (Data and Storage)
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
+- [Human Task](../patterns/23-workflow-orchestration/human-task.md) (Workflow and Orchestration)
 - [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) (AI and Agentic)
 - [Humble Object](../patterns/14-testing/humble-object.md) (Testing)
 - [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) (AI and Agentic)
