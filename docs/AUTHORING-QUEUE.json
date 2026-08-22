@@ -4284,13 +4284,6 @@
     "focus": ""
   },
   {
-    "name": "Real User Monitoring",
-    "slug": "real-user-monitoring",
-    "category": "observability",
-    "path": "patterns/22-observability/real-user-monitoring.md",
-    "focus": ""
-  },
-  {
     "name": "Workflow Engine",
     "slug": "workflow-engine",
     "category": "workflow orchestration",

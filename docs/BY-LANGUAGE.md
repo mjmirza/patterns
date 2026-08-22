@@ -782,6 +782,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [RED Method](../patterns/22-observability/red-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1384,6 +1385,7 @@ These patterns contain runnable code examples written in Go:
 - [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) (Data and Storage)
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
 - [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
+- [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md) (Observability)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) (Enterprise Application Architecture)
 - [Reflexion](../patterns/17-ai-agentic/reflexion.md) (AI and Agentic)
@@ -3113,6 +3115,7 @@ These patterns contain runnable code examples written in Python:
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) (Data and Storage)
 - [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
+- [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md) (Observability)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) (Enterprise Application Architecture)
 - [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) (Frontend and UI)
@@ -4833,6 +4836,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) (Data and Storage)
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
 - [Reader Monad](../patterns/16-functional/reader-monad.md) (Functional Programming)
+- [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md) (Observability)
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) (Frontend and UI)
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
