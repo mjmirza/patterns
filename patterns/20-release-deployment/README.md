@@ -2,7 +2,7 @@
 
 Origin. Humble and Farley
 
-6 entries, 12,081 words. Every entry carries all 18
+7 entries, 14,145 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Deployment
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Blue-Green Deployment](blue-green-deployment.md) | canonical | 2,101 | Deploying a new release directly onto the running production environment, in place, risks downtime while the deployment is in progress, and leaves no clean way to undo the change ... |
+| [Branch by Abstraction](branch-by-abstraction.md) | canonical | 2,064 |  |
 | [Canary Release](canary-release.md) | canonical | 2,240 | Deploying a new release to all production traffic at once means every user is affected the instant a defect ships, and the defect is only discovered once it has already reached ... |
 | [Dark Launch](dark-launch.md) | canonical | 2,011 |  |
 | [Feature Toggle](feature-toggle.md) | canonical | 1,996 |  |

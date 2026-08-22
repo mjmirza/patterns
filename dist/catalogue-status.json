@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 793,
+  "published_total": 794,
   "target_total": 847,
   "families_total": 29,
   "families_complete": 22,
   "stale_entries": 0,
-  "references_checked": 4190,
+  "references_checked": 4191,
   "rows": [
     {
       "family": "01-gof",
@@ -266,12 +266,12 @@
       "family": "20-release-deployment",
       "name": "Release and Deployment",
       "origin": "Humble and Farley",
-      "published": 6,
-      "planned": 4,
+      "published": 7,
+      "planned": 3,
       "target": 10,
-      "percent": 60.0,
+      "percent": 70.0,
       "maturity": {
-        "canonical": 6
+        "canonical": 7
       }
     },
     {
