@@ -2099,6 +2099,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Missed events between construction and registration. Symptom. An observer | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
 | Missed persistence before RPC reply. Symptom. After a crash and restart, | [Raft](../patterns/12-data-storage/raft.md) | Data and Storage |
 | Missed timeout, unbounded wait on a Notifier that will never arrive. | [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) | Concurrency and Parallelism |
+| Missing backpressure. a server streaming a large sequence of messages faster than a slow client can consume them exha... | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |
 | Missing cancellation. Symptom. Clients give up, but server threads continue | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
 | Missing case silently ignored. Symptom. A new node type produces no output, | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Missing companion at runtime. Symptom, a new concrete type is added to | [Parallel Inheritance Hierarchies](../patterns/02-code-smells/parallel-inheritance-hierarchies.md) | Code Smells |
@@ -2432,6 +2433,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Parameterizing too many constants. The functions differ in three or | [Parameterize Function](../patterns/03-refactoring/parameterize-function.md) | Refactoring Techniques |
 | Partial dispose chain across a multi-level hierarchy. Symptom. a resource | [Call Super](../patterns/18-anti-patterns/call-super.md) | Anti-Patterns |
 | partial groups. Symptom. aggregator memory usage grows steadily over the | [Scatter-Gather](../patterns/07-integration/scatter-gather.md) | Enterprise Integration |
+| Partial-message handling gaps. code written assuming every call has exactly one response message, later reused for a ... | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |
 | Participants argue for ten minutes about whether a scenario is | [STRIDE](../patterns/15-security/stride.md) | Security |
 | Passing a large amount of server-only data through props into a | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Passing a large object that gives too much access. The function | [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) | Refactoring Techniques |
@@ -2938,6 +2940,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Silent coercion. Symptom. "0012" becomes 12, "false" becomes truthy, | [Input Validation](../patterns/15-security/input-validation.md) | Security |
 | Silent command loss because control messages were sent fire-and-forget. | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | Silent conflict swallowing. Symptom, a user reports that an edit they | [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) | Enterprise Application Architecture |
+| Silent connection loss. a network failure that drops the underlying connection without either side sending an explici... | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |
 | Silent contract drift on hook ordering. Symptom. After a framework upgrade a | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Silent contract drift. Symptom. A production incident traced to the real | [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) | Enterprise Application Architecture |
 | Silent coupling through an undocumented region schema. The symptom is | [Agentic Blackboard](../patterns/17-ai-agentic/agentic-blackboard.md) | AI and Agentic |
@@ -5160,6 +5163,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Unbounded rule cache. Symptom. Steadily growing heap in a long-running | [Interpreter](../patterns/01-gof/interpreter.md) | Design Patterns (GoF) |
 | Unbounded stack depth from dynamic composition. Symptom. Stack overflow in | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
 | Unbounded state growth in the gossiped payload. Symptom. Gossip message | [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) | Data and Storage |
+| Unbounded stream lifetime. a stream that is never explicitly closed on either error or success keeps consuming server... | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |
 | Unbounded, unstructured logging burying the useful signal. Symptom. | [Log Aggregation](../patterns/10-microservices/log-aggregation.md) | Microservices |
 | unchanged. The symptom is a silent logic error: the fee was supposed to be | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
 | Unclear effect boundary. Symptom. unsafeRun, blocking waits, or direct | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
@@ -16080,6 +16084,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Inconsistent use of the standard method mapping, such as using POST for an update that should be a PATCH, breaking the predictability the pattern is meant to deliver.
 - Forcing every operation into a resource shape even when a genuine non-resource action would be clearer, producing an awkward, contorted design rather than a genuinely simpler one.
 - An inconsistent pluralization or naming convention across different resource collections, undermining the learnable structure a client developer relies on.
+
+#### [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md)
+
+**Core Problem:** A single request and response pair works well when a client wants exactly one answer to one question, but it forces an awkward shape onto any interaction that is naturally a sequence. a server pushing live updates as they happen, a client uploading a large amount of data incrementally, or two sides exchanging messages back and forth over time. Forcing any of these into repeated unary calls means opening a new connection, or at least a new request, for every single message, which adds overhead and loses the natural ordering between messages that belong together.
+
+**Failure Mode Symptoms:**
+
+- Unbounded stream lifetime. a stream that is never explicitly closed on either error or success keeps consuming server resources indefinitely.
+- Missing backpressure. a server streaming a large sequence of messages faster than a slow client can consume them exhausts memory buffering the unread backlog.
+- Silent connection loss. a network failure that drops the underlying connection without either side sending an explicit close can leave both ends believing the stream is still open until a transport-level timeout eventually fires.
+- Partial-message handling gaps. code written assuming every call has exactly one response message, later reused for a streaming call, silently processes only the first message in the sequence and drops the rest.
 
 ### SRE and Operations
 
