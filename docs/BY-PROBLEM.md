@@ -16142,6 +16142,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Abandoned version never retired. a version kept supported indefinitely with no client actually using it any longer wastes the provider's ongoing maintenance effort.
 - Premature version retirement. a version retired before every client has genuinely migrated off it breaks the exact clients this pattern was meant to protect.
 
+#### [API and Schema Federation](../patterns/19-api-design/api-schema-federation.md)
+
+**Core Problem:** An organization with many teams, each owning a distinct part of the domain, faces two bad choices for its API layer without this pattern. A single monolithic schema owned by one team forces every other team to route changes through that team, and forces a person's understanding of a User or a Product type to live in one place even when no single team actually controls every aspect of it. Apollo names this directly. "no single team controls every aspect of an important type like a User or Product, so the definition of these types should be distributed across teams and codebases, rather than centralized." (Apollo GraphQL Blog, see reference 1.)
+
 #### [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md)
 
 **Core Problem:** A numeric offset identifies a position in a collection, but that position shifts the moment an item is inserted or removed anywhere before it. A client paging sequentially through a numerically-offset collection while it changes can silently skip an item that moved past the boundary, or see an item twice that shifted the other way. This is especially visible on a fast-changing collection, a live feed, an activity log, an auto-refreshing list.
