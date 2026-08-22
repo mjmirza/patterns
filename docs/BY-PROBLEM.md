@@ -667,6 +667,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A team splits a monolith into microservices along what | [Common Closure Principle](../patterns/04-principles-and-laws/common-closure-principle.md) | Principles and Laws |
 | A team stands up a BFF for a single, unremarkable web client | [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md) | Cloud and Distributed |
 | A team that adopted event-driven architecture specifically to | [Request-Reply](../patterns/07-integration/request-reply.md) | Enterprise Integration |
+| A team treats RED as sufficient on its own and never checks the resource layer, so a slowdown whose real cause is a s... | [RED Method](../patterns/22-observability/red-method.md) | Observability |
 | A team treats the deployment platform as a substitute for | [Service Deployment Platform](../patterns/10-microservices/service-deployment-platform.md) | Microservices |
 | A team treats the registry as a substitute for actually reading the | [Schema Registry](../patterns/10-microservices/schema-registry.md) | Microservices |
 | A team wraps every nested field access in an immutable value object | [Law of Demeter](../patterns/04-principles-and-laws/law-of-demeter.md) | Principles and Laws |
@@ -1456,6 +1457,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Duplicated work between parallel siblings. Symptom, two subagents run in | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
 | Duplicates persist after idempotency was supposedly added. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
 | Duplicating the same presentation logic inside both the view model | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
+| Duration is instrumented as a simple running average rather than a histogram, which hides tail latency entirely, and,... | [RED Method](../patterns/22-observability/red-method.md) | Observability |
 | During a partial zone or region outage, the system's overall | [Server-Side Service Discovery](../patterns/10-microservices/server-side-service-discovery.md) | Microservices |
 | During a real incident, the fallback targets fail almost as | [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) | AI and Agentic |
 | During a traffic spike or right after a deploy that clears | [No Caching](../patterns/18-anti-patterns/no-caching.md) | Anti-Patterns |
@@ -2612,6 +2614,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Race between concurrent retries. two retries with the same key arriving at nearly the same time, before the first att... | [Idempotent API](../patterns/19-api-design/idempotent-api.md) | API and Interface Design |
 | Raising a package's abstractness does not reduce its distance | [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) | Principles and Laws |
 | Rare inputs now panic or throw a different error. Cause. The | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
+| Rate, Error, or Duration labels are broken out by a value that can take on very many distinct values, such as a raw i... | [RED Method](../patterns/22-observability/red-method.md) | Observability |
 | rather than a single citable source for each symptom. The pattern of these | [Service-Oriented Architecture](../patterns/05-architectural/service-oriented-architecture.md) | Architectural Patterns |
 | rather than an ongoing hygiene practice, and the symptom is the same bad | [Change Function Declaration](../patterns/03-refactoring/change-function-declaration.md) | Refactoring Techniques |
 | rather than inferred from a system-wide symptom, since dimension 16 covers | [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) | Concurrency and Parallelism |
@@ -4564,6 +4567,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The message schema and the domain schema need to change on different | [Messaging Mapper](../patterns/07-integration/messaging-mapper.md) | Enterprise Integration |
 | The Messaging Mapper and the Message Translator pattern get | [Messaging Mapper](../patterns/07-integration/messaging-mapper.md) | Enterprise Integration |
 | The metamorphic suite is green, but a known bug still reaches | [Metamorphic Testing](../patterns/14-testing/metamorphic-testing.md) | Testing |
+| The method is applied to a batch job, a streaming pipeline, or another workload with no natural request unit, produci... | [RED Method](../patterns/22-observability/red-method.md) | Observability |
 | The migration stalls and the organization runs two systems forever. | [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md) | Cloud and Distributed |
 | The mismatch is at the interface, not in the behaviour. This is the test | [Adapter](../patterns/01-design-patterns-gof/adapter.md) | Design Patterns (GoF) |
 | The mistake, once surfaced, is expressible as a sentence an LLM can | [Reflexion](../patterns/17-ai-agentic/reflexion.md) | AI and Agentic |
@@ -5125,6 +5129,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Two SCSs quietly share a database instance for one query, and | [Self-Contained Service](../patterns/10-microservices/self-contained-service.md) | Microservices |
 | Two security tools create the same finding and both are ignored. | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Two services are constantly changed together in the same pull | [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) | Microservices |
+| Two services define Errors differently, one counting only server side failures and another also counting client side ... | [RED Method](../patterns/22-observability/red-method.md) | Observability |
 | Two services show a deploy marker at the same minute, but a responder cannot tell from the ledger which git commit or... | [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) | Microservices |
 | Two services silently disagree about the same real-world fact, for | [Database per Service](../patterns/10-microservices/database-per-service.md) | Microservices |
 | Two simultaneous walks collide. Index variables held by the caller work | [Iterator](../patterns/01-design-patterns-gof/iterator.md) | Design Patterns (GoF) |
@@ -16391,6 +16396,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - One service in the chain mints a brand new identifier instead of reusing the one it received, most often because its own instrumentation was added independently and never wired to the inbound header, which fragments what should be a single trace into two disconnected ones with no obvious symptom beyond an incomplete picture during the next incident.
 - The identifier, or a value carried alongside it, is treated as if it were secret or as an authorization token. it is neither. it is deliberately written into logs, returned to end users in error messages for support purposes, and exposed in tracing dashboards, so anything that must stay confidential does not belong inside it or beside it.
 - Extra business context, most often something that looks convenient to have on hand later, is embedded directly inside the identifier value itself rather than kept in a separate, purpose built field, which risks the identifier carrying personal data into every log line it touches. the general logging guidance on this point is that sensitive personal data is one of the categories that should usually not be recorded directly in logs (https://cheatsheetseries.owasp.org/cheatsheets/LoggingCheatSheet.html), and an identifier is a log field like any other.
+
+#### [RED Method](../patterns/22-observability/red-method.md)
+
+**Core Problem:** A team running many request driven services, each built by a different group of engineers, ends up with a different, inconsistent set of dashboards and metrics per service. One team graphs average latency, another graphs a raw request count with no error breakdown, and a third has no dashboard at all until something breaks. When an incident spans several services, an engineer moving from one dashboard to the next has to relearn what each one shows before they can even start comparing them.
+
+**Failure Mode Symptoms:**
+
+- The method is applied to a batch job, a streaming pipeline, or another workload with no natural request unit, producing a dashboard with metrics that do not map to anything real, exactly the fit ClickHouse's own engineering resource hub names as a genuine limitation, not a misuse it invented (https://clickhouse.com/resources/engineering/red-use-methods).
+- Duration is instrumented as a simple running average rather than a histogram, which hides tail latency entirely, and, if it is instrumented as a pre aggregated summary and then combined across service instances, produces a number that does not represent any real percentile, the exact problem Prometheus's own histogram guidance warns against (https://prometheus.io/docs/practices/histograms/).
+- A team treats RED as sufficient on its own and never checks the resource layer, so a slowdown whose real cause is a saturated resource is investigated entirely at the service level and never found, because that signal was never in scope for this method to begin with.
+- Rate, Error, or Duration labels are broken out by a value that can take on very many distinct values, such as a raw identifier rather than a normalized route template, which multiplies the number of distinct time series far beyond what the dashboard or its backend was built to hold.
+- Two services define Errors differently, one counting only server side failures and another also counting client side validation failures as errors, so a fleet wide error rate comparison between them is misleading even though both dashboards look identical.
 
 #### [Structured Logging](../patterns/22-observability/structured-logging.md)
 
