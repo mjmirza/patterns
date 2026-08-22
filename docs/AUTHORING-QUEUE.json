@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "HATEOAS",
-    "slug": "hateoas",
-    "category": "API design",
-    "path": "patterns/19-api-design/hateoas.md",
-    "focus": ""
-  },
-  {
     "name": "Blue-Green Deployment",
     "slug": "blue-green-deployment",
     "category": "release and deployment",

@@ -753,6 +753,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
+| [HATEOAS](../patterns/19-api-design/hateoas.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Idempotent API](../patterns/19-api-design/idempotent-api.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2409,6 +2410,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) (SRE and Operations)
 - [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) (API and Interface Design)
 - [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) (API and Interface Design)
+- [HATEOAS](../patterns/19-api-design/hateoas.md) (API and Interface Design)
 - [Idempotent API](../patterns/19-api-design/idempotent-api.md) (API and Interface Design)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
@@ -2818,6 +2820,7 @@ These patterns contain runnable code examples written in Python:
 - [GraphRAG](../patterns/17-ai-agentic/graphrag.md) (AI and Agentic)
 - [Guaranteed Delivery](../patterns/07-integration/guaranteed-delivery.md) (Enterprise Integration)
 - [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) (Concurrency and Parallelism)
+- [HATEOAS](../patterns/19-api-design/hateoas.md) (API and Interface Design)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) (Embedded and Hardware-Software)
 - [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
@@ -4099,6 +4102,7 @@ These patterns contain runnable code examples written in Swift:
 - [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) (SRE and Operations)
 - [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) (API and Interface Design)
 - [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) (API and Interface Design)
+- [HATEOAS](../patterns/19-api-design/hateoas.md) (API and Interface Design)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) (Embedded and Hardware-Software)
 - [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)
