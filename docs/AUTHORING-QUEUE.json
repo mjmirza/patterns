@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Structured Logging",
-    "slug": "structured-logging",
-    "category": "observability",
-    "path": "patterns/22-observability/structured-logging.md",
-    "focus": ""
-  },
-  {
     "name": "RED Method",
     "slug": "red-method",
     "category": "observability",
