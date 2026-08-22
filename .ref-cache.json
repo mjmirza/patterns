@@ -3359,6 +3359,8 @@
  "https://sre.google/sre-book/handling-overload/": 200,
  "https://sre.google/sre-book/introduction/": 200,
  "https://sre.google/sre-book/production-environment/": 200,
+ "https://sre.google/sre-book/service-level-objectives/": 200,
+ "https://sre.google/workbook/implementing-slos/": 200,
  "https://staltz.com/unidirectional-user-interface-architectures.html": 200,
  "https://standards.scheme.org/corrected-r7rs/r7rs-Z-H-6.html": 200,
  "https://statecharts.dev/state-machine-state-explosion.html": 200,

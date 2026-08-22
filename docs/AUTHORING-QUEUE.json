@@ -4424,13 +4424,6 @@
     "focus": ""
   },
   {
-    "name": "Service Level Objective",
-    "slug": "service-level-objective",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/service-level-objective.md",
-    "focus": ""
-  },
-  {
     "name": "Error Budget",
     "slug": "error-budget",
     "category": "SRE and operations",

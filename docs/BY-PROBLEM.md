@@ -172,6 +172,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | / Symptom / Cause / Fix / | [Cargo Cult Programming](../patterns/18-anti-patterns/cargo-cult-programming.md) | Anti-Patterns |
 | / Symptom / Cause / Fix / | [Lava Flow](../patterns/18-anti-patterns/lava-flow.md) | Anti-Patterns |
 | / Symptom observed / Underlying cause / Fix / | [Leader-Follower Architecture](../patterns/05-architectural/leader-follower-architecture.md) | Architectural Patterns |
+| 100-percent target. setting the SLO at or effectively at perfect reliability, which Google's own guidance names direc... | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |
 | <th>Symptom</th> | [Option Maybe](../patterns/16-functional/option-maybe.md) | Functional Programming |
 | A "core domain" package that is supposed to be the settled center | [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) | Principles and Laws |
 | A "highly available" service returns wrong or conflicting data | [CAP Theorem](../patterns/04-principles-and-laws/cap-theorem.md) | Principles and Laws |
@@ -1777,6 +1778,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Ignoring SIGTERM. Symptom. Every rolling deploy produces a burst of | [Service Instance per Container](../patterns/10-microservices/service-instance-per-container.md) | Microservices |
 | Ignoring the accessibility gap the technique introduces, leaving | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |
 | Ignoring the pending state the companion hook already provides, and | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
+| Ignoring the SLA distinction. treating an internal SLO as if it were an externally binding SLA, creating contractual ... | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |
 | Ignoring the warning signs of a deteriorating vendor relationship. | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |
 | Illegal pairings at runtime. Symptom. A production error reading | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | IllegalStateException at build() when the URI was never set. Symptom is a | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
@@ -2183,6 +2185,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Nested result. Symptom. Types such as Result<Result<Order, Error>, Error> | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
 | Nesting several render props until the JSX becomes genuinely hard to | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | Network split without latency budget. Symptom. An endpoint doubles its p95 | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
+| Never revisiting the target. an SLO set once at launch and left unchanged for years, even as the service, its users, ... | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |
 | New instances repeatedly start and are killed within | [Service Deployment Platform](../patterns/10-microservices/service-deployment-platform.md) | Microservices |
 | new system exhibits the same symptoms as the old one. Cause. The rewrite | [Big Ball of Mud](../patterns/18-anti-patterns/big-ball-of-mud.md) | Anti-Patterns |
 | New tokens verify in one region and fail in another. Cause. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
@@ -2952,6 +2955,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Skeleton with one implementation. Symptom. An abstract class and exactly one | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Skipped cleanup. Symptom. File handles, locks, spans, database transactions, | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | Skipped tail work. Symptom. A counter, audit call, buffer append, or cleanup | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
+| SLO with no consequence and no owner. a target nobody actually acts on when missed, which is indistinguishable in pra... | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |
 | Slow rollback under incident pressure. Symptom. During an active | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
 | Slow, brittle tests that wire up more than they claim to test. Symptom. | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
 | Slow, flaky test suites. Symptom. Unit tests for the God Object take a | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
@@ -5186,6 +5190,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Value equality that ignores a field. The equals method compares | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
 | Value Object explosion with no invariant behind any of them. Symptom. A | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
 | value. Symptom. A value appears to update in one part of the UI but | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
+| Vanity metric SLI. choosing an SLI that is easy to measure but does not correlate with what a real user experiences, ... | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |
 | Variable that is reassigned. The variable is declared as mutable, and | [Extract Variable](../patterns/03-refactoring/extract-variable.md) | Refactoring Techniques |
 | Variable that restates the expression. The variable is named | [Extract Variable](../patterns/03-refactoring/extract-variable.md) | Refactoring Techniques |
 | Vector clock confused with, or substituted for, a version vector without | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
@@ -15976,6 +15981,20 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Concurrent edits at different levels colliding silently. Symptom. Two
 - Fragile base class breakage from reordering. Symptom. An apparently
 - The empty intermediate class trap. Symptom. A reader tracing a bug
+
+### SRE and Operations
+
+#### [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md)
+
+**Core Problem:** A service either works or it does not, but complex distributed systems rarely fail as a binary. they degrade in latency, drop a fraction of requests, or become unavailable in one region while healthy elsewhere. Without an agreed, numeric definition of good enough, engineering teams either over-invest in reliability well past the point where a person can perceive the difference, or under-invest and let real degradation go unnoticed until it becomes an outage.
+
+**Failure Mode Symptoms:**
+
+- Vanity metric SLI. choosing an SLI that is easy to measure but does not correlate with what a real user experiences, producing a green SLO dashboard while people are genuinely unhappy with the service.
+- 100-percent target. setting the SLO at or effectively at perfect reliability, which Google's own guidance names directly as the wrong target, since it leaves no error budget for any release risk at all.
+- SLO with no consequence and no owner. a target nobody actually acts on when missed, which is indistinguishable in practice from having no SLO.
+- Ignoring the SLA distinction. treating an internal SLO as if it were an externally binding SLA, creating contractual exposure the team never actually agreed to.
+- Never revisiting the target. an SLO set once at launch and left unchanged for years, even as the service, its users, and its dependencies have all changed substantially.
 
 ### Mobile Architecture
 
