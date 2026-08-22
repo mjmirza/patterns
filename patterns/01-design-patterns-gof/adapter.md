@@ -1,7 +1,7 @@
 ---
 name: Adapter
 slug: adapter
-family: 01-gof
+family: 01-design-patterns-gof
 category: Structural
 aliases: [Wrapper, Translator, Shim, Ports and Adapters (architectural use)]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

@@ -1,7 +1,7 @@
 ---
 name: Facade
 slug: facade
-family: 01-gof
+family: 01-design-patterns-gof
 category: Structural
 aliases: [Subsystem Facade, Coarse-Grained Interface, Convenience API, Shortcut]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

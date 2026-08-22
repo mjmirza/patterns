@@ -1,7 +1,7 @@
 ---
 name: Prototype
 slug: prototype
-family: 01-gof
+family: 01-design-patterns-gof
 category: Creational
 aliases: [Clone, Copy Constructor Pattern, Exemplar, Prototypal Instantiation]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

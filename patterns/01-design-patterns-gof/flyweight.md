@@ -1,7 +1,7 @@
 ---
 name: Flyweight
 slug: flyweight
-family: 01-gof
+family: 01-design-patterns-gof
 category: Structural
 aliases: [Glyph, Interning, Hash Consing, Canonicalization, Shared Immutable Value]
 first_described: "Calder and Linton 1990, cataloged by Gamma, Helm, Johnson, Vlissides 1994"

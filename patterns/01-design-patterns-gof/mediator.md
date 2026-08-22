@@ -1,7 +1,7 @@
 ---
 name: Mediator
 slug: mediator
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Dialog Director, Coordinator, Hub, Broker (loosely)]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

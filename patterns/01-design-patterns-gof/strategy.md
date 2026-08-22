@@ -1,7 +1,7 @@
 ---
 name: Strategy
 slug: strategy
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Policy, Pluggable Behaviour, Algorithm Object]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

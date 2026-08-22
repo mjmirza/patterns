@@ -1,7 +1,7 @@
 ---
 name: Chain of Responsibility
 slug: chain-of-responsibility
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Chain of Command, Responsibility Chain, Intercepting Filter, Middleware Pipeline]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

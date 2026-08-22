@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PATTERNS = ROOT / "patterns"
 
 FAMILY_TITLES = {
-    "01-gof": ("Design Patterns", "Gamma, Helm, Johnson, Vlissides 1994"),
+    "01-design-patterns-gof": ("Design Patterns", "Gamma, Helm, Johnson, Vlissides 1994"),
     "02-code-smells": ("Code Smells", "Fowler and Beck, Refactoring"),
     "03-refactoring": ("Refactoring Techniques", "Fowler, Refactoring 2nd edition"),
     "04-principles-and-laws": ("Principles and Laws", "Martin, Larman, Brewer, Conway"),

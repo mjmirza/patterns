@@ -1,7 +1,7 @@
 ---
 name: Observer
 slug: observer
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Dependents, Publish-Subscribe, Listener, Event Listener, Signal-Slot]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

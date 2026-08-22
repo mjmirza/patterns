@@ -1,7 +1,7 @@
 ---
 name: Composite
 slug: composite
-family: 01-gof
+family: 01-design-patterns-gof
 category: Structural
 aliases: [Part-Whole Hierarchy, Recursive Composition, Object Tree]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

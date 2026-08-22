@@ -8,7 +8,7 @@
   "references_checked": 4191,
   "rows": [
     {
-      "family": "01-gof",
+      "family": "01-design-patterns-gof",
       "name": "Design Patterns (GoF)",
       "origin": "Gamma, Helm, Johnson, Vlissides 1994",
       "published": 23,

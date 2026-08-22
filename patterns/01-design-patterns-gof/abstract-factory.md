@@ -1,7 +1,7 @@
 ---
 name: Abstract Factory
 slug: abstract-factory
-family: 01-gof
+family: 01-design-patterns-gof
 category: Creational
 aliases: [Kit, Toolkit, Factory of Factories, Product Family Factory]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

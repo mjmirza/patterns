@@ -498,7 +498,7 @@ from.
 | Conformist (`patterns/11-domain-driven-design/conformist.md`) | None, domain adopts upstream model wholesale | High, every upstream change is a downstream change | Low, no translation to build | Low day to day, high if upstream changes often | Upstream will not collaborate and translation is not worth its cost |
 | Customer-Supplier (`patterns/11-domain-driven-design/context-map.md`) | High, downstream negotiates its own model | Managed, upstream accounts for downstream needs | Moderate, requires ongoing coordination | Moderate, relationship must be actively maintained | Both teams are in the same organisation and can negotiate priorities |
 | Shared Kernel (`patterns/11-domain-driven-design/shared-kernel.md`) | Deliberately merged, not separate | Very high by design, shared code is shared risk | Low to start, one model instead of two | High coordination cost as both sides change it together | The two contexts genuinely should evolve as one model, closely-collaborating teams |
-| Plain Adapter (`patterns/01-gof/adapter.md`) alone | Low, converts interface shape but not deeper model conflicts | Partial, absorbs interface mismatch, not conceptual mismatch | Low, a single class | Low | The mismatch is purely structural, method signatures differ but concepts agree |
+| Plain Adapter (`patterns/01-design-patterns-gof/adapter.md`) alone | Low, converts interface shape but not deeper model conflicts | Partial, absorbs interface mismatch, not conceptual mismatch | Low, a single class | Low | The mismatch is purely structural, method signatures differ but concepts agree |
 
 ## 13. Related and incompatible patterns
 
@@ -520,8 +520,8 @@ from.
   relationship for when the two teams can negotiate, sometimes used alongside
   a lighter ACL that mainly handles versioning rather than deep semantic
   conflict.
-- **Adapter (GoF), `patterns/01-gof/adapter.md`, and Facade (GoF),
-  `patterns/01-gof/facade.md`.** The Anticorruption Layer is best understood
+- **Adapter (GoF), `patterns/01-design-patterns-gof/adapter.md`, and Facade (GoF),
+  `patterns/01-design-patterns-gof/facade.md`.** The Anticorruption Layer is best understood
   as a composition of these two GoF patterns plus an explicit Translator role,
   applied specifically at a domain-model boundary rather than at an arbitrary
   interface mismatch. An Adapter alone converts a mismatched interface. An ACL
