@@ -751,6 +751,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -2369,6 +2370,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
+- [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 
 #### Changes Shape in Kotlin
 
@@ -2442,6 +2444,7 @@ These patterns have unique implementation variants or change their design struct
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Template Method](../patterns/01-gof/template-method.md) (Design Patterns (GoF))
 - [Test Data Builder](../patterns/14-testing/test-data-builder.md) (Testing)
+- [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
@@ -3189,6 +3192,7 @@ These patterns contain runnable code examples written in Python:
 - [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) (Data and Storage)
 - [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) (Domain-Driven Design)
 - [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
+- [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
@@ -4053,6 +4057,7 @@ These patterns contain runnable code examples written in Swift:
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
 - [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) (Concurrency and Parallelism)
 - [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
+- [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
 - [Validation Applicative](../patterns/16-functional/validation-applicative.md) (Functional Programming)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)

@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "Unidirectional Data Flow (Mobile)",
-    "slug": "unidirectional-data-flow",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/unidirectional-data-flow.md",
-    "focus": ""
-  },
-  {
     "name": "Repository Pattern (Mobile Offline-First)",
     "slug": "repository-pattern",
     "category": "mobile architecture",
