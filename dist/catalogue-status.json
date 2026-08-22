@@ -1,6 +1,6 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 764,
+  "published_total": 765,
   "target_total": 847,
   "families_total": 29,
   "families_complete": 19,
@@ -334,12 +334,12 @@
       "family": "27-mobile-architecture",
       "name": "Mobile Architecture",
       "origin": "Official Android/iOS architecture guidance",
-      "published": 9,
-      "planned": 2,
+      "published": 10,
+      "planned": 1,
       "target": 11,
-      "percent": 81.8,
+      "percent": 90.9,
       "maturity": {
-        "canonical": 9
+        "canonical": 10
       }
     },
     {

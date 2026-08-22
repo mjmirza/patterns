@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2373,6 +2374,7 @@ These patterns have native features in Java that make the pattern unnecessary, o
 These patterns contain runnable code examples written in Kotlin:
 
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
@@ -2582,6 +2584,7 @@ These patterns contain runnable code examples written in Python:
 - [Claim Check](../patterns/07-integration/claim-check.md) (Enterprise Integration)
 - [Claim Check](../patterns/08-cloud-distributed/claim-check.md) (Cloud and Distributed)
 - [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md) (Enterprise Application Architecture)
+- [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Clean Architecture](../patterns/05-architectural/clean-architecture.md) (Architectural Patterns)
 - [Client Session State](../patterns/06-enterprise-application-architecture/client-session-state.md) (Enterprise Application Architecture)
 - [Client-Server](../patterns/05-architectural/client-server.md) (Architectural Patterns)
@@ -3997,6 +4000,7 @@ These patterns contain runnable code examples written in Swift:
 - [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) (Frontend and UI)
 - [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)

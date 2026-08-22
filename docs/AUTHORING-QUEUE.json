@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "Clean Architecture (Mobile)",
-    "slug": "clean-architecture",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/clean-architecture.md",
-    "focus": ""
-  },
-  {
     "name": "Redux-for-Mobile (Unidirectional Store)",
     "slug": "redux-for-mobile",
     "category": "mobile architecture",
