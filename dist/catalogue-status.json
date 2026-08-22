@@ -1,9 +1,9 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
   "published_total": 795,
-  "target_total": 847,
+  "target_total": 882,
   "families_total": 29,
-  "families_complete": 22,
+  "families_complete": 17,
   "stale_entries": 0,
   "references_checked": 4191,
   "rows": [
@@ -12,9 +12,9 @@
       "name": "Design Patterns (GoF)",
       "origin": "Gamma, Helm, Johnson, Vlissides 1994",
       "published": 23,
-      "planned": 0,
-      "target": 23,
-      "percent": 100.0,
+      "planned": 10,
+      "target": 33,
+      "percent": 69.7,
       "maturity": {
         "canonical": 22,
         "contested": 1
@@ -50,9 +50,9 @@
       "name": "Principles and Laws",
       "origin": "Martin, Larman, Brewer, Conway",
       "published": 41,
-      "planned": 0,
-      "target": 41,
-      "percent": 100.0,
+      "planned": 1,
+      "target": 42,
+      "percent": 97.6,
       "maturity": {
         "canonical": 38,
         "established": 2,
@@ -78,9 +78,9 @@
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
       "published": 48,
-      "planned": 0,
-      "target": 48,
-      "percent": 100.0,
+      "planned": 11,
+      "target": 59,
+      "percent": 81.4,
       "maturity": {
         "canonical": 43,
         "established": 5
@@ -198,9 +198,9 @@
       "name": "Security",
       "origin": "OWASP ASVS",
       "published": 35,
-      "planned": 0,
-      "target": 35,
-      "percent": 100.0,
+      "planned": 3,
+      "target": 38,
+      "percent": 92.1,
       "maturity": {
         "established": 27,
         "canonical": 7,
@@ -226,9 +226,9 @@
       "name": "AI and Agentic",
       "origin": "Papers and vendor engineering, 2023 to 2026",
       "published": 55,
-      "planned": 0,
-      "target": 55,
-      "percent": 100.0,
+      "planned": 10,
+      "target": 65,
+      "percent": 84.6,
       "maturity": {
         "established": 38,
         "emerging": 8,

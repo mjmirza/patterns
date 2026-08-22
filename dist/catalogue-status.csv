@@ -1,10 +1,10 @@
 family,name,published,planned,target,percent
-01-design-patterns-gof,Design Patterns (GoF),23,0,23,100.0
+01-design-patterns-gof,Design Patterns (GoF),23,10,33,69.7
 02-code-smells,Code Smells,28,0,28,100.0
 03-refactoring,Refactoring Techniques,66,0,66,100.0
-04-principles-and-laws,Principles and Laws,41,0,41,100.0
+04-principles-and-laws,Principles and Laws,41,1,42,97.6
 05-architectural,Architectural Patterns,30,0,30,100.0
-06-enterprise-application-architecture,Enterprise Application Architecture,48,0,48,100.0
+06-enterprise-application-architecture,Enterprise Application Architecture,48,11,59,81.4
 07-integration,Enterprise Integration,54,0,54,100.0
 08-cloud-distributed,Cloud and Distributed,42,0,42,100.0
 09-concurrency,Concurrency and Parallelism,40,0,40,100.0
@@ -13,9 +13,9 @@ family,name,published,planned,target,percent
 12-data-storage,Data and Storage,41,0,41,100.0
 13-frontend-ui,Frontend and UI,34,0,34,100.0
 14-testing,Testing,30,0,30,100.0
-15-security,Security,35,0,35,100.0
+15-security,Security,35,3,38,92.1
 16-functional,Functional Programming,39,0,39,100.0
-17-ai-agentic,AI and Agentic,55,0,55,100.0
+17-ai-agentic,AI and Agentic,55,10,65,84.6
 18-anti-patterns,Anti-Patterns,51,0,51,100.0
 19-api-design,API and Interface Design,10,0,10,100.0
 20-release-deployment,Release and Deployment,8,2,10,80.0
