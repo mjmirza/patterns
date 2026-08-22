@@ -753,6 +753,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
+| [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -2373,6 +2374,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
+- [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
 
 #### Changes Shape in Kotlin
 
@@ -3204,6 +3206,7 @@ These patterns contain runnable code examples written in Python:
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Vector Clock](../patterns/12-data-storage/vector-clock.md) (Data and Storage)
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
+- [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
@@ -4065,6 +4068,7 @@ These patterns contain runnable code examples written in Swift:
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
 - [Validation Applicative](../patterns/16-functional/validation-applicative.md) (Functional Programming)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
+- [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)

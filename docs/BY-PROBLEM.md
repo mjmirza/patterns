@@ -712,6 +712,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A view controller that was genuinely reusable across | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | A view model class defined in the Interface Adapters ring is | [Clean Architecture](../patterns/05-architectural/clean-architecture.md) | Architectural Patterns |
 | A ViewModel is instantiated fresh, and expensive, every time | [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) | Architectural Patterns |
+| A ViewModel or a parent composable accumulates real state | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |
 | A ViewModel unit test suite is fully green, but the actual | [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) | Architectural Patterns |
 | A visual snapshot test that has been reliably passing for | [Snapshot Test](../patterns/14-testing/snapshot-test.md) | Testing |
 | A way exists to check the property automatically, without a human reading | [Property-Based Test](../patterns/14-testing/property-based-test.md) | Testing |
@@ -1737,6 +1738,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | High CPU and I/O on brokers correlated with a specific compacted topic. | [Log Compaction](../patterns/12-data-storage/log-compaction.md) | Data and Storage |
 | Hinted-handoff storage grows without bound and eventually fills | [Quorum](../patterns/12-data-storage/quorum.md) | Data and Storage |
 | History has business value in itself. Somebody outside engineering wants | [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) | Cloud and Distributed |
+| Hoisting a piece of state higher than Google's own rules genuinely | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |
 | Holding the monitor lock across a slow or blocking operation. Symptom, | [Monitor Object](../patterns/09-concurrency/monitor-object.md) | Concurrency and Parallelism |
 | Hook explosion. Symptom. A base class with fifteen or more protected | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | hop. Symptom. Code that correctly reads a request-scoped value earlier in | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
@@ -1914,6 +1916,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Leaky Stable Point. Symptom. Client code contains a cast back to a | [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) | Principles and Laws |
 | leave empty. Symptom. A component renders visibly broken or empty | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
 | leaves the page. The observable symptom is a policy that keeps getting longer | [Content Security Policy](../patterns/15-security/content-security-policy.md) | Security |
+| Leaving a composable stateful when it genuinely needs to be reused, | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |
 | Leaving an event with no defined transition in a given state | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Leaving no loading state for the route transition a lazily loaded | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | leaving the rest of the scattering in place, since patching only the symptom | [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) | Code Smells |
@@ -2960,6 +2963,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Splitting far below the profitable threshold. Symptom. The parallel | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
 | Splitting nested routes so finely that a single user flow through | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
 | Splitting so finely that the number of chunks, and their combined | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
+| Splitting two states that genuinely always change together across | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |
 | Spring AOP self-invocation silently skips the proxy. Symptom. A method | [Proxy](../patterns/01-gof/proxy.md) | Design Patterns (GoF) |
 | Spurious wakeup treated as a real signal. Symptom, a consumer processes a | [Monitor Object](../patterns/09-concurrency/monitor-object.md) | Concurrency and Parallelism |
 | Spurious wakeup treated as a real signal. Symptom. A guarded method | [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) | Concurrency and Parallelism |
@@ -3007,6 +3011,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Static method mistaken for the pattern. Symptom. A "factory method" declared | [Factory Method](../patterns/01-gof/factory-method.md) | Design Patterns (GoF) |
 | Static, IP-based routing that breaks on every deploy. Symptom, routing | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | Step definition explosion and duplicate steps. Symptom. Two step | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
+| step was skipped. Symptom. The composable genuinely cannot be | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |
 | Storage cost for the event log grows without bound and | [Kappa Architecture](../patterns/12-data-storage/kappa-architecture.md) | Data and Storage |
 | Storage costs and compressed file sizes are much higher than | [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) | Data and Storage |
 | storage costs for Bronze grow without bound and nobody can | [Medallion Architecture](../patterns/12-data-storage/medallion-architecture.md) | Data and Storage |
@@ -4976,6 +4981,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Two or more processes each believe they hold priority, or none does. | [Lamport Clock](../patterns/12-data-storage/lamport-clock.md) | Data and Storage |
 | Two peers holding different, both internally consistent, | [Peer-to-Peer](../patterns/05-architectural/peer-to-peer.md) | Architectural Patterns |
 | Two Presenters race to update one View. Symptom. A field flickers between | [Model-View-Presenter](../patterns/05-architectural/model-view-presenter.md) | Architectural Patterns |
+| Two real, related values drift out of sync, because they are | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |
 | Two regions show different values for the same record, and neither is | [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) | Data and Storage |
 | Two related pieces of shared state are individually consistent | [Compare-and-Swap Loop](../patterns/09-concurrency/compare-and-swap-loop.md) | Concurrency and Parallelism |
 | Two relay instances running for redundancy both publish the | [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) | Microservices |
@@ -15991,6 +15997,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Composable Architecture's own Reducer both require. Symptom. The
 - Bypassing the event or action channel entirely by calling a method
 - named event or action. Symptom. The one-way discipline the pattern
+
+#### [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md)
+
+**Core Problem:** A composable function that declares and mutates its own local state directly is genuinely difficult to reuse, test, or preview, because its behavior depends on state hidden inside the function itself, invisible to whatever calls it. Google's own documentation, "State and Jetpack Compose," https://developer.android.com/develop/ui/compose/state, verified 2026-08-22, names the mechanical fix directly, "the general pattern for state hoisting in Jetpack Compose is to replace the state variable with two parameters, value, the current value to display, and onValueChange, an event that requests the value to change." ViewModel with State Hoisting solves the reuse and testability problem by moving the real, owned state up to a caller, commonly a ViewModel, and leaving the composable itself with nothing to hold, only a value to render and an event to raise when the user wants it changed.
+
+**Failure Mode Symptoms:**
+
+- Hoisting a piece of state higher than Google's own rules genuinely
+- A ViewModel or a parent composable accumulates real state
+- Leaving a composable stateful when it genuinely needs to be reused,
+- step was skipped. Symptom. The composable genuinely cannot be
+- Splitting two states that genuinely always change together across
+- Two real, related values drift out of sync, because they are
 
 ### Embedded and Hardware-Software
 

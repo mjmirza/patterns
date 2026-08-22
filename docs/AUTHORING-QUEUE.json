@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "ViewModel with State Hoisting",
-    "slug": "viewmodel-with-state-hoisting",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md",
-    "focus": ""
-  },
-  {
     "name": "Feature Modules",
     "slug": "feature-modules",
     "category": "mobile architecture",
