@@ -536,6 +536,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A request spends little time building a response object, then | [Lazy Evaluation](../patterns/16-functional/lazy-evaluation.md) | Functional Programming |
 | a request that should return in milliseconds occasionally hangs for | [Scatter-Gather](../patterns/07-integration/scatter-gather.md) | Enterprise Integration |
 | A reranker chained after hybrid fusion barely changes the top | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |
+| A resource hierarchy that does not actually match real domain ownership, misleading a client developer about how the ... | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |
 | A resource server accepts a token minted for a different API. | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | A resource server must accept delegated access from multiple clients. | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | A restored backup silently brings deleted rows back to life. | [Tombstone](../patterns/12-data-storage/tombstone.md) | Data and Storage |
@@ -830,6 +831,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | An incident timeline shows no deploy marker even though the on-call engineer knows a deploy happened around that time... | [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) | Microservices |
 | An incident's error rate stays high for many minutes after the | [Retry Storm](../patterns/18-anti-patterns/retry-storm.md) | Anti-Patterns |
 | An incomplete dependency array capturing a stale value. Symptom. | [Hooks](../patterns/13-frontend-ui/hooks.md) | Frontend and UI |
+| An inconsistent pluralization or naming convention across different resource collections, undermining the learnable s... | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |
 | An innocuous field addition needed by one context, for example a | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | An insert into the leaf table throws a foreign key violation | [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md) | Enterprise Application Architecture |
 | An instanceof/isinstance/type check against SpecialCaseType | [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) | Enterprise Application Architecture |
@@ -1674,6 +1676,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Forced single-Activity where the OS genuinely requires otherwise. bending an app widget configuration screen or a lau... | [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |
 | Forced third dimension. Symptom, a second axis of variation appears, | [Parallel Inheritance Hierarchies](../patterns/02-code-smells/parallel-inheritance-hierarchies.md) | Code Smells |
 | Forcing every component into a strict, single, agreed level before | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
+| Forcing every operation into a resource shape even when a genuine non-resource action would be clearer, producing an ... | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |
 | Forgetting to remove a finished child coordinator from its parent's | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | Forgetting to update a caller that mutated in place. A caller that did | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
 | Forgetting to wire a view model's completion report at creation | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
@@ -1813,6 +1816,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | In-memory state with no durability. Symptom, a routine service restart or | [Process Manager](../patterns/07-integration/process-manager.md) | Enterprise Integration |
 | Inbound messages intermittently produce a domain object in an | [Messaging Mapper](../patterns/07-integration/messaging-mapper.md) | Enterprise Integration |
 | Incompatible delegates installed together. Symptom. A tenant receives a | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
+| Inconsistent use of the standard method mapping, such as using POST for an update that should be a PATCH, breaking th... | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |
 | Incorrect Python loop else. Symptom. Code in a Python loop else block no | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | increasing the retry budget, which treats the symptom rather than the cause. | [Structured Output](../patterns/17-ai-agentic/structured-output.md) | AI and Agentic |
 | indefinitely, or storage grows unboundedly. Symptom. A single logical | [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) | Data and Storage |
@@ -5245,6 +5249,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Variable that restates the expression. The variable is named | [Extract Variable](../patterns/03-refactoring/extract-variable.md) | Refactoring Techniques |
 | Vector clock confused with, or substituted for, a version vector without | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
 | Vendor blame spiral. Symptom. Customer and vendor argue about acceptance | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
+| Verb-shaped endpoints layered on top of a nominally resource-oriented API, such as a /users/{id}/activate action endp... | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |
 | Verbosity inflation. Symptom. A longer, padded response consistently | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |
 | Verification of a single leaf takes noticeably longer for some | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
 | Version bump in name only. Symptom. A "v2" of the API exists in name | [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) | Domain-Driven Design |
@@ -16031,6 +16036,20 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Concurrent edits at different levels colliding silently. Symptom. Two
 - Fragile base class breakage from reordering. Symptom. An apparently
 - The empty intermediate class trap. Symptom. A reader tracing a bug
+
+### API and Interface Design
+
+#### [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md)
+
+**Core Problem:** An API whose endpoints are organized around actions, such as getUser or createOrder as distinct endpoint names, grows unpredictably as new actions are added, and gives a client developer no consistent structure to learn once and reuse across the whole API. Every new capability means learning a brand new endpoint shape, with no shared convention for how to find, read, update, or remove the underlying data.
+
+**Failure Mode Symptoms:**
+
+- Verb-shaped endpoints layered on top of a nominally resource-oriented API, such as a /users/{id}/activate action endpoint that reintroduces the exact action-based inconsistency this pattern exists to remove.
+- A resource hierarchy that does not actually match real domain ownership, misleading a client developer about how the underlying entities actually relate to each other.
+- Inconsistent use of the standard method mapping, such as using POST for an update that should be a PATCH, breaking the predictability the pattern is meant to deliver.
+- Forcing every operation into a resource shape even when a genuine non-resource action would be clearer, producing an awkward, contorted design rather than a genuinely simpler one.
+- An inconsistent pluralization or naming convention across different resource collections, undermining the learnable structure a client developer relies on.
 
 ### SRE and Operations
 

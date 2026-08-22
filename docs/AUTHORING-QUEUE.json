@@ -4284,13 +4284,6 @@
     "focus": ""
   },
   {
-    "name": "REST Resource Modeling",
-    "slug": "rest-resource-modeling",
-    "category": "API design",
-    "path": "patterns/19-api-design/rest-resource-modeling.md",
-    "focus": ""
-  },
-  {
     "name": "GraphQL Resolver Pattern",
     "slug": "graphql-resolver-pattern",
     "category": "API design",

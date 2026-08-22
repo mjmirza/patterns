@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2399,6 +2400,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
+- [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) (API and Interface Design)
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) (SRE and Operations)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
@@ -3033,6 +3035,7 @@ These patterns contain runnable code examples written in Python:
 - [Query Object](../patterns/06-enterprise-application-architecture/query-object.md) (Enterprise Application Architecture)
 - [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) (Cloud and Distributed)
 - [Quorum](../patterns/12-data-storage/quorum.md) (Data and Storage)
+- [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) (API and Interface Design)
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
@@ -4099,6 +4102,7 @@ These patterns contain runnable code examples written in Swift:
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Provider Pattern](../patterns/13-frontend-ui/provider-pattern.md) (Frontend and UI)
+- [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) (API and Interface Design)
 - [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) (Embedded and Hardware-Software)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) (Frontend and UI)
