@@ -565,6 +565,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A security review finds that the token vault, meant to be | [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) | AI and Agentic |
 | A serialization or persistence layer chokes on the Special Case | [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) | Enterprise Application Architecture |
 | A serialized snapshot of the Host, taken for caching, logging, | [Temporary Field](../patterns/02-code-smells/temporary-field.md) | Code Smells |
+| A service accepts an inbound identifier and writes it directly into a log line without sanitizing it first, which is ... | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |
 | A service calls another service without a human in the loop, and the callee | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | A service has not had a dependency upgrade, a security patch, | [Service per Team](../patterns/10-microservices/service-per-team.md) | Microservices |
 | A service is null, nil, or throws "not registered" on | [Registry](../patterns/06-enterprise-application-architecture/registry.md) | Enterprise Application Architecture |
@@ -1601,6 +1602,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Exposing internal state or handlers that leak implementation | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
 | extensively. The symptom is a reader who must navigate through five | [Extract Class](../patterns/03-refactoring/extract-class.md) | Refactoring Techniques |
 | External error leaks internal state. Symptom. A caller learns policy names, | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
+| Extra business context, most often something that looks convenient to have on hand later, is embedded directly inside... | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |
 | Extracted methods still need many parameters. Cause. The | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
 | Extracting a branch that is not single purpose. The then branch does | [Decompose Conditional](../patterns/03-refactoring/decompose-conditional.md) | Refactoring Techniques |
 | Extracting a class that is just a data bag. The extracted class has | [Extract Class](../patterns/03-refactoring/extract-class.md) | Refactoring Techniques |
@@ -2323,6 +2325,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | One malformed or oversized row blocks every event after it | [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) | Microservices |
 | One observer takes down the notification. Symptom. Several downstream effects | [Observer](../patterns/01-design-patterns-gof/observer.md) | Design Patterns (GoF) |
 | One place owns URI-to-screen resolution, so link shape changes touch one file instead of every feature that might be ... | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |
+| One service in the chain mints a brand new identifier instead of reusing the one it received, most often because its ... | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |
 | One service's instances are frequently evicted or | [Service Deployment Platform](../patterns/10-microservices/service-deployment-platform.md) | Microservices |
 | One specific report or query, written as an escape-hatch raw SQL | [Query Object](../patterns/06-enterprise-application-architecture/query-object.md) | Enterprise Application Architecture |
 | One store calling into another store's update logic directly. | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
@@ -2563,6 +2566,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Proof format does not encode left-right sidedness. Symptom. A | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
 | Prop name collisions between stacked HOCs. Symptom. A component | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |
 | Prop-drilling an unmanageable number of fields between the two | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
+| Propagation breaks silently across an asynchronous boundary, most often a message queue or a background job, because ... | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |
 | Protected-field trap. Symptom. The refactoring stalls because the child read | [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) | Refactoring Techniques |
 | Prototype used as a Singleton bypass. A registry exemplar is handed out | [Prototype](../patterns/01-design-patterns-gof/prototype.md) | Design Patterns (GoF) |
 | provide. Symptom. Porting the firmware to a different | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
@@ -4504,6 +4508,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The host application slows down or crashes only for certain | [Plugin Architecture](../patterns/05-architectural/plugin-architecture.md) | Architectural Patterns |
 | The host has something worth protecting that the plugin should not get | [Plugin Sandbox](../patterns/05-architectural/plugin-sandbox.md) | Architectural Patterns |
 | The idempotency gap. Symptom. A customer is charged twice for one order, | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
+| The identifier, or a value carried alongside it, is treated as if it were secret or as an authorization token. it is ... | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |
 | The identity map is missing, and two divergent copies of the same | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
 | The implementor interface that mirrors the abstraction. Symptom. Every | [Bridge](../patterns/01-design-patterns-gof/bridge.md) | Design Patterns (GoF) |
 | The implementor that is too primitive. Symptom. The abstraction contains | [Bridge](../patterns/01-design-patterns-gof/bridge.md) | Design Patterns (GoF) |
@@ -16367,6 +16372,20 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Treating the toil budget as a target to hit rather than a ceiling, so the team spends effort chasing a specific percentage instead of actually reducing the underlying manual work.
 - Automating a task instead of asking whether the task needs to exist at all, missing the Workbook's own preferred strategy of eliminating the task at the source.
 - Counting genuine engineering work as toil, or vice versa, which corrupts the measurement the whole practice depends on.
+
+### Observability
+
+#### [Correlation ID](../patterns/22-observability/correlation-id.md)
+
+**Core Problem:** A single request entering a distributed system rarely stays inside one process. It crosses a load balancer, an API gateway, several internal services, a database, a cache, and often a message queue, before a response is returned. Each of those hops writes its own log lines, and each log line, on its own, carries no information tying it back to the other hops that served the same logical request.
+
+**Failure Mode Symptoms:**
+
+- Propagation breaks silently across an asynchronous boundary, most often a message queue or a background job, because the identifier lives in an in process context that a worker picking up a queued message never automatically receives, and the OpenTelemetry messaging semantic conventions describe exactly this failure. consumer traces cannot be directly correlated with producer traces if the message creation context is not attached and propagated with the message (https://opentelemetry.io/docs/specs/semconv/messaging/messaging-spans/).
+- A service accepts an inbound identifier and writes it directly into a log line without sanitizing it first, which is a log injection vector. OWASP documents that writing invalidated user input to log files can allow an attacker to forge log entries or inject malicious content into the logs (https://owasp.org/www-community/attacks/LogInjection), and an unsanitized correlation ID header is exactly this kind of invalidated input the moment it originates outside a trusted boundary.
+- One service in the chain mints a brand new identifier instead of reusing the one it received, most often because its own instrumentation was added independently and never wired to the inbound header, which fragments what should be a single trace into two disconnected ones with no obvious symptom beyond an incomplete picture during the next incident.
+- The identifier, or a value carried alongside it, is treated as if it were secret or as an authorization token. it is neither. it is deliberately written into logs, returned to end users in error messages for support purposes, and exposed in tracing dashboards, so anything that must stay confidential does not belong inside it or beside it.
+- Extra business context, most often something that looks convenient to have on hand later, is embedded directly inside the identifier value itself rather than kept in a separate, purpose built field, which risks the identifier carrying personal data into every log line it touches. the general logging guidance on this point is that sensitive personal data is one of the categories that should usually not be recorded directly in logs (https://cheatsheetseries.owasp.org/cheatsheets/LoggingCheatSheet.html), and an identifier is a log field like any other.
 
 ### Mobile Architecture
 
