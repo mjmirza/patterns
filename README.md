@@ -96,23 +96,23 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 | 02 | [Code Smells](patterns/02-code-smells/) | Fowler and Beck, Refactoring | 28 | 0 | 28 |
 | 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 66 | 0 | 66 |
 | 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 41 | 1 | 42 |
-| 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 30 | 0 | 30 |
-| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 48 | 11 | 59 |
+| 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 30 | 1 | 31 |
+| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 48 | 12 | 60 |
 | 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 54 | 0 | 54 |
-| 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 | 0 | 42 |
+| 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 | 2 | 44 |
 | 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 40 | 0 | 40 |
 | 10 | [Microservices](patterns/10-microservices/) | Richardson | 49 | 0 | 49 |
 | 11 | [Domain-Driven Design](patterns/11-domain-driven-design/) | Evans, Vernon | 35 | 0 | 35 |
-| 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 41 | 0 | 41 |
+| 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 41 | 4 | 45 |
 | 13 | [Frontend and UI](patterns/13-frontend-ui/) | Framework documentation | 34 | 0 | 34 |
 | 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 30 | 0 | 30 |
 | 15 | [Security](patterns/15-security/) | OWASP ASVS | 35 | 3 | 38 |
 | 16 | [Functional Programming](patterns/16-functional/) | Category theory in practice | 39 | 0 | 39 |
 | 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 55 | 10 | 65 |
 | 18 | [Anti-Patterns](patterns/18-anti-patterns/) | Brown et al, AntiPatterns | 51 | 0 | 51 |
-| 19 | [API and Interface Design](patterns/19-api-design/) | REST, GraphQL, gRPC specifications | 10 | 0 | 10 |
+| 19 | [API and Interface Design](patterns/19-api-design/) | REST, GraphQL, gRPC specifications | 10 | 1 | 11 |
 | 20 | [Release and Deployment](patterns/20-release-deployment/) | Humble and Farley | 10 | 0 | 10 |
-| 21 | [SRE and Operations](patterns/21-sre-operations/) | Google SRE, AWS Well-Architected | 11 | 0 | 11 |
+| 21 | [SRE and Operations](patterns/21-sre-operations/) | Google SRE, AWS Well-Architected | 11 | 1 | 12 |
 | 22 | [Observability](patterns/22-observability/) | OpenTelemetry, RED and USE methods | 7 | 1 | 8 |
 | 23 | [Workflow and Orchestration](patterns/23-workflow-orchestration/) | Durable execution literature | 0 | 6 | 6 |
 | 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 0 | 8 | 8 |
