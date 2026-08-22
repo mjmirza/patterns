@@ -2,7 +2,7 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-30 entries, 243,971 words, 1 more planned, 31 total when the family is complete. Every entry carries all 18
+31 entries, 248,986 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
@@ -27,6 +27,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Model-View-Intent](model-view-intent.md) | established | 7,956 | A View that mutates its own local, mutable fields in response to individual events accumulates state that nobody can reconstruct from a single snapshot. |
 | [Model-View-Presenter](model-view-presenter.md) | established | 7,710 | A screen, form, or activity has to do three jobs at once. |
 | [Modular Monolith](modular-monolith.md) | established | 7,918 | A team is building a system that will run as one process, or one small cluster of identical processes behind a load balancer, and deploys as one unit. |
+| [Multi-Tenant Architecture](multi-tenant-architecture.md) | canonical | 5,015 | A SaaS provider serves many customers, called tenants, from one running application. |
 | [Onion Architecture](onion-architecture.md) | canonical | 8,637 | A team builds a business application against a specific database, a specific web framework, and a specific set of third party integrations, because those are the concrete ... |
 | [Peer-to-Peer](peer-to-peer.md) | canonical | 8,950 | A system needs many participants to exchange data or share work, and at least one of the following forces makes a single, dedicated server the wrong place to put that coordination. |
 | [Pipeline Architecture](pipeline-architecture.md) | canonical | 8,757 | A system needs to transform a stream of data through a sequence of independent processing steps, and the set of steps, their order, or their implementation is expected to change ... |
@@ -39,12 +40,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Shared Nothing](shared-nothing.md) | canonical | 7,785 | A system needs to handle more work than one machine can handle, whether that work is transaction throughput, storage volume, or concurrent connections. |
 | [Space-Based Architecture](space-based-architecture.md) | established | 7,002 | A system built as a stateless application tier in front of a single relational database scales the application tier easily and the database tier badly. |
 | [VIPER](viper.md) | established | 8,403 | A screen in a UIKit or AppKit application tends to accumulate three kinds of code inside one view controller, code that lays out and updates the user interface, code that decides ... |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Multi-Tenant Architecture
 
 ## Reading order
 

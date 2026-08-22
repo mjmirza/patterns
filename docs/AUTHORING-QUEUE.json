@@ -581,13 +581,6 @@
     "focus": ""
   },
   {
-    "name": "Multi-Tenant Architecture",
-    "slug": "multi-tenant-architecture",
-    "category": "architectural",
-    "path": "patterns/05-architectural/multi-tenant-architecture.md",
-    "focus": ""
-  },
-  {
     "name": "Byzantine Fault Tolerance",
     "slug": "byzantine-fault-tolerance",
     "category": "data and storage",

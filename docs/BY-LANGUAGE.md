@@ -185,6 +185,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |  |  |  |  |  |  | Yes | Yes | Yes |
 | [Model-View-Presenter](../patterns/05-architectural/model-view-presenter.md) | Architectural Patterns |  |  |  | Yes |  |  |  | Yes | Yes |
 | [Modular Monolith](../patterns/05-architectural/modular-monolith.md) | Architectural Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Multi-Tenant Architecture](../patterns/05-architectural/multi-tenant-architecture.md) | Architectural Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Onion Architecture](../patterns/05-architectural/onion-architecture.md) | Architectural Patterns |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Peer-to-Peer](../patterns/05-architectural/peer-to-peer.md) | Architectural Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) | Architectural Patterns |  |  | Yes |  |  | Yes | Yes |  |  |
@@ -1301,6 +1302,7 @@ These patterns contain runnable code examples written in Go:
 - [Monolithic Persistence](../patterns/18-anti-patterns/monolithic-persistence.md) (Anti-Patterns)
 - [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) (AI and Agentic)
 - [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) (Data and Storage)
+- [Multi-Tenant Architecture](../patterns/05-architectural/multi-tenant-architecture.md) (Architectural Patterns)
 - [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) (Microservices)
 - [Multiversion Concurrency Control](../patterns/12-data-storage/mvcc.md) (Data and Storage)
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
@@ -3007,6 +3009,7 @@ These patterns contain runnable code examples written in Python:
 - [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) (AI and Agentic)
 - [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) (Data and Storage)
 - [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
+- [Multi-Tenant Architecture](../patterns/05-architectural/multi-tenant-architecture.md) (Architectural Patterns)
 - [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) (Microservices)
 - [Multiversion Concurrency Control](../patterns/12-data-storage/mvcc.md) (Data and Storage)
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
@@ -4741,6 +4744,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Move Statements to Callers](../patterns/03-refactoring/move-statements-to-callers.md) (Refactoring Techniques)
 - [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) (AI and Agentic)
 - [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) (Data and Storage)
+- [Multi-Tenant Architecture](../patterns/05-architectural/multi-tenant-architecture.md) (Architectural Patterns)
 - [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) (Microservices)
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
 - [Mutual TLS](../patterns/15-security/mutual-tls.md) (Security)

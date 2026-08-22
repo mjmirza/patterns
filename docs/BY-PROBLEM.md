@@ -8104,6 +8104,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. After extraction of a module into its own service, a
 - Symptom. A single feature change routinely touches three or four
 
+#### [Multi-Tenant Architecture](../patterns/05-architectural/multi-tenant-architecture.md)
+
+**Core Problem:** A SaaS provider serves many customers, called tenants, from one running application. Each tenant needs its own data kept apart from every other tenant's data, needs a fair share of the shared compute and storage, and, for some tenants, needs a level of isolation strong enough to satisfy a regulator. Running one fully separate deployment per customer solves the isolation problem completely but throws away the cost efficiency that made a shared platform worth building in the first place, since idle capacity for one customer cannot be used by another. Running everything in one shared deployment with no separation at all solves the cost problem but risks one tenant's bug, load spike, or breach touching every other tenant.
+
 #### [Onion Architecture](../patterns/05-architectural/onion-architecture.md)
 
 **Core Problem:** A team builds a business application against a specific database, a specific web framework, and a specific set of third party integrations, because those are the concrete decisions a working system needs on day one. The natural place to put a decision is where it is needed, so calls to the ORM, HTTP clients for a payment provider, and framework specific request objects end up threaded directly through the code that expresses what the business actually does. Six months later the business rule that a discount cannot apply to an already refunded order sits inside a controller action, next to the code that parses the HTTP request and next to the Entity Framework query that loads the order row. Nothing distinguishes the one line of code that is the actual business decision from the forty lines of code that exist only because of the web framework and the database driver.

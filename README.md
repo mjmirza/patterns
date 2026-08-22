@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-805%20published%20%2F%20892%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-806%20published%20%2F%20892%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -14,10 +14,10 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-805-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-87-lightgrey)
-![Catalogue completion](https://img.shields.io/badge/completion-90.2%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-4263-brightgreen)
+![Published entries](https://img.shields.io/badge/published-806-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-86-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-90.4%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-4284-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
@@ -96,7 +96,7 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 | 02 | [Code Smells](patterns/02-code-smells/) | Fowler and Beck, Refactoring | 28 | 0 | 28 |
 | 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 66 | 0 | 66 |
 | 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 42 | 0 | 42 |
-| 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 30 | 1 | 31 |
+| 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 31 | 0 | 31 |
 | 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 48 | 12 | 60 |
 | 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 54 | 0 | 54 |
 | 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 | 2 | 44 |
