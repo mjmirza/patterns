@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "Deep Link Router",
-    "slug": "deep-link-router",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/deep-link-router.md",
-    "focus": ""
-  },
-  {
     "name": "Offline-First Sync",
     "slug": "offline-first-sync",
     "category": "mobile architecture",

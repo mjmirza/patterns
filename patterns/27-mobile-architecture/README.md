@@ -2,7 +2,7 @@
 
 Origin. Official Android/iOS architecture guidance
 
-6 entries, 22,330 words. Every entry carries all 18
+7 entries, 25,521 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Coordinator Pattern](coordinator-pattern.md) | canonical | 3,836 | A view controller that decides what happens after a button tap, whether to push a new screen, present a modal, or pop back, is a view controller that knows about the rest of the ... |
+| [Deep Link Router](deep-link-router.md) | canonical | 3,191 | An app receives a link from outside itself. |
 | [Feature Modules](feature-modules.md) | canonical | 3,662 | A single, undivided app module genuinely forces every real change, however small, to rebuild and recompile the entire codebase, and it genuinely gives every part of the code ... |
 | [MVVM-C (Model-View-ViewModel-Coordinator)](mvvm-c.md) | canonical | 3,602 | Plain MVVM cleanly separates a screen's own presentation logic from its view, per Microsoft's own description, "the view model implements properties and commands to which the view ... |
 | [Repository Pattern (Mobile Offline-First)](repository-pattern.md) | canonical | 3,834 | A mobile app that reads directly from the network whenever a screen needs data genuinely stops working the moment the device loses connectivity, and even with a connection, every ... |
