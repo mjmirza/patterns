@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-48 entries, 358,966 words. Every entry carries all 18
+48 entries, 358,966 words, 11 more planned, 59 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -142,6 +142,22 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Template View](template-view.md) | canonical | 7,530 | A system has finished computing a result, a customer record, a list of orders, a search result set, and now has to turn that result into an HTML document a browser can render. |
 | [Transform View](transform-view.md) | established | 7,578 | An application has assembled everything it needs to render a response. |
 | [Two Step View](two-step-view.md) | canonical | 6,245 | A web application with more than a handful of pages needs every page to share a consistent visual identity. |
+
+## Planned
+
+Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
+
+- Business Delegate
+- Collecting Parameter
+- Composite Entity
+- Composite View
+- Context Object
+- Intercepting Filter
+- Presentation Model
+- Service Layer
+- Session Facade
+- Tolerant Reader
+- View Helper
 
 ## Reading order
 
