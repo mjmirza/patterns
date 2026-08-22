@@ -16220,6 +16220,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 #### [Dark Launch](../patterns/20-release-deployment/dark-launch.md)
 
+#### [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md)
+
 #### [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md)
 
 #### [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md)

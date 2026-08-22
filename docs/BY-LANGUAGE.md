@@ -762,6 +762,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Dark Launch](../patterns/20-release-deployment/dark-launch.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2414,6 +2415,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
+- [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) (Release and Deployment)
 - [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
 - [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) (SRE and Operations)
 - [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) (API and Interface Design)
@@ -2792,6 +2794,7 @@ These patterns contain runnable code examples written in Python:
 - [Fault Injection](../patterns/14-testing/fault-injection.md) (Testing)
 - [Feature Envy](../patterns/02-code-smells/feature-envy.md) (Code Smells)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
+- [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) (Release and Deployment)
 - [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) (Cloud and Distributed)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Flyweight](../patterns/01-gof/flyweight.md) (Design Patterns (GoF))
@@ -4112,6 +4115,7 @@ These patterns contain runnable code examples written in Swift:
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
+- [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) (Release and Deployment)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Form Action](../patterns/13-frontend-ui/form-action.md) (Frontend and UI)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
