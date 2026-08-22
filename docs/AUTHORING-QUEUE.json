@@ -4424,13 +4424,6 @@
     "focus": ""
   },
   {
-    "name": "Runbook Automation",
-    "slug": "runbook-automation",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/runbook-automation.md",
-    "focus": ""
-  },
-  {
     "name": "Game Day",
     "slug": "game-day",
     "category": "SRE and operations",
