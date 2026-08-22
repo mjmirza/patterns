@@ -1587,6 +1587,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Exceptions handled in the wrong layer. Symptom. Batch code fails fast while | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
 | Excessive process overhead on genuinely low-stakes teams. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | Expected value derived from the code under test. Symptom. A regression | [Four-Phase Test](../patterns/14-testing/four-phase-test.md) | Testing |
+| Expensive deep offset. a request for a page far into a large collection, on a data store that computes an offset by s... | [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) | API and Interface Design |
 | Expired certificate outage. Symptom. Calls begin failing at the same time | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | explicit coordination mechanism between them. Symptom. Interacting | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | Exposing a mutable delegate. The delegate is mutable, and exposing it | [Remove Middle Man](../patterns/03-refactoring/remove-middle-man.md) | Refactoring Techniques |
@@ -3010,6 +3011,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Sizing the queue too small for the real timing gap between | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
 | Skeleton with one implementation. Symptom. An abstract class and exactly one | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Skipped cleanup. Symptom. File handles, locks, spans, database transactions, | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
+| Skipped or duplicated items. an item inserted or removed between two page requests shifts every later item's offset, ... | [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) | API and Interface Design |
 | Skipped signature verification. a receiver that trusts an incoming request's payload without verifying its signature ... | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |
 | Skipped tail work. Symptom. A counter, audit call, buffer append, or cleanup | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | SLO with no consequence and no owner. a target nobody actually acts on when missed, which is indistinguishable in pra... | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |
@@ -3083,6 +3085,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Stale state after a deploy. Symptom. A user with an in-progress wizard | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
 | Stale token access. Symptom. A removed employee or transferred user keeps | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
 | Stale token roles. Symptom. A user removed from a role can keep acting for | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
+| Stale total count. a total item or page count computed once and cached too long can mislead a client about how many p... | [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) | API and Interface Design |
 | Stale trust anchor after key rotation. Symptom. Every federated login | [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) | Cloud and Distributed |
 | Stale value leaking across pooled-thread reuse. Symptom. A worker in a | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
 | Stale value read across reused invocations. Symptom. An intermittent | [Temporary Field](../patterns/02-code-smells/temporary-field.md) | Code Smells |
@@ -5156,6 +5159,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Unbounded node interning. Symptom. A process with many distinct historical | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
 | Unbounded offload. Symptom. Event-loop lag improves while memory, thread | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
 | Unbounded output growth. Symptom. A batch job's memory rises with input | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
+| Unbounded page size. a server that does not clamp the client-requested page size can be asked to return an enormous s... | [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) | API and Interface Design |
 | Unbounded persistence context in a long-running process. Symptom. Memory | [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) | Enterprise Application Architecture |
 | Unbounded policy expression. Symptom. Authorization latency spikes when a | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
 | Unbounded pool growth on an open key space. Symptom. Resident memory climbs | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
@@ -16091,6 +16095,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Unhandled key conflict. a server that returns the cached result for a key without checking whether the new request body actually matches the original silently answers a different operation with a stale result.
 - Race between concurrent retries. two retries with the same key arriving at nearly the same time, before the first attempt's result is stored, can both proceed to perform the operation if the server has no in-flight locking.
 - Premature key expiry. a stored result that expires too soon lets a legitimate retry, arriving after the expiry window, perform the operation a second time.
+
+#### [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md)
+
+**Core Problem:** A collection endpoint whose response includes every matching item, with no limit at all, works fine while the underlying collection is small, but degrades as the collection grows. The response payload grows unboundedly with the data, the server does more work assembling a larger response, and the client has to hold the entire result in memory before it can start acting on any of it, even when the client only actually needs the first handful of items.
+
+**Failure Mode Symptoms:**
+
+- Skipped or duplicated items. an item inserted or removed between two page requests shifts every later item's offset, causing a client paging sequentially to miss or see twice an item near the boundary.
+- Unbounded page size. a server that does not clamp the client-requested page size can be asked to return an enormous single page, defeating the purpose of pagination and risking resource exhaustion.
+- Expensive deep offset. a request for a page far into a large collection, on a data store that computes an offset by scanning past every earlier row, becomes progressively slower the deeper the requested page is.
+- Stale total count. a total item or page count computed once and cached too long can mislead a client about how many pages actually remain, if the collection changes afterward.
 
 #### [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md)
 
