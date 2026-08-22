@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-23 entries, 250,341 words, 10 more planned, 33 total when the family is complete. Every entry carries all 18
+24 entries, 256,143 words, 9 more planned, 33 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -39,6 +39,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Bridge](bridge.md) | canonical | 12,403 | A single class hierarchy is being asked to vary along two independent axes at once, and the class count is growing as the product of the two axis sizes rather than as their sum. |
 | [Composite](composite.md) | canonical | 10,897 | There is a domain where a thing can be made of the same kind of thing, without limit, and client code has to operate over the whole structure without caring how deep it goes. |
 | [Decorator](decorator.md) | canonical | 14,044 | An object needs an extra responsibility, only sometimes, only for some instances, and the set of extra responsibilities keeps growing and keeps combining. |
+| [Dependency Injection](dependency-injection.md) | canonical | 5,802 | Fowler's own running example names the problem precisely. |
 | [Facade](facade.md) | canonical | 11,164 | A caller needs a small, ordinary result from a subsystem that is large, correct and unpleasant to talk to. |
 | [Flyweight](flyweight.md) | canonical | 11,738 | A program needs a very large number of objects that are almost all the same, and the memory cost of representing each one separately is what is going to break it. |
 | [Proxy](proxy.md) | canonical | 9,732 | Some object is expensive, remote, dangerous, or shared, and the code that wants to use it should not have to know that. |
@@ -48,7 +49,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
 - Data Access Object
-- Dependency Injection
 - Extension Object
 - Marker Interface
 - Multiton

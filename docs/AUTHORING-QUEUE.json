@@ -266,13 +266,6 @@
     "focus": ""
   },
   {
-    "name": "Dependency Injection",
-    "slug": "dependency-injection",
-    "category": "design patterns gof",
-    "path": "patterns/01-design-patterns-gof/dependency-injection.md",
-    "focus": ""
-  },
-  {
     "name": "Data Access Object",
     "slug": "data-access-object",
     "category": "design patterns gof",
