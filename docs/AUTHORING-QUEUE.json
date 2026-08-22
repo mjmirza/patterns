@@ -448,13 +448,6 @@
     "focus": ""
   },
   {
-    "name": "Inversion of Control",
-    "slug": "inversion-of-control",
-    "category": "principles and laws",
-    "path": "patterns/04-principles-and-laws/inversion-of-control.md",
-    "focus": ""
-  },
-  {
     "name": "Dual LLM Pattern",
     "slug": "dual-llm-pattern",
     "category": "security",

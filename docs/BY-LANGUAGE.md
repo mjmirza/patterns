@@ -145,6 +145,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Information Expert](../patterns/04-principles-and-laws/information-expert.md) | Principles and Laws |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) | Principles and Laws |  |  | Yes |  |  | Yes | Yes |  | Yes |
+| [Inversion of Control](../patterns/04-principles-and-laws/inversion-of-control.md) | Principles and Laws |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Keep It Simple](../patterns/04-principles-and-laws/keep-it-simple.md) | Principles and Laws |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Law of Demeter](../patterns/04-principles-and-laws/law-of-demeter.md) | Principles and Laws |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1229,6 +1230,7 @@ These patterns contain runnable code examples written in Go:
 - [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) (Principles and Laws)
 - [Interpreter Architecture](../patterns/05-architectural/interpreter-architecture.md) (Architectural Patterns)
 - [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) (Enterprise Integration)
+- [Inversion of Control](../patterns/04-principles-and-laws/inversion-of-control.md) (Principles and Laws)
 - [Iterator](../patterns/01-design-patterns-gof/iterator.md) (Design Patterns (GoF))
 - [JWT](../patterns/15-security/jwt.md) (Security)
 - [Kappa Architecture](../patterns/12-data-storage/kappa-architecture.md) (Data and Storage)
@@ -2194,6 +2196,7 @@ These patterns have unique implementation variants or change their design struct
 - [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) (Refactoring Techniques)
 - [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) (Refactoring Techniques)
 - [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) (Enterprise Integration)
+- [Inversion of Control](../patterns/04-principles-and-laws/inversion-of-control.md) (Principles and Laws)
 - [Iterator](../patterns/01-design-patterns-gof/iterator.md) (Design Patterns (GoF))
 - [LSM Tree](../patterns/12-data-storage/lsm-tree.md) (Data and Storage)
 - [Large Class](../patterns/02-code-smells/large-class.md) (Code Smells)
@@ -2507,6 +2510,7 @@ These patterns have unique implementation variants or change their design struct
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) (Principles and Laws)
 - [Interpreter](../patterns/01-design-patterns-gof/interpreter.md) (Design Patterns (GoF))
+- [Inversion of Control](../patterns/04-principles-and-laws/inversion-of-control.md) (Principles and Laws)
 - [Iterator](../patterns/01-design-patterns-gof/iterator.md) (Design Patterns (GoF))
 - [Law of Demeter](../patterns/04-principles-and-laws/law-of-demeter.md) (Principles and Laws)
 - [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) (Enterprise Application Architecture)
@@ -2916,6 +2920,7 @@ These patterns contain runnable code examples written in Python:
 - [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) (Refactoring Techniques)
 - [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) (Refactoring Techniques)
 - [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) (Enterprise Integration)
+- [Inversion of Control](../patterns/04-principles-and-laws/inversion-of-control.md) (Principles and Laws)
 - [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [Iterator](../patterns/01-design-patterns-gof/iterator.md) (Design Patterns (GoF))
 - [JWT](../patterns/15-security/jwt.md) (Security)
@@ -4654,6 +4659,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) (Refactoring Techniques)
 - [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) (Refactoring Techniques)
 - [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) (Enterprise Integration)
+- [Inversion of Control](../patterns/04-principles-and-laws/inversion-of-control.md) (Principles and Laws)
 - [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) (Frontend and UI)
 - [Iterator](../patterns/01-design-patterns-gof/iterator.md) (Design Patterns (GoF))
 - [Kappa Architecture](../patterns/12-data-storage/kappa-architecture.md) (Data and Storage)

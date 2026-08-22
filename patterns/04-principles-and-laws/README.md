@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-41 entries, 322,492 words, 1 more planned, 42 total when the family is complete. Every entry carries all 18
+42 entries, 327,284 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -12,6 +12,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Acyclic Dependencies Principle](acyclic-dependencies-principle.md) | canonical | 8,479 | A codebase of any real size is not one file. |
 | [Composable](composable.md) | canonical | 7,680 | Every system with more than one moving part eventually needs behavior that no single unit provides on its own. |
 | [Dependency Inversion Principle](dependency-inversion-principle.md) | canonical | 7,097 | A codebase grows outward from a small number of policy decisions, what the system does, in what order, and why. |
+| [Inversion of Control](inversion-of-control.md) | canonical | 4,792 | In an ordinary, un-inverted call structure, application code owns the entry point. |
 | [Predictable](predictable.md) | canonical | 9,475 | A caller who invokes an operation, reads an API's documentation, or pulls a dependency's published version needs to know, before acting, what is going to happen. |
 | [Stable Abstractions Principle](stable-abstractions-principle.md) | canonical | 8,095 | A codebase accumulates two kinds of code over its life. |
 | [Unix Philosophy (CUPID)](unix-philosophy-cupid.md) | established | 5,536 | A function, class, module, or service accumulates responsibility over time because adding one more branch to something that already exists is almost always locally cheaper than ... |
@@ -70,12 +71,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Domain-based](domain-based.md) | canonical | 8,254 | A system of any real size grows two kinds of edges as it is built. |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Inversion of Control
 
 ## Reading order
 

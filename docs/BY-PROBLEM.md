@@ -2306,6 +2306,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | object rather than to the function signature. The symptom is a parameter | [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) | Refactoring Techniques |
 | observable production symptom, its root mechanism, and the concrete fix. | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
 | observable symptom given first because that is what a reader will actually | [Disruptor](../patterns/09-concurrency/disruptor.md) | Concurrency and Parallelism |
+| observable symptom is a startup crash naming the two beans, not a subtle | [Inversion of Control](../patterns/04-principles-and-laws/inversion-of-control.md) | Principles and Laws |
 | observable symptom is getters and setters on every field in idiomatic Go, | [Idiomatic](../patterns/04-principles-and-laws/idiomatic.md) | Principles and Laws |
 | observable symptom is silently incorrect downstream behavior, a stale balance shown to a | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
 | observable symptoms. | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
@@ -7587,6 +7588,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A role interface is defined, but every concrete implementer of it
 - Adding a single new method to a system now requires touching a
 - A class implements a role interface but its implementation throws
+
+#### [Inversion of Control](../patterns/04-principles-and-laws/inversion-of-control.md)
+
+**Core Problem:** In an ordinary, un-inverted call structure, application code owns the entry point. It decides what runs, in what order, and it calls out to a library for reusable pieces, formatting, parsing, math, and gets a return value back. The application is always the caller.
+
+**Failure Mode Symptoms:**
+
+- observable symptom is a startup crash naming the two beans, not a subtle
 
 #### [Keep It Simple](../patterns/04-principles-and-laws/keep-it-simple.md)
 
