@@ -911,6 +911,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Assumed global ordering. Symptom. A downstream projection ends up in a | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Assuming a session survives across HTTP requests without checking. | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
 | Assuming a vendor's HAL implementation behaves identically across | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
+| Assuming ad blocker driven data loss is random noise rather than a systematic gap, when the sources of that gap are w... | [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md) | Observability |
 | Assuming an Error Boundary catches an error thrown inside an event | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Assuming every handler resumes exactly once. Symptom. Code written | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Assuming Server Functions dispatch and complete in true parallel | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
@@ -1157,6 +1158,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Collapsing a subclass that is not actually empty. A subclass that | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
 | Collapsing the wrong direction. The subclass has the real behaviour | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
 | Collapsing too early. The subclass is empty today but was created as | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
+| Collecting raw IP address, precise location, or another identifying field with no anonymization or opt out path, when... | [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md) | Observability |
 | Collector or agent silently falling behind under load. Symptom. | [Log Aggregation](../patterns/10-microservices/log-aggregation.md) | Microservices |
 | colocate. The symptom is a class that exists only to wrap one function, and | [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) | Refactoring Techniques |
 | colocating data. The symptom is a class that could be a module or a set of | [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) | Refactoring Techniques |
@@ -1601,6 +1603,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Exceptions handled in the wrong layer. Symptom. Batch code fails fast while | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
 | Excessive process overhead on genuinely low-stakes teams. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | Expected value derived from the code under test. Symptom. A regression | [Four-Phase Test](../patterns/14-testing/four-phase-test.md) | Testing |
+| Expecting RUM to catch a broken but rarely used path quickly, when by definition it only produces a signal once a rea... | [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md) | Observability |
 | Expensive deep offset. a request for a page far into a large collection, on a data store that computes an offset by s... | [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) | API and Interface Design |
 | Expired certificate outage. Symptom. Calls begin failing at the same time | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | explicit coordination mechanism between them. Symptom. Interacting | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
@@ -2734,6 +2737,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Report generation that takes minutes and hammers every service's | [Database per Service](../patterns/10-microservices/database-per-service.md) | Microservices |
 | Report-only becomes permanent. Symptom. Dashboards show that a new operation | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Reporting on the blocking path. Symptom. Under load, request latency | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
+| Reporting the mean instead of a percentile, which hides exactly the tail of slow, real experiences that matter most, ... | [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md) | Observability |
 | reporting through its coordinator. Symptom. The exact coupling | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | Repository per entity instead of per Aggregate root. Symptom, an | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
 | Representation chosen too early. Symptom. Money wraps a decimal amount, | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
@@ -5032,6 +5036,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Traversal order becomes the caller's problem. Depth-first, breadth-first, | [Iterator](../patterns/01-design-patterns-gof/iterator.md) | Design Patterns (GoF) |
 | Treating "eventually consistent" as "consistent enough to skip | [BASE](../patterns/04-principles-and-laws/base.md) | Principles and Laws |
 | Treating "shared nothing" as "no coordination anywhere". Symptom. two | [Shared Nothing](../patterns/05-architectural/shared-nothing.md) | Architectural Patterns |
+| Treating a business correlation study like the Google commissioned Milliseconds Make Millions research as proof any s... | [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md) | Observability |
 | Treating a clean fuzz run as proof of correctness. Symptom. A team ships a | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | Treating a compacted topic as an audit log is a category misuse. A team | [Log Compaction](../patterns/12-data-storage/log-compaction.md) | Data and Storage |
 | Treating a data-validation matrix as narrative scenarios. Symptom. Twelve | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
@@ -16423,6 +16428,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A team treats RED as sufficient on its own and never checks the resource layer, so a slowdown whose real cause is a saturated resource is investigated entirely at the service level and never found, because that signal was never in scope for this method to begin with.
 - Rate, Error, or Duration labels are broken out by a value that can take on very many distinct values, such as a raw identifier rather than a normalized route template, which multiplies the number of distinct time series far beyond what the dashboard or its backend was built to hold.
 - Two services define Errors differently, one counting only server side failures and another also counting client side validation failures as errors, so a fleet wide error rate comparison between them is misleading even though both dashboards look identical.
+
+#### [Real User Monitoring](../patterns/22-observability/real-user-monitoring.md)
+
+**Core Problem:** A team wants to know what a real person on a real device, a real network, in a real place, actually experiences when using an application, rather than only what a controlled test run measures from one fixed location. A team can script and test every path it thinks to test, but it cannot script every real device, browser version, network condition, and geography its actual audience uses.
+
+**Failure Mode Symptoms:**
+
+- Reporting the mean instead of a percentile, which hides exactly the tail of slow, real experiences that matter most, the failure web.dev's own field guidance names directly when it states an average does not represent any single person's session (https://web.dev/articles/vitals-field-measurement-best-practices).
+- Assuming ad blocker driven data loss is random noise rather than a systematic gap, when the sources of that gap are well documented, Datadog's own troubleshooting docs confirm ad blockers prevent the SDK from loading or sending data at all for the people running them (https://docs.datadoghq.com/realusermonitoring/browser/troubleshooting/).
+- Expecting RUM to catch a broken but rarely used path quickly, when by definition it only produces a signal once a real person happens to hit that exact path, unlike a scheduled synthetic check.
+- Collecting raw IP address, precise location, or another identifying field with no anonymization or opt out path, when a compliant configuration is available and documented, for example Datadog's own default of tying each session only to an anonymized session identifier with no user identity tracked (https://docs.datadoghq.com/datasecurity/realusermonitoring/).
+- Treating a business correlation study like the Google commissioned Milliseconds Make Millions research as proof any specific site's own conversion will move by the same percentage, when the real, cited figures are aggregate findings across 37 sites and are not a guarantee for any one property (https://web.dev/case-studies/milliseconds-make-millions).
 
 #### [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md)
 
