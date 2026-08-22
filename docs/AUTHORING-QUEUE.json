@@ -539,13 +539,6 @@
     "focus": ""
   },
   {
-    "name": "Load Balancing",
-    "slug": "load-balancing",
-    "category": "cloud distributed",
-    "path": "patterns/08-cloud-distributed/load-balancing.md",
-    "focus": ""
-  },
-  {
     "name": "Autoscaling",
     "slug": "autoscaling",
     "category": "cloud distributed",

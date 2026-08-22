@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 808,
+  "published_total": 809,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 17,
   "stale_entries": 0,
-  "references_checked": 4336,
+  "references_checked": 4361,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -102,12 +102,12 @@
       "family": "08-cloud-distributed",
       "name": "Cloud and Distributed",
       "origin": "Azure Architecture Center",
-      "published": 42,
-      "planned": 2,
+      "published": 43,
+      "planned": 1,
       "target": 44,
-      "percent": 95.5,
+      "percent": 97.7,
       "maturity": {
-        "canonical": 34,
+        "canonical": 35,
         "established": 8
       }
     },

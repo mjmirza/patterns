@@ -325,6 +325,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Index Table](../patterns/08-cloud-distributed/index-table.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Leader Election](../patterns/08-cloud-distributed/leader-election.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Materialized View](../patterns/08-cloud-distributed/materialized-view.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Messaging Bridge](../patterns/08-cloud-distributed/messaging-bridge.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Pipes and Filters](../patterns/08-cloud-distributed/pipes-filters.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1260,6 +1261,7 @@ These patterns contain runnable code examples written in Go:
 - [Least to Most](../patterns/17-ai-agentic/least-to-most.md) (AI and Agentic)
 - [Lens](../patterns/16-functional/lens.md) (Functional Programming)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
+- [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) (Cloud and Distributed)
 - [Lock Striping](../patterns/09-concurrency/lock-striping.md) (Concurrency and Parallelism)
 - [Log Aggregation](../patterns/10-microservices/log-aggregation.md) (Microservices)
 - [Log Compaction](../patterns/12-data-storage/log-compaction.md) (Data and Storage)
@@ -2958,6 +2960,7 @@ These patterns contain runnable code examples written in Python:
 - [Least to Most](../patterns/17-ai-agentic/least-to-most.md) (AI and Agentic)
 - [Lens](../patterns/16-functional/lens.md) (Functional Programming)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
+- [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) (Cloud and Distributed)
 - [Log Aggregation](../patterns/10-microservices/log-aggregation.md) (Microservices)
 - [Log Compaction](../patterns/12-data-storage/log-compaction.md) (Data and Storage)
 - [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) (Microservices)
@@ -4696,6 +4699,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Least to Most](../patterns/17-ai-agentic/least-to-most.md) (AI and Agentic)
 - [Lens](../patterns/16-functional/lens.md) (Functional Programming)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
+- [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) (Cloud and Distributed)
 - [Lock Striping](../patterns/09-concurrency/lock-striping.md) (Concurrency and Parallelism)
 - [Log Aggregation](../patterns/10-microservices/log-aggregation.md) (Microservices)
 - [Log Compaction](../patterns/12-data-storage/log-compaction.md) (Data and Storage)

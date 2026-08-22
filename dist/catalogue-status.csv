@@ -6,7 +6,7 @@ family,name,published,planned,target,percent
 05-architectural,Architectural Patterns,31,0,31,100.0
 06-enterprise-application-architecture,Enterprise Application Architecture,48,12,60,80.0
 07-integration,Enterprise Integration,54,0,54,100.0
-08-cloud-distributed,Cloud and Distributed,42,2,44,95.5
+08-cloud-distributed,Cloud and Distributed,43,1,44,97.7
 09-concurrency,Concurrency and Parallelism,40,0,40,100.0
 10-microservices,Microservices,49,0,49,100.0
 11-domain-driven-design,Domain-Driven Design,35,0,35,100.0
