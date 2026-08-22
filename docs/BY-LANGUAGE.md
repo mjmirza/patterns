@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [API Versioning](../patterns/19-api-design/api-versioning.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2394,6 +2395,7 @@ These patterns have native features in Java that make the pattern unnecessary, o
 
 These patterns contain runnable code examples written in Kotlin:
 
+- [API Versioning](../patterns/19-api-design/api-versioning.md) (API and Interface Design)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
@@ -2540,6 +2542,7 @@ These patterns contain runnable code examples written in Python:
 - [ACID](../patterns/04-principles-and-laws/acid.md) (Principles and Laws)
 - [API Composition](../patterns/10-microservices/api-composition.md) (Microservices)
 - [API Gateway](../patterns/10-microservices/api-gateway.md) (Microservices)
+- [API Versioning](../patterns/19-api-design/api-versioning.md) (API and Interface Design)
 - [Access Token](../patterns/10-microservices/access-token.md) (Microservices)
 - [Active Object](../patterns/09-concurrency/active-object.md) (Concurrency and Parallelism)
 - [Active Record](../patterns/06-enterprise-application-architecture/active-record.md) (Enterprise Application Architecture)
@@ -4051,6 +4054,7 @@ These patterns have native features in Rust that make the pattern unnecessary, o
 
 These patterns contain runnable code examples written in Swift:
 
+- [API Versioning](../patterns/19-api-design/api-versioning.md) (API and Interface Design)
 - [Algebraic Data Type](../patterns/16-functional/algebraic-data-type.md) (Functional Programming)
 - [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) (Functional Programming)
 - [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) (Cloud and Distributed)

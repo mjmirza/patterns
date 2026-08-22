@@ -728,6 +728,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A workload running on a platform needs access to a control plane or cloud | [Token-based Authentication](../patterns/15-security/token-based-authentication.md) | Security |
 | A write a user made shortly before a regional outage appears to | [Geode](../patterns/08-cloud-distributed/geode.md) | Cloud and Distributed |
 | A wrong answer with no exception at all. Symptom. A report shows zero | [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) | Anti-Patterns |
+| Abandoned version never retired. a version kept supported indefinitely with no client actually using it any longer wa... | [API Versioning](../patterns/19-api-design/api-versioning.md) | API and Interface Design |
 | ability to enforce the invariant. The symptom is a source class that can | [Move Field](../patterns/03-refactoring/move-field.md) | Refactoring Techniques |
 | above. code that everyone believed was retired executes anyway, | [Dead Code](../patterns/02-code-smells/dead-code.md) | Code Smells |
 | above. symptoms are what an operator would actually observe. | [Shared Nothing](../patterns/05-architectural/shared-nothing.md) | Architectural Patterns |
@@ -2520,6 +2521,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Premature portability, the overcorrection. Symptom, the team has spent | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |
 | Premature service extraction along a guessed domain line. Symptom. A | [Domain-based](../patterns/04-principles-and-laws/domain-based.md) | Principles and Laws |
 | Premature strangling along the wrong domain boundaries. Symptom. the new | [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md) | Cloud and Distributed |
+| Premature version retirement. a version retired before every client has genuinely migrated off it breaks the exact cl... | [API Versioning](../patterns/19-api-design/api-versioning.md) | API and Interface Design |
 | Prepared statement cache pressure. Symptom. Database memory rises, proxy | [Parameterized Query](../patterns/15-security/parameterized-query.md) | Security |
 | Prepared transactions accumulate over days or weeks and a | [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) | Data and Storage |
 | PreparedData gains fields on every unrelated feature branch. | [Split Phase](../patterns/03-refactoring/split-phase.md) | Refactoring Techniques |
@@ -2945,6 +2947,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Silencing dissent by mislabeling it bikeshedding. Symptom. A team lead | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | Silent accumulation with no inventory. The most common failure mode is not | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |
 | Silent backpressure collapse. Symptom. Memory on one filter's host grows | [Pipes and Filters](../patterns/08-cloud-distributed/pipes-filters.md) | Cloud and Distributed |
+| Silent breaking change. a change shipped within the current version that was actually breaking, misclassified by the ... | [API Versioning](../patterns/19-api-design/api-versioning.md) | API and Interface Design |
 | Silent coercion. Symptom. "0012" becomes 12, "false" becomes truthy, | [Input Validation](../patterns/15-security/input-validation.md) | Security |
 | Silent command loss because control messages were sent fire-and-forget. | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | Silent conflict swallowing. Symptom, a user reports that an edit they | [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) | Enterprise Application Architecture |
@@ -5207,6 +5210,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | unhandled, with no deliberate policy. Symptom. The system receives an | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Uniform application without gating. Symptom. Retrieval latency spikes | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |
 | Uniform partition sizes on skewed traffic. | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |
+| Unintended default version. a client that never explicitly sets its version can be moved onto a newer default without... | [API Versioning](../patterns/19-api-design/api-versioning.md) | API and Interface Design |
 | Unit tests assert a final state with many incidental fields. | [State Monad](../patterns/16-functional/state-monad.md) | Functional Programming |
 | Unit tests for a use case require standing up the web framework, a | [Controller](../patterns/04-principles-and-laws/controller.md) | Principles and Laws |
 | unit tests on the Logic Holder are all green, but the feature | [Humble Object](../patterns/14-testing/humble-object.md) | Testing |
@@ -16066,6 +16070,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The empty intermediate class trap. Symptom. A reader tracing a bug
 
 ### API and Interface Design
+
+#### [API Versioning](../patterns/19-api-design/api-versioning.md)
+
+**Core Problem:** An API that never changes never needs versioning, but a real API evolves. fields are added, renamed, or removed, behavior is corrected, new capabilities are introduced. If every change applied instantly and uniformly to every client, a single breaking change could silently fail every integration built against the API's previous shape, with no warning and no chance for the client's own team to prepare.
+
+**Failure Mode Symptoms:**
+
+- Silent breaking change. a change shipped within the current version that was actually breaking, misclassified by the provider, breaks every client on that version without warning, exactly the failure this pattern exists to prevent.
+- Unintended default version. a client that never explicitly sets its version can be moved onto a newer default without realizing it, if the provider's default silently advances over time.
+- Abandoned version never retired. a version kept supported indefinitely with no client actually using it any longer wastes the provider's ongoing maintenance effort.
+- Premature version retirement. a version retired before every client has genuinely migrated off it breaks the exact clients this pattern was meant to protect.
 
 #### [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md)
 
