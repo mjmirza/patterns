@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "Feature Modules",
-    "slug": "feature-modules",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/feature-modules.md",
-    "focus": ""
-  },
-  {
     "name": "Deep Link Router",
     "slug": "deep-link-router",
     "category": "mobile architecture",
