@@ -2,13 +2,14 @@
 
 Origin. Durable execution literature
 
-3 entries, 23,448 words, 3 more planned, 6 total when the family is complete. Every entry carries all 18
+4 entries, 30,044 words, 2 more planned, 6 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## workflow orchestration
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Compensation Handler](compensation-handler.md) | canonical | 6,596 | The problem this pattern solves is architectural, not merely inconvenient. |
 | [Human Task](human-task.md) | established | 7,976 | AWS states the rationale for pausing a workflow for a human directly, in its own product documentation, as one of exactly three named reasons a callback task exists. |
 | [State Machine Workflow](state-machine-workflow.md) | canonical | 8,225 | Spring Statemachine's own reference documentation states the origin story for this pattern in its Background section directly. |
 | [Workflow Engine](workflow-engine.md) | established | 7,247 | A process that spans more than one service call, or that waits on a timer or a human response, cannot safely keep its state only in a running process's memory. |
@@ -17,7 +18,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Compensation Handler
 - Durable Execution
 - Outbox Inbox Pair
 
