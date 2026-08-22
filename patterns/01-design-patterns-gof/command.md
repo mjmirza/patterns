@@ -1,7 +1,7 @@
 ---
 name: Command
 slug: command
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Action, Transaction]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

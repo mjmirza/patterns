@@ -1,7 +1,7 @@
 ---
 name: Builder
 slug: builder
-family: 01-gof
+family: 01-design-patterns-gof
 category: Creational
 aliases: [Fluent Builder, Step Builder, Test Data Builder, Functional Options]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

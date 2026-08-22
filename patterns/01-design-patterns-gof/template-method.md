@@ -1,7 +1,7 @@
 ---
 name: Template Method
 slug: template-method
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Template Function, Skeleton Algorithm, Hook Method Pattern]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

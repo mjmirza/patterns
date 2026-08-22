@@ -634,7 +634,7 @@ A system built with real care commonly uses isolation for delegated
 background workers and handoff for the primary conversational seat, at the
 same time, without either one replacing the other.
 
-**Chain of Responsibility (GoF, `01-gof/chain-of-responsibility.md`).** The
+**Chain of Responsibility (GoF, `01-design-patterns-gof/chain-of-responsibility.md`).** The
 classical structural ancestor in spirit. A request travels along a
 sequence of handlers until one accepts it. The difference is who is aware
 of the transfer. Chain of Responsibility's handlers are ordinarily silent,
@@ -645,7 +645,7 @@ named agent, often disclosed to the user, takes over, and it usually keeps
 ownership for many following turns rather than processing one request and
 returning control up a chain immediately after.
 
-**State (GoF, `01-gof/state.md`).** Also structurally close. An object's
+**State (GoF, `01-design-patterns-gof/state.md`).** Also structurally close. An object's
 behavior changes because it delegates to a different internal state
 object. State's transitions are private implementation detail belonging to
 one object with one identity from any caller's point of view. Agent

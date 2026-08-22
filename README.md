@@ -92,7 +92,7 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 
 | # | Family | Origin | Published | Planned | Target |
 |---|---|---|---|---|---|
-| 01 | [Design Patterns (GoF)](patterns/01-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 23 | 0 | 23 |
+| 01 | [Design Patterns (GoF)](patterns/01-design-patterns-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 23 | 0 | 23 |
 | 02 | [Code Smells](patterns/02-code-smells/) | Fowler and Beck, Refactoring | 28 | 0 | 28 |
 | 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 66 | 0 | 66 |
 | 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 41 | 0 | 41 |

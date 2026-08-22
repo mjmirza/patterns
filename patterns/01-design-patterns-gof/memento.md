@@ -1,7 +1,7 @@
 ---
 name: Memento
 slug: memento
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Token, Snapshot, Cookie]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

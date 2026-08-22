@@ -1,7 +1,7 @@
 ---
 name: Factory Method
 slug: factory-method
-family: 01-gof
+family: 01-design-patterns-gof
 category: Creational
 aliases: [Virtual Constructor, Factory Hook]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

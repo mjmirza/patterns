@@ -31,7 +31,7 @@ master reference and a getting started overview, and it is enforced by
 ---
 name: Chain of Responsibility
 slug: chain-of-responsibility
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Chain of Command, Responsibility Chain]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

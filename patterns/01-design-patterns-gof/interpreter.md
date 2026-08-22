@@ -1,7 +1,7 @@
 ---
 name: Interpreter
 slug: interpreter
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Little Language, Expression Tree, Embedded DSL Evaluator]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"

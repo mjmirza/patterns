@@ -1,7 +1,7 @@
 ---
 name: Decorator
 slug: decorator
-family: 01-gof
+family: 01-design-patterns-gof
 category: Structural
 aliases: [Wrapper, Filter, Middleware, Smart Proxy]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
