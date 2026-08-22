@@ -49,12 +49,17 @@ def tokenize_text(text: str) -> set[str]:
     return {w for w in words if w not in STOPWORDS and w not in GENERIC_PATTERN_TERMS}
 
 
-def jaccard_similarity(set1: set[str], set2: set[str]) -> float:
-    if not set1 or not set2:
+def jaccard_similarity(set1: set[str], set2: set[str], threshold: float = 0.0) -> float:
+    len1, len2 = len(set1), len(set2)
+    if not len1 or not len2:
         return 0.0
-    intersection = len(set1 & set2)
-    union = len(set1 | set2)
-    return intersection / union if union > 0 else 0.0
+    if threshold > 0 and (len1 < len2 * threshold or len2 < len1 * threshold):
+        return 0.0
+    inter_len = len(set1 & set2)
+    if inter_len == 0:
+        return 0.0
+    union_len = len1 + len2 - inter_len
+    return inter_len / union_len if union_len > 0 else 0.0
 
 
 def extract_frontmatter_and_sections(filepath: Path) -> dict:
@@ -181,20 +186,24 @@ def analyze_repository(queue_path: Path) -> dict:
 
     # Published vs Published Semantic Similarity Check
     semantic_collisions = []
+    threshold = 0.70
     for i in range(len(published)):
+        p1 = published[i]
+        t1_prob = p1["problem_tokens"]
+        t1_mech = p1["mechanism_tokens"]
         for j in range(i + 1, len(published)):
-            p1 = published[i]
             p2 = published[j]
-            prob_sim = jaccard_similarity(p1["problem_tokens"], p2["problem_tokens"])
-            mech_sim = jaccard_similarity(p1["mechanism_tokens"], p2["mechanism_tokens"])
-            if prob_sim > 0.70 and mech_sim > 0.70:
-                semantic_collisions.append({
-                    "type": "PUBLISHED_SEMANTIC_DUPLICATE",
-                    "path1": p1["path"],
-                    "path2": p2["path"],
-                    "problem_similarity": prob_sim,
-                    "mechanism_similarity": mech_sim,
-                })
+            prob_sim = jaccard_similarity(t1_prob, p2["problem_tokens"], threshold)
+            if prob_sim > threshold:
+                mech_sim = jaccard_similarity(t1_mech, p2["mechanism_tokens"], threshold)
+                if mech_sim > threshold:
+                    semantic_collisions.append({
+                        "type": "PUBLISHED_SEMANTIC_DUPLICATE",
+                        "path1": p1["path"],
+                        "path2": p2["path"],
+                        "problem_similarity": prob_sim,
+                        "mechanism_similarity": mech_sim,
+                    })
 
     history = fetch_historical_proposals()
 
