@@ -1,6 +1,6 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 779,
+  "published_total": 780,
   "target_total": 847,
   "families_total": 29,
   "families_complete": 21,
@@ -254,12 +254,12 @@
       "family": "19-api-design",
       "name": "API and Interface Design",
       "origin": "REST, GraphQL, gRPC specifications",
-      "published": 2,
-      "planned": 8,
+      "published": 3,
+      "planned": 7,
       "target": 10,
-      "percent": 20.0,
+      "percent": 30.0,
       "maturity": {
-        "canonical": 2
+        "canonical": 3
       }
     },
     {

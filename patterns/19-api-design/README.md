@@ -2,13 +2,14 @@
 
 Origin. REST, GraphQL, gRPC specifications
 
-2 entries, 5,085 words. Every entry carries all 18
+3 entries, 7,610 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Fetching
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [GraphQL DataLoader](graphql-dataloader.md) | canonical | 2,525 | A resolver written for a single object works correctly and looks simple when tested in isolation, but the same resolver function runs once per instance whenever its field appears ... |
 | [GraphQL Resolver Pattern](graphql-resolver-pattern.md) | canonical | 2,638 | A client asking for data over an API rarely wants an entire, fixed record shape. |
 
 ## Structural

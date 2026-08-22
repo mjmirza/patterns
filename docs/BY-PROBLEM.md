@@ -1283,6 +1283,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Creation with hidden side effects. Symptom. A retry loop or a test helper | [Factory Method](../patterns/01-gof/factory-method.md) | Design Patterns (GoF) |
 | Credential ID stored as text incorrectly. Symptom. Some users can register | [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) | Security |
 | Cross-domain imports that bypass the published interface. Symptom. A | [Domain-based](../patterns/04-principles-and-laws/domain-based.md) | Principles and Laws |
+| Cross-request cache leakage. a DataLoader instance created once at server startup, instead of once per request, serve... | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |
 | Cross-request unit of work leakage. Symptom. One user's uncommitted | [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) | Enterprise Application Architecture |
 | Cross-service DRY via a shared library. Two independently deployable | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | Cross-team integration inside one organisation. Two Bounded Contexts | [Anticorruption Layer](../patterns/11-domain-driven-design/anticorruption-layer.md) | Domain-Driven Design |
@@ -2345,6 +2346,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Ordering assumed but not guaranteed. Symptom. A state machine | [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) | Enterprise Integration |
 | Ordering assumed but not guaranteed. Symptom. An update message arrives | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | Ordering is wrong and nobody notices for months. Symptom. Retry counts in the | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
+| Ordering mismatch. a batch function that returns its results in a different order than the keys it was given silently... | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |
 | Ordering regression after a refactor. Symptom. Authentication stops running | [Chain of Responsibility](../patterns/01-gof/chain-of-responsibility.md) | Design Patterns (GoF) |
 | Ordering-sensitive downstream logic silently produces wrong results. | [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) | Enterprise Integration |
 | Org chart naming. Symptom. A codebase names its top-level modules or | [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) | Domain-Driven Design |
@@ -3059,6 +3061,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Stale business rule behind a live sounding name. Symptom. A Specification | [Specification](../patterns/11-domain-driven-design/specification.md) | Domain-Driven Design |
 | Stale but trusted cached status. Symptom. An instance keeps answering | [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) | Cloud and Distributed |
 | Stale cache masking a real outage. Symptom, a service is completely down, | [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) | Microservices |
+| Stale cache within a long-lived request. a mutation performed partway through a request does not invalidate an alread... | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |
 | Stale dashboard total. Symptom. A user edits a line item, the line list | [Replace Derived Variable with Query](../patterns/03-refactoring/replace-derived-variable-with-query.md) | Refactoring Techniques |
 | Stale data served as fresh. Symptom. An agent confidently reports a | [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) | AI and Agentic |
 | Stale expected result masking a real regression. Symptom. The verifier | [Test Message](../patterns/07-integration/test-message.md) | Enterprise Integration |
@@ -5121,6 +5124,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | UI-only enforcement. Symptom. Buttons disappear in the browser, but direct | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | Unauthenticated control channel treated as a trusted internal detail. | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | Unauthenticated diagnostic leak. Symptom. An external actor is able to | [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) | Cloud and Distributed |
+| Unbounded batch size. a batch function with no limit on how many keys it accepts at once can be handed an unexpectedl... | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |
 | Unbounded buffering causing out-of-memory kills. Symptom. A pipeline | [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) | Architectural Patterns |
 | Unbounded cache growth. Symptom. A long-running agent process's memory | [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) | AI and Agentic |
 | Unbounded cache growth. Symptom. Steadily climbing memory usage in the | [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) | Data and Storage |
@@ -16042,6 +16046,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The empty intermediate class trap. Symptom. A reader tracing a bug
 
 ### API and Interface Design
+
+#### [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md)
+
+**Core Problem:** A resolver written for a single object works correctly and looks simple when tested in isolation, but the same resolver function runs once per instance whenever its field appears inside a list. If that resolver issues its own database or network call directly, a list of a hundred parent objects produces a hundred separate calls to answer one field, even though every one of those calls could have been answered by a single query for all hundred keys at once.
+
+**Failure Mode Symptoms:**
+
+- Cross-request cache leakage. a DataLoader instance created once at server startup, instead of once per request, serves one user's cached values back to a different user.
+- Ordering mismatch. a batch function that returns its results in a different order than the keys it was given silently attaches the wrong value to the wrong key.
+- Stale cache within a long-lived request. a mutation performed partway through a request does not invalidate an already-cached read of the same key, so a later read in that same request still returns the old value.
+- Unbounded batch size. a batch function with no limit on how many keys it accepts at once can be handed an unexpectedly large key list by a single pathological query, overwhelming the underlying data source in one call.
 
 #### [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md)
 
