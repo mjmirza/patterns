@@ -283,6 +283,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A decorator forgets to delegate and silently truncates the chain. Symptom. | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
 | A decorator narrows the component contract, breaking substitutability. | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
 | a defense that worked in testing stops working two weeks after | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |
+| A degradation trigger tuned so conservatively that the system degrades too late to actually prevent the cascading fai... | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |
 | A deleted item silently reappears after a sync. | [CRDT](../patterns/12-data-storage/crdt.md) | Data and Storage |
 | A deleted row or column silently reappears days or weeks after it | [Anti-Entropy](../patterns/12-data-storage/anti-entropy.md) | Data and Storage |
 | A dependency audit or a vulnerability scanner repeatedly flags a | [Boat Anchor](../patterns/18-anti-patterns/boat-anchor.md) | Anti-Patterns |
@@ -1954,6 +1955,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Letting a view model perform navigation directly, such as | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | Letting a view read or mutate a piece of local state directly, | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
 | Letting the automated step set drift out of sync with the runbook document, so the human readable procedure and what ... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
+| Letting the degraded response path rot from lack of testing, so it silently breaks and is only discovered during a re... | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |
 | Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Letting the number of states grow without periodically reassessing | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Letting the plant simulation's model drift out of sync with the | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
@@ -2208,6 +2210,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No cycle is ever reported by CI, yet developers still describe the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | No decision owner, so the timer alone does not converge. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | No defined abort criteria, so a scenario that starts drifting toward a genuine unintended outage has no clear point a... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
+| No degradation indicator, so a degraded response is silently treated as a normal one downstream, hiding a real qualit... | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |
 | No emergency path. Symptom: an admin loses access during an incident. Cause: | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
 | No escalation path, so an automated step set that cannot resolve the condition leaves the incident stuck with nobody ... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | No exception path. a policy with no carve-out for a genuine emergency fix or rollback, which can make an already-bad ... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
@@ -2216,6 +2219,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | no more granular boundaries inside it. Symptom. Any rendering error | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | No oracle beyond survival. Symptom. A fuzz campaign runs for weeks, finds | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | No reauthentication path. Symptom. A user signed in by magic link can | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
+| No recovery check, so the system stays in degraded mode long after the original overload or dependency failure has cl... | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |
 | No reply ever produced for a two-way channel. Symptom. Requestors | [Service Activator](../patterns/07-integration/service-activator.md) | Enterprise Integration |
 | No shared subsystem abstraction was designed before the second | [Stovepipe System](../patterns/18-anti-patterns/stovepipe-system.md) | Anti-Patterns |
 | No single place describes the rules. The answer to "what happens when the | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
@@ -2845,6 +2849,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Service A calls service B, and B's audit log records the request | [Access Token](../patterns/10-microservices/access-token.md) | Microservices |
 | Service locator disguised as dependency injection. Symptom. A class | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
 | Service logs cannot answer whether a request represented a user, | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
+| Serving a degraded response for a request where a partial answer is actually worse than no answer at all, such as a f... | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |
 | Session affinity assumed but not configured. Symptom. A user | [Server-Side Discovery](../patterns/10-microservices/server-side-discovery.md) | Microservices |
 | Session affinity masquerading as statelessness. Symptom, a load | [Client-Server](../patterns/05-architectural/client-server.md) | Architectural Patterns |
 | Session data must survive an individual server crashing, restarting for a | [Database Session State](../patterns/06-enterprise-application-architecture/database-session-state.md) | Enterprise Application Architecture |
@@ -16044,6 +16049,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A findings log that is written but never reviewed, so the exercise surfaces real gaps that then sit unfixed until a genuine incident hits the same gap.
 - Scheduling the exercise so rarely that the findings from the last one are stale by the time the next one runs, missing changes the system has gone through in between.
 - Treating a tabletop-only exercise as equivalent to a real, scoped production exercise, when the two find genuinely different classes of gap.
+
+#### [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md)
+
+**Core Problem:** When a system is overloaded, or a dependency it relies on fails, the naive response is to fail every request outright. That produces the worst possible outcome for the person using the system. a complete outage, at exactly the moment the system was under the most stress. The problem this pattern solves is that many requests can still be served usefully with a cheaper, less complete, or less accurate response, rather than not served at all.
+
+**Failure Mode Symptoms:**
+
+- Serving a degraded response for a request where a partial answer is actually worse than no answer at all, such as a financial or safety critical action.
+- No degradation indicator, so a degraded response is silently treated as a normal one downstream, hiding a real quality problem.
+- No recovery check, so the system stays in degraded mode long after the original overload or dependency failure has cleared.
+- A degradation trigger tuned so conservatively that the system degrades too late to actually prevent the cascading failure it was meant to stop.
+- Letting the degraded response path rot from lack of testing, so it silently breaks and is only discovered during a real overload, exactly when it is needed most.
 
 #### [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md)
 
