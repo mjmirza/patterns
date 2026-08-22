@@ -1,6 +1,6 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 772,
+  "published_total": 773,
   "target_total": 847,
   "families_total": 29,
   "families_complete": 20,
@@ -274,12 +274,12 @@
       "family": "21-sre-operations",
       "name": "SRE and Operations",
       "origin": "Google SRE, AWS Well-Architected",
-      "published": 6,
-      "planned": 5,
+      "published": 7,
+      "planned": 4,
       "target": 11,
-      "percent": 54.5,
+      "percent": 63.6,
       "maturity": {
-        "canonical": 6
+        "canonical": 7
       }
     },
     {
