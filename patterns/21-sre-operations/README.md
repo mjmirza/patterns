@@ -2,7 +2,7 @@
 
 Origin. Google SRE, AWS Well-Architected
 
-2 entries, 5,224 words. Every entry carries all 18
+3 entries, 7,871 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -11,6 +11,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Error Budget](error-budget.md) | canonical | 2,575 | Engineering teams building on top of a service and the team operating that service structurally want different things. |
 | [Service Level Objective](service-level-objective.md) | canonical | 2,649 | A service either works or it does not, but complex distributed systems rarely fail as a binary. |
+| [Toil Automation](toil-automation.md) | canonical | 2,647 | As a service grows, the amount of manual operational work required to keep it running (provisioning, restarts, routine configuration changes, responding to the same class of ... |
 
 ## Reading order
 

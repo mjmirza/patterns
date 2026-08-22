@@ -920,6 +920,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Authorization remains bundled. Symptom. A user with read permission can | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Autoboxing identity surprise. Symptom. A comparison of two boxed integers | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Automated failover fires repeatedly during a period of network | [Split Brain](../patterns/18-anti-patterns/split-brain.md) | Anti-Patterns |
+| Automating a task instead of asking whether the task needs to exist at all, missing the Workbook's own preferred stra... | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
+| Automating a task that was not genuinely repeatable, producing a brittle script that breaks on the first edge case it... | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
 | Awaiting a Rust future that is never polled. Symptom, a future is | [Async Await](../patterns/09-concurrency/async-await.md) | Concurrency and Parallelism |
 | Back stack mismanagement. manually manipulating the NavController's back stack (popping to an arbitrary destination w... | [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |
 | Backends reachable directly, bypassing the gateway entirely. Symptom. | [Gateway Routing](../patterns/08-cloud-distributed/gateway-routing.md) | Cloud and Distributed |
@@ -998,6 +1000,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Building a repository that claims to be offline-first but genuinely | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |
 | Building a skeleton whose dimensions do not match the real | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Building a state machine with no real upfront design, treating the | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
+| Building automation with no maintenance owner, so it silently rots and the team eventually reverts to the manual proc... | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
 | Building the enhanced, JavaScript-dependent experience first, and | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Building the palette overlay without correct, reliable focus | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
 | Building two islands that silently depend on shared state with no | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
@@ -1251,6 +1254,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Cost spikes on an unrelated bill. Symptom. A spike in message volume | [Content Enricher](../patterns/07-integration/content-enricher.md) | Enterprise Integration |
 | Cost surprise from idle reserved capacity. Symptom. A cloud bill review | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
 | Cost surprise from per-invocation billing at fine grain. Symptom. A | [Nanoservices](../patterns/18-anti-patterns/nanoservices.md) | Anti-Patterns |
+| Counting genuine engineering work as toil, or vice versa, which corrupts the measurement the whole practice depends on. | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
 | Coupling a generic utility to a specific type. The function is a | [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) | Refactoring Techniques |
 | Coupling that reaches the domain model, not just the infrastructure edge. | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |
 | Coupling the application to a specific broker client library locks the | [Channel Adapter](../patterns/07-integration/channel-adapter.md) | Enterprise Integration |
@@ -4959,6 +4963,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating the publish channel as a request-reply channel. Symptom. A | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Treating the Reference as infallible. Symptom. A bug is "fixed" in the | [Differential Testing](../patterns/14-testing/differential-testing.md) | Testing |
 | Treating the shared global overflow queue as the primary path. Symptom. the work-stealing | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
+| Treating the toil budget as a target to hit rather than a ceiling, so the team spends effort chasing a specific perce... | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
 | Treating tool-call arguments as pre-validated. Symptom, a tool call | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
 | Treating tree comparison as authoritative for conflict resolution. | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
 | Trigger phrase applied to a small or narrowly tuned model. Symptom. | [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) | AI and Agentic |
@@ -16012,6 +16017,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - SLO with no consequence and no owner. a target nobody actually acts on when missed, which is indistinguishable in practice from having no SLO.
 - Ignoring the SLA distinction. treating an internal SLO as if it were an externally binding SLA, creating contractual exposure the team never actually agreed to.
 - Never revisiting the target. an SLO set once at launch and left unchanged for years, even as the service, its users, and its dependencies have all changed substantially.
+
+#### [Toil Automation](../patterns/21-sre-operations/toil-automation.md)
+
+**Core Problem:** As a service grows, the amount of manual operational work required to keep it running (provisioning, restarts, routine configuration changes, responding to the same class of alert) tends to grow along with it. Left unchecked, that manual work consumes an ever larger share of an engineering team's time, leaving less and less capacity for the engineering work that actually improves the service.
+
+**Failure Mode Symptoms:**
+
+- Automating a task that was not genuinely repeatable, producing a brittle script that breaks on the first edge case it was not written to handle.
+- Building automation with no maintenance owner, so it silently rots and the team eventually reverts to the manual process without noticing the automation had stopped working.
+- Treating the toil budget as a target to hit rather than a ceiling, so the team spends effort chasing a specific percentage instead of actually reducing the underlying manual work.
+- Automating a task instead of asking whether the task needs to exist at all, missing the Workbook's own preferred strategy of eliminating the task at the source.
+- Counting genuine engineering work as toil, or vice versa, which corrupts the measurement the whole practice depends on.
 
 ### Mobile Architecture
 
