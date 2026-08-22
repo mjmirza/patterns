@@ -4284,13 +4284,6 @@
     "focus": ""
   },
   {
-    "name": "GraphQL DataLoader",
-    "slug": "graphql-dataloader",
-    "category": "API design",
-    "path": "patterns/19-api-design/graphql-dataloader.md",
-    "focus": ""
-  },
-  {
     "name": "gRPC Streaming",
     "slug": "grpc-streaming",
     "category": "API design",
