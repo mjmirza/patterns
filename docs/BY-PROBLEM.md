@@ -918,6 +918,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Autoboxing identity surprise. Symptom. A comparison of two boxed integers | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Automated failover fires repeatedly during a period of network | [Split Brain](../patterns/18-anti-patterns/split-brain.md) | Anti-Patterns |
 | Awaiting a Rust future that is never polled. Symptom, a future is | [Async Await](../patterns/09-concurrency/async-await.md) | Concurrency and Parallelism |
+| Back stack mismanagement. manually manipulating the NavController's back stack (popping to an arbitrary destination w... | [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |
 | Backends reachable directly, bypassing the gateway entirely. Symptom. | [Gateway Routing](../patterns/08-cloud-distributed/gateway-routing.md) | Cloud and Distributed |
 | backing collection gets a ConcurrentModificationException. The symptom | [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) | Refactoring Techniques |
 | Backlog items from the model never close, and the same threats | [STRIDE](../patterns/15-security/stride.md) | Security |
@@ -1303,6 +1304,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Deep hierarchy. The extraction adds a level, and subsequent | [Extract Superclass](../patterns/03-refactoring/extract-superclass.md) | Refactoring Techniques |
 | Deep recursion on adversarial input. Symptom. A crash rather than an error | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | Deep-link bypass. Symptom. A user bookmarks, or manually types, the URL | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
+| Deep-link state assumption bugs. a destination reached via deep link assumes prior destinations already ran and set u... | [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |
 | Default deny with no operator signal. Symptom. Customers see generic errors | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Defect bankruptcy. Symptom. The bug tracker has hundreds of stale defects, | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | deferred task with no genuine data-race protection. Symptom. The | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software |
@@ -1646,6 +1648,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | for a narrower case than the record is actually used for. The symptom is | [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) | Refactoring Techniques |
 | for reasons nobody understands. Symptom. Local test runs are green, yet | [Contract Test](../patterns/14-testing/contract-test.md) | Testing |
 | for that long in the first place, since the flapping is frequently a symptom | [Leader Election](../patterns/08-cloud-distributed/leader-election.md) | Cloud and Distributed |
+| Forced single-Activity where the OS genuinely requires otherwise. bending an app widget configuration screen or a lau... | [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |
 | Forced third dimension. Symptom, a second axis of variation appears, | [Parallel Inheritance Hierarchies](../patterns/02-code-smells/parallel-inheritance-hierarchies.md) | Code Smells |
 | Forcing every component into a strict, single, agreed level before | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Forgetting to remove a finished child coordinator from its parent's | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
@@ -1686,6 +1689,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Gorilla banana problem. The superclass provides a large set of methods, | [Extract Superclass](../patterns/03-refactoring/extract-superclass.md) | Refactoring Techniques |
 | Gossip storm under partial network partition. Symptom. CPU and network | [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) | Data and Storage |
 | Grader hacking during optimization. Symptom. A metric a training or | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |
+| Graph-scoped ViewModel leaks. a ViewModel scoped too broadly (to the whole graph instead of a feature sub-graph) outl... | [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |
 | Green dashboard, red reality. Symptom. Status is green or amber until the | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Green suite, broken production because the real collaborator's shape | [Stub](../patterns/14-testing/stub.md) | Testing |
 | Group claim treated as current authorization truth. Symptom. A removed | [OpenID Connect](../patterns/15-security/openid-connect.md) | Security |
@@ -2110,6 +2114,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Modifier returns a disguised query. Symptom. New code calls sendBill() in | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Modifying a matching value drops metadata from the original | [Prism](../patterns/16-functional/prism.md) | Functional Programming |
 | Monad transformer pile. Symptom. Type errors mention several transformer | [Monad](../patterns/16-functional/monad.md) | Functional Programming |
+| Monolithic navigation graph. every feature adding destinations directly to one flat graph instead of nested sub-graph... | [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |
 | monolithic test, because that treats the symptom rather than the | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
 | Monotonic key hot spot. Symptom observed. inserts that were fast at | [B-Tree](../patterns/12-data-storage/b-tree.md) | Data and Storage |
 | Monotonic Scheduling. Symptom. The schedulability guarantee the | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
@@ -16041,6 +16046,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - on every app restart or network loss. Symptom. The app genuinely
 - Writing to the network first and only updating the local database
 - Google's own described order. Symptom. A real write the user made
+
+#### [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md)
+
+**Core Problem:** In the pre-Navigation-component era, an Android app with N screens commonly had N Activities. Passing data between them meant serializing it into an Intent's Bundle, which is slow for anything beyond primitives, loses type safety, and has a hard size limit that silently crashes the app (TransactionTooLargeException) when exceeded. Sharing UI state, a logged-in user, a shopping cart, a form draft, across screens meant reaching for a singleton, a static field, or a separate persistence layer only to bridge Activity boundaries that should not have existed in the first place.
+
+**Failure Mode Symptoms:**
+
+- Graph-scoped ViewModel leaks. a ViewModel scoped too broadly (to the whole graph instead of a feature sub-graph) outlives the destinations that genuinely need it and holds stale or unbounded state.
+- Deep-link state assumption bugs. a destination reached via deep link assumes prior destinations already ran and set up state they normally would have, crashing or showing an empty screen when entered directly.
+- Back stack mismanagement. manually manipulating the NavController's back stack (popping to an arbitrary destination without using the documented popUpTo semantics) produces inconsistent back and up behavior that differs screen to screen.
+- Monolithic navigation graph. every feature adding destinations directly to one flat graph instead of nested sub-graphs, producing a single file that every team edits and that becomes a merge-conflict and coupling hotspot.
+- Forced single-Activity where the OS genuinely requires otherwise. bending an app widget configuration screen or a launcher-shortcut target into the main graph when the platform API requires its own Activity, producing a fragile workaround instead of the platform-intended structure.
 
 #### [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md)
 

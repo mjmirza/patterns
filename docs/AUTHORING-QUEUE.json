@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "Single Activity Architecture",
-    "slug": "single-activity-architecture",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/single-activity-architecture.md",
-    "focus": ""
-  },
-  {
     "name": "Clean Architecture (Mobile)",
     "slug": "clean-architecture",
     "category": "mobile architecture",
