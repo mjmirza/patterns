@@ -823,6 +823,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | An entity method sends an email, writes a log line through a | [Onion Architecture](../patterns/05-architectural/onion-architecture.md) | Architectural Patterns |
 | An entity method that internally performs a database query, a | [Information Expert](../patterns/04-principles-and-laws/information-expert.md) | Principles and Laws |
 | An enum such as Status.INVALIDCUSTOMER is returned while the real output is | [Replace Error Code with Exception](../patterns/03-refactoring/replace-error-code-with-exception.md) | Refactoring Techniques |
+| An evacuation trigger, automated or manual, that fires too slowly to meaningfully reduce the impact of a fast-moving ... | [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) | SRE and Operations |
 | An execution log that is incomplete or hard to find, so the person who is escalated to has to reconstruct what the au... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | An expression grammar where a binary operation contains two expressions, each | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | An idempotent-looking retry or saga compensation message | [Message Expiration](../patterns/07-integration/message-expiration.md) | Enterprise Integration |
@@ -1536,6 +1537,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Error messages that name node types. Symptom. Rule authors file support | [Interpreter](../patterns/01-gof/interpreter.md) | Design Patterns (GoF) |
 | Error type drift. Symptom. Each step returns a different string, exception, | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
 | Estimating item heights inaccurately in the variable-height | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |
+| Evacuating traffic to healthy zones that do not actually have enough spare capacity, causing a new overload in the ve... | [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) | SRE and Operations |
+| Evacuation tooling that has not been tested since it was built, discovered to be broken only during the real incident... | [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) | SRE and Operations |
 | Evaluation speed is not the binding constraint. The GoF applicability | [Interpreter](../patterns/01-gof/interpreter.md) | Design Patterns (GoF) |
 | Event object mutated by an observer. Symptom. Observer one behaves correctly | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
 | Event schema drift breaking a downstream consumer silently. Symptom. A | [Choreography](../patterns/08-cloud-distributed/choreography.md) | Cloud and Distributed |
@@ -2215,6 +2218,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No action log, so after the incident nobody can reconstruct exactly what mitigation was taken or why. | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |
 | No circuit breaking on downstream calls, so one slow service takes down | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | No clear authorization scope, so during a real incident nobody is sure who is allowed to pull the lever, costing valu... | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |
+| No clear reversal path, so traffic stays evacuated long after the impaired zone has genuinely recovered. | [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) | SRE and Operations |
 | No composition root exists that could own the instance instead. | [Singleton](../patterns/01-gof/singleton.md) | Design Patterns (GoF) |
 | No cross-cell observability. Symptom. An operator can see that overall | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | No cycle is ever reported by CI, yet developers still describe the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
@@ -4987,6 +4991,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating IO composition as ordinary sequential statements. Symptom. | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
 | Treating RCU as a general-purpose replacement for locking. Symptom. A | [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) | Concurrency and Parallelism |
 | Treating the bus as a database. Symptom. A new consumer needs historical | [Message Bus](../patterns/07-integration/message-bus.md) | Enterprise Integration |
+| Treating the evacuation itself as the fix, rather than a temporary mitigation, and never actually correcting the unde... | [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) | SRE and Operations |
 | Treating the event stream as a durable system of record. Symptom, a team | [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) | Architectural Patterns |
 | Treating the five-level taxonomy as a substitute for actual design | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Treating the gateway as a database. Symptom, the gateway starts | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
@@ -16100,6 +16105,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Data synchronization that lags far behind real time, so a site failure still loses meaningful data even though the architecture is labeled active active.
 - Adopting this pattern for a workload whose recovery requirements would have been fully met by a much cheaper passive standby strategy, paying the full ongoing cost for a resilience benefit the workload did not actually need.
 - Testing failover only in a controlled exercise and never actually verifying real traffic shifts correctly under a genuine, unplanned site failure.
+
+#### [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md)
+
+**Core Problem:** A multi-site architecture removes a single point of failure at the architectural level, but it does not by itself give an operator a fast, safe, well tested way to actually act on a failing zone. Without dedicated evacuation tooling, moving traffic away from an impaired zone during a real incident means improvising a change under pressure, with no prior practice and real risk of getting it wrong at exactly the worst moment.
+
+**Failure Mode Symptoms:**
+
+- Evacuating traffic to healthy zones that do not actually have enough spare capacity, causing a new overload in the very zones meant to absorb the shift.
+- No clear reversal path, so traffic stays evacuated long after the impaired zone has genuinely recovered.
+- An evacuation trigger, automated or manual, that fires too slowly to meaningfully reduce the impact of a fast-moving impairment.
+- Treating the evacuation itself as the fix, rather than a temporary mitigation, and never actually correcting the underlying problem in the impaired zone.
+- Evacuation tooling that has not been tested since it was built, discovered to be broken only during the real incident it was meant to help with.
 
 #### [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md)
 

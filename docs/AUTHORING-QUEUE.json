@@ -4424,13 +4424,6 @@
     "focus": ""
   },
   {
-    "name": "Regional Evacuation",
-    "slug": "regional-evacuation",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/regional-evacuation.md",
-    "focus": ""
-  },
-  {
     "name": "Correlation ID",
     "slug": "correlation-id",
     "category": "observability",

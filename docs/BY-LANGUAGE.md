@@ -755,6 +755,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2399,6 +2400,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
+- [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) (SRE and Operations)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
 - [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) (SRE and Operations)
 - [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
@@ -3048,6 +3050,7 @@ These patterns contain runnable code examples written in Python:
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
 - [Reflexion](../patterns/17-ai-agentic/reflexion.md) (AI and Agentic)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
+- [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) (SRE and Operations)
 - [Registry](../patterns/06-enterprise-application-architecture/registry.md) (Enterprise Application Architecture)
 - [Reinventing the Wheel](../patterns/18-anti-patterns/reinventing-the-wheel.md) (Anti-Patterns)
 - [Relationship-Based Access Control](../patterns/15-security/rebac.md) (Security)
@@ -4102,6 +4105,7 @@ These patterns contain runnable code examples written in Swift:
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
+- [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) (SRE and Operations)
 - [Render Props](../patterns/13-frontend-ui/render-props.md) (Frontend and UI)
 - [Replace Error Code with Exception](../patterns/03-refactoring/replace-error-code-with-exception.md) (Refactoring Techniques)
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)

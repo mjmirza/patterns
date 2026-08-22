@@ -830,6 +830,8 @@
  "https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/fan-out-message-processing-using-amazon-sqs-and-aws-lambda.html": 200,
  "https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/serverless-cell-router-architecture.html": 200,
  "https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture/security-services.html": 200,
+ "https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.html": 200,
+ "https://docs.aws.amazon.com/r53recovery/latest/dg/route53-arc-best-practices.zonal-shifts.html": 200,
  "https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/": 200,
  "https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html": 200,
  "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html": 200,
