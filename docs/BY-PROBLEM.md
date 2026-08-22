@@ -16222,6 +16222,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 #### [Dark Launch](../patterns/20-release-deployment/dark-launch.md)
 
+#### [Disaster Recovery Pilot Light](../patterns/20-release-deployment/disaster-recovery-pilot-light.md)
+
 #### [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md)
 
 #### [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md)

@@ -763,6 +763,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Branch by Abstraction](../patterns/20-release-deployment/branch-by-abstraction.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Dark Launch](../patterns/20-release-deployment/dark-launch.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Disaster Recovery Pilot Light](../patterns/20-release-deployment/disaster-recovery-pilot-light.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2415,6 +2416,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) (API and Interface Design)
 - [Dark Launch](../patterns/20-release-deployment/dark-launch.md) (Release and Deployment)
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
+- [Disaster Recovery Pilot Light](../patterns/20-release-deployment/disaster-recovery-pilot-light.md) (Release and Deployment)
 - [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
 - [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md) (Release and Deployment)
@@ -2740,6 +2742,7 @@ These patterns contain runnable code examples written in Python:
 - [Detour](../patterns/07-integration/detour.md) (Enterprise Integration)
 - [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) (Embedded and Hardware-Software)
 - [Differential Testing](../patterns/14-testing/differential-testing.md) (Testing)
+- [Disaster Recovery Pilot Light](../patterns/20-release-deployment/disaster-recovery-pilot-light.md) (Release and Deployment)
 - [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) (Anti-Patterns)
 - [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) (Microservices)
 - [Divergent Change](../patterns/02-code-smells/divergent-change.md) (Code Smells)
@@ -4113,6 +4116,7 @@ These patterns contain runnable code examples written in Swift:
 - [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) (Embedded and Hardware-Software)
+- [Disaster Recovery Pilot Light](../patterns/20-release-deployment/disaster-recovery-pilot-light.md) (Release and Deployment)
 - [Domain Service](../patterns/11-domain-driven-design/domain-service.md) (Domain-Driven Design)
 - [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) (Embedded and Hardware-Software)
