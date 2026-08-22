@@ -781,6 +781,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [RED Method](../patterns/22-observability/red-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1369,6 +1370,7 @@ These patterns contain runnable code examples written in Go:
 - [Pure Fabrication](../patterns/04-principles-and-laws/pure-fabrication.md) (Principles and Laws)
 - [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) (Cloud and Distributed)
 - [Quorum](../patterns/12-data-storage/quorum.md) (Data and Storage)
+- [RED Method](../patterns/22-observability/red-method.md) (Observability)
 - [Raft](../patterns/12-data-storage/raft.md) (Data and Storage)
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
@@ -3093,6 +3095,7 @@ These patterns contain runnable code examples written in Python:
 - [Query Object](../patterns/06-enterprise-application-architecture/query-object.md) (Enterprise Application Architecture)
 - [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) (Cloud and Distributed)
 - [Quorum](../patterns/12-data-storage/quorum.md) (Data and Storage)
+- [RED Method](../patterns/22-observability/red-method.md) (Observability)
 - [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) (API and Interface Design)
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
@@ -4809,6 +4812,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Query Object](../patterns/06-enterprise-application-architecture/query-object.md) (Enterprise Application Architecture)
 - [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) (Cloud and Distributed)
 - [Quorum](../patterns/12-data-storage/quorum.md) (Data and Storage)
+- [RED Method](../patterns/22-observability/red-method.md) (Observability)
 - [Raft](../patterns/12-data-storage/raft.md) (Data and Storage)
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
