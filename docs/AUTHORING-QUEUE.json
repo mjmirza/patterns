@@ -7,13 +7,6 @@
     "focus": ""
   },
   {
-    "name": "Durable Execution",
-    "slug": "durable-execution",
-    "category": "workflow orchestration",
-    "path": "patterns/23-workflow-orchestration/durable-execution.md",
-    "focus": ""
-  },
-  {
     "name": "Outbox Inbox Pair",
     "slug": "outbox-inbox-pair",
     "category": "workflow orchestration",
