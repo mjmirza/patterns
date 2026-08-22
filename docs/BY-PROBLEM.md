@@ -981,7 +981,9 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | browser actually supports the API it depends on. Symptom. The | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Browser apps keep access tokens in local storage for long | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |
 | Browser feature detection blocks valid flows. Symptom. Users on Linux, | [Passkeys and WebAuthn](../patterns/15-security/passkeys-and-webauthn.md) | Security |
+| Budget attributed to the wrong cause. an outage caused by a dependency or the platform itself charged against a team'... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
 | Budget exhausted by a healthy client. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
+| Budget gaming. incidents deliberately mis-categorized or under-reported to avoid consuming budget, which corrupts the... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
 | buffer, due to a bookkeeping error in which buffer is which. Symptom. | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
 | Build times grow non-linearly as the codebase grows, well past what the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | Builder as an escape hatch for a god object. A builder with thirty-five | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
@@ -2196,6 +2198,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No cycle is ever reported by CI, yet developers still describe the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | No decision owner, so the timer alone does not converge. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | No emergency path. Symptom: an admin loses access during an incident. Cause: | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
+| No exception path. a policy with no carve-out for a genuine emergency fix or rollback, which can make an already-bad ... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
 | No external aid, a call hierarchy view, a maintained sequence diagram, | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | no genuine connection to application health. Symptom. The | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | no more granular boundaries inside it. Symptom. Any rendering error | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
@@ -2676,6 +2679,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reranking is added and end-to-end answer quality does not | [Reranking](../patterns/17-ai-agentic/reranking.md) | AI and Agentic |
 | Reranking scores look reasonable in isolation but the final | [Reranking](../patterns/17-ai-agentic/reranking.md) | AI and Agentic |
 | Resequencing where order does not matter. Symptom. A Resequencer sits in | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
+| Reset-boundary gaming. deliberately timing risky releases just after a reset to maximize available budget before the ... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
 | Residual non-delivery in pure push gossip. Symptom. A small, apparently | [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) | Data and Storage |
 | Resolving too early and freezing the wrong binding. Symptom. A worker | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
 | Resource exhaustion from an unbounded loop. Symptom, a single invocation | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
@@ -5118,6 +5122,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Undo declared on operations that cannot honour it. Symptom. Pressing undo | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
 | Undo that leaves the model wrong. Symptom. A user performs three edits, | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
 | Undo, so the last action can be reversed. | [Memento](../patterns/01-gof/memento.md) | Design Patterns (GoF) |
+| Unenforced policy. an Error Budget that is tracked and reported but whose policy is never actually applied when exhau... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
 | Uneven cell sizing. Symptom. One cell's dashboards are consistently | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | unhandled edge case in the recovery logic itself. Symptom. A device | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | Unhandled error event terminating the process. Symptom. A Node service exits | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
@@ -15983,6 +15988,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The empty intermediate class trap. Symptom. A reader tracing a bug
 
 ### SRE and Operations
+
+#### [Error Budget](../patterns/21-sre-operations/error-budget.md)
+
+**Core Problem:** Engineering teams building on top of a service and the team operating that service structurally want different things. one wants to ship features and changes as fast as possible, the other wants the service to stay reliable. Left to informal negotiation, that tension gets resolved by whichever side argues loudest in a given week, which produces inconsistent decisions and recurring conflict.
+
+**Failure Mode Symptoms:**
+
+- Unenforced policy. an Error Budget that is tracked and reported but whose policy is never actually applied when exhausted, making the whole mechanism theater rather than governance.
+- Budget gaming. incidents deliberately mis-categorized or under-reported to avoid consuming budget, which corrupts the very signal the pattern depends on.
+- No exception path. a policy with no carve-out for a genuine emergency fix or rollback, which can make an already-bad incident worse by blocking the fix that would resolve it.
+- Budget attributed to the wrong cause. an outage caused by a dependency or the platform itself charged against a team's own budget, producing a freeze that has nothing to do with that team's actual releases.
+- Reset-boundary gaming. deliberately timing risky releases just after a reset to maximize available budget before the next measurement window begins, which defeats the pattern's intent of steady, ongoing risk discipline.
 
 #### [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md)
 
