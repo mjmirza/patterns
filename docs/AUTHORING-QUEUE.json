@@ -593,12 +593,5 @@
     "category": "data and storage",
     "path": "patterns/12-data-storage/distributed-hash-table.md",
     "focus": ""
-  },
-  {
-    "name": "API and Schema Federation",
-    "slug": "api-schema-federation",
-    "category": "api and interface design",
-    "path": "patterns/19-api-design/api-schema-federation.md",
-    "focus": ""
   }
 ]

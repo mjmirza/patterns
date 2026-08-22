@@ -752,6 +752,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [API Versioning](../patterns/19-api-design/api-versioning.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
+| [API and Schema Federation](../patterns/19-api-design/api-schema-federation.md) | API and Interface Design |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -979,6 +980,7 @@ These patterns contain runnable code examples written in Go:
 - [ACID](../patterns/04-principles-and-laws/acid.md) (Principles and Laws)
 - [API Composition](../patterns/10-microservices/api-composition.md) (Microservices)
 - [API Gateway](../patterns/10-microservices/api-gateway.md) (Microservices)
+- [API and Schema Federation](../patterns/19-api-design/api-schema-federation.md) (API and Interface Design)
 - [Abstract Factory](../patterns/01-design-patterns-gof/abstract-factory.md) (Design Patterns (GoF))
 - [Access Token](../patterns/10-microservices/access-token.md) (Microservices)
 - [Active Object](../patterns/09-concurrency/active-object.md) (Concurrency and Parallelism)
@@ -2586,6 +2588,7 @@ These patterns contain runnable code examples written in Python:
 - [API Composition](../patterns/10-microservices/api-composition.md) (Microservices)
 - [API Gateway](../patterns/10-microservices/api-gateway.md) (Microservices)
 - [API Versioning](../patterns/19-api-design/api-versioning.md) (API and Interface Design)
+- [API and Schema Federation](../patterns/19-api-design/api-schema-federation.md) (API and Interface Design)
 - [Access Token](../patterns/10-microservices/access-token.md) (Microservices)
 - [Active Object](../patterns/09-concurrency/active-object.md) (Concurrency and Parallelism)
 - [Active Record](../patterns/06-enterprise-application-architecture/active-record.md) (Enterprise Application Architecture)
@@ -4368,6 +4371,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [ACID](../patterns/04-principles-and-laws/acid.md) (Principles and Laws)
 - [API Composition](../patterns/10-microservices/api-composition.md) (Microservices)
 - [API Gateway](../patterns/10-microservices/api-gateway.md) (Microservices)
+- [API and Schema Federation](../patterns/19-api-design/api-schema-federation.md) (API and Interface Design)
 - [Abstract Factory](../patterns/01-design-patterns-gof/abstract-factory.md) (Design Patterns (GoF))
 - [Access Token](../patterns/10-microservices/access-token.md) (Microservices)
 - [Active Object](../patterns/09-concurrency/active-object.md) (Concurrency and Parallelism)
