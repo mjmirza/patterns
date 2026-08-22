@@ -1819,6 +1819,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | infrastructure cannot actually back up. Symptom. A project claims a | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
 | Inherited accept collapses the dispatch. Symptom. Every node in a subtree | [Visitor](../patterns/01-gof/visitor.md) | Design Patterns (GoF) |
 | Initial backfill of a large table takes down the source database or | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
+| Injecting a fault into a system with no genuine designed resilience to test, producing an outage rather than a useful... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
 | Inlining a class that is reused. The class is called from multiple | [Inline Class](../patterns/03-refactoring/inline-class.md) | Refactoring Techniques |
 | Inlining a class with a real responsibility. The class has a | [Inline Class](../patterns/03-refactoring/inline-class.md) | Refactoring Techniques |
 | Inlining a communicative name. The variable's name communicates a | [Inline Variable](../patterns/03-refactoring/inline-variable.md) | Refactoring Techniques |
@@ -2199,6 +2200,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | New instances repeatedly start and are killed within | [Service Deployment Platform](../patterns/10-microservices/service-deployment-platform.md) | Microservices |
 | new system exhibits the same symptoms as the old one. Cause. The rewrite | [Big Ball of Mud](../patterns/18-anti-patterns/big-ball-of-mud.md) | Anti-Patterns |
 | New tokens verify in one region and fail in another. Cause. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
+| No abort mechanism, or an abort mechanism that is too slow, so a failing experiment grows past its intended blast rad... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
 | No absolute timeout. Symptom. A browser profile left open for weeks remains | [Session Management](../patterns/15-security/session-management.md) | Security |
 | No circuit breaking on downstream calls, so one slow service takes down | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | No composition root exists that could own the instance instead. | [Singleton](../patterns/01-gof/singleton.md) | Design Patterns (GoF) |
@@ -2758,6 +2760,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Runaway recursive spawning. Symptom, token or cost usage grows | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
 | Runaway retries against a permanently broken dependency. | [Scheduler Agent Supervisor](../patterns/08-cloud-distributed/scheduler-agent-supervisor.md) | Cloud and Distributed |
 | Running an expensive check regardless of earlier results. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
+| Running an experiment once and treating the result as permanent, when the system, its dependencies, and its traffic k... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
+| Running an experiment with no defined steady state hypothesis, so there is no clear signal for whether the system act... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
 | running branches. Symptom. Results are occasionally wrong, in a way that | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
 | Running the exercise with a different team than the one that would handle a real instance of the scenario, testing a ... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
 | Running the plant simulation with real-time compute that cannot | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
@@ -4970,6 +4974,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating the gateway as a database. Symptom, the gateway starts | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | Treating the internal model as already the Published Language. Symptom. | [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) | Domain-Driven Design |
 | Treating the network as reliable. Symptom. A code review, or an incident | [Remote Procedure Invocation](../patterns/10-microservices/remote-procedure-invocation.md) | Microservices |
+| Treating the practice as purely a testing exercise rather than acting on what each experiment finds, so real weakness... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
 | Treating the publish channel as a request-reply channel. Symptom. A | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Treating the Reference as infallible. Symptom. A bug is "fixed" in the | [Differential Testing](../patterns/14-testing/differential-testing.md) | Testing |
 | Treating the shared global overflow queue as the primary path. Symptom. the work-stealing | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
@@ -16003,6 +16008,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The empty intermediate class trap. Symptom. A reader tracing a bug
 
 ### SRE and Operations
+
+#### [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md)
+
+**Core Problem:** A distributed system's resilience is, by default, an assumption. Engineers design for fault tolerance, but the actual behavior of a live system under a real, partial failure is rarely tested until a real failure happens. Netflix's own framing of the problem states this directly. just designing a fault tolerant architecture is not enough. We have to constantly test our ability to actually survive these once in a blue moon failures (https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116).
+
+**Failure Mode Symptoms:**
+
+- Running an experiment with no defined steady state hypothesis, so there is no clear signal for whether the system actually held up or not.
+- No abort mechanism, or an abort mechanism that is too slow, so a failing experiment grows past its intended blast radius before anyone can stop it.
+- Injecting a fault into a system with no genuine designed resilience to test, producing an outage rather than a useful finding.
+- Running an experiment once and treating the result as permanent, when the system, its dependencies, and its traffic keep changing after that single run.
+- Treating the practice as purely a testing exercise rather than acting on what each experiment finds, so real weaknesses are discovered repeatedly but never fixed.
 
 #### [Error Budget](../patterns/21-sre-operations/error-budget.md)
 

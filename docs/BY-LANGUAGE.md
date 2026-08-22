@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2380,6 +2381,7 @@ These patterns have native features in Java that make the pattern unnecessary, o
 These patterns contain runnable code examples written in Kotlin:
 
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
@@ -2588,6 +2590,7 @@ These patterns contain runnable code examples written in Python:
 - [Change Value to Reference](../patterns/03-refactoring/change-value-to-reference.md) (Refactoring Techniques)
 - [Channel Adapter](../patterns/07-integration/channel-adapter.md) (Enterprise Integration)
 - [Channel Purger](../patterns/07-integration/channel-purger.md) (Enterprise Integration)
+- [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
 - [Characterization Test](../patterns/14-testing/characterization-test.md) (Testing)
 - [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) (Anti-Patterns)
 - [Choreography](../patterns/08-cloud-distributed/choreography.md) (Cloud and Distributed)
@@ -4019,6 +4022,7 @@ These patterns contain runnable code examples written in Swift:
 - [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) (Frontend and UI)
