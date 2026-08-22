@@ -780,6 +780,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1089,6 +1090,7 @@ These patterns contain runnable code examples written in Go:
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
 - [Core Domain](../patterns/11-domain-driven-design/core-domain.md) (Domain-Driven Design)
 - [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) (AI and Agentic)
+- [Correlation ID](../patterns/22-observability/correlation-id.md) (Observability)
 - [Correlation Identifier](../patterns/07-integration/correlation-identifier.md) (Enterprise Integration)
 - [Cost Guard](../patterns/17-ai-agentic/cost-guard.md) (AI and Agentic)
 - [Countdown Latch](../patterns/09-concurrency/countdown-latch.md) (Concurrency and Parallelism)
@@ -2710,6 +2712,7 @@ These patterns contain runnable code examples written in Python:
 - [Copy-Paste Programming](../patterns/18-anti-patterns/copy-paste-programming.md) (Anti-Patterns)
 - [Core Domain](../patterns/11-domain-driven-design/core-domain.md) (Domain-Driven Design)
 - [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) (AI and Agentic)
+- [Correlation ID](../patterns/22-observability/correlation-id.md) (Observability)
 - [Correlation Identifier](../patterns/07-integration/correlation-identifier.md) (Enterprise Integration)
 - [Cost Guard](../patterns/17-ai-agentic/cost-guard.md) (AI and Agentic)
 - [Countdown Latch](../patterns/09-concurrency/countdown-latch.md) (Concurrency and Parallelism)
@@ -4469,6 +4472,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Copy-Paste Programming](../patterns/18-anti-patterns/copy-paste-programming.md) (Anti-Patterns)
 - [Core Domain](../patterns/11-domain-driven-design/core-domain.md) (Domain-Driven Design)
 - [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) (AI and Agentic)
+- [Correlation ID](../patterns/22-observability/correlation-id.md) (Observability)
 - [Correlation Identifier](../patterns/07-integration/correlation-identifier.md) (Enterprise Integration)
 - [Cost Guard](../patterns/17-ai-agentic/cost-guard.md) (AI and Agentic)
 - [Creator](../patterns/04-principles-and-laws/creator.md) (Principles and Laws)
