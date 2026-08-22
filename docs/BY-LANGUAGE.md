@@ -760,6 +760,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2400,6 +2401,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [API Versioning](../patterns/19-api-design/api-versioning.md) (API and Interface Design)
 - [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) (Release and Deployment)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Canary Release](../patterns/20-release-deployment/canary-release.md) (Release and Deployment)
 - [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
@@ -2612,6 +2614,7 @@ These patterns contain runnable code examples written in Python:
 - [Cache Stampede](../patterns/18-anti-patterns/cache-stampede.md) (Anti-Patterns)
 - [Cache-Aside](../patterns/08-cloud-distributed/cache-aside.md) (Cloud and Distributed)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Canary Release](../patterns/20-release-deployment/canary-release.md) (Release and Deployment)
 - [Canonical Data Model](../patterns/07-integration/canonical-data-model.md) (Enterprise Integration)
 - [Cargo Cult Programming](../patterns/18-anti-patterns/cargo-cult-programming.md) (Anti-Patterns)
 - [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) (Architectural Patterns)
@@ -4073,6 +4076,7 @@ These patterns contain runnable code examples written in Swift:
 - [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
+- [Canary Release](../patterns/20-release-deployment/canary-release.md) (Release and Deployment)
 - [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)

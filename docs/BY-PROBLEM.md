@@ -1055,6 +1055,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Calling a non-FromISR API function from inside an interrupt context. | [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) | Embedded and Hardware-Software |
 | can hold its full behavior in their head. Symptom. Understanding a | [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) | Frontend and UI |
 | can observe. The symptom is a transform that passes all tests but produces | [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) | Refactoring Techniques |
+| Canary too small to be meaningful. a traffic slice too small relative to the service's real volume can fail to surfac... | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |
 | Capacity protection. The service has a known maximum sustainable | [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) | Cloud and Distributed |
 | Captured environment leak. Symptom. Heap snapshots show request objects, | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
 | Cartesian explosion from a naive join fix. Symptom. Fixing an N+1 | [N+1 Query](../patterns/18-anti-patterns/n+1-query.md) | Anti-Patterns |
@@ -3140,6 +3141,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Stub over-fitted to the happy path. Symptom. A fully green test suite, and | [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) | Enterprise Application Architecture |
 | Stub reachable in production. Symptom. Real customers receive obviously | [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) | Enterprise Application Architecture |
 | stub. Symptom. Two engineers disagree in code review about whether the | [Stub](../patterns/14-testing/stub.md) | Testing |
+| Stuck partial rollout. a canary left at a partial traffic fraction indefinitely, with no decision to advance or roll ... | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |
 | subclass a use case needs. Symptom. An attempt to define a Lens over a | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | subclasses accidentally inherit instead of overriding. The symptom is a | [Pull Up Method](../patterns/03-refactoring/pull-up-method.md) | Refactoring Techniques |
 | subclasses, and pulling it up gives every subclass the field. The symptom | [Pull Up Field](../patterns/03-refactoring/pull-up-field.md) | Refactoring Techniques |
@@ -5233,6 +5235,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Unreachable key after the owning module is unloaded. Symptom. A native | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
 | Unrelated merge conflicts. Symptom. Two developers, working on | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
 | unrelated one. Symptom, a developer changes the shape or the meaning of a | [Global Data](../patterns/02-code-smells/global-data.md) | Code Smells |
+| Unrepresentative canary traffic. a canary slice that happens to exclude a real traffic pattern or user segment can lo... | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |
 | Unsafe dynamic URL. Symptom. A link appears escaped in HTML but still opens | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
 | Unsafe stored procedure internals. Symptom. The application binds procedure | [Parameterized Query](../patterns/15-security/parameterized-query.md) | Security |
 | Unstable key causing silent zero hit rate. Symptom. Cache hit and miss | [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) | AI and Agentic |
@@ -5351,6 +5354,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Wrong audience accepted. Symptom. A token minted for one API works against | [JWT](../patterns/15-security/jwt.md) | Security |
 | Wrong context encoder. Symptom. A payload displays safely in a paragraph but | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
 | Wrong final boundary. Symptom. A low-level helper prints, sends a response, | [Continuation](../patterns/16-functional/continuation.md) | Functional Programming |
+| Wrong health metrics. evaluating the canary against metrics that do not actually reflect the real risk being managed ... | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |
 | Wrong identity value. Symptom. Empty input returns a result that looks valid | [Foldable](../patterns/16-functional/foldable.md) | Functional Programming |
 | Wrong loop exited. Symptom. A nested scan stops the inner loop but keeps the | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | YAGNI as an excuse to avoid a hard design conversation. Symptom. a | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
@@ -16202,6 +16206,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Insufficiently verified green environment. an environment that passed synthetic testing but never saw real traffic patterns can still surface a problem the moment the switch happens.
 - Dropped in-flight requests at the switch. a request already in progress at the exact moment of the traffic switch can be lost if the switch is not handled gracefully.
 - Idle environment left stale. a blue environment kept around as the rollback target, but never refreshed or re-verified, can itself be broken by the time it is actually needed for a rollback.
+
+#### [Canary Release](../patterns/20-release-deployment/canary-release.md)
+
+**Core Problem:** Deploying a new release to all production traffic at once means every user is affected the instant a defect ships, and the defect is only discovered once it has already reached everyone. Even careful pre-release testing cannot catch every real-world condition, a traffic pattern, a data shape, an edge case, that only shows up once a release meets genuine production traffic at scale.
+
+**Failure Mode Symptoms:**
+
+- Canary too small to be meaningful. a traffic slice too small relative to the service's real volume can fail to surface a real defect during the evaluation window.
+- Unrepresentative canary traffic. a canary slice that happens to exclude a real traffic pattern or user segment can look healthy while a defect specific to that excluded segment goes completely undetected.
+- Wrong health metrics. evaluating the canary against metrics that do not actually reflect the real risk being managed can either miss a genuine regression or flag a healthy canary as unhealthy.
+- Stuck partial rollout. a canary left at a partial traffic fraction indefinitely, with no decision to advance or roll back, leaves the deployment in an ambiguous, half-migrated state.
 
 ### SRE and Operations
 
