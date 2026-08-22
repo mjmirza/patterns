@@ -719,7 +719,7 @@ becoming the God Mother failure mode described in dimension 11.
 **Factory Method and Abstract Factory (GoF).** Object Mother is, as Fowler
 states directly, a specialization of the Factory idea from the GoF catalog,
 narrowed to the purpose of producing test data rather than production objects
-(see `patterns/01-gof/factory-method.md`). The structural mechanism, a class
+(see `patterns/01-design-patterns-gof/factory-method.md`). The structural mechanism, a class
 whose job is to encapsulate object construction, is identical. What Object
 Mother adds is a testing-specific naming convention, "named canonical
 scenario" methods, and a community habit of returning a fresh instance every
@@ -729,7 +729,7 @@ call.
 is frequently implemented internally using the Builder pattern, and the
 hybrid variant in dimension 8 makes the relationship explicit, a mother
 supplying named starting points into an otherwise ordinary builder (see
-`patterns/01-gof/builder.md`). Test Data Builder is the test-specific
+`patterns/01-design-patterns-gof/builder.md`). Test Data Builder is the test-specific
 specialization of Builder in the same way Object Mother is the test-specific
 specialization of Factory Method, and the two test-specific patterns compose
 naturally, as covered in dimension 12.

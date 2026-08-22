@@ -820,7 +820,7 @@ repository follows for dimensions of this kind.
    Injection pattern*. Source of the Service Locator testability discussion
    cited in dimensions 8 and 13.
    https://martinfowler.com/articles/injection.html verified 2026-08-02.
-10. This repository, `patterns/01-gof/singleton.md`. Companion entry
+10. This repository, `patterns/01-design-patterns-gof/singleton.md`. Companion entry
     covering the Singleton pattern itself, its structure, dynamics, and
     legitimate implementation variants, referenced throughout this entry
     rather than duplicated.
