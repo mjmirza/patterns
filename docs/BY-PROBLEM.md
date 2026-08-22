@@ -1493,6 +1493,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Election storms under repeated partial failure. Symptom. CPU and | [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) | Data and Storage |
 | element with client:idle or client:visible. Symptom. A user who | [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) | Frontend and UI |
 | Email used as the account key. Symptom. A user loses access after changing | [OpenID Connect](../patterns/15-security/openid-connect.md) | Security |
+| Embedding a real production credential directly in a script instead of a dedicated, scoped test account, so a leaked ... | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |
 | Emergency access used during an incident remains active for | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | Emergency rotation disables the attacker and the production app. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
 | Empty input silently reports a valid-looking business value. | [Monoid](../patterns/16-functional/monoid.md) | Functional Programming |
@@ -2443,6 +2444,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | p99 latency on a specific endpoint or handler is much higher than | [No Caching](../patterns/18-anti-patterns/no-caching.md) | Anti-Patterns |
 | Page load time for a composed page silently doubles or | [Self-Contained Service](../patterns/10-microservices/self-contained-service.md) | Microservices |
 | page, with no prefetch hint to soften the delay. Symptom. | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
+| Paging on a single location's failure without confirming a second location also fails, which turns one location's own... | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |
 | panic in Go, not a silent no-op. Symptom, a crash reporting a send on a | [Communicating Sequential Processes](../patterns/09-concurrency/communicating-sequential-processes.md) | Concurrency and Parallelism |
 | Parallel pipeline with ordered state. Symptom. Windowed output or running | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
 | Parallel race. Symptom. A parallel stream or distributed transform produces | [Replace Loop with Pipeline](../patterns/03-refactoring/replace-loop-with-pipeline.md) | Refactoring Techniques |
@@ -2822,6 +2824,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Running an experiment once and treating the result as permanent, when the system, its dependencies, and its traffic k... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
 | Running an experiment with no defined steady state hypothesis, so there is no clear signal for whether the system act... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
 | running branches. Symptom. Results are occasionally wrong, in a way that | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
+| Running checks so often and from so many locations that cost grows unchecked, when the two named cost drivers, freque... | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |
 | Running the exercise with a different team than the one that would handle a real instance of the scenario, testing a ... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
 | Running the plant simulation with real-time compute that cannot | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
 | Runtime exceptions mention missing keys inside path code. | [Optics](../patterns/16-functional/optics.md) | Functional Programming |
@@ -3143,6 +3146,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Storage or message size for the CRDT grows without bound over | [CRDT](../patterns/12-data-storage/crdt.md) | Data and Storage |
 | Store write fails but the cache write already happened. Symptom. The | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | Stored failure freezes a transient outage. Symptom. Retrying with the same | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |
+| Storing a secret used by the script in plain configuration instead of a secrets mechanism with access control, when t... | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |
 | Storing build-time-only information in the data struct, or runtime, | [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) | Embedded and Hardware-Software |
 | Storing every piece of application state in Redux, including state | [Redux](../patterns/13-frontend-ui/redux.md) | Frontend and UI |
 | Strategy allocated per call in a hot path. Symptom. Allocation rate and | [Strategy](../patterns/01-design-patterns-gof/strategy.md) | Design Patterns (GoF) |
@@ -5038,6 +5042,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating a local acknowledgement as final delivery. Symptom. A | [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) | Microservices |
 | Treating a lock timeout as a correctness signal. Symptom. Application | [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) | Data and Storage |
 | Treating a missing or failed provider as a hard failure by accident. | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
+| Treating a passing synthetic check as proof the whole system works, when the script only ever exercises the specific ... | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |
 | Treating a shared, interned instance as though identity mattered. | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
 | Treating a tabletop-only exercise as equivalent to a real, scoped production exercise, when the two find genuinely di... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
 | Treating a tool call argument object as pre-validated for safety, not just | [Structured Output](../patterns/17-ai-agentic/structured-output.md) | AI and Agentic |
@@ -16442,6 +16447,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Log volume grows unmanaged as more and more structured fields are added to more and more call sites, until ingestion and storage cost becomes a real budget problem, which is the exact scenario Datadog's own guidance addresses by recommending routing, filtering, and sampling as close to the source as possible (https://www.datadoghq.com/blog/optimize-high-volume-logs/).
 - A field with an effectively unbounded number of distinct values, most often a user identifier or a request identifier, is added as an indexed dimension in a system built around a bounded set of values, and indexing and storage cost can rise sharply as the field's own value space and the traffic through it both grow.
 - Structured and unstructured logging are mixed in the same service with no clear boundary, so downstream tooling has to handle both shapes, and queries that assume a consistent structured shape silently miss the unstructured lines.
+
+#### [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md)
+
+**Core Problem:** A team wants to know when a system is broken before a person using it finds out first, and it wants that signal even during a quiet period when little or no real traffic is flowing through the exact path that broke. Waiting for a real user to hit a broken checkout flow, or a broken password reset, or a broken third party payment integration, means the team learns about the outage from a complaint rather than from its own tooling.
+
+**Failure Mode Symptoms:**
+
+- Treating a passing synthetic check as proof the whole system works, when the script only ever exercises the specific narrow path it was written for, and a real customer routinely takes a path the script never covers (https://speedscale.com/blog/synthetic-monitoring-is-broken-production-traffic-can-fix-it/).
+- Embedding a real production credential directly in a script instead of a dedicated, scoped test account, so a leaked script leaks a real account. Datadog's own security docs recommend a dedicated account for testing specifically to avoid this (https://docs.datadoghq.com/datasecurity/synthetics/).
+- Storing a secret used by the script in plain configuration instead of a secrets mechanism with access control, when the correct pattern, per the same Datadog docs, is an obfuscated variable store with role based permissions restricting who can read it (https://docs.datadoghq.com/datasecurity/synthetics/).
+- Paging on a single location's failure without confirming a second location also fails, which turns one location's own network flakiness into a false alarm, exactly the failure mode Google Cloud's default multi-location confirmation threshold exists to avoid (https://docs.cloud.google.com/monitoring/uptime-checks).
+- Running checks so often and from so many locations that cost grows unchecked, when the two named cost drivers, frequency and location count, both scale the bill in ways that should be sized to the path's actual importance rather than left at a default.
 
 #### [USE Method](../patterns/22-observability/use-method.md)
 

@@ -2,7 +2,7 @@
 
 Origin. OpenTelemetry, RED and USE methods
 
-5 entries, 17,921 words, 3 more planned, 8 total when the family is complete. Every entry carries all 18
+6 entries, 21,667 words, 2 more planned, 8 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
@@ -13,6 +13,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [RED Method](red-method.md) | canonical | 3,385 | A team running many request driven services, each built by a different group of engineers, ends up with a different, inconsistent set of dashboards and metrics per service. |
 | [Span and Trace Context Propagation](span-and-trace-context-propagation.md) | canonical | 3,676 | A Correlation ID ties every log line from one request together with a single flat value, which answers which log lines belong to this request, but not which specific hop inside ... |
 | [Structured Logging](structured-logging.md) | canonical | 3,327 | A traditional log line is a sentence written for a human eye, something like a request failed for user 42 after 300 milliseconds. |
+| [Synthetic Monitoring](synthetic-monitoring.md) | canonical | 3,746 | A team wants to know when a system is broken before a person using it finds out first, and it wants that signal even during a quiet period when little or no real traffic is ... |
 | [USE Method](use-method.md) | canonical | 3,386 | When a system is running slowly, the obvious first instinct is to start with application level profiling, reading through code paths, adding instrumentation, and guessing at what ... |
 
 ## Planned
@@ -21,7 +22,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 
 - High-Cardinality Metrics
 - Real User Monitoring
-- Synthetic Monitoring
 
 ## Reading order
 
