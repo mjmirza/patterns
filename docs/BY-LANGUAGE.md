@@ -759,6 +759,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2397,6 +2398,7 @@ These patterns have native features in Java that make the pattern unnecessary, o
 These patterns contain runnable code examples written in Kotlin:
 
 - [API Versioning](../patterns/19-api-design/api-versioning.md) (API and Interface Design)
+- [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) (Release and Deployment)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
@@ -2594,6 +2596,7 @@ These patterns contain runnable code examples written in Python:
 - [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) (Anti-Patterns)
 - [Blackboard Architecture](../patterns/05-architectural/blackboard-architecture.md) (Architectural Patterns)
 - [Bloom Filter](../patterns/12-data-storage/bloom-filter.md) (Data and Storage)
+- [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) (Release and Deployment)
 - [Boat Anchor](../patterns/18-anti-patterns/boat-anchor.md) (Anti-Patterns)
 - [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [Bounded Context](../patterns/11-domain-driven-design/bounded-context.md) (Domain-Driven Design)
@@ -4066,6 +4069,7 @@ These patterns contain runnable code examples written in Swift:
 - [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) (Enterprise Application Architecture)
 - [Async Await](../patterns/09-concurrency/async-await.md) (Concurrency and Parallelism)
 - [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) (Frontend and UI)
+- [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) (Release and Deployment)
 - [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
