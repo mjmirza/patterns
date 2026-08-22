@@ -2230,6 +2230,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No cross-cell observability. Symptom. An operator can see that overall | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | No cycle is ever reported by CI, yet developers still describe the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | No decision owner, so the timer alone does not converge. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
+| No deduplication. a receiver that reprocesses every delivery, including a retried one, can double-apply an action, ch... | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |
 | No defined abort criteria, so a scenario that starts drifting toward a genuine unintended outage has no clear point a... | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |
 | No degradation indicator, so a degraded response is silently treated as a normal one downstream, hiding a real qualit... | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |
 | No emergency path. Symptom: an admin loses access during an incident. Cause: | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
@@ -3006,9 +3007,11 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Sizing the queue too small for the real timing gap between | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
 | Skeleton with one implementation. Symptom. An abstract class and exactly one | [Template Method](../patterns/01-gof/template-method.md) | Design Patterns (GoF) |
 | Skipped cleanup. Symptom. File handles, locks, spans, database transactions, | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
+| Skipped signature verification. a receiver that trusts an incoming request's payload without verifying its signature ... | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |
 | Skipped tail work. Symptom. A counter, audit call, buffer append, or cleanup | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | SLO with no consequence and no owner. a target nobody actually acts on when missed, which is indistinguishable in pra... | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |
 | Slow rollback under incident pressure. Symptom. During an active | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
+| Slow synchronous processing. a receiver that performs its full downstream work inside the request handler causes the ... | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |
 | Slow, brittle tests that wire up more than they claim to test. Symptom. | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
 | Slow, flaky test suites. Symptom. Unit tests for the God Object take a | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
 | Slow-start restart loop. Symptom. A service that takes tens of seconds | [Health Endpoint Monitoring](../patterns/08-cloud-distributed/health-endpoint-monitoring.md) | Cloud and Distributed |
@@ -5153,6 +5156,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Unbounded persistence context in a long-running process. Symptom. Memory | [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) | Enterprise Application Architecture |
 | Unbounded policy expression. Symptom. Authorization latency spikes when a | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
 | Unbounded pool growth on an open key space. Symptom. Resident memory climbs | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
+| Unbounded processed-event log. a log of every seen event identifier that is kept forever, with no expiry or bound, gr... | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |
 | Unbounded proof depth on an unbalanced or adversarially grown tree. | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
 | Unbounded query depth. a client nests a query deeply enough, especially against a resolver whose field returns object... | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |
 | Unbounded queue growth under sustained overload. Symptom. Backlog depth | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
@@ -16084,6 +16088,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Inconsistent use of the standard method mapping, such as using POST for an update that should be a PATCH, breaking the predictability the pattern is meant to deliver.
 - Forcing every operation into a resource shape even when a genuine non-resource action would be clearer, producing an awkward, contorted design rather than a genuinely simpler one.
 - An inconsistent pluralization or naming convention across different resource collections, undermining the learnable structure a client developer relies on.
+
+#### [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md)
+
+**Core Problem:** An application that wants to react to something happening in a third-party system, a payment succeeding, a repository receiving a new commit, a support ticket changing status, either has to poll that system repeatedly asking whether anything changed, or expose an endpoint the third-party system can call directly the moment the event occurs. Polling wastes calls on the common case of nothing having changed, and adds a delay bounded by the polling interval before the application notices a real change.
+
+**Failure Mode Symptoms:**
+
+- Skipped signature verification. a receiver that trusts an incoming request's payload without verifying its signature can be tricked into acting on a forged event, exactly the risk of triggering actions like fulfilling orders, granting account access, or modifying records that verification exists to prevent (https://docs.stripe.com/webhooks).
+- No deduplication. a receiver that reprocesses every delivery, including a retried one, can double-apply an action, charging a customer twice or sending a duplicate notification.
+- Slow synchronous processing. a receiver that performs its full downstream work inside the request handler causes the sender to time out and retry, generating the very duplicate delivery a fast acknowledgement is meant to avoid.
+- Unbounded processed-event log. a log of every seen event identifier that is kept forever, with no expiry or bound, grows without limit as the receiver stays in production.
 
 #### [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md)
 

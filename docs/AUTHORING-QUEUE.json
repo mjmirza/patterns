@@ -4284,13 +4284,6 @@
     "focus": ""
   },
   {
-    "name": "Webhook Receiver",
-    "slug": "webhook-receiver",
-    "category": "API design",
-    "path": "patterns/19-api-design/webhook-receiver.md",
-    "focus": ""
-  },
-  {
     "name": "Idempotent API",
     "slug": "idempotent-api",
     "category": "API design",
