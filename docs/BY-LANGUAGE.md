@@ -781,6 +781,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1500,6 +1501,7 @@ These patterns contain runnable code examples written in Go:
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
+- [Structured Logging](../patterns/22-observability/structured-logging.md) (Observability)
 - [Structured Output](../patterns/17-ai-agentic/structured-output.md) (AI and Agentic)
 - [Stub](../patterns/14-testing/stub.md) (Testing)
 - [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) (AI and Agentic)
@@ -1811,6 +1813,7 @@ These patterns have unique implementation variants or change their design struct
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
+- [Structured Logging](../patterns/22-observability/structured-logging.md) (Observability)
 - [Stub](../patterns/14-testing/stub.md) (Testing)
 - [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) (AI and Agentic)
 - [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) (Refactoring Techniques)
@@ -3261,6 +3264,7 @@ These patterns contain runnable code examples written in Python:
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
+- [Structured Logging](../patterns/22-observability/structured-logging.md) (Observability)
 - [Structured Output](../patterns/17-ai-agentic/structured-output.md) (AI and Agentic)
 - [Stub](../patterns/14-testing/stub.md) (Testing)
 - [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) (AI and Agentic)
@@ -4021,6 +4025,7 @@ These patterns have unique implementation variants or change their design struct
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
+- [Structured Logging](../patterns/22-observability/structured-logging.md) (Observability)
 - [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) (Refactoring Techniques)
 - [Switch Statements](../patterns/02-code-smells/switch-statements.md) (Code Smells)
 - [Tagless Final](../patterns/16-functional/tagless-final.md) (Functional Programming)
@@ -4960,6 +4965,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
+- [Structured Logging](../patterns/22-observability/structured-logging.md) (Observability)
 - [Structured Output](../patterns/17-ai-agentic/structured-output.md) (AI and Agentic)
 - [Stub](../patterns/14-testing/stub.md) (Testing)
 - [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) (AI and Agentic)

@@ -322,6 +322,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A feature works for every payment method except the one added last | [Repeated Switches](../patterns/02-code-smells/repeated-switches.md) | Code Smells |
 | A feature-flag change appears in one handler but not another. | [Currying](../patterns/16-functional/currying.md) | Functional Programming |
 | A field embedded inside a tool call's JSON arguments, or a | [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) | AI and Agentic |
+| A field with an effectively unbounded number of distinct values, most often a user identifier or a request identifier... | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |
 | A field, state variable, or column is never entered by a user and never | [Replace Derived Variable with Query](../patterns/03-refactoring/replace-derived-variable-with-query.md) | Refactoring Techniques |
 | A fifth symptom is that the organization has adopted microservices, but | [Microservices Architecture](../patterns/05-architectural/microservices-architecture.md) | Architectural Patterns |
 | A file system where a directory contains files and other directories, and a | [Composite](../patterns/01-design-patterns-gof/composite.md) | Design Patterns (GoF) |
@@ -1652,6 +1653,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Feeding the watchdog with no real condition attached, from an interrupt or timer with | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | fewer total model calls in the common case. Symptom. Total spend or | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
 | Field initializer silently runs on only one thread. Symptom. A | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
+| Field names drift across services, most often because each team added its own logging independently with no shared co... | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |
 | fields are not initialised when the subclass fields are set. The symptom | [Pull Up Constructor Body](../patterns/03-refactoring/pull-up-constructor-body.md) | Refactoring Techniques |
 | fields it does not need. The symptom is a parameter object whose fields | [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) | Refactoring Techniques |
 | Files colliding across unrelated pull requests. Symptom. A single file | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
@@ -2009,6 +2011,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Lockstep releases hidden behind independent-looking pipelines. Symptom. | [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) | Anti-Patterns |
 | Log injection by record boundaries. Symptom. A single user value creates | [Output Encoding](../patterns/15-security/output-encoding.md) | Security |
 | Log line changes data. Symptom. Adding a log, metric label, template | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
+| Log volume grows unmanaged as more and more structured fields are added to more and more call sites, until ingestion ... | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |
 | Logger replacement mistake. Symptom. Production dashboards show no events | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
 | logic. Symptom. A change to one product team's composed endpoint requires a | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | logic. Symptom. Over time, a presentational component that started | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
@@ -2876,6 +2879,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Sensitive data leaking into the aggregated store. Symptom. A security | [Log Aggregation](../patterns/10-microservices/log-aggregation.md) | Microservices |
 | Sensitive data leaks into a channel with weaker access controls than the | [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) | Enterprise Integration |
 | Sensitive data, a customer's full name, an email address, a | [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) | Microservices |
+| Sensitive data, a session identifier, an access token, or personal information, is logged directly as a structured fi... | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |
 | Sensitive field spill. Symptom. A log search returns tokens, passwords, | [Audit Log](../patterns/15-security/audit-log.md) | Security |
 | Sensitive fields appear in logs after an otherwise harmless | [Functor](../patterns/16-functional/functor.md) | Functional Programming |
 | Sensitive intermediate content surfaced through the chain. Symptom. A | [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) | AI and Agentic |
@@ -3142,6 +3146,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Stringly diagnostic soup. Symptom. Callers search for substrings in Writer | [Writer Monad](../patterns/16-functional/writer-monad.md) | Functional Programming |
 | Stringly left values. Symptom. Callers compare error text such as | [Result Either](../patterns/16-functional/result-either.md) | Functional Programming |
 | Structural modification during an external traversal. Symptom. A | [Iterator](../patterns/01-design-patterns-gof/iterator.md) | Design Patterns (GoF) |
+| Structured and unstructured logging are mixed in the same service with no clear boundary, so downstream tooling has t... | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |
 | Stub over-fitted to the happy path. Symptom. A fully green test suite, and | [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) | Enterprise Application Architecture |
 | Stub reachable in production. Symptom. Real customers receive obviously | [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) | Enterprise Application Architecture |
 | stub. Symptom. Two engineers disagree in code review about whether the | [Stub](../patterns/14-testing/stub.md) | Testing |
@@ -16386,6 +16391,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - One service in the chain mints a brand new identifier instead of reusing the one it received, most often because its own instrumentation was added independently and never wired to the inbound header, which fragments what should be a single trace into two disconnected ones with no obvious symptom beyond an incomplete picture during the next incident.
 - The identifier, or a value carried alongside it, is treated as if it were secret or as an authorization token. it is neither. it is deliberately written into logs, returned to end users in error messages for support purposes, and exposed in tracing dashboards, so anything that must stay confidential does not belong inside it or beside it.
 - Extra business context, most often something that looks convenient to have on hand later, is embedded directly inside the identifier value itself rather than kept in a separate, purpose built field, which risks the identifier carrying personal data into every log line it touches. the general logging guidance on this point is that sensitive personal data is one of the categories that should usually not be recorded directly in logs (https://cheatsheetseries.owasp.org/cheatsheets/LoggingCheatSheet.html), and an identifier is a log field like any other.
+
+#### [Structured Logging](../patterns/22-observability/structured-logging.md)
+
+**Core Problem:** A traditional log line is a sentence written for a human eye, something like a request failed for user 42 after 300 milliseconds. That sentence is easy to read in isolation, and close to impossible to query reliably at scale. Finding every failed request for user 42 across a week of logs, or computing the average latency across a million such lines, means writing a fragile regular expression against a phrasing that a future code change can silently break.
+
+**Failure Mode Symptoms:**
+
+- Field names drift across services, most often because each team added its own logging independently with no shared convention, and a query written against one service's field name silently misses every other service using a different name for the same concept, exactly the class of problem the OpenTelemetry semantic conventions were built to fix (https://opentelemetry.io/docs/specs/semconv/).
+- Sensitive data, a session identifier, an access token, or personal information, is logged directly as a structured field, where general logging guidance is clear that categories such as session identification values and access tokens should usually not be recorded directly in logs (https://cheatsheetseries.owasp.org/cheatsheets/LoggingCheatSheet.html), and a structured field makes that same data trivially easy to query out at scale once it is in.
+- Log volume grows unmanaged as more and more structured fields are added to more and more call sites, until ingestion and storage cost becomes a real budget problem, which is the exact scenario Datadog's own guidance addresses by recommending routing, filtering, and sampling as close to the source as possible (https://www.datadoghq.com/blog/optimize-high-volume-logs/).
+- A field with an effectively unbounded number of distinct values, most often a user identifier or a request identifier, is added as an indexed dimension in a system built around a bounded set of values, and indexing and storage cost can rise sharply as the field's own value space and the traffic through it both grow.
+- Structured and unstructured logging are mixed in the same service with no clear boundary, so downstream tooling has to handle both shapes, and queries that assume a consistent structured shape silently miss the unstructured lines.
 
 ### Mobile Architecture
 
