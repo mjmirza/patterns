@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-23 entries, 250,341 words. Every entry carries all 18
+23 entries, 250,341 words, 10 more planned, 33 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -42,6 +42,21 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Facade](facade.md) | canonical | 11,164 | A caller needs a small, ordinary result from a subsystem that is large, correct and unpleasant to talk to. |
 | [Flyweight](flyweight.md) | canonical | 11,738 | A program needs a very large number of objects that are almost all the same, and the memory cost of representing each one separately is what is going to break it. |
 | [Proxy](proxy.md) | canonical | 9,732 | Some object is expensive, remote, dangerous, or shared, and the code that wants to use it should not have to know that. |
+
+## Planned
+
+Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
+
+- Data Access Object
+- Dependency Injection
+- Extension Object
+- Marker Interface
+- Multiton
+- Null Object
+- Private Class Data
+- Role Object
+- Servant
+- Twin
 
 ## Reading order
 
