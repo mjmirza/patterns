@@ -2,7 +2,7 @@
 
 Origin. Google SRE, AWS Well-Architected
 
-10 entries, 25,421 words. Every entry carries all 18
+11 entries, 27,944 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -14,6 +14,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Error Budget](error-budget.md) | canonical | 2,575 | Engineering teams building on top of a service and the team operating that service structurally want different things. |
 | [Game Day](game-day.md) | canonical | 2,510 | A system's resilience, a runbook's correctness, and a team's readiness are all assumptions until they are tested against a real failure. |
 | [Graceful Degradation](graceful-degradation.md) | canonical | 2,434 | When a system is overloaded, or a dependency it relies on fails, the naive response is to fail every request outright. |
+| [Regional Evacuation](regional-evacuation.md) | canonical | 2,523 | A multi-site architecture removes a single point of failure at the architectural level, but it does not by itself give an operator a fast, safe, well tested way to actually act on ... |
 | [Runbook Automation](runbook-automation.md) | canonical | 2,671 | During an incident, a person following a runbook by hand introduces two real costs. |
 | [Service Level Objective](service-level-objective.md) | canonical | 2,649 | A service either works or it does not, but complex distributed systems rarely fail as a binary. |
 | [Toil Automation](toil-automation.md) | canonical | 2,647 | As a service grows, the amount of manual operational work required to keep it running (provisioning, restarts, routine configuration changes, responding to the same class of ... |
