@@ -2,7 +2,7 @@
 
 Origin. Official Android/iOS architecture guidance
 
-1 entries, 3,836 words. Every entry carries all 18
+2 entries, 7,438 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Coordinator Pattern](coordinator-pattern.md) | canonical | 3,836 | A view controller that decides what happens after a button tap, whether to push a new screen, present a modal, or pop back, is a view controller that knows about the rest of the ... |
+| [MVVM-C (Model-View-ViewModel-Coordinator)](mvvm-c.md) | canonical | 3,602 | Plain MVVM cleanly separates a screen's own presentation logic from its view, per Microsoft's own description, "the view model implements properties and commands to which the view ... |
 
 ## Reading order
 

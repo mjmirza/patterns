@@ -208,6 +208,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A card number typed with unusual spacing, or a phone number | [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) | AI and Agentic |
 | A chain gains flags such as skipValidation, auditOnly, and | [Function Composition](../patterns/16-functional/function-composition.md) | Functional Programming |
 | A change that alters no observable behaviour still fails many | [Stub](../patterns/14-testing/stub.md) | Testing |
+| A change to a screen's presentation behavior needs to be made | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | A change to one package unexpectedly breaks a test suite in a seemingly | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | a change to the canonical schema that was intended to be backward-compatible breaks an existing adapter in production. | [Canonical Data Model](../patterns/07-integration/canonical-data-model.md) | Enterprise Integration |
 | A change to the signed-in user, made from an unrelated screen, does | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
@@ -1413,6 +1414,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Duplicated validation across controllers. Symptom. Two Controllers or route | [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) | Architectural Patterns |
 | Duplicated work between parallel siblings. Symptom, two subagents run in | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
 | Duplicates persist after idempotency was supposedly added. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
+| Duplicating the same presentation logic inside both the view model | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | During a partial zone or region outage, the system's overall | [Server-Side Service Discovery](../patterns/10-microservices/server-side-service-discovery.md) | Microservices |
 | During a real incident, the fallback targets fail almost as | [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) | AI and Agentic |
 | During a traffic spike or right after a deploy that clears | [No Caching](../patterns/18-anti-patterns/no-caching.md) | Anti-Patterns |
@@ -1640,6 +1642,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Forcing every component into a strict, single, agreed level before | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Forgetting to remove a finished child coordinator from its parent's | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | Forgetting to update a caller that mutated in place. A caller that did | [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) | Refactoring Techniques |
+| Forgetting to wire a view model's completion report at creation | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | Forgotten boundary conversion. Symptom. Invalid input is rejected by one API | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Forgotten promise, permanent hang. Symptom. a request handler or worker | [Future Promise](../patterns/09-concurrency/future-promise.md) | Concurrency and Parallelism |
 | Forwarding everything. Symptom. The new child has dozens of methods whose | [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) | Refactoring Techniques |
@@ -1914,6 +1917,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | legitimate customer messages are refused or flagged at a rate | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |
 | Legitimate outputs are refused or redacted at a rate high | [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) | AI and Agentic |
 | Letting a view controller reach directly into its coordinator's | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
+| Letting a view model perform navigation directly, such as | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Letting the number of states grow without periodically reassessing | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Letting the plant simulation's model drift out of sync with the | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
@@ -2614,6 +2618,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Report generation that takes minutes and hammers every service's | [Database per Service](../patterns/10-microservices/database-per-service.md) | Microservices |
 | Report-only becomes permanent. Symptom. Dashboards show that a new operation | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Reporting on the blocking path. Symptom. Under load, request latency | [Exception Tracking](../patterns/10-microservices/exception-tracking.md) | Microservices |
+| reporting through its coordinator. Symptom. The exact coupling | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | Repository per entity instead of per Aggregate root. Symptom, an | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
 | Representation chosen too early. Symptom. Money wraps a decimal amount, | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Reprocessing a full history takes days and the business | [Kappa Architecture](../patterns/12-data-storage/kappa-architecture.md) | Data and Storage |
@@ -4772,6 +4777,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The upstream team has no reason to accommodate the downstream's needs. | [Conformist](../patterns/11-domain-driven-design/conformist.md) | Domain-Driven Design |
 | The upstream's model is close enough to what the downstream actually | [Conformist](../patterns/11-domain-driven-design/conformist.md) | Domain-Driven Design |
 | the URL in section 9. Observable symptom, two libraries in one process | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
+| The user finishes a screen's real task, but the app appears | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | The variable has at least two non-overlapping lifetimes, or the later uses can | [Split Variable](../patterns/03-refactoring/split-variable.md) | Refactoring Techniques |
 | The variable parts occupy value positions, such as predicates, inserted | [Parameterized Query](../patterns/15-security/parameterized-query.md) | Security |
 | The variant specific behaviour is genuinely coupled to the variant's own | [Switch Statements](../patterns/02-code-smells/switch-statements.md) | Code Smells |
@@ -15934,6 +15940,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A view controller that was genuinely reusable across
 - Creating one coordinator per individual screen rather than per
 - inside the coordinator layer instead of removing it. Symptom. The
+
+#### [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md)
+
+**Core Problem:** Plain MVVM cleanly separates a screen's own presentation logic from its view, per Microsoft's own description, "the view model implements properties and commands to which the view can data bind to." But plain MVVM does not, by itself, say where the decision "what screen comes after this one" should live. If that decision is placed inside the view model, per this pattern's own composition, the view model must now know about the wider navigation graph, exactly the same coupling problem Khanlou's own Coordinator posts describe for view controllers, "your navigation flow is now spread among three different objects." MVVM-C solves this by keeping the view model scoped strictly to its own screen's presentation state, per Microsoft's own guidance, and routing every navigation decision to a coordinator, per Khanlou's own mechanism, so neither object ever needs to know about the other's responsibility.
+
+**Failure Mode Symptoms:**
+
+- Letting a view model perform navigation directly, such as
+- reporting through its coordinator. Symptom. The exact coupling
+- Forgetting to wire a view model's completion report at creation
+- The user finishes a screen's real task, but the app appears
+- Duplicating the same presentation logic inside both the view model
+- A change to a screen's presentation behavior needs to be made
 
 ### Embedded and Hardware-Software
 
