@@ -1846,6 +1846,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | In-memory state with no durability. Symptom, a routine service restart or | [Process Manager](../patterns/07-integration/process-manager.md) | Enterprise Integration |
 | Inbound messages intermittently produce a domain object in an | [Messaging Mapper](../patterns/07-integration/messaging-mapper.md) | Enterprise Integration |
 | Incompatible delegates installed together. Symptom. A tenant receives a | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
+| Incomplete transition table causing an unhandled event. This pass could not find | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |
 | Inconsistent authorization. a check applied in one resolver but forgotten in a sibling resolver over the same underly... | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |
 | Inconsistent use of the standard method mapping, such as using POST for an update that should be a PATCH, breaking th... | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |
 | Incorrect Python loop else. Symptom. Code in a Python loop else block no | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
@@ -2428,6 +2429,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Over-fetching because the composer does not know what the client actually | [API Composition](../patterns/10-microservices/api-composition.md) | Microservices |
 | Over-generalized reflective or interpreter-driven protection. Symptom. | [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) | Principles and Laws |
 | Over-layering a trivial feature. applying the full three-layer structure to a screen with no real business logic to i... | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |
+| Over-modeling. The clearest sourced critique remains the GoF caveat already quoted | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |
 | Over-retained secret. Symptom. A secret removed from current state still | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
 | Over-subscription. a screen subscribing to the entire state tree instead of the specific slice it needs, causing unne... | [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) | Mobile Architecture |
 | Over-wide error algebra. Symptom. Every function returns | [Result Either](../patterns/16-functional/result-either.md) | Functional Programming |
@@ -3141,6 +3143,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Starvation of a specific task under sustained local churn. Symptom. a profiler or trace | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
 | State and command issuance not committed atomically. Symptom. The | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | State bleed across reused containers. Symptom, an agent's second, unrelated | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
+| State drift, persisted or in-memory state disagreeing with reality. The clearest | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |
+| State explosion. Already sourced in dimension 3 with the cartesian-product example | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |
 | State explosion. Symptom. A directory with twenty-eight state classes, most | [State](../patterns/01-design-patterns-gof/state.md) | Design Patterns (GoF) |
 | State is small enough per entity, or bounded. A stream that grows without | [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) | Cloud and Distributed |
 | State leaking across in-process iterations. Symptom. A crash the engine | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
@@ -16546,6 +16550,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Errors are checked only for the resource believed to be the problem, rather than for every resource in the sweep, so a genuine error condition on an unrelated resource goes unnoticed.
 
 ### Workflow and Orchestration
+
+#### [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md)
+
+**Core Problem:** Spring Statemachine's own reference documentation states the origin story for this pattern in its Background section directly.
+
+**Failure Mode Symptoms:**
+
+- State explosion. Already sourced in dimension 3 with the cartesian-product example
+- Incomplete transition table causing an unhandled event. This pass could not find
+- State drift, persisted or in-memory state disagreeing with reality. The clearest
+- Over-modeling. The clearest sourced critique remains the GoF caveat already quoted
 
 #### [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md)
 
