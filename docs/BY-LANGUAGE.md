@@ -752,6 +752,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Idempotent API](../patterns/19-api-design/idempotent-api.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2408,6 +2409,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
+- [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) (API and Interface Design)
 - [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) (API and Interface Design)
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) (SRE and Operations)
@@ -2980,6 +2982,7 @@ These patterns contain runnable code examples written in Python:
 - [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) (AI and Agentic)
 - [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) (Frontend and UI)
 - [Page Controller](../patterns/06-enterprise-application-architecture/page-controller.md) (Enterprise Application Architecture)
+- [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) (API and Interface Design)
 - [Parallel Inheritance Hierarchies](../patterns/02-code-smells/parallel-inheritance-hierarchies.md) (Code Smells)
 - [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) (Concurrency and Parallelism)
 - [Parallelization](../patterns/17-ai-agentic/parallelization.md) (AI and Agentic)
@@ -4113,6 +4116,7 @@ These patterns contain runnable code examples written in Swift:
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) (Frontend and UI)
 - [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) (Frontend and UI)
+- [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) (API and Interface Design)
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) (Embedded and Hardware-Software)
