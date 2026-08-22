@@ -773,6 +773,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Warm Standby](../patterns/20-release-deployment/warm-standby.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Checkpoints](../patterns/21-sre-operations/checkpoints.md) | SRE and Operations |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1048,6 +1049,7 @@ These patterns contain runnable code examples written in Go:
 - [Channel Purger](../patterns/07-integration/channel-purger.md) (Enterprise Integration)
 - [Characterization Test](../patterns/14-testing/characterization-test.md) (Testing)
 - [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) (Anti-Patterns)
+- [Checkpoints](../patterns/21-sre-operations/checkpoints.md) (SRE and Operations)
 - [Choreography](../patterns/08-cloud-distributed/choreography.md) (Cloud and Distributed)
 - [Chunking Strategies](../patterns/17-ai-agentic/chunking-strategies.md) (AI and Agentic)
 - [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) (Cloud and Distributed)
@@ -2672,6 +2674,7 @@ These patterns contain runnable code examples written in Python:
 - [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
 - [Characterization Test](../patterns/14-testing/characterization-test.md) (Testing)
 - [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) (Anti-Patterns)
+- [Checkpoints](../patterns/21-sre-operations/checkpoints.md) (SRE and Operations)
 - [Choreography](../patterns/08-cloud-distributed/choreography.md) (Cloud and Distributed)
 - [Chunking Strategies](../patterns/17-ai-agentic/chunking-strategies.md) (AI and Agentic)
 - [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) (Cloud and Distributed)
@@ -4444,6 +4447,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Channel Purger](../patterns/07-integration/channel-purger.md) (Enterprise Integration)
 - [Characterization Test](../patterns/14-testing/characterization-test.md) (Testing)
 - [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) (Anti-Patterns)
+- [Checkpoints](../patterns/21-sre-operations/checkpoints.md) (SRE and Operations)
 - [Choreography](../patterns/08-cloud-distributed/choreography.md) (Cloud and Distributed)
 - [Chunking Strategies](../patterns/17-ai-agentic/chunking-strategies.md) (AI and Agentic)
 - [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) (Cloud and Distributed)
