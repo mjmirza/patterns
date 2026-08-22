@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 796,
+  "published_total": 797,
   "target_total": 882,
   "families_total": 29,
-  "families_complete": 17,
+  "families_complete": 18,
   "stale_entries": 0,
-  "references_checked": 4193,
+  "references_checked": 4194,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -266,12 +266,12 @@
       "family": "20-release-deployment",
       "name": "Release and Deployment",
       "origin": "Humble and Farley",
-      "published": 9,
-      "planned": 1,
+      "published": 10,
+      "planned": 0,
       "target": 10,
-      "percent": 90.0,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 9
+        "canonical": 10
       }
     },
     {

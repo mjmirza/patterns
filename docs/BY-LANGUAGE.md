@@ -768,6 +768,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Warm Standby](../patterns/20-release-deployment/warm-standby.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2446,6 +2447,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Toil Automation](../patterns/21-sre-operations/toil-automation.md) (SRE and Operations)
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
+- [Warm Standby](../patterns/20-release-deployment/warm-standby.md) (Release and Deployment)
 - [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) (API and Interface Design)
 - [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) (API and Interface Design)
 
@@ -3317,6 +3319,7 @@ These patterns contain runnable code examples written in Python:
 - [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
+- [Warm Standby](../patterns/20-release-deployment/warm-standby.md) (Release and Deployment)
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
 - [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) (API and Interface Design)
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
@@ -4215,6 +4218,7 @@ These patterns contain runnable code examples written in Swift:
 - [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
+- [Warm Standby](../patterns/20-release-deployment/warm-standby.md) (Release and Deployment)
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
 - [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) (API and Interface Design)
 - [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) (API and Interface Design)

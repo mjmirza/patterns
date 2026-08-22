@@ -2500,6 +2500,7 @@
  "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions": 200,
  "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas": 200,
  "https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption": 200,
+ "https://learn.microsoft.com/en-us/azure/well-architected/design-guides/disaster-recovery": 200,
  "https://learn.microsoft.com/en-us/azure/well-architected/security/secure-development-lifecycle": 200,
  "https://learn.microsoft.com/en-us/common-data-model/": 200,
  "https://learn.microsoft.com/en-us/cpp/mfc/hierarchy-chart": 200,
