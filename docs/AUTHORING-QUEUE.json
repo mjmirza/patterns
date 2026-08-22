@@ -4424,13 +4424,6 @@
     "focus": ""
   },
   {
-    "name": "Error Budget",
-    "slug": "error-budget",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/error-budget.md",
-    "focus": ""
-  },
-  {
     "name": "Toil Automation",
     "slug": "toil-automation",
     "category": "SRE and operations",

@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2379,6 +2380,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
+- [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
@@ -2707,6 +2709,7 @@ These patterns contain runnable code examples written in Python:
 - [Envelope Encryption](../patterns/15-security/envelope-encryption.md) (Security)
 - [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) (Enterprise Integration)
 - [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
+- [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
 - [Evaluation Suite](../patterns/17-ai-agentic/evaluation-suite.md) (AI and Agentic)
 - [Evaluator-Optimizer](../patterns/17-ai-agentic/evaluator-optimizer.md) (AI and Agentic)
 - [Event Message](../patterns/07-integration/event-message.md) (Enterprise Integration)
@@ -4026,6 +4029,7 @@ These patterns contain runnable code examples written in Swift:
 - [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) (Embedded and Hardware-Software)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
 - [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
+- [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)

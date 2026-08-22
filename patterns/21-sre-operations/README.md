@@ -2,13 +2,14 @@
 
 Origin. Google SRE, AWS Well-Architected
 
-1 entries, 2,649 words. Every entry carries all 18
+2 entries, 5,224 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Error Budget](error-budget.md) | canonical | 2,575 | Engineering teams building on top of a service and the team operating that service structurally want different things. |
 | [Service Level Objective](service-level-objective.md) | canonical | 2,649 | A service either works or it does not, but complex distributed systems rarely fail as a binary. |
 
 ## Reading order
