@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-761%20published%20%2F%20847%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-762%20published%20%2F%20847%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -14,10 +14,10 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-761-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-86-lightgrey)
-![Catalogue completion](https://img.shields.io/badge/completion-89.8%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-4149-brightgreen)
+![Published entries](https://img.shields.io/badge/published-762-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-85-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-90.0%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-4151-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
@@ -118,7 +118,7 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 | 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 0 | 8 | 8 |
 | 25 | [MLOps](patterns/25-mlops/) | Google ML design patterns | 0 | 9 | 9 |
 | 26 | [Interaction and HCI](patterns/26-interaction-hci/) | Tidwell, Designing Interfaces | 0 | 10 | 10 |
-| 27 | [Mobile Architecture](patterns/27-mobile-architecture/) | Official Android/iOS architecture guidance | 6 | 5 | 11 |
+| 27 | [Mobile Architecture](patterns/27-mobile-architecture/) | Official Android/iOS architecture guidance | 7 | 4 | 11 |
 | 28 | [Embedded and Hardware-Software](patterns/28-embedded-hardware/) | Embedded systems engineering literature | 14 | 0 | 14 |
 | 29 | [Real-Time Simulation](patterns/29-realtime-simulation/) | Nystrom, Game Programming Patterns | 0 | 9 | 9 |
 

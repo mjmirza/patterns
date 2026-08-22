@@ -750,6 +750,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2371,6 +2372,7 @@ These patterns contain runnable code examples written in Kotlin:
 
 - [Call Super](../patterns/18-anti-patterns/call-super.md) (Anti-Patterns)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
+- [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
@@ -2653,6 +2655,7 @@ These patterns contain runnable code examples written in Python:
 - [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) (Microservices)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-gof/decorator.md) (Design Patterns (GoF))
+- [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
@@ -3999,6 +4002,7 @@ These patterns contain runnable code examples written in Swift:
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
+- [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) (Embedded and Hardware-Software)
 - [Domain Service](../patterns/11-domain-driven-design/domain-service.md) (Domain-Driven Design)
 - [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)

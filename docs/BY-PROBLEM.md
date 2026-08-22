@@ -451,6 +451,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A plugin, once installed, is discovered to be reading or | [Plugin Architecture](../patterns/05-architectural/plugin-architecture.md) | Architectural Patterns |
 | A polling loop with no bounded timeout that can hang indefinitely if | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software |
 | A polymorphic "list all players" screen gets measurably slower | [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md) | Enterprise Application Architecture |
+| A poorly bounded route table can leak feature-specific parameter shapes into a supposedly generic layer, quietly reco... | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |
 | A post-incident review discovers that any service with network | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | A predicate exists, or can be extracted, that answers the condition without | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
 | A presentational component quietly gaining its own data-fetching | [Container Presentational](../patterns/13-frontend-ui/container-presentational.md) | Frontend and UI |
@@ -909,6 +910,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Attribute name collision. Symptom. A policy that was meant for project tags | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
 | Audit cannot tell what data a compromised key protected. Cause. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
 | Audit sink blocks the product. Symptom. Login, checkout, or admin pages | [Audit Log](../patterns/15-security/audit-log.md) | Security |
+| Auth and validation guards run once, centrally, instead of being reimplemented per feature with a risk of one feature... | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |
 | Authentication intermittently fails for a subset of servers, or | [Access Token](../patterns/10-microservices/access-token.md) | Microservices |
 | Authorization behavior changes after refactoring wrappers into | [Tail Call Optimization](../patterns/16-functional/tail-call-optimization.md) | Functional Programming |
 | Authorization from claims alone. Symptom. A token with scope=admin grants | [JWT](../patterns/15-security/jwt.md) | Security |
@@ -1119,6 +1121,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Code review pushback of "this is too simple, what about | [Keep It Simple](../patterns/04-principles-and-laws/keep-it-simple.md) | Principles and Laws |
 | Code that worked against the plain component throws | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
 | Cold cache node serves nothing for a key the store has always had. Symptom. | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
+| Cold-start deep links (the app was not running) require extra care to defer navigation until the app's own startup se... | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |
 | Collapsing a public API class. The subclass is part of a published | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
 | Collapsing a subclass that is not actually empty. A subclass that | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
 | Collapsing the wrong direction. The subclass has the real behaviour | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
@@ -1608,6 +1611,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Feature Envy hiding behind a renamed method. Symptom, a reviewer sees a | [Tell, Don't Ask](../patterns/04-principles-and-laws/tell-do-not-ask.md) | Principles and Laws |
 | feature envy in the other direction. The symptom is the same smell in the | [Move Function](../patterns/03-refactoring/move-function.md) | Refactoring Techniques |
 | Feature Envy is the most commonly observed symptom of Information Expert | [Information Expert](../patterns/04-principles-and-laws/information-expert.md) | Principles and Laws |
+| Feature modules stay independently buildable, since none of them needs to import another feature's concrete navigatio... | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |
 | Feeding the watchdog with no real condition attached, from an interrupt or timer with | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | fewer total model calls in the common case. Symptom. Total spend or | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |
 | Field initializer silently runs on only one thread. Symptom. A | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
@@ -2001,6 +2005,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Many breaks in a broad loop. Symptom. A reviewer has to search an entire | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | many times they retry. The observable symptom is an incident marked "cannot | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
 | Mapping identity changes the object, metadata, order, counter, | [Functor](../patterns/16-functional/functor.md) | Functional Programming |
+| Marketing, push, and web teams get a single, stable contract (the route table) rather than needing engineering suppor... | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |
 | Marking a component as a Client Component reflexively, out of habit | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Marking every component on the page as an island, defeating the | [Islands Architecture](../patterns/13-frontend-ui/islands-architecture.md) | Frontend and UI |
 | masks a programming error. The symptom is a function that produces no | [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) | Refactoring Techniques |
@@ -2247,6 +2252,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | One file in the repository has grown past a thousand lines and | [Mediator](../patterns/01-gof/mediator.md) | Design Patterns (GoF) |
 | One malformed or oversized row blocks every event after it | [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) | Microservices |
 | One observer takes down the notification. Symptom. Several downstream effects | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
+| One place owns URI-to-screen resolution, so link shape changes touch one file instead of every feature that might be ... | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |
 | One service's instances are frequently evicted or | [Service Deployment Platform](../patterns/10-microservices/service-deployment-platform.md) | Microservices |
 | One specific report or query, written as an escape-hatch raw SQL | [Query Object](../patterns/06-enterprise-application-architecture/query-object.md) | Enterprise Application Architecture |
 | One store calling into another store's update logic directly. | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
@@ -4593,6 +4599,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The rotation job reports success, but clients still use old | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
 | The router as a silent single point of failure. Symptom. One load | [Server-Side Discovery](../patterns/10-microservices/server-side-discovery.md) | Microservices |
 | The router as an unintended single point of failure. Symptom. Every | [Content-Based Router](../patterns/07-integration/content-based-router.md) | Enterprise Integration |
+| The router becomes a shared dependency every feature module touches indirectly, so a bug in the router has app-wide b... | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |
 | The Router ends up holding business logic, deciding, for | [VIPER](../patterns/05-architectural/viper.md) | Architectural Patterns |
 | The router grows a brain. Symptom. The routing layer starts making | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | The router grows into a business rules engine. Symptom. A single router | [Content-Based Router](../patterns/07-integration/content-based-router.md) | Enterprise Integration |
@@ -15964,6 +15971,20 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A view controller that was genuinely reusable across
 - Creating one coordinator per individual screen rather than per
 - inside the coordinator layer instead of removing it. Symptom. The
+
+#### [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md)
+
+**Core Problem:** An app receives a link from outside itself. a push notification, an email, a web page, a QR code, another app, or a Universal Link tapped in Safari. The operating system hands that link to the app, but the app still has to figure out what to DO with it. which screen to show, what data to load first, and what to do if the user is not logged in or the target no longer exists.
+
+**Failure Mode Symptoms:**
+
+- One place owns URI-to-screen resolution, so link shape changes touch one file instead of every feature that might be a target.
+- Feature modules stay independently buildable, since none of them needs to import another feature's concrete navigation types to be linked into.
+- Auth and validation guards run once, centrally, instead of being reimplemented per feature with a risk of one feature forgetting the check.
+- Marketing, push, and web teams get a single, stable contract (the route table) rather than needing engineering support for every new link.
+- The router becomes a shared dependency every feature module touches indirectly, so a bug in the router has app-wide blast radius.
+- A poorly bounded route table can leak feature-specific parameter shapes into a supposedly generic layer, quietly recoupling the modules it was meant to decouple.
+- Cold-start deep links (the app was not running) require extra care to defer navigation until the app's own startup sequence and any required data are ready, which adds real complexity the naive version of this pattern glosses over.
 
 #### [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md)
 
