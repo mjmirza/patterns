@@ -5332,5 +5332,75 @@
     "category": "ai agentic",
     "path": "patterns/17-ai-agentic/incident-to-eval-synthesis.md",
     "focus": ""
+  },
+  {
+    "name": "Checkpoints",
+    "slug": "checkpoints",
+    "category": "sre and operations",
+    "path": "patterns/21-sre-operations/checkpoints.md",
+    "focus": ""
+  },
+  {
+    "name": "Load Balancing",
+    "slug": "load-balancing",
+    "category": "cloud distributed",
+    "path": "patterns/08-cloud-distributed/load-balancing.md",
+    "focus": ""
+  },
+  {
+    "name": "Autoscaling",
+    "slug": "autoscaling",
+    "category": "cloud distributed",
+    "path": "patterns/08-cloud-distributed/autoscaling.md",
+    "focus": ""
+  },
+  {
+    "name": "Connection Pooling",
+    "slug": "connection-pooling",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/connection-pooling.md",
+    "focus": ""
+  },
+  {
+    "name": "Database Federation",
+    "slug": "database-federation",
+    "category": "data and storage",
+    "path": "patterns/12-data-storage/database-federation.md",
+    "focus": ""
+  },
+  {
+    "name": "Denormalization",
+    "slug": "denormalization",
+    "category": "data and storage",
+    "path": "patterns/12-data-storage/denormalization.md",
+    "focus": ""
+  },
+  {
+    "name": "Multi-Tenant Architecture",
+    "slug": "multi-tenant-architecture",
+    "category": "architectural",
+    "path": "patterns/05-architectural/multi-tenant-architecture.md",
+    "focus": ""
+  },
+  {
+    "name": "Byzantine Fault Tolerance",
+    "slug": "byzantine-fault-tolerance",
+    "category": "data and storage",
+    "path": "patterns/12-data-storage/byzantine-fault-tolerance.md",
+    "focus": ""
+  },
+  {
+    "name": "Distributed Hash Table",
+    "slug": "distributed-hash-table",
+    "category": "data and storage",
+    "path": "patterns/12-data-storage/distributed-hash-table.md",
+    "focus": ""
+  },
+  {
+    "name": "API and Schema Federation",
+    "slug": "api-schema-federation",
+    "category": "api and interface design",
+    "path": "patterns/19-api-design/api-schema-federation.md",
+    "focus": ""
   }
 ]
