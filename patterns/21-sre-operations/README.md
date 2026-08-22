@@ -2,7 +2,7 @@
 
 Origin. Google SRE, AWS Well-Architected
 
-9 entries, 22,883 words. Every entry carries all 18
+10 entries, 25,421 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -22,6 +22,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Multi-Site Active Active](multi-site-active-active.md) | canonical | 2,538 | A single-site or passive-standby architecture concentrates real risk in one place. |
 | [Static Stability](static-stability.md) | canonical | 2,468 | A distributed system spread across multiple availability zones or regions often relies on real-time coordination with a central control plane, or with its peers, to make decisions. |
 
 ## Reading order

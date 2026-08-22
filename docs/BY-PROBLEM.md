@@ -773,6 +773,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Adopting multi-leader replication for a low-write-latency requirement, | [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) | Data and Storage |
 | Adopting preload, render, and lazy load, but never building or | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | Adopting the archived original Flux library on a new project | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
+| Adopting this pattern for a workload whose recovery requirements would have been fully met by a much cheaper passive ... | [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) | SRE and Operations |
 | After a deployment or a brief network blip, one service's | [Distributed Transaction Coordinator Antipattern](../patterns/10-microservices/distributed-transaction-coordinator-antipattern.md) | Microservices |
 | After a network incident, the same record has two different | [Split Brain](../patterns/18-anti-patterns/split-brain.md) | Anti-Patterns |
 | After adding retries to a payment or order-creation endpoint, the | [Retry Storm](../patterns/18-anti-patterns/retry-storm.md) | Anti-Patterns |
@@ -1296,6 +1297,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Data race and corrupted map under concurrent writes. Symptom. In Go, the race | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Data silently changes shape or loses precision somewhere | [Channel Adapter](../patterns/07-integration/channel-adapter.md) | Enterprise Integration |
 | Data skew concentrating on a single key. Symptom. A job finishes almost | [Map-Reduce](../patterns/09-concurrency/map-reduce.md) | Concurrency and Parallelism |
+| Data synchronization that lags far behind real time, so a site failure still loses meaningful data even though the ar... | [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) | SRE and Operations |
 | Data the plugin was never explicitly granted access to still | [Plugin Sandbox](../patterns/05-architectural/plugin-sandbox.md) | Architectural Patterns |
 | Database connection errors appear minutes after secret rotation. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
 | Database CPU or connection-pool utilization spikes sharply and out | [No Caching](../patterns/18-anti-patterns/no-caching.md) | Anti-Patterns |
@@ -1842,6 +1844,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Instant cutover instead of graceful drain. Symptom. Draining an unhealthy | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | instead of a maintained successor. Symptom. A new codebase depends | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
 | instead of delegating. Symptom, two different teams' services disagree | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
+| Insufficient capacity headroom at the remaining sites, so a real site failure still causes overload rather than a cle... | [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) | SRE and Operations |
 | insufficient memory for two complete buffers. Symptom. The system | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
 | insufficient. Symptom. A controller passes every HIL test and is | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
 | Integration cliff. Symptom. Local demos work, but the first full environment | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
@@ -2222,6 +2225,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No escalation path, so an automated step set that cannot resolve the condition leaves the incident stuck with nobody ... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | No exception path. a policy with no carve-out for a genuine emergency fix or rollback, which can make an already-bad ... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
 | No external aid, a call hierarchy view, a maintained sequence diagram, | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
+| No genuine conflict resolution strategy, so concurrent writes at different sites silently produce inconsistent data. | [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) | SRE and Operations |
 | no genuine connection to application health. Symptom. The | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
 | no more granular boundaries inside it. Symptom. Any rendering error | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | No oracle beyond survival. Symptom. A fuzz campaign runs for weeks, finds | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
@@ -4175,6 +4179,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Test suite isolation used as the sole justification for a split. | [Nanoservices](../patterns/18-anti-patterns/nanoservices.md) | Anti-Patterns |
 | Test traffic outnumbers a low-volume channel's real messages. Symptom. A | [Test Message](../patterns/07-integration/test-message.md) | Enterprise Integration |
 | Test-only reset hooks bolted onto production code. Symptom. A method such | [Fresh Fixture](../patterns/14-testing/fresh-fixture.md) | Testing |
+| Testing failover only in a controlled exercise and never actually verifying real traffic shifts correctly under a gen... | [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) | SRE and Operations |
 | Testing only through the primary adapter. Symptom. The test suite spins | [Hexagonal Architecture](../patterns/05-architectural/hexagonal-architecture.md) | Architectural Patterns |
 | Testing theater. Symptom. Test plans exist, but evidence is missing, | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Tests become flaky after replacing a temp with now(), | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
@@ -16083,6 +16088,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - No recovery check, so the system stays in degraded mode long after the original overload or dependency failure has cleared.
 - A degradation trigger tuned so conservatively that the system degrades too late to actually prevent the cascading failure it was meant to stop.
 - Letting the degraded response path rot from lack of testing, so it silently breaks and is only discovered during a real overload, exactly when it is needed most.
+
+#### [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md)
+
+**Core Problem:** A single-site or passive-standby architecture concentrates real risk in one place. if the active site fails, the system either goes down entirely, or a standby site has to be activated, and that activation itself takes real time, during which the service is unavailable. Even a well tested standby has never actually served live production traffic before the moment it is needed most.
+
+**Failure Mode Symptoms:**
+
+- Insufficient capacity headroom at the remaining sites, so a real site failure still causes overload rather than a clean absorption of the shifted traffic.
+- No genuine conflict resolution strategy, so concurrent writes at different sites silently produce inconsistent data.
+- Data synchronization that lags far behind real time, so a site failure still loses meaningful data even though the architecture is labeled active active.
+- Adopting this pattern for a workload whose recovery requirements would have been fully met by a much cheaper passive standby strategy, paying the full ongoing cost for a resilience benefit the workload did not actually need.
+- Testing failover only in a controlled exercise and never actually verifying real traffic shifts correctly under a genuine, unplanned site failure.
 
 #### [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md)
 
