@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2397,6 +2398,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
 - [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) (SRE and Operations)
+- [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) (API and Interface Design)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
@@ -2795,6 +2797,7 @@ These patterns contain runnable code examples written in Python:
 - [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) (Data and Storage)
 - [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) (SRE and Operations)
 - [Graph of Thoughts](../patterns/17-ai-agentic/graph-of-thoughts.md) (AI and Agentic)
+- [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) (API and Interface Design)
 - [GraphRAG](../patterns/17-ai-agentic/graphrag.md) (AI and Agentic)
 - [Guaranteed Delivery](../patterns/07-integration/guaranteed-delivery.md) (Enterprise Integration)
 - [Guarded Suspension](../patterns/09-concurrency/guarded-suspension.md) (Concurrency and Parallelism)
@@ -4071,6 +4074,7 @@ These patterns contain runnable code examples written in Swift:
 - [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
 - [Golden Master](../patterns/14-testing/golden-master.md) (Testing)
 - [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) (SRE and Operations)
+- [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) (API and Interface Design)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) (Embedded and Hardware-Software)
 - [Headless Component](../patterns/13-frontend-ui/headless-component.md) (Frontend and UI)

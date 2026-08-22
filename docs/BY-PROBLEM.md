@@ -1816,6 +1816,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | In-memory state with no durability. Symptom, a routine service restart or | [Process Manager](../patterns/07-integration/process-manager.md) | Enterprise Integration |
 | Inbound messages intermittently produce a domain object in an | [Messaging Mapper](../patterns/07-integration/messaging-mapper.md) | Enterprise Integration |
 | Incompatible delegates installed together. Symptom. A tenant receives a | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
+| Inconsistent authorization. a check applied in one resolver but forgotten in a sibling resolver over the same underly... | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |
 | Inconsistent use of the standard method mapping, such as using POST for an update that should be a PATCH, breaking th... | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |
 | Incorrect Python loop else. Symptom. Code in a Python loop else block no | [Replace Control Flag with Break](../patterns/03-refactoring/replace-control-flag-with-break.md) | Refactoring Techniques |
 | increasing the retry budget, which treats the symptom rather than the cause. | [Structured Output](../patterns/17-ai-agentic/structured-output.md) | AI and Agentic |
@@ -2945,6 +2946,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Silent data loss. a last-write-wins policy by wall-clock time discards a genuinely later edit made on a device whose ... | [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |
 | Silent default from a drifted builder. A field is added to the product and | [Builder](../patterns/01-gof/builder.md) | Design Patterns (GoF) |
 | Silent default routing. Symptom. Users occasionally land on a fallback or | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |
+| Silent default-resolver mismatch. a field with no explicit resolver falls back to the default, which reads a same-nam... | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |
 | Silent drop on capacity overflow. Symptom. Units disappear with no error, | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
 | Silent drop on unmatched content. Symptom. Messages disappear with no | [Content-Based Router](../patterns/07-integration/content-based-router.md) | Enterprise Integration |
 | Silent exception swallowing inside the Scheduler loop. Symptom, a Method | [Active Object](../patterns/09-concurrency/active-object.md) | Concurrency and Parallelism |
@@ -4536,6 +4538,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The N+1 query storm from lazy proxies. Symptom. A page that renders a list of | [Proxy](../patterns/01-gof/proxy.md) | Design Patterns (GoF) |
 | The N+1 that only appears under real data. Symptom. Local development | [N+1 Query](../patterns/18-anti-patterns/n+1-query.md) | Anti-Patterns |
 | The N+1 that only shows up under real data. Symptom. A feature page | [Extraneous Fetching](../patterns/18-anti-patterns/extraneous-fetching.md) | Anti-Patterns |
+| The N-plus-one problem. a resolver on a field that appears inside a list issues its own independent data fetch once p... | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |
 | The naive warmer. Symptom. A scheduled job pings a function every few | [Serverless Architecture](../patterns/05-architectural/serverless-architecture.md) | Architectural Patterns |
 | The nested branches are mostly terminal. Once a branch is chosen, the rest of | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | The network is unreliable in the ordinary sense, packets are dropped or | [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) | Data and Storage |
@@ -5144,6 +5147,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Unbounded policy expression. Symptom. Authorization latency spikes when a | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
 | Unbounded pool growth on an open key space. Symptom. Resident memory climbs | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Unbounded proof depth on an unbalanced or adversarially grown tree. | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
+| Unbounded query depth. a client nests a query deeply enough, especially against a resolver whose field returns object... | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |
 | Unbounded queue growth under sustained overload. Symptom. Backlog depth | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | Unbounded queue masking saturation. The observable symptom is that memory usage climbs | [Thread Pool](../patterns/09-concurrency/thread-pool.md) | Concurrency and Parallelism |
 | Unbounded queueing behind a bounded resource. Symptom. Memory or thread | [Semaphore](../patterns/09-concurrency/semaphore.md) | Concurrency and Parallelism |
@@ -16038,6 +16042,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The empty intermediate class trap. Symptom. A reader tracing a bug
 
 ### API and Interface Design
+
+#### [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md)
+
+**Core Problem:** A client asking for data over an API rarely wants an entire, fixed record shape. It wants exactly the fields it needs, sometimes reaching across several related entities in one request, and rarely in the same shape two different clients would ask for. A server built around fixed endpoints returning fixed payloads forces either an ever-growing set of bespoke endpoints, one per client shape, or a single endpoint that always returns more data than most callers need.
+
+**Failure Mode Symptoms:**
+
+- The N-plus-one problem. a resolver on a field that appears inside a list issues its own independent data fetch once per list item, turning what should be one query into one query per item.
+- Unbounded query depth. a client nests a query deeply enough, especially against a resolver whose field returns objects of the same type it started from, that the server spends unbounded resolver calls answering one request.
+- Inconsistent authorization. a check applied in one resolver but forgotten in a sibling resolver over the same underlying sensitive data leaves a path a client can use to bypass the intended access control.
+- Silent default-resolver mismatch. a field with no explicit resolver falls back to the default, which reads a same-named property off the parent value, and if that property is named or shaped differently than the field, the field silently returns null instead of failing loudly.
 
 #### [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md)
 

@@ -4284,13 +4284,6 @@
     "focus": ""
   },
   {
-    "name": "GraphQL Resolver Pattern",
-    "slug": "graphql-resolver-pattern",
-    "category": "API design",
-    "path": "patterns/19-api-design/graphql-resolver-pattern.md",
-    "focus": ""
-  },
-  {
     "name": "GraphQL DataLoader",
     "slug": "graphql-dataloader",
     "category": "API design",
