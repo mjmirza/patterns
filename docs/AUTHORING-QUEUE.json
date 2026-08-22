@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "API Versioning",
-    "slug": "api-versioning",
-    "category": "API design",
-    "path": "patterns/19-api-design/api-versioning.md",
-    "focus": ""
-  },
-  {
     "name": "HATEOAS",
     "slug": "hateoas",
     "category": "API design",
