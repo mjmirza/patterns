@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Feature Toggle",
-    "slug": "feature-toggle",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/feature-toggle.md",
-    "focus": ""
-  },
-  {
     "name": "Branch by Abstraction",
     "slug": "branch-by-abstraction",
     "category": "release and deployment",
