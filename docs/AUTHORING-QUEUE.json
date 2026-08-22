@@ -4284,13 +4284,6 @@
     "focus": ""
   },
   {
-    "name": "gRPC Streaming",
-    "slug": "grpc-streaming",
-    "category": "API design",
-    "path": "patterns/19-api-design/grpc-streaming.md",
-    "focus": ""
-  },
-  {
     "name": "Webhook Receiver",
     "slug": "webhook-receiver",
     "category": "API design",

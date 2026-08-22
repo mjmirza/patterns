@@ -752,6 +752,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
+| [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2416,6 +2417,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Toil Automation](../patterns/21-sre-operations/toil-automation.md) (SRE and Operations)
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
+- [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) (API and Interface Design)
 
 #### Changes Shape in Kotlin
 
@@ -3284,6 +3286,7 @@ These patterns contain runnable code examples written in Python:
 - [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) (Principles and Laws)
 - [Zero Trust](../patterns/15-security/zero-trust.md) (Security)
 - [Zipper](../patterns/16-functional/zipper.md) (Functional Programming)
+- [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) (API and Interface Design)
 
 #### Changes Shape in Python
 
@@ -4154,6 +4157,7 @@ These patterns contain runnable code examples written in Swift:
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-gof/visitor.md) (Design Patterns (GoF))
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
+- [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) (API and Interface Design)
 
 #### Changes Shape in Swift
 
