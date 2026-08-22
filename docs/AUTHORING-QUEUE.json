@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Disaster Recovery Pilot Light",
-    "slug": "disaster-recovery-pilot-light",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/disaster-recovery-pilot-light.md",
-    "focus": ""
-  },
-  {
     "name": "Warm Standby",
     "slug": "warm-standby",
     "category": "release and deployment",
