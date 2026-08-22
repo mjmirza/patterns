@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "USE Method",
-    "slug": "use-method",
-    "category": "observability",
-    "path": "patterns/22-observability/use-method.md",
-    "focus": ""
-  },
-  {
     "name": "Span and Trace Context Propagation",
     "slug": "span-and-trace-context-propagation",
     "category": "observability",

@@ -783,6 +783,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [RED Method](../patterns/22-observability/red-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [USE Method](../patterns/22-observability/use-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1548,6 +1549,7 @@ These patterns contain runnable code examples written in Go:
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) (Data and Storage)
+- [USE Method](../patterns/22-observability/use-method.md) (Observability)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
@@ -3315,6 +3317,7 @@ These patterns contain runnable code examples written in Python:
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) (Data and Storage)
+- [USE Method](../patterns/22-observability/use-method.md) (Observability)
 - [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) (Domain-Driven Design)
 - [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
@@ -5014,6 +5017,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
+- [USE Method](../patterns/22-observability/use-method.md) (Observability)
 - [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) (Domain-Driven Design)
 - [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
