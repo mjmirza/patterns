@@ -756,6 +756,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1781,6 +1782,7 @@ These patterns have unique implementation variants or change their design struct
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
+- [Static Stability](../patterns/21-sre-operations/static-stability.md) (SRE and Operations)
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
 - [Strategy](../patterns/01-gof/strategy.md) (Design Patterns (GoF))
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
@@ -2400,6 +2402,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
 - [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
+- [Static Stability](../patterns/21-sre-operations/static-stability.md) (SRE and Operations)
 - [Toil Automation](../patterns/21-sre-operations/toil-automation.md) (SRE and Operations)
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
@@ -3185,6 +3188,7 @@ These patterns contain runnable code examples written in Python:
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-gof/state.md) (Design Patterns (GoF))
 - [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) (Cloud and Distributed)
+- [Static Stability](../patterns/21-sre-operations/static-stability.md) (SRE and Operations)
 - [Stovepipe System](../patterns/18-anti-patterns/stovepipe-system.md) (Anti-Patterns)
 - [Strangler Application](../patterns/10-microservices/strangler-application.md) (Microservices)
 - [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md) (Cloud and Distributed)
@@ -4115,6 +4119,7 @@ These patterns contain runnable code examples written in Swift:
 - [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) (Frontend and UI)
 - [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
+- [Static Stability](../patterns/21-sre-operations/static-stability.md) (SRE and Operations)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) (Anti-Patterns)
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)

@@ -4424,13 +4424,6 @@
     "focus": ""
   },
   {
-    "name": "Static Stability",
-    "slug": "static-stability",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/static-stability.md",
-    "focus": ""
-  },
-  {
     "name": "Multi-Site Active Active",
     "slug": "multi-site-active-active",
     "category": "SRE and operations",

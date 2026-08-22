@@ -2,7 +2,7 @@
 
 Origin. Google SRE, AWS Well-Architected
 
-8 entries, 20,415 words. Every entry carries all 18
+9 entries, 22,883 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -17,6 +17,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Runbook Automation](runbook-automation.md) | canonical | 2,671 | During an incident, a person following a runbook by hand introduces two real costs. |
 | [Service Level Objective](service-level-objective.md) | canonical | 2,649 | A service either works or it does not, but complex distributed systems rarely fail as a binary. |
 | [Toil Automation](toil-automation.md) | canonical | 2,647 | As a service grows, the amount of manual operational work required to keep it running (provisioning, restarts, routine configuration changes, responding to the same class of ... |
+
+## Structural
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Static Stability](static-stability.md) | canonical | 2,468 | A distributed system spread across multiple availability zones or regions often relies on real-time coordination with a central control plane, or with its peers, to make decisions. |
 
 ## Reading order
 
