@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Expand-Contract Migration",
-    "slug": "expand-contract-migration",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/expand-contract-migration.md",
-    "focus": ""
-  },
-  {
     "name": "Disaster Recovery Pilot Light",
     "slug": "disaster-recovery-pilot-light",
     "category": "release and deployment",

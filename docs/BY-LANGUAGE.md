@@ -763,6 +763,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Branch by Abstraction](../patterns/20-release-deployment/branch-by-abstraction.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Dark Launch](../patterns/20-release-deployment/dark-launch.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2416,6 +2417,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
+- [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md) (Release and Deployment)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) (Release and Deployment)
 - [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
@@ -2780,6 +2782,7 @@ These patterns contain runnable code examples written in Python:
 - [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) (Architectural Patterns)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
 - [Exception Tracking](../patterns/10-microservices/exception-tracking.md) (Microservices)
+- [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md) (Release and Deployment)
 - [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) (Cloud and Distributed)
 - [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) (Microservices)
 - [Extract Class](../patterns/03-refactoring/extract-class.md) (Refactoring Techniques)
@@ -4117,6 +4120,7 @@ These patterns contain runnable code examples written in Swift:
 - [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
+- [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md) (Release and Deployment)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) (Release and Deployment)
