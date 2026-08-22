@@ -750,6 +750,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2384,6 +2385,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
+- [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
@@ -2757,6 +2759,7 @@ These patterns contain runnable code examples written in Python:
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
 - [Future Promise](../patterns/09-concurrency/future-promise.md) (Concurrency and Parallelism)
 - [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) (Testing)
+- [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
 - [Gatekeeper](../patterns/08-cloud-distributed/gatekeeper.md) (Cloud and Distributed)
 - [Gateway Aggregation](../patterns/08-cloud-distributed/gateway-aggregation.md) (Cloud and Distributed)
 - [Gateway Offloading](../patterns/08-cloud-distributed/gateway-offloading.md) (Cloud and Distributed)
@@ -4041,6 +4044,7 @@ These patterns contain runnable code examples written in Swift:
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Form Action](../patterns/13-frontend-ui/form-action.md) (Frontend and UI)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
+- [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
 - [Golden Master](../patterns/14-testing/golden-master.md) (Testing)
 - [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) (Embedded and Hardware-Software)
 - [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) (Embedded and Hardware-Software)

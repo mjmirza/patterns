@@ -2,7 +2,7 @@
 
 Origin. Google SRE, AWS Well-Architected
 
-4 entries, 10,542 words. Every entry carries all 18
+5 entries, 13,052 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Error Budget](error-budget.md) | canonical | 2,575 | Engineering teams building on top of a service and the team operating that service structurally want different things. |
+| [Game Day](game-day.md) | canonical | 2,510 | A system's resilience, a runbook's correctness, and a team's readiness are all assumptions until they are tested against a real failure. |
 | [Runbook Automation](runbook-automation.md) | canonical | 2,671 | During an incident, a person following a runbook by hand introduces two real costs. |
 | [Service Level Objective](service-level-objective.md) | canonical | 2,649 | A service either works or it does not, but complex distributed systems rarely fail as a binary. |
 | [Toil Automation](toil-automation.md) | canonical | 2,647 | As a service grows, the amount of manual operational work required to keep it running (provisioning, restarts, routine configuration changes, responding to the same class of ... |
