@@ -517,6 +517,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A refactor to extract the shared logic is proposed and | [Copy-Paste Programming](../patterns/18-anti-patterns/copy-paste-programming.md) | Anti-Patterns |
 | A refactor toward a rich model adds a well-designed cancel() | [Anemic Domain Model](../patterns/18-anti-patterns/anemic-domain-model.md) | Anti-Patterns |
 | A refine loop that occasionally never returns, or returns | [Graph of Thoughts](../patterns/17-ai-agentic/graph-of-thoughts.md) | AI and Agentic |
+| A refresh path that silently stops working, so the statically cached state drifts far out of date long before anyone ... | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |
 | A regenerated gateway class breaks a caller at compile time, | [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) | Enterprise Application Architecture |
 | A relation always passes, no matter what is broken in the | [Metamorphic Testing](../patterns/14-testing/metamorphic-testing.md) | Testing |
 | A relation fails intermittently and the team starts ignoring | [Metamorphic Testing](../patterns/14-testing/metamorphic-testing.md) | Testing |
@@ -879,6 +880,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Applying Optimistic UI to an action with a real chance of | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
 | Applying REP where no second consumer exists. Symptom. A team spends | [Release Reuse Equivalence](../patterns/04-principles-and-laws/release-reuse-equivalence.md) | Principles and Laws |
 | Applying route-based splitting to an application with few routes, | [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) | Frontend and UI |
+| Applying this pattern to a component with no genuine multi-zone or multi-region failure mode, adding real complexity ... | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |
 | Applying Virtual List to a list small enough that it was never | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |
 | Applying write-through to a high-cardinality, rarely-read write stream. | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
 | architecture discussions. Symptom. Tracing a single request requires reading | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
@@ -903,6 +905,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Assuming an Error Boundary catches an error thrown inside an event | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Assuming every handler resumes exactly once. Symptom. Code written | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Assuming Server Functions dispatch and complete in true parallel | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
+| Assuming static stability removes the need for capacity planning, when pre-provisioned capacity still needs to be siz... | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |
 | Assuming stealing preserves ordering. Symptom. intermittent, load-dependent bugs where | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
 | Assuming the general, task-level Producer-Consumer pattern's | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
 | Async and continuation-based frameworks silently losing the value across a | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
@@ -1005,6 +1008,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Building a repository that claims to be offline-first but genuinely | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |
 | Building a skeleton whose dimensions do not match the real | [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) | Frontend and UI |
 | Building a state machine with no real upfront design, treating the | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
+| Building a system that still has a second, distinct behavior for the impaired case, reintroducing the exact bimodal b... | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |
 | Building automation with no maintenance owner, so it silently rots and the team eventually reverts to the manual proc... | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
 | Building the enhanced, JavaScript-dependent experience first, and | [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) | Frontend and UI |
 | Building the palette overlay without correct, reliable focus | [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) | Frontend and UI |
@@ -4988,6 +4992,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating the publish channel as a request-reply channel. Symptom. A | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Treating the Reference as infallible. Symptom. A bug is "fixed" in the | [Differential Testing](../patterns/14-testing/differential-testing.md) | Testing |
 | Treating the shared global overflow queue as the primary path. Symptom. the work-stealing | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
+| Treating the statically cached state as a substitute for genuine testing, when the single normal mode still needs to ... | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |
 | Treating the toil budget as a target to hit rather than a ceiling, so the team spends effort chasing a specific perce... | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
 | Treating tool-call arguments as pre-validated. Symptom, a tool call | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
 | Treating tree comparison as authoritative for conflict resolution. | [Merkle Tree](../patterns/12-data-storage/merkle-tree.md) | Data and Storage |
@@ -16102,6 +16107,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - SLO with no consequence and no owner. a target nobody actually acts on when missed, which is indistinguishable in practice from having no SLO.
 - Ignoring the SLA distinction. treating an internal SLO as if it were an externally binding SLA, creating contractual exposure the team never actually agreed to.
 - Never revisiting the target. an SLO set once at launch and left unchanged for years, even as the service, its users, and its dependencies have all changed substantially.
+
+#### [Static Stability](../patterns/21-sre-operations/static-stability.md)
+
+**Core Problem:** A distributed system spread across multiple availability zones or regions often relies on real-time coordination with a central control plane, or with its peers, to make decisions. That coordination usually works, so the system's normal, tested behavior assumes it will keep working. The problem appears exactly when that assumption breaks. a zone loses connectivity to the control plane or to a peer region, and the system now has to behave in a mode nobody has tested nearly as thoroughly as the normal one.
+
+**Failure Mode Symptoms:**
+
+- Building a system that still has a second, distinct behavior for the impaired case, reintroducing the exact bimodal behavior this pattern exists to avoid.
+- A refresh path that silently stops working, so the statically cached state drifts far out of date long before anyone notices.
+- Assuming static stability removes the need for capacity planning, when pre-provisioned capacity still needs to be sized correctly for the traffic each independent unit actually needs to serve.
+- Applying this pattern to a component with no genuine multi-zone or multi-region failure mode, adding real complexity with no corresponding resilience benefit.
+- Treating the statically cached state as a substitute for genuine testing, when the single normal mode still needs to be verified directly against real impairment conditions.
 
 #### [Toil Automation](../patterns/21-sre-operations/toil-automation.md)
 
