@@ -19,7 +19,7 @@ family,name,published,planned,target,percent
 18-anti-patterns,Anti-Patterns,51,0,51,100.0
 19-api-design,API and Interface Design,0,10,10,0.0
 20-release-deployment,Release and Deployment,0,10,10,0.0
-21-sre-operations,SRE and Operations,3,8,11,27.3
+21-sre-operations,SRE and Operations,4,7,11,36.4
 22-observability,Observability,0,8,8,0.0
 23-workflow-orchestration,Workflow and Orchestration,0,6,6,0.0
 24-stream-processing,Stream Processing,0,8,8,0.0

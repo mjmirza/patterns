@@ -750,6 +750,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2387,6 +2388,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
+- [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) (SRE and Operations)
 - [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
 - [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
@@ -3080,6 +3082,7 @@ These patterns contain runnable code examples written in Python:
 - [Routing Slip](../patterns/07-integration/routing-slip.md) (Enterprise Integration)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
 - [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) (Enterprise Application Architecture)
+- [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) (SRE and Operations)
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [STRIDE](../patterns/15-security/stride.md) (Security)
 - [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) (Domain-Driven Design)
@@ -4084,6 +4087,7 @@ These patterns contain runnable code examples written in Swift:
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
 - [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
+- [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) (SRE and Operations)
 - [SLSA Provenance](../patterns/15-security/slsa-provenance.md) (Security)
 - [Server Action](../patterns/13-frontend-ui/server-action.md) (Frontend and UI)
 - [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)

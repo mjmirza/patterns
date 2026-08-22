@@ -818,6 +818,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | An entity method sends an email, writes a log line through a | [Onion Architecture](../patterns/05-architectural/onion-architecture.md) | Architectural Patterns |
 | An entity method that internally performs a database query, a | [Information Expert](../patterns/04-principles-and-laws/information-expert.md) | Principles and Laws |
 | An enum such as Status.INVALIDCUSTOMER is returned while the real output is | [Replace Error Code with Exception](../patterns/03-refactoring/replace-error-code-with-exception.md) | Refactoring Techniques |
+| An execution log that is incomplete or hard to find, so the person who is escalated to has to reconstruct what the au... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | An expression grammar where a binary operation contains two expressions, each | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | An idempotent-looking retry or saga compensation message | [Message Expiration](../patterns/07-integration/message-expiration.md) | Enterprise Integration |
 | An incident timeline shows no deploy marker even though the on-call engineer knows a deploy happened around that time... | [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) | Microservices |
@@ -920,6 +921,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Authorization remains bundled. Symptom. A user with read permission can | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Autoboxing identity surprise. Symptom. A comparison of two boxed integers | [Flyweight](../patterns/01-gof/flyweight.md) | Design Patterns (GoF) |
 | Automated failover fires repeatedly during a period of network | [Split Brain](../patterns/18-anti-patterns/split-brain.md) | Anti-Patterns |
+| Automating a runbook before its steps have stabilized, encoding a procedure that is still actively changing and execu... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | Automating a task instead of asking whether the task needs to exist at all, missing the Workbook's own preferred stra... | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
 | Automating a task that was not genuinely repeatable, producing a brittle script that breaks on the first edge case it... | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
 | Awaiting a Rust future that is never polled. Symptom, a future is | [Async Await](../patterns/09-concurrency/async-await.md) | Concurrency and Parallelism |
@@ -1949,6 +1951,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Letting a view controller reach directly into its coordinator's | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |
 | Letting a view model perform navigation directly, such as | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | Letting a view read or mutate a piece of local state directly, | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
+| Letting the automated step set drift out of sync with the runbook document, so the human readable procedure and what ... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Letting the number of states grow without periodically reassessing | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Letting the plant simulation's model drift out of sync with the | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
@@ -2202,6 +2205,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | No cycle is ever reported by CI, yet developers still describe the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
 | No decision owner, so the timer alone does not converge. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | No emergency path. Symptom: an admin loses access during an incident. Cause: | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
+| No escalation path, so an automated step set that cannot resolve the condition leaves the incident stuck with nobody ... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | No exception path. a policy with no carve-out for a genuine emergency fix or rollback, which can make an already-bad ... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
 | No external aid, a call hierarchy view, a maintained sequence diagram, | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |
 | no genuine connection to application health. Symptom. The | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software |
@@ -4951,6 +4955,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating batch-mode latency as a bug to route around with a smaller | [Resequencer](../patterns/07-integration/resequencer.md) | Enterprise Integration |
 | Treating code execution as an approval mechanism. Symptom, a consequential | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
 | Treating fail-fast detection as thread safety. Symptom. A production system | [Iterator](../patterns/01-gof/iterator.md) | Design Patterns (GoF) |
+| Treating full automation as the only acceptable end state, when a partial automation with a deliberate escalation poi... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | Treating GraphRAG as a strict upgrade over plain RAG. Symptom. A team | [GraphRAG](../patterns/17-ai-agentic/graphrag.md) | AI and Agentic |
 | Treating IO composition as ordinary sequential statements. Symptom. | [IO Monad](../patterns/16-functional/io-monad.md) | Functional Programming |
 | Treating RCU as a general-purpose replacement for locking. Symptom. A | [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) | Concurrency and Parallelism |
@@ -16005,6 +16010,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - No exception path. a policy with no carve-out for a genuine emergency fix or rollback, which can make an already-bad incident worse by blocking the fix that would resolve it.
 - Budget attributed to the wrong cause. an outage caused by a dependency or the platform itself charged against a team's own budget, producing a freeze that has nothing to do with that team's actual releases.
 - Reset-boundary gaming. deliberately timing risky releases just after a reset to maximize available budget before the next measurement window begins, which defeats the pattern's intent of steady, ongoing risk discipline.
+
+#### [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md)
+
+**Core Problem:** During an incident, a person following a runbook by hand introduces two real costs. the time it takes a person to read, interpret, and execute each step, and the risk that a stressed or unfamiliar on-call engineer makes a mistake performing a step that a machine would perform identically every time. Google's SRE Workbook documents a real incident response where the on-call SRE validated that all automated recovery actions had been executed, and completed the mitigation steps in relevant runbooks (https://sre.google/workbook/incident-response/), showing that even a mature response still leans on a mix of automated recovery and manual runbook steps.
+
+**Failure Mode Symptoms:**
+
+- Automating a runbook before its steps have stabilized, encoding a procedure that is still actively changing and executing the wrong action faster than a person would have.
+- No escalation path, so an automated step set that cannot resolve the condition leaves the incident stuck with nobody notified.
+- An execution log that is incomplete or hard to find, so the person who is escalated to has to reconstruct what the automation already tried instead of reading it directly.
+- Treating full automation as the only acceptable end state, when a partial automation with a deliberate escalation point is often the correct and safer shape for a runbook that still has a genuine judgment step in it.
+- Letting the automated step set drift out of sync with the runbook document, so the human readable procedure and what the machine actually does silently disagree.
 
 #### [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md)
 
