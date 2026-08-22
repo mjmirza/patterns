@@ -755,6 +755,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2380,6 +2381,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
+- [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
 - [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
@@ -2449,6 +2451,7 @@ These patterns have unique implementation variants or change their design struct
 - [Primitive Obsession](../patterns/02-code-smells/primitive-obsession.md) (Code Smells)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
+- [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) (Refactoring Techniques)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
@@ -3014,6 +3017,7 @@ These patterns contain runnable code examples written in Python:
 - [Recipient List](../patterns/07-integration/recipient-list.md) (Enterprise Integration)
 - [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) (Enterprise Application Architecture)
 - [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) (Frontend and UI)
+- [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
 - [Reflexion](../patterns/17-ai-agentic/reflexion.md) (AI and Agentic)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
@@ -4058,6 +4062,7 @@ These patterns contain runnable code examples written in Swift:
 - [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) (Embedded and Hardware-Software)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) (Frontend and UI)
+- [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Redux](../patterns/13-frontend-ui/redux.md) (Frontend and UI)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
 - [Render Props](../patterns/13-frontend-ui/render-props.md) (Frontend and UI)
@@ -4142,6 +4147,7 @@ These patterns have unique implementation variants or change their design struct
 - [Prism](../patterns/16-functional/prism.md) (Functional Programming)
 - [Published Language](../patterns/11-domain-driven-design/published-language.md) (Domain-Driven Design)
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
+- [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Refused Bequest](../patterns/02-code-smells/refused-bequest.md) (Code Smells)
 - [Repeated Switches](../patterns/02-code-smells/repeated-switches.md) (Code Smells)
 - [Replace Command with Function](../patterns/03-refactoring/replace-command-with-function.md) (Refactoring Techniques)

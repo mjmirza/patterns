@@ -2,8 +2,14 @@
 
 Origin. Official Android/iOS architecture guidance
 
-10 entries, 34,207 words. Every entry carries all 18
+11 entries, 37,014 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Behavioral
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Redux for Mobile](redux-for-mobile.md) | established | 2,807 | A mobile app's state can be scattered across many ViewModels, view controllers, and singletons, each owning a private slice and mutating it directly. |
 
 ## Structural
 
