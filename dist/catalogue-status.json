@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 777,
+  "published_total": 778,
   "target_total": 847,
   "families_total": 29,
   "families_complete": 21,
   "stale_entries": 0,
-  "references_checked": 4174,
+  "references_checked": 4176,
   "rows": [
     {
       "family": "01-gof",
@@ -254,11 +254,13 @@
       "family": "19-api-design",
       "name": "API and Interface Design",
       "origin": "REST, GraphQL, gRPC specifications",
-      "published": 0,
-      "planned": 10,
+      "published": 1,
+      "planned": 9,
       "target": 10,
-      "percent": 0.0,
-      "maturity": {}
+      "percent": 10.0,
+      "maturity": {
+        "canonical": 1
+      }
     },
     {
       "family": "20-release-deployment",
