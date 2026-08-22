@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Cursor-based Pagination",
-    "slug": "cursor-based-pagination",
-    "category": "API design",
-    "path": "patterns/19-api-design/cursor-based-pagination.md",
-    "focus": ""
-  },
-  {
     "name": "API Versioning",
     "slug": "api-versioning",
     "category": "API design",

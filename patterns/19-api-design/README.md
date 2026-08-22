@@ -2,13 +2,14 @@
 
 Origin. REST, GraphQL, gRPC specifications
 
-7 entries, 17,245 words. Every entry carries all 18
+8 entries, 19,685 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Fetching
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Cursor-based Pagination](cursor-based-pagination.md) | canonical | 2,440 | A numeric offset identifies a position in a collection, but that position shifts the moment an item is inserted or removed anywhere before it. |
 | [GraphQL DataLoader](graphql-dataloader.md) | canonical | 2,525 | A resolver written for a single object works correctly and looks simple when tested in isolation, but the same resolver function runs once per instance whenever its field appears ... |
 | [GraphQL Resolver Pattern](graphql-resolver-pattern.md) | canonical | 2,638 | A client asking for data over an API rarely wants an entire, fixed record shape. |
 | [Idempotent API](idempotent-api.md) | canonical | 2,494 | A client that sends a state-changing request, creating a payment, placing an order, and does not receive a response before its own timeout fires cannot distinguish between two ... |
