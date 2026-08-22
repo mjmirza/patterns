@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 811,
+  "published_total": 812,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 18,
   "stale_entries": 0,
-  "references_checked": 4435,
+  "references_checked": 4467,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -303,11 +303,12 @@
       "family": "23-workflow-orchestration",
       "name": "Workflow and Orchestration",
       "origin": "Durable execution literature",
-      "published": 1,
-      "planned": 5,
+      "published": 2,
+      "planned": 4,
       "target": 6,
-      "percent": 16.7,
+      "percent": 33.3,
       "maturity": {
+        "canonical": 1,
         "established": 1
       }
     },

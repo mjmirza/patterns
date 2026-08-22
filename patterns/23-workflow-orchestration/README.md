@@ -2,13 +2,14 @@
 
 Origin. Durable execution literature
 
-1 entries, 7,247 words, 5 more planned, 6 total when the family is complete. Every entry carries all 18
+2 entries, 15,472 words, 4 more planned, 6 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## workflow orchestration
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [State Machine Workflow](state-machine-workflow.md) | canonical | 8,225 | Spring Statemachine's own reference documentation states the origin story for this pattern in its Background section directly. |
 | [Workflow Engine](workflow-engine.md) | established | 7,247 | A process that spans more than one service call, or that waits on a timer or a human response, cannot safely keep its state only in a running process's memory. |
 
 ## Planned
@@ -19,7 +20,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Durable Execution
 - Human Task
 - Outbox Inbox Pair
-- State Machine Workflow
 
 ## Reading order
 

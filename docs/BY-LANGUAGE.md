@@ -793,6 +793,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [USE Method](../patterns/22-observability/use-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -947,6 +948,7 @@ These patterns have unique implementation variants or change their design struct
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Specification](../patterns/11-domain-driven-design/specification.md) (Domain-Driven Design)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
+- [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) (Workflow and Orchestration)
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
 - [Template Method](../patterns/01-design-patterns-gof/template-method.md) (Design Patterns (GoF))
 - [Template View](../patterns/06-enterprise-application-architecture/template-view.md) (Enterprise Application Architecture)
@@ -1512,6 +1514,7 @@ These patterns contain runnable code examples written in Go:
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [Star Schema](../patterns/12-data-storage/star-schema.md) (Data and Storage)
+- [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) (Workflow and Orchestration)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-design-patterns-gof/state.md) (Design Patterns (GoF))
 - [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) (Cloud and Distributed)
@@ -2345,6 +2348,7 @@ These patterns have unique implementation variants or change their design struct
 - [Split Variable](../patterns/03-refactoring/split-variable.md) (Refactoring Techniques)
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
+- [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) (Workflow and Orchestration)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
@@ -3289,6 +3293,7 @@ These patterns contain runnable code examples written in Python:
 - [Star Schema](../patterns/12-data-storage/star-schema.md) (Data and Storage)
 - [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
+- [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) (Workflow and Orchestration)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-design-patterns-gof/state.md) (Design Patterns (GoF))
 - [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) (Cloud and Distributed)
@@ -3653,6 +3658,7 @@ These patterns have unique implementation variants or change their design struct
 - [Split Phase](../patterns/03-refactoring/split-phase.md) (Refactoring Techniques)
 - [Spy](../patterns/14-testing/spy.md) (Testing)
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
+- [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) (Workflow and Orchestration)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-design-patterns-gof/state.md) (Design Patterns (GoF))
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
@@ -5004,6 +5010,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [Star Schema](../patterns/12-data-storage/star-schema.md) (Data and Storage)
 - [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
+- [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) (Workflow and Orchestration)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [State](../patterns/01-design-patterns-gof/state.md) (Design Patterns (GoF))
 - [Static Content Hosting](../patterns/08-cloud-distributed/static-content-hosting.md) (Cloud and Distributed)
@@ -5274,6 +5281,7 @@ These patterns have unique implementation variants or change their design struct
 - [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) (Principles and Laws)
 - [Stable Dependencies Principle](../patterns/04-principles-and-laws/stable-dependencies-principle.md) (Principles and Laws)
 - [State Machine UI](../patterns/13-frontend-ui/state-machine-ui.md) (Frontend and UI)
+- [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) (Workflow and Orchestration)
 - [State Monad](../patterns/16-functional/state-monad.md) (Functional Programming)
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
