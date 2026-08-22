@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Correlation ID",
-    "slug": "correlation-id",
-    "category": "observability",
-    "path": "patterns/22-observability/correlation-id.md",
-    "focus": ""
-  },
-  {
     "name": "Structured Logging",
     "slug": "structured-logging",
     "category": "observability",
