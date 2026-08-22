@@ -749,6 +749,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Thundering Herd](../patterns/18-anti-patterns/thundering-herd.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
+| [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Idempotent API](../patterns/19-api-design/idempotent-api.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2397,6 +2398,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) (SRE and Operations)
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
+- [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) (API and Interface Design)
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
@@ -2685,6 +2687,7 @@ These patterns contain runnable code examples written in Python:
 - [Countdown Latch](../patterns/09-concurrency/countdown-latch.md) (Concurrency and Parallelism)
 - [Creator](../patterns/04-principles-and-laws/creator.md) (Principles and Laws)
 - [Currying](../patterns/16-functional/currying.md) (Functional Programming)
+- [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) (API and Interface Design)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
 - [Data Class](../patterns/02-code-smells/data-class.md) (Code Smells)
 - [Data Clumps](../patterns/02-code-smells/data-clumps.md) (Code Smells)
@@ -4068,6 +4071,7 @@ These patterns contain runnable code examples written in Swift:
 - [Context Selector](../patterns/13-frontend-ui/context-selector.md) (Frontend and UI)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
+- [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) (API and Interface Design)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)

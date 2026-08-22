@@ -1125,6 +1125,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Client Component that only needs a small piece of it. Symptom. The | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Client errors counted as dependency failures. | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
 | Client library drift across services. Symptom, different services in the | [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) | Microservices |
+| Client-parsed cursor. a client that reverse-engineers the cursor's internal structure and constructs its own breaks t... | [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) | API and Interface Design |
 | Client-side-only validation. Symptom. The browser blocks a bad value during | [Input Validation](../patterns/15-security/input-validation.md) | Security |
 | Clients should not know the depth. If every caller already knows it is | [Composite](../patterns/01-gof/composite.md) | Design Patterns (GoF) |
 | Clock and ordering confusion. Symptom. The same request appears to complete | [Audit Log](../patterns/15-security/audit-log.md) | Security |
@@ -1343,6 +1344,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Delegate explosion. Symptom. A directory contains dozens of one-method | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
 | Delegating method with a bad name. The method is named | [Hide Delegate](../patterns/03-refactoring/hide-delegate.md) | Refactoring Techniques |
 | Delegation overhead exceeding the work delegated. Symptom, a small, | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
+| Deleted-item cursor. a stored cursor referring to an item deleted since it was issued, with no defined server behavio... | [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) | API and Interface Design |
 | Deleting a Book also deletes Author rows that are still referenced by other books. An automatic-removal rule was appl... | [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) | Enterprise Application Architecture |
 | Deleting a root-level record silently fails with a foreign key | [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md) | Enterprise Application Architecture |
 | Denial of service threats are accepted as "not security" and | [STRIDE](../patterns/15-security/stride.md) | Security |
@@ -2263,6 +2265,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Non-reentrant acquisition on the same thread. Symptom. An immediate, | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Non-repeatable read inside one saga. Symptom. A saga validates that a | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
 | Non-replayable request body. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
+| Non-unique ordering key. a cursor derived from an ordering column that is not actually unique across the collection c... | [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) | API and Interface Design |
 | Nonce retry loop. Symptom. Clients alternate between usedpopnonce and | [Token Binding and DPoP](../patterns/15-security/token-binding-and-dpop.md) | Security |
 | Nonce skipped in flows that return ID Tokens through the front channel. | [OpenID Connect](../patterns/15-security/openid-connect.md) | Security |
 | Nondeterministic replay breaking an evaluation suite. The symptom is that | [Agentic Blackboard](../patterns/17-ai-agentic/agentic-blackboard.md) | AI and Agentic |
@@ -5225,6 +5228,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Untrusted rules with an unrestricted node set. Symptom. A security finding, | [Interpreter](../patterns/01-gof/interpreter.md) | Design Patterns (GoF) |
 | Untrusted web content reaches the generator unfiltered. Symptom. A | [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) | AI and Agentic |
 | Unused range index. Symptom observed. a range query that should be fast | [B-Tree](../patterns/12-data-storage/b-tree.md) | Data and Storage |
+| Unvalidated cursor input. a server that decodes an incoming cursor without validating it first can crash, or worse, e... | [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) | API and Interface Design |
 | Unvalidated judge shipped to production. Symptom. The evaluation | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |
 | updates efficiently. Symptom. Individual consumers now re-render | [Context Selector](../patterns/13-frontend-ui/context-selector.md) | Frontend and UI |
 | Updating one store causes an unexpected chain of changes | [Flux](../patterns/13-frontend-ui/flux.md) | Frontend and UI |
@@ -16062,6 +16066,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The empty intermediate class trap. Symptom. A reader tracing a bug
 
 ### API and Interface Design
+
+#### [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md)
+
+**Core Problem:** A numeric offset identifies a position in a collection, but that position shifts the moment an item is inserted or removed anywhere before it. A client paging sequentially through a numerically-offset collection while it changes can silently skip an item that moved past the boundary, or see an item twice that shifted the other way. This is especially visible on a fast-changing collection, a live feed, an activity log, an auto-refreshing list.
+
+**Failure Mode Symptoms:**
+
+- Client-parsed cursor. a client that reverse-engineers the cursor's internal structure and constructs its own breaks the moment the server changes its encoding, exactly the risk the opaque-cursor contract exists to prevent.
+- Non-unique ordering key. a cursor derived from an ordering column that is not actually unique across the collection can produce an ambiguous position, causing an item to be skipped or repeated even with cursor-based pagination in place.
+- Unvalidated cursor input. a server that decodes an incoming cursor without validating it first can crash, or worse, expose internal state, when handed a malformed or tampered value.
+- Deleted-item cursor. a stored cursor referring to an item deleted since it was issued, with no defined server behavior for that case, produces an undefined or inconsistent next page.
 
 #### [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md)
 
