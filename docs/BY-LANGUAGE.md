@@ -793,6 +793,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [USE Method](../patterns/22-observability/use-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1578,6 +1579,7 @@ These patterns contain runnable code examples written in Go:
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
+- [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) (Workflow and Orchestration)
 - [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) (Data and Storage)
 - [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) (Data and Storage)
 - [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) (Data and Storage)
@@ -3368,6 +3370,7 @@ These patterns contain runnable code examples written in Python:
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
+- [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) (Workflow and Orchestration)
 - [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) (Data and Storage)
 - [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) (Data and Storage)
 - [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) (Data and Storage)
@@ -3683,6 +3686,7 @@ These patterns have unique implementation variants or change their design struct
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
+- [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) (Workflow and Orchestration)
 - [Writer Monad](../patterns/16-functional/writer-monad.md) (Functional Programming)
 - [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) (Anti-Patterns)
 
@@ -5072,6 +5076,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
+- [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) (Workflow and Orchestration)
 - [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) (Data and Storage)
 - [Write-Behind Cache](../patterns/12-data-storage/write-behind-cache.md) (Data and Storage)
 - [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) (Data and Storage)

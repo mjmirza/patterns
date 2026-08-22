@@ -1863,6 +1863,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Infinite notification loop. Symptom. Stack overflow, or a UI that pegs a core | [Mediator](../patterns/01-design-patterns-gof/mediator.md) | Design Patterns (GoF) |
 | Infinite or near-infinite action loops. Symptom, the same Action, or a | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |
 | infrastructure cannot actually back up. Symptom. A project claims a | [SLSA Provenance](../patterns/15-security/slsa-provenance.md) | Security |
+| Infrastructure incidents, scoped honestly. Temporal Cloud's own public status page | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |
 | Inherited accept collapses the dispatch. Symptom. Every node in a subtree | [Visitor](../patterns/01-design-patterns-gof/visitor.md) | Design Patterns (GoF) |
 | Initial backfill of a large table takes down the source database or | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |
 | Injecting a fault into a system with no genuine designed resilience to test, producing an outage rather than a useful... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
@@ -4613,6 +4614,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The new algorithm has a clear reason to exist, such as simpler expression, | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
 | The new key appears in logs or error reports during rollout. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
 | The nodes communicate over a network that can partition, as opposed to | [Split Brain](../patterns/18-anti-patterns/split-brain.md) | Anti-Patterns |
+| The non-determinism error. This is the failure mode the whole pattern is built | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |
 | The Normal Message Channel's real, legitimate throughput drops | [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) | Enterprise Integration |
 | The normal path is valuable enough to read as a straight line. If the reader | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | The number of modes is small, closed, and known to the module that owns the | [State](../patterns/01-design-patterns-gof/state.md) | Design Patterns (GoF) |
@@ -5205,6 +5207,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Unbounded conflict accumulation. a revision-tree model that retains every conflicting branch forever without ever sur... | [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |
 | Unbounded consumption of an unbounded producer. Symptom. A process consuming | [Iterator](../patterns/01-design-patterns-gof/iterator.md) | Design Patterns (GoF) |
 | Unbounded distinct on a live stream. Symptom. Heap grows with traffic and | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
+| Unbounded event-history growth. Covered with exact thresholds in dimension 3, | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |
 | Unbounded fan-out amplifying an incident. Symptom. One producer's bug | [Message Bus](../patterns/07-integration/message-bus.md) | Enterprise Integration |
 | Unbounded fan-out inside a scope. Symptom. A scope that fans out one child | [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) | Concurrency and Parallelism |
 | Unbounded fan-out through a registry. Symptom. Adding one new implementor | [Indirection](../patterns/04-principles-and-laws/indirection.md) | Principles and Laws |
@@ -16541,6 +16544,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Saturation is skipped entirely because it seems hard to measure, when a direct measurement is often already available on the platform, Linux pressure stall information reports the share of time in which some, or all, tasks are stalled on a given resource (https://docs.kernel.org/accounting/psi.html), and skipping it in favor of Utilization alone reintroduces the exact blind spot the method exists to close.
 - Time pressure during an incident leads an investigator to check only the resource that already looks suspicious and skip the rest of the sweep, which can miss the actual bottleneck sitting on a resource nobody thought to look at, the failure mode Gregg's own caveat about limited time implicitly warns against.
 - Errors are checked only for the resource believed to be the problem, rather than for every resource in the sweep, so a genuine error condition on an unrelated resource goes unnoticed.
+
+### Workflow and Orchestration
+
+#### [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md)
+
+**Core Problem:** A process that spans more than one service call, or that waits on a timer or a human response, cannot safely keep its state only in a running process's memory. Temporal's own framing states plainly that its guarantee is that an application "will run to completion" and that if something goes wrong, such as a power outage, "it guarantees that your application can pick up right where it left off," by keeping a history of every step (docs.temporal.io, Understanding Temporal(https://docs.temporal.io/evaluate/understanding-temporal), verified 2026-08-22).
+
+**Failure Mode Symptoms:**
+
+- The non-determinism error. This is the failure mode the whole pattern is built
+- Unbounded event-history growth. Covered with exact thresholds in dimension 3,
+- Infrastructure incidents, scoped honestly. Temporal Cloud's own public status page
 
 ### Mobile Architecture
 

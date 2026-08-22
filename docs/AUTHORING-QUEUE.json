@@ -7,13 +7,6 @@
     "focus": ""
   },
   {
-    "name": "Workflow Engine",
-    "slug": "workflow-engine",
-    "category": "workflow orchestration",
-    "path": "patterns/23-workflow-orchestration/workflow-engine.md",
-    "focus": ""
-  },
-  {
     "name": "State Machine Workflow",
     "slug": "state-machine-workflow",
     "category": "workflow orchestration",
