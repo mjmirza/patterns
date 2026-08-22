@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-48 entries, 358,966 words, 11 more planned, 59 total when the family is complete. Every entry carries all 18
+48 entries, 358,966 words, 12 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -151,6 +151,7 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Collecting Parameter
 - Composite Entity
 - Composite View
+- Connection Pooling
 - Context Object
 - Intercepting Filter
 - Presentation Model

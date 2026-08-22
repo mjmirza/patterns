@@ -1,9 +1,9 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
   "published_total": 797,
-  "target_total": 882,
+  "target_total": 892,
   "families_total": 29,
-  "families_complete": 18,
+  "families_complete": 13,
   "stale_entries": 0,
   "references_checked": 4194,
   "rows": [
@@ -64,9 +64,9 @@
       "name": "Architectural Patterns",
       "origin": "Buschmann POSA 1, Bass SEI",
       "published": 30,
-      "planned": 0,
-      "target": 30,
-      "percent": 100.0,
+      "planned": 1,
+      "target": 31,
+      "percent": 96.8,
       "maturity": {
         "established": 11,
         "canonical": 18,
@@ -78,9 +78,9 @@
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
       "published": 48,
-      "planned": 11,
-      "target": 59,
-      "percent": 81.4,
+      "planned": 12,
+      "target": 60,
+      "percent": 80.0,
       "maturity": {
         "canonical": 43,
         "established": 5
@@ -103,9 +103,9 @@
       "name": "Cloud and Distributed",
       "origin": "Azure Architecture Center",
       "published": 42,
-      "planned": 0,
-      "target": 42,
-      "percent": 100.0,
+      "planned": 2,
+      "target": 44,
+      "percent": 95.5,
       "maturity": {
         "canonical": 34,
         "established": 8
@@ -157,9 +157,9 @@
       "name": "Data and Storage",
       "origin": "Kleppmann",
       "published": 41,
-      "planned": 0,
-      "target": 41,
-      "percent": 100.0,
+      "planned": 4,
+      "target": 45,
+      "percent": 91.1,
       "maturity": {
         "canonical": 30,
         "established": 10,
@@ -255,9 +255,9 @@
       "name": "API and Interface Design",
       "origin": "REST, GraphQL, gRPC specifications",
       "published": 10,
-      "planned": 0,
-      "target": 10,
-      "percent": 100.0,
+      "planned": 1,
+      "target": 11,
+      "percent": 90.9,
       "maturity": {
         "canonical": 10
       }
@@ -279,9 +279,9 @@
       "name": "SRE and Operations",
       "origin": "Google SRE, AWS Well-Architected",
       "published": 11,
-      "planned": 0,
-      "target": 11,
-      "percent": 100.0,
+      "planned": 1,
+      "target": 12,
+      "percent": 91.7,
       "maturity": {
         "canonical": 11
       }

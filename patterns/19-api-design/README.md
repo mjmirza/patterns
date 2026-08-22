@@ -2,7 +2,7 @@
 
 Origin. REST, GraphQL, gRPC specifications
 
-10 entries, 24,156 words. Every entry carries all 18
+10 entries, 24,156 words, 1 more planned, 11 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Fetching
@@ -24,6 +24,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [REST Resource Modeling](rest-resource-modeling.md) | canonical | 2,447 | An API whose endpoints are organized around actions, such as getUser or createOrder as distinct endpoint names, grows unpredictably as new actions are added, and gives a client ... |
+
+## Planned
+
+Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
+
+- API and Schema Federation
 
 ## Reading order
 
