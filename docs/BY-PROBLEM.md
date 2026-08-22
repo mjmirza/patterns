@@ -16300,6 +16300,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Running an experiment once and treating the result as permanent, when the system, its dependencies, and its traffic keep changing after that single run.
 - Treating the practice as purely a testing exercise rather than acting on what each experiment finds, so real weaknesses are discovered repeatedly but never fixed.
 
+#### [Checkpoints](../patterns/21-sre-operations/checkpoints.md)
+
+**Core Problem:** A long-running computation, a stream-processing job, a database, a multi-step workflow, or a distributed training run, must survive a crash without either losing all of its progress or keeping an unbounded record of everything that has ever happened. Google's own SRE book states the failure this pattern exists to prevent directly, describing what happens when a stalled pipeline chunk is restarted without checkpointing. "because pipeline implementations by design usually don't include checkpointing, work on all chunks is restarted from the beginning, thereby wasting the time, CPU cycles, and human effort invested in the previous cycle." (Google SRE Book, Data Processing Pipelines, see reference 4.) Apache Flink states the same problem from the stream-processing side. "Checkpoints allow Flink to recover state and positions in the streams to give the application the same semantics as a failure-free execution." (Apache Flink Docs, see reference 7.)
+
 #### [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md)
 
 **Core Problem:** During an active incident, an operator often knows which feature or which category of load is causing the problem, but has no fast, safe way to turn it off. A normal code change and deploy takes time the incident does not have, and an ad-hoc emergency change made under pressure, with no prior testing, carries real risk of making things worse.

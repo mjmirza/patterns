@@ -539,13 +539,6 @@
     "focus": ""
   },
   {
-    "name": "Checkpoints",
-    "slug": "checkpoints",
-    "category": "sre and operations",
-    "path": "patterns/21-sre-operations/checkpoints.md",
-    "focus": ""
-  },
-  {
     "name": "Load Balancing",
     "slug": "load-balancing",
     "category": "cloud distributed",
