@@ -3738,244 +3738,6 @@
     "focus": ""
   },
   {
-    "name": "Container Presentational",
-    "slug": "container-presentational",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/container-presentational.md",
-    "focus": ""
-  },
-  {
-    "name": "Compound Components",
-    "slug": "compound-components",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/compound-components.md",
-    "focus": ""
-  },
-  {
-    "name": "Render Props",
-    "slug": "render-props",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/render-props.md",
-    "focus": ""
-  },
-  {
-    "name": "Higher-Order Component",
-    "slug": "higher-order-component",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/higher-order-component.md",
-    "focus": ""
-  },
-  {
-    "name": "Hooks",
-    "slug": "hooks",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/hooks.md",
-    "focus": ""
-  },
-  {
-    "name": "Provider Pattern",
-    "slug": "provider-pattern",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/provider-pattern.md",
-    "focus": ""
-  },
-  {
-    "name": "Signals",
-    "slug": "signals",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/signals.md",
-    "focus": ""
-  },
-  {
-    "name": "Flux",
-    "slug": "flux",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/flux.md",
-    "focus": ""
-  },
-  {
-    "name": "Redux",
-    "slug": "redux",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/redux.md",
-    "focus": ""
-  },
-  {
-    "name": "State Machine UI",
-    "slug": "state-machine-ui",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/state-machine-ui.md",
-    "focus": ""
-  },
-  {
-    "name": "Atomic Design",
-    "slug": "atomic-design",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/atomic-design.md",
-    "focus": ""
-  },
-  {
-    "name": "Islands Architecture",
-    "slug": "islands-architecture",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/islands-architecture.md",
-    "focus": ""
-  },
-  {
-    "name": "Micro Frontends",
-    "slug": "micro-frontends",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/micro-frontends.md",
-    "focus": ""
-  },
-  {
-    "name": "Server Components",
-    "slug": "server-components",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/server-components.md",
-    "focus": ""
-  },
-  {
-    "name": "Progressive Enhancement",
-    "slug": "progressive-enhancement",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/progressive-enhancement.md",
-    "focus": ""
-  },
-  {
-    "name": "Optimistic UI",
-    "slug": "optimistic-ui",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/optimistic-ui.md",
-    "focus": ""
-  },
-  {
-    "name": "Skeleton and Suspense",
-    "slug": "skeleton-and-suspense",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/skeleton-and-suspense.md",
-    "focus": ""
-  },
-  {
-    "name": "Virtual List",
-    "slug": "virtual-list",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/virtual-list.md",
-    "focus": ""
-  },
-  {
-    "name": "Infinite Scroll",
-    "slug": "infinite-scroll",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/infinite-scroll.md",
-    "focus": ""
-  },
-  {
-    "name": "PRPL Pattern",
-    "slug": "prpl-pattern",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/prpl-pattern.md",
-    "focus": ""
-  },
-  {
-    "name": "Resource Hints",
-    "slug": "resource-hints",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/resource-hints.md",
-    "focus": ""
-  },
-  {
-    "name": "Code Splitting",
-    "slug": "code-splitting",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/code-splitting.md",
-    "focus": ""
-  },
-  {
-    "name": "Route-based Lazy Loading",
-    "slug": "route-based-lazy-loading",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/route-based-lazy-loading.md",
-    "focus": ""
-  },
-  {
-    "name": "Debounce and Throttle",
-    "slug": "debounce-and-throttle",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/debounce-and-throttle.md",
-    "focus": ""
-  },
-  {
-    "name": "Headless Component",
-    "slug": "headless-component",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/headless-component.md",
-    "focus": ""
-  },
-  {
-    "name": "Slot and Children as API",
-    "slug": "slot-and-children-as-api",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/slot-and-children-as-api.md",
-    "focus": ""
-  },
-  {
-    "name": "Reducer Hook",
-    "slug": "reducer-hook",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/reducer-hook.md",
-    "focus": ""
-  },
-  {
-    "name": "Context Selector",
-    "slug": "context-selector",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/context-selector.md",
-    "focus": ""
-  },
-  {
-    "name": "Server Action",
-    "slug": "server-action",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/server-action.md",
-    "focus": ""
-  },
-  {
-    "name": "Form Action",
-    "slug": "form-action",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/form-action.md",
-    "focus": ""
-  },
-  {
-    "name": "Error Boundary",
-    "slug": "error-boundary",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/error-boundary.md",
-    "focus": ""
-  },
-  {
-    "name": "Hydration Island",
-    "slug": "hydration-island",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/hydration-island.md",
-    "focus": ""
-  },
-  {
-    "name": "Command Palette UI",
-    "slug": "command-palette-ui",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/command-palette-ui.md",
-    "focus": ""
-  },
-  {
-    "name": "Undo Stack",
-    "slug": "undo-stack",
-    "category": "frontend and UI",
-    "path": "patterns/13-frontend-ui/undo-stack.md",
-    "focus": ""
-  },
-  {
     "name": "Secure by Default",
     "slug": "secure-by-default",
     "category": "security",
@@ -4141,13 +3903,6 @@
     "slug": "audit-log",
     "category": "security",
     "path": "patterns/15-security/audit-log.md",
-    "focus": ""
-  },
-  {
-    "name": "Idempotency Key",
-    "slug": "idempotency-key",
-    "category": "security",
-    "path": "patterns/15-security/idempotency-key.md",
     "focus": ""
   },
   {
@@ -4519,223 +4274,6 @@
     "slug": "over-agentification",
     "category": "anti-pattern",
     "path": "patterns/18-anti-patterns/over-agentification.md",
-    "focus": ""
-  },
-  {
-    "name": "REST Resource Modeling",
-    "slug": "rest-resource-modeling",
-    "category": "API design",
-    "path": "patterns/19-api-design/rest-resource-modeling.md",
-    "focus": ""
-  },
-  {
-    "name": "GraphQL Resolver Pattern",
-    "slug": "graphql-resolver-pattern",
-    "category": "API design",
-    "path": "patterns/19-api-design/graphql-resolver-pattern.md",
-    "focus": ""
-  },
-  {
-    "name": "GraphQL DataLoader",
-    "slug": "graphql-dataloader",
-    "category": "API design",
-    "path": "patterns/19-api-design/graphql-dataloader.md",
-    "focus": ""
-  },
-  {
-    "name": "gRPC Streaming",
-    "slug": "grpc-streaming",
-    "category": "API design",
-    "path": "patterns/19-api-design/grpc-streaming.md",
-    "focus": ""
-  },
-  {
-    "name": "Webhook Receiver",
-    "slug": "webhook-receiver",
-    "category": "API design",
-    "path": "patterns/19-api-design/webhook-receiver.md",
-    "focus": ""
-  },
-  {
-    "name": "Idempotent API",
-    "slug": "idempotent-api",
-    "category": "API design",
-    "path": "patterns/19-api-design/idempotent-api.md",
-    "focus": ""
-  },
-  {
-    "name": "Pagination Pattern",
-    "slug": "pagination-pattern",
-    "category": "API design",
-    "path": "patterns/19-api-design/pagination-pattern.md",
-    "focus": ""
-  },
-  {
-    "name": "Cursor-based Pagination",
-    "slug": "cursor-based-pagination",
-    "category": "API design",
-    "path": "patterns/19-api-design/cursor-based-pagination.md",
-    "focus": ""
-  },
-  {
-    "name": "API Versioning",
-    "slug": "api-versioning",
-    "category": "API design",
-    "path": "patterns/19-api-design/api-versioning.md",
-    "focus": ""
-  },
-  {
-    "name": "HATEOAS",
-    "slug": "hateoas",
-    "category": "API design",
-    "path": "patterns/19-api-design/hateoas.md",
-    "focus": ""
-  },
-  {
-    "name": "Blue-Green Deployment",
-    "slug": "blue-green-deployment",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/blue-green-deployment.md",
-    "focus": ""
-  },
-  {
-    "name": "Canary Release",
-    "slug": "canary-release",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/canary-release.md",
-    "focus": ""
-  },
-  {
-    "name": "Rolling Deployment",
-    "slug": "rolling-deployment",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/rolling-deployment.md",
-    "focus": ""
-  },
-  {
-    "name": "Shadow Traffic",
-    "slug": "shadow-traffic",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/shadow-traffic.md",
-    "focus": ""
-  },
-  {
-    "name": "Dark Launch",
-    "slug": "dark-launch",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/dark-launch.md",
-    "focus": ""
-  },
-  {
-    "name": "Feature Toggle",
-    "slug": "feature-toggle",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/feature-toggle.md",
-    "focus": ""
-  },
-  {
-    "name": "Branch by Abstraction",
-    "slug": "branch-by-abstraction",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/branch-by-abstraction.md",
-    "focus": ""
-  },
-  {
-    "name": "Expand-Contract Migration",
-    "slug": "expand-contract-migration",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/expand-contract-migration.md",
-    "focus": ""
-  },
-  {
-    "name": "Disaster Recovery Pilot Light",
-    "slug": "disaster-recovery-pilot-light",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/disaster-recovery-pilot-light.md",
-    "focus": ""
-  },
-  {
-    "name": "Warm Standby",
-    "slug": "warm-standby",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/warm-standby.md",
-    "focus": ""
-  },
-  {
-    "name": "Service Level Objective",
-    "slug": "service-level-objective",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/service-level-objective.md",
-    "focus": ""
-  },
-  {
-    "name": "Error Budget",
-    "slug": "error-budget",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/error-budget.md",
-    "focus": ""
-  },
-  {
-    "name": "Toil Automation",
-    "slug": "toil-automation",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/toil-automation.md",
-    "focus": ""
-  },
-  {
-    "name": "Runbook Automation",
-    "slug": "runbook-automation",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/runbook-automation.md",
-    "focus": ""
-  },
-  {
-    "name": "Game Day",
-    "slug": "game-day",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/game-day.md",
-    "focus": ""
-  },
-  {
-    "name": "Chaos Engineering",
-    "slug": "chaos-engineering",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/chaos-engineering.md",
-    "focus": ""
-  },
-  {
-    "name": "Graceful Degradation",
-    "slug": "graceful-degradation",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/graceful-degradation.md",
-    "focus": ""
-  },
-  {
-    "name": "Emergency Lever",
-    "slug": "emergency-lever",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/emergency-lever.md",
-    "focus": ""
-  },
-  {
-    "name": "Static Stability",
-    "slug": "static-stability",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/static-stability.md",
-    "focus": ""
-  },
-  {
-    "name": "Multi-Site Active Active",
-    "slug": "multi-site-active-active",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/multi-site-active-active.md",
-    "focus": ""
-  },
-  {
-    "name": "Regional Evacuation",
-    "slug": "regional-evacuation",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/regional-evacuation.md",
     "focus": ""
   },
   {
@@ -5488,188 +5026,6 @@
     "focus": ""
   },
   {
-    "name": "MVVM-C (Model-View-ViewModel-Coordinator)",
-    "slug": "mvvm-c",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/mvvm-c.md",
-    "focus": ""
-  },
-  {
-    "name": "Coordinator Pattern",
-    "slug": "coordinator-pattern",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/coordinator-pattern.md",
-    "focus": ""
-  },
-  {
-    "name": "Model-View-Intent (MVI)",
-    "slug": "model-view-intent",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/model-view-intent.md",
-    "focus": ""
-  },
-  {
-    "name": "Unidirectional Data Flow (Mobile)",
-    "slug": "unidirectional-data-flow",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/unidirectional-data-flow.md",
-    "focus": ""
-  },
-  {
-    "name": "Repository Pattern (Mobile Offline-First)",
-    "slug": "repository-pattern",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/repository-pattern.md",
-    "focus": ""
-  },
-  {
-    "name": "ViewModel with State Hoisting",
-    "slug": "viewmodel-with-state-hoisting",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md",
-    "focus": ""
-  },
-  {
-    "name": "Feature Modules",
-    "slug": "feature-modules",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/feature-modules.md",
-    "focus": ""
-  },
-  {
-    "name": "Deep Link Router",
-    "slug": "deep-link-router",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/deep-link-router.md",
-    "focus": ""
-  },
-  {
-    "name": "Offline-First Sync",
-    "slug": "offline-first-sync",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/offline-first-sync.md",
-    "focus": ""
-  },
-  {
-    "name": "Single Activity Architecture",
-    "slug": "single-activity-architecture",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/single-activity-architecture.md",
-    "focus": ""
-  },
-  {
-    "name": "Clean Architecture (Mobile)",
-    "slug": "clean-architecture",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/clean-architecture.md",
-    "focus": ""
-  },
-  {
-    "name": "Redux-for-Mobile (Unidirectional Store)",
-    "slug": "redux-for-mobile",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/redux-for-mobile.md",
-    "focus": ""
-  },
-  {
-    "name": "Hardware Abstraction Layer (HAL)",
-    "slug": "hardware-abstraction-layer",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/hardware-abstraction-layer.md",
-    "focus": ""
-  },
-  {
-    "name": "Interrupt Service Routine",
-    "slug": "interrupt-service-routine",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/interrupt-service-routine.md",
-    "focus": ""
-  },
-  {
-    "name": "Watchdog Timer",
-    "slug": "watchdog-timer",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/watchdog-timer.md",
-    "focus": ""
-  },
-  {
-    "name": "State Machine (Embedded)",
-    "slug": "state-machine",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/state-machine.md",
-    "focus": ""
-  },
-  {
-    "name": "Double Buffering",
-    "slug": "double-buffering",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/double-buffering.md",
-    "focus": ""
-  },
-  {
-    "name": "Ring Buffer",
-    "slug": "ring-buffer",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/ring-buffer.md",
-    "focus": ""
-  },
-  {
-    "name": "Memory Pool (Fixed Block Allocator)",
-    "slug": "memory-pool",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/memory-pool.md",
-    "focus": ""
-  },
-  {
-    "name": "Polling Loop",
-    "slug": "polling-loop",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/polling-loop.md",
-    "focus": ""
-  },
-  {
-    "name": "Bootloader Pattern",
-    "slug": "bootloader-pattern",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/bootloader-pattern.md",
-    "focus": ""
-  },
-  {
-    "name": "Rate Monotonic Scheduling",
-    "slug": "rate-monotonic-scheduling",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/rate-monotonic-scheduling.md",
-    "focus": ""
-  },
-  {
-    "name": "Earliest Deadline First Scheduling",
-    "slug": "earliest-deadline-first-scheduling",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md",
-    "focus": ""
-  },
-  {
-    "name": "Hardware-in-the-Loop Testing",
-    "slug": "hardware-in-the-loop-testing",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/hardware-in-the-loop-testing.md",
-    "focus": ""
-  },
-  {
-    "name": "Producer-Consumer (Embedded)",
-    "slug": "producer-consumer",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/producer-consumer.md",
-    "focus": ""
-  },
-  {
-    "name": "Device Driver Pattern",
-    "slug": "device-driver-pattern",
-    "category": "embedded and hardware-software",
-    "path": "patterns/28-embedded-hardware/device-driver-pattern.md",
-    "focus": ""
-  },
-  {
     "name": "Game Loop",
     "slug": "game-loop",
     "category": "real-time simulation",
@@ -5730,6 +5086,321 @@
     "slug": "event-queue",
     "category": "real-time simulation",
     "path": "patterns/29-realtime-simulation/event-queue.md",
+    "focus": ""
+  },
+  {
+    "name": "Null Object",
+    "slug": "null-object",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/null-object.md",
+    "focus": ""
+  },
+  {
+    "name": "Dependency Injection",
+    "slug": "dependency-injection",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/dependency-injection.md",
+    "focus": ""
+  },
+  {
+    "name": "Data Access Object",
+    "slug": "data-access-object",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/data-access-object.md",
+    "focus": ""
+  },
+  {
+    "name": "Marker Interface",
+    "slug": "marker-interface",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/marker-interface.md",
+    "focus": ""
+  },
+  {
+    "name": "Multiton",
+    "slug": "multiton",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/multiton.md",
+    "focus": ""
+  },
+  {
+    "name": "Private Class Data",
+    "slug": "private-class-data",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/private-class-data.md",
+    "focus": ""
+  },
+  {
+    "name": "Servant",
+    "slug": "servant",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/servant.md",
+    "focus": ""
+  },
+  {
+    "name": "Twin",
+    "slug": "twin",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/twin.md",
+    "focus": ""
+  },
+  {
+    "name": "Extension Object",
+    "slug": "extension-object",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/extension-object.md",
+    "focus": ""
+  },
+  {
+    "name": "Role Object",
+    "slug": "role-object",
+    "category": "design patterns gof",
+    "path": "patterns/01-design-patterns-gof/role-object.md",
+    "focus": ""
+  },
+  {
+    "name": "Service Layer",
+    "slug": "service-layer",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/service-layer.md",
+    "focus": ""
+  },
+  {
+    "name": "Presentation Model",
+    "slug": "presentation-model",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/presentation-model.md",
+    "focus": ""
+  },
+  {
+    "name": "Business Delegate",
+    "slug": "business-delegate",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/business-delegate.md",
+    "focus": ""
+  },
+  {
+    "name": "Composite Entity",
+    "slug": "composite-entity",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/composite-entity.md",
+    "focus": ""
+  },
+  {
+    "name": "Composite View",
+    "slug": "composite-view",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/composite-view.md",
+    "focus": ""
+  },
+  {
+    "name": "Context Object",
+    "slug": "context-object",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/context-object.md",
+    "focus": ""
+  },
+  {
+    "name": "Session Facade",
+    "slug": "session-facade",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/session-facade.md",
+    "focus": ""
+  },
+  {
+    "name": "View Helper",
+    "slug": "view-helper",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/view-helper.md",
+    "focus": ""
+  },
+  {
+    "name": "Intercepting Filter",
+    "slug": "intercepting-filter",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/intercepting-filter.md",
+    "focus": ""
+  },
+  {
+    "name": "Tolerant Reader",
+    "slug": "tolerant-reader",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/tolerant-reader.md",
+    "focus": ""
+  },
+  {
+    "name": "Collecting Parameter",
+    "slug": "collecting-parameter",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/collecting-parameter.md",
+    "focus": ""
+  },
+  {
+    "name": "Inversion of Control",
+    "slug": "inversion-of-control",
+    "category": "principles and laws",
+    "path": "patterns/04-principles-and-laws/inversion-of-control.md",
+    "focus": ""
+  },
+  {
+    "name": "Dual LLM Pattern",
+    "slug": "dual-llm-pattern",
+    "category": "security",
+    "path": "patterns/15-security/dual-llm-pattern.md",
+    "focus": ""
+  },
+  {
+    "name": "Lethal Trifecta Threat Model",
+    "slug": "lethal-trifecta-threat-model",
+    "category": "security",
+    "path": "patterns/15-security/lethal-trifecta-threat-model.md",
+    "focus": ""
+  },
+  {
+    "name": "Egress Lockdown",
+    "slug": "egress-lockdown",
+    "category": "security",
+    "path": "patterns/15-security/egress-lockdown.md",
+    "focus": ""
+  },
+  {
+    "name": "Context Window Auto-Compaction",
+    "slug": "context-window-auto-compaction",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/context-window-auto-compaction.md",
+    "focus": ""
+  },
+  {
+    "name": "Prompt Caching via Exact Prefix Preservation",
+    "slug": "prompt-caching-exact-prefix",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/prompt-caching-exact-prefix.md",
+    "focus": ""
+  },
+  {
+    "name": "Language Agent Tree Search",
+    "slug": "language-agent-tree-search",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/language-agent-tree-search.md",
+    "focus": ""
+  },
+  {
+    "name": "Self-Discover",
+    "slug": "self-discover",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/self-discover.md",
+    "focus": ""
+  },
+  {
+    "name": "RLAIF",
+    "slug": "rlaif",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/rlaif.md",
+    "focus": ""
+  },
+  {
+    "name": "Filesystem-Based Agent State",
+    "slug": "filesystem-based-agent-state",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/filesystem-based-agent-state.md",
+    "focus": ""
+  },
+  {
+    "name": "Code Mode",
+    "slug": "code-mode",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/code-mode.md",
+    "focus": ""
+  },
+  {
+    "name": "Inference-Time Scaling",
+    "slug": "inference-time-scaling",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/inference-time-scaling.md",
+    "focus": ""
+  },
+  {
+    "name": "Hook-Based Safety Guard Rails",
+    "slug": "hook-based-safety-guard-rails",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/hook-based-safety-guard-rails.md",
+    "focus": ""
+  },
+  {
+    "name": "Incident-to-Eval Synthesis",
+    "slug": "incident-to-eval-synthesis",
+    "category": "ai agentic",
+    "path": "patterns/17-ai-agentic/incident-to-eval-synthesis.md",
+    "focus": ""
+  },
+  {
+    "name": "Checkpoints",
+    "slug": "checkpoints",
+    "category": "sre and operations",
+    "path": "patterns/21-sre-operations/checkpoints.md",
+    "focus": ""
+  },
+  {
+    "name": "Load Balancing",
+    "slug": "load-balancing",
+    "category": "cloud distributed",
+    "path": "patterns/08-cloud-distributed/load-balancing.md",
+    "focus": ""
+  },
+  {
+    "name": "Autoscaling",
+    "slug": "autoscaling",
+    "category": "cloud distributed",
+    "path": "patterns/08-cloud-distributed/autoscaling.md",
+    "focus": ""
+  },
+  {
+    "name": "Connection Pooling",
+    "slug": "connection-pooling",
+    "category": "enterprise application architecture",
+    "path": "patterns/06-enterprise-application-architecture/connection-pooling.md",
+    "focus": ""
+  },
+  {
+    "name": "Database Federation",
+    "slug": "database-federation",
+    "category": "data and storage",
+    "path": "patterns/12-data-storage/database-federation.md",
+    "focus": ""
+  },
+  {
+    "name": "Denormalization",
+    "slug": "denormalization",
+    "category": "data and storage",
+    "path": "patterns/12-data-storage/denormalization.md",
+    "focus": ""
+  },
+  {
+    "name": "Multi-Tenant Architecture",
+    "slug": "multi-tenant-architecture",
+    "category": "architectural",
+    "path": "patterns/05-architectural/multi-tenant-architecture.md",
+    "focus": ""
+  },
+  {
+    "name": "Byzantine Fault Tolerance",
+    "slug": "byzantine-fault-tolerance",
+    "category": "data and storage",
+    "path": "patterns/12-data-storage/byzantine-fault-tolerance.md",
+    "focus": ""
+  },
+  {
+    "name": "Distributed Hash Table",
+    "slug": "distributed-hash-table",
+    "category": "data and storage",
+    "path": "patterns/12-data-storage/distributed-hash-table.md",
+    "focus": ""
+  },
+  {
+    "name": "API and Schema Federation",
+    "slug": "api-schema-federation",
+    "category": "api and interface design",
+    "path": "patterns/19-api-design/api-schema-federation.md",
     "focus": ""
   }
 ]

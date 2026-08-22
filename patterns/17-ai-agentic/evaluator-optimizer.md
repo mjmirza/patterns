@@ -707,7 +707,7 @@ function that decides which branch of the tree to expand next.
 decomposed into a sequence of independent, specialized checks, a schema
 checker, then a safety checker, then a factuality checker, each able to
 reject and hand off to the next, that decomposition is a direct application
-of the classical [`chain-of-responsibility`](../01-gof/chain-of-responsibility.md)
+of the classical [`chain-of-responsibility`](../01-design-patterns-gof/chain-of-responsibility.md)
 pattern to the evaluator role specifically, one named GoF pattern
 implementing one participant of this one.
 

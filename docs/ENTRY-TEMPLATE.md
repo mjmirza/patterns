@@ -31,7 +31,7 @@ master reference and a getting started overview, and it is enforced by
 ---
 name: Chain of Responsibility
 slug: chain-of-responsibility
-family: 01-gof
+family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Chain of Command, Responsibility Chain]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
@@ -144,6 +144,33 @@ Where it is silent, say so plainly rather than inventing a concern.
 Every source used, with author, title, edition or version, page or section, URL
 where one exists, and the date the URL was verified. Sources must be
 independently checkable by a reader.
+
+#### Evidence confidence (optional addendum)
+
+An author may close dimension 18 with a short, honest confidence tag on the
+entry's own sourcing, distinct from `maturity` in the frontmatter. `maturity`
+grades how settled the PATTERN is in industry. This addendum grades how solid
+the SOURCING behind this particular entry is, which can diverge, a contested
+pattern can still be sourced with high confidence, and a canonical one can
+still lean on a thin citation somewhere.
+
+```markdown
+**Evidence grade.** high | medium | low | mixed | unknown
+
+**Most solid findings.** One to three bullets naming the claims this entry is
+most confident in and why.
+
+**Unverified or unclear.** What still needs a closer source before it should
+be treated as settled fact, named plainly rather than smoothed over.
+```
+
+Optional, new-only. Existing entries are not retroactively required to carry
+it, and `tools/check-structure.py` does not enforce it, the same new-only
+posture as the advisory duplicate check. Adopted from the `evidence_grade` and
+`evidence_snapshot` convention in nibzard/awesome-agentic-patterns'
+`TEMPLATE.md`, adapted here as a documented addendum inside dimension 18
+rather than a frontmatter-only tag, since our dimension 18 already carries the
+per-source detail this confidence judgement sits beside.
 
 ## Code examples
 
