@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "Redux-for-Mobile (Unidirectional Store)",
-    "slug": "redux-for-mobile",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/redux-for-mobile.md",
-    "focus": ""
-  },
-  {
     "name": "Game Loop",
     "slug": "game-loop",
     "category": "real-time simulation",

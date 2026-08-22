@@ -746,6 +746,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Accumulator smuggled into a closure. Symptom. A pipeline has push, | [Replace Loop with Pipeline](../patterns/03-refactoring/replace-loop-with-pipeline.md) | Refactoring Techniques |
 | Accuracy on a new task domain is far below the numbers | [Least to Most](../patterns/17-ai-agentic/least-to-most.md) | AI and Agentic |
 | across more than three files. Fix, the same consolidation, but this symptom | [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) | Code Smells |
+| Action explosion. an action type created for every trivial UI detail instead of a real domain event, producing hundre... | [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) | Mobile Architecture |
 | actual benefit. The observable symptom is a reviewer asking why a piece of | [Idiomatic](../patterns/04-principles-and-laws/idiomatic.md) | Principles and Laws |
 | actually use the application. Symptom. A session that visits route | [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) | Frontend and UI |
 | Adapter used where the target has one implementation. Symptom. An interface | [Adapter](../patterns/01-gof/adapter.md) | Design Patterns (GoF) |
@@ -1784,6 +1785,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Implementor calling back into the abstraction. Symptom. A cyclic dependency | [Bridge](../patterns/01-gof/bridge.md) | Design Patterns (GoF) |
 | Implicit interpreter surprise. Symptom. The same test passes in one package | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
 | Import cycles in languages that enforce an acyclic module graph. Symptom. | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
+| Impure reducers. a reducer that performs a network call, mutates its input state directly, or reads external mutable ... | [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) | Mobile Architecture |
 | in one request. The symptom is intermittent mismatched pairs under configuration | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | in the deleted class. The symptom is a class with no behaviour after the | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
 | In-memory state with no durability. Symptom, a routine service restart or | [Process Manager](../patterns/07-integration/process-manager.md) | Enterprise Integration |
@@ -2119,6 +2121,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Modifying a matching value drops metadata from the original | [Prism](../patterns/16-functional/prism.md) | Functional Programming |
 | Monad transformer pile. Symptom. Type errors mention several transformer | [Monad](../patterns/16-functional/monad.md) | Functional Programming |
 | Monolithic navigation graph. every feature adding destinations directly to one flat graph instead of nested sub-graph... | [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |
+| Monolithic state tree. one giant, undivided state object that every feature reads and writes, turning the store itsel... | [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) | Mobile Architecture |
 | monolithic test, because that treats the symptom rather than the | [God Object](../patterns/18-anti-patterns/god-object.md) | Anti-Patterns |
 | Monotonic key hot spot. Symptom observed. inserts that were fast at | [B-Tree](../patterns/12-data-storage/b-tree.md) | Data and Storage |
 | Monotonic Scheduling. Symptom. The schedulability guarantee the | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
@@ -2344,6 +2347,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Over-generalized reflective or interpreter-driven protection. Symptom. | [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) | Principles and Laws |
 | Over-layering a trivial feature. applying the full three-layer structure to a screen with no real business logic to i... | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |
 | Over-retained secret. Symptom. A secret removed from current state still | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
+| Over-subscription. a screen subscribing to the entire state tree instead of the specific slice it needs, causing unne... | [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) | Mobile Architecture |
 | Over-wide error algebra. Symptom. Every function returns | [Result Either](../patterns/16-functional/result-either.md) | Functional Programming |
 | Overbroad break-glass rule. Symptom. Incident responders can read resources | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
 | Overbroad delegate interface. Symptom. Most delegate implementations return | [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) | Refactoring Techniques |
@@ -2868,6 +2872,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Sibling explosion with no reconciliation policy. Symptom. Reads return | [Vector Clock](../patterns/12-data-storage/vector-clock.md) | Data and Storage |
 | Side effect extraction. The block modifies a local variable of the | [Extract Function](../patterns/03-refactoring/extract-function.md) | Refactoring Techniques |
 | Side effects hidden in a reusable stage. Symptom. A batch run and a channel | [Transducer](../patterns/16-functional/transducer.md) | Functional Programming |
+| Side effects leaking into the reducer. an async call or a mutation smuggled into what should be a pure function, sile... | [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) | Mobile Architecture |
 | Side effects performed inside the reducer. Symptom. A test that calls | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
 | Side-effect condition. Symptom. Moving a guard changes counters, cache | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
 | Side-path bypass. Symptom. The API denies access, but a batch job, export | [Attribute-Based Access Control](../patterns/15-security/abac.md) | Security |
@@ -16050,6 +16055,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Unbounded conflict accumulation. a revision-tree model that retains every conflicting branch forever without ever surfacing or pruning them grows storage without bound and never actually resolves anything for the person.
 - Schema drift. the local store's shape diverges from the remote API's shape over app versions, and the sync engine either crashes on an old client's unsynced data or silently drops fields it does not recognize.
 - Merge blind spots. a CRDT or merge policy that covers most fields but treats one field (a status enum, a relationship reference) with plain overwrite semantics, producing an inconsistent result exactly where it matters most.
+
+#### [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md)
+
+**Core Problem:** A mobile app's state can be scattered across many ViewModels, view controllers, and singletons, each owning a private slice and mutating it directly. When several screens need to react to the same piece of state, or when a bug needs to be traced back to exactly which mutation caused an incorrect value, an app with many independent, mutable state owners makes both jobs hard. there is no single place to look, and no way to replay the sequence of changes that produced a given state.
+
+**Failure Mode Symptoms:**
+
+- Impure reducers. a reducer that performs a network call, mutates its input state directly, or reads external mutable state breaks every guarantee (testability, replayability, predictability) the pattern exists to provide.
+- Action explosion. an action type created for every trivial UI detail instead of a real domain event, producing hundreds of near-duplicate actions that add ceremony with no corresponding clarity.
+- Monolithic state tree. one giant, undivided state object that every feature reads and writes, turning the store itself into a coupling hazard the pattern was meant to avoid.
+- Side effects leaking into the reducer. an async call or a mutation smuggled into what should be a pure function, silently breaking determinism in a way unit tests may not catch until it manifests as a real bug.
+- Over-subscription. a screen subscribing to the entire state tree instead of the specific slice it needs, causing unnecessary re-renders on every unrelated state change.
 
 #### [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md)
 
