@@ -539,13 +539,6 @@
     "focus": ""
   },
   {
-    "name": "Autoscaling",
-    "slug": "autoscaling",
-    "category": "cloud distributed",
-    "path": "patterns/08-cloud-distributed/autoscaling.md",
-    "focus": ""
-  },
-  {
     "name": "Connection Pooling",
     "slug": "connection-pooling",
     "category": "enterprise application architecture",

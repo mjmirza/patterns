@@ -207,6 +207,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A caller bypasses the coordinator and calls phase two with a | [Split Phase](../patterns/03-refactoring/split-phase.md) | Refactoring Techniques |
 | A canary succeeds, but the full rollout fails at midnight UTC. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
 | A capability service has grown to require five or more teams to | [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) | Microservices |
+| A capacity ceiling hit silently. Slack's own postmortem of its January | [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) | Cloud and Distributed |
 | A card number typed with unusual spacing, or a phone number | [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) | AI and Agentic |
 | A chain gains flags such as skipValidation, auditOnly, and | [Function Composition](../patterns/16-functional/function-composition.md) | Functional Programming |
 | A change that alters no observable behaviour still fails many | [Stub](../patterns/14-testing/stub.md) | Testing |
@@ -394,6 +395,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A metered polling API shows a high proportion of empty responses. | [Polling Consumer](../patterns/07-integration/polling-consumer.md) | Enterprise Integration |
 | A method returns different results after refactoring when a field | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
 | A method whose body is dominated by calls of the shape | [Information Expert](../patterns/04-principles-and-laws/information-expert.md) | Principles and Laws |
+| A metric that does not track true load. Spotify's own post names two | [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) | Cloud and Distributed |
 | A metrics filter undercounts events after a new variant ships. | [Prism](../patterns/16-functional/prism.md) | Functional Programming |
 | A microservice architecture multiplies the number of independently deployable units, and therefore multiplies the num... | [Log Deployments and Changes](../patterns/10-microservices/log-deployments-changes.md) | Microservices |
 | A mid-level team lead's own subtree keeps growing another level | [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) | AI and Agentic |
@@ -1689,6 +1691,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Fixture reuse disguised as a helper method. Symptom. A createTestUser() | [Fresh Fixture](../patterns/14-testing/fresh-fixture.md) | Testing |
 | Flaky comparator from non-deterministic systems under test. Symptom. The | [Differential Testing](../patterns/14-testing/differential-testing.md) | Testing |
 | Flaky tests corrupting the score. Symptom. The same mutant is reported as | [Mutation Test](../patterns/14-testing/mutation-test.md) | Testing |
+| Flapping. Covered as a force in dimension 3, with Azure's own worked | [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) | Cloud and Distributed |
 | Flat network behind a new front door. Symptom. A compromised host can scan | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | Fleet-wide staleness from a paused patch pipeline. Symptom. A security | [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) | Microservices |
 | Flooding a newly recovered backend. Covered as a force in dimension 3. | [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) | Cloud and Distributed |
@@ -2855,6 +2858,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | satisfying the method signature. The observable symptom is a sort routine that enters an | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
 | Saturation is skipped entirely because it seems hard to measure, when a direct measurement is often already available... | [USE Method](../patterns/22-observability/use-method.md) | Observability |
 | Save is called from inside a loop over query results, defeating | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
+| Scaling lag outpacing a real spike. Netflix's own account, cited fully | [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) | Cloud and Distributed |
 | scan. Symptom. A component's return statement grows several levels | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | scenarios. Symptom. A widely imported test-helper module holds one giant | [Stub](../patterns/14-testing/stub.md) | Testing |
 | schedulability analysis for the new period set. Symptom. A task set | [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) | Embedded and Hardware-Software |
@@ -9690,6 +9694,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Failure Mode Symptoms:**
 
 - / Symptom / Cause / Fix /
+
+#### [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md)
+
+**Core Problem:** A fixed-size pool of servers forces a choice between two costly extremes. AWS's own guidance frames this directly with a worked example of an application that sees midweek demand spikes. Provision for peak demand and idle capacity sits unused on every quiet day, raising the cost of running the application. Provision for average demand instead and the application degrades whenever real demand exceeds it, producing a poor experience for the people using it (AWS, Benefits of Amazon EC2 Auto Scaling(https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-benefits.md), verified 2026-08-22). Autoscaling is the third option AWS names. add capacity only when it is needed, and remove it again once it is not, so the running cost tracks real demand rather than either extreme.
+
+**Failure Mode Symptoms:**
+
+- Scaling lag outpacing a real spike. Netflix's own account, cited fully
+- Flapping. Covered as a force in dimension 3, with Azure's own worked
+- A metric that does not track true load. Spotify's own post names two
+- A capacity ceiling hit silently. Slack's own postmortem of its January
 
 #### [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md)
 

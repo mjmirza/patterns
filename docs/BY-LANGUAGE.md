@@ -303,6 +303,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Ambassador](../patterns/08-cloud-distributed/ambassador.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Asynchronous Request-Reply](../patterns/08-cloud-distributed/asynchronous-request-reply.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) | Cloud and Distributed |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Cache-Aside](../patterns/08-cloud-distributed/cache-aside.md) | Cloud and Distributed |  |  | Yes |  |  | Yes | Yes |  | Yes |
@@ -1014,6 +1015,7 @@ These patterns contain runnable code examples written in Go:
 - [Attribute-Based Access Control](../patterns/15-security/abac.md) (Security)
 - [Audit Log](../patterns/15-security/audit-log.md) (Security)
 - [Audit Logging](../patterns/10-microservices/audit-logging.md) (Microservices)
+- [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) (Cloud and Distributed)
 - [B-Tree](../patterns/12-data-storage/b-tree.md) (Data and Storage)
 - [BASE](../patterns/04-principles-and-laws/base.md) (Principles and Laws)
 - [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md) (Cloud and Distributed)
@@ -2632,6 +2634,7 @@ These patterns contain runnable code examples written in Python:
 - [Attribute-Based Access Control](../patterns/15-security/abac.md) (Security)
 - [Audit Log](../patterns/15-security/audit-log.md) (Security)
 - [Audit Logging](../patterns/10-microservices/audit-logging.md) (Microservices)
+- [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) (Cloud and Distributed)
 - [B-Tree](../patterns/12-data-storage/b-tree.md) (Data and Storage)
 - [BASE](../patterns/04-principles-and-laws/base.md) (Principles and Laws)
 - [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md) (Cloud and Distributed)
@@ -4415,6 +4418,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) (Frontend and UI)
 - [Audit Log](../patterns/15-security/audit-log.md) (Security)
 - [Audit Logging](../patterns/10-microservices/audit-logging.md) (Microservices)
+- [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) (Cloud and Distributed)
 - [B-Tree](../patterns/12-data-storage/b-tree.md) (Data and Storage)
 - [BASE](../patterns/04-principles-and-laws/base.md) (Principles and Laws)
 - [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md) (Cloud and Distributed)

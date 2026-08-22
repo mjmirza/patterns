@@ -2,8 +2,14 @@
 
 Origin. Azure Architecture Center, Nygard
 
-43 entries, 386,162 words, 1 more planned, 44 total when the family is complete. Every entry carries all 18
+44 entries, 393,246 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
+
+## Capacity Management
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Autoscaling](autoscaling.md) | canonical | 7,084 | A fixed-size pool of servers forces a choice between two costly extremes. |
 
 ## Cloud Distributed
 
@@ -152,12 +158,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Load Balancing](load-balancing.md) | canonical | 6,878 | A service running on one machine has a hard ceiling on the traffic it can handle. |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Autoscaling
 
 ## Reading order
 
