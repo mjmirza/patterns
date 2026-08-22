@@ -616,13 +616,13 @@ abstraction.
   The GoF version is a subclass-overridable method with no domain-specific
   invariant obligation. the DDD version borrows the shape and adds Evans's
   atomicity and invariant rules on top. See the separate `factory-method`
-  entry in this repository's `01-design-patterns-gof` family for the ancestor pattern in
+  entry in this repository's `01-gof` family for the ancestor pattern in
   full.
 - **Abstract Factory (GoF).** The DDD Dedicated Factory Class variant,
   described in dimension 8, is structurally the same idea as the GoF Abstract
   Factory when the DDD Factory must choose between several concrete product
   subtypes at runtime. See the separate `abstract-factory` entry in this
-  repository's `01-design-patterns-gof` family.
+  repository's `01-gof` family.
 - **Builder (GoF).** Composes with Factory rather than competing with it, per
   the Builder-backed Factory variant in dimension 8, whenever a single
   Factory method's parameter list has grown too large to stay readable.
@@ -1190,8 +1190,8 @@ func main() {
   Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
   1994. Chapter 3, Creational Patterns. Source for the ancestor Factory
   Method and Abstract Factory patterns referenced in dimensions 1 and 13.
-  See this repository's `01-design-patterns-gof/factory-method.md` and
-  `01-design-patterns-gof/abstract-factory.md` entries for full treatment.
+  See this repository's `01-gof/factory-method.md` and
+  `01-gof/abstract-factory.md` entries for full treatment.
 - AxonIQ. "AggregateFactory (Axon Framework 2.0.6 API)". Java framework API
   documentation, used as a named production use in dimension 9 and a failure
   mode source in dimension 11. Verified 2026-08-02.

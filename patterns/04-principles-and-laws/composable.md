@@ -199,8 +199,8 @@ than the rule.
   wearing an architecture costume. A direct function call, or a direct
   import, is honest and deletes cleanly. This is the same argument against reaching for the pattern
   argument made for
-  [Strategy](../01-design-patterns-gof/strategy.md) and
-  [Factory Method](../01-design-patterns-gof/factory-method.md) when only one variant exists.
+  [Strategy](../01-gof/strategy.md) and
+  [Factory Method](../01-gof/factory-method.md) when only one variant exists.
 - **The operations genuinely depend on each other's internal state, and not
   only on their input and output.** If step two of a pipeline needs to know
   implementation details of step one, forcing them through a narrow
@@ -613,11 +613,11 @@ Negative.
   expression of streaming composability, where filters are the composable
   units and pipes are the composition operator, most visible in Unix
   pipelines and in stream-processing frameworks.
-- **[Decorator](../01-design-patterns-gof/decorator.md).** A special case of composability
+- **[Decorator](../01-gof/decorator.md).** A special case of composability
   where every unit satisfies the same interface as the thing it wraps, which
   is precisely why decorators can nest arbitrarily. the middleware chain in
   dimension 8 is Decorator applied to request handlers.
-- **[Strategy](../01-design-patterns-gof/strategy.md).** Composable at a single seam rather
+- **[Strategy](../01-gof/strategy.md).** Composable at a single seam rather
   than across a chain. Strategy swaps one interchangeable algorithm into one
   fixed slot, while composability more generally chains or combines several
   interchangeable units into a pipeline.

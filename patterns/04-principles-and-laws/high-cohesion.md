@@ -354,7 +354,7 @@ into several focused ones would break too many existing callers at once, a
 Facade can sit in front of the new, more numerous, more cohesive
 collaborators and present the old call shape while the split proceeds
 incrementally. This repository's own entry on Facade documents that seam in
-detail, at patterns/01-design-patterns-gof/facade.md; this entry treats the trade-off from
+detail, at patterns/01-gof/facade.md; this entry treats the trade-off from
 the cohesion side only.
 
 Cyclomatic and LCOM-style metrics as a machine-checkable proxy. Lack of
@@ -531,7 +531,7 @@ at once, a Facade can preserve the old call shape while the underlying
 collaborators are separated for cohesion, letting the two changes,
 internal restructuring and external interface stability, proceed on
 different schedules. See this repository's Facade entry, at
-patterns/01-design-patterns-gof/facade.md, for the pattern's own dimensions, this entry
+patterns/01-gof/facade.md, for the pattern's own dimensions, this entry
 only notes the seam.
 
 God Object anti-pattern, the direct incompatibility. A God Object is the

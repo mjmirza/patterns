@@ -619,7 +619,7 @@ adding exhaustiveness checking.
 ## 13. Related and incompatible patterns
 
 - **Factory Method.** A closely related and easily confused sibling. Factory
-  Method (see the entry in family 01-design-patterns-gof) solves which concrete type to
+  Method (see the entry in family 01-gof) solves which concrete type to
   construct, using subclass-level dispatch to pick a product. Switch
   Statements as a smell most often appears alongside a Simple Factory, an
   unrelated idiom, a plain function with a switch or a map that constructs

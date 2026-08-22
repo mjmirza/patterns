@@ -37,7 +37,7 @@ class TestCheckFamilyNames(unittest.TestCase):
             "## The families\n\n"
             "| # | Family |\n"
             "|---|---|\n"
-            "| 01 | [Design Patterns (GoF)](patterns/01-design-patterns-gof/) |\n"
+            "| 01 | [Design Patterns (GoF)](patterns/01-gof/) |\n"
             "| 02 | [Code Smells](patterns/02-code-smells/) |\n\n"
             "## How to read it\n"
         )
@@ -45,7 +45,7 @@ class TestCheckFamilyNames(unittest.TestCase):
         self.assertIsNone(err)
         self.assertEqual(
             slugs,
-            {"01-design-patterns-gof": "Design Patterns (GoF)", "02-code-smells": "Code Smells"},
+            {"01-gof": "Design Patterns (GoF)", "02-code-smells": "Code Smells"},
         )
 
     def test_parse_table_slugs_missing_header(self):
@@ -73,11 +73,11 @@ class TestCheckFamilyNames(unittest.TestCase):
             "## The families\n\n"
             "| # | Family |\n"
             "|---|---|\n"
-            "| 01 | [GoF](patterns/01-design-patterns-gof/) |\n"
+            "| 01 | [GoF](patterns/01-gof/) |\n"
             "| 02 | [Smells](patterns/02-code-smells/) |\n\n"
             "## Next\n"
         )
-        (self.patterns / "01-design-patterns-gof").mkdir()
+        (self.patterns / "01-gof").mkdir()
         (self.patterns / "02-code-smells").mkdir()
 
         code, lines = check_family_names.verify_family_names(self.patterns, self.readme)
@@ -91,10 +91,10 @@ class TestCheckFamilyNames(unittest.TestCase):
             "## The families\n\n"
             "| # | Family |\n"
             "|---|---|\n"
-            "| 01 | [GoF](patterns/01-design-patterns-gof/) |\n\n"
+            "| 01 | [GoF](patterns/01-gof/) |\n\n"
             "## Next\n"
         )
-        (self.patterns / "01-design-patterns-gof").mkdir()
+        (self.patterns / "01-gof").mkdir()
         (self.patterns / "99-unlisted").mkdir()
 
         code, lines = check_family_names.verify_family_names(self.patterns, self.readme)
@@ -106,7 +106,7 @@ class TestCheckFamilyNames(unittest.TestCase):
 
     def test_verify_family_names_missing_patterns_dir(self):
         self.readme.write_text(
-            "## The families\n\n| 01 | [GoF](patterns/01-design-patterns-gof/) |\n\n## Next\n"
+            "## The families\n\n| 01 | [GoF](patterns/01-gof/) |\n\n## Next\n"
         )
         nonexistent_patterns = self.tmp / "nonexistent_patterns"
 

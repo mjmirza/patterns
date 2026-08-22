@@ -24,7 +24,7 @@ def generate_valid_pattern() -> str:
         "---\n"
         "name: Test Pattern\n"
         "slug: test-pattern\n"
-        "family: 01-design-patterns-gof\n"
+        "family: 01-gof\n"
         "maturity: canonical\n"
         "verified: true\n"
         "---\n\n"

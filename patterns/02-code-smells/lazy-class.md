@@ -199,7 +199,7 @@ following hold.
   common supertype for a type hierarchy that genuinely varies at the
   subclasses, even if the base itself adds nothing. This is a Composite or
   Template Method root, not a Lazy Class, because its emptiness is structural
-  rather than accidental. See Composite and Template Method in the 01-design-patterns-gof
+  rather than accidental. See Composite and Template Method in the 01-gof
   family for the distinction.
 
 ## 5. Structure

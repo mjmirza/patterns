@@ -572,7 +572,7 @@ Negative outcomes.
   object frequently used to express selection or eligibility rules on domain
   objects without embedding query concerns directly into the domain object's
   own methods.
-- **Factory Method (see this repository, 01-design-patterns-gof).** Frequently used to
+- **Factory Method (see this repository, 01-gof).** Frequently used to
   construct domain objects, particularly Entities that must be created with a
   valid identity or must enforce invariants at construction time that a bare
   constructor cannot conveniently express.

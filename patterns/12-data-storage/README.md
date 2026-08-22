@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-41 entries, 312,891 words, 4 more planned, 45 total when the family is complete. Every entry carries all 18
+41 entries, 312,891 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -80,15 +80,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [HyperLogLog](hyperloglog.md) | canonical | 8,164 | A system needs to answer "how many distinct X happened" where X might be visitors to a page, IP addresses hitting an API, users who played a song, distinct search queries in a ... |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Byzantine Fault Tolerance
-- Database Federation
-- Denormalization
-- Distributed Hash Table
 
 ## Reading order
 

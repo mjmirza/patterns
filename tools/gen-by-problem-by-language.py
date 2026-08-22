@@ -26,7 +26,7 @@ TARGET_LANGS = {
 }
 
 FAMILY_NAMES = {
-    "01-design-patterns-gof": "Design Patterns (GoF)",
+    "01-gof": "Design Patterns (GoF)",
     "02-code-smells": "Code Smells",
     "03-refactoring": "Refactoring Techniques",
     "04-principles-and-laws": "Principles and Laws",

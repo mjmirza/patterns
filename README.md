@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-797%20published%20%2F%20892%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-707%20published%20%2F%20848%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -14,10 +14,10 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-797-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-95-lightgrey)
-![Catalogue completion](https://img.shields.io/badge/completion-89.3%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-4194-brightgreen)
+![Published entries](https://img.shields.io/badge/published-707-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-141-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-83.4%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-4056-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
@@ -92,34 +92,34 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 
 | # | Family | Origin | Published | Planned | Target |
 |---|---|---|---|---|---|
-| 01 | [Design Patterns (GoF)](patterns/01-design-patterns-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 23 | 10 | 33 |
+| 01 | [Design Patterns (GoF)](patterns/01-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 23 | 0 | 23 |
 | 02 | [Code Smells](patterns/02-code-smells/) | Fowler and Beck, Refactoring | 28 | 0 | 28 |
 | 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 66 | 0 | 66 |
-| 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 41 | 1 | 42 |
+| 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 41 | 0 | 41 |
 | 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 30 | 0 | 30 |
-| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 48 | 11 | 59 |
+| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 48 | 0 | 48 |
 | 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 54 | 0 | 54 |
 | 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 42 | 0 | 42 |
 | 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 40 | 0 | 40 |
 | 10 | [Microservices](patterns/10-microservices/) | Richardson | 49 | 0 | 49 |
 | 11 | [Domain-Driven Design](patterns/11-domain-driven-design/) | Evans, Vernon | 35 | 0 | 35 |
 | 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 41 | 0 | 41 |
-| 13 | [Frontend and UI](patterns/13-frontend-ui/) | Framework documentation | 34 | 0 | 34 |
+| 13 | [Frontend and UI](patterns/13-frontend-ui/) | Framework documentation | 0 | 34 | 34 |
 | 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 30 | 0 | 30 |
-| 15 | [Security](patterns/15-security/) | OWASP ASVS | 35 | 3 | 38 |
+| 15 | [Security](patterns/15-security/) | OWASP ASVS | 35 | 0 | 35 |
 | 16 | [Functional Programming](patterns/16-functional/) | Category theory in practice | 39 | 0 | 39 |
-| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 55 | 10 | 65 |
+| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 55 | 0 | 55 |
 | 18 | [Anti-Patterns](patterns/18-anti-patterns/) | Brown et al, AntiPatterns | 51 | 0 | 51 |
-| 19 | [API and Interface Design](patterns/19-api-design/) | REST, GraphQL, gRPC specifications | 10 | 0 | 10 |
-| 20 | [Release and Deployment](patterns/20-release-deployment/) | Humble and Farley | 10 | 0 | 10 |
-| 21 | [SRE and Operations](patterns/21-sre-operations/) | Google SRE, AWS Well-Architected | 11 | 0 | 11 |
+| 19 | [API and Interface Design](patterns/19-api-design/) | REST, GraphQL, gRPC specifications | 0 | 10 | 10 |
+| 20 | [Release and Deployment](patterns/20-release-deployment/) | Humble and Farley | 0 | 10 | 10 |
+| 21 | [SRE and Operations](patterns/21-sre-operations/) | Google SRE, AWS Well-Architected | 0 | 12 | 12 |
 | 22 | [Observability](patterns/22-observability/) | OpenTelemetry, RED and USE methods | 0 | 8 | 8 |
 | 23 | [Workflow and Orchestration](patterns/23-workflow-orchestration/) | Durable execution literature | 0 | 6 | 6 |
 | 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 0 | 8 | 8 |
 | 25 | [MLOps](patterns/25-mlops/) | Google ML design patterns | 0 | 9 | 9 |
 | 26 | [Interaction and HCI](patterns/26-interaction-hci/) | Tidwell, Designing Interfaces | 0 | 10 | 10 |
-| 27 | [Mobile Architecture](patterns/27-mobile-architecture/) | Official Android/iOS architecture guidance | 11 | 0 | 11 |
-| 28 | [Embedded and Hardware-Software](patterns/28-embedded-hardware/) | Embedded systems engineering literature | 14 | 0 | 14 |
+| 27 | [Mobile Architecture](patterns/27-mobile-architecture/) | Official Android/iOS architecture guidance | 0 | 12 | 12 |
+| 28 | [Embedded and Hardware-Software](patterns/28-embedded-hardware/) | Embedded systems engineering literature | 0 | 14 | 14 |
 | 29 | [Real-Time Simulation](patterns/29-realtime-simulation/) | Nystrom, Game Programming Patterns | 0 | 9 | 9 |
 
 Family 04 is named Principles and Laws rather than patterns, because SOLID,

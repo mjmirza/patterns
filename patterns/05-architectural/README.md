@@ -2,7 +2,7 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-30 entries, 243,971 words, 1 more planned, 31 total when the family is complete. Every entry carries all 18
+30 entries, 243,971 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
@@ -39,12 +39,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Shared Nothing](shared-nothing.md) | canonical | 7,785 | A system needs to handle more work than one machine can handle, whether that work is transaction throughput, storage volume, or concurrent connections. |
 | [Space-Based Architecture](space-based-architecture.md) | established | 7,002 | A system built as a stateless application tier in front of a single relational database scales the application tier easily and the database tier badly. |
 | [VIPER](viper.md) | established | 8,403 | A screen in a UIKit or AppKit application tends to accumulate three kinds of code inside one view controller, code that lays out and updates the user interface, code that decides ... |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Multi-Tenant Architecture
 
 ## Reading order
 

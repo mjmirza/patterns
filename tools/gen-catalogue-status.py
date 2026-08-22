@@ -28,7 +28,7 @@ FRONTMATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 VALID_MATURITY = {"canonical", "established", "emerging", "contested", "deprecated"}
 
 FAMILY_ORIGIN = {
-    "01-design-patterns-gof": ("Design Patterns (GoF)", "Gamma, Helm, Johnson, Vlissides 1994"),
+    "01-gof": ("Design Patterns (GoF)", "Gamma, Helm, Johnson, Vlissides 1994"),
     "02-code-smells": ("Code Smells", "Fowler and Beck, Refactoring"),
     "03-refactoring": ("Refactoring Techniques", "Fowler, Refactoring 2nd ed"),
     "04-principles-and-laws": ("Principles and Laws", "Martin, Larman, Brewer, Conway"),

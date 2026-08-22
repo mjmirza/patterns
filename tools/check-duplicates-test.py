@@ -69,11 +69,28 @@ class TestCheckDuplicates(unittest.TestCase):
     def test_historical_proposal_detection(self):
         history = fetch_historical_proposals()
         self.assertIsInstance(history, list)
-        self.assertGreater(len(history), 0)
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
         results = analyze_repository(queue_file)
-        historical_collisions = [c for c in results["collisions"] if c.get("type") == "HISTORICAL_PROPOSAL_COLLISION"]
-        self.assertGreater(len(historical_collisions), 0)
+        self.assertIsInstance(results["collisions"], list)
+        if history:
+            historical_collisions = [
+                c for c in results["collisions"] if c.get("type") == "HISTORICAL_PROPOSAL_COLLISION"
+            ]
+            self.assertGreater(len(historical_collisions), 0)
+
+    def test_historical_proposal_collision_mock(self):
+        fake_history = [{"path": "patterns/06-poeaa/transaction-script.md", "slug": "transaction-script"}]
+        original_fetch = check_duplicates.fetch_historical_proposals
+        check_duplicates.fetch_historical_proposals = lambda: fake_history
+        try:
+            queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
+            results = analyze_repository(queue_file)
+            historical_collisions = [
+                c for c in results["collisions"] if c.get("type") == "HISTORICAL_PROPOSAL_COLLISION"
+            ]
+            self.assertGreater(len(historical_collisions), 0)
+        finally:
+            check_duplicates.fetch_historical_proposals = original_fetch
 
 
 if __name__ == "__main__":

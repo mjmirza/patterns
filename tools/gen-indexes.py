@@ -4,53 +4,20 @@ Regenerated on every run so an index can never drift from the entries."""
 
 from __future__ import annotations
 
-import json
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PATTERNS = ROOT / "patterns"
-QUEUE = ROOT / "docs" / "AUTHORING-QUEUE.json"
-
-
-def load_planned() -> dict[str, list[str]]:
-    """Groups queued-but-unauthored entry names by family folder name.
-    A queue entry path always starts with patterns then the family slug
-    then the filename, which is the only thing this needs, so a missing
-    or malformed queue entry is skipped rather than crashing the build."""
-    if not QUEUE.exists():
-        return {}
-    try:
-        data = json.loads(QUEUE.read_text(encoding="utf-8"))
-    except (json.JSONDecodeError, OSError):
-        return {}
-    planned: dict[str, list[str]] = {}
-    for entry in data:
-        path = entry.get("path", "")
-        name = entry.get("name", "")
-        parts = path.split("/")
-        if len(parts) < 3 or parts[0] != "patterns" or not name:
-            continue
-        if (ROOT / path).exists():
-            continue
-        planned.setdefault(parts[1], []).append(name)
-    return planned
-
 
 FAMILY_TITLES = {
-    "01-design-patterns-gof": (
-        "Design Patterns",
-        "Gamma, Helm, Johnson, Vlissides 1994",
-    ),
+    "01-gof": ("Design Patterns", "Gamma, Helm, Johnson, Vlissides 1994"),
     "02-code-smells": ("Code Smells", "Fowler and Beck, Refactoring"),
     "03-refactoring": ("Refactoring Techniques", "Fowler, Refactoring 2nd edition"),
     "04-principles-and-laws": ("Principles and Laws", "Martin, Larman, Brewer, Conway"),
     "05-architectural": ("Architectural Patterns", "Buschmann POSA 1, Bass SEI"),
-    "06-enterprise-application-architecture": (
-        "Enterprise Application Architecture",
-        "Fowler, PoEAA",
-    ),
+    "06-enterprise-application-architecture": ("Enterprise Application Architecture", "Fowler, PoEAA"),
     "07-integration": ("Enterprise Integration", "Hohpe and Woolf"),
     "08-cloud-distributed": (
         "Cloud and Distributed",
@@ -80,18 +47,6 @@ FAMILY_TITLES = {
     ),
     "25-mlops": ("MLOps", "Google ML design patterns"),
     "26-interaction-hci": ("Interaction and HCI", "Tidwell, Designing Interfaces"),
-    "27-mobile-architecture": (
-        "Mobile Architecture",
-        "Official Android/iOS architecture guidance",
-    ),
-    "28-embedded-hardware": (
-        "Embedded and Hardware-Software",
-        "Embedded systems engineering literature",
-    ),
-    "29-realtime-simulation": (
-        "Real-Time Simulation",
-        "Nystrom, Game Programming Patterns",
-    ),
 }
 
 FRONTMATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
@@ -123,9 +78,9 @@ def first_intent(text: str) -> str:
     return out[:180].rsplit(" ", 1)[0].rstrip(" ,;") + " ..."
 
 
-def build(family: Path, planned_names: list[str]) -> int:
+def build(family: Path) -> int:
     entries = sorted(p for p in family.glob("*.md") if p.name.lower() != "readme.md")
-    if not entries and not planned_names:
+    if not entries:
         return 0
 
     key = family.name
@@ -145,22 +100,12 @@ def build(family: Path, planned_names: list[str]) -> int:
         )
         rows.append(words)
 
-    planned_names = sorted(planned_names)
-    total = len(entries) + len(planned_names)
-    published_line = f"{len(entries)} entries, {sum(rows):,} words"
-    if planned_names:
-        published_line += (
-            f", {len(planned_names)} more planned, {total} total when the "
-            "family is complete"
-        )
-    published_line += ". Every entry carries all 18"
-
     lines = [
         f"# Family {key.split('-')[0]}. {title}",
         "",
         f"Origin. {origin}" if origin else "",
         "",
-        published_line,
+        f"{len(entries)} entries, {sum(rows):,} words. Every entry carries all 18",
         "dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).",
         "",
     ]
@@ -170,20 +115,6 @@ def build(family: Path, planned_names: list[str]) -> int:
         lines += ["| Pattern | Maturity | Words | Intent |", "|---|---|---|---|"]
         for name, fn, mat, words, intent in sorted(groups[cat]):
             lines.append(f"| [{name}]({fn}) | {mat} | {words:,} | {intent} |")
-        lines.append("")
-
-    if planned_names:
-        lines.append("## Planned")
-        lines.append("")
-        lines.append(
-            "Named, not yet authored. Queued in "
-            "[docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), "
-            "each one to be built to the same 18-dimension standard as "
-            "the entries above before it is published."
-        )
-        lines.append("")
-        for name in planned_names:
-            lines.append("- " + name)
         lines.append("")
 
     lines += [
@@ -202,10 +133,9 @@ def build(family: Path, planned_names: list[str]) -> int:
 
 def main() -> int:
     total = 0
-    planned = load_planned()
     for family in sorted(PATTERNS.iterdir()):
         if family.is_dir():
-            n = build(family, planned.get(family.name, []))
+            n = build(family)
             if n:
                 print(f"{family.name}: {n} entries indexed")
                 total += n
