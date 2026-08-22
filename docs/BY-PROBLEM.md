@@ -633,6 +633,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A stolen service token can read far more data than the service | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |
 | a stored procedure or trigger that was fast when written becomes | [Busy Database](../patterns/18-anti-patterns/busy-database.md) | Anti-Patterns |
 | A stream aggregate loses exactness at scale. Cause. The | [Monoid](../patterns/16-functional/monoid.md) | Functional Programming |
+| A stuck saga with no working compensation. The 1987 paper's own honest limit, quoted | [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) | Workflow and Orchestration |
 | A subclass changes a protected query and breaks a base method. | [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) | Refactoring Techniques |
 | A subclass implementing an interface throws | [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) | Principles and Laws |
 | A subsystem is labelled Generic and then neglected, its | [Core Domain](../patterns/11-domain-driven-design/core-domain.md) | Domain-Driven Design |
@@ -858,6 +859,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | An operator sends a stop command to a runaway component during an | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | An organisation chart where a department contains employees and sub | [Composite](../patterns/01-design-patterns-gof/composite.md) | Design Patterns (GoF) |
 | An ORM's lazy-loading proxy throws a lazy-initialization | [Chatty I/O](../patterns/18-anti-patterns/chatty-i-o.md) | Anti-Patterns |
+| An unauthorized party triggering the compensation. This is a real, currently exploited | [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) | Workflow and Orchestration |
 | An unclaimed task with no escalation path. BPMN's Escalation Event is opt-in, not | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |
 | An update process that writes a new image without properly signing | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | An upstream caller times out at exactly its own deadline while the | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
@@ -1117,6 +1119,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Choosing an error type with no sensible combine operation. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
 | Choosing choreography for a process that needed a single owner. Symptom. | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | Choosing full double buffering on a system with genuinely | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
+| Choosing literal undo over semantic compensation for an irreversible action. Azure's | [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) | Workflow and Orchestration |
 | Choosing the deprecated implementation path. Camunda's own migration docs name the | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |
 | Choosing the internal-bookkeeping memory slab variant for a buffer | [Memory Pool (Fixed Block Allocator)](../patterns/28-embedded-hardware/memory-pool.md) | Embedded and Hardware-Software |
 | Choosing the overflow policy without a deliberate decision about | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software |
@@ -2295,6 +2298,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Non-deterministic routing under retry. Symptom. The same message, resent | [Content-Based Router](../patterns/07-integration/content-based-router.md) | Enterprise Integration |
 | Non-deterministic targets producing unreproducible crashes. Symptom. The | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
 | Non-idempotent command issuance under at-least-once delivery. Symptom. A | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
+| Non-idempotent compensation logic causing a double-undo. WS-BPEL's own formal | [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) | Workflow and Orchestration |
 | Non-idempotent map or reduce functions. Symptom. Output totals are | [Map-Reduce](../patterns/09-concurrency/map-reduce.md) | Concurrency and Parallelism |
 | Non-idempotent participant under at-least-once delivery. Symptom. A customer | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
 | Non-reentrant acquisition on the same thread. Symptom. An immediate, | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
@@ -16555,6 +16559,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Errors are checked only for the resource believed to be the problem, rather than for every resource in the sweep, so a genuine error condition on an unrelated resource goes unnoticed.
 
 ### Workflow and Orchestration
+
+#### [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md)
+
+**Core Problem:** The problem this pattern solves is architectural, not merely inconvenient. Azure's own Architecture Center names the limit directly.
+
+**Failure Mode Symptoms:**
+
+- A stuck saga with no working compensation. The 1987 paper's own honest limit, quoted
+- Choosing literal undo over semantic compensation for an irreversible action. Azure's
+- An unauthorized party triggering the compensation. This is a real, currently exploited
+- Non-idempotent compensation logic causing a double-undo. WS-BPEL's own formal
 
 #### [Human Task](../patterns/23-workflow-orchestration/human-task.md)
 

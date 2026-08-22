@@ -793,6 +793,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [USE Method](../patterns/22-observability/use-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1078,6 +1079,7 @@ These patterns contain runnable code examples written in Go:
 - [Communicating Sequential Processes](../patterns/09-concurrency/communicating-sequential-processes.md) (Concurrency and Parallelism)
 - [Compare-and-Swap Loop](../patterns/09-concurrency/compare-and-swap-loop.md) (Concurrency and Parallelism)
 - [Compensating Transaction](../patterns/08-cloud-distributed/compensating-transaction.md) (Cloud and Distributed)
+- [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) (Workflow and Orchestration)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) (Cloud and Distributed)
 - [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
@@ -1640,6 +1642,7 @@ These patterns have unique implementation variants or change their design struct
 - [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) (Principles and Laws)
 - [Communicating Sequential Processes](../patterns/09-concurrency/communicating-sequential-processes.md) (Concurrency and Parallelism)
 - [Compare-and-Swap Loop](../patterns/09-concurrency/compare-and-swap-loop.md) (Concurrency and Parallelism)
+- [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) (Workflow and Orchestration)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) (Cloud and Distributed)
 - [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
@@ -2134,6 +2137,7 @@ These patterns have unique implementation variants or change their design struct
 - [Common Closure Principle](../patterns/04-principles-and-laws/common-closure-principle.md) (Principles and Laws)
 - [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) (Principles and Laws)
 - [Compare-and-Swap Loop](../patterns/09-concurrency/compare-and-swap-loop.md) (Concurrency and Parallelism)
+- [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) (Workflow and Orchestration)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Composition over Inheritance](../patterns/04-principles-and-laws/composition-over-inheritance.md) (Principles and Laws)
 - [Consolidate Conditional Expression](../patterns/03-refactoring/consolidate-conditional-expression.md) (Refactoring Techniques)
@@ -2715,6 +2719,7 @@ These patterns contain runnable code examples written in Python:
 - [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) (Principles and Laws)
 - [Communicating Sequential Processes](../patterns/09-concurrency/communicating-sequential-processes.md) (Concurrency and Parallelism)
 - [Compensating Transaction](../patterns/08-cloud-distributed/compensating-transaction.md) (Cloud and Distributed)
+- [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) (Workflow and Orchestration)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) (Cloud and Distributed)
 - [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
@@ -3939,6 +3944,7 @@ These patterns have unique implementation variants or change their design struct
 - [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) (Cloud and Distributed)
 - [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) (Principles and Laws)
 - [Compare-and-Swap Loop](../patterns/09-concurrency/compare-and-swap-loop.md) (Concurrency and Parallelism)
+- [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) (Workflow and Orchestration)
 - [Composable](../patterns/04-principles-and-laws/composable.md) (Principles and Laws)
 - [Composite](../patterns/01-design-patterns-gof/composite.md) (Design Patterns (GoF))
 - [Composition over Inheritance](../patterns/04-principles-and-laws/composition-over-inheritance.md) (Principles and Laws)
@@ -4495,6 +4501,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) (Principles and Laws)
 - [Compare-and-Swap Loop](../patterns/09-concurrency/compare-and-swap-loop.md) (Concurrency and Parallelism)
 - [Compensating Transaction](../patterns/08-cloud-distributed/compensating-transaction.md) (Cloud and Distributed)
+- [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) (Workflow and Orchestration)
 - [Competing Consumers](../patterns/07-integration/competing-consumers.md) (Enterprise Integration)
 - [Competing Consumers](../patterns/08-cloud-distributed/competing-consumers.md) (Cloud and Distributed)
 - [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
@@ -5132,6 +5139,7 @@ These patterns have unique implementation variants or change their design struct
 - [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) (Refactoring Techniques)
 - [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) (Cloud and Distributed)
 - [Common Reuse Principle](../patterns/04-principles-and-laws/common-reuse-principle.md) (Principles and Laws)
+- [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) (Workflow and Orchestration)
 - [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composition over Inheritance](../patterns/04-principles-and-laws/composition-over-inheritance.md) (Principles and Laws)
 - [Conformist](../patterns/11-domain-driven-design/conformist.md) (Domain-Driven Design)

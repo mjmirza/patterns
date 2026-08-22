@@ -7,13 +7,6 @@
     "focus": ""
   },
   {
-    "name": "Compensation Handler",
-    "slug": "compensation-handler",
-    "category": "workflow orchestration",
-    "path": "patterns/23-workflow-orchestration/compensation-handler.md",
-    "focus": ""
-  },
-  {
     "name": "Durable Execution",
     "slug": "durable-execution",
     "category": "workflow orchestration",
