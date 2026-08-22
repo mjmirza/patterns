@@ -1122,6 +1122,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | class did, even though the reaching-into-fields symptom is technically gone | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
 | Class that is a namespace. The functions are grouped into a class, but | [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) | Refactoring Techniques |
 | Class with one method. The refactoring is applied to a single function | [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) | Refactoring Techniques |
+| Client bypasses the links anyway. a client that still hardcodes URLs despite the server providing links gets none of ... | [HATEOAS](../patterns/19-api-design/hateoas.md) | API and Interface Design |
 | Client certificate reused too widely. Symptom. Logs show the same | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
 | Client Component that only needs a small piece of it. Symptom. The | [Server Components](../patterns/13-frontend-ui/server-components.md) | Frontend and UI |
 | Client errors counted as dependency failures. | [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) | Cloud and Distributed |
@@ -2115,6 +2116,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Missing Format Indicator on an opaque envelope. Symptom. The unwrapping | [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) | Enterprise Integration |
 | Missing idempotency causing duplicate side effects. Symptom. A customer | [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) | Architectural Patterns |
 | Missing identity value. Symptom. Empty input crashes, returns a misleading | [Foldable](../patterns/16-functional/foldable.md) | Functional Programming |
+| Missing links on an error response. a server that omits links on a failure response leaves the client with no guidanc... | [HATEOAS](../patterns/19-api-design/hateoas.md) | API and Interface Design |
 | Missing or inconsistent correlation identifiers. Symptom. An operator | [Log Aggregation](../patterns/10-microservices/log-aggregation.md) | Microservices |
 | Missing or wrong audience check. Symptom. A token or assertion issued | [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) | Cloud and Distributed |
 | Missing publish barrier. Symptom. A reader occasionally observes a | [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) | Concurrency and Parallelism |
@@ -3084,6 +3086,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Stale expected result masking a real regression. Symptom. The verifier | [Test Message](../patterns/07-integration/test-message.md) | Enterprise Integration |
 | Stale graph after the corpus changes. Symptom. Newly added documents are | [GraphRAG](../patterns/17-ai-agentic/graphrag.md) | AI and Agentic |
 | Stale or duplicate handoff re-execution. The symptom is that the same | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |
+| Stale or incorrect link inclusion. a server that includes a link for an action that is not actually currently valid m... | [HATEOAS](../patterns/19-api-design/hateoas.md) | API and Interface Design |
 | Stale reads from a missing or misused Identity Map. Symptom. Two calls | [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) | Enterprise Application Architecture |
 | Stale reference after identity map eviction. A registry or identity map | [Change Value to Reference](../patterns/03-refactoring/change-value-to-reference.md) | Refactoring Techniques |
 | Stale registry entries serving dead instances. Symptom. A small, | [Server-Side Discovery](../patterns/10-microservices/server-side-discovery.md) | Microservices |
@@ -5200,6 +5203,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Undo declared on operations that cannot honour it. Symptom. Pressing undo | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
 | Undo that leaves the model wrong. Symptom. A user performs three edits, | [Command](../patterns/01-gof/command.md) | Design Patterns (GoF) |
 | Undo, so the last action can be reversed. | [Memento](../patterns/01-gof/memento.md) | Design Patterns (GoF) |
+| Undocumented link relation names. a client that does not already know what a given relation name means cannot meaning... | [HATEOAS](../patterns/19-api-design/hateoas.md) | API and Interface Design |
 | Unenforced policy. an Error Budget that is tracked and reported but whose policy is never actually applied when exhau... | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |
 | Uneven cell sizing. Symptom. One cell's dashboards are consistently | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | unhandled edge case in the recovery logic itself. Symptom. A device | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
@@ -16114,6 +16118,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Unbounded query depth. a client nests a query deeply enough, especially against a resolver whose field returns objects of the same type it started from, that the server spends unbounded resolver calls answering one request.
 - Inconsistent authorization. a check applied in one resolver but forgotten in a sibling resolver over the same underlying sensitive data leaves a path a client can use to bypass the intended access control.
 - Silent default-resolver mismatch. a field with no explicit resolver falls back to the default, which reads a same-named property off the parent value, and if that property is named or shaped differently than the field, the field silently returns null instead of failing loudly.
+
+#### [HATEOAS](../patterns/19-api-design/hateoas.md)
+
+**Core Problem:** A client built against an API's documented URL structure, hardcoding every endpoint path it will ever call, is tightly coupled to that exact structure. If the server later reorganizes its URLs, moves a resource under a different path, or changes which actions are actually available given the current state of a resource, every client baked with the old structure breaks or silently attempts an action that is no longer valid.
+
+**Failure Mode Symptoms:**
+
+- Client bypasses the links anyway. a client that still hardcodes URLs despite the server providing links gets none of this pattern's decoupling benefit, and breaks exactly when the server reorganizes.
+- Stale or incorrect link inclusion. a server that includes a link for an action that is not actually currently valid misleads the client into attempting an action that then fails.
+- Undocumented link relation names. a client that does not already know what a given relation name means cannot meaningfully act on the link, even though it is technically present in the response.
+- Missing links on an error response. a server that omits links on a failure response leaves the client with no guidance on what to try next, exactly when that guidance would matter most.
 
 #### [Idempotent API](../patterns/19-api-design/idempotent-api.md)
 

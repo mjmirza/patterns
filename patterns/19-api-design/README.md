@@ -2,7 +2,7 @@
 
 Origin. REST, GraphQL, gRPC specifications
 
-9 entries, 21,852 words. Every entry carries all 18
+10 entries, 24,156 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Data Fetching
@@ -13,6 +13,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Cursor-based Pagination](cursor-based-pagination.md) | canonical | 2,440 | A numeric offset identifies a position in a collection, but that position shifts the moment an item is inserted or removed anywhere before it. |
 | [GraphQL DataLoader](graphql-dataloader.md) | canonical | 2,525 | A resolver written for a single object works correctly and looks simple when tested in isolation, but the same resolver function runs once per instance whenever its field appears ... |
 | [GraphQL Resolver Pattern](graphql-resolver-pattern.md) | canonical | 2,638 | A client asking for data over an API rarely wants an entire, fixed record shape. |
+| [HATEOAS](hateoas.md) | canonical | 2,304 | A client built against an API's documented URL structure, hardcoding every endpoint path it will ever call, is tightly coupled to that exact structure. |
 | [Idempotent API](idempotent-api.md) | canonical | 2,494 | A client that sends a state-changing request, creating a payment, placing an order, and does not receive a response before its own timeout fires cannot distinguish between two ... |
 | [Pagination Pattern](pagination-pattern.md) | canonical | 2,286 | A collection endpoint whose response includes every matching item, with no limit at all, works fine while the underlying collection is small, but degrades as the collection grows. |
 | [Webhook Receiver](webhook-receiver.md) | canonical | 2,302 | An application that wants to react to something happening in a third-party system, a payment succeeding, a repository receiving a new commit, a support ticket changing status ... |
