@@ -761,6 +761,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Dark Launch](../patterns/20-release-deployment/dark-launch.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2408,6 +2409,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) (API and Interface Design)
+- [Dark Launch](../patterns/20-release-deployment/dark-launch.md) (Release and Deployment)
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
@@ -2704,6 +2706,7 @@ These patterns contain runnable code examples written in Python:
 - [Currying](../patterns/16-functional/currying.md) (Functional Programming)
 - [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) (API and Interface Design)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
+- [Dark Launch](../patterns/20-release-deployment/dark-launch.md) (Release and Deployment)
 - [Data Class](../patterns/02-code-smells/data-class.md) (Code Smells)
 - [Data Clumps](../patterns/02-code-smells/data-clumps.md) (Code Smells)
 - [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) (Enterprise Application Architecture)
@@ -4094,6 +4097,7 @@ These patterns contain runnable code examples written in Swift:
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
 - [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) (API and Interface Design)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
+- [Dark Launch](../patterns/20-release-deployment/dark-launch.md) (Release and Deployment)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)

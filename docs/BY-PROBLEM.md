@@ -16218,6 +16218,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Wrong health metrics. evaluating the canary against metrics that do not actually reflect the real risk being managed can either miss a genuine regression or flag a healthy canary as unhealthy.
 - Stuck partial rollout. a canary left at a partial traffic fraction indefinitely, with no decision to advance or roll back, leaves the deployment in an ambiguous, half-migrated state.
 
+#### [Dark Launch](../patterns/20-release-deployment/dark-launch.md)
+
 #### [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md)
 
 #### [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md)

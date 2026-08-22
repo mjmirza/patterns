@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Dark Launch",
-    "slug": "dark-launch",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/dark-launch.md",
-    "focus": ""
-  },
-  {
     "name": "Feature Toggle",
     "slug": "feature-toggle",
     "category": "release and deployment",
