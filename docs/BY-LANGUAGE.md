@@ -782,6 +782,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [RED Method](../patterns/22-observability/red-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Structured Logging](../patterns/22-observability/structured-logging.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [USE Method](../patterns/22-observability/use-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1484,6 +1485,7 @@ These patterns contain runnable code examples written in Go:
 - [Society of Mind](../patterns/17-ai-agentic/society-of-mind.md) (AI and Agentic)
 - [Space-Based Architecture](../patterns/05-architectural/space-based-architecture.md) (Architectural Patterns)
 - [Spaghetti Code](../patterns/18-anti-patterns/spaghetti-code.md) (Anti-Patterns)
+- [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) (Observability)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
 - [Split Brain](../patterns/18-anti-patterns/split-brain.md) (Anti-Patterns)
 - [Split Loop](../patterns/03-refactoring/split-loop.md) (Refactoring Techniques)
@@ -3245,6 +3247,7 @@ These patterns contain runnable code examples written in Python:
 - [Society of Mind](../patterns/17-ai-agentic/society-of-mind.md) (AI and Agentic)
 - [Space-Based Architecture](../patterns/05-architectural/space-based-architecture.md) (Architectural Patterns)
 - [Spaghetti Code](../patterns/18-anti-patterns/spaghetti-code.md) (Anti-Patterns)
+- [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) (Observability)
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Specification](../patterns/11-domain-driven-design/specification.md) (Domain-Driven Design)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
@@ -4951,6 +4954,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Society of Mind](../patterns/17-ai-agentic/society-of-mind.md) (AI and Agentic)
 - [Space-Based Architecture](../patterns/05-architectural/space-based-architecture.md) (Architectural Patterns)
 - [Spaghetti Code](../patterns/18-anti-patterns/spaghetti-code.md) (Anti-Patterns)
+- [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) (Observability)
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Specification](../patterns/11-domain-driven-design/specification.md) (Domain-Driven Design)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)

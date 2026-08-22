@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Span and Trace Context Propagation",
-    "slug": "span-and-trace-context-propagation",
-    "category": "observability",
-    "path": "patterns/22-observability/span-and-trace-context-propagation.md",
-    "focus": ""
-  },
-  {
     "name": "High-Cardinality Metrics",
     "slug": "high-cardinality-metrics",
     "category": "observability",
