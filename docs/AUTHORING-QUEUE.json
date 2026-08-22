@@ -7,13 +7,6 @@
     "focus": ""
   },
   {
-    "name": "Outbox Inbox Pair",
-    "slug": "outbox-inbox-pair",
-    "category": "workflow orchestration",
-    "path": "patterns/23-workflow-orchestration/outbox-inbox-pair.md",
-    "focus": ""
-  },
-  {
     "name": "Event-Time Processing",
     "slug": "event-time-processing",
     "category": "stream processing",

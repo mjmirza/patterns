@@ -796,6 +796,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1343,6 +1344,7 @@ These patterns contain runnable code examples written in Go:
 - [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) (Enterprise Application Architecture)
 - [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Orchestrator-Worker](../patterns/17-ai-agentic/orchestrator-worker.md) (AI and Agentic)
+- [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) (Workflow and Orchestration)
 - [Output Encoding](../patterns/15-security/output-encoding.md) (Security)
 - [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) (AI and Agentic)
 - [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) (Anti-Patterns)
@@ -3066,6 +3068,7 @@ These patterns contain runnable code examples written in Python:
 - [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) (Frontend and UI)
 - [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Orchestrator-Worker](../patterns/17-ai-agentic/orchestrator-worker.md) (AI and Agentic)
+- [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) (Workflow and Orchestration)
 - [Output Encoding](../patterns/15-security/output-encoding.md) (Security)
 - [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) (AI and Agentic)
 - [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) (Anti-Patterns)
@@ -4810,6 +4813,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) (Enterprise Application Architecture)
 - [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) (Frontend and UI)
 - [Orchestrator-Worker](../patterns/17-ai-agentic/orchestrator-worker.md) (AI and Agentic)
+- [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) (Workflow and Orchestration)
 - [Output Encoding](../patterns/15-security/output-encoding.md) (Security)
 - [Output Guardrails](../patterns/17-ai-agentic/output-guardrails.md) (AI and Agentic)
 - [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) (Anti-Patterns)

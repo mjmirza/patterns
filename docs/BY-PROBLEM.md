@@ -1845,6 +1845,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | IllegalStateException at build() when the URI was never set. Symptom is a | [Builder](../patterns/01-design-patterns-gof/builder.md) | Design Patterns (GoF) |
 | Implementation detail leaking into step text. Symptom. A feature file | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
 | Implementing the loading trigger by polling scroll position and | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
+| Implementing the Outbox half and skipping the Inbox half is the most consequential misuse, because it leaves the syst... | [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) | Workflow and Orchestration |
 | Implementor calling back into the abstraction. Symptom. A cyclic dependency | [Bridge](../patterns/01-design-patterns-gof/bridge.md) | Design Patterns (GoF) |
 | Implicit interpreter surprise. Symptom. The same test passes in one package | [Tagless Final](../patterns/16-functional/tagless-final.md) | Functional Programming |
 | Import cycles in languages that enforce an acyclic module graph. Symptom. | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
@@ -16593,6 +16594,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Choosing the deprecated implementation path. Camunda's own migration docs name the
 - Authorization bypass at the exact claim or complete boundary. This is not a general
 - Choosing a code-shaped tool for a data-shaped problem. A team already committed to
+
+#### [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md)
+
+**Core Problem:** A service in a distributed system commonly needs to do two things when a business fact changes, update its own database and tell the rest of the system by publishing a message. Doing both reliably runs into what is widely called the dual write problem. Richardson states the exact shape of it, "how to atomically update the database and send messages to a message broker" (Chris Richardson, Transactional Outbox, microservices.io, https://microservices.io/patterns/data/transactional-outbox.html, verified 2026-08-23), and names the reason a distributed two-phase commit spanning both systems is not the answer, that it is "unreliable and undesirable."
+
+**Failure Mode Symptoms:**
+
+- Implementing the Outbox half and skipping the Inbox half is the most consequential misuse, because it leaves the system believing it has solved reliable delivery when it has only solved reliable sending. Debezium's own blog names the risk directly, warning against duplicate processing "caused by the at least once semantics of this data pipeline," and Confluent's own course material states the delivery guarantee plainly, that a message published this way "may arrive more than once" and downstream systems must be "prepared to handle any duplicates" (Confluent Developer, The Transactional Outbox Pattern, https://developer.confluent.io/courses/microservices/the-transactional-outbox-pattern/, verified 2026-08-23). The observable symptom in production is a duplicated business side effect, a charge processed twice, an email sent twice, precisely the failure mode the two named NServiceBus categories, Zombie Records and Ghost Messages, describe for a system with no outbox at all.
 
 #### [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md)
 
