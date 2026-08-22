@@ -1429,6 +1429,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Dropped asynchronous events. Symptom. Event counters at services exceed | [Audit Log](../patterns/15-security/audit-log.md) | Security |
 | Dropped continuation. Symptom. A request hangs, a coroutine never resumes, or | [Continuation](../patterns/16-functional/continuation.md) | Functional Programming |
 | Dropped continuation. Symptom. A request hangs, a parser never reports | [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) | Functional Programming |
+| Dropped in-flight requests at the switch. a request already in progress at the exact moment of the traffic switch can... | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |
 | Dropped or mismatched Tool Result in a parallel batch. Symptom. The | [Function Calling](../patterns/17-ai-agentic/function-calling.md) | AI and Agentic |
 | DRY applied across bounded contexts. A "Customer" or "Order" concept is | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | Duplicate charge on a retried payment step. | [Scheduler Agent Supervisor](../patterns/08-cloud-distributed/scheduler-agent-supervisor.md) | Cloud and Distributed |
@@ -1801,6 +1802,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | idempotency key. Observable symptom, a unique-constraint violation on insert, | [Prototype](../patterns/01-gof/prototype.md) | Design Patterns (GoF) |
 | Identifier binding attempted as a value. Symptom. A developer tries | [Parameterized Query](../patterns/15-security/parameterized-query.md) | Security |
 | Identity comparison and downcasting break on introduction. Symptom. A feature | [Decorator](../patterns/01-gof/decorator.md) | Design Patterns (GoF) |
+| Idle environment left stale. a blue environment kept around as the rollback target, but never refreshed or re-verifie... | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |
 | IdP-initiated SAML replay. Symptom. A captured or resent SAML Response, | [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) | Cloud and Distributed |
 | Ignored failure values. Symptom. Logs show an error result was returned, but | [Result Either](../patterns/16-functional/result-either.md) | Functional Programming |
 | Ignored return. Symptom. A test shows no change after a helper call even | [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) | Refactoring Techniques |
@@ -1862,6 +1864,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Insufficient capacity headroom at the remaining sites, so a real site failure still causes overload rather than a cle... | [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) | SRE and Operations |
 | insufficient memory for two complete buffers. Symptom. The system | [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) | Embedded and Hardware-Software |
 | insufficient. Symptom. A controller passes every HIL test and is | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
+| Insufficiently verified green environment. an environment that passed synthetic testing but never saw real traffic pa... | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |
 | Integration cliff. Symptom. Local demos work, but the first full environment | [Death March](../patterns/18-anti-patterns/death-march.md) | Anti-Patterns |
 | Intent explosion mirroring every UI callback one-to-one. Symptom. An | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
 | intent. Symptom. Understanding what actually happened from reading | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
@@ -2913,6 +2916,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | sharding. This is the symptom. The cause is Speculative Performance Tuning | [Premature Optimization](../patterns/18-anti-patterns/premature-optimization.md) | Anti-Patterns |
 | Shared actor identity. Symptom. Hundreds of privileged events show | [Audit Log](../patterns/15-security/audit-log.md) | Security |
 | shared code at all, letting it stagnate, that is the observable symptom. | [Context Map](../patterns/11-domain-driven-design/context-map.md) | Domain-Driven Design |
+| Shared database drift. a schema or data change made against one environment that the other environment does not expec... | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |
 | Shared mutable child. Symptom. Editing version v2 changes what a test | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
 | Shared mutable state accessed without synchronization from concurrently | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
 | Shared mutable state in the tree. Symptom. Intermittent wrong results under | [Interpreter](../patterns/01-gof/interpreter.md) | Design Patterns (GoF) |
@@ -16185,6 +16189,19 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Missing backpressure. a server streaming a large sequence of messages faster than a slow client can consume them exhausts memory buffering the unread backlog.
 - Silent connection loss. a network failure that drops the underlying connection without either side sending an explicit close can leave both ends believing the stream is still open until a transport-level timeout eventually fires.
 - Partial-message handling gaps. code written assuming every call has exactly one response message, later reused for a streaming call, silently processes only the first message in the sequence and drops the rest.
+
+### Release and Deployment
+
+#### [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md)
+
+**Core Problem:** Deploying a new release directly onto the running production environment, in place, risks downtime while the deployment is in progress, and leaves no clean way to undo the change if something goes wrong beyond re-deploying the previous version, which itself takes time and may not even be possible if the deployment process partially corrupted the running environment.
+
+**Failure Mode Symptoms:**
+
+- Shared database drift. a schema or data change made against one environment that the other environment does not expect breaks whichever environment receives traffic next.
+- Insufficiently verified green environment. an environment that passed synthetic testing but never saw real traffic patterns can still surface a problem the moment the switch happens.
+- Dropped in-flight requests at the switch. a request already in progress at the exact moment of the traffic switch can be lost if the switch is not handled gracefully.
+- Idle environment left stale. a blue environment kept around as the rollback target, but never refreshed or re-verified, can itself be broken by the time it is actually needed for a rollback.
 
 ### SRE and Operations
 

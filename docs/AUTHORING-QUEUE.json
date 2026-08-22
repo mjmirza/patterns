@@ -4277,13 +4277,6 @@
     "focus": ""
   },
   {
-    "name": "Blue-Green Deployment",
-    "slug": "blue-green-deployment",
-    "category": "release and deployment",
-    "path": "patterns/20-release-deployment/blue-green-deployment.md",
-    "focus": ""
-  },
-  {
     "name": "Canary Release",
     "slug": "canary-release",
     "category": "release and deployment",

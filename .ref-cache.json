@@ -2702,6 +2702,7 @@
  "https://martinfowler.com/articles/serverless.html": 200,
  "https://martinfowler.com/bliki/": 200,
  "https://martinfowler.com/bliki/AnemicDomainModel.html": 200,
+ "https://martinfowler.com/bliki/BlueGreenDeployment.html": 200,
  "https://martinfowler.com/bliki/BoundedContext.html": 200,
  "https://martinfowler.com/bliki/BranchByAbstraction.html": 200,
  "https://martinfowler.com/bliki/CQRS.html": 200,
