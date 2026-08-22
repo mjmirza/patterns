@@ -755,6 +755,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
@@ -2378,6 +2379,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
+- [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
@@ -3122,6 +3124,7 @@ These patterns contain runnable code examples written in Python:
 - [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) (Principles and Laws)
 - [Single Source of Truth](../patterns/04-principles-and-laws/single-source-of-truth.md) (Principles and Laws)
 - [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) (Enterprise Application Architecture)
+- [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Singleton Abuse](../patterns/18-anti-patterns/singleton-abuse.md) (Anti-Patterns)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 - [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) (Frontend and UI)
@@ -4067,6 +4070,7 @@ These patterns contain runnable code examples written in Swift:
 - [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
+- [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) (Frontend and UI)
 - [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) (Frontend and UI)
 - [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)

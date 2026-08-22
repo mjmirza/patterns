@@ -2,7 +2,7 @@
 
 Origin. Official Android/iOS architecture guidance
 
-8 entries, 28,610 words. Every entry carries all 18
+9 entries, 31,400 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
@@ -15,6 +15,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [MVVM-C (Model-View-ViewModel-Coordinator)](mvvm-c.md) | canonical | 3,602 | Plain MVVM cleanly separates a screen's own presentation logic from its view, per Microsoft's own description, "the view model implements properties and commands to which the view ... |
 | [Offline-First Sync](offline-first-sync.md) | canonical | 3,089 | A mobile device is not always connected. |
 | [Repository Pattern (Mobile Offline-First)](repository-pattern.md) | canonical | 3,834 | A mobile app that reads directly from the network whenever a screen needs data genuinely stops working the moment the device loses connectivity, and even with a connection, every ... |
+| [Single-Activity Architecture](single-activity-architecture.md) | canonical | 2,790 | In the pre-Navigation-component era, an Android app with N screens commonly had N Activities. |
 | [Unidirectional Data Flow (Mobile)](unidirectional-data-flow.md) | canonical | 3,879 | A screen whose state can be changed from more than one direction, a view mutating its own local property directly in one place, and a separate object also updating that same ... |
 | [ViewModel with State Hoisting](viewmodel-with-state-hoisting.md) | canonical | 3,517 | A composable function that declares and mutates its own local state directly is genuinely difficult to reuse, test, or preview, because its behavior depends on state hidden inside ... |
 
