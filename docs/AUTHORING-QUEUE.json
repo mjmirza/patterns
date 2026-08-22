@@ -3906,13 +3906,6 @@
     "focus": ""
   },
   {
-    "name": "Idempotency Key",
-    "slug": "idempotency-key",
-    "category": "security",
-    "path": "patterns/15-security/idempotency-key.md",
-    "focus": ""
-  },
-  {
     "name": "Webhook Signature Verification",
     "slug": "webhook-signature-verification",
     "category": "security",
@@ -4281,13 +4274,6 @@
     "slug": "over-agentification",
     "category": "anti-pattern",
     "path": "patterns/18-anti-patterns/over-agentification.md",
-    "focus": ""
-  },
-  {
-    "name": "Idempotent API",
-    "slug": "idempotent-api",
-    "category": "API design",
-    "path": "patterns/19-api-design/idempotent-api.md",
     "focus": ""
   },
   {

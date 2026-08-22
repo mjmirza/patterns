@@ -1691,6 +1691,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Framework leakage. a UI framework annotation or lifecycle type quietly imported into the domain layer because it was ... | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |
 | Freeing memory the instant the pointer is swapped. Symptom. A crash or | [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) | Concurrency and Parallelism |
 | Fresh fixture, stale environment. Symptom. Tests pass locally and fail | [Fresh Fixture](../patterns/14-testing/fresh-fixture.md) | Testing |
+| Fresh key per retry. a client that mistakenly generates a new idempotency key on every retry attempt gets no protecti... | [Idempotent API](../patterns/19-api-design/idempotent-api.md) | API and Interface Design |
 | Freshly ingested documents are findable by keyword search | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |
 | from. The symptom is a crash in production for a condition that should have | [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) | Refactoring Techniques |
 | frontends purely to follow the pattern's popularity. Symptom. The | [Micro Frontends](../patterns/13-frontend-ui/micro-frontends.md) | Frontend and UI |
@@ -2510,6 +2511,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Preloading resources the initial route does not actually need. | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | Premature abstraction. One family, one implementation, a full interface, and a | [Abstract Factory](../patterns/01-gof/abstract-factory.md) | Design Patterns (GoF) |
 | Premature extraction with only one actor so far. Symptom. A codebase | [Single Responsibility Principle](../patterns/04-principles-and-laws/single-responsibility-principle.md) | Principles and Laws |
+| Premature key expiry. a stored result that expires too soon lets a legitimate retry, arriving after the expiry window... | [Idempotent API](../patterns/19-api-design/idempotent-api.md) | API and Interface Design |
 | Premature microservices. Symptom. A team of five engineers running twenty services, each | [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) | Principles and Laws |
 | Premature portability, the overcorrection. Symptom, the team has spent | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |
 | Premature service extraction along a guessed domain line. Symptom. A | [Domain-based](../patterns/04-principles-and-laws/domain-based.md) | Principles and Laws |
@@ -2588,6 +2590,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Quorum miscalculation after a topology change. Symptom. A cluster that | [Three-Phase Commit](../patterns/12-data-storage/three-phase-commit.md) | Data and Storage |
 | Race after a split. Symptom. A caller checks availability, then the action | [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) | Refactoring Techniques |
 | Race between check and use. Symptom. Logs show "file not found", | [Replace Exception with Precheck](../patterns/03-refactoring/replace-exception-with-precheck.md) | Refactoring Techniques |
+| Race between concurrent retries. two retries with the same key arriving at nearly the same time, before the first att... | [Idempotent API](../patterns/19-api-design/idempotent-api.md) | API and Interface Design |
 | Raising a package's abstractness does not reduce its distance | [Stable Abstractions Principle](../patterns/04-principles-and-laws/stable-abstractions-principle.md) | Principles and Laws |
 | Rare inputs now panic or throw a different error. Cause. The | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
 | rather than a single citable source for each symptom. The pattern of these | [Service-Oriented Architecture](../patterns/05-architectural/service-oriented-architecture.md) | Architectural Patterns |
@@ -5192,6 +5195,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | unhandled edge case in the recovery logic itself. Symptom. A device | [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) | Embedded and Hardware-Software |
 | Unhandled error event terminating the process. Symptom. A Node service exits | [Observer](../patterns/01-gof/observer.md) | Design Patterns (GoF) |
 | Unhandled fault crossing the boundary. Symptom, a subagent that throws an | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |
+| Unhandled key conflict. a server that returns the cached result for a key without checking whether the new request bo... | [Idempotent API](../patterns/19-api-design/idempotent-api.md) | API and Interface Design |
 | Unhandled rejection silently dropped. Symptom. an asynchronous failure | [Future Promise](../patterns/09-concurrency/future-promise.md) | Concurrency and Parallelism |
 | unhandled, with no deliberate policy. Symptom. The system receives an | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Uniform application without gating. Symptom. Retrieval latency spikes | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |
@@ -16076,6 +16080,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Unbounded query depth. a client nests a query deeply enough, especially against a resolver whose field returns objects of the same type it started from, that the server spends unbounded resolver calls answering one request.
 - Inconsistent authorization. a check applied in one resolver but forgotten in a sibling resolver over the same underlying sensitive data leaves a path a client can use to bypass the intended access control.
 - Silent default-resolver mismatch. a field with no explicit resolver falls back to the default, which reads a same-named property off the parent value, and if that property is named or shaped differently than the field, the field silently returns null instead of failing loudly.
+
+#### [Idempotent API](../patterns/19-api-design/idempotent-api.md)
+
+**Core Problem:** A client that sends a state-changing request, creating a payment, placing an order, and does not receive a response before its own timeout fires cannot distinguish between two very different outcomes. the request never reached the server at all, or the request reached the server, succeeded, and only the response was lost on the way back. If the client simply retries in either case, and the operation genuinely happened the first time, a naive retry performs the same state-changing action a second time.
+
+**Failure Mode Symptoms:**
+
+- Fresh key per retry. a client that mistakenly generates a new idempotency key on every retry attempt gets no protection at all, since the server never recognizes the retries as the same operation.
+- Unhandled key conflict. a server that returns the cached result for a key without checking whether the new request body actually matches the original silently answers a different operation with a stale result.
+- Race between concurrent retries. two retries with the same key arriving at nearly the same time, before the first attempt's result is stored, can both proceed to perform the operation if the server has no in-flight locking.
+- Premature key expiry. a stored result that expires too soon lets a legitimate retry, arriving after the expiry window, perform the operation a second time.
 
 #### [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md)
 

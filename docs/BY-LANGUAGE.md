@@ -751,6 +751,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Idempotent API](../patterns/19-api-design/idempotent-api.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
 | [gRPC Streaming](../patterns/19-api-design/grpc-streaming.md) | API and Interface Design |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2403,6 +2404,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) (SRE and Operations)
 - [GraphQL DataLoader](../patterns/19-api-design/graphql-dataloader.md) (API and Interface Design)
 - [GraphQL Resolver Pattern](../patterns/19-api-design/graphql-resolver-pattern.md) (API and Interface Design)
+- [Idempotent API](../patterns/19-api-design/idempotent-api.md) (API and Interface Design)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
 - [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
@@ -2828,6 +2830,7 @@ These patterns contain runnable code examples written in Python:
 - [HyperLogLog](../patterns/12-data-storage/hyperloglog.md) (Data and Storage)
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
 - [Idempotency Key](../patterns/15-security/idempotency-key.md) (Security)
+- [Idempotent API](../patterns/19-api-design/idempotent-api.md) (API and Interface Design)
 - [Idempotent Consumer](../patterns/10-microservices/idempotent-consumer.md) (Microservices)
 - [Identity Field](../patterns/06-enterprise-application-architecture/identity-field.md) (Enterprise Application Architecture)
 - [Identity Map](../patterns/06-enterprise-application-architecture/identity-map.md) (Enterprise Application Architecture)
@@ -4092,6 +4095,7 @@ These patterns contain runnable code examples written in Swift:
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
 - [Hydration Island](../patterns/13-frontend-ui/hydration-island.md) (Frontend and UI)
 - [IO Monad](../patterns/16-functional/io-monad.md) (Functional Programming)
+- [Idempotent API](../patterns/19-api-design/idempotent-api.md) (API and Interface Design)
 - [Immutable Object](../patterns/09-concurrency/immutable-object.md) (Concurrency and Parallelism)
 - [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) (Frontend and UI)
 - [Interrupt Service Routine](../patterns/28-embedded-hardware/interrupt-service-routine.md) (Embedded and Hardware-Software)
