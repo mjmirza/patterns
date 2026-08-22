@@ -41,12 +41,14 @@ def tool(name: str) -> str | None:
     return shutil.which(name)
 
 
-def run(cmd: list[str], cwd: Path, timeout: int = 120, max_output: int = 1500) -> tuple[int, str]:
+def run(
+    cmd: list[str], cwd: Path, timeout: int = 120, max_output: int = 1500
+) -> tuple[int, str]:
     try:
         p = subprocess.run(
             cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout
         )
-        out = (p.stderr or p.stdout)
+        out = p.stderr or p.stdout
         if max_output and len(out) > max_output:
             out = out[:max_output]
         return p.returncode, out
@@ -129,7 +131,9 @@ def ts_project() -> Path | None:
         _TS_PROJECT = Path("/nonexistent")
         return None
     proj = Path(tempfile.mkdtemp(prefix="patterns-ts-"))
-    (proj / "package.json").write_text('{"name":"scratch","private":true}', encoding="utf-8")
+    (proj / "package.json").write_text(
+        '{"name":"scratch","private":true}', encoding="utf-8"
+    )
     rc, out = run(
         [npm, "install", "--no-audit", "--no-fund", "typescript@5", "@types/node@22"],
         proj,
@@ -225,8 +229,12 @@ def check_ts_batch(tasks: list[tuple[int, str]]) -> dict[int, tuple[int, str]]:
 
     checker_script = proj / "checker.js"
     tasks_file = proj / "tasks.json"
-    tasks_file.write_text(json.dumps([{"id": tid, "src": src} for tid, src in tasks]), encoding="utf-8")
-    rc, out = run([node, str(checker_script), str(tasks_file)], proj, timeout=180, max_output=0)
+    tasks_file.write_text(
+        json.dumps([{"id": tid, "src": src} for tid, src in tasks]), encoding="utf-8"
+    )
+    rc, out = run(
+        [node, str(checker_script), str(tasks_file)], proj, timeout=180, max_output=0
+    )
     if rc != 0 or not out.strip():
         return {tid: (1, f"TypeScript runner failed: {out}") for tid, _ in tasks}
 
@@ -237,7 +245,10 @@ def check_ts_batch(tasks: list[tuple[int, str]]) -> dict[int, tuple[int, str]]:
             res[int(tid_str)] = (code, msg)
         return res
     except Exception as e:
-        return {tid: (1, f"Failed to parse TS runner output: {e}\n{out[:500]}") for tid, _ in tasks}
+        return {
+            tid: (1, f"Failed to parse TS runner output: {e}\n{out[:500]}")
+            for tid, _ in tasks
+        }
 
 
 def check_ts(src: str, d: Path) -> tuple[int, str]:
@@ -254,6 +265,16 @@ def check_swift(src: str, d: Path) -> tuple[int, str]:
     return run([sc, "-parse", str(f)], d)
 
 
+def check_c(src: str, d: Path) -> tuple[int, str]:
+    # clang, never the "cc" name: some shells alias cc to an unrelated tool.
+    clang = tool("clang")
+    if not clang:
+        return -1, "clang not available"
+    f = d / "s.c"
+    f.write_text(src, encoding="utf-8")
+    return run([clang, "-std=c11", "-Wall", "-fsyntax-only", str(f)], d)
+
+
 CHECKERS = {
     "python": check_python,
     "java": check_java,
@@ -261,6 +282,7 @@ CHECKERS = {
     "go": check_go,
     "typescript": check_ts,
     "swift": check_swift,
+    "c": check_c,
 }
 
 
@@ -279,7 +301,9 @@ def main() -> int:
     task_counter = 0
 
     # First pass: map blocks and collect TypeScript batch tasks with explicit task IDs
-    parsed_files: list[tuple[Path, list[tuple[int, str, str, int | None, int | None]]]] = []
+    parsed_files: list[
+        tuple[Path, list[tuple[int, str, str, int | None, int | None]]]
+    ] = []
     for f in files:
         text = f.read_text(encoding="utf-8", errors="replace")
         blocks: list[tuple[int, str, str, int | None, int | None]] = []

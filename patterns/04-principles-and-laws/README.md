@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-41 entries, 322,492 words. Every entry carries all 18
+41 entries, 322,492 words, 1 more planned, 42 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -70,6 +70,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Domain-based](domain-based.md) | canonical | 8,254 | A system of any real size grows two kinds of edges as it is built. |
+
+## Planned
+
+Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
+
+- Inversion of Control
 
 ## Reading order
 
