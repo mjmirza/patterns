@@ -5250,13 +5250,6 @@
     "focus": ""
   },
   {
-    "name": "Offline-First Sync",
-    "slug": "offline-first-sync",
-    "category": "mobile architecture",
-    "path": "patterns/27-mobile-architecture/offline-first-sync.md",
-    "focus": ""
-  },
-  {
     "name": "Single Activity Architecture",
     "slug": "single-activity-architecture",
     "category": "mobile architecture",

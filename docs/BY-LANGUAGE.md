@@ -753,6 +753,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2375,6 +2376,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) (Mobile Architecture)
+- [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
@@ -2908,6 +2910,7 @@ These patterns contain runnable code examples written in Python:
 - [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-gof/observer.md) (Design Patterns (GoF))
+- [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
 - [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) (Domain-Driven Design)
@@ -4035,6 +4038,7 @@ These patterns contain runnable code examples written in Swift:
 - [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) (Architectural Patterns)
 - [Model-View-Presenter](../patterns/05-architectural/model-view-presenter.md) (Architectural Patterns)
 - [Money](../patterns/06-enterprise-application-architecture/money.md) (Enterprise Application Architecture)
+- [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) (Frontend and UI)
 - [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) (Frontend and UI)
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
