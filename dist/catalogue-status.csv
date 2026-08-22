@@ -18,7 +18,7 @@ family,name,published,planned,target,percent
 17-ai-agentic,AI and Agentic,55,0,55,100.0
 18-anti-patterns,Anti-Patterns,51,0,51,100.0
 19-api-design,API and Interface Design,10,0,10,100.0
-20-release-deployment,Release and Deployment,3,7,10,30.0
+20-release-deployment,Release and Deployment,4,6,10,40.0
 21-sre-operations,SRE and Operations,11,0,11,100.0
 22-observability,Observability,0,8,8,0.0
 23-workflow-orchestration,Workflow and Orchestration,0,6,6,0.0

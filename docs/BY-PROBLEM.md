@@ -16220,6 +16220,8 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 #### [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md)
 
+#### [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md)
+
 ### SRE and Operations
 
 #### [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md)

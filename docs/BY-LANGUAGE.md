@@ -762,6 +762,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Blue-Green Deployment](../patterns/20-release-deployment/blue-green-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Canary Release](../patterns/20-release-deployment/canary-release.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) | Release and Deployment |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2428,6 +2429,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) (Release and Deployment)
 - [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) (SRE and Operations)
 - [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
+- [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) (Release and Deployment)
 - [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Singleton](../patterns/01-gof/singleton.md) (Design Patterns (GoF))
 - [Static Stability](../patterns/21-sre-operations/static-stability.md) (SRE and Operations)
@@ -3189,6 +3191,7 @@ These patterns contain runnable code examples written in Python:
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Service-Oriented Architecture](../patterns/05-architectural/service-oriented-architecture.md) (Architectural Patterns)
 - [Session Management](../patterns/15-security/session-management.md) (Security)
+- [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) (Release and Deployment)
 - [Sharding](../patterns/08-cloud-distributed/sharding.md) (Cloud and Distributed)
 - [Shared Database Microservices](../patterns/18-anti-patterns/shared-database-microservices.md) (Anti-Patterns)
 - [Shared Database](../patterns/10-microservices/shared-database.md) (Microservices)
@@ -4171,6 +4174,7 @@ These patterns contain runnable code examples written in Swift:
 - [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)
 - [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
+- [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) (Release and Deployment)
 - [Signals](../patterns/13-frontend-ui/signals.md) (Frontend and UI)
 - [Single-Activity Architecture](../patterns/27-mobile-architecture/single-activity-architecture.md) (Mobile Architecture)
 - [Skeleton and Suspense](../patterns/13-frontend-ui/skeleton-and-suspense.md) (Frontend and UI)
