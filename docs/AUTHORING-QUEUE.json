@@ -4424,13 +4424,6 @@
     "focus": ""
   },
   {
-    "name": "Emergency Lever",
-    "slug": "emergency-lever",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/emergency-lever.md",
-    "focus": ""
-  },
-  {
     "name": "Static Stability",
     "slug": "static-stability",
     "category": "SRE and operations",

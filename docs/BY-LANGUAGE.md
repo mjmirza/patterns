@@ -750,6 +750,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) | Anti-Patterns |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Yo-yo Problem](../patterns/18-anti-patterns/yo-yo-problem.md) | Anti-Patterns |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
+| [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Error Budget](../patterns/21-sre-operations/error-budget.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Game Day](../patterns/21-sre-operations/game-day.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -2386,6 +2387,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) (Mobile Architecture)
 - [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) (Mobile Architecture)
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
+- [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
 - [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
@@ -2712,6 +2714,7 @@ These patterns contain runnable code examples written in Python:
 - [ETL](../patterns/12-data-storage/etl.md) (Data and Storage)
 - [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) (Embedded and Hardware-Software)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
+- [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) (Refactoring Techniques)
 - [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) (Refactoring Techniques)
 - [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) (Refactoring Techniques)
@@ -4044,6 +4047,7 @@ These patterns contain runnable code examples written in Swift:
 - [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) (Embedded and Hardware-Software)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
+- [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) (Frontend and UI)
 - [Error Budget](../patterns/21-sre-operations/error-budget.md) (SRE and Operations)
 - [Fake](../patterns/14-testing/fake.md) (Testing)

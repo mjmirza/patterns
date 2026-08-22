@@ -370,6 +370,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A latency-sensitive hot path shows unexplained tail-latency | [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) | Concurrency and Parallelism |
 | A later, legitimate change to one of the two locations is blocked | [Do Not Repeat Yourself](../patterns/04-principles-and-laws/do-not-repeat-yourself.md) | Principles and Laws |
 | a later, unrelated render. Symptom. A prediction from an earlier | [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) | Frontend and UI |
+| A lever nobody has tested since it was built, discovered to be broken only during the real incident it was meant to h... | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |
 | A list combination unexpectedly returns many more rows than the | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
 | A list mapping step silently removes records or adds records. | [Functor](../patterns/16-functional/functor.md) | Functional Programming |
 | A list page or a report takes noticeably longer as the data | [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) | Enterprise Application Architecture |
@@ -2204,7 +2205,9 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | New tokens verify in one region and fail in another. Cause. | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |
 | No abort mechanism, or an abort mechanism that is too slow, so a failing experiment grows past its intended blast rad... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
 | No absolute timeout. Symptom. A browser profile left open for weeks remains | [Session Management](../patterns/15-security/session-management.md) | Security |
+| No action log, so after the incident nobody can reconstruct exactly what mitigation was taken or why. | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |
 | No circuit breaking on downstream calls, so one slow service takes down | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
+| No clear authorization scope, so during a real incident nobody is sure who is allowed to pull the lever, costing valu... | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |
 | No composition root exists that could own the instance instead. | [Singleton](../patterns/01-gof/singleton.md) | Design Patterns (GoF) |
 | No cross-cell observability. Symptom. An operator can see that overall | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
 | No cycle is ever reported by CI, yet developers still describe the | [Acyclic Dependencies Principle](../patterns/04-principles-and-laws/acyclic-dependencies-principle.md) | Principles and Laws |
@@ -2536,6 +2539,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | public type. The symptom is a compile error in consumer code that is only | [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) | Refactoring Techniques |
 | Published in name, internal in fact. Symptom. A consuming team builds | [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) | Domain-Driven Design |
 | Publishing domain events before the transaction commits. Symptom. | [Application Service](../patterns/11-domain-driven-design/application-service.md) | Domain-Driven Design |
+| Pulling a lever with an unclear effect boundary, causing unexpected collateral impact the operator did not anticipate. | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |
 | Pulling up a field that is not universal. The field is only on some | [Pull Up Field](../patterns/03-refactoring/pull-up-field.md) | Refactoring Techniques |
 | Pulling up a field with a different meaning. The fields have the same | [Pull Up Field](../patterns/03-refactoring/pull-up-field.md) | Refactoring Techniques |
 | Pulling up a final field without pulling up the constructor. The | [Pull Up Field](../patterns/03-refactoring/pull-up-field.md) | Refactoring Techniques |
@@ -4978,6 +4982,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating the five-level taxonomy as a substitute for actual design | [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) | Frontend and UI |
 | Treating the gateway as a database. Symptom, the gateway starts | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | Treating the internal model as already the Published Language. Symptom. | [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) | Domain-Driven Design |
+| Treating the lever as the fix rather than a mitigation, leaving it pulled indefinitely instead of resolving the under... | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |
 | Treating the network as reliable. Symptom. A code review, or an incident | [Remote Procedure Invocation](../patterns/10-microservices/remote-procedure-invocation.md) | Microservices |
 | Treating the practice as purely a testing exercise rather than acting on what each experiment finds, so real weakness... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
 | Treating the publish channel as a request-reply channel. Symptom. A | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
@@ -16025,6 +16030,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Injecting a fault into a system with no genuine designed resilience to test, producing an outage rather than a useful finding.
 - Running an experiment once and treating the result as permanent, when the system, its dependencies, and its traffic keep changing after that single run.
 - Treating the practice as purely a testing exercise rather than acting on what each experiment finds, so real weaknesses are discovered repeatedly but never fixed.
+
+#### [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md)
+
+**Core Problem:** During an active incident, an operator often knows which feature or which category of load is causing the problem, but has no fast, safe way to turn it off. A normal code change and deploy takes time the incident does not have, and an ad-hoc emergency change made under pressure, with no prior testing, carries real risk of making things worse.
+
+**Failure Mode Symptoms:**
+
+- A lever nobody has tested since it was built, discovered to be broken only during the real incident it was meant to help contain.
+- No clear authorization scope, so during a real incident nobody is sure who is allowed to pull the lever, costing valuable time.
+- Pulling a lever with an unclear effect boundary, causing unexpected collateral impact the operator did not anticipate.
+- Treating the lever as the fix rather than a mitigation, leaving it pulled indefinitely instead of resolving the underlying problem and releasing it.
+- No action log, so after the incident nobody can reconstruct exactly what mitigation was taken or why.
 
 #### [Error Budget](../patterns/21-sre-operations/error-budget.md)
 
