@@ -2,7 +2,7 @@
 
 Origin. OpenTelemetry, RED and USE methods
 
-3 entries, 10,859 words, 5 more planned, 8 total when the family is complete. Every entry carries all 18
+4 entries, 14,245 words, 4 more planned, 8 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
@@ -12,6 +12,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Correlation ID](correlation-id.md) | canonical | 4,147 | A single request entering a distributed system rarely stays inside one process. |
 | [RED Method](red-method.md) | canonical | 3,385 | A team running many request driven services, each built by a different group of engineers, ends up with a different, inconsistent set of dashboards and metrics per service. |
 | [Structured Logging](structured-logging.md) | canonical | 3,327 | A traditional log line is a sentence written for a human eye, something like a request failed for user 42 after 300 milliseconds. |
+| [USE Method](use-method.md) | canonical | 3,386 | When a system is running slowly, the obvious first instinct is to start with application level profiling, reading through code paths, adding instrumentation, and guessing at what ... |
 
 ## Planned
 
@@ -21,7 +22,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Real User Monitoring
 - Span and Trace Context Propagation
 - Synthetic Monitoring
-- USE Method
 
 ## Reading order
 

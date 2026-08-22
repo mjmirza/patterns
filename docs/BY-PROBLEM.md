@@ -1549,6 +1549,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Error messages become worse after the split. Cause. The new | [Split Phase](../patterns/03-refactoring/split-phase.md) | Refactoring Techniques |
 | Error messages that name node types. Symptom. Rule authors file support | [Interpreter](../patterns/01-design-patterns-gof/interpreter.md) | Design Patterns (GoF) |
 | Error type drift. Symptom. Each step returns a different string, exception, | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
+| Errors are checked only for the resource believed to be the problem, rather than for every resource in the sweep, so ... | [USE Method](../patterns/22-observability/use-method.md) | Observability |
 | Estimating item heights inaccurately in the variable-height | [Virtual List](../patterns/13-frontend-ui/virtual-list.md) | Frontend and UI |
 | Evacuating traffic to healthy zones that do not actually have enough spare capacity, causing a new overload in the ve... | [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) | SRE and Operations |
 | Evacuation tooling that has not been tested since it was built, discovered to be broken only during the real incident... | [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) | SRE and Operations |
@@ -2838,6 +2839,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Sandbox escape or ambient credential leakage. Symptom, code that should have | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
 | Sandboxing matters. the evaluator must be able to run untrusted or | [Interpreter Architecture](../patterns/05-architectural/interpreter-architecture.md) | Architectural Patterns |
 | satisfying the method signature. The observable symptom is a sort routine that enters an | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
+| Saturation is skipped entirely because it seems hard to measure, when a direct measurement is often already available... | [USE Method](../patterns/22-observability/use-method.md) | Observability |
 | Save is called from inside a loop over query results, defeating | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
 | scan. Symptom. A component's return statement grows several levels | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
 | scenarios. Symptom. A widely imported test-helper module holds one giant | [Stub](../patterns/14-testing/stub.md) | Testing |
@@ -4922,6 +4924,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The upstream team has no reason to accommodate the downstream's needs. | [Conformist](../patterns/11-domain-driven-design/conformist.md) | Domain-Driven Design |
 | The upstream's model is close enough to what the downstream actually | [Conformist](../patterns/11-domain-driven-design/conformist.md) | Domain-Driven Design |
 | the URL in section 9. Observable symptom, two libraries in one process | [Prototype](../patterns/01-design-patterns-gof/prototype.md) | Design Patterns (GoF) |
+| The USE Method is applied to a request driven service instead of a hardware resource, producing checks that do not ma... | [USE Method](../patterns/22-observability/use-method.md) | Observability |
 | The user finishes a screen's real task, but the app appears | [MVVM-C (Model-View-ViewModel-Coordinator)](../patterns/27-mobile-architecture/mvvm-c.md) | Mobile Architecture |
 | The variable has at least two non-overlapping lifetimes, or the later uses can | [Split Variable](../patterns/03-refactoring/split-variable.md) | Refactoring Techniques |
 | The variable parts occupy value positions, such as predicates, inserted | [Parameterized Query](../patterns/15-security/parameterized-query.md) | Security |
@@ -4986,6 +4989,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Thundering herd on registry refresh. Symptom, the registry's CPU or | [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) | Microservices |
 | Thundering herd on router restart or scale event. Symptom. Every caller | [Server-Side Discovery](../patterns/10-microservices/server-side-discovery.md) | Microservices |
 | Thundering-herd stealing under bursty low parallelism. Symptom. CPU usage spikes on all | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
+| Time pressure during an incident leads an investigator to check only the resource that already looks suspicious and s... | [USE Method](../patterns/22-observability/use-method.md) | Observability |
 | Time pressure that rewards local delivery over cross-system | [Stovepipe System](../patterns/18-anti-patterns/stovepipe-system.md) | Anti-Patterns |
 | Timeboxing applied to a genuinely hard, high-stakes topic. Symptom. A | [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) | Anti-Patterns |
 | timed-out request. The observable symptom is a duplicate line item in a | [Predictable](../patterns/04-principles-and-laws/predictable.md) | Principles and Laws |
@@ -5290,6 +5294,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Using the control bus as a covert data channel. | [Control Bus](../patterns/07-integration/control-bus.md) | Enterprise Integration |
 | Using the log store as a database of record. Symptom. A finance or | [Log Aggregation](../patterns/10-microservices/log-aggregation.md) | Microservices |
 | Using throttle for a scenario where only the final, settled state | [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) | Frontend and UI |
+| Utilization and Saturation are conflated as if they were the same measurement, when Gregg's own example shows they ca... | [USE Method](../patterns/22-observability/use-method.md) | Observability |
 | Vague task boundaries causing duplicated work. The symptom is two or more | [Multi-Agent Supervisor](../patterns/17-ai-agentic/multi-agent-supervisor.md) | AI and Agentic |
 | Validate before decode. Symptom. A path, tag, or identifier passes the first | [Input Validation](../patterns/15-security/input-validation.md) | Security |
 | Validation duplicated at every entry point. Symptom. The same | [Anemic Domain Model](../patterns/18-anti-patterns/anemic-domain-model.md) | Anti-Patterns |
@@ -16420,6 +16425,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Log volume grows unmanaged as more and more structured fields are added to more and more call sites, until ingestion and storage cost becomes a real budget problem, which is the exact scenario Datadog's own guidance addresses by recommending routing, filtering, and sampling as close to the source as possible (https://www.datadoghq.com/blog/optimize-high-volume-logs/).
 - A field with an effectively unbounded number of distinct values, most often a user identifier or a request identifier, is added as an indexed dimension in a system built around a bounded set of values, and indexing and storage cost can rise sharply as the field's own value space and the traffic through it both grow.
 - Structured and unstructured logging are mixed in the same service with no clear boundary, so downstream tooling has to handle both shapes, and queries that assume a consistent structured shape silently miss the unstructured lines.
+
+#### [USE Method](../patterns/22-observability/use-method.md)
+
+**Core Problem:** When a system is running slowly, the obvious first instinct is to start with application level profiling, reading through code paths, adding instrumentation, and guessing at what might be slow. That instinct often skips past the simpler, faster question of whether the underlying hardware itself, the CPU, the memory, a disk, or the network, is the actual bottleneck, and it is easy to miss an obviously overloaded resource entirely if there is no systematic way of checking every one of them.
+
+**Failure Mode Symptoms:**
+
+- Utilization and Saturation are conflated as if they were the same measurement, when Gregg's own example shows they can diverge sharply. a resource can show a low average utilization figure over a long window while still saturating in short bursts within that same window, and only Saturation, not Utilization, reveals the real problem (https://www.brendangregg.com/usemethod.html).
+- The USE Method is applied to a request driven service instead of a hardware resource, producing checks that do not map to anything the service's users actually experience, exactly the boundary the method's own creator and RED's creator both state directly (https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/).
+- Saturation is skipped entirely because it seems hard to measure, when a direct measurement is often already available on the platform, Linux pressure stall information reports the share of time in which some, or all, tasks are stalled on a given resource (https://docs.kernel.org/accounting/psi.html), and skipping it in favor of Utilization alone reintroduces the exact blind spot the method exists to close.
+- Time pressure during an incident leads an investigator to check only the resource that already looks suspicious and skip the rest of the sweep, which can miss the actual bottleneck sitting on a resource nobody thought to look at, the failure mode Gregg's own caveat about limited time implicitly warns against.
+- Errors are checked only for the resource believed to be the problem, rather than for every resource in the sweep, so a genuine error condition on an unrelated resource goes unnoticed.
 
 ### Mobile Architecture
 

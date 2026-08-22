@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 800,
+  "published_total": 801,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 13,
   "stale_entries": 0,
-  "references_checked": 4213,
+  "references_checked": 4219,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -290,12 +290,12 @@
       "family": "22-observability",
       "name": "Observability",
       "origin": "OpenTelemetry, RED and USE methods",
-      "published": 3,
-      "planned": 5,
+      "published": 4,
+      "planned": 4,
       "target": 8,
-      "percent": 37.5,
+      "percent": 50.0,
       "maturity": {
-        "canonical": 3
+        "canonical": 4
       }
     },
     {
