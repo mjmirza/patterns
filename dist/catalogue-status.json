@@ -1,6 +1,6 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 794,
+  "published_total": 795,
   "target_total": 847,
   "families_total": 29,
   "families_complete": 22,
@@ -266,12 +266,12 @@
       "family": "20-release-deployment",
       "name": "Release and Deployment",
       "origin": "Humble and Farley",
-      "published": 7,
-      "planned": 3,
+      "published": 8,
+      "planned": 2,
       "target": 10,
-      "percent": 70.0,
+      "percent": 80.0,
       "maturity": {
-        "canonical": 7
+        "canonical": 8
       }
     },
     {
