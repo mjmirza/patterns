@@ -2,13 +2,14 @@
 
 Origin. Google SRE, AWS Well-Architected
 
-5 entries, 13,052 words. Every entry carries all 18
+6 entries, 15,509 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Chaos Engineering](chaos-engineering.md) | canonical | 2,457 | A distributed system's resilience is, by default, an assumption. |
 | [Error Budget](error-budget.md) | canonical | 2,575 | Engineering teams building on top of a service and the team operating that service structurally want different things. |
 | [Game Day](game-day.md) | canonical | 2,510 | A system's resilience, a runbook's correctness, and a team's readiness are all assumptions until they are tested against a real failure. |
 | [Runbook Automation](runbook-automation.md) | canonical | 2,671 | During an incident, a person following a runbook by hand introduces two real costs. |

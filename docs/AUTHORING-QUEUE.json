@@ -4424,13 +4424,6 @@
     "focus": ""
   },
   {
-    "name": "Chaos Engineering",
-    "slug": "chaos-engineering",
-    "category": "SRE and operations",
-    "path": "patterns/21-sre-operations/chaos-engineering.md",
-    "focus": ""
-  },
-  {
     "name": "Graceful Degradation",
     "slug": "graceful-degradation",
     "category": "SRE and operations",
