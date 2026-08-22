@@ -317,6 +317,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A failed operation sometimes keeps state changes and sometimes | [State Monad](../patterns/16-functional/state-monad.md) | Functional Programming |
 | A failed update looks like a successful no-op in production. | [Prism](../patterns/16-functional/prism.md) | Functional Programming |
 | A failure partway through must be handled by something, either automatic | [Saga versus Process Manager](../patterns/11-domain-driven-design/saga-versus-process-manager.md) | Domain-Driven Design |
+| A fan-in or broadcast relationship is forced into the strict single parent model instead of using span links, silentl... | [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) | Observability |
 | A feature request to run the application with two different | [Singleton Abuse](../patterns/18-anti-patterns/singleton-abuse.md) | Anti-Patterns |
 | A feature ships with an obvious edge case unhandled, and when | [Keep It Simple](../patterns/04-principles-and-laws/keep-it-simple.md) | Principles and Laws |
 | A feature works for every payment method except the one added last | [Repeated Switches](../patterns/02-code-smells/repeated-switches.md) | Code Smells |
@@ -946,6 +947,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Backpressure coupling the emitter to the backend. Symptom. Request | [Log Aggregation](../patterns/10-microservices/log-aggregation.md) | Microservices |
 | Bad name that hides the condition. The extracted condition is named | [Decompose Conditional](../patterns/03-refactoring/decompose-conditional.md) | Refactoring Techniques |
 | Bad name. The extracted function is named for how the block works | [Extract Function](../patterns/03-refactoring/extract-function.md) | Refactoring Techniques |
+| Baggage is used to carry a large or sensitive value, forgetting that it is deliberately propagated to every downstrea... | [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) | Observability |
 | Baking environment-specific configuration into the image. Symptom. There | [Service Instance per Container](../patterns/10-microservices/service-instance-per-container.md) | Microservices |
 | Batch update allocation cliff. Symptom. Updating 10,000 keys through a loop | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
 | Batched writer loses the per-write acknowledgement boundary. Symptom. A | [Write-Through Cache](../patterns/12-data-storage/write-through-cache.md) | Data and Storage |
@@ -1751,6 +1753,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | handler, such as an onClick callback. Symptom. The error is not | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Handoff used where delegation was needed. The symptom is that work that | [Agent Handoff](../patterns/17-ai-agentic/agent-handoff.md) | AI and Agentic |
 | Hard-to-reproduce stale data. Symptom. An occasional message carries stale | [Content Enricher](../patterns/07-integration/content-enricher.md) | Enterprise Integration |
+| Head based sampling drops the one trace that actually mattered, an error, before its full shape was ever known, since... | [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) | Observability |
 | Head-of-line blocking on a single slow item. Symptom. Overall pipeline | [Pipeline Architecture](../patterns/05-architectural/pipeline-architecture.md) | Architectural Patterns |
 | Header and body drift. Symptom. A field exists in both the envelope | [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) | Enterprise Integration |
 | Header identity spoofing after a gateway. Symptom. A caller reaches an | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |
@@ -5009,6 +5012,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Torn or inconsistent reads from a read path that silently mutates. | [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) | Concurrency and Parallelism |
 | Torn read during a swap. Symptom. One request produces a result that no | [Strategy](../patterns/01-design-patterns-gof/strategy.md) | Design Patterns (GoF) |
 | Total-order contract violations in comparator-style interfaces. A subtype's | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
+| Trace context is not propagated across an asynchronous boundary, most often a message queue, because the receiving wo... | [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) | Observability |
 | Trace query volume or storage cost grows far faster than | [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) | Microservices |
 | Traces show one generic "validate" span with no field-level | [Applicative](../patterns/16-functional/applicative.md) | Functional Programming |
 | transactional integrity. Symptom, code iterates over | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
@@ -5215,6 +5219,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Uncompensatable step placed too early. Symptom. Customers receive a | [Saga](../patterns/08-cloud-distributed/saga.md) | Cloud and Distributed |
 | Unconditional application to small payloads. Symptom. A pipeline shows | [Claim Check](../patterns/08-cloud-distributed/claim-check.md) | Cloud and Distributed |
 | Uncoordinated schema drift. Symptom, a service starts returning null or | [Shared Database](../patterns/10-microservices/shared-database.md) | Microservices |
+| Uncorrected clock skew between hosts makes a child span appear to start before its own parent, corrupting the trace's... | [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) | Observability |
 | Under a spike of concurrent producer and consumer threads, | [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) | Concurrency and Parallelism |
 | Under a synthetic benchmark or a real production hot spot, CPU | [Compare-and-Swap Loop](../patterns/09-concurrency/compare-and-swap-loop.md) | Concurrency and Parallelism |
 | Under load, the Aggregator's memory or storage grows without | [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) | Enterprise Integration |
@@ -16413,6 +16418,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A team treats RED as sufficient on its own and never checks the resource layer, so a slowdown whose real cause is a saturated resource is investigated entirely at the service level and never found, because that signal was never in scope for this method to begin with.
 - Rate, Error, or Duration labels are broken out by a value that can take on very many distinct values, such as a raw identifier rather than a normalized route template, which multiplies the number of distinct time series far beyond what the dashboard or its backend was built to hold.
 - Two services define Errors differently, one counting only server side failures and another also counting client side validation failures as errors, so a fleet wide error rate comparison between them is misleading even though both dashboards look identical.
+
+#### [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md)
+
+**Core Problem:** A Correlation ID ties every log line from one request together with a single flat value, which answers which log lines belong to this request, but not which specific hop inside that request was slow, or how the work fanned out across parallel calls. When a request touches five services and the overall response is slow, a flat identifier tells an engineer the request was slow, not which one of the five services actually caused it.
+
+**Failure Mode Symptoms:**
+
+- Trace context is not propagated across an asynchronous boundary, most often a message queue, because the receiving worker never automatically inherits the in process context the way a synchronous HTTP call would, producing an orphaned span with no connection back to the trace that caused it, exactly the failure OpenTelemetry's messaging conventions describe and the reason span links exist as the fix (https://opentelemetry.io/docs/specs/semconv/messaging/messaging-spans/).
+- A fan-in or broadcast relationship is forced into the strict single parent model instead of using span links, silently dropping every predecessor but one, or producing a tree structure that does not actually describe what happened.
+- Head based sampling drops the one trace that actually mattered, an error, before its full shape was ever known, since a head sampling decision is made early and cannot see the rest of the trace, exactly the limitation OpenTelemetry names directly (https://opentelemetry.io/docs/concepts/sampling/).
+- Uncorrected clock skew between hosts makes a child span appear to start before its own parent, corrupting the trace's visual and logical ordering, a real, documented condition Jaeger addresses with a configurable clock skew correction feature (https://www.jaegertracing.io/docs/2.dev/deployment/configuration/). Even that correction is not free of its own problems, a real engineering discussion on the Jaeger project's own issue tracker argues the correction feature can misfire, since it relies on an undocumented tag to detect distinct hosts and assumes a child span's duration is always shorter than its parent's, an assumption that does not always hold (https://github.com/jaegertracing/jaeger/issues/1459). This second point is engineering judgement drawn from a real, cited discussion, not a settled fact.
+- Baggage is used to carry a large or sensitive value, forgetting that it is deliberately propagated to every downstream hop by design, whether or not that hop actually needs it.
 
 #### [Structured Logging](../patterns/22-observability/structured-logging.md)
 
