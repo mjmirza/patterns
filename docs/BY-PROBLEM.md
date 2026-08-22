@@ -2013,6 +2013,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Letting a view read or mutate a piece of local state directly, | [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) | Mobile Architecture |
 | Letting the automated step set drift out of sync with the runbook document, so the human readable procedure and what ... | [Runbook Automation](../patterns/21-sre-operations/runbook-automation.md) | SRE and Operations |
 | Letting the degraded response path rot from lack of testing, so it silently breaks and is only discovered during a re... | [Graceful Degradation](../patterns/21-sre-operations/graceful-degradation.md) | SRE and Operations |
+| Letting the Event History grow without bound is a second failure mode. The observable symptom escalates in two stages... | [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) | Workflow and Orchestration |
 | Letting the history grow unbounded in a long-running session. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Letting the number of states grow without periodically reassessing | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software |
 | Letting the plant simulation's model drift out of sync with the | [Hardware-in-the-Loop Testing](../patterns/28-embedded-hardware/hardware-in-the-loop-testing.md) | Embedded and Hardware-Software |
@@ -2297,6 +2298,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | non-applicability list. Symptom, a new special case has to be bolted onto | [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) | Code Smells |
 | Non-deterministic routing under retry. Symptom. The same message, resent | [Content-Based Router](../patterns/07-integration/content-based-router.md) | Enterprise Integration |
 | Non-deterministic targets producing unreproducible crashes. Symptom. The | [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) | Testing |
+| Non-deterministic workflow code, most commonly a direct call to the system clock, a random number generator, or an in... | [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) | Workflow and Orchestration |
 | Non-idempotent command issuance under at-least-once delivery. Symptom. A | [Process Manager](../patterns/11-domain-driven-design/process-manager.md) | Domain-Driven Design |
 | Non-idempotent compensation logic causing a double-undo. WS-BPEL's own formal | [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) | Workflow and Orchestration |
 | Non-idempotent map or reduce functions. Symptom. Output totals are | [Map-Reduce](../patterns/09-concurrency/map-reduce.md) | Concurrency and Parallelism |
@@ -16570,6 +16572,15 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Choosing literal undo over semantic compensation for an irreversible action. Azure's
 - An unauthorized party triggering the compensation. This is a real, currently exploited
 - Non-idempotent compensation logic causing a double-undo. WS-BPEL's own formal
+
+#### [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md)
+
+**Core Problem:** A long running process, one that spans minutes, days, or months of real wall clock time and moves through many sequential steps, will eventually crash, get killed by a deploy, or have its host rebooted, simply because the process runs long enough for one of those events to occur. Without durable execution, everything the process held in memory at that moment, which step it was on, what local variables it had computed, is gone. Temporal's own framing of the problem is direct, that "normally, if a crash occurs then the state of your application's execution is lost," which forces "extensive error handling logic and complex recovery code to resume" (Temporal Docs, Understanding Temporal, https://docs.temporal.io/evaluate/understanding-temporal, verified 2026-08-23).
+
+**Failure Mode Symptoms:**
+
+- Non-deterministic workflow code, most commonly a direct call to the system clock, a random number generator, or an inline network call inside orchestration code rather than an Activity, causes replay to diverge from the recorded history. The observable symptom is a workflow task failure carrying a non-determinism error, and on Azure Durable Functions the platform states plainly that "nondeterministic orchestrator code can result in runtime errors or other unexpected behavior" (Microsoft Learn, Durable Task orchestrations, https://learn.microsoft.com/en-us/azure/durable-task/common/durable-task-orchestrations, verified 2026-08-23). The dangerous variant of this failure is that a change can pass every unit test cleanly, because a fresh test has no history to replay against, and only fails once it collides with an already in flight execution's real history in production.
+- Letting the Event History grow without bound is a second failure mode. The observable symptom escalates in two stages, a warning logged once an execution passes 10,240 events, followed by outright termination at 51,200 events (Temporal Docs, Event History Limits, https://docs.temporal.io/workflow-execution/event, verified 2026-08-23), and the fix is to reach for Continue-As-New before the ceiling is close, not after.
 
 #### [Human Task](../patterns/23-workflow-orchestration/human-task.md)
 

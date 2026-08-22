@@ -794,6 +794,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Synthetic Monitoring](../patterns/22-observability/synthetic-monitoring.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [USE Method](../patterns/22-observability/use-method.md) | Observability |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Compensation Handler](../patterns/23-workflow-orchestration/compensation-handler.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Human Task](../patterns/23-workflow-orchestration/human-task.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1156,6 +1157,7 @@ These patterns contain runnable code examples written in Go:
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
+- [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
 - [Durable Subscriber](../patterns/07-integration/durable-subscriber.md) (Enterprise Integration)
 - [Dynamic Router](../patterns/07-integration/dynamic-router.md) (Enterprise Integration)
 - [ELT](../patterns/12-data-storage/elt.md) (Data and Storage)
@@ -1678,6 +1680,7 @@ These patterns have unique implementation variants or change their design struct
 - [Domain-based](../patterns/04-principles-and-laws/domain-based.md) (Principles and Laws)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
+- [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
 - [Dynamic Router](../patterns/07-integration/dynamic-router.md) (Enterprise Integration)
 - [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) (Cloud and Distributed)
 - [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) (Microservices)
@@ -2162,6 +2165,7 @@ These patterns have unique implementation variants or change their design struct
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
+- [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
 - [ETL](../patterns/12-data-storage/etl.md) (Data and Storage)
 - [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) (Refactoring Techniques)
 - [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) (Refactoring Techniques)
@@ -2808,6 +2812,7 @@ These patterns contain runnable code examples written in Python:
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
+- [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
 - [Durable Subscriber](../patterns/07-integration/durable-subscriber.md) (Enterprise Integration)
 - [Dynamic Router](../patterns/07-integration/dynamic-router.md) (Enterprise Integration)
 - [ELT](../patterns/12-data-storage/elt.md) (Data and Storage)
@@ -3465,6 +3470,7 @@ These patterns have unique implementation variants or change their design struct
 - [Domain-based](../patterns/04-principles-and-laws/domain-based.md) (Principles and Laws)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
+- [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
 - [Dynamic Router](../patterns/07-integration/dynamic-router.md) (Enterprise Integration)
 - [ETL](../patterns/12-data-storage/etl.md) (Data and Storage)
 - [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) (Refactoring Techniques)
@@ -4580,6 +4586,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Domain-based](../patterns/04-principles-and-laws/domain-based.md) (Principles and Laws)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
+- [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
 - [Durable Subscriber](../patterns/07-integration/durable-subscriber.md) (Enterprise Integration)
 - [Dynamic Router](../patterns/07-integration/dynamic-router.md) (Enterprise Integration)
 - [ELT](../patterns/12-data-storage/elt.md) (Data and Storage)
@@ -5159,6 +5166,7 @@ These patterns have unique implementation variants or change their design struct
 - [Domain Event](../patterns/11-domain-driven-design/domain-event.md) (Domain-Driven Design)
 - [Domain Primitive](../patterns/11-domain-driven-design/domain-primitive.md) (Domain-Driven Design)
 - [Domain Service](../patterns/11-domain-driven-design/domain-service.md) (Domain-Driven Design)
+- [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
 - [Dynamic Router](../patterns/07-integration/dynamic-router.md) (Enterprise Integration)
 - [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) (Refactoring Techniques)
 - [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) (Refactoring Techniques)
