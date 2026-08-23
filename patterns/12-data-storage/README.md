@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-42 entries, 314,814 words, 3 more planned, 45 total when the family is complete. Every entry carries all 18
+44 entries, 318,137 words, 1 more planned, 45 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -30,6 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Bloom Filter](bloom-filter.md) | canonical | 8,876 | A system needs to answer one question over and over, at high volume, with low latency. |
+| [Byzantine Fault Tolerance](byzantine-fault-tolerance.md) | canonical | 1,762 | A distributed system that assumes a failed node simply stops responding, a crash fault, is defenseless against a node that instead keeps responding but lies, sending one answer to ... |
 | [CRDT](crdt.md) | established | 6,106 | A system replicates the same logical data across more than one node, and more than one node accepts writes without first coordinating with the others. |
 | [Change Data Capture](change-data-capture.md) | established | 6,609 | A service owns a database that other services, warehouses, caches, and search indexes need to stay synchronized with. |
 | [Columnar Storage](columnar-storage.md) | canonical | 7,452 | A database has to put bytes on disk or in memory in some fixed physical order, and that order is a one-time decision with permanent consequences for every query that runs ... |
@@ -37,6 +38,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Data Mesh](data-mesh.md) | established | 7,417 | A large organization with more than a handful of independent product or business domains eventually runs a central data team whose job is to ingest data from every domain's ... |
 | [Data Vault](data-vault.md) | established | 8,114 | An enterprise data warehouse ingests data from many source systems, an ERP, a CRM, a billing platform, several SaaS tools connected through an API, and often at least one legacy ... |
 | [Denormalization](denormalization.md) | canonical | 1,923 | The normalization article states directly why a fully normalized schema exists in the first place, and denormalization is the deliberate trade against exactly this protection. |
+| [Distributed Hash Table](distributed-hash-table.md) | canonical | 1,561 | A centralized lookup directory is a single point of failure and a single scaling bottleneck, every lookup depends on that one directory staying up and staying fast as the number ... |
 | [ELT](elt.md) | established | 7,149 | A team needs data from several operational systems, a payments database, a support ticket system, a marketing platform's API, a stream of application events, made available for ... |
 | [ETL](etl.md) | canonical | 7,257 | An organization has data that lives in one shape, in one place, produced for one purpose, and it needs that data in a different shape, in a different place, usable for a different ... |
 | [Gossip Protocol](gossip-protocol.md) | canonical | 9,789 | A set of processes, potentially numbering in the hundreds or thousands, needs to keep a piece of shared state consistent, or needs to agree on who is currently alive, without a ... |
@@ -86,9 +88,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Byzantine Fault Tolerance
 - Database Federation
-- Distributed Hash Table
 
 ## Reading order
 

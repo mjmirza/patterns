@@ -12196,6 +12196,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. A team building an SPV-style lightweight client using Bloom filter
 - Symptom. Query latency for the filter grows noticeably as the number of
 
+#### [Byzantine Fault Tolerance](../patterns/12-data-storage/byzantine-fault-tolerance.md)
+
+**Core Problem:** A distributed system that assumes a failed node simply stops responding, a crash fault, is defenseless against a node that instead keeps responding but lies, sending one answer to one peer and a contradictory answer to another. the interactive consistency problem, named directly in dimension 1, is exactly this, how a set of correct nodes can still reach agreement when some unknown subset of nodes is actively working against that agreement rather than merely absent.
+
 #### [CRDT](../patterns/12-data-storage/crdt.md)
 
 **Core Problem:** A system replicates the same logical data across more than one node, and more than one node accepts writes without first coordinating with the others. This happens for three distinct reasons a reader should be able to recognize in their own architecture. Geographic distribution, where round trips to a single leader cost too much latency for interactive use. Offline-first client software, where a device must accept edits with no network connection at all. Peer-to-peer collaboration, where there is no server in the write path by design.
@@ -12272,6 +12276,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 #### [Denormalization](../patterns/12-data-storage/denormalization.md)
 
 **Core Problem:** The normalization article states directly why a fully normalized schema exists in the first place, and denormalization is the deliberate trade against exactly this protection. "there are circumstances in which certain facts cannot be recorded at all" (an insertion anomaly), "the same information can be expressed on multiple rows, therefore updates to the relation may result in logical inconsistencies" (an update anomaly), and "under certain circumstances, the deletion of data representing certain facts necessitates the deletion of data representing completely different facts" (a deletion anomaly) (Wikipedia, "Database normalization," verified 2026-08-23). a fully normalized schema avoids these three anomalies but often requires more joins to answer a read, which is the cost denormalization exists to remove.
+
+#### [Distributed Hash Table](../patterns/12-data-storage/distributed-hash-table.md)
+
+**Core Problem:** A centralized lookup directory is a single point of failure and a single scaling bottleneck, every lookup depends on that one directory staying up and staying fast as the number of nodes and keys grows. Wikipedia's own text names the properties a DHT provides instead directly. "autonomy and decentralization," where nodes form the system with no central coordination, "fault tolerance," where "the system remains reliable despite nodes continuously joining, leaving, and failing," and "scalability," where "the system operates efficiently even with thousands or millions of nodes" (Wikipedia, "Distributed hash table," verified 2026-08-23).
 
 #### [ELT](../patterns/12-data-storage/elt.md)
 
@@ -15211,6 +15219,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Hybrid search results look nearly identical to pure vector
 - A reranker chained after hybrid fusion barely changes the top
 - The team believes it has hybrid search but retrieval quality
+
+#### [Inference-Time Scaling](../patterns/17-ai-agentic/inference-time-scaling.md)
+
+**Core Problem:** The paper's own text names the underlying inefficiency directly, already implied in dimension 1. spending the same fixed amount of test-time compute on every prompt, regardless of how hard that prompt actually is, wastes compute on easy prompts and under-serves hard ones. "the effectiveness of different approaches to scaling test-time compute critically varies depending on the difficulty of the prompt" (Snell et al., "Scaling LLM Test-Time Compute Optimally," verified 2026-08-23), naming difficulty-blindness as the exact gap a compute-optimal strategy closes.
 
 #### [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md)
 
