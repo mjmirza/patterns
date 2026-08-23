@@ -4660,6 +4660,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The object graph is deep enough, an Entity referencing child Entities that | [Aggregate Root](../patterns/11-domain-driven-design/aggregate-root.md) | Domain-Driven Design |
 | The object is stateless, or its state is a cache whose contents do not change | [Singleton](../patterns/01-design-patterns-gof/singleton.md) | Design Patterns (GoF) |
 | The objects are peers, not a layered stack. Each stands on its own and none | [Mediator](../patterns/01-design-patterns-gof/mediator.md) | Design Patterns (GoF) |
+| The observable production symptom is every application instance replicating | [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |
 | The observable symptom is listed first in each triple, because that is what a | [Poison Pill](../patterns/18-anti-patterns/poison-pill.md) | Anti-Patterns |
 | The observed symptoms below are the visible surface a reader would actually | [Half-Sync/Half-Async](../patterns/09-concurrency/half-sync-half-async.md) | Concurrency and Parallelism |
 | The observers can be given a defined lifetime, so that registration is matched | [Observer](../patterns/01-design-patterns-gof/observer.md) | Design Patterns (GoF) |
@@ -16739,6 +16740,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 - Watermark stalls from an idle partition or source, the straggler problem, documented directly by Flink. "If one of the input splits/partitions/shards does not carry events for a while this means that the WatermarkGenerator also does not get any new information on which to base a watermark." Because the overall watermark is the minimum across all parallel sources, one silent partition holds back every downstream window from ever firing, even though the rest of the pipeline is healthy. The observable symptom is a job that appears to hang, no windows ever close, while most of the pipeline is otherwise producing data normally. Flink's fix is withIdleness, which excludes a source from the minimum calculation after a timeout.
 - Late data silently dropped by default, in three of the four systems surveyed. Flink, "By default... late elements are dropped when the watermark is past the end of the window... elements that arrive behind the watermark will be dropped," with allowedLateness and sideOutputLateData as the opt-in escape hatch. Beam, "if you are using both the default windowing configuration and the default trigger, the default trigger emits exactly once, and late data is discarded," with withAllowedLateness as the opt-in. Kafka Streams, a negative or invalid extracted timestamp causes the record to be quietly dropped, "Returning a negative timestamp will cause the record not to be processed but rather silently skipped," and out-of-window records past the grace period are simply excluded. The observable production symptom is a metric or count that is silently and permanently short, discovered only when totals fail to reconcile against a source-of-truth system, often days or weeks later.
+
+#### [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md)
+
+**Core Problem:** Kafka's own documentation frames the problem as a first-class support gap a stream-processing technology must close, not a hypothetical. "When implementing stream processing use cases in practice, you typically need both streams and also databases. An example use case that is very common in practice is an e-commerce application that enriches an incoming stream of customer transactions with the latest customer information from a database table... Any stream processing technology must therefore provide first-class support for streams and tables." The Streams DSL developer guide restates the same gap through a different worked example, a continuously-updated customer view built from many input event streams. "What your application will be doing is transforming many input streams of customer-related events into an output table that contains a continuously updated 360-degree view of your customers." Source. Apache Kafka documentation, "DSL API," Kafka Streams, verified 2026-08-23, https://kafka.apache.org/43/streams/developer-guide/dsl-api/.
+
+**Failure Mode Symptoms:**
+
+- The observable production symptom is every application instance replicating
 
 #### [Watermark](../patterns/24-stream-processing/watermark.md)
 
