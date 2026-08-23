@@ -197,27 +197,33 @@ the system rather than distributed through every consumer.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+          uses           +---------------------+
-|      Client       | ----------------------> |     Abstraction      |
-| (never edited to   |                         |   <<interface>>      |
-|  add a new variant) |                        |  operation()          |
-+-------------------+                          +---------------------+
-                                                          ^
-                                                          | implements
-                          +-------------------------------+-------------------------------+
-                          |                                |                               |
-              +---------------------+        +---------------------+       +---------------------+
-              | ConcreteImpl A       |        | ConcreteImpl B       |       | ConcreteImpl C (new) |
-              | operation()          |        | operation()          |       | operation()           |
-              +---------------------+        +---------------------+       +---------------------+
-                          ^                                ^                               ^
-                          +----------------+---------------+---------------+----------------+
-                                           wired by
-                                   +---------------------+
-                                   |  Composition Root     |
-                                   |  (knows every variant, |
-                                   |   only place that does) |
-                                   +---------------------+
++-------------------------------------+
+| Client                              |
+| (never edited to add a new variant) |
++-------------------------------------+
+           | uses
+           v
++----------------------------+
+| Abstraction  <<interface>> |
+| operation()                |
++----------------------------+
+           ^
+           | implements
+     +-----+-----+-----+
+     |           |     |
++---------------------+ +---------------------+ +---------------------+
+| ConcreteImpl A      | | ConcreteImpl B      | | ConcreteImpl C (new)|
+| operation()         | | operation()         | | operation()         |
++---------------------+ +---------------------+ +---------------------+
+     ^           ^     ^
+     +-----+-----+-----+
+           | wired by
+           v
++-----------------------+
+| Composition Root      |
+| (knows every variant, |
+| only place that does) |
++-----------------------+
 ```
 
 ## 7. Dynamics

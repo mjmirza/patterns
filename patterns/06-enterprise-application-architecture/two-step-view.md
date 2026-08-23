@@ -196,29 +196,31 @@ between them.
 ## 6. ASCII structure diagram
 
 ```
-+------------------+        builds        +----------------+
-|  Domain Model     | --------------------> |  Logical Page   |
-|  (order, invoice, |                       |  Builder         |
-|   article, ...)   |                       +--------+---------+
-+------------------+                                  |
-                                                        | produces
-                                                        v
-                                              +----------------------+
-                                              |   Logical Page        |
-                                              |   (presentation-      |
-                                              |    neutral tree or    |
-                                              |    XML vocabulary)    |
-                                              +-----------+----------+
-                                                            |
-                                    +-----------------------+------------------------+
-                                    |                                                |
-                                    v                                                v
-                          +------------------+                             +------------------+
-                          |  HTML Formatter    |                             |  PDF/Text Formatter |
-                          +--------+---------+                             +--------+---------+
-                                    |                                                |
-                                    v                                                v
-                             HTML response                               PDF or plain-text response
++--------------------------------+
+| Domain Model                   |
+| (order, invoice, article, ...) |
++--------------------------------+
+           | builds
+           v
++----------------------+
+| Logical Page Builder |
++----------------------+
+           | produces
+           v
++----------------------------+
+| Logical Page               |
+| (presentation-neutral tree |
+| or XML vocabulary)         |
++----------------------------+
+           |
+     +-----+-----+
+     |           |
++----------------------+  +----------------------+
+| HTML Formatter       |  | PDF/Text Formatter   |
++----------------------+  +----------------------+
+     |           |
+     v           v
+HTML response   PDF or plain-text response
 ```
 
 ## 7. Dynamics

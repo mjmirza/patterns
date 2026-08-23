@@ -254,41 +254,41 @@ of the most common questions asked of any analytical pipeline.
 ## 6. ASCII structure diagram
 
 ```
-+-------------+     +-------------+     +---------------+     +-------------+     +---------------+
-|   Source A  |     |   Source B  |     |   Source C    |     |    ...      |     |               |
-| (OLTP DB)   |     | (SaaS API)  |     | (event logs)  |     |             |     |               |
-+------+------+     +------+------+     +-------+-------+     +------+------+     |               |
-       |                    |                    |                    |          |               |
-       v                    v                    v                    v          |               |
-+------------------------------------------------------------------------+       |               |
-|                            EXTRACTOR (per source connector)             |       | Orchestrator  |
-+------------------------------------------------------------------------+       | (schedules,   |
-                                     |                                            |  retries,     |
-                                     v                                            |  dependency   |
-                            +-----------------+                                  |  graph,       |
-                            |  Staging area   |                                  |  run history) |
-                            |  (raw, landed)  |                                  |               |
-                            +--------+--------+                                  |               |
-                                     |                                            |               |
-                                     v                                            |               |
-                            +-----------------+                                  |               |
-                            |   TRANSFORMER   |<---------------------------------+               |
-                            | (clean, conform,|                                  |               |
-                            |  dedup, model)  |                                  |               |
-                            +--------+--------+                                  |               |
-                                     |                                            |               |
-                                     v                                            |               |
-                            +-----------------+                                  |               |
-                            |     LOADER      |                                  |               |
-                            | (upsert / swap) |                                  |               |
-                            +--------+--------+                                  |               |
-                                     |                                            |               |
-                                     v                                            +---------------+
-                            +-----------------+
-                            |  Destination    |
-                            | (warehouse /    |
-                            |  lake / mart)   |
-                            +-----------------+
++---------------+ +---------------+ +---------------+
+| Source A      | | Source B      | | Source C      |
+| (OLTP DB)     | | (SaaS API)    | | (event logs)  |
++---------------+ +---------------+ +---------------+
+    |            |            |
+    +------------+------------+
+                 v
++----------------------------------+
+| EXTRACTOR (per source connector) |
++----------------------------------+
+                 v
++----------------------------+
+| Staging area (raw, landed) |
++----------------------------+
+                 v
++--------------------------------+
+| TRANSFORMER                    |
+| (clean, conform, dedup, model) |
++--------------------------------+
+                 v
++------------------------+
+| LOADER (upsert / swap) |
++------------------------+
+                 v
++---------------------------+
+| Destination               |
+| (warehouse / lake / mart) |
++---------------------------+
+
++----------------------------------------------------+
+| Orchestrator                                       |
+| schedules, retries, dependency graph, run history. |
+| Drives EXTRACTOR and TRANSFORMER above, not shown  |
+| as separate arrows to keep the flow readable.      |
++----------------------------------------------------+
 ```
 
 ## 7. Dynamics

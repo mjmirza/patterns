@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-56 entries, 371,878 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
+56 entries, 371,855 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -17,7 +17,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Mapper](mapper.md) | canonical | 5,400 | Two subsystems need to exchange information, but neither one should hold a compile time or a conceptual dependency on the other's shape. |
+| [Mapper](mapper.md) | canonical | 5,386 | Two subsystems need to exchange information, but neither one should hold a compile time or a conceptual dependency on the other's shape. |
 
 ## Base Patterns
 
@@ -154,7 +154,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Page Controller](page-controller.md) | canonical | 5,225 | A web application must translate an incoming HTTP request into a specific piece of server-side behavior and a specific response. |
 | [Template View](template-view.md) | canonical | 7,530 | A system has finished computing a result, a customer record, a list of orders, a search result set, and now has to turn that result into an HTML document a browser can render. |
 | [Transform View](transform-view.md) | established | 7,578 | An application has assembled everything it needs to render a response. |
-| [Two Step View](two-step-view.md) | canonical | 6,245 | A web application with more than a handful of pages needs every page to share a consistent visual identity. |
+| [Two Step View](two-step-view.md) | canonical | 6,236 | A web application with more than a handful of pages needs every page to share a consistent visual identity. |
 
 ## Planned
 

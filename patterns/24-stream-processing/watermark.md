@@ -82,59 +82,65 @@ Kafka Streams' structurally different substitute. There is no propagated waterma
 ## 6. ASCII structure diagram
 
 ```
-  partitioned source (N partitions, e.g. a Kafka topic)
-        |
-        v
-  per-partition watermark generator      (periodic: onEvent() + onPeriodicEmit()
-        |  (one per partition,            punctuated: fires on an in-band marker event)
-        |   independent of the others)
-        v
-  per-partition watermarks merged inside the source operator
-  (same min-of-inputs rule as the operator merge below, applied one level earlier)
-        |
-        v
-  source operator's emitted watermark  ---->  [optional: idle-source exclusion]
-        |                                     [optional: watermark alignment,
-        |                                      pauses a source that drifts too
-        |                                      far ahead of its alignment group]
-        v
-  downstream operator A  <---(input 1)---  source operator's watermark
-        ^
-        |
-  downstream operator A  <---(input 2)---  a different upstream operator's watermark
-        |
-        v
-  operator A's watermark = min( operator A's own oldest unfinished work,
-                                 watermark of every upstream input to A )
-        |
-        | whenever an operator's own event time advances, it emits a
-        | new watermark downstream to its successor operators
-        v
-  ... the same merge rule repeats recursively through the DAG ...
-        |
-        v
-  per-key timers fire, in increasing timestamp order, as the low
-  watermark passes each timer's scheduled value
-        |
-        v
-  a window's trigger fires once the watermark crosses the window's
-  event-time end (the handoff into windowing and triggering, see
-  the related event-time-processing entry)
-        |
-        v
-  a late record arrives, event time earlier than the current watermark
-        |
-        +--- within the allowed lateness or grace period --> re-enters
-        |                                                     the window, re-fires the trigger
-        |
-        +--- past that horizon -----------------------------> dropped, or
-                                                                routed to a side output if configured
+partitioned source (N partitions, e.g. a Kafka topic)
+  |
+  v
+per-partition watermark generator
+  (one per partition, independent of the others)
+  (periodic: onEvent() + onPeriodicEmit())
+  (punctuated: fires on an in-band marker event)
+  |
+  v
+per-partition watermarks merged inside the source operator
+  (same min-of-inputs rule as the operator merge below,)
+  (applied one level earlier)
+  |
+  v
+source operator's emitted watermark
+  (optional: idle-source exclusion)
+  (optional: watermark alignment, pauses a source that)
+  (drifts too far ahead of its alignment group)
+  |
+  v
+downstream operator A
+  (input 1, from the source operator's watermark)
+  (input 2, from a different upstream operator's watermark)
+  |
+  v
+operator A's watermark = min(
+  operator A's own oldest unfinished work,
+  watermark of every upstream input to A )
+  |
+  (whenever an operator's own event time advances, it)
+  (emits a new watermark downstream to its successors)
+  v
+... the same merge rule repeats recursively through the DAG ...
+  |
+  v
+per-key timers fire, in increasing timestamp order, as the low
+watermark passes each timer's scheduled value
+  |
+  v
+a window's trigger fires once the watermark crosses the
+window's event-time end
+  (the handoff into windowing and triggering, see the)
+  (related event-time-processing entry)
+  |
+  v
+a late record arrives, event time earlier than the watermark
+  |
+  +-- within the allowed lateness or grace period
+  |     --> re-enters the window, re-fires the trigger
+  |
+  +-- past that horizon
+        --> dropped, or routed to a side output if configured
 
-  [ separate, optional path, MillWheel-specific: a sharded, central
-    watermark authority aggregates every worker's already-computed
-    minimum, purely to report progress and to compute percentile
-    (heuristic, approximate) watermarks. It never leads what the
-    workers themselves have already computed. ]
+[ separate, optional path, MillWheel-specific: a sharded,
+  central watermark authority aggregates every worker's
+  already-computed minimum, purely to report progress and
+  to compute percentile (heuristic, approximate)
+  watermarks. It never leads what the workers themselves
+  have already computed. ]
 ```
 
 The per-partition merge and the per-operator merge are the same rule applied at two structural levels, not two different mechanisms. Flink's own documentation states the per-partition case is merged "in the same way as watermarks are merged on stream shuffles," the identical min-of-inputs rule that governs every later step in the chain.

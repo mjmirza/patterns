@@ -249,29 +249,48 @@ rather than code-level actors.
 ## 6. ASCII structure diagram
 
 ```
-  ORGANIZATION                          SYSTEM
-  (communication graph)                 (module dependency graph)
+ORGANIZATION (communication graph)
 
-  +-----------+   frequent    +-----------+       +-----------+  rich, informal  +-----------+
-  |  Team A   |<------------->|  Team B   |       | Module A  |<---------------->| Module B  |
-  | (Billing) |   contact     | (Ledger)  |       | (Billing) |   interface      | (Ledger)  |
-  +-----------+               +-----------+       +-----------+                  +-----------+
-        ^                            ^                   ^                             ^
-        | rare, formal contact       |                   | brittle, versioned,          |
-        | (different offices,        |                   | defensively specified        |
-        |  different managers)       |                   | interface                    |
-        v                            v                   v                             v
-  +-----------+   rare        +-----------+       +-----------+   brittle, versioned  +-----------+
-  |  Team C   |<------------->|  Team D   |       | Module C  |<---------------------->| Module D  |
-  | (Search)  |   quarterly   | (Public   |       | (Search)  |                        | (Public   |
-  |           |   sync only   |   API)    |       |           |                        |   API)    |
-  +-----------+               +-----------+       +-----------+                        +-----------+
++-----------+            +----------+
+| Team A    |            | Team B   |
+| (Billing) | <--------> | (Ledger) |
++-----------+            +----------+
+     ^                    ^
+     | rare, formal contact
+     | (different offices, different managers)
+     v                    v
++----------+            +--------------+
+| Team C   |            | Team D       |
+| (Search) | <--------> | (Public API) |
++----------+            +--------------+
 
-  The organizational edge (top) and the module dependency edge (top) are both
-  frequent and rich. The organizational edge (bottom) and the module
-  dependency edge (bottom) are both rare and brittle. Conway's Law is the
-  claim that this correspondence is not a coincidence, it is causal, running
-  from the top row to the bottom row.
+Team A <-> Team B: frequent contact
+Team C <-> Team D: rare, quarterly sync only
+
+SYSTEM (module dependency graph)
+
++-----------+        +----------+
+| Module A  |        | Module B |
+| (Billing) | <----> | (Ledger) |
++-----------+        +----------+
+      ^                   ^
+      | brittle, versioned,
+      | defensively specified interface
+      v                   v
++----------+        +--------------+
+| Module C |        | Module D     |
+| (Search) | <----> | (Public API) |
++----------+        +--------------+
+
+Module A <-> Module B: rich, informal interface
+Module C <-> Module D: brittle, versioned interface
+
+The organizational edge A-B and the module dependency edge
+A-B are both frequent and rich. The organizational edge C-D
+and the module dependency edge C-D are both rare and
+brittle. Conway's Law is the claim that this correspondence
+is not a coincidence, it is causal, running from the
+organization to the system.
 ```
 
 ## 7. Dynamics

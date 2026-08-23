@@ -54,30 +54,37 @@ Do not reach for a marker interface when the tag needs to carry data now or is l
 ## 6. ASCII structure diagram
 
 ```
-+----------------------------+
-|      <<marker interface>>   |
-|      java.io.Serializable   |
-|------------------------------|
-|      (no members)           |
-+---------------^--------------+
-                |
-                | implements, alongside other markers
-                |
-+---------------+----------------------------------------+
-|                java.util.ArrayList<E>                    |
-|------------------------------------------------------------|
-|  implements List<E>, RandomAccess, Cloneable, Serializable |
-+------------------------------------------------------------+
++----------------------+
+| <<marker interface>> |
+| java.io.Serializable |
+| (no members)         |
++----------------------+
+           ^
+           | implements, alongside other markers
+           |
++-----------------------------------+
+| java.util.ArrayList<E>            |
+| implements List<E>, RandomAccess, |
+| Cloneable, Serializable           |
++-----------------------------------+
 
-+------------------------------+          checks           +----------------------------+
-|  java.io.ObjectOutputStream   |--------------------------->|  instanceof Serializable?   |
-|  writeObject(Object obj)      |                            +--------------+---------------+
-+------------------------------+                                            |
-                                                                   yes       |       no
-                                                          +-----------------+------------------+
-                                                          v                                      v
-                                              object is serialized                 java.io.NotSerializableException
-                                                                                    is thrown, naming the class
+Serialization check, at write time:
+
++----------------------------+
+| java.io.ObjectOutputStream |
+| writeObject(Object obj)    |
++----------------------------+
+           |
+           | checks
+           v
++--------------------------+
+| instanceof Serializable? |
++--------------------------+
+        yes |    | no
+      +-----+    +-----+
+      v                v
+object is       NotSerializableException
+serialized      is thrown, naming the class
 ```
 
 ## 7. Dynamics

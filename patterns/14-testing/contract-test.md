@@ -226,56 +226,59 @@ generated identifiers, while still asserting the shape is correct.
 ## 6. ASCII structure diagram
 
 ```
-                     CONSUMER-DRIVEN VARIANT (Pact-style)
+CONSUMER-DRIVEN VARIANT (Pact-style)
 
-  +------------------+                         +------------------+
-  |    Consumer      |                         |    Provider      |
-  |   (Service A)    |                         |   (Service B)    |
-  |                  |                         |                  |
-  |  consumer test   |                         |  provider verify |
-  |  suite runs       |                         |  step runs        |
-  |  against a mock   |                         |  against REAL      |
-  |  of Service B     |                         |  Service B code    |
-  +--------+---------+                         +---------+--------+
-           |                                             |
-           | 1. records interactions                     | 3. replays every
-           |    request shape,                            |    interaction from
-           |     expected response                         |    every consumer
-           v                                               |    contract, asserts
-  +------------------+   2. publish contract   +----------v-------+
-  |  Contract file    |------------------------>|   Pact Broker    |
-  |  JSON, versioned   |                        |  contract store, |
-  +------------------+                          |  verify results, |
-                                                 |  can-i-deploy     |
-                                                 +---------+--------+
-                                                            |
-                                                            | 4. CI on both sides
-                                                            |    queries broker
-                                                            |    before deploy
-                                                            v
-                                                 +------------------+
-                                                 |  Deploy gate,    |
-                                                 |  can-i-deploy?   |
-                                                 +------------------+
++----------------------------------+
+| Consumer (Service A)             |
+| consumer test suite runs against |
+| a mock of Service B              |
++----------------------------------+
+           | 1. records interactions:
+           |    request shape, expected response
+           v
++--------------------------------+
+| Contract file, JSON, versioned |
++--------------------------------+
+           | 2. publish contract
+           v
++----------------------------------------------+
+| Pact Broker                                  |
+| contract store, verify results, can-i-deploy |
++----------------------------------------------+
+           ^
+           | 3. provider replays every interaction from
+           |    every consumer contract, asserts against
+           |    REAL Service B code
++----------------------+
+| Provider (Service B) |
+| provider verify step |
++----------------------+
+
+           | 4. CI on both sides queries broker before deploy
+           v
++----------------------------+
+| Deploy gate, can-i-deploy? |
++----------------------------+
 
 
-                  SPECIFICATION-DRIVEN VARIANT (OpenAPI / proto)
+SPECIFICATION-DRIVEN VARIANT (OpenAPI / proto)
 
-  +------------------+                          +------------------+
-  |    Provider      |----- owns and publishes ->|  Schema document |
-  |   (Service B)    |     OpenAPI YAML,           |  single source   |
-  |                  |      .proto file            |   of truth       |
-  +------------------+                          +---------+--------+
-                                                            |
-                                    +-----------------------+------------------------+
-                                    |                                                |
-                                    v                                                v
-                          +------------------+                            +------------------+
-                          |  Provider test,  |                            |  Consumer test,  |
-                          |  own responses    |                            |  own requests     |
-                          |  validated against|                            |  validated against|
-                          |  the schema        |                            |  the schema        |
-                          +------------------+                            +------------------+
++----------------------+
+| Provider (Service B) |
++----------------------+
+           | owns and publishes OpenAPI YAML, .proto file
+           v
++-----------------------------------------+
+| Schema document, single source of truth |
++-----------------------------------------+
+           |
+     +-----+-----+
+     |           |
++------------------------+  +------------------------+
+| Provider test,         |  | Consumer test,         |
+| own responses validated|  | own requests validated |
+| against the schema     |  | against the schema     |
++------------------------+  +------------------------+
 ```
 
 ## 7. Dynamics

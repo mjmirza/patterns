@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-42 entries, 327,284 words. Every entry carries all 18
+42 entries, 327,293 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -33,7 +33,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Common Closure Principle](common-closure-principle.md) | canonical | 7,574 | A codebase reaches the size where a single flat namespace of classes stops being a unit anyone can reason about, and the team splits it into smaller compilation and deployment ... |
 | [Composition over Inheritance](composition-over-inheritance.md) | canonical | 6,930 | A designer needs an object to have several independent, combinable behaviours, and reaches for a single class hierarchy to express all of them. |
 | [Controller](controller.md) | canonical | 6,874 | A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system ... |
-| [Conway's Law](conway-law.md) | canonical | 7,740 | A team is asked to build a system with several distinct concerns. |
+| [Conway's Law](conway-law.md) | canonical | 7,751 | A team is asked to build a system with several distinct concerns. |
 | [Creator](creator.md) | canonical | 7,514 | Every object-oriented system eventually needs a new object of type A to come into existence somewhere, and the code that calls the constructor has to live in some class B. |
 | [Do Not Repeat Yourself](do-not-repeat-yourself.md) | canonical | 6,449 | A single fact about the system, a tax rate, a validation rule, a URL, a unit conversion, a business rule about who is allowed to approve a refund, gets written down in more than ... |
 | [Fail Fast](fail-fast.md) | established | 7,090 | A running program encounters a state it was not written to handle correctly. |
@@ -45,7 +45,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Keep It Simple](keep-it-simple.md) | canonical | 8,079 | Every non-trivial piece of software accretes complexity over its lifetime, and that accretion happens in two very different ways that are easy to conflate. |
 | [Law of Demeter](law-of-demeter.md) | canonical | 7,910 | A method reaches through an object it was handed to get at a second object, then calls a method on that second object. |
 | [Low Coupling](low-coupling.md) | canonical | 7,299 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
-| [Open Closed Principle](open-closed-principle.md) | canonical | 5,600 | A piece of software that ships once and never changes does not need this principle. |
+| [Open Closed Principle](open-closed-principle.md) | canonical | 5,598 | A piece of software that ships once and never changes does not need this principle. |
 | [PACELC Theorem](pacelc-theorem.md) | canonical | 9,039 | A team picks a distributed database, reads that it is "AP" or "CP" under CAP, and believes that single letter fully describes how the system will behave in production. |
 | [Postel's Law](postel-law.md) | contested | 8,891 | Two or more parties implement the same open, published specification independently, without coordinating their release schedules, their source code, or in most cases even knowing ... |
 | [Principle of Least Astonishment](principle-of-least-astonishment.md) | canonical | 9,080 | A person interacts with a piece of software, whether by reading its code, by calling its API, by typing a command at a shell, or by clicking a button in a user interface, and ... |
