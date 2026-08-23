@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-26 entries, 267,812 words, 7 more planned, 33 total when the family is complete. Every entry carries all 18
+27 entries, 273,127 words, 6 more planned, 33 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -28,6 +28,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Abstract Factory](abstract-factory.md) | canonical | 6,653 | You have several product types that must vary together. |
 | [Builder](builder.md) | canonical | 6,755 | A type is expensive or awkward to construct because construction has several independent axes. |
 | [Factory Method](factory-method.md) | canonical | 6,010 | A class does real work that involves an object it must create, and it cannot name the concrete class of that object at the point where the work is written. |
+| [Multiton](multiton.md) | contested | 5,315 | Sometimes an application needs at most one instance of a class per distinct key value, never a single global instance and never unrestricted instantiation. |
 | [Prototype](prototype.md) | canonical | 7,511 | You have an object whose configuration is expensive, awkward, or impossible to reconstruct from a constructor call. |
 | [Singleton](singleton.md) | contested | 9,217 | A resource exists once in the running process, and code scattered across the program needs to reach it without threading a reference through every call. |
 
@@ -51,7 +52,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
 - Extension Object
-- Multiton
 - Null Object
 - Private Class Data
 - Role Object

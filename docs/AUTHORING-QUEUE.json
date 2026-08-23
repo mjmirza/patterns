@@ -266,13 +266,6 @@
     "focus": ""
   },
   {
-    "name": "Multiton",
-    "slug": "multiton",
-    "category": "design patterns gof",
-    "path": "patterns/01-design-patterns-gof/multiton.md",
-    "focus": ""
-  },
-  {
     "name": "Private Class Data",
     "slug": "private-class-data",
     "category": "design patterns gof",
