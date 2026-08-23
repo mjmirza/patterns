@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 845,
+  "published_total": 848,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 20,
   "stale_entries": 0,
-  "references_checked": 4892,
+  "references_checked": 4948,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -343,12 +343,13 @@
       "family": "26-interaction-hci",
       "name": "Interaction and HCI",
       "origin": "Tidwell, Designing Interfaces",
-      "published": 4,
-      "planned": 6,
+      "published": 7,
+      "planned": 3,
       "target": 10,
-      "percent": 40.0,
+      "percent": 70.0,
       "maturity": {
-        "established": 4
+        "established": 6,
+        "canonical": 1
       }
     },
     {

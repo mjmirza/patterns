@@ -16839,6 +16839,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 **Core Problem:** A traditional menu bar or sidebar hierarchy requires a person to know where a command lives, which menu, which submenu, which settings page, before they can use it. A command palette replaces that spatial recall with textual recall, letting a person type what they want and get it regardless of where it structurally lives. GitHub's own documentation states this directly, the palette gives quick access to a wide range of actions, without the need to remember keyboard shortcuts, and Zed's own getting-started guide frames the same idea from the forgotten-shortcut angle, if you forget a keyboard shortcut, you can search for the desired action through the command palette instead.
 
+#### [Empty State](../patterns/26-interaction-hci/empty-state.md)
+
+**Core Problem:** A screen with no content and no explanation is indistinguishable from a broken one. The Nielsen Norman Group's Kate Kaplan states the core risk directly: an empty state's first guideline is to communicate system status, clarifying whether content is loading, an error occurred, or genuinely no results exist, because a specific message such as there are no records to display for the selected date range prevents confusion and increases confidence, where a blank region alone does not (Kaplan, Kate, "Designing Empty States in Complex Applications: 3 Guidelines," Nielsen Norman Group, September 19, 2021, https://www.nngroup.com/articles/empty-state-interface-design/, verified 2026-08-23).
+
+#### [Inline Validation](../patterns/26-interaction-hci/inline-validation.md)
+
+**Core Problem:** A form that only validates on submit forces the person to fill in every field before learning which of them were wrong, then reconcile a wall of errors against fields that may have scrolled off screen. GOV.UK's own design system mitigates exactly this by requiring a linked error summary at the top of the page with keyboard focus moved to it on submit failure (GOV.UK Design System, "Error summary," https://design-system.service.gov.uk/components/error-summary/, verified 2026-08-23), an accommodation that exists specifically because reconciling a late, disconnected wall of errors is hard.
+
+#### [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md)
+
+**Core Problem:** An interface that serves both a person doing something for the first time and a person who does it daily faces a direct conflict. The newcomer needs a small, learnable surface with few choices. The frequent user wants every option available without extra clicks once they know where things live. Showing every option to everyone at once serves neither well: the newcomer is overwhelmed and the frequent user still has to scan past options they rarely touch.
+
 #### [Undo](../patterns/26-interaction-hci/undo.md)
 
 **Core Problem:** Any interface that lets a person change state, a text edit, a shape moved, a value typed, a file deleted, creates a moment where the person can make a mistake, and a mistake with no way back either forces extreme caution before every action or punishes a slip with lost work. Wikipedia's Undo article names the resulting freedom directly, undo lets users explore and work without fear of making mistakes, because they can easily be undone.

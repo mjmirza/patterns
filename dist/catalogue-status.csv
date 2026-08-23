@@ -24,7 +24,7 @@ family,name,published,planned,target,percent
 23-workflow-orchestration,Workflow and Orchestration,6,0,6,100.0
 24-stream-processing,Stream Processing,7,1,8,87.5
 25-mlops,MLOps,9,0,9,100.0
-26-interaction-hci,Interaction and HCI,4,6,10,40.0
+26-interaction-hci,Interaction and HCI,7,3,10,70.0
 27-mobile-architecture,Mobile Architecture,11,0,11,100.0
 28-embedded-hardware,Embedded and Hardware-Software,14,0,14,100.0
 29-realtime-simulation,Real-Time Simulation,0,9,9,0.0

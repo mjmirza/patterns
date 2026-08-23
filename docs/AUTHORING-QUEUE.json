@@ -14,27 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Inline Validation",
-    "slug": "inline-validation",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/inline-validation.md",
-    "focus": ""
-  },
-  {
-    "name": "Empty State",
-    "slug": "empty-state",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/empty-state.md",
-    "focus": ""
-  },
-  {
-    "name": "Progressive Disclosure",
-    "slug": "progressive-disclosure",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/progressive-disclosure.md",
-    "focus": ""
-  },
-  {
     "name": "Autosave",
     "slug": "autosave",
     "category": "interaction and HCI",
