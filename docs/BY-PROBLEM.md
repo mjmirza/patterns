@@ -1984,6 +1984,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Lambda pinball. Symptom. A production incident review cannot answer | [Nanoservices](../patterns/18-anti-patterns/nanoservices.md) | Anti-Patterns |
 | language. The observable symptom is code review comments repeatedly asking | [Idiomatic](../patterns/04-principles-and-laws/idiomatic.md) | Principles and Laws |
 | Large or endless sequences cannot be handled at all. Materialising a | [Iterator](../patterns/01-design-patterns-gof/iterator.md) | Design Patterns (GoF) |
+| Late data silently dropped by default, in three of the four systems surveyed. Flink, "By default... late elements are... | [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) | Stream Processing |
 | Late reply after the requestor gave up. Symptom. the requestor's | [Return Address](../patterns/07-integration/return-address.md) | Enterprise Integration |
 | Latency multiplies exactly on the hardest queries. Symptom. Aggregate | [Corrective RAG](../patterns/17-ai-agentic/corrective-rag.md) | AI and Agentic |
 | Latency spikes intermittently, and the spikes correlate with | [Reranking](../patterns/17-ai-agentic/reranking.md) | AI and Agentic |
@@ -5396,6 +5397,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Visitor reused across traversals. Symptom. The second report contains the | [Visitor](../patterns/01-design-patterns-gof/visitor.md) | Design Patterns (GoF) |
 | Visitor used to fake a missing feature. Symptom. A visitor interface with two | [Visitor](../patterns/01-design-patterns-gof/visitor.md) | Design Patterns (GoF) |
 | Vocabulary drift between the document and the code. Symptom. A message | [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) | Domain-Driven Design |
+| Watermark stalls from an idle partition or source, the straggler problem, documented directly by Flink. "If one of th... | [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) | Stream Processing |
 | Weak HMAC secret. Symptom. Attackers can forge tokens after obtaining one | [JWT](../patterns/15-security/jwt.md) | Security |
 | Weak state binding. Symptom. Login callbacks fail intermittently, or a | [OpenID Connect](../patterns/15-security/openid-connect.md) | Security |
 | Websocket clients keep receiving events after tenant removal. | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |
@@ -16725,6 +16727,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The non-determinism error. This is the failure mode the whole pattern is built
 - Unbounded event-history growth. Covered with exact thresholds in dimension 3,
 - Infrastructure incidents, scoped honestly. Temporal Cloud's own public status page
+
+### Stream Processing
+
+#### [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md)
+
+**Core Problem:** The Dataflow paper states the root cause directly. "Event time for a given event essentially never changes, but processing time changes constantly for each event as it flows through the pipeline and time marches ever forward." The paper names the mechanism behind the mismatch. "During processing, the realities of the systems in use (communication delays, scheduling algorithms, time spent processing, pipeline serialization, etc.) result in an inherent and dynamically changing amount of skew between the two domains."
+
+**Failure Mode Symptoms:**
+
+- Watermark stalls from an idle partition or source, the straggler problem, documented directly by Flink. "If one of the input splits/partitions/shards does not carry events for a while this means that the WatermarkGenerator also does not get any new information on which to base a watermark." Because the overall watermark is the minimum across all parallel sources, one silent partition holds back every downstream window from ever firing, even though the rest of the pipeline is healthy. The observable symptom is a job that appears to hang, no windows ever close, while most of the pipeline is otherwise producing data normally. Flink's fix is withIdleness, which excludes a source from the minimum calculation after a timeout.
+- Late data silently dropped by default, in three of the four systems surveyed. Flink, "By default... late elements are dropped when the watermark is past the end of the window... elements that arrive behind the watermark will be dropped," with allowedLateness and sideOutputLateData as the opt-in escape hatch. Beam, "if you are using both the default windowing configuration and the default trigger, the default trigger emits exactly once, and late data is discarded," with withAllowedLateness as the opt-in. Kafka Streams, a negative or invalid extracted timestamp causes the record to be quietly dropped, "Returning a negative timestamp will cause the record not to be processed but rather silently skipped," and out-of-window records past the grace period are simply excluded. The observable production symptom is a metric or count that is silently and permanently short, discovered only when totals fail to reconcile against a source-of-truth system, often days or weeks later.
 
 ### Mobile Architecture
 
