@@ -14,27 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Game Loop",
-    "slug": "game-loop",
-    "category": "real-time simulation",
-    "path": "patterns/29-realtime-simulation/game-loop.md",
-    "focus": ""
-  },
-  {
-    "name": "Entity-Component-System",
-    "slug": "entity-component-system",
-    "category": "real-time simulation",
-    "path": "patterns/29-realtime-simulation/entity-component-system.md",
-    "focus": ""
-  },
-  {
-    "name": "Spatial Partitioning",
-    "slug": "spatial-partitioning",
-    "category": "real-time simulation",
-    "path": "patterns/29-realtime-simulation/spatial-partitioning.md",
-    "focus": ""
-  },
-  {
     "name": "Object Pool (Real-Time Simulation)",
     "slug": "object-pool",
     "category": "real-time simulation",

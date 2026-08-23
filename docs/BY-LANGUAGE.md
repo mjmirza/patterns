@@ -859,6 +859,9 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Entity-Component-System](../patterns/29-realtime-simulation/entity-component-system.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Game Loop](../patterns/29-realtime-simulation/game-loop.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Spatial Partitioning](../patterns/29-realtime-simulation/spatial-partitioning.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 
 ## Language Reference Guides
 
@@ -1216,6 +1219,7 @@ These patterns contain runnable code examples written in Go:
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
 - [Empty State](../patterns/26-interaction-hci/empty-state.md) (Interaction and HCI)
 - [Entity Service](../patterns/18-anti-patterns/entity-service.md) (Anti-Patterns)
+- [Entity-Component-System](../patterns/29-realtime-simulation/entity-component-system.md) (Real-Time Simulation)
 - [Entity](../patterns/11-domain-driven-design/entity.md) (Domain-Driven Design)
 - [Envelope Encryption](../patterns/15-security/envelope-encryption.md) (Security)
 - [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) (Enterprise Integration)
@@ -1253,6 +1257,7 @@ These patterns contain runnable code examples written in Go:
 - [Function Composition](../patterns/16-functional/function-composition.md) (Functional Programming)
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
 - [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) (Testing)
+- [Game Loop](../patterns/29-realtime-simulation/game-loop.md) (Real-Time Simulation)
 - [Gatekeeper](../patterns/08-cloud-distributed/gatekeeper.md) (Cloud and Distributed)
 - [Gateway Aggregation](../patterns/08-cloud-distributed/gateway-aggregation.md) (Cloud and Distributed)
 - [Gateway Offloading](../patterns/08-cloud-distributed/gateway-offloading.md) (Cloud and Distributed)
@@ -1580,6 +1585,7 @@ These patterns contain runnable code examples written in Go:
 - [Space-Based Architecture](../patterns/05-architectural/space-based-architecture.md) (Architectural Patterns)
 - [Spaghetti Code](../patterns/18-anti-patterns/spaghetti-code.md) (Anti-Patterns)
 - [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) (Observability)
+- [Spatial Partitioning](../patterns/29-realtime-simulation/spatial-partitioning.md) (Real-Time Simulation)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
 - [Split Brain](../patterns/18-anti-patterns/split-brain.md) (Anti-Patterns)
 - [Split Loop](../patterns/03-refactoring/split-loop.md) (Refactoring Techniques)
@@ -2929,6 +2935,7 @@ These patterns contain runnable code examples written in Python:
 - [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) (Refactoring Techniques)
 - [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) (Refactoring Techniques)
 - [Entity Service](../patterns/18-anti-patterns/entity-service.md) (Anti-Patterns)
+- [Entity-Component-System](../patterns/29-realtime-simulation/entity-component-system.md) (Real-Time Simulation)
 - [Entity](../patterns/11-domain-driven-design/entity.md) (Domain-Driven Design)
 - [Envelope Encryption](../patterns/15-security/envelope-encryption.md) (Security)
 - [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) (Enterprise Integration)
@@ -2984,6 +2991,7 @@ These patterns contain runnable code examples written in Python:
 - [Future Promise](../patterns/09-concurrency/future-promise.md) (Concurrency and Parallelism)
 - [Fuzz Testing](../patterns/14-testing/fuzz-testing.md) (Testing)
 - [Game Day](../patterns/21-sre-operations/game-day.md) (SRE and Operations)
+- [Game Loop](../patterns/29-realtime-simulation/game-loop.md) (Real-Time Simulation)
 - [Gatekeeper](../patterns/08-cloud-distributed/gatekeeper.md) (Cloud and Distributed)
 - [Gateway Aggregation](../patterns/08-cloud-distributed/gateway-aggregation.md) (Cloud and Distributed)
 - [Gateway Offloading](../patterns/08-cloud-distributed/gateway-offloading.md) (Cloud and Distributed)
@@ -3415,6 +3423,7 @@ These patterns contain runnable code examples written in Python:
 - [Space-Based Architecture](../patterns/05-architectural/space-based-architecture.md) (Architectural Patterns)
 - [Spaghetti Code](../patterns/18-anti-patterns/spaghetti-code.md) (Anti-Patterns)
 - [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) (Observability)
+- [Spatial Partitioning](../patterns/29-realtime-simulation/spatial-partitioning.md) (Real-Time Simulation)
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Specification](../patterns/11-domain-driven-design/specification.md) (Domain-Driven Design)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
@@ -4103,6 +4112,7 @@ These patterns have unique implementation variants or change their design struct
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
+- [Entity-Component-System](../patterns/29-realtime-simulation/entity-component-system.md) (Real-Time Simulation)
 - [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) (Cloud and Distributed)
 - [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) (Microservices)
 - [Facade](../patterns/01-design-patterns-gof/facade.md) (Design Patterns (GoF))
@@ -4745,6 +4755,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) (Refactoring Techniques)
 - [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) (Refactoring Techniques)
 - [Entity Service](../patterns/18-anti-patterns/entity-service.md) (Anti-Patterns)
+- [Entity-Component-System](../patterns/29-realtime-simulation/entity-component-system.md) (Real-Time Simulation)
 - [Entity](../patterns/11-domain-driven-design/entity.md) (Domain-Driven Design)
 - [Envelope Encryption](../patterns/15-security/envelope-encryption.md) (Security)
 - [Envelope Wrapper](../patterns/07-integration/envelope-wrapper.md) (Enterprise Integration)
@@ -4789,6 +4800,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Function Calling](../patterns/17-ai-agentic/function-calling.md) (AI and Agentic)
 - [Function Composition](../patterns/16-functional/function-composition.md) (Functional Programming)
 - [Future Promise](../patterns/09-concurrency/future-promise.md) (Concurrency and Parallelism)
+- [Game Loop](../patterns/29-realtime-simulation/game-loop.md) (Real-Time Simulation)
 - [Gatekeeper](../patterns/08-cloud-distributed/gatekeeper.md) (Cloud and Distributed)
 - [Gateway Aggregation](../patterns/08-cloud-distributed/gateway-aggregation.md) (Cloud and Distributed)
 - [Gateway Offloading](../patterns/08-cloud-distributed/gateway-offloading.md) (Cloud and Distributed)
@@ -5183,6 +5195,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Space-Based Architecture](../patterns/05-architectural/space-based-architecture.md) (Architectural Patterns)
 - [Spaghetti Code](../patterns/18-anti-patterns/spaghetti-code.md) (Anti-Patterns)
 - [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) (Observability)
+- [Spatial Partitioning](../patterns/29-realtime-simulation/spatial-partitioning.md) (Real-Time Simulation)
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Specification](../patterns/11-domain-driven-design/specification.md) (Domain-Driven Design)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
