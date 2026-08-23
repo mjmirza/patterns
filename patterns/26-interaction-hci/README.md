@@ -2,28 +2,28 @@
 
 Origin. Tidwell, Designing Interfaces
 
-1 entries, 4,571 words, 9 more planned, 10 total when the family is complete. Every entry carries all 18
+4 entries, 17,439 words, 6 more planned, 10 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Interaction and HCI
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Breadcrumbs](breadcrumbs.md) | established | 3,727 | Smashing Magazine's own definition frames the problem directly, a breadcrumb trail is a type of secondary navigation scheme that reveals the user's location in a website or web ... |
+| [Command Palette](command-palette-ux.md) | established | 4,478 | A traditional menu bar or sidebar hierarchy requires a person to know where a command lives, which menu, which submenu, which settings page, before they can use it. |
 | [Undo](undo.md) | established | 4,571 | Any interface that lets a person change state, a text edit, a shape moved, a value typed, a file deleted, creates a moment where the person can make a mistake, and a mistake with ... |
+| [Wizard](wizard.md) | established | 4,663 | A single flat form with many fields overwhelms a person and increases both error rate and abandonment, a wizard trades that for a lower per-screen cognitive load at the cost of ... |
 
 ## Planned
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
 - Autosave
-- Breadcrumbs
 - Bulk Action
-- Command Palette UX
 - Empty State
 - Inline Validation
 - Optimistic Undo
 - Progressive Disclosure
-- Wizard
 
 ## Reading order
 

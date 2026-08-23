@@ -14,27 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Wizard",
-    "slug": "wizard",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/wizard.md",
-    "focus": ""
-  },
-  {
-    "name": "Breadcrumbs",
-    "slug": "breadcrumbs",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/breadcrumbs.md",
-    "focus": ""
-  },
-  {
-    "name": "Command Palette UX",
-    "slug": "command-palette-ux",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/command-palette-ux.md",
-    "focus": ""
-  },
-  {
     "name": "Inline Validation",
     "slug": "inline-validation",
     "category": "interaction and HCI",
