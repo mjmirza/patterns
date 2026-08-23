@@ -16787,6 +16787,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 ### MLOps
 
+#### [Batch Inference](../patterns/25-mlops/batch-inference.md)
+
+**Core Problem:** Many prediction workloads have no human waiting on a response, a nightly churn score for every customer, a fraud risk score recomputed after a data refresh, a batch of images to caption ahead of a content release. Serving these through a low-latency, always-on endpoint forces a system to pay for constant availability it never needs and to build request-shaped plumbing around what is fundamentally a bulk data transformation.
+
 #### [Feature Store](../patterns/25-mlops/feature-store.md)
 
 **Core Problem:** Feature computation logic written for offline, batch training, commonly Python or Spark against a data warehouse, is easy to accidentally diverge from the low-latency online serving path that computes the same feature at prediction time, often in a different language or runtime entirely. Any difference between the two, a different null-handling rule, a different aggregation window, a bug present in one path and not the other, causes the model to see systematically different feature values in production than it saw during training, silently degrading accuracy with no exception thrown anywhere. Google's own "Rules of Machine Learning" names this problem directly, in a rule aimed exactly at avoiding it, "The best way to make sure that you train like you serve is to save the set of features used at serving time, and then pipe those features to a log to use them at training time," and, separately, "Re-use code between your training pipeline and your serving pipeline whenever possible." AWS's own SageMaker Feature Store documentation names the failure mode by its common industry term directly, "This reduces training-serving skew, a common issue in ML where the difference between performance during training and serving can impact the accuracy of your ML model."

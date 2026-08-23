@@ -2,13 +2,14 @@
 
 Origin. Google ML design patterns
 
-2 entries, 6,342 words, 7 more planned, 9 total when the family is complete. Every entry carries all 18
+3 entries, 8,499 words, 6 more planned, 9 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## MLOps
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Batch Inference](batch-inference.md) | established | 2,157 | Many prediction workloads have no human waiting on a response, a nightly churn score for every customer, a fraud risk score recomputed after a data refresh, a batch of images to ... |
 | [Feature Store](feature-store.md) | established | 3,828 | Feature computation logic written for offline, batch training, commonly Python or Spark against a data warehouse, is easy to accidentally diverge from the low-latency online ... |
 | [Model Registry](model-registry.md) | established | 2,514 | A model that exists only as a file on someone's laptop, or an artifact saved into a training run's own log directory, has no independent identity. |
 
@@ -16,7 +17,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Batch Inference
 - Champion-Challenger
 - Drift Detection
 - Model Monitoring

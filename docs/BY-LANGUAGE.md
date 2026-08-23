@@ -815,6 +815,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Watermark](../patterns/24-stream-processing/watermark.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Batch Inference](../patterns/25-mlops/batch-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Model Registry](../patterns/25-mlops/model-registry.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1052,6 +1053,7 @@ These patterns contain runnable code examples written in Go:
 - [Backpressure](../patterns/09-concurrency/backpressure.md) (Concurrency and Parallelism)
 - [Balking](../patterns/09-concurrency/balking.md) (Concurrency and Parallelism)
 - [Barrier](../patterns/09-concurrency/barrier.md) (Concurrency and Parallelism)
+- [Batch Inference](../patterns/25-mlops/batch-inference.md) (MLOps)
 - [Big Ball of Mud](../patterns/11-domain-driven-design/big-ball-of-mud.md) (Domain-Driven Design)
 - [Big Ball of Mud](../patterns/18-anti-patterns/big-ball-of-mud.md) (Anti-Patterns)
 - [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) (Anti-Patterns)
@@ -2714,6 +2716,7 @@ These patterns contain runnable code examples written in Python:
 - [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md) (Cloud and Distributed)
 - [Backpressure](../patterns/09-concurrency/backpressure.md) (Concurrency and Parallelism)
 - [Barrier](../patterns/09-concurrency/barrier.md) (Concurrency and Parallelism)
+- [Batch Inference](../patterns/25-mlops/batch-inference.md) (MLOps)
 - [Big Ball of Mud](../patterns/11-domain-driven-design/big-ball-of-mud.md) (Domain-Driven Design)
 - [Big Ball of Mud](../patterns/18-anti-patterns/big-ball-of-mud.md) (Anti-Patterns)
 - [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) (Anti-Patterns)
@@ -4533,6 +4536,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Backends for Frontends](../patterns/08-cloud-distributed/backends-for-frontends.md) (Cloud and Distributed)
 - [Backpressure](../patterns/09-concurrency/backpressure.md) (Concurrency and Parallelism)
 - [Balking](../patterns/09-concurrency/balking.md) (Concurrency and Parallelism)
+- [Batch Inference](../patterns/25-mlops/batch-inference.md) (MLOps)
 - [Big Ball of Mud](../patterns/11-domain-driven-design/big-ball-of-mud.md) (Domain-Driven Design)
 - [Big Ball of Mud](../patterns/18-anti-patterns/big-ball-of-mud.md) (Anti-Patterns)
 - [Bikeshedding](../patterns/18-anti-patterns/bikeshedding.md) (Anti-Patterns)
