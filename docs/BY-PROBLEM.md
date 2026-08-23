@@ -17199,6 +17199,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 ### Real-Time Simulation
 
+#### [Data Locality](../patterns/29-realtime-simulation/data-locality.md)
+
+**Core Problem:** The chapter opens not with a code example but with a cache-cost argument, quoted directly. "with today's hardware, it can take hundreds of cycles to fetch a byte of data from RAM," and "whenever your chip needs a byte of data from RAM, it automatically grabs a whole chunk of contiguous memory, usually around 64 to 128 bytes, and puts it in the cache" (Nystrom, "Data Locality," verified 2026-08-23). the author's own measured demonstration follows directly. "I wrote two programs that did the exact same computation. The only difference was how many cache misses they caused. The slow one was fifty times slower than the other" (Nystrom, "Data Locality," verified 2026-08-23).
+
 #### [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md)
 
 **Core Problem:** Recomputing a derived value eagerly, every time the primary data it depends on changes, wastes work when the derived value is read far less often than the primary data changes. Nystrom's own chapter introduces the problem with a hierarchical scene-graph example, a pirate ship carrying a crow's nest, a pirate, and a parrot, each with a local transform relative to its parent and needing a derived world transform for rendering, where the naive, eager approach recomputes the parrot's own world position four separate times in a single frame even though only the final result before rendering was ever actually needed (Nystrom, "Dirty Flag," verified 2026-08-23). this problem shows up anywhere a piece of cached, derived state changes upstream far more often than it is read downstream.
@@ -17206,6 +17210,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 #### [Entity-Component-System](../patterns/29-realtime-simulation/entity-component-system.md)
 
 **Core Problem:** A single monolithic game-object class that grows a new field and a new method for every capability an object might need, physics, rendering, inventory, dialogue, eventually becomes a class where "even the most seemingly trivial changes can have far-reaching implications" (Nystrom, "Component," verified 2026-08-23). This shows up in any simulation with many different kinds of entities that share some capabilities and not others, a player character that renders and has physics and an inventory, a background prop that only renders, a trigger volume that has physics but no rendering, where a single inheritance hierarchy cannot cleanly express every combination without either duplicating code or inheriting capabilities an object does not actually need.
+
+#### [Event Queue](../patterns/29-realtime-simulation/event-queue.md)
+
+**Core Problem:** The chapter's own motivating example is an audio manager, and it names three distinct problems with a naive, synchronous playSound call. "our playSound method is synchronous, it doesn't return back to the caller until bloops are coming out of the speakers," meaning the caller blocks. two simultaneous calls to play the same sound stack into one sound "twice as loud," which is "jarringly loud." and "since our API is synchronous, it runs on the caller's thread. When we call it from different game systems, we're hitting our API concurrently from multiple threads" (Nystrom, "Event Queue," verified 2026-08-23). the chapter's own closing diagnosis names the common root. "the audio engine interprets a call to playSound to mean, drop everything and play the sound right now. Immediacy is the problem" (Nystrom, "Event Queue," verified 2026-08-23).
 
 #### [Game Loop](../patterns/29-realtime-simulation/game-loop.md)
 
@@ -17218,6 +17226,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 #### [Spatial Partitioning](../patterns/29-realtime-simulation/spatial-partitioning.md)
 
 **Core Problem:** Checking every object in a simulation against every other object for proximity or collision costs O(n squared) tests, since "the number of pairwise tests we have to perform each frame increases with the square of the number of units" (Nystrom, "Spatial Partition," verified 2026-08-23). Wikipedia's own Collision detection article states the same problem in formal terms. "for n objects, n(n-1)/2 intersection tests are needed with a naive approach. This quadratic growth makes such an approach computationally expensive as n increases" (Wikipedia contributors, "Collision detection," https://en.wikipedia.org/wiki/Collisiondetection, verified 2026-08-23). this problem shows up in any simulation, game, physics engine, or spatial database, that must repeatedly answer proximity, range, or intersection queries over a large or growing number of objects.
+
+#### [Type Object](../patterns/29-realtime-simulation/type-object.md)
+
+**Core Problem:** Nystrom's own text names the recompile-cycle cost directly, using a monster-breed example. "adding new breeds means adding new code, and each breed has to be compiled in as its own type" (Nystrom, "Type Object," verified 2026-08-23). the chapter's own numbered worked example makes the cost concrete. get an email asking to change a troll's health, check out and change the troll's own header file, recompile, check in, reply, and repeat for every tuning pass a designer wants.
 
 #### [Update Method](../patterns/29-realtime-simulation/update-method.md)
 

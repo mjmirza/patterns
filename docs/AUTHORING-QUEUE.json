@@ -14,27 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Type Object",
-    "slug": "type-object",
-    "category": "real-time simulation",
-    "path": "patterns/29-realtime-simulation/type-object.md",
-    "focus": ""
-  },
-  {
-    "name": "Data Locality (Real-Time Simulation)",
-    "slug": "data-locality",
-    "category": "real-time simulation",
-    "path": "patterns/29-realtime-simulation/data-locality.md",
-    "focus": ""
-  },
-  {
-    "name": "Event Queue (Real-Time Simulation)",
-    "slug": "event-queue",
-    "category": "real-time simulation",
-    "path": "patterns/29-realtime-simulation/event-queue.md",
-    "focus": ""
-  },
-  {
     "name": "Null Object",
     "slug": "null-object",
     "category": "design patterns gof",
