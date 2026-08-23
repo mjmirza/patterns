@@ -54,6 +54,7 @@ ALLOW_UNREACHABLE = {
     "doi.org",
     "www.semanticscholar.org",
     "en.cppreference.com",
+    "ssw.jku.at",
 }
 
 

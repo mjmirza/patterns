@@ -36,6 +36,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [State](../patterns/01-design-patterns-gof/state.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Strategy](../patterns/01-design-patterns-gof/strategy.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Template Method](../patterns/01-design-patterns-gof/template-method.md) | Design Patterns (GoF) |  |  |  | Yes |  | Yes | Yes |  | Yes |
+| [Twin](../patterns/01-design-patterns-gof/twin.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Visitor](../patterns/01-design-patterns-gof/visitor.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes | Yes | Yes | Yes |
 | [Alternative Classes with Different Interfaces](../patterns/02-code-smells/alternative-classes-with-different-interfaces.md) | Code Smells |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Comments](../patterns/02-code-smells/comments.md) | Code Smells |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -987,6 +988,7 @@ These patterns have native features in C# that make the pattern unnecessary, or 
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Synchronous I/O](../patterns/18-anti-patterns/synchronous-i-o.md) (Anti-Patterns)
 - [Template Method](../patterns/01-design-patterns-gof/template-method.md) (Design Patterns (GoF))
+- [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
 
 ### Go
@@ -1590,6 +1592,7 @@ These patterns contain runnable code examples written in Go:
 - [Transducer](../patterns/16-functional/transducer.md) (Functional Programming)
 - [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) (Enterprise Application Architecture)
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
+- [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) (Data and Storage)
@@ -2398,6 +2401,7 @@ These patterns have unique implementation variants or change their design struct
 - [Thread-Safe Interface](../patterns/09-concurrency/thread-safe-interface.md) (Concurrency and Parallelism)
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
 - [Transactional Outbox](../patterns/10-microservices/transactional-outbox.md) (Microservices)
+- [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
@@ -2464,6 +2468,7 @@ These patterns have native features in Java that make the pattern unnecessary, o
 - [Template Method](../patterns/01-design-patterns-gof/template-method.md) (Design Patterns (GoF))
 - [Thread Pool](../patterns/09-concurrency/thread-pool.md) (Concurrency and Parallelism)
 - [Thread-Safe Interface](../patterns/09-concurrency/thread-safe-interface.md) (Concurrency and Parallelism)
+- [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 
@@ -2594,6 +2599,7 @@ These patterns have unique implementation variants or change their design struct
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Template Method](../patterns/01-design-patterns-gof/template-method.md) (Design Patterns (GoF))
 - [Test Data Builder](../patterns/14-testing/test-data-builder.md) (Testing)
+- [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
@@ -2623,6 +2629,7 @@ These patterns have native features in Kotlin that make the pattern unnecessary,
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [State](../patterns/01-design-patterns-gof/state.md) (Design Patterns (GoF))
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
+- [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
 
 ### Python
@@ -3395,6 +3402,7 @@ These patterns contain runnable code examples written in Python:
 - [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) (Enterprise Application Architecture)
 - [Traversable](../patterns/16-functional/traversable.md) (Functional Programming)
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
+- [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) (Data and Storage)
@@ -4183,6 +4191,7 @@ These patterns have native features in Rust that make the pattern unnecessary, o
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Tagless Final](../patterns/16-functional/tagless-final.md) (Functional Programming)
 - [Template Method](../patterns/01-design-patterns-gof/template-method.md) (Design Patterns (GoF))
+- [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
 - [Zipper](../patterns/16-functional/zipper.md) (Functional Programming)
 
@@ -5127,6 +5136,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) (Enterprise Application Architecture)
 - [Traversable](../patterns/16-functional/traversable.md) (Functional Programming)
 - [Tree of Thoughts](../patterns/17-ai-agentic/tree-of-thoughts.md) (AI and Agentic)
+- [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [USE Method](../patterns/22-observability/use-method.md) (Observability)

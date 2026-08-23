@@ -4503,6 +4503,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The facade becomes an unplanned bottleneck or single point of failure. | [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md) | Cloud and Distributed |
 | The facade that grew a database. Symptom. The facade holds a mutable cache, | [Facade](../patterns/01-design-patterns-gof/facade.md) | Design Patterns (GoF) |
 | The failure is plausibly transient. Re-sending has a real chance of a | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
+| The failure mode with the strongest direct sourcing is a memory leak from the mutual reference cycle. Wikipedia's art... | [Twin](../patterns/01-design-patterns-gof/twin.md) | Design Patterns (GoF) |
 | The failure the caller is protecting against is a whole-target failure, not | [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) | AI and Agentic |
 | The failure-detection mechanism cannot distinguish "peer is dead" from | [Split Brain](../patterns/18-anti-patterns/split-brain.md) | Anti-Patterns |
 | The false confidence field. Symptom. A sentiment or confidence field is | [Structured Output](../patterns/17-ai-agentic/structured-output.md) | AI and Agentic |
@@ -6068,6 +6069,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Skeleton with one implementation. Symptom. An abstract class and exactly one
 - Silent contract drift on hook ordering. Symptom. After a framework upgrade a
 - Re-entrancy corruption. Symptom. Nested processing produces interleaved or
+
+#### [Twin](../patterns/01-design-patterns-gof/twin.md)
+
+**Core Problem:** A designer working in a single inheritance language sometimes needs one conceptual object to behave as two unrelated, already existing base types at once, each carrying its own real state, not just its own method signatures. Moessenboeck's own motivating example, restated here in different words rather than quoted, is a simple video game. A GameItem base class provides the drawing and collision behaviour every visible object on screen shares. A Ball needs that behaviour. It also needs to run on its own independent schedule, checking for collisions and moving itself every few milliseconds, which in Java means it needs to be a Thread. Java allows a class to extend exactly one class. Ball cannot extend both GameItem and Thread.
+
+**Failure Mode Symptoms:**
+
+- The failure mode with the strongest direct sourcing is a memory leak from the mutual reference cycle. Wikipedia's article states the risk in general terms, that the pattern "causes a cyclic reference scenario" some languages "may require" special handling to avoid a leak. In a language with a reference counting garbage collector, two objects that reference only each other, and nothing else, can hold each other alive indefinitely even after every outside reference to the pair is gone, because each object still counts as referenced by its partner. The symptom a reader would actually see is a twin pair that is logically dead, no longer reachable from application code, that nonetheless never gets collected.
 
 #### [Visitor](../patterns/01-design-patterns-gof/visitor.md)
 
