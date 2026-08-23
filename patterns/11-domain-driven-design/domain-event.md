@@ -263,28 +263,38 @@ systems, not a hypothetical caution.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------------+        raises        +-------------------+
-|   Aggregate Root         |---------------------->|   Domain Event     |
-|   (Order)                 |                       |   (OrderPaid)       |
-|   markPaid()               |                       |   orderId          |
-|   enforces invariants      |                       |   amount           |
-+------------+--------------+                       |   occurredAt        |
-             |                                        +----------+---------+
-             | collects into                                    |
-             v                                                    | published to
-+-------------------------+                                       v
-|   Event Registrar         |     after commit      +--------------------+
-|   (pendingEvents list)    |----------------------->|  Event Publisher    |
-+-------------------------+                          |  / Dispatcher        |
-                                                       +----------+-----------+
-                                                                  |
-                                        fan out to N handlers      |
-                              +-----------------------+-----------+-----------+
-                              v                        v                       v
-                    +-------------------+   +-------------------+   +-------------------+
-                    | ShippingHandler     |   | InventoryHandler    |   | LoyaltyHandler       |
-                    | (different agg.)    |   | (different agg.)    |   | (different context)  |
-                    +-------------------+   +-------------------+   +-------------------+
++------------------------+
+| Aggregate Root (Order) |
+| markPaid()             |
+| enforces invariants    |
++------------------------+
+           | raises
+           v
++--------------------------+
+| Domain Event (OrderPaid) |
+| orderId                  |
+| amount                   |
+| occurredAt               |
++--------------------------+
+           |
+           | collects into
+           v
++--------------------------------------+
+| Event Registrar (pendingEvents list) |
++--------------------------------------+
+           | after commit
+           v
++------------------------------+
+| Event Publisher / Dispatcher |
++------------------------------+
+           |
+           | fan out to N handlers
+     +-----+-----+-----+
+     |           |     |
++---------------------+ +---------------------+ +---------------------+
+| ShippingHandler     | | InventoryHandler    | | LoyaltyHandler      |
+| (different agg.)    | | (different agg.)    | | (different context) |
++---------------------+ +---------------------+ +---------------------+
 ```
 
 ## 7. Dynamics

@@ -2,7 +2,7 @@
 
 Origin. Dataflow model, Kafka documentation
 
-7 entries, 41,961 words, 1 more planned, 8 total when the family is complete. Every entry carries all 18
+7 entries, 41,954 words, 1 more planned, 8 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Stream Processing
@@ -10,7 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Dead-Letter Topic](dead-letter-topic.md) | established | 4,634 | KIP-298's own motivation states the problem this entry's stream-native variant answers directly. |
-| [Event-Time Processing](event-time-processing.md) | established | 8,523 | The Dataflow paper states the root cause directly. |
+| [Event-Time Processing](event-time-processing.md) | established | 8,516 | The Dataflow paper states the root cause directly. |
 | [Exactly-Once Processing](exactly-once-processing.md) | canonical | 4,481 | A stream processor that crashes mid-batch and restarts will, by default, reprocess whatever it had not yet acknowledged. |
 | [Replayable Log](replayable-log.md) | canonical | 4,185 | A traditional message queue removes a message once it has been consumed. |
 | [Stream Backpressure](stream-backpressure.md) | established | 4,619 | In a single-process reactive pipeline the backpressure problem is a pair, one producer and one consumer, and a demand-signaling or buffer-based protocol between the two is ... |

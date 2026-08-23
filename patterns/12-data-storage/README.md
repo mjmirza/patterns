@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-45 entries, 319,799 words. Every entry carries all 18
+45 entries, 319,824 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -55,8 +55,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Quorum](quorum.md) | canonical | 7,448 | A system replicates the same piece of data onto several nodes so that the loss of any one node, or the temporary unavailability of any one node, does not lose data or stop the ... |
 | [Read Repair](read-repair.md) | canonical | 6,416 | A system with leaderless, quorum-based replication accepts writes on any of several replicas for a key, and a temporarily unreachable replica, a dropped message, or a slow node ... |
 | [Read-Through Cache](read-through-cache.md) | canonical | 7,970 | An application reads the same piece of data far more often than the data changes. |
-| [Slowly Changing Dimensions](slowly-changing-dimensions.md) | canonical | 7,732 | A dimensional data warehouse separates numeric, frequently-recorded facts (an order line, a sensor reading, a page view) from the descriptive dimensions those facts are analyzed ... |
-| [Snowflake Schema](snowflake-schema.md) | canonical | 7,419 | A team building a data warehouse or a semantic model for business intelligence needs to answer analytical questions fast, total revenue by region and month, units sold by product ... |
+| [Slowly Changing Dimensions](slowly-changing-dimensions.md) | canonical | 7,737 | A dimensional data warehouse separates numeric, frequently-recorded facts (an order line, a sensor reading, a page view) from the descriptive dimensions those facts are analyzed ... |
+| [Snowflake Schema](snowflake-schema.md) | canonical | 7,439 | A team building a data warehouse or a semantic model for business intelligence needs to answer analytical questions fast, total revenue by region and month, units sold by product ... |
 | [Star Schema](star-schema.md) | canonical | 7,771 | An organization accumulates a large volume of business events, orders, shipments, page views, sensor readings, trades. |
 | [Three-Phase Commit](three-phase-commit.md) | established | 8,714 | A coordinator has already run the first two rounds of the classical Two-Phase Commit protocol. |
 | [Tombstone](tombstone.md) | canonical | 7,488 | A system holds more than one copy of the same data, and those copies do not all learn about a delete at the same instant. |

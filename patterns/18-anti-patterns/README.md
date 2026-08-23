@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-51 entries, 398,699 words. Every entry carries all 18
+51 entries, 398,692 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -50,7 +50,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Boat Anchor](boat-anchor.md) | established | 7,077 | A team adds a piece of code, an API, a dependency, a database table, a configuration flag, or a whole service for a reason that was real at the time. |
 | [Circular Dependency](circular-dependency.md) | canonical | 9,330 | A codebase grows by adding files, packages, or services, and each new unit imports whatever it needs from its neighbours. |
 | [Entity Service](entity-service.md) | contested | 8,323 | A team decomposes a monolith, or designs a new distributed system from scratch, and reaches for the most obvious axis of decomposition available. |
-| [Extraneous Fetching](extraneous-fetching.md) | established | 8,228 | A piece of code needs three fields from a record, a page needs the title and the thumbnail of a hundred articles, a mobile screen needs a user's display name and avatar. |
+| [Extraneous Fetching](extraneous-fetching.md) | established | 8,221 | A piece of code needs three fields from a record, a page needs the title and the thumbnail of a hundred articles, a mobile screen needs a user's display name and avatar. |
 | [Improper Instantiation](improper-instantiation.md) | established | 9,564 | A type in the codebase is expensive, or moderately expensive, or genuinely expensive, to construct. |
 | [Service Locator](service-locator.md) | contested | 6,102 | A component needs a collaborator to do its work, a repository, a logger, a payment gateway client, a feature-flag reader, and it does not want to be handed a concrete instance by ... |
 | [Service Locator Antipattern](service-locator-antipattern.md) | contested | 6,301 | A component needs collaborators to perform its work. |

@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-28 entries, 221,165 words. Every entry carries all 18
+28 entries, 221,162 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -60,7 +60,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Refused Bequest](refused-bequest.md) | canonical | 9,224 | The smell shows up the moment someone writes a subclass that extends a base class not because the subclass genuinely wants to honor the base class's whole public contract, but ... |
 | [Repeated Switches](repeated-switches.md) | canonical | 7,719 | A codebase accumulates a type code, an enum, a string discriminant, or a kind field on a tagged union, that represents a small closed family of variants a business actually cares ... |
 | [Switch Statements](switch-statements.md) | canonical | 8,919 | The problem starts small and grows by exactly the mechanism the smell is named for, switching. |
-| [Temporary Field](temporary-field.md) | canonical | 9,246 | The smell appears when a class has a method that implements a complex, multi-step algorithm, and that algorithm needs several intermediate values threaded through more than one ... |
+| [Temporary Field](temporary-field.md) | canonical | 9,243 | The smell appears when a class has a method that implements a complex, multi-step algorithm, and that algorithm needs several intermediate values threaded through more than one ... |
 
 ## Structural
 

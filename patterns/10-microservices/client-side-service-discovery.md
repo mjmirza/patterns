@@ -198,22 +198,32 @@ Do not use client-side service discovery in the following situations.
 ## 6. ASCII structure diagram
 
 ```
-+---------------------+                          +----------------------+
-|   Service Consumer   |                          |   Service Registry    |
-|   (Order Service)    |----(1) query instances-->|  (Eureka, Consul,      |
-|                       |<---(2) instance list-----|   ZooKeeper)           |
-|  +----------------+   |                          +----------------------+
-|  | Discovery      |    |                                   ^
-|  | Client Library |    |                                   |
-|  | - cache        |    |                       (register / deregister /
-|  | - load balancer|    |                          heartbeat)
-|  +-------+--------+    |                                   |
-|          |              |                     +-------------+-------------+
-+----------+--------------+                     |                           |
-           |                            +--------v--------+          +------v---------+
-           |  (3) direct request        | Service Instance |          |Service Instance |
-           +----------------------------->| A (Payment Svc)  |          | B (Payment Svc) |
-                                         +------------------+          +-----------------+
++----------------------------------+
+| Service Consumer (Order Service) |
+| -------------------------------  |
+| Discovery Client Library         |
+|  - cache                         |
+|  - load balancer                 |
++----------------------------------+
+           | (1) query instances
+           v
++----------------------------------------------+
+| Service Registry (Eureka, Consul, ZooKeeper) |
++----------------------------------------------+
+           | (2) instance list, returned to Consumer
+           ^
+           |
+           | register / deregister / heartbeat
+     +-----+-----+
+     |           |
++----------------------+  +----------------------+
+| Service Instance A   |  | Service Instance B   |
+| (Payment Svc)        |  | (Payment Svc)        |
++----------------------+  +----------------------+
+
+(3) Consumer sends the direct request straight to the
+chosen instance, A or B, using the cached list and its
+own load balancer, no registry hop on the request path.
 ```
 
 ## 7. Dynamics

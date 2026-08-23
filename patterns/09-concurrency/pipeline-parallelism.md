@@ -217,20 +217,36 @@ leak in any other channel-based implementation.
 ## 6. ASCII structure diagram
 
 ```
-                 Cancellation / Done signal (broadcast, read by every stage)
-   +------------------------+------------------------+------------------------+
-   |                        |                        |                        |
-+--v-------+  chan/queue  +-+--------+  chan/queue  +-+--------+  chan/queue  +-v--------+
-|  Source  |------------->|  Stage 1 |------------->|  Stage 2 |------------->|   Sink   |
-|(producer)|              |(transform)|              |(transform)|              |(consumer)|
-+----------+              +----------+              +----------+              +----------+
-  worker(s)                 worker(s)                 worker(s)                 worker(s)
- N1 concurrency            N2 concurrency            N3 concurrency            N4 concurrency
+Cancellation / Done signal (broadcast, read by every stage)
 
-  Fan-out variant on Stage 2 (independently sized worker pool per stage):
++---------------------------+
+| Source (producer)         |
+| worker(s), N1 concurrency |
++---------------------------+
+           | chan/queue
+           v
++---------------------------+
+| Stage 1 (transform)       |
+| worker(s), N2 concurrency |
++---------------------------+
+           | chan/queue
+           v
++---------------------------+
+| Stage 2 (transform)       |
+| worker(s), N3 concurrency |
++---------------------------+
+           | chan/queue
+           v
++---------------------------+
+| Sink (consumer)           |
+| worker(s), N4 concurrency |
++---------------------------+
+
+Fan-out variant on Stage 2 (independently sized worker
+pool per stage):
 
               +--> worker 2a --+
-  Stage 1 out -+--> worker 2b --+--> merge --> Stage 3 in
+Stage 1 out --+--> worker 2b --+--> merge --> Stage 3 in
               +--> worker 2c --+
 ```
 

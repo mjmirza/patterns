@@ -244,53 +244,72 @@ flat star dimension into a chain.
 
 ## 6. ASCII structure diagram
 
-```text
-Star schema (denormalized dimension, one hop from fact to every attribute)
+```
+Star schema (denormalized dimension, one hop from fact
+to every attribute)
 
-                    +----------------------+
-                    |  dim_product (wide)  |
-                    |----------------------|
-                    | product_key   (PK)   |
-                    | product_name         |
-                    | subcategory_name     |
-                    | category_name        |
-                    +----------+-----------+
-                               |
-                               | 1
-                               |
-                               *
-                    +----------------------+
-                    |     fact_sales       |
-                    |----------------------|
-                    | sale_key       (PK)  |
-                    | product_key    (FK)  |
-                    | date_key       (FK)  |
-                    | quantity             |
-                    | unit_price_cents     |
-                    +----------------------+
++---------------------+
+| dim_product (wide)  |
+| ------------------- |
+| product_key   (PK)  |
+| product_name        |
+| subcategory_name    |
+| category_name       |
++---------------------+
+           | 1
+           |
+           * 
++---------------------+
+| fact_sales          |
+| -----------         |
+| sale_key       (PK) |
+| product_key    (FK) |
+| date_key       (FK) |
+| quantity            |
+| unit_price_cents    |
++---------------------+
 
 
-Snowflake schema (same dimension, normalized into a hierarchy chain)
+Snowflake schema (same dimension, normalized into a
+hierarchy chain)
 
-+------------------------+     +---------------------------+     +--------------------+
-| dim_product_category   |     | dim_product_subcategory    |     |     dim_product     |
-|------------------------|     |----------------------------|     |----------------------|
-| category_key   (PK)    |1---*| subcategory_key    (PK)     |1---*| product_key   (PK)   |
-| category_name          |     | subcategory_name            |     | product_name         |
-+------------------------+     | category_key       (FK)     |     | subcategory_key (FK) |
-                                +---------------------------+     +----------+-----------+
-                                                                              |
-                                                                              | 1
-                                                                              |
-                                                                              *
-                                                                   +----------------------+
-                                                                   |     fact_sales       |
-                                                                   |----------------------|
-                                                                   | sale_key       (PK)  |
-                                                                   | product_key    (FK)  |
-                                                                   | quantity             |
-                                                                   | unit_price_cents     |
-                                                                   +----------------------+
++-----------------------+
+| dim_product_category  |
+| --------------------- |
+| category_key   (PK)   |
+| category_name         |
++-----------------------+
+           | 1
+           |
+           * 
++--------------------------+
+| dim_product_subcategory  |
+| ------------------------ |
+| subcategory_key (PK)     |
+| subcategory_name         |
+| category_key    (FK)     |
++--------------------------+
+           | 1
+           |
+           * 
++----------------------+
+| dim_product          |
+| -----------          |
+| product_key   (PK)   |
+| product_name         |
+| subcategory_key (FK) |
++----------------------+
+           | 1
+           |
+           * 
++---------------------+
+| fact_sales          |
+| -----------         |
+| sale_key       (PK) |
+| product_key    (FK) |
+| quantity            |
+| unit_price_cents    |
++---------------------+
 ```
 
 ## 7. Dynamics

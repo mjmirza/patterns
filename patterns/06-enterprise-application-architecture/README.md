@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-56 entries, 371,855 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
+56 entries, 371,867 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -106,7 +106,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Association Table Mapping](association-table-mapping.md) | canonical | 5,922 | An application built with an object model needs to persist a relationship where either side can be associated with more than one instance of the other. |
+| [Association Table Mapping](association-table-mapping.md) | canonical | 5,934 | An application built with an object model needs to persist a relationship where either side can be associated with more than one instance of the other. |
 
 ## Object-Relational Structural
 
