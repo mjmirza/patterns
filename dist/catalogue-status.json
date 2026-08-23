@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 854,
+  "published_total": 857,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 21,
   "stale_entries": 0,
-  "references_checked": 5012,
+  "references_checked": 5019,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -381,13 +381,13 @@
       "family": "29-realtime-simulation",
       "name": "Real-Time Simulation",
       "origin": "Nystrom, Game Programming Patterns",
-      "published": 3,
-      "planned": 6,
+      "published": 6,
+      "planned": 3,
       "target": 9,
-      "percent": 33.3,
+      "percent": 66.7,
       "maturity": {
-        "established": 1,
-        "canonical": 2
+        "canonical": 5,
+        "established": 1
       }
     }
   ]

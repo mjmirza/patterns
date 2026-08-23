@@ -17199,6 +17199,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 ### Real-Time Simulation
 
+#### [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md)
+
+**Core Problem:** Recomputing a derived value eagerly, every time the primary data it depends on changes, wastes work when the derived value is read far less often than the primary data changes. Nystrom's own chapter introduces the problem with a hierarchical scene-graph example, a pirate ship carrying a crow's nest, a pirate, and a parrot, each with a local transform relative to its parent and needing a derived world transform for rendering, where the naive, eager approach recomputes the parrot's own world position four separate times in a single frame even though only the final result before rendering was ever actually needed (Nystrom, "Dirty Flag," verified 2026-08-23). this problem shows up anywhere a piece of cached, derived state changes upstream far more often than it is read downstream.
+
 #### [Entity-Component-System](../patterns/29-realtime-simulation/entity-component-system.md)
 
 **Core Problem:** A single monolithic game-object class that grows a new field and a new method for every capability an object might need, physics, rendering, inventory, dialogue, eventually becomes a class where "even the most seemingly trivial changes can have far-reaching implications" (Nystrom, "Component," verified 2026-08-23). This shows up in any simulation with many different kinds of entities that share some capabilities and not others, a player character that renders and has physics and an inventory, a background prop that only renders, a trigger volume that has physics but no rendering, where a single inheritance hierarchy cannot cleanly express every combination without either duplicating code or inheriting capabilities an object does not actually need.
@@ -17207,8 +17211,16 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 **Core Problem:** A naive loop that simulates and renders as fast as the hardware allows ties the simulation's own speed to whatever machine it happens to run on. a faster machine simulates faster, physics behaves differently frame to frame, and the same recorded input produces a different outcome on different hardware. Nystrom states the intent this pattern answers directly. "Decouple the progression of game time from user input and processor speed" (Nystrom, "Game Loop," verified 2026-08-23). this problem shows up in any software that repeatedly advances an internal state and presents it to a person. games, physics or particle simulations, and any near-real-time visualization that must behave the same way regardless of how fast the machine driving it happens to be.
 
+#### [Object Pool](../patterns/29-realtime-simulation/object-pool.md)
+
+**Core Problem:** Repeatedly allocating and freeing short-lived objects, particles, bullets, network connections, on a hot path costs more than the allocation itself. Nystrom's own text names two distinct costs directly. fragmentation, "fragmentation means the free space in our heap is broken into smaller pieces of memory instead of one large open block," and raw allocation speed, which the chapter frames as especially costly on resource- constrained platforms such as game consoles and mobile devices (Nystrom, "Object Pool," verified 2026-08-23). this shows up anywhere a simulation, a game, or a server repeatedly creates and destroys many short-lived objects of the same kind, whether particles in a game or connections in a database client.
+
 #### [Spatial Partitioning](../patterns/29-realtime-simulation/spatial-partitioning.md)
 
 **Core Problem:** Checking every object in a simulation against every other object for proximity or collision costs O(n squared) tests, since "the number of pairwise tests we have to perform each frame increases with the square of the number of units" (Nystrom, "Spatial Partition," verified 2026-08-23). Wikipedia's own Collision detection article states the same problem in formal terms. "for n objects, n(n-1)/2 intersection tests are needed with a naive approach. This quadratic growth makes such an approach computationally expensive as n increases" (Wikipedia contributors, "Collision detection," https://en.wikipedia.org/wiki/Collisiondetection, verified 2026-08-23). this problem shows up in any simulation, game, physics engine, or spatial database, that must repeatedly answer proximity, range, or intersection queries over a large or growing number of objects.
+
+#### [Update Method](../patterns/29-realtime-simulation/update-method.md)
+
+**Core Problem:** Nystrom's own chapter opens with a directly quoted motivating example. a skeleton on patrol, whose per-frame behaviour, moving toward the next patrol point, playing an animation, checking for the player, starts as its own small piece of code, then a second skeleton is added, then a third, and "pretty soon, you have a big blob of code" where "the skeleton-patrolling code and the statue-toppling code and the ghost-flying code are all mushed together" in one place (Nystrom, "Update Method," verified 2026-08-23). the naive fix, one giant function handling every object kind's per-frame logic in a single branch, is what the pattern exists to avoid.
 
 Generated by `tools/gen-by-problem-by-language.py`. Do not edit by hand.

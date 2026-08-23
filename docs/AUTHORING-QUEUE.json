@@ -14,27 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Object Pool (Real-Time Simulation)",
-    "slug": "object-pool",
-    "category": "real-time simulation",
-    "path": "patterns/29-realtime-simulation/object-pool.md",
-    "focus": ""
-  },
-  {
-    "name": "Dirty Flag",
-    "slug": "dirty-flag",
-    "category": "real-time simulation",
-    "path": "patterns/29-realtime-simulation/dirty-flag.md",
-    "focus": ""
-  },
-  {
-    "name": "Update Method",
-    "slug": "update-method",
-    "category": "real-time simulation",
-    "path": "patterns/29-realtime-simulation/update-method.md",
-    "focus": ""
-  },
-  {
     "name": "Type Object",
     "slug": "type-object",
     "category": "real-time simulation",
