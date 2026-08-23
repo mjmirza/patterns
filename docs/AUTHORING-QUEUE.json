@@ -35,13 +35,6 @@
     "focus": ""
   },
   {
-    "name": "Business Delegate",
-    "slug": "business-delegate",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/business-delegate.md",
-    "focus": ""
-  },
-  {
     "name": "Composite Entity",
     "slug": "composite-entity",
     "category": "enterprise application architecture",
@@ -53,13 +46,6 @@
     "slug": "composite-view",
     "category": "enterprise application architecture",
     "path": "patterns/06-enterprise-application-architecture/composite-view.md",
-    "focus": ""
-  },
-  {
-    "name": "Context Object",
-    "slug": "context-object",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/context-object.md",
     "focus": ""
   },
   {
@@ -81,13 +67,6 @@
     "slug": "intercepting-filter",
     "category": "enterprise application architecture",
     "path": "patterns/06-enterprise-application-architecture/intercepting-filter.md",
-    "focus": ""
-  },
-  {
-    "name": "Collecting Parameter",
-    "slug": "collecting-parameter",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/collecting-parameter.md",
     "focus": ""
   },
   {
