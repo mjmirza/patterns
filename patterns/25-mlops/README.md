@@ -2,7 +2,7 @@
 
 Origin. Google ML design patterns
 
-1 entries, 3,828 words, 8 more planned, 9 total when the family is complete. Every entry carries all 18
+2 entries, 6,342 words, 7 more planned, 9 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## MLOps
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Feature Store](feature-store.md) | established | 3,828 | Feature computation logic written for offline, batch training, commonly Python or Spark against a data warehouse, is easy to accidentally diverge from the low-latency online ... |
+| [Model Registry](model-registry.md) | established | 2,514 | A model that exists only as a file on someone's laptop, or an artifact saved into a training run's own log directory, has no independent identity. |
 
 ## Planned
 
@@ -19,7 +20,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Champion-Challenger
 - Drift Detection
 - Model Monitoring
-- Model Registry
 - Online Inference
 - Shadow Model
 - Training-Serving Skew Guard
