@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 828,
+  "published_total": 829,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 19,
   "stale_entries": 0,
-  "references_checked": 4742,
+  "references_checked": 4760,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -317,12 +317,12 @@
       "family": "24-stream-processing",
       "name": "Stream Processing",
       "origin": "Dataflow model, Kafka docs",
-      "published": 3,
-      "planned": 5,
+      "published": 4,
+      "planned": 4,
       "target": 8,
-      "percent": 37.5,
+      "percent": 50.0,
       "maturity": {
-        "established": 3
+        "established": 4
       }
     },
     {

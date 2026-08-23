@@ -14,13 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Stream-Table Duality",
-    "slug": "stream-table-duality",
-    "category": "stream processing",
-    "path": "patterns/24-stream-processing/stream-table-duality.md",
-    "focus": ""
-  },
-  {
     "name": "Exactly-Once Processing",
     "slug": "exactly-once-processing",
     "category": "stream processing",

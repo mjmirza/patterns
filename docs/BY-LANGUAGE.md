@@ -810,6 +810,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Watermark](../patterns/24-stream-processing/watermark.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1558,6 +1559,7 @@ These patterns contain runnable code examples written in Go:
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md) (Stream Processing)
+- [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) (Stream Processing)
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Structured Logging](../patterns/22-observability/structured-logging.md) (Observability)
@@ -3372,6 +3374,7 @@ These patterns contain runnable code examples written in Python:
 - [Strangler Fig](../patterns/08-cloud-distributed/strangler-fig.md) (Cloud and Distributed)
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md) (Stream Processing)
+- [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) (Stream Processing)
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
 - [Structured Concurrency](../patterns/09-concurrency/structured-concurrency.md) (Concurrency and Parallelism)
 - [Structured Logging](../patterns/22-observability/structured-logging.md) (Observability)
@@ -5114,6 +5117,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Strategized Locking](../patterns/09-concurrency/strategized-locking.md) (Concurrency and Parallelism)
 - [Strategy](../patterns/01-design-patterns-gof/strategy.md) (Design Patterns (GoF))
 - [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md) (Stream Processing)
+- [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) (Stream Processing)
 - [Structural Sharing](../patterns/16-functional/structural-sharing.md) (Functional Programming)
 - [Structured Logging](../patterns/22-observability/structured-logging.md) (Observability)
 - [Structured Output](../patterns/17-ai-agentic/structured-output.md) (AI and Agentic)

@@ -4660,6 +4660,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The object graph is deep enough, an Entity referencing child Entities that | [Aggregate Root](../patterns/11-domain-driven-design/aggregate-root.md) | Domain-Driven Design |
 | The object is stateless, or its state is a cache whose contents do not change | [Singleton](../patterns/01-design-patterns-gof/singleton.md) | Design Patterns (GoF) |
 | The objects are peers, not a layered stack. Each stands on its own and none | [Mediator](../patterns/01-design-patterns-gof/mediator.md) | Design Patterns (GoF) |
+| The observable production symptom is every application instance replicating | [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |
 | The observable symptom is listed first in each triple, because that is what a | [Poison Pill](../patterns/18-anti-patterns/poison-pill.md) | Anti-Patterns |
 | The observed symptoms below are the visible surface a reader would actually | [Half-Sync/Half-Async](../patterns/09-concurrency/half-sync-half-async.md) | Concurrency and Parallelism |
 | The observers can be given a defined lifetime, so that registration is matched | [Observer](../patterns/01-design-patterns-gof/observer.md) | Design Patterns (GoF) |
@@ -16743,6 +16744,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 #### [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md)
 
 **Core Problem:** In a single-process reactive pipeline the backpressure problem is a pair, one producer and one consumer, and a demand-signaling or buffer-based protocol between the two is sufficient. A stream-processing engine has a structurally harder version of the same problem. a topology of many parallel operator subtasks, potentially hundreds, spread across many machines, connected by a shuffle in which every subtask of one operator may send to every subtask of the next. If any single downstream subtask falls behind, whether from a genuinely slow user function, a skewed key distribution sending it more data than its peers, or a transient resource contention on its host, the naive outcome is that every upstream subtask feeding it keeps sending at full rate into a buffer that has nowhere bounded to grow, and unlike a single process's heap, an unbounded buffer inside a long-running TaskManager degrades the whole machine, not just one queue, through garbage-collection pressure and eventually out-of-memory failure.
+
+#### [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md)
+
+**Core Problem:** Kafka's own documentation frames the problem as a first-class support gap a stream-processing technology must close, not a hypothetical. "When implementing stream processing use cases in practice, you typically need both streams and also databases. An example use case that is very common in practice is an e-commerce application that enriches an incoming stream of customer transactions with the latest customer information from a database table... Any stream processing technology must therefore provide first-class support for streams and tables." The Streams DSL developer guide restates the same gap through a different worked example, a continuously-updated customer view built from many input event streams. "What your application will be doing is transforming many input streams of customer-related events into an output table that contains a continuously updated 360-degree view of your customers." Source. Apache Kafka documentation, "DSL API," Kafka Streams, verified 2026-08-23, https://kafka.apache.org/43/streams/developer-guide/dsl-api/.
+
+**Failure Mode Symptoms:**
+
+- The observable production symptom is every application instance replicating
 
 #### [Watermark](../patterns/24-stream-processing/watermark.md)
 
