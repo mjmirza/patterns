@@ -811,6 +811,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Dead-Letter Topic](../patterns/24-stream-processing/dead-letter-topic.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Exactly-Once Processing](../patterns/24-stream-processing/exactly-once-processing.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Replayable Log](../patterns/24-stream-processing/replayable-log.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Watermark](../patterns/24-stream-processing/watermark.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1464,6 +1465,7 @@ These patterns contain runnable code examples written in Go:
 - [Replace Subclass with Delegate](../patterns/03-refactoring/replace-subclass-with-delegate.md) (Refactoring Techniques)
 - [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) (Refactoring Techniques)
 - [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) (Refactoring Techniques)
+- [Replayable Log](../patterns/24-stream-processing/replayable-log.md) (Stream Processing)
 - [Repository](../patterns/11-domain-driven-design/repository.md) (Domain-Driven Design)
 - [Request-Reply](../patterns/07-integration/request-reply.md) (Enterprise Integration)
 - [Reranking](../patterns/17-ai-agentic/reranking.md) (AI and Agentic)
@@ -3258,6 +3260,7 @@ These patterns contain runnable code examples written in Python:
 - [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) (Refactoring Techniques)
 - [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) (Refactoring Techniques)
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
+- [Replayable Log](../patterns/24-stream-processing/replayable-log.md) (Stream Processing)
 - [Repository Pattern (Mobile Offline-First)](../patterns/27-mobile-architecture/repository-pattern.md) (Mobile Architecture)
 - [Repository](../patterns/11-domain-driven-design/repository.md) (Domain-Driven Design)
 - [Request-Reply](../patterns/07-integration/request-reply.md) (Enterprise Integration)
@@ -5013,6 +5016,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Replace Superclass with Delegate](../patterns/03-refactoring/replace-superclass-with-delegate.md) (Refactoring Techniques)
 - [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) (Refactoring Techniques)
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
+- [Replayable Log](../patterns/24-stream-processing/replayable-log.md) (Stream Processing)
 - [Repository](../patterns/11-domain-driven-design/repository.md) (Domain-Driven Design)
 - [Request-Reply](../patterns/07-integration/request-reply.md) (Enterprise Integration)
 - [Reranking](../patterns/17-ai-agentic/reranking.md) (AI and Agentic)
