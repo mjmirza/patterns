@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-28 entries, 279,676 words, 5 more planned, 33 total when the family is complete. Every entry carries all 18
+29 entries, 285,353 words, 4 more planned, 33 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -16,6 +16,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Mediator](mediator.md) | canonical | 11,878 | A set of objects has to cooperate, and every one of them needs to know something about the others in order to do its part. |
 | [Memento](memento.md) | canonical | 11,628 | An object holds state that changes over time, and something outside that object needs the ability to put the state back the way it was. |
 | [Observer](observer.md) | canonical | 13,321 | A piece of state changes, and an unknown number of other pieces of the system need to react. |
+| [Servant](servant.md) | contested | 5,677 | Wikipedia's own definition, quoted directly. |
 | [State](state.md) | canonical | 14,281 | An object behaves differently depending on a mode it is in, and every method that depends on that mode has grown the same conditional. |
 | [Strategy](strategy.md) | canonical | 11,071 | An object does a piece of work in more than one way, and the choice of way is not a property of the object's identity. |
 | [Template Method](template-method.md) | canonical | 12,033 | Two or more procedures do the same thing in the same order, and differ in a small number of steps in the middle. |
@@ -55,7 +56,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Extension Object
 - Null Object
 - Role Object
-- Servant
 - Twin
 
 ## Reading order
