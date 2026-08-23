@@ -105,13 +105,6 @@
     "focus": ""
   },
   {
-    "name": "Inference-Time Scaling",
-    "slug": "inference-time-scaling",
-    "category": "ai agentic",
-    "path": "patterns/17-ai-agentic/inference-time-scaling.md",
-    "focus": ""
-  },
-  {
     "name": "Incident-to-Eval Synthesis",
     "slug": "incident-to-eval-synthesis",
     "category": "ai agentic",
@@ -123,20 +116,6 @@
     "slug": "database-federation",
     "category": "data and storage",
     "path": "patterns/12-data-storage/database-federation.md",
-    "focus": ""
-  },
-  {
-    "name": "Byzantine Fault Tolerance",
-    "slug": "byzantine-fault-tolerance",
-    "category": "data and storage",
-    "path": "patterns/12-data-storage/byzantine-fault-tolerance.md",
-    "focus": ""
-  },
-  {
-    "name": "Distributed Hash Table",
-    "slug": "distributed-hash-table",
-    "category": "data and storage",
-    "path": "patterns/12-data-storage/distributed-hash-table.md",
     "focus": ""
   }
 ]

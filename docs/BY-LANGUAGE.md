@@ -482,6 +482,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Anti-Entropy](../patterns/12-data-storage/anti-entropy.md) | Data and Storage |  |  | Yes |  |  | Yes | Yes |  |  |
 | [B-Tree](../patterns/12-data-storage/b-tree.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Bloom Filter](../patterns/12-data-storage/bloom-filter.md) | Data and Storage |  |  | Yes |  |  | Yes | Yes |  | Yes |
+| [Byzantine Fault Tolerance](../patterns/12-data-storage/byzantine-fault-tolerance.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [CRDT](../patterns/12-data-storage/crdt.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -489,6 +490,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Data Mesh](../patterns/12-data-storage/data-mesh.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Data Vault](../patterns/12-data-storage/data-vault.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Denormalization](../patterns/12-data-storage/denormalization.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Distributed Hash Table](../patterns/12-data-storage/distributed-hash-table.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [ELT](../patterns/12-data-storage/elt.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [ETL](../patterns/12-data-storage/etl.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -690,6 +692,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Inference-Time Scaling](../patterns/17-ai-agentic/inference-time-scaling.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [LLM Circuit Breaker](../patterns/17-ai-agentic/llm-circuit-breaker.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1107,6 +1110,7 @@ These patterns contain runnable code examples written in Go:
 - [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) (Cloud and Distributed)
 - [Busy Database](../patterns/18-anti-patterns/busy-database.md) (Anti-Patterns)
 - [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) (Anti-Patterns)
+- [Byzantine Fault Tolerance](../patterns/12-data-storage/byzantine-fault-tolerance.md) (Data and Storage)
 - [CAP Theorem](../patterns/04-principles-and-laws/cap-theorem.md) (Principles and Laws)
 - [CRDT](../patterns/12-data-storage/crdt.md) (Data and Storage)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
@@ -1218,6 +1222,7 @@ These patterns contain runnable code examples written in Go:
 - [Differential Testing](../patterns/14-testing/differential-testing.md) (Testing)
 - [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md) (Real-Time Simulation)
 - [Disruptor](../patterns/09-concurrency/disruptor.md) (Concurrency and Parallelism)
+- [Distributed Hash Table](../patterns/12-data-storage/distributed-hash-table.md) (Data and Storage)
 - [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) (Microservices)
 - [Distributed Transaction Coordinator Antipattern](../patterns/10-microservices/distributed-transaction-coordinator-antipattern.md) (Microservices)
 - [Divergent Change](../patterns/02-code-smells/divergent-change.md) (Code Smells)
@@ -1326,6 +1331,7 @@ These patterns contain runnable code examples written in Go:
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Index Table](../patterns/08-cloud-distributed/index-table.md) (Cloud and Distributed)
 - [Indirection](../patterns/04-principles-and-laws/indirection.md) (Principles and Laws)
+- [Inference-Time Scaling](../patterns/17-ai-agentic/inference-time-scaling.md) (AI and Agentic)
 - [Information Expert](../patterns/04-principles-and-laws/information-expert.md) (Principles and Laws)
 - [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) (Enterprise Application Architecture)
 - [Inline Validation](../patterns/26-interaction-hci/inline-validation.md) (Interaction and HCI)
@@ -2812,6 +2818,7 @@ These patterns contain runnable code examples written in Python:
 - [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) (Cloud and Distributed)
 - [Busy Database](../patterns/18-anti-patterns/busy-database.md) (Anti-Patterns)
 - [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) (Anti-Patterns)
+- [Byzantine Fault Tolerance](../patterns/12-data-storage/byzantine-fault-tolerance.md) (Data and Storage)
 - [CAP Theorem](../patterns/04-principles-and-laws/cap-theorem.md) (Principles and Laws)
 - [CRDT](../patterns/12-data-storage/crdt.md) (Data and Storage)
 - [CSRF Token](../patterns/15-security/csrf-token.md) (Security)
@@ -2945,6 +2952,7 @@ These patterns contain runnable code examples written in Python:
 - [Differential Testing](../patterns/14-testing/differential-testing.md) (Testing)
 - [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md) (Real-Time Simulation)
 - [Disaster Recovery Pilot Light](../patterns/20-release-deployment/disaster-recovery-pilot-light.md) (Release and Deployment)
+- [Distributed Hash Table](../patterns/12-data-storage/distributed-hash-table.md) (Data and Storage)
 - [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) (Anti-Patterns)
 - [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) (Microservices)
 - [Divergent Change](../patterns/02-code-smells/divergent-change.md) (Code Smells)
@@ -3096,6 +3104,7 @@ These patterns contain runnable code examples written in Python:
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Index Table](../patterns/08-cloud-distributed/index-table.md) (Cloud and Distributed)
 - [Indirection](../patterns/04-principles-and-laws/indirection.md) (Principles and Laws)
+- [Inference-Time Scaling](../patterns/17-ai-agentic/inference-time-scaling.md) (AI and Agentic)
 - [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) (Frontend and UI)
 - [Information Expert](../patterns/04-principles-and-laws/information-expert.md) (Principles and Laws)
 - [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) (Enterprise Application Architecture)
@@ -4668,6 +4677,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) (Cloud and Distributed)
 - [Busy Database](../patterns/18-anti-patterns/busy-database.md) (Anti-Patterns)
 - [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) (Anti-Patterns)
+- [Byzantine Fault Tolerance](../patterns/12-data-storage/byzantine-fault-tolerance.md) (Data and Storage)
 - [CRDT](../patterns/12-data-storage/crdt.md) (Data and Storage)
 - [Cache Stampede](../patterns/18-anti-patterns/cache-stampede.md) (Anti-Patterns)
 - [Cache-Aside](../patterns/08-cloud-distributed/cache-aside.md) (Cloud and Distributed)
@@ -4787,6 +4797,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Detour](../patterns/07-integration/detour.md) (Enterprise Integration)
 - [Differential Testing](../patterns/14-testing/differential-testing.md) (Testing)
 - [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md) (Real-Time Simulation)
+- [Distributed Hash Table](../patterns/12-data-storage/distributed-hash-table.md) (Data and Storage)
 - [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) (Anti-Patterns)
 - [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) (Microservices)
 - [Distributed Transaction Coordinator Antipattern](../patterns/10-microservices/distributed-transaction-coordinator-antipattern.md) (Microservices)
@@ -4917,6 +4928,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Index Table](../patterns/08-cloud-distributed/index-table.md) (Cloud and Distributed)
 - [Indirection](../patterns/04-principles-and-laws/indirection.md) (Principles and Laws)
+- [Inference-Time Scaling](../patterns/17-ai-agentic/inference-time-scaling.md) (AI and Agentic)
 - [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) (Frontend and UI)
 - [Information Expert](../patterns/04-principles-and-laws/information-expert.md) (Principles and Laws)
 - [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) (Enterprise Application Architecture)

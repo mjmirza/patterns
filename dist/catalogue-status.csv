@@ -10,12 +10,12 @@ family,name,published,planned,target,percent
 09-concurrency,Concurrency and Parallelism,40,0,40,100.0
 10-microservices,Microservices,49,0,49,100.0
 11-domain-driven-design,Domain-Driven Design,35,0,35,100.0
-12-data-storage,Data and Storage,42,3,45,93.3
+12-data-storage,Data and Storage,44,1,45,97.8
 13-frontend-ui,Frontend and UI,34,0,34,100.0
 14-testing,Testing,30,0,30,100.0
 15-security,Security,37,1,38,97.4
 16-functional,Functional Programming,39,0,39,100.0
-17-ai-agentic,AI and Agentic,62,3,65,95.4
+17-ai-agentic,AI and Agentic,63,2,65,96.9
 18-anti-patterns,Anti-Patterns,51,0,51,100.0
 19-api-design,API and Interface Design,11,0,11,100.0
 20-release-deployment,Release and Deployment,10,0,10,100.0

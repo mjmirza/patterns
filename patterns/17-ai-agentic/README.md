@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-62 entries, 488,850 words, 3 more planned, 65 total when the family is complete. Every entry carries all 18
+63 entries, 490,435 words, 2 more planned, 65 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -22,6 +22,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [GraphRAG](graphrag.md) | emerging | 7,850 | A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. |
 | [Hook-Based Safety Guard Rails](hook-based-safety-guard-rails.md) | established | 1,796 | The chapter's own text states the underlying problem directly, already quoted in dimension 1. |
 | [Human in the Loop](human-in-the-loop.md) | established | 7,618 | An agent is given a goal and a set of tools, and it plans and executes a sequence of tool calls autonomously. |
+| [Inference-Time Scaling](inference-time-scaling.md) | established | 1,585 | The paper's own text names the underlying inefficiency directly, already implied in dimension 1. |
 | [Input Guardrails](input-guardrails.md) | established | 8,596 | An agent built on a large language model treats every token in its context window with roughly the same weight, whether that token came from the person operating the agent, from a ... |
 | [LLM as Judge](llm-as-judge.md) | established | 7,737 | A team ships a feature whose output is open-ended text, a chat reply, a document summary, a retrieval-augmented answer, or an autonomous agent's final report. |
 | [Language Agent Tree Search](language-agent-tree-search.md) | established | 1,913 | The paper's own text names the specific limitation of the prior baseline directly, ReAct. |
@@ -128,7 +129,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 
 - Context Window Auto-Compaction
 - Incident-to-Eval Synthesis
-- Inference-Time Scaling
 
 ## Reading order
 
