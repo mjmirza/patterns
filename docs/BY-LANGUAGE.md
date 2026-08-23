@@ -809,6 +809,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Watermark](../patterns/24-stream-processing/watermark.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1611,6 +1612,7 @@ These patterns contain runnable code examples written in Go:
 - [Vector Clock](../patterns/12-data-storage/vector-clock.md) (Data and Storage)
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
+- [Watermark](../patterns/24-stream-processing/watermark.md) (Stream Processing)
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
@@ -3436,6 +3438,7 @@ These patterns contain runnable code examples written in Python:
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
 - [Warm Standby](../patterns/20-release-deployment/warm-standby.md) (Release and Deployment)
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
+- [Watermark](../patterns/24-stream-processing/watermark.md) (Stream Processing)
 - [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) (API and Interface Design)
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
@@ -5168,6 +5171,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
+- [Watermark](../patterns/24-stream-processing/watermark.md) (Stream Processing)
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
