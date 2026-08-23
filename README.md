@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-827%20published%20%2F%20892%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-828%20published%20%2F%20892%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -14,10 +14,10 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-827-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-65-lightgrey)
-![Catalogue completion](https://img.shields.io/badge/completion-92.7%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-4738-brightgreen)
+![Published entries](https://img.shields.io/badge/published-828-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-64-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-92.8%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-4742-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
@@ -115,7 +115,7 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 | 21 | [SRE and Operations](patterns/21-sre-operations/) | Google SRE, AWS Well-Architected | 12 | 0 | 12 |
 | 22 | [Observability](patterns/22-observability/) | OpenTelemetry, RED and USE methods | 7 | 1 | 8 |
 | 23 | [Workflow and Orchestration](patterns/23-workflow-orchestration/) | Durable execution literature | 6 | 0 | 6 |
-| 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 2 | 6 | 8 |
+| 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 3 | 5 | 8 |
 | 25 | [MLOps](patterns/25-mlops/) | Google ML design patterns | 0 | 9 | 9 |
 | 26 | [Interaction and HCI](patterns/26-interaction-hci/) | Tidwell, Designing Interfaces | 0 | 10 | 10 |
 | 27 | [Mobile Architecture](patterns/27-mobile-architecture/) | Official Android/iOS architecture guidance | 11 | 0 | 11 |
