@@ -23,7 +23,7 @@ family,name,published,planned,target,percent
 22-observability,Observability,7,1,8,87.5
 23-workflow-orchestration,Workflow and Orchestration,6,0,6,100.0
 24-stream-processing,Stream Processing,6,2,8,75.0
-25-mlops,MLOps,0,9,9,0.0
+25-mlops,MLOps,1,8,9,11.1
 26-interaction-hci,Interaction and HCI,0,10,10,0.0
 27-mobile-architecture,Mobile Architecture,11,0,11,100.0
 28-embedded-hardware,Embedded and Hardware-Software,14,0,14,100.0

@@ -814,6 +814,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Watermark](../patterns/24-stream-processing/watermark.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1212,6 +1213,7 @@ These patterns contain runnable code examples written in Go:
 - [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) (AI and Agentic)
 - [Fault Injection](../patterns/14-testing/fault-injection.md) (Testing)
 - [Feature Envy](../patterns/02-code-smells/feature-envy.md) (Code Smells)
+- [Feature Store](../patterns/25-mlops/feature-store.md) (MLOps)
 - [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) (Cloud and Distributed)
 - [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) (Design Patterns (GoF))
 - [Fork-Join](../patterns/09-concurrency/fork-join.md) (Concurrency and Parallelism)
@@ -2913,6 +2915,7 @@ These patterns contain runnable code examples written in Python:
 - [Fault Injection](../patterns/14-testing/fault-injection.md) (Testing)
 - [Feature Envy](../patterns/02-code-smells/feature-envy.md) (Code Smells)
 - [Feature Modules](../patterns/27-mobile-architecture/feature-modules.md) (Mobile Architecture)
+- [Feature Store](../patterns/25-mlops/feature-store.md) (MLOps)
 - [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) (Release and Deployment)
 - [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) (Cloud and Distributed)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
@@ -4704,6 +4707,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) (AI and Agentic)
 - [Fault Injection](../patterns/14-testing/fault-injection.md) (Testing)
 - [Feature Envy](../patterns/02-code-smells/feature-envy.md) (Code Smells)
+- [Feature Store](../patterns/25-mlops/feature-store.md) (MLOps)
 - [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) (Cloud and Distributed)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) (Design Patterns (GoF))

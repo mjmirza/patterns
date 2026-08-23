@@ -21,13 +21,6 @@
     "focus": ""
   },
   {
-    "name": "Feature Store",
-    "slug": "feature-store",
-    "category": "MLOps",
-    "path": "patterns/25-mlops/feature-store.md",
-    "focus": ""
-  },
-  {
     "name": "Model Registry",
     "slug": "model-registry",
     "category": "MLOps",
