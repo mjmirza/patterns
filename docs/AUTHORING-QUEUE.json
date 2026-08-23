@@ -133,13 +133,6 @@
     "focus": ""
   },
   {
-    "name": "Hook-Based Safety Guard Rails",
-    "slug": "hook-based-safety-guard-rails",
-    "category": "ai agentic",
-    "path": "patterns/17-ai-agentic/hook-based-safety-guard-rails.md",
-    "focus": ""
-  },
-  {
     "name": "Incident-to-Eval Synthesis",
     "slug": "incident-to-eval-synthesis",
     "category": "ai agentic",
@@ -147,24 +140,10 @@
     "focus": ""
   },
   {
-    "name": "Connection Pooling",
-    "slug": "connection-pooling",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/connection-pooling.md",
-    "focus": ""
-  },
-  {
     "name": "Database Federation",
     "slug": "database-federation",
     "category": "data and storage",
     "path": "patterns/12-data-storage/database-federation.md",
-    "focus": ""
-  },
-  {
-    "name": "Denormalization",
-    "slug": "denormalization",
-    "category": "data and storage",
-    "path": "patterns/12-data-storage/denormalization.md",
     "focus": ""
   },
   {

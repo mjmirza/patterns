@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-49 entries, 360,483 words, 11 more planned, 60 total when the family is complete. Every entry carries all 18
+50 entries, 362,145 words, 10 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -72,6 +72,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Connection Pooling](connection-pooling.md) | canonical | 1,662 | PostgreSQL's own documentation states the direct constraint this pattern works against. |
 | [Tolerant Reader](tolerant-reader.md) | established | 1,517 | Fowler's own text states the underlying problem directly. |
 
 ## Object-Relational Behavioral
@@ -157,7 +158,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Collecting Parameter
 - Composite Entity
 - Composite View
-- Connection Pooling
 - Context Object
 - Intercepting Filter
 - Presentation Model
