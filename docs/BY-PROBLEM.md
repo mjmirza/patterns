@@ -16797,6 +16797,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Online and offline drift when materialization lags or fails. The online
 - Treating a feature store as a general-purpose warehouse substitute.
 
+#### [Model Registry](../patterns/25-mlops/model-registry.md)
+
+**Core Problem:** A model that exists only as a file on someone's laptop, or an artifact saved into a training run's own log directory, has no independent identity. Nothing distinguishes the tenth retraining of a model from the ninth except memory, nobody can say with confidence which specific version is currently serving traffic, and rolling back after a bad deploy means finding the right file by hand under time pressure. A registry gives every trained version a stable, queryable identity, separate from the ephemeral run that created it, so promotion, rollback, and audit become deliberate operations against a record rather than archaeology against a filesystem.
+
 ### Mobile Architecture
 
 #### [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md)

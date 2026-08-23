@@ -816,6 +816,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Watermark](../patterns/24-stream-processing/watermark.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Model Registry](../patterns/25-mlops/model-registry.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1341,6 +1342,7 @@ These patterns contain runnable code examples written in Go:
 - [Middle Man](../patterns/02-code-smells/middle-man.md) (Code Smells)
 - [Mock](../patterns/14-testing/mock.md) (Testing)
 - [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) (AI and Agentic)
+- [Model Registry](../patterns/25-mlops/model-registry.md) (MLOps)
 - [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) (Architectural Patterns)
 - [Modular Monolith](../patterns/05-architectural/modular-monolith.md) (Architectural Patterns)
 - [Module](../patterns/11-domain-driven-design/module.md) (Domain-Driven Design)
@@ -3090,6 +3092,7 @@ These patterns contain runnable code examples written in Python:
 - [Middle Man](../patterns/02-code-smells/middle-man.md) (Code Smells)
 - [Mock](../patterns/14-testing/mock.md) (Testing)
 - [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) (AI and Agentic)
+- [Model Registry](../patterns/25-mlops/model-registry.md) (MLOps)
 - [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) (Architectural Patterns)
 - [Modular Monolith](../patterns/05-architectural/modular-monolith.md) (Architectural Patterns)
 - [Module](../patterns/11-domain-driven-design/module.md) (Domain-Driven Design)
@@ -4861,6 +4864,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Middle Man](../patterns/02-code-smells/middle-man.md) (Code Smells)
 - [Mock](../patterns/14-testing/mock.md) (Testing)
 - [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) (AI and Agentic)
+- [Model Registry](../patterns/25-mlops/model-registry.md) (MLOps)
 - [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) (Architectural Patterns)
 - [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) (Architectural Patterns)
 - [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) (Architectural Patterns)
