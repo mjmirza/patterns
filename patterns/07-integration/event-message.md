@@ -222,28 +222,31 @@ Do NOT reach for Event Message when.
 ## 6. ASCII structure diagram
 
 ```
-+------------------+         publishes         +------------------+
-|   Producer        |  ----------------------->  |      Channel      |
-|  (Event Source)    |    Event Message(s)       |  (topic / stream / |
-|                    |                            |   pub-sub bus)     |
-+------------------+                             +---------+----------+
-                                                             |
-                                     fan-out (0..N)          |
-                          +----------------------------------+---------------------------+
-                          |                                  |                           |
-                          v                                  v                           v
-                 +----------------+                 +----------------+          +----------------+
-                 |  Consumer A     |                 |  Consumer B     |          |  Consumer N     |
-                 | (e.g. Billing)  |                 | (e.g. Inventory)|          | (e.g. Analytics)|
-                 +--------+--------+                 +--------+--------+          +--------+--------+
-                          |                                    |                             |
-                 handler fails after retries         handler succeeds              handler succeeds
-                          |
-                          v
-                 +----------------+
-                 | Dead Letter     |
-                 |   Channel       |
-                 +----------------+
++-------------------------+
+| Producer (Event Source) |
++-------------------------+
+           | publishes Event Message(s)
+           v
++--------------------------------+
+| Channel                        |
+| (topic / stream / pub-sub bus) |
++--------------------------------+
+           |
+           | fan-out (0..N)
+     +-----+-----+-----+
+     |           |     |
++---------------------+ +---------------------+ +---------------------+
+| Consumer A          | | Consumer B          | | Consumer N          |
+| (e.g. Billing)      | | (e.g. Inventory)    | | (e.g. Analytics)    |
++---------------------+ +---------------------+ +---------------------+
+     |
+     | handler fails after retries
+     v
++---------------------+
+| Dead Letter Channel |
++---------------------+
+
+(Consumer B and Consumer N: handler succeeds)
 ```
 
 ## 7. Dynamics

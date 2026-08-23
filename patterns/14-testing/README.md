@@ -2,7 +2,7 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-30 entries, 217,056 words. Every entry carries all 18
+30 entries, 217,016 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Test Data
@@ -34,7 +34,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Approval Test](approval-test.md) | established | 7,682 | Consider a function that renders an invoice as HTML, a compiler pass that lowers an abstract syntax tree to bytecode, a report generator that produces a multi-page PDF summary, or ... |
 | [Arrange-Act-Assert](arrange-act-assert.md) | canonical | 6,255 | A test that has no imposed shape tends to accrete in whatever order the writer thought of things. |
 | [Characterization Test](characterization-test.md) | canonical | 6,420 | A team inherits a module, a service, or a whole codebase with no tests, or with tests too sparse to trust. |
-| [Contract Test](contract-test.md) | canonical | 8,408 | A team splits a monolith into services, or simply has two teams shipping two deployables that talk over HTTP, gRPC, or a message queue. |
+| [Contract Test](contract-test.md) | canonical | 8,368 | A team splits a monolith into services, or simply has two teams shipping two deployables that talk over HTTP, gRPC, or a message queue. |
 | [Differential Testing](differential-testing.md) | established | 7,373 | A team owns, or depends on, more than one thing that is meant to compute the same answer. |
 | [Fault Injection](fault-injection.md) | established | 7,609 | Software that talks to another process over a network, a disk, a database connection, or any other boundary will eventually see that boundary fail. |
 | [Fresh Fixture](fresh-fixture.md) | canonical | 7,305 | A test needs an environment in which to run its assertions, objects to act on, data in a database, files on disk, a running process. |

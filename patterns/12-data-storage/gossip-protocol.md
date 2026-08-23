@@ -276,33 +276,47 @@ implementation has something filling each role.
 ## 6. ASCII structure diagram
 
 ```
-   +----------------------+          random peer          +----------------------+
-   |        Node A        |------------------------------->|        Node B        |
-   |----------------------|      gossip message, push,     |----------------------|
-   | LocalState            |      pull, or push-pull        | LocalState            |
-   |  - key/version pairs  |<-------------------------------| - key/version pairs  |
-   |----------------------|                                 |----------------------|
-   | PeerList (bounded)    |                                 | PeerList (bounded)    |
-   |  A, C, E, F ...        |                                 |  B, D, F, G ...        |
-   |----------------------|                                 |----------------------|
-   | Reconciler (merge)     |                                 | Reconciler (merge)     |
-   |----------------------|                                 |----------------------|
-   | FailureDetector        |                                 | FailureDetector        |
-   +----------------------+                                 +----------------------+
-             |                                                          |
-             |  each node independently, on its own timer, repeats.    |
-             |  select random peer, exchange, merge, update peer list, |
-             |  sleep(gossip_interval), repeat.                        |
-             v                                                          v
-   +----------------------+                                 +----------------------+
-   |        Node C          |<--- eventually reached  ------->|        Node D          |
-   |  (learns A's update     |     through multi-hop            |  (learns A's update     |
-   |   via B or another        |     relay, not a direct link     |   via C or another        |
-   |   intermediary)             |     from A)                     |   intermediary)              |
-   +----------------------+                                 +----------------------+
++--------------------------+
+| Node A                   |
+| ------------------------ |
+| LocalState               |
+|  - key/version pairs     |
+| PeerList (bounded)       |
+|  A, C, E, F ...          |
+| Reconciler (merge)       |
+| FailureDetector          |
++--------------------------+
+     |
+     | random peer, gossip message, push, pull, or push-pull
+     v
++--------------------------+
+| Node B                   |
+| ------------------------ |
+| LocalState               |
+|  - key/version pairs     |
+| PeerList (bounded)       |
+|  B, D, F, G ...          |
+| Reconciler (merge)       |
+| FailureDetector          |
++--------------------------+
 
-   No node has a global view. Every node's PeerList is a small, local,
-   partial sample of the whole membership, refreshed by gossip traffic.
+Each node independently, on its own timer, repeats: select
+random peer, exchange, merge, update peer list,
+sleep(gossip_interval), repeat.
+
++----------------------+         +----------------------+
+| Node C               |         | Node D               |
+| (learns A's update   |         | (learns A's update   |
+| via B or another     | <---> | via C or another     |
+| intermediary)        |         | intermediary)        |
++----------------------+         +----------------------+
+
+(eventually reached through multi-hop relay, not a
+ direct link from A)
+
+No node has a global view. Every node's PeerList is a
+small, local, partial sample of the whole membership,
+refreshed by gossip traffic.
 ```
 
 ## 7. Dynamics

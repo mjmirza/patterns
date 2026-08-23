@@ -226,24 +226,28 @@ still agreeing on meaning.
 ## 6. ASCII structure diagram
 
 ```
-+-----------+        Document Message         +--------------------+
-| Producer  | ------------------------------> | Message Channel     |
-| (holds    |  { schema-typed data payload }  | (point-to-point or  |
-|  the data)|                                 |  publish-subscribe) |
-+-----------+                                 +----------+----------+
-                                                          |
-                          +-------------------------------+-------------------------------+
-                          |                                                               |
-                          v                                                               v
-                 +-----------------+                                             +-----------------+
-                 |   Consumer A    |                                             |   Consumer B     |
-                 | interprets the  |                                             | interprets the   |
-                 | document in its |                                             | document in its  |
-                 | own domain      |                                             | own domain       |
-                 +-----------------+                                             +-----------------+
++---------------------------+
+| Producer (holds the data) |
++---------------------------+
+           | Document Message
+           | { schema-typed data payload }
+           v
++---------------------------------------+
+| Message Channel                       |
+| (point-to-point or publish-subscribe) |
++---------------------------------------+
+           |
+     +-----+-----+
+     |           |
++---------------------+ +---------------------+
+| Consumer A          | | Consumer B          |
+| interprets the      | | interprets the      |
+| document in its     | | document in its     |
+| own domain          | | own domain          |
++---------------------+ +---------------------+
 
-                 Producer knows only that a well-formed <Type> document was published.
-                 Producer does NOT know or care what A or B do with it.
+Producer knows only that a well-formed <Type> document was
+published. Producer does NOT know or care what A or B do with it.
 ```
 
 ## 7. Dynamics

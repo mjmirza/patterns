@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-54 entries, 385,772 words. Every entry carries all 18
+54 entries, 385,760 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -48,9 +48,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Content Enricher](content-enricher.md) | canonical | 6,840 | A message arrives at an integration point carrying less data than the next step needs. |
 | [Content Filter](content-filter.md) | canonical | 8,464 | A consumer receives a message that is far larger, richer, or more deeply nested than anything it needs, and forwarding or storing that full message creates real cost. |
 | [Correlation Identifier](correlation-identifier.md) | canonical | 7,467 | A process sends a message and does not receive its answer over the same connection it used to send it. |
-| [Document Message](document-message.md) | canonical | 7,022 | Two systems need to exchange a structured record, such as a customer record, a purchase order, a lab result, or a shipment manifest. |
+| [Document Message](document-message.md) | canonical | 7,017 | Two systems need to exchange a structured record, such as a customer record, a purchase order, a lab result, or a shipment manifest. |
 | [Dynamic Router](dynamic-router.md) | canonical | 7,649 | A message-routing component in a system needs to send a message onward, and the set of places it might send that message to is not fixed at the time the router is built, deployed ... |
-| [Event Message](event-message.md) | canonical | 7,042 | An application performs an action that other applications, possibly ones the first application has never heard of and will never know about, need to react to. |
+| [Event Message](event-message.md) | canonical | 7,035 | An application performs an action that other applications, possibly ones the first application has never heard of and will never know about, need to react to. |
 | [Event-Driven Consumer](event-driven-consumer.md) | canonical | 6,039 | A service needs to react when something happens elsewhere in the system, a payment is captured, an order is placed, a file lands in a bucket, a row is updated in another team's ... |
 | [Format Indicator](format-indicator.md) | canonical | 6,130 | A message travels from a producer to a consumer, and at some point the consumer must decide how to parse the bytes it received. |
 | [Message](message.md) | canonical | 6,901 | Two applications need to exchange information without either one blocking on the other's availability, without either one dictating the other's internal data model, and without a ... |

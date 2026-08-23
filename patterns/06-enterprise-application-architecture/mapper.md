@@ -173,22 +173,35 @@ composes with rather than requires.
 ## 6. ASCII structure diagram
 
 ```
-+-----------------+          +-----------------+          +-----------------+
-|      Source       |          |      Mapper       |          |      Target       |
-|  (e.g. domain      |          |  knows both        |          |  (e.g. relational  |
-|   object, has no    | <------ |  shapes, holds      | ------> |   row, has no      |
-|   knowledge of        |         |  the translation    |         |   knowledge of      |
-|   Target)                |         |  logic                  |         |   Source)                |
-+-----------------+          +-----------------+          +-----------------+
-                                     |
-                                     |  optionally collaborates with
-                                     v
-                  +------------------+     +------------------+
-                  |   Identity Map     |     |   Unit of Work     |
-                  |  one in-memory      |     |  batches pending    |
-                  |  object per row      |     |  inserts, updates,   |
-                  |                       |     |  deletes              |
-                  +------------------+     +------------------+
++-----------------------------+
+| Source                      |
+| (e.g. domain object, has no |
+| knowledge of Target)        |
++-----------------------------+
+           ^
+           |
+           v
++-----------------------------+
+| Mapper                      |
+| knows both shapes,          |
+| holds the translation logic |
++-----------------------------+
+           ^
+           |
+           v
++------------------------------+
+| Target                       |
+| (e.g. relational row, has no |
+| knowledge of Source)         |
++------------------------------+
+
+Mapper optionally collaborates with:
+
++---------------------------+  +---------------------------+
+| Identity Map              |  | Unit of Work              |
+| one in-memory object      |  | batches pending           |
+| per row                   |  | inserts, updates, deletes |
++---------------------------+  +---------------------------+
 ```
 
 ## 7. Dynamics
