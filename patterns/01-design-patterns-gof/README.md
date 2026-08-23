@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-30 entries, 291,469 words, 3 more planned, 33 total when the family is complete. Every entry carries all 18
+31 entries, 297,655 words, 2 more planned, 33 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -43,6 +43,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Data Access Object](data-access-object.md) | canonical | 6,468 | Most real applications need to read and write persistent data at some point, and that data can live behind very different access mechanisms: a relational database reached through ... |
 | [Decorator](decorator.md) | canonical | 14,044 | An object needs an extra responsibility, only sometimes, only for some instances, and the set of extra responsibilities keeps growing and keeps combining. |
 | [Dependency Injection](dependency-injection.md) | canonical | 5,802 | Fowler's own running example names the problem precisely. |
+| [Extension Object](extension-object.md) | established | 6,186 | Some abstractions cannot have their full, final interface anticipated at design time, because different clients of the same class genuinely need different views onto it. |
 | [Facade](facade.md) | canonical | 11,164 | A caller needs a small, ordinary result from a subsystem that is large, correct and unpleasant to talk to. |
 | [Flyweight](flyweight.md) | canonical | 11,738 | A program needs a very large number of objects that are almost all the same, and the memory cost of representing each one separately is what is going to break it. |
 | [Marker Interface](marker-interface.md) | contested | 5,201 | Sometimes a class needs to signal a capability or a semantic property to an external mechanism, most often the runtime or a framework, without adding any real behaviour of its own. |
@@ -54,7 +55,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Extension Object
 - Null Object
 - Role Object
 

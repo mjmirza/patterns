@@ -5667,6 +5667,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 - Constructor over-injection is the most commonly named misuse, and Mark Seemann is precise about what it actually signals, "Constructor Over-injection is a code smell, not an anti-pattern," and specifically "a symptom that a class is doing too much, that it's violating the Single Responsibility Principle" (Mark Seemann, On Constructor Over-injection, blog.ploeh.dk, 2018-08-27, https://blog.ploeh.dk/2018/08/27/on-constructor-over-injection/, verified 2026-08-23). The observable symptom is a constructor whose parameter list keeps growing, and the fix Seemann names is not abandoning Constructor Injection, it is splitting the class.
 
+#### [Extension Object](../patterns/01-design-patterns-gof/extension-object.md)
+
+**Core Problem:** Some abstractions cannot have their full, final interface anticipated at design time, because different clients of the same class genuinely need different views onto it. Gamma's own Motivation section states the problem directly, that combining every operation different clients need into one interface "results in a bloated interface," that such interfaces "are difficult to maintain and understand," and that a change made for one client's part of the interface "can affect other clients that use the same abstraction."
+
 #### [Facade](../patterns/01-design-patterns-gof/facade.md)
 
 **Core Problem:** A caller needs a small, ordinary result from a subsystem that is large, correct and unpleasant to talk to.

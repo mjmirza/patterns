@@ -18,6 +18,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Data Access Object](../patterns/01-design-patterns-gof/data-access-object.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Decorator](../patterns/01-design-patterns-gof/decorator.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Facade](../patterns/01-design-patterns-gof/facade.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Factory Method](../patterns/01-design-patterns-gof/factory-method.md) | Design Patterns (GoF) |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
@@ -1188,6 +1189,7 @@ These patterns contain runnable code examples written in Go:
 - [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) (Architectural Patterns)
 - [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) (Architectural Patterns)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
+- [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
 - [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) (Cloud and Distributed)
 - [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) (Microservices)
 - [Extraneous Fetching](../patterns/18-anti-patterns/extraneous-fetching.md) (Anti-Patterns)
@@ -2194,6 +2196,7 @@ These patterns have unique implementation variants or change their design struct
 - [Entity](../patterns/11-domain-driven-design/entity.md) (Domain-Driven Design)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
 - [Exception Tracking](../patterns/10-microservices/exception-tracking.md) (Microservices)
+- [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
 - [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) (Cloud and Distributed)
 - [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) (Microservices)
 - [Extract Class](../patterns/03-refactoring/extract-class.md) (Refactoring Techniques)
@@ -2873,6 +2876,7 @@ These patterns contain runnable code examples written in Python:
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
 - [Exception Tracking](../patterns/10-microservices/exception-tracking.md) (Microservices)
 - [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md) (Release and Deployment)
+- [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
 - [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) (Cloud and Distributed)
 - [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) (Microservices)
 - [Extract Class](../patterns/03-refactoring/extract-class.md) (Refactoring Techniques)
@@ -4658,6 +4662,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) (Architectural Patterns)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
 - [Exception Tracking](../patterns/10-microservices/exception-tracking.md) (Microservices)
+- [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
 - [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) (Cloud and Distributed)
 - [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) (Microservices)
 - [Extract Class](../patterns/03-refactoring/extract-class.md) (Refactoring Techniques)
