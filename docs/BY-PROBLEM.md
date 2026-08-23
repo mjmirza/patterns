@@ -8968,6 +8968,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. A cross-site scripting report comes in against a page that
 - Symptom. A file that started as a small, readable template has grown past
 
+#### [Tolerant Reader](../patterns/06-enterprise-application-architecture/tolerant-reader.md)
+
+**Core Problem:** Fowler's own text states the underlying problem directly. "one of the truisms of service oriented systems is that you have separate services that need to talk to each other, and that these services are usually built and maintained by separate teams... a common form of coupling in this environment is when a consumer of a service breaks because the provider changes the format of the messages it sends" (Fowler, "Tolerant Reader," verified 2026-08-23), even when the change genuinely adds no meaning the consumer relies on, an added field, a reordered element, a new optional attribute.
+
 #### [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md)
 
 **Core Problem:** A team is building a business application, an order system, a billing system, a claims processor, anything where the software's job is to carry out operations that a business analyst would recognize and name, place an order, transfer funds, calculate a bonus, recognize revenue on a contract. Each of those operations reads a request, applies some rules, touches a database, and returns a result. The question the team faces before writing a line of code is where the logic for "transfer funds" should live.
@@ -13649,6 +13653,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A backup exists but recovery fails under incident pressure.
 - Security review debates tools, not risks. Cause. The layer
 
+#### [Dual LLM Pattern](../patterns/15-security/dual-llm-pattern.md)
+
+**Core Problem:** Willison's own text states the problem directly, naming the failure mode this pattern exists to contain. an LLM that both reads untrusted content and can act on tools is vulnerable to prompt injection, where "unfiltered content output by the Quarantined LLM is never forwarded on to the Privileged LLM" (Willison, "Dual LLM," verified 2026-08-23) is exactly the rule the pattern enforces to prevent an attacker's instructions, smuggled inside content the model reads, from ever reaching the model that holds tool access.
+
 #### [Envelope Encryption](../patterns/15-security/envelope-encryption.md)
 
 **Core Problem:** A system must encrypt many records, objects, files, messages, volumes, or tenant datasets. The data is too large or too frequent to send through a remote key service for every byte of encryption, yet the organization still wants central control over the authority that can decrypt. The system also needs a workable answer to rotation, audit, access control, and incident response.
@@ -13783,6 +13791,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Opaque denials. Symptom: denial logs contain no useful fields. Cause: the
 - Hidden inheritance. Symptom: a narrow role later becomes broad without
 - Local data copies. Symptom: developers copy production data to local
+
+#### [Lethal Trifecta Threat Model](../patterns/15-security/lethal-trifecta-threat-model.md)
+
+**Core Problem:** Willison's own text states why the three conditions matter only in combination, not individually. an agent with private-data access alone is merely useful. an agent exposed to untrusted content alone is merely reading the internet. an agent that can communicate externally alone is merely doing its job. the danger appears specifically "if you combine these three factors" (Willison, "Lethal Trifecta," verified 2026-08-23), because that combination gives an attacker's injected instructions, smuggled inside the untrusted content, both something worth stealing and a channel to steal it through.
 
 #### [Mutual TLS](../patterns/15-security/mutual-tls.md)
 

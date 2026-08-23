@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-48 entries, 358,966 words, 12 more planned, 60 total when the family is complete. Every entry carries all 18
+49 entries, 360,483 words, 11 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -67,6 +67,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Domain Model](domain-model.md) | canonical | 7,665 | An enterprise application accumulates business rules over its life, pricing tiers, discount eligibility, order-state transitions, tax jurisdictions, credit limits, cancellation ... |
 | [Table Module](table-module.md) | established | 6,460 | A team is building a business application against a relational database using a technology stack whose native data-access layer hands back an in-memory, table-shaped structure ... |
 | [Transaction Script](transaction-script.md) | canonical | 8,585 | A team is building a business application, an order system, a billing system, a claims processor, anything where the software's job is to carry out operations that a business ... |
+
+## Enterprise Application Architecture
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Tolerant Reader](tolerant-reader.md) | established | 1,517 | Fowler's own text states the underlying problem directly. |
 
 ## Object-Relational Behavioral
 
@@ -157,7 +163,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Presentation Model
 - Service Layer
 - Session Facade
-- Tolerant Reader
 - View Helper
 
 ## Reading order

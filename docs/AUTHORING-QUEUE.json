@@ -84,31 +84,10 @@
     "focus": ""
   },
   {
-    "name": "Tolerant Reader",
-    "slug": "tolerant-reader",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/tolerant-reader.md",
-    "focus": ""
-  },
-  {
     "name": "Collecting Parameter",
     "slug": "collecting-parameter",
     "category": "enterprise application architecture",
     "path": "patterns/06-enterprise-application-architecture/collecting-parameter.md",
-    "focus": ""
-  },
-  {
-    "name": "Dual LLM Pattern",
-    "slug": "dual-llm-pattern",
-    "category": "security",
-    "path": "patterns/15-security/dual-llm-pattern.md",
-    "focus": ""
-  },
-  {
-    "name": "Lethal Trifecta Threat Model",
-    "slug": "lethal-trifecta-threat-model",
-    "category": "security",
-    "path": "patterns/15-security/lethal-trifecta-threat-model.md",
     "focus": ""
   },
   {
