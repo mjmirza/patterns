@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-55 entries, 474,799 words, 10 more planned, 65 total when the family is complete. Every entry carries all 18
+58 entries, 481,688 words, 7 more planned, 65 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -13,9 +13,11 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Agentic RAG](agentic-rag.md) | emerging | 10,218 | Naive RAG performs exactly one retrieval and exactly one generation per user turn, embed the query, fetch the top-k nearest chunks from a single index, paste them into the prompt ... |
 | [Chunking Strategies](chunking-strategies.md) | established | 7,093 | A large language model has a finite context limit, and even models with very large limits charge per token and lose retrieval accuracy on needles buried deep in a long context, a ... |
 | [Code Execution as Tool](code-execution-as-tool.md) | established | 9,276 | An LLM agent that can only call tools one at a time, through a fixed function-calling schema, hits a specific wall as soon as a task needs more than a handful of steps chained ... |
+| [Code Mode](code-mode.md) | emerging | 2,017 | Cloudflare's own text states the problem directly, contrasting it with standard tool calling. |
 | [Contextual Retrieval](contextual-retrieval.md) | established | 9,338 | A retrieval-augmented generation system splits source documents into chunks because an embedding model has a token limit and because retrieval precision degrades when a chunk ... |
 | [Corrective RAG](corrective-rag.md) | emerging | 8,133 | A support bot answers questions by retrieving from a company's help center index and handing the top few documents to a generator. |
 | [Evaluation Suite](evaluation-suite.md) | established | 9,431 | A function built from deterministic code either compiles or it does not, and a passing unit test today keeps passing tomorrow unless the code under test changes. |
+| [Filesystem-Based Agent State](filesystem-based-agent-state.md) | established | 2,488 | The chapter's own text, meaning Anthropic's own documentation, states the problem directly in one sentence. |
 | [Golden Dataset](golden-dataset.md) | established | 9,529 | An engineer changes a system prompt, swaps a retrieval step, upgrades from one model version to another, or adjusts a temperature setting, and then has to answer one question ... |
 | [GraphRAG](graphrag.md) | emerging | 7,850 | A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. |
 | [Human in the Loop](human-in-the-loop.md) | established | 7,618 | An agent is given a goal and a set of tools, and it plans and executes a sequence of tool calls autonomously. |
@@ -25,6 +27,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Memory Compaction](memory-compaction.md) | established | 8,946 | An agent that runs for a long time accumulates a conversation. |
 | [PII Redaction](pii-redaction.md) | established | 8,577 | An agent pipeline routinely moves text through places where a human name, an email address, a card number, or a medical record number does not belong. |
 | [Parallelization](parallelization.md) | established | 9,204 | An agentic pipeline built as a single sequential chain of LLM calls has one throughput limit, the wall-clock latency of the slowest single call multiplied by the number of calls ... |
+| [Prompt Caching via Exact Prefix Preservation](prompt-caching-exact-prefix.md) | established | 2,384 | The chapter's own text, meaning Claude Code's own documentation, states the underlying problem directly. |
 | [Prompt Injection Defense](prompt-injection-defense.md) | emerging | 7,008 | An LLM-integrated system is built around one structural weakness. |
 | [Reranking](reranking.md) | canonical | 7,225 | A reader who has never heard the word reranking has still hit the problem it solves. |
 | [Retrieval Augmented Generation](retrieval-augmented-generation.md) | canonical | 8,731 | A large language model's knowledge is frozen at the moment its training data was collected, and its parameters have a fixed, finite capacity that cannot hold every fact a user ... |
@@ -119,14 +122,11 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Code Mode
 - Context Window Auto-Compaction
-- Filesystem-Based Agent State
 - Hook-Based Safety Guard Rails
 - Incident-to-Eval Synthesis
 - Inference-Time Scaling
 - Language Agent Tree Search
-- Prompt Caching via Exact Prefix Preservation
 - RLAIF
 - Self-Discover
 
