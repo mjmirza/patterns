@@ -214,6 +214,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Client Session State](../patterns/06-enterprise-application-architecture/client-session-state.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Connection Pooling](../patterns/06-enterprise-application-architecture/connection-pooling.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) | Enterprise Application Architecture |  |  | Yes | Yes |  | Yes | Yes | Yes | Yes |
 | [Database Session State](../patterns/06-enterprise-application-architecture/database-session-state.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -487,6 +488,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Consistent Hashing](../patterns/12-data-storage/consistent-hashing.md) | Data and Storage |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Data Mesh](../patterns/12-data-storage/data-mesh.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Data Vault](../patterns/12-data-storage/data-vault.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Denormalization](../patterns/12-data-storage/denormalization.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [ELT](../patterns/12-data-storage/elt.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [ETL](../patterns/12-data-storage/etl.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Gossip Protocol](../patterns/12-data-storage/gossip-protocol.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -684,6 +686,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Graph of Thoughts](../patterns/17-ai-agentic/graph-of-thoughts.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [GraphRAG](../patterns/17-ai-agentic/graphrag.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Hook-Based Safety Guard Rails](../patterns/17-ai-agentic/hook-based-safety-guard-rails.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1154,6 +1157,7 @@ These patterns contain runnable code examples written in Go:
 - [Computer Use](../patterns/17-ai-agentic/computer-use.md) (AI and Agentic)
 - [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md) (Enterprise Application Architecture)
 - [Conformist](../patterns/11-domain-driven-design/conformist.md) (Domain-Driven Design)
+- [Connection Pooling](../patterns/06-enterprise-application-architecture/connection-pooling.md) (Enterprise Application Architecture)
 - [Consistent Hashing](../patterns/12-data-storage/consistent-hashing.md) (Data and Storage)
 - [Constitutional AI](../patterns/17-ai-agentic/constitutional-ai.md) (AI and Agentic)
 - [Consumer-Driven Contract Test](../patterns/10-microservices/consumer-driven-contract-test.md) (Microservices)
@@ -1201,6 +1205,7 @@ These patterns contain runnable code examples written in Go:
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-design-patterns-gof/decorator.md) (Design Patterns (GoF))
 - [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
+- [Denormalization](../patterns/12-data-storage/denormalization.md) (Data and Storage)
 - [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) (Design Patterns (GoF))
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
@@ -1302,6 +1307,7 @@ These patterns contain runnable code examples written in Go:
 - [Hierarchical Agents](../patterns/17-ai-agentic/hierarchical-agents.md) (AI and Agentic)
 - [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) (Principles and Laws)
 - [Hinted Handoff](../patterns/12-data-storage/hinted-handoff.md) (Data and Storage)
+- [Hook-Based Safety Guard Rails](../patterns/17-ai-agentic/hook-based-safety-guard-rails.md) (AI and Agentic)
 - [Human Task](../patterns/23-workflow-orchestration/human-task.md) (Workflow and Orchestration)
 - [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) (AI and Agentic)
 - [Humble Object](../patterns/14-testing/humble-object.md) (Testing)
@@ -2866,6 +2872,7 @@ These patterns contain runnable code examples written in Python:
 - [Computer Use](../patterns/17-ai-agentic/computer-use.md) (AI and Agentic)
 - [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md) (Enterprise Application Architecture)
 - [Conformist](../patterns/11-domain-driven-design/conformist.md) (Domain-Driven Design)
+- [Connection Pooling](../patterns/06-enterprise-application-architecture/connection-pooling.md) (Enterprise Application Architecture)
 - [Consistent Hashing](../patterns/12-data-storage/consistent-hashing.md) (Data and Storage)
 - [Consolidate Conditional Expression](../patterns/03-refactoring/consolidate-conditional-expression.md) (Refactoring Techniques)
 - [Constitutional AI](../patterns/17-ai-agentic/constitutional-ai.md) (AI and Agentic)
@@ -2921,6 +2928,7 @@ These patterns contain runnable code examples written in Python:
 - [Decorator](../patterns/01-design-patterns-gof/decorator.md) (Design Patterns (GoF))
 - [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) (Mobile Architecture)
 - [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
+- [Denormalization](../patterns/12-data-storage/denormalization.md) (Data and Storage)
 - [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) (Design Patterns (GoF))
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
@@ -3057,6 +3065,7 @@ These patterns contain runnable code examples written in Python:
 - [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) (Principles and Laws)
 - [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hinted Handoff](../patterns/12-data-storage/hinted-handoff.md) (Data and Storage)
+- [Hook-Based Safety Guard Rails](../patterns/17-ai-agentic/hook-based-safety-guard-rails.md) (AI and Agentic)
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
 - [Human Task](../patterns/23-workflow-orchestration/human-task.md) (Workflow and Orchestration)
 - [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) (AI and Agentic)
@@ -4711,6 +4720,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Computer Use](../patterns/17-ai-agentic/computer-use.md) (AI and Agentic)
 - [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md) (Enterprise Application Architecture)
 - [Conformist](../patterns/11-domain-driven-design/conformist.md) (Domain-Driven Design)
+- [Connection Pooling](../patterns/06-enterprise-application-architecture/connection-pooling.md) (Enterprise Application Architecture)
 - [Consolidate Conditional Expression](../patterns/03-refactoring/consolidate-conditional-expression.md) (Refactoring Techniques)
 - [Constitutional AI](../patterns/17-ai-agentic/constitutional-ai.md) (AI and Agentic)
 - [Consumer-Driven Contract Test](../patterns/10-microservices/consumer-driven-contract-test.md) (Microservices)
@@ -4759,6 +4769,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
 - [Decorator](../patterns/01-design-patterns-gof/decorator.md) (Design Patterns (GoF))
 - [Defense in Depth](../patterns/15-security/defense-in-depth.md) (Security)
+- [Denormalization](../patterns/12-data-storage/denormalization.md) (Data and Storage)
 - [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) (Design Patterns (GoF))
 - [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) (Principles and Laws)
 - [Dependent Mapping](../patterns/06-enterprise-application-architecture/dependent-mapping.md) (Enterprise Application Architecture)
@@ -4873,6 +4884,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [High Cohesion](../patterns/04-principles-and-laws/high-cohesion.md) (Principles and Laws)
 - [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) (Frontend and UI)
 - [Hinted Handoff](../patterns/12-data-storage/hinted-handoff.md) (Data and Storage)
+- [Hook-Based Safety Guard Rails](../patterns/17-ai-agentic/hook-based-safety-guard-rails.md) (AI and Agentic)
 - [Hooks](../patterns/13-frontend-ui/hooks.md) (Frontend and UI)
 - [Human Task](../patterns/23-workflow-orchestration/human-task.md) (Workflow and Orchestration)
 - [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) (AI and Agentic)

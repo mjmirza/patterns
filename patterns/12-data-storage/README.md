@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-41 entries, 312,891 words, 4 more planned, 45 total when the family is complete. Every entry carries all 18
+42 entries, 314,814 words, 3 more planned, 45 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -36,6 +36,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Consistent Hashing](consistent-hashing.md) | canonical | 7,705 | A system needs to map a large, high-churn set of keys, cache entries, shard identifiers, session identifiers, onto a smaller, changing set of nodes, caches, database shards, load ... |
 | [Data Mesh](data-mesh.md) | established | 7,417 | A large organization with more than a handful of independent product or business domains eventually runs a central data team whose job is to ingest data from every domain's ... |
 | [Data Vault](data-vault.md) | established | 8,114 | An enterprise data warehouse ingests data from many source systems, an ERP, a CRM, a billing platform, several SaaS tools connected through an API, and often at least one legacy ... |
+| [Denormalization](denormalization.md) | canonical | 1,923 | The normalization article states directly why a fully normalized schema exists in the first place, and denormalization is the deliberate trade against exactly this protection. |
 | [ELT](elt.md) | established | 7,149 | A team needs data from several operational systems, a payments database, a support ticket system, a marketing platform's API, a stream of application events, made available for ... |
 | [ETL](etl.md) | canonical | 7,257 | An organization has data that lives in one shape, in one place, produced for one purpose, and it needs that data in a different shape, in a different place, usable for a different ... |
 | [Gossip Protocol](gossip-protocol.md) | canonical | 9,789 | A set of processes, potentially numbering in the hundreds or thousands, needs to keep a piece of shared state consistent, or needs to agree on who is currently alive, without a ... |
@@ -87,7 +88,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 
 - Byzantine Fault Tolerance
 - Database Federation
-- Denormalization
 - Distributed Hash Table
 
 ## Reading order

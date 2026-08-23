@@ -8517,6 +8517,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. A foreign key column that should reference any payment is found,
 - Symptom. A new engineer, reading the database schema directly with no
 
+#### [Connection Pooling](../patterns/06-enterprise-application-architecture/connection-pooling.md)
+
+**Core Problem:** PostgreSQL's own documentation states the direct constraint this pattern works against. "maxconnections... determines the maximum number of concurrent connections to the database server. the default is typically 100 connections... PostgreSQL sizes certain resources based directly on the value of maxconnections. increasing its value leads to higher allocation of those resources, including shared memory" (PostgreSQL, "Connection Settings," PostgreSQL documentation, https://www.postgresql.org/docs/current/runtime-config-connection.html, verified 2026-08-23). this entry explicitly checked the fetched page for the exact per-connection memory or process cost and did not find that figure stated on this specific page, and reports that gap directly rather than inventing a number.
+
 #### [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md)
 
 **Core Problem:** An application has a domain model made of objects with behavior, and a relational database made of tables, rows, and columns with no behavior. The two representations do not line up. An object can hold a collection, a polymorphic reference, or a graph of associations that a single table cannot express directly, and a table enforces a flat, typed, set-based structure that an object graph does not naturally have.
@@ -12265,6 +12269,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. A new source integration takes weeks of modeling work instead
 - Symptom. Team adopts Data Vault for a first warehouse with one or two
 
+#### [Denormalization](../patterns/12-data-storage/denormalization.md)
+
+**Core Problem:** The normalization article states directly why a fully normalized schema exists in the first place, and denormalization is the deliberate trade against exactly this protection. "there are circumstances in which certain facts cannot be recorded at all" (an insertion anomaly), "the same information can be expressed on multiple rows, therefore updates to the relation may result in logical inconsistencies" (an update anomaly), and "under certain circumstances, the deletion of data representing certain facts necessitates the deletion of data representing completely different facts" (a deletion anomaly) (Wikipedia, "Database normalization," verified 2026-08-23). a fully normalized schema avoids these three anomalies but often requires more joins to answer a read, which is the cost denormalization exists to remove.
+
 #### [ELT](../patterns/12-data-storage/elt.md)
 
 **Core Problem:** A team needs data from several operational systems, a payments database, a support ticket system, a marketing platform's API, a stream of application events, made available for analysis in one place where analysts and downstream services can query it with SQL or feed it into reporting and machine learning.
@@ -15157,6 +15165,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A team lead's final summary omits a detail that turns out to
 - The system behaves unpredictably from run to run on what looks
 - A mid-level team lead's own subtree keeps growing another level
+
+#### [Hook-Based Safety Guard Rails](../patterns/17-ai-agentic/hook-based-safety-guard-rails.md)
+
+**Core Problem:** The chapter's own text states the underlying problem directly, already quoted in dimension 1. an instruction given only to the model, in a system prompt or a rule file, is a request the model can forget, misjudge, or be argued out of. a hook removes that dependency for the specific rules it encodes, because the shell command runs every time the matching event fires, regardless of what the model currently believes about the task.
 
 #### [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md)
 

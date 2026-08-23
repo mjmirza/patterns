@@ -5,7 +5,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-866%20published%20%2F%20892%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-869%20published%20%2F%20892%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
@@ -14,10 +14,10 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-866-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-26-lightgrey)
-![Catalogue completion](https://img.shields.io/badge/completion-97.1%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-5033-brightgreen)
+![Published entries](https://img.shields.io/badge/published-869-brightgreen)
+![Planned entries](https://img.shields.io/badge/planned-23-lightgrey)
+![Catalogue completion](https://img.shields.io/badge/completion-97.4%25-yellow)
+![References checked](https://img.shields.io/badge/references%20checked-5038-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
@@ -97,18 +97,18 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 | 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 66 | 0 | 66 |
 | 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 42 | 0 | 42 |
 | 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 31 | 0 | 31 |
-| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 49 | 11 | 60 |
+| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 50 | 10 | 60 |
 | 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 54 | 0 | 54 |
 | 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 44 | 0 | 44 |
 | 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 40 | 0 | 40 |
 | 10 | [Microservices](patterns/10-microservices/) | Richardson | 49 | 0 | 49 |
 | 11 | [Domain-Driven Design](patterns/11-domain-driven-design/) | Evans, Vernon | 35 | 0 | 35 |
-| 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 41 | 4 | 45 |
+| 12 | [Data and Storage](patterns/12-data-storage/) | Kleppmann | 42 | 3 | 45 |
 | 13 | [Frontend and UI](patterns/13-frontend-ui/) | Framework documentation | 34 | 0 | 34 |
 | 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 30 | 0 | 30 |
 | 15 | [Security](patterns/15-security/) | OWASP ASVS | 37 | 1 | 38 |
 | 16 | [Functional Programming](patterns/16-functional/) | Category theory in practice | 39 | 0 | 39 |
-| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 58 | 7 | 65 |
+| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 59 | 6 | 65 |
 | 18 | [Anti-Patterns](patterns/18-anti-patterns/) | Brown et al, AntiPatterns | 51 | 0 | 51 |
 | 19 | [API and Interface Design](patterns/19-api-design/) | REST, GraphQL, gRPC specifications | 11 | 0 | 11 |
 | 20 | [Release and Deployment](patterns/20-release-deployment/) | Humble and Farley | 10 | 0 | 10 |

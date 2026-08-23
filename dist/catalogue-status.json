@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 866,
+  "published_total": 869,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 22,
   "stale_entries": 0,
-  "references_checked": 5033,
+  "references_checked": 5038,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -78,12 +78,12 @@
       "family": "06-enterprise-application-architecture",
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
-      "published": 49,
-      "planned": 11,
+      "published": 50,
+      "planned": 10,
       "target": 60,
-      "percent": 81.7,
+      "percent": 83.3,
       "maturity": {
-        "canonical": 43,
+        "canonical": 44,
         "established": 6
       }
     },
@@ -157,12 +157,12 @@
       "family": "12-data-storage",
       "name": "Data and Storage",
       "origin": "Kleppmann",
-      "published": 41,
-      "planned": 4,
+      "published": 42,
+      "planned": 3,
       "target": 45,
-      "percent": 91.1,
+      "percent": 93.3,
       "maturity": {
-        "canonical": 30,
+        "canonical": 31,
         "established": 10,
         "contested": 1
       }
@@ -226,12 +226,12 @@
       "family": "17-ai-agentic",
       "name": "AI and Agentic",
       "origin": "Papers and vendor engineering, 2023 to 2026",
-      "published": 58,
-      "planned": 7,
+      "published": 59,
+      "planned": 6,
       "target": 65,
-      "percent": 89.2,
+      "percent": 90.8,
       "maturity": {
-        "established": 40,
+        "established": 41,
         "emerging": 9,
         "canonical": 9
       }

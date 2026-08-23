@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-58 entries, 481,688 words, 7 more planned, 65 total when the family is complete. Every entry carries all 18
+59 entries, 483,484 words, 6 more planned, 65 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -20,6 +20,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Filesystem-Based Agent State](filesystem-based-agent-state.md) | established | 2,488 | The chapter's own text, meaning Anthropic's own documentation, states the problem directly in one sentence. |
 | [Golden Dataset](golden-dataset.md) | established | 9,529 | An engineer changes a system prompt, swaps a retrieval step, upgrades from one model version to another, or adjusts a temperature setting, and then has to answer one question ... |
 | [GraphRAG](graphrag.md) | emerging | 7,850 | A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. |
+| [Hook-Based Safety Guard Rails](hook-based-safety-guard-rails.md) | established | 1,796 | The chapter's own text states the underlying problem directly, already quoted in dimension 1. |
 | [Human in the Loop](human-in-the-loop.md) | established | 7,618 | An agent is given a goal and a set of tools, and it plans and executes a sequence of tool calls autonomously. |
 | [Input Guardrails](input-guardrails.md) | established | 8,596 | An agent built on a large language model treats every token in its context window with roughly the same weight, whether that token came from the person operating the agent, from a ... |
 | [LLM as Judge](llm-as-judge.md) | established | 7,737 | A team ships a feature whose output is open-ended text, a chat reply, a document summary, a retrieval-augmented answer, or an autonomous agent's final report. |
@@ -123,7 +124,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
 - Context Window Auto-Compaction
-- Hook-Based Safety Guard Rails
 - Incident-to-Eval Synthesis
 - Inference-Time Scaling
 - Language Agent Tree Search
