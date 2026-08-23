@@ -55,7 +55,7 @@ Quoted directly from the 2000, PLoPD4 edition:
 >
 > Don't use this pattern if
 >
-> - your potential roles have strong interdependencies."
+> - your [candidate] roles have strong interdependencies."
 
 The 1997 conference edition carries a fourth applicability bullet not present in the 2000 revision, sitting between the "dynamically... at runtime" bullet and the "role/client pairs independent" bullet: "...you want to treat the extensions transparently and need to preserve the logical object identity of the resulting object conglomerate..." This is a genuine, verified textual difference between the two editions; its content is arguably folded into the Related Patterns and Implementation discussion of Decorator in the 2000 text, but the bullet itself was dropped.
 
@@ -94,7 +94,7 @@ The paper's own Collaborations section, quoted directly, describes how core and 
 
 It describes the client's side of the interaction the same way, quoted directly.
 
-> "A client can add new roles to the core object. To this end, it describes the desired roles with specification objects.
+> "A client can add new roles to the core object. [In doing so], it describes the desired roles with specification objects.
 >
 > Whenever the client wants to work on a core object in a role specific way, he asks the core object for this role. If the core object is currently playing the requested role, it is returned to the client.
 >
@@ -145,7 +145,7 @@ Transcribed from the paper's own Figure 3, "Structure diagram of the Role Object
 
 The paper does not carry a section titled "Dynamics," but its Motivation walkthrough plus the Collaborations text describe the runtime flow precisely. Quoted directly:
 
-> "A client like the loan application may either work with objects of the CustomerCore class, using the interface class Customer, or with objects of concrete CustomerRole subclasses. Suppose the loan application knows a particular Customer instance through its Customer interface. The loan application may want to check whether the Customer object plays the role of Borrower. To this end it calls hasRole() with a suitable role specification. For the purpose of our example, let's assume we can name roles with a simple string. If the Customer object can play the role named 'Borrower,' the loan application will ask it to return a reference to the corresponding object. The loan application may now use this reference to call Borrower-specific operations."
+> "A client like the loan application may either work with objects of the CustomerCore class, using the interface class Customer, or with objects of concrete CustomerRole subclasses. Suppose the loan application knows a particular Customer instance through its Customer interface. The loan application may want to check whether the Customer object plays the role of Borrower. [So] it calls hasRole() with a suitable role specification. For the purpose of our example, let's assume we can name roles with a simple string. If the Customer object can play the role named 'Borrower,' the loan application will ask it to return a reference to the corresponding object. The loan application may now use this reference to call Borrower-specific operations."
 
 And the general runtime protocol, from Implementation: "Role instances are used to decorate a core object at run-time. A key issue is how a ConcreteRole instance is actually created and attached to the core object. Notice that ConcreteRoles are not meant to be created by clients. Rather, the role creation process should be initiated by ComponentCore, thereby avoiding that role objects may exist of their own (i.e. independently of a core object). This also prevents clients from knowing how to instantiate role objects." On failure, both editions state: "If the core object does not know about a specific requested role, an exception is thrown or an error is reported."
 

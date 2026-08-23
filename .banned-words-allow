@@ -135,15 +135,3 @@ canvases
 # kappa-architecture.md, per ENTRY-TEMPLATE.md. Renaming the title would
 # misquote the source.
 production-ready
-
-# potential. Verbatim inside a direct quote from the Role Object paper's
-# own Applicability section ("your potential roles have strong
-# interdependencies"), cited word for word per the original-prose and
-# citation rules in ENTRY-TEMPLATE.md.
-potential
-
-# to this end. Verbatim inside a direct quote from the Role Object paper's
-# own Collaborations section ("...it describes the desired roles with
-# specification objects."), cited word for word per the original-prose
-# and citation rules in ENTRY-TEMPLATE.md.
-to this end

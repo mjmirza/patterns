@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-32 entries, 306,350 words, 1 more planned, 33 total when the family is complete. Every entry carries all 18
+32 entries, 306,348 words, 1 more planned, 33 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -49,7 +49,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Marker Interface](marker-interface.md) | contested | 5,201 | Sometimes a class needs to signal a capability or a semantic property to an external mechanism, most often the runtime or a framework, without adding any real behaviour of its own. |
 | [Private Class Data](private-class-data.md) | contested | 6,549 | SourceMaking's own "Problem" section states the target of the pattern directly. |
 | [Proxy](proxy.md) | canonical | 9,732 | Some object is expensive, remote, dangerous, or shared, and the code that wants to use it should not have to know that. |
-| [Role Object](role-object.md) | established | 8,695 | A single key abstraction is used from more than one context, and each context needs its own, different view of it. |
+| [Role Object](role-object.md) | established | 8,693 | A single key abstraction is used from more than one context, and each context needs its own, different view of it. |
 | [Twin](twin.md) | contested | 6,116 | A designer working in a single inheritance language sometimes needs one conceptual object to behave as two unrelated, already existing base types at once, each carrying its own ... |
 
 ## Planned
