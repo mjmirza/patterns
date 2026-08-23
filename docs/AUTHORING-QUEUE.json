@@ -21,13 +21,6 @@
     "focus": ""
   },
   {
-    "name": "Replayable Log",
-    "slug": "replayable-log",
-    "category": "stream processing",
-    "path": "patterns/24-stream-processing/replayable-log.md",
-    "focus": ""
-  },
-  {
     "name": "Feature Store",
     "slug": "feature-store",
     "category": "MLOps",
