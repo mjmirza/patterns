@@ -16805,6 +16805,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 **Core Problem:** A model that exists only as a file on someone's laptop, or an artifact saved into a training run's own log directory, has no independent identity. Nothing distinguishes the tenth retraining of a model from the ninth except memory, nobody can say with confidence which specific version is currently serving traffic, and rolling back after a bad deploy means finding the right file by hand under time pressure. A registry gives every trained version a stable, queryable identity, separate from the ephemeral run that created it, so promotion, rollback, and audit become deliberate operations against a record rather than archaeology against a filesystem.
 
+#### [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md)
+
+**Core Problem:** Feature logic written once for an offline training pipeline is easy to reimplement, slightly differently, for a separate low-latency serving pipeline, since the two paths are usually built by different people under different constraints, batch throughput for training and tight latency budgets for serving. Any divergence between the two, a different null-handling rule, a stale reference table, a rounding difference, causes the model to see systematically different feature values in production than it saw during training, degrading accuracy with no exception thrown anywhere. Google's Cloud MLOps architecture guide names the organizational root cause directly, describing a manual handoff of a trained model artifact from a data science team to an engineering team that must then make the same features available for low-latency serving, a scenario it states can lead directly to training-serving skew.
+
 ### Mobile Architecture
 
 #### [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md)

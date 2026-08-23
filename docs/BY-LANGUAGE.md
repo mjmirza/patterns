@@ -818,6 +818,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Batch Inference](../patterns/25-mlops/batch-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Model Registry](../patterns/25-mlops/model-registry.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1609,6 +1610,7 @@ These patterns contain runnable code examples written in Go:
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
+- [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) (MLOps)
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
 - [Transaction Log Tailing](../patterns/10-microservices/transaction-log-tailing.md) (Microservices)
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
@@ -3432,6 +3434,7 @@ These patterns contain runnable code examples written in Python:
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
+- [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) (MLOps)
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
 - [Transaction Log Tailing](../patterns/10-microservices/transaction-log-tailing.md) (Microservices)
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
@@ -5178,6 +5181,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
+- [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) (MLOps)
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
 - [Transaction Log Tailing](../patterns/10-microservices/transaction-log-tailing.md) (Microservices)
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)

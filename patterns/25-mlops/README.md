@@ -2,7 +2,7 @@
 
 Origin. Google ML design patterns
 
-3 entries, 8,499 words, 6 more planned, 9 total when the family is complete. Every entry carries all 18
+4 entries, 11,179 words, 5 more planned, 9 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## MLOps
@@ -12,6 +12,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Batch Inference](batch-inference.md) | established | 2,157 | Many prediction workloads have no human waiting on a response, a nightly churn score for every customer, a fraud risk score recomputed after a data refresh, a batch of images to ... |
 | [Feature Store](feature-store.md) | established | 3,828 | Feature computation logic written for offline, batch training, commonly Python or Spark against a data warehouse, is easy to accidentally diverge from the low-latency online ... |
 | [Model Registry](model-registry.md) | established | 2,514 | A model that exists only as a file on someone's laptop, or an artifact saved into a training run's own log directory, has no independent identity. |
+| [Training-Serving Skew Guard](training-serving-skew-guard.md) | established | 2,680 | Feature logic written once for an offline training pipeline is easy to reimplement, slightly differently, for a separate low-latency serving pipeline, since the two paths are ... |
 
 ## Planned
 
@@ -22,7 +23,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Model Monitoring
 - Online Inference
 - Shadow Model
-- Training-Serving Skew Guard
 
 ## Reading order
 

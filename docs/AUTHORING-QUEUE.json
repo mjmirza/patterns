@@ -14,13 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Training-Serving Skew Guard",
-    "slug": "training-serving-skew-guard",
-    "category": "MLOps",
-    "path": "patterns/25-mlops/training-serving-skew-guard.md",
-    "focus": ""
-  },
-  {
     "name": "Online Inference",
     "slug": "online-inference",
     "category": "MLOps",
