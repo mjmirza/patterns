@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-32 entries, 306,348 words, 1 more planned, 33 total when the family is complete. Every entry carries all 18
+32 entries, 306,344 words, 1 more planned, 33 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -40,7 +40,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Adapter](adapter.md) | canonical | 11,688 | Two pieces of code need to work together and neither can be changed to match the other. |
 | [Bridge](bridge.md) | canonical | 12,403 | A single class hierarchy is being asked to vary along two independent axes at once, and the class count is growing as the product of the two axis sizes rather than as their sum. |
 | [Composite](composite.md) | canonical | 10,897 | There is a domain where a thing can be made of the same kind of thing, without limit, and client code has to operate over the whole structure without caring how deep it goes. |
-| [Data Access Object](data-access-object.md) | canonical | 6,468 | Most real applications need to read and write persistent data at some point, and that data can live behind very different access mechanisms: a relational database reached through ... |
+| [Data Access Object](data-access-object.md) | canonical | 6,452 | Most real applications need to read and write persistent data at some point, and that data can live behind very different access mechanisms: a relational database reached through ... |
 | [Decorator](decorator.md) | canonical | 14,044 | An object needs an extra responsibility, only sometimes, only for some instances, and the set of extra responsibilities keeps growing and keeps combining. |
 | [Dependency Injection](dependency-injection.md) | canonical | 5,802 | Fowler's own running example names the problem precisely. |
 | [Extension Object](extension-object.md) | established | 6,186 | Some abstractions cannot have their full, final interface anticipated at design time, because different clients of the same class genuinely need different views onto it. |
@@ -49,7 +49,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Marker Interface](marker-interface.md) | contested | 5,201 | Sometimes a class needs to signal a capability or a semantic property to an external mechanism, most often the runtime or a framework, without adding any real behaviour of its own. |
 | [Private Class Data](private-class-data.md) | contested | 6,549 | SourceMaking's own "Problem" section states the target of the pattern directly. |
 | [Proxy](proxy.md) | canonical | 9,732 | Some object is expensive, remote, dangerous, or shared, and the code that wants to use it should not have to know that. |
-| [Role Object](role-object.md) | established | 8,693 | A single key abstraction is used from more than one context, and each context needs its own, different view of it. |
+| [Role Object](role-object.md) | established | 8,705 | A single key abstraction is used from more than one context, and each context needs its own, different view of it. |
 | [Twin](twin.md) | contested | 6,116 | A designer working in a single inheritance language sometimes needs one conceptual object to behave as two unrelated, already existing base types at once, each carrying its own ... |
 
 ## Planned
