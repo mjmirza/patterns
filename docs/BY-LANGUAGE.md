@@ -706,6 +706,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Self-RAG](../patterns/17-ai-agentic/self-rag.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Semantic Caching](../patterns/17-ai-agentic/semantic-caching.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Society of Mind](../patterns/17-ai-agentic/society-of-mind.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Speculative Decoding](../patterns/17-ai-agentic/speculative-decoding.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Structured Output](../patterns/17-ai-agentic/structured-output.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Sub-Agent Isolation](../patterns/17-ai-agentic/sub-agent-isolation.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Token Budget](../patterns/17-ai-agentic/token-budget.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1547,6 +1548,7 @@ These patterns contain runnable code examples written in Go:
 - [Space-Based Architecture](../patterns/05-architectural/space-based-architecture.md) (Architectural Patterns)
 - [Spaghetti Code](../patterns/18-anti-patterns/spaghetti-code.md) (Anti-Patterns)
 - [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) (Observability)
+- [Speculative Decoding](../patterns/17-ai-agentic/speculative-decoding.md) (AI and Agentic)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
 - [Split Brain](../patterns/18-anti-patterns/split-brain.md) (Anti-Patterns)
 - [Split Loop](../patterns/03-refactoring/split-loop.md) (Refactoring Techniques)
@@ -3364,6 +3366,7 @@ These patterns contain runnable code examples written in Python:
 - [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) (Observability)
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Specification](../patterns/11-domain-driven-design/specification.md) (Domain-Driven Design)
+- [Speculative Decoding](../patterns/17-ai-agentic/speculative-decoding.md) (AI and Agentic)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
 - [Split Brain](../patterns/18-anti-patterns/split-brain.md) (Anti-Patterns)
 - [Split Loop](../patterns/03-refactoring/split-loop.md) (Refactoring Techniques)
@@ -5113,6 +5116,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Span and Trace Context Propagation](../patterns/22-observability/span-and-trace-context-propagation.md) (Observability)
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Specification](../patterns/11-domain-driven-design/specification.md) (Domain-Driven Design)
+- [Speculative Decoding](../patterns/17-ai-agentic/speculative-decoding.md) (AI and Agentic)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
 - [Split Loop](../patterns/03-refactoring/split-loop.md) (Refactoring Techniques)
 - [Split Phase](../patterns/03-refactoring/split-phase.md) (Refactoring Techniques)
