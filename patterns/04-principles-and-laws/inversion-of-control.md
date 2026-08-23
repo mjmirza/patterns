@@ -156,34 +156,47 @@ dependency backs which consumer and hands it in.
 ```
 Framework-scale IoC (the host owns the loop)
 
-  +------------------+          registers/implements          +--------------------+
-  |  Application code |  -------------------------------->     | Extension point     |
-  |  (a handler, a     |                                        | (interface, abstract|
-  |   listener, a step)|                                        |  method, event slot) |
-  +---------+----------+                                        +----------+----------+
-            ^                                                              |
-            | calls in at the extension point                             |
-            |                                                              v
-  +---------+-------------------------------------------------------------+---------+
-  |                              Host / framework                                    |
-  |  owns the loop, the lifecycle, or the request dispatch. never calls main().      |
-  +------------------------------------------------------------------------------------+
++---------------------------------+
+| Application code                |
+| (a handler, a listener, a step) |
++---------------------------------+
+           | registers/implements
+           v
++------------------------------------------+
+| Extension point                          |
+| (interface, abstract method, event slot) |
++------------------------------------------+
+           ^
+           | calls in at the extension point
+           |
++----------------------------------------------+
+| Host / framework                             |
+| owns the loop, the lifecycle, or the request |
+| dispatch. never calls main().                |
++----------------------------------------------+
 
 
-Object-wiring IoC (a composition root decides who gets what)
+Object-wiring IoC (a composition root decides who
+gets what)
 
-  +----------------+       resolves and injects        +----------------+
-  | Composition root| ---------------------------------> |   Consumer      |
-  | (hand written or |                                     | (constructor    |
-  |  a container)     |                                     |  parameter of an|
-  +--------+---------+                                     |  interface type) |
-           |                                               +--------+---------+
-           | constructs                                             |
-           v                                                        | uses through
-  +------------------+                                              v the interface
-  |  Concrete          |  <-----------------------------------------+
-  |  dependency         |
-  +------------------+
++-------------------------------+
+| Composition root              |
+| (hand written or a container) |
++-------------------------------+
+           | constructs
+           v
++---------------------+
+| Concrete dependency |
++---------------------+
+           |
+           | Composition root injects this instance,
+           | Consumer sees it only through the
+           | interface type
+           v
++----------------------------------------------+
+| Consumer                                     |
+| (constructor parameter of an interface type) |
++----------------------------------------------+
 ```
 
 ## 7. Dynamics

@@ -280,46 +280,49 @@ subsystem.
 ## 6. ASCII structure diagram
 
 ```
-                         +----------------------+
-                         |   Published Pointer   |
-                         |  (atomic, one word)   |
-                         +-----------+-----------+
-                                     |
-                     rcu_dereference |  rcu_assign_pointer
-                    (readers follow) |  (writer publishes)
-                                     v
-                     +---------------+----------------+
-                     |         Version N (live)         |
-                     |   immutable once published       |
-                     +------------------------------------+
++--------------------+
+| Published Pointer  |
+| (atomic, one word) |
++--------------------+
+           |
+           | rcu_dereference (readers follow)
+           | rcu_assign_pointer (writer publishes)
+           v
++--------------------------+
+| Version N (live)         |
+| immutable once published |
++--------------------------+
 
-  Reader A                Reader B               Writer
-  --------                --------               ------
-  rcu_read_lock()          rcu_read_lock()        build Version N+1 (off to the side,
-    p = rcu_dereference()    (still holds ptr        no reader can see it yet)
-    use(*p)  -- reading      to Version N,          |
-    Version N                started earlier)       rcu_assign_pointer(--> N+1)
-  rcu_read_unlock()                                 |  Published Pointer now -> N+1.
-                                                     |  New readers see N+1 immediately.
-                                                     |  Reader B is still inside N,
-                                                     |  and that is allowed.
-                          rcu_read_unlock()          |
-                                                     v
-                                          +----------+-----------+
-                                          |  Grace Period Detector  |
-                                          |  waits until every       |
-                                          |  reader that could hold  |
-                                          |  Version N has exited    |
-                                          |  its critical section    |
-                                          +----------+-----------+
-                                                     |
-                                                     v
-                                          +----------+-----------+
-                                          |       Reclaimer        |
-                                          |  frees Version N        |
-                                          |  (synchronize_rcu       |
-                                          |   or call_rcu callback) |
-                                          +------------------------+
+Reader A:
+  rcu_read_lock()
+  p = rcu_dereference()
+  use(*p)  -- reading Version N
+  rcu_read_unlock()
+
+Reader B (started earlier, still holds ptr to Version N):
+  ... still inside its critical section ...
+  rcu_read_unlock()  -- exits later, and that is allowed
+
+Writer:
+  build Version N+1 (off to the side, no reader can see
+  it yet)
+  rcu_assign_pointer(--> N+1)
+  Published Pointer now -> N+1. New readers see N+1
+  immediately.
+           |
+           v
++-------------------------------------------+
+| Grace Period Detector                     |
+| waits until every reader that could hold  |
+| Version N has exited its critical section |
++-------------------------------------------+
+           |
+           v
++----------------------------------------+
+| Reclaimer                              |
+| frees Version N                        |
+| (synchronize_rcu or call_rcu callback) |
++----------------------------------------+
 ```
 
 ## 7. Dynamics

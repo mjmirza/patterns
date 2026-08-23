@@ -196,29 +196,37 @@ Do not reach for ELT in these situations.
 ## 6. ASCII structure diagram
 
 ```
-  SOURCE SYSTEMS                 TARGET SYSTEM (warehouse / lakehouse)
-  ---------------                --------------------------------------
+SOURCE SYSTEMS
 
-  +--------------+   extract    +----------------------------------+
-  | payments DB  |------------->|  RAW / LANDING ZONE               |
-  +--------------+              |  raw_payments                     |
-                                 |  raw_tickets                      |
-  +--------------+   extract    |  raw_events                       |
-  | ticket API   |------------->|  (append-only, minimal validation)|
-  +--------------+              +----------------+-------------------+
-                                                  |
-  +--------------+   extract                     | transform (SQL, in-warehouse compute)
-  | event stream |------------->raw_events        v
-  +--------------+              +----------------------------------+
-                                 |  MODELED / SERVING LAYER          |
-                                 |  fct_orders                       |
-                                 |  dim_customers                    |
-                                 |  agg_daily_revenue                |
-                                 +----------------+-------------------+
-                                                  |
-                                                  v
-                                       dashboards, ML features,
-                                       downstream services
++----------------+ +----------------+ +----------------+
+| payments DB    | | ticket API     | | event stream   |
++----------------+ +----------------+ +----------------+
+     |            |            |
+     +------------+------------+
+       extract (each source)
+                 v
+
+TARGET SYSTEM (warehouse / lakehouse)
+
++-----------------------------------+
+| RAW / LANDING ZONE                |
+| raw_payments                      |
+| raw_tickets                       |
+| raw_events                        |
+| (append-only, minimal validation) |
++-----------------------------------+
+           |
+           | transform (SQL, in-warehouse compute)
+           v
++-------------------------+
+| MODELED / SERVING LAYER |
+| fct_orders              |
+| dim_customers           |
+| agg_daily_revenue       |
++-------------------------+
+           |
+           v
+dashboards, ML features, downstream services
 ```
 
 ## 7. Dynamics

@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-44 entries, 393,246 words. Every entry carries all 18
+44 entries, 393,247 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Capacity Management
@@ -115,7 +115,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Health Endpoint Monitoring](health-endpoint-monitoring.md) | canonical | 8,420 | A service running behind a load balancer, an orchestrator, or a service mesh can fail in ways that are invisible from outside the process. |
+| [Health Endpoint Monitoring](health-endpoint-monitoring.md) | canonical | 8,421 | A service running behind a load balancer, an orchestrator, or a service mesh can fail in ways that are invisible from outside the process. |
 
 ## Resilience
 

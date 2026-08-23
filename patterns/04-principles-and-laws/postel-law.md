@@ -292,34 +292,31 @@ composition inside one process.
 ## 6. ASCII structure diagram
 
 ```
-                       shared, imperfect Specification
-                    (natural language, evolves over time)
-                    /                                   \
-                   /                                     \
-   +-----------------------+                 +-----------------------+
-   |   Sender (Producer)    |                 |  Receiver (Consumer)  |
-   |------------------------|    encoded      |------------------------|
-   | emits strictly         | -- message -->  | accepts strict AND    |
-   | conforming output,     |    on the wire   | a bounded set of      |
-   | full grammar, always   |                 | tolerated deviations   |
-   +-----------------------+                 +-----------------------+
-                                                        |
-                                          splits the message into
-                                                        |
-                                     +------------------+------------------+
-                                     |                                     |
-                          +--------------------+              +----------------------+
-                          |    Core field      |              |   Extension field     |
-                          |--------------------|              |------------------------|
-                          | validated strictly |              | unknown or optional,   |
-                          | rejected if wrong,  |              | ignored (or preserved) |
-                          | meaning must be     |              | without complaint,     |
-                          | exact               |              | never rejects the      |
-                          |                     |              | message                |
-                          +--------------------+              +----------------------+
+shared, imperfect Specification
+(natural language, evolves over time)
 
-   Leniency belongs on the right branch only. Leniency applied to the
-   left branch is the misapplication traced through dimension 11.
++------------------------+      +------------------------+
+| Sender (Producer)      |      | Receiver (Consumer)    |
+| emits strictly         |      | accepts strict AND     |
+| conforming output,     | ---> | a bounded set of       |
+| full grammar, always   |      | tolerated deviations   |
++------------------------+      +------------------------+
+
+(encoded message on the wire)
+
+Receiver splits the message into:
+
++---------------------------+ +---------------------------+
+| Core field                | | Extension field           |
+| validated strictly        | | unknown or optional,      |
+| rejected if wrong,        | | ignored (or preserved)    |
+| meaning must be exact     | | without complaint,        |
+|                           | | never rejects the message |
++---------------------------+ +---------------------------+
+
+Leniency belongs on the right branch (Extension field)
+only. Leniency applied to the left branch (Core field)
+is the misapplication traced through dimension 11.
 ```
 
 ## 7. Dynamics

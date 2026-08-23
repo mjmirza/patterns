@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-51 entries, 398,692 words. Every entry carries all 18
+51 entries, 398,660 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -12,7 +12,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Analysis Paralysis](analysis-paralysis.md) | canonical | 7,215 | A team is asked to build a feature, choose an architecture, or pick a technology. |
 | [Bikeshedding](bikeshedding.md) | canonical | 7,563 | A decision needs to be made by a group, and the group contains people with very different depths of expertise on the subject. |
 | [Busy Database](busy-database.md) | canonical | 8,380 | The context is any system with a client tier, an application or service tier, and a database tier, where the database engine exposes a facility for running code close to the data ... |
-| [Busy Front End](busy-front-end.md) | canonical | 8,025 | The context is a server-side application built as, or converged into over time, a single deployable process that does two structurally different jobs at once, accepting and ... |
+| [Busy Front End](busy-front-end.md) | canonical | 7,993 | The context is a server-side application built as, or converged into over time, a single deployable process that does two structurally different jobs at once, accepting and ... |
 | [Cache Stampede](cache-stampede.md) | canonical | 8,736 | The shape that produces this anti-pattern is almost always the same three ingredients arriving together. |
 | [Call Super](call-super.md) | canonical | 8,627 | A base class method does two things at once. |
 | [Cargo Cult Programming](cargo-cult-programming.md) | canonical | 8,232 | A developer under time pressure needs code that solves a problem they do not fully understand, in a domain they have not fully learned, often on a deadline that leaves no room to ... |

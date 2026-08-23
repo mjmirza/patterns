@@ -207,29 +207,31 @@ dimension 13.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+          uses           +------------------------+
-|   Application      | ----------------------> |   Repository            |
-|   Service /         |                         |   (interface, domain    |
-|   Command Handler   |                         |   or port layer)        |
-+-------------------+                          +------------------------+
-                                                        ^
-                                                        | implements
-                                                        |
-                                    +-------------------+-------------------+
-                                    |                                       |
-                        +------------------------+           +------------------------+
-                        |  SqlOrderRepository     |           |  InMemoryOrderRepository|
-                        |  (infrastructure,       |           |  (test double,           |
-                        |   real database)         |           |   no external I/O)      |
-                        +------------------------+           +------------------------+
-                                    |
-                                    v
-                        +------------------------+
-                        |  Order (Aggregate root)  |
-                        |  + line items (entity)   |
-                        |  + shipping address       |
-                        |    (value object)          |
-                        +------------------------+
++---------------------------------------+
+| Application Service / Command Handler |
++---------------------------------------+
+           | uses
+           v
++-----------------------------------+
+| Repository                        |
+| (interface, domain or port layer) |
++-----------------------------------+
+           ^
+           | implements
+     +-----+-----+
+     |           |
++---------------------------+ +---------------------------+
+| SqlOrderRepository        | | InMemoryOrderRepository   |
+| (infrastructure,          | | (test double,             |
+| real database)            | | no external I/O)          |
++---------------------------+ +---------------------------+
+     |
+     v
++-----------------------------------+
+| Order (Aggregate root)            |
+| + line items (entity)             |
+| + shipping address (value object) |
++-----------------------------------+
 ```
 
 ## 7. Dynamics
