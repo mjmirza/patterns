@@ -15,6 +15,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Chain of Responsibility](../patterns/01-design-patterns-gof/chain-of-responsibility.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Command](../patterns/01-design-patterns-gof/command.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Composite](../patterns/01-design-patterns-gof/composite.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
+| [Data Access Object](../patterns/01-design-patterns-gof/data-access-object.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Decorator](../patterns/01-design-patterns-gof/decorator.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Dependency Injection](../patterns/01-design-patterns-gof/dependency-injection.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Facade](../patterns/01-design-patterns-gof/facade.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1121,6 +1122,7 @@ These patterns contain runnable code examples written in Go:
 - [Creator](../patterns/04-principles-and-laws/creator.md) (Principles and Laws)
 - [Currying](../patterns/16-functional/currying.md) (Functional Programming)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
+- [Data Access Object](../patterns/01-design-patterns-gof/data-access-object.md) (Design Patterns (GoF))
 - [Data Class](../patterns/02-code-smells/data-class.md) (Code Smells)
 - [Data Clumps](../patterns/02-code-smells/data-clumps.md) (Code Smells)
 - [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) (Enterprise Application Architecture)
@@ -2774,6 +2776,7 @@ These patterns contain runnable code examples written in Python:
 - [Cursor-based Pagination](../patterns/19-api-design/cursor-based-pagination.md) (API and Interface Design)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
 - [Dark Launch](../patterns/20-release-deployment/dark-launch.md) (Release and Deployment)
+- [Data Access Object](../patterns/01-design-patterns-gof/data-access-object.md) (Design Patterns (GoF))
 - [Data Class](../patterns/02-code-smells/data-class.md) (Code Smells)
 - [Data Clumps](../patterns/02-code-smells/data-clumps.md) (Code Smells)
 - [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) (Enterprise Application Architecture)
@@ -4556,6 +4559,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Creator](../patterns/04-principles-and-laws/creator.md) (Principles and Laws)
 - [Currying](../patterns/16-functional/currying.md) (Functional Programming)
 - [Customer-Supplier](../patterns/11-domain-driven-design/customer-supplier.md) (Domain-Driven Design)
+- [Data Access Object](../patterns/01-design-patterns-gof/data-access-object.md) (Design Patterns (GoF))
 - [Data Class](../patterns/02-code-smells/data-class.md) (Code Smells)
 - [Data Clumps](../patterns/02-code-smells/data-clumps.md) (Code Smells)
 - [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) (Enterprise Application Architecture)
