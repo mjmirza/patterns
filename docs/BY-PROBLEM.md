@@ -16791,6 +16791,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 **Core Problem:** Many prediction workloads have no human waiting on a response, a nightly churn score for every customer, a fraud risk score recomputed after a data refresh, a batch of images to caption ahead of a content release. Serving these through a low-latency, always-on endpoint forces a system to pay for constant availability it never needs and to build request-shaped plumbing around what is fundamentally a bulk data transformation.
 
+#### [Champion-Challenger](../patterns/25-mlops/champion-challenger.md)
+
+**Core Problem:** A single promotion decision, is this new model good enough to replace the old one, is a one-time event. The problem champion-challenger addresses is different, is the model currently deployed still the best one available, asked repeatedly, over time, as new candidates keep arriving. AWS SageMaker's own worked example for its A or B mechanism makes the repeatable nature explicit, after one variant wins and the loser is deleted, you can continue testing new models in production by adding new variants to your endpoint and following the same steps again, the same cycle re-run indefinitely rather than a single event.
+
 #### [Feature Store](../patterns/25-mlops/feature-store.md)
 
 **Core Problem:** Feature computation logic written for offline, batch training, commonly Python or Spark against a data warehouse, is easy to accidentally diverge from the low-latency online serving path that computes the same feature at prediction time, often in a different language or runtime entirely. Any difference between the two, a different null-handling rule, a different aggregation window, a bug present in one path and not the other, causes the model to see systematically different feature values in production than it saw during training, silently degrading accuracy with no exception thrown anywhere. Google's own "Rules of Machine Learning" names this problem directly, in a rule aimed exactly at avoiding it, "The best way to make sure that you train like you serve is to save the set of features used at serving time, and then pipe those features to a log to use them at training time," and, separately, "Re-use code between your training pipeline and your serving pipeline whenever possible." AWS's own SageMaker Feature Store documentation names the failure mode by its common industry term directly, "This reduces training-serving skew, a common issue in ML where the difference between performance during training and serving can impact the accuracy of your ML model."
@@ -16808,6 +16812,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 #### [Online Inference](../patterns/25-mlops/online-inference.md)
 
 **Core Problem:** A user or a system is synchronously blocked waiting on a prediction, a fraud check on a payment, a ranking call in a search or feed, a recommendation on a product page, a chatbot turn, and needs an answer inside a tight latency budget, milliseconds to low seconds, before it can proceed. This is the direct structural opposite of a nightly job scoring millions of rows with no one waiting, the caller is present, in the loop, and a late answer risks timeout or abandonment.
+
+#### [Shadow Model](../patterns/25-mlops/shadow-model.md)
+
+**Core Problem:** A/B testing a new model candidate necessarily risks real users receiving a worse prediction, because the candidate's output is served to some fraction of live requests. Shadow testing eliminates that specific risk by construction, the candidate's output is architecturally incapable of reaching the user, since AWS SageMaker's own documentation states the shadow variant's responses are logged for comparison and not returned to the caller. The trade a team makes for that safety is real, shadow mode can only compare logged predictions against production predictions on the same input, it cannot measure genuine user behavioral response, click, conversion, engagement, to the candidate's actual output, since that output never reaches anyone.
+
+#### [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md)
+
+**Core Problem:** Feature logic written once for an offline training pipeline is easy to reimplement, slightly differently, for a separate low-latency serving pipeline, since the two paths are usually built by different people under different constraints, batch throughput for training and tight latency budgets for serving. Any divergence between the two, a different null-handling rule, a stale reference table, a rounding difference, causes the model to see systematically different feature values in production than it saw during training, degrading accuracy with no exception thrown anywhere. Google's Cloud MLOps architecture guide names the organizational root cause directly, describing a manual handoff of a trained model artifact from a data science team to an engineering team that must then make the same features available for low-latency serving, a scenario it states can lead directly to training-serving skew.
 
 ### Mobile Architecture
 

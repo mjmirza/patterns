@@ -816,9 +816,12 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Watermark](../patterns/24-stream-processing/watermark.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Batch Inference](../patterns/25-mlops/batch-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Champion-Challenger](../patterns/25-mlops/champion-challenger.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Model Registry](../patterns/25-mlops/model-registry.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Online Inference](../patterns/25-mlops/online-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Shadow Model](../patterns/25-mlops/shadow-model.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1080,6 +1083,7 @@ These patterns contain runnable code examples written in Go:
 - [Certificate Pinning](../patterns/15-security/certificate-pinning.md) (Security)
 - [Chain of Responsibility](../patterns/01-design-patterns-gof/chain-of-responsibility.md) (Design Patterns (GoF))
 - [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) (AI and Agentic)
+- [Champion-Challenger](../patterns/25-mlops/champion-challenger.md) (MLOps)
 - [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) (Data and Storage)
 - [Channel Adapter](../patterns/07-integration/channel-adapter.md) (Enterprise Integration)
 - [Channel Purger](../patterns/07-integration/channel-purger.md) (Enterprise Integration)
@@ -1532,6 +1536,7 @@ These patterns contain runnable code examples written in Go:
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Service-Oriented Architecture](../patterns/05-architectural/service-oriented-architecture.md) (Architectural Patterns)
 - [Session Management](../patterns/15-security/session-management.md) (Security)
+- [Shadow Model](../patterns/25-mlops/shadow-model.md) (MLOps)
 - [Sharding](../patterns/08-cloud-distributed/sharding.md) (Cloud and Distributed)
 - [Shared Database Microservices](../patterns/18-anti-patterns/shared-database-microservices.md) (Anti-Patterns)
 - [Shared Database](../patterns/10-microservices/shared-database.md) (Microservices)
@@ -1611,6 +1616,7 @@ These patterns contain runnable code examples written in Go:
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
+- [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) (MLOps)
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
 - [Transaction Log Tailing](../patterns/10-microservices/transaction-log-tailing.md) (Microservices)
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
@@ -2750,6 +2756,7 @@ These patterns contain runnable code examples written in Python:
 - [Certificate Pinning](../patterns/15-security/certificate-pinning.md) (Security)
 - [Chain of Responsibility](../patterns/01-design-patterns-gof/chain-of-responsibility.md) (Design Patterns (GoF))
 - [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) (AI and Agentic)
+- [Champion-Challenger](../patterns/25-mlops/champion-challenger.md) (MLOps)
 - [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) (Data and Storage)
 - [Change Function Declaration](../patterns/03-refactoring/change-function-declaration.md) (Refactoring Techniques)
 - [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) (Refactoring Techniques)
@@ -3345,6 +3352,7 @@ These patterns contain runnable code examples written in Python:
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Service-Oriented Architecture](../patterns/05-architectural/service-oriented-architecture.md) (Architectural Patterns)
 - [Session Management](../patterns/15-security/session-management.md) (Security)
+- [Shadow Model](../patterns/25-mlops/shadow-model.md) (MLOps)
 - [Shadow Traffic](../patterns/20-release-deployment/shadow-traffic.md) (Release and Deployment)
 - [Sharding](../patterns/08-cloud-distributed/sharding.md) (Cloud and Distributed)
 - [Shared Database Microservices](../patterns/18-anti-patterns/shared-database-microservices.md) (Anti-Patterns)
@@ -3436,6 +3444,7 @@ These patterns contain runnable code examples written in Python:
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
+- [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) (MLOps)
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
 - [Transaction Log Tailing](../patterns/10-microservices/transaction-log-tailing.md) (Microservices)
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)
@@ -4563,6 +4572,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Certificate Pinning](../patterns/15-security/certificate-pinning.md) (Security)
 - [Chain of Responsibility](../patterns/01-design-patterns-gof/chain-of-responsibility.md) (Design Patterns (GoF))
 - [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) (AI and Agentic)
+- [Champion-Challenger](../patterns/25-mlops/champion-challenger.md) (MLOps)
 - [Change Data Capture](../patterns/12-data-storage/change-data-capture.md) (Data and Storage)
 - [Change Function Declaration](../patterns/03-refactoring/change-function-declaration.md) (Refactoring Techniques)
 - [Change Reference to Value](../patterns/03-refactoring/change-reference-to-value.md) (Refactoring Techniques)
@@ -5099,6 +5109,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Service-Oriented Architecture](../patterns/05-architectural/service-oriented-architecture.md) (Architectural Patterns)
 - [Session Management](../patterns/15-security/session-management.md) (Security)
+- [Shadow Model](../patterns/25-mlops/shadow-model.md) (MLOps)
 - [Sharding](../patterns/08-cloud-distributed/sharding.md) (Cloud and Distributed)
 - [Shared Database Microservices](../patterns/18-anti-patterns/shared-database-microservices.md) (Anti-Patterns)
 - [Shared Database](../patterns/10-microservices/shared-database.md) (Microservices)
@@ -5183,6 +5194,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
+- [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) (MLOps)
 - [Trampolining](../patterns/16-functional/trampolining.md) (Functional Programming)
 - [Transaction Log Tailing](../patterns/10-microservices/transaction-log-tailing.md) (Microservices)
 - [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) (Enterprise Application Architecture)

@@ -14,27 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Training-Serving Skew Guard",
-    "slug": "training-serving-skew-guard",
-    "category": "MLOps",
-    "path": "patterns/25-mlops/training-serving-skew-guard.md",
-    "focus": ""
-  },
-  {
-    "name": "Shadow Model",
-    "slug": "shadow-model",
-    "category": "MLOps",
-    "path": "patterns/25-mlops/shadow-model.md",
-    "focus": ""
-  },
-  {
-    "name": "Champion-Challenger",
-    "slug": "champion-challenger",
-    "category": "MLOps",
-    "path": "patterns/25-mlops/champion-challenger.md",
-    "focus": ""
-  },
-  {
     "name": "Model Monitoring",
     "slug": "model-monitoring",
     "category": "MLOps",
