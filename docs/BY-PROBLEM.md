@@ -16732,6 +16732,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 ### Stream Processing
 
+#### [Dead-Letter Topic](../patterns/24-stream-processing/dead-letter-topic.md)
+
+**Core Problem:** KIP-298's own motivation states the problem this entry's stream-native variant answers directly. "There are several places in Connect during which failures may occur. Any failure to deserialize, convert, process, or read/write a record in Kafka Connect can cause a task to fail... it is difficult to guarantee correct and valid data or to tell Connect to skip problematic records." Without this mechanism, a single malformed record causes the entire Connect task, the framework's own unit of parallelism, to fail outright, the task-blocking failure mode named in this family's own sibling entries.
+
 #### [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md)
 
 **Core Problem:** The Dataflow paper states the root cause directly. "Event time for a given event essentially never changes, but processing time changes constantly for each event as it flows through the pipeline and time marches ever forward." The paper names the mechanism behind the mismatch. "During processing, the realities of the systems in use (communication delays, scheduling algorithms, time spent processing, pipeline serialization, etc.) result in an inherent and dynamically changing amount of skew between the two domains."

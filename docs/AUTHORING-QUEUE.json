@@ -21,13 +21,6 @@
     "focus": ""
   },
   {
-    "name": "Dead-Letter Topic",
-    "slug": "dead-letter-topic",
-    "category": "stream processing",
-    "path": "patterns/24-stream-processing/dead-letter-topic.md",
-    "focus": ""
-  },
-  {
     "name": "Replayable Log",
     "slug": "replayable-log",
     "category": "stream processing",

@@ -808,6 +808,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Dead-Letter Topic](../patterns/24-stream-processing/dead-letter-topic.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1150,6 +1151,7 @@ These patterns contain runnable code examples written in Go:
 - [Datatype Channel](../patterns/07-integration/datatype-channel.md) (Enterprise Integration)
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Dead Letter Channel](../patterns/07-integration/dead-letter-channel.md) (Enterprise Integration)
+- [Dead-Letter Topic](../patterns/24-stream-processing/dead-letter-topic.md) (Stream Processing)
 - [Death March](../patterns/18-anti-patterns/death-march.md) (Anti-Patterns)
 - [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) (Microservices)
 - [Decompose by Subdomain](../patterns/10-microservices/decompose-by-subdomain.md) (Microservices)
@@ -2828,6 +2830,7 @@ These patterns contain runnable code examples written in Python:
 - [Datatype Channel](../patterns/07-integration/datatype-channel.md) (Enterprise Integration)
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Dead Letter Channel](../patterns/07-integration/dead-letter-channel.md) (Enterprise Integration)
+- [Dead-Letter Topic](../patterns/24-stream-processing/dead-letter-topic.md) (Stream Processing)
 - [Death March](../patterns/18-anti-patterns/death-march.md) (Anti-Patterns)
 - [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
 - [Decompose Conditional](../patterns/03-refactoring/decompose-conditional.md) (Refactoring Techniques)
@@ -4628,6 +4631,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Datatype Channel](../patterns/07-integration/datatype-channel.md) (Enterprise Integration)
 - [Dead Code](../patterns/02-code-smells/dead-code.md) (Code Smells)
 - [Dead Letter Channel](../patterns/07-integration/dead-letter-channel.md) (Enterprise Integration)
+- [Dead-Letter Topic](../patterns/24-stream-processing/dead-letter-topic.md) (Stream Processing)
 - [Debounce and Throttle](../patterns/13-frontend-ui/debounce-and-throttle.md) (Frontend and UI)
 - [Decompose Conditional](../patterns/03-refactoring/decompose-conditional.md) (Refactoring Techniques)
 - [Decompose by Business Capability](../patterns/10-microservices/decompose-by-business-capability.md) (Microservices)

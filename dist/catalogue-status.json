@@ -1,6 +1,6 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 829,
+  "published_total": 830,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 19,
@@ -317,12 +317,12 @@
       "family": "24-stream-processing",
       "name": "Stream Processing",
       "origin": "Dataflow model, Kafka docs",
-      "published": 4,
-      "planned": 4,
+      "published": 5,
+      "planned": 3,
       "target": 8,
-      "percent": 50.0,
+      "percent": 62.5,
       "maturity": {
-        "established": 4
+        "established": 5
       }
     },
     {
