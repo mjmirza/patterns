@@ -2,7 +2,7 @@
 
 Origin. Tidwell, Designing Interfaces
 
-4 entries, 17,439 words, 6 more planned, 10 total when the family is complete. Every entry carries all 18
+7 entries, 31,344 words, 3 more planned, 10 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Interaction and HCI
@@ -11,6 +11,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Breadcrumbs](breadcrumbs.md) | established | 3,727 | Smashing Magazine's own definition frames the problem directly, a breadcrumb trail is a type of secondary navigation scheme that reveals the user's location in a website or web ... |
 | [Command Palette](command-palette-ux.md) | established | 4,478 | A traditional menu bar or sidebar hierarchy requires a person to know where a command lives, which menu, which submenu, which settings page, before they can use it. |
+| [Empty State](empty-state.md) | established | 4,587 | A screen with no content and no explanation is indistinguishable from a broken one. |
+| [Inline Validation](inline-validation.md) | established | 4,740 | A form that only validates on submit forces the person to fill in every field before learning which of them were wrong, then reconcile a wall of errors against fields that may ... |
+| [Progressive Disclosure](progressive-disclosure.md) | canonical | 4,578 | An interface that serves both a person doing something for the first time and a person who does it daily faces a direct conflict. |
 | [Undo](undo.md) | established | 4,571 | Any interface that lets a person change state, a text edit, a shape moved, a value typed, a file deleted, creates a moment where the person can make a mistake, and a mistake with ... |
 | [Wizard](wizard.md) | established | 4,663 | A single flat form with many fields overwhelms a person and increases both error rate and abandonment, a wizard trades that for a lower per-screen cognitive load at the cost of ... |
 
@@ -20,10 +23,7 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 
 - Autosave
 - Bulk Action
-- Empty State
-- Inline Validation
 - Optimistic Undo
-- Progressive Disclosure
 
 ## Reading order
 

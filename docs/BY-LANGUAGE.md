@@ -826,6 +826,9 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Breadcrumbs](../patterns/26-interaction-hci/breadcrumbs.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Empty State](../patterns/26-interaction-hci/empty-state.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Inline Validation](../patterns/26-interaction-hci/inline-validation.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Undo](../patterns/26-interaction-hci/undo.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Wizard](../patterns/26-interaction-hci/wizard.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1206,6 +1209,7 @@ These patterns contain runnable code examples written in Go:
 - [ELT](../patterns/12-data-storage/elt.md) (Data and Storage)
 - [ETL](../patterns/12-data-storage/etl.md) (Data and Storage)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
+- [Empty State](../patterns/26-interaction-hci/empty-state.md) (Interaction and HCI)
 - [Entity Service](../patterns/18-anti-patterns/entity-service.md) (Anti-Patterns)
 - [Entity](../patterns/11-domain-driven-design/entity.md) (Domain-Driven Design)
 - [Envelope Encryption](../patterns/15-security/envelope-encryption.md) (Security)
@@ -1287,6 +1291,7 @@ These patterns contain runnable code examples written in Go:
 - [Indirection](../patterns/04-principles-and-laws/indirection.md) (Principles and Laws)
 - [Information Expert](../patterns/04-principles-and-laws/information-expert.md) (Principles and Laws)
 - [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) (Enterprise Application Architecture)
+- [Inline Validation](../patterns/26-interaction-hci/inline-validation.md) (Interaction and HCI)
 - [Inner-Platform Effect](../patterns/18-anti-patterns/inner-platform-effect.md) (Anti-Patterns)
 - [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) (AI and Agentic)
 - [Input Validation](../patterns/15-security/input-validation.md) (Security)
@@ -1438,6 +1443,7 @@ These patterns contain runnable code examples written in Go:
 - [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Process Manager](../patterns/07-integration/process-manager.md) (Enterprise Integration)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
+- [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md) (Interaction and HCI)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
 - [Prompt Injection Sink](../patterns/18-anti-patterns/prompt-injection-sink.md) (Anti-Patterns)
@@ -2910,6 +2916,7 @@ These patterns contain runnable code examples written in Python:
 - [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) (Embedded and Hardware-Software)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
 - [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
+- [Empty State](../patterns/26-interaction-hci/empty-state.md) (Interaction and HCI)
 - [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) (Refactoring Techniques)
 - [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) (Refactoring Techniques)
 - [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) (Refactoring Techniques)
@@ -3033,6 +3040,7 @@ These patterns contain runnable code examples written in Python:
 - [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) (Enterprise Application Architecture)
 - [Inline Class](../patterns/03-refactoring/inline-class.md) (Refactoring Techniques)
 - [Inline Function](../patterns/03-refactoring/inline-function.md) (Refactoring Techniques)
+- [Inline Validation](../patterns/26-interaction-hci/inline-validation.md) (Interaction and HCI)
 - [Inline Variable](../patterns/03-refactoring/inline-variable.md) (Refactoring Techniques)
 - [Inner-Platform Effect](../patterns/18-anti-patterns/inner-platform-effect.md) (Anti-Patterns)
 - [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) (AI and Agentic)
@@ -3223,6 +3231,7 @@ These patterns contain runnable code examples written in Python:
 - [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) (Embedded and Hardware-Software)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
+- [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md) (Interaction and HCI)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
@@ -4720,6 +4729,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [ELT](../patterns/12-data-storage/elt.md) (Data and Storage)
 - [ETL](../patterns/12-data-storage/etl.md) (Data and Storage)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
+- [Empty State](../patterns/26-interaction-hci/empty-state.md) (Interaction and HCI)
 - [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) (Refactoring Techniques)
 - [Encapsulate Record](../patterns/03-refactoring/encapsulate-record.md) (Refactoring Techniques)
 - [Encapsulate Variable](../patterns/03-refactoring/encapsulate-variable.md) (Refactoring Techniques)
@@ -4825,6 +4835,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) (Enterprise Application Architecture)
 - [Inline Class](../patterns/03-refactoring/inline-class.md) (Refactoring Techniques)
 - [Inline Function](../patterns/03-refactoring/inline-function.md) (Refactoring Techniques)
+- [Inline Validation](../patterns/26-interaction-hci/inline-validation.md) (Interaction and HCI)
 - [Inline Variable](../patterns/03-refactoring/inline-variable.md) (Refactoring Techniques)
 - [Inner-Platform Effect](../patterns/18-anti-patterns/inner-platform-effect.md) (Anti-Patterns)
 - [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) (AI and Agentic)
@@ -4997,6 +5008,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Process Manager](../patterns/11-domain-driven-design/process-manager.md) (Domain-Driven Design)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
+- [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md) (Interaction and HCI)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
