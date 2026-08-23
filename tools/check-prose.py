@@ -90,6 +90,12 @@ EMOJI = re.compile(
 
 BANNED_PHRASES = [w for w in BANNED_WORDS if " " in w]
 BANNED_SINGLE_WORDS = [w for w in BANNED_WORDS if " " not in w]
+
+# A banned slop word can collide with a real proper noun (a cited surname).
+# Skip the match only when capitalized exactly like the known name.
+PROPER_NOUN_COLLISIONS = {
+    "Foster",
+}
 BANNED_SINGLE_RE = re.compile(
     r"\b(?:" + "|".join(map(re.escape, BANNED_SINGLE_WORDS)) + r")\b"
 )
@@ -140,6 +146,9 @@ def check(path: Path) -> list[str]:
                 errors.append(f"line {lineno}: banned phrase '{phrase}'")
 
         for m in BANNED_SINGLE_RE.finditer(low):
+            original = line[m.start() : m.end()]
+            if original in PROPER_NOUN_COLLISIONS:
+                continue
             errors.append(f"line {lineno}: banned word '{m.group(0)}'")
 
         if raw.strip() == "---":

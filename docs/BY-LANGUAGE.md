@@ -32,6 +32,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prototype](../patterns/01-design-patterns-gof/prototype.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Proxy](../patterns/01-design-patterns-gof/proxy.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
+| [Role Object](../patterns/01-design-patterns-gof/role-object.md) | Design Patterns (GoF) | Yes |  | Yes |  |  | Yes |  |  | Yes |
 | [Servant](../patterns/01-design-patterns-gof/servant.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Singleton](../patterns/01-design-patterns-gof/singleton.md) | Design Patterns (GoF) |  |  | Yes | Yes | Yes | Yes | Yes |  | Yes |
 | [State](../patterns/01-design-patterns-gof/state.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
@@ -855,6 +856,7 @@ These patterns contain runnable code examples written in C++:
 - [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) (Embedded and Hardware-Software)
 - [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) (Embedded and Hardware-Software)
 - [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
+- [Role Object](../patterns/01-design-patterns-gof/role-object.md) (Design Patterns (GoF))
 - [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) (Embedded and Hardware-Software)
 - [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) (Embedded and Hardware-Software)
 
@@ -865,6 +867,7 @@ These patterns have unique implementation variants or change their design struct
 - [Copy-on-Write](../patterns/09-concurrency/copy-on-write.md) (Concurrency and Parallelism)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Future Promise](../patterns/09-concurrency/future-promise.md) (Concurrency and Parallelism)
+- [Role Object](../patterns/01-design-patterns-gof/role-object.md) (Design Patterns (GoF))
 - [Scoped Locking](../patterns/09-concurrency/scoped-locking.md) (Concurrency and Parallelism)
 - [Structured Output](../patterns/17-ai-agentic/structured-output.md) (AI and Agentic)
 - [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) (Concurrency and Parallelism)
@@ -1463,6 +1466,7 @@ These patterns contain runnable code examples written in Go:
 - [Retry](../patterns/08-cloud-distributed/retry.md) (Cloud and Distributed)
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
+- [Role Object](../patterns/01-design-patterns-gof/role-object.md) (Design Patterns (GoF))
 - [Role-Based Access Control](../patterns/15-security/rbac.md) (Security)
 - [Routing Slip](../patterns/07-integration/routing-slip.md) (Enterprise Integration)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
@@ -2360,6 +2364,7 @@ These patterns have unique implementation variants or change their design struct
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
+- [Role Object](../patterns/01-design-patterns-gof/role-object.md) (Design Patterns (GoF))
 - [Saga](../patterns/08-cloud-distributed/saga.md) (Cloud and Distributed)
 - [Scheduler](../patterns/09-concurrency/scheduler.md) (Concurrency and Parallelism)
 - [Scoped Locking](../patterns/09-concurrency/scoped-locking.md) (Concurrency and Parallelism)
@@ -3252,6 +3257,7 @@ These patterns contain runnable code examples written in Python:
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) (Embedded and Hardware-Software)
+- [Role Object](../patterns/01-design-patterns-gof/role-object.md) (Design Patterns (GoF))
 - [Role-Based Access Control](../patterns/15-security/rbac.md) (Security)
 - [Rolling Deployment](../patterns/20-release-deployment/rolling-deployment.md) (Release and Deployment)
 - [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
@@ -4998,6 +5004,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Retry](../patterns/08-cloud-distributed/retry.md) (Cloud and Distributed)
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
+- [Role Object](../patterns/01-design-patterns-gof/role-object.md) (Design Patterns (GoF))
 - [Role-Based Access Control](../patterns/15-security/rbac.md) (Security)
 - [Route-based Lazy Loading](../patterns/13-frontend-ui/route-based-lazy-loading.md) (Frontend and UI)
 - [Routing Slip](../patterns/07-integration/routing-slip.md) (Enterprise Integration)

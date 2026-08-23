@@ -2834,6 +2834,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Ring rebuilt from scratch instead of updated incrementally. Symptom. A | [Consistent Hashing](../patterns/12-data-storage/consistent-hashing.md) | Data and Storage |
 | Risk acceptance laundering. Symptom. Many high-impact threats are | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | Role explosion. Symptom. The admin UI shows hundreds of near-duplicate | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
+| Role identity confusion is the primary source's own most developed misuse, quoted at length because the language is p... | [Role Object](../patterns/01-design-patterns-gof/role-object.md) | Design Patterns (GoF) |
 | Role membership changes more often than the meaning of the role. NIST notes | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | Role names used as business truth. Symptom. Code branches on | [Role-Based Access Control](../patterns/15-security/rbac.md) | Security |
 | Rollback is impossible after data was rewritten. Cause. The | [Substitute Algorithm](../patterns/03-refactoring/substitute-algorithm.md) | Refactoring Techniques |
@@ -5961,6 +5962,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The proxy grew a brain. Symptom. A bug is reported against business
 - Unbounded caching inside a proxy. Symptom. Heap grows monotonically in a
 - Everything is proxied. Symptom. Startup time grows steadily as the
+
+#### [Role Object](../patterns/01-design-patterns-gof/role-object.md)
+
+**Core Problem:** A single key abstraction is used from more than one context, and each context needs its own, different view of it. The paper's own worked example: a bank has a Customer class serving the investment department, holding the state that department needs (name, address, savings and deposit accounts). The loan department later also needs to work with customers, but as borrowers, needing credit and security-account state the original Customer class was never built to hold.
+
+**Failure Mode Symptoms:**
+
+- Role identity confusion is the primary source's own most developed misuse, quoted at length because the language is precise: "Role objects introduce a logical identity next to the physical identity of objects. The physical identity is the identity of each individual object. The logical identity is the identity of the logical object consisting of the core and its roles. For each role, you need to be able to ask whether it is physically identical with another role (same object), and whether it is logical identical with another role (which may be another role of the same logical object)... for implementing the logical identity check, you have to introduce a dedicated operation." Worked through concretely: "a client application which works directly with the core object through the Component interface, and refers to its single role instance using a concrete role interface... the two references do not point to the same object because they reference two technically distinct objects. Thus, to find out that the two references are actually denote the same conceptual object, the client must use special identity comparison operations." The concrete symptom is a silent false negative, not a crash. Two references to what is logically the same customer, obtained via different paths, compare unequal under a language's default reference equality, and this most often surfaces as duplicate entries in a deduplicated list or a set membership check, never as an obvious error.
 
 #### [Servant](../patterns/01-design-patterns-gof/servant.md)
 

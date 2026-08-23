@@ -266,13 +266,6 @@
     "focus": ""
   },
   {
-    "name": "Role Object",
-    "slug": "role-object",
-    "category": "design patterns gof",
-    "path": "patterns/01-design-patterns-gof/role-object.md",
-    "focus": ""
-  },
-  {
     "name": "Service Layer",
     "slug": "service-layer",
     "category": "enterprise application architecture",
