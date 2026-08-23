@@ -37,17 +37,19 @@ Exact Distribution Fidelity vs. Heuristic Speedup. System architects must often 
 
 ## 4. Applicability and non-applicability
 
-#### When to apply
+### When to apply
 
 Reach for Speculative Decoding when:
+
 1. Target model inference is memory-bandwidth bound during decoding, with low GPU compute utilization per forward pass.
 2. Output token latency is the critical service level indicator (SLI) for user experience or agentic workflow completion.
 3. A suitable draft model exists that shares vocabulary and tokenizer alignment with the target model, yielding high token acceptance rates.
 4. Sufficient GPU VRAM is available to host both the target model and draft model without causing out-of-memory errors or reducing maximum target batch size below operational thresholds.
 
-#### When NOT to apply
+### When NOT to apply
 
 Do NOT reach for Speculative Decoding when:
+
 1. Serving workloads under extreme request concurrency where target model batch size is already large enough to saturate GPU compute FLOPS (compute-bound regime).
 2. The draft model vocabulary or tokenizer diverges from the target model, requiring complex mapping layers that lower acceptance alignment.
 3. GPU memory is severely constrained, making draft model parameter hosting or draft KV cache reservation impossible.
@@ -105,6 +107,7 @@ Draft Model               Target Model             Verifier             Orchestr
 ```
 
 Detailed sequence steps:
+
 1. **Draft Step**: The Draft Model generates K draft tokens sequentially. For each draft token $t_i$, the draft model produces probability distribution $q_i(x)$.
 2. **Target Step**: The Target Model receives the prompt plus all K draft tokens. It performs a single parallel forward pass over the $K$ draft positions, outputting probability distributions $p_1(x), p_2(x), \dots, p_{K+1}(x)$.
 3. **Verification Step**: For $i = 1 \dots K$, the verifier checks if token $t_i$ is accepted. A random uniform variable $u \sim U(0,1)$ is drawn. If $u \le \min(1, p_i(t_i) / q_i(t_i))$, token $t_i$ is accepted.
@@ -113,15 +116,15 @@ Detailed sequence steps:
 
 ## 8. Implementation variants
 
-#### Draft Model Speculative Decoding
+### Draft Model Speculative Decoding
 
 The standard variant described by Leviathan et al. Uses a separate, smaller neural network (e.g., Llama-3-8B as draft for Llama-3-70B). Offers high draft quality and variable speculation length $K$, but requires allocating GPU memory for draft model weights.
 
-#### Medusa / Eagle Multi-Head Speculative Decoding
+### Medusa / Eagle Multi-Head Speculative Decoding
 
 Instead of a separate draft model, extra prediction heads (Medusa or Eagle) are attached directly to the target model's top hidden state. These heads predict multiple future tokens in parallel without running an independent draft loop. Reduces memory overhead since parameter weights are shared, but limits draft flexibility.
 
-#### Prompt / N-Gram Lookup Speculative Decoding
+### Prompt / N-Gram Lookup Speculative Decoding
 
 Replaces the draft model with a static N-gram lookup table or prompt prefix search. Candidate draft tokens are gathered by matching current context against earlier parts of the prompt or document history. Requires zero additional GPU VRAM and zero draft forward passes. Highly effective for summarization, code editing, and retrieval tasks with repetitive context.
 
@@ -133,13 +136,13 @@ Replaces the draft model with a static N-gram lookup table or prompt prefix sear
 
 ## 10. Consequences
 
-#### Positive
+### Positive
 
 1. **Reduced Generation Latency**: Achieves 1.5x to 3.0x speedup in time-per-output-token latency for memory-bandwidth bound LLM serving workloads.
 2. **Mathematically Lossless**: Modified rejection sampling guarantees that output token probability distribution remains identical to standalone target model generation.
 3. **Higher GPU Compute Efficiency**: Converts idle GPU compute cycles into effective output token throughput without altering network weights.
 
-#### Negative
+### Negative
 
 1. **Increased VRAM Consumption**: Hosting draft model parameters and draft KV caches consumes GPU memory that could otherwise support larger target batch sizes.
 2. **Variable Latency Per Step**: Iteration time varies depending on the number of accepted tokens per draft round, requiring dynamic batch scheduling.
@@ -163,19 +166,19 @@ Replaces the draft model with a static N-gram lookup table or prompt prefix sear
 
 ## 13. Related and incompatible patterns
 
-#### Related Patterns
+### Related Patterns
 
 * **Prompt Caching via Exact Prefix Preservation**: Caches Key-Value tensors for prompt prefixes. Complements Speculative Decoding: Prompt Caching accelerates the initial prefill phase, while Speculative Decoding accelerates the subsequent decode phase.
 * **Semantic Caching**: Serves pre-computed responses for semantically equivalent prompts. Operates upstream of inference; on cache hit, inference and speculative decoding are entirely bypassed.
 * **Token Budget**: Constrains output sequence length. Works alongside Speculative Decoding to set maximum draft horizon $K$ within token limits.
 
-#### Incompatible Patterns
+### Incompatible Patterns
 
 * **Pre-fill / Decode Disaggregation with Extreme Concurrency**: Disaggregating prefill and decode nodes at maximum batch saturation (where target decode is compute bound) negates the benefits of speculative decoding.
 
 ## 14. Refactoring path in and out
 
-#### Adoption Path
+### Adoption Path
 
 1. **Establish Baseline SLIs**: Measure baseline time-per-output-token latency and GPU memory usage for the target model.
 2. **Select Draft Strategy**: Evaluate off-the-shelf draft models with matching tokenizers or evaluate N-gram prompt lookup if VRAM is constrained.
@@ -183,7 +186,7 @@ Replaces the draft model with a static N-gram lookup table or prompt prefix sear
 4. **Benchmark Acceptance Rate**: Profile draft acceptance rate $E[\text{accept}]$ across production query samples. Confirm acceptance rate exceeds 50% before deploying to production.
 5. **Enable Dynamic Speculation Horizon**: Tune speculation horizon $K$ dynamically based on measured acceptance rates and target GPU memory load.
 
-#### Removal Path
+### Removal Path
 
 1. **Disable Speculative Routing**: Re-route inference requests directly to target model autoregressive decode engine.
 2. **Deallocate Draft Memory**: Unload draft model parameters and release draft KV cache memory pools.
@@ -218,7 +221,7 @@ Speculative Decoding operates entirely within the model inference execution pipe
 
 1. Leviathan, Y., Kalman, M., & Matias, Y. (2023). "Fast Inference from Transformers via Speculative Decoding". Proceedings of the 40th International Conference on Machine Learning (ICML 2023). PMLR 202:19274-19286. https://arxiv.org/abs/2211.17192 (Verified 2026-08-23).
 2. Chen, C., Bunge, S., Tuttle, M., et al. (2023). "Accelerating Large Language Model Decoding with Speculative Sampling". arXiv preprint arXiv:2302.01318. https://arxiv.org/abs/2302.01318 (Verified 2026-08-23).
-3. vLLM Project. (2024). "Speculative Decoding Architecture and Documentation". https://docs.vllm.ai/en/latest/models/spec_decode.html (Verified 2026-08-23).
+3. vLLM Project. (2024). "Speculative Decoding Architecture and Documentation". https://docs.vllm.ai/en/latest/features/spec_decode.html (Verified 2026-08-23).
 4. NVIDIA Corporation. (2024). "TensorRT-LLM Developer Guide: Speculative Decoding". https://nvidia.github.io/TensorRT-LLM/advanced/speculative-decoding.html (Verified 2026-08-23).
 
 **Evidence grade.** high
