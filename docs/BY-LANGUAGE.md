@@ -250,6 +250,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Table Data Gateway](../patterns/06-enterprise-application-architecture/table-data-gateway.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Table Module](../patterns/06-enterprise-application-architecture/table-module.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Template View](../patterns/06-enterprise-application-architecture/template-view.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Tolerant Reader](../patterns/06-enterprise-application-architecture/tolerant-reader.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Transaction Script](../patterns/06-enterprise-application-architecture/transaction-script.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -589,6 +590,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Complete Mediation](../patterns/15-security/complete-mediation.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Content Security Policy](../patterns/15-security/content-security-policy.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Dual LLM Pattern](../patterns/15-security/dual-llm-pattern.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Envelope Encryption](../patterns/15-security/envelope-encryption.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -596,6 +598,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [JWT](../patterns/15-security/jwt.md) | Security |  |  | Yes |  |  | Yes |  | Yes |  |
 | [Key Rotation](../patterns/15-security/key-rotation.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Lethal Trifecta Threat Model](../patterns/15-security/lethal-trifecta-threat-model.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Mutual TLS](../patterns/15-security/mutual-tls.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [OpenID Connect](../patterns/15-security/openid-connect.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1221,6 +1224,7 @@ These patterns contain runnable code examples written in Go:
 - [Domain-based](../patterns/04-principles-and-laws/domain-based.md) (Principles and Laws)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Drift Detection](../patterns/25-mlops/drift-detection.md) (MLOps)
+- [Dual LLM Pattern](../patterns/15-security/dual-llm-pattern.md) (Security)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
 - [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
@@ -1347,6 +1351,7 @@ These patterns contain runnable code examples written in Go:
 - [Least Privilege](../patterns/15-security/least-privilege.md) (Security)
 - [Least to Most](../patterns/17-ai-agentic/least-to-most.md) (AI and Agentic)
 - [Lens](../patterns/16-functional/lens.md) (Functional Programming)
+- [Lethal Trifecta Threat Model](../patterns/15-security/lethal-trifecta-threat-model.md) (Security)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
 - [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) (Cloud and Distributed)
 - [Lock Striping](../patterns/09-concurrency/lock-striping.md) (Concurrency and Parallelism)
@@ -1658,6 +1663,7 @@ These patterns contain runnable code examples written in Go:
 - [Token Binding and DPoP](../patterns/15-security/token-binding-and-dpop.md) (Security)
 - [Token Budget](../patterns/17-ai-agentic/token-budget.md) (AI and Agentic)
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
+- [Tolerant Reader](../patterns/06-enterprise-application-architecture/tolerant-reader.md) (Enterprise Application Architecture)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
 - [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) (MLOps)
@@ -2941,6 +2947,7 @@ These patterns contain runnable code examples written in Python:
 - [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
 - [Drift Detection](../patterns/25-mlops/drift-detection.md) (MLOps)
+- [Dual LLM Pattern](../patterns/15-security/dual-llm-pattern.md) (Security)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
 - [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
@@ -3122,6 +3129,7 @@ These patterns contain runnable code examples written in Python:
 - [Least Privilege](../patterns/15-security/least-privilege.md) (Security)
 - [Least to Most](../patterns/17-ai-agentic/least-to-most.md) (AI and Agentic)
 - [Lens](../patterns/16-functional/lens.md) (Functional Programming)
+- [Lethal Trifecta Threat Model](../patterns/15-security/lethal-trifecta-threat-model.md) (Security)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
 - [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) (Cloud and Distributed)
 - [Log Aggregation](../patterns/10-microservices/log-aggregation.md) (Microservices)
@@ -3511,6 +3519,7 @@ These patterns contain runnable code examples written in Python:
 - [Token Binding and DPoP](../patterns/15-security/token-binding-and-dpop.md) (Security)
 - [Token Budget](../patterns/17-ai-agentic/token-budget.md) (AI and Agentic)
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
+- [Tolerant Reader](../patterns/06-enterprise-application-architecture/tolerant-reader.md) (Enterprise Application Architecture)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
 - [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) (MLOps)
@@ -4773,6 +4782,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) (Microservices)
 - [Domain-based](../patterns/04-principles-and-laws/domain-based.md) (Principles and Laws)
 - [Drift Detection](../patterns/25-mlops/drift-detection.md) (MLOps)
+- [Dual LLM Pattern](../patterns/15-security/dual-llm-pattern.md) (Security)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
 - [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
@@ -4929,6 +4939,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Least Privilege](../patterns/15-security/least-privilege.md) (Security)
 - [Least to Most](../patterns/17-ai-agentic/least-to-most.md) (AI and Agentic)
 - [Lens](../patterns/16-functional/lens.md) (Functional Programming)
+- [Lethal Trifecta Threat Model](../patterns/15-security/lethal-trifecta-threat-model.md) (Security)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
 - [Load Balancing](../patterns/08-cloud-distributed/load-balancing.md) (Cloud and Distributed)
 - [Lock Striping](../patterns/09-concurrency/lock-striping.md) (Concurrency and Parallelism)
@@ -5288,6 +5299,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Token Binding and DPoP](../patterns/15-security/token-binding-and-dpop.md) (Security)
 - [Token Budget](../patterns/17-ai-agentic/token-budget.md) (AI and Agentic)
 - [Token-based Authentication](../patterns/15-security/token-based-authentication.md) (Security)
+- [Tolerant Reader](../patterns/06-enterprise-application-architecture/tolerant-reader.md) (Enterprise Application Architecture)
 - [Tombstone](../patterns/12-data-storage/tombstone.md) (Data and Storage)
 - [Tool Result Caching](../patterns/17-ai-agentic/tool-result-caching.md) (AI and Agentic)
 - [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) (MLOps)

@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 863,
+  "published_total": 866,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 22,
   "stale_entries": 0,
-  "references_checked": 5030,
+  "references_checked": 5033,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -78,13 +78,13 @@
       "family": "06-enterprise-application-architecture",
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
-      "published": 48,
-      "planned": 12,
+      "published": 49,
+      "planned": 11,
       "target": 60,
-      "percent": 80.0,
+      "percent": 81.7,
       "maturity": {
         "canonical": 43,
-        "established": 5
+        "established": 6
       }
     },
     {
@@ -198,14 +198,14 @@
       "family": "15-security",
       "name": "Security",
       "origin": "OWASP ASVS",
-      "published": 35,
-      "planned": 3,
+      "published": 37,
+      "planned": 1,
       "target": 38,
-      "percent": 92.1,
+      "percent": 97.4,
       "maturity": {
         "established": 27,
         "canonical": 7,
-        "emerging": 1
+        "emerging": 3
       }
     },
     {
