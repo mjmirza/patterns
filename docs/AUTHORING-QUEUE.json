@@ -14,13 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Stream Backpressure",
-    "slug": "stream-backpressure",
-    "category": "stream processing",
-    "path": "patterns/24-stream-processing/stream-backpressure.md",
-    "focus": ""
-  },
-  {
     "name": "Exactly-Once Processing",
     "slug": "exactly-once-processing",
     "category": "stream processing",
