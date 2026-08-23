@@ -8459,6 +8459,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A fresh database created from a hand-written migration fails with a message that the join table does not exist, while the same code works on an older database. The join table was named by hand and does not match the ORM's generated naming convention (for example Rails' lexical-order default), so a schema built by hand and a schema built by the generator disagree.
 - A query planner does a full scan of the join table when looking up "books for this author" even though the composite primary key exists. The composite primary key (bookid, authorid) only accelerates lookups starting from bookid; the reverse direction has no covering index.
 
+#### [Business Delegate](../patterns/06-enterprise-application-architecture/business-delegate.md)
+
+**Core Problem:** A presentation-tier client, or another remote caller such as a device, a web service, or a rich client, needs to reach a business-tier service, and calling that remote service directly couples the client to lookup mechanics, network exceptions, and retry logic that have nothing to do with the client's own job.
+
 #### [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md)
 
 **Core Problem:** A domain model built with proper object-oriented inheritance, a Player base class with Pitcher and Fielder subclasses each carrying fields the other does not need, sits naturally in memory as a type hierarchy. A relational database has no native concept of inheritance. It has tables, rows, and foreign keys. The moment a team decides the domain model should keep its inheritance structure, rather than being flattened into value objects or a single generic entity, someone has to decide how that hierarchy becomes tables.
@@ -8505,6 +8509,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Code review or a new team member treats Coarse-Grained Lock as a
 - A batch job or an administrative script bypasses the application's
 
+#### [Collecting Parameter](../patterns/06-enterprise-application-architecture/collecting-parameter.md)
+
+**Core Problem:** A single bulky method accumulates a result into a local variable across a long, linear sequence of steps, which is exactly the shape Industrial Logic's own text names directly, already quoted in dimension 1, and the usual first response, extracting each step into its own smaller method, runs into a shared-state problem. each extracted method needs write access to the very same accumulator the others are writing to, so returning each step's own local result and stitching them together in the caller is not always the natural shape once the extraction happens.
+
 #### [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md)
 
 **Core Problem:** An application's domain model contains a base type with several concrete subtypes, each subtype adding its own fields, and the persistence layer must map that hierarchy onto tables in a relational database that has no native representation of inheritance. This is the identical starting problem shared by all three of Fowler's inheritance mapping patterns, and Concrete Table Inheritance is one of three competing answers, not a standalone technique invented in isolation.
@@ -8520,6 +8528,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 #### [Connection Pooling](../patterns/06-enterprise-application-architecture/connection-pooling.md)
 
 **Core Problem:** PostgreSQL's own documentation states the direct constraint this pattern works against. "maxconnections... determines the maximum number of concurrent connections to the database server. the default is typically 100 connections... PostgreSQL sizes certain resources based directly on the value of maxconnections. increasing its value leads to higher allocation of those resources, including shared memory" (PostgreSQL, "Connection Settings," PostgreSQL documentation, https://www.postgresql.org/docs/current/runtime-config-connection.html, verified 2026-08-23). this entry explicitly checked the fetched page for the exact per-connection memory or process cost and did not find that figure stated on this specific page, and reports that gap directly rather than inventing a number.
+
+#### [Context Object](../patterns/06-enterprise-application-architecture/context-object.md)
+
+**Core Problem:** A component or a service somewhere in an application needs access to system information, such as request parameters or configuration values, that originates from a specific protocol, and reaching into that protocol's own object directly from deep inside application logic ties the logic to that protocol's shape.
 
 #### [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md)
 

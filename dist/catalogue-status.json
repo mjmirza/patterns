@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 878,
+  "published_total": 881,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 24,
   "stale_entries": 0,
-  "references_checked": 5056,
+  "references_checked": 5060,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -78,13 +78,13 @@
       "family": "06-enterprise-application-architecture",
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
-      "published": 50,
-      "planned": 10,
+      "published": 53,
+      "planned": 7,
       "target": 60,
-      "percent": 83.3,
+      "percent": 88.3,
       "maturity": {
         "canonical": 44,
-        "established": 6
+        "established": 9
       }
     },
     {

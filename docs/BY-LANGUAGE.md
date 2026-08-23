@@ -210,11 +210,14 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Active Record](../patterns/06-enterprise-application-architecture/active-record.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Application Controller](../patterns/06-enterprise-application-architecture/application-controller.md) | Enterprise Application Architecture |  |  |  |  |  | Yes |  | Yes | Yes |
 | [Association Table Mapping](../patterns/06-enterprise-application-architecture/association-table-mapping.md) | Enterprise Application Architecture |  |  |  |  |  | Yes |  | Yes | Yes |
+| [Business Delegate](../patterns/06-enterprise-application-architecture/business-delegate.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Class Table Inheritance](../patterns/06-enterprise-application-architecture/class-table-inheritance.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Client Session State](../patterns/06-enterprise-application-architecture/client-session-state.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Collecting Parameter](../patterns/06-enterprise-application-architecture/collecting-parameter.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Connection Pooling](../patterns/06-enterprise-application-architecture/connection-pooling.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Context Object](../patterns/06-enterprise-application-architecture/context-object.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) | Enterprise Application Architecture |  |  | Yes | Yes |  | Yes | Yes | Yes | Yes |
 | [Database Session State](../patterns/06-enterprise-application-architecture/database-session-state.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1111,6 +1114,7 @@ These patterns contain runnable code examples written in Go:
 - [Builder](../patterns/01-design-patterns-gof/builder.md) (Design Patterns (GoF))
 - [Bulk Action](../patterns/26-interaction-hci/bulk-action.md) (Interaction and HCI)
 - [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) (Cloud and Distributed)
+- [Business Delegate](../patterns/06-enterprise-application-architecture/business-delegate.md) (Enterprise Application Architecture)
 - [Busy Database](../patterns/18-anti-patterns/busy-database.md) (Anti-Patterns)
 - [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) (Anti-Patterns)
 - [Byzantine Fault Tolerance](../patterns/12-data-storage/byzantine-fault-tolerance.md) (Data and Storage)
@@ -1145,6 +1149,7 @@ These patterns contain runnable code examples written in Go:
 - [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) (Microservices)
 - [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) (Enterprise Application Architecture)
 - [Code Mode](../patterns/17-ai-agentic/code-mode.md) (AI and Agentic)
+- [Collecting Parameter](../patterns/06-enterprise-application-architecture/collecting-parameter.md) (Enterprise Application Architecture)
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
 - [Command Message](../patterns/07-integration/command-message.md) (Enterprise Integration)
 - [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md) (Interaction and HCI)
@@ -1178,6 +1183,7 @@ These patterns contain runnable code examples written in Go:
 - [Content-Based Router](../patterns/07-integration/content-based-router.md) (Enterprise Integration)
 - [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) (Domain-Driven Design)
 - [Context Map](../patterns/11-domain-driven-design/context-map.md) (Domain-Driven Design)
+- [Context Object](../patterns/06-enterprise-application-architecture/context-object.md) (Enterprise Application Architecture)
 - [Contextual Retrieval](../patterns/17-ai-agentic/contextual-retrieval.md) (AI and Agentic)
 - [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) (Functional Programming)
 - [Continuation](../patterns/16-functional/continuation.md) (Functional Programming)
@@ -2822,6 +2828,7 @@ These patterns contain runnable code examples written in Python:
 - [Builder](../patterns/01-design-patterns-gof/builder.md) (Design Patterns (GoF))
 - [Bulk Action](../patterns/26-interaction-hci/bulk-action.md) (Interaction and HCI)
 - [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) (Cloud and Distributed)
+- [Business Delegate](../patterns/06-enterprise-application-architecture/business-delegate.md) (Enterprise Application Architecture)
 - [Busy Database](../patterns/18-anti-patterns/busy-database.md) (Anti-Patterns)
 - [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) (Anti-Patterns)
 - [Byzantine Fault Tolerance](../patterns/12-data-storage/byzantine-fault-tolerance.md) (Data and Storage)
@@ -2867,6 +2874,7 @@ These patterns contain runnable code examples written in Python:
 - [Code Mode](../patterns/17-ai-agentic/code-mode.md) (AI and Agentic)
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) (Refactoring Techniques)
+- [Collecting Parameter](../patterns/06-enterprise-application-architecture/collecting-parameter.md) (Enterprise Application Architecture)
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
 - [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) (Refactoring Techniques)
 - [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) (Refactoring Techniques)
@@ -2904,6 +2912,7 @@ These patterns contain runnable code examples written in Python:
 - [Content-Based Router](../patterns/07-integration/content-based-router.md) (Enterprise Integration)
 - [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) (Domain-Driven Design)
 - [Context Map](../patterns/11-domain-driven-design/context-map.md) (Domain-Driven Design)
+- [Context Object](../patterns/06-enterprise-application-architecture/context-object.md) (Enterprise Application Architecture)
 - [Context Selector](../patterns/13-frontend-ui/context-selector.md) (Frontend and UI)
 - [Contextual Retrieval](../patterns/17-ai-agentic/contextual-retrieval.md) (AI and Agentic)
 - [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) (Functional Programming)
@@ -4684,6 +4693,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Builder](../patterns/01-design-patterns-gof/builder.md) (Design Patterns (GoF))
 - [Bulk Action](../patterns/26-interaction-hci/bulk-action.md) (Interaction and HCI)
 - [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) (Cloud and Distributed)
+- [Business Delegate](../patterns/06-enterprise-application-architecture/business-delegate.md) (Enterprise Application Architecture)
 - [Busy Database](../patterns/18-anti-patterns/busy-database.md) (Anti-Patterns)
 - [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) (Anti-Patterns)
 - [Byzantine Fault Tolerance](../patterns/12-data-storage/byzantine-fault-tolerance.md) (Data and Storage)
@@ -4723,6 +4733,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Code Mode](../patterns/17-ai-agentic/code-mode.md) (AI and Agentic)
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) (Refactoring Techniques)
+- [Collecting Parameter](../patterns/06-enterprise-application-architecture/collecting-parameter.md) (Enterprise Application Architecture)
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
 - [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) (Refactoring Techniques)
 - [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) (Refactoring Techniques)
@@ -4760,6 +4771,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Content-Based Router](../patterns/07-integration/content-based-router.md) (Enterprise Integration)
 - [Context Canvas](../patterns/11-domain-driven-design/context-canvas.md) (Domain-Driven Design)
 - [Context Map](../patterns/11-domain-driven-design/context-map.md) (Domain-Driven Design)
+- [Context Object](../patterns/06-enterprise-application-architecture/context-object.md) (Enterprise Application Architecture)
 - [Context Selector](../patterns/13-frontend-ui/context-selector.md) (Frontend and UI)
 - [Contextual Retrieval](../patterns/17-ai-agentic/contextual-retrieval.md) (AI and Agentic)
 - [Continuation-Passing Style](../patterns/16-functional/continuation-passing-style.md) (Functional Programming)
