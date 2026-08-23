@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 869,
+  "published_total": 872,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 22,
   "stale_entries": 0,
-  "references_checked": 5038,
+  "references_checked": 5042,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -226,12 +226,12 @@
       "family": "17-ai-agentic",
       "name": "AI and Agentic",
       "origin": "Papers and vendor engineering, 2023 to 2026",
-      "published": 59,
-      "planned": 6,
+      "published": 62,
+      "planned": 3,
       "target": 65,
-      "percent": 90.8,
+      "percent": 95.4,
       "maturity": {
-        "established": 41,
+        "established": 44,
         "emerging": 9,
         "canonical": 9
       }

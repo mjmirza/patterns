@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-59 entries, 483,484 words, 6 more planned, 65 total when the family is complete. Every entry carries all 18
+62 entries, 488,850 words, 3 more planned, 65 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -24,15 +24,18 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Human in the Loop](human-in-the-loop.md) | established | 7,618 | An agent is given a goal and a set of tools, and it plans and executes a sequence of tool calls autonomously. |
 | [Input Guardrails](input-guardrails.md) | established | 8,596 | An agent built on a large language model treats every token in its context window with roughly the same weight, whether that token came from the person operating the agent, from a ... |
 | [LLM as Judge](llm-as-judge.md) | established | 7,737 | A team ships a feature whose output is open-ended text, a chat reply, a document summary, a retrieval-augmented answer, or an autonomous agent's final report. |
+| [Language Agent Tree Search](language-agent-tree-search.md) | established | 1,913 | The paper's own text names the specific limitation of the prior baseline directly, ReAct. |
 | [Late Chunking](late-chunking.md) | emerging | 8,222 | Picture a retrieval pipeline built over a long, single-narrative source, a Wikipedia article, a signed contract, a meeting transcript, a product manual. |
 | [Memory Compaction](memory-compaction.md) | established | 8,946 | An agent that runs for a long time accumulates a conversation. |
 | [PII Redaction](pii-redaction.md) | established | 8,577 | An agent pipeline routinely moves text through places where a human name, an email address, a card number, or a medical record number does not belong. |
 | [Parallelization](parallelization.md) | established | 9,204 | An agentic pipeline built as a single sequential chain of LLM calls has one throughput limit, the wall-clock latency of the slowest single call multiplied by the number of calls ... |
 | [Prompt Caching via Exact Prefix Preservation](prompt-caching-exact-prefix.md) | established | 2,384 | The chapter's own text, meaning Claude Code's own documentation, states the underlying problem directly. |
 | [Prompt Injection Defense](prompt-injection-defense.md) | emerging | 7,008 | An LLM-integrated system is built around one structural weakness. |
+| [RLAIF](rlaif.md) | established | 1,618 | The paper's own text states the underlying constraint directly, already implied in dimension 1, human preference labeling does not scale, it is slow and expensive to collect at ... |
 | [Reranking](reranking.md) | canonical | 7,225 | A reader who has never heard the word reranking has still hit the problem it solves. |
 | [Retrieval Augmented Generation](retrieval-augmented-generation.md) | canonical | 8,731 | A large language model's knowledge is frozen at the moment its training data was collected, and its parameters have a fixed, finite capacity that cannot hold every fact a user ... |
 | [Self-Consistency](self-consistency.md) | established | 6,441 | A large language model generating a chain-of-thought answer with standard greedy decoding commits to one path through the reasoning space, token by token, and never reconsiders. |
+| [Self-Discover](self-discover.md) | established | 1,835 | The paper's own text states directly what a fixed, one-size-fits-all prompting method misses, already implied in dimension 1, a single reasoning strategy applied uniformly is not ... |
 | [Semantic Caching](semantic-caching.md) | established | 8,544 | A production system built on a hosted large language model pays for every call, in latency and in metered tokens, and a meaningful share of real traffic is not novel. |
 | [Tool Result Caching](tool-result-caching.md) | established | 9,391 | An agent built on a tool-calling loop, the mechanism the Function Calling entry in this family describes, asks a model to decide, turn by turn, whether to answer directly or ... |
 
@@ -126,9 +129,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Context Window Auto-Compaction
 - Incident-to-Eval Synthesis
 - Inference-Time Scaling
-- Language Agent Tree Search
-- RLAIF
-- Self-Discover
 
 ## Reading order
 

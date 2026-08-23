@@ -693,6 +693,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [LLM Circuit Breaker](../patterns/17-ai-agentic/llm-circuit-breaker.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Language Agent Tree Search](../patterns/17-ai-agentic/language-agent-tree-search.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Late Chunking](../patterns/17-ai-agentic/late-chunking.md) | AI and Agentic |  |  |  |  |  | Yes | Yes |  | Yes |
 | [Least to Most](../patterns/17-ai-agentic/least-to-most.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Memory Compaction](../patterns/17-ai-agentic/memory-compaction.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -706,12 +707,14 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Prompt Caching via Exact Prefix Preservation](../patterns/17-ai-agentic/prompt-caching-exact-prefix.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [RLAIF](../patterns/17-ai-agentic/rlaif.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Reflexion](../patterns/17-ai-agentic/reflexion.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Reranking](../patterns/17-ai-agentic/reranking.md) | AI and Agentic |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Retrieval Augmented Generation](../patterns/17-ai-agentic/retrieval-augmented-generation.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Routing](../patterns/17-ai-agentic/routing.md) | AI and Agentic |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Self-Discover](../patterns/17-ai-agentic/self-discover.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Self-RAG](../patterns/17-ai-agentic/self-rag.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Semantic Caching](../patterns/17-ai-agentic/semantic-caching.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Society of Mind](../patterns/17-ai-agentic/society-of-mind.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1344,6 +1347,7 @@ These patterns contain runnable code examples written in Go:
 - [LSM Tree](../patterns/12-data-storage/lsm-tree.md) (Data and Storage)
 - [Lambda Architecture](../patterns/12-data-storage/lambda-architecture.md) (Data and Storage)
 - [Lamport Clock](../patterns/12-data-storage/lamport-clock.md) (Data and Storage)
+- [Language Agent Tree Search](../patterns/17-ai-agentic/language-agent-tree-search.md) (AI and Agentic)
 - [Large Class](../patterns/02-code-smells/large-class.md) (Code Smells)
 - [Lava Flow](../patterns/18-anti-patterns/lava-flow.md) (Anti-Patterns)
 - [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) (Enterprise Application Architecture)
@@ -1494,6 +1498,7 @@ These patterns contain runnable code examples written in Go:
 - [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) (Cloud and Distributed)
 - [Quorum](../patterns/12-data-storage/quorum.md) (Data and Storage)
 - [RED Method](../patterns/22-observability/red-method.md) (Observability)
+- [RLAIF](../patterns/17-ai-agentic/rlaif.md) (AI and Agentic)
 - [Raft](../patterns/12-data-storage/raft.md) (Data and Storage)
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
@@ -1561,6 +1566,7 @@ These patterns contain runnable code examples written in Go:
 - [Self Registration](../patterns/10-microservices/self-registration.md) (Microservices)
 - [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) (AI and Agentic)
 - [Self-Contained Service](../patterns/10-microservices/self-contained-service.md) (Microservices)
+- [Self-Discover](../patterns/17-ai-agentic/self-discover.md) (AI and Agentic)
 - [Self-RAG](../patterns/17-ai-agentic/self-rag.md) (AI and Agentic)
 - [Semantic Caching](../patterns/17-ai-agentic/semantic-caching.md) (AI and Agentic)
 - [Semaphore](../patterns/09-concurrency/semaphore.md) (Concurrency and Parallelism)
@@ -3121,6 +3127,7 @@ These patterns contain runnable code examples written in Python:
 - [LSM Tree](../patterns/12-data-storage/lsm-tree.md) (Data and Storage)
 - [Lambda Architecture](../patterns/12-data-storage/lambda-architecture.md) (Data and Storage)
 - [Lamport Clock](../patterns/12-data-storage/lamport-clock.md) (Data and Storage)
+- [Language Agent Tree Search](../patterns/17-ai-agentic/language-agent-tree-search.md) (AI and Agentic)
 - [Large Class](../patterns/02-code-smells/large-class.md) (Code Smells)
 - [Late Chunking](../patterns/17-ai-agentic/late-chunking.md) (AI and Agentic)
 - [Lava Flow](../patterns/18-anti-patterns/lava-flow.md) (Anti-Patterns)
@@ -3313,6 +3320,7 @@ These patterns contain runnable code examples written in Python:
 - [Quorum](../patterns/12-data-storage/quorum.md) (Data and Storage)
 - [RED Method](../patterns/22-observability/red-method.md) (Observability)
 - [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) (API and Interface Design)
+- [RLAIF](../patterns/17-ai-agentic/rlaif.md) (AI and Agentic)
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
@@ -3403,6 +3411,7 @@ These patterns contain runnable code examples written in Python:
 - [Self Registration](../patterns/10-microservices/self-registration.md) (Microservices)
 - [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) (AI and Agentic)
 - [Self-Contained Service](../patterns/10-microservices/self-contained-service.md) (Microservices)
+- [Self-Discover](../patterns/17-ai-agentic/self-discover.md) (AI and Agentic)
 - [Self-RAG](../patterns/17-ai-agentic/self-rag.md) (AI and Agentic)
 - [Semantic Caching](../patterns/17-ai-agentic/semantic-caching.md) (AI and Agentic)
 - [Semaphore](../patterns/09-concurrency/semaphore.md) (Concurrency and Parallelism)
@@ -4936,6 +4945,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [LLM as Judge](../patterns/17-ai-agentic/llm-as-judge.md) (AI and Agentic)
 - [Lambda Architecture](../patterns/12-data-storage/lambda-architecture.md) (Data and Storage)
 - [Lamport Clock](../patterns/12-data-storage/lamport-clock.md) (Data and Storage)
+- [Language Agent Tree Search](../patterns/17-ai-agentic/language-agent-tree-search.md) (AI and Agentic)
 - [Large Class](../patterns/02-code-smells/large-class.md) (Code Smells)
 - [Late Chunking](../patterns/17-ai-agentic/late-chunking.md) (AI and Agentic)
 - [Lava Flow](../patterns/18-anti-patterns/lava-flow.md) (Anti-Patterns)
@@ -5112,6 +5122,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) (Cloud and Distributed)
 - [Quorum](../patterns/12-data-storage/quorum.md) (Data and Storage)
 - [RED Method](../patterns/22-observability/red-method.md) (Observability)
+- [RLAIF](../patterns/17-ai-agentic/rlaif.md) (AI and Agentic)
 - [Raft](../patterns/12-data-storage/raft.md) (Data and Storage)
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
@@ -5195,6 +5206,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Self Registration](../patterns/10-microservices/self-registration.md) (Microservices)
 - [Self-Consistency](../patterns/17-ai-agentic/self-consistency.md) (AI and Agentic)
 - [Self-Contained Service](../patterns/10-microservices/self-contained-service.md) (Microservices)
+- [Self-Discover](../patterns/17-ai-agentic/self-discover.md) (AI and Agentic)
 - [Self-RAG](../patterns/17-ai-agentic/self-rag.md) (AI and Agentic)
 - [Semantic Caching](../patterns/17-ai-agentic/semantic-caching.md) (AI and Agentic)
 - [Semigroup](../patterns/16-functional/semigroup.md) (Functional Programming)
