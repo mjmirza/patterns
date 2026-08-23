@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 835,
+  "published_total": 836,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 19,
   "stale_entries": 0,
-  "references_checked": 4799,
+  "references_checked": 4808,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -330,12 +330,12 @@
       "family": "25-mlops",
       "name": "MLOps",
       "origin": "Google ML design patterns",
-      "published": 3,
-      "planned": 6,
+      "published": 4,
+      "planned": 5,
       "target": 9,
-      "percent": 33.3,
+      "percent": 44.4,
       "maturity": {
-        "established": 3
+        "established": 4
       }
     },
     {

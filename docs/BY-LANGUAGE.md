@@ -818,6 +818,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Batch Inference](../patterns/25-mlops/batch-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Model Registry](../patterns/25-mlops/model-registry.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Online Inference](../patterns/25-mlops/online-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1371,6 +1372,7 @@ These patterns contain runnable code examples written in Go:
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
+- [Online Inference](../patterns/25-mlops/online-inference.md) (MLOps)
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
 - [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) (Domain-Driven Design)
 - [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) (Domain-Driven Design)
@@ -2318,6 +2320,7 @@ These patterns have unique implementation variants or change their design struct
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
+- [Online Inference](../patterns/25-mlops/online-inference.md) (MLOps)
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
 - [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) (Domain-Driven Design)
 - [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) (Domain-Driven Design)
@@ -3128,6 +3131,7 @@ These patterns contain runnable code examples written in Python:
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
+- [Online Inference](../patterns/25-mlops/online-inference.md) (MLOps)
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
 - [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) (Domain-Driven Design)
 - [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) (Domain-Driven Design)
@@ -4900,6 +4904,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
+- [Online Inference](../patterns/25-mlops/online-inference.md) (MLOps)
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
 - [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) (Domain-Driven Design)
 - [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) (Domain-Driven Design)
