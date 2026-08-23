@@ -859,11 +859,14 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Data Locality](../patterns/29-realtime-simulation/data-locality.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Entity-Component-System](../patterns/29-realtime-simulation/entity-component-system.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Event Queue](../patterns/29-realtime-simulation/event-queue.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Game Loop](../patterns/29-realtime-simulation/game-loop.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Object Pool](../patterns/29-realtime-simulation/object-pool.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Spatial Partitioning](../patterns/29-realtime-simulation/spatial-partitioning.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Type Object](../patterns/29-realtime-simulation/type-object.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Update Method](../patterns/29-realtime-simulation/update-method.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 
 ## Language Reference Guides
@@ -1175,6 +1178,7 @@ These patterns contain runnable code examples written in Go:
 - [Data Access Object](../patterns/01-design-patterns-gof/data-access-object.md) (Design Patterns (GoF))
 - [Data Class](../patterns/02-code-smells/data-class.md) (Code Smells)
 - [Data Clumps](../patterns/02-code-smells/data-clumps.md) (Code Smells)
+- [Data Locality](../patterns/29-realtime-simulation/data-locality.md) (Real-Time Simulation)
 - [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) (Enterprise Application Architecture)
 - [Data Mesh](../patterns/12-data-storage/data-mesh.md) (Data and Storage)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
@@ -1230,6 +1234,7 @@ These patterns contain runnable code examples written in Go:
 - [Evaluation Suite](../patterns/17-ai-agentic/evaluation-suite.md) (AI and Agentic)
 - [Evaluator-Optimizer](../patterns/17-ai-agentic/evaluator-optimizer.md) (AI and Agentic)
 - [Event Message](../patterns/07-integration/event-message.md) (Enterprise Integration)
+- [Event Queue](../patterns/29-realtime-simulation/event-queue.md) (Real-Time Simulation)
 - [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) (Cloud and Distributed)
 - [Event Storming](../patterns/11-domain-driven-design/event-storming.md) (Domain-Driven Design)
 - [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) (Architectural Patterns)
@@ -1662,6 +1667,7 @@ These patterns contain runnable code examples written in Go:
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) (Data and Storage)
+- [Type Object](../patterns/29-realtime-simulation/type-object.md) (Real-Time Simulation)
 - [USE Method](../patterns/22-observability/use-method.md) (Observability)
 - [Undo](../patterns/26-interaction-hci/undo.md) (Interaction and HCI)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
@@ -2883,6 +2889,7 @@ These patterns contain runnable code examples written in Python:
 - [Data Access Object](../patterns/01-design-patterns-gof/data-access-object.md) (Design Patterns (GoF))
 - [Data Class](../patterns/02-code-smells/data-class.md) (Code Smells)
 - [Data Clumps](../patterns/02-code-smells/data-clumps.md) (Code Smells)
+- [Data Locality](../patterns/29-realtime-simulation/data-locality.md) (Real-Time Simulation)
 - [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) (Enterprise Application Architecture)
 - [Data Mesh](../patterns/12-data-storage/data-mesh.md) (Data and Storage)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
@@ -2951,6 +2958,7 @@ These patterns contain runnable code examples written in Python:
 - [Evaluation Suite](../patterns/17-ai-agentic/evaluation-suite.md) (AI and Agentic)
 - [Evaluator-Optimizer](../patterns/17-ai-agentic/evaluator-optimizer.md) (AI and Agentic)
 - [Event Message](../patterns/07-integration/event-message.md) (Enterprise Integration)
+- [Event Queue](../patterns/29-realtime-simulation/event-queue.md) (Real-Time Simulation)
 - [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) (Cloud and Distributed)
 - [Event Storming](../patterns/11-domain-driven-design/event-storming.md) (Domain-Driven Design)
 - [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) (Architectural Patterns)
@@ -3510,6 +3518,7 @@ These patterns contain runnable code examples written in Python:
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) (Data and Storage)
+- [Type Object](../patterns/29-realtime-simulation/type-object.md) (Real-Time Simulation)
 - [USE Method](../patterns/22-observability/use-method.md) (Observability)
 - [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) (Domain-Driven Design)
 - [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
@@ -4713,6 +4722,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Data Access Object](../patterns/01-design-patterns-gof/data-access-object.md) (Design Patterns (GoF))
 - [Data Class](../patterns/02-code-smells/data-class.md) (Code Smells)
 - [Data Clumps](../patterns/02-code-smells/data-clumps.md) (Code Smells)
+- [Data Locality](../patterns/29-realtime-simulation/data-locality.md) (Real-Time Simulation)
 - [Data Mapper](../patterns/06-enterprise-application-architecture/data-mapper.md) (Enterprise Application Architecture)
 - [Data Mesh](../patterns/12-data-storage/data-mesh.md) (Data and Storage)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
@@ -4773,6 +4783,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Evaluation Suite](../patterns/17-ai-agentic/evaluation-suite.md) (AI and Agentic)
 - [Evaluator-Optimizer](../patterns/17-ai-agentic/evaluator-optimizer.md) (AI and Agentic)
 - [Event Message](../patterns/07-integration/event-message.md) (Enterprise Integration)
+- [Event Queue](../patterns/29-realtime-simulation/event-queue.md) (Real-Time Simulation)
 - [Event Sourcing](../patterns/08-cloud-distributed/event-sourcing.md) (Cloud and Distributed)
 - [Event Storming](../patterns/11-domain-driven-design/event-storming.md) (Domain-Driven Design)
 - [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) (Architectural Patterns)
@@ -5279,6 +5290,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Twin](../patterns/01-design-patterns-gof/twin.md) (Design Patterns (GoF))
 - [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) (Enterprise Application Architecture)
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
+- [Type Object](../patterns/29-realtime-simulation/type-object.md) (Real-Time Simulation)
 - [USE Method](../patterns/22-observability/use-method.md) (Observability)
 - [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) (Domain-Driven Design)
 - [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)

@@ -2,27 +2,22 @@
 
 Origin. Nystrom, Game Programming Patterns
 
-6 entries, 21,913 words, 3 more planned, 9 total when the family is complete. Every entry carries all 18
+9 entries, 29,017 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Real-Time Simulation
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Data Locality](data-locality.md) | canonical | 2,376 | The chapter opens not with a code example but with a cache-cost argument, quoted directly. |
 | [Dirty Flag](dirty-flag.md) | canonical | 3,322 | Recomputing a derived value eagerly, every time the primary data it depends on changes, wastes work when the derived value is read far less often than the primary data changes. |
 | [Entity-Component-System](entity-component-system.md) | established | 3,806 | A single monolithic game-object class that grows a new field and a new method for every capability an object might need, physics, rendering, inventory, dialogue, eventually ... |
+| [Event Queue](event-queue.md) | canonical | 2,592 | The chapter's own motivating example is an audio manager, and it names three distinct problems with a naive, synchronous playSound call. |
 | [Game Loop](game-loop.md) | canonical | 3,972 | A naive loop that simulates and renders as fast as the hardware allows ties the simulation's own speed to whatever machine it happens to run on. |
 | [Object Pool](object-pool.md) | canonical | 3,418 | Repeatedly allocating and freeing short-lived objects, particles, bullets, network connections, on a hot path costs more than the allocation itself. |
 | [Spatial Partitioning](spatial-partitioning.md) | canonical | 3,976 | Checking every object in a simulation against every other object for proximity or collision costs O(n squared) tests, since "the number of pairwise tests we have to perform each ... |
+| [Type Object](type-object.md) | canonical | 2,136 | Nystrom's own text names the recompile-cycle cost directly, using a monster-breed example. |
 | [Update Method](update-method.md) | canonical | 3,419 | Nystrom's own chapter opens with a directly quoted motivating example. |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Data Locality (Real-Time Simulation)
-- Event Queue (Real-Time Simulation)
-- Type Object
 
 ## Reading order
 
