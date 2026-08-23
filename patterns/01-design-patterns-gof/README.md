@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-24 entries, 256,143 words, 9 more planned, 33 total when the family is complete. Every entry carries all 18
+25 entries, 262,611 words, 8 more planned, 33 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -38,6 +38,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Adapter](adapter.md) | canonical | 11,688 | Two pieces of code need to work together and neither can be changed to match the other. |
 | [Bridge](bridge.md) | canonical | 12,403 | A single class hierarchy is being asked to vary along two independent axes at once, and the class count is growing as the product of the two axis sizes rather than as their sum. |
 | [Composite](composite.md) | canonical | 10,897 | There is a domain where a thing can be made of the same kind of thing, without limit, and client code has to operate over the whole structure without caring how deep it goes. |
+| [Data Access Object](data-access-object.md) | canonical | 6,468 | Most real applications need to read and write persistent data at some point, and that data can live behind very different access mechanisms: a relational database reached through ... |
 | [Decorator](decorator.md) | canonical | 14,044 | An object needs an extra responsibility, only sometimes, only for some instances, and the set of extra responsibilities keeps growing and keeps combining. |
 | [Dependency Injection](dependency-injection.md) | canonical | 5,802 | Fowler's own running example names the problem precisely. |
 | [Facade](facade.md) | canonical | 11,164 | A caller needs a small, ordinary result from a subsystem that is large, correct and unpleasant to talk to. |
@@ -48,7 +49,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Data Access Object
 - Extension Object
 - Marker Interface
 - Multiton

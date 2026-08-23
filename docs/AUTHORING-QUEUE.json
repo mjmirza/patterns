@@ -266,13 +266,6 @@
     "focus": ""
   },
   {
-    "name": "Data Access Object",
-    "slug": "data-access-object",
-    "category": "design patterns gof",
-    "path": "patterns/01-design-patterns-gof/data-access-object.md",
-    "focus": ""
-  },
-  {
     "name": "Marker Interface",
     "slug": "marker-interface",
     "category": "design patterns gof",
