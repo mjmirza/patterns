@@ -16831,9 +16831,21 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 ### Interaction and HCI
 
+#### [Breadcrumbs](../patterns/26-interaction-hci/breadcrumbs.md)
+
+**Core Problem:** Smashing Magazine's own definition frames the problem directly, a breadcrumb trail is a type of secondary navigation scheme that reveals the user's location in a website or web application. The Interaction Design Foundation names the deeper version of the same problem, breadcrumbs show the site's hierarchy, not actual browsing history, a person may arrive at a deep page via an external link or a search engine without ever traversing the intermediate levels, so the trail is what tells them where they have landed, not how they got there.
+
+#### [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md)
+
+**Core Problem:** A traditional menu bar or sidebar hierarchy requires a person to know where a command lives, which menu, which submenu, which settings page, before they can use it. A command palette replaces that spatial recall with textual recall, letting a person type what they want and get it regardless of where it structurally lives. GitHub's own documentation states this directly, the palette gives quick access to a wide range of actions, without the need to remember keyboard shortcuts, and Zed's own getting-started guide frames the same idea from the forgotten-shortcut angle, if you forget a keyboard shortcut, you can search for the desired action through the command palette instead.
+
 #### [Undo](../patterns/26-interaction-hci/undo.md)
 
 **Core Problem:** Any interface that lets a person change state, a text edit, a shape moved, a value typed, a file deleted, creates a moment where the person can make a mistake, and a mistake with no way back either forces extreme caution before every action or punishes a slip with lost work. Wikipedia's Undo article names the resulting freedom directly, undo lets users explore and work without fear of making mistakes, because they can easily be undone.
+
+#### [Wizard](../patterns/26-interaction-hci/wizard.md)
+
+**Core Problem:** A single flat form with many fields overwhelms a person and increases both error rate and abandonment, a wizard trades that for a lower per-screen cognitive load at the cost of extra navigation, more clicks, more page loads, and less ability to see the whole picture or jump directly to one field. Microsoft's own current guidance states the trade plainly, wizards are a relatively heavy form of user interface, if there is a suitable, lighter-weight solution available, use it.
 
 ### Mobile Architecture
 

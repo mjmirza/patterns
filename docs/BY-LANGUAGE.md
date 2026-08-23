@@ -824,7 +824,10 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Online Inference](../patterns/25-mlops/online-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Shadow Model](../patterns/25-mlops/shadow-model.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Breadcrumbs](../patterns/26-interaction-hci/breadcrumbs.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Undo](../patterns/26-interaction-hci/undo.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Wizard](../patterns/26-interaction-hci/wizard.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1068,6 +1071,7 @@ These patterns contain runnable code examples written in Go:
 - [Bloom Filter](../patterns/12-data-storage/bloom-filter.md) (Data and Storage)
 - [Boat Anchor](../patterns/18-anti-patterns/boat-anchor.md) (Anti-Patterns)
 - [Bounded Context](../patterns/11-domain-driven-design/bounded-context.md) (Domain-Driven Design)
+- [Breadcrumbs](../patterns/26-interaction-hci/breadcrumbs.md) (Interaction and HCI)
 - [Bridge](../patterns/01-design-patterns-gof/bridge.md) (Design Patterns (GoF))
 - [Broker](../patterns/05-architectural/broker-architecture.md) (Architectural Patterns)
 - [Builder](../patterns/01-design-patterns-gof/builder.md) (Design Patterns (GoF))
@@ -1106,6 +1110,7 @@ These patterns contain runnable code examples written in Go:
 - [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) (Enterprise Application Architecture)
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
 - [Command Message](../patterns/07-integration/command-message.md) (Enterprise Integration)
+- [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md) (Interaction and HCI)
 - [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) (Cloud and Distributed)
 - [Command](../patterns/01-design-patterns-gof/command.md) (Design Patterns (GoF))
 - [Comments](../patterns/02-code-smells/comments.md) (Code Smells)
@@ -1645,6 +1650,7 @@ These patterns contain runnable code examples written in Go:
 - [Watermark](../patterns/24-stream-processing/watermark.md) (Stream Processing)
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
+- [Wizard](../patterns/26-interaction-hci/wizard.md) (Interaction and HCI)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 - [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) (Workflow and Orchestration)
@@ -1935,6 +1941,7 @@ These patterns have unique implementation variants or change their design struct
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
+- [Wizard](../patterns/26-interaction-hci/wizard.md) (Interaction and HCI)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 - [Write-Ahead Log](../patterns/12-data-storage/write-ahead-log.md) (Data and Storage)
@@ -2742,6 +2749,7 @@ These patterns contain runnable code examples written in Python:
 - [Bootloader Pattern](../patterns/28-embedded-hardware/bootloader-pattern.md) (Embedded and Hardware-Software)
 - [Bounded Context](../patterns/11-domain-driven-design/bounded-context.md) (Domain-Driven Design)
 - [Branch by Abstraction](../patterns/20-release-deployment/branch-by-abstraction.md) (Release and Deployment)
+- [Breadcrumbs](../patterns/26-interaction-hci/breadcrumbs.md) (Interaction and HCI)
 - [Bridge](../patterns/01-design-patterns-gof/bridge.md) (Design Patterns (GoF))
 - [Broker](../patterns/05-architectural/broker-architecture.md) (Architectural Patterns)
 - [Builder](../patterns/01-design-patterns-gof/builder.md) (Design Patterns (GoF))
@@ -2793,6 +2801,7 @@ These patterns contain runnable code examples written in Python:
 - [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) (Refactoring Techniques)
 - [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) (Refactoring Techniques)
 - [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) (Frontend and UI)
+- [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md) (Interaction and HCI)
 - [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) (Cloud and Distributed)
 - [Command](../patterns/01-design-patterns-gof/command.md) (Design Patterns (GoF))
 - [Comments](../patterns/02-code-smells/comments.md) (Code Smells)
@@ -3488,6 +3497,7 @@ These patterns contain runnable code examples written in Python:
 - [Webhook Receiver](../patterns/19-api-design/webhook-receiver.md) (API and Interface Design)
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
+- [Wizard](../patterns/26-interaction-hci/wizard.md) (Interaction and HCI)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 - [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) (Workflow and Orchestration)
@@ -4566,6 +4576,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Blackboard Architecture](../patterns/05-architectural/blackboard-architecture.md) (Architectural Patterns)
 - [Bloom Filter](../patterns/12-data-storage/bloom-filter.md) (Data and Storage)
 - [Bounded Context](../patterns/11-domain-driven-design/bounded-context.md) (Domain-Driven Design)
+- [Breadcrumbs](../patterns/26-interaction-hci/breadcrumbs.md) (Interaction and HCI)
 - [Bridge](../patterns/01-design-patterns-gof/bridge.md) (Design Patterns (GoF))
 - [Broker](../patterns/05-architectural/broker-architecture.md) (Architectural Patterns)
 - [Builder](../patterns/01-design-patterns-gof/builder.md) (Design Patterns (GoF))
@@ -4612,6 +4623,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) (Refactoring Techniques)
 - [Command Message](../patterns/07-integration/command-message.md) (Enterprise Integration)
 - [Command Palette UI](../patterns/13-frontend-ui/command-palette-ui.md) (Frontend and UI)
+- [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md) (Interaction and HCI)
 - [Command Query Responsibility Segregation](../patterns/08-cloud-distributed/cqrs.md) (Cloud and Distributed)
 - [Command](../patterns/01-design-patterns-gof/command.md) (Design Patterns (GoF))
 - [Comments](../patterns/02-code-smells/comments.md) (Code Smells)
@@ -5236,6 +5248,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Watermark](../patterns/24-stream-processing/watermark.md) (Stream Processing)
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
 - [Wire Tap](../patterns/07-integration/wire-tap.md) (Enterprise Integration)
+- [Wizard](../patterns/26-interaction-hci/wizard.md) (Interaction and HCI)
 - [Work Queue](../patterns/09-concurrency/work-queue.md) (Concurrency and Parallelism)
 - [Work Stealing](../patterns/09-concurrency/work-stealing.md) (Concurrency and Parallelism)
 - [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) (Workflow and Orchestration)
