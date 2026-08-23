@@ -14,13 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Exactly-Once Processing",
-    "slug": "exactly-once-processing",
-    "category": "stream processing",
-    "path": "patterns/24-stream-processing/exactly-once-processing.md",
-    "focus": ""
-  },
-  {
     "name": "Replayable Log",
     "slug": "replayable-log",
     "category": "stream processing",

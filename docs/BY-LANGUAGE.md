@@ -810,6 +810,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Dead-Letter Topic](../patterns/24-stream-processing/dead-letter-topic.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Exactly-Once Processing](../patterns/24-stream-processing/exactly-once-processing.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Stream Backpressure](../patterns/24-stream-processing/stream-backpressure.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Stream-Table Duality](../patterns/24-stream-processing/stream-table-duality.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Watermark](../patterns/24-stream-processing/watermark.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1199,6 +1200,7 @@ These patterns contain runnable code examples written in Go:
 - [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) (Architectural Patterns)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
 - [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) (Stream Processing)
+- [Exactly-Once Processing](../patterns/24-stream-processing/exactly-once-processing.md) (Stream Processing)
 - [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
 - [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) (Cloud and Distributed)
 - [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) (Microservices)
@@ -2891,6 +2893,7 @@ These patterns contain runnable code examples written in Python:
 - [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) (Architectural Patterns)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
 - [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) (Stream Processing)
+- [Exactly-Once Processing](../patterns/24-stream-processing/exactly-once-processing.md) (Stream Processing)
 - [Exception Tracking](../patterns/10-microservices/exception-tracking.md) (Microservices)
 - [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md) (Release and Deployment)
 - [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
@@ -4684,6 +4687,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) (Architectural Patterns)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
 - [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) (Stream Processing)
+- [Exactly-Once Processing](../patterns/24-stream-processing/exactly-once-processing.md) (Stream Processing)
 - [Exception Tracking](../patterns/10-microservices/exception-tracking.md) (Microservices)
 - [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
 - [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) (Cloud and Distributed)
