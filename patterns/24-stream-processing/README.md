@@ -2,13 +2,14 @@
 
 Origin. Dataflow model, Kafka documentation
 
-4 entries, 28,671 words, 4 more planned, 8 total when the family is complete. Every entry carries all 18
+5 entries, 33,305 words, 3 more planned, 8 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Stream Processing
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Dead-Letter Topic](dead-letter-topic.md) | established | 4,634 | KIP-298's own motivation states the problem this entry's stream-native variant answers directly. |
 | [Event-Time Processing](event-time-processing.md) | established | 8,523 | The Dataflow paper states the root cause directly. |
 | [Stream Backpressure](stream-backpressure.md) | established | 4,619 | In a single-process reactive pipeline the backpressure problem is a pair, one producer and one consumer, and a demand-signaling or buffer-based protocol between the two is ... |
 | [Stream-Table Duality](stream-table-duality.md) | established | 5,645 | Kafka's own documentation frames the problem as a first-class support gap a stream-processing technology must close, not a hypothetical. |
@@ -18,7 +19,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Dead-Letter Topic
 - Exactly-Once Processing
 - Replayable Log
 - Windowing
