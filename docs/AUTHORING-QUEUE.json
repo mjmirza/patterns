@@ -91,31 +91,10 @@
     "focus": ""
   },
   {
-    "name": "Egress Lockdown",
-    "slug": "egress-lockdown",
-    "category": "security",
-    "path": "patterns/15-security/egress-lockdown.md",
-    "focus": ""
-  },
-  {
     "name": "Context Window Auto-Compaction",
     "slug": "context-window-auto-compaction",
     "category": "ai agentic",
     "path": "patterns/17-ai-agentic/context-window-auto-compaction.md",
-    "focus": ""
-  },
-  {
-    "name": "Incident-to-Eval Synthesis",
-    "slug": "incident-to-eval-synthesis",
-    "category": "ai agentic",
-    "path": "patterns/17-ai-agentic/incident-to-eval-synthesis.md",
-    "focus": ""
-  },
-  {
-    "name": "Database Federation",
-    "slug": "database-federation",
-    "category": "data and storage",
-    "path": "patterns/12-data-storage/database-federation.md",
     "focus": ""
   }
 ]

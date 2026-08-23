@@ -489,6 +489,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Consistent Hashing](../patterns/12-data-storage/consistent-hashing.md) | Data and Storage |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Data Mesh](../patterns/12-data-storage/data-mesh.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Data Vault](../patterns/12-data-storage/data-vault.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Database Federation](../patterns/12-data-storage/database-federation.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Denormalization](../patterns/12-data-storage/denormalization.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Distributed Hash Table](../patterns/12-data-storage/distributed-hash-table.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
 | [ELT](../patterns/12-data-storage/elt.md) | Data and Storage |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -595,6 +596,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Content Security Policy](../patterns/15-security/content-security-policy.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Defense in Depth](../patterns/15-security/defense-in-depth.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Dual LLM Pattern](../patterns/15-security/dual-llm-pattern.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Egress Lockdown](../patterns/15-security/egress-lockdown.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Envelope Encryption](../patterns/15-security/envelope-encryption.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |  |  | Yes |  |  | Yes | Yes |  |  |
 | [Idempotency Key](../patterns/15-security/idempotency-key.md) | Security |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -692,6 +694,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Human in the Loop](../patterns/17-ai-agentic/human-in-the-loop.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [HyDE (Hypothetical Document Embeddings)](../patterns/17-ai-agentic/hyde.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Hybrid Search](../patterns/17-ai-agentic/hybrid-search.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Incident-to-Eval Synthesis](../patterns/17-ai-agentic/incident-to-eval-synthesis.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Inference-Time Scaling](../patterns/17-ai-agentic/inference-time-scaling.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [LLM Circuit Breaker](../patterns/17-ai-agentic/llm-circuit-breaker.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1201,6 +1204,7 @@ These patterns contain runnable code examples written in Go:
 - [Data Mesh](../patterns/12-data-storage/data-mesh.md) (Data and Storage)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
 - [Data Vault](../patterns/12-data-storage/data-vault.md) (Data and Storage)
+- [Database Federation](../patterns/12-data-storage/database-federation.md) (Data and Storage)
 - [Database Session State](../patterns/06-enterprise-application-architecture/database-session-state.md) (Enterprise Application Architecture)
 - [Database per Service](../patterns/10-microservices/database-per-service.md) (Microservices)
 - [Datatype Channel](../patterns/07-integration/datatype-channel.md) (Enterprise Integration)
@@ -1245,6 +1249,7 @@ These patterns contain runnable code examples written in Go:
 - [Dynamic Router](../patterns/07-integration/dynamic-router.md) (Enterprise Integration)
 - [ELT](../patterns/12-data-storage/elt.md) (Data and Storage)
 - [ETL](../patterns/12-data-storage/etl.md) (Data and Storage)
+- [Egress Lockdown](../patterns/15-security/egress-lockdown.md) (Security)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
 - [Empty State](../patterns/26-interaction-hci/empty-state.md) (Interaction and HCI)
 - [Entity Service](../patterns/18-anti-patterns/entity-service.md) (Anti-Patterns)
@@ -1328,6 +1333,7 @@ These patterns contain runnable code examples written in Go:
 - [Immutable Object](../patterns/09-concurrency/immutable-object.md) (Concurrency and Parallelism)
 - [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) (Anti-Patterns)
 - [Inbox](../patterns/10-microservices/inbox.md) (Microservices)
+- [Incident-to-Eval Synthesis](../patterns/17-ai-agentic/incident-to-eval-synthesis.md) (AI and Agentic)
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Index Table](../patterns/08-cloud-distributed/index-table.md) (Cloud and Distributed)
 - [Indirection](../patterns/04-principles-and-laws/indirection.md) (Principles and Laws)
@@ -2927,6 +2933,7 @@ These patterns contain runnable code examples written in Python:
 - [Data Mesh](../patterns/12-data-storage/data-mesh.md) (Data and Storage)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
 - [Data Vault](../patterns/12-data-storage/data-vault.md) (Data and Storage)
+- [Database Federation](../patterns/12-data-storage/database-federation.md) (Data and Storage)
 - [Database Session State](../patterns/06-enterprise-application-architecture/database-session-state.md) (Enterprise Application Architecture)
 - [Database per Service](../patterns/10-microservices/database-per-service.md) (Microservices)
 - [Datatype Channel](../patterns/07-integration/datatype-channel.md) (Enterprise Integration)
@@ -2978,6 +2985,7 @@ These patterns contain runnable code examples written in Python:
 - [ELT](../patterns/12-data-storage/elt.md) (Data and Storage)
 - [ETL](../patterns/12-data-storage/etl.md) (Data and Storage)
 - [Earliest Deadline First Scheduling](../patterns/28-embedded-hardware/earliest-deadline-first-scheduling.md) (Embedded and Hardware-Software)
+- [Egress Lockdown](../patterns/15-security/egress-lockdown.md) (Security)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
 - [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) (SRE and Operations)
 - [Empty State](../patterns/26-interaction-hci/empty-state.md) (Interaction and HCI)
@@ -3101,6 +3109,7 @@ These patterns contain runnable code examples written in Python:
 - [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) (Anti-Patterns)
 - [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) (Code Smells)
 - [Inbox](../patterns/10-microservices/inbox.md) (Microservices)
+- [Incident-to-Eval Synthesis](../patterns/17-ai-agentic/incident-to-eval-synthesis.md) (AI and Agentic)
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Index Table](../patterns/08-cloud-distributed/index-table.md) (Cloud and Distributed)
 - [Indirection](../patterns/04-principles-and-laws/indirection.md) (Principles and Laws)
@@ -4776,6 +4785,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Data Mesh](../patterns/12-data-storage/data-mesh.md) (Data and Storage)
 - [Data Transfer Object](../patterns/06-enterprise-application-architecture/data-transfer-object.md) (Enterprise Application Architecture)
 - [Data Vault](../patterns/12-data-storage/data-vault.md) (Data and Storage)
+- [Database Federation](../patterns/12-data-storage/database-federation.md) (Data and Storage)
 - [Database Session State](../patterns/06-enterprise-application-architecture/database-session-state.md) (Enterprise Application Architecture)
 - [Database per Service](../patterns/10-microservices/database-per-service.md) (Microservices)
 - [Datatype Channel](../patterns/07-integration/datatype-channel.md) (Enterprise Integration)
@@ -4821,6 +4831,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Dynamic Router](../patterns/07-integration/dynamic-router.md) (Enterprise Integration)
 - [ELT](../patterns/12-data-storage/elt.md) (Data and Storage)
 - [ETL](../patterns/12-data-storage/etl.md) (Data and Storage)
+- [Egress Lockdown](../patterns/15-security/egress-lockdown.md) (Security)
 - [Embedded Value](../patterns/06-enterprise-application-architecture/embedded-value.md) (Enterprise Application Architecture)
 - [Empty State](../patterns/26-interaction-hci/empty-state.md) (Interaction and HCI)
 - [Encapsulate Collection](../patterns/03-refactoring/encapsulate-collection.md) (Refactoring Techniques)
@@ -4925,6 +4936,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Improper Instantiation](../patterns/18-anti-patterns/improper-instantiation.md) (Anti-Patterns)
 - [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) (Code Smells)
 - [Inbox](../patterns/10-microservices/inbox.md) (Microservices)
+- [Incident-to-Eval Synthesis](../patterns/17-ai-agentic/incident-to-eval-synthesis.md) (AI and Agentic)
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Index Table](../patterns/08-cloud-distributed/index-table.md) (Cloud and Distributed)
 - [Indirection](../patterns/04-principles-and-laws/indirection.md) (Principles and Laws)
