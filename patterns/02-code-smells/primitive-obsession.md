@@ -222,37 +222,49 @@ refactoring, since that is what gives the smell a shape to compare against.
 ```
 BEFORE (primitive obsession)
 
-  +----------------------+       raw String        +----------------------+
-  |  OrderService         | -----------------------> |  validateEmail(str) |
-  |                       |       raw String        |  (duplicated logic) |
-  |  placeOrder(          | -----------------------> |  formatEmail(str)   |
-  |    customerId: int,   |                          +----------------------+
-  |    productId: int,    |
-  |    email: String,     |       raw String        +----------------------+
-  |    quantity: int)     | -----------------------> |  sendConfirmation(  |
-  +----------------------+                          |    str)              |
-                                                       |  (re-validates)      |
-                                                       +----------------------+
+  +--------------------------+
+  | OrderService.placeOrder( |
+  |   customerId: int,       |
+  |   productId: int,        |
+  |   email: String,         |
+  |   quantity: int)         |
+  +--------------------------+
+            | raw String, three separate call sites
+            v
+  +---------------------------------+
+  | validateEmail(str)              |
+  | formatEmail(str)                |
+  | sendConfirmation(str)           |
+  | each re-validates independently |
+  +---------------------------------+
 
-  customerId and productId are both plain int, so nothing stops
-  placeOrder(productId, customerId, ...) from compiling and
-  silently swapping the two arguments.
+  customerId and productId are both plain int, so nothing
+  stops placeOrder(productId, customerId, ...) from
+  compiling and silently swapping the two arguments.
 
 
 AFTER (Replace Primitive with Object)
 
-  +----------------------+                          +----------------------+
-  |  OrderService         | ---- EmailAddress -----> |  EmailAddress        |
-  |                       |                          |  - value: String     |
-  |  placeOrder(          |                          |  - validate() private|
-  |    customerId: CustomerId,                       |  + format(): String  |
-  |    productId: ProductId,                         |  + equals(other)     |
-  |    email: EmailAddress,                          +----------------------+
-  |    quantity: Quantity)|
-  +----------------------+       CustomerId and ProductId are now distinct
-                                  types. placeOrder(productId, customerId, ...)
-                                  is a compile-time type error, not a silent
-                                  runtime bug.
+  +---------------------------+
+  | OrderService.placeOrder(  |
+  |   customerId: CustomerId, |
+  |   productId: ProductId,   |
+  |   email: EmailAddress,    |
+  |   quantity: Quantity)     |
+  +---------------------------+
+            | EmailAddress
+            v
+  +----------------------+
+  | EmailAddress         |
+  | - value: String      |
+  | - validate() private |
+  | + format(): String   |
+  | + equals(other)      |
+  +----------------------+
+
+  CustomerId and ProductId are now distinct types.
+  placeOrder(productId, customerId, ...) is a compile-time
+  type error, not a silent runtime bug.
 ```
 
 ## 7. Dynamics

@@ -107,36 +107,50 @@ The paper draws its own line against Decorator directly in its Implementation se
 Transcribed from the paper's own Figure 3, "Structure diagram of the Role Object pattern," identical in both editions.
 
 ```
-                            +-----------------------------+
-   ClientA -----------------|          Component            |
-   ClientB -----------------+-----------------------------+
-                            | operation()                    |
-                            | addRole(Spec)                  |
-                            | hasRole(Spec)                  |
-                            | removeRole(Spec)               |
-                            | getRole(Spec)                  |
-                            +---------------+---------------+
-                                            |
-                       +--------------------+--------------------+
-                       |                                         |
-           +-----------------------+               +-----------------------+
-           |     ComponentCore       |<--roles-------|     ComponentRole       |
-           +-----------------------+----core-------->+-----------------------+
-           | operation()              |               | operation()              | --> core->operation()
-           | addRole(Spec)             |               | addRole(Spec)             |
-           | hasRole(Spec)             |               | hasRole(Spec)             | --> core->hasRole(aSpec)
-           | removeRole(Spec)          |               | removeRole(Spec)          |
-           | getRole(Spec)             |               | getRole(Spec)             |
-           | state                     |               +-----------+-------------+
-           +-----------------------+                            |
-                                                    +------------+------------+
-                                                    |                         |
-                                        +---------------------+   +---------------------+
-                                        |    ConcreteRoleA       |   |    ConcreteRoleB       |
-                                        +---------------------+   +---------------------+
-                                        | addedBehaviorA()        |   | addedBehaviorB()        |
-                                        | addedStateA              |   |                          |
-                                        +---------------------+   +---------------------+
+  ClientA, ClientB
+            |
+            v
+  +---------------------------------+
+  | <<interface>> Component         |
+  | operation()                     |
+  | addRole(Spec), hasRole(Spec)    |
+  | removeRole(Spec), getRole(Spec) |
+  +---------------------------------+
+            ^
+            | implemented by
+      +-----+-----+
+      |           |
+  +------------------------------------+
+  | ComponentCore                      |
+  | operation()                        |
+  | addRole/hasRole/removeRole/getRole |
+  | state                              |
+  +------------------------------------+
+  holds a roles collection of its currently attached
+  role objects.
+
+            ^  ComponentRole holds a core back-reference
+            |  to the single core it wraps, and forwards
+  +---------------------------------+
+  | ComponentRole (abstract)        |
+  | core: ComponentCore             |
+  | operation() -> core.operation() |
+  | hasRole(s) -> core.hasRole(s)   |
+  +---------------------------------+
+            ^
+            | extended by
+      +-----+-----+
+      |           |
+  +------------------+
+  | ConcreteRoleA    |
+  | addedBehaviorA() |
+  | addedStateA      |
+  +------------------+
+
+  +------------------+
+  | ConcreteRoleB    |
+  | addedBehaviorB() |
+  +------------------+
 ```
 
 `Component` is the abstract interface both `ComponentCore` and the abstract `ComponentRole` implement. `ComponentCore` holds a `roles` collection of its currently attached role objects; each `ComponentRole` holds a `core` back-reference to the single core it wraps. `ConcreteRoleA` and `ConcreteRoleB` inherit from `ComponentRole` and add their own role-specific behavior and state. The two annotation call-outs on the diagram itself, `core->operation()` and `core->hasRole(aSpec)`, show `ComponentRole` forwarding every request it receives straight through to its `core`.

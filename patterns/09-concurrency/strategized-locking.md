@@ -275,50 +275,55 @@ one exists.
 ## 6. ASCII structure diagram
 
 ```
-  Compile-time (parameterized-type) form
-  --------------------------------------
+Compile-time (parameterized-type) form
+---------------------------------------
 
-    +----------------------------+
-    |  Component<LOCK>            |  LOCK is a type parameter, bound
-    |  (e.g. File_Cache<LOCK>)    |  at instantiation, resolved by the
-    |------------------------------|  compiler, no vtable involved.
-    |  - lock_ : LOCK               |
-    |------------------------------|
-    |  + find(path)                 |  method body. acquire lock_,
-    |  + bind(path)                 |  do the work, release lock_
-    +---------------+--------------+
-                    | instantiated with
-        +-----------+-----------+-----------+
-        |                       |            |
-  +------------+        +--------------+  +------------+
-  | Null_Mutex |        | Thread_Mutex |  |  RW_Lock   |
-  |------------|        |--------------|  |------------|
-  | lock()  {} |        | lock()   ... |  | lock() ... |
-  | unlock(){} |        | unlock() ... |  | unlock()...|
-  +------------+        +--------------+  +------------+
-        no-op                real mutex     readers/writer
+  +----------------------------+
+  | Component<LOCK>            |
+  | - lock_ : LOCK             |
+  | + find(path), + bind(path) |
+  +----------------------------+
+  LOCK is a type parameter, bound at instantiation, resolved
+  by the compiler, no vtable involved. method body acquires
+  lock_, does the work, releases lock_.
+            | instantiated with
+      +-----+-----+-----+
+      v     v     v
+  +-----------+ +-------------+ +---------------+
+  | Null Mutex| | Thread Mutex| | RW Lock       |
+  | no-op     | | real mutex  | | readers/writer|
+  +-----------+ +-------------+ +---------------+
 
-  Runtime (polymorphic) form
-  ---------------------------
+Runtime (polymorphic) form
+---------------------------
 
-    +----------------------------+          +------------------+
-    |  Component                  |  holds   |  <<interface>>    |
-    |  (e.g. File_Cache)          |--------->|  Lockable          |
-    |------------------------------|  a ref   |------------------|
-    |  - lock_ : Lockable&          |  to      |  + acquire()      |
-    |------------------------------|          |  + release()      |
-    |  + find(path)                 |          +---------+--------+
-    |  + bind(path)                 |                    ^  ^
-    +--------------------------------+                    |  |
-                                       implemented by      |  |
-                          +--------------------------------+  +----------------------------+
-                          |                                                                |
-              +------------------------+                                    +----------------------------+
-              | Thread_Mutex_Lockable    |                                    | Null_Mutex_Lockable          |
-              |--------------------------|                                    |------------------------------|
-              | acquire() -> lock_.lock()|                                    | acquire() -> return 0          |
-              | release() -> lock_.unlock|                                    | release() -> return 0          |
-              +------------------------+                                    +----------------------------+
+  +----------------------------+
+  | Component                  |
+  | - lock_ : Lockable&        |
+  | + find(path), + bind(path) |
+  +----------------------------+
+            | holds a ref to
+            v
+  +------------------------+
+  | <<interface>> Lockable |
+  | + acquire()            |
+  | + release()            |
+  +------------------------+
+            ^
+            | implemented by
+      +-----+-----+
+      |           |
+  +-----------------------------+
+  | Thread_Mutex_Lockable       |
+  | acquire() -> lock_.lock()   |
+  | release() -> lock_.unlock() |
+  +-----------------------------+
+
+  +-----------------------+
+  | Null_Mutex_Lockable   |
+  | acquire() -> return 0 |
+  | release() -> return 0 |
+  +-----------------------+
 ```
 
 ## 7. Dynamics

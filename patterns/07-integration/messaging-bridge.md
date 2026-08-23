@@ -226,26 +226,44 @@ handling, not in the happy-path forwarding logic.
 ## 6. ASCII structure diagram
 
 ```
-+--------------------+       +---------------------------------------+       +------------------------+
-|   Source System     |       |            Messaging Bridge            |       |  Destination System     |
-| (Broker A / Bus A)   |       |                                       |       |  (Broker B / Bus B)      |
-|                      |       |  +---------+   +------------------+   |       |                          |
-|  [ Queue / Topic ]   |------>|  |  Inbound  |-->| Message Translator |-->  |       |  [ Queue / Topic ]       |
-|                      |  ack  |  |  Adapter  |   |     (optional)     |   |       |                          |
-|                      |<------|  +---------+   +------------------+   |------>|                          |
-|                      |       |        \                /             |  ack  |                          |
-|                      |       |         \              /              |<------|                          |
-|                      |       |          v            v               |       |                          |
-|                      |       |     +---------------------+           |       |                          |
-|                      |       |     | Bridge Coordinator    |          |       |                          |
-|                      |       |     | retry / DLQ / state    |         |       |                          |
-|                      |       |     +---------------------+           |       |                          |
-|                      |       |               |                       |       |                          |
-|                      |       |               v                       |       |                          |
-|                      |       |     +---------------------+           |       |                          |
-|                      |       |     |  Outbound Adapter      |         |       |                          |
-|                      |       |     +---------------------+           |       |                          |
-+----------------------+       +---------------------------------------+       +--------------------------+
+  +--------------------+
+  | Source System      |
+  | (Broker A / Bus A) |
+  | [ Queue / Topic ]  |
+  +--------------------+
+            |  message
+            v
+  +-----------------+
+  | Inbound Adapter |
+  +-----------------+
+            |
+            v
+  +--------------------+
+  | Message Translator |
+  | (optional)         |
+  +--------------------+
+            |
+            v
+  +---------------------+
+  | Bridge Coordinator  |
+  | retry / DLQ / state |
+  +---------------------+
+            |
+            v
+  +------------------+
+  | Outbound Adapter |
+  +------------------+
+            |  message
+            v
+  +--------------------+
+  | Destination System |
+  | (Broker B / Bus B) |
+  | [ Queue / Topic ]  |
+  +--------------------+
+
+  ack flows back up the same path, source to destination, so
+  the bridge only removes a message from the source once the
+  destination has confirmed receipt.
 ```
 
 ## 7. Dynamics
