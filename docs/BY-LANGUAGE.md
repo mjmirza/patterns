@@ -28,6 +28,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Memento](../patterns/01-design-patterns-gof/memento.md) | Design Patterns (GoF) |  | Yes |  | Yes |  | Yes |  |  | Yes |
 | [Multiton](../patterns/01-design-patterns-gof/multiton.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Observer](../patterns/01-design-patterns-gof/observer.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
+| [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prototype](../patterns/01-design-patterns-gof/prototype.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Proxy](../patterns/01-design-patterns-gof/proxy.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Singleton](../patterns/01-design-patterns-gof/singleton.md) | Design Patterns (GoF) |  |  | Yes | Yes | Yes | Yes | Yes |  | Yes |
@@ -941,6 +942,7 @@ These patterns have unique implementation variants or change their design struct
 - [Polymorphism](../patterns/04-principles-and-laws/polymorphism.md) (Principles and Laws)
 - [Primitive Obsession](../patterns/02-code-smells/primitive-obsession.md) (Code Smells)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Proactor](../patterns/09-concurrency/proactor.md) (Concurrency and Parallelism)
 - [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) (Principles and Laws)
 - [Prototype](../patterns/01-design-patterns-gof/prototype.md) (Design Patterns (GoF))
@@ -1392,6 +1394,7 @@ These patterns contain runnable code examples written in Go:
 - [Primitive Obsession](../patterns/02-code-smells/primitive-obsession.md) (Code Smells)
 - [Principle of Least Astonishment](../patterns/04-principles-and-laws/principle-of-least-astonishment.md) (Principles and Laws)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Process Manager](../patterns/07-integration/process-manager.md) (Enterprise Integration)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
@@ -2302,6 +2305,7 @@ These patterns have unique implementation variants or change their design struct
 - [Primitive Obsession](../patterns/02-code-smells/primitive-obsession.md) (Code Smells)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
 - [Prism](../patterns/16-functional/prism.md) (Functional Programming)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
 - [Property-Based Test](../patterns/14-testing/property-based-test.md) (Testing)
 - [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) (Principles and Laws)
@@ -2431,6 +2435,7 @@ These patterns have native features in Java that make the pattern unnecessary, o
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Phaser](../patterns/09-concurrency/phaser.md) (Concurrency and Parallelism)
 - [Point-free Style](../patterns/16-functional/point-free-style.md) (Functional Programming)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Protected Variations](../patterns/04-principles-and-laws/protected-variations.md) (Principles and Laws)
 - [Prototype](../patterns/01-design-patterns-gof/prototype.md) (Design Patterns (GoF))
 - [Proxy](../patterns/01-design-patterns-gof/proxy.md) (Design Patterns (GoF))
@@ -2572,6 +2577,7 @@ These patterns have unique implementation variants or change their design struct
 - [Parallel Scatter-Gather](../patterns/09-concurrency/parallel-scatter-gather.md) (Concurrency and Parallelism)
 - [Primitive Obsession](../patterns/02-code-smells/primitive-obsession.md) (Code Smells)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Read-Write Lock](../patterns/09-concurrency/read-write-lock.md) (Concurrency and Parallelism)
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) (Refactoring Techniques)
@@ -3135,6 +3141,7 @@ These patterns contain runnable code examples written in Python:
 - [Principle of Least Astonishment](../patterns/04-principles-and-laws/principle-of-least-astonishment.md) (Principles and Laws)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
 - [Prism](../patterns/16-functional/prism.md) (Functional Programming)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Proactor](../patterns/09-concurrency/proactor.md) (Concurrency and Parallelism)
 - [Process Manager](../patterns/07-integration/process-manager.md) (Enterprise Integration)
 - [Process Manager](../patterns/11-domain-driven-design/process-manager.md) (Domain-Driven Design)
@@ -3610,6 +3617,7 @@ These patterns have unique implementation variants or change their design struct
 - [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) (Refactoring Techniques)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
 - [Prism](../patterns/16-functional/prism.md) (Functional Programming)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Proactor](../patterns/09-concurrency/proactor.md) (Concurrency and Parallelism)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Property-Based Test](../patterns/14-testing/property-based-test.md) (Testing)
@@ -4056,6 +4064,7 @@ These patterns have unique implementation variants or change their design struct
 - [Principle of Least Astonishment](../patterns/04-principles-and-laws/principle-of-least-astonishment.md) (Principles and Laws)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
 - [Prism](../patterns/16-functional/prism.md) (Functional Programming)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Proactor](../patterns/09-concurrency/proactor.md) (Concurrency and Parallelism)
 - [Property-Based Test](../patterns/14-testing/property-based-test.md) (Testing)
 - [Prototype](../patterns/01-design-patterns-gof/prototype.md) (Design Patterns (GoF))
@@ -4878,6 +4887,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Principle of Least Astonishment](../patterns/04-principles-and-laws/principle-of-least-astonishment.md) (Principles and Laws)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
 - [Prism](../patterns/16-functional/prism.md) (Functional Programming)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Proactor](../patterns/09-concurrency/proactor.md) (Concurrency and Parallelism)
 - [Process Manager](../patterns/07-integration/process-manager.md) (Enterprise Integration)
 - [Process Manager](../patterns/11-domain-driven-design/process-manager.md) (Domain-Driven Design)
@@ -5273,6 +5283,7 @@ These patterns have unique implementation variants or change their design struct
 - [Primitive Obsession](../patterns/02-code-smells/primitive-obsession.md) (Code Smells)
 - [Priority Queue](../patterns/08-cloud-distributed/priority-queue.md) (Cloud and Distributed)
 - [Prism](../patterns/16-functional/prism.md) (Functional Programming)
+- [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) (Design Patterns (GoF))
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Pull Up Constructor Body](../patterns/03-refactoring/pull-up-constructor-body.md) (Refactoring Techniques)
 - [Pull Up Field](../patterns/03-refactoring/pull-up-field.md) (Refactoring Techniques)

@@ -266,13 +266,6 @@
     "focus": ""
   },
   {
-    "name": "Private Class Data",
-    "slug": "private-class-data",
-    "category": "design patterns gof",
-    "path": "patterns/01-design-patterns-gof/private-class-data.md",
-    "focus": ""
-  },
-  {
     "name": "Servant",
     "slug": "servant",
     "category": "design patterns gof",
