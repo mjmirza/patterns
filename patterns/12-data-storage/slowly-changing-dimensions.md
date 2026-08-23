@@ -261,34 +261,39 @@ entity's data.
 ## 6. ASCII structure diagram
 
 ```
-                     +--------------------------------------------+
-                     |         DIM_CUSTOMER  (Type 2 dimension)   |
-                     +--------------------------------------------+
-                     | customer_sk (PK, surrogate key)             |
-                     | customer_id (natural key, from source)      |
-                     | name                                        |  <- Type 1 (overwritten)
-                     | segment                                     |  <- Type 2 (versioned)
-                     | region                                      |  <- Type 2 (versioned)
-                     | effective_from                              |
-                     | effective_to                                |
-                     | is_current                                  |
-                     +--------------------------------------------+
++----------------------------------------+
+| DIM_CUSTOMER (Type 2 dimension)        |
+| ------------------------------         |
+| customer_sk (PK, surrogate key)        |
+| customer_id (natural key, from source) |
+| name       <- Type 1 (overwritten)     |
+| segment    <- Type 2 (versioned)       |
+| region     <- Type 2 (versioned)       |
+| effective_from                         |
+| effective_to                           |
+| is_current                             |
++----------------------------------------+
 
-  natural key 1042 has three physical rows over time.
+natural key 1042 has three physical rows over time:
 
-  sk=501  customer_id=1042  segment=Bronze  eff[2023-01-01, 2024-03-14)  is_current=false
-  sk=734  customer_id=1042  segment=Silver  eff[2024-03-14, 2025-09-02)  is_current=false
-  sk=910  customer_id=1042  segment=Gold    eff[2025-09-02, 9999-12-31] is_current=true
+sk=501 customer_id=1042 segment=Bronze
+  eff[2023-01-01, 2024-03-14)  is_current=false
+sk=734 customer_id=1042 segment=Silver
+  eff[2024-03-14, 2025-09-02)  is_current=false
+sk=910 customer_id=1042 segment=Gold
+  eff[2025-09-02, 9999-12-31]  is_current=true
 
-                     +--------------------------------------------+
-                     |              FACT_ORDER                    |
-                     +--------------------------------------------+
-                     | order_id                                    |
-                     | order_date                                  |
-                     | customer_sk (FK -> DIM_CUSTOMER.customer_sk) |---> points at sk=501 or 734
-                     | amount                                      |     depending on WHEN the
-                     +--------------------------------------------+     order happened, never
-                                                                         at the natural key alone
++----------------------------------------------+
+| FACT_ORDER                                   |
+| ----------                                   |
+| order_id                                     |
+| order_date                                   |
+| customer_sk (FK -> DIM_CUSTOMER.customer_sk) |
+| amount                                       |
++----------------------------------------------+
+
+customer_sk points at sk=501 or 734 depending on WHEN
+the order happened, never at the natural key alone.
 ```
 
 ## 7. Dynamics

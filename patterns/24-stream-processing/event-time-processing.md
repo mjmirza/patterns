@@ -98,34 +98,37 @@ Downstream consumer, the recipient of the panes emitted by the pipeline. The pap
 The technical shape below is sourced from the structural participants above and from the layout of the Dataflow paper's own Figures 5, 6, and 12, which plot event time on one axis and processing time on the other, with a watermark line moving irregularly across the plot.
 
 ```
-  unbounded event stream
-          |
-          v
-  event-time timestamp assignment
-          |
-          v
-  window assignment (event-time based)         watermark tracking
-          |                                      (running in parallel,
-          v                                       observing the same stream)
-  [window merging, for session/unaligned]              |
-          |                                             |
-          v                                             v
-  per-key, per-window buffered state  <----- feeds threshold into ----->  trigger evaluation
-          |                                                                     |
-          |                                                                     v
-          |                                        fires when watermark crosses window end,
-          |                                        OR on a processing-time period,
-          |                                        OR on a data-driven condition
-          |                                                                     |
-          v                                                                     v
-  late-data handler                                                    pane emission
-  (record's event time behind                                    (discarding / accumulating /
-   the current watermark)                                      accumulating-and-retracting)
-          |                                                                     |
-          +----- within allowed lateness: re-enters window,                    |
-          |      causes a repeat trigger fire (refinement)                     |
-          |                                                                    v
-          +----- past allowed lateness: dropped                        downstream sink
+unbounded event stream
+  |
+  v
+event-time timestamp assignment
+  |
+  v
+window assignment (event-time based)
+  (in parallel: watermark tracking, observing the same stream)
+  |
+  v
+[window merging, for session/unaligned]
+  |
+  v
+per-key, per-window buffered state
+  |
+  | feeds threshold into --> trigger evaluation
+  |     fires when watermark crosses window end,
+  |     OR on a processing-time period,
+  |     OR on a data-driven condition
+  |                                |
+  v                                v
+late-data handler                pane emission
+(record's event time behind      (discarding / accumulating /
+ the current watermark)           accumulating-and-retracting)
+  |
+  +-- within allowed lateness: re-enters window,
+  |     causes a repeat trigger fire (refinement)
+  |
+  +-- past allowed lateness: dropped
+
+(pane emission continues to) downstream sink
 ```
 
 The watermark is drawn as a moving boundary line across the event-time axis, separate from the linear, monotonic processing-time axis along which the system actually observes and reacts to data. This two-axis relationship, event time on one dimension, the system's own view of that event time advancing non-monotonically relative to real time due to skew, is the single most important visual idea across the paper's own figures.

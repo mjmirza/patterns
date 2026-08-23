@@ -277,48 +277,65 @@ outlive the operation.
 ```
 BEFORE. the smell.
 
-  +--------------------------------------+
-  |               Host                   |
-  |---------------------------------------|
-  | - id            (persistent)         |
-  | - createdAt      (persistent)         |
-  | - processedCount (persistent)         |
-  | ......................................|
-  | - currentRate    (temporary, scratch)|
-  | - exemption      (temporary, scratch)|
-  | - remainder      (temporary, scratch)|
-  |---------------------------------------|
-  | + applyRegionalTax(invoice)          |  <- sets temp fields, then
-  | - lookupRate(region)                 |     three private helpers
-  | - applyExemption(amount)             |     read/write them
-  | - roundToCents(amount)               |
-  | + recordProcessed()                  |  <- unrelated method, does
-  +--------------------------------------+     not touch temp fields
++-------------------------------------------------+
+| Host                                            |
+| ----------------------------                    |
+| id             (persistent)                     |
+| createdAt      (persistent)                     |
+| processedCount (persistent)                     |
+| ............................                    |
+| currentRate    (temporary, scratch)             |
+| exemption      (temporary, scratch)             |
+| remainder      (temporary, scratch)             |
+| ----------------------------                    |
+| applyRegionalTax(invoice)  <- sets temp fields, |
+|   then three private helpers read/write them    |
+| lookupRate(region)                              |
+| applyExemption(amount)                          |
+| roundToCents(amount)                            |
+| recordProcessed()  <- unrelated method, does    |
+|   not touch temp fields                         |
++-------------------------------------------------+
 
-  A reader of the field list cannot tell, without reading every
-  method body, which three fields are alive only during one call.
+A reader of the field list cannot tell, without reading
+every method body, which three fields are alive only
+during one call.
 
 
 AFTER. Extract Class applied to the temporary fields.
 
-  +----------------------+        creates, per call        +---------------------------+
-  |         Host          |  ----------------------------->  |  RegionalTaxCalculation   |
-  |------------------------|                                  |----------------------------|
-  | - id                  |                                  | - invoice   (input)       |
-  | - createdAt           |                                  | - region    (input)       |
-  | - processedCount      |                                  | - currentRate (own state) |
-  |------------------------|                                  | - exemption   (own state) |
-  | + applyRegionalTax(i) |  new RegionalTaxCalculation(i,r)  | - remainder   (own state) |
-  |   .calculate()        |  ------------------------------->  |----------------------------|
-  | + recordProcessed()   |                                  | + calculate(): Money      |
-  +------------------------+                                  | - lookupRate()            |
-                                                                 | - applyExemption(amount)  |
-                                                                 | - roundToCents(amount)    |
-                                                                 +---------------------------+
++---------------------+
+| Host                |
+| ----------------    |
+| id                  |
+| createdAt           |
+| processedCount      |
+| ----------------    |
+| applyRegionalTax(i) |
+|   .calculate()      |
+| recordProcessed()   |
++---------------------+
+           | creates, per call
+           | new RegionalTaxCalculation(i, r)
+           v
++----------------------------+
+| RegionalTaxCalculation     |
+| ----------------------     |
+| invoice        (input)     |
+| region         (input)     |
+| currentRate    (own state) |
+| exemption      (own state) |
+| remainder      (own state) |
+| ----------------------     |
+| calculate(): Money         |
+| lookupRate()               |
+| applyExemption(amount)     |
+| roundToCents(amount)       |
++----------------------------+
 
-  Every field on RegionalTaxCalculation is now valid for the
-  entire lifetime of the object, because the object's lifetime is
-  exactly one calculation.
+Every field on RegionalTaxCalculation is now valid for
+the entire lifetime of the object, because the object's
+lifetime is exactly one calculation.
 ```
 
 ## 7. Dynamics

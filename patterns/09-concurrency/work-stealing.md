@@ -209,33 +209,34 @@ threads.
 ## 6. ASCII structure diagram
 
 ```
-                     +------------------------------+
-                     |   Victim selection policy     |
-                     |   (uniform random, or biased) |
-                     +---------------+----------------+
-                                     |
-        picks a victim when own deque is empty
-                                     |
-                                     v
-   +--------------+   steal (top)  +--------------+   steal (top)  +--------------+
-   |  Worker  0   |<---------------|  Worker  1   |<---------------|  Worker  2   |
-   |  (owner)     |--------------->|  (owner)     |--------------->|  (owner)     |
-   +------+-------+                +------+-------+                +------+-------+
-          |  push/pop (bottom)            |  push/pop (bottom)            |  push/pop (bottom)
-          v                               v                               v
-   +--------------+                +--------------+                +--------------+
-   |   Deque 0    |                |   Deque 1    |                |   Deque 2    |
-   | top   [T5]   |                | top   [T9]   |                | top   [ ]    |
-   | ...          |                | ...          |                | ...          |
-   | bot   [T3][T2]                | bot   [T7]   |                | bot   [ ]    |
-   +--------------+                +--------------+                +--------------+
-          ^                               ^                               ^
-          |  new task pushed on spawn     |                               |
-   +------+-------+                +------+-------+                +------+-------+
-   |  Task T1     |                |  Task T7     |                |  (empty,     |
-   |  executing,  |                |  executing,  |                |  requests    |
-   |  spawns T2,T3|                |  spawns T9   |                |  a steal)    |
-   +--------------+                +--------------+                +--------------+
++-----------------------------+
+| Victim selection policy     |
+| (uniform random, or biased) |
++-----------------------------+
+           |
+           | picks a victim when own deque is empty
+           v
+
++--------------+ +--------------+ +--------------+
+| Worker 0     | | Worker 1     | | Worker 2     |
+| (owner)      | | (owner)      | | (owner)      |
++--------------+ +--------------+ +--------------+
+  <---- steal (top) ---->  <---- steal (top) ---->
+ push/pop        push/pop        push/pop
+ (bottom)        (bottom)        (bottom)
+     v               v               v
++--------------+ +--------------+ +--------------+
+| Deque 0      | | Deque 1      | | Deque 2      |
+| top [T5]     | | top [T9]     | | top [ ]      |
+| bot [T3][T2] | | bot [T7]     | | bot [ ]      |
++--------------+ +--------------+ +--------------+
+     ^               ^               ^
+     | new task pushed on spawn
++--------------+ +--------------+ +--------------+
+| Task T1      | | Task T7      | | (empty,      |
+| executing,   | | executing,   | | requests     |
+| spawns T2,T3 | | spawns T9    | | a steal)     |
++--------------+ +--------------+ +--------------+
 ```
 
 ## 7. Dynamics

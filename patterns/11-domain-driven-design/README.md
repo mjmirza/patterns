@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-35 entries, 264,798 words. Every entry carries all 18
+35 entries, 264,791 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -91,7 +91,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Domain Event](domain-event.md) | canonical | 7,792 | A codebase modeling a real domain accumulates behavior that has to happen "because something else happened," and that dependency keeps landing in the wrong place. |
+| [Domain Event](domain-event.md) | canonical | 7,785 | A codebase modeling a real domain accumulates behavior that has to happen "because something else happened," and that dependency keeps landing in the wrong place. |
 
 ## Tactical Modeling
 

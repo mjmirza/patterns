@@ -238,33 +238,45 @@ the shape of the call and the actors around it.
 ## 6. ASCII structure diagram
 
 ```
-   THE ANTIPATTERN (no projection contract)
+THE ANTIPATTERN (no projection contract)
 
-   +-------------+        default wide call        +-----------------+
-   |  Consumer   |  ------------------------------> |  Data Access    |
-   |  needs: {a} |                                  |  Layer          |
-   +-------------+                                  +-----------------+
-         ^                                                    |
-         |  full entity                                       | SELECT * / GET /entity
-         |  {a, b, c, d, e, f}                                v
-         |                                          +-----------------+
-         +----------------------------------------- |  Data Source    |
-              b..f discarded after use of a         |  (a..f + more)  |
-                                                      +-----------------+
++----------------------+
+| Consumer, needs: {a} |
++----------------------+
+           | default wide call
+           v
++-------------------+
+| Data Access Layer |
++-------------------+
+           | SELECT * / GET /entity
+           v
++---------------------------+
+| Data Source (a..f + more) |
++---------------------------+
+           |
+           | full entity {a, b, c, d, e, f}
+           v
+(back to Consumer, b..f discarded after use of a)
 
-   THE FIX (explicit projection contract)
+THE FIX (explicit projection contract)
 
-   +-------------+   request naming needs {a}     +-----------------+
-   |  Consumer   |  ------------------------------> |  Data Access    |
-   |  needs: {a} |                                  |  Layer          |
-   +-------------+                                  +-----------------+
-         ^                                                    |
-         |  {a} only                                          | SELECT a / GET /entity?fields=a
-         |                                                    v
-         +----------------------------------------- +-----------------+
-                                                      |  Data Source    |
-                                                      |  (a..f + more)  |
-                                                      +-----------------+
++----------------------+
+| Consumer, needs: {a} |
++----------------------+
+           | request naming needs {a}
+           v
++-------------------+
+| Data Access Layer |
++-------------------+
+           | SELECT a / GET /entity?fields=a
+           v
++---------------------------+
+| Data Source (a..f + more) |
++---------------------------+
+           |
+           | {a} only
+           v
+(back to Consumer, nothing discarded)
 ```
 
 ## 7. Dynamics

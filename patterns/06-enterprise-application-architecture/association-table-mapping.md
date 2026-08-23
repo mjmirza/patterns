@@ -63,27 +63,43 @@ Three participants carry the weight of this pattern. Two domain entities, neithe
 ## 6. ASCII Structure Diagram
 
 ```
-+-------------------+          +--------------------------+          +-------------------+
-|       Book         |          |       book_authors        |          |      Author        |
-+-------------------+          +--------------------------+          +-------------------+
-| id            PK   |<---------| book_id       FK, PK(1/2) |          | id            PK   |
-| title               |         | author_id     FK, PK(2/2) |--------->| name                |
-| isbn                |         +--------------------------+          | bio                 |
-+-------------------+          | (no columns beyond the    |         +-------------------+
-                                |  two foreign keys, unless
-                                |  the association carries
-                                |  its own data)
-                                +--------------------------+
++------------------+
+| Book             |
+| id            PK |
+| title            |
+| isbn             |
++------------------+
+           ^
+           | book_id   FK, PK(1/2)
+           |
++-----------------------------------+
+| book_authors                      |
+| book_id     FK, PK(1/2)           |
+| author_id   FK, PK(2/2)           |
+| (no columns beyond the two        |
+| foreign keys, unless the          |
+| association carries its own data) |
++-----------------------------------+
+           |
+           | author_id FK, PK(2/2)
+           v
++------------------+
+| Author           |
+| id            PK |
+| name             |
+| bio              |
++------------------+
 
 Object model side (no join-table class exists in the domain)
 
-   +-------------------+                          +-------------------+
-   |       Book         |  authors : Set<Author>   |      Author        |
-   |---------------------|<------------------------|---------------------|
-   |  id                 |  books   : Set<Book>     |  id                 |
-   |  title              |------------------------->|  name               |
-   |  isbn               |                           |  bio                |
-   +-------------------+                          +-------------------+
++------------------------+        +------------------------+
+| Book                   |        | Author                 |
+| id                     |        | id                     |
+| title                  | <---> | name                   |
+| isbn                   |        | bio                    |
++------------------------+        +------------------------+
+
+Book.authors : Set<Author>    Author.books : Set<Book>
 ```
 
 ## 7. Dynamics
