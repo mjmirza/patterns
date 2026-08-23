@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-25 entries, 262,611 words, 8 more planned, 33 total when the family is complete. Every entry carries all 18
+26 entries, 267,812 words, 7 more planned, 33 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -43,6 +43,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Dependency Injection](dependency-injection.md) | canonical | 5,802 | Fowler's own running example names the problem precisely. |
 | [Facade](facade.md) | canonical | 11,164 | A caller needs a small, ordinary result from a subsystem that is large, correct and unpleasant to talk to. |
 | [Flyweight](flyweight.md) | canonical | 11,738 | A program needs a very large number of objects that are almost all the same, and the memory cost of representing each one separately is what is going to break it. |
+| [Marker Interface](marker-interface.md) | contested | 5,201 | Sometimes a class needs to signal a capability or a semantic property to an external mechanism, most often the runtime or a framework, without adding any real behaviour of its own. |
 | [Proxy](proxy.md) | canonical | 9,732 | Some object is expensive, remote, dangerous, or shared, and the code that wants to use it should not have to know that. |
 
 ## Planned
@@ -50,7 +51,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
 - Extension Object
-- Marker Interface
 - Multiton
 - Null Object
 - Private Class Data

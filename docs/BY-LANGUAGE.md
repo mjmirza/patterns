@@ -23,6 +23,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Interpreter](../patterns/01-design-patterns-gof/interpreter.md) | Design Patterns (GoF) |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Iterator](../patterns/01-design-patterns-gof/iterator.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes | Yes |  | Yes |
+| [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Mediator](../patterns/01-design-patterns-gof/mediator.md) | Design Patterns (GoF) |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Memento](../patterns/01-design-patterns-gof/memento.md) | Design Patterns (GoF) |  | Yes |  | Yes |  | Yes |  |  | Yes |
 | [Observer](../patterns/01-design-patterns-gof/observer.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
@@ -1287,6 +1288,7 @@ These patterns contain runnable code examples written in Go:
 - [Magic Numbers](../patterns/18-anti-patterns/magic-numbers.md) (Anti-Patterns)
 - [Map-Reduce](../patterns/09-concurrency/map-reduce.md) (Concurrency and Parallelism)
 - [Mapper](../patterns/06-enterprise-application-architecture/mapper.md) (Enterprise Application Architecture)
+- [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) (Design Patterns (GoF))
 - [Materialized View](../patterns/08-cloud-distributed/materialized-view.md) (Cloud and Distributed)
 - [Medallion Architecture](../patterns/12-data-storage/medallion-architecture.md) (Data and Storage)
 - [Memoization](../patterns/16-functional/memoization.md) (Functional Programming)
@@ -2246,6 +2248,7 @@ These patterns have unique implementation variants or change their design struct
 - [Low Coupling](../patterns/04-principles-and-laws/low-coupling.md) (Principles and Laws)
 - [Map-Reduce](../patterns/09-concurrency/map-reduce.md) (Concurrency and Parallelism)
 - [Mapper](../patterns/06-enterprise-application-architecture/mapper.md) (Enterprise Application Architecture)
+- [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) (Design Patterns (GoF))
 - [Memento](../patterns/01-design-patterns-gof/memento.md) (Design Patterns (GoF))
 - [Memoization](../patterns/16-functional/memoization.md) (Functional Programming)
 - [Message Channel](../patterns/07-integration/message-channel.md) (Enterprise Integration)
@@ -3004,6 +3007,7 @@ These patterns contain runnable code examples written in Python:
 - [Magic Numbers](../patterns/18-anti-patterns/magic-numbers.md) (Anti-Patterns)
 - [Map-Reduce](../patterns/09-concurrency/map-reduce.md) (Concurrency and Parallelism)
 - [Mapper](../patterns/06-enterprise-application-architecture/mapper.md) (Enterprise Application Architecture)
+- [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) (Design Patterns (GoF))
 - [Materialized View](../patterns/08-cloud-distributed/materialized-view.md) (Cloud and Distributed)
 - [Medallion Architecture](../patterns/12-data-storage/medallion-architecture.md) (Data and Storage)
 - [Mediator](../patterns/01-design-patterns-gof/mediator.md) (Design Patterns (GoF))
@@ -4757,6 +4761,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Magic Numbers](../patterns/18-anti-patterns/magic-numbers.md) (Anti-Patterns)
 - [Map-Reduce](../patterns/09-concurrency/map-reduce.md) (Concurrency and Parallelism)
 - [Mapper](../patterns/06-enterprise-application-architecture/mapper.md) (Enterprise Application Architecture)
+- [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) (Design Patterns (GoF))
 - [Materialized View](../patterns/08-cloud-distributed/materialized-view.md) (Cloud and Distributed)
 - [Medallion Architecture](../patterns/12-data-storage/medallion-architecture.md) (Data and Storage)
 - [Mediator](../patterns/01-design-patterns-gof/mediator.md) (Design Patterns (GoF))
