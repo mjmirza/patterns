@@ -15253,6 +15253,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Reference leakage, trivial similarity matching. Symptom. A judge grades
 - Prompt injection through judged content. Symptom. A candidate response
 
+#### [Language Agent Tree Search](../patterns/17-ai-agentic/language-agent-tree-search.md)
+
+**Core Problem:** The paper's own text names the specific limitation of the prior baseline directly, ReAct. "existing methods like ReAct are reflexive and fall short of humans' deliberate and thoughtful decision-making characteristics" and cannot "consider multiple reasoning paths or plan ahead" (Zhou et al., "LATS," verified 2026-08-23). a single, linear reasoning-acting trajectory commits to its first choice at every step, with no mechanism to compare it against an alternative or recover once a step turns out to be a mistake.
+
 #### [Late Chunking](../patterns/17-ai-agentic/late-chunking.md)
 
 **Core Problem:** Picture a retrieval pipeline built over a long, single-narrative source, a Wikipedia article, a signed contract, a meeting transcript, a product manual. The pipeline needs to answer questions by finding the right passage and handing it to a language model, so at ingestion time the document gets split into chunks of a few hundred tokens, and each chunk is embedded on its own by sending the chunk's text, and only that text, through an embedding model.
@@ -15422,6 +15426,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - the agent leaks a fragment of its own system prompt or an
 - an internal audit finds that the capability check in the code
 
+#### [RLAIF](../patterns/17-ai-agentic/rlaif.md)
+
+**Core Problem:** The paper's own text states the underlying constraint directly, already implied in dimension 1, human preference labeling does not scale, it is slow and expensive to collect at the volume reinforcement learning from human feedback needs. RLAIF substitutes an AI labeler for the human rater in exactly that one step, while keeping the rest of the RLHF pipeline the same, addressing the scaling constraint without discarding the reward-model-based reinforcement learning approach itself.
+
 #### [ReAct](../patterns/17-ai-agentic/react.md)
 
 **Core Problem:** A language model asked to answer a multi-hop factual question, or to complete a task that spans several tool calls, has two failure modes when it is prompted with only one of the two capabilities. Ask it to reason with chain-of-thought alone, with no tools, and it will produce a plausible chain of intermediate statements that can drift from any grounded fact, because every step is generated from the model's own parameters and nothing external checks it along the way. This is the well-documented hallucination and error propagation problem, a wrong fact stated at step two is treated as true at step five, and the final answer inherits the error with no mechanism to notice it happened. Ask the same model to only act, calling tools and reading their results with no interleaved reasoning, and the opposite failure appears. The model has no visible record of why it called a particular tool, cannot recover cleanly from an unexpected or empty result, and produces action sequences that a human reviewing the transcript cannot follow or trust, because the "why" was never written down. The paper's own framing states that acting-only prompting struggles particularly with "the model's inability to reason to induce, track, and update action plans and handle exceptions" (arXiv 2210.03629, verified 2026-08-02).
@@ -15496,6 +15504,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. Production cost or latency on the reasoning endpoint spikes
 - Symptom. The pattern is applied to an open-ended writing or
 - Symptom. The model confidently produces the same specific wrong answer
+
+#### [Self-Discover](../patterns/17-ai-agentic/self-discover.md)
+
+**Core Problem:** The paper's own text states directly what a fixed, one-size-fits-all prompting method misses, already implied in dimension 1, a single reasoning strategy applied uniformly is not tailored to what a specific task actually needs. "core to the framework is a self-discovery process where LLMs select multiple atomic reasoning modules such as critical thinking and step-by-step thinking, and compose them into an explicit reasoning structure for LLMs to follow during decoding" (Zhou et al., "Self-Discover," verified 2026-08-23), naming the gap directly, a generic prompt is not composed for the task in front of it.
 
 #### [Self-RAG](../patterns/17-ai-agentic/self-rag.md)
 

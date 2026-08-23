@@ -105,27 +105,6 @@
     "focus": ""
   },
   {
-    "name": "Language Agent Tree Search",
-    "slug": "language-agent-tree-search",
-    "category": "ai agentic",
-    "path": "patterns/17-ai-agentic/language-agent-tree-search.md",
-    "focus": ""
-  },
-  {
-    "name": "Self-Discover",
-    "slug": "self-discover",
-    "category": "ai agentic",
-    "path": "patterns/17-ai-agentic/self-discover.md",
-    "focus": ""
-  },
-  {
-    "name": "RLAIF",
-    "slug": "rlaif",
-    "category": "ai agentic",
-    "path": "patterns/17-ai-agentic/rlaif.md",
-    "focus": ""
-  },
-  {
     "name": "Inference-Time Scaling",
     "slug": "inference-time-scaling",
     "category": "ai agentic",
