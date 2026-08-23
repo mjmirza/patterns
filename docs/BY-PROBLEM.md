@@ -927,6 +927,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Assuming static stability removes the need for capacity planning, when pre-provisioned capacity still needs to be siz... | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |
 | Assuming stealing preserves ordering. Symptom. intermittent, load-dependent bugs where | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
 | Assuming the general, task-level Producer-Consumer pattern's | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
+| Assuming the guarantee reaches an external side effect. The single most | [Exactly-Once Processing](../patterns/24-stream-processing/exactly-once-processing.md) | Stream Processing |
 | Assuming the marker interface is a code-quality neutral choice. Checkstyle's own InterfaceIsType rule documentation s... | [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) | Design Patterns (GoF) |
 | Async and continuation-based frameworks silently losing the value across a | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
 | Async facade that still blocks. Symptom. Callers await a function that | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
@@ -2195,6 +2196,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Misuse. Using the pattern's aggregation step as a substitute for | [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) | Enterprise Integration |
 | Mitigation without verification. Symptom. A threat is marked closed because | [Threat Modeling](../patterns/15-security/threat-modeling.md) | Security |
 | Mixed failure protocol. Symptom. Callers contain checks for null, false, | [Replace Nested Conditional with Guard Clauses](../patterns/03-refactoring/replace-nested-conditional-with-guard-clauses.md) | Refactoring Techniques |
+| Mixing a transactional producer with a non-transactional consumer | [Exactly-Once Processing](../patterns/24-stream-processing/exactly-once-processing.md) | Stream Processing |
 | Mixing signal-based and component-render-based state for the same | [Signals](../patterns/13-frontend-ui/signals.md) | Frontend and UI |
 | Mixing the polling API and the interrupt-driven API on the same | [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) | Embedded and Hardware-Software |
 | Mocking seam removed. Symptom. Tests that used to replace a command class | [Replace Command with Function](../patterns/03-refactoring/replace-command-with-function.md) | Refactoring Techniques |
@@ -5453,6 +5455,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | YAGNI misapplied to a load-bearing seam. Symptom. a public API version | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
 | YAGNI without safety nets, the precondition failure. Symptom. deferred | [You Aren't Gonna Need It](../patterns/04-principles-and-laws/you-are-not-gonna-need-it.md) | Principles and Laws |
 | Zipper over a structure that is secretly mutated elsewhere. Symptom. | [Zipper](../patterns/16-functional/zipper.md) | Functional Programming |
+| Zombie producers. An old producer instance that has lost leadership or | [Exactly-Once Processing](../patterns/24-stream-processing/exactly-once-processing.md) | Stream Processing |
 
 ## Detailed Problem Profiles by Family
 
@@ -16747,6 +16750,16 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 - Watermark stalls from an idle partition or source, the straggler problem, documented directly by Flink. "If one of the input splits/partitions/shards does not carry events for a while this means that the WatermarkGenerator also does not get any new information on which to base a watermark." Because the overall watermark is the minimum across all parallel sources, one silent partition holds back every downstream window from ever firing, even though the rest of the pipeline is healthy. The observable symptom is a job that appears to hang, no windows ever close, while most of the pipeline is otherwise producing data normally. Flink's fix is withIdleness, which excludes a source from the minimum calculation after a timeout.
 - Late data silently dropped by default, in three of the four systems surveyed. Flink, "By default... late elements are dropped when the watermark is past the end of the window... elements that arrive behind the watermark will be dropped," with allowedLateness and sideOutputLateData as the opt-in escape hatch. Beam, "if you are using both the default windowing configuration and the default trigger, the default trigger emits exactly once, and late data is discarded," with withAllowedLateness as the opt-in. Kafka Streams, a negative or invalid extracted timestamp causes the record to be quietly dropped, "Returning a negative timestamp will cause the record not to be processed but rather silently skipped," and out-of-window records past the grace period are simply excluded. The observable production symptom is a metric or count that is silently and permanently short, discovered only when totals fail to reconcile against a source-of-truth system, often days or weeks later.
+
+#### [Exactly-Once Processing](../patterns/24-stream-processing/exactly-once-processing.md)
+
+**Core Problem:** A stream processor that crashes mid-batch and restarts will, by default, reprocess whatever it had not yet acknowledged. Under at-least-once delivery this is correct but incomplete, the same record can now be processed twice, and if the processing step increments a counter, charges a payment, or aggregates a metric, that duplicate silently corrupts the result. The MillWheel paper's own motivating example is a trend-detection pipeline, Zeitgeist, where a duplicate delivery causes "spurious spikes" in the aggregated output, and the paper states plainly that its revenue-processing customers depend on this correctness rather than "reinventing their own deduplication mechanism." Exactly-once processing exists to remove that double-counting risk from the processing layer itself, rather than leaving every consumer to build its own ad hoc deduplication.
+
+**Failure Mode Symptoms:**
+
+- Assuming the guarantee reaches an external side effect. The single most
+- Zombie producers. An old producer instance that has lost leadership or
+- Mixing a transactional producer with a non-transactional consumer
 
 #### [Replayable Log](../patterns/24-stream-processing/replayable-log.md)
 

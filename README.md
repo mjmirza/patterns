@@ -17,7 +17,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 ![Published entries](https://img.shields.io/badge/published-832-brightgreen)
 ![Planned entries](https://img.shields.io/badge/planned-60-lightgrey)
 ![Catalogue completion](https://img.shields.io/badge/completion-93.3%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-4778-brightgreen)
+![References checked](https://img.shields.io/badge/references%20checked-4779-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
@@ -115,7 +115,7 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 | 21 | [SRE and Operations](patterns/21-sre-operations/) | Google SRE, AWS Well-Architected | 12 | 0 | 12 |
 | 22 | [Observability](patterns/22-observability/) | OpenTelemetry, RED and USE methods | 7 | 1 | 8 |
 | 23 | [Workflow and Orchestration](patterns/23-workflow-orchestration/) | Durable execution literature | 6 | 0 | 6 |
-| 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 6 | 2 | 8 |
+| 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 7 | 1 | 8 |
 | 25 | [MLOps](patterns/25-mlops/) | Google ML design patterns | 1 | 8 | 9 |
 | 26 | [Interaction and HCI](patterns/26-interaction-hci/) | Tidwell, Designing Interfaces | 0 | 10 | 10 |
 | 27 | [Mobile Architecture](patterns/27-mobile-architecture/) | Official Android/iOS architecture guidance | 11 | 0 | 11 |
