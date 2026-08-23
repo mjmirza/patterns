@@ -1,11 +1,11 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 875,
+  "published_total": 878,
   "target_total": 892,
   "families_total": 29,
-  "families_complete": 22,
+  "families_complete": 24,
   "stale_entries": 0,
-  "references_checked": 5049,
+  "references_checked": 5056,
   "rows": [
     {
       "family": "01-design-patterns-gof",
@@ -157,13 +157,13 @@
       "family": "12-data-storage",
       "name": "Data and Storage",
       "origin": "Kleppmann",
-      "published": 44,
-      "planned": 1,
+      "published": 45,
+      "planned": 0,
       "target": 45,
-      "percent": 97.8,
+      "percent": 100.0,
       "maturity": {
         "canonical": 33,
-        "established": 10,
+        "established": 11,
         "contested": 1
       }
     },
@@ -198,12 +198,12 @@
       "family": "15-security",
       "name": "Security",
       "origin": "OWASP ASVS",
-      "published": 37,
-      "planned": 1,
+      "published": 38,
+      "planned": 0,
       "target": 38,
-      "percent": 97.4,
+      "percent": 100.0,
       "maturity": {
-        "established": 27,
+        "established": 28,
         "canonical": 7,
         "emerging": 3
       }
@@ -226,12 +226,12 @@
       "family": "17-ai-agentic",
       "name": "AI and Agentic",
       "origin": "Papers and vendor engineering, 2023 to 2026",
-      "published": 63,
-      "planned": 2,
+      "published": 64,
+      "planned": 1,
       "target": 65,
-      "percent": 96.9,
+      "percent": 98.5,
       "maturity": {
-        "established": 45,
+        "established": 46,
         "emerging": 9,
         "canonical": 9
       }

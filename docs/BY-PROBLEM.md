@@ -12273,6 +12273,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. A new source integration takes weeks of modeling work instead
 - Symptom. Team adopts Data Vault for a first warehouse with one or two
 
+#### [Database Federation](../patterns/12-data-storage/database-federation.md)
+
+**Core Problem:** Data that a person or an application needs often lives in more than one system, a transactional database here, an analytical warehouse there, a data lake elsewhere, and copying all of it into one place before every query is slow, stale by the time it finishes, and duplicates storage. PostgreSQL's own text names the direct alternative. "you need only SELECT from a foreign table to access the data stored in its underlying remote table" (PostgreSQL, "postgresfdw," verified 2026-08-23), querying the remote data in place instead of copying it first.
+
 #### [Denormalization](../patterns/12-data-storage/denormalization.md)
 
 **Core Problem:** The normalization article states directly why a fully normalized schema exists in the first place, and denormalization is the deliberate trade against exactly this protection. "there are circumstances in which certain facts cannot be recorded at all" (an insertion anomaly), "the same information can be expressed on multiple rows, therefore updates to the relation may result in logical inconsistencies" (an update anomaly), and "under certain circumstances, the deletion of data representing certain facts necessitates the deletion of data representing completely different facts" (a deletion anomaly) (Wikipedia, "Database normalization," verified 2026-08-23). a fully normalized schema avoids these three anomalies but often requires more joins to answer a read, which is the cost denormalization exists to remove.
@@ -13672,6 +13676,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 #### [Dual LLM Pattern](../patterns/15-security/dual-llm-pattern.md)
 
 **Core Problem:** Willison's own text states the problem directly, naming the failure mode this pattern exists to contain. an LLM that both reads untrusted content and can act on tools is vulnerable to prompt injection, where "unfiltered content output by the Quarantined LLM is never forwarded on to the Privileged LLM" (Willison, "Dual LLM," verified 2026-08-23) is exactly the rule the pattern enforces to prevent an attacker's instructions, smuggled inside content the model reads, from ever reaching the model that holds tool access.
+
+#### [Egress Lockdown](../patterns/15-security/egress-lockdown.md)
+
+**Core Problem:** A workload that can reach any destination on the network can also be misused to reach an attacker's destination, whether through a genuine compromise or, for an LLM-driven agent, through a prompt injection that steers it toward an exfiltration channel. This entry's own already published Lethal Trifecta Threat Model entry names one of its three required conditions directly as the presence of "the ability to externally communicate in a way that could exfiltrate this data," so removing or bounding that ability is a direct mitigation for that named risk.
 
 #### [Envelope Encryption](../patterns/15-security/envelope-encryption.md)
 
@@ -15219,6 +15227,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Hybrid search results look nearly identical to pure vector
 - A reranker chained after hybrid fusion barely changes the top
 - The team believes it has hybrid search but retrieval quality
+
+#### [Incident-to-Eval Synthesis](../patterns/17-ai-agentic/incident-to-eval-synthesis.md)
+
+**Core Problem:** An eval suite built once, at project start, from imagined or synthetic inputs drifts away from what a system actually gets wrong in production, and a real failure a user or an operator notices is easy to fix once and forget, so the exact same class of mistake resurfaces on a later change. Braintrust's own text names the underlying justification for closing that gap directly. "if you don't have some validation of what good looks like for your AI product, then it's impossible to judge whether quality improved or regressed" (Braintrust, "How to improve your golden datasets with human review," verified 2026-08-23), and a dataset seeded only from synthetic cases cannot validate against a failure mode nobody imagined in advance.
 
 #### [Inference-Time Scaling](../patterns/17-ai-agentic/inference-time-scaling.md)
 

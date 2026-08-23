@@ -2,7 +2,7 @@
 
 Origin. OWASP ASVS
 
-37 entries, 225,046 words, 1 more planned, 38 total when the family is complete. Every entry carries all 18
+38 entries, 226,879 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Authorization
@@ -28,6 +28,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Content Security Policy](content-security-policy.md) | established | 6,848 | A web page runs with large ambient power. |
 | [Defense in Depth](defense-in-depth.md) | canonical | 6,502 | A system has assets that must remain confidential, correct, and available while being exposed to users, code, networks, dependencies, administrators, build systems, and other ... |
 | [Dual LLM Pattern](dual-llm-pattern.md) | emerging | 1,666 | Willison's own text states the problem directly, naming the failure mode this pattern exists to contain. |
+| [Egress Lockdown](egress-lockdown.md) | established | 1,833 | A workload that can reach any destination on the network can also be misused to reach an attacker's destination, whether through a genuine compromise or, for an LLM-driven agent ... |
 | [Envelope Encryption](envelope-encryption.md) | established | 6,273 | A system must encrypt many records, objects, files, messages, volumes, or tenant datasets. |
 | [Fail Securely](fail-securely.md) | established | 6,856 | A program must make a decision that protects a resource, but the information needed for that decision can be absent, stale, malformed, contradictory, late, or produced by a ... |
 | [Idempotency Key](idempotency-key.md) | established | 6,606 | A client sends a mutating request and then loses the answer. |
@@ -71,12 +72,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Session Management](session-management.md) | established | 6,114 | HTTP requests arrive independently. A user signs in on one request, then clicks through pages, posts forms, uploads data, and calls APIs on later requests. |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Egress Lockdown
 
 ## Reading order
 

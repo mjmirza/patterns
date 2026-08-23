@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-44 entries, 318,137 words, 1 more planned, 45 total when the family is complete. Every entry carries all 18
+45 entries, 319,858 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -37,6 +37,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Consistent Hashing](consistent-hashing.md) | canonical | 7,705 | A system needs to map a large, high-churn set of keys, cache entries, shard identifiers, session identifiers, onto a smaller, changing set of nodes, caches, database shards, load ... |
 | [Data Mesh](data-mesh.md) | established | 7,417 | A large organization with more than a handful of independent product or business domains eventually runs a central data team whose job is to ingest data from every domain's ... |
 | [Data Vault](data-vault.md) | established | 8,114 | An enterprise data warehouse ingests data from many source systems, an ERP, a CRM, a billing platform, several SaaS tools connected through an API, and often at least one legacy ... |
+| [Database Federation](database-federation.md) | established | 1,721 | Data that a person or an application needs often lives in more than one system, a transactional database here, an analytical warehouse there, a data lake elsewhere, and copying ... |
 | [Denormalization](denormalization.md) | canonical | 1,923 | The normalization article states directly why a fully normalized schema exists in the first place, and denormalization is the deliberate trade against exactly this protection. |
 | [Distributed Hash Table](distributed-hash-table.md) | canonical | 1,561 | A centralized lookup directory is a single point of failure and a single scaling bottleneck, every lookup depends on that one directory staying up and staying fast as the number ... |
 | [ELT](elt.md) | established | 7,149 | A team needs data from several operational systems, a payments database, a support ticket system, a marketing platform's API, a stream of application events, made available for ... |
@@ -83,12 +84,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [HyperLogLog](hyperloglog.md) | canonical | 8,164 | A system needs to answer "how many distinct X happened" where X might be visitors to a page, IP addresses hitting an API, users who played a song, distinct search queries in a ... |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Database Federation
 
 ## Reading order
 

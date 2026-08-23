@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-63 entries, 490,435 words, 2 more planned, 65 total when the family is complete. Every entry carries all 18
+64 entries, 492,586 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -22,6 +22,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [GraphRAG](graphrag.md) | emerging | 7,850 | A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. |
 | [Hook-Based Safety Guard Rails](hook-based-safety-guard-rails.md) | established | 1,796 | The chapter's own text states the underlying problem directly, already quoted in dimension 1. |
 | [Human in the Loop](human-in-the-loop.md) | established | 7,618 | An agent is given a goal and a set of tools, and it plans and executes a sequence of tool calls autonomously. |
+| [Incident-to-Eval Synthesis](incident-to-eval-synthesis.md) | established | 2,151 | An eval suite built once, at project start, from imagined or synthetic inputs drifts away from what a system actually gets wrong in production, and a real failure a user or an ... |
 | [Inference-Time Scaling](inference-time-scaling.md) | established | 1,585 | The paper's own text names the underlying inefficiency directly, already implied in dimension 1. |
 | [Input Guardrails](input-guardrails.md) | established | 8,596 | An agent built on a large language model treats every token in its context window with roughly the same weight, whether that token came from the person operating the agent, from a ... |
 | [LLM as Judge](llm-as-judge.md) | established | 7,737 | A team ships a feature whose output is open-ended text, a chat reply, a document summary, a retrieval-augmented answer, or an autonomous agent's final report. |
@@ -128,7 +129,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
 - Context Window Auto-Compaction
-- Incident-to-Eval Synthesis
 
 ## Reading order
 
