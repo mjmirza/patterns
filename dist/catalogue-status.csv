@@ -4,7 +4,7 @@ family,name,published,planned,target,percent
 03-refactoring,Refactoring Techniques,66,0,66,100.0
 04-principles-and-laws,Principles and Laws,42,0,42,100.0
 05-architectural,Architectural Patterns,31,0,31,100.0
-06-enterprise-application-architecture,Enterprise Application Architecture,53,7,60,88.3
+06-enterprise-application-architecture,Enterprise Application Architecture,56,4,60,93.3
 07-integration,Enterprise Integration,54,0,54,100.0
 08-cloud-distributed,Cloud and Distributed,44,0,44,100.0
 09-concurrency,Concurrency and Parallelism,40,0,40,100.0

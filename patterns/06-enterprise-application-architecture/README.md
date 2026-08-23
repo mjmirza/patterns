@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-53 entries, 367,278 words, 7 more planned, 60 total when the family is complete. Every entry carries all 18
+56 entries, 371,878 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -74,9 +74,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Business Delegate](business-delegate.md) | established | 1,710 | A presentation-tier client, or another remote caller such as a device, a web service, or a rich client, needs to reach a business-tier service, and calling that remote service ... |
 | [Collecting Parameter](collecting-parameter.md) | established | 1,922 | A single bulky method accumulates a result into a local variable across a long, linear sequence of steps, which is exactly the shape Industrial Logic's own text names directly ... |
+| [Composite Entity](composite-entity.md) | established | 1,572 | A domain model made of many small, related objects, mapped one-to-one to individually remote, individually persistent components, pays a real network and management cost for every ... |
+| [Composite View](composite-view.md) | established | 1,561 | A page is commonly built from parts that are shared across many other pages, a header, a footer, a navigation block, and duplicating those shared parts directly inside every page ... |
 | [Connection Pooling](connection-pooling.md) | canonical | 1,662 | PostgreSQL's own documentation states the direct constraint this pattern works against. |
 | [Context Object](context-object.md) | established | 1,501 | A component or a service somewhere in an application needs access to system information, such as request parameters or configuration values, that originates from a specific ... |
 | [Tolerant Reader](tolerant-reader.md) | established | 1,517 | Fowler's own text states the underlying problem directly. |
+| [View Helper](view-helper.md) | established | 1,467 | A template-based view, such as a JSP page, is easy to fill with embedded processing logic simply because the logic and the markup live in the same file, and once that happens, the ... |
 
 ## Object-Relational Behavioral
 
@@ -157,13 +160,10 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Composite Entity
-- Composite View
 - Intercepting Filter
 - Presentation Model
 - Service Layer
 - Session Facade
-- View Helper
 
 ## Reading order
 
