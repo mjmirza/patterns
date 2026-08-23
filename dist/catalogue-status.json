@@ -1,23 +1,23 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 818,
+  "published_total": 819,
   "target_total": 892,
   "families_total": 29,
   "families_complete": 19,
   "stale_entries": 0,
-  "references_checked": 4599,
+  "references_checked": 4624,
   "rows": [
     {
       "family": "01-design-patterns-gof",
       "name": "Design Patterns (GoF)",
       "origin": "Gamma, Helm, Johnson, Vlissides 1994",
-      "published": 25,
-      "planned": 8,
+      "published": 26,
+      "planned": 7,
       "target": 33,
-      "percent": 75.8,
+      "percent": 78.8,
       "maturity": {
         "canonical": 24,
-        "contested": 1
+        "contested": 2
       }
     },
     {

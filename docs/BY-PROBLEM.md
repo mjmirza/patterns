@@ -925,6 +925,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Assuming static stability removes the need for capacity planning, when pre-provisioned capacity still needs to be siz... | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |
 | Assuming stealing preserves ordering. Symptom. intermittent, load-dependent bugs where | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
 | Assuming the general, task-level Producer-Consumer pattern's | [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) | Embedded and Hardware-Software |
+| Assuming the marker interface is a code-quality neutral choice. Checkstyle's own InterfaceIsType rule documentation s... | [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) | Design Patterns (GoF) |
 | Async and continuation-based frameworks silently losing the value across a | [Thread-Specific Storage](../patterns/09-concurrency/thread-specific-storage.md) | Concurrency and Parallelism |
 | Async facade that still blocks. Symptom. Callers await a function that | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
 | Async wrapper pileup. Symptom. The code contains Promise<Result<T,E>>, | [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) | Functional Programming |
@@ -1386,6 +1387,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | description draws on operational experience rather than a citable | [Message](../patterns/07-integration/message.md) | Enterprise Integration |
 | Deserialization bypass. Symptom. An object exists in memory with a raw value | [Replace Primitive with Object](../patterns/03-refactoring/replace-primitive-with-object.md) | Refactoring Techniques |
 | Deserialization bypassing the validating constructor. Symptom. A Value | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |
+| Deserialization of untrusted data, the pattern's most serious real-world failure mode. Because Serializable requires ... | [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) | Design Patterns (GoF) |
 | Design changes fanning out across every rule. Symptom. A change to | [Transform View](../patterns/06-enterprise-application-architecture/transform-view.md) | Enterprise Application Architecture |
 | Detached collection mutation exceptions. Symptom, adding or removing an | [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md) | Enterprise Application Architecture |
 | Detached entity, lazy-load-after-close. Symptom. An exception such as | [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) | Enterprise Application Architecture |
@@ -3053,6 +3055,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Silent truncation or type coercion on write-back. Symptom. A save | [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) | Enterprise Application Architecture |
 | Silent truncation producing confidently wrong reasoning. Symptom, the model | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |
 | Silent write-side ownership violation. Symptom, a row's value changes to | [Shared Database](../patterns/10-microservices/shared-database.md) | Microservices |
+| Silent, uncontrollable inheritance of the marker. Because a marker interface's contract is inherited by every subclas... | [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) | Design Patterns (GoF) |
 | Silent, unexplained missing fields. Symptom. Intermittent messages | [Content Enricher](../patterns/07-integration/content-enricher.md) | Enterprise Integration |
 | Silently swallowed or delayed exceptions. Symptom. A forked branch fails, | [Fork-Join](../patterns/09-concurrency/fork-join.md) | Concurrency and Parallelism |
 | simple, independent state updates. Symptom. The component now | [Reducer Hook](../patterns/13-frontend-ui/reducer-hook.md) | Frontend and UI |
@@ -5098,6 +5101,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating the gateway as a database. Symptom, the gateway starts | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | Treating the internal model as already the Published Language. Symptom. | [Open Host Service](../patterns/11-domain-driven-design/open-host-service.md) | Domain-Driven Design |
 | Treating the lever as the fix rather than a mitigation, leaving it pulled indefinitely instead of resolving the under... | [Emergency Lever](../patterns/21-sre-operations/emergency-lever.md) | SRE and Operations |
+| Treating the marker as behaviourally significant on its own. Cloneable's own javadoc warns against exactly this. impl... | [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) | Design Patterns (GoF) |
 | Treating the network as reliable. Symptom. A code review, or an incident | [Remote Procedure Invocation](../patterns/10-microservices/remote-procedure-invocation.md) | Microservices |
 | Treating the practice as purely a testing exercise rather than acting on what each experiment finds, so real weakness... | [Chaos Engineering](../patterns/21-sre-operations/chaos-engineering.md) | SRE and Operations |
 | Treating the publish channel as a request-reply channel. Symptom. A | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
@@ -5782,6 +5786,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Hand-written cursor state that drifts from the container. Symptom. A
 - Iteration while holding a lock. Symptom. Latency spikes and thread pool
 - Removal semantics misused. Symptom. An IllegalStateException from a Java
+
+#### [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md)
+
+**Core Problem:** Sometimes a class needs to signal a capability or a semantic property to an external mechanism, most often the runtime or a framework, without adding any real behaviour of its own. The signal has to be part of the class's type so it can be checked without instantiating the object, it has to be inherited automatically by every subclass without a fresh declaration, and it has to cost nothing at runtime beyond a type check. The best documented real instance of this problem is java.io.Serializable, whose own javadoc states the requirement directly. "Serializability of a class is enabled by the class implementing the java.io.Serializable interface. Classes that do not implement this interface will not have any of their state serialized or deserialized. All subtypes of a serializable class are themselves serializable." The same page is explicit that the interface itself carries none of the behaviour. "The serialization interface has no methods or fields and serves only to identify the semantics of being serializable."
+
+**Failure Mode Symptoms:**
+
+- Treating the marker as behaviourally significant on its own. Cloneable's own javadoc warns against exactly this. implementing it "does not guarantee" that Object.clone() will succeed, since the marker only licenses the attempt, and the actual field-for-field copy logic lives elsewhere. A class that implements Cloneable and assumes clone() now works correctly, without checking whether its own fields need deep-copy handling, will produce a shallow-copy bug that surfaces only when a mutable field is shared unexpectedly between the original and the copy.
+- Silent, uncontrollable inheritance of the marker. Because a marker interface's contract is inherited by every subclass with no way to opt out, a subclass that should never be serialized or cloned has no clean mechanism to refuse. Wikipedia's own critique names the workaround plainly. such a subclass "must explicitly throw NotSerializableException," a runtime failure standing in for what a type system with true negative constraints would instead reject at compile time.
+- Assuming the marker interface is a code-quality neutral choice. Checkstyle's own InterfaceIsType rule documentation states it implements "Joshua Bloch, Effective Java, Item 17, use interfaces only to define types," and offers an explicit configuration, allowMarkerInterfaces, to flag marker interfaces like java.io.Serializable as a violation when a project opts into the stricter setting. That property defaults to true, meaning the tooling community's own default posture tolerates the pattern, but a team that has not consciously made that choice, and instead inherited a stricter Checkstyle configuration, can find marker interfaces flagged as violations they did not anticipate.
+- Deserialization of untrusted data, the pattern's most serious real-world failure mode. Because Serializable requires zero validation logic to implement, any class, including deep internal library classes never designed with security in mind, can opt in with no compiler-enforced safety contract over what happens during deserialization. OWASP's own Deserialization Cheat Sheet states the consequence directly. "Attacks against deserializers have been found to allow denial-of-service, access control, or remote code execution (RCE) attacks." This is not a theoretical concern. CVE-2015-7501, a critical, CVSS 9.8 remote code execution vulnerability tied to the Apache Commons Collections library, and CVE-2015-4852, the same underlying gadget-chain class of vulnerability exploited against Oracle WebLogic Server, are both real, dated, NVD-catalogued instances of this exact failure mode, both classified under CWE-502, deserialization of untrusted data.
 
 #### [Mediator](../patterns/01-design-patterns-gof/mediator.md)
 
