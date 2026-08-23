@@ -35,31 +35,10 @@
     "focus": ""
   },
   {
-    "name": "Composite Entity",
-    "slug": "composite-entity",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/composite-entity.md",
-    "focus": ""
-  },
-  {
-    "name": "Composite View",
-    "slug": "composite-view",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/composite-view.md",
-    "focus": ""
-  },
-  {
     "name": "Session Facade",
     "slug": "session-facade",
     "category": "enterprise application architecture",
     "path": "patterns/06-enterprise-application-architecture/session-facade.md",
-    "focus": ""
-  },
-  {
-    "name": "View Helper",
-    "slug": "view-helper",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/view-helper.md",
     "focus": ""
   },
   {

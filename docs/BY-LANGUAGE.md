@@ -215,6 +215,8 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Client Session State](../patterns/06-enterprise-application-architecture/client-session-state.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Collecting Parameter](../patterns/06-enterprise-application-architecture/collecting-parameter.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Composite Entity](../patterns/06-enterprise-application-architecture/composite-entity.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Composite View](../patterns/06-enterprise-application-architecture/composite-view.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Connection Pooling](../patterns/06-enterprise-application-architecture/connection-pooling.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Context Object](../patterns/06-enterprise-application-architecture/context-object.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -260,6 +262,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Two Step View](../patterns/06-enterprise-application-architecture/two-step-view.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) | Enterprise Application Architecture |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) | Enterprise Application Architecture |  |  |  |  |  | Yes | Yes |  | Yes |
+| [View Helper](../patterns/06-enterprise-application-architecture/view-helper.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Aggregator](../patterns/07-integration/aggregator.md) | Enterprise Integration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Canonical Data Model](../patterns/07-integration/canonical-data-model.md) | Enterprise Integration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Channel Adapter](../patterns/07-integration/channel-adapter.md) | Enterprise Integration |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1167,6 +1170,8 @@ These patterns contain runnable code examples written in Go:
 - [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composable](../patterns/04-principles-and-laws/composable.md) (Principles and Laws)
 - [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) (Enterprise Integration)
+- [Composite Entity](../patterns/06-enterprise-application-architecture/composite-entity.md) (Enterprise Application Architecture)
+- [Composite View](../patterns/06-enterprise-application-architecture/composite-view.md) (Enterprise Application Architecture)
 - [Composite](../patterns/01-design-patterns-gof/composite.md) (Design Patterns (GoF))
 - [Composition over Inheritance](../patterns/04-principles-and-laws/composition-over-inheritance.md) (Principles and Laws)
 - [Computer Use](../patterns/17-ai-agentic/computer-use.md) (AI and Agentic)
@@ -1718,6 +1723,7 @@ These patterns contain runnable code examples written in Go:
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Vector Clock](../patterns/12-data-storage/vector-clock.md) (Data and Storage)
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
+- [View Helper](../patterns/06-enterprise-application-architecture/view-helper.md) (Enterprise Application Architecture)
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
 - [Watermark](../patterns/24-stream-processing/watermark.md) (Stream Processing)
 - [Webhook Signature Verification](../patterns/15-security/webhook-signature-verification.md) (Security)
@@ -2893,6 +2899,8 @@ These patterns contain runnable code examples written in Python:
 - [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composable](../patterns/04-principles-and-laws/composable.md) (Principles and Laws)
 - [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) (Enterprise Integration)
+- [Composite Entity](../patterns/06-enterprise-application-architecture/composite-entity.md) (Enterprise Application Architecture)
+- [Composite View](../patterns/06-enterprise-application-architecture/composite-view.md) (Enterprise Application Architecture)
 - [Composite](../patterns/01-design-patterns-gof/composite.md) (Design Patterns (GoF))
 - [Composition over Inheritance](../patterns/04-principles-and-laws/composition-over-inheritance.md) (Principles and Laws)
 - [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
@@ -3596,6 +3604,7 @@ These patterns contain runnable code examples written in Python:
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Vector Clock](../patterns/12-data-storage/vector-clock.md) (Data and Storage)
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
+- [View Helper](../patterns/06-enterprise-application-architecture/view-helper.md) (Enterprise Application Architecture)
 - [ViewModel with State Hoisting](../patterns/27-mobile-architecture/viewmodel-with-state-hoisting.md) (Mobile Architecture)
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
@@ -4753,6 +4762,8 @@ These patterns contain runnable code examples written in TypeScript:
 - [Complete Mediation](../patterns/15-security/complete-mediation.md) (Security)
 - [Composable](../patterns/04-principles-and-laws/composable.md) (Principles and Laws)
 - [Composed Message Processor](../patterns/07-integration/composed-message-processor.md) (Enterprise Integration)
+- [Composite Entity](../patterns/06-enterprise-application-architecture/composite-entity.md) (Enterprise Application Architecture)
+- [Composite View](../patterns/06-enterprise-application-architecture/composite-view.md) (Enterprise Application Architecture)
 - [Composite](../patterns/01-design-patterns-gof/composite.md) (Design Patterns (GoF))
 - [Composition over Inheritance](../patterns/04-principles-and-laws/composition-over-inheritance.md) (Principles and Laws)
 - [Compound Components](../patterns/13-frontend-ui/compound-components.md) (Frontend and UI)
@@ -5389,6 +5400,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Vendor Lock-in](../patterns/18-anti-patterns/vendor-lock-in.md) (Anti-Patterns)
+- [View Helper](../patterns/06-enterprise-application-architecture/view-helper.md) (Enterprise Application Architecture)
 - [Virtual List](../patterns/13-frontend-ui/virtual-list.md) (Frontend and UI)
 - [Visitor](../patterns/01-design-patterns-gof/visitor.md) (Design Patterns (GoF))
 - [Watermark](../patterns/24-stream-processing/watermark.md) (Stream Processing)

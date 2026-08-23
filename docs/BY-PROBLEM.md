@@ -8513,6 +8513,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 **Core Problem:** A single bulky method accumulates a result into a local variable across a long, linear sequence of steps, which is exactly the shape Industrial Logic's own text names directly, already quoted in dimension 1, and the usual first response, extracting each step into its own smaller method, runs into a shared-state problem. each extracted method needs write access to the very same accumulator the others are writing to, so returning each step's own local result and stitching them together in the caller is not always the natural shape once the extraction happens.
 
+#### [Composite Entity](../patterns/06-enterprise-application-architecture/composite-entity.md)
+
+**Core Problem:** A domain model made of many small, related objects, mapped one-to-one to individually remote, individually persistent components, pays a real network and management cost for every one of those fine-grained pieces, which the archived source names directly as one of its own central forces under dimension 3.
+
+#### [Composite View](../patterns/06-enterprise-application-architecture/composite-view.md)
+
+**Core Problem:** A page is commonly built from parts that are shared across many other pages, a header, a footer, a navigation block, and duplicating those shared parts directly inside every page that uses them means a single layout change has to be repeated everywhere that duplicate lives.
+
 #### [Concrete Table Inheritance](../patterns/06-enterprise-application-architecture/concrete-table-inheritance.md)
 
 **Core Problem:** An application's domain model contains a base type with several concrete subtypes, each subtype adding its own fields, and the persistence layer must map that hierarchy onto tables in a relational database that has no native representation of inheritance. This is the identical starting problem shared by all three of Fowler's inheritance mapping patterns, and Concrete Table Inheritance is one of three competing answers, not a standalone technique invented in isolation.
@@ -9057,6 +9065,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Treating a shared, interned instance as though identity mattered.
 - A conditional written as if (currencyA == currencyB) works in
 - Value Object explosion with no invariant behind any of them. Symptom. A
+
+#### [View Helper](../patterns/06-enterprise-application-architecture/view-helper.md)
+
+**Core Problem:** A template-based view, such as a JSP page, is easy to fill with embedded processing logic simply because the logic and the markup live in the same file, and once that happens, the view can no longer be understood, tested, or handed to a page designer without also touching the program logic mixed into it.
 
 ### Enterprise Integration
 
