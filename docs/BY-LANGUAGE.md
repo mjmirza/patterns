@@ -808,6 +808,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [State Machine Workflow](../patterns/23-workflow-orchestration/state-machine-workflow.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Workflow Engine](../patterns/23-workflow-orchestration/workflow-engine.md) | Workflow and Orchestration |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1192,6 +1193,7 @@ These patterns contain runnable code examples written in Go:
 - [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) (Architectural Patterns)
 - [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) (Architectural Patterns)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
+- [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) (Stream Processing)
 - [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
 - [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) (Cloud and Distributed)
 - [Externalized Configuration](../patterns/10-microservices/externalized-configuration.md) (Microservices)
@@ -2879,6 +2881,7 @@ These patterns contain runnable code examples written in Python:
 - [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) (Architectural Patterns)
 - [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) (Architectural Patterns)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
+- [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) (Stream Processing)
 - [Exception Tracking](../patterns/10-microservices/exception-tracking.md) (Microservices)
 - [Expand-Contract Migration](../patterns/20-release-deployment/expand-contract-migration.md) (Release and Deployment)
 - [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
@@ -4667,6 +4670,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Event-Carried State Transfer](../patterns/05-architectural/event-carried-state-transfer.md) (Architectural Patterns)
 - [Event-Driven Architecture](../patterns/05-architectural/event-driven-architecture.md) (Architectural Patterns)
 - [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) (Enterprise Integration)
+- [Event-Time Processing](../patterns/24-stream-processing/event-time-processing.md) (Stream Processing)
 - [Exception Tracking](../patterns/10-microservices/exception-tracking.md) (Microservices)
 - [Extension Object](../patterns/01-design-patterns-gof/extension-object.md) (Design Patterns (GoF))
 - [External Configuration Store](../patterns/08-cloud-distributed/external-configuration-store.md) (Cloud and Distributed)

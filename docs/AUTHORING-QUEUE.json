@@ -7,13 +7,6 @@
     "focus": ""
   },
   {
-    "name": "Event-Time Processing",
-    "slug": "event-time-processing",
-    "category": "stream processing",
-    "path": "patterns/24-stream-processing/event-time-processing.md",
-    "focus": ""
-  },
-  {
     "name": "Watermark",
     "slug": "watermark",
     "category": "stream processing",
