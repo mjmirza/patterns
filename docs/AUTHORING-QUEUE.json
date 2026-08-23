@@ -14,27 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Autosave",
-    "slug": "autosave",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/autosave.md",
-    "focus": ""
-  },
-  {
-    "name": "Bulk Action",
-    "slug": "bulk-action",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/bulk-action.md",
-    "focus": ""
-  },
-  {
-    "name": "Optimistic Undo",
-    "slug": "optimistic-undo",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/optimistic-undo.md",
-    "focus": ""
-  },
-  {
     "name": "Game Loop",
     "slug": "game-loop",
     "category": "real-time simulation",

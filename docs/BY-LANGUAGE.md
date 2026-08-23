@@ -824,10 +824,13 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Online Inference](../patterns/25-mlops/online-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Shadow Model](../patterns/25-mlops/shadow-model.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Autosave](../patterns/26-interaction-hci/autosave.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Breadcrumbs](../patterns/26-interaction-hci/breadcrumbs.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Bulk Action](../patterns/26-interaction-hci/bulk-action.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Empty State](../patterns/26-interaction-hci/empty-state.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Inline Validation](../patterns/26-interaction-hci/inline-validation.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Optimistic Undo](../patterns/26-interaction-hci/optimistic-undo.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Undo](../patterns/26-interaction-hci/undo.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Wizard](../patterns/26-interaction-hci/wizard.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1059,6 +1062,7 @@ These patterns contain runnable code examples written in Go:
 - [Attribute-Based Access Control](../patterns/15-security/abac.md) (Security)
 - [Audit Log](../patterns/15-security/audit-log.md) (Security)
 - [Audit Logging](../patterns/10-microservices/audit-logging.md) (Microservices)
+- [Autosave](../patterns/26-interaction-hci/autosave.md) (Interaction and HCI)
 - [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) (Cloud and Distributed)
 - [B-Tree](../patterns/12-data-storage/b-tree.md) (Data and Storage)
 - [BASE](../patterns/04-principles-and-laws/base.md) (Principles and Laws)
@@ -1078,6 +1082,7 @@ These patterns contain runnable code examples written in Go:
 - [Bridge](../patterns/01-design-patterns-gof/bridge.md) (Design Patterns (GoF))
 - [Broker](../patterns/05-architectural/broker-architecture.md) (Architectural Patterns)
 - [Builder](../patterns/01-design-patterns-gof/builder.md) (Design Patterns (GoF))
+- [Bulk Action](../patterns/26-interaction-hci/bulk-action.md) (Interaction and HCI)
 - [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) (Cloud and Distributed)
 - [Busy Database](../patterns/18-anti-patterns/busy-database.md) (Anti-Patterns)
 - [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) (Anti-Patterns)
@@ -1398,6 +1403,7 @@ These patterns contain runnable code examples written in Go:
 - [OpenID Connect](../patterns/15-security/openid-connect.md) (Security)
 - [Optics](../patterns/16-functional/optics.md) (Functional Programming)
 - [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) (Enterprise Application Architecture)
+- [Optimistic Undo](../patterns/26-interaction-hci/optimistic-undo.md) (Interaction and HCI)
 - [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Orchestrator-Worker](../patterns/17-ai-agentic/orchestrator-worker.md) (AI and Agentic)
 - [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) (Workflow and Orchestration)
@@ -2738,6 +2744,7 @@ These patterns contain runnable code examples written in Python:
 - [Attribute-Based Access Control](../patterns/15-security/abac.md) (Security)
 - [Audit Log](../patterns/15-security/audit-log.md) (Security)
 - [Audit Logging](../patterns/10-microservices/audit-logging.md) (Microservices)
+- [Autosave](../patterns/26-interaction-hci/autosave.md) (Interaction and HCI)
 - [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) (Cloud and Distributed)
 - [B-Tree](../patterns/12-data-storage/b-tree.md) (Data and Storage)
 - [BASE](../patterns/04-principles-and-laws/base.md) (Principles and Laws)
@@ -2759,6 +2766,7 @@ These patterns contain runnable code examples written in Python:
 - [Bridge](../patterns/01-design-patterns-gof/bridge.md) (Design Patterns (GoF))
 - [Broker](../patterns/05-architectural/broker-architecture.md) (Architectural Patterns)
 - [Builder](../patterns/01-design-patterns-gof/builder.md) (Design Patterns (GoF))
+- [Bulk Action](../patterns/26-interaction-hci/bulk-action.md) (Interaction and HCI)
 - [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) (Cloud and Distributed)
 - [Busy Database](../patterns/18-anti-patterns/busy-database.md) (Anti-Patterns)
 - [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) (Anti-Patterns)
@@ -3171,6 +3179,7 @@ These patterns contain runnable code examples written in Python:
 - [Optics](../patterns/16-functional/optics.md) (Functional Programming)
 - [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) (Enterprise Application Architecture)
 - [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) (Frontend and UI)
+- [Optimistic Undo](../patterns/26-interaction-hci/optimistic-undo.md) (Interaction and HCI)
 - [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
 - [Orchestrator-Worker](../patterns/17-ai-agentic/orchestrator-worker.md) (AI and Agentic)
 - [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) (Workflow and Orchestration)
@@ -4572,6 +4581,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Atomic Design](../patterns/13-frontend-ui/atomic-design.md) (Frontend and UI)
 - [Audit Log](../patterns/15-security/audit-log.md) (Security)
 - [Audit Logging](../patterns/10-microservices/audit-logging.md) (Microservices)
+- [Autosave](../patterns/26-interaction-hci/autosave.md) (Interaction and HCI)
 - [Autoscaling](../patterns/08-cloud-distributed/autoscaling.md) (Cloud and Distributed)
 - [B-Tree](../patterns/12-data-storage/b-tree.md) (Data and Storage)
 - [BASE](../patterns/04-principles-and-laws/base.md) (Principles and Laws)
@@ -4589,6 +4599,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Bridge](../patterns/01-design-patterns-gof/bridge.md) (Design Patterns (GoF))
 - [Broker](../patterns/05-architectural/broker-architecture.md) (Architectural Patterns)
 - [Builder](../patterns/01-design-patterns-gof/builder.md) (Design Patterns (GoF))
+- [Bulk Action](../patterns/26-interaction-hci/bulk-action.md) (Interaction and HCI)
 - [Bulkhead](../patterns/08-cloud-distributed/bulkhead.md) (Cloud and Distributed)
 - [Busy Database](../patterns/18-anti-patterns/busy-database.md) (Anti-Patterns)
 - [Busy Front End](../patterns/18-anti-patterns/busy-front-end.md) (Anti-Patterns)
@@ -4957,6 +4968,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Optics](../patterns/16-functional/optics.md) (Functional Programming)
 - [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) (Enterprise Application Architecture)
 - [Optimistic UI](../patterns/13-frontend-ui/optimistic-ui.md) (Frontend and UI)
+- [Optimistic Undo](../patterns/26-interaction-hci/optimistic-undo.md) (Interaction and HCI)
 - [Orchestrator-Worker](../patterns/17-ai-agentic/orchestrator-worker.md) (AI and Agentic)
 - [Outbox Inbox Pair](../patterns/23-workflow-orchestration/outbox-inbox-pair.md) (Workflow and Orchestration)
 - [Output Encoding](../patterns/15-security/output-encoding.md) (Security)

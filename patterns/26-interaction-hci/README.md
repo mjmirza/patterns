@@ -2,28 +2,23 @@
 
 Origin. Tidwell, Designing Interfaces
 
-7 entries, 31,344 words, 3 more planned, 10 total when the family is complete. Every entry carries all 18
+10 entries, 45,939 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Interaction and HCI
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
+| [Autosave](autosave.md) | canonical | 4,641 | A manual-save-only application places the entire burden of data safety on a person remembering to act, and every crash, browser tab close, or accidental navigation between that ... |
 | [Breadcrumbs](breadcrumbs.md) | established | 3,727 | Smashing Magazine's own definition frames the problem directly, a breadcrumb trail is a type of secondary navigation scheme that reveals the user's location in a website or web ... |
+| [Bulk Action](bulk-action.md) | established | 4,844 | Applying the same operation to many similar items one at a time is repetitive, and the more items a task touches, the more that repetition costs. |
 | [Command Palette](command-palette-ux.md) | established | 4,478 | A traditional menu bar or sidebar hierarchy requires a person to know where a command lives, which menu, which submenu, which settings page, before they can use it. |
 | [Empty State](empty-state.md) | established | 4,587 | A screen with no content and no explanation is indistinguishable from a broken one. |
 | [Inline Validation](inline-validation.md) | established | 4,740 | A form that only validates on submit forces the person to fill in every field before learning which of them were wrong, then reconcile a wall of errors against fields that may ... |
+| [Optimistic Undo](optimistic-undo.md) | established | 5,110 | A blocking confirmation dialog interrupts every single invocation of an action, whether that particular invocation was a mistake or not, which is costly for actions a person takes ... |
 | [Progressive Disclosure](progressive-disclosure.md) | canonical | 4,578 | An interface that serves both a person doing something for the first time and a person who does it daily faces a direct conflict. |
 | [Undo](undo.md) | established | 4,571 | Any interface that lets a person change state, a text edit, a shape moved, a value typed, a file deleted, creates a moment where the person can make a mistake, and a mistake with ... |
 | [Wizard](wizard.md) | established | 4,663 | A single flat form with many fields overwhelms a person and increases both error rate and abandonment, a wizard trades that for a lower per-screen cognitive load at the cost of ... |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Autosave
-- Bulk Action
-- Optimistic Undo
 
 ## Reading order
 
