@@ -266,13 +266,6 @@
     "focus": ""
   },
   {
-    "name": "Servant",
-    "slug": "servant",
-    "category": "design patterns gof",
-    "path": "patterns/01-design-patterns-gof/servant.md",
-    "focus": ""
-  },
-  {
     "name": "Twin",
     "slug": "twin",
     "category": "design patterns gof",

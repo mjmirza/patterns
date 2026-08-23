@@ -1627,6 +1627,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Exposing a mutable delegate. The delegate is mutable, and exposing it | [Remove Middle Man](../patterns/03-refactoring/remove-middle-man.md) | Refactoring Techniques |
 | Exposing a slot for content that only ever varies across a small, | [Slot and Children as API](../patterns/13-frontend-ui/slot-and-children-as-api.md) | Frontend and UI |
 | Exposing internal state or handlers that leak implementation | [Headless Component](../patterns/13-frontend-ui/headless-component.md) | Frontend and UI |
+| Exposing internal state solely so the servant can reach it. This is the direct, sourced consequence of the pattern's ... | [Servant](../patterns/01-design-patterns-gof/servant.md) | Design Patterns (GoF) |
 | extensively. The symptom is a reader who must navigate through five | [Extract Class](../patterns/03-refactoring/extract-class.md) | Refactoring Techniques |
 | External error leaks internal state. Symptom. A caller learns policy names, | [Fail Securely](../patterns/15-security/fail-securely.md) | Security |
 | Extra business context, most often something that looks convenient to have on hand later, is embedded directly inside... | [Correlation ID](../patterns/22-observability/correlation-id.md) | Observability |
@@ -2663,6 +2664,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Reaching for a hand-rolled continuation-passing encoding purely to | [Algebraic Effects](../patterns/16-functional/algebraic-effects.md) | Functional Programming |
 | Reaching for a HOC where a custom hook would serve identically, with | [Higher-Order Component](../patterns/13-frontend-ui/higher-order-component.md) | Frontend and UI |
 | Reaching for a render prop in a codebase where a custom hook would | [Render Props](../patterns/13-frontend-ui/render-props.md) | Frontend and UI |
+| Reaching for a servant when the served classes genuinely share meaningful, cohesive behavior. If several classes are ... | [Servant](../patterns/01-design-patterns-gof/servant.md) | Design Patterns (GoF) |
 | Reaching for a Server Action for a pure data-fetching read rather | [Server Action](../patterns/13-frontend-ui/server-action.md) | Frontend and UI |
 | Reaching for Profunctor when only one direction is needed. Symptom. | [Profunctor](../patterns/16-functional/profunctor.md) | Functional Programming |
 | Reaching for the Monad instance and expecting accumulation anyway. | [Validation Applicative](../patterns/16-functional/validation-applicative.md) | Functional Programming |
@@ -4535,6 +4537,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The gateway silently duplicates authentication and authorization logic | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
 | The gateway's interface has grown to dozens of methods, many of | [Messaging Gateway](../patterns/07-integration/messaging-gateway.md) | Enterprise Integration |
 | the gateway. Symptom, a single degraded backend service (raised | [API Gateway](../patterns/10-microservices/api-gateway.md) | Microservices |
+| The general utility-class anti-pattern critique applies directly. Baeldung's own guide to mocking static methods stat... | [Servant](../patterns/01-design-patterns-gof/servant.md) | Design Patterns (GoF) |
 | The generic repository leaks the ORM underneath it. Symptom, a | [Repository](../patterns/11-domain-driven-design/repository.md) | Domain-Driven Design |
 | The GetterEradicator anti-pattern. Symptom, every getter in a codebase has | [Tell, Don't Ask](../patterns/04-principles-and-laws/tell-do-not-ask.md) | Principles and Laws |
 | The god aggregate. Symptom, one class grows to hold every rule that ever | [Tell, Don't Ask](../patterns/04-principles-and-laws/tell-do-not-ask.md) | Principles and Laws |
@@ -4804,6 +4807,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | The second failure mode is interface-itis. The symptom is that every class in | [Dependency Inversion Principle](../patterns/04-principles-and-laws/dependency-inversion-principle.md) | Principles and Laws |
 | The sender is content to have the request handled by somebody, without a | [Chain of Responsibility](../patterns/01-design-patterns-gof/chain-of-responsibility.md) | Design Patterns (GoF) |
 | The sensitive action can be decomposed into named duties. | [Separation of Duties](../patterns/15-security/separation-of-duties.md) | Security |
+| The servant becoming a God class. Wikipedia's own God object article defines the risk directly, an entity that "refer... | [Servant](../patterns/01-design-patterns-gof/servant.md) | Design Patterns (GoF) |
 | The server team can publish a future key before it is needed, or can keep a | [Certificate Pinning](../patterns/15-security/certificate-pinning.md) | Security |
 | The service is exposed to remote attackers, so credential stuffing and | [Passwordless Authentication](../patterns/15-security/passwordless-authentication.md) | Security |
 | The service is large enough, or important enough, that a full outage has a | [Cell-Based Architecture](../patterns/05-architectural/cell-based-architecture.md) | Architectural Patterns |
@@ -5952,6 +5956,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The proxy grew a brain. Symptom. A bug is reported against business
 - Unbounded caching inside a proxy. Symptom. Heap grows monotonically in a
 - Everything is proxied. Symptom. Startup time grows steadily as the
+
+#### [Servant](../patterns/01-design-patterns-gof/servant.md)
+
+**Core Problem:** Wikipedia's own definition, quoted directly. "Servant is used for providing some behavior to a group of classes. Instead of defining that behavior in each class, or when we cannot factor out this behavior in the common parent class, it is defined once in the Servant." The article's own lead restates the same idea. "The servant pattern defines an object used to offer some functionality to a group of classes without defining that functionality in each of them. A Servant is a class whose instance, or even just class, provides methods that take care of a desired service, while objects for which, or with whom, the servant does something, are taken as parameters."
+
+**Failure Mode Symptoms:**
+
+- Reaching for a servant when the served classes genuinely share meaningful, cohesive behavior. If several classes are not merely "can be repositioned" but share a real, ongoing behavioral contract, a UI widget lifecycle, for example, pulling that into an external servant instead of a proper shared interface or base class discards real polymorphic dispatch for no benefit, replacing widget.render() everywhere with servant.render(widget), and the manual isinstance-style branching confirmed directly in faif/python-patterns's own GeometryTools.calculatearea is the concrete cost of that choice, a runtime type check standing in for what a compiler-enforced virtual call would otherwise provide for free.
+- The servant becoming a God class. Wikipedia's own God object article defines the risk directly, an entity that "references a large number of distinct types, has too many unrelated or uncategorized methods, or some combination of both," which "violates the fundamental programming technique of separating a large problem into several smaller problems," and creates tight coupling because "the other objects within the program rely on the single god object." Since a servant's entire purpose is accumulating cross-cutting operations for a group of classes, an unbounded or badly scoped one, an AppUtils or Helper class that keeps absorbing unrelated new capabilities because "there is already a place for shared stuff," is a direct, well-documented path to exactly this failure.
+- Exposing internal state solely so the servant can reach it. This is the direct, sourced consequence of the pattern's own mechanism. the Movable interface confirmed in dimension 5 exists purely to let MoveServant reach Position, adding public getPosition and setPosition to every shape class that would otherwise have no reason to expose a mutable position setter publicly. Dimension 8's own finding, that native extension mechanisms in C, Kotlin, and Swift are all explicitly barred from private state, sharpens this failure mode by contrast, a hand-rolled servant has no equivalent guardrail, so widening a served class's public surface purely to accommodate the servant is a real and easy mistake, not a theoretical one.
+- The general utility-class anti-pattern critique applies directly. Baeldung's own guide to mocking static methods states the mechanism plainly, "a class depending on a static method has tight coupling, and second, it nearly always leads to code that is difficult to test," a critique covered fully as a testing concern in dimension 15, and one that transfers wholesale to most real Servant implementations found in this research, since nearly all of them, the Python @staticmethod examples and the framework utility classes alike, use exactly this static shape.
 
 #### [Singleton](../patterns/01-design-patterns-gof/singleton.md)
 

@@ -31,6 +31,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prototype](../patterns/01-design-patterns-gof/prototype.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Proxy](../patterns/01-design-patterns-gof/proxy.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
+| [Servant](../patterns/01-design-patterns-gof/servant.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Singleton](../patterns/01-design-patterns-gof/singleton.md) | Design Patterns (GoF) |  |  | Yes | Yes | Yes | Yes | Yes |  | Yes |
 | [State](../patterns/01-design-patterns-gof/state.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Strategy](../patterns/01-design-patterns-gof/strategy.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes | Yes |  | Yes |
@@ -954,6 +955,7 @@ These patterns have unique implementation variants or change their design struct
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
 - [Row Data Gateway](../patterns/06-enterprise-application-architecture/row-data-gateway.md) (Enterprise Application Architecture)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
+- [Servant](../patterns/01-design-patterns-gof/servant.md) (Design Patterns (GoF))
 - [Singleton Abuse](../patterns/18-anti-patterns/singleton-abuse.md) (Anti-Patterns)
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Specification](../patterns/11-domain-driven-design/specification.md) (Domain-Driven Design)
@@ -1486,6 +1488,7 @@ These patterns contain runnable code examples written in Go:
 - [Sequential Convoy](../patterns/08-cloud-distributed/sequential-convoy.md) (Cloud and Distributed)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
+- [Servant](../patterns/01-design-patterns-gof/servant.md) (Design Patterns (GoF))
 - [Server Session State](../patterns/06-enterprise-application-architecture/server-session-state.md) (Enterprise Application Architecture)
 - [Server-Side Discovery](../patterns/10-microservices/server-side-discovery.md) (Microservices)
 - [Server-Side Service Discovery](../patterns/10-microservices/server-side-service-discovery.md) (Microservices)
@@ -2361,6 +2364,7 @@ These patterns have unique implementation variants or change their design struct
 - [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) (Principles and Laws)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
+- [Servant](../patterns/01-design-patterns-gof/servant.md) (Design Patterns (GoF))
 - [Serverless Architecture](../patterns/05-architectural/serverless-architecture.md) (Architectural Patterns)
 - [Service Deployment Platform](../patterns/10-microservices/service-deployment-platform.md) (Microservices)
 - [Service Locator Antipattern](../patterns/18-anti-patterns/service-locator-antipattern.md) (Anti-Patterns)
@@ -2582,6 +2586,7 @@ These patterns have unique implementation variants or change their design struct
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) (Refactoring Techniques)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
+- [Servant](../patterns/01-design-patterns-gof/servant.md) (Design Patterns (GoF))
 - [Singleton](../patterns/01-design-patterns-gof/singleton.md) (Design Patterns (GoF))
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
@@ -3269,6 +3274,7 @@ These patterns contain runnable code examples written in Python:
 - [Separation of Duties](../patterns/15-security/separation-of-duties.md) (Security)
 - [Sequential Convoy](../patterns/08-cloud-distributed/sequential-convoy.md) (Cloud and Distributed)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
+- [Servant](../patterns/01-design-patterns-gof/servant.md) (Design Patterns (GoF))
 - [Server Action](../patterns/13-frontend-ui/server-action.md) (Frontend and UI)
 - [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)
 - [Server Session State](../patterns/06-enterprise-application-architecture/server-session-state.md) (Enterprise Application Architecture)
@@ -3681,6 +3687,7 @@ These patterns have unique implementation variants or change their design struct
 - [Separation of Duties](../patterns/15-security/separation-of-duties.md) (Security)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
+- [Servant](../patterns/01-design-patterns-gof/servant.md) (Design Patterns (GoF))
 - [Serverless Deployment](../patterns/10-microservices/serverless-deployment.md) (Microservices)
 - [Service Instance per Container](../patterns/10-microservices/service-instance-per-container.md) (Microservices)
 - [Shared Nothing](../patterns/05-architectural/shared-nothing.md) (Architectural Patterns)
@@ -4100,6 +4107,7 @@ These patterns have unique implementation variants or change their design struct
 - [Semaphore](../patterns/09-concurrency/semaphore.md) (Concurrency and Parallelism)
 - [Separate Query from Modifier](../patterns/03-refactoring/separate-query-from-modifier.md) (Refactoring Techniques)
 - [Separation of Concerns](../patterns/04-principles-and-laws/separation-of-concerns.md) (Principles and Laws)
+- [Servant](../patterns/01-design-patterns-gof/servant.md) (Design Patterns (GoF))
 - [Service Instance per Container](../patterns/10-microservices/service-instance-per-container.md) (Microservices)
 - [Shared Nothing](../patterns/05-architectural/shared-nothing.md) (Architectural Patterns)
 - [Singleton](../patterns/01-design-patterns-gof/singleton.md) (Design Patterns (GoF))
@@ -4388,6 +4396,7 @@ These patterns have unique implementation variants or change their design struct
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
 - [Semigroup](../patterns/16-functional/semigroup.md) (Functional Programming)
+- [Servant](../patterns/01-design-patterns-gof/servant.md) (Design Patterns (GoF))
 - [Slide Statements](../patterns/03-refactoring/slide-statements.md) (Refactoring Techniques)
 - [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) (Enterprise Application Architecture)
 - [Speculative Generality](../patterns/02-code-smells/speculative-generality.md) (Code Smells)
@@ -5006,6 +5015,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Sequential Convoy](../patterns/08-cloud-distributed/sequential-convoy.md) (Cloud and Distributed)
 - [Sequential Coupling](../patterns/18-anti-patterns/sequential-coupling.md) (Anti-Patterns)
 - [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) (Enterprise Application Architecture)
+- [Servant](../patterns/01-design-patterns-gof/servant.md) (Design Patterns (GoF))
 - [Server Action](../patterns/13-frontend-ui/server-action.md) (Frontend and UI)
 - [Server Components](../patterns/13-frontend-ui/server-components.md) (Frontend and UI)
 - [Server Session State](../patterns/06-enterprise-application-architecture/server-session-state.md) (Enterprise Application Architecture)
