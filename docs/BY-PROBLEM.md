@@ -2379,6 +2379,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | one, with no prefetch hint to soften the delay. Symptom. Moving | [PRPL Pattern](../patterns/13-frontend-ui/prpl-pattern.md) | Frontend and UI |
 | One-shot events crammed into State. Symptom. A toast or a one-time UI | [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) | Architectural Patterns |
 | One-shot iterator treated as Traversable. Symptom. The first pass succeeds, | [Traversable](../patterns/16-functional/traversable.md) | Functional Programming |
+| Online and offline drift when materialization lags or fails. The online | [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |
 | only descriptive. Judgement note. the specific symptom wording below is | [Singleton Abuse](../patterns/18-anti-patterns/singleton-abuse.md) | Anti-Patterns |
 | Opaque denials. Symptom. Users retry, open support tickets, or find unsafe | [Zero Trust](../patterns/15-security/zero-trust.md) | Security |
 | Opaque denials. Symptom: denial logs contain no useful fields. Cause: the | [Least Privilege](../patterns/15-security/least-privilege.md) | Security |
@@ -2543,6 +2544,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Placing a footer or other important, reachable content directly | [Infinite Scroll](../patterns/13-frontend-ui/infinite-scroll.md) | Frontend and UI |
 | Placing a single Error Boundary around the entire application with | [Error Boundary](../patterns/13-frontend-ui/error-boundary.md) | Frontend and UI |
 | Placing the abstraction layer on a genuinely cycle-critical | [Hardware Abstraction Layer](../patterns/28-embedded-hardware/hardware-abstraction-layer.md) | Embedded and Hardware-Software |
+| Point-in-time join done incorrectly, causing label leakage. This is the | [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |
 | Poison message loop. Symptom. A single message is processed, fails, becomes | [Queue-Based Load Leveling](../patterns/08-cloud-distributed/queue-based-load-leveling.md) | Cloud and Distributed |
 | Poison message loop. Symptom. Consumer lag on one partition grows | [Event-Driven Consumer](../patterns/07-integration/event-driven-consumer.md) | Enterprise Integration |
 | Poison message replay. | [Retry](../patterns/08-cloud-distributed/retry.md) | Cloud and Distributed |
@@ -5091,6 +5093,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating a compacted topic as an audit log is a category misuse. A team | [Log Compaction](../patterns/12-data-storage/log-compaction.md) | Data and Storage |
 | Treating a data-validation matrix as narrative scenarios. Symptom. Twelve | [Given-When-Then](../patterns/14-testing/given-when-then.md) | Testing |
 | Treating a distributed system's clock as a reliable version source. | [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) | Enterprise Application Architecture |
+| Treating a feature store as a general-purpose warehouse substitute. | [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |
 | Treating a Form Action as identical to a Server Action, and | [Form Action](../patterns/13-frontend-ui/form-action.md) | Frontend and UI |
 | Treating a genuinely irreversible, external action as undoable. | [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) | Frontend and UI |
 | Treating a job as a low-latency service. Symptom. A user-facing feature | [Map-Reduce](../patterns/09-concurrency/map-reduce.md) | Concurrency and Parallelism |
@@ -16781,6 +16784,18 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 **Failure Mode Symptoms:**
 
 - Silent data loss from an unexamined default, a class of misuse confirmed identically across all four systems surveyed by the related event-time-processing entry. Flink drops late elements by default once the watermark has passed a window's end. Beam's default trigger emits exactly once and discards late data because the default allowed lateness is zero. Kafka Streams drops a record carrying a negative or invalid extracted timestamp. The observable production symptom, per that entry, is "a metric or count that is silently and permanently short, discovered only when totals fail to reconcile against a source-of-truth system, often days or weeks later." Arguably the single most common real-world misuse of the whole mechanism is shipping the default, zero allowed lateness, zero grace period, configuration without ever making an explicit decision about it.
+
+### MLOps
+
+#### [Feature Store](../patterns/25-mlops/feature-store.md)
+
+**Core Problem:** Feature computation logic written for offline, batch training, commonly Python or Spark against a data warehouse, is easy to accidentally diverge from the low-latency online serving path that computes the same feature at prediction time, often in a different language or runtime entirely. Any difference between the two, a different null-handling rule, a different aggregation window, a bug present in one path and not the other, causes the model to see systematically different feature values in production than it saw during training, silently degrading accuracy with no exception thrown anywhere. Google's own "Rules of Machine Learning" names this problem directly, in a rule aimed exactly at avoiding it, "The best way to make sure that you train like you serve is to save the set of features used at serving time, and then pipe those features to a log to use them at training time," and, separately, "Re-use code between your training pipeline and your serving pipeline whenever possible." AWS's own SageMaker Feature Store documentation names the failure mode by its common industry term directly, "This reduces training-serving skew, a common issue in ML where the difference between performance during training and serving can impact the accuracy of your ML model."
+
+**Failure Mode Symptoms:**
+
+- Point-in-time join done incorrectly, causing label leakage. This is the
+- Online and offline drift when materialization lags or fails. The online
+- Treating a feature store as a general-purpose warehouse substitute.
 
 ### Mobile Architecture
 
