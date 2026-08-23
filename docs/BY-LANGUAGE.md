@@ -817,11 +817,14 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Watermark](../patterns/24-stream-processing/watermark.md) | Stream Processing |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Batch Inference](../patterns/25-mlops/batch-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Champion-Challenger](../patterns/25-mlops/champion-challenger.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Drift Detection](../patterns/25-mlops/drift-detection.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Feature Store](../patterns/25-mlops/feature-store.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Model Monitoring](../patterns/25-mlops/model-monitoring.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Model Registry](../patterns/25-mlops/model-registry.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Online Inference](../patterns/25-mlops/online-inference.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Shadow Model](../patterns/25-mlops/shadow-model.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md) | MLOps |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Undo](../patterns/26-interaction-hci/undo.md) | Interaction and HCI |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Coordinator Pattern](../patterns/27-mobile-architecture/coordinator-pattern.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
 | [Deep Link Router](../patterns/27-mobile-architecture/deep-link-router.md) | Mobile Architecture |  |  |  |  | Yes | Yes |  | Yes |  |
@@ -1189,6 +1192,7 @@ These patterns contain runnable code examples written in Go:
 - [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) (Microservices)
 - [Domain-based](../patterns/04-principles-and-laws/domain-based.md) (Principles and Laws)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
+- [Drift Detection](../patterns/25-mlops/drift-detection.md) (MLOps)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
 - [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
@@ -1349,6 +1353,7 @@ These patterns contain runnable code examples written in Go:
 - [Middle Man](../patterns/02-code-smells/middle-man.md) (Code Smells)
 - [Mock](../patterns/14-testing/mock.md) (Testing)
 - [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) (AI and Agentic)
+- [Model Monitoring](../patterns/25-mlops/model-monitoring.md) (MLOps)
 - [Model Registry](../patterns/25-mlops/model-registry.md) (MLOps)
 - [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) (Architectural Patterns)
 - [Modular Monolith](../patterns/05-architectural/modular-monolith.md) (Architectural Patterns)
@@ -1630,6 +1635,7 @@ These patterns contain runnable code examples written in Go:
 - [Two-Phase Commit](../patterns/12-data-storage/two-phase-commit.md) (Data and Storage)
 - [Two-Phase Locking](../patterns/12-data-storage/two-phase-locking.md) (Data and Storage)
 - [USE Method](../patterns/22-observability/use-method.md) (Observability)
+- [Undo](../patterns/26-interaction-hci/undo.md) (Interaction and HCI)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
@@ -2884,6 +2890,7 @@ These patterns contain runnable code examples written in Python:
 - [Domain-based](../patterns/04-principles-and-laws/domain-based.md) (Principles and Laws)
 - [Double Buffering](../patterns/28-embedded-hardware/double-buffering.md) (Embedded and Hardware-Software)
 - [Double-Checked Locking](../patterns/09-concurrency/double-checked-locking.md) (Concurrency and Parallelism)
+- [Drift Detection](../patterns/25-mlops/drift-detection.md) (MLOps)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
 - [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
@@ -3105,6 +3112,7 @@ These patterns contain runnable code examples written in Python:
 - [Middle Man](../patterns/02-code-smells/middle-man.md) (Code Smells)
 - [Mock](../patterns/14-testing/mock.md) (Testing)
 - [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) (AI and Agentic)
+- [Model Monitoring](../patterns/25-mlops/model-monitoring.md) (MLOps)
 - [Model Registry](../patterns/25-mlops/model-registry.md) (MLOps)
 - [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) (Architectural Patterns)
 - [Modular Monolith](../patterns/05-architectural/modular-monolith.md) (Architectural Patterns)
@@ -3461,6 +3469,7 @@ These patterns contain runnable code examples written in Python:
 - [USE Method](../patterns/22-observability/use-method.md) (Observability)
 - [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) (Domain-Driven Design)
 - [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
+- [Undo](../patterns/26-interaction-hci/undo.md) (Interaction and HCI)
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
@@ -3647,6 +3656,7 @@ These patterns have unique implementation variants or change their design struct
 - [Microservices Architecture](../patterns/05-architectural/microservices-architecture.md) (Architectural Patterns)
 - [Mock](../patterns/14-testing/mock.md) (Testing)
 - [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) (AI and Agentic)
+- [Model Monitoring](../patterns/25-mlops/model-monitoring.md) (MLOps)
 - [Modular Monolith](../patterns/05-architectural/modular-monolith.md) (Architectural Patterns)
 - [Module](../patterns/11-domain-driven-design/module.md) (Domain-Driven Design)
 - [Monad](../patterns/16-functional/monad.md) (Functional Programming)
@@ -4689,6 +4699,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Domain Storytelling](../patterns/11-domain-driven-design/domain-storytelling.md) (Domain-Driven Design)
 - [Domain-Specific Protocol](../patterns/10-microservices/domain-specific-protocol.md) (Microservices)
 - [Domain-based](../patterns/04-principles-and-laws/domain-based.md) (Principles and Laws)
+- [Drift Detection](../patterns/25-mlops/drift-detection.md) (MLOps)
 - [Dummy](../patterns/14-testing/dummy.md) (Testing)
 - [Duplicate Code](../patterns/02-code-smells/duplicate-code.md) (Code Smells)
 - [Durable Execution](../patterns/23-workflow-orchestration/durable-execution.md) (Workflow and Orchestration)
@@ -4882,6 +4893,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Middle Man](../patterns/02-code-smells/middle-man.md) (Code Smells)
 - [Mock](../patterns/14-testing/mock.md) (Testing)
 - [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) (AI and Agentic)
+- [Model Monitoring](../patterns/25-mlops/model-monitoring.md) (MLOps)
 - [Model Registry](../patterns/25-mlops/model-registry.md) (MLOps)
 - [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) (Architectural Patterns)
 - [Model-View-Controller](../patterns/05-architectural/model-view-controller.md) (Architectural Patterns)
@@ -5210,6 +5222,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [USE Method](../patterns/22-observability/use-method.md) (Observability)
 - [Ubiquitous Language](../patterns/11-domain-driven-design/ubiquitous-language.md) (Domain-Driven Design)
 - [Undo Stack](../patterns/13-frontend-ui/undo-stack.md) (Frontend and UI)
+- [Undo](../patterns/26-interaction-hci/undo.md) (Interaction and HCI)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)

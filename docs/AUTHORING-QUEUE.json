@@ -14,27 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Model Monitoring",
-    "slug": "model-monitoring",
-    "category": "MLOps",
-    "path": "patterns/25-mlops/model-monitoring.md",
-    "focus": ""
-  },
-  {
-    "name": "Drift Detection",
-    "slug": "drift-detection",
-    "category": "MLOps",
-    "path": "patterns/25-mlops/drift-detection.md",
-    "focus": ""
-  },
-  {
-    "name": "Undo",
-    "slug": "undo",
-    "category": "interaction and HCI",
-    "path": "patterns/26-interaction-hci/undo.md",
-    "focus": ""
-  },
-  {
     "name": "Wizard",
     "slug": "wizard",
     "category": "interaction and HCI",

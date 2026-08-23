@@ -16795,6 +16795,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 **Core Problem:** A single promotion decision, is this new model good enough to replace the old one, is a one-time event. The problem champion-challenger addresses is different, is the model currently deployed still the best one available, asked repeatedly, over time, as new candidates keep arriving. AWS SageMaker's own worked example for its A or B mechanism makes the repeatable nature explicit, after one variant wins and the loser is deleted, you can continue testing new models in production by adding new variants to your endpoint and following the same steps again, the same cycle re-run indefinitely rather than a single event.
 
+#### [Drift Detection](../patterns/25-mlops/drift-detection.md)
+
+**Core Problem:** A trained model's parameters are frozen at the moment training ends, but the real-world process it scores keeps moving. Huyen's article frames this directly through named companies whose production traffic genuinely shifts, Google Maps' time-of-arrival estimation, Google Translate's translation quality, Facebook's newsfeed ranking, Stitch Fix's clothing recommendation with delayed customer feedback, and Lyft handling market seasonality in its own time series. TikTok's traffic-allocation strategy, each new video randomly assigned an initial pool of traffic, is itself an example of a system deliberately built around the expectation that distributions keep shifting.
+
 #### [Feature Store](../patterns/25-mlops/feature-store.md)
 
 **Core Problem:** Feature computation logic written for offline, batch training, commonly Python or Spark against a data warehouse, is easy to accidentally diverge from the low-latency online serving path that computes the same feature at prediction time, often in a different language or runtime entirely. Any difference between the two, a different null-handling rule, a different aggregation window, a bug present in one path and not the other, causes the model to see systematically different feature values in production than it saw during training, silently degrading accuracy with no exception thrown anywhere. Google's own "Rules of Machine Learning" names this problem directly, in a rule aimed exactly at avoiding it, "The best way to make sure that you train like you serve is to save the set of features used at serving time, and then pipe those features to a log to use them at training time," and, separately, "Re-use code between your training pipeline and your serving pipeline whenever possible." AWS's own SageMaker Feature Store documentation names the failure mode by its common industry term directly, "This reduces training-serving skew, a common issue in ML where the difference between performance during training and serving can impact the accuracy of your ML model."
@@ -16804,6 +16808,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Point-in-time join done incorrectly, causing label leakage. This is the
 - Online and offline drift when materialization lags or fails. The online
 - Treating a feature store as a general-purpose warehouse substitute.
+
+#### [Model Monitoring](../patterns/25-mlops/model-monitoring.md)
+
+**Core Problem:** A deployed model does not throw an exception when it gets worse. AWS's own model quality monitoring documentation states the core mechanism this practice exists to solve, model quality monitoring jobs monitor the performance of a model by comparing the predictions that the model makes with the actual ground truth labels that the model attempts to predict, and its current replacement-stack guidance names the reason that comparison is fundamentally delayed, including a pattern for reconciling delayed ground truth with predictions by inference identifier, which addresses the real world label latency that makes model quality monitoring difficult.
 
 #### [Model Registry](../patterns/25-mlops/model-registry.md)
 
@@ -16820,6 +16828,12 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 #### [Training-Serving Skew Guard](../patterns/25-mlops/training-serving-skew-guard.md)
 
 **Core Problem:** Feature logic written once for an offline training pipeline is easy to reimplement, slightly differently, for a separate low-latency serving pipeline, since the two paths are usually built by different people under different constraints, batch throughput for training and tight latency budgets for serving. Any divergence between the two, a different null-handling rule, a stale reference table, a rounding difference, causes the model to see systematically different feature values in production than it saw during training, degrading accuracy with no exception thrown anywhere. Google's Cloud MLOps architecture guide names the organizational root cause directly, describing a manual handoff of a trained model artifact from a data science team to an engineering team that must then make the same features available for low-latency serving, a scenario it states can lead directly to training-serving skew.
+
+### Interaction and HCI
+
+#### [Undo](../patterns/26-interaction-hci/undo.md)
+
+**Core Problem:** Any interface that lets a person change state, a text edit, a shape moved, a value typed, a file deleted, creates a moment where the person can make a mistake, and a mistake with no way back either forces extreme caution before every action or punishes a slip with lost work. Wikipedia's Undo article names the resulting freedom directly, undo lets users explore and work without fear of making mistakes, because they can easily be undone.
 
 ### Mobile Architecture
 

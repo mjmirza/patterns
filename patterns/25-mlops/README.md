@@ -2,7 +2,7 @@
 
 Origin. Google ML design patterns
 
-7 entries, 18,686 words, 2 more planned, 9 total when the family is complete. Every entry carries all 18
+9 entries, 28,372 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## MLOps
@@ -11,18 +11,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Batch Inference](batch-inference.md) | established | 2,157 | Many prediction workloads have no human waiting on a response, a nightly churn score for every customer, a fraud risk score recomputed after a data refresh, a batch of images to ... |
 | [Champion-Challenger](champion-challenger.md) | emerging | 2,385 | A single promotion decision, is this new model good enough to replace the old one, is a one-time event. |
+| [Drift Detection](drift-detection.md) | established | 4,834 | A trained model's parameters are frozen at the moment training ends, but the real-world process it scores keeps moving. |
 | [Feature Store](feature-store.md) | established | 3,828 | Feature computation logic written for offline, batch training, commonly Python or Spark against a data warehouse, is easy to accidentally diverge from the low-latency online ... |
+| [Model Monitoring](model-monitoring.md) | established | 4,852 | A deployed model does not throw an exception when it gets worse. |
 | [Model Registry](model-registry.md) | established | 2,514 | A model that exists only as a file on someone's laptop, or an artifact saved into a training run's own log directory, has no independent identity. |
 | [Online Inference](online-inference.md) | established | 2,554 | A user or a system is synchronously blocked waiting on a prediction, a fraud check on a payment, a ranking call in a search or feed, a recommendation on a product page, a chatbot ... |
 | [Shadow Model](shadow-model.md) | established | 2,568 | A/B testing a new model candidate necessarily risks real users receiving a worse prediction, because the candidate's output is served to some fraction of live requests. |
 | [Training-Serving Skew Guard](training-serving-skew-guard.md) | established | 2,680 | Feature logic written once for an offline training pipeline is easy to reimplement, slightly differently, for a separate low-latency serving pipeline, since the two paths are ... |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Drift Detection
-- Model Monitoring
 
 ## Reading order
 
