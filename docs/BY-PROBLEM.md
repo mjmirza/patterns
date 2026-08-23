@@ -16831,9 +16831,17 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 ### Interaction and HCI
 
+#### [Autosave](../patterns/26-interaction-hci/autosave.md)
+
+**Core Problem:** A manual-save-only application places the entire burden of data safety on a person remembering to act, and every crash, browser tab close, or accidental navigation between that last click and the current moment destroys unsaved work. Wikipedia's Autosave article states this purpose directly, that autosave exists intending to prevent data loss should the user be otherwise prevented from doing so manually by a crash, freeze, or user error (Wikipedia contributors, "Autosave," verified 2026-08-23). This problem shows up in any application where a person edits a document, a form, or a piece of content over an extended period with no fixed, short-lived transaction boundary, a word processor, a design tool, a long settings form, or a draft post.
+
 #### [Breadcrumbs](../patterns/26-interaction-hci/breadcrumbs.md)
 
 **Core Problem:** Smashing Magazine's own definition frames the problem directly, a breadcrumb trail is a type of secondary navigation scheme that reveals the user's location in a website or web application. The Interaction Design Foundation names the deeper version of the same problem, breadcrumbs show the site's hierarchy, not actual browsing history, a person may arrive at a deep page via an external link or a search engine without ever traversing the intermediate levels, so the trail is what tells them where they have landed, not how they got there.
+
+#### [Bulk Action](../patterns/26-interaction-hci/bulk-action.md)
+
+**Core Problem:** Applying the same operation to many similar items one at a time is repetitive, and the more items a task touches, the more that repetition costs. This problem shows up in any list, table, or grid a person manages at volume, an inbox, a set of issues, a table of records, or a card board.
 
 #### [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md)
 
@@ -16846,6 +16854,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 #### [Inline Validation](../patterns/26-interaction-hci/inline-validation.md)
 
 **Core Problem:** A form that only validates on submit forces the person to fill in every field before learning which of them were wrong, then reconcile a wall of errors against fields that may have scrolled off screen. GOV.UK's own design system mitigates exactly this by requiring a linked error summary at the top of the page with keyboard focus moved to it on submit failure (GOV.UK Design System, "Error summary," https://design-system.service.gov.uk/components/error-summary/, verified 2026-08-23), an accommodation that exists specifically because reconciling a late, disconnected wall of errors is hard.
+
+#### [Optimistic Undo](../patterns/26-interaction-hci/optimistic-undo.md)
+
+**Core Problem:** A blocking confirmation dialog interrupts every single invocation of an action, whether that particular invocation was a mistake or not, which is costly for actions a person takes often and can genuinely reverse. This shows up anywhere a frequent, low-risk, reversible action, archiving an email, deleting a card, sending a message, sits behind a confirmation step that most people never actually needed.
 
 #### [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md)
 
