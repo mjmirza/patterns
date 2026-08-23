@@ -260,46 +260,58 @@ Service's own code, that decides placement.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+        builds into        +-----------------------+
-|  Order Service     |  ------------------------> |  order-service:v1.4   |
-|  (source + Dockerfile)                          |  Container Image      |
-+-------------------+                             +-----------------------+
-                                                              |
-                                    instantiated as (N replicas, N=3 here)
-                                                              |
-                          +-----------------------------------+-----------------------------------+
-                          |                                   |                                   |
-                +-------------------+               +-------------------+               +-------------------+
-                | Container Instance |               | Container Instance |               | Container Instance |
-                |  order-service     |               |  order-service     |               |  order-service     |
-                |  cpu: 0.5, mem: 256Mi              |  cpu: 0.5, mem: 256Mi              |  cpu: 0.5, mem: 256Mi
-                +-------------------+               +-------------------+               +-------------------+
-                          ^                                   ^                                   ^
-                          |                                   |                                   |
-                          +-----------------------------------+-----------------------------------+
-                                                              |
-                                                place, health-check, restart
-                                                              |
-                                                  +-----------------------+
-                                                  |  Scheduler /           |
-                                                  |  Orchestrator          |
-                                                  |  (Kubernetes, ECS, ...)|
-                                                  +-----------------------+
+  +-----------------------+
+  | Order Service         |
+  | (source + Dockerfile) |
+  +-----------------------+
+            |
+            | builds into
+            v
+  +--------------------+
+  | order-service:v1.4 |
+  | Container Image    |
+  +--------------------+
+            |
+            | instantiated as N replicas (N=3 here)
+      +-----+-----+
+      v     v     v
+  +------------+  +------------+  +------------+
+  | instance 1 |  | instance 2 |  | instance 3 |
+  | cpu 0.5    |  | cpu 0.5    |  | cpu 0.5    |
+  | mem 256Mi  |  | mem 256Mi  |  | mem 256Mi  |
+  +------------+  +------------+  +------------+
+      ^     ^     ^
+      +-----+-----+
+            |
+            | place, health-check, restart
+            v
+  +--------------------------+
+  | Scheduler / Orchestrator |
+  | (Kubernetes, ECS, ...)   |
+  +--------------------------+
 
-  A second, unrelated service (fraud-check) builds and scales through the
-  same shape independently, with no shared image, no shared host assumption,
-  and no coupling to order-service's scaling decisions.
+  A second, unrelated service (fraud-check) builds and scales
+  through the same shape independently, with no shared image,
+  no shared host assumption, and no coupling to order-service's
+  scaling decisions.
 
-+-------------------+        builds into        +-----------------------+
-|  Fraud Check Service|  -----------------------> |  fraud-check:v0.9      |
-+-------------------+                             +-----------------------+
-                                                              |
-                                                     1 replica right now
-                                                              |
-                                                  +-------------------+
-                                                  | Container Instance |
-                                                  |  fraud-check        |
-                                                  +-------------------+
+  +---------------------+
+  | Fraud Check Service |
+  +---------------------+
+            |
+            | builds into
+            v
+  +------------------+
+  | fraud-check:v0.9 |
+  | Container Image  |
+  +------------------+
+            |
+            | 1 replica right now
+            v
+  +-------------+
+  | instance 1  |
+  | fraud-check |
+  +-------------+
 ```
 
 ## 7. Dynamics

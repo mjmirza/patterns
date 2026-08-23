@@ -56,42 +56,48 @@ Do not reach for a hand-written DAO when a framework will generate the equivalen
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+          depends on           +------------------------+
-|   BusinessObject   |------------------------------->|   <<interface>>        |
-|  (service layer)   |                                |   CustomerDao          |
-|                     |<-------------------------------|------------------------|
-+-------------------+     TransferObject in, out     |  findById(id)          |
-                                                        |  findAll()             |
-                                                        |  save(customer)        |
-                                                        |  delete(id)            |
-                                                        +-----------^------------+
-                                                                    |
-                                                            implements
-                                              +---------------------+---------------------+
-                                              |                                             |
-                              +---------------v----------------+          +----------------v----------------+
-                              |   ConcreteDataAccessObject      |          |   ConcreteDataAccessObject      |
-                              |   JdbcCustomerDao                |          |   InMemoryCustomerDao            |
-                              |----------------------------------|          |----------------------------------|
-                              |  - dataSource                    |          |  - records: Map                 |
-                              |  findById(id)                    |          |  findById(id)                    |
-                              |  findAll()                       |          |  findAll()                       |
-                              |  save(customer)                  |          |  save(customer)                  |
-                              |  delete(id)                      |          |  delete(id)                      |
-                              +---------------+------------------+          +----------------------------------+
-                                              |
-                                              v
-                                   +-----------------------+
-                                   |      DataSource         |
-                                   |  (relational database) |
-                                   +-----------------------+
+  +-----------------+
+  | BusinessObject  |
+  | (service layer) |
+  +-----------------+
+            | depends on, TransferObject in/out
+            v
+  +---------------------------+
+  | <<interface>> CustomerDao |
+  | findById(id)              |
+  | findAll()                 |
+  | save(customer)            |
+  | delete(id)                |
+  +---------------------------+
+            ^
+            | implements
+      +-----+-----+
+      |           |
+  +------------------------------+
+  | ConcreteDataAccessObject     |
+  | JdbcCustomerDao              |
+  | - dataSource                 |
+  | findById/findAll/save/delete |
+  +------------------------------+
+            |
+            v
+  +-----------------------+
+  | DataSource            |
+  | (relational database) |
+  +-----------------------+
 
-                                   +-----------------------+
-                                   |     TransferObject      |
-                                   |     CustomerRecord      |
-                                   |-------------------------|
-                                   |  id, name, email        |
-                                   +-----------------------+
+  +------------------------------+
+  | ConcreteDataAccessObject     |
+  | InMemoryCustomerDao          |
+  | - records: Map               |
+  | findById/findAll/save/delete |
+  +------------------------------+
+  (holds its own in-memory map, no external DataSource)
+
+  +--------------------------------+
+  | TransferObject: CustomerRecord |
+  | id, name, email                |
+  +--------------------------------+
 ```
 
 ## 7. Dynamics

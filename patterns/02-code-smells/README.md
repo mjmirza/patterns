@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-28 entries, 221,178 words. Every entry carries all 18
+28 entries, 221,165 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -32,7 +32,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Long Parameter List](long-parameter-list.md) | canonical | 7,502 | A function, method, or constructor accumulates parameters over its lifetime, usually one at a time, usually each addition individually reasonable, until the call site becomes ... |
 | [Loops](loops.md) | canonical | 8,826 | A loop is the most flexible construct available in an imperative language. |
 | [Middle Man](middle-man.md) | canonical | 7,237 | The smell shows up during evolution, almost never at the moment a class is first written. |
-| [Primitive Obsession](primitive-obsession.md) | canonical | 7,378 | A codebase represents a concept from its domain, a monetary amount, a telephone number, a temperature, an email address, a percentage, a date range, a currency code, using the ... |
+| [Primitive Obsession](primitive-obsession.md) | canonical | 7,365 | A codebase represents a concept from its domain, a monetary amount, a telephone number, a temperature, an email address, a percentage, a date range, a currency code, using the ... |
 
 ## Code Smell, Object-Oriented Abusers
 
