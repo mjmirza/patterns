@@ -2,7 +2,7 @@
 
 Origin. Dataflow model, Kafka documentation
 
-1 entries, 8,523 words, 7 more planned, 8 total when the family is complete. Every entry carries all 18
+2 entries, 18,407 words, 6 more planned, 8 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Stream Processing
@@ -10,6 +10,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Event-Time Processing](event-time-processing.md) | established | 8,523 | The Dataflow paper states the root cause directly. |
+| [Watermark](watermark.md) | established | 9,884 | A stream processing system that groups records by when they actually happened, not by when the system happened to receive them, faces a specific unanswerable-looking question. |
 
 ## Planned
 
@@ -20,7 +21,6 @@ Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHOR
 - Replayable Log
 - Stream Backpressure
 - Stream-Table Duality
-- Watermark
 - Windowing
 
 ## Reading order

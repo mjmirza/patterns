@@ -7,13 +7,6 @@
     "focus": ""
   },
   {
-    "name": "Watermark",
-    "slug": "watermark",
-    "category": "stream processing",
-    "path": "patterns/24-stream-processing/watermark.md",
-    "focus": ""
-  },
-  {
     "name": "Windowing",
     "slug": "windowing",
     "category": "stream processing",
