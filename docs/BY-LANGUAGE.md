@@ -859,9 +859,12 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Ring Buffer](../patterns/28-embedded-hardware/ring-buffer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [State Machine (Embedded)](../patterns/28-embedded-hardware/state-machine.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
 | [Watchdog Timer](../patterns/28-embedded-hardware/watchdog-timer.md) | Embedded and Hardware-Software | Yes |  |  |  |  | Yes |  | Yes |  |
+| [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Entity-Component-System](../patterns/29-realtime-simulation/entity-component-system.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Game Loop](../patterns/29-realtime-simulation/game-loop.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Object Pool](../patterns/29-realtime-simulation/object-pool.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Spatial Partitioning](../patterns/29-realtime-simulation/spatial-partitioning.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Update Method](../patterns/29-realtime-simulation/update-method.md) | Real-Time Simulation |  |  | Yes |  |  | Yes |  |  | Yes |
 
 ## Language Reference Guides
 
@@ -1194,6 +1197,7 @@ These patterns contain runnable code examples written in Go:
 - [Derived Value](../patterns/14-testing/derived-value.md) (Testing)
 - [Detour](../patterns/07-integration/detour.md) (Enterprise Integration)
 - [Differential Testing](../patterns/14-testing/differential-testing.md) (Testing)
+- [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md) (Real-Time Simulation)
 - [Disruptor](../patterns/09-concurrency/disruptor.md) (Concurrency and Parallelism)
 - [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) (Microservices)
 - [Distributed Transaction Coordinator Antipattern](../patterns/10-microservices/distributed-transaction-coordinator-antipattern.md) (Microservices)
@@ -1399,6 +1403,7 @@ These patterns contain runnable code examples written in Go:
 - [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) (Anti-Patterns)
 - [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
+- [Object Pool](../patterns/29-realtime-simulation/object-pool.md) (Real-Time Simulation)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
 - [Online Inference](../patterns/25-mlops/online-inference.md) (MLOps)
@@ -1660,6 +1665,7 @@ These patterns contain runnable code examples written in Go:
 - [USE Method](../patterns/22-observability/use-method.md) (Observability)
 - [Undo](../patterns/26-interaction-hci/undo.md) (Interaction and HCI)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
+- [Update Method](../patterns/29-realtime-simulation/update-method.md) (Real-Time Simulation)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
 - [Value Object](../patterns/11-domain-driven-design/value-object.md) (Domain-Driven Design)
 - [Vector Clock](../patterns/12-data-storage/vector-clock.md) (Data and Storage)
@@ -2903,6 +2909,7 @@ These patterns contain runnable code examples written in Python:
 - [Detour](../patterns/07-integration/detour.md) (Enterprise Integration)
 - [Device Driver Pattern](../patterns/28-embedded-hardware/device-driver-pattern.md) (Embedded and Hardware-Software)
 - [Differential Testing](../patterns/14-testing/differential-testing.md) (Testing)
+- [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md) (Real-Time Simulation)
 - [Disaster Recovery Pilot Light](../patterns/20-release-deployment/disaster-recovery-pilot-light.md) (Release and Deployment)
 - [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) (Anti-Patterns)
 - [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) (Microservices)
@@ -3176,6 +3183,7 @@ These patterns contain runnable code examples written in Python:
 - [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) (Anti-Patterns)
 - [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
+- [Object Pool](../patterns/29-realtime-simulation/object-pool.md) (Real-Time Simulation)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
@@ -3509,6 +3517,7 @@ These patterns contain runnable code examples written in Python:
 - [Unidirectional Data Flow (Mobile)](../patterns/27-mobile-architecture/unidirectional-data-flow.md) (Mobile Architecture)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
+- [Update Method](../patterns/29-realtime-simulation/update-method.md) (Real-Time Simulation)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
 - [Validation Applicative](../patterns/16-functional/validation-applicative.md) (Functional Programming)
 - [Value Object](../patterns/06-enterprise-application-architecture/value-object.md) (Enterprise Application Architecture)
@@ -4727,6 +4736,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Derived Value](../patterns/14-testing/derived-value.md) (Testing)
 - [Detour](../patterns/07-integration/detour.md) (Enterprise Integration)
 - [Differential Testing](../patterns/14-testing/differential-testing.md) (Testing)
+- [Dirty Flag](../patterns/29-realtime-simulation/dirty-flag.md) (Real-Time Simulation)
 - [Distributed Monolith](../patterns/18-anti-patterns/distributed-monolith.md) (Anti-Patterns)
 - [Distributed Tracing](../patterns/10-microservices/distributed-tracing.md) (Microservices)
 - [Distributed Transaction Coordinator Antipattern](../patterns/10-microservices/distributed-transaction-coordinator-antipattern.md) (Microservices)
@@ -4970,6 +4980,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) (Anti-Patterns)
 - [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
+- [Object Pool](../patterns/29-realtime-simulation/object-pool.md) (Real-Time Simulation)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
 - [Online Inference](../patterns/25-mlops/online-inference.md) (MLOps)
@@ -5274,6 +5285,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Undo](../patterns/26-interaction-hci/undo.md) (Interaction and HCI)
 - [Unit of Work](../patterns/06-enterprise-application-architecture/unit-of-work.md) (Enterprise Application Architecture)
 - [Unix Philosophy (CUPID)](../patterns/04-principles-and-laws/unix-philosophy-cupid.md) (Principles and Laws)
+- [Update Method](../patterns/29-realtime-simulation/update-method.md) (Real-Time Simulation)
 - [VIPER](../patterns/05-architectural/viper.md) (Architectural Patterns)
 - [Valet Key](../patterns/08-cloud-distributed/valet-key.md) (Cloud and Distributed)
 - [Validation Applicative](../patterns/16-functional/validation-applicative.md) (Functional Programming)
