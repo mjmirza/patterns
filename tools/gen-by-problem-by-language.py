@@ -177,8 +177,8 @@ def detect_mentions(section_text: str, lang_key: str) -> bool:
         "java": [r"\bjava\b"],
         "swift": [r"\bswift\b"],
         "kotlin": [r"\bkotlin\b"],
-        "csharp": [r"\bcsharp\b", r"c#"],
-        "cpp": [r"\bcpp\b", r"\bc\+\+\b"],
+        "csharp": [r"\bcsharp\b", r"\bc#"],
+        "cpp": [r"\bcpp\b", r"\bc\+\+"],
     }
 
     for pattern in terms.get(lang_key, []):
