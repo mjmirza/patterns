@@ -266,13 +266,6 @@
     "focus": ""
   },
   {
-    "name": "Twin",
-    "slug": "twin",
-    "category": "design patterns gof",
-    "path": "patterns/01-design-patterns-gof/twin.md",
-    "focus": ""
-  },
-  {
     "name": "Extension Object",
     "slug": "extension-object",
     "category": "design patterns gof",
