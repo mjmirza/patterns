@@ -14966,6 +14966,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - State bleed across reused containers. Symptom, an agent's second, unrelated
 - Treating code execution as an approval mechanism. Symptom, a consequential
 
+#### [Code Mode](../patterns/17-ai-agentic/code-mode.md)
+
+**Core Problem:** Cloudflare's own text states the problem directly, contrasting it with standard tool calling. "each individual tool call requires a full round trip. the model generates a tool call, the client executes it, the result goes back into the context, and the model decides what to do next... for a task requiring many tool calls in sequence, this is slow and burns a lot of tokens" (Varda and Pai, "Code Mode," verified 2026-08-23). the standard round trip this contrasts against is defined precisely by the Model Context Protocol's own specification. "to invoke a tool, clients send a tools/call request," and the protocol's own message-flow diagram shows that path completing before the model resumes. "Client, tools/call. Server, Tool result. Client, Process result" (Model Context Protocol, "Tools," https://modelcontextprotocol.io/docs/concepts/tools, verified 2026-08-23), one such round trip per tool invocation, which the round-trip cost compounds specifically because intermediate results, per dimension 3, must pass back through the model's own context to be acted on.
+
 #### [Computer Use](../patterns/17-ai-agentic/computer-use.md)
 
 **Core Problem:** Most of the software a person or a business depends on every day was never built with an API for an autonomous agent to call. A decade-old internal finance tool, a government portal, a vendor's desktop application with no public integration surface, a competitor's website with deliberately no public feed, a legacy Windows program still running the accounting department, none of these expose a documented, versioned, machine-readable way to ask a system to submit a form or read a table. The only interface any of them guarantees is the one built for a person with eyes and hands, a rendered screen and a set of input events.
@@ -15074,6 +15078,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A user reports receiving a duplicate notification, a
 - The team believes the chain gives strong availability
 - Per-target retry inside the chain is set generously, and a
+
+#### [Filesystem-Based Agent State](../patterns/17-ai-agentic/filesystem-based-agent-state.md)
+
+**Core Problem:** The chapter's own text, meaning Anthropic's own documentation, states the problem directly in one sentence. "each Claude Code session begins with a fresh context" (Anthropic, "Give Claude persistent memory," verified 2026-08-23), meaning everything an agent learned in a prior session, a compaction, or a subagent spawn is gone unless something outside that ephemeral conversation carries it forward. Anthropic's own applied research post names the same problem from a different angle. "structured note-taking... allows the agent to track critical context and dependencies that would otherwise be lost across dozens of tool calls" (Anthropic, "Effective context engineering for AI agents," Anthropic engineering blog, https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents, verified 2026-08-23).
 
 #### [Function Calling](../patterns/17-ai-agentic/function-calling.md)
 
@@ -15361,6 +15369,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - fewer total model calls in the common case. Symptom. Total spend or
 - A plan approved by a human reviewer executes differently than what was
 - shown. Symptom. An audit reveals the executed arguments do not match what
+
+#### [Prompt Caching via Exact Prefix Preservation](../patterns/17-ai-agentic/prompt-caching-exact-prefix.md)
+
+**Core Problem:** The chapter's own text, meaning Claude Code's own documentation, states the underlying problem directly. "the model doesn't remember anything between requests, so Claude Code re-sends the full context, the system prompt, your project context, every prior message and tool result, and your new message. New content is appended at the end, which means most of each request is identical to the one before it" (Anthropic, "Prompt caching," Claude Code documentation, verified 2026-08-23). a stateless API means cost and latency both scale with a growing conversation unless the redundant, identical portion of every request can be skipped.
 
 #### [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md)
 

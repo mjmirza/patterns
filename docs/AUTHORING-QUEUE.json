@@ -126,13 +126,6 @@
     "focus": ""
   },
   {
-    "name": "Prompt Caching via Exact Prefix Preservation",
-    "slug": "prompt-caching-exact-prefix",
-    "category": "ai agentic",
-    "path": "patterns/17-ai-agentic/prompt-caching-exact-prefix.md",
-    "focus": ""
-  },
-  {
     "name": "Language Agent Tree Search",
     "slug": "language-agent-tree-search",
     "category": "ai agentic",
@@ -151,20 +144,6 @@
     "slug": "rlaif",
     "category": "ai agentic",
     "path": "patterns/17-ai-agentic/rlaif.md",
-    "focus": ""
-  },
-  {
-    "name": "Filesystem-Based Agent State",
-    "slug": "filesystem-based-agent-state",
-    "category": "ai agentic",
-    "path": "patterns/17-ai-agentic/filesystem-based-agent-state.md",
-    "focus": ""
-  },
-  {
-    "name": "Code Mode",
-    "slug": "code-mode",
-    "category": "ai agentic",
-    "path": "patterns/17-ai-agentic/code-mode.md",
     "focus": ""
   },
   {

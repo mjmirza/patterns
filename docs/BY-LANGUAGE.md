@@ -666,6 +666,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Chain of Thought](../patterns/17-ai-agentic/chain-of-thought.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Chunking Strategies](../patterns/17-ai-agentic/chunking-strategies.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) | AI and Agentic |  |  |  |  |  | Yes | Yes |  | Yes |
+| [Code Mode](../patterns/17-ai-agentic/code-mode.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Computer Use](../patterns/17-ai-agentic/computer-use.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Constitutional AI](../patterns/17-ai-agentic/constitutional-ai.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Contextual Retrieval](../patterns/17-ai-agentic/contextual-retrieval.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -674,6 +675,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Evaluation Suite](../patterns/17-ai-agentic/evaluation-suite.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Evaluator-Optimizer](../patterns/17-ai-agentic/evaluator-optimizer.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Filesystem-Based Agent State](../patterns/17-ai-agentic/filesystem-based-agent-state.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Function Calling](../patterns/17-ai-agentic/function-calling.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Golden Dataset](../patterns/17-ai-agentic/golden-dataset.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Graph of Thoughts](../patterns/17-ai-agentic/graph-of-thoughts.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -695,6 +697,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [PII Redaction](../patterns/17-ai-agentic/pii-redaction.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Parallelization](../patterns/17-ai-agentic/parallelization.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Plan and Execute](../patterns/17-ai-agentic/plan-execute.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Prompt Caching via Exact Prefix Preservation](../patterns/17-ai-agentic/prompt-caching-exact-prefix.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1125,6 +1128,7 @@ These patterns contain runnable code examples written in Go:
 - [Client-Server](../patterns/05-architectural/client-server.md) (Architectural Patterns)
 - [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) (Microservices)
 - [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) (Enterprise Application Architecture)
+- [Code Mode](../patterns/17-ai-agentic/code-mode.md) (AI and Agentic)
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
 - [Command Message](../patterns/07-integration/command-message.md) (Enterprise Integration)
 - [Command Palette](../patterns/26-interaction-hci/command-palette-ux.md) (Interaction and HCI)
@@ -1256,6 +1260,7 @@ These patterns contain runnable code examples written in Go:
 - [Feature Envy](../patterns/02-code-smells/feature-envy.md) (Code Smells)
 - [Feature Store](../patterns/25-mlops/feature-store.md) (MLOps)
 - [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) (Cloud and Distributed)
+- [Filesystem-Based Agent State](../patterns/17-ai-agentic/filesystem-based-agent-state.md) (AI and Agentic)
 - [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) (Design Patterns (GoF))
 - [Fork-Join](../patterns/09-concurrency/fork-join.md) (Concurrency and Parallelism)
 - [Format Indicator](../patterns/07-integration/format-indicator.md) (Enterprise Integration)
@@ -1465,6 +1470,7 @@ These patterns contain runnable code examples written in Go:
 - [Process Manager](../patterns/07-integration/process-manager.md) (Enterprise Integration)
 - [Producer-Consumer](../patterns/09-concurrency/producer-consumer.md) (Concurrency and Parallelism)
 - [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md) (Interaction and HCI)
+- [Prompt Caching via Exact Prefix Preservation](../patterns/17-ai-agentic/prompt-caching-exact-prefix.md) (AI and Agentic)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
 - [Prompt Injection Sink](../patterns/18-anti-patterns/prompt-injection-sink.md) (Anti-Patterns)
@@ -2827,6 +2833,7 @@ These patterns contain runnable code examples written in Python:
 - [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) (Microservices)
 - [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) (Enterprise Application Architecture)
 - [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) (AI and Agentic)
+- [Code Mode](../patterns/17-ai-agentic/code-mode.md) (AI and Agentic)
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) (Refactoring Techniques)
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
@@ -2989,6 +2996,7 @@ These patterns contain runnable code examples written in Python:
 - [Feature Store](../patterns/25-mlops/feature-store.md) (MLOps)
 - [Feature Toggle](../patterns/20-release-deployment/feature-toggle.md) (Release and Deployment)
 - [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) (Cloud and Distributed)
+- [Filesystem-Based Agent State](../patterns/17-ai-agentic/filesystem-based-agent-state.md) (AI and Agentic)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) (Design Patterns (GoF))
 - [Foldable](../patterns/16-functional/foldable.md) (Functional Programming)
@@ -3266,6 +3274,7 @@ These patterns contain runnable code examples written in Python:
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md) (Interaction and HCI)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
+- [Prompt Caching via Exact Prefix Preservation](../patterns/17-ai-agentic/prompt-caching-exact-prefix.md) (AI and Agentic)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
 - [Prompt Injection Sink](../patterns/18-anti-patterns/prompt-injection-sink.md) (Anti-Patterns)
@@ -3648,6 +3657,7 @@ These patterns have unique implementation variants or change their design struct
 - [Fail Fast](../patterns/04-principles-and-laws/fail-fast.md) (Principles and Laws)
 - [Fake](../patterns/14-testing/fake.md) (Testing)
 - [Fallback Chain](../patterns/17-ai-agentic/fallback-chain.md) (AI and Agentic)
+- [Filesystem-Based Agent State](../patterns/17-ai-agentic/filesystem-based-agent-state.md) (AI and Agentic)
 - [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) (Design Patterns (GoF))
 - [Foldable](../patterns/16-functional/foldable.md) (Functional Programming)
 - [Fork-Join](../patterns/09-concurrency/fork-join.md) (Concurrency and Parallelism)
@@ -4664,6 +4674,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Client-side Service Discovery](../patterns/10-microservices/client-side-service-discovery.md) (Microservices)
 - [Coarse-Grained Lock](../patterns/06-enterprise-application-architecture/coarse-grained-lock.md) (Enterprise Application Architecture)
 - [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) (AI and Agentic)
+- [Code Mode](../patterns/17-ai-agentic/code-mode.md) (AI and Agentic)
 - [Code Splitting](../patterns/13-frontend-ui/code-splitting.md) (Frontend and UI)
 - [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) (Refactoring Techniques)
 - [Columnar Storage](../patterns/12-data-storage/columnar-storage.md) (Data and Storage)
@@ -4810,6 +4821,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Feature Envy](../patterns/02-code-smells/feature-envy.md) (Code Smells)
 - [Feature Store](../patterns/25-mlops/feature-store.md) (MLOps)
 - [Federated Identity](../patterns/08-cloud-distributed/federated-identity.md) (Cloud and Distributed)
+- [Filesystem-Based Agent State](../patterns/17-ai-agentic/filesystem-based-agent-state.md) (AI and Agentic)
 - [Flux](../patterns/13-frontend-ui/flux.md) (Frontend and UI)
 - [Flyweight](../patterns/01-design-patterns-gof/flyweight.md) (Design Patterns (GoF))
 - [Foldable](../patterns/16-functional/foldable.md) (Functional Programming)
@@ -5056,6 +5068,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Progressive Disclosure](../patterns/26-interaction-hci/progressive-disclosure.md) (Interaction and HCI)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
+- [Prompt Caching via Exact Prefix Preservation](../patterns/17-ai-agentic/prompt-caching-exact-prefix.md) (AI and Agentic)
 - [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) (AI and Agentic)
 - [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) (AI and Agentic)
 - [Prompt Injection Sink](../patterns/18-anti-patterns/prompt-injection-sink.md) (Anti-Patterns)
@@ -5352,6 +5365,7 @@ These patterns have unique implementation variants or change their design struct
 - [Characterization Test](../patterns/14-testing/characterization-test.md) (Testing)
 - [Circuit Breaker](../patterns/08-cloud-distributed/circuit-breaker.md) (Cloud and Distributed)
 - [Code Execution as Tool](../patterns/17-ai-agentic/code-execution-as-tool.md) (AI and Agentic)
+- [Code Mode](../patterns/17-ai-agentic/code-mode.md) (AI and Agentic)
 - [Collapse Hierarchy](../patterns/03-refactoring/collapse-hierarchy.md) (Refactoring Techniques)
 - [Combine Functions into Class](../patterns/03-refactoring/combine-functions-into-class.md) (Refactoring Techniques)
 - [Combine Functions into Transform](../patterns/03-refactoring/combine-functions-into-transform.md) (Refactoring Techniques)
