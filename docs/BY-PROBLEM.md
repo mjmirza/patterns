@@ -409,6 +409,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | A monolith is being taken apart feature by feature. During the transition, | [Anti-Corruption Layer](../patterns/08-cloud-distributed/anti-corruption-layer.md) | Cloud and Distributed |
 | A multi-table operation, transferring an order from one | [Table Data Gateway](../patterns/06-enterprise-application-architecture/table-data-gateway.md) | Enterprise Application Architecture |
 | A multi-year effort to convert an existing, single-region | [Geode](../patterns/08-cloud-distributed/geode.md) | Cloud and Distributed |
+| A naive check-then-act race under concurrent access. Described in full in dimension 7, two threads racing to create a... | [Multiton](../patterns/01-design-patterns-gof/multiton.md) | Design Patterns (GoF) |
 | A naive merge instead of a real fix. Symptom. Someone "fixes" the | [Inappropriate Intimacy](../patterns/02-code-smells/inappropriate-intimacy.md) | Code Smells |
 | A naive, non-associative combiner. Symptom. A computed average, or any | [Map-Reduce](../patterns/09-concurrency/map-reduce.md) | Concurrency and Parallelism |
 | A named event ("InventoryReservationRequested") is published, | [Domain Event](../patterns/11-domain-driven-design/domain-event.md) | Domain-Driven Design |
@@ -5107,6 +5108,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Treating the publish channel as a request-reply channel. Symptom. A | [Publisher-Subscriber](../patterns/08-cloud-distributed/publisher-subscriber.md) | Cloud and Distributed |
 | Treating the Reference as infallible. Symptom. A bug is "fixed" in the | [Differential Testing](../patterns/14-testing/differential-testing.md) | Testing |
 | Treating the shared global overflow queue as the primary path. Symptom. the work-stealing | [Work Stealing](../patterns/09-concurrency/work-stealing.md) | Concurrency and Parallelism |
+| Treating the static registry as invisible in tests. Because the registry is static and persists across test methods w... | [Multiton](../patterns/01-design-patterns-gof/multiton.md) | Design Patterns (GoF) |
 | Treating the statically cached state as a substitute for genuine testing, when the single normal mode still needs to ... | [Static Stability](../patterns/21-sre-operations/static-stability.md) | SRE and Operations |
 | Treating the toil budget as a target to hit rather than a ceiling, so the team spends effort chasing a specific perce... | [Toil Automation](../patterns/21-sre-operations/toil-automation.md) | SRE and Operations |
 | Treating tool-call arguments as pre-validated. Symptom, a tool call | [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) | AI and Agentic |
@@ -5241,6 +5243,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Unbounded history. Symptom. Steadily climbing heap in a long lived editor | [Command](../patterns/01-design-patterns-gof/command.md) | Design Patterns (GoF) |
 | Unbounded input with total strict fold. Symptom. A service hangs on a live | [Foldable](../patterns/16-functional/foldable.md) | Functional Programming |
 | Unbounded itinerary growth. Symptom. Message size climbs steadily over a | [Routing Slip](../patterns/07-integration/routing-slip.md) | Enterprise Integration |
+| Unbounded key space driving unbounded memory growth. The pattern's own most serious, most concretely documented failu... | [Multiton](../patterns/01-design-patterns-gof/multiton.md) | Design Patterns (GoF) |
 | Unbounded leniency applied to core, semantic fields. Symptom. Two | [Postel's Law](../patterns/04-principles-and-laws/postel-law.md) | Principles and Laws |
 | Unbounded node interning. Symptom. A process with many distinct historical | [Structural Sharing](../patterns/16-functional/structural-sharing.md) | Functional Programming |
 | Unbounded offload. Symptom. Event-loop lag improves while memory, thread | [Synchronous I O Antipattern](../patterns/18-anti-patterns/synchronous-i-o-antipattern.md) | Anti-Patterns |
@@ -5852,6 +5855,16 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Version drift on persisted mementos. Symptom. After a deployment, restore
 - Sensitive data captured by accident. Symptom. A password, an access token or
 - Memento used where Command was needed. Symptom. Editing a large document
+
+#### [Multiton](../patterns/01-design-patterns-gof/multiton.md)
+
+**Core Problem:** Sometimes an application needs at most one instance of a class per distinct key value, never a single global instance and never unrestricted instantiation. Wikipedia's own framing states the distinction directly. "Whereas the singleton allows only one instance of a class to be created, the multiton pattern allows for the controlled creation of multiple instances, which it manages through the use of a map," guaranteeing "a single instance per key" rather than a single instance total, which "enables indexed storage of shared objects while maintaining centralized access to what functions as a unified directory."
+
+**Failure Mode Symptoms:**
+
+- Unbounded key space driving unbounded memory growth. The pattern's own most serious, most concretely documented failure mode. CVE-2026-33012, quoted in full in dimension 9, is a real, dated, CVSS 7.5 instance of precisely this. an unbounded ConcurrentHashMap-backed registry keyed by attacker-influenceable input, with no eviction policy, leading to an OutOfMemoryError and denial of service. This is formally classified under CWE-770, Allocation of Resources Without Limits or Throttling, a documented child of CWE-400, whose own description states plainly. "The product does not properly control the allocation and maintenance of a limited resource." OWASP's own Denial of Service Cheat Sheet names the standard mitigation directly. "Prevent input based resource allocation," meaning a key derived from untrusted input must never be allowed to grow a Multiton's registry without a bound.
+- A naive check-then-act race under concurrent access. Described in full in dimension 7, two threads racing to create an instance for the same key in an unsynchronized registry, producing a duplicated or corrupted entry. The symptom an engineer actually observes is two logically distinct objects both believed to be "the" instance for one key, with client code silently operating on different instances depending on which one it happened to receive.
+- Treating the static registry as invisible in tests. Because the registry is static and persists across test methods within the same run unless explicitly reset, a test that populates a given key can leak state into a later, unrelated test that reuses that key. Baeldung's own treatment of the closely related Singleton case states the mechanism directly, that when a class is "used as global objects, it becomes difficult to choose the configuration for the test environment. Therefore, when we run the tests, the production database gets spoiled with the test data, which is hardly acceptable," a criticism that transfers to Multiton unchanged, and in fact compounds, since an entire map of keyed state must be isolated between tests rather than one field.
 
 #### [Observer](../patterns/01-design-patterns-gof/observer.md)
 

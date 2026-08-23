@@ -26,6 +26,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Marker Interface](../patterns/01-design-patterns-gof/marker-interface.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Mediator](../patterns/01-design-patterns-gof/mediator.md) | Design Patterns (GoF) |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Memento](../patterns/01-design-patterns-gof/memento.md) | Design Patterns (GoF) |  | Yes |  | Yes |  | Yes |  |  | Yes |
+| [Multiton](../patterns/01-design-patterns-gof/multiton.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Observer](../patterns/01-design-patterns-gof/observer.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Prototype](../patterns/01-design-patterns-gof/prototype.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Proxy](../patterns/01-design-patterns-gof/proxy.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
@@ -1328,6 +1329,7 @@ These patterns contain runnable code examples written in Go:
 - [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) (Data and Storage)
 - [Multi-Tenant Architecture](../patterns/05-architectural/multi-tenant-architecture.md) (Architectural Patterns)
 - [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) (Microservices)
+- [Multiton](../patterns/01-design-patterns-gof/multiton.md) (Design Patterns (GoF))
 - [Multiversion Concurrency Control](../patterns/12-data-storage/mvcc.md) (Data and Storage)
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
 - [Mutation Test](../patterns/14-testing/mutation-test.md) (Testing)
@@ -2274,6 +2276,7 @@ These patterns have unique implementation variants or change their design struct
 - [Move Function](../patterns/03-refactoring/move-function.md) (Refactoring Techniques)
 - [Move Statements into Function](../patterns/03-refactoring/move-statements-into-function.md) (Refactoring Techniques)
 - [Move Statements to Callers](../patterns/03-refactoring/move-statements-to-callers.md) (Refactoring Techniques)
+- [Multiton](../patterns/01-design-patterns-gof/multiton.md) (Design Patterns (GoF))
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
 - [Mutation Test](../patterns/14-testing/mutation-test.md) (Testing)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
@@ -3056,6 +3059,7 @@ These patterns contain runnable code examples written in Python:
 - [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Multi-Tenant Architecture](../patterns/05-architectural/multi-tenant-architecture.md) (Architectural Patterns)
 - [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) (Microservices)
+- [Multiton](../patterns/01-design-patterns-gof/multiton.md) (Design Patterns (GoF))
 - [Multiversion Concurrency Control](../patterns/12-data-storage/mvcc.md) (Data and Storage)
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
 - [Mutation Test](../patterns/14-testing/mutation-test.md) (Testing)
@@ -4809,6 +4813,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Multi-Leader Replication](../patterns/12-data-storage/multi-leader-replication.md) (Data and Storage)
 - [Multi-Tenant Architecture](../patterns/05-architectural/multi-tenant-architecture.md) (Architectural Patterns)
 - [Multiple Service Instances per Host](../patterns/10-microservices/multiple-service-instances-per-host.md) (Microservices)
+- [Multiton](../patterns/01-design-patterns-gof/multiton.md) (Design Patterns (GoF))
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
 - [Mutual TLS](../patterns/15-security/mutual-tls.md) (Security)
 - [N+1 Query](../patterns/18-anti-patterns/n+1-query.md) (Anti-Patterns)
