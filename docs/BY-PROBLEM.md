@@ -16805,6 +16805,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 
 **Core Problem:** A model that exists only as a file on someone's laptop, or an artifact saved into a training run's own log directory, has no independent identity. Nothing distinguishes the tenth retraining of a model from the ninth except memory, nobody can say with confidence which specific version is currently serving traffic, and rolling back after a bad deploy means finding the right file by hand under time pressure. A registry gives every trained version a stable, queryable identity, separate from the ephemeral run that created it, so promotion, rollback, and audit become deliberate operations against a record rather than archaeology against a filesystem.
 
+#### [Online Inference](../patterns/25-mlops/online-inference.md)
+
+**Core Problem:** A user or a system is synchronously blocked waiting on a prediction, a fraud check on a payment, a ranking call in a search or feed, a recommendation on a product page, a chatbot turn, and needs an answer inside a tight latency budget, milliseconds to low seconds, before it can proceed. This is the direct structural opposite of a nightly job scoring millions of rows with no one waiting, the caller is present, in the loop, and a late answer risks timeout or abandonment.
+
 ### Mobile Architecture
 
 #### [Clean Architecture (Mobile)](../patterns/27-mobile-architecture/clean-architecture-mobile.md)
