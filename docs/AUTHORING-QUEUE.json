@@ -14,13 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Online Inference",
-    "slug": "online-inference",
-    "category": "MLOps",
-    "path": "patterns/25-mlops/online-inference.md",
-    "focus": ""
-  },
-  {
     "name": "Shadow Model",
     "slug": "shadow-model",
     "category": "MLOps",
