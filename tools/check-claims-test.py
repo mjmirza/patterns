@@ -5,14 +5,14 @@ from __future__ import annotations
 
 import importlib.util
 import json
-import os
-import sys
 import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 ROOT = Path(__file__).resolve().parent.parent
-SPEC = importlib.util.spec_from_file_location("check_claims", ROOT / "tools" / "check-claims.py")
+SPEC = importlib.util.spec_from_file_location(
+    "check_claims", ROOT / "tools" / "check-claims.py"
+)
 check_claims = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(check_claims)
 
@@ -22,9 +22,9 @@ class TestCheckClaims(unittest.TestCase):
     def test_added_paths(self, mock_run):
         mock_run.return_value = MagicMock(
             stdout="A\tpatterns/01-gof/strategy.md\n"
-                   "M\tpatterns/01-gof/observer.md\n"
-                   "A\tdocs/README.md\n"
-                   "A\tpatterns/02-code-smells/god-object.md\n"
+            "M\tpatterns/01-gof/observer.md\n"
+            "A\tdocs/README.md\n"
+            "A\tpatterns/02-code-smells/god-object.md\n"
         )
         paths = check_claims.added_paths()
         self.assertEqual(
@@ -40,20 +40,27 @@ class TestCheckClaims(unittest.TestCase):
     @patch("subprocess.run")
     def test_published_on_main_false(self, mock_run):
         mock_run.return_value = MagicMock(returncode=1)
-        self.assertFalse(check_claims.published_on_main("patterns/01-gof/new-pattern.md"))
+        self.assertFalse(
+            check_claims.published_on_main("patterns/01-gof/new-pattern.md")
+        )
 
     @patch("subprocess.run")
     def test_sibling_pr_paths(self, mock_run):
-        prs_output = json.dumps([
-            {
-                "number": 10,
-                "files": [{"path": "patterns/01-gof/singleton.md"}, {"path": "README.md"}],
-            },
-            {
-                "number": 12,
-                "files": [{"path": "patterns/02-code-smells/feature-envy.md"}],
-            },
-        ])
+        prs_output = json.dumps(
+            [
+                {
+                    "number": 10,
+                    "files": [
+                        {"path": "patterns/01-gof/singleton.md"},
+                        {"path": "README.md"},
+                    ],
+                },
+                {
+                    "number": 12,
+                    "files": [{"path": "patterns/02-code-smells/feature-envy.md"}],
+                },
+            ]
+        )
 
         mock_run.return_value = MagicMock(stdout=prs_output)
         siblings = check_claims.sibling_pr_paths(this_pr="10")
@@ -69,7 +76,10 @@ class TestCheckClaims(unittest.TestCase):
     @patch.object(check_claims, "published_on_main")
     @patch.object(check_claims, "added_paths")
     def test_main_with_collisions(self, mock_added, mock_pub, mock_siblings):
-        mock_added.return_value = ["patterns/01-gof/strategy.md", "patterns/02-code-smells/god-object.md"]
+        mock_added.return_value = [
+            "patterns/01-gof/strategy.md",
+            "patterns/02-code-smells/god-object.md",
+        ]
         mock_pub.side_effect = lambda path: path == "patterns/01-gof/strategy.md"
         mock_siblings.return_value = {"patterns/02-code-smells/god-object.md": 42}
 
