@@ -259,26 +259,33 @@ input and returns output or fails.
 ## 6. ASCII structure diagram
 
 ```
-   +----------------+   invokes    +----------------------+
-   |    Trigger     | -----------> |  Execution Environment |
-   | (API Gateway,  |              |  (created on demand,   |
-   |  Queue, Bucket, |              |   torn down when idle) |
-   |  Scheduler)     |              |  +-------------------+ |
-   +----------------+              |  |     Function      | |
-                                    |  | (stateless logic) | |
-                                    |  +---------+---------+ |
-                                    +------------|-----------+
-                                                 |
-                                reads / writes   |
-                          +----------------------+----------------------+
-                          |                      |                      |
-                 +----------------+   +------------------+   +------------------+
-                 | Managed Queue  |   | Managed Database  |   | Managed Storage  |
-                 |   (BaaS)       |   |    (BaaS)          |   |    (BaaS)        |
-                 +----------------+   +------------------+   +------------------+
++---------------------------------------+
+| Trigger                               |
+| API Gateway, Queue, Bucket, Scheduler |
++---------------------------------------+
+           | invokes
+           v
++----------------------------------------+
+| Execution Environment                  |
+| created on demand, torn down when idle |
+|                                        |
+|   Function (stateless logic)           |
++----------------------------------------+
+           | reads / writes
+           v
++----------------------+
+| Managed Queue (BaaS) |
++----------------------+
++-------------------------+
+| Managed Database (BaaS) |
++-------------------------+
++------------------------+
+| Managed Storage (BaaS) |
++------------------------+
 
-   Orchestrator (state machine or event bus) sequences several Functions,
-   each one independently triggered, none holding the workflow's state.
+Orchestrator, a state machine or event bus, sequences
+several Functions, each one independently triggered, none
+holding the workflow's state.
 ```
 
 ## 7. Dynamics

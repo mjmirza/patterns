@@ -243,38 +243,40 @@ that appear whenever SRP is applied concretely.
 ## 6. ASCII structure diagram
 
 ```
-  Before                                After
+Before
 
-  +----------------------+              +-----------------------+
-  |       Invoice        |              |   InvoiceCalculator   |
-  |----------------------|              |------------------------|
-  | fields: lines, tax   |              | + total(inv): Money   |
-  |----------------------|              +-----------------------+
-  | + total(): Money     |  <- finance             ^
-  | + print(): String    |  <- layout team          |  reads
-  | + save(db): void     |  <- storage team          |
-  +----------------------+              +-----------------------+
-                                          |       Invoice        |
-                                          |  (data only, no      |
-                                          |   behaviour beyond   |
-                                          |   its own shape)     |
-                                          +-----------------------+
-                                                     ^
-                                     reads            |            reads
-                                          +-----------+-----------+
-                                          |                       |
-                              +-----------------------+ +-----------------------+
-                              |    InvoicePrinter      | |  InvoiceRepository    |
-                              |------------------------| |------------------------|
-                              | + render(inv): String  | | + save(inv): void      |
-                              +-----------------------+ +-----------------------+
-                                     ^ answers to               ^ answers to
-                                layout / reporting team    storage / DBA team
++---------------------------------------+
+| Invoice                               |
+| fields: lines, tax                    |
+| + total(): Money      <- finance team |
+| + print(): String     <- layout team  |
+| + save(db): void      <- storage team |
++---------------------------------------+
 
-  Each right-hand box has exactly one actor who would ask it to change.
-  A change to tax law touches only InvoiceCalculator. A change to the PDF
-  layout touches only InvoicePrinter. A change to the storage schema
-  touches only InvoiceRepository. No single edit crosses two boxes.
+Three unrelated teams each have a reason to change this
+one class.
+
+
+After
+
++----------------------------------------------+
+| Invoice                                      |
+| data only, no behaviour beyond its own shape |
++----------------------------------------------+
+        ^                ^                ^
+        | reads          | reads          | reads
++-------------------+  +----------------+  +-------------------+
+| InvoiceCalculator |  | InvoicePrinter |  | InvoiceRepository |
+| + total(inv)      |  | + render(inv)  |  | + save(inv)       |
++-------------------+  +----------------+  +-------------------+
+      answers to        answers to        answers to
+      finance team       layout team       storage team
+
+Each box has exactly one actor who would ask it to change.
+A tax law change touches only InvoiceCalculator, a PDF
+layout change touches only InvoicePrinter, a storage
+schema change touches only InvoiceRepository. No single
+edit crosses two boxes.
 ```
 
 ## 7. Dynamics
