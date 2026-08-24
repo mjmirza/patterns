@@ -211,28 +211,41 @@ the performance force from dimension 3 lives.
 ## 6. ASCII structure diagram
 
 ```
-        Client                    Abstraction                Concrete
-        (caller)                  (interface / protocol)     Implementations
++-----------------------------+
+| Client (caller)             |
+| holds reference typed Shape |
++-----------------------------+
+           | calls process(shape) -> s.area()
+           v
++------------------------------+
+| Abstraction, interface Shape |
+| area(): number               |
+| perimeter(): number          |
++------------------------------+
+           ^
+           | implemented by three concrete classes
 
-  +----------------+          +----------------------+     +----------------+
-  |  process(shape) |-------->|  interface Shape      |<----|  Circle        |
-  |                  |  calls |    area(): number      |     |  area() { ... } |
-  |  holds reference |        |    perimeter(): number |     +----------------+
-  |  typed Shape     |        +----------------------+     +----------------+
-  +------------------+                   ^                  |  Square        |
-                                          | implements       |  area() { ... } |
-                                          |                   +----------------+
-                                          |                  +----------------+
-                                          +------------------|  Triangle      |
-                                                             |  area() { ... } |
-                                                             +----------------+
++----------------+
+| Circle         |
+| area() { ... } |
++----------------+
++----------------+
+| Square         |
+| area() { ... } |
++----------------+
++----------------+
+| Triangle       |
+| area() { ... } |
++----------------+
 
-  Binder (runtime dispatch mechanism, one per language runtime):
+Binder, the runtime dispatch mechanism, one per language
+runtime.
 
-  C++ / Java   ->  vtable pointer inside the object header, indexed lookup
-  Go           ->  interface value = (type descriptor, data pointer), itable lookup
-  Rust dyn     ->  fat pointer = (data pointer, vtable pointer)
-  Python/Ruby  ->  method resolution order (MRO) walk on the object's class
+  C++/Java   vtable pointer in the object header, indexed
+  Go         interface value (type descriptor, data
+             pointer), itable lookup
+  Rust dyn   fat pointer (data pointer, vtable pointer)
+  Python/Ruby   method resolution order walk on the class
 ```
 
 ## 7. Dynamics

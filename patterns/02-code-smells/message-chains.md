@@ -223,34 +223,55 @@ client calls one method instead of walking the chain itself.
 ```
 BEFORE, message chain
 
-  +--------+   .customer   +----------+   .address   +---------+
-  | Client |-------------->| Head     |------------->| Interm. |
-  +--------+               | (Order)  |              |(Custmr) |
-      |                    +----------+              +---------+
-      |                                                    |
-      | client reaches through Order and Customer          | .address
-      | to touch Address directly                          v
-      |                                              +---------+   .zipCode
-      +--------------------------------------------->| Interm. |----------> target
-                                                       |(Address)|
-                                                       +---------+
++--------+
+| Client |
++--------+
+     | .customer
+     v
++--------------+
+| Head (Order) |
++--------------+
+     | .address
+     v
++-------------------------+
+| Intermediate (Customer) |
++-------------------------+
+     | .address
+     v
++------------------------+
+| Intermediate (Address) |
++------------------------+
+     | .zipCode
+     v
+target
+
+Client reaches through Order and Customer to touch
+Address directly, one accessor call per hop.
 
 AFTER, Hide Delegate applied
 
-  +--------+  .shippingZip()   +----------+
-  | Client |------------------>| Head     |
-  +--------+                   | (Order)  |
-                                +----------+
-                                     |
-                                     | Order.shippingZip() internally
-                                     | walks customer.address.zipCode
-                                     v
-                          +----------+     +---------+
-                          | Customer |---->| Address |
-                          +----------+     +---------+
++--------+
+| Client |
++--------+
+     | .shippingZip()
+     v
++--------------+
+| Head (Order) |
++--------------+
+     | internally walks customer.address.zipCode
+     v
++----------+
+| Customer |
++----------+
+     |
+     v
++---------+
+| Address |
++---------+
 
-  Client now depends on Order alone. Customer and Address are private
-  implementation detail of how Order answers the question.
+Client now depends on Order alone. Customer and Address
+are private implementation detail of how Order answers
+the question.
 ```
 
 ## 7. Dynamics

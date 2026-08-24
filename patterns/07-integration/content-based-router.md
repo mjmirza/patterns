@@ -215,24 +215,28 @@ useful part.
 ## 6. ASCII structure diagram
 
 ```
-                          +---------------------------+
-                          |   Content-Based Router     |
-                          |-----------------------------|
-    +----------+          | rule 1: type == "domestic" |         +-------------+
-    | Producer | -------> | rule 2: type == "intl"     | ------> | Domestic Svc|
-    +----------+  inbound | rule N: (default)          |  \      +-------------+
-                 channel  +---------------------------+   \
-                                                             \     +-------------+
-                                                              ---> | Intl Svc    |
-                                                                    +-------------+
-                                                             \
-                                                              \    +-------------+
-                                                               --> | Default /   |
-                                                                    | Dead-letter |
-                                                                    +-------------+
++----------+
+| Producer |
++----------+
+     | inbound channel
+     v
++----------------------------+
+| Content-Based Router       |
+| rule 1: type == "domestic" |
+| rule 2: type == "intl"     |
+| rule N: (default)          |
++----------------------------+
+     | evaluates rules, exactly one edge fires
+     +-----------------+-----------------+
+     v                 v                 v
++--------------+  +----------+  +-------------+
+| Domestic Svc |  | Intl Svc |  | Default /   |
+|              |  |          |  | Dead-letter |
++--------------+  +----------+  +-------------+
 
-   Exactly one outbound edge fires per message. Producer and consumers never
-   see each other. The router owns the rule set and every channel reference.
+Exactly one outbound edge fires per message. Producer and
+consumers never see each other. The router owns the rule
+set and every channel reference.
 ```
 
 ## 7. Dynamics

@@ -236,40 +236,41 @@ Do not reach for Correlation Identifier when the situation matches one of these.
 ## 6. ASCII structure diagram
 
 ```
-+-------------+                          +-------------+
-|  Requestor  |                          |   Replier   |
-|-------------|                          |-------------|
-| generates   |   1. request msg         | receives    |
-| correlation | -----------------------> | request,    |
-| id "abc123" |   headers                | reads       |
-|             |     correlationId=abc123 | correlationId
-| stores      |                          | from headers|
-| "abc123" -> |                          |             |
-|  pending op |   2. reply msg           | copies same |
-|             | <----------------------- | correlationId
-| looks up    |   headers                | into reply  |
-| "abc123" in |     correlationId=abc123 | headers,    |
-| pending ops |                          | unchanged   |
-| table, finds|                          |             |
-| the waiting |                          |             |
-| operation   |                          |             |
-+-------------+                          +-------------+
++-----------------------------------+
+| Requestor                         |
+| generates correlation id "abc123" |
+| stores "abc123" -> pending op     |
++-----------------------------------+
+     | 1. request msg, header correlationId=abc123
+     v
++----------------------------------------------------+
+| Replier                                            |
+| receives request, reads correlationId from headers |
+| copies same correlationId into reply headers,      |
+| unchanged                                          |
++----------------------------------------------------+
+     | 2. reply msg, header correlationId=abc123
+     v
+Requestor looks up "abc123" in its pending ops table,
+finds the waiting operation.
 
-Fan-in view, several outstanding requests on one shared inbound channel
+Fan-in view, several outstanding requests on one shared
+inbound channel. Order of arrival is irrelevant. Order
+of dispatch is by id, not by time.
 
-  Requestor sends                        Shared inbound channel receives, any order
+  Requestor sends            Shared channel receives,
+                             any order
 
-  req(id=A) ----.                        .--- reply(id=B)
-  req(id=B) ----+---> [ asynchronous ]---+---- reply(id=D)
-  req(id=C) ----+---> [   transport  ]---+---- reply(id=A)
-  req(id=D) ----'                        '---- reply(id=C)
+  req(id=A) --.              .--- reply(id=B)
+  req(id=B) --+-[ async  ]--+---- reply(id=D)
+  req(id=C) --+-[transport]--+---- reply(id=A)
+  req(id=D) --'              '---- reply(id=C)
 
   Correlating consumer
     lookup(B) -> resumes op B
     lookup(D) -> resumes op D
     lookup(A) -> resumes op A
     lookup(C) -> resumes op C
-  Order of arrival is irrelevant. Order of dispatch is by id, not by time.
 ```
 
 ## 7. Dynamics

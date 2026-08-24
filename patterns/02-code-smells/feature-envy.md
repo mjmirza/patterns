@@ -228,26 +228,42 @@ existing code rather than designed in advance.
 ## 6. ASCII structure diagram
 
 ```
-  Before                              After
+Before
 
-  +----------------+                  +----------------+
-  | InvoicePrinter  |                 | InvoicePrinter  |
-  |----------------|                  |----------------|
-  | +priceFor(c,amt)|--calls-->       | +priceFor(c,amt)|--calls-->
-  +----------------+       |          +----------------+       |
-         |                 |                                    |
-         | reads mostly    |          +----------------+        |
-         v                 |          |    Customer    |<-------+
-  +----------------+       |          |----------------|
-  |    Customer    |<------+          | -discountRate  |
-  |----------------|                  | -loyaltyYears  |
-  | -discountRate  |                  | -isWholesale   |
-  | -loyaltyYears  |                  | +priceFor(amt) |  <- rule now
-  | -isWholesale   |                  +----------------+     lives beside
-  +----------------+                                          its own data
++-----------------------------+
+| InvoicePrinter              |
+| +priceFor(customer, amount) |
++-----------------------------+
+           | reads customer's fields directly
+           v
++---------------+
+| Customer      |
+| -discountRate |
+| -loyaltyYears |
+| -isWholesale  |
++---------------+
 
-  Legend. InvoicePrinter.priceFor reads Customer's fields more    Customer.priceFor
-  than its own state, the envy.                                   reads only self.
+InvoicePrinter.priceFor reads Customer's fields more
+than its own state. That is the envy.
+
+
+After
+
++-----------------------------+
+| InvoicePrinter              |
+| +priceFor(customer, amount) |
++-----------------------------+
+           | delegates to
+           v
++----------------------------------------------------------+
+| Customer                                                 |
+| -discountRate                                            |
+| -loyaltyYears                                            |
+| -isWholesale                                             |
+| +priceFor(amount)  <- rule now lives beside its own data |
++----------------------------------------------------------+
+
+Customer.priceFor reads only its own state.
 ```
 
 ## 7. Dynamics
