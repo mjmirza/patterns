@@ -441,6 +441,18 @@ but it is worth naming explicitly, since the dispatcher's very
 usefulness as a central logging point is exactly what makes it easy
 to log more than intended.
 
+## 18. References
+
+1. Facebook. "Flux, Actions and the Dispatcher". React Blog. 30 July
+   2014.
+   https://legacy.reactjs.org/blog/2014/07/30/flux-actions-and-the-dispatcher.html
+   Verified 2026-08-21. Source of the defining sentence and the
+   first_described lineage.
+2. Facebook. "Flux, In-Depth Overview".
+   https://facebookarchive.github.io/flux/docs/in-depth-overview/
+   Verified 2026-08-21. Source for the production use in dimension 9
+   and the full data-flow description.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -622,15 +634,3 @@ counterStore.subscribe {
 dispatcher.dispatch(Action(type: "INCREMENT"))
 dispatcher.dispatch(Action(type: "INCREMENT"))
 ```
-
-## 18. References
-
-1. Facebook. "Flux, Actions and the Dispatcher". React Blog. 30 July
-   2014.
-   https://legacy.reactjs.org/blog/2014/07/30/flux-actions-and-the-dispatcher.html
-   Verified 2026-08-21. Source of the defining sentence and the
-   first_described lineage.
-2. Facebook. "Flux, In-Depth Overview".
-   https://facebookarchive.github.io/flux/docs/in-depth-overview/
-   Verified 2026-08-21. Source for the production use in dimension 9
-   and the full data-flow description.

@@ -730,6 +730,38 @@ Controls.
 - Require review for policies that broaden access or weaken deny rules.
 - Test every enforcement path, not only the public API.
 
+## 18. References
+
+- Hu, Vincent, David Ferraiolo, Richard Kuhn, Adam Schnitzer, Kenneth Sandlin,
+  Robert Miller, and Karen Scarfone. *Guide to Attribute Based Access Control
+  (ABAC) Definition and Considerations*. NIST Special Publication 800-162,
+  January 2014, updated August 2, 2019. URL
+  https://csrc.nist.gov/pubs/sp/800/162/upd2/final, verified 2026-08-02.
+- OASIS. *eXtensible Access Control Markup Language (XACML) Version 3.0*.
+  Edited by Erik Rissanen. OASIS Standard, January 22, 2013. Sections 2, 3,
+  5.44 through 5.48, 7.2, 7.3, and 9. URL
+  https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html,
+  verified 2026-08-02.
+- Amazon Web Services. AWS Identity and Access Management User Guide. "Define
+  permissions based on attributes with ABAC authorization." URL
+  https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html,
+  verified 2026-08-02.
+- Google Cloud. Identity and Access Management documentation. "Overview of IAM
+  Conditions." URL
+  https://docs.cloud.google.com/iam/docs/conditions-overview?hl=en, verified
+  2026-08-02.
+- Microsoft Learn. "What is Azure attribute-based access control (Azure ABAC)?"
+  URL
+  https://learn.microsoft.com/en-us/azure/role-based-access-control/conditions-overview,
+  verified 2026-08-02.
+- Amazon Web Services. Amazon Verified Permissions User Guide. "Amazon Verified
+  Permissions and Cedar policy language terms and concepts." URL
+  https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/terminology.html,
+  verified 2026-08-02.
+- Open Policy Agent. "Access Control Systems." URL
+  https://www.openpolicyagent.org/docs/comparisons/access-control-systems,
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples below are intentionally small. They show ABAC as typed predicates
@@ -890,35 +922,3 @@ fn main() {
     println!("{}", allow(&request, &[same_department, enough_clearance, managed_device_for_export]));
 }
 ```
-
-## 18. References
-
-- Hu, Vincent, David Ferraiolo, Richard Kuhn, Adam Schnitzer, Kenneth Sandlin,
-  Robert Miller, and Karen Scarfone. *Guide to Attribute Based Access Control
-  (ABAC) Definition and Considerations*. NIST Special Publication 800-162,
-  January 2014, updated August 2, 2019. URL
-  https://csrc.nist.gov/pubs/sp/800/162/upd2/final, verified 2026-08-02.
-- OASIS. *eXtensible Access Control Markup Language (XACML) Version 3.0*.
-  Edited by Erik Rissanen. OASIS Standard, January 22, 2013. Sections 2, 3,
-  5.44 through 5.48, 7.2, 7.3, and 9. URL
-  https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html,
-  verified 2026-08-02.
-- Amazon Web Services. AWS Identity and Access Management User Guide. "Define
-  permissions based on attributes with ABAC authorization." URL
-  https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_attribute-based-access-control.html,
-  verified 2026-08-02.
-- Google Cloud. Identity and Access Management documentation. "Overview of IAM
-  Conditions." URL
-  https://docs.cloud.google.com/iam/docs/conditions-overview?hl=en, verified
-  2026-08-02.
-- Microsoft Learn. "What is Azure attribute-based access control (Azure ABAC)?"
-  URL
-  https://learn.microsoft.com/en-us/azure/role-based-access-control/conditions-overview,
-  verified 2026-08-02.
-- Amazon Web Services. Amazon Verified Permissions User Guide. "Amazon Verified
-  Permissions and Cedar policy language terms and concepts." URL
-  https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/terminology.html,
-  verified 2026-08-02.
-- Open Policy Agent. "Access Control Systems." URL
-  https://www.openpolicyagent.org/docs/comparisons/access-control-systems,
-  verified 2026-08-02.

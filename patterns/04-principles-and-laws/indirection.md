@@ -809,6 +809,46 @@ example when a Referent's name encodes a tenant, a region, or a person, and
 that log field needs the same handling as any other identifying field rather
 than being assumed safe because it looks like infrastructure metadata.
 
+## 18. References
+
+1. Wikipedia contributors. "Indirection." https://en.wikipedia.org/wiki/Indirection
+   Verified 2026-08-02. Source for the general definition, the Wheeler and
+   Lampson attribution and its contested status, and the "too many layers of
+   indirection" corollary in dimension 1.
+2. Wikipedia contributors. "GRASP (object-oriented design)."
+   https://en.wikipedia.org/wiki/GRASP_(object-oriented_design) Verified
+   2026-08-02. Used to confirm the nine-pattern GRASP catalog and Indirection's
+   place within it alongside Protected Variations, referenced in dimension 1,
+   dimension 9, and dimension 13.
+3. Craig Larman. *Applying UML and Patterns. An Introduction to
+   Object-Oriented Analysis and Design and Iterative Development*, 3rd
+   edition. Prentice Hall, 2004. ISBN 0-13-148906-2. Source of the original
+   GRASP formulation of Indirection first published in the 1997 first
+   edition, and of its pairing with Polymorphism to achieve Protected
+   Variations, cited in dimension 1 and dimension 13. Cited from the
+   published catalog description rather than a specific page, since a page
+   number for the 1997 first edition could not be independently confirmed
+   through a live source at time of writing.
+4. P. Mockapetris. RFC 1034, "Domain Names, Concepts and Facilities."
+   Internet Engineering Task Force, November 1987.
+   https://www.rfc-editor.org/rfc/rfc1034 Verified 2026-08-02. Source for the
+   DNS production use in dimension 8 and dimension 9.
+5. Linux man-pages project. `mmap(2)` manual page.
+   https://man7.org/linux/man-pages/man2/mmap.2.html Verified 2026-08-02.
+   Source for the virtual memory production use in dimension 8 and dimension
+   9.
+6. Kubernetes documentation. "Service."
+   https://kubernetes.io/docs/concepts/services-networking/service/ Verified
+   2026-08-02. Source for the Kubernetes Service production use in dimension
+   8 and dimension 9.
+7. Microsoft. ".NET Microservices Architecture for Containerized .NET
+   Applications," "The API gateway pattern versus the direct
+   client-to-microservice communication."
+   https://learn.microsoft.com/en-us/dotnet/standard/microservices-architecture/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern
+   Verified 2026-08-02. Source for the API Gateway production use, the
+   explicit "tier of indirection" language quoted in dimension 8, and the
+   Ocelot and Azure API Management examples in dimension 9.
+
 ## Code examples
 
 Three languages chosen for genuinely different idiomatic shapes. Go shows
@@ -1003,43 +1043,3 @@ console.log("full price", checkout.total(["WIDGET", "GADGET"]).toFixed(2));
 binding.rebind(new StaticCatalog(new Map([["WIDGET", 8.99], ["GADGET", 17.99]])));
 console.log("repriced", checkout.total(["WIDGET", "GADGET"]).toFixed(2));
 ```
-
-## 18. References
-
-1. Wikipedia contributors. "Indirection." https://en.wikipedia.org/wiki/Indirection
-   Verified 2026-08-02. Source for the general definition, the Wheeler and
-   Lampson attribution and its contested status, and the "too many layers of
-   indirection" corollary in dimension 1.
-2. Wikipedia contributors. "GRASP (object-oriented design)."
-   https://en.wikipedia.org/wiki/GRASP_(object-oriented_design) Verified
-   2026-08-02. Used to confirm the nine-pattern GRASP catalog and Indirection's
-   place within it alongside Protected Variations, referenced in dimension 1,
-   dimension 9, and dimension 13.
-3. Craig Larman. *Applying UML and Patterns. An Introduction to
-   Object-Oriented Analysis and Design and Iterative Development*, 3rd
-   edition. Prentice Hall, 2004. ISBN 0-13-148906-2. Source of the original
-   GRASP formulation of Indirection first published in the 1997 first
-   edition, and of its pairing with Polymorphism to achieve Protected
-   Variations, cited in dimension 1 and dimension 13. Cited from the
-   published catalog description rather than a specific page, since a page
-   number for the 1997 first edition could not be independently confirmed
-   through a live source at time of writing.
-4. P. Mockapetris. RFC 1034, "Domain Names, Concepts and Facilities."
-   Internet Engineering Task Force, November 1987.
-   https://www.rfc-editor.org/rfc/rfc1034 Verified 2026-08-02. Source for the
-   DNS production use in dimension 8 and dimension 9.
-5. Linux man-pages project. `mmap(2)` manual page.
-   https://man7.org/linux/man-pages/man2/mmap.2.html Verified 2026-08-02.
-   Source for the virtual memory production use in dimension 8 and dimension
-   9.
-6. Kubernetes documentation. "Service."
-   https://kubernetes.io/docs/concepts/services-networking/service/ Verified
-   2026-08-02. Source for the Kubernetes Service production use in dimension
-   8 and dimension 9.
-7. Microsoft. ".NET Microservices Architecture for Containerized .NET
-   Applications," "The API gateway pattern versus the direct
-   client-to-microservice communication."
-   https://learn.microsoft.com/en-us/dotnet/standard/microservices-architecture/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern
-   Verified 2026-08-02. Source for the API Gateway production use, the
-   explicit "tier of indirection" language quoted in dimension 8, and the
-   Ocelot and Azure API Management examples in dimension 9.

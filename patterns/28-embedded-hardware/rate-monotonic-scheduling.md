@@ -426,6 +426,18 @@ real, necessary part of a security-conscious Rate Monotonic Scheduling
 deployment, particularly for any task that processes data from an
 untrusted or external source.
 
+## 18. References
+
+1. Barr Group. "Introduction to Rate Monotonic Scheduling".
+   https://barrgroup.com/embedded-systems/how-to/rma-rate-monotonic-algorithm
+   Verified 2026-08-21. Source of the priority-assignment rule, the
+   optimality claim, and the Liu and Layland schedulability bound
+   quotes used in dimensions 1, 2, 3, 5, 7, 8, 9, and 10.
+2. Zephyr Project. "Scheduling".
+   https://docs.zephyrproject.org/latest/kernel/services/scheduling/index.html
+   Verified 2026-08-21. Source of the priority-preemptive scheduler
+   mechanism quotes used in dimensions 4, 5, 7, and 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -561,15 +573,3 @@ for task in assigned.sorted(by: { $0.priority < $1.priority }) {
 import Foundation
 print("Liu and Layland bound for 4 tasks:", liuLaylandBound(4))
 ```
-
-## 18. References
-
-1. Barr Group. "Introduction to Rate Monotonic Scheduling".
-   https://barrgroup.com/embedded-systems/how-to/rma-rate-monotonic-algorithm
-   Verified 2026-08-21. Source of the priority-assignment rule, the
-   optimality claim, and the Liu and Layland schedulability bound
-   quotes used in dimensions 1, 2, 3, 5, 7, 8, 9, and 10.
-2. Zephyr Project. "Scheduling".
-   https://docs.zephyrproject.org/latest/kernel/services/scheduling/index.html
-   Verified 2026-08-21. Source of the priority-preemptive scheduler
-   mechanism quotes used in dimensions 4, 5, 7, and 9.

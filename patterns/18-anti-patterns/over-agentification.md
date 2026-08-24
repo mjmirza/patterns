@@ -767,6 +767,58 @@ verified 2026-08-02). The gate can be human approval, a deterministic rule, a
 typed policy engine, or a transaction authorization service. It should not be
 another unconstrained agent with a sterner prompt.
 
+## 18. References
+
+- Anthropic, Erik S. and Barry Zhang, "Building effective agents," published
+  December 19, 2024, sections "What are agents?", "When and when not to use
+  agents", "When and how to use frameworks", "Agents", and "Summary",
+  https://www.anthropic.com/engineering/building-effective-agents, verified
+  2026-08-02.
+- OpenAI, "A practical guide to building AI agents," sections "What is an
+  agent?", "When should you build an agent?", "Orchestration", and "Guardrails",
+  https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/,
+  verified 2026-08-02.
+- OpenAI, "OpenAI Agents SDK," overview section,
+  https://openai.github.io/openai-agents-python/, verified 2026-08-02.
+- OpenAI Agents SDK, "Guardrails," sections "Workflow boundaries", "Input
+  guardrails", "Output guardrails", and "Tool guardrails",
+  https://openai.github.io/openai-agents-python/guardrails/, verified
+  2026-08-02.
+- LangChain, "Workflows and agents," sections "Workflows" and "Agents",
+  https://langchain-ai.github.io/langgraph/agents/tools/, verified 2026-08-02.
+- LangChain, "Agents," section "Dynamic tools",
+  https://langchain-5e9cc07a.mintlify.app/oss/python/langchain/agents, verified
+  2026-08-02.
+- Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu, Li
+  Jiang, Xiaoyun Zhang, Shaokun Zhang, Ahmed Awadallah, Ryen W. White, Doug
+  Burger, Chi Wang, "AutoGen. Enabling Next-Gen LLM Applications via
+  Multi-Agent Conversation," COLM 2024,
+  https://www.microsoft.com/en-us/research/publication/autogen-enabling-next-gen-llm-applications-via-multi-agent-conversation-framework/,
+  verified 2026-08-02.
+- Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik
+  Narasimhan, Yuan Cao, "ReAct. Synergizing Reasoning and Acting in Language
+  Models," Google Research blog summary, November 8, 2022,
+  https://research.google/blog/react-synergizing-reasoning-and-acting-in-language-models/,
+  verified 2026-08-02.
+- Klarna Bank AB, "Klarna AI assistant handles two-thirds of customer service
+  chats in its first month," PR Newswire, February 27, 2024,
+  https://www.prnewswire.com/news-releases/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month-302072744.html,
+  verified 2026-08-02.
+- GitHub Docs, "Using Copilot cloud agent on GitHub," section "Assigning an
+  issue to Copilot",
+  https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-on-github,
+  verified 2026-08-02.
+- Intercom Help, Beth-Ann Sher, "What is Fin?", June 9, 2026,
+  https://www.intercom.com/help/en/articles/9515824-what-is-fin, verified
+  2026-08-02.
+- Intercom Help, Beth-Ann Sher, "Fin AI Agent FAQs," section "Customer
+  Experience", https://www.intercom.com/help/en/articles/7837535-fin-ai-agent-faqs,
+  verified 2026-08-02.
+- OWASP GenAI Security Project, "2025 Top 10 Risk and Mitigations for LLMs and
+  Gen AI Apps," https://genai.owasp.org/llm-top-10/, verified 2026-08-02.
+- OWASP Foundation, "OWASP MCP Top 10,"
+  https://owasp.org/www-project-mcp-top-10/, verified 2026-08-02.
+
 ## Code examples
 
 The examples below compile or run as standalone demonstrations. Each shows the
@@ -904,55 +956,3 @@ public class OverAgentificationExample {
     }
 }
 ```
-
-## 18. References
-
-- Anthropic, Erik S. and Barry Zhang, "Building effective agents," published
-  December 19, 2024, sections "What are agents?", "When and when not to use
-  agents", "When and how to use frameworks", "Agents", and "Summary",
-  https://www.anthropic.com/engineering/building-effective-agents, verified
-  2026-08-02.
-- OpenAI, "A practical guide to building AI agents," sections "What is an
-  agent?", "When should you build an agent?", "Orchestration", and "Guardrails",
-  https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/,
-  verified 2026-08-02.
-- OpenAI, "OpenAI Agents SDK," overview section,
-  https://openai.github.io/openai-agents-python/, verified 2026-08-02.
-- OpenAI Agents SDK, "Guardrails," sections "Workflow boundaries", "Input
-  guardrails", "Output guardrails", and "Tool guardrails",
-  https://openai.github.io/openai-agents-python/guardrails/, verified
-  2026-08-02.
-- LangChain, "Workflows and agents," sections "Workflows" and "Agents",
-  https://langchain-ai.github.io/langgraph/agents/tools/, verified 2026-08-02.
-- LangChain, "Agents," section "Dynamic tools",
-  https://langchain-5e9cc07a.mintlify.app/oss/python/langchain/agents, verified
-  2026-08-02.
-- Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu, Li
-  Jiang, Xiaoyun Zhang, Shaokun Zhang, Ahmed Awadallah, Ryen W. White, Doug
-  Burger, Chi Wang, "AutoGen. Enabling Next-Gen LLM Applications via
-  Multi-Agent Conversation," COLM 2024,
-  https://www.microsoft.com/en-us/research/publication/autogen-enabling-next-gen-llm-applications-via-multi-agent-conversation-framework/,
-  verified 2026-08-02.
-- Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik
-  Narasimhan, Yuan Cao, "ReAct. Synergizing Reasoning and Acting in Language
-  Models," Google Research blog summary, November 8, 2022,
-  https://research.google/blog/react-synergizing-reasoning-and-acting-in-language-models/,
-  verified 2026-08-02.
-- Klarna Bank AB, "Klarna AI assistant handles two-thirds of customer service
-  chats in its first month," PR Newswire, February 27, 2024,
-  https://www.prnewswire.com/news-releases/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month-302072744.html,
-  verified 2026-08-02.
-- GitHub Docs, "Using Copilot cloud agent on GitHub," section "Assigning an
-  issue to Copilot",
-  https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-cloud-agent-on-github,
-  verified 2026-08-02.
-- Intercom Help, Beth-Ann Sher, "What is Fin?", June 9, 2026,
-  https://www.intercom.com/help/en/articles/9515824-what-is-fin, verified
-  2026-08-02.
-- Intercom Help, Beth-Ann Sher, "Fin AI Agent FAQs," section "Customer
-  Experience", https://www.intercom.com/help/en/articles/7837535-fin-ai-agent-faqs,
-  verified 2026-08-02.
-- OWASP GenAI Security Project, "2025 Top 10 Risk and Mitigations for LLMs and
-  Gen AI Apps," https://genai.owasp.org/llm-top-10/, verified 2026-08-02.
-- OWASP Foundation, "OWASP MCP Top 10,"
-  https://owasp.org/www-project-mcp-top-10/, verified 2026-08-02.

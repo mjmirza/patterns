@@ -831,6 +831,40 @@ or a data-residency requirement, the routing-decision log inherits that
 sensitivity and needs the matching retention and access controls, not a
 default operational-logs-keep-forever policy.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. Message Router chapter, Dynamic Router. Source of the
+   pattern name, the original problem and solution statement, and the
+   self-registering shape.
+2. Enterprise Integration Patterns companion site. "Dynamic Router".
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/DynamicRouter.html
+   Verified 2026-08-02. Source of the exact problem statement quoted in
+   dimension 1 and the differentiation from Content-Based Router and
+   Routing Slip in dimension 1.
+3. Enterprise Integration Patterns companion site. "Message Router".
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageRouter.html
+   Verified 2026-08-02. Confirms Dynamic Router's placement as a variation
+   within the broader Message Router family.
+4. Apache Software Foundation. Apache Camel documentation, "Dynamic Router
+   EIP". https://camel.apache.org/components/latest/eips/dynamicRouter-eip.html
+   Verified 2026-08-02. Source of the iterative expression variant, the
+   null-termination requirement, and the Exchange-scoped state guidance
+   quoted in dimensions 1, 7, and 8.
+5. VMware Tanzu. Spring Integration reference documentation, Router
+   documentation index. https://docs.spring.io/spring-integration/reference/router.html
+   Verified 2026-08-02. Confirms Dynamic Router as a distinct, named router
+   type in Spring Integration's routing family, cited in dimensions 1 and 9.
+6. Envoy Proxy project. "Dynamic configuration (xDS)", architecture
+   overview. https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/operations/dynamic_configuration
+   Verified 2026-08-02. Source of the Route Discovery Service description
+   quoted in dimensions 1 and 9.
+7. Istio project. "Istio architecture, deployment model".
+   https://istio.io/latest/docs/ops/deployment/architecture/
+   Verified 2026-08-02. Source of the istiod-to-Envoy xDS propagation
+   description cited as a named production use in dimension 9.
+
 ## Code examples
 
 Three languages, each showing the iterative-expression variant, which is the
@@ -969,37 +1003,3 @@ func main() {
 	fmt.Println(h2)
 }
 ```
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. Message Router chapter, Dynamic Router. Source of the
-   pattern name, the original problem and solution statement, and the
-   self-registering shape.
-2. Enterprise Integration Patterns companion site. "Dynamic Router".
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/DynamicRouter.html
-   Verified 2026-08-02. Source of the exact problem statement quoted in
-   dimension 1 and the differentiation from Content-Based Router and
-   Routing Slip in dimension 1.
-3. Enterprise Integration Patterns companion site. "Message Router".
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageRouter.html
-   Verified 2026-08-02. Confirms Dynamic Router's placement as a variation
-   within the broader Message Router family.
-4. Apache Software Foundation. Apache Camel documentation, "Dynamic Router
-   EIP". https://camel.apache.org/components/latest/eips/dynamicRouter-eip.html
-   Verified 2026-08-02. Source of the iterative expression variant, the
-   null-termination requirement, and the Exchange-scoped state guidance
-   quoted in dimensions 1, 7, and 8.
-5. VMware Tanzu. Spring Integration reference documentation, Router
-   documentation index. https://docs.spring.io/spring-integration/reference/router.html
-   Verified 2026-08-02. Confirms Dynamic Router as a distinct, named router
-   type in Spring Integration's routing family, cited in dimensions 1 and 9.
-6. Envoy Proxy project. "Dynamic configuration (xDS)", architecture
-   overview. https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/operations/dynamic_configuration
-   Verified 2026-08-02. Source of the Route Discovery Service description
-   quoted in dimensions 1 and 9.
-7. Istio project. "Istio architecture, deployment model".
-   https://istio.io/latest/docs/ops/deployment/architecture/
-   Verified 2026-08-02. Source of the istiod-to-Envoy xDS propagation
-   description cited as a named production use in dimension 9.

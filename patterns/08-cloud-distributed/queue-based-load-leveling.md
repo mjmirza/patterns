@@ -939,6 +939,55 @@ retention and access rules the rest of the system applies to identifying
 data, rather than treated as exempt because it lives in operational
 telemetry rather than the primary data store.
 
+## 18. References
+
+1. Alex Homer, John Sharp, Larry Brader, Masashi Narumoto, Trent Swanson.
+   *Cloud Design Patterns. Prescriptive Architecture Guidance for Cloud
+   Applications*. Microsoft patterns & practices, 2014. ISBN
+   978-1-62114-036-8. Source of the pattern's origin and its economic
+   framing.
+2. Microsoft Learn, Azure Architecture Center. "Queue-Based Load Leveling
+   pattern".
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
+   Verified 2026-08-02. Source for the current pattern definition, the
+   autoscaling-without-bounding-downstream-rate warning, and the Azure
+   Functions and Service Bus production example.
+3. Amazon Web Services. *Amazon EC2 Auto Scaling User Guide*. "Scaling
+   policy based on Amazon SQS".
+   https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-using-sqs-queue.html
+   Verified 2026-08-02. Source for the backlog-per-instance and acceptable-
+   backlog-per-instance formulas, and the reason raw queue depth is an
+   insufficient scaling number.
+4. Amazon Web Services. *AWS Lambda Developer Guide*. "Using Lambda with
+   Amazon SQS".
+   https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html
+   Verified 2026-08-02. Source for the SQS event source mapping production
+   use, at-least-once delivery, and provisioned mode scaling figures.
+5. Celery Project. *Celery Documentation*. "Task Queues" introduction.
+   https://docs.celeryq.dev/en/stable/getting-started/introduction.html
+   Verified 2026-08-02. Source for the Celery production use and the
+   broker-mediated producer and worker description.
+6. KEDA Authors. *KEDA Documentation*. "AWS SQS Queue trigger".
+   https://keda.sh/docs/2.16/scalers/aws-sqs/
+   Verified 2026-08-02. Source for the KEDA queue-length scaling formula and
+   worked example.
+7. Wikipedia contributors. "Little's law".
+   https://en.wikipedia.org/wiki/Little%27s_law
+   Verified 2026-08-02. Source for the formula L = lambda W, the stability
+   precondition, and the 1961 proof by John Little in Operations Research.
+8. Google. *Site Reliability Engineering*. "Handling Overload" chapter.
+   https://sre.google/sre-book/handling-overload/
+   Verified 2026-08-02. Source for the load shedding definition and its
+   distinction from deferred, queued work.
+9. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003. ISBN
+   0-321-20068-3. Source for the Point-to-Point Channel and Competing
+   Consumers ancestry this pattern builds on.
+10. Enterprise Integration Patterns website. "Point-to-Point Channel".
+    https://www.enterpriseintegrationpatterns.com/patterns/messaging/PointToPointChannel.html
+    Verified 2026-08-02. Source for the exact competing-consumer delivery
+    guarantee referenced in dimension 13.
+
 ## Code examples
 
 Three languages, each chosen because the pattern's mechanism, a bounded
@@ -1142,52 +1191,3 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
-
-## 18. References
-
-1. Alex Homer, John Sharp, Larry Brader, Masashi Narumoto, Trent Swanson.
-   *Cloud Design Patterns. Prescriptive Architecture Guidance for Cloud
-   Applications*. Microsoft patterns & practices, 2014. ISBN
-   978-1-62114-036-8. Source of the pattern's origin and its economic
-   framing.
-2. Microsoft Learn, Azure Architecture Center. "Queue-Based Load Leveling
-   pattern".
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
-   Verified 2026-08-02. Source for the current pattern definition, the
-   autoscaling-without-bounding-downstream-rate warning, and the Azure
-   Functions and Service Bus production example.
-3. Amazon Web Services. *Amazon EC2 Auto Scaling User Guide*. "Scaling
-   policy based on Amazon SQS".
-   https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-using-sqs-queue.html
-   Verified 2026-08-02. Source for the backlog-per-instance and acceptable-
-   backlog-per-instance formulas, and the reason raw queue depth is an
-   insufficient scaling number.
-4. Amazon Web Services. *AWS Lambda Developer Guide*. "Using Lambda with
-   Amazon SQS".
-   https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html
-   Verified 2026-08-02. Source for the SQS event source mapping production
-   use, at-least-once delivery, and provisioned mode scaling figures.
-5. Celery Project. *Celery Documentation*. "Task Queues" introduction.
-   https://docs.celeryq.dev/en/stable/getting-started/introduction.html
-   Verified 2026-08-02. Source for the Celery production use and the
-   broker-mediated producer and worker description.
-6. KEDA Authors. *KEDA Documentation*. "AWS SQS Queue trigger".
-   https://keda.sh/docs/2.16/scalers/aws-sqs/
-   Verified 2026-08-02. Source for the KEDA queue-length scaling formula and
-   worked example.
-7. Wikipedia contributors. "Little's law".
-   https://en.wikipedia.org/wiki/Little%27s_law
-   Verified 2026-08-02. Source for the formula L = lambda W, the stability
-   precondition, and the 1961 proof by John Little in Operations Research.
-8. Google. *Site Reliability Engineering*. "Handling Overload" chapter.
-   https://sre.google/sre-book/handling-overload/
-   Verified 2026-08-02. Source for the load shedding definition and its
-   distinction from deferred, queued work.
-9. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003. ISBN
-   0-321-20068-3. Source for the Point-to-Point Channel and Competing
-   Consumers ancestry this pattern builds on.
-10. Enterprise Integration Patterns website. "Point-to-Point Channel".
-    https://www.enterpriseintegrationpatterns.com/patterns/messaging/PointToPointChannel.html
-    Verified 2026-08-02. Source for the exact competing-consumer delivery
-    guarantee referenced in dimension 13.

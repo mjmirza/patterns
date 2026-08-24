@@ -718,6 +718,42 @@ collects nor retains data on its own, and any retention concern belongs to
 whatever storage mechanism a fresh fixture happens to be built against, not to
 the pattern itself.
 
+## 18. References
+
+1. Gerard Meszaros. *xUnit Test Patterns. Refactoring Test Code*.
+   Addison-Wesley, 2007. ISBN 978-0131495050. Fixture design pattern catalog.
+   Source of the Fresh Fixture and Shared Fixture names and their opposing
+   trade-offs described throughout this entry.
+2. JUnit Team. *JUnit 5 User Guide API*, `org.junit.jupiter.api.BeforeEach`.
+   https://docs.junit.org/current/api/org.junit.jupiter.api/org/junit/jupiter/api/BeforeEach.html
+   Verified 2026-08-02. Source for the "executed before each" timing claim and
+   the annotation's requirements.
+3. .NET Foundation. *xUnit.net documentation*, "Shared Context between Tests".
+   https://xunit.net/docs/shared-context
+   Verified 2026-08-02. Source for the per-test-method instance construction
+   claim and the constructor-as-fixture variant.
+4. pytest development team. *pytest documentation*, "How to use fixtures",
+   "Fixture scopes" section.
+   https://docs.pytest.org/en/stable/how-to/fixtures.html
+   Verified 2026-08-02. Source for the default function scope and its
+   per-test teardown behaviour.
+5. RSpec Core Team. *RSpec documentation*, "let and let!".
+   https://rspec.info/features/3-12/rspec-core/helper-methods/let/
+   Verified 2026-08-02. Source for the per-example caching and cross-example
+   isolation behaviour of `let`.
+6. Django Software Foundation. *Django 5.2 documentation*, "Testing tools",
+   `django.test.TestCase` section.
+   https://docs.djangoproject.com/en/5.2/topics/testing/tools/
+   Verified 2026-08-02. Source for the transaction-wrap-and-rollback teardown
+   variant and the nested per-test `atomic()` block behaviour.
+7. Martin Fowler. "UnitTest". Bliki, martinfowler.com.
+   https://martinfowler.com/bliki/UnitTest.html
+   Verified 2026-08-02. Consulted for background on solitary versus sociable
+   unit tests, referenced only for the test-double relationship in dimension
+   13, and confirmed to not contain a direct discussion of cross-test fixture
+   sharing, so it is cited narrowly rather than as a source for this entry's
+   central claims.
+
 ## Code examples
 
 Three languages where the pattern is idiomatic in genuinely different ways.
@@ -860,39 +896,3 @@ sample compiled with `javac Main.java` and ran with `java Main`, output
 dependency so it compiles standalone with no build tool, per the note in the
 code comment; the real annotation and lifecycle claims for JUnit 5 are backed
 separately by the citation in dimension 9.
-
-## 18. References
-
-1. Gerard Meszaros. *xUnit Test Patterns. Refactoring Test Code*.
-   Addison-Wesley, 2007. ISBN 978-0131495050. Fixture design pattern catalog.
-   Source of the Fresh Fixture and Shared Fixture names and their opposing
-   trade-offs described throughout this entry.
-2. JUnit Team. *JUnit 5 User Guide API*, `org.junit.jupiter.api.BeforeEach`.
-   https://docs.junit.org/current/api/org.junit.jupiter.api/org/junit/jupiter/api/BeforeEach.html
-   Verified 2026-08-02. Source for the "executed before each" timing claim and
-   the annotation's requirements.
-3. .NET Foundation. *xUnit.net documentation*, "Shared Context between Tests".
-   https://xunit.net/docs/shared-context
-   Verified 2026-08-02. Source for the per-test-method instance construction
-   claim and the constructor-as-fixture variant.
-4. pytest development team. *pytest documentation*, "How to use fixtures",
-   "Fixture scopes" section.
-   https://docs.pytest.org/en/stable/how-to/fixtures.html
-   Verified 2026-08-02. Source for the default function scope and its
-   per-test teardown behaviour.
-5. RSpec Core Team. *RSpec documentation*, "let and let!".
-   https://rspec.info/features/3-12/rspec-core/helper-methods/let/
-   Verified 2026-08-02. Source for the per-example caching and cross-example
-   isolation behaviour of `let`.
-6. Django Software Foundation. *Django 5.2 documentation*, "Testing tools",
-   `django.test.TestCase` section.
-   https://docs.djangoproject.com/en/5.2/topics/testing/tools/
-   Verified 2026-08-02. Source for the transaction-wrap-and-rollback teardown
-   variant and the nested per-test `atomic()` block behaviour.
-7. Martin Fowler. "UnitTest". Bliki, martinfowler.com.
-   https://martinfowler.com/bliki/UnitTest.html
-   Verified 2026-08-02. Consulted for background on solitary versus sociable
-   unit tests, referenced only for the test-double relationship in dimension
-   13, and confirmed to not contain a direct discussion of cross-test fixture
-   sharing, so it is cited narrowly rather than as a source for this entry's
-   central claims.

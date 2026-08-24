@@ -906,6 +906,48 @@ On data privacy specifically, the pattern has no direct implication beyond
 these two general points, and no privacy-specific claim is made here that
 was not independently verifiable during the research for this entry.
 
+## 18. References
+
+1. Taenzer, David, Murali Ganti, and Sudhakar Podar. "Problems in
+   Object-Oriented Software Reuse." Presented at the European Conference on
+   Object-Oriented Programming (ECOOP), 1989. Source of the coined term and
+   the "riding a yoyo" quotation, attributed through the Wikipedia article
+   below because the primary conference paper was not independently
+   reachable during research for this entry.
+2. Wikipedia contributors. "Yo-yo problem."
+   https://en.wikipedia.org/wiki/Yo-yo_problem verified 2026-08-02. Source
+   for the coining attribution, the year, the venue, the direct quotation
+   in dimension 1, and the general mitigation guidance summarized in
+   dimensions 1 and 2.
+3. Wikipedia contributors. "Composition over inheritance."
+   https://en.wikipedia.org/wiki/Composition_over_inheritance verified
+   2026-08-02. Source for the general framing that composition avoids
+   problems associated with deep, multi-generation inheritance models,
+   itself citing Eric Freeman, Elisabeth Robson, Bert Bates, and Kathy
+   Sierra, Head First Design Patterns, O'Reilly Media, 2004.
+4. Oracle. "How to Use Various Components," The Java Tutorials, section on
+   `JComponent`.
+   https://docs.oracle.com/javase/tutorial/uiswing/components/jcomponent.html
+   verified 2026-08-02. Source for the Java Swing `JComponent` production
+   use in dimension 9.
+5. Microsoft. "CFrameWnd Class," MFC Reference documentation.
+   https://learn.microsoft.com/en-us/cpp/mfc/reference/cframewnd-class
+   verified 2026-08-02. Source for the MFC `CFrameWnd` inheritance
+   hierarchy quoted in dimension 9.
+6. Microsoft. "MFC class hierarchy chart."
+   https://learn.microsoft.com/en-us/cpp/mfc/hierarchy-chart verified
+   2026-08-02. Source for MFC's dedicated hierarchy-chart documentation
+   artifact, cited as the tolerable-case mitigation example in dimensions
+   4 and 9.
+7. The Qt Company. "QAbstractSpinBox Class," Qt 6 Reference Documentation.
+   https://doc.qt.io/qt-6/qabstractspinbox.html verified 2026-08-02.
+   Source for the Qt widget hierarchy and "Inherited By" listing cited in
+   dimension 9.
+8. Eclipse Foundation. "Interface Scrollable," Eclipse Platform API.
+   https://help.eclipse.org/latest/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Scrollable.html
+   verified 2026-08-02. Source for the Eclipse SWT `Scrollable` inheritance
+   hierarchy and its documented subclasses cited in dimension 9.
+
 ## Code examples
 
 Three languages, each showing the identical anti-pattern shape followed by
@@ -1199,45 +1241,3 @@ if __name__ == "__main__":
     form.render()
     print(" ".join(form.trace))
 ```
-
-## 18. References
-
-1. Taenzer, David, Murali Ganti, and Sudhakar Podar. "Problems in
-   Object-Oriented Software Reuse." Presented at the European Conference on
-   Object-Oriented Programming (ECOOP), 1989. Source of the coined term and
-   the "riding a yoyo" quotation, attributed through the Wikipedia article
-   below because the primary conference paper was not independently
-   reachable during research for this entry.
-2. Wikipedia contributors. "Yo-yo problem."
-   https://en.wikipedia.org/wiki/Yo-yo_problem verified 2026-08-02. Source
-   for the coining attribution, the year, the venue, the direct quotation
-   in dimension 1, and the general mitigation guidance summarized in
-   dimensions 1 and 2.
-3. Wikipedia contributors. "Composition over inheritance."
-   https://en.wikipedia.org/wiki/Composition_over_inheritance verified
-   2026-08-02. Source for the general framing that composition avoids
-   problems associated with deep, multi-generation inheritance models,
-   itself citing Eric Freeman, Elisabeth Robson, Bert Bates, and Kathy
-   Sierra, Head First Design Patterns, O'Reilly Media, 2004.
-4. Oracle. "How to Use Various Components," The Java Tutorials, section on
-   `JComponent`.
-   https://docs.oracle.com/javase/tutorial/uiswing/components/jcomponent.html
-   verified 2026-08-02. Source for the Java Swing `JComponent` production
-   use in dimension 9.
-5. Microsoft. "CFrameWnd Class," MFC Reference documentation.
-   https://learn.microsoft.com/en-us/cpp/mfc/reference/cframewnd-class
-   verified 2026-08-02. Source for the MFC `CFrameWnd` inheritance
-   hierarchy quoted in dimension 9.
-6. Microsoft. "MFC class hierarchy chart."
-   https://learn.microsoft.com/en-us/cpp/mfc/hierarchy-chart verified
-   2026-08-02. Source for MFC's dedicated hierarchy-chart documentation
-   artifact, cited as the tolerable-case mitigation example in dimensions
-   4 and 9.
-7. The Qt Company. "QAbstractSpinBox Class," Qt 6 Reference Documentation.
-   https://doc.qt.io/qt-6/qabstractspinbox.html verified 2026-08-02.
-   Source for the Qt widget hierarchy and "Inherited By" listing cited in
-   dimension 9.
-8. Eclipse Foundation. "Interface Scrollable," Eclipse Platform API.
-   https://help.eclipse.org/latest/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Scrollable.html
-   verified 2026-08-02. Source for the Eclipse SWT `Scrollable` inheritance
-   hierarchy and its documented subclasses cited in dimension 9.

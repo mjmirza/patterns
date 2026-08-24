@@ -697,6 +697,54 @@ personal data into threat statements. Use data classes, synthetic examples, and
 asset labels. If a model must name a regulated data set or customer segment,
 apply the same access controls used for architecture and incident material.
 
+## 18. References
+
+- Loren Kohnfelder and Praerit Garg, "The threats to our products," Microsoft,
+  1999. Cited through Microsoft Learn's DevOps threat modeling paper at
+  https://learn.microsoft.com/en-us/security/engineering/threat-modeling-with-dev-ops,
+  verified 2026-08-02.
+- Adam Shostack, *Threat Modeling. Designing for Security*, Wiley, 1st edition,
+  2014, chapters 1 through 4.
+- Microsoft Learn, "Microsoft Threat Modeling Tool threats,"
+  https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats,
+  verified 2026-08-02.
+- Microsoft Learn, "Getting started with the Threat Modeling Tool,"
+  https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-getting-started,
+  verified 2026-08-02.
+- Microsoft Security Engineering, "Threat Modeling,"
+  https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling,
+  verified 2026-08-02.
+- Microsoft Security Engineering, "About the Microsoft Security Development
+  Lifecycle,"
+  https://www.microsoft.com/en-us/securityengineering/sdl/about,
+  verified 2026-08-02.
+- Microsoft Security Engineering, "Secure By Design,"
+  https://www.microsoft.com/en-us/securityengineering/sdl/practices/secure-by-design,
+  verified 2026-08-02.
+- Microsoft Learn, "Design secure applications on Microsoft Azure,"
+  https://learn.microsoft.com/en-us/azure/security/develop/secure-design,
+  verified 2026-08-02.
+- OWASP Cheat Sheet Series, "Threat Modeling Cheat Sheet,"
+  https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html,
+  verified 2026-08-02.
+- OWASP Foundation, "OWASP Threat Dragon,"
+  https://owasp.org/www-project-threat-dragon/, verified 2026-08-02.
+- OWASP, "pytm," https://github.com/OWASP/pytm, verified 2026-08-02.
+- AWS Security Blog, Danny Cortegaca, Ana Malhotra, and Kareem Abdol-Hamid,
+  "Threat modeling your generative AI workload to evaluate security risk,"
+  https://aws.amazon.com/blogs/security/threat-modeling-your-generative-ai-workload-to-evaluate-security-risk/,
+  verified 2026-08-02.
+- AWS, "AWS Security Agent announces support for Threat Modeling,"
+  https://aws.amazon.com/about-aws/whats-new/2026/06/aws-security-agent-threat-modeling/,
+  verified 2026-08-02.
+- AWS Security Agent API Reference, "CreateThreat,"
+  https://docs.aws.amazon.com/securityagent/latest/APIReference/API_CreateThreat.html,
+  verified 2026-08-02.
+- LINDDUN, "Threat Types," https://linddun.org/threat-types/, verified
+  2026-08-02.
+- Threat Modeling Manifesto, https://www.threatmodelingmanifesto.org/,
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples model a small STRIDE triage rule. They are intentionally tiny: a
@@ -846,51 +894,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-- Loren Kohnfelder and Praerit Garg, "The threats to our products," Microsoft,
-  1999. Cited through Microsoft Learn's DevOps threat modeling paper at
-  https://learn.microsoft.com/en-us/security/engineering/threat-modeling-with-dev-ops,
-  verified 2026-08-02.
-- Adam Shostack, *Threat Modeling. Designing for Security*, Wiley, 1st edition,
-  2014, chapters 1 through 4.
-- Microsoft Learn, "Microsoft Threat Modeling Tool threats,"
-  https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats,
-  verified 2026-08-02.
-- Microsoft Learn, "Getting started with the Threat Modeling Tool,"
-  https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-getting-started,
-  verified 2026-08-02.
-- Microsoft Security Engineering, "Threat Modeling,"
-  https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling,
-  verified 2026-08-02.
-- Microsoft Security Engineering, "About the Microsoft Security Development
-  Lifecycle,"
-  https://www.microsoft.com/en-us/securityengineering/sdl/about,
-  verified 2026-08-02.
-- Microsoft Security Engineering, "Secure By Design,"
-  https://www.microsoft.com/en-us/securityengineering/sdl/practices/secure-by-design,
-  verified 2026-08-02.
-- Microsoft Learn, "Design secure applications on Microsoft Azure,"
-  https://learn.microsoft.com/en-us/azure/security/develop/secure-design,
-  verified 2026-08-02.
-- OWASP Cheat Sheet Series, "Threat Modeling Cheat Sheet,"
-  https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html,
-  verified 2026-08-02.
-- OWASP Foundation, "OWASP Threat Dragon,"
-  https://owasp.org/www-project-threat-dragon/, verified 2026-08-02.
-- OWASP, "pytm," https://github.com/OWASP/pytm, verified 2026-08-02.
-- AWS Security Blog, Danny Cortegaca, Ana Malhotra, and Kareem Abdol-Hamid,
-  "Threat modeling your generative AI workload to evaluate security risk,"
-  https://aws.amazon.com/blogs/security/threat-modeling-your-generative-ai-workload-to-evaluate-security-risk/,
-  verified 2026-08-02.
-- AWS, "AWS Security Agent announces support for Threat Modeling,"
-  https://aws.amazon.com/about-aws/whats-new/2026/06/aws-security-agent-threat-modeling/,
-  verified 2026-08-02.
-- AWS Security Agent API Reference, "CreateThreat,"
-  https://docs.aws.amazon.com/securityagent/latest/APIReference/API_CreateThreat.html,
-  verified 2026-08-02.
-- LINDDUN, "Threat Types," https://linddun.org/threat-types/, verified
-  2026-08-02.
-- Threat Modeling Manifesto, https://www.threatmodelingmanifesto.org/,
-  verified 2026-08-02.

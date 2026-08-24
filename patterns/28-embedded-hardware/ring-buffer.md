@@ -425,6 +425,14 @@ interface. Validating the length and shape of any externally supplied
 data before it is written into the buffer is a necessary part of the
 producer side's own implementation, not an optional hardening step.
 
+## 18. References
+
+1. The Zephyr Project. "Ring Buffers".
+   https://docs.zephyrproject.org/latest/kernel/data_structures/ring_buffers.html
+   Verified 2026-08-21. Source of the definition, FIFO ordering, and
+   single-producer single-consumer safety quotes used in dimensions 1,
+   2, 3, 5, and 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -599,11 +607,3 @@ while let value = rb.get() {
     print("consumed " + String(value))
 }
 ```
-
-## 18. References
-
-1. The Zephyr Project. "Ring Buffers".
-   https://docs.zephyrproject.org/latest/kernel/data_structures/ring_buffers.html
-   Verified 2026-08-21. Source of the definition, FIFO ordering, and
-   single-producer single-consumer safety quotes used in dimensions 1,
-   2, 3, 5, and 9.

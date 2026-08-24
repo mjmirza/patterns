@@ -744,6 +744,54 @@ transmits anything by itself, and any personal data handling risk in a
 screen built with MVP is a property of what the Model and the concrete View
 do, not of the Presenter's structure.
 
+## 18. References
+
+1. Mike Potel. "MVP. Model-View-Presenter, The Taligent Programming Model for
+   C++ and Java." Taligent, Inc, 1996.
+   https://www.wildcrest.com/Potel/Portfolio/mvp.pdf
+   Verified 2026-08-05. Primary source for the pattern's origin, its six
+   original abstractions, Model, Selections, Commands, View, Interactor,
+   Presenter, and the direct quotations on the Presenter's role in
+   dimensions 1 and 3.
+2. Martin Fowler. "GUI Architectures."
+   https://martinfowler.com/eaaDev/uiArchs.html
+   Verified 2026-08-05. Source for the Taligent and Dolphin Smalltalk
+   dual-origin claim, and for the form-level versus widget-level distinction
+   between MVP and MVC in dimension 1.
+3. Martin Fowler. "Passive View."
+   https://martinfowler.com/eaaDev/PassiveScreen.html
+   Verified 2026-08-05. Source for the Passive View variant description in
+   dimensions 7 and 8.
+4. Martin Fowler. "Supervising Presenter."
+   https://martinfowler.com/eaaDev/SupervisingPresenter.html
+   Verified 2026-08-05. Source for the Supervising Controller variant
+   description in dimensions 7 and 8.
+5. Wikipedia contributors. "Model-view-presenter."
+   https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter
+   Verified 2026-08-05. Used to confirm the Dolphin Smalltalk attribution and
+   the 2006 Microsoft .NET Framework adoption date, and the list of Java and
+   PHP frameworks referenced in dimension 1, cross-checked against Fowler's
+   page rather than relied on alone.
+6. GWT Project. "Large scale application development and MVP."
+   https://www.gwtproject.org/articles/mvp-architecture.html
+   Verified 2026-08-05. Source for the GWT production use in dimension 9 and
+   the EventBus variant in dimension 8.
+7. Microsoft patterns and practices. "The Model-View-Presenter (MVP)
+   Pattern," SharePoint Guidance V2.
+   https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff649571(v=pandp.10)
+   Verified 2026-08-05. Source for the Partner Portal and Training
+   Management production use in dimension 9, the Supervising Presenter
+   sample code in dimension 8, and the Application Controller relationship
+   in dimension 13.
+8. GitHub, `googlesamples/android-architecture` repository, default branch,
+   and `gh api repos/googlesamples/android-architecture/branches`.
+   https://github.com/googlesamples/android-architecture
+   Verified 2026-08-05. Used only to confirm that no branch matching `mvp`
+   currently exists on the repository and that its current default branch
+   documents a Compose plus ViewModel architecture instead, supporting the
+   non-applicability discussion in dimension 4 and the honesty note in
+   dimension 9.
+
 ## Code examples
 
 Three languages chosen because MVP is genuinely idiomatic, in a distinct way,
@@ -999,51 +1047,3 @@ type-checked with `tsc --strict --noEmit`. The Swift sample was parsed with
 `swiftc -parse`, which checks syntax and typing at the parse and type-check
 stage but does not link or execute a binary, the standard check level for
 short standalone samples in this catalog.
-
-## 18. References
-
-1. Mike Potel. "MVP. Model-View-Presenter, The Taligent Programming Model for
-   C++ and Java." Taligent, Inc, 1996.
-   https://www.wildcrest.com/Potel/Portfolio/mvp.pdf
-   Verified 2026-08-05. Primary source for the pattern's origin, its six
-   original abstractions, Model, Selections, Commands, View, Interactor,
-   Presenter, and the direct quotations on the Presenter's role in
-   dimensions 1 and 3.
-2. Martin Fowler. "GUI Architectures."
-   https://martinfowler.com/eaaDev/uiArchs.html
-   Verified 2026-08-05. Source for the Taligent and Dolphin Smalltalk
-   dual-origin claim, and for the form-level versus widget-level distinction
-   between MVP and MVC in dimension 1.
-3. Martin Fowler. "Passive View."
-   https://martinfowler.com/eaaDev/PassiveScreen.html
-   Verified 2026-08-05. Source for the Passive View variant description in
-   dimensions 7 and 8.
-4. Martin Fowler. "Supervising Presenter."
-   https://martinfowler.com/eaaDev/SupervisingPresenter.html
-   Verified 2026-08-05. Source for the Supervising Controller variant
-   description in dimensions 7 and 8.
-5. Wikipedia contributors. "Model-view-presenter."
-   https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter
-   Verified 2026-08-05. Used to confirm the Dolphin Smalltalk attribution and
-   the 2006 Microsoft .NET Framework adoption date, and the list of Java and
-   PHP frameworks referenced in dimension 1, cross-checked against Fowler's
-   page rather than relied on alone.
-6. GWT Project. "Large scale application development and MVP."
-   https://www.gwtproject.org/articles/mvp-architecture.html
-   Verified 2026-08-05. Source for the GWT production use in dimension 9 and
-   the EventBus variant in dimension 8.
-7. Microsoft patterns and practices. "The Model-View-Presenter (MVP)
-   Pattern," SharePoint Guidance V2.
-   https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff649571(v=pandp.10)
-   Verified 2026-08-05. Source for the Partner Portal and Training
-   Management production use in dimension 9, the Supervising Presenter
-   sample code in dimension 8, and the Application Controller relationship
-   in dimension 13.
-8. GitHub, `googlesamples/android-architecture` repository, default branch,
-   and `gh api repos/googlesamples/android-architecture/branches`.
-   https://github.com/googlesamples/android-architecture
-   Verified 2026-08-05. Used only to confirm that no branch matching `mvp`
-   currently exists on the repository and that its current default branch
-   documents a Compose plus ViewModel architecture instead, supporting the
-   non-applicability discussion in dimension 4 and the honesty note in
-   dimension 9.

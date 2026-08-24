@@ -709,6 +709,54 @@ tag alone may be low risk, but the payload may be high risk. Logging, tracing,
 retention, and analytics should follow the payload classification rather than
 the type name.
 
+## 18. References
+
+- Simon Marlow, editor, *Haskell 2010 Language Report*, section 4.2.1,
+  Algebraic Datatype Declarations,
+  https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-620004.2.1,
+  verified 2026-08-02.
+- OCaml documentation, *Basic Data Types and Pattern Matching*, user-defined
+  types and variants, https://ocaml.org/docs/basic-data-types, verified
+  2026-08-02.
+- Microsoft Learn, *Discriminated Unions*, F# language reference,
+  https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/discriminated-unions,
+  verified 2026-08-02.
+- Rust standard documentation, *Keyword enum*,
+  https://dev-doc.rust-lang.org/std/keyword.enum.html, verified 2026-08-02.
+- Rust standard documentation, *core::option::Option*,
+  https://doc.rust-lang.org/core/option/enum.Option.html, verified
+  2026-08-02.
+- Rust standard documentation, *std::result::Result*,
+  https://doc.rust-lang.org/stable/std/result/enum.Result.html, verified
+  2026-08-02.
+- Steve Klabnik and Carol Nichols, *The Rust Programming Language*, chapter 6,
+  Enums and Pattern Matching, https://doc.rust-lang.org/book/ch06-00-enums.html,
+  verified 2026-08-02.
+- Apple Developer Documentation, *Optional*,
+  https://developer.apple.com/documentation/Swift/Optional, verified
+  2026-08-02.
+- Apple Developer Documentation, *Result*,
+  https://developer.apple.com/documentation/Swift/Result, verified 2026-08-02.
+- Swift.org, *The Swift Programming Language*, Enumerations,
+  https://docs.swift.org/swift-book/documentation/the-swift-programming-language/enumerations/,
+  verified 2026-08-02.
+- TypeScript Handbook, *Narrowing*, discriminated unions,
+  https://www.typescriptlang.org/docs/handbook/2/narrowing.html, verified
+  2026-08-02.
+- TypeScript Handbook, *TypeScript for Functional Programmers*, discriminated
+  unions, https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-func.html,
+  verified 2026-08-02.
+- Microsoft TypeScript repository, `src/compiler/types.ts`,
+  https://github.com/microsoft/TypeScript/blob/v5.9.3/src/compiler/types.ts,
+  verified 2026-08-02.
+- Microsoft TypeScript wiki, *Using the Compiler API*,
+  https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API,
+  verified 2026-08-02.
+- Benjamin C. Pierce, *Types and Programming Languages*, MIT Press, 2002,
+  chapter 11, Simple Extensions.
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, second
+  edition, Addison-Wesley, 2018, chapters 11 and 12.
+
 ## Code examples
 
 The samples use four languages where the pattern has different shapes: Rust and
@@ -848,51 +896,3 @@ print(receiptLine(payment))
 
 Verification performed on 2026-08-21 with `npx tsc`, `node`, `python3`,
 `rustc`, and `swiftc`.
-
-## 18. References
-
-- Simon Marlow, editor, *Haskell 2010 Language Report*, section 4.2.1,
-  Algebraic Datatype Declarations,
-  https://www.haskell.org/onlinereport/haskell2010/haskellch4.html#x10-620004.2.1,
-  verified 2026-08-02.
-- OCaml documentation, *Basic Data Types and Pattern Matching*, user-defined
-  types and variants, https://ocaml.org/docs/basic-data-types, verified
-  2026-08-02.
-- Microsoft Learn, *Discriminated Unions*, F# language reference,
-  https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/discriminated-unions,
-  verified 2026-08-02.
-- Rust standard documentation, *Keyword enum*,
-  https://dev-doc.rust-lang.org/std/keyword.enum.html, verified 2026-08-02.
-- Rust standard documentation, *core::option::Option*,
-  https://doc.rust-lang.org/core/option/enum.Option.html, verified
-  2026-08-02.
-- Rust standard documentation, *std::result::Result*,
-  https://doc.rust-lang.org/stable/std/result/enum.Result.html, verified
-  2026-08-02.
-- Steve Klabnik and Carol Nichols, *The Rust Programming Language*, chapter 6,
-  Enums and Pattern Matching, https://doc.rust-lang.org/book/ch06-00-enums.html,
-  verified 2026-08-02.
-- Apple Developer Documentation, *Optional*,
-  https://developer.apple.com/documentation/Swift/Optional, verified
-  2026-08-02.
-- Apple Developer Documentation, *Result*,
-  https://developer.apple.com/documentation/Swift/Result, verified 2026-08-02.
-- Swift.org, *The Swift Programming Language*, Enumerations,
-  https://docs.swift.org/swift-book/documentation/the-swift-programming-language/enumerations/,
-  verified 2026-08-02.
-- TypeScript Handbook, *Narrowing*, discriminated unions,
-  https://www.typescriptlang.org/docs/handbook/2/narrowing.html, verified
-  2026-08-02.
-- TypeScript Handbook, *TypeScript for Functional Programmers*, discriminated
-  unions, https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-func.html,
-  verified 2026-08-02.
-- Microsoft TypeScript repository, `src/compiler/types.ts`,
-  https://github.com/microsoft/TypeScript/blob/v5.9.3/src/compiler/types.ts,
-  verified 2026-08-02.
-- Microsoft TypeScript wiki, *Using the Compiler API*,
-  https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API,
-  verified 2026-08-02.
-- Benjamin C. Pierce, *Types and Programming Languages*, MIT Press, 2002,
-  chapter 11, Simple Extensions.
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, second
-  edition, Addison-Wesley, 2018, chapters 11 and 12.

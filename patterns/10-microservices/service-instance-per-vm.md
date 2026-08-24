@@ -885,6 +885,58 @@ organization's data retention and deletion obligations, rather than assuming
 termination alone is sufficient, since some providers retain deleted-volume
 data for a recovery window before it is actually erased.
 
+## 18. References
+
+1. Chris Richardson. microservices.io, deployment patterns, "Deploy a service
+   instance per VM". https://microservices.io/patterns/deployment/service-per-vm.html
+   Fetched and verified 2026-08-02. Source for the pattern's canonical name,
+   context, problem, forces, solution, benefits, drawbacks, the Netflix
+   production example, and the related and incompatible patterns listed in
+   dimension 13.
+2. Chris Richardson. *Microservices Patterns. With Examples in Java*. Manning
+   Publications, 2019. ISBN 978-1-61729-454-9. Chapter 12, "Deploying
+   microservices", which frames deployment onto a virtual machine per
+   service instance as one of the book's general deployment strategies,
+   alongside container and serverless deployment. Cited for the
+   `first_described` attribution and for the historical framing in dimension
+   2 and dimension 4.
+3. Amazon Web Services. "Amazon Machine Images (AMI)". Amazon EC2 User Guide.
+   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html Fetched and
+   verified 2026-08-02. Source for the Amazon Machine Image definition and
+   the multiple-instances-from-one-image mechanism cited in dimension 1 and
+   dimension 9.
+4. Microsoft. "What is Azure Cloud Services (classic)". Azure documentation
+   archive. https://learn.microsoft.com/en-us/previous-versions/azure/cloud-services/cloud-services-choose-me
+   Fetched and verified 2026-08-02. Source for the web role and worker role
+   per-VM-instance model in dimension 8, the production use in dimension 9,
+   and the deprecation lifecycle datapoint used in dimension 9 and dimension
+   10.
+5. HashiCorp. Packer documentation, "What is Packer?".
+   https://developer.hashicorp.com/packer/docs Fetched and verified
+   2026-08-02, describing Packer as building identical machine images for
+   multiple platforms from a single source configuration. Cited as the
+   cross-provider generalisation of the image-baking tooling in dimension 9.
+6. Go project. `net/http` package documentation, standard library.
+   https://pkg.go.dev/net/http Referenced for the standard library HTTP
+   server API used in the Go code example, no separate live verification
+   needed beyond confirming the sample builds with the installed Go 1.26
+   toolchain, which it does.
+
+Unverifiable or judgement-labelled claims, stated plainly rather than
+disguised as sourced fact. The specific boot-time figures given in dimension
+3 and dimension 6, tens of seconds to a few minutes, are engineering
+judgement drawn from common public-cloud VM boot behaviour rather than a
+single cited benchmark, and are stated as an order-of-magnitude comparison
+against container start time rather than as a precise, sourced number. The
+Netflix Aminator tooling's internal mechanics were not independently
+re-verified beyond the production-use summary already recorded on the
+microservices.io page cited in reference 1, because the original Netflix
+Technology Blog post could not be fetched directly in this session, its URL
+redirected through a Medium authentication gate this tool could not follow,
+so no claim in this entry rests on that specific post, and the Netflix
+production use is instead sourced entirely to reference 1, which
+independently states the same fact.
+
 ## Code examples
 
 Three examples covering the parts of this pattern that are genuinely
@@ -1114,55 +1166,3 @@ for (const state of history) {
 const complete = isRolloutComplete(history[history.length - 1]);
 console.log("rollout complete", complete);
 ```
-
-## 18. References
-
-1. Chris Richardson. microservices.io, deployment patterns, "Deploy a service
-   instance per VM". https://microservices.io/patterns/deployment/service-per-vm.html
-   Fetched and verified 2026-08-02. Source for the pattern's canonical name,
-   context, problem, forces, solution, benefits, drawbacks, the Netflix
-   production example, and the related and incompatible patterns listed in
-   dimension 13.
-2. Chris Richardson. *Microservices Patterns. With Examples in Java*. Manning
-   Publications, 2019. ISBN 978-1-61729-454-9. Chapter 12, "Deploying
-   microservices", which frames deployment onto a virtual machine per
-   service instance as one of the book's general deployment strategies,
-   alongside container and serverless deployment. Cited for the
-   `first_described` attribution and for the historical framing in dimension
-   2 and dimension 4.
-3. Amazon Web Services. "Amazon Machine Images (AMI)". Amazon EC2 User Guide.
-   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html Fetched and
-   verified 2026-08-02. Source for the Amazon Machine Image definition and
-   the multiple-instances-from-one-image mechanism cited in dimension 1 and
-   dimension 9.
-4. Microsoft. "What is Azure Cloud Services (classic)". Azure documentation
-   archive. https://learn.microsoft.com/en-us/previous-versions/azure/cloud-services/cloud-services-choose-me
-   Fetched and verified 2026-08-02. Source for the web role and worker role
-   per-VM-instance model in dimension 8, the production use in dimension 9,
-   and the deprecation lifecycle datapoint used in dimension 9 and dimension
-   10.
-5. HashiCorp. Packer documentation, "What is Packer?".
-   https://developer.hashicorp.com/packer/docs Fetched and verified
-   2026-08-02, describing Packer as building identical machine images for
-   multiple platforms from a single source configuration. Cited as the
-   cross-provider generalisation of the image-baking tooling in dimension 9.
-6. Go project. `net/http` package documentation, standard library.
-   https://pkg.go.dev/net/http Referenced for the standard library HTTP
-   server API used in the Go code example, no separate live verification
-   needed beyond confirming the sample builds with the installed Go 1.26
-   toolchain, which it does.
-
-Unverifiable or judgement-labelled claims, stated plainly rather than
-disguised as sourced fact. The specific boot-time figures given in dimension
-3 and dimension 6, tens of seconds to a few minutes, are engineering
-judgement drawn from common public-cloud VM boot behaviour rather than a
-single cited benchmark, and are stated as an order-of-magnitude comparison
-against container start time rather than as a precise, sourced number. The
-Netflix Aminator tooling's internal mechanics were not independently
-re-verified beyond the production-use summary already recorded on the
-microservices.io page cited in reference 1, because the original Netflix
-Technology Blog post could not be fetched directly in this session, its URL
-redirected through a Medium authentication gate this tool could not follow,
-so no claim in this entry rests on that specific post, and the Netflix
-production use is instead sourced entirely to reference 1, which
-independently states the same fact.

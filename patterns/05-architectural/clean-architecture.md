@@ -706,6 +706,35 @@ follow directly from where it puts logic.
   boundary carelessly, and the pattern does nothing on its own to stop that
   choice.
 
+## 18. References
+
+1. Robert C. Martin, "The Clean Architecture," blog.cleancoder.com, published
+   13 August 2012, https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html, verified 2026-08-02.
+2. Robert C. Martin, *Clean Architecture. A Craftsman's Guide to Software
+   Structure and Design*, Pearson, published 10 September 2017, ISBN
+   978-0134494166, publication record confirmed via Open Library,
+   https://openlibrary.org/isbn/9780134494166, verified 2026-08-02.
+3. Alistair Cockburn's Hexagonal Architecture, also called Ports and
+   Adapters, renamed 2005, summarized in Wikipedia, "Hexagonal architecture
+   (software)," https://en.wikipedia.org/wiki/Hexagonal_architecture_(software), verified 2026-08-02.
+4. Jeffrey Palermo, "The Onion Architecture, Part 1," jeffreypalermo.com,
+   published 29 July 2008, https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/, verified 2026-08-02.
+5. Robert C. Martin's formulation of the Dependency Inversion Principle,
+   "Object Oriented Design Quality Metrics. an analysis of dependencies,"
+   October 1994, and "The Dependency Inversion Principle," C++ Report, June
+   1996, summarized in Wikipedia, "Dependency inversion principle,"
+   https://en.wikipedia.org/wiki/Dependency_inversion_principle, verified
+   2026-08-02.
+6. ardalis/CleanArchitecture, GitHub repository README,
+   https://github.com/ardalis/CleanArchitecture, verified 2026-08-02.
+7. dotnet-architecture/eShopOnWeb, GitHub repository,
+   https://github.com/dotnet-architecture/eShopOnWeb, verified 2026-08-02.
+8. Android Developers, "Guide to app architecture," last updated 14 April
+   2026, https://developer.android.com/topic/architecture, verified
+   2026-08-02.
+9. android/nowinandroid, GitHub repository,
+   https://github.com/android/nowinandroid, verified 2026-08-02.
+
 ## Code examples
 
 Each example implements the same small scenario, placing an order with a
@@ -998,32 +1027,3 @@ func main() {
 	fmt.Printf("%+v\n", *presenter.ViewModel)
 }
 ```
-
-## 18. References
-
-1. Robert C. Martin, "The Clean Architecture," blog.cleancoder.com, published
-   13 August 2012, https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html, verified 2026-08-02.
-2. Robert C. Martin, *Clean Architecture. A Craftsman's Guide to Software
-   Structure and Design*, Pearson, published 10 September 2017, ISBN
-   978-0134494166, publication record confirmed via Open Library,
-   https://openlibrary.org/isbn/9780134494166, verified 2026-08-02.
-3. Alistair Cockburn's Hexagonal Architecture, also called Ports and
-   Adapters, renamed 2005, summarized in Wikipedia, "Hexagonal architecture
-   (software)," https://en.wikipedia.org/wiki/Hexagonal_architecture_(software), verified 2026-08-02.
-4. Jeffrey Palermo, "The Onion Architecture, Part 1," jeffreypalermo.com,
-   published 29 July 2008, https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/, verified 2026-08-02.
-5. Robert C. Martin's formulation of the Dependency Inversion Principle,
-   "Object Oriented Design Quality Metrics. an analysis of dependencies,"
-   October 1994, and "The Dependency Inversion Principle," C++ Report, June
-   1996, summarized in Wikipedia, "Dependency inversion principle,"
-   https://en.wikipedia.org/wiki/Dependency_inversion_principle, verified
-   2026-08-02.
-6. ardalis/CleanArchitecture, GitHub repository README,
-   https://github.com/ardalis/CleanArchitecture, verified 2026-08-02.
-7. dotnet-architecture/eShopOnWeb, GitHub repository,
-   https://github.com/dotnet-architecture/eShopOnWeb, verified 2026-08-02.
-8. Android Developers, "Guide to app architecture," last updated 14 April
-   2026, https://developer.android.com/topic/architecture, verified
-   2026-08-02.
-9. android/nowinandroid, GitHub repository,
-   https://github.com/android/nowinandroid, verified 2026-08-02.

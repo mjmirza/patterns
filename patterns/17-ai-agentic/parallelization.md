@@ -904,6 +904,37 @@ would need, the fan-out does not reduce this risk and, by increasing the
 number of distinct upstream sources feeding into one synthesis call, arguably
 widens it.
 
+## 18. References
+
+- Anthropic engineering team, "Building Effective Agents," Anthropic, December
+  2024, https://www.anthropic.com/engineering/building-effective-agents,
+  verified 2026-08-02. Source for the Parallelization pattern's naming,
+  Sectioning and Voting as its two named variants, and the content-moderation
+  and code-review examples cited in dimensions 1, 2, and 10.
+- Anthropic engineering team, "How we built our multi-agent research system,"
+  Anthropic, https://www.anthropic.com/engineering/multi-agent-research-system,
+  verified 2026-08-02. Source for the parallel-subagent production system,
+  the 3-5 subagent fan-out, the 90% research-time reduction, and the 90.2%
+  accuracy improvement figures cited in dimensions 1, 9, and 10.
+- Amazon Web Services, "Parallel state," AWS Step Functions Developer Guide,
+  Amazon States Language reference,
+  https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-parallel-state.html,
+  verified 2026-08-02. Source for the
+  Parallel state's `Branches` field, its concurrent execution semantics, and
+  its branch-level error-handling contract, cited in dimensions 1, 5, and 9.
+- OpenAI, "Function calling," OpenAI Platform documentation,
+  https://developers.openai.com/api/docs/guides/function-calling, verified
+  2026-08-02. Source for parallel tool calling as a provider-native
+  Sectioning variant, the `parallel_tool_calls` parameter, and the GPT-5
+  built-in-tools restriction, cited in dimensions 8 and 9.
+- Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang,
+  Aakanksha Chowdhery, Denny Zhou, "Self-Consistency Improves Chain of
+  Thought Reasoning in Language Models," Proceedings of the International
+  Conference on Learning Representations (ICLR) 2023,
+  https://arxiv.org/abs/2203.11171, verified 2026-08-02. Source for
+  Self-Consistency as the reasoning-research specialization of Voting, cited
+  in dimensions 1 and 13.
+
 ## Code examples
 
 Three languages, each showing a different variant from dimension 8. Python
@@ -1114,34 +1145,3 @@ func main() {
 ```
 
 Compiled and run with `go build` and `go run`, verified 2026-08-02.
-
-## 18. References
-
-- Anthropic engineering team, "Building Effective Agents," Anthropic, December
-  2024, https://www.anthropic.com/engineering/building-effective-agents,
-  verified 2026-08-02. Source for the Parallelization pattern's naming,
-  Sectioning and Voting as its two named variants, and the content-moderation
-  and code-review examples cited in dimensions 1, 2, and 10.
-- Anthropic engineering team, "How we built our multi-agent research system,"
-  Anthropic, https://www.anthropic.com/engineering/multi-agent-research-system,
-  verified 2026-08-02. Source for the parallel-subagent production system,
-  the 3-5 subagent fan-out, the 90% research-time reduction, and the 90.2%
-  accuracy improvement figures cited in dimensions 1, 9, and 10.
-- Amazon Web Services, "Parallel state," AWS Step Functions Developer Guide,
-  Amazon States Language reference,
-  https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-parallel-state.html,
-  verified 2026-08-02. Source for the
-  Parallel state's `Branches` field, its concurrent execution semantics, and
-  its branch-level error-handling contract, cited in dimensions 1, 5, and 9.
-- OpenAI, "Function calling," OpenAI Platform documentation,
-  https://developers.openai.com/api/docs/guides/function-calling, verified
-  2026-08-02. Source for parallel tool calling as a provider-native
-  Sectioning variant, the `parallel_tool_calls` parameter, and the GPT-5
-  built-in-tools restriction, cited in dimensions 8 and 9.
-- Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang,
-  Aakanksha Chowdhery, Denny Zhou, "Self-Consistency Improves Chain of
-  Thought Reasoning in Language Models," Proceedings of the International
-  Conference on Learning Representations (ICLR) 2023,
-  https://arxiv.org/abs/2203.11171, verified 2026-08-02. Source for
-  Self-Consistency as the reasoning-research specialization of Voting, cited
-  in dimensions 1 and 13.

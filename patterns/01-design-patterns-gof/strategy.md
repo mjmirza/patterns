@@ -1001,6 +1001,55 @@ client. Where names carry that, treat the field as attributable data under the
 same retention, access and export rules as any other identifier, or use an opaque
 stable identifier in telemetry and keep the mapping elsewhere.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Strategy. Source
+   of the intent, the three participants, the client-must-understand-strategies
+   consequence, and the separation from State and Template Method by chapter
+   placement.
+2. Oracle. *Java SE 21 API Specification*, `java.util.Comparator`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html
+   Verified 2026-08-02. Source for the canonical production Strategy, the
+   functional-interface declaration, the total-ordering contract, and the
+   composite and decorating members `thenComparing`, `reversed`, `nullsFirst`,
+   `nullsLast` and `comparing`.
+3. Go project. *Package sort*. https://pkg.go.dev/sort Verified 2026-08-02.
+   Source for `sort.Interface` with its `Len`, `Less` and `Swap` methods, and for
+   `sort.Slice` taking a less function, used as evidence that the interface form
+   and the function form are one pattern.
+4. Rust project. *Rust standard library documentation*, `std::hash::BuildHasher`.
+   https://doc.rust-lang.org/std/hash/trait.BuildHasher.html Verified 2026-08-02.
+   Source for the monomorphised strategy variant and for the hash map production
+   use, including the statement that a `BuildHasher` is used by `HashMap` to
+   create a hasher per key.
+5. Passport. *Strategies*.
+   https://www.passportjs.org/concepts/authentication/strategies/ Verified
+   2026-08-02. Source for the registry-backed production use, the `passport.use`
+   registration, and selection by strategy name.
+6. Spring. *Spring Security API documentation*,
+   `org.springframework.security.crypto.password.PasswordEncoder`.
+   https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/password/PasswordEncoder.html
+   Verified 2026-08-02. Source for the `encode`, `matches` and `upgradeEncoding`
+   contract, the seventeen shipped implementations including `NoOpPasswordEncoder`
+   and `BCryptPasswordEncoder`, the documented preference for BCrypt, and the
+   `DelegatingPasswordEncoder` registry variant used in dimension 17.
+7. Django Software Foundation. *Django 5.2 documentation*, "Customizing
+   authentication in Django".
+   https://docs.djangoproject.com/en/5.2/topics/auth/customizing/ Verified
+   2026-08-02. Source for `AUTHENTICATION_BACKENDS`, its single-entry default
+   naming `ModelBackend`, the ordered attempt across backends, and the
+   `authenticate` method signature taking a request and credentials.
+8. Wikipedia contributors. "Strategy pattern".
+   https://en.wikipedia.org/wiki/Strategy_pattern Verified 2026-08-02. Used to
+   confirm the runtime-selection framing of the intent and the Policy alias, not
+   as a source of explanation.
+9. Wikipedia contributors. "State pattern".
+   https://en.wikipedia.org/wiki/State_pattern Verified 2026-08-02. Used to
+   confirm the documented structural overlap between State and Strategy quoted in
+   dimensions 1 and 13.
+
 ## Code examples
 
 Four languages, chosen because each shows a different genuine shape. TypeScript
@@ -1359,52 +1408,3 @@ feature and no external crate. The `RULES` mapping in the Python sample and the
 `cart` constant in the TypeScript closure sample depend on identifiers defined in
 the preceding block of the same language, so those pairs are meant to run
 together rather than in isolation.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Strategy. Source
-   of the intent, the three participants, the client-must-understand-strategies
-   consequence, and the separation from State and Template Method by chapter
-   placement.
-2. Oracle. *Java SE 21 API Specification*, `java.util.Comparator`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html
-   Verified 2026-08-02. Source for the canonical production Strategy, the
-   functional-interface declaration, the total-ordering contract, and the
-   composite and decorating members `thenComparing`, `reversed`, `nullsFirst`,
-   `nullsLast` and `comparing`.
-3. Go project. *Package sort*. https://pkg.go.dev/sort Verified 2026-08-02.
-   Source for `sort.Interface` with its `Len`, `Less` and `Swap` methods, and for
-   `sort.Slice` taking a less function, used as evidence that the interface form
-   and the function form are one pattern.
-4. Rust project. *Rust standard library documentation*, `std::hash::BuildHasher`.
-   https://doc.rust-lang.org/std/hash/trait.BuildHasher.html Verified 2026-08-02.
-   Source for the monomorphised strategy variant and for the hash map production
-   use, including the statement that a `BuildHasher` is used by `HashMap` to
-   create a hasher per key.
-5. Passport. *Strategies*.
-   https://www.passportjs.org/concepts/authentication/strategies/ Verified
-   2026-08-02. Source for the registry-backed production use, the `passport.use`
-   registration, and selection by strategy name.
-6. Spring. *Spring Security API documentation*,
-   `org.springframework.security.crypto.password.PasswordEncoder`.
-   https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/password/PasswordEncoder.html
-   Verified 2026-08-02. Source for the `encode`, `matches` and `upgradeEncoding`
-   contract, the seventeen shipped implementations including `NoOpPasswordEncoder`
-   and `BCryptPasswordEncoder`, the documented preference for BCrypt, and the
-   `DelegatingPasswordEncoder` registry variant used in dimension 17.
-7. Django Software Foundation. *Django 5.2 documentation*, "Customizing
-   authentication in Django".
-   https://docs.djangoproject.com/en/5.2/topics/auth/customizing/ Verified
-   2026-08-02. Source for `AUTHENTICATION_BACKENDS`, its single-entry default
-   naming `ModelBackend`, the ordered attempt across backends, and the
-   `authenticate` method signature taking a request and credentials.
-8. Wikipedia contributors. "Strategy pattern".
-   https://en.wikipedia.org/wiki/Strategy_pattern Verified 2026-08-02. Used to
-   confirm the runtime-selection framing of the intent and the Policy alias, not
-   as a source of explanation.
-9. Wikipedia contributors. "State pattern".
-   https://en.wikipedia.org/wiki/State_pattern Verified 2026-08-02. Used to
-   confirm the documented structural overlap between State and Strategy quoted in
-   dimensions 1 and 13.

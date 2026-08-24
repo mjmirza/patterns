@@ -740,6 +740,24 @@ produce a later timestamp. A safer carrier may include a trust tier, and the
 combine rule may select by tier first and timestamp second. The monoid law can
 still hold, but the carrier must include the data needed for the policy.
 
+## 18. References
+
+- Haskell `base` documentation, `Data.Monoid`, version 4.22.0.0.
+  https://hackage.haskell.org/package/base/docs/Data-Monoid.html, verified
+  2026-08-02.
+- Typelevel Cats documentation, `Monoid` type class.
+  https://typelevel.org/cats/typeclasses/monoid.html, verified 2026-08-02.
+- fp-ts documentation, `Monoid.ts`.
+  https://gcanti.github.io/fp-ts/modules/Monoid.ts.html, verified 2026-08-02.
+- Twitter Algebird documentation, abstract algebra for Scala aggregation.
+  https://twitter.github.io/algebird/, verified 2026-08-02.
+- Oracle, Java SE 21 API documentation, `java.util.stream.Stream`, `reduce`.
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html,
+  verified 2026-08-02.
+- Saunders Mac Lane, *Categories for the Working Mathematician*, second
+  edition, Springer, 1998, chapter I, section 1. Page not cited because the
+  page image was not verified in this session.
+
 ## Code examples
 
 The examples below are intentionally small. Each one models the same pattern:
@@ -873,21 +891,3 @@ func main() {
 
 These samples were compiled or run in this session with `npx tsc`, `python3`,
 and `go run`.
-
-## 18. References
-
-- Haskell `base` documentation, `Data.Monoid`, version 4.22.0.0.
-  https://hackage.haskell.org/package/base/docs/Data-Monoid.html, verified
-  2026-08-02.
-- Typelevel Cats documentation, `Monoid` type class.
-  https://typelevel.org/cats/typeclasses/monoid.html, verified 2026-08-02.
-- fp-ts documentation, `Monoid.ts`.
-  https://gcanti.github.io/fp-ts/modules/Monoid.ts.html, verified 2026-08-02.
-- Twitter Algebird documentation, abstract algebra for Scala aggregation.
-  https://twitter.github.io/algebird/, verified 2026-08-02.
-- Oracle, Java SE 21 API documentation, `java.util.stream.Stream`, `reduce`.
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html,
-  verified 2026-08-02.
-- Saunders Mac Lane, *Categories for the Working Mathematician*, second
-  edition, Springer, 1998, chapter I, section 1. Page not cited because the
-  page image was not verified in this session.

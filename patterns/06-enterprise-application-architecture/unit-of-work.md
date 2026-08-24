@@ -841,6 +841,39 @@ and logging discipline as any other in-process data, and the observability
 advice in dimension 16 to log registered-object counts should not extend to
 logging the objects' field values themselves.
 
+## 18. References
+
+1. Martin Fowler. Patterns of Enterprise Application Architecture.
+   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 11, object-relational
+   behavioral patterns, "Unit of Work". Source of the intent, the four
+   participants, the registered and automatic variants, and the insert
+   before update and delete ordering rule.
+2. Martin Fowler. "Unit of Work", online catalog entry.
+   https://martinfowler.com/eaaCatalog/unitOfWork.html verified 2026-08-02.
+   Source of the exact intent wording quoted in dimension 1.
+3. Red Hat / Hibernate ORM project. Hibernate ORM Introduction Guide,
+   current release, "Persistence Context".
+   https://docs.hibernate.org/orm/current/introduction/html_single/Hibernate_Introduction.html
+   verified 2026-08-02. Source for the Hibernate Session production use in
+   dimension 9.
+4. Oracle. Java EE 7 API Specification, javax.persistence.EntityManager.
+   https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html
+   verified 2026-08-02. Source for the JPA persistence context production
+   use and the flush() semantics in dimension 9.
+5. SQLAlchemy project. SQLAlchemy 2.0 Documentation, "Session Basics".
+   https://docs.sqlalchemy.org/en/20/orm/session_basics.html verified
+   2026-08-02. Source for the explicit "unit of work pattern" naming and the
+   identity map description quoted in dimension 9.
+6. Microsoft. Entity Framework Core documentation, "Basic Save Changes".
+   https://learn.microsoft.com/en-us/ef/core/saving/basic verified
+   2026-08-02. Source for the DbContext change tracking and transactional
+   SaveChanges production use in dimension 9.
+7. Eric Evans. Domain-Driven Design. Tackling Complexity in the Heart of
+   Software. Addison-Wesley, 2003. ISBN 0-321-12521-5. Part 3, the
+   aggregate and repository discussion. Source of the aggregate-scoped
+   transaction boundary reading in dimension 8 and the aggregate-boundary
+   violation failure mode in dimension 11.
+
 ## Code examples
 
 Three languages chosen for genuinely different idiomatic shapes. Java shows
@@ -1133,36 +1166,3 @@ if __name__ == "__main__":
 
     uow.commit(OrderMapper(), InvoiceMapper())
 ```
-
-## 18. References
-
-1. Martin Fowler. Patterns of Enterprise Application Architecture.
-   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 11, object-relational
-   behavioral patterns, "Unit of Work". Source of the intent, the four
-   participants, the registered and automatic variants, and the insert
-   before update and delete ordering rule.
-2. Martin Fowler. "Unit of Work", online catalog entry.
-   https://martinfowler.com/eaaCatalog/unitOfWork.html verified 2026-08-02.
-   Source of the exact intent wording quoted in dimension 1.
-3. Red Hat / Hibernate ORM project. Hibernate ORM Introduction Guide,
-   current release, "Persistence Context".
-   https://docs.hibernate.org/orm/current/introduction/html_single/Hibernate_Introduction.html
-   verified 2026-08-02. Source for the Hibernate Session production use in
-   dimension 9.
-4. Oracle. Java EE 7 API Specification, javax.persistence.EntityManager.
-   https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html
-   verified 2026-08-02. Source for the JPA persistence context production
-   use and the flush() semantics in dimension 9.
-5. SQLAlchemy project. SQLAlchemy 2.0 Documentation, "Session Basics".
-   https://docs.sqlalchemy.org/en/20/orm/session_basics.html verified
-   2026-08-02. Source for the explicit "unit of work pattern" naming and the
-   identity map description quoted in dimension 9.
-6. Microsoft. Entity Framework Core documentation, "Basic Save Changes".
-   https://learn.microsoft.com/en-us/ef/core/saving/basic verified
-   2026-08-02. Source for the DbContext change tracking and transactional
-   SaveChanges production use in dimension 9.
-7. Eric Evans. Domain-Driven Design. Tackling Complexity in the Heart of
-   Software. Addison-Wesley, 2003. ISBN 0-321-12521-5. Part 3, the
-   aggregate and repository discussion. Source of the aggregate-scoped
-   transaction boundary reading in dimension 8 and the aggregate-boundary
-   violation failure mode in dimension 11.

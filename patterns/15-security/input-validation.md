@@ -712,6 +712,42 @@ Engineering judgement: treat validation logs as security data and user data at
 the same time. They are useful exactly because they show what callers tried to
 send, and that is why they need tighter access than ordinary application logs.
 
+## 18. References
+
+1. MITRE. *CWE-20: Improper Input Validation*. CWE version 4.20.
+   https://cwe.mitre.org/data/definitions/20.html
+   Verified 2026-08-02. Source for the weakness name, input properties,
+   consequences, accept-known-good mitigation, client-side warning,
+   canonicalization warning, and related validation weaknesses.
+2. OWASP Foundation. *Input Validation Cheat Sheet*. OWASP Cheat Sheet Series.
+   https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html
+   Verified 2026-08-02. Source for validation goals, untrusted source coverage,
+   syntactic and semantic validation, server-side validation, allowlist guidance,
+   free-form text notes, and ReDoS warning.
+3. JSON Schema organization. *JSON Schema Validation: A Vocabulary for
+   Structural Validation of JSON*. Draft 2020-12.
+   https://json-schema.org/draft/2020-12/json-schema-validation
+   Verified 2026-08-02. Source for schema-first structural validation.
+4. Django Software Foundation. *Django 5.2 documentation*, "Form and field
+   validation."
+   https://docs.djangoproject.com/en/5.2/ref/forms/validation/
+   Verified 2026-08-02. Source for Django's form validation flow and cleaning
+   hooks.
+5. Django Software Foundation. *Django 5.2 documentation*, "Validators."
+   https://docs.djangoproject.com/en/5.2/ref/validators/
+   Verified 2026-08-02. Source for reusable Django validators.
+6. Ruby on Rails project. *Active Record Validations*. Rails Guides.
+   https://guides.rubyonrails.org/active_record_validations.html
+   Verified 2026-08-02. Source for Rails model-level validations, validation
+   helpers, custom validators, and validation contexts.
+7. Kubernetes project. *Admission Control in Kubernetes*.
+   https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/
+   Verified 2026-08-02. Source for admission controller placement, validating
+   admission behavior, and the limit that reads bypass admission control.
+8. Pydantic project. *Validators*. Pydantic documentation.
+   https://pydantic.dev/docs/validation/latest/concepts/validators/
+   Verified 2026-08-02. Source for Pydantic field validator variants.
+
 ## Code examples
 
 Three languages are shown because the pattern has different idioms. TypeScript
@@ -880,39 +916,3 @@ func main() {
 	fmt.Println(signup.Plan)
 }
 ```
-
-## 18. References
-
-1. MITRE. *CWE-20: Improper Input Validation*. CWE version 4.20.
-   https://cwe.mitre.org/data/definitions/20.html
-   Verified 2026-08-02. Source for the weakness name, input properties,
-   consequences, accept-known-good mitigation, client-side warning,
-   canonicalization warning, and related validation weaknesses.
-2. OWASP Foundation. *Input Validation Cheat Sheet*. OWASP Cheat Sheet Series.
-   https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html
-   Verified 2026-08-02. Source for validation goals, untrusted source coverage,
-   syntactic and semantic validation, server-side validation, allowlist guidance,
-   free-form text notes, and ReDoS warning.
-3. JSON Schema organization. *JSON Schema Validation: A Vocabulary for
-   Structural Validation of JSON*. Draft 2020-12.
-   https://json-schema.org/draft/2020-12/json-schema-validation
-   Verified 2026-08-02. Source for schema-first structural validation.
-4. Django Software Foundation. *Django 5.2 documentation*, "Form and field
-   validation."
-   https://docs.djangoproject.com/en/5.2/ref/forms/validation/
-   Verified 2026-08-02. Source for Django's form validation flow and cleaning
-   hooks.
-5. Django Software Foundation. *Django 5.2 documentation*, "Validators."
-   https://docs.djangoproject.com/en/5.2/ref/validators/
-   Verified 2026-08-02. Source for reusable Django validators.
-6. Ruby on Rails project. *Active Record Validations*. Rails Guides.
-   https://guides.rubyonrails.org/active_record_validations.html
-   Verified 2026-08-02. Source for Rails model-level validations, validation
-   helpers, custom validators, and validation contexts.
-7. Kubernetes project. *Admission Control in Kubernetes*.
-   https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/
-   Verified 2026-08-02. Source for admission controller placement, validating
-   admission behavior, and the limit that reads bypass admission control.
-8. Pydantic project. *Validators*. Pydantic documentation.
-   https://pydantic.dev/docs/validation/latest/concepts/validators/
-   Verified 2026-08-02. Source for Pydantic field validator variants.

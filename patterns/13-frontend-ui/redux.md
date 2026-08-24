@@ -457,6 +457,18 @@ worth naming explicitly, since Redux's very serializability, the
 property that makes it so tool-friendly, is exactly what makes an
 accidental leak of sensitive state easy to produce.
 
+## 18. References
+
+1. Redux documentation. "Getting Started with Redux".
+   https://redux.js.org/introduction/getting-started
+   Verified 2026-08-21. Source of the defining sentence and the three
+   core rules described in dimension 9.
+2. Redux Toolkit documentation. "Getting Started".
+   https://redux-toolkit.js.org/introduction/getting-started
+   Verified 2026-08-21. Source for the production-recommendation claim
+   in dimension 9 and the standard-approach status described in
+   dimension 8.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -623,15 +635,3 @@ store.subscribe {
 store.dispatch(Action(type: "INCREMENT"))
 store.dispatch(Action(type: "INCREMENT"))
 ```
-
-## 18. References
-
-1. Redux documentation. "Getting Started with Redux".
-   https://redux.js.org/introduction/getting-started
-   Verified 2026-08-21. Source of the defining sentence and the three
-   core rules described in dimension 9.
-2. Redux Toolkit documentation. "Getting Started".
-   https://redux-toolkit.js.org/introduction/getting-started
-   Verified 2026-08-21. Source for the production-recommendation claim
-   in dimension 9 and the standard-approach status described in
-   dimension 8.

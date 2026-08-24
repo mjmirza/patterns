@@ -709,6 +709,25 @@ message store, since the message was never classified and therefore never
 passed through any format-specific redaction or field-level access control
 logic a known translator might otherwise apply.
 
+## 18. References
+
+Hohpe, Gregor, and Bobby Woolf. *Enterprise Integration Patterns. Designing,
+Building, and Deploying Messaging Solutions.* Addison-Wesley, 2003. Message
+transformation chapter, the Normalizer pattern.
+
+enterpriseintegrationpatterns.com, Normalizer.
+https://www.enterpriseintegrationpatterns.com/patterns/messaging/Normalizer.html
+Verified 2026-08-02.
+
+Apache Camel, Implementing the Normalizer EIP in Apache Camel.
+https://camel.apache.org/components/next/eips/normalizer.html
+Verified 2026-08-02.
+
+Elastic, Logstash Advanced Pipeline Tutorial (grok filter and structured
+event normalization).
+https://www.elastic.co/guide/en/logstash/current/advanced-pipeline.html
+Verified 2026-08-02.
+
 ## Code examples
 
 Three languages, each classifying two inbound partner formats and mapping
@@ -967,22 +986,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-Hohpe, Gregor, and Bobby Woolf. *Enterprise Integration Patterns. Designing,
-Building, and Deploying Messaging Solutions.* Addison-Wesley, 2003. Message
-transformation chapter, the Normalizer pattern.
-
-enterpriseintegrationpatterns.com, Normalizer.
-https://www.enterpriseintegrationpatterns.com/patterns/messaging/Normalizer.html
-Verified 2026-08-02.
-
-Apache Camel, Implementing the Normalizer EIP in Apache Camel.
-https://camel.apache.org/components/next/eips/normalizer.html
-Verified 2026-08-02.
-
-Elastic, Logstash Advanced Pipeline Tutorial (grok filter and structured
-event normalization).
-https://www.elastic.co/guide/en/logstash/current/advanced-pipeline.html
-Verified 2026-08-02.

@@ -664,6 +664,68 @@ Engineering judgement: ReBAC improves privacy only when checks happen before
 data fetch or before data leaves a trusted boundary. If services fetch broad
 rows and filter later in memory, the model has not protected the data path.
 
+## 18. References
+
+1. Carrie E. Gates. "Access Control Requirements for Web 2.0 Security and
+   Privacy." IEEE Web 2.0 Privacy and Security Workshop, 2007. Cited through
+   Fong and Siahaan's lineage discussion because the workshop page was not used
+   directly for a claim in this entry.
+2. Philip W. L. Fong. "Relationship-based access control: protection model and
+   policy language." CODASPY 2011, pages 191 to 202. DOI
+   10.1145/1943513.1943539.
+   https://dblp.org/rec/conf/codaspy/Fong11.html
+   Verified 2026-08-02. Source for the formal ReBAC model lineage.
+3. Philip W. L. Fong and Ida Siahaan. "Relationship-Based Access Control
+   Policies and Their Policy Languages." SACMAT 2011, pages 51 to 60. DOI
+   10.1145/1998441.1998450.
+   https://www.researchgate.net/publication/221366961_Relationship-based_access_control_policies_and_their_policy_languages
+   Verified 2026-08-02. Source for relational policies as a ReBAC distinction.
+4. Ruoming Pang, Ramon Caceres, Mike Burrows, Zhifeng Chen, Pratik Dave,
+   Nathan Germer, Alexander Golynski, Kevin Graney, Nina Kang, Lea Kissner,
+   Jeffrey L. Korn, Abhishek Parmar, Christina D. Richards, and Mengzhi Wang.
+   "Zanzibar: Google's Consistent, Global Authorization System." USENIX ATC
+   2019.
+   https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/
+   Verified 2026-08-02. Source for Zanzibar design goals, Google production
+   use, service names, scale, latency, and availability statements.
+5. Auth0. "Getting started with Auth0 FGA."
+   https://docs.fga.dev/getting-started
+   Verified 2026-08-02. Source for Auth0 FGA's Zanzibar inspiration, ReBAC
+   basis, stores, tuples, and API framing.
+6. Auth0. "Configuration Language."
+   https://docs.fga.dev/modeling/configuration-language
+   Verified 2026-08-02. Source for computed usersets, tuple-to-userset rewrites,
+   and Zanzibar-style model constructs.
+7. AuthZed. "AuthZed Documentation."
+   https://authzed.com/docs/index
+   Verified 2026-08-02. Source for SpiceDB as a Zanzibar-style ReBAC system.
+8. Cedar Policy Language. "Best practice: Use attributes or templates to
+   represent relationships."
+   https://docs.cedarpolicy.com/bestpractices/bp-relationship-representation.html
+   Verified 2026-08-02. Source for relationship representation variants in
+   Cedar.
+9. Amazon Web Services Security Blog. "How to implement relationship-based
+   access control with Amazon Verified Permissions and Amazon Neptune."
+   https://aws.amazon.com/blogs/security/how-to-implement-relationship-based-access-control-with-amazon-verified-permissions-and-amazon-neptune/
+   Verified 2026-08-02. Source for the Cedar plus Neptune variant and warnings
+   about indirect relationships.
+10. OpenFGA. "OpenFGA Adopters and Case Studies."
+    https://openfga.dev/docs/adopters
+    Verified 2026-08-02. Source for named OpenFGA production adopters and
+    deployment scale.
+11. OpenFGA. "Agicap: Fine-grained authorization for a European fintech
+    platform."
+    https://openfga.dev/docs/adopters/agicap
+    Verified 2026-08-02. Source for Agicap production use.
+12. OpenFGA. "Openlane: Authorization at the data-access layer for compliance
+    automation."
+    https://openfga.dev/docs/adopters/openlane
+    Verified 2026-08-02. Source for Openlane production use.
+13. OpenFGA Community. "ADOPTERS.md."
+    https://github.com/openfga/community/blob/main/ADOPTERS.md
+    Verified 2026-08-02. Source for Sourcegraph and other community-listed
+    production uses.
+
 ## Code examples
 
 Three runnable examples show the core relation graph in different language
@@ -842,65 +904,3 @@ fn main() {
     println!("{}", graph.has("user:maya", "view", "doc:roadmap"));
 }
 ```
-
-## 18. References
-
-1. Carrie E. Gates. "Access Control Requirements for Web 2.0 Security and
-   Privacy." IEEE Web 2.0 Privacy and Security Workshop, 2007. Cited through
-   Fong and Siahaan's lineage discussion because the workshop page was not used
-   directly for a claim in this entry.
-2. Philip W. L. Fong. "Relationship-based access control: protection model and
-   policy language." CODASPY 2011, pages 191 to 202. DOI
-   10.1145/1943513.1943539.
-   https://dblp.org/rec/conf/codaspy/Fong11.html
-   Verified 2026-08-02. Source for the formal ReBAC model lineage.
-3. Philip W. L. Fong and Ida Siahaan. "Relationship-Based Access Control
-   Policies and Their Policy Languages." SACMAT 2011, pages 51 to 60. DOI
-   10.1145/1998441.1998450.
-   https://www.researchgate.net/publication/221366961_Relationship-based_access_control_policies_and_their_policy_languages
-   Verified 2026-08-02. Source for relational policies as a ReBAC distinction.
-4. Ruoming Pang, Ramon Caceres, Mike Burrows, Zhifeng Chen, Pratik Dave,
-   Nathan Germer, Alexander Golynski, Kevin Graney, Nina Kang, Lea Kissner,
-   Jeffrey L. Korn, Abhishek Parmar, Christina D. Richards, and Mengzhi Wang.
-   "Zanzibar: Google's Consistent, Global Authorization System." USENIX ATC
-   2019.
-   https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/
-   Verified 2026-08-02. Source for Zanzibar design goals, Google production
-   use, service names, scale, latency, and availability statements.
-5. Auth0. "Getting started with Auth0 FGA."
-   https://docs.fga.dev/getting-started
-   Verified 2026-08-02. Source for Auth0 FGA's Zanzibar inspiration, ReBAC
-   basis, stores, tuples, and API framing.
-6. Auth0. "Configuration Language."
-   https://docs.fga.dev/modeling/configuration-language
-   Verified 2026-08-02. Source for computed usersets, tuple-to-userset rewrites,
-   and Zanzibar-style model constructs.
-7. AuthZed. "AuthZed Documentation."
-   https://authzed.com/docs/index
-   Verified 2026-08-02. Source for SpiceDB as a Zanzibar-style ReBAC system.
-8. Cedar Policy Language. "Best practice: Use attributes or templates to
-   represent relationships."
-   https://docs.cedarpolicy.com/bestpractices/bp-relationship-representation.html
-   Verified 2026-08-02. Source for relationship representation variants in
-   Cedar.
-9. Amazon Web Services Security Blog. "How to implement relationship-based
-   access control with Amazon Verified Permissions and Amazon Neptune."
-   https://aws.amazon.com/blogs/security/how-to-implement-relationship-based-access-control-with-amazon-verified-permissions-and-amazon-neptune/
-   Verified 2026-08-02. Source for the Cedar plus Neptune variant and warnings
-   about indirect relationships.
-10. OpenFGA. "OpenFGA Adopters and Case Studies."
-    https://openfga.dev/docs/adopters
-    Verified 2026-08-02. Source for named OpenFGA production adopters and
-    deployment scale.
-11. OpenFGA. "Agicap: Fine-grained authorization for a European fintech
-    platform."
-    https://openfga.dev/docs/adopters/agicap
-    Verified 2026-08-02. Source for Agicap production use.
-12. OpenFGA. "Openlane: Authorization at the data-access layer for compliance
-    automation."
-    https://openfga.dev/docs/adopters/openlane
-    Verified 2026-08-02. Source for Openlane production use.
-13. OpenFGA Community. "ADOPTERS.md."
-    https://github.com/openfga/community/blob/main/ADOPTERS.md
-    Verified 2026-08-02. Source for Sourcegraph and other community-listed
-    production uses.

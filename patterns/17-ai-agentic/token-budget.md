@@ -849,6 +849,26 @@ that inspection falls under the same data-handling policy as the model call
 it is deciding budget for, not a lesser one because it runs before the model
 sees anything.
 
+## 18. References
+
+1. Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+   Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin, "Attention Is All You
+   Need," arXiv 1706.03762, June 2017, section 3.2.1, verified 2026-08-03,
+   [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762).
+2. Anthropic, "Prompt caching," Claude Platform documentation, verified
+   2026-08-03, [platform.claude.com/docs/en/build-with-claude/prompt-caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching).
+3. Anthropic, "Rate limits," Claude Platform API documentation, verified
+   2026-08-03, [platform.claude.com/docs/en/api/rate-limits](https://platform.claude.com/docs/en/api/rate-limits).
+4. Anthropic, "Manage costs effectively," Claude Code documentation,
+   verified 2026-08-03, [code.claude.com/docs/en/costs](https://code.claude.com/docs/en/costs).
+5. LangChain, `trim_messages` implementation, `langchain_core.messages.utils`,
+   verified against source 2026-08-03,
+   [raw.githubusercontent.com/langchain-ai/langchain/master/libs/core/langchain_core/messages/utils.py](https://raw.githubusercontent.com/langchain-ai/langchain/master/libs/core/langchain_core/messages/utils.py).
+6. OpenAI, tiktoken repository README, verified 2026-08-03,
+   [github.com/openai/tiktoken](https://github.com/openai/tiktoken).
+7. Google, "Context caching," Gemini API documentation, verified 2026-08-03,
+   [ai.google.dev/gemini-api/docs/caching](https://ai.google.dev/gemini-api/docs/caching).
+
 ## Code examples
 
 ### TypeScript
@@ -1228,23 +1248,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
-   Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin, "Attention Is All You
-   Need," arXiv 1706.03762, June 2017, section 3.2.1, verified 2026-08-03,
-   [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762).
-2. Anthropic, "Prompt caching," Claude Platform documentation, verified
-   2026-08-03, [platform.claude.com/docs/en/build-with-claude/prompt-caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching).
-3. Anthropic, "Rate limits," Claude Platform API documentation, verified
-   2026-08-03, [platform.claude.com/docs/en/api/rate-limits](https://platform.claude.com/docs/en/api/rate-limits).
-4. Anthropic, "Manage costs effectively," Claude Code documentation,
-   verified 2026-08-03, [code.claude.com/docs/en/costs](https://code.claude.com/docs/en/costs).
-5. LangChain, `trim_messages` implementation, `langchain_core.messages.utils`,
-   verified against source 2026-08-03,
-   [raw.githubusercontent.com/langchain-ai/langchain/master/libs/core/langchain_core/messages/utils.py](https://raw.githubusercontent.com/langchain-ai/langchain/master/libs/core/langchain_core/messages/utils.py).
-6. OpenAI, tiktoken repository README, verified 2026-08-03,
-   [github.com/openai/tiktoken](https://github.com/openai/tiktoken).
-7. Google, "Context caching," Gemini API documentation, verified 2026-08-03,
-   [ai.google.dev/gemini-api/docs/caching](https://ai.google.dev/gemini-api/docs/caching).

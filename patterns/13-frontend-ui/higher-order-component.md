@@ -430,6 +430,16 @@ access control should verify no route or component tree renders the
 unwrapped original directly, never assuming the wrapping function
 alone is sufficient enforcement.
 
+## 18. References
+
+1. React documentation. "Higher-Order Components".
+   https://legacy.reactjs.org/docs/higher-order-components.html
+   Verified 2026-08-21. Source of the canonical definition and the
+   note on the pattern's diminished modern usage.
+2. react-redux documentation. "connect()".
+   https://react-redux.js.org/api/connect
+   Verified 2026-08-21. Source for the production use in dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely idiomatic
@@ -554,13 +564,3 @@ let wrapped = WithSubscription(wrapped: commentList)
 wrapped.update(value: "first comment")
 print(wrapped.render(with: CommentListProps(title: "Comments")))
 ```
-
-## 18. References
-
-1. React documentation. "Higher-Order Components".
-   https://legacy.reactjs.org/docs/higher-order-components.html
-   Verified 2026-08-21. Source of the canonical definition and the
-   note on the pattern's diminished modern usage.
-2. react-redux documentation. "connect()".
-   https://react-redux.js.org/api/connect
-   Verified 2026-08-21. Source for the production use in dimension 9.

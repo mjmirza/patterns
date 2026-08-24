@@ -783,6 +783,33 @@ or credential, is a small discipline worth building into the Shared Fixture
 Holder itself rather than relying on every client test's author to remember
 it individually.
 
+## 18. References
+
+1. Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
+   Addison-Wesley, 2007, the Fixture Setup Patterns chapter covering Shared
+   Fixture, Fresh Fixture, Lazy Setup, Prebuilt Fixture, Setup Decorator,
+   Chained Tests, Interacting Tests, Erratic Test, and Test Run War.
+2. Martin Fowler, "Eradicating Non-Determinism in Tests,"
+   [martinfowler.com/articles/nonDeterminism.html](https://www.martinfowler.com/articles/nonDeterminism.html),
+   verified 2026-08-02.
+3. pytest documentation, "How to use fixtures, Fixture scopes,"
+   [docs.pytest.org/en/stable/how-to/fixtures.html](https://docs.pytest.org/en/stable/how-to/fixtures.html),
+   verified 2026-08-02.
+4. Django documentation, "Testing tools, TestCase.setUpTestData,"
+   [docs.djangoproject.com/en/5.2/topics/testing/tools](https://docs.djangoproject.com/en/5.2/topics/testing/tools/),
+   verified 2026-08-02.
+5. xUnit.net documentation, "Shared Context between Tests,"
+   [xunit.net/docs/shared-context](https://xunit.net/docs/shared-context),
+   verified 2026-08-02.
+6. Testcontainers documentation, "Manual container lifecycle control, the
+   singleton container pattern,"
+   [java.testcontainers.org/test_framework_integration/manual_lifecycle_control](https://java.testcontainers.org/test_framework_integration/manual_lifecycle_control/),
+   verified 2026-08-02.
+7. JUnit 5 User Guide,
+   [docs.junit.org/current/user-guide](https://docs.junit.org/current/user-guide/),
+   the class lifecycle and `@BeforeAll`/`@AfterAll` annotations, verified
+   reachable 2026-08-02.
+
 ## Code examples
 
 The three examples below all implement the same shape, a Scope Boundary
@@ -1054,30 +1081,3 @@ function runAll(ledger: Ledger, testCases: TestCase[]): void {
 
 runAll(sharedLedger, cases);
 ```
-
-## 18. References
-
-1. Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
-   Addison-Wesley, 2007, the Fixture Setup Patterns chapter covering Shared
-   Fixture, Fresh Fixture, Lazy Setup, Prebuilt Fixture, Setup Decorator,
-   Chained Tests, Interacting Tests, Erratic Test, and Test Run War.
-2. Martin Fowler, "Eradicating Non-Determinism in Tests,"
-   [martinfowler.com/articles/nonDeterminism.html](https://www.martinfowler.com/articles/nonDeterminism.html),
-   verified 2026-08-02.
-3. pytest documentation, "How to use fixtures, Fixture scopes,"
-   [docs.pytest.org/en/stable/how-to/fixtures.html](https://docs.pytest.org/en/stable/how-to/fixtures.html),
-   verified 2026-08-02.
-4. Django documentation, "Testing tools, TestCase.setUpTestData,"
-   [docs.djangoproject.com/en/5.2/topics/testing/tools](https://docs.djangoproject.com/en/5.2/topics/testing/tools/),
-   verified 2026-08-02.
-5. xUnit.net documentation, "Shared Context between Tests,"
-   [xunit.net/docs/shared-context](https://xunit.net/docs/shared-context),
-   verified 2026-08-02.
-6. Testcontainers documentation, "Manual container lifecycle control, the
-   singleton container pattern,"
-   [java.testcontainers.org/test_framework_integration/manual_lifecycle_control](https://java.testcontainers.org/test_framework_integration/manual_lifecycle_control/),
-   verified 2026-08-02.
-7. JUnit 5 User Guide,
-   [docs.junit.org/current/user-guide](https://docs.junit.org/current/user-guide/),
-   the class lifecycle and `@BeforeAll`/`@AfterAll` annotations, verified
-   reachable 2026-08-02.

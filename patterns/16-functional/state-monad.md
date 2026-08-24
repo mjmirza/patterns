@@ -725,6 +725,39 @@ State Monad is silent about durability, access control, encryption, and
 concurrent isolation. Those properties come from the surrounding storage,
 runtime, and protocol design.
 
+## 18. References
+
+- Philip Wadler, "Monads for functional programming", in Johan Jeuring and Erik
+  Meijer, editors, *Advanced Functional Programming*, Springer Lecture Notes in
+  Computer Science 925, 1995, sections 1 through 2.5. Earlier version in the
+  1992 Marktoberdorf summer school proceedings. URL:
+  https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf,
+  verified 2026-08-02.
+- Haskell `transformers`, `Control.Monad.Trans.State.Strict` source
+  documentation, version 0.4.1.0. URL:
+  https://hackage.haskell.org/package/transformers-0.4.1.0/docs/src/Control-Monad-Trans-State-Strict.html,
+  verified 2026-08-02.
+- GHC libraries, `GHC.Utils.Monad.State.Strict`, GHC 9.15 in-place
+  documentation. URL:
+  https://ghc.gitlab.haskell.org/ghc/doc/libraries/ghc-9.15-inplace/GHC-Utils-Monad-State-Strict.html,
+  verified 2026-08-02.
+- GHC libraries, `GHC.CmmToAsm.Reg.Linear.State` source documentation. URL:
+  https://ghc.gitlab.haskell.org/ghc/doc/libraries/ghc-9.15-inplace/src/GHC.CmmToAsm.Reg.Linear.State.html,
+  verified 2026-08-02.
+- Typelevel Cats, `State` data type documentation. URL:
+  https://typelevel.org/cats/datatypes/state.html, verified 2026-08-02.
+- Typelevel Cats, `StateT` data type documentation. URL:
+  https://typelevel.org/cats/datatypes/statet.html, verified 2026-08-02.
+- Typelevel Cats MTL, `Stateful` type class documentation. URL:
+  https://typelevel.org/cats-mtl/mtl-classes/stateful.html, verified
+  2026-08-02.
+- fp-ts, `State.ts` module documentation. URL:
+  https://gcanti.github.io/fp-ts/modules/State.ts.html, verified 2026-08-02.
+- GHC `mtl`, `Control.Monad.Accum` source documentation discussing
+  non-commuting state and error effects. URL:
+  https://downloads.haskell.org/ghc/latest/docs/libraries/mtl-2.3.1-77f5/src/Control.Monad.Accum.html,
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples use TypeScript, Python, and Go because the repository toolchain can
@@ -889,36 +922,3 @@ func main() {
 	fmt.Printf("%s:%d\n", result.State.Prefix, result.State.NextID)
 }
 ```
-
-## 18. References
-
-- Philip Wadler, "Monads for functional programming", in Johan Jeuring and Erik
-  Meijer, editors, *Advanced Functional Programming*, Springer Lecture Notes in
-  Computer Science 925, 1995, sections 1 through 2.5. Earlier version in the
-  1992 Marktoberdorf summer school proceedings. URL:
-  https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf,
-  verified 2026-08-02.
-- Haskell `transformers`, `Control.Monad.Trans.State.Strict` source
-  documentation, version 0.4.1.0. URL:
-  https://hackage.haskell.org/package/transformers-0.4.1.0/docs/src/Control-Monad-Trans-State-Strict.html,
-  verified 2026-08-02.
-- GHC libraries, `GHC.Utils.Monad.State.Strict`, GHC 9.15 in-place
-  documentation. URL:
-  https://ghc.gitlab.haskell.org/ghc/doc/libraries/ghc-9.15-inplace/GHC-Utils-Monad-State-Strict.html,
-  verified 2026-08-02.
-- GHC libraries, `GHC.CmmToAsm.Reg.Linear.State` source documentation. URL:
-  https://ghc.gitlab.haskell.org/ghc/doc/libraries/ghc-9.15-inplace/src/GHC.CmmToAsm.Reg.Linear.State.html,
-  verified 2026-08-02.
-- Typelevel Cats, `State` data type documentation. URL:
-  https://typelevel.org/cats/datatypes/state.html, verified 2026-08-02.
-- Typelevel Cats, `StateT` data type documentation. URL:
-  https://typelevel.org/cats/datatypes/statet.html, verified 2026-08-02.
-- Typelevel Cats MTL, `Stateful` type class documentation. URL:
-  https://typelevel.org/cats-mtl/mtl-classes/stateful.html, verified
-  2026-08-02.
-- fp-ts, `State.ts` module documentation. URL:
-  https://gcanti.github.io/fp-ts/modules/State.ts.html, verified 2026-08-02.
-- GHC `mtl`, `Control.Monad.Accum` source documentation discussing
-  non-commuting state and error effects. URL:
-  https://downloads.haskell.org/ghc/latest/docs/libraries/mtl-2.3.1-77f5/src/Control.Monad.Accum.html,
-  verified 2026-08-02.

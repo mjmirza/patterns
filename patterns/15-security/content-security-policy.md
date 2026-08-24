@@ -767,6 +767,55 @@ hostnames are usually acceptable in CSP when they are required for browser
 loads, but internal hostnames and tenant identifiers should not appear in a
 browser-delivered policy unless the page already exposes them by design.
 
+## 18. References
+
+- W3C, *Content Security Policy Level 3*, Working Draft, 13 August 2026,
+  sections 1, 2.2, 3, 6, 7, and 8.
+  [https://www.w3.org/TR/CSP/](https://www.w3.org/TR/CSP/), verified
+  2026-08-02.
+- W3C, *Content Security Policy Level 2*, Recommendation, 15 December 2016,
+  introduction and policy delivery discussion.
+  [https://www.w3.org/TR/CSP2/](https://www.w3.org/TR/CSP2/), verified
+  2026-08-02.
+- MDN Web Docs, *Content-Security-Policy (CSP) header*.
+  [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy),
+  verified 2026-08-02.
+- MDN Web Docs, *Content Security Policy (CSP)*.
+  [https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP),
+  verified 2026-08-02.
+- MDN Web Docs, *Content-Security-Policy-Report-Only header*.
+  [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only),
+  verified 2026-08-02.
+- OWASP Cheat Sheet Series, *Content Security Policy Cheat Sheet*.
+  [https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html),
+  verified 2026-08-02.
+- Lukas Weichselbaum, *Mitigate cross-site scripting with a strict Content
+  Security Policy*, web.dev.
+  [https://web.dev/articles/strict-csp](https://web.dev/articles/strict-csp),
+  verified 2026-08-02.
+- web.dev, *Security headers quick reference*, Content Security Policy section.
+  [https://web.dev/articles/security-headers](https://web.dev/articles/security-headers),
+  verified 2026-08-02.
+- GitHub Engineering, CSP rollout case study.
+  `https://github.blog/engineering/platform-security/githubs-csp-journey/`,
+  verified 2026-08-02.
+- Shopify Developers, *Set up iframe protection*.
+  [https://shopify.dev/docs/apps/build/security/set-up-iframe-protection](https://shopify.dev/docs/apps/build/security/set-up-iframe-protection),
+  verified 2026-08-02.
+- Shopify Developers, *Following security best practices*.
+  [https://shopify.dev/docs/apps/build/security/following-security-best-practices](https://shopify.dev/docs/apps/build/security/following-security-best-practices),
+  verified 2026-08-02.
+- GitLab Omnibus, *Configuration*, Content Security Policy settings.
+  [https://github.com/gitlabhq/omnibus-gitlab/blob/master/doc/settings/configuration.md](https://github.com/gitlabhq/omnibus-gitlab/blob/master/doc/settings/configuration.md),
+  verified 2026-08-02.
+- W3C, *Trusted Types*, Working Draft, CSP integration sections.
+  [https://www.w3.org/TR/trusted-types/](https://www.w3.org/TR/trusted-types/),
+  verified 2026-08-02.
+- ACM CCS 2016, *Accepted papers*, listing "CSP is Dead, Long Live CSP: On the
+  Insecurity of Whitelists and the Future of the Content Security Policy".
+  [https://www.sigsac.org/ccs/CCS2016/accepted-papers/index.html](https://www.sigsac.org/ccs/CCS2016/accepted-papers/index.html),
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples are deliberately small. They model the pattern mechanics rather
@@ -895,52 +944,3 @@ func main() {
 
 Verification performed for these samples on 2026-08-20 with `npx tsc`,
 `python3`, and `go run`.
-
-## 18. References
-
-- W3C, *Content Security Policy Level 3*, Working Draft, 13 August 2026,
-  sections 1, 2.2, 3, 6, 7, and 8.
-  [https://www.w3.org/TR/CSP/](https://www.w3.org/TR/CSP/), verified
-  2026-08-02.
-- W3C, *Content Security Policy Level 2*, Recommendation, 15 December 2016,
-  introduction and policy delivery discussion.
-  [https://www.w3.org/TR/CSP2/](https://www.w3.org/TR/CSP2/), verified
-  2026-08-02.
-- MDN Web Docs, *Content-Security-Policy (CSP) header*.
-  [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy),
-  verified 2026-08-02.
-- MDN Web Docs, *Content Security Policy (CSP)*.
-  [https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP),
-  verified 2026-08-02.
-- MDN Web Docs, *Content-Security-Policy-Report-Only header*.
-  [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only),
-  verified 2026-08-02.
-- OWASP Cheat Sheet Series, *Content Security Policy Cheat Sheet*.
-  [https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html),
-  verified 2026-08-02.
-- Lukas Weichselbaum, *Mitigate cross-site scripting with a strict Content
-  Security Policy*, web.dev.
-  [https://web.dev/articles/strict-csp](https://web.dev/articles/strict-csp),
-  verified 2026-08-02.
-- web.dev, *Security headers quick reference*, Content Security Policy section.
-  [https://web.dev/articles/security-headers](https://web.dev/articles/security-headers),
-  verified 2026-08-02.
-- GitHub Engineering, CSP rollout case study.
-  `https://github.blog/engineering/platform-security/githubs-csp-journey/`,
-  verified 2026-08-02.
-- Shopify Developers, *Set up iframe protection*.
-  [https://shopify.dev/docs/apps/build/security/set-up-iframe-protection](https://shopify.dev/docs/apps/build/security/set-up-iframe-protection),
-  verified 2026-08-02.
-- Shopify Developers, *Following security best practices*.
-  [https://shopify.dev/docs/apps/build/security/following-security-best-practices](https://shopify.dev/docs/apps/build/security/following-security-best-practices),
-  verified 2026-08-02.
-- GitLab Omnibus, *Configuration*, Content Security Policy settings.
-  [https://github.com/gitlabhq/omnibus-gitlab/blob/master/doc/settings/configuration.md](https://github.com/gitlabhq/omnibus-gitlab/blob/master/doc/settings/configuration.md),
-  verified 2026-08-02.
-- W3C, *Trusted Types*, Working Draft, CSP integration sections.
-  [https://www.w3.org/TR/trusted-types/](https://www.w3.org/TR/trusted-types/),
-  verified 2026-08-02.
-- ACM CCS 2016, *Accepted papers*, listing "CSP is Dead, Long Live CSP: On the
-  Insecurity of Whitelists and the Future of the Content Security Policy".
-  [https://www.sigsac.org/ccs/CCS2016/accepted-papers/index.html](https://www.sigsac.org/ccs/CCS2016/accepted-papers/index.html),
-  verified 2026-08-02.

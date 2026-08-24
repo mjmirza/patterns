@@ -789,6 +789,32 @@ indefinitely as test data, since it will otherwise persist real personal
 information in test fixtures and logs long after the original message would
 have expired under a normal retention policy.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. System Management chapter, entry Test Message. Source
+   of the pattern name, the four participants, and the sentinel-value
+   caution in dimension 8.
+2. enterpriseintegrationpatterns.com. "Test Message".
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/TestMessage.html
+   Verified 2026-08-02. Source of the intent statement, the solution
+   paragraph, and the related-patterns list quoted and paraphrased across
+   dimensions 1, 5, and 8.
+3. GitHub, LinkedIn. "kafka-monitor" (Xinfra Monitor).
+   https://github.com/linkedin/kafka-monitor
+   Verified 2026-08-02. Source for the canary-message production use in
+   dimensions 1, 8, and 9.
+4. Amazon Web Services. "Synthetic monitoring (canaries)", Amazon CloudWatch
+   User Guide.
+   https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries.html
+   Verified 2026-08-02. Source for the synthetic-transaction production use
+   in dimensions 1, 8, and 9.
+5. Datadog. "API tests", Synthetic Monitoring documentation.
+   https://docs.datadoghq.com/synthetics/api_tests/
+   Verified 2026-08-02. Source for the scripted, scheduled synthetic-request
+   production use in dimensions 8 and 9.
+
 ## Code examples
 
 Three languages, matching the roles from dimension 5 against the fixed
@@ -972,29 +998,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. System Management chapter, entry Test Message. Source
-   of the pattern name, the four participants, and the sentinel-value
-   caution in dimension 8.
-2. enterpriseintegrationpatterns.com. "Test Message".
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/TestMessage.html
-   Verified 2026-08-02. Source of the intent statement, the solution
-   paragraph, and the related-patterns list quoted and paraphrased across
-   dimensions 1, 5, and 8.
-3. GitHub, LinkedIn. "kafka-monitor" (Xinfra Monitor).
-   https://github.com/linkedin/kafka-monitor
-   Verified 2026-08-02. Source for the canary-message production use in
-   dimensions 1, 8, and 9.
-4. Amazon Web Services. "Synthetic monitoring (canaries)", Amazon CloudWatch
-   User Guide.
-   https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries.html
-   Verified 2026-08-02. Source for the synthetic-transaction production use
-   in dimensions 1, 8, and 9.
-5. Datadog. "API tests", Synthetic Monitoring documentation.
-   https://docs.datadoghq.com/synthetics/api_tests/
-   Verified 2026-08-02. Source for the scripted, scheduled synthetic-request
-   production use in dimensions 8 and 9.

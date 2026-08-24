@@ -1006,6 +1006,20 @@ because deleting the application's own database record for a customer does
 not automatically clear session state a workflow left behind inside the
 message broker.
 
+## 18. References
+
+- [Microsoft Learn, Sequential Convoy pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/sequential-convoy), Azure Architecture Center, verified 2026-08-02.
+- [Wayback Machine capture of the Sequential Convoy pattern page](http://web.archive.org/web/20200421154247/https://docs.microsoft.com/en-us/azure/architecture/patterns/sequential-convoy), Internet Archive, capture dated April 21, 2020, verified 2026-08-02.
+- [Microsoft Learn, Competing Consumers pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/competing-consumers), Azure Architecture Center, verified 2026-08-02.
+- [Azure Service Bus message sessions](https://learn.microsoft.com/en-us/azure/service-bus-messaging/message-sessions), Microsoft Learn, verified 2026-08-02.
+- [Amazon SQS high throughput for FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/high-throughput-fifo.html), AWS Documentation, verified 2026-08-02.
+- [Apache Kafka, Introduction](https://kafka.apache.org/intro), Apache Software Foundation, verified 2026-08-02.
+- [Confluent, Kafka Producer configuration and partitioning](https://docs.confluent.io/platform/current/clients/producer.html), Confluent Documentation, verified 2026-08-02.
+- [Google Cloud, Pub/Sub message ordering](https://docs.cloud.google.com/pubsub/docs/ordering), Google Cloud Documentation, verified 2026-08-02.
+- [RabbitMQ, Queues](https://www.rabbitmq.com/docs/queues), RabbitMQ Documentation, verified 2026-08-02.
+- [Enterprise Integration Patterns, Resequencer](https://www.enterpriseintegrationpatterns.com/patterns/messaging/Resequencer.html), verified 2026-08-02.
+- Hohpe, G. and Woolf, B., *Enterprise Integration Patterns. Designing, Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003, ISBN 0-321-20068-3, Message Routing chapter, Resequencer.
+
 ## Code examples
 
 The following implementation demonstrates the pattern's core mechanical
@@ -1252,17 +1266,3 @@ handles the distributed concerns, lock expiry across a network partition,
 consumer crash recovery, at-least-once redelivery, that a production
 deployment of this pattern must handle using the specific broker's own
 mechanisms documented in dimension 8.
-
-## 18. References
-
-- [Microsoft Learn, Sequential Convoy pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/sequential-convoy), Azure Architecture Center, verified 2026-08-02.
-- [Wayback Machine capture of the Sequential Convoy pattern page](http://web.archive.org/web/20200421154247/https://docs.microsoft.com/en-us/azure/architecture/patterns/sequential-convoy), Internet Archive, capture dated April 21, 2020, verified 2026-08-02.
-- [Microsoft Learn, Competing Consumers pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/competing-consumers), Azure Architecture Center, verified 2026-08-02.
-- [Azure Service Bus message sessions](https://learn.microsoft.com/en-us/azure/service-bus-messaging/message-sessions), Microsoft Learn, verified 2026-08-02.
-- [Amazon SQS high throughput for FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/high-throughput-fifo.html), AWS Documentation, verified 2026-08-02.
-- [Apache Kafka, Introduction](https://kafka.apache.org/intro), Apache Software Foundation, verified 2026-08-02.
-- [Confluent, Kafka Producer configuration and partitioning](https://docs.confluent.io/platform/current/clients/producer.html), Confluent Documentation, verified 2026-08-02.
-- [Google Cloud, Pub/Sub message ordering](https://docs.cloud.google.com/pubsub/docs/ordering), Google Cloud Documentation, verified 2026-08-02.
-- [RabbitMQ, Queues](https://www.rabbitmq.com/docs/queues), RabbitMQ Documentation, verified 2026-08-02.
-- [Enterprise Integration Patterns, Resequencer](https://www.enterpriseintegrationpatterns.com/patterns/messaging/Resequencer.html), verified 2026-08-02.
-- Hohpe, G. and Woolf, B., *Enterprise Integration Patterns. Designing, Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003, ISBN 0-321-20068-3, Message Routing chapter, Resequencer.

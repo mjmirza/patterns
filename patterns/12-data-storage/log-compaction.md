@@ -761,6 +761,70 @@ accommodate slow consumers, not to satisfy any particular regulatory
 deletion deadline, and a team with stricter deletion timing requirements
 must explicitly tune it rather than rely on the default.
 
+## 18. References
+
+1. Apache Kafka Project. "Kafka Documentation, section 5.6, Log Compaction."
+   Official Apache Kafka documentation site, design section.
+   https://kafka.apache.org/documentation/#compaction
+   Content corroborated via Confluent's mirrored design documentation,
+   verified 2026-08-02.
+2. Confluent, Inc. "Log Compaction." Confluent Documentation, Kafka Design
+   guide.
+   https://docs.confluent.io/kafka/design/log_compaction.html
+   Verified 2026-08-02. Source for the tombstone mechanics, dirty ratio and
+   `min.cleanable.dirty.ratio` behavior, log cleaner thread throttling, and
+   the four ordering and offset stability guarantees cited in sections 3, 7,
+   and 10.
+3. Kreps, Jay. "The Log." LinkedIn Engineering Blog, December 2013,
+   republished by Confluent under the subtitle "What every software engineer
+   should know about real-time data's unifying abstraction." Cited for the
+   changelog and stream-table duality framing referenced in section 2.
+4. Kleppmann, Martin. Designing Data-Intensive Applications. O'Reilly Media,
+   2017. Chapter 3, "Storage and Retrieval," section on log-structured
+   storage engines and compaction. Cited for the general compaction concept
+   in log-structured storage and its relationship to LSM trees, referenced
+   in sections 1, 3, and 8.
+5. Confluent, Inc. "Kafka Streams Architecture, Fault Tolerance." Confluent
+   Documentation.
+   https://docs.confluent.io/platform/current/streams/architecture.html
+   Describes changelog topics as the mechanism for state store recovery,
+   verified 2026-08-02, cited in sections 2, 7, and 9 for the Kafka Streams
+   production use case.
+6. Apache Kafka Project. "Kafka Connect User Guide, Configuring Internal
+   Topics." Apache Kafka Documentation.
+   https://kafka.apache.org/documentation/#connect_running
+   Describes the config, offset, and status internal topics created with
+   `cleanup.policy=compact`, verified 2026-08-02, cited in section 9.
+7. Debezium Community. "Debezium Connector Topic Auto-Create Configuration."
+   Debezium Documentation.
+   https://debezium.io/documentation/reference/stable/configuration/topic-auto-create-config.html
+   Verified 2026-08-02, cited in section 9 for the recommendation of
+   `cleanup.policy=compact` on change event topics used as materialized
+   caches.
+8. Confluent, Inc. "Materialized Views in ksqlDB." Confluent Platform
+   Documentation.
+   https://docs.confluent.io/platform/current/ksqldb/concepts/materialized-views.html
+   Verified 2026-08-18, cited in section 9 for tables being backed by
+   compacted changelog topics.
+9. Facebook, Inc. "RocksDB Wiki, Compaction." RocksDB GitHub Wiki.
+   https://github.com/facebook/rocksdb/wiki/Compaction
+   Verified 2026-08-02. Source for the leveled, universal, and FIFO
+   compaction strategy descriptions and their write and space amplification
+   trade-offs cited in sections 8, 12, and 13.
+10. Apache Software Foundation. "Apache Cassandra Documentation, Compaction."
+    Apache Cassandra Documentation, Operating section.
+    https://cassandra.apache.org/doc/latest/cassandra/managing/operating/compaction/index.html
+    Verified 2026-08-02. Source for the existence and naming of
+    SizeTieredCompactionStrategy, LeveledCompactionStrategy, and
+    TimeWindowCompactionStrategy cited in section 8.
+11. Apache Kafka Project. Kafka issue tracker, historical reference to the
+    key-based log cleaning proposal commonly cited by the community as
+    KAFKA-46, predating the formal documentation of log compaction in
+    Kafka's design guide. Cited in section 1 for lineage; the specific issue
+    text was not independently re-verified for this entry and the claim is
+    presented as commonly cited project history rather than a directly
+    fetched primary source, flagged here for transparency.
+
 ## Code examples
 
 Three languages, each implementing the same minimal compaction pass. the
@@ -923,67 +987,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. Apache Kafka Project. "Kafka Documentation, section 5.6, Log Compaction."
-   Official Apache Kafka documentation site, design section.
-   https://kafka.apache.org/documentation/#compaction
-   Content corroborated via Confluent's mirrored design documentation,
-   verified 2026-08-02.
-2. Confluent, Inc. "Log Compaction." Confluent Documentation, Kafka Design
-   guide.
-   https://docs.confluent.io/kafka/design/log_compaction.html
-   Verified 2026-08-02. Source for the tombstone mechanics, dirty ratio and
-   `min.cleanable.dirty.ratio` behavior, log cleaner thread throttling, and
-   the four ordering and offset stability guarantees cited in sections 3, 7,
-   and 10.
-3. Kreps, Jay. "The Log." LinkedIn Engineering Blog, December 2013,
-   republished by Confluent under the subtitle "What every software engineer
-   should know about real-time data's unifying abstraction." Cited for the
-   changelog and stream-table duality framing referenced in section 2.
-4. Kleppmann, Martin. Designing Data-Intensive Applications. O'Reilly Media,
-   2017. Chapter 3, "Storage and Retrieval," section on log-structured
-   storage engines and compaction. Cited for the general compaction concept
-   in log-structured storage and its relationship to LSM trees, referenced
-   in sections 1, 3, and 8.
-5. Confluent, Inc. "Kafka Streams Architecture, Fault Tolerance." Confluent
-   Documentation.
-   https://docs.confluent.io/platform/current/streams/architecture.html
-   Describes changelog topics as the mechanism for state store recovery,
-   verified 2026-08-02, cited in sections 2, 7, and 9 for the Kafka Streams
-   production use case.
-6. Apache Kafka Project. "Kafka Connect User Guide, Configuring Internal
-   Topics." Apache Kafka Documentation.
-   https://kafka.apache.org/documentation/#connect_running
-   Describes the config, offset, and status internal topics created with
-   `cleanup.policy=compact`, verified 2026-08-02, cited in section 9.
-7. Debezium Community. "Debezium Connector Topic Auto-Create Configuration."
-   Debezium Documentation.
-   https://debezium.io/documentation/reference/stable/configuration/topic-auto-create-config.html
-   Verified 2026-08-02, cited in section 9 for the recommendation of
-   `cleanup.policy=compact` on change event topics used as materialized
-   caches.
-8. Confluent, Inc. "Materialized Views in ksqlDB." Confluent Platform
-   Documentation.
-   https://docs.confluent.io/platform/current/ksqldb/concepts/materialized-views.html
-   Verified 2026-08-18, cited in section 9 for tables being backed by
-   compacted changelog topics.
-9. Facebook, Inc. "RocksDB Wiki, Compaction." RocksDB GitHub Wiki.
-   https://github.com/facebook/rocksdb/wiki/Compaction
-   Verified 2026-08-02. Source for the leveled, universal, and FIFO
-   compaction strategy descriptions and their write and space amplification
-   trade-offs cited in sections 8, 12, and 13.
-10. Apache Software Foundation. "Apache Cassandra Documentation, Compaction."
-    Apache Cassandra Documentation, Operating section.
-    https://cassandra.apache.org/doc/latest/cassandra/managing/operating/compaction/index.html
-    Verified 2026-08-02. Source for the existence and naming of
-    SizeTieredCompactionStrategy, LeveledCompactionStrategy, and
-    TimeWindowCompactionStrategy cited in section 8.
-11. Apache Kafka Project. Kafka issue tracker, historical reference to the
-    key-based log cleaning proposal commonly cited by the community as
-    KAFKA-46, predating the formal documentation of log compaction in
-    Kafka's design guide. Cited in section 1 for lineage; the specific issue
-    text was not independently re-verified for this entry and the claim is
-    presented as commonly cited project history rather than a directly
-    fetched primary source, flagged here for transparency.

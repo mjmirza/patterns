@@ -668,6 +668,35 @@ concern than exists.
   This point is analytical judgement about a common operational gap, not a
   claim tied to a specific named incident.
 
+## 18. References
+
+1. Mike Cohn, *Succeeding with Agile. Software Development Using Scrum*,
+   Addison-Wesley, 2009, testing chapter, cited via Martin Fowler's
+   restatement below. The book itself was not independently re-verified page
+   by page for this entry, the shape and instruction are quoted as restated
+   and directly attributed by Fowler.
+2. Martin Fowler, "The Practical Test Pyramid,"
+   [martinfowler.com/articles/practical-test-pyramid.html](https://martinfowler.com/articles/practical-test-pyramid.html),
+   verified 2026-08-02.
+3. Google Testing Blog, "Just Say No to More End-to-End Tests,"
+   [testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html),
+   verified 2026-08-02.
+4. Titus Winters, Tom Manshreck, Hyrum Wright, editors, *Software Engineering
+   at Google*, O'Reilly, 2020, chapter 11, "Testing Overview,"
+   [abseil.io/resources/swe-book/html/ch11.html](https://abseil.io/resources/swe-book/html/ch11.html),
+   verified 2026-08-02.
+5. Spotify Engineering, "Testing of Microservices,"
+   [engineering.atspotify.com/2018/01/testing-of-microservices/](https://engineering.atspotify.com/2018/01/testing-of-microservices/),
+   verified 2026-08-02.
+6. Alister Scott, "Testing Pyramids and Ice-Cream Cones," 2012, cited via
+   Martin Fowler's article above. A direct live fetch of the primary source
+   returned a certificate error at verification time and is therefore
+   reported here at one remove rather than independently confirmed.
+7. Simon Stewart, Google test sizes writeup, cited within Martin Fowler's
+   article above, referencing the Google testing blog post on test sizes
+   from December 2010. Not independently re-verified beyond Fowler's
+   citation of it.
+
 ## Code examples
 
 Three languages, chosen because each shows the pyramid's base and middle
@@ -857,32 +886,3 @@ Java, Rust, or Swift sample is included, because the pyramid is a suite level
 organizing strategy rather than a structural pattern with a language specific
 object shape, and a fourth near identical fake and gateway example in a fourth
 language would repeat the same idea without adding a distinct idiom.
-
-## 18. References
-
-1. Mike Cohn, *Succeeding with Agile. Software Development Using Scrum*,
-   Addison-Wesley, 2009, testing chapter, cited via Martin Fowler's
-   restatement below. The book itself was not independently re-verified page
-   by page for this entry, the shape and instruction are quoted as restated
-   and directly attributed by Fowler.
-2. Martin Fowler, "The Practical Test Pyramid,"
-   [martinfowler.com/articles/practical-test-pyramid.html](https://martinfowler.com/articles/practical-test-pyramid.html),
-   verified 2026-08-02.
-3. Google Testing Blog, "Just Say No to More End-to-End Tests,"
-   [testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html),
-   verified 2026-08-02.
-4. Titus Winters, Tom Manshreck, Hyrum Wright, editors, *Software Engineering
-   at Google*, O'Reilly, 2020, chapter 11, "Testing Overview,"
-   [abseil.io/resources/swe-book/html/ch11.html](https://abseil.io/resources/swe-book/html/ch11.html),
-   verified 2026-08-02.
-5. Spotify Engineering, "Testing of Microservices,"
-   [engineering.atspotify.com/2018/01/testing-of-microservices/](https://engineering.atspotify.com/2018/01/testing-of-microservices/),
-   verified 2026-08-02.
-6. Alister Scott, "Testing Pyramids and Ice-Cream Cones," 2012, cited via
-   Martin Fowler's article above. A direct live fetch of the primary source
-   returned a certificate error at verification time and is therefore
-   reported here at one remove rather than independently confirmed.
-7. Simon Stewart, Google test sizes writeup, cited within Martin Fowler's
-   article above, referencing the Google testing blog post on test sizes
-   from December 2010. Not independently re-verified beyond Fowler's
-   citation of it.

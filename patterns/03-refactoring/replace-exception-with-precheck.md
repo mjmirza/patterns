@@ -794,6 +794,32 @@ Security review questions.
 - Does the new predicate duplicate validation logic that attackers can search
   for gaps?
 
+## 18. References
+
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, second
+  edition, Addison-Wesley, 2018, catalog refactoring "Replace Exception with
+  Precheck." Book page:
+  https://martinfowler.com/books/refactoring.html, verified 2026-08-02.
+- Martin Fowler, "Replace Exception with Precheck", public refactoring catalog,
+  https://refactoring.com/catalog/replaceExceptionWithPrecheck.html, verified
+  2026-08-02.
+- Oracle, Java SE 21 API, `java.util.Iterator`, method details for `hasNext`
+  and `next`,
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Iterator.html,
+  verified 2026-08-02.
+- Oracle, Java SE 18 API, `java.util.Scanner`, class documentation and numeric
+  token methods,
+  https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/Scanner.html,
+  verified 2026-08-02.
+- Microsoft Learn, .NET API documentation,
+  `System.Collections.Generic.IDictionary<TKey,TValue>.TryGetValue`,
+  https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2.trygetvalue,
+  verified 2026-08-02.
+- MDN Web Docs, "URL", static method `canParse` and constructor behavior,
+  https://developer.mozilla.org/en-US/docs/Web/API/URL, verified 2026-08-02.
+- Rust Standard Library, `std::path::Path`, methods `exists` and `try_exists`,
+  https://doc.rust-lang.org/std/path/struct.Path.html, verified 2026-08-02.
+
 ## Code examples
 
 Three languages are shown because the pattern appears in different idioms.
@@ -849,29 +875,3 @@ fn main() {
     println!("{}", value_for_period(&values, 9));
 }
 ```
-
-## 18. References
-
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, second
-  edition, Addison-Wesley, 2018, catalog refactoring "Replace Exception with
-  Precheck." Book page:
-  https://martinfowler.com/books/refactoring.html, verified 2026-08-02.
-- Martin Fowler, "Replace Exception with Precheck", public refactoring catalog,
-  https://refactoring.com/catalog/replaceExceptionWithPrecheck.html, verified
-  2026-08-02.
-- Oracle, Java SE 21 API, `java.util.Iterator`, method details for `hasNext`
-  and `next`,
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Iterator.html,
-  verified 2026-08-02.
-- Oracle, Java SE 18 API, `java.util.Scanner`, class documentation and numeric
-  token methods,
-  https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/Scanner.html,
-  verified 2026-08-02.
-- Microsoft Learn, .NET API documentation,
-  `System.Collections.Generic.IDictionary<TKey,TValue>.TryGetValue`,
-  https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2.trygetvalue,
-  verified 2026-08-02.
-- MDN Web Docs, "URL", static method `canParse` and constructor behavior,
-  https://developer.mozilla.org/en-US/docs/Web/API/URL, verified 2026-08-02.
-- Rust Standard Library, `std::path::Path`, methods `exists` and `try_exists`,
-  https://doc.rust-lang.org/std/path/struct.Path.html, verified 2026-08-02.

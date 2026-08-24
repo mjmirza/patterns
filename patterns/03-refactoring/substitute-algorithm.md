@@ -690,6 +690,43 @@ Where the pattern is silent: it does not itself provide encryption,
 authentication, authorization, input validation, or secret handling. Those
 properties come from the algorithm selected and from the boundary around it.
 
+## 18. References
+
+- Martin Fowler. *Refactoring. Improving the Design of Existing Code*. First
+  edition. Addison-Wesley, 1999. Chapter 6, "Composing Methods", catalog entry
+  "Substitute Algorithm."
+- Martin Fowler, with Kent Beck. *Refactoring. Improving the Design of
+  Existing Code*. Second edition. Addison-Wesley, 2018. Chapter 6, "A First Set
+  of Refactorings", catalog entry "Substitute Algorithm."
+- Martin Fowler. "Substitute Algorithm." Refactoring catalog.
+  https://refactoring.com/catalog/substituteAlgorithm.html, verified
+  2026-08-02.
+- Martin Fowler. "Refactoring." Book page.
+  https://martinfowler.com/books/refactoring.html, verified 2026-08-02.
+- Martin Fowler. "Changes for the 2nd Edition of Refactoring."
+  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
+  2026-08-02.
+- Tim Peters and CPython contributors. "listsort.txt." CPython repository.
+  https://github.com/python/cpython/blob/main/Objects/listsort.txt, verified
+  2026-08-02.
+- Simon Zund. "Getting things sorted in V8." V8 blog.
+  https://v8.dev/blog/array-sort, verified 2026-08-02.
+- Mathias Bynens. "Stable Array.prototype.sort." V8.
+  https://v8.dev/features/stable-sort, verified 2026-08-02.
+- MDN Web Docs contributors. "Array.prototype.sort()."
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort,
+  verified 2026-08-02.
+- Rust project contributors. "RELEASES.md." Rust 1.81 release notes mirror.
+  https://chromium.googlesource.com/external/github.com/rust-lang/rust/%2Bshow/f21fbac535ab2c3bc50db20547f4d48477357103/RELEASES.md,
+  verified 2026-08-02.
+- Rust project contributors. "Primitive slice documentation."
+  https://doc.rust-lang.org/std/primitive.slice.html, verified 2026-08-02.
+- Donald E. Knuth. *The Art of Computer Programming, Volume 3. Sorting and
+  Searching*. Second edition. Addison-Wesley, 1998. Chapter 5, "Sorting."
+- Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
+  *Introduction to Algorithms*. Third edition. MIT Press, 2009. Chapters 2, 6,
+  7, 8, and 15.
+
 ## Code examples
 
 The examples are intentionally small and original. They model the same move in
@@ -810,40 +847,3 @@ priority order. The substitute algorithm names priority as data and performs
 one pass. The stable contract is "return the highest-priority active candidate,
 or the empty string." That contract is easier to test than the original branch
 sequence.
-
-## 18. References
-
-- Martin Fowler. *Refactoring. Improving the Design of Existing Code*. First
-  edition. Addison-Wesley, 1999. Chapter 6, "Composing Methods", catalog entry
-  "Substitute Algorithm."
-- Martin Fowler, with Kent Beck. *Refactoring. Improving the Design of
-  Existing Code*. Second edition. Addison-Wesley, 2018. Chapter 6, "A First Set
-  of Refactorings", catalog entry "Substitute Algorithm."
-- Martin Fowler. "Substitute Algorithm." Refactoring catalog.
-  https://refactoring.com/catalog/substituteAlgorithm.html, verified
-  2026-08-02.
-- Martin Fowler. "Refactoring." Book page.
-  https://martinfowler.com/books/refactoring.html, verified 2026-08-02.
-- Martin Fowler. "Changes for the 2nd Edition of Refactoring."
-  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
-  2026-08-02.
-- Tim Peters and CPython contributors. "listsort.txt." CPython repository.
-  https://github.com/python/cpython/blob/main/Objects/listsort.txt, verified
-  2026-08-02.
-- Simon Zund. "Getting things sorted in V8." V8 blog.
-  https://v8.dev/blog/array-sort, verified 2026-08-02.
-- Mathias Bynens. "Stable Array.prototype.sort." V8.
-  https://v8.dev/features/stable-sort, verified 2026-08-02.
-- MDN Web Docs contributors. "Array.prototype.sort()."
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort,
-  verified 2026-08-02.
-- Rust project contributors. "RELEASES.md." Rust 1.81 release notes mirror.
-  https://chromium.googlesource.com/external/github.com/rust-lang/rust/%2Bshow/f21fbac535ab2c3bc50db20547f4d48477357103/RELEASES.md,
-  verified 2026-08-02.
-- Rust project contributors. "Primitive slice documentation."
-  https://doc.rust-lang.org/std/primitive.slice.html, verified 2026-08-02.
-- Donald E. Knuth. *The Art of Computer Programming, Volume 3. Sorting and
-  Searching*. Second edition. Addison-Wesley, 1998. Chapter 5, "Sorting."
-- Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
-  *Introduction to Algorithms*. Third edition. MIT Press, 2009. Chapters 2, 6,
-  7, 8, and 15.

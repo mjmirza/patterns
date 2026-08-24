@@ -108,6 +108,12 @@ Cross-region replication lag is the single most important ongoing signal, a grow
 
 The recovery region's data tier holds a full, current copy of production data at all times, so it carries the exact same access-control, encryption-at-rest, and encryption-in-transit requirements as the primary, a recovery region that is treated as a lower-security afterthought is a real data-exposure risk, not a theoretical one. Cross-region replication traffic itself must be encrypted in transit and, for regulated data, may be constrained by data-residency rules that limit which regions are legally eligible as a recovery target. IAM roles and secrets used to launch the recovery region's compute tier must be provisioned and rotated on the same schedule as the primary region's, a stale or over-privileged recovery-region credential is exactly the kind of thing an infrequently-used environment tends to accumulate.
 
+## References
+
+- Amazon Web Services, Disaster Recovery of Workloads on AWS, Disaster Recovery Options in the Cloud, https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html#pilot-light
+- Amazon Web Services, AWS Well-Architected Framework, Reliability Pillar, REL13-BP02 Use defined recovery strategies to meet the recovery objectives, https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html
+- Amazon Web Services, AWS Well-Architected Framework, Reliability Pillar, the ordered list of DR strategies by increasing cost, complexity, and decreasing RTO and RPO, https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html#rel_planning_for_recovery_disaster_recovery
+
 ## Code examples
 
 ### Swift
@@ -212,9 +218,3 @@ class PilotLightController:
         self._recovery_region.compute_instance_count = target_instance_count
         self.state = DisasterRecoveryState.FAILED_OVER
 ```
-
-## References
-
-- Amazon Web Services, Disaster Recovery of Workloads on AWS, Disaster Recovery Options in the Cloud, https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html#pilot-light
-- Amazon Web Services, AWS Well-Architected Framework, Reliability Pillar, REL13-BP02 Use defined recovery strategies to meet the recovery objectives, https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html
-- Amazon Web Services, AWS Well-Architected Framework, Reliability Pillar, the ordered list of DR strategies by increasing cost, complexity, and decreasing RTO and RPO, https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html#rel_planning_for_recovery_disaster_recovery

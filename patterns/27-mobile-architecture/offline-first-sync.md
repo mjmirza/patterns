@@ -174,6 +174,11 @@ Skip it for data that is read-only from the client's perspective (a content feed
 - Retained conflicting revisions (the revision-tree model) can retain data the person believed was overwritten or deleted, which has real privacy and compliance implications. a genuine delete request must purge every retained branch, not only the visible winner.
 - Multi-device sync means a compromised or lost device can pull the full sync history, so access revocation on device loss must be able to cut that device off from future sync, not merely lock its screen.
 
+## 18. References
+
+- PouchDB, Replication and Sync guide (https://pouchdb.com/guides/replication.html)
+- Automerge documentation, Hello (https://automerge.org/docs/hello/)
+
 ## Code examples
 
 ### Python
@@ -312,8 +317,3 @@ _ = engine.write(recordId: "note-1", data: ["title": "grocery list"])
 let pushed = engine.sync(remoteRecords: [])
 print("pending push count " + String(pushed.count))
 ```
-
-## 18. References
-
-- PouchDB, Replication and Sync guide (https://pouchdb.com/guides/replication.html)
-- Automerge documentation, Hello (https://automerge.org/docs/hello/)

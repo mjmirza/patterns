@@ -172,6 +172,11 @@ Operator escalates to a different mitigation
 - A lever that redirects or drops traffic should be reviewed for whether it could unintentionally expose or misroute data belonging to the traffic it affects.
 - The action log itself is a security-relevant record, and should be protected from tampering with the same care as any other incident or audit log.
 
+## 18. References
+
+- AWS Well-Architected Framework, mitigating deployment risks, safe deployment strategies (https://docs.aws.amazon.com/wellarchitected/latest/framework/ops_mit_deploy_risks_deploy_mgmt_sys.html)
+- Google, SRE Workbook, Canarying Releases chapter (https://sre.google/workbook/canarying-releases/)
+
 ## Code examples
 
 ### Python
@@ -285,8 +290,3 @@ try lever.pull(actorRole: "on-call-sre", reason: "recommendation service overloa
 print("pulled " + String(lever.pulled))
 print("log entries " + String(lever.actionLog.count))
 ```
-
-## 18. References
-
-- AWS Well-Architected Framework, mitigating deployment risks, safe deployment strategies (https://docs.aws.amazon.com/wellarchitected/latest/framework/ops_mit_deploy_risks_deploy_mgmt_sys.html)
-- Google, SRE Workbook, Canarying Releases chapter (https://sre.google/workbook/canarying-releases/)

@@ -171,6 +171,11 @@ Skip it for a system too small or too low-stakes for the coordination cost of a 
 - The abort criteria and the blast-radius scoping are themselves a security control, and weakening either one to make the exercise more realistic trades safety for realism in a way that should be a deliberate, reviewed decision, not a default.
 - Findings logged during the exercise, especially ones revealing a genuine security or access-control gap, should be handled with the same care as any other sensitive incident record.
 
+## 18. References
+
+- Google, Site Reliability Engineering, Lessons Learned chapter (https://sre.google/sre-book/lessons-learned/)
+- AWS Well-Architected Framework, REL12-BP05, Conduct game days regularly (https://docs.aws.amazon.com/wellarchitected/latest/framework/rel_testing_resiliency_game_days_resiliency.html)
+
 ## Code examples
 
 ### Python
@@ -300,8 +305,3 @@ run.recordFinding("failover took 7 minutes, runbook step 3 was unclear")
 print("aborted " + String(run.aborted))
 print("findings " + String(run.findings.count))
 ```
-
-## 18. References
-
-- Google, Site Reliability Engineering, Lessons Learned chapter (https://sre.google/sre-book/lessons-learned/)
-- AWS Well-Architected Framework, REL12-BP05, Conduct game days regularly (https://docs.aws.amazon.com/wellarchitected/latest/framework/rel_testing_resiliency_game_days_resiliency.html)

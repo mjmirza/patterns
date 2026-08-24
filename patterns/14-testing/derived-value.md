@@ -474,6 +474,32 @@ authentication, authorization, or cryptography, it is silent on those
 surfaces because it is a data-provisioning technique for tests, not a
 runtime mechanism.
 
+## 18. References
+
+1. Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
+   Addison-Wesley, 2007, chapter 11 (test data provision strategies,
+   Literal Value, Generated Value, Derived Value) and chapter 18 (Test
+   Logic in Production, the coincidental correctness discussion).
+2. Nat Pryce, "Test Data Builders. an alternative to the Object Mother
+   pattern", published 2007. The live site is unreachable (connection
+   refused domain-wide), archived copy verified 2026-08-04.
+   http://web.archive.org/web/20260801032913/http://www.natpryce.com/articles/000714.html
+3. Martin Fowler, "Mocks Aren't Stubs", published 2 January 2007, verified
+   2026-08-02. https://martinfowler.com/articles/mocksArentStubs.html
+4. FactoryBot documentation, "Sequences", verified 2026-08-04.
+   https://thoughtbot.github.io/factory_bot/sequences/summary.html
+5. factory_boy documentation, "Sequences", verified 2026-08-02.
+   https://factoryboy.readthedocs.io/en/stable/reference.html
+6. JUnit 5 User Guide, "Dependency Injection for Constructors and Methods",
+   verified 2026-08-02. https://docs.junit.org/current/user-guide/
+7. pytest documentation, "How to use fixtures", the `request` fixture
+   section, verified 2026-08-02.
+   https://docs.pytest.org/en/stable/how-to/fixtures.html
+8. Hypothesis documentation, "Writing custom strategies", verified
+   2026-08-02. https://hypothesis.readthedocs.io/en/latest/data.html
+9. Wikipedia contributors, "Test double", verified 2026-08-02.
+   https://en.wikipedia.org/wiki/Test_double
+
 ## Code examples
 
 Each example builds a small, deterministic derivation function from an
@@ -581,29 +607,3 @@ func main() {
 	fmt.Println("Go derived-value tests passed")
 }
 ```
-
-## 18. References
-
-1. Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
-   Addison-Wesley, 2007, chapter 11 (test data provision strategies,
-   Literal Value, Generated Value, Derived Value) and chapter 18 (Test
-   Logic in Production, the coincidental correctness discussion).
-2. Nat Pryce, "Test Data Builders. an alternative to the Object Mother
-   pattern", published 2007. The live site is unreachable (connection
-   refused domain-wide), archived copy verified 2026-08-04.
-   http://web.archive.org/web/20260801032913/http://www.natpryce.com/articles/000714.html
-3. Martin Fowler, "Mocks Aren't Stubs", published 2 January 2007, verified
-   2026-08-02. https://martinfowler.com/articles/mocksArentStubs.html
-4. FactoryBot documentation, "Sequences", verified 2026-08-04.
-   https://thoughtbot.github.io/factory_bot/sequences/summary.html
-5. factory_boy documentation, "Sequences", verified 2026-08-02.
-   https://factoryboy.readthedocs.io/en/stable/reference.html
-6. JUnit 5 User Guide, "Dependency Injection for Constructors and Methods",
-   verified 2026-08-02. https://docs.junit.org/current/user-guide/
-7. pytest documentation, "How to use fixtures", the `request` fixture
-   section, verified 2026-08-02.
-   https://docs.pytest.org/en/stable/how-to/fixtures.html
-8. Hypothesis documentation, "Writing custom strategies", verified
-   2026-08-02. https://hypothesis.readthedocs.io/en/latest/data.html
-9. Wikipedia contributors, "Test double", verified 2026-08-02.
-   https://en.wikipedia.org/wiki/Test_double

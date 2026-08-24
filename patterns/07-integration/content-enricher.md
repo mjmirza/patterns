@@ -663,6 +663,25 @@ common example, its exposure to the third party is a data-handling decision
 that should be made deliberately, not as an incidental consequence of wiring
 up an enrichment call.
 
+## 18. References
+
+1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003, chapter
+   on Message Transformation, pattern Content Enricher.
+2. Enterprise Integration Patterns companion site, "Content Enricher"
+   (indexed as Data Enricher), [https://www.enterpriseintegrationpatterns.com/patterns/messaging/DataEnricher.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/DataEnricher.html),
+   verified 2026-08-02.
+3. Apache Camel documentation, "Enrich EIP",
+   [https://camel.apache.org/components/next/eips/enrich-eip.html](https://camel.apache.org/components/next/eips/enrich-eip.html),
+   verified 2026-08-02.
+4. Spring Integration Reference Documentation, "Content Enricher",
+   [https://docs.spring.io/spring-integration/reference/content-enrichment.html](https://docs.spring.io/spring-integration/reference/content-enrichment.html),
+   verified 2026-08-02.
+5. Amazon Web Services documentation, "Enrichment in Amazon EventBridge
+   Pipes",
+   [https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-enrichment.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-enrichment.html),
+   verified 2026-08-02.
+
 ## Code examples
 
 The following three implementations model the same scenario. An order carries
@@ -882,22 +901,3 @@ style, a dynamically typed, data-class style, and a statically typed,
 interface-based, value-semantics style. Adding three more mechanical
 restatements would not add coverage of a genuinely new implementation
 concern.
-
-## 18. References
-
-1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003, chapter
-   on Message Transformation, pattern Content Enricher.
-2. Enterprise Integration Patterns companion site, "Content Enricher"
-   (indexed as Data Enricher), [https://www.enterpriseintegrationpatterns.com/patterns/messaging/DataEnricher.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/DataEnricher.html),
-   verified 2026-08-02.
-3. Apache Camel documentation, "Enrich EIP",
-   [https://camel.apache.org/components/next/eips/enrich-eip.html](https://camel.apache.org/components/next/eips/enrich-eip.html),
-   verified 2026-08-02.
-4. Spring Integration Reference Documentation, "Content Enricher",
-   [https://docs.spring.io/spring-integration/reference/content-enrichment.html](https://docs.spring.io/spring-integration/reference/content-enrichment.html),
-   verified 2026-08-02.
-5. Amazon Web Services documentation, "Enrichment in Amazon EventBridge
-   Pipes",
-   [https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-enrichment.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-enrichment.html),
-   verified 2026-08-02.

@@ -845,6 +845,40 @@ resource, it does not itself observe or transform the data flowing through
 that resource, and no dimension of the pattern's own mechanics involves
 reading or storing the content of the work being gated.
 
+## 18. References
+
+1. Wikipedia contributors. "Semaphore (programming)".
+   https://en.wikipedia.org/wiki/Semaphore_(programming)
+   Verified 2026-08-02. Source for the 1962 or 1963 invention date, the
+   EWD-35 paper attribution, the P and V operation naming and their Dutch
+   etymology, and the counting versus binary semaphore distinction in
+   dimension 1.
+2. Oracle. *Java SE 21 API Specification*,
+   `java.util.concurrent.Semaphore`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Semaphore.html
+   Verified 2026-08-02. Source for the acquire and release method set, the
+   fairness constructor parameter and its default, the barging behaviour of
+   `tryAcquire`, the no-ownership property, and the pool usage example
+   referenced in dimensions 3, 8, 9, and the code example.
+3. The Go Authors. Package documentation,
+   `golang.org/x/sync/semaphore`.
+   https://pkg.go.dev/golang.org/x/sync/semaphore
+   Verified 2026-08-02. Source for the weighted semaphore's `Weighted` type,
+   its `Acquire`, `TryAcquire`, and `Release` methods, the context-cancellable
+   acquire behaviour, and the worker-pool example referenced in dimensions 8
+   and 9.
+4. Python Software Foundation. *Python 3 documentation*, "Synchronization
+   Primitives", `asyncio.Semaphore` and `asyncio.BoundedSemaphore`.
+   https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore
+   Verified 2026-08-02. Source for the async counter semantics, the
+   preferred `async with` context-manager usage, the not-thread-safe
+   warning, and the bounded-semaphore over-release behaviour referenced in
+   dimensions 8, 9, and 11.
+5. Linux man-pages project. `sem_wait(3)`.
+   https://man7.org/linux/man-pages/man3/sem_wait.3.html
+   Verified 2026-08-02. Source for the POSIX `sem_wait`, `sem_trywait`, and
+   `sem_timedwait` semantics referenced in dimensions 8 and 11.
+
 ## Code examples
 
 Three languages where the semaphore is idiomatic in genuinely different
@@ -1020,37 +1054,3 @@ async def main() -> None:
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-
-## 18. References
-
-1. Wikipedia contributors. "Semaphore (programming)".
-   https://en.wikipedia.org/wiki/Semaphore_(programming)
-   Verified 2026-08-02. Source for the 1962 or 1963 invention date, the
-   EWD-35 paper attribution, the P and V operation naming and their Dutch
-   etymology, and the counting versus binary semaphore distinction in
-   dimension 1.
-2. Oracle. *Java SE 21 API Specification*,
-   `java.util.concurrent.Semaphore`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Semaphore.html
-   Verified 2026-08-02. Source for the acquire and release method set, the
-   fairness constructor parameter and its default, the barging behaviour of
-   `tryAcquire`, the no-ownership property, and the pool usage example
-   referenced in dimensions 3, 8, 9, and the code example.
-3. The Go Authors. Package documentation,
-   `golang.org/x/sync/semaphore`.
-   https://pkg.go.dev/golang.org/x/sync/semaphore
-   Verified 2026-08-02. Source for the weighted semaphore's `Weighted` type,
-   its `Acquire`, `TryAcquire`, and `Release` methods, the context-cancellable
-   acquire behaviour, and the worker-pool example referenced in dimensions 8
-   and 9.
-4. Python Software Foundation. *Python 3 documentation*, "Synchronization
-   Primitives", `asyncio.Semaphore` and `asyncio.BoundedSemaphore`.
-   https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore
-   Verified 2026-08-02. Source for the async counter semantics, the
-   preferred `async with` context-manager usage, the not-thread-safe
-   warning, and the bounded-semaphore over-release behaviour referenced in
-   dimensions 8, 9, and 11.
-5. Linux man-pages project. `sem_wait(3)`.
-   https://man7.org/linux/man-pages/man3/sem_wait.3.html
-   Verified 2026-08-02. Source for the POSIX `sem_wait`, `sem_trywait`, and
-   `sem_timedwait` semantics referenced in dimensions 8 and 11.

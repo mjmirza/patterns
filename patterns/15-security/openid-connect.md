@@ -779,6 +779,57 @@ OP sends back-channel logout but the RP cannot map the logout token to local
 sessions, stale sessions survive. Document which logout semantics the product
 promises, then build and test those semantics explicitly.
 
+## 18. References
+
+1. Nat Sakimura, John Bradley, Michael B. Jones, Breno de Medeiros, Chuck
+   Mortimore. *OpenID Connect Core 1.0 incorporating errata set 2*. OpenID
+   Foundation, December 15, 2023. Sections 1, 2, 3, 5, 8, 9, 10, 16, and 17.
+   [https://openid.net/specs/openid-connect-core-1_0.html](https://openid.net/specs/openid-connect-core-1_0.html).
+   Verified 2026-08-02.
+2. Nat Sakimura, John Bradley, Michael B. Jones, Edmund Jay. *OpenID Connect
+   Discovery 1.0 incorporating errata set 2*. OpenID Foundation, December 15,
+   2023. Sections 3 and 4.
+   [https://openid.net/specs/openid-connect-discovery-1_0.html](https://openid.net/specs/openid-connect-discovery-1_0.html).
+   Verified 2026-08-02.
+3. D. Hardt, editor. *RFC 6749. The OAuth 2.0 Authorization Framework*. IETF,
+   October 2012. Sections 1, 1.1, 1.4, and 4.1.
+   [https://www.rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749).
+   Verified 2026-08-02.
+4. M. Jones, J. Bradley, N. Sakimura. *RFC 7519. JSON Web Token*. IETF, May
+   2015. Sections 1, 3, 4, 7, 11, and 12.
+   [https://www.rfc-editor.org/rfc/rfc7519](https://www.rfc-editor.org/rfc/rfc7519).
+   Verified 2026-08-02.
+5. N. Sakimura, J. Bradley, N. Agarwal. *RFC 7636. Proof Key for Code Exchange
+   by OAuth Public Clients*. IETF, September 2015. Sections 1 and 4.
+   [https://datatracker.ietf.org/doc/html/rfc7636](https://datatracker.ietf.org/doc/html/rfc7636).
+   Verified 2026-08-02.
+6. T. Lodderstedt, J. Bradley, A. Labunets, D. Fett. *RFC 9700. Best Current
+   Practice for OAuth 2.0 Security*. IETF, January 2025.
+   [https://www.rfc-editor.org/rfc/rfc9700](https://www.rfc-editor.org/rfc/rfc9700).
+   Verified 2026-08-02.
+7. OpenID Foundation. *OpenID Connect RP-Initiated Logout 1.0*. September 12,
+   2022.
+   [https://openid.net/specs/openid-connect-rpinitiated-1_0.html](https://openid.net/specs/openid-connect-rpinitiated-1_0.html).
+   Verified 2026-08-02.
+8. OpenID Foundation. *OpenID Connect Back-Channel Logout 1.0 incorporating
+   errata set 1*. September 12, 2022.
+   [https://openid.net/specs/openid-connect-backchannel-1_0.html](https://openid.net/specs/openid-connect-backchannel-1_0.html).
+   Verified 2026-08-02.
+9. Google. *OpenID Connect, Sign in with Google*. Google for Developers.
+   [https://developers.google.com/identity/openid-connect/openid-connect](https://developers.google.com/identity/openid-connect/openid-connect).
+   Verified 2026-08-02.
+10. Microsoft. *OpenID Connect on the Microsoft identity platform*. Microsoft
+   Learn.
+   [https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc).
+   Verified 2026-08-02.
+11. Kubernetes project. *Authenticating, OpenID Connect tokens*. Kubernetes
+   documentation.
+   [https://kubernetes.io/docs/reference/access-authn-authz/authentication/](https://kubernetes.io/docs/reference/access-authn-authz/authentication/).
+   Verified 2026-08-02.
+12. Okta. *OAuth 2.0 and OpenID Connect overview*. Okta Developer.
+   [https://developer.okta.com/docs/concepts/oauth-openid/](https://developer.okta.com/docs/concepts/oauth-openid/).
+   Verified 2026-08-02.
+
 ## Code examples
 
 These samples are intentionally small. They do not implement full JWT
@@ -976,54 +1027,3 @@ func main() {
 	fmt.Println(validateIDTokenClaims(claims, tx))
 }
 ```
-
-## 18. References
-
-1. Nat Sakimura, John Bradley, Michael B. Jones, Breno de Medeiros, Chuck
-   Mortimore. *OpenID Connect Core 1.0 incorporating errata set 2*. OpenID
-   Foundation, December 15, 2023. Sections 1, 2, 3, 5, 8, 9, 10, 16, and 17.
-   [https://openid.net/specs/openid-connect-core-1_0.html](https://openid.net/specs/openid-connect-core-1_0.html).
-   Verified 2026-08-02.
-2. Nat Sakimura, John Bradley, Michael B. Jones, Edmund Jay. *OpenID Connect
-   Discovery 1.0 incorporating errata set 2*. OpenID Foundation, December 15,
-   2023. Sections 3 and 4.
-   [https://openid.net/specs/openid-connect-discovery-1_0.html](https://openid.net/specs/openid-connect-discovery-1_0.html).
-   Verified 2026-08-02.
-3. D. Hardt, editor. *RFC 6749. The OAuth 2.0 Authorization Framework*. IETF,
-   October 2012. Sections 1, 1.1, 1.4, and 4.1.
-   [https://www.rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749).
-   Verified 2026-08-02.
-4. M. Jones, J. Bradley, N. Sakimura. *RFC 7519. JSON Web Token*. IETF, May
-   2015. Sections 1, 3, 4, 7, 11, and 12.
-   [https://www.rfc-editor.org/rfc/rfc7519](https://www.rfc-editor.org/rfc/rfc7519).
-   Verified 2026-08-02.
-5. N. Sakimura, J. Bradley, N. Agarwal. *RFC 7636. Proof Key for Code Exchange
-   by OAuth Public Clients*. IETF, September 2015. Sections 1 and 4.
-   [https://datatracker.ietf.org/doc/html/rfc7636](https://datatracker.ietf.org/doc/html/rfc7636).
-   Verified 2026-08-02.
-6. T. Lodderstedt, J. Bradley, A. Labunets, D. Fett. *RFC 9700. Best Current
-   Practice for OAuth 2.0 Security*. IETF, January 2025.
-   [https://www.rfc-editor.org/rfc/rfc9700](https://www.rfc-editor.org/rfc/rfc9700).
-   Verified 2026-08-02.
-7. OpenID Foundation. *OpenID Connect RP-Initiated Logout 1.0*. September 12,
-   2022.
-   [https://openid.net/specs/openid-connect-rpinitiated-1_0.html](https://openid.net/specs/openid-connect-rpinitiated-1_0.html).
-   Verified 2026-08-02.
-8. OpenID Foundation. *OpenID Connect Back-Channel Logout 1.0 incorporating
-   errata set 1*. September 12, 2022.
-   [https://openid.net/specs/openid-connect-backchannel-1_0.html](https://openid.net/specs/openid-connect-backchannel-1_0.html).
-   Verified 2026-08-02.
-9. Google. *OpenID Connect, Sign in with Google*. Google for Developers.
-   [https://developers.google.com/identity/openid-connect/openid-connect](https://developers.google.com/identity/openid-connect/openid-connect).
-   Verified 2026-08-02.
-10. Microsoft. *OpenID Connect on the Microsoft identity platform*. Microsoft
-   Learn.
-   [https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc).
-   Verified 2026-08-02.
-11. Kubernetes project. *Authenticating, OpenID Connect tokens*. Kubernetes
-   documentation.
-   [https://kubernetes.io/docs/reference/access-authn-authz/authentication/](https://kubernetes.io/docs/reference/access-authn-authz/authentication/).
-   Verified 2026-08-02.
-12. Okta. *OAuth 2.0 and OpenID Connect overview*. Okta Developer.
-   [https://developer.okta.com/docs/concepts/oauth-openid/](https://developer.okta.com/docs/concepts/oauth-openid/).
-   Verified 2026-08-02.

@@ -873,6 +873,31 @@ can be used to trigger an unintended early shutdown of a consumer pool, which
 is itself a narrow denial-of-service angle worth closing by using a
 distinguished sentinel type rather than an in-band value.
 
+## 18. References
+
+- Amazon Web Services. *Using dead-letter queues in Amazon SQS*.
+  [docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html),
+  verified 2026-08-02.
+- Microsoft. *Service Bus dead-letter queues*.
+  [learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues),
+  verified 2026-08-02.
+- Microsoft. *BlockingCollection\<T\>.CompleteAdding Method*.
+  [learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1.completeadding](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1.completeadding),
+  verified 2026-08-02.
+- Ajmani, Sameer. *Go Concurrency Patterns. Pipelines and cancellation*. The
+  Go Blog. [go.dev/blog/pipelines](https://go.dev/blog/pipelines), verified
+  2026-08-02.
+- Python Software Foundation. *queue, A synchronized queue class*, Python 3
+  documentation. [docs.python.org/3/library/queue.html](https://docs.python.org/3/library/queue.html),
+  verified 2026-08-02.
+- Rust Project. *std, sync, mpsc*, The Rust Standard Library documentation.
+  [doc.rust-lang.org/std/sync/mpsc/index.html](https://doc.rust-lang.org/std/sync/mpsc/index.html),
+  verified 2026-08-02.
+- Hohpe, Gregor, and Woolf, Bobby. *Dead Letter Channel*, Enterprise
+  Integration Patterns.
+  [enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html),
+  verified 2026-08-02.
+
 ## Code examples
 
 Three languages are shown, each compiled or run to completion during
@@ -1056,28 +1081,3 @@ other half of a channel" has "hung up by being dropped" (Rust Project,
 verified 2026-08-02). Rust's ownership model makes the counted-sentinel and
 type-confusion failure modes unreachable by construction here, there is no
 payload value that could ever be mistaken for a dropped sender.
-
-## 18. References
-
-- Amazon Web Services. *Using dead-letter queues in Amazon SQS*.
-  [docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html),
-  verified 2026-08-02.
-- Microsoft. *Service Bus dead-letter queues*.
-  [learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues),
-  verified 2026-08-02.
-- Microsoft. *BlockingCollection\<T\>.CompleteAdding Method*.
-  [learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1.completeadding](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1.completeadding),
-  verified 2026-08-02.
-- Ajmani, Sameer. *Go Concurrency Patterns. Pipelines and cancellation*. The
-  Go Blog. [go.dev/blog/pipelines](https://go.dev/blog/pipelines), verified
-  2026-08-02.
-- Python Software Foundation. *queue, A synchronized queue class*, Python 3
-  documentation. [docs.python.org/3/library/queue.html](https://docs.python.org/3/library/queue.html),
-  verified 2026-08-02.
-- Rust Project. *std, sync, mpsc*, The Rust Standard Library documentation.
-  [doc.rust-lang.org/std/sync/mpsc/index.html](https://doc.rust-lang.org/std/sync/mpsc/index.html),
-  verified 2026-08-02.
-- Hohpe, Gregor, and Woolf, Bobby. *Dead Letter Channel*, Enterprise
-  Integration Patterns.
-  [enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html),
-  verified 2026-08-02.

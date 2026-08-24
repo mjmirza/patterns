@@ -641,6 +641,21 @@ added or modified a tap configuration, not merely audit logging of the
 tapped traffic itself, is worth treating as a requirement in any system where
 the tapped channels carry sensitive data.
 
+## 18. References
+
+1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003, Message
+   Routing chapter, "Wire Tap" entry. Companion web page,
+   [enterpriseintegrationpatterns.com/patterns/messaging/WireTap.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/WireTap.html),
+   verified 2026-08-02.
+2. Apache Camel documentation, "Wire Tap EIP",
+   [camel.apache.org/components/next/eips/wireTap-eip.html](https://camel.apache.org/components/next/eips/wireTap-eip.html),
+   verified 2026-08-02.
+3. Spring Integration Reference Documentation, "Configuring a Message Channel"
+   (wire tap interceptor section),
+   [docs.spring.io/spring-integration/reference/channel/configuration.html](https://docs.spring.io/spring-integration/reference/channel/configuration.html),
+   verified 2026-08-02.
+
 ## Code examples
 
 Three languages, chosen for how differently each expresses the same shape.
@@ -869,18 +884,3 @@ Java, Rust, and Swift are omitted here for space. the shape in each is a
 straightforward translation of the Go or TypeScript version, an interface or
 protocol for the channel abstraction, a bounded queue or channel for the tap,
 and the same selector-then-copy-then-forward sequence.
-
-## 18. References
-
-1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003, Message
-   Routing chapter, "Wire Tap" entry. Companion web page,
-   [enterpriseintegrationpatterns.com/patterns/messaging/WireTap.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/WireTap.html),
-   verified 2026-08-02.
-2. Apache Camel documentation, "Wire Tap EIP",
-   [camel.apache.org/components/next/eips/wireTap-eip.html](https://camel.apache.org/components/next/eips/wireTap-eip.html),
-   verified 2026-08-02.
-3. Spring Integration Reference Documentation, "Configuring a Message Channel"
-   (wire tap interceptor section),
-   [docs.spring.io/spring-integration/reference/channel/configuration.html](https://docs.spring.io/spring-integration/reference/channel/configuration.html),
-   verified 2026-08-02.

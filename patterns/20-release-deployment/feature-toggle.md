@@ -128,6 +128,11 @@ Track the current state of every live toggle and how long it has been in that st
 
 Access to change a toggle's state should be controlled and audited, since flipping a toggle can change production behavior for every user instantly, with the same operational weight as a deployment. A toggle that gates a security-sensitive code path (an authentication check, an authorization rule) needs the same scrutiny as any other security control, and should never default to the less-secure state if the flag store is unavailable.
 
+## References
+
+- Pete Hodgson, Feature Toggles (Feature Flags), https://martinfowler.com/articles/feature-toggles.html
+- LaunchDarkly, What are feature flags, https://launchdarkly.com/blog/what-are-feature-flags/
+
 ## Code Examples
 
 ### Swift
@@ -168,8 +173,3 @@ class FeatureToggle:
         # checked fresh on every call, with no deployment required to flip it.
         return new_path() if self.is_enabled(flag) else old_path()
 ```
-
-## References
-
-- Pete Hodgson, Feature Toggles (Feature Flags), https://martinfowler.com/articles/feature-toggles.html
-- LaunchDarkly, What are feature flags, https://launchdarkly.com/blog/what-are-feature-flags/

@@ -802,6 +802,54 @@ running on whichever processing thread happened to be promoted, with full
 access to the same handle set and synchronizer every other connection's
 handler shares.
 
+## 18. References
+
+Douglas C. Schmidt, Carlos O'Ryan, Irfan Pyarali, Michael Kircher, and Frank
+Buschmann, "Leader/Followers. A Design Pattern for Efficient Multi-threaded
+Event Demultiplexing and Dispatching," 7th Pattern Languages of Programs
+Conference, Allerton Park, Illinois, August 2000. Full paper.
+https://www.dre.vanderbilt.edu/~schmidt/PDF/lf.pdf, verified 2026-08-02.
+
+Douglas C. Schmidt's ACE patterns index page, naming this paper's exact
+title, author list, and conference venue.
+https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html, verified
+2026-08-02.
+
+Douglas C. Schmidt, Michael Stal, Hans Rohnert, and Frank Buschmann,
+Pattern-Oriented Software Architecture, Volume 2, Patterns for Concurrent and
+Networked Objects, John Wiley and Sons, 2000, ISBN 978-0-471-60695-6, cited
+inside the Leader/Followers paper as [POSA2] for the sibling patterns Reactor,
+Proactor, Half-Sync/Half-Async, Active Object, and the Manager and Monitor
+Object patterns referenced in dimension 13.
+
+Wikipedia's summary of the Pattern-Oriented Software Architecture book
+series, confirming Volume 2's authors, publication year, and ISBN.
+https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture,
+verified 2026-08-02.
+
+J.C. Hu, I. Pyarali, and D.C. Schmidt, "The Object-Oriented Design and
+Performance of JAWS. A High-performance Web Server Optimized for
+High-speed Networks," Parallel and Distributed Computing Practices Journal,
+special issue on Distributed Object-Oriented Systems, 1999, cited inside the
+Leader/Followers paper's Known Uses section as the JAWS Web server reference.
+
+D.C. Schmidt and C. Cleeland, "Applying Patterns to Develop Extensible ORB
+Middleware," IEEE Communications Magazine, Design Patterns special issue,
+April 1999, cited inside the Leader/Followers paper's Known Uses section as
+the TAO ORB reference.
+
+D.C. Schmidt, S. Mungee, S. Flores-Gaitan, and A. Gokhale, "Software
+Architectures for Reducing Priority Inversion and Non-determinism in
+Real-time Object Request Brokers," Journal of Real-time Systems, special
+issue on real-time distributed computing edited by A. Stoyen, 2000,
+cited inside the Leader/Followers paper's Known Uses section as the Chorus
+COOL ORB reference.
+
+Object Management Group, "CORBA Services, Transactions Service," TC Document
+formal/97-12-17, 1997, cited inside the Leader/Followers paper's Known Uses
+section as the source for CORBA Transaction Service implementations using
+bound Leader/Followers associations.
+
 ## Code examples
 
 Three languages, chosen to show three different points on the promotion
@@ -1245,51 +1293,3 @@ returns. The token here plays the same role the mutex and condition variable
 play in the Java and Python examples, a single-permit synchronizer that
 exactly one goroutine may hold at a time, handed off before that goroutine
 begins the work it detected rather than after.
-
-## 18. References
-
-Douglas C. Schmidt, Carlos O'Ryan, Irfan Pyarali, Michael Kircher, and Frank
-Buschmann, "Leader/Followers. A Design Pattern for Efficient Multi-threaded
-Event Demultiplexing and Dispatching," 7th Pattern Languages of Programs
-Conference, Allerton Park, Illinois, August 2000. Full paper.
-https://www.dre.vanderbilt.edu/~schmidt/PDF/lf.pdf, verified 2026-08-02.
-
-Douglas C. Schmidt's ACE patterns index page, naming this paper's exact
-title, author list, and conference venue.
-https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html, verified
-2026-08-02.
-
-Douglas C. Schmidt, Michael Stal, Hans Rohnert, and Frank Buschmann,
-Pattern-Oriented Software Architecture, Volume 2, Patterns for Concurrent and
-Networked Objects, John Wiley and Sons, 2000, ISBN 978-0-471-60695-6, cited
-inside the Leader/Followers paper as [POSA2] for the sibling patterns Reactor,
-Proactor, Half-Sync/Half-Async, Active Object, and the Manager and Monitor
-Object patterns referenced in dimension 13.
-
-Wikipedia's summary of the Pattern-Oriented Software Architecture book
-series, confirming Volume 2's authors, publication year, and ISBN.
-https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture,
-verified 2026-08-02.
-
-J.C. Hu, I. Pyarali, and D.C. Schmidt, "The Object-Oriented Design and
-Performance of JAWS. A High-performance Web Server Optimized for
-High-speed Networks," Parallel and Distributed Computing Practices Journal,
-special issue on Distributed Object-Oriented Systems, 1999, cited inside the
-Leader/Followers paper's Known Uses section as the JAWS Web server reference.
-
-D.C. Schmidt and C. Cleeland, "Applying Patterns to Develop Extensible ORB
-Middleware," IEEE Communications Magazine, Design Patterns special issue,
-April 1999, cited inside the Leader/Followers paper's Known Uses section as
-the TAO ORB reference.
-
-D.C. Schmidt, S. Mungee, S. Flores-Gaitan, and A. Gokhale, "Software
-Architectures for Reducing Priority Inversion and Non-determinism in
-Real-time Object Request Brokers," Journal of Real-time Systems, special
-issue on real-time distributed computing edited by A. Stoyen, 2000,
-cited inside the Leader/Followers paper's Known Uses section as the Chorus
-COOL ORB reference.
-
-Object Management Group, "CORBA Services, Transactions Service," TC Document
-formal/97-12-17, 1997, cited inside the Leader/Followers paper's Known Uses
-section as the source for CORBA Transaction Service implementations using
-bound Leader/Followers associations.

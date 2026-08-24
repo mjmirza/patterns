@@ -813,6 +813,56 @@ operational convenience, it is frequently the only record that lets an
 organization answer which specific system, and therefore whose data
 processing agreement or jurisdiction, actually handled a given record.
 
+## 18. References
+
+1. Craig Larman. *Applying UML and Patterns. An Introduction to
+   Object-Oriented Analysis and Design*. Prentice Hall, first edition 1997,
+   with the GRASP catalog, including Protected Variations, present in every
+   subsequent edition. Source of the GRASP pattern name and its formal
+   definition as one of the nine General Responsibility Assignment Software
+   Patterns.
+2. Alistair Cockburn. "Prioritizing Forces in Software Design". In *Pattern
+   Languages of Program Design*, volume 2, Addison-Wesley, 1996. Source of
+   the earliest description of the underlying idea, published before the
+   Protected Variations name existed and before Cockburn knew of the
+   Open-Closed Principle, per Larman's own account.
+3. Craig Larman. "Protected Variation. The Importance of Being Closed".
+   *IEEE Software*, volume 18, number 3, May/June 2001, pages 89 to 91.
+   https://martinfowler.com/ieeeSoftware/protectedVariation.pdf
+   Verified 2026-08-02. The primary source for this entry. Naming of the term
+   for general use, the relationship to OCP and information hiding, the full
+   list of mechanisms in dimension 8, the Color.red and pager-scripting
+   anecdotes in dimensions 4 and 11, and the "pick your battles" framing in
+   dimension 3.
+4. Bertrand Meyer. *Object-Oriented Software Construction*. IEEE Press
+   Prentice Hall, 1988. Source of the Open-Closed Principle statement quoted
+   in dimension 1, as reproduced and cited in Larman's 2001 article.
+5. David Parnas. "On the Criteria to Be Used in Decomposing Systems into
+   Modules". *Communications of the ACM*, volume 15, number 12, December
+   1972, pages 1053 to 1058. Source of information hiding, quoted directly in
+   dimension 1 via Larman's 2001 article's reproduction of Parnas's own
+   words.
+6. The Linux Kernel documentation project. "Overview of the Linux Virtual
+   File System". https://www.kernel.org/doc/html/latest/filesystems/vfs.html
+   Verified 2026-08-02. Source for the POSIX filesystem production use in
+   dimension 9.
+7. Oracle. *Java SE 21 API Specification*, `java.sql.DriverManager`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/DriverManager.html
+   Verified 2026-08-02. Source for the JDBC production use in dimension 9.
+8. Open Container Initiative. `runtime-spec` project README.
+   https://github.com/opencontainers/runtime-spec/blob/main/README.md
+   Verified 2026-08-02. Source for the container runtime specification
+   production use in dimension 9.
+9. World Wide Web Consortium and WHATWG. "DOM Standard".
+   https://dom.spec.whatwg.org/
+   Verified 2026-08-02. Source for the Document Object Model production use
+   in dimension 9.
+10. GRASP (object-oriented design). Wikipedia.
+    https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)
+    Verified 2026-08-02. Used only to cross-check the naming and grouping of
+    Protected Variations among the other eight GRASP patterns, not as a
+    source of explanation for the principle itself.
+
 ## Code examples
 
 Three languages chosen for genuinely different idiomatic shapes. TypeScript
@@ -993,53 +1043,3 @@ func main() {
 	fmt.Println(invoice.TotalWithTax())
 }
 ```
-
-## 18. References
-
-1. Craig Larman. *Applying UML and Patterns. An Introduction to
-   Object-Oriented Analysis and Design*. Prentice Hall, first edition 1997,
-   with the GRASP catalog, including Protected Variations, present in every
-   subsequent edition. Source of the GRASP pattern name and its formal
-   definition as one of the nine General Responsibility Assignment Software
-   Patterns.
-2. Alistair Cockburn. "Prioritizing Forces in Software Design". In *Pattern
-   Languages of Program Design*, volume 2, Addison-Wesley, 1996. Source of
-   the earliest description of the underlying idea, published before the
-   Protected Variations name existed and before Cockburn knew of the
-   Open-Closed Principle, per Larman's own account.
-3. Craig Larman. "Protected Variation. The Importance of Being Closed".
-   *IEEE Software*, volume 18, number 3, May/June 2001, pages 89 to 91.
-   https://martinfowler.com/ieeeSoftware/protectedVariation.pdf
-   Verified 2026-08-02. The primary source for this entry. Naming of the term
-   for general use, the relationship to OCP and information hiding, the full
-   list of mechanisms in dimension 8, the Color.red and pager-scripting
-   anecdotes in dimensions 4 and 11, and the "pick your battles" framing in
-   dimension 3.
-4. Bertrand Meyer. *Object-Oriented Software Construction*. IEEE Press
-   Prentice Hall, 1988. Source of the Open-Closed Principle statement quoted
-   in dimension 1, as reproduced and cited in Larman's 2001 article.
-5. David Parnas. "On the Criteria to Be Used in Decomposing Systems into
-   Modules". *Communications of the ACM*, volume 15, number 12, December
-   1972, pages 1053 to 1058. Source of information hiding, quoted directly in
-   dimension 1 via Larman's 2001 article's reproduction of Parnas's own
-   words.
-6. The Linux Kernel documentation project. "Overview of the Linux Virtual
-   File System". https://www.kernel.org/doc/html/latest/filesystems/vfs.html
-   Verified 2026-08-02. Source for the POSIX filesystem production use in
-   dimension 9.
-7. Oracle. *Java SE 21 API Specification*, `java.sql.DriverManager`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/DriverManager.html
-   Verified 2026-08-02. Source for the JDBC production use in dimension 9.
-8. Open Container Initiative. `runtime-spec` project README.
-   https://github.com/opencontainers/runtime-spec/blob/main/README.md
-   Verified 2026-08-02. Source for the container runtime specification
-   production use in dimension 9.
-9. World Wide Web Consortium and WHATWG. "DOM Standard".
-   https://dom.spec.whatwg.org/
-   Verified 2026-08-02. Source for the Document Object Model production use
-   in dimension 9.
-10. GRASP (object-oriented design). Wikipedia.
-    https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)
-    Verified 2026-08-02. Used only to cross-check the naming and grouping of
-    Protected Variations among the other eight GRASP patterns, not as a
-    source of explanation for the principle itself.

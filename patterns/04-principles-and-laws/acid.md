@@ -644,6 +644,40 @@ read access to every row that was ever committed within the retention window,
 independent of whatever row-level access controls the live application
 enforces.
 
+## 18. References
+
+- T. Haerder and A. Reuter, "Principles of Transaction-Oriented Database
+  Recovery," ACM Computing Surveys, volume 15, issue 4, 1983, pages 287 to
+  317, DOI 10.1145/289.291.
+  [https://dl.acm.org/doi/10.1145/289.291](https://dl.acm.org/doi/10.1145/289.291),
+  verified 2026-08-02.
+- J. Gray, "The Transaction Concept. Virtues and Limitations," Proceedings of
+  the Seventh International Conference on Very Large Data Bases (VLDB '81),
+  volume 7, pages 144 to 154, also issued as Tandem Technical Report TR 81.3.
+  [https://jimgray.azurewebsites.net/papers/thetransactionconcept.pdf](https://jimgray.azurewebsites.net/papers/thetransactionconcept.pdf),
+  verified 2026-08-02.
+- J. Gray and L. Lamport, "Consensus on Transaction Commit," ACM Transactions
+  on Database Systems, volume 31, issue 1, March 2006, pages 133 to 160, DOI
+  10.1145/1132863.1132867.
+  [https://dl.acm.org/doi/10.1145/1132863.1132867](https://dl.acm.org/doi/10.1145/1132863.1132867),
+  verified 2026-08-02.
+- J.C. Corbett et al., "Spanner. Google's Globally-Distributed Database,"
+  Proceedings of the 10th USENIX Symposium on Operating Systems Design and
+  Implementation (OSDI '12), 2012.
+  [https://research.google.com/archive/spanner-osdi2012.pdf](https://research.google.com/archive/spanner-osdi2012.pdf),
+  verified 2026-08-02.
+- PostgreSQL Global Development Group, "PostgreSQL 17 Documentation, Chapter
+  13, Concurrency Control."
+  [https://www.postgresql.org/docs/current/transaction-iso.html](https://www.postgresql.org/docs/current/transaction-iso.html),
+  verified 2026-08-02.
+- Oracle Corporation, "MySQL 8.4 Reference Manual, Section 17.7.2.1,
+  Transaction Isolation Levels."
+  [https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html),
+  verified 2026-08-02.
+- SQLite Consortium, "Atomic Commit In SQLite."
+  [https://www.sqlite.org/atomiccommit.html](https://www.sqlite.org/atomiccommit.html),
+  verified 2026-08-02.
+
 ## Code examples
 
 Three languages, three different properties made concrete. TypeScript for
@@ -904,37 +938,3 @@ of increments are silently lost, exactly the anomaly a database's row
 lock, or an MVCC engine's write-write conflict detection, exists to
 prevent; the mutex-protected version reproduces what that isolation
 guarantee delivers.
-
-## 18. References
-
-- T. Haerder and A. Reuter, "Principles of Transaction-Oriented Database
-  Recovery," ACM Computing Surveys, volume 15, issue 4, 1983, pages 287 to
-  317, DOI 10.1145/289.291.
-  [https://dl.acm.org/doi/10.1145/289.291](https://dl.acm.org/doi/10.1145/289.291),
-  verified 2026-08-02.
-- J. Gray, "The Transaction Concept. Virtues and Limitations," Proceedings of
-  the Seventh International Conference on Very Large Data Bases (VLDB '81),
-  volume 7, pages 144 to 154, also issued as Tandem Technical Report TR 81.3.
-  [https://jimgray.azurewebsites.net/papers/thetransactionconcept.pdf](https://jimgray.azurewebsites.net/papers/thetransactionconcept.pdf),
-  verified 2026-08-02.
-- J. Gray and L. Lamport, "Consensus on Transaction Commit," ACM Transactions
-  on Database Systems, volume 31, issue 1, March 2006, pages 133 to 160, DOI
-  10.1145/1132863.1132867.
-  [https://dl.acm.org/doi/10.1145/1132863.1132867](https://dl.acm.org/doi/10.1145/1132863.1132867),
-  verified 2026-08-02.
-- J.C. Corbett et al., "Spanner. Google's Globally-Distributed Database,"
-  Proceedings of the 10th USENIX Symposium on Operating Systems Design and
-  Implementation (OSDI '12), 2012.
-  [https://research.google.com/archive/spanner-osdi2012.pdf](https://research.google.com/archive/spanner-osdi2012.pdf),
-  verified 2026-08-02.
-- PostgreSQL Global Development Group, "PostgreSQL 17 Documentation, Chapter
-  13, Concurrency Control."
-  [https://www.postgresql.org/docs/current/transaction-iso.html](https://www.postgresql.org/docs/current/transaction-iso.html),
-  verified 2026-08-02.
-- Oracle Corporation, "MySQL 8.4 Reference Manual, Section 17.7.2.1,
-  Transaction Isolation Levels."
-  [https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html),
-  verified 2026-08-02.
-- SQLite Consortium, "Atomic Commit In SQLite."
-  [https://www.sqlite.org/atomiccommit.html](https://www.sqlite.org/atomiccommit.html),
-  verified 2026-08-02.

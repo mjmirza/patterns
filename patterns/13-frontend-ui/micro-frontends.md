@@ -454,6 +454,18 @@ the page that it would apply to its own code, and consider a stronger
 isolation mechanism when the micro frontends genuinely come from
 different, independently trusted teams or vendors.
 
+## 18. References
+
+1. Cam Jackson. "Micro Frontends".
+   https://martinfowler.com/articles/micro-frontends.html
+   Verified 2026-08-21. Source of the defining sentence and the
+   frontend-monolith framing quoted in dimensions 1 and 9.
+2. Thoughtworks Technology Radar. "Micro Frontends".
+   https://www.thoughtworks.com/en-us/radar/techniques/micro-frontends
+   Verified 2026-08-21. Source of the November 2016 origin, the
+   feature-team ownership description, and the Adopt ring status
+   quoted in dimensions 1 and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -604,15 +616,3 @@ composition.register(SearchMicroFrontend())
 
 composition.composePage(regions: ["checkout": "checkout-region", "search": "search-region"])
 ```
-
-## 18. References
-
-1. Cam Jackson. "Micro Frontends".
-   https://martinfowler.com/articles/micro-frontends.html
-   Verified 2026-08-21. Source of the defining sentence and the
-   frontend-monolith framing quoted in dimensions 1 and 9.
-2. Thoughtworks Technology Radar. "Micro Frontends".
-   https://www.thoughtworks.com/en-us/radar/techniques/micro-frontends
-   Verified 2026-08-21. Source of the November 2016 origin, the
-   feature-team ownership description, and the Adopt ring status
-   quoted in dimensions 1 and 9.

@@ -875,6 +875,52 @@ data-handling and endpoint-trust rules for that real endpoint apply
 exactly as they would in production code, and the double should never be
 assumed exempt from them merely because it lives inside a test file.
 
+## 18. References
+
+1. Gerard Meszaros. *xUnit Test Patterns. Refactoring Test Code*.
+   Addison-Wesley, 2007. The catalog source of the five-way test double
+   taxonomy, Dummy, Fake, Stub, Spy, Mock Object, cited here through Martin
+   Fowler's article and Wikipedia's corroborating attribution, since the
+   book's own companion site could not be reached to verify a page number
+   directly, so no page or chapter number is claimed.
+2. Martin Fowler. "Mocks Aren't Stubs". Published 2 January 2007.
+   https://martinfowler.com/articles/mocksArentStubs.html
+   Verified 2026-08-02. Primary source for the direct quotations of
+   Meszaros's Dummy, Fake, Stub, Spy, and Mock definitions, and for the
+   classical versus mockist testing distinction used in dimension 3.
+3. Wikipedia contributors. "Test double".
+   https://en.wikipedia.org/wiki/Test_double
+   Verified 2026-08-02. Corroborates the attribution of the five-way
+   taxonomy to Meszaros and the 2007 Addison-Wesley publication.
+4. Wikipedia contributors. "Method stub".
+   https://en.wikipedia.org/wiki/Method_stub
+   Verified 2026-08-02. Source for the older, broader software-engineering
+   meaning of stub distinguished from the testing-pattern meaning in
+   dimension 1.
+5. Sinon.JS project. "Stubs".
+   https://sinonjs.org/concepts/stubs
+   Verified 2026-08-02. Source for the Sinon.js production use in
+   dimension 9 and the stub definition quoted in dimension 1.
+6. Python Software Foundation. Python 3 documentation, `unittest.mock`.
+   https://docs.python.org/3/library/unittest.mock.html
+   Verified 2026-08-02. Source for the standard library production use in
+   dimension 9 and the `return_value` and `side_effect` configuration
+   shown in the code example.
+7. WireMock project. "Stubbing".
+   https://wiremock.org/docs/stubbing/
+   Verified 2026-08-02. Source for the HTTP-level stub server variant in
+   dimension 8 and the WireMock production use in dimension 9.
+8. The Go Authors. Go documentation, package `net/http/httptest`.
+   https://pkg.go.dev/net/http/httptest
+   Verified 2026-08-02. Source for the `httptest.NewServer` production use
+   in dimension 9 and the HTTP-level code example.
+9. OpenJS Foundation. Jest documentation, "Mock Functions".
+   https://jestjs.io/docs/mock-function-api
+   Verified 2026-08-02. Source for the Jest production use in dimension 9
+   and the naming-confusion point made in dimension 1, where the page
+   describes the mechanism as a mock function or spy and never uses the
+   word stub.
+
 ## Code examples
 
 Three languages where the pattern is idiomatic in genuinely different ways.
@@ -1104,49 +1150,3 @@ func main() {
 	fmt.Printf("approved=%v reference=%s\n", result.Approved, result.Reference)
 }
 ```
-
-## 18. References
-
-1. Gerard Meszaros. *xUnit Test Patterns. Refactoring Test Code*.
-   Addison-Wesley, 2007. The catalog source of the five-way test double
-   taxonomy, Dummy, Fake, Stub, Spy, Mock Object, cited here through Martin
-   Fowler's article and Wikipedia's corroborating attribution, since the
-   book's own companion site could not be reached to verify a page number
-   directly, so no page or chapter number is claimed.
-2. Martin Fowler. "Mocks Aren't Stubs". Published 2 January 2007.
-   https://martinfowler.com/articles/mocksArentStubs.html
-   Verified 2026-08-02. Primary source for the direct quotations of
-   Meszaros's Dummy, Fake, Stub, Spy, and Mock definitions, and for the
-   classical versus mockist testing distinction used in dimension 3.
-3. Wikipedia contributors. "Test double".
-   https://en.wikipedia.org/wiki/Test_double
-   Verified 2026-08-02. Corroborates the attribution of the five-way
-   taxonomy to Meszaros and the 2007 Addison-Wesley publication.
-4. Wikipedia contributors. "Method stub".
-   https://en.wikipedia.org/wiki/Method_stub
-   Verified 2026-08-02. Source for the older, broader software-engineering
-   meaning of stub distinguished from the testing-pattern meaning in
-   dimension 1.
-5. Sinon.JS project. "Stubs".
-   https://sinonjs.org/concepts/stubs
-   Verified 2026-08-02. Source for the Sinon.js production use in
-   dimension 9 and the stub definition quoted in dimension 1.
-6. Python Software Foundation. Python 3 documentation, `unittest.mock`.
-   https://docs.python.org/3/library/unittest.mock.html
-   Verified 2026-08-02. Source for the standard library production use in
-   dimension 9 and the `return_value` and `side_effect` configuration
-   shown in the code example.
-7. WireMock project. "Stubbing".
-   https://wiremock.org/docs/stubbing/
-   Verified 2026-08-02. Source for the HTTP-level stub server variant in
-   dimension 8 and the WireMock production use in dimension 9.
-8. The Go Authors. Go documentation, package `net/http/httptest`.
-   https://pkg.go.dev/net/http/httptest
-   Verified 2026-08-02. Source for the `httptest.NewServer` production use
-   in dimension 9 and the HTTP-level code example.
-9. OpenJS Foundation. Jest documentation, "Mock Functions".
-   https://jestjs.io/docs/mock-function-api
-   Verified 2026-08-02. Source for the Jest production use in dimension 9
-   and the naming-confusion point made in dimension 1, where the page
-   describes the mechanism as a mock function or spy and never uses the
-   word stub.

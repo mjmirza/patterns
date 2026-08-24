@@ -785,6 +785,23 @@ can be partially applied in many orders is hard to audit. Use a named request
 record or a pointful function at that boundary, then compose pure policy
 predicates inside the record if the team wants a functional style.
 
+## 18. References
+
+- Haskell.org, *A Gentle Introduction to Haskell, Version 98*, section 3,
+  Functions, `(.)`, sections, currying, and partial application,
+  https://www.haskell.org/tutorial/functions.html, verified 2026-08-02.
+- Ramda, *Ramda Documentation*, `pipe`, `compose`, `pluck`, `curry`, and related
+  function helpers, https://ramdajs.com/docs/, verified 2026-08-02.
+- lodash, *FP Guide*, lodash/fp data-last, auto-curried, capped-iteratee
+  methods, https://github.com/lodash/lodash/wiki/fp-guide, verified
+  2026-08-02.
+- Neil Mitchell, *HLint Manual*, eta reduction, hint customization, and
+  point-free hints guidance,
+  https://hackage-content.haskell.org/package/hlint-1.7/src/hlint.htm,
+  verified 2026-08-02.
+- Neil Mitchell, *HLint. Haskell source code suggestions*, README and usage
+  guidance, https://github.com/ndmitchell/hlint, verified 2026-08-02.
+
 ## Code examples
 
 TypeScript. This example uses data-last helpers so the exported transformation
@@ -873,20 +890,3 @@ func main() {
 	fmt.Println(slug("  Ready  "))
 }
 ```
-
-## 18. References
-
-- Haskell.org, *A Gentle Introduction to Haskell, Version 98*, section 3,
-  Functions, `(.)`, sections, currying, and partial application,
-  https://www.haskell.org/tutorial/functions.html, verified 2026-08-02.
-- Ramda, *Ramda Documentation*, `pipe`, `compose`, `pluck`, `curry`, and related
-  function helpers, https://ramdajs.com/docs/, verified 2026-08-02.
-- lodash, *FP Guide*, lodash/fp data-last, auto-curried, capped-iteratee
-  methods, https://github.com/lodash/lodash/wiki/fp-guide, verified
-  2026-08-02.
-- Neil Mitchell, *HLint Manual*, eta reduction, hint customization, and
-  point-free hints guidance,
-  https://hackage-content.haskell.org/package/hlint-1.7/src/hlint.htm,
-  verified 2026-08-02.
-- Neil Mitchell, *HLint. Haskell source code suggestions*, README and usage
-  guidance, https://github.com/ndmitchell/hlint, verified 2026-08-02.

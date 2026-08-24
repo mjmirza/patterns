@@ -785,6 +785,44 @@ what personal data an entity holds or exposes, and any privacy control, field
 level access rules, redaction on serialization, needs to be layered on
 independently of whether the entity is anemic or rich.
 
+## 18. References
+
+1. Martin Fowler. "AnemicDomainModel". Bliki, 2003.
+   https://martinfowler.com/bliki/AnemicDomainModel.html
+   Verified 2026-08-02. Source of the pattern name, the "bags of getters and
+   setters" quote, the "fundamental horror" quote, the "incur all of the
+   costs" quote, and the direct reference naming J2EE Entity Beans.
+2. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Part 2, chapter 5,
+   "A Model Expressed in Software." Source for the healthy alternative this
+   anti-pattern is defined against, and the naming conversation Fowler credits
+   in his own entry.
+3. Vaughn Vernon. *Implementing Domain-Driven Design*. Addison-Wesley, 2013.
+   ISBN 978-0-321-83457-7. Chapter 5, "Entities," and chapter 7, "Services."
+   Source for the discussion of Entities as "merely containers with getter and
+   setter methods" and the link between Domain Service overuse and the anemic
+   result.
+4. Petri Kainulainen. "The Biggest Flaw of Spring Web Applications."
+   https://www.petrikainulainen.net/software-development/design/the-biggest-flaw-of-spring-web-applications/
+   Verified 2026-08-02. Source for the claim that Spring's own tutorials teach
+   domain objects as POJOs with only getters and setters.
+5. DZone. "Anemic Domain Model in Typical Spring Projects (Part 1)."
+   https://dzone.com/articles/anemic-domain-model-in-typical-spring-projects-1
+   Verified 2026-08-02. Source for the documented recurrence of the pattern
+   across surveyed Spring codebases.
+6. Wikipedia contributors. "Anemic domain model."
+   https://en.wikipedia.org/wiki/Anemic_domain_model
+   Verified 2026-08-02. Used only to confirm the general definition and the
+   attribution to Fowler, not as a primary source of explanation.
+7. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
+   edition. Addison-Wesley, 2019. ISBN 978-0134757599. Chapter 11,
+   "Encapsulate Field," and the surrounding Move Function catalog entries.
+   Source for the refactoring vocabulary used in dimension 14.
+8. This repository. `patterns/18-anti-patterns/entity-service.md`. Sibling
+   entry describing the same failure at the granularity of a whole network
+   service, and the source of the Anemic Microservice alias cross-referenced
+   in dimension 1.
+
 ## Code examples
 
 Three languages, each showing the anemic shape first and the fix it earns
@@ -1024,41 +1062,3 @@ func main() {
 ```
 
 All three examples were run locally. `npx tsc --strict --target es2020 --module commonjs anemic.ts && node anemic.js` compiled and ran the TypeScript sample with no errors, printing the expected bypass and refusal lines. `python3 anemic.py` and `python3 rich.py` ran the Python sample directly with no errors. `go run main.go` compiled and ran the Go sample with no errors, printing the expected bypass and refusal lines. Java was not compiled for this entry, since the TypeScript sample already covers the same static-typing, class-based shape the Java version would show, and the pattern's contrast is not tied to one language.
-
-## 18. References
-
-1. Martin Fowler. "AnemicDomainModel". Bliki, 2003.
-   https://martinfowler.com/bliki/AnemicDomainModel.html
-   Verified 2026-08-02. Source of the pattern name, the "bags of getters and
-   setters" quote, the "fundamental horror" quote, the "incur all of the
-   costs" quote, and the direct reference naming J2EE Entity Beans.
-2. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Part 2, chapter 5,
-   "A Model Expressed in Software." Source for the healthy alternative this
-   anti-pattern is defined against, and the naming conversation Fowler credits
-   in his own entry.
-3. Vaughn Vernon. *Implementing Domain-Driven Design*. Addison-Wesley, 2013.
-   ISBN 978-0-321-83457-7. Chapter 5, "Entities," and chapter 7, "Services."
-   Source for the discussion of Entities as "merely containers with getter and
-   setter methods" and the link between Domain Service overuse and the anemic
-   result.
-4. Petri Kainulainen. "The Biggest Flaw of Spring Web Applications."
-   https://www.petrikainulainen.net/software-development/design/the-biggest-flaw-of-spring-web-applications/
-   Verified 2026-08-02. Source for the claim that Spring's own tutorials teach
-   domain objects as POJOs with only getters and setters.
-5. DZone. "Anemic Domain Model in Typical Spring Projects (Part 1)."
-   https://dzone.com/articles/anemic-domain-model-in-typical-spring-projects-1
-   Verified 2026-08-02. Source for the documented recurrence of the pattern
-   across surveyed Spring codebases.
-6. Wikipedia contributors. "Anemic domain model."
-   https://en.wikipedia.org/wiki/Anemic_domain_model
-   Verified 2026-08-02. Used only to confirm the general definition and the
-   attribution to Fowler, not as a primary source of explanation.
-7. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
-   edition. Addison-Wesley, 2019. ISBN 978-0134757599. Chapter 11,
-   "Encapsulate Field," and the surrounding Move Function catalog entries.
-   Source for the refactoring vocabulary used in dimension 14.
-8. This repository. `patterns/18-anti-patterns/entity-service.md`. Sibling
-   entry describing the same failure at the granularity of a whole network
-   service, and the source of the Anemic Microservice alias cross-referenced
-   in dimension 1.

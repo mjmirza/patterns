@@ -710,6 +710,35 @@ loading the entire graph as the easiest way to make a query count metric
 look better, which would quietly erase the minimization benefit the pattern
 was providing.
 
+## 18. References
+
+1. Martin Fowler, with David Rice and Matthew Foemmel, *Patterns of
+   Enterprise Application Architecture*, Addison-Wesley, 2002, chapter 18,
+   Object-Relational Behavioral Patterns, Lazy Load, page 200 (chapter
+   opening, book pagination), Identity Map, page 195.
+2. Martin Fowler, "Lazy Load", https://martinfowler.com/eaaCatalog/lazyLoad.html,
+   verified 2026-08-02.
+3. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, *Design
+   Patterns. Elements of Reusable Object-Oriented Software*, Addison-Wesley,
+   1994, chapter 4, Structural Patterns, Proxy, page 208.
+4. Joshua Bloch, *Effective Java*, 3rd edition, Addison-Wesley, 2018, Item
+   83, "Use lazy initialization judiciously", pages 319 to 323.
+5. Hibernate ORM team, "Hibernate ORM User Guide, Fetching",
+   https://docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html,
+   verified 2026-08-02.
+6. Ruby on Rails team, "Active Record Query Interface, Eager Loading
+   Associations", https://guides.rubyonrails.org/active_record_querying.html,
+   verified 2026-08-02.
+7. Doctrine Project, "Doctrine ORM, Advanced Configuration",
+   https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/advanced-configuration.html,
+   verified 2026-08-02.
+8. Microsoft, "Lazy Loading of Related Data, EF Core",
+   https://learn.microsoft.com/en-us/ef/core/querying/related-data/lazy,
+   verified 2026-08-02.
+9. Microsoft, ".NET, System.Lazy Class",
+   https://learn.microsoft.com/en-us/dotnet/api/system.lazy-1,
+   verified 2026-08-02.
+
 ## Code examples
 
 Java, a self contained Ghost variant, using a state field on the entity
@@ -919,32 +948,3 @@ main().catch((error) => {
   process.exitCode = 1;
 });
 ```
-
-## 18. References
-
-1. Martin Fowler, with David Rice and Matthew Foemmel, *Patterns of
-   Enterprise Application Architecture*, Addison-Wesley, 2002, chapter 18,
-   Object-Relational Behavioral Patterns, Lazy Load, page 200 (chapter
-   opening, book pagination), Identity Map, page 195.
-2. Martin Fowler, "Lazy Load", https://martinfowler.com/eaaCatalog/lazyLoad.html,
-   verified 2026-08-02.
-3. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, *Design
-   Patterns. Elements of Reusable Object-Oriented Software*, Addison-Wesley,
-   1994, chapter 4, Structural Patterns, Proxy, page 208.
-4. Joshua Bloch, *Effective Java*, 3rd edition, Addison-Wesley, 2018, Item
-   83, "Use lazy initialization judiciously", pages 319 to 323.
-5. Hibernate ORM team, "Hibernate ORM User Guide, Fetching",
-   https://docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html,
-   verified 2026-08-02.
-6. Ruby on Rails team, "Active Record Query Interface, Eager Loading
-   Associations", https://guides.rubyonrails.org/active_record_querying.html,
-   verified 2026-08-02.
-7. Doctrine Project, "Doctrine ORM, Advanced Configuration",
-   https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/advanced-configuration.html,
-   verified 2026-08-02.
-8. Microsoft, "Lazy Loading of Related Data, EF Core",
-   https://learn.microsoft.com/en-us/ef/core/querying/related-data/lazy,
-   verified 2026-08-02.
-9. Microsoft, ".NET, System.Lazy Class",
-   https://learn.microsoft.com/en-us/dotnet/api/system.lazy-1,
-   verified 2026-08-02.

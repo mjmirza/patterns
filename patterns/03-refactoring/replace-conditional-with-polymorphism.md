@@ -799,6 +799,39 @@ For deserialization, never instantiate arbitrary classes named by input. Use an
 allowlist mapping from stable codes to constructors. This keeps the selector as
 a controlled boundary rather than an object creation gadget.
 
+## 18. References
+
+- Martin Fowler. *Refactoring. Improving the Design of Existing Code*. First
+  edition. Addison-Wesley, 1999. Chapter "Simplifying Conditional Expressions."
+- Martin Fowler, with Kent Beck. *Refactoring. Improving the Design of Existing
+  Code*. Second edition. Addison-Wesley, 2018. Catalog entry "Replace
+  Conditional with Polymorphism."
+- Martin Fowler. "Replace Conditional with Polymorphism." Refactoring catalog.
+  https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html.
+  Verified 2026-08-02.
+- Martin Fowler. "Changes for the 2nd Edition of Refactoring."
+  https://martinfowler.com/articles/refactoring-2nd-changes.html. Verified
+  2026-08-02.
+- Martin Fowler. "Refactoring. Improving the Design of Existing Code."
+  https://www.martinfowler.com/books/refactoring.html. Verified 2026-08-02.
+- Martin Fowler. "Introduce Special Case." Refactoring catalog.
+  https://refactoring.com/catalog/introduceSpecialCase.html. Verified
+  2026-08-02.
+- Spring Framework API. `org.springframework.web.servlet.HandlerAdapter`.
+  https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/HandlerAdapter.html.
+  Verified 2026-08-02.
+- Spring Framework Reference. "Special Bean Types."
+  https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-servlet/special-bean-types.html.
+  Verified 2026-08-02.
+- Django documentation. "Migration Operations."
+  https://docs.djangoproject.com/en/6.1/ref/migration-operations/. Verified
+  2026-08-02.
+- Django source. `django/db/migrations/operations/base.py`.
+  https://github.com/django/django/blob/main/django/db/migrations/operations/base.py.
+  Verified 2026-08-02.
+- Python documentation. "`pathlib`. Object-oriented filesystem paths."
+  https://docs.python.org/3.14/library/pathlib.html. Verified 2026-08-02.
+
 ## Code examples
 
 The examples are intentionally small. Go shows the interface form without
@@ -941,36 +974,3 @@ const loyalty: DiscountFunction = (subtotalCents) =>
 
 console.log(5000 - loyalty(5000));
 ```
-
-## 18. References
-
-- Martin Fowler. *Refactoring. Improving the Design of Existing Code*. First
-  edition. Addison-Wesley, 1999. Chapter "Simplifying Conditional Expressions."
-- Martin Fowler, with Kent Beck. *Refactoring. Improving the Design of Existing
-  Code*. Second edition. Addison-Wesley, 2018. Catalog entry "Replace
-  Conditional with Polymorphism."
-- Martin Fowler. "Replace Conditional with Polymorphism." Refactoring catalog.
-  https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html.
-  Verified 2026-08-02.
-- Martin Fowler. "Changes for the 2nd Edition of Refactoring."
-  https://martinfowler.com/articles/refactoring-2nd-changes.html. Verified
-  2026-08-02.
-- Martin Fowler. "Refactoring. Improving the Design of Existing Code."
-  https://www.martinfowler.com/books/refactoring.html. Verified 2026-08-02.
-- Martin Fowler. "Introduce Special Case." Refactoring catalog.
-  https://refactoring.com/catalog/introduceSpecialCase.html. Verified
-  2026-08-02.
-- Spring Framework API. `org.springframework.web.servlet.HandlerAdapter`.
-  https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/HandlerAdapter.html.
-  Verified 2026-08-02.
-- Spring Framework Reference. "Special Bean Types."
-  https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-servlet/special-bean-types.html.
-  Verified 2026-08-02.
-- Django documentation. "Migration Operations."
-  https://docs.djangoproject.com/en/6.1/ref/migration-operations/. Verified
-  2026-08-02.
-- Django source. `django/db/migrations/operations/base.py`.
-  https://github.com/django/django/blob/main/django/db/migrations/operations/base.py.
-  Verified 2026-08-02.
-- Python documentation. "`pathlib`. Object-oriented filesystem paths."
-  https://docs.python.org/3.14/library/pathlib.html. Verified 2026-08-02.

@@ -769,6 +769,35 @@ state dump would be, MVI does not change that obligation, it only makes it
 easier to accidentally capture a complete, structured snapshot in one place,
 which is a reason to be more deliberate about what that place logs, not less.
 
+## 18. References
+
+1. Andre Staltz. "Unidirectional User Interface Architectures".
+   https://staltz.com/unidirectional-user-interface-architectures.html
+   Verified 2026-08-02. Source of the Model-View-Intent name, the intent
+   function definition, "a function from Observable of user events to
+   Observable of actions", and the comparison against Flux and MVC in
+   dimension 1.
+2. Google, Android Developers. "UI layer".
+   https://developer.android.com/topic/architecture/ui-layer
+   Verified 2026-08-02. Source of the unidirectional data flow definition,
+   "the pattern where the state flows down and the events flow up", and the
+   single-source-of-truth statement quoted in dimensions 1 and 9.
+3. Spotify AB. Mobius project documentation.
+   https://github.com/spotify/mobius
+   Verified 2026-08-02. Source of the Model, Event, Effect, Update function,
+   and Effect Handler terminology, and the stated production use inside
+   Spotify's Android applications, in dimension 9.
+4. Arkadii Ivanov. MVIKotlin project documentation.
+   https://github.com/arkivanov/MVIKotlin
+   Verified 2026-08-02. Source of the Store and single-source-of-truth
+   terminology and the time-travel debugging feature cited in dimensions 9
+   and 15.
+5. Mikolaj Leszczynski and Appmattus Limited. Orbit MVI documentation.
+   https://orbit-mvi.org/
+   Verified 2026-08-02. Source of the State, SideEffect, and reduce
+   terminology, and the stated Android, iOS, and desktop production targets,
+   cited in dimensions 8 and 9.
+
 ## Code examples
 
 Three platforms where the pattern is genuinely idiomatic in different ways.
@@ -969,32 +998,3 @@ fn main() {
     assert_eq!(model.items, vec!["a", "b"]);
 }
 ```
-
-## 18. References
-
-1. Andre Staltz. "Unidirectional User Interface Architectures".
-   https://staltz.com/unidirectional-user-interface-architectures.html
-   Verified 2026-08-02. Source of the Model-View-Intent name, the intent
-   function definition, "a function from Observable of user events to
-   Observable of actions", and the comparison against Flux and MVC in
-   dimension 1.
-2. Google, Android Developers. "UI layer".
-   https://developer.android.com/topic/architecture/ui-layer
-   Verified 2026-08-02. Source of the unidirectional data flow definition,
-   "the pattern where the state flows down and the events flow up", and the
-   single-source-of-truth statement quoted in dimensions 1 and 9.
-3. Spotify AB. Mobius project documentation.
-   https://github.com/spotify/mobius
-   Verified 2026-08-02. Source of the Model, Event, Effect, Update function,
-   and Effect Handler terminology, and the stated production use inside
-   Spotify's Android applications, in dimension 9.
-4. Arkadii Ivanov. MVIKotlin project documentation.
-   https://github.com/arkivanov/MVIKotlin
-   Verified 2026-08-02. Source of the Store and single-source-of-truth
-   terminology and the time-travel debugging feature cited in dimensions 9
-   and 15.
-5. Mikolaj Leszczynski and Appmattus Limited. Orbit MVI documentation.
-   https://orbit-mvi.org/
-   Verified 2026-08-02. Source of the State, SideEffect, and reduce
-   terminology, and the stated Android, iOS, and desktop production targets,
-   cited in dimensions 8 and 9.

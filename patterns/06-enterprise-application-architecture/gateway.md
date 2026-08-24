@@ -698,6 +698,38 @@ means a policy change (rotating a credential, tightening a TLS requirement)
 is a one-file change rather than a search across every call site that used to
 exist before the Gateway was introduced.
 
+## 18. References
+
+- Martin Fowler, *Patterns of Enterprise Application Architecture*,
+  Addison-Wesley, 2002, "Base Patterns" chapter, Gateway.
+  [martinfowler.com/eaaCatalog/gateway.html](https://martinfowler.com/eaaCatalog/gateway.html),
+  verified 2026-08-02.
+- Martin Fowler, "Patterns of Enterprise Application Architecture" catalog
+  index, Base Patterns section.
+  [martinfowler.com/eaaCatalog/](https://martinfowler.com/eaaCatalog/),
+  verified 2026-08-02.
+- Martin Fowler, "GatewayPattern," martinfowler.com, 2021, standalone article
+  expanding on the Gateway versus Adapter, Facade, and Mediator distinctions,
+  and on testing strategy.
+  [martinfowler.com/articles/gateway-pattern.html](https://martinfowler.com/articles/gateway-pattern.html),
+  verified 2026-08-02.
+- Martin Fowler, *Patterns of Enterprise Application Architecture*,
+  Addison-Wesley, 2002, "Base Patterns" chapter, Service Stub.
+  [martinfowler.com/eaaCatalog/serviceStub.html](https://martinfowler.com/eaaCatalog/serviceStub.html),
+  verified 2026-08-02.
+- AWS SDK for Java 2.x Developer Guide, client architecture description for
+  service client classes such as `S3Client`.
+  [docs.aws.amazon.com/sdk-for-java/latest/developer-guide/](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/),
+  verified 2026-08-02.
+- Stripe, `stripe-java` repository, README usage example showing resource
+  class calls translating into signed HTTPS requests against the Stripe API.
+  [github.com/stripe/stripe-java](https://github.com/stripe/stripe-java),
+  verified 2026-08-02.
+- OpenFeign, `feign` repository, README description and code example of
+  interface-to-HTTP-client binding.
+  [github.com/OpenFeign/feign](https://github.com/OpenFeign/feign),
+  verified 2026-08-02.
+
 ## Code examples
 
 Three languages, three different resources, so the pattern is seen wrapping a
@@ -982,35 +1014,3 @@ order ord_2: not found
 order ord_unknown: gateway down (shipping gateway unavailable: dial tcp: connection refused)
 order ord_1: in_transit
 ```
-
-## 18. References
-
-- Martin Fowler, *Patterns of Enterprise Application Architecture*,
-  Addison-Wesley, 2002, "Base Patterns" chapter, Gateway.
-  [martinfowler.com/eaaCatalog/gateway.html](https://martinfowler.com/eaaCatalog/gateway.html),
-  verified 2026-08-02.
-- Martin Fowler, "Patterns of Enterprise Application Architecture" catalog
-  index, Base Patterns section.
-  [martinfowler.com/eaaCatalog/](https://martinfowler.com/eaaCatalog/),
-  verified 2026-08-02.
-- Martin Fowler, "GatewayPattern," martinfowler.com, 2021, standalone article
-  expanding on the Gateway versus Adapter, Facade, and Mediator distinctions,
-  and on testing strategy.
-  [martinfowler.com/articles/gateway-pattern.html](https://martinfowler.com/articles/gateway-pattern.html),
-  verified 2026-08-02.
-- Martin Fowler, *Patterns of Enterprise Application Architecture*,
-  Addison-Wesley, 2002, "Base Patterns" chapter, Service Stub.
-  [martinfowler.com/eaaCatalog/serviceStub.html](https://martinfowler.com/eaaCatalog/serviceStub.html),
-  verified 2026-08-02.
-- AWS SDK for Java 2.x Developer Guide, client architecture description for
-  service client classes such as `S3Client`.
-  [docs.aws.amazon.com/sdk-for-java/latest/developer-guide/](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/),
-  verified 2026-08-02.
-- Stripe, `stripe-java` repository, README usage example showing resource
-  class calls translating into signed HTTPS requests against the Stripe API.
-  [github.com/stripe/stripe-java](https://github.com/stripe/stripe-java),
-  verified 2026-08-02.
-- OpenFeign, `feign` repository, README description and code example of
-  interface-to-HTTP-client binding.
-  [github.com/OpenFeign/feign](https://github.com/OpenFeign/feign),
-  verified 2026-08-02.

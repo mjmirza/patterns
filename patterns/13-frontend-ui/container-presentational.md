@@ -465,6 +465,18 @@ the same output-encoding and sanitisation discipline it would need
 without the split, since the pattern only reorganises where the
 rendering happens, not what is safe to render.
 
+## 18. References
+
+1. Dan Abramov. "Presentational and Container Components". 23 March
+   2015, updated 2019.
+   https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
+   Verified 2026-08-21. Source of the first_described lineage claim
+   and the 2019 retraction quoted in dimension 1.
+2. Patterns.dev. Container/Presentational Pattern.
+   https://www.patterns.dev/react/presentational-container-pattern/
+   Verified 2026-08-21. Source for the production reference use in
+   dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely idiomatic
@@ -616,15 +628,3 @@ struct UserListContainer: View {
     }
 }
 ```
-
-## 18. References
-
-1. Dan Abramov. "Presentational and Container Components". 23 March
-   2015, updated 2019.
-   https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
-   Verified 2026-08-21. Source of the first_described lineage claim
-   and the 2019 retraction quoted in dimension 1.
-2. Patterns.dev. Container/Presentational Pattern.
-   https://www.patterns.dev/react/presentational-container-pattern/
-   Verified 2026-08-21. Source for the production reference use in
-   dimension 9.

@@ -691,6 +691,26 @@ fix, such as adding a required consent check or a redaction rule, is applied
 to one copy and missed in a sibling copy, with the missed copy then
 processing personal data in a way the fixed copy no longer does.
 
+## 18. References
+
+- Brown, William J., Raphael C. Malveau, Hays W. McCormick, and Thomas J.
+  Mowbray. *AntiPatterns. Refactoring Software, Architectures, and Projects
+  in Crisis.* John Wiley and Sons, 1998, chapter 4, Cut-and-Paste
+  Programming.
+- Fowler, Martin. *Refactoring. Improving the Design of Existing Code.* 2nd
+  edition, Addison-Wesley, 2018, chapter 3, Bad Smells in Code, Duplicated
+  Code.
+- Wikipedia. "Copy-and-paste programming."
+  https://en.wikipedia.org/wiki/Copy-and-paste_programming, verified
+  2026-08-02.
+- Fowler, Martin. "CodeSmell."
+  https://martinfowler.com/bliki/CodeSmell.html, verified 2026-08-02.
+- PMD project documentation. "PMD CPD."
+  https://pmd.github.io/pmd/pmd_userdocs_cpd.html, verified 2026-08-02.
+- SonarSource. "SonarQube Server, Metric Definitions."
+  https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition/,
+  verified 2026-08-02.
+
 ## Code examples
 
 Three languages, each showing the same shape. duplicated function-body
@@ -906,23 +926,3 @@ entry's code samples because the same three-language demonstration already
 carries the pattern completely, not because the anti-pattern is language
 specific. copy-paste duplication and its Extract Method fix apply equally in
 every language this catalog covers.
-
-## 18. References
-
-- Brown, William J., Raphael C. Malveau, Hays W. McCormick, and Thomas J.
-  Mowbray. *AntiPatterns. Refactoring Software, Architectures, and Projects
-  in Crisis.* John Wiley and Sons, 1998, chapter 4, Cut-and-Paste
-  Programming.
-- Fowler, Martin. *Refactoring. Improving the Design of Existing Code.* 2nd
-  edition, Addison-Wesley, 2018, chapter 3, Bad Smells in Code, Duplicated
-  Code.
-- Wikipedia. "Copy-and-paste programming."
-  https://en.wikipedia.org/wiki/Copy-and-paste_programming, verified
-  2026-08-02.
-- Fowler, Martin. "CodeSmell."
-  https://martinfowler.com/bliki/CodeSmell.html, verified 2026-08-02.
-- PMD project documentation. "PMD CPD."
-  https://pmd.github.io/pmd/pmd_userdocs_cpd.html, verified 2026-08-02.
-- SonarSource. "SonarQube Server, Metric Definitions."
-  https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition/,
-  verified 2026-08-02.

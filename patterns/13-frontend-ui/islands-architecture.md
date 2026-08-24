@@ -438,6 +438,17 @@ server island rather than baked into a shared static shell, where it
 could be served to the wrong user or cached and reused across
 requests.
 
+## 18. References
+
+1. Jason Miller. "Islands Architecture".
+   https://jasonformat.com/islands-architecture/
+   Verified 2026-08-21. Source of the defining sentence and the 2019
+   Etsy origin credit quoted in dimensions 1 and 9.
+2. Astro documentation. "Astro Islands".
+   https://docs.astro.build/en/concepts/islands/
+   Verified 2026-08-21. Source of the client-directive implementation
+   description quoted in dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -596,14 +607,3 @@ page.addIsland(Island(id: "comment-form", html: "<form>Comment</form>", hydratio
 print(page.renderShell(staticContent: "<article>Static article content</article>"))
 print("islands to hydrate immediately: " + String(page.islands(for: .load).count))
 ```
-
-## 18. References
-
-1. Jason Miller. "Islands Architecture".
-   https://jasonformat.com/islands-architecture/
-   Verified 2026-08-21. Source of the defining sentence and the 2019
-   Etsy origin credit quoted in dimensions 1 and 9.
-2. Astro documentation. "Astro Islands".
-   https://docs.astro.build/en/concepts/islands/
-   Verified 2026-08-21. Source of the client-directive implementation
-   description quoted in dimension 9.

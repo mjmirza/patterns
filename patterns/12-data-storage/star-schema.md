@@ -789,6 +789,33 @@ the warehouse (unusually large result sets, unusual export patterns) is a
 meaningful control specifically because the schema's own usability goal works
 against containment.
 
+## 18. References
+
+1. Ralph Kimball, Margy Ross. *The Data Warehouse Toolkit. The Definitive
+   Guide to Dimensional Modeling*, 3rd edition. Wiley, 2013. ISBN
+   978-1-118-53080-1. Chapters on fact table design and dimension table
+   design. Source for star schema, fact table grain, surrogate keys, slowly
+   changing dimensions, and the Kimball Bus Architecture referenced throughout
+   this entry.
+2. Kimball Group. "Snowflaked Dimension".
+   https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/
+   Verified 2026-08-02. Source for the recommendation against snowflaking by
+   default, cited in dimensions 1, 8, and 11.
+3. Microsoft. "Understand star schema and the importance for Power BI".
+   https://learn.microsoft.com/en-us/power-bi/guidance/star-schema
+   Verified 2026-08-02. Source for the dimension and fact table definitions,
+   the Adventure Works production use, slowly changing dimensions, snowflake
+   dimensions, role-playing dimensions, junk dimensions, degenerate dimensions,
+   and factless fact tables, cited in dimensions 1, 5, 8, 9, and 11.
+4. dbt Labs. "Building a Kimball dimensional model with dbt".
+   https://docs.getdbt.com/blog/kimball-dimensional-model
+   Verified 2026-08-02. Source for the dbt-based production implementation
+   pattern cited in dimension 9.
+5. Oracle. "Star and Snowflake Schemas".
+   https://www.oracle.com/webfolder/technetwork/tutorials/obe/db/10g/r2/owb/owb10gr2_gs/owb/lesson3/starandsnowflake.htm
+   Verified 2026-08-02. Source for the historical relational-warehouse
+   production use cited in dimension 9.
+
 ## Code examples
 
 Three languages plus SQL, because a star schema is at its root a relational
@@ -968,30 +995,3 @@ const facts: FactSalesRow[] = [
 
 console.log(aggregateByCategory(facts, products));
 ```
-
-## 18. References
-
-1. Ralph Kimball, Margy Ross. *The Data Warehouse Toolkit. The Definitive
-   Guide to Dimensional Modeling*, 3rd edition. Wiley, 2013. ISBN
-   978-1-118-53080-1. Chapters on fact table design and dimension table
-   design. Source for star schema, fact table grain, surrogate keys, slowly
-   changing dimensions, and the Kimball Bus Architecture referenced throughout
-   this entry.
-2. Kimball Group. "Snowflaked Dimension".
-   https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/
-   Verified 2026-08-02. Source for the recommendation against snowflaking by
-   default, cited in dimensions 1, 8, and 11.
-3. Microsoft. "Understand star schema and the importance for Power BI".
-   https://learn.microsoft.com/en-us/power-bi/guidance/star-schema
-   Verified 2026-08-02. Source for the dimension and fact table definitions,
-   the Adventure Works production use, slowly changing dimensions, snowflake
-   dimensions, role-playing dimensions, junk dimensions, degenerate dimensions,
-   and factless fact tables, cited in dimensions 1, 5, 8, 9, and 11.
-4. dbt Labs. "Building a Kimball dimensional model with dbt".
-   https://docs.getdbt.com/blog/kimball-dimensional-model
-   Verified 2026-08-02. Source for the dbt-based production implementation
-   pattern cited in dimension 9.
-5. Oracle. "Star and Snowflake Schemas".
-   https://www.oracle.com/webfolder/technetwork/tutorials/obe/db/10g/r2/owb/owb10gr2_gs/owb/lesson3/starandsnowflake.htm
-   Verified 2026-08-02. Source for the historical relational-warehouse
-   production use cited in dimension 9.

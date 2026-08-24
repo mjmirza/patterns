@@ -723,6 +723,32 @@ fields and the decision outcome, not the full message body, and apply the
 same retention and access controls to router audit logs that apply to the
 data the messages themselves carry.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. Chapter 4, Messaging Systems, Message Routing section.
+   Source of the pattern name, intent, icon, and the exclusive-destination
+   framing distinguished from Recipient List.
+2. Gregor Hohpe, Bobby Woolf. "Content-Based Router."
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/ContentBasedRouter.html
+   Verified 2026-08-02. The book's own online reference page, used for the
+   verbatim problem and solution statement quoted in dimension 1 and 2.
+3. Apache Software Foundation. "Choice EIP." Apache Camel component
+   reference. https://camel.apache.org/components/latest/eips/choice-eip.html
+   Verified 2026-08-02. Source for Camel's implementation of Content-Based
+   Router as the Choice EIP and its first-match-wins evaluation order.
+4. VMware, Spring Team. "Router Implementations." Spring Integration
+   Reference Manual.
+   https://docs.spring.io/spring-integration/reference/router/implementations.html
+   Verified 2026-08-02. Source for `PayloadTypeRouter`, `HeaderValueRouter`,
+   `RecipientListRouter`, and the SpEL-based `@Router` annotation.
+5. Amazon Web Services. "Creating Amazon EventBridge event patterns." AWS
+   EventBridge User Guide.
+   https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html
+   Verified 2026-08-02. Source for the EventBridge event-pattern production
+   use and the pattern-matching implementation variant.
+
 ## Code examples
 
 Three languages chosen for genuinely different idiomatic shapes. TypeScript
@@ -888,29 +914,3 @@ if __name__ == "__main__":
     unmatched = OrderMessage(order_id="o-2", order_type="unknown", amount_cents=100)
     print(router.route(unmatched))
 ```
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. Chapter 4, Messaging Systems, Message Routing section.
-   Source of the pattern name, intent, icon, and the exclusive-destination
-   framing distinguished from Recipient List.
-2. Gregor Hohpe, Bobby Woolf. "Content-Based Router."
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/ContentBasedRouter.html
-   Verified 2026-08-02. The book's own online reference page, used for the
-   verbatim problem and solution statement quoted in dimension 1 and 2.
-3. Apache Software Foundation. "Choice EIP." Apache Camel component
-   reference. https://camel.apache.org/components/latest/eips/choice-eip.html
-   Verified 2026-08-02. Source for Camel's implementation of Content-Based
-   Router as the Choice EIP and its first-match-wins evaluation order.
-4. VMware, Spring Team. "Router Implementations." Spring Integration
-   Reference Manual.
-   https://docs.spring.io/spring-integration/reference/router/implementations.html
-   Verified 2026-08-02. Source for `PayloadTypeRouter`, `HeaderValueRouter`,
-   `RecipientListRouter`, and the SpEL-based `@Router` annotation.
-5. Amazon Web Services. "Creating Amazon EventBridge event patterns." AWS
-   EventBridge User Guide.
-   https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html
-   Verified 2026-08-02. Source for the EventBridge event-pattern production
-   use and the pattern-matching implementation variant.

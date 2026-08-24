@@ -736,6 +736,35 @@ trace payloads that carelessly include personal data in span attributes turn
 the tracing system into an unintended second copy of sensitive fields, spread
 across every service the trace passes through.
 
+## 18. References
+
+1. Chris Richardson, microservices.io, "Pattern. Decompose by subdomain",
+   https://microservices.io/patterns/decomposition/decompose-by-subdomain.html
+   verified 2026-08-02.
+2. Chris Richardson, microservices.io, "Pattern. Decompose by business
+   capability",
+   https://microservices.io/patterns/decomposition/decompose-by-business-capability.html
+   verified 2026-08-02.
+3. Chris Richardson, *Microservices Patterns. With examples in Java*, Manning
+   Publications, 2019, chapter on decomposition strategies.
+4. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*, Addison-Wesley, 2003.
+5. Martin Fowler, "BoundedContext",
+   https://martinfowler.com/bliki/BoundedContext.html, published 15 January
+   2014, verified 2026-08-02.
+6. Martin Fowler, "Microservices",
+   https://martinfowler.com/articles/microservices.html, published 25 March
+   2014, verified 2026-08-02.
+7. Sam Newman, *Monolith to Microservices*, O'Reilly Media, 2019, chapters on
+   splitting the monolith incrementally.
+8. Uber Engineering Blog, "Introducing Domain-Oriented Microservice
+   Architecture", https://www.uber.com/blog/microservice-architecture/,
+   published 23 July 2020, verified 2026-08-02.
+9. Phil Calçado, SoundCloud Developers Blog, "Building Products at
+   SoundCloud, Part 1. Dealing with the Monolith",
+   https://developers.soundcloud.com/blog/building-products-at-soundcloud-part-1-dealing-with-the-monolith,
+   published 11 June 2014, verified 2026-08-02.
+
 ## Code examples
 
 The three examples below implement the same decomposition, a small e-commerce
@@ -980,32 +1009,3 @@ and the three examples above already cover an explicit-interface style, a
 protocol-based dependency-injection style, and an event-driven style, which
 are the three integration shapes this pattern actually uses in practice
 regardless of implementation language.
-
-## 18. References
-
-1. Chris Richardson, microservices.io, "Pattern. Decompose by subdomain",
-   https://microservices.io/patterns/decomposition/decompose-by-subdomain.html
-   verified 2026-08-02.
-2. Chris Richardson, microservices.io, "Pattern. Decompose by business
-   capability",
-   https://microservices.io/patterns/decomposition/decompose-by-business-capability.html
-   verified 2026-08-02.
-3. Chris Richardson, *Microservices Patterns. With examples in Java*, Manning
-   Publications, 2019, chapter on decomposition strategies.
-4. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*, Addison-Wesley, 2003.
-5. Martin Fowler, "BoundedContext",
-   https://martinfowler.com/bliki/BoundedContext.html, published 15 January
-   2014, verified 2026-08-02.
-6. Martin Fowler, "Microservices",
-   https://martinfowler.com/articles/microservices.html, published 25 March
-   2014, verified 2026-08-02.
-7. Sam Newman, *Monolith to Microservices*, O'Reilly Media, 2019, chapters on
-   splitting the monolith incrementally.
-8. Uber Engineering Blog, "Introducing Domain-Oriented Microservice
-   Architecture", https://www.uber.com/blog/microservice-architecture/,
-   published 23 July 2020, verified 2026-08-02.
-9. Phil Calçado, SoundCloud Developers Blog, "Building Products at
-   SoundCloud, Part 1. Dealing with the Monolith",
-   https://developers.soundcloud.com/blog/building-products-at-soundcloud-part-1-dealing-with-the-monolith,
-   published 11 June 2014, verified 2026-08-02.

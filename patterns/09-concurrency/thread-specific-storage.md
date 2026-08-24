@@ -942,6 +942,78 @@ that identifier is not itself personal data, and the caution above about
 retained sensitive data concerns the VALUE stored in the slot, not the
 mechanism's own instrumentation.
 
+## 18. References
+
+1. Douglas C. Schmidt, Timothy H. Harrison, Nat Pryce. "Thread-Specific
+   Storage for C/C++. An Object Behavioral Pattern for Accessing per-Thread
+   State Efficiently." Proceedings of the 4th Pattern Languages of Programs
+   Conference, Allerton Park, Illinois, September 1997. Also published in
+   C++ Report, SIGS, Vol. 9, No. 10, November/December 1997.
+   https://www.dre.vanderbilt.edu/~schmidt/PDF/TSS-pattern.pdf
+   Verified 2026-08-02. Primary source for the problem, forces, structure,
+   participants, collaborations, implementation variants, consequences,
+   liabilities, known uses, and related patterns throughout this entry.
+2. Douglas C. Schmidt. Patterns index page listing "Thread-Specific Storage"
+   with its title, venue, and co-author attribution.
+   https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html
+   Verified 2026-08-02. Source for the paper's exact venue, date, and
+   co-authorship confirmation in dimension 1.
+3. Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann.
+   Pattern-Oriented Software Architecture Volume 2. Patterns for Concurrent
+   and Networked Objects. John Wiley and Sons, 2000. ISBN 978-0-471-60695-6.
+   Cited via the Wikipedia summary of the POSA series for author list, year,
+   and ISBN, https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture
+   Verified 2026-08-02. Named as the book most closely associated with the
+   same ACE-program research group in dimension 1, with the chapter
+   attribution explicitly left unconfirmed rather than asserted.
+4. Wikipedia contributors. "Thread-local storage."
+   https://en.wikipedia.org/wiki/Thread-local_storage
+   Verified 2026-08-02. Source for the industry-standard "Thread-Local
+   Storage" naming and the `pthread_key_create`/`pthread_key_delete`
+   summary quoted in dimension 1.
+5. Oracle. Java SE 21 API Specification, `java.lang.ThreadLocal`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ThreadLocal.html
+   Verified 2026-08-02. Source for the garbage-collection contract quoted in
+   dimension 11.
+6. Microsoft. "Thread Local Storage (TLS)," Visual C++ documentation.
+   https://learn.microsoft.com/en-us/cpp/parallel/thread-local-storage-tls?view=msvc-170
+   Verified 2026-08-02. Source for the C++11 `thread_local` description in
+   dimension 8.
+7. The Open Group. The Open Group Base Specifications Issue 7,
+   `pthread_key_create`.
+   https://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_key_create.html
+   Verified 2026-08-02. Source for the POSIX key-creation contract quoted in
+   dimension 8.
+8. Python Software Foundation. Python 3 documentation, `threading` module,
+   "Thread-Local Data."
+   https://docs.python.org/3/library/threading.html#thread-local-data
+   Verified 2026-08-02. Source for the per-thread `__init__` behaviour of
+   `threading.local` quoted in dimension 8.
+9. The Rust Project Developers. Rust standard library documentation,
+   `std::thread_local` macro.
+   https://doc.rust-lang.org/std/macro.thread_local.html
+   Verified 2026-08-02. Source for the `LocalKey` and `.with()` description
+   underlying the Rust code example.
+10. The Go Authors. "Frequently Asked Questions (FAQ)," section "Why is
+    there no goroutine ID?"
+    https://go.dev/doc/faq
+    Verified 2026-08-02. Source for Go's deliberate omission of
+    goroutine-local storage, quoted in dimension 4.
+11. Microsoft. "ThreadStaticAttribute Class," .NET API documentation.
+    https://learn.microsoft.com/en-us/dotnet/api/system.threadstaticattribute
+    Verified 2026-08-02. Source for the field-initializer warning quoted in
+    dimension 11.
+12. The Apache Software Foundation. Apache Log4j 2 manual, "Thread Context."
+    https://logging.apache.org/log4j/2.x/manual/thread-context.html
+    Verified 2026-08-02. Source for the ThreadContext/MDC production use in
+    dimension 9.
+13. OpenJS Foundation. Node.js API documentation, "Asynchronous context
+    tracking."
+    https://nodejs.org/api/async_context.html
+    Verified 2026-08-02. Source for the `AsyncLocalStorage` description and
+    its own self-comparison to thread-local storage, quoted in dimensions 4
+    and 13.
+
 ## Code examples
 
 Four languages, chosen to show the pattern's real range, from the raw
@@ -1243,75 +1315,3 @@ The Go FAQ's own stated reason, that a `net/http` handler must remain free
 to fan work out to helper goroutines without those goroutines losing access
 to the request's state, is precisely why this example threads `ctx`
 explicitly rather than attempting a goroutine-keyed workaround.
-
-## 18. References
-
-1. Douglas C. Schmidt, Timothy H. Harrison, Nat Pryce. "Thread-Specific
-   Storage for C/C++. An Object Behavioral Pattern for Accessing per-Thread
-   State Efficiently." Proceedings of the 4th Pattern Languages of Programs
-   Conference, Allerton Park, Illinois, September 1997. Also published in
-   C++ Report, SIGS, Vol. 9, No. 10, November/December 1997.
-   https://www.dre.vanderbilt.edu/~schmidt/PDF/TSS-pattern.pdf
-   Verified 2026-08-02. Primary source for the problem, forces, structure,
-   participants, collaborations, implementation variants, consequences,
-   liabilities, known uses, and related patterns throughout this entry.
-2. Douglas C. Schmidt. Patterns index page listing "Thread-Specific Storage"
-   with its title, venue, and co-author attribution.
-   https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html
-   Verified 2026-08-02. Source for the paper's exact venue, date, and
-   co-authorship confirmation in dimension 1.
-3. Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann.
-   Pattern-Oriented Software Architecture Volume 2. Patterns for Concurrent
-   and Networked Objects. John Wiley and Sons, 2000. ISBN 978-0-471-60695-6.
-   Cited via the Wikipedia summary of the POSA series for author list, year,
-   and ISBN, https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture
-   Verified 2026-08-02. Named as the book most closely associated with the
-   same ACE-program research group in dimension 1, with the chapter
-   attribution explicitly left unconfirmed rather than asserted.
-4. Wikipedia contributors. "Thread-local storage."
-   https://en.wikipedia.org/wiki/Thread-local_storage
-   Verified 2026-08-02. Source for the industry-standard "Thread-Local
-   Storage" naming and the `pthread_key_create`/`pthread_key_delete`
-   summary quoted in dimension 1.
-5. Oracle. Java SE 21 API Specification, `java.lang.ThreadLocal`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ThreadLocal.html
-   Verified 2026-08-02. Source for the garbage-collection contract quoted in
-   dimension 11.
-6. Microsoft. "Thread Local Storage (TLS)," Visual C++ documentation.
-   https://learn.microsoft.com/en-us/cpp/parallel/thread-local-storage-tls?view=msvc-170
-   Verified 2026-08-02. Source for the C++11 `thread_local` description in
-   dimension 8.
-7. The Open Group. The Open Group Base Specifications Issue 7,
-   `pthread_key_create`.
-   https://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_key_create.html
-   Verified 2026-08-02. Source for the POSIX key-creation contract quoted in
-   dimension 8.
-8. Python Software Foundation. Python 3 documentation, `threading` module,
-   "Thread-Local Data."
-   https://docs.python.org/3/library/threading.html#thread-local-data
-   Verified 2026-08-02. Source for the per-thread `__init__` behaviour of
-   `threading.local` quoted in dimension 8.
-9. The Rust Project Developers. Rust standard library documentation,
-   `std::thread_local` macro.
-   https://doc.rust-lang.org/std/macro.thread_local.html
-   Verified 2026-08-02. Source for the `LocalKey` and `.with()` description
-   underlying the Rust code example.
-10. The Go Authors. "Frequently Asked Questions (FAQ)," section "Why is
-    there no goroutine ID?"
-    https://go.dev/doc/faq
-    Verified 2026-08-02. Source for Go's deliberate omission of
-    goroutine-local storage, quoted in dimension 4.
-11. Microsoft. "ThreadStaticAttribute Class," .NET API documentation.
-    https://learn.microsoft.com/en-us/dotnet/api/system.threadstaticattribute
-    Verified 2026-08-02. Source for the field-initializer warning quoted in
-    dimension 11.
-12. The Apache Software Foundation. Apache Log4j 2 manual, "Thread Context."
-    https://logging.apache.org/log4j/2.x/manual/thread-context.html
-    Verified 2026-08-02. Source for the ThreadContext/MDC production use in
-    dimension 9.
-13. OpenJS Foundation. Node.js API documentation, "Asynchronous context
-    tracking."
-    https://nodejs.org/api/async_context.html
-    Verified 2026-08-02. Source for the `AsyncLocalStorage` description and
-    its own self-comparison to thread-local storage, quoted in dimensions 4
-    and 13.

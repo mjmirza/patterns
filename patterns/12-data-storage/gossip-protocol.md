@@ -949,6 +949,59 @@ and route that data through a replication mechanism whose replica set is
 explicit and bounded, such as quorum-based leaderless replication with a
 known, fixed replication factor.
 
+## 18. References
+
+1. Alan Demers, Dan Greene, Carl Hauser, Wes Irish, John Larson, Scott
+   Shenker, Howard Sturgis, Dan Swinehart, Doug Terry. "Epidemic Algorithms
+   for Replicated Database Maintenance". Proceedings of the Sixth Annual ACM
+   Symposium on Principles of Distributed Computing (PODC), 1987. ACM DL,
+   https://dl.acm.org/doi/10.1145/41840.41841, and summarized with direct
+   paper excerpts in University of Wisconsin CS 739 course notes,
+   https://pages.cs.wisc.edu/~swift/classes/cs739-fa14/blog/2014/09/epidemic_algorithms_for_replic.html.
+   Verified 2026-08-18. Source of the anti-entropy, rumor mongering, and
+   direct mail taxonomy in dimension 1, and the push-gossip residue analysis
+   in dimensions 8 and 11.
+2. Abhinandan Das, Indranil Gupta, Ashish Motivala. "SWIM. Scalable
+   Weakly-consistent Infection-style Process Group Membership Protocol".
+   Proceedings of the 2002 International Conference on Dependable Systems
+   and Networks (DSN), pages 303 to 312.
+   https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf
+   Verified 2026-08-02. Source of the failure-detection and dissemination
+   separation, indirect probing, and incarnation number design in
+   dimensions 1, 5, and 8.
+3. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati,
+   Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter
+   Vosshall, Werner Vogels. "Dynamo. Amazon's Highly Available Key-value
+   Store". Proceedings of the 21st ACM Symposium on Operating Systems
+   Principles (SOSP), 2007.
+   https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
+   Verified 2026-08-02. Source of the ring membership production use in
+   dimension 9, and the Merkle tree anti-entropy variant in dimension 8.
+4. DataStax. Apache Cassandra 3.x documentation, "Internode communications
+   (gossip)".
+   https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/architecture/archGossipAbout.html
+   Verified 2026-08-02. Source of the Cassandra production use and round
+   timing in dimensions 7 and 9.
+5. HashiCorp. Consul documentation, "Gossip".
+   https://developer.hashicorp.com/consul/docs/concept/gossip
+   Verified 2026-08-02. Source of the Serf and memberlist SWIM-based
+   production use, the LAN and WAN gossip pool structure, and the gossip
+   encryption key security note, in dimensions 8, 9, and 17.
+6. Redis. Redis documentation, "Redis cluster specification".
+   https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/
+   Verified 2026-08-02. Source of the Redis Cluster bus and PING PONG
+   gossip production use in dimensions 8 and 9.
+7. Lightbend. Akka documentation, "Cluster Specification".
+   https://doc.akka.io/docs/akka/2.5/common/cluster.html
+   Verified 2026-08-02. Source of the vector clock, push-pull, convergence,
+   and gossip-derived leader election production use in dimensions 8, 9,
+   and 13.
+8. Gyanesh Patra, Umesh Bellur, Purushottam Kulkarni. "Lifeguard. Local
+   Health Awareness for More Accurate Failure Detection".
+   https://arxiv.org/pdf/1707.00788
+   Verified 2026-08-02. Source of the adaptive suspicion timeout mitigation
+   in dimension 11.
+
 ## Code examples
 
 Three languages, each showing the same push-pull anti-entropy exchange over
@@ -1163,56 +1216,3 @@ node loop, the shape memberlist itself uses, and a plain deterministic
 simulation loop suitable for any language with maps and a seedable random
 source, and a fourth or fifth language would repeat the same simulation
 structure without showing a new idiom.
-
-## 18. References
-
-1. Alan Demers, Dan Greene, Carl Hauser, Wes Irish, John Larson, Scott
-   Shenker, Howard Sturgis, Dan Swinehart, Doug Terry. "Epidemic Algorithms
-   for Replicated Database Maintenance". Proceedings of the Sixth Annual ACM
-   Symposium on Principles of Distributed Computing (PODC), 1987. ACM DL,
-   https://dl.acm.org/doi/10.1145/41840.41841, and summarized with direct
-   paper excerpts in University of Wisconsin CS 739 course notes,
-   https://pages.cs.wisc.edu/~swift/classes/cs739-fa14/blog/2014/09/epidemic_algorithms_for_replic.html.
-   Verified 2026-08-18. Source of the anti-entropy, rumor mongering, and
-   direct mail taxonomy in dimension 1, and the push-gossip residue analysis
-   in dimensions 8 and 11.
-2. Abhinandan Das, Indranil Gupta, Ashish Motivala. "SWIM. Scalable
-   Weakly-consistent Infection-style Process Group Membership Protocol".
-   Proceedings of the 2002 International Conference on Dependable Systems
-   and Networks (DSN), pages 303 to 312.
-   https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf
-   Verified 2026-08-02. Source of the failure-detection and dissemination
-   separation, indirect probing, and incarnation number design in
-   dimensions 1, 5, and 8.
-3. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati,
-   Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter
-   Vosshall, Werner Vogels. "Dynamo. Amazon's Highly Available Key-value
-   Store". Proceedings of the 21st ACM Symposium on Operating Systems
-   Principles (SOSP), 2007.
-   https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
-   Verified 2026-08-02. Source of the ring membership production use in
-   dimension 9, and the Merkle tree anti-entropy variant in dimension 8.
-4. DataStax. Apache Cassandra 3.x documentation, "Internode communications
-   (gossip)".
-   https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/architecture/archGossipAbout.html
-   Verified 2026-08-02. Source of the Cassandra production use and round
-   timing in dimensions 7 and 9.
-5. HashiCorp. Consul documentation, "Gossip".
-   https://developer.hashicorp.com/consul/docs/concept/gossip
-   Verified 2026-08-02. Source of the Serf and memberlist SWIM-based
-   production use, the LAN and WAN gossip pool structure, and the gossip
-   encryption key security note, in dimensions 8, 9, and 17.
-6. Redis. Redis documentation, "Redis cluster specification".
-   https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/
-   Verified 2026-08-02. Source of the Redis Cluster bus and PING PONG
-   gossip production use in dimensions 8 and 9.
-7. Lightbend. Akka documentation, "Cluster Specification".
-   https://doc.akka.io/docs/akka/2.5/common/cluster.html
-   Verified 2026-08-02. Source of the vector clock, push-pull, convergence,
-   and gossip-derived leader election production use in dimensions 8, 9,
-   and 13.
-8. Gyanesh Patra, Umesh Bellur, Purushottam Kulkarni. "Lifeguard. Local
-   Health Awareness for More Accurate Failure Detection".
-   https://arxiv.org/pdf/1707.00788
-   Verified 2026-08-02. Source of the adaptive suspicion timeout mitigation
-   in dimension 11.

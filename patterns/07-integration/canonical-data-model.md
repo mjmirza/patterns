@@ -262,6 +262,17 @@ Because every message from every system passes through the same translation laye
 
 Field-level data minimization is worth deliberate attention in the canonical schema's design. A field genuinely needed by only one or two of many integrated systems should not be included in the shared canonical schema by default, because doing so means every other adapter's parser now handles that sensitive field even though the systems behind those adapters never needed it and may not have appropriate access controls or retention policies for it. This is not a concern specific to Canonical Data Model as a security pattern in itself; it is a consequence of the genericity-versus-fidelity force from dimension 3, applied through a privacy lens, and it is best addressed at schema-design time by involving privacy and security stakeholders in the same governance process that reviews new field additions.
 
+## 18. References
+
+1. Hohpe, Gregor, and Bobby Woolf. "Enterprise Integration Patterns, Designing, Building, and Deploying Messaging Solutions." Addison-Wesley, 2003. ISBN 978-0321200686. Canonical Data Model pattern, and the companion Message Translator pattern (chapter 5, pages 85 through 94).
+2. Hohpe, Gregor. "Canonical Data Model." EnterpriseIntegrationPatterns.com, https://www.enterpriseintegrationpatterns.com/CanonicalDataModel.html, verified reachable 2026-08-02.
+3. HL7 International. "HL7 FHIR Release 5." https://www.hl7.org/fhir/, verified reachable 2026-08-02.
+4. ACORD. "ACORD Data Standards." https://www.acord.org/standards-architecture/acord-data-standards, verified reachable 2026-08-13.
+5. SAP SE. "IDoc Interface / Application Link Enabling (ALE)." SAP Help Portal, https://help.sap.com/docs/SAP_NETWEAVER_750/e6dff0deabaf4772871881828bd8f631/48c34d3e2e449139e10000000a42189c.html, verified reachable 2026-08-02.
+6. Evans, Eric. "Domain-Driven Design, Tackling Complexity in the Heart of Software." Addison-Wesley, 2003. ISBN 978-0321125217. Bounded Context and the conceptual basis for Anticorruption Layer.
+7. Vernon, Vaughn. "Implementing Domain-Driven Design." Addison-Wesley, 2013. ISBN 978-0321834577. Anticorruption Layer, elaborated.
+8. Microsoft. "Common Data Model overview." https://learn.microsoft.com/en-us/common-data-model/, verified reachable 2026-08-02.
+
 ## Code examples
 
 The example models three systems (an e-commerce storefront, a warehouse fulfillment system, and a billing system) exchanging order data through a canonical CanonicalOrder shape. Each language implementation shows one system's native order type, the canonical type, and a bidirectional adapter, exercised by a small runnable demonstration.
@@ -601,14 +612,3 @@ go run canonical_order.go
 Verification log. the TypeScript example compiled with `npx tsc canonical-order.ts --module commonjs --target es2020` and executed with `node`, producing the canonical JSON representation, the round-tripped storefront cart, and the confirmation line with no errors. The Python example executed with `python3 canonical_order.py`, producing the canonical dataclass repr, the round-tripped warehouse pick ticket, and both assertions passed with no errors. The Go example built and executed with `go run canonical_order.go`, producing the canonical struct, the round-tripped billing invoice draft, and the confirmation line with no errors.
 
 Judgement versus sourced claim. the specific guidance that a canonical model's payoff threshold sits somewhere above three or four systems, stated in dimensions 3 and 4, is this author's engineering judgement, since Hohpe and Woolf describe the combinatorial problem qualitatively but do not name a specific N at which the pattern becomes worthwhile, and that threshold depends on the relative cost of governance versus point-to-point translation in a given organization. The specific numeric thresholds, dashboard contents, and library names in dimensions 15 through 17 (testing, observability, security) are drawn from general integration-architecture practice rather than from a single citable source naming this exact pattern; they are labeled here as judgement rather than dressed as sourced fact. The observation that canonical models tend to silently mirror the first-integrated system's schema when governance is weak, in dimension 11, is a commonly observed anti-pattern in integration architecture discussions but is not a specific documented case study cited here with a named source.
-
-## 18. References
-
-1. Hohpe, Gregor, and Bobby Woolf. "Enterprise Integration Patterns, Designing, Building, and Deploying Messaging Solutions." Addison-Wesley, 2003. ISBN 978-0321200686. Canonical Data Model pattern, and the companion Message Translator pattern (chapter 5, pages 85 through 94).
-2. Hohpe, Gregor. "Canonical Data Model." EnterpriseIntegrationPatterns.com, https://www.enterpriseintegrationpatterns.com/CanonicalDataModel.html, verified reachable 2026-08-02.
-3. HL7 International. "HL7 FHIR Release 5." https://www.hl7.org/fhir/, verified reachable 2026-08-02.
-4. ACORD. "ACORD Data Standards." https://www.acord.org/standards-architecture/acord-data-standards, verified reachable 2026-08-13.
-5. SAP SE. "IDoc Interface / Application Link Enabling (ALE)." SAP Help Portal, https://help.sap.com/docs/SAP_NETWEAVER_750/e6dff0deabaf4772871881828bd8f631/48c34d3e2e449139e10000000a42189c.html, verified reachable 2026-08-02.
-6. Evans, Eric. "Domain-Driven Design, Tackling Complexity in the Heart of Software." Addison-Wesley, 2003. ISBN 978-0321125217. Bounded Context and the conceptual basis for Anticorruption Layer.
-7. Vernon, Vaughn. "Implementing Domain-Driven Design." Addison-Wesley, 2013. ISBN 978-0321834577. Anticorruption Layer, elaborated.
-8. Microsoft. "Common Data Model overview." https://learn.microsoft.com/en-us/common-data-model/, verified reachable 2026-08-02.

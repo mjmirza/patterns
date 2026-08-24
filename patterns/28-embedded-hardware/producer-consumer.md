@@ -419,6 +419,18 @@ typical or expected rate, are real, necessary parts of a security-
 conscious implementation of this pattern whenever the producer's real
 trigger rate can be influenced by an untrusted or external source.
 
+## 18. References
+
+1. Zephyr Project. "Message Queues".
+   https://docs.zephyrproject.org/latest/kernel/services/data_passing/message_queues.html
+   Verified 2026-08-21. Source of the ISR non-blocking constraint and
+   the full-queue data-loss trade-off quotes used in dimensions 1, 2,
+   3, 7, 9, 10, and 11.
+2. Zephyr Project. "Pipes".
+   https://docs.zephyrproject.org/latest/kernel/services/data_passing/pipes.html
+   Verified 2026-08-21. Source of the byte-stream pipe variant quote
+   used in dimensions 3, 4, 8, and 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -566,15 +578,3 @@ while let value = queue.get() {
     print("consume", value)
 }
 ```
-
-## 18. References
-
-1. Zephyr Project. "Message Queues".
-   https://docs.zephyrproject.org/latest/kernel/services/data_passing/message_queues.html
-   Verified 2026-08-21. Source of the ISR non-blocking constraint and
-   the full-queue data-loss trade-off quotes used in dimensions 1, 2,
-   3, 7, 9, 10, and 11.
-2. Zephyr Project. "Pipes".
-   https://docs.zephyrproject.org/latest/kernel/services/data_passing/pipes.html
-   Verified 2026-08-21. Source of the byte-stream pipe variant quote
-   used in dimensions 3, 4, 8, and 9.

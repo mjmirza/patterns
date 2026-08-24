@@ -1274,6 +1274,114 @@ contains connection strings, tenant identifiers and region names. Redact the
 configuration values and keep the layer names, which are the part that answers
 the incident question.
 
+## 18. References
+
+Books.
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994. Chapter
+   4, Structural Patterns, the Decorator entry. Source for the canonical name, the
+   Wrapper alias, the four participants, the combinatorial-subclassing motivation,
+   and the Related Patterns note connecting Decorator to Composite, Adapter,
+   Proxy and Strategy.
+2. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018. Item 18,
+   "Favor composition over inheritance". Source for the forwarding-class variant,
+   the `ForwardingSet` and `InstrumentedSet` example, and the argument that a
+   wrapper works over any implementation of the interface where a subclass works
+   over only one.
+
+Language and library specifications, all URLs verified 2026-08-02.
+
+3. Oracle. *Java SE 21 API Specification*, `java.io.FilterInputStream`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/FilterInputStream.html
+   Source for the abstract-decorator participant in the Java stream hierarchy and
+   for the protected `in` field holding the filtered stream.
+4. Oracle. *dev.java*, "Decorating I/O Streams".
+   https://dev.java/learn/java-io/reading-writing/decorating/
+   Source for the statement that the Java I/O API uses the Decorator pattern, and
+   for the compression example.
+5. Oracle. *Java SE 21 API Specification*, `java.lang.reflect.Proxy`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/Proxy.html
+   Source for the runtime-generated forwarding variant and for the dispatch
+   contract used in the security analysis.
+6. Jakarta EE. *Jakarta Servlet 6.0 API documentation*,
+   `jakarta.servlet.ServletRequestWrapper`.
+   https://jakarta.ee/specifications/servlet/6.0/apidocs/jakarta.servlet/jakarta/servlet/servletrequestwrapper
+   Source for a specification naming the pattern in its own class description and
+   for the `getRequest` accessor returning the wrapped request.
+7. Jakarta EE. *Jakarta Servlet Specification, version 6.0*, chapter 6,
+   Filtering. https://jakarta.ee/specifications/servlet/6.0/jakarta-servlet-spec-6.0
+   Source for the treatment of filter chaining and request wrapping as separate
+   concepts, used in the Chain of Responsibility comparison.
+8. Python Software Foundation. *Python 3 documentation*, `io`.
+   https://docs.python.org/3/library/io.html
+   Source for the `TextIOWrapper` over `BufferedReader` over raw stream layering.
+9. Python Software Foundation. *Python 3 documentation*, `functools`.
+   https://docs.python.org/3/library/functools.html
+   Source for `wraps`, the `WRAPPER_ASSIGNMENTS` attribute list, and the
+   `__wrapped__` attribute pointing at the wrapped function.
+10. Python Software Foundation. *PEP 318, Decorators for Functions and Methods*,
+    status Final. https://peps.python.org/pep-0318/
+    Source for the language-level decorator syntax and its desugaring, used to
+    separate the syntax from the structural pattern.
+11. TC39. *Decorators proposal*, Stage 2.7 as of the verification date.
+    https://github.com/tc39/proposal-decorators
+    Source for the JavaScript decorator semantics and the constraint that a
+    decorator replaces a value only with one of matching semantics.
+12. Microsoft. *.NET API documentation*, `System.IO.Compression.GZipStream`.
+    https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.gzipstream
+    Source for the `BaseStream` accessor, the `leaveOpen` constructor overloads,
+    and the documented `NotSupportedException` on `Length`, `Position`, `Seek`
+    and `SetLength`.
+13. `tower` crate. `tower::Layer` trait documentation.
+    https://docs.rs/tower/latest/tower/trait.Layer.html
+    Source for the equivalence of middleware and decoration, and for the
+    `layer` method signature taking an inner service and returning the wrapper.
+14. `tower` crate. `tower::builder::ServiceBuilder` documentation.
+    https://docs.rs/tower/latest/tower/builder/struct.ServiceBuilder.html
+    Source for the statement that layers added first are called with the request
+    first, and for the buffer and concurrency-limit ordering example used in
+    dimension 16.
+15. Go project. `net/http`, `StripPrefix`.
+    https://pkg.go.dev/net/http#StripPrefix
+    Source for the function-valued decorator in the Go standard library.
+16. JetBrains. *Kotlin documentation*, "Delegation".
+    https://kotlinlang.org/docs/delegation.html
+    Source for the `by` clause generating the forwarding methods, for overrides
+    taking precedence over the delegate, and for the statement that overridden
+    members are not called from the members of the delegate object.
+17. Go project. *Effective Go*, "Embedding".
+    https://go.dev/doc/effective_go
+    Source for method promotion from an embedded type, and for the statement
+    that the receiver of a promoted method is the inner type and not the outer
+    one, which is the important way embedding differs from subclassing.
+18. Microsoft. *.NET API documentation*, `System.Reflection.DispatchProxy`.
+    https://learn.microsoft.com/en-us/dotnet/api/system.reflection.dispatchproxy
+    Source for the runtime proxy-generation variant on .NET and for the `Invoke`
+    dispatch contract.
+
+Standards and research, URLs verified 2026-08-02.
+
+19. MITRE. *Common Weakness Enumeration*, CWE-532, "Insertion of Sensitive
+    Information into Log File". https://cwe.mitre.org/data/definitions/532.html
+    Source for the logging-decorator leakage class in dimension 17.
+20. OpenTelemetry. "Traces", concepts documentation.
+    https://opentelemetry.io/docs/concepts/signals/traces/
+    Source for the parent and child span model and the definition of span
+    attributes, used for the per-layer instrumentation recommendation.
+21. Virginia Niculescu, Adrian Sterca, Darius Bufnea. "Should Decorators Preserve
+    the Component Interface?", arXiv preprint arXiv:2009.06414, 2020.
+    https://arxiv.org/abs/2009.06414
+    Source for the academic treatment of the interface-preservation constraint
+    and the proposed relaxations, cited in the interface-bloat failure mode.
+
+Claims deliberately not made, recorded so a later contributor does not add them
+without evidence. No source was found that states the per-call cost of a
+decorator layer in any specific runtime, so no number is given for it, and
+dimension 3 says only that the cost is one dispatch per layer. No source was
+found attributing the phrase "smart proxy" to a specific publication, so that
+alias is recorded as being in informal use rather than as having a named origin.
+
 ## Code examples
 
 Four languages, each showing a different genuine shape of the pattern rather than
@@ -1571,111 +1679,3 @@ so the composition is visible in the type system and the innermost component is
 reachable by name. That is the introspection property the other three languages
 lose, and it is bought by giving up the ability to hold a heterogeneous stack
 behind one type without boxing.
-
-## 18. References
-
-Books.
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994. Chapter
-   4, Structural Patterns, the Decorator entry. Source for the canonical name, the
-   Wrapper alias, the four participants, the combinatorial-subclassing motivation,
-   and the Related Patterns note connecting Decorator to Composite, Adapter,
-   Proxy and Strategy.
-2. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018. Item 18,
-   "Favor composition over inheritance". Source for the forwarding-class variant,
-   the `ForwardingSet` and `InstrumentedSet` example, and the argument that a
-   wrapper works over any implementation of the interface where a subclass works
-   over only one.
-
-Language and library specifications, all URLs verified 2026-08-02.
-
-3. Oracle. *Java SE 21 API Specification*, `java.io.FilterInputStream`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/FilterInputStream.html
-   Source for the abstract-decorator participant in the Java stream hierarchy and
-   for the protected `in` field holding the filtered stream.
-4. Oracle. *dev.java*, "Decorating I/O Streams".
-   https://dev.java/learn/java-io/reading-writing/decorating/
-   Source for the statement that the Java I/O API uses the Decorator pattern, and
-   for the compression example.
-5. Oracle. *Java SE 21 API Specification*, `java.lang.reflect.Proxy`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/Proxy.html
-   Source for the runtime-generated forwarding variant and for the dispatch
-   contract used in the security analysis.
-6. Jakarta EE. *Jakarta Servlet 6.0 API documentation*,
-   `jakarta.servlet.ServletRequestWrapper`.
-   https://jakarta.ee/specifications/servlet/6.0/apidocs/jakarta.servlet/jakarta/servlet/servletrequestwrapper
-   Source for a specification naming the pattern in its own class description and
-   for the `getRequest` accessor returning the wrapped request.
-7. Jakarta EE. *Jakarta Servlet Specification, version 6.0*, chapter 6,
-   Filtering. https://jakarta.ee/specifications/servlet/6.0/jakarta-servlet-spec-6.0
-   Source for the treatment of filter chaining and request wrapping as separate
-   concepts, used in the Chain of Responsibility comparison.
-8. Python Software Foundation. *Python 3 documentation*, `io`.
-   https://docs.python.org/3/library/io.html
-   Source for the `TextIOWrapper` over `BufferedReader` over raw stream layering.
-9. Python Software Foundation. *Python 3 documentation*, `functools`.
-   https://docs.python.org/3/library/functools.html
-   Source for `wraps`, the `WRAPPER_ASSIGNMENTS` attribute list, and the
-   `__wrapped__` attribute pointing at the wrapped function.
-10. Python Software Foundation. *PEP 318, Decorators for Functions and Methods*,
-    status Final. https://peps.python.org/pep-0318/
-    Source for the language-level decorator syntax and its desugaring, used to
-    separate the syntax from the structural pattern.
-11. TC39. *Decorators proposal*, Stage 2.7 as of the verification date.
-    https://github.com/tc39/proposal-decorators
-    Source for the JavaScript decorator semantics and the constraint that a
-    decorator replaces a value only with one of matching semantics.
-12. Microsoft. *.NET API documentation*, `System.IO.Compression.GZipStream`.
-    https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.gzipstream
-    Source for the `BaseStream` accessor, the `leaveOpen` constructor overloads,
-    and the documented `NotSupportedException` on `Length`, `Position`, `Seek`
-    and `SetLength`.
-13. `tower` crate. `tower::Layer` trait documentation.
-    https://docs.rs/tower/latest/tower/trait.Layer.html
-    Source for the equivalence of middleware and decoration, and for the
-    `layer` method signature taking an inner service and returning the wrapper.
-14. `tower` crate. `tower::builder::ServiceBuilder` documentation.
-    https://docs.rs/tower/latest/tower/builder/struct.ServiceBuilder.html
-    Source for the statement that layers added first are called with the request
-    first, and for the buffer and concurrency-limit ordering example used in
-    dimension 16.
-15. Go project. `net/http`, `StripPrefix`.
-    https://pkg.go.dev/net/http#StripPrefix
-    Source for the function-valued decorator in the Go standard library.
-16. JetBrains. *Kotlin documentation*, "Delegation".
-    https://kotlinlang.org/docs/delegation.html
-    Source for the `by` clause generating the forwarding methods, for overrides
-    taking precedence over the delegate, and for the statement that overridden
-    members are not called from the members of the delegate object.
-17. Go project. *Effective Go*, "Embedding".
-    https://go.dev/doc/effective_go
-    Source for method promotion from an embedded type, and for the statement
-    that the receiver of a promoted method is the inner type and not the outer
-    one, which is the important way embedding differs from subclassing.
-18. Microsoft. *.NET API documentation*, `System.Reflection.DispatchProxy`.
-    https://learn.microsoft.com/en-us/dotnet/api/system.reflection.dispatchproxy
-    Source for the runtime proxy-generation variant on .NET and for the `Invoke`
-    dispatch contract.
-
-Standards and research, URLs verified 2026-08-02.
-
-19. MITRE. *Common Weakness Enumeration*, CWE-532, "Insertion of Sensitive
-    Information into Log File". https://cwe.mitre.org/data/definitions/532.html
-    Source for the logging-decorator leakage class in dimension 17.
-20. OpenTelemetry. "Traces", concepts documentation.
-    https://opentelemetry.io/docs/concepts/signals/traces/
-    Source for the parent and child span model and the definition of span
-    attributes, used for the per-layer instrumentation recommendation.
-21. Virginia Niculescu, Adrian Sterca, Darius Bufnea. "Should Decorators Preserve
-    the Component Interface?", arXiv preprint arXiv:2009.06414, 2020.
-    https://arxiv.org/abs/2009.06414
-    Source for the academic treatment of the interface-preservation constraint
-    and the proposed relaxations, cited in the interface-bloat failure mode.
-
-Claims deliberately not made, recorded so a later contributor does not add them
-without evidence. No source was found that states the per-call cost of a
-decorator layer in any specific runtime, so no number is given for it, and
-dimension 3 says only that the cost is one dispatch per layer. No source was
-found attributing the phrase "smart proxy" to a specific publication, so that
-alias is recorded as being in informal use rather than as having a named origin.

@@ -840,6 +840,54 @@ auditability concern worth naming to a privacy reviewer, but it is, again, a
 consequence of the structural coupling from dimension 3 rather than a
 property of the cycle acting on the data directly.
 
+## 18. References
+
+1. Robert C. Martin. "The Acyclic Dependencies Principle". Engineering
+   Notebook column, C++ Report, 1996. Cited via its restatement in reference
+   2 below, which is the independently checkable, in-print source for the
+   principle's chapter-length treatment.
+2. Robert C. Martin. *Agile Software Development, Principles, Patterns, and
+   Practices*. Prentice Hall, 2002. ISBN 0-13-597444-5. Chapter 28, "The
+   Acyclic Dependencies Principle". Source for the naming of the principle,
+   the statement that the package dependency graph must contain no cycles,
+   and the two named remediation techniques, Dependency Inversion and
+   extracting a shared package, that dimension 14 draws from.
+3. Node.js documentation, "Modules. CommonJS modules", section "Cycles".
+   https://nodejs.org/api/modules.html#cycles
+   Verified 2026-08-02. Source for the exact `a.js`/`b.js`/`main.js` example
+   and console output traced in dimensions 7 and 9, and for the statement
+   about careful planning being needed for cyclic module dependencies to
+   work correctly.
+4. Python Software Foundation. "Python FAQ", "Programming FAQ", the entry on
+   using import inside a module. https://docs.python.org/3/faq/programming.html
+   Verified 2026-08-02. Source for the distinction between `import module`
+   and `from module import name` under a cycle, and for the four named
+   remediation techniques used in dimensions 9 and the Python code example.
+5. Spring Framework reference documentation. "The IoC Container", "Dependency
+   Injection", section "Circular dependencies".
+   https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html
+   Verified 2026-08-02. Source for the `BeanCurrentlyInCreationException`
+   name, the constructor-injection cycle scenario, and the setter-injection
+   recommendation used in dimensions 7, 9, 11, and the Java code example.
+6. ArchUnit User Guide. Section "4.7. Cycle Checks" and section "8.2.
+   Slices". https://www.archunit.org/userguide/html/000_Index.html
+   Verified 2026-08-02. Source for the `beFreeOfCycles()` assertion and the
+   `CycleDetector` API cited in dimensions 9, 12, and 15 as a production
+   testing technique for package-level cycles.
+
+Unverifiable or not independently sourced in this pass. The JVM
+class-loading deadlock and default-value behaviour described in dimension 7
+is stated as engineering judgement drawn from generally known JVM
+class-initialization semantics rather than tied to a specific verified page
+from this pass, and is labelled as such in the text rather than presented as
+a sourced claim. The Go compiler's refusal of import cycles, described in
+dimension 8 and dimension 11, was attempted against two live sources, the Go
+language specification and the `go` command documentation, and neither
+page's fetched content contained the specific import-cycle-refusal wording,
+so those sentences are stated as widely known properties of the Go
+toolchain rather than pinned to a URL verified in this session, and no page
+number or URL is attached to them for that reason.
+
 ## Code examples
 
 Three languages, chosen to show the anti-pattern in three genuinely different
@@ -1105,51 +1153,3 @@ public final class BetterDemo {
     }
 }
 ```
-
-## 18. References
-
-1. Robert C. Martin. "The Acyclic Dependencies Principle". Engineering
-   Notebook column, C++ Report, 1996. Cited via its restatement in reference
-   2 below, which is the independently checkable, in-print source for the
-   principle's chapter-length treatment.
-2. Robert C. Martin. *Agile Software Development, Principles, Patterns, and
-   Practices*. Prentice Hall, 2002. ISBN 0-13-597444-5. Chapter 28, "The
-   Acyclic Dependencies Principle". Source for the naming of the principle,
-   the statement that the package dependency graph must contain no cycles,
-   and the two named remediation techniques, Dependency Inversion and
-   extracting a shared package, that dimension 14 draws from.
-3. Node.js documentation, "Modules. CommonJS modules", section "Cycles".
-   https://nodejs.org/api/modules.html#cycles
-   Verified 2026-08-02. Source for the exact `a.js`/`b.js`/`main.js` example
-   and console output traced in dimensions 7 and 9, and for the statement
-   about careful planning being needed for cyclic module dependencies to
-   work correctly.
-4. Python Software Foundation. "Python FAQ", "Programming FAQ", the entry on
-   using import inside a module. https://docs.python.org/3/faq/programming.html
-   Verified 2026-08-02. Source for the distinction between `import module`
-   and `from module import name` under a cycle, and for the four named
-   remediation techniques used in dimensions 9 and the Python code example.
-5. Spring Framework reference documentation. "The IoC Container", "Dependency
-   Injection", section "Circular dependencies".
-   https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html
-   Verified 2026-08-02. Source for the `BeanCurrentlyInCreationException`
-   name, the constructor-injection cycle scenario, and the setter-injection
-   recommendation used in dimensions 7, 9, 11, and the Java code example.
-6. ArchUnit User Guide. Section "4.7. Cycle Checks" and section "8.2.
-   Slices". https://www.archunit.org/userguide/html/000_Index.html
-   Verified 2026-08-02. Source for the `beFreeOfCycles()` assertion and the
-   `CycleDetector` API cited in dimensions 9, 12, and 15 as a production
-   testing technique for package-level cycles.
-
-Unverifiable or not independently sourced in this pass. The JVM
-class-loading deadlock and default-value behaviour described in dimension 7
-is stated as engineering judgement drawn from generally known JVM
-class-initialization semantics rather than tied to a specific verified page
-from this pass, and is labelled as such in the text rather than presented as
-a sourced claim. The Go compiler's refusal of import cycles, described in
-dimension 8 and dimension 11, was attempted against two live sources, the Go
-language specification and the `go` command documentation, and neither
-page's fetched content contained the specific import-cycle-refusal wording,
-so those sentences are stated as widely known properties of the Go
-toolchain rather than pinned to a URL verified in this session, and no page
-number or URL is attached to them for that reason.

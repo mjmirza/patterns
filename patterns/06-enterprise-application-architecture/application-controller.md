@@ -823,6 +823,59 @@ authorization-adjacent routing decisions deserve the same change-control
 rigor as an authorization policy file, not the lighter review a view
 template typically receives.
 
+## 18. References
+
+1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
+   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 14, Web Presentation
+   Patterns, "Application Controller". Source of the pattern's name, its
+   original intent, and its placement in the Web Presentation Patterns group.
+2. Martin Fowler. "Application Controller".
+   https://martinfowler.com/eaaCatalog/applicationController.html
+   Verified 2026-08-02. Source of the exact quoted intent sentence and the
+   description of input controllers consulting the Application Controller
+   for a command and a view.
+3. Martin Fowler. "Enterprise Application Architecture Patterns" catalog
+   index. https://martinfowler.com/eaaCatalog/
+   Verified 2026-08-02. Source confirming the Web Presentation Patterns
+   grouping and the sibling patterns in it.
+4. Martin Fowler. "Front Controller".
+   https://martinfowler.com/eaaCatalog/frontController.html
+   Verified 2026-08-02. Source for the Front Controller description used to
+   draw the boundary in dimension 1 and dimension 13.
+5. Apache Software Foundation. "RequestProcessor", Struts 1 wiki.
+   https://cwiki.apache.org/confluence/display/STRUTS1/RequestProcessor
+   Verified 2026-08-02. Source for the description of `RequestProcessor`'s
+   centralizing, pluggable role used in dimension 9.
+6. "The RequestProcessor". Java Practical Info.
+   https://javapracticalinfo.blogspot.com/2013/02/the-requestprocessor.html
+   Verified 2026-08-02. Source of the explicit secondary claim naming
+   `RequestProcessor` as an Application Controller implementation, used in
+   dimension 9 and labelled there as a secondary, checkable source rather
+   than an authority on the pattern's original definition.
+7. Oracle. *JavaServer Faces 1.2 API documentation*,
+   `javax.faces.application.NavigationHandler`.
+   https://docs.oracle.com/cd/E17802_01/j2ee/j2ee/javaserverfaces/1.2/docs/api/javax/faces/application/NavigationHandler.html
+   Verified 2026-08-02. Source of the quoted Javadoc description used in
+   dimension 8 and dimension 9.
+8. VMware, Spring team. *Spring Web Flow Reference Guide*.
+   https://docs.spring.io/spring-webflow/docs/current/reference/
+   Verified 2026-08-02. Source of the quoted descriptions of flows, states,
+   and transitions used in dimension 8 and dimension 9.
+9. Soroush Khanlou. "The Coordinator".
+   https://khanlou.com/2015/01/the-coordinator/
+   Verified 2026-08-02. Source of the Coordinator alias, the explicit named
+   link to Fowler's Application Controller pattern, and the mobile
+   production use in dimension 9.
+10. Ruby on Rails Guides. "Action Controller Overview".
+    https://guides.rubyonrails.org/action_controller_overview.html
+    Verified 2026-08-02. Consulted while researching this entry to check a
+    possible Ruby on Rails production use. `ApplicationController` in Rails
+    is confirmed by this guide to be the shared base class every controller
+    inherits from, a naming convention for common controller behaviour, not
+    a centralized flow-decision authority in Fowler's sense, and it is
+    therefore deliberately not listed as a production use in dimension 9 to
+    avoid overstating the connection.
+
 ## Code examples
 
 Three languages, each chosen because the pattern is idiomatic in a genuinely
@@ -1045,56 +1098,3 @@ let digitalFlow = CheckoutCoordinator(navigator: navigator, digitalOnly: true) {
 }
 digitalFlow.start()
 ```
-
-## 18. References
-
-1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
-   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 14, Web Presentation
-   Patterns, "Application Controller". Source of the pattern's name, its
-   original intent, and its placement in the Web Presentation Patterns group.
-2. Martin Fowler. "Application Controller".
-   https://martinfowler.com/eaaCatalog/applicationController.html
-   Verified 2026-08-02. Source of the exact quoted intent sentence and the
-   description of input controllers consulting the Application Controller
-   for a command and a view.
-3. Martin Fowler. "Enterprise Application Architecture Patterns" catalog
-   index. https://martinfowler.com/eaaCatalog/
-   Verified 2026-08-02. Source confirming the Web Presentation Patterns
-   grouping and the sibling patterns in it.
-4. Martin Fowler. "Front Controller".
-   https://martinfowler.com/eaaCatalog/frontController.html
-   Verified 2026-08-02. Source for the Front Controller description used to
-   draw the boundary in dimension 1 and dimension 13.
-5. Apache Software Foundation. "RequestProcessor", Struts 1 wiki.
-   https://cwiki.apache.org/confluence/display/STRUTS1/RequestProcessor
-   Verified 2026-08-02. Source for the description of `RequestProcessor`'s
-   centralizing, pluggable role used in dimension 9.
-6. "The RequestProcessor". Java Practical Info.
-   https://javapracticalinfo.blogspot.com/2013/02/the-requestprocessor.html
-   Verified 2026-08-02. Source of the explicit secondary claim naming
-   `RequestProcessor` as an Application Controller implementation, used in
-   dimension 9 and labelled there as a secondary, checkable source rather
-   than an authority on the pattern's original definition.
-7. Oracle. *JavaServer Faces 1.2 API documentation*,
-   `javax.faces.application.NavigationHandler`.
-   https://docs.oracle.com/cd/E17802_01/j2ee/j2ee/javaserverfaces/1.2/docs/api/javax/faces/application/NavigationHandler.html
-   Verified 2026-08-02. Source of the quoted Javadoc description used in
-   dimension 8 and dimension 9.
-8. VMware, Spring team. *Spring Web Flow Reference Guide*.
-   https://docs.spring.io/spring-webflow/docs/current/reference/
-   Verified 2026-08-02. Source of the quoted descriptions of flows, states,
-   and transitions used in dimension 8 and dimension 9.
-9. Soroush Khanlou. "The Coordinator".
-   https://khanlou.com/2015/01/the-coordinator/
-   Verified 2026-08-02. Source of the Coordinator alias, the explicit named
-   link to Fowler's Application Controller pattern, and the mobile
-   production use in dimension 9.
-10. Ruby on Rails Guides. "Action Controller Overview".
-    https://guides.rubyonrails.org/action_controller_overview.html
-    Verified 2026-08-02. Consulted while researching this entry to check a
-    possible Ruby on Rails production use. `ApplicationController` in Rails
-    is confirmed by this guide to be the shared base class every controller
-    inherits from, a naming convention for common controller behaviour, not
-    a centralized flow-decision authority in Fowler's sense, and it is
-    therefore deliberately not listed as a production use in dimension 9 to
-    avoid overstating the connection.

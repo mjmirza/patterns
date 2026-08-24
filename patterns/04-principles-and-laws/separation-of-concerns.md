@@ -853,6 +853,68 @@ is a direct, practical application of the data minimization principle found in m
 privacy regulation, and it is a natural byproduct of drawing interfaces well under
 Separation of Concerns rather than a separate discipline layered on top.
 
+## 18. References
+
+1. Edsger W. Dijkstra. "On the Role of Scientific Thought," EWD447, August 1974.
+   Archived at the E.W. Dijkstra Archive, University of Texas at Austin,
+   https://www.cs.utexas.edu/~EWD/transcriptions/EWD04xx/EWD447.html verified 2026-08-02.
+   Also collected in *Selected Writings on Computing, A Personal Perspective*,
+   Springer-Verlag, 1982. Source for the coining of the phrase "separation of concerns" and
+   the correctness-versus-efficiency illustration in dimensions 1 and 2.
+2. D.L. Parnas. "On the Criteria to Be Used in Decomposing Systems into Modules,"
+   Communications of the ACM, volume 15, issue 12, 1972, pages 1053 to 1058.
+   https://dl.acm.org/doi/10.1145/361598.361623 verified 2026-08-02. Source for the
+   information-hiding criterion in dimension 1 and the decomposition test in dimension 4.
+3. Robert C. Martin. *Agile Software Development, Principles, Patterns, and Practices*.
+   Prentice Hall, 2002. ISBN 0-13-597444-5. Chapter 8, the Single Responsibility Principle.
+   Source for the class-level restatement of the principle in dimensions 1 and 13.
+4. Edward Yourdon and Larry L. Constantine. *Structured Design, Fundamentals of a Discipline
+   of Computer Program and Systems Design*. Yourdon Press, 1979. ISBN 0-917072-13-2. Source
+   for the definitions of coupling and cohesion used in dimension 3.
+5. Melvin E. Conway. "How Do Committees Invent?" Datamation, April 1968. Source for the
+   organization-structure observation used in dimension 3.
+6. Martin Fowler. *Patterns of Enterprise Application Architecture*. Addison-Wesley, 2002.
+   ISBN 0-321-12742-0. Chapter 1, "Layering." Source for the layered architecture variant in
+   dimension 8.
+7. Alistair Cockburn. "Hexagonal Architecture." Original 2005 description, now hosted at
+   https://alistair.cockburn.us/hexagonal-architecture/, verified 2026-08-09 (the older
+   alistaircockburn.com path has since moved and 404s; the current cockburn.us URL is the
+   live original). Source for the ports and adapters variant in dimension 8.
+8. Trygve Reenskaug. "THING-MODEL-VIEW-EDITOR, an Example from a Planning System," 12 May
+   1979, and "MODELS-VIEWS-CONTROLLERS," 10 December 1979. Historical summary at
+   https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller verified 2026-08-02.
+   Source for the origin of MVC in dimension 8.
+9. Eric Evans. *Domain-Driven Design, Tackling Complexity in the Heart of Software*.
+   Addison-Wesley, 2003. ISBN 0-321-12521-5. Part IV, bounded contexts. Source for the
+   bounded context variant in dimension 8.
+10. Sam Newman. *Building Microservices*, 2nd edition. O'Reilly, 2021. ISBN 978-1-492-03402-5.
+    Chapter 1. Source for the microservices variant in dimension 8 and the Netflix
+    production use in dimension 9.
+11. Martin Fowler. "CQRS." martinfowler.com, 14 July 2011.
+    https://martinfowler.com/bliki/CQRS.html verified 2026-08-02. Source for the CQRS
+    definition and its narrow-scope warning in dimension 8.
+12. ISO/IEC 7498-1:1994. "Information technology, Open Systems Interconnection, Basic
+    Reference Model, The Basic Model." Source for the OSI model production use in
+    dimension 9.
+13. Rails Guides. "Getting Started with Rails," section on Model-View-Controller.
+    https://guides.rubyonrails.org/getting_started.html verified 2026-08-02. Source for the
+    Rails production use in dimension 9.
+14. Kubernetes documentation. "What is Kubernetes?"
+    https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/ verified 2026-08-02.
+    Source for the declarative-configuration production use in dimension 9.
+15. Peter H. Salus. *A Quarter Century of UNIX*. Addison-Wesley, 1994. ISBN 0-201-54777-5.
+    Source for Doug McIlroy's Unix philosophy formulation used in dimension 9.
+16. Brian Foote and Joseph Yoder. "Big Ball of Mud." Fourth Conference on Pattern Languages
+    of Programs, PLoP 1997. https://www.laputan.org/mud/ verified 2026-08-02. Source for
+    the anti-pattern in dimension 13 and the economic-rationality caveat used in dimension 4.
+17. Martin Fowler. "AnemicDomainModel." martinfowler.com, undated bliki entry.
+    https://martinfowler.com/bliki/AnemicDomainModel.html verified 2026-08-02. Source for
+    the failure mode in dimension 11.
+18. Martin Fowler. *Refactoring, Improving the Design of Existing Code*, 2nd edition.
+    Addison-Wesley, 2018. ISBN 978-0-13-475759-9. Chapter 3, code smells including Shotgun
+    Surgery, and chapter 7, Extract Class and Move Method. Source for the failure mode and
+    refactoring path in dimensions 11 and 14.
+
 ## Code examples
 
 Three languages, each showing the same small system, an order-placement handler, separated
@@ -1053,65 +1115,3 @@ func main() {
 	fmt.Println(status, body)
 }
 ```
-
-## 18. References
-
-1. Edsger W. Dijkstra. "On the Role of Scientific Thought," EWD447, August 1974.
-   Archived at the E.W. Dijkstra Archive, University of Texas at Austin,
-   https://www.cs.utexas.edu/~EWD/transcriptions/EWD04xx/EWD447.html verified 2026-08-02.
-   Also collected in *Selected Writings on Computing, A Personal Perspective*,
-   Springer-Verlag, 1982. Source for the coining of the phrase "separation of concerns" and
-   the correctness-versus-efficiency illustration in dimensions 1 and 2.
-2. D.L. Parnas. "On the Criteria to Be Used in Decomposing Systems into Modules,"
-   Communications of the ACM, volume 15, issue 12, 1972, pages 1053 to 1058.
-   https://dl.acm.org/doi/10.1145/361598.361623 verified 2026-08-02. Source for the
-   information-hiding criterion in dimension 1 and the decomposition test in dimension 4.
-3. Robert C. Martin. *Agile Software Development, Principles, Patterns, and Practices*.
-   Prentice Hall, 2002. ISBN 0-13-597444-5. Chapter 8, the Single Responsibility Principle.
-   Source for the class-level restatement of the principle in dimensions 1 and 13.
-4. Edward Yourdon and Larry L. Constantine. *Structured Design, Fundamentals of a Discipline
-   of Computer Program and Systems Design*. Yourdon Press, 1979. ISBN 0-917072-13-2. Source
-   for the definitions of coupling and cohesion used in dimension 3.
-5. Melvin E. Conway. "How Do Committees Invent?" Datamation, April 1968. Source for the
-   organization-structure observation used in dimension 3.
-6. Martin Fowler. *Patterns of Enterprise Application Architecture*. Addison-Wesley, 2002.
-   ISBN 0-321-12742-0. Chapter 1, "Layering." Source for the layered architecture variant in
-   dimension 8.
-7. Alistair Cockburn. "Hexagonal Architecture." Original 2005 description, now hosted at
-   https://alistair.cockburn.us/hexagonal-architecture/, verified 2026-08-09 (the older
-   alistaircockburn.com path has since moved and 404s; the current cockburn.us URL is the
-   live original). Source for the ports and adapters variant in dimension 8.
-8. Trygve Reenskaug. "THING-MODEL-VIEW-EDITOR, an Example from a Planning System," 12 May
-   1979, and "MODELS-VIEWS-CONTROLLERS," 10 December 1979. Historical summary at
-   https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller verified 2026-08-02.
-   Source for the origin of MVC in dimension 8.
-9. Eric Evans. *Domain-Driven Design, Tackling Complexity in the Heart of Software*.
-   Addison-Wesley, 2003. ISBN 0-321-12521-5. Part IV, bounded contexts. Source for the
-   bounded context variant in dimension 8.
-10. Sam Newman. *Building Microservices*, 2nd edition. O'Reilly, 2021. ISBN 978-1-492-03402-5.
-    Chapter 1. Source for the microservices variant in dimension 8 and the Netflix
-    production use in dimension 9.
-11. Martin Fowler. "CQRS." martinfowler.com, 14 July 2011.
-    https://martinfowler.com/bliki/CQRS.html verified 2026-08-02. Source for the CQRS
-    definition and its narrow-scope warning in dimension 8.
-12. ISO/IEC 7498-1:1994. "Information technology, Open Systems Interconnection, Basic
-    Reference Model, The Basic Model." Source for the OSI model production use in
-    dimension 9.
-13. Rails Guides. "Getting Started with Rails," section on Model-View-Controller.
-    https://guides.rubyonrails.org/getting_started.html verified 2026-08-02. Source for the
-    Rails production use in dimension 9.
-14. Kubernetes documentation. "What is Kubernetes?"
-    https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/ verified 2026-08-02.
-    Source for the declarative-configuration production use in dimension 9.
-15. Peter H. Salus. *A Quarter Century of UNIX*. Addison-Wesley, 1994. ISBN 0-201-54777-5.
-    Source for Doug McIlroy's Unix philosophy formulation used in dimension 9.
-16. Brian Foote and Joseph Yoder. "Big Ball of Mud." Fourth Conference on Pattern Languages
-    of Programs, PLoP 1997. https://www.laputan.org/mud/ verified 2026-08-02. Source for
-    the anti-pattern in dimension 13 and the economic-rationality caveat used in dimension 4.
-17. Martin Fowler. "AnemicDomainModel." martinfowler.com, undated bliki entry.
-    https://martinfowler.com/bliki/AnemicDomainModel.html verified 2026-08-02. Source for
-    the failure mode in dimension 11.
-18. Martin Fowler. *Refactoring, Improving the Design of Existing Code*, 2nd edition.
-    Addison-Wesley, 2018. ISBN 978-0-13-475759-9. Chapter 3, code smells including Shotgun
-    Surgery, and chapter 7, Extract Class and Move Method. Source for the failure mode and
-    refactoring path in dimensions 11 and 14.

@@ -734,6 +734,45 @@ module boundary in a convention-only language as requiring the
 architecture-testing tool from dimension 15, not merely a documented
 policy.
 
+## 18. References
+
+1. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*, Addison-Wesley, 2003, Chapter 5, "A Model Expressed in
+   Software", section "Modules (aka Packages)". Chapter and section
+   breakdown confirmed via
+   [https://herbertograca.com/2015/09/29/domain-driven-design-by-eric-evans-chap-5-a-model-expressed-in-software/](https://herbertograca.com/2015/09/29/domain-driven-design-by-eric-evans-chap-5-a-model-expressed-in-software/),
+   verified 2026-08-02.
+2. Vaughn Vernon, *Implementing Domain-Driven Design*, Addison-Wesley,
+   2013, Chapter 9, "Modules". Chapter title and Java package to C#
+   namespace mapping confirmed via the O'Reilly indexed chapter page,
+   [https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/ch09.html](https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/ch09.html),
+   verified 2026-08-02. Full chapter text was not directly retrievable
+   (403 response), so quotes beyond the title and top-level mapping are
+   not claimed.
+3. Melvin Conway, "How Do Committees Invent?", Datamation, April 1968,
+   [https://www.melconway.com/Home/pdf/committees.pdf](https://www.melconway.com/Home/pdf/committees.pdf),
+   verified 2026-08-02.
+4. Oracle, JEP 261, "Module System",
+   [https://openjdk.org/jeps/261](https://openjdk.org/jeps/261), verified
+   2026-08-02.
+5. The Rust Programming Language, Chapter 7, "Managing Growing Projects
+   with Packages, Crates, and Modules",
+   [https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html),
+   verified 2026-08-02.
+6. Shopify Engineering, "Enforce Modularity in Rails Apps Using
+   Packwerk",
+   [https://shopify.engineering/enforcing-modularity-rails-apps-packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk),
+   verified 2026-08-02.
+7. Spring team, "Spring Modulith" reference documentation,
+   [https://docs.spring.io/spring-modulith/reference/](https://docs.spring.io/spring-modulith/reference/),
+   verified 2026-08-02.
+8. Microsoft, "eShop" reference application, GitHub repository,
+   [https://github.com/dotnet/eShop](https://github.com/dotnet/eShop),
+   verified 2026-08-02.
+9. Martin Fowler, "BoundedContext",
+   [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html),
+   verified 2026-08-02.
+
 ## Code examples
 
 ### TypeScript
@@ -983,42 +1022,3 @@ order` has no `pub` marker, so it is private to that module. Widening the
 `rustc` rejects it, reporting the struct as private, the same compile-time
 enforcement dimension 9 describes for the language's module system
 generally.
-
-## 18. References
-
-1. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*, Addison-Wesley, 2003, Chapter 5, "A Model Expressed in
-   Software", section "Modules (aka Packages)". Chapter and section
-   breakdown confirmed via
-   [https://herbertograca.com/2015/09/29/domain-driven-design-by-eric-evans-chap-5-a-model-expressed-in-software/](https://herbertograca.com/2015/09/29/domain-driven-design-by-eric-evans-chap-5-a-model-expressed-in-software/),
-   verified 2026-08-02.
-2. Vaughn Vernon, *Implementing Domain-Driven Design*, Addison-Wesley,
-   2013, Chapter 9, "Modules". Chapter title and Java package to C#
-   namespace mapping confirmed via the O'Reilly indexed chapter page,
-   [https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/ch09.html](https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/ch09.html),
-   verified 2026-08-02. Full chapter text was not directly retrievable
-   (403 response), so quotes beyond the title and top-level mapping are
-   not claimed.
-3. Melvin Conway, "How Do Committees Invent?", Datamation, April 1968,
-   [https://www.melconway.com/Home/pdf/committees.pdf](https://www.melconway.com/Home/pdf/committees.pdf),
-   verified 2026-08-02.
-4. Oracle, JEP 261, "Module System",
-   [https://openjdk.org/jeps/261](https://openjdk.org/jeps/261), verified
-   2026-08-02.
-5. The Rust Programming Language, Chapter 7, "Managing Growing Projects
-   with Packages, Crates, and Modules",
-   [https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html),
-   verified 2026-08-02.
-6. Shopify Engineering, "Enforce Modularity in Rails Apps Using
-   Packwerk",
-   [https://shopify.engineering/enforcing-modularity-rails-apps-packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk),
-   verified 2026-08-02.
-7. Spring team, "Spring Modulith" reference documentation,
-   [https://docs.spring.io/spring-modulith/reference/](https://docs.spring.io/spring-modulith/reference/),
-   verified 2026-08-02.
-8. Microsoft, "eShop" reference application, GitHub repository,
-   [https://github.com/dotnet/eShop](https://github.com/dotnet/eShop),
-   verified 2026-08-02.
-9. Martin Fowler, "BoundedContext",
-   [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html),
-   verified 2026-08-02.

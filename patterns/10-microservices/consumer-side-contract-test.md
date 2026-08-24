@@ -610,6 +610,28 @@ deliberately does not, and should not be extended to, validate actual
 token contents or secrets during contract verification, since doing so
 would require real credentials inside test fixtures.
 
+## 18. References
+
+1. Ian Robinson. "Consumer-Driven Contracts. A Service Evolution Pattern."
+   martinfowler.com, 12 June 2006.
+   https://martinfowler.com/articles/consumerDrivenContracts.html
+   Verified 2026-08-02.
+2. Chris Richardson. "Pattern. Consumer-side contract test." microservices.io,
+   Testing patterns.
+   https://microservices.io/patterns/testing/consumer-side-contract-test.html
+   Verified 2026-08-02.
+3. Pact Foundation. "What is Pact." docs.pact.io.
+   https://docs.pact.io/
+   Verified 2026-08-02.
+4. Pact Foundation. "The Pact Broker." docs.pact.io.
+   https://docs.pact.io/pact_broker
+   Verified 2026-08-02.
+5. PactFlow. "Case Studies." pactflow.io.
+   https://pactflow.io/case-studies/
+   Verified 2026-08-02.
+6. Sam Newman. Building Microservices, 2nd edition. O'Reilly Media, 2021.
+   Chapter 1, "What Is a Microservice."
+
 ## Code examples
 
 All three examples below are original, minimal, and dependency free. None
@@ -986,25 +1008,3 @@ func main() {
 	fmt.Println("all consumer contract assertions passed")
 }
 ```
-
-## 18. References
-
-1. Ian Robinson. "Consumer-Driven Contracts. A Service Evolution Pattern."
-   martinfowler.com, 12 June 2006.
-   https://martinfowler.com/articles/consumerDrivenContracts.html
-   Verified 2026-08-02.
-2. Chris Richardson. "Pattern. Consumer-side contract test." microservices.io,
-   Testing patterns.
-   https://microservices.io/patterns/testing/consumer-side-contract-test.html
-   Verified 2026-08-02.
-3. Pact Foundation. "What is Pact." docs.pact.io.
-   https://docs.pact.io/
-   Verified 2026-08-02.
-4. Pact Foundation. "The Pact Broker." docs.pact.io.
-   https://docs.pact.io/pact_broker
-   Verified 2026-08-02.
-5. PactFlow. "Case Studies." pactflow.io.
-   https://pactflow.io/case-studies/
-   Verified 2026-08-02.
-6. Sam Newman. Building Microservices, 2nd edition. O'Reilly Media, 2021.
-   Chapter 1, "What Is a Microservice."

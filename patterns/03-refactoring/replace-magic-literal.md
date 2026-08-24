@@ -769,6 +769,34 @@ This refactoring is silent on cryptography. It does not make an algorithm,
 salt length, token size, or timeout safe. It only gives the value a name. The
 security review still has to validate the chosen value and the threat model.
 
+## 18. References
+
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 1st
+  edition, Addison-Wesley, 1999, chapter 8, "Organizing Data," page 204,
+  "Replace Magic Number with Symbolic Constant."
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
+  edition, Addison-Wesley, 2018, chapter 6, "A First Set of Refactorings,"
+  "Replace Magic Literal."
+- Martin Fowler, "Replace Magic Literal," refactoring catalog,
+  https://refactoring.com/catalog/replaceMagicLiteral.html, verified
+  2026-08-02.
+- Python Software Foundation, "`http` HTTP modules," Python 3 documentation,
+  https://docs.python.org/3/library/http.html, verified 2026-08-02.
+- Go project, "`time` package," Go standard library documentation,
+  https://pkg.go.dev/time, verified 2026-08-02.
+- Oracle, "`java.util.concurrent.TimeUnit`," Java SE 21 API documentation,
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/TimeUnit.html,
+  verified 2026-08-02.
+- Kubernetes documentation, "Recommended Labels,"
+  https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/,
+  verified 2026-08-02.
+- Kubernetes documentation, "Labels and Selectors,"
+  https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/,
+  verified 2026-08-02.
+- R. Fielding, M. Nottingham, J. Reschke, editors, "RFC 9110. HTTP Semantics,"
+  section 15, https://www.rfc-editor.org/rfc/rfc9110.html#section-15,
+  verified 2026-08-02.
+
 ## Code examples
 
 TypeScript is idiomatic for string unions and `as const` objects. This example
@@ -850,31 +878,3 @@ func main() {
 	fmt.Println(ok, int64(delay/time.Millisecond))
 }
 ```
-
-## 18. References
-
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 1st
-  edition, Addison-Wesley, 1999, chapter 8, "Organizing Data," page 204,
-  "Replace Magic Number with Symbolic Constant."
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
-  edition, Addison-Wesley, 2018, chapter 6, "A First Set of Refactorings,"
-  "Replace Magic Literal."
-- Martin Fowler, "Replace Magic Literal," refactoring catalog,
-  https://refactoring.com/catalog/replaceMagicLiteral.html, verified
-  2026-08-02.
-- Python Software Foundation, "`http` HTTP modules," Python 3 documentation,
-  https://docs.python.org/3/library/http.html, verified 2026-08-02.
-- Go project, "`time` package," Go standard library documentation,
-  https://pkg.go.dev/time, verified 2026-08-02.
-- Oracle, "`java.util.concurrent.TimeUnit`," Java SE 21 API documentation,
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/TimeUnit.html,
-  verified 2026-08-02.
-- Kubernetes documentation, "Recommended Labels,"
-  https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/,
-  verified 2026-08-02.
-- Kubernetes documentation, "Labels and Selectors,"
-  https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/,
-  verified 2026-08-02.
-- R. Fielding, M. Nottingham, J. Reschke, editors, "RFC 9110. HTTP Semantics,"
-  section 15, https://www.rfc-editor.org/rfc/rfc9110.html#section-15,
-  verified 2026-08-02.

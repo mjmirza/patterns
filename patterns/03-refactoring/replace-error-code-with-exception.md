@@ -746,6 +746,46 @@ that support operators and developers, then map them to public error objects
 with a smaller field set. Test that mapping. The more context an exception
 carries, the more disciplined the boundary must be.
 
+## 18. References
+
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 1st
+  edition, Addison-Wesley, 1999, chapter 10, "Making Method Calls Simpler,"
+  Replace Error Code with Exception.
+- Martin Fowler, "Replace Error Code with Exception," refactoring catalog,
+  https://refactoring.com/catalog/replaceErrorCodeWithException.html, verified
+  2026-08-02.
+- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
+  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
+  2026-08-02.
+- Martin Fowler, "Refactoring,"
+  https://www.martinfowler.com/books/refactoring.html, verified 2026-08-02.
+- Martin Fowler, "Replacing Throwing Exceptions with Notification in
+  Validations,"
+  https://martinfowler.com/articles/replaceThrowWithNotification.html, verified
+  2026-08-02.
+- Oracle, Java SE 21 API documentation, `java.sql.SQLException`,
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html,
+  verified 2026-08-02.
+- Python Software Foundation, Python 3 documentation, `errno`,
+  https://docs.python.org/3/library/errno.html, verified 2026-08-02.
+- Python Software Foundation, Python 3 documentation, built-in exceptions,
+  https://docs.python.org/3/library/exceptions.html, verified 2026-08-02.
+- OpenJS Foundation, Node.js API documentation, Errors,
+  https://nodejs.org/api/errors.html, verified 2026-08-02.
+- OpenJS Foundation, Node.js API documentation, Errors,
+  https://nodejs.org/dist/latest/docs/api/errors.html, verified 2026-08-02.
+- Requests project, Requests documentation, Quickstart, Errors and Exceptions,
+  https://requests.readthedocs.io/en/latest/user/quickstart/, verified
+  2026-08-02.
+- Requests project, Requests API documentation, `Response.raise_for_status`,
+  https://docs.python-requests.org/en/latest/api/?highlight=raise_for_status,
+  verified 2026-08-02.
+- Django Software Foundation, Django documentation, built-in views, 404 view,
+  https://docs.djangoproject.com/en/6.0/ref/views/, verified 2026-08-02.
+- The Swift Programming Language, Error Handling,
+  https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html, verified
+  2026-08-02.
+
 ## Code examples
 
 The examples use TypeScript, Python, and Swift because those languages support
@@ -875,43 +915,3 @@ func checkout(_ account: Account, amount: Int) throws -> String {
 print(try checkout(Account(id: "acct-1", balance: 10), amount: 25))
 print(try checkout(Account(id: "acct-2", balance: 40), amount: 25))
 ```
-
-## 18. References
-
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 1st
-  edition, Addison-Wesley, 1999, chapter 10, "Making Method Calls Simpler,"
-  Replace Error Code with Exception.
-- Martin Fowler, "Replace Error Code with Exception," refactoring catalog,
-  https://refactoring.com/catalog/replaceErrorCodeWithException.html, verified
-  2026-08-02.
-- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
-  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
-  2026-08-02.
-- Martin Fowler, "Refactoring,"
-  https://www.martinfowler.com/books/refactoring.html, verified 2026-08-02.
-- Martin Fowler, "Replacing Throwing Exceptions with Notification in
-  Validations,"
-  https://martinfowler.com/articles/replaceThrowWithNotification.html, verified
-  2026-08-02.
-- Oracle, Java SE 21 API documentation, `java.sql.SQLException`,
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html,
-  verified 2026-08-02.
-- Python Software Foundation, Python 3 documentation, `errno`,
-  https://docs.python.org/3/library/errno.html, verified 2026-08-02.
-- Python Software Foundation, Python 3 documentation, built-in exceptions,
-  https://docs.python.org/3/library/exceptions.html, verified 2026-08-02.
-- OpenJS Foundation, Node.js API documentation, Errors,
-  https://nodejs.org/api/errors.html, verified 2026-08-02.
-- OpenJS Foundation, Node.js API documentation, Errors,
-  https://nodejs.org/dist/latest/docs/api/errors.html, verified 2026-08-02.
-- Requests project, Requests documentation, Quickstart, Errors and Exceptions,
-  https://requests.readthedocs.io/en/latest/user/quickstart/, verified
-  2026-08-02.
-- Requests project, Requests API documentation, `Response.raise_for_status`,
-  https://docs.python-requests.org/en/latest/api/?highlight=raise_for_status,
-  verified 2026-08-02.
-- Django Software Foundation, Django documentation, built-in views, 404 view,
-  https://docs.djangoproject.com/en/6.0/ref/views/, verified 2026-08-02.
-- The Swift Programming Language, Error Handling,
-  https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html, verified
-  2026-08-02.

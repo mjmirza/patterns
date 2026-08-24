@@ -448,6 +448,15 @@ should apply the same review it would apply to exposing that data
 through any other prop, never assuming the function-prop mechanism
 itself adds any protection.
 
+## 18. References
+
+1. Michael Jackson. "Use a Render Prop!". 18 September 2017.
+   https://medium.com/@mjackson/use-a-render-prop-50de598f11ce
+   Verified 2026-08-21. Source of the first_described lineage claim.
+2. Downshift README. downshift-js/downshift.
+   https://github.com/downshift-js/downshift
+   Verified 2026-08-21. Source for the production use in dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely idiomatic
@@ -557,12 +566,3 @@ let tracker = MouseTracker { pos in "cursor at (" + String(pos.x) + ", " + Strin
 print(tracker.render())
 print(tracker.move(x: 42, y: 87))
 ```
-
-## 18. References
-
-1. Michael Jackson. "Use a Render Prop!". 18 September 2017.
-   https://medium.com/@mjackson/use-a-render-prop-50de598f11ce
-   Verified 2026-08-21. Source of the first_described lineage claim.
-2. Downshift README. downshift-js/downshift.
-   https://github.com/downshift-js/downshift
-   Verified 2026-08-21. Source for the production use in dimension 9.

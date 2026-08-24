@@ -930,6 +930,48 @@ is presented as reasoning a security-conscious reviewer can apply, not as a
 claim independently established in the cited security literature for this
 specific named code smell.
 
+## 18. References
+
+1. Martin Fowler, with Kent Beck, John Brant, William Opdyke, and Don
+   Roberts, *Refactoring, Improving the Design of Existing Code*,
+   Addison-Wesley, 1999, Chapter 3, "Bad Smells in Code", section "Large
+   Class", and Chapter 2 for the definition of refactoring as
+   behaviour-preserving structural change.
+2. Martin Fowler, with Kent Beck, *Refactoring, Improving the Design of
+   Existing Code*, second edition, Addison-Wesley, 2018, retaining the
+   Large Class smell and its treatment under the reorganized catalogue.
+3. Arthur J. Riel, *Object-Oriented Design Heuristics*, Addison-Wesley,
+   1996, heuristic warning against classes named Driver, Manager, System,
+   or Subsystem, the earliest formal source found for the God Class term.
+   Referenced via https://en.wikipedia.org/wiki/God_object, verified
+   2026-08-02.
+4. William J. Brown, Raphael C. Malveau, Hays W. McCormick III, and Thomas
+   J. Mowbray, *AntiPatterns, Refactoring Software, Architectures, and
+   Projects in Crisis*, Wiley, 1998, the Blob antipattern. Author and year
+   confirmed via https://openlibrary.org/search.json?q=AntiPatterns+Refactoring+Software+Architectures+Projects+Crisis, verified 2026-08-02.
+5. Robert C. Martin, *Agile Software Development, Principles, Patterns, and
+   Practices*, Prentice Hall, 2002, chapter introducing the Single
+   Responsibility Principle.
+6. Michele Lanza and Radu Marinescu, *Object-Oriented Metrics in Practice,
+   Using Software Metrics to Characterize, Evaluate, and Improve the
+   Design of Object-Oriented Systems*, Springer, 2006, the God Class
+   detection strategy using Weighted Method Count, Access To Foreign Data,
+   and Tight Class Cohesion. Title, authors, publisher, and year confirmed
+   via search, verified 2026-08-02.
+7. PMD documentation, "Java Design rules", `GodClass`, `TooManyMethods`,
+   `TooManyFields`. https://docs.pmd-code.org/latest/pmd_rules_java_design.html,
+   verified 2026-08-02.
+8. Android Open Source Project, `PackageManagerService.java`, GitHub mirror
+   of `frameworks/base`.
+   https://api.github.com/repos/android/platform_frameworks_base/contents/services/core/java/com/android/server/pm/PackageManagerService.java,
+   verified 2026-08-02, reported size 382,605 bytes.
+9. Hibernate ORM, `SessionImpl.java`, `hibernate-core` module.
+   https://api.github.com/repos/hibernate/hibernate-orm/contents/hibernate-core/src/main/java/org/hibernate/internal/SessionImpl.java,
+   verified 2026-08-02, reported size 92,027 bytes.
+10. Mozilla Gecko, `nsGlobalWindowInner.cpp`, `dom/base` component.
+    https://api.github.com/repos/mozilla/gecko-dev/contents/dom/base/nsGlobalWindowInner.cpp,
+    verified 2026-08-02, reported size 258,614 bytes.
+
 ## Code examples
 
 ### Python
@@ -1230,45 +1272,3 @@ JavaScript ran with `node`, printing the same style of before and after
 output. Go compiled and ran with `go run`, printing shipment, notification,
 and total lines for both the wide struct and the composed version. No
 sample required a modification after the first attempt to run.
-
-## 18. References
-
-1. Martin Fowler, with Kent Beck, John Brant, William Opdyke, and Don
-   Roberts, *Refactoring, Improving the Design of Existing Code*,
-   Addison-Wesley, 1999, Chapter 3, "Bad Smells in Code", section "Large
-   Class", and Chapter 2 for the definition of refactoring as
-   behaviour-preserving structural change.
-2. Martin Fowler, with Kent Beck, *Refactoring, Improving the Design of
-   Existing Code*, second edition, Addison-Wesley, 2018, retaining the
-   Large Class smell and its treatment under the reorganized catalogue.
-3. Arthur J. Riel, *Object-Oriented Design Heuristics*, Addison-Wesley,
-   1996, heuristic warning against classes named Driver, Manager, System,
-   or Subsystem, the earliest formal source found for the God Class term.
-   Referenced via https://en.wikipedia.org/wiki/God_object, verified
-   2026-08-02.
-4. William J. Brown, Raphael C. Malveau, Hays W. McCormick III, and Thomas
-   J. Mowbray, *AntiPatterns, Refactoring Software, Architectures, and
-   Projects in Crisis*, Wiley, 1998, the Blob antipattern. Author and year
-   confirmed via https://openlibrary.org/search.json?q=AntiPatterns+Refactoring+Software+Architectures+Projects+Crisis, verified 2026-08-02.
-5. Robert C. Martin, *Agile Software Development, Principles, Patterns, and
-   Practices*, Prentice Hall, 2002, chapter introducing the Single
-   Responsibility Principle.
-6. Michele Lanza and Radu Marinescu, *Object-Oriented Metrics in Practice,
-   Using Software Metrics to Characterize, Evaluate, and Improve the
-   Design of Object-Oriented Systems*, Springer, 2006, the God Class
-   detection strategy using Weighted Method Count, Access To Foreign Data,
-   and Tight Class Cohesion. Title, authors, publisher, and year confirmed
-   via search, verified 2026-08-02.
-7. PMD documentation, "Java Design rules", `GodClass`, `TooManyMethods`,
-   `TooManyFields`. https://docs.pmd-code.org/latest/pmd_rules_java_design.html,
-   verified 2026-08-02.
-8. Android Open Source Project, `PackageManagerService.java`, GitHub mirror
-   of `frameworks/base`.
-   https://api.github.com/repos/android/platform_frameworks_base/contents/services/core/java/com/android/server/pm/PackageManagerService.java,
-   verified 2026-08-02, reported size 382,605 bytes.
-9. Hibernate ORM, `SessionImpl.java`, `hibernate-core` module.
-   https://api.github.com/repos/hibernate/hibernate-orm/contents/hibernate-core/src/main/java/org/hibernate/internal/SessionImpl.java,
-   verified 2026-08-02, reported size 92,027 bytes.
-10. Mozilla Gecko, `nsGlobalWindowInner.cpp`, `dom/base` component.
-    https://api.github.com/repos/mozilla/gecko-dev/contents/dom/base/nsGlobalWindowInner.cpp,
-    verified 2026-08-02, reported size 258,614 bytes.

@@ -805,6 +805,18 @@ to preserve the full, original message durably first, then apply Content
 Filter only to whatever copy continues onward to a specific, narrower
 consumer, never to filter the one and only copy that will ever exist.
 
+## 18. References
+
+1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003,
+   Message Transformation chapter, Content Filter.
+2. [Enterprise Integration Patterns, Content Filter](https://www.enterpriseintegrationpatterns.com/patterns/messaging/ContentFilter.html), verified 2026-08-02.
+3. [Google Cloud, API System Parameters](https://docs.cloud.google.com/apis/docs/system-parameters), verified 2026-08-02.
+4. [AWS, Amazon EventBridge input transformation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-transform-target-input.html), verified 2026-08-02.
+5. [Elastic, remove processor](https://www.elastic.co/guide/en/elasticsearch/reference/current/remove-processor.html), verified 2026-08-02.
+6. [bazaarvoice/jolt, README](https://github.com/bazaarvoice/jolt), verified 2026-08-02.
+7. [Spring Integration, Message Transformation](https://docs.spring.io/spring-integration/reference/message-transformation.html), verified 2026-08-02.
+
 ## Code examples
 
 Every example below implements the same scenario. an order message carrying
@@ -1071,15 +1083,3 @@ demonstrate every implementation-relevant idea the pattern carries, a simple
 recursive path get and set over a nested map, and a fourth or fifth sample
 would repeat that same shape rather than reveal anything new about the
 pattern itself.
-
-## 18. References
-
-1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003,
-   Message Transformation chapter, Content Filter.
-2. [Enterprise Integration Patterns, Content Filter](https://www.enterpriseintegrationpatterns.com/patterns/messaging/ContentFilter.html), verified 2026-08-02.
-3. [Google Cloud, API System Parameters](https://docs.cloud.google.com/apis/docs/system-parameters), verified 2026-08-02.
-4. [AWS, Amazon EventBridge input transformation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-transform-target-input.html), verified 2026-08-02.
-5. [Elastic, remove processor](https://www.elastic.co/guide/en/elasticsearch/reference/current/remove-processor.html), verified 2026-08-02.
-6. [bazaarvoice/jolt, README](https://github.com/bazaarvoice/jolt), verified 2026-08-02.
-7. [Spring Integration, Message Transformation](https://docs.spring.io/spring-integration/reference/message-transformation.html), verified 2026-08-02.

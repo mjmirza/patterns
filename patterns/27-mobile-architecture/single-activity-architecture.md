@@ -169,6 +169,11 @@ Skip it, or scope it deliberately, when a screen genuinely needs its own process
 - Deep links resolving directly into an authenticated destination must re-verify authentication and authorization inside the destination itself, since a link can be constructed to target a screen directly, bypassing whatever gate a normal in-app navigation path would have enforced.
 - Because the whole app shares one Activity and one process, a memory-dump or debugging tool attached to that process sees every destination's state at once, so sensitive in-memory data should be cleared promptly rather than left resident in a long-lived, broadly scoped ViewModel.
 
+## 18. References
+
+- Android Developers, Activity destinations (https://developer.android.com/guide/navigation/design/activity-destinations)
+- Android Developers, Navigation component overview (https://developer.android.com/topic/libraries/architecture/navigation)
+
 ## Code examples
 
 ### Python
@@ -294,8 +299,3 @@ nav.navigate(Destination(name: "profile", args: ["userId": 482]))
 let cart = nav.scopedViewModel(key: "cart") { [String]() }
 print("current destination " + nav.current.name)
 ```
-
-## 18. References
-
-- Android Developers, Activity destinations (https://developer.android.com/guide/navigation/design/activity-destinations)
-- Android Developers, Navigation component overview (https://developer.android.com/topic/libraries/architecture/navigation)

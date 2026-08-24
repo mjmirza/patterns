@@ -703,6 +703,45 @@ rules, and XSS prevention. It depends on those controls. A strong session
 manager cannot save an application that authenticates the wrong user, grants
 the wrong role, or lets script injection read every page.
 
+## 18. References
+
+1. OWASP Foundation. *OWASP Cheat Sheet Series, Session Management Cheat
+   Sheet*. Sections "Introduction", "Session ID Properties", "Cookies",
+   "Session ID Life Cycle", "Session Expiration", and "Session Attacks
+   Detection".
+   https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html
+   Verified 2026-08-02.
+2. National Institute of Standards and Technology. *NIST Special Publication
+   800-63B, Digital Identity Guidelines, Authentication and Authenticator
+   Management*, Revision 4 draft. Sections 5, "Session Management", 5.1,
+   "Session Bindings", 5.3, "Session Monitoring", and 6.3, "Session Attacks".
+   https://pages.nist.gov/800-63-4/sp800-63b.html
+   Verified 2026-08-02.
+3. Adam Barth. *RFC 6265, HTTP State Management Mechanism*. Internet
+   Engineering Task Force, April 2011. Sections 4 and 5.
+   https://www.rfc-editor.org/rfc/rfc6265
+   Verified 2026-08-02.
+4. MDN contributors. *Set-Cookie header*. HTTP reference. Sections on cookie
+   attributes and cookie prefixes.
+   https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie
+   Verified 2026-08-02.
+5. Django Software Foundation. *Django 5.2 documentation, How to use sessions*.
+   Sections "Enabling sessions" and "Configuring the session engine".
+   https://docs.djangoproject.com/en/5.2/topics/http/sessions/
+   Verified 2026-08-02.
+6. Express project. *session middleware*. API documentation for
+   `session(options)` and cookie options.
+   https://expressjs.com/en/resources/middleware/session/
+   Verified 2026-08-02.
+7. Spring project. *Spring Session Reference Documentation*. Overview and
+   repository integrations.
+   https://docs.spring.io/spring-session/reference/index.html
+   Verified 2026-08-02.
+8. Ruby on Rails project. *Securing Rails Applications*. Sections "Session
+   Management", "What are Sessions?", and "Session Hijacking".
+   https://guides.rubyonrails.org/security.html
+   Verified 2026-08-02.
+
 ## Code examples
 
 The examples use three languages from the repository-approved set. TypeScript
@@ -865,42 +904,3 @@ func main() {
 	fmt.Println(ok)
 }
 ```
-
-## 18. References
-
-1. OWASP Foundation. *OWASP Cheat Sheet Series, Session Management Cheat
-   Sheet*. Sections "Introduction", "Session ID Properties", "Cookies",
-   "Session ID Life Cycle", "Session Expiration", and "Session Attacks
-   Detection".
-   https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html
-   Verified 2026-08-02.
-2. National Institute of Standards and Technology. *NIST Special Publication
-   800-63B, Digital Identity Guidelines, Authentication and Authenticator
-   Management*, Revision 4 draft. Sections 5, "Session Management", 5.1,
-   "Session Bindings", 5.3, "Session Monitoring", and 6.3, "Session Attacks".
-   https://pages.nist.gov/800-63-4/sp800-63b.html
-   Verified 2026-08-02.
-3. Adam Barth. *RFC 6265, HTTP State Management Mechanism*. Internet
-   Engineering Task Force, April 2011. Sections 4 and 5.
-   https://www.rfc-editor.org/rfc/rfc6265
-   Verified 2026-08-02.
-4. MDN contributors. *Set-Cookie header*. HTTP reference. Sections on cookie
-   attributes and cookie prefixes.
-   https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie
-   Verified 2026-08-02.
-5. Django Software Foundation. *Django 5.2 documentation, How to use sessions*.
-   Sections "Enabling sessions" and "Configuring the session engine".
-   https://docs.djangoproject.com/en/5.2/topics/http/sessions/
-   Verified 2026-08-02.
-6. Express project. *session middleware*. API documentation for
-   `session(options)` and cookie options.
-   https://expressjs.com/en/resources/middleware/session/
-   Verified 2026-08-02.
-7. Spring project. *Spring Session Reference Documentation*. Overview and
-   repository integrations.
-   https://docs.spring.io/spring-session/reference/index.html
-   Verified 2026-08-02.
-8. Ruby on Rails project. *Securing Rails Applications*. Sections "Session
-   Management", "What are Sessions?", and "Session Hijacking".
-   https://guides.rubyonrails.org/security.html
-   Verified 2026-08-02.

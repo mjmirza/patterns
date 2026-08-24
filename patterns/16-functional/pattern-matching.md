@@ -617,6 +617,59 @@ Authorization must not live only in pattern shape. A pattern can prove that a
 message is `DeleteAccount(id)`. It cannot prove that the caller may delete that
 account. Keep authorization as an explicit branch step or precondition.
 
+## 18. References
+
+- Brandt Bucher, Guido van Rossum, PEP 634, "Structural Pattern Matching:
+  Specification", Python Enhancement Proposals, Python 3.10, sections
+  "Syntax and Semantics", "Patterns", "Guards", "Side Effects and Undefined
+  Behavior", https://peps.python.org/pep-0634/, verified 2026-08-02.
+- Daniel F Moisset, PEP 636, "Structural Pattern Matching: Tutorial", Python
+  Enhancement Proposals, Python 3.10,
+  https://peps.python.org/pep-0636/, verified 2026-08-02.
+- The Rust Project Developers, "Patterns", The Rust Reference, sections
+  "Patterns", "Destructuring", "Reference patterns",
+  https://doc.rust-lang.org/stable/reference/patterns.html, verified
+  2026-08-02.
+- The Rust Project Developers, "Match expressions", The Rust Reference,
+  https://doc.rust-lang.org/reference/expressions/match-expr.html, verified
+  2026-08-02.
+- The Rust Compiler Developers, "Pattern and exhaustiveness checking", Rust
+  Compiler Development Guide,
+  https://rustc-dev-guide.rust-lang.org/pat-exhaustive-checking.html, verified
+  2026-08-02.
+- Apple Inc. and the Swift Project Authors, "Patterns", The Swift Programming
+  Language, Language Reference,
+  https://docs.swift.org/swift-book/ReferenceManual/Patterns.html, verified
+  2026-08-02.
+- Apple Inc. and the Swift Project Authors, "Statements", The Swift Programming
+  Language, Language Reference,
+  https://docs.swift.org/swift-book/documentation/the-swift-programming-language/statements/,
+  verified 2026-08-02.
+- Simon Marlow, editor, "Haskell 2010 Language Report", chapter 3, sections
+  3.13 and 3.17, https://www.haskell.org/onlinereport/haskell2010/,
+  verified 2026-08-02.
+- OCaml Developers, "The OCaml language, Patterns", OCaml Manual 5.5,
+  https://ocaml.org/manual/5.5/patterns.html, verified 2026-08-02.
+- OCaml Developers, "Expressions", OCaml Manual 4.05, section "Case
+  expression" and "Guards in pattern-matchings",
+  https://ocaml.org/manual/4.05/expr.html, verified 2026-08-02.
+- Erlang/OTP Documentation Team, "Pattern Matching", Erlang System
+  Documentation v29.0.5, https://www.erlang.org/doc/system/patterns.html,
+  verified 2026-08-02.
+- Erlang/OTP Documentation Team, "Concurrent Programming", Erlang System
+  Documentation v29.0.5, section on `receive`,
+  https://www.erlang.org/doc/system/conc_prog.html, verified 2026-08-02.
+- Erlang/OTP Documentation Team, "gen_server", STDLIB Reference Manual,
+  version 5.2.3.6, https://www.erlang.org/docs/26/man/gen_server.html,
+  verified 2026-08-02.
+- Phoenix Framework, `Phoenix.Router` documentation and source,
+  https://github.com/phoenixframework/phoenix/blob/main/lib/phoenix/router.ex,
+  verified 2026-08-02.
+- LFCS, School of Informatics, University of Edinburgh, "History of Research on
+  Programming Languages at Edinburgh University",
+  https://informatics.ed.ac.uk/lfcs/research/programming-languages-and-foundations/history,
+  verified 2026-08-02.
+
 ## Code examples
 
 The following samples were compiled or run on 2026-08-21 with `python3`,
@@ -733,56 +786,3 @@ function classify(event: DomainEvent): string {
 console.log(classify({ kind: "charge", amount: 35, currency: "USD" }));
 console.log(classify({ kind: "refund", amount: 12 }));
 ```
-
-## 18. References
-
-- Brandt Bucher, Guido van Rossum, PEP 634, "Structural Pattern Matching:
-  Specification", Python Enhancement Proposals, Python 3.10, sections
-  "Syntax and Semantics", "Patterns", "Guards", "Side Effects and Undefined
-  Behavior", https://peps.python.org/pep-0634/, verified 2026-08-02.
-- Daniel F Moisset, PEP 636, "Structural Pattern Matching: Tutorial", Python
-  Enhancement Proposals, Python 3.10,
-  https://peps.python.org/pep-0636/, verified 2026-08-02.
-- The Rust Project Developers, "Patterns", The Rust Reference, sections
-  "Patterns", "Destructuring", "Reference patterns",
-  https://doc.rust-lang.org/stable/reference/patterns.html, verified
-  2026-08-02.
-- The Rust Project Developers, "Match expressions", The Rust Reference,
-  https://doc.rust-lang.org/reference/expressions/match-expr.html, verified
-  2026-08-02.
-- The Rust Compiler Developers, "Pattern and exhaustiveness checking", Rust
-  Compiler Development Guide,
-  https://rustc-dev-guide.rust-lang.org/pat-exhaustive-checking.html, verified
-  2026-08-02.
-- Apple Inc. and the Swift Project Authors, "Patterns", The Swift Programming
-  Language, Language Reference,
-  https://docs.swift.org/swift-book/ReferenceManual/Patterns.html, verified
-  2026-08-02.
-- Apple Inc. and the Swift Project Authors, "Statements", The Swift Programming
-  Language, Language Reference,
-  https://docs.swift.org/swift-book/documentation/the-swift-programming-language/statements/,
-  verified 2026-08-02.
-- Simon Marlow, editor, "Haskell 2010 Language Report", chapter 3, sections
-  3.13 and 3.17, https://www.haskell.org/onlinereport/haskell2010/,
-  verified 2026-08-02.
-- OCaml Developers, "The OCaml language, Patterns", OCaml Manual 5.5,
-  https://ocaml.org/manual/5.5/patterns.html, verified 2026-08-02.
-- OCaml Developers, "Expressions", OCaml Manual 4.05, section "Case
-  expression" and "Guards in pattern-matchings",
-  https://ocaml.org/manual/4.05/expr.html, verified 2026-08-02.
-- Erlang/OTP Documentation Team, "Pattern Matching", Erlang System
-  Documentation v29.0.5, https://www.erlang.org/doc/system/patterns.html,
-  verified 2026-08-02.
-- Erlang/OTP Documentation Team, "Concurrent Programming", Erlang System
-  Documentation v29.0.5, section on `receive`,
-  https://www.erlang.org/doc/system/conc_prog.html, verified 2026-08-02.
-- Erlang/OTP Documentation Team, "gen_server", STDLIB Reference Manual,
-  version 5.2.3.6, https://www.erlang.org/docs/26/man/gen_server.html,
-  verified 2026-08-02.
-- Phoenix Framework, `Phoenix.Router` documentation and source,
-  https://github.com/phoenixframework/phoenix/blob/main/lib/phoenix/router.ex,
-  verified 2026-08-02.
-- LFCS, School of Informatics, University of Edinburgh, "History of Research on
-  Programming Languages at Edinburgh University",
-  https://informatics.ed.ac.uk/lfcs/research/programming-languages-and-foundations/history,
-  verified 2026-08-02.

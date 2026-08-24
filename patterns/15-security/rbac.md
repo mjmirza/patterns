@@ -777,6 +777,70 @@ records, prevent SQL injection, sanitize output, or decide whether data should
 be collected. It is an authorization pattern. It composes with those controls
 but does not replace them.
 
+## 18. References
+
+1. David Ferraiolo and Richard Kuhn. "Role-Based Access Controls." Proceedings
+   of the 15th National Computer Security Conference, 1992, pages 554 to 563.
+   NIST publication page:
+   https://csrc.nist.gov/pubs/conference/1992/10/13/rolebased-access-controls/final
+   Verified 2026-08-02. Source for the first formal RBAC lineage.
+2. NIST Computer Security Resource Center. "Role Based Access Control RBAC",
+   project page.
+   https://csrc.nist.gov/projects/role-based-access-control
+   Verified 2026-08-02. Source for aliases, standard history, background, and
+   primary references.
+3. NIST Computer Security Resource Center. "Role Based Access Control RBAC",
+   FAQ.
+   https://csrc.nist.gov/Projects/role-based-access-control/faqs
+   Verified 2026-08-02. Source for the three RBAC rules, RBAC0 through RBAC3,
+   session activation, hierarchy, and separation-of-duty model components.
+4. ANSI INCITS 359-2012. *Information Technology, Role-Based Access Control*.
+   May 29, 2012. Cited through NIST's RBAC project page because the public
+   standards page was verified there:
+   https://csrc.nist.gov/projects/role-based-access-control
+   Verified 2026-08-02.
+5. Kubernetes documentation. "Using RBAC Authorization."
+   https://kubernetes.io/docs/reference/access-authn-authz/rbac/
+   Verified 2026-08-02. Source for Role, ClusterRole, RoleBinding, and
+   ClusterRoleBinding production use and scope behavior.
+6. Microsoft Learn. "What is Azure role-based access control (Azure RBAC)?"
+   https://learn.microsoft.com/en-us/azure/role-based-access-control/overview
+   Verified 2026-08-02. Source for Azure role assignments, scopes, additive
+   evaluation, deny assignments, and conditions.
+7. PostgreSQL Global Development Group. *PostgreSQL 16 Documentation*,
+   Chapter 22, "Database Roles."
+   https://www.postgresql.org/docs/16/user-manag.html
+   Verified 2026-08-02. Source for database role production use.
+8. GitLab documentation. "Roles and permissions."
+   https://docs.gitlab.com/user/permissions/
+   Verified 2026-08-02. Source for GitLab project and group role production
+   use.
+9. GitLab documentation. "Custom roles."
+   https://docs.gitlab.com/user/custom_roles/
+   Verified 2026-08-02. Source for GitLab custom role behavior.
+10. AWS documentation. "IAM roles."
+    https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
+    Verified 2026-08-02. Source for assumable IAM role behavior and temporary
+    credentials.
+11. AWS. "AWS Identity and Access Management FAQs."
+    https://aws.amazon.com/iam/faqs/
+    Verified 2026-08-02. Source for AWS's RBAC explanation using IAM roles.
+12. Google Cloud documentation. "Roles and permissions."
+    https://docs.cloud.google.com/iam/docs/roles-overview?authuser=0
+    Verified 2026-08-02. Source for Google Cloud IAM role types and role as a
+    permission collection.
+13. Vincent C. Hu, David Ferraiolo, Richard Kuhn, Adam Schnitzer, Kenneth
+    Sandlin, Robert Miller, Karen Scarfone. NIST SP 800-162, *Guide to
+    Attribute Based Access Control (ABAC) Definition and Considerations*,
+    January 2014, updated 2019.
+    https://csrc.nist.gov/pubs/sp/800/162/upd2/final
+    Verified 2026-08-02. Source for the ABAC comparison.
+14. OASIS XACML Technical Committee. *XACML v3.0 Core and Hierarchical Role
+    Based Access Control (RBAC) Profile Version 1.0*, Committee Specification
+    02, edited by Erik Rissanen, October 23, 2014.
+    https://docs.oasis-open.org/xacml/3.0/xacml-3.0-rbac-v1-spec-en.html
+    Verified 2026-08-02. Source for the XACML RBAC profile variant.
+
 ## Code examples
 
 Three languages are used because they show different deployment shapes.
@@ -978,67 +1042,3 @@ func main() {
 	fmt.Println(rbac.Can("li", "invoice:approve", "tenant-b"))
 }
 ```
-
-## 18. References
-
-1. David Ferraiolo and Richard Kuhn. "Role-Based Access Controls." Proceedings
-   of the 15th National Computer Security Conference, 1992, pages 554 to 563.
-   NIST publication page:
-   https://csrc.nist.gov/pubs/conference/1992/10/13/rolebased-access-controls/final
-   Verified 2026-08-02. Source for the first formal RBAC lineage.
-2. NIST Computer Security Resource Center. "Role Based Access Control RBAC",
-   project page.
-   https://csrc.nist.gov/projects/role-based-access-control
-   Verified 2026-08-02. Source for aliases, standard history, background, and
-   primary references.
-3. NIST Computer Security Resource Center. "Role Based Access Control RBAC",
-   FAQ.
-   https://csrc.nist.gov/Projects/role-based-access-control/faqs
-   Verified 2026-08-02. Source for the three RBAC rules, RBAC0 through RBAC3,
-   session activation, hierarchy, and separation-of-duty model components.
-4. ANSI INCITS 359-2012. *Information Technology, Role-Based Access Control*.
-   May 29, 2012. Cited through NIST's RBAC project page because the public
-   standards page was verified there:
-   https://csrc.nist.gov/projects/role-based-access-control
-   Verified 2026-08-02.
-5. Kubernetes documentation. "Using RBAC Authorization."
-   https://kubernetes.io/docs/reference/access-authn-authz/rbac/
-   Verified 2026-08-02. Source for Role, ClusterRole, RoleBinding, and
-   ClusterRoleBinding production use and scope behavior.
-6. Microsoft Learn. "What is Azure role-based access control (Azure RBAC)?"
-   https://learn.microsoft.com/en-us/azure/role-based-access-control/overview
-   Verified 2026-08-02. Source for Azure role assignments, scopes, additive
-   evaluation, deny assignments, and conditions.
-7. PostgreSQL Global Development Group. *PostgreSQL 16 Documentation*,
-   Chapter 22, "Database Roles."
-   https://www.postgresql.org/docs/16/user-manag.html
-   Verified 2026-08-02. Source for database role production use.
-8. GitLab documentation. "Roles and permissions."
-   https://docs.gitlab.com/user/permissions/
-   Verified 2026-08-02. Source for GitLab project and group role production
-   use.
-9. GitLab documentation. "Custom roles."
-   https://docs.gitlab.com/user/custom_roles/
-   Verified 2026-08-02. Source for GitLab custom role behavior.
-10. AWS documentation. "IAM roles."
-    https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html
-    Verified 2026-08-02. Source for assumable IAM role behavior and temporary
-    credentials.
-11. AWS. "AWS Identity and Access Management FAQs."
-    https://aws.amazon.com/iam/faqs/
-    Verified 2026-08-02. Source for AWS's RBAC explanation using IAM roles.
-12. Google Cloud documentation. "Roles and permissions."
-    https://docs.cloud.google.com/iam/docs/roles-overview?authuser=0
-    Verified 2026-08-02. Source for Google Cloud IAM role types and role as a
-    permission collection.
-13. Vincent C. Hu, David Ferraiolo, Richard Kuhn, Adam Schnitzer, Kenneth
-    Sandlin, Robert Miller, Karen Scarfone. NIST SP 800-162, *Guide to
-    Attribute Based Access Control (ABAC) Definition and Considerations*,
-    January 2014, updated 2019.
-    https://csrc.nist.gov/pubs/sp/800/162/upd2/final
-    Verified 2026-08-02. Source for the ABAC comparison.
-14. OASIS XACML Technical Committee. *XACML v3.0 Core and Hierarchical Role
-    Based Access Control (RBAC) Profile Version 1.0*, Committee Specification
-    02, edited by Erik Rissanen, October 23, 2014.
-    https://docs.oasis-open.org/xacml/3.0/xacml-3.0-rbac-v1-spec-en.html
-    Verified 2026-08-02. Source for the XACML RBAC profile variant.

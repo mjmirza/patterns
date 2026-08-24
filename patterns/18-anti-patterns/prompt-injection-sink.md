@@ -748,6 +748,57 @@ user, an administrator policy, or a preexisting product rule. The model can
 draft, classify, or summarize. It should not mint authority from the document it
 is reading.
 
+## 18. References
+
+- OpenAI. "Designing AI agents to resist prompt injection." March 11, 2026.
+  https://openai.com/index/designing-agents-to-resist-prompt-injection/.
+  Verified 2026-08-02.
+- OpenAI. "Understanding prompt injections."
+  https://openai.com/safety/prompt-injections/. Verified 2026-08-02.
+- MITRE. "CWE-1427: Improper Neutralization of Input Used for LLM Prompting."
+  CWE version 4.20. https://cwe.mitre.org/data/definitions/1427.html.
+  Verified 2026-08-02.
+- OWASP Cheat Sheet Series. "LLM Prompt Injection Prevention Cheat Sheet."
+  https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html.
+  Verified 2026-08-02.
+- OWASP Cheat Sheet Series. "RAG Security Cheat Sheet."
+  https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html.
+  Verified 2026-08-02.
+- OWASP Foundation. "HITL Dialog Forging."
+  https://owasp.org/www-community/attacks/Lies_in_the_Loop. Verified
+  2026-08-02.
+- Kai Greshake, Sahar Abdelnabi, Shailesh Mishra, Christoph Endres, Thorsten
+  Holz, and Mario Fritz. "Not what you've signed up for: Compromising
+  Real-World LLM-Integrated Applications with Indirect Prompt Injection."
+  arXiv:2302.12173, version 2, May 5, 2023.
+  https://arxiv.org/abs/2302.12173. Verified 2026-08-02.
+- Microsoft Learn. "Defend against indirect prompt injection attacks." Last
+  updated March 24, 2026.
+  https://learn.microsoft.com/en-us/security/zero-trust/sfi/defend-indirect-prompt-injection.
+  Verified 2026-08-02.
+- Microsoft Learn. "Prompt injection protection in Microsoft Defender for
+  Office 365." Last updated August 6, 2026.
+  https://learn.microsoft.com/en-us/defender-office-365/step-by-step-guides/prompt-injection-protection-defender-for-office-365.
+  Verified 2026-08-02.
+- Microsoft Developer Blog. "Protecting against indirect injection attacks in
+  MCP." April 28, 2025.
+  https://developer.microsoft.com/blog/protecting-against-indirect-injection-attacks-mcp/.
+  Verified 2026-08-02.
+- Google Security Blog. "Google Workspace's continuous approach to mitigating
+  indirect prompt injections." April 2, 2026.
+  https://blog.google/security/google-workspaces-continuous-approach-to-mitigating-indirect-prompt-injections/.
+  Verified 2026-08-02.
+- Google Security Blog. "AI threats in the wild: The current state of prompt
+  injections on the web." April 23, 2026.
+  https://blog.google/security/prompt-injections-web/. Verified 2026-08-02.
+- GitHub Blog. Michael Stepankin. "Safeguarding VS Code against prompt
+  injections." August 25, 2025, updated July 6, 2026.
+  https://github.blog/security/vulnerability-research/safeguarding-vs-code-against-prompt-injections/.
+  Verified 2026-08-02.
+- MITRE ATLAS. "2023-10.md." October 2023 data update.
+  https://github.com/mitre-atlas/atlas-website/blob/main/public/content/update-files/2023-10.md.
+  Verified 2026-08-02.
+
 ## Code examples
 
 The examples implement the same rule in three languages. Untrusted context may
@@ -869,54 +920,3 @@ func main() {
 	fmt.Println(err)
 }
 ```
-
-## 18. References
-
-- OpenAI. "Designing AI agents to resist prompt injection." March 11, 2026.
-  https://openai.com/index/designing-agents-to-resist-prompt-injection/.
-  Verified 2026-08-02.
-- OpenAI. "Understanding prompt injections."
-  https://openai.com/safety/prompt-injections/. Verified 2026-08-02.
-- MITRE. "CWE-1427: Improper Neutralization of Input Used for LLM Prompting."
-  CWE version 4.20. https://cwe.mitre.org/data/definitions/1427.html.
-  Verified 2026-08-02.
-- OWASP Cheat Sheet Series. "LLM Prompt Injection Prevention Cheat Sheet."
-  https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html.
-  Verified 2026-08-02.
-- OWASP Cheat Sheet Series. "RAG Security Cheat Sheet."
-  https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html.
-  Verified 2026-08-02.
-- OWASP Foundation. "HITL Dialog Forging."
-  https://owasp.org/www-community/attacks/Lies_in_the_Loop. Verified
-  2026-08-02.
-- Kai Greshake, Sahar Abdelnabi, Shailesh Mishra, Christoph Endres, Thorsten
-  Holz, and Mario Fritz. "Not what you've signed up for: Compromising
-  Real-World LLM-Integrated Applications with Indirect Prompt Injection."
-  arXiv:2302.12173, version 2, May 5, 2023.
-  https://arxiv.org/abs/2302.12173. Verified 2026-08-02.
-- Microsoft Learn. "Defend against indirect prompt injection attacks." Last
-  updated March 24, 2026.
-  https://learn.microsoft.com/en-us/security/zero-trust/sfi/defend-indirect-prompt-injection.
-  Verified 2026-08-02.
-- Microsoft Learn. "Prompt injection protection in Microsoft Defender for
-  Office 365." Last updated August 6, 2026.
-  https://learn.microsoft.com/en-us/defender-office-365/step-by-step-guides/prompt-injection-protection-defender-for-office-365.
-  Verified 2026-08-02.
-- Microsoft Developer Blog. "Protecting against indirect injection attacks in
-  MCP." April 28, 2025.
-  https://developer.microsoft.com/blog/protecting-against-indirect-injection-attacks-mcp/.
-  Verified 2026-08-02.
-- Google Security Blog. "Google Workspace's continuous approach to mitigating
-  indirect prompt injections." April 2, 2026.
-  https://blog.google/security/google-workspaces-continuous-approach-to-mitigating-indirect-prompt-injections/.
-  Verified 2026-08-02.
-- Google Security Blog. "AI threats in the wild: The current state of prompt
-  injections on the web." April 23, 2026.
-  https://blog.google/security/prompt-injections-web/. Verified 2026-08-02.
-- GitHub Blog. Michael Stepankin. "Safeguarding VS Code against prompt
-  injections." August 25, 2025, updated July 6, 2026.
-  https://github.blog/security/vulnerability-research/safeguarding-vs-code-against-prompt-injections/.
-  Verified 2026-08-02.
-- MITRE ATLAS. "2023-10.md." October 2023 data update.
-  https://github.com/mitre-atlas/atlas-website/blob/main/public/content/update-files/2023-10.md.
-  Verified 2026-08-02.

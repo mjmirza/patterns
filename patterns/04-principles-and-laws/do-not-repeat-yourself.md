@@ -682,6 +682,37 @@ for a data-access rule is easier to review for compliance with a privacy
 policy than the same rule scattered and possibly drifted across many call
 sites.
 
+## 18. References
+
+- Andrew Hunt and David Thomas, *The Pragmatic Programmer. From Journeyman to
+  Master*, Addison-Wesley, 1999, chapter 2, "The Evils of Duplication". The
+  originating source of the DRY name and its definition.
+- [Wikipedia, "Don't repeat yourself"](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself),
+  verified 2026-08-02. Summary of the principle, the WET backronym, and
+  implementation approaches Hunt and Thomas describe across system layers.
+- [Wikipedia, "Dave Thomas (programmer)"](https://en.wikipedia.org/wiki/Dave_Thomas_(programmer)),
+  verified 2026-08-02. Attribution of the DRY coinage to Thomas.
+- [Wikipedia, "Rule of three (computer programming)"](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)),
+  verified 2026-08-02. The Don Roberts guideline as popularized by Martin
+  Fowler, used here as the standard non-applicability heuristic in dimension
+  4.
+- [Sandi Metz, "The Wrong Abstraction"](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction),
+  published 2016-01-20, verified 2026-08-02. Source of "duplication is far
+  cheaper than the wrong abstraction" and the described symptom of a shared
+  method accumulating caller-specific conditionals.
+- [Kent C. Dodds, "AHA Programming"](https://kentcdodds.com/blog/aha-programming),
+  verified 2026-08-02. Source of the AHA, "Avoid Hasty Abstractions", middle
+  position referenced in the trade-off matrix.
+- [Ruby on Rails Discussions, "What is the official position on the DRY
+  concept in Rails?"](https://discuss.rubyonrails.org/t/what-is-the-official-position-on-the-dry-concept-in-rails/82798),
+  verified 2026-08-02. Confirms DRY as a stated Rails Guides principle.
+- [Protocol Buffers, "Protocol Buffers Overview"](https://protobuf.dev/overview/),
+  verified 2026-08-02. Source for the single-schema, multi-language code
+  generation production use.
+- [HashiCorp Developer, "Module Development - Recommended Pattern"](https://developer.hashicorp.com/terraform/language/modules/develop),
+  verified 2026-08-02. Source for the Terraform module reuse production use
+  and its caution against over-modularizing.
+
 ## Code examples
 
 Four languages, each pulling the identical shared calculation out of two
@@ -863,34 +894,3 @@ Dunning email total: 575.00
 Statement total: 575.00
 one fee formula, two consumers, structurally in sync
 ```
-
-## 18. References
-
-- Andrew Hunt and David Thomas, *The Pragmatic Programmer. From Journeyman to
-  Master*, Addison-Wesley, 1999, chapter 2, "The Evils of Duplication". The
-  originating source of the DRY name and its definition.
-- [Wikipedia, "Don't repeat yourself"](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself),
-  verified 2026-08-02. Summary of the principle, the WET backronym, and
-  implementation approaches Hunt and Thomas describe across system layers.
-- [Wikipedia, "Dave Thomas (programmer)"](https://en.wikipedia.org/wiki/Dave_Thomas_(programmer)),
-  verified 2026-08-02. Attribution of the DRY coinage to Thomas.
-- [Wikipedia, "Rule of three (computer programming)"](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)),
-  verified 2026-08-02. The Don Roberts guideline as popularized by Martin
-  Fowler, used here as the standard non-applicability heuristic in dimension
-  4.
-- [Sandi Metz, "The Wrong Abstraction"](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction),
-  published 2016-01-20, verified 2026-08-02. Source of "duplication is far
-  cheaper than the wrong abstraction" and the described symptom of a shared
-  method accumulating caller-specific conditionals.
-- [Kent C. Dodds, "AHA Programming"](https://kentcdodds.com/blog/aha-programming),
-  verified 2026-08-02. Source of the AHA, "Avoid Hasty Abstractions", middle
-  position referenced in the trade-off matrix.
-- [Ruby on Rails Discussions, "What is the official position on the DRY
-  concept in Rails?"](https://discuss.rubyonrails.org/t/what-is-the-official-position-on-the-dry-concept-in-rails/82798),
-  verified 2026-08-02. Confirms DRY as a stated Rails Guides principle.
-- [Protocol Buffers, "Protocol Buffers Overview"](https://protobuf.dev/overview/),
-  verified 2026-08-02. Source for the single-schema, multi-language code
-  generation production use.
-- [HashiCorp Developer, "Module Development - Recommended Pattern"](https://developer.hashicorp.com/terraform/language/modules/develop),
-  verified 2026-08-02. Source for the Terraform module reuse production use
-  and its caution against over-modularizing.

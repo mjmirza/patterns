@@ -639,6 +639,34 @@ location and health, so this pattern's privacy surface is narrow, limited
 to the topology disclosure concern above rather than any direct handling
 of end user data.
 
+## 18. References
+
+1. Richardson, Chris. Microservices Patterns. Manning Publications, 2018.
+   Chapter 3 covers inter-process communication and introduces the Service
+   Registry pattern alongside Client-Side and Server-Side Discovery.
+2. Richardson, Chris. Pattern, Service registry. microservices.io.
+   https://microservices.io/patterns/service-registry.html, verified
+   2026-08-03.
+3. Kubernetes documentation. Service. Kubernetes.io.
+   https://kubernetes.io/docs/concepts/services-networking/service/,
+   verified 2026-08-03. Describes DNS and environment-variable based
+   service discovery and the built-in Endpoints and EndpointSlice
+   controller behavior.
+4. HashiCorp. Service Discovery. Consul documentation.
+   https://developer.hashicorp.com/consul/docs/concepts/service-discovery,
+   verified 2026-08-03. Describes the service catalog and health-check
+   based discovery model.
+5. Netflix. Eureka README. GitHub.
+   https://github.com/Netflix/eureka, verified 2026-08-03. Describes
+   Eureka's purpose in Netflix mid-tier infrastructure and its heartbeat
+   and eviction model.
+6. Apache Kafka Improvement Proposals. KIP-500, Replace ZooKeeper with a
+   Self-Managed Metadata Quorum. Referenced as engineering judgement
+   regarding the industry pattern of replacing an external
+   coordination-service-backed registry with an internal one, drawn from
+   general knowledge of Kafka's architecture history rather than
+   independently re-verified in this session.
+
 ## Code examples
 
 Three implementations of the same core registry contract, register, heartbeat,
@@ -813,31 +841,3 @@ languages above, and the strongest illustration of the pattern's two
 distinct roles, the registry server logic and the client-side discovery
 logic, is already covered by the Python and Go registry plus the
 TypeScript client.
-
-## 18. References
-
-1. Richardson, Chris. Microservices Patterns. Manning Publications, 2018.
-   Chapter 3 covers inter-process communication and introduces the Service
-   Registry pattern alongside Client-Side and Server-Side Discovery.
-2. Richardson, Chris. Pattern, Service registry. microservices.io.
-   https://microservices.io/patterns/service-registry.html, verified
-   2026-08-03.
-3. Kubernetes documentation. Service. Kubernetes.io.
-   https://kubernetes.io/docs/concepts/services-networking/service/,
-   verified 2026-08-03. Describes DNS and environment-variable based
-   service discovery and the built-in Endpoints and EndpointSlice
-   controller behavior.
-4. HashiCorp. Service Discovery. Consul documentation.
-   https://developer.hashicorp.com/consul/docs/concepts/service-discovery,
-   verified 2026-08-03. Describes the service catalog and health-check
-   based discovery model.
-5. Netflix. Eureka README. GitHub.
-   https://github.com/Netflix/eureka, verified 2026-08-03. Describes
-   Eureka's purpose in Netflix mid-tier infrastructure and its heartbeat
-   and eviction model.
-6. Apache Kafka Improvement Proposals. KIP-500, Replace ZooKeeper with a
-   Self-Managed Metadata Quorum. Referenced as engineering judgement
-   regarding the industry pattern of replacing an external
-   coordination-service-backed registry with an internal one, drawn from
-   general knowledge of Kafka's architecture history rather than
-   independently re-verified in this session.

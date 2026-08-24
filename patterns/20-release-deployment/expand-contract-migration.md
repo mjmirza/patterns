@@ -122,6 +122,11 @@ Track which callers or code paths are still using the old version versus the new
 
 Any access-control or data-protection property enforced on the old schema or API version must also be enforced on the new one from the moment the expand phase makes it available, since a caller could otherwise reach the new version through a path that has not yet had the same controls applied. If the migration involves personal data, the old and new copies coexisting during the migrate phase both fall under the same data-protection requirements for as long as both exist.
 
+## References
+
+- Martin Fowler, ParallelChange, https://martinfowler.com/bliki/ParallelChange.html
+- Martin Fowler, ParallelChange (continuous delivery rationale), https://martinfowler.com/bliki/ParallelChange.html
+
 ## Code Examples
 
 ### Swift
@@ -178,8 +183,3 @@ class ExpandContractMigration:
             self.write_old(value)
         self.write_new(value)
 ```
-
-## References
-
-- Martin Fowler, ParallelChange, https://martinfowler.com/bliki/ParallelChange.html
-- Martin Fowler, ParallelChange (continuous delivery rationale), https://martinfowler.com/bliki/ParallelChange.html

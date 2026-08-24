@@ -461,6 +461,16 @@ what the context exposes, write the shared state, so genuine access
 control between pieces of a compound component needs its own explicit
 enforcement, never assumed from the implicit-sharing mechanism alone.
 
+## 18. References
+
+1. Kent C. Dodds. Epic React, Compound Components Patterns Intro.
+   Crediting Ryan Florence's 2016 ReactJS Phoenix talk.
+   https://www.epicreact.dev/modules/advanced-react-patterns-v1/compound-components-patterns-intro
+   Verified 2026-08-21. Source of the first_described lineage claim.
+2. Radix UI documentation. Tabs.
+   https://www.radix-ui.com/primitives/docs/components/tabs
+   Verified 2026-08-21. Source for the production use in dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely idiomatic
@@ -602,13 +612,3 @@ struct TabsContainer: View {
     }
 }
 ```
-
-## 18. References
-
-1. Kent C. Dodds. Epic React, Compound Components Patterns Intro.
-   Crediting Ryan Florence's 2016 ReactJS Phoenix talk.
-   https://www.epicreact.dev/modules/advanced-react-patterns-v1/compound-components-patterns-intro
-   Verified 2026-08-21. Source of the first_described lineage claim.
-2. Radix UI documentation. Tabs.
-   https://www.radix-ui.com/primitives/docs/components/tabs
-   Verified 2026-08-21. Source for the production use in dimension 9.

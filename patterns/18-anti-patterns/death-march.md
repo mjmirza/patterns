@@ -675,6 +675,65 @@ security and privacy gates part of the launch ledger in dimension 14. A skipped
 control needs a named risk owner and a short review date. Some findings can be
 accepted. Silent acceptance is the anti-pattern.
 
+## 18. References
+
+1. Edward Yourdon. *Death March, Second Edition*. Pearson, 2003. ISBN
+   013143635X. Chapter 1, "Introduction"; chapter 2, "Politics"; chapter 5,
+   "Death March Processes"; chapter 9, "Managing and Controlling Progress".
+   O'Reilly catalog page:
+   https://www.oreilly.com/library/view/death-march-second/013143635X/ch01.html.
+   Verified 2026-08-02. Source for lineage, author, publisher, publication
+   date, chapter structure, and the name of the anti-pattern.
+2. Jacques Dozzi. "Death March III." Project Management Institute, 2015.
+   https://www.pmi.org/learning/library/manage-deeply-troubled-projects-10216.
+   Verified 2026-08-02. Source for the summary of Yourdon's 50 percent
+   parameter definition and failure probability framing as cited from the 1997
+   edition.
+3. U.S. Government Accountability Office. "Information Technology: Responses to
+   Subcommittee Post-Hearing Questions Regarding the FBI's Management Practices
+   and Acquisition of a New Investigative Case Management System." GAO-06-302R,
+   December 21, 2005. https://www.gao.gov/assets/a93935.html. Verified
+   2026-08-02. Source for Virtual Case File cost, nondeployment, cancellation
+   context, and contractor oversight findings.
+4. Federal Bureau of Investigation. "FBI's Virtual Case File System." Testimony,
+   2005.
+   https://archives.fbi.gov/archives/news/testimony/fbis-virtual-case-file-system.
+   Verified 2026-08-02. Source for Virtual Case File requirements, contract,
+   skill, turnover, complexity, and loss facts.
+5. U.S. Government Accountability Office. "Healthcare.gov: CMS Has Taken Steps
+   to Address Problems, but Needs to Further Implement Systems Development Best
+   Practices." GAO-15-238, March 4, 2015.
+   https://www.gao.gov/products/gao-15-238. Verified 2026-08-02. Source for
+   launch problems, capacity planning, code defects, missing functionality,
+   testing, requirements, and oversight findings.
+6. U.S. Government Accountability Office. "Healthcare.gov: Contract Planning and
+   Oversight Practices Were Ineffective Given the Challenges and Risks."
+   GAO-14-824T, July 31, 2014. https://www.gao.gov/products/gao-14-824t.
+   Verified 2026-08-02. Source for compressed time frames, unknown technical
+   requirements, delayed governance reviews, cost growth, and launch without
+   performance verification.
+7. U.S. Government Accountability Office. "Healthcare.gov: Actions Needed to
+   Address Weaknesses in Information Security and Privacy Controls."
+   GAO-14-730, September 16, 2014. https://www.gao.gov/products/gao-14-730.
+   Verified 2026-08-02. Source for HealthCare.gov security and privacy control
+   findings at initial deployment.
+8. Cabinet Office. "Review of Department of Health: National Programme for IT."
+   GOV.UK, September 22, 2011.
+   https://www.gov.uk/government/publications/review-of-department-of-health-national-programme-for-it.
+   Verified 2026-08-02. Source for National Programme for IT creation date,
+   spending to date, and conclusion about original intent.
+9. National Audit Office. "Review of the final benefits statement for programmes
+   previously managed under the National Programme for IT in the NHS." June 18,
+   2013.
+   https://www.nao.org.uk/reports/review-of-the-final-benefits-statement-for-programmes-previously-managed-under-the-national-programme-for-it-in-the-nhs/.
+   Verified 2026-08-02. Source for benefit uncertainty and remaining deployment
+   risk.
+10. South West Thames Regional Health Authority. *Report of the Inquiry Into
+    The London Ambulance Service*. February 1993.
+    https://studylib.net/doc/11607424/report-of-the-inquiry-into-the-london-ambulance-service--....
+    Verified 2026-08-02. Source for London Ambulance Service CAD readiness,
+    testing, hardware, training, and implementation findings.
+
 ## Code examples
 
 These examples are not implementations of a useful pattern. They are small
@@ -791,62 +850,3 @@ fn main() {
 
 All three samples were run locally on 2026-08-20 with `python3`, `go run`, and
 `rustc` followed by the compiled binary.
-
-## 18. References
-
-1. Edward Yourdon. *Death March, Second Edition*. Pearson, 2003. ISBN
-   013143635X. Chapter 1, "Introduction"; chapter 2, "Politics"; chapter 5,
-   "Death March Processes"; chapter 9, "Managing and Controlling Progress".
-   O'Reilly catalog page:
-   https://www.oreilly.com/library/view/death-march-second/013143635X/ch01.html.
-   Verified 2026-08-02. Source for lineage, author, publisher, publication
-   date, chapter structure, and the name of the anti-pattern.
-2. Jacques Dozzi. "Death March III." Project Management Institute, 2015.
-   https://www.pmi.org/learning/library/manage-deeply-troubled-projects-10216.
-   Verified 2026-08-02. Source for the summary of Yourdon's 50 percent
-   parameter definition and failure probability framing as cited from the 1997
-   edition.
-3. U.S. Government Accountability Office. "Information Technology: Responses to
-   Subcommittee Post-Hearing Questions Regarding the FBI's Management Practices
-   and Acquisition of a New Investigative Case Management System." GAO-06-302R,
-   December 21, 2005. https://www.gao.gov/assets/a93935.html. Verified
-   2026-08-02. Source for Virtual Case File cost, nondeployment, cancellation
-   context, and contractor oversight findings.
-4. Federal Bureau of Investigation. "FBI's Virtual Case File System." Testimony,
-   2005.
-   https://archives.fbi.gov/archives/news/testimony/fbis-virtual-case-file-system.
-   Verified 2026-08-02. Source for Virtual Case File requirements, contract,
-   skill, turnover, complexity, and loss facts.
-5. U.S. Government Accountability Office. "Healthcare.gov: CMS Has Taken Steps
-   to Address Problems, but Needs to Further Implement Systems Development Best
-   Practices." GAO-15-238, March 4, 2015.
-   https://www.gao.gov/products/gao-15-238. Verified 2026-08-02. Source for
-   launch problems, capacity planning, code defects, missing functionality,
-   testing, requirements, and oversight findings.
-6. U.S. Government Accountability Office. "Healthcare.gov: Contract Planning and
-   Oversight Practices Were Ineffective Given the Challenges and Risks."
-   GAO-14-824T, July 31, 2014. https://www.gao.gov/products/gao-14-824t.
-   Verified 2026-08-02. Source for compressed time frames, unknown technical
-   requirements, delayed governance reviews, cost growth, and launch without
-   performance verification.
-7. U.S. Government Accountability Office. "Healthcare.gov: Actions Needed to
-   Address Weaknesses in Information Security and Privacy Controls."
-   GAO-14-730, September 16, 2014. https://www.gao.gov/products/gao-14-730.
-   Verified 2026-08-02. Source for HealthCare.gov security and privacy control
-   findings at initial deployment.
-8. Cabinet Office. "Review of Department of Health: National Programme for IT."
-   GOV.UK, September 22, 2011.
-   https://www.gov.uk/government/publications/review-of-department-of-health-national-programme-for-it.
-   Verified 2026-08-02. Source for National Programme for IT creation date,
-   spending to date, and conclusion about original intent.
-9. National Audit Office. "Review of the final benefits statement for programmes
-   previously managed under the National Programme for IT in the NHS." June 18,
-   2013.
-   https://www.nao.org.uk/reports/review-of-the-final-benefits-statement-for-programmes-previously-managed-under-the-national-programme-for-it-in-the-nhs/.
-   Verified 2026-08-02. Source for benefit uncertainty and remaining deployment
-   risk.
-10. South West Thames Regional Health Authority. *Report of the Inquiry Into
-    The London Ambulance Service*. February 1993.
-    https://studylib.net/doc/11607424/report-of-the-inquiry-into-the-london-ambulance-service--....
-    Verified 2026-08-02. Source for London Ambulance Service CAD readiness,
-    testing, hardware, training, and implementation findings.

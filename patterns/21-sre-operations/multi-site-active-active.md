@@ -171,6 +171,11 @@ Skip it for a workload where a passive standby's slower recovery time is genuine
 - Access control and authorization decisions need to be consistent across every active site, since a person's permissions should not silently differ depending on which site happens to serve their request.
 - The channel carrying data synchronization between sites is a real, high-value target, and should be encrypted and authenticated with the same rigor as any other inter-service communication carrying production data.
 
+## 18. References
+
+- AWS Well-Architected Framework, Reliability Pillar, planning for disaster recovery (https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html)
+- AWS Whitepaper, Disaster Recovery of Workloads on AWS, disaster recovery options in the cloud (https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html)
+
 ## Code examples
 
 ### Python
@@ -279,8 +284,3 @@ print(
     + String(distribution.canAbsorbFailure(of: "eu-west"))
 )
 ```
-
-## 18. References
-
-- AWS Well-Architected Framework, Reliability Pillar, planning for disaster recovery (https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html)
-- AWS Whitepaper, Disaster Recovery of Workloads on AWS, disaster recovery options in the cloud (https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html)

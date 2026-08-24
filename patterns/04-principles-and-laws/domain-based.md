@@ -816,6 +816,44 @@ with an explicit, documented map of which domain holds what, so a deletion
 request can be routed correctly rather than requiring an ad hoc search across
 every service.
 
+## 18. References
+
+1. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-2. Strategic design
+   chapters, source of Bounded Context, Subdomain, and the Context Map
+   relationship vocabulary, Customer Supplier, Open Host Service, Anti-
+   corruption Layer, Separate Ways, cited in dimensions 1 and 5.
+2. Martin Fowler. "BoundedContext". martinfowler.com bliki entry.
+   https://martinfowler.com/bliki/BoundedContext.html
+   Verified 2026-08-02. Source for the summary of Evans's reasoning that a
+   single unified domain model does not scale to a large system, cited in
+   dimension 1.
+3. Microsoft. "Use Domain Analysis to Model Microservices". Azure
+   Architecture Center.
+   https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
+   Verified 2026-08-02. Source for the business-capability design guidance,
+   the Core, Supporting, Generic subdomain classification, and the
+   description of bounded contexts and context maps, cited in dimensions 1, 5,
+   and 9.
+4. Kubernetes project. "Namespaces". Kubernetes documentation.
+   https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+   Verified 2026-08-02. Source for the namespace-as-team-or-project-division
+   mechanism, cited in dimensions 1, 8, 9, and 17. The documentation does not
+   itself claim a domain mapping; that convention is recorded as engineering
+   judgement in dimension 8.
+5. Jimmy Bogard. "Vertical Slice Architecture". jimmybogard.com.
+   https://www.jimmybogard.com/vertical-slice-architecture/
+   Verified 2026-08-02. Source for the Vertical Slice Architecture name, the
+   coupling-minimization framing, and the MediatR production-use claim, cited
+   in dimensions 1, 8, and 9.
+6. Melvin Conway. "How Do Committees Invent?". *Datamation*, April 1968.
+   Source of the observation, referenced by Microsoft's own domain-analysis
+   guidance under the name Conway's Law, that a system's structure tends to
+   mirror the communication structure of the organization that builds it,
+   cited as motivation in dimension 3. Cited at the level Microsoft's own
+   guidance cites it; the original 1968 article was not independently
+   re-verified in this session.
+
 ## Code examples
 
 Three languages, chosen because each shows domain-based organization at a
@@ -998,41 +1036,3 @@ the TypeScript sample printed `refund approved: true`. `python3` printed
 attempted because no Java runtime was present in the environment used to write
 this entry, `javac` reported it could not locate one, and this entry states
 that plainly rather than presenting an unrun sample as verified.
-
-## 18. References
-
-1. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-2. Strategic design
-   chapters, source of Bounded Context, Subdomain, and the Context Map
-   relationship vocabulary, Customer Supplier, Open Host Service, Anti-
-   corruption Layer, Separate Ways, cited in dimensions 1 and 5.
-2. Martin Fowler. "BoundedContext". martinfowler.com bliki entry.
-   https://martinfowler.com/bliki/BoundedContext.html
-   Verified 2026-08-02. Source for the summary of Evans's reasoning that a
-   single unified domain model does not scale to a large system, cited in
-   dimension 1.
-3. Microsoft. "Use Domain Analysis to Model Microservices". Azure
-   Architecture Center.
-   https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
-   Verified 2026-08-02. Source for the business-capability design guidance,
-   the Core, Supporting, Generic subdomain classification, and the
-   description of bounded contexts and context maps, cited in dimensions 1, 5,
-   and 9.
-4. Kubernetes project. "Namespaces". Kubernetes documentation.
-   https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
-   Verified 2026-08-02. Source for the namespace-as-team-or-project-division
-   mechanism, cited in dimensions 1, 8, 9, and 17. The documentation does not
-   itself claim a domain mapping; that convention is recorded as engineering
-   judgement in dimension 8.
-5. Jimmy Bogard. "Vertical Slice Architecture". jimmybogard.com.
-   https://www.jimmybogard.com/vertical-slice-architecture/
-   Verified 2026-08-02. Source for the Vertical Slice Architecture name, the
-   coupling-minimization framing, and the MediatR production-use claim, cited
-   in dimensions 1, 8, and 9.
-6. Melvin Conway. "How Do Committees Invent?". *Datamation*, April 1968.
-   Source of the observation, referenced by Microsoft's own domain-analysis
-   guidance under the name Conway's Law, that a system's structure tends to
-   mirror the communication structure of the organization that builds it,
-   cited as motivation in dimension 3. Cited at the level Microsoft's own
-   guidance cites it; the original 1968 article was not independently
-   re-verified in this session.

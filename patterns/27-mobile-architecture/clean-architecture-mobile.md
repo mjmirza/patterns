@@ -173,6 +173,11 @@ Skip it for a small app, a prototype, or a screen whose logic is genuinely trivi
 - Because the domain layer has no UI dependency, it is easy to unit-test security-sensitive rules (an eligibility check, a permission gate) directly and exhaustively, which is harder to do reliably when the same logic is entangled with a ViewModel or Activity.
 - Repository interfaces should expose only the data a use case genuinely needs, not a full raw data-layer model, so a use case cannot accidentally leak a field (an internal identifier, a raw credential) that the presentation layer was never meant to see.
 
+## 18. References
+
+- Robert C. Martin, The Clean Architecture (https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- Android Developers, Domain layer (https://developer.android.com/topic/architecture/domain-layer)
+
 ## Code examples
 
 ### Python
@@ -284,8 +289,3 @@ Task {
     print("discounted total " + String(result.totalCents))
 }
 ```
-
-## 18. References
-
-- Robert C. Martin, The Clean Architecture (https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-- Android Developers, Domain layer (https://developer.android.com/topic/architecture/domain-layer)

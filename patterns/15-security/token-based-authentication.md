@@ -867,6 +867,47 @@ result of those decisions, but it does not make them correct. It also does not
 replace secure transport, input validation, rate limiting, audit logging, abuse
 detection, or secrets management.
 
+## 18. References
+
+- D. Hardt, editor, RFC 6749, *The OAuth 2.0 Authorization Framework*,
+  sections 1, 1.1, 1.4, 1.5, October 2012,
+  [https://www.rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749),
+  verified 2026-08-02.
+- M. Jones and D. Hardt, RFC 6750, *The OAuth 2.0 Authorization Framework:
+  Bearer Token Usage*, sections 1.2, 2.1, 2.3, 5, October 2012,
+  [https://www.rfc-editor.org/rfc/rfc6750](https://www.rfc-editor.org/rfc/rfc6750),
+  verified 2026-08-02.
+- M. Jones, J. Bradley, and N. Sakimura, RFC 7519, *JSON Web Token (JWT)*,
+  sections 1 and 2, May 2015,
+  [https://www.rfc-editor.org/rfc/rfc7519](https://www.rfc-editor.org/rfc/rfc7519),
+  verified 2026-08-02.
+- V. Bertocci, RFC 9068, *JSON Web Token (JWT) Profile for OAuth 2.0 Access
+  Tokens*, sections 2.2, 3, and 4, October 2021,
+  [https://www.rfc-editor.org/rfc/rfc9068](https://www.rfc-editor.org/rfc/rfc9068),
+  verified 2026-08-02.
+- T. Lodderstedt, J. Bradley, A. Labunets, and D. Fett, RFC 9700, *Best Current
+  Practice for OAuth 2.0 Security*, sections 2, 4.10, and 4.14, January 2025,
+  [https://datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700),
+  verified 2026-08-02.
+- J. Richer, RFC 7662, *OAuth 2.0 Token Introspection*, sections 1 and 2,
+  October 2015,
+  [https://datatracker.ietf.org/doc/html/rfc7662](https://datatracker.ietf.org/doc/html/rfc7662),
+  verified 2026-08-02.
+- Kubernetes documentation, *Managing Service Accounts*, sections on bound
+  service account tokens, TokenRequest API, token deletion and invalidation,
+  [https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/),
+  verified 2026-08-02.
+- AWS Identity and Access Management documentation, *Temporary security
+  credentials in IAM*,
+  [https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html),
+  verified 2026-08-02.
+- GitHub Docs, *Managing your personal access tokens*,
+  [https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens),
+  verified 2026-08-02.
+- Google for Developers, *Using OAuth 2.0 to Access Google APIs*,
+  [https://developers.google.com/identity/protocols/oauth2](https://developers.google.com/identity/protocols/oauth2),
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples use HMAC-signed, compact tokens to show the core pattern without
@@ -1089,44 +1130,3 @@ func main() {
 	fmt.Println(claims.Sub)
 }
 ```
-
-## 18. References
-
-- D. Hardt, editor, RFC 6749, *The OAuth 2.0 Authorization Framework*,
-  sections 1, 1.1, 1.4, 1.5, October 2012,
-  [https://www.rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749),
-  verified 2026-08-02.
-- M. Jones and D. Hardt, RFC 6750, *The OAuth 2.0 Authorization Framework:
-  Bearer Token Usage*, sections 1.2, 2.1, 2.3, 5, October 2012,
-  [https://www.rfc-editor.org/rfc/rfc6750](https://www.rfc-editor.org/rfc/rfc6750),
-  verified 2026-08-02.
-- M. Jones, J. Bradley, and N. Sakimura, RFC 7519, *JSON Web Token (JWT)*,
-  sections 1 and 2, May 2015,
-  [https://www.rfc-editor.org/rfc/rfc7519](https://www.rfc-editor.org/rfc/rfc7519),
-  verified 2026-08-02.
-- V. Bertocci, RFC 9068, *JSON Web Token (JWT) Profile for OAuth 2.0 Access
-  Tokens*, sections 2.2, 3, and 4, October 2021,
-  [https://www.rfc-editor.org/rfc/rfc9068](https://www.rfc-editor.org/rfc/rfc9068),
-  verified 2026-08-02.
-- T. Lodderstedt, J. Bradley, A. Labunets, and D. Fett, RFC 9700, *Best Current
-  Practice for OAuth 2.0 Security*, sections 2, 4.10, and 4.14, January 2025,
-  [https://datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700),
-  verified 2026-08-02.
-- J. Richer, RFC 7662, *OAuth 2.0 Token Introspection*, sections 1 and 2,
-  October 2015,
-  [https://datatracker.ietf.org/doc/html/rfc7662](https://datatracker.ietf.org/doc/html/rfc7662),
-  verified 2026-08-02.
-- Kubernetes documentation, *Managing Service Accounts*, sections on bound
-  service account tokens, TokenRequest API, token deletion and invalidation,
-  [https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/),
-  verified 2026-08-02.
-- AWS Identity and Access Management documentation, *Temporary security
-  credentials in IAM*,
-  [https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html),
-  verified 2026-08-02.
-- GitHub Docs, *Managing your personal access tokens*,
-  [https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens),
-  verified 2026-08-02.
-- Google for Developers, *Using OAuth 2.0 to Access Google APIs*,
-  [https://developers.google.com/identity/protocols/oauth2](https://developers.google.com/identity/protocols/oauth2),
-  verified 2026-08-02.

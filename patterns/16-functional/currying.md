@@ -764,6 +764,38 @@ locale. If it captures a request object when it needs only a tenant id, bind the
 tenant id. Currying rewards small captures. Large captures turn a narrow helper
 into a hidden data container.
 
+## 18. References
+
+- Haskell B. Curry and Robert Feys, *Combinatory Logic*, volume 1,
+  North-Holland, 1958, chapter 1. Historical background only. No page claim
+  made.
+- Moses Schönfinkel, "Über die Bausteine der mathematischen Logik", 1924.
+  Historical background only. No page claim made.
+- Internet Encyclopedia of Philosophy, "Haskell Brooks Curry",
+  https://iep.utm.edu/haskell-brooks-curry/, verified 2026-08-02.
+- Haskell.org, "A Gentle Introduction to Haskell, Version 98, Functions",
+  https://www.haskell.org/tutorial/functions.html, verified 2026-08-02.
+- GHC base 4.11.1.0 documentation, "Prelude",
+  https://downloads.haskell.org/~ghc/8.4-latest/docs/html/libraries/base-4.11.1.0/Prelude.html,
+  verified 2026-08-02.
+- Ramda documentation, "curry",
+  https://ramdajs.com/docs/#curry, verified 2026-08-02.
+- Ramda home page, "Why Ramda",
+  https://ramdajs.com/, verified 2026-08-02.
+- Lodash documentation, "_.curry",
+  https://lodash.com/docs/#curry, verified 2026-08-02.
+- React Redux documentation, "connect()",
+  https://react-redux.js.org/api/connect, verified 2026-08-02.
+- FSharp.Core API reference, "Operators",
+  https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html,
+  verified 2026-08-02.
+- Scala Standard Library 2.13.18, "scala.Function2",
+  https://www.scala-lang.org/api/2.13.x/scala/Function2.html, verified
+  2026-08-02.
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
+  edition, Addison-Wesley, 2018, chapters 6 and 11. Refactoring names only. No
+  page claim made.
+
 ## Code examples
 
 The examples below are intentionally small and dependency-free. They show
@@ -853,35 +885,3 @@ fn main() {
     println!("{}", price_in_eur(100.0));
 }
 ```
-
-## 18. References
-
-- Haskell B. Curry and Robert Feys, *Combinatory Logic*, volume 1,
-  North-Holland, 1958, chapter 1. Historical background only. No page claim
-  made.
-- Moses Schönfinkel, "Über die Bausteine der mathematischen Logik", 1924.
-  Historical background only. No page claim made.
-- Internet Encyclopedia of Philosophy, "Haskell Brooks Curry",
-  https://iep.utm.edu/haskell-brooks-curry/, verified 2026-08-02.
-- Haskell.org, "A Gentle Introduction to Haskell, Version 98, Functions",
-  https://www.haskell.org/tutorial/functions.html, verified 2026-08-02.
-- GHC base 4.11.1.0 documentation, "Prelude",
-  https://downloads.haskell.org/~ghc/8.4-latest/docs/html/libraries/base-4.11.1.0/Prelude.html,
-  verified 2026-08-02.
-- Ramda documentation, "curry",
-  https://ramdajs.com/docs/#curry, verified 2026-08-02.
-- Ramda home page, "Why Ramda",
-  https://ramdajs.com/, verified 2026-08-02.
-- Lodash documentation, "_.curry",
-  https://lodash.com/docs/#curry, verified 2026-08-02.
-- React Redux documentation, "connect()",
-  https://react-redux.js.org/api/connect, verified 2026-08-02.
-- FSharp.Core API reference, "Operators",
-  https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html,
-  verified 2026-08-02.
-- Scala Standard Library 2.13.18, "scala.Function2",
-  https://www.scala-lang.org/api/2.13.x/scala/Function2.html, verified
-  2026-08-02.
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
-  edition, Addison-Wesley, 2018, chapters 6 and 11. Refactoring names only. No
-  page claim made.

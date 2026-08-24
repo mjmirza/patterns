@@ -779,6 +779,48 @@ exposure surface beyond whatever the LLM call itself already requires. It is
 silent on those concerns beyond the data-handling implications described
 above.
 
+## 18. References
+
+Anthropic, "Introducing Contextual Retrieval," September 19, 2024,
+https://www.anthropic.com/news/contextual-retrieval, verified 2026-08-02. The
+primary source for the pattern name, the reference context-generation prompt
+quoted below verbatim, the retrieval failure rate benchmark numbers, a 35%
+reduction from contextual embeddings alone, from 5.7% to 3.7%, a 49% reduction
+combining contextual embeddings with contextual BM25, to 2.9%, and a 67%
+reduction adding reranking on top of both, to 1.9%, the prompt-caching cost
+figure of approximately $1.02 per million document tokens for the stated
+chunk and context size assumptions, and the statement that Gemini and Voyage
+embeddings performed particularly well among the models tested.
+
+The reference context-generation prompt, quoted verbatim from the source
+above, verified 2026-08-02.
+
+```
+<document>
+{{WHOLE_DOCUMENT}}
+</document>
+Here is the chunk we want to situate within the whole document
+<chunk>
+{{CHUNK_CONTENT}}
+</chunk>
+Please give a short succinct context to situate this chunk within the overall
+document for the purposes of improving search retrieval of the chunk. Answer
+only with the succinct context and nothing else.
+```
+
+DataCamp, "Anthropic's Contextual Retrieval, A Guide With Implementation,"
+https://www.datacamp.com/tutorial/contextual-retrieval-anthropic, verified
+2026-08-02. An independent, third-party reimplementation of the technique
+against the same reference prompt and cost model, cited in dimension 9 as
+evidence the mechanics reproduce outside the originating team.
+
+Towards Data Science, "Implementing Anthropic's Contextual Retrieval for
+Powerful RAG Performance,"
+https://towardsdatascience.com/implementing-anthropics-contextual-retrieval-for-powerful-rag-performance-b85173a65b83/,
+verified 2026-08-02. A second independent walkthrough implementing the same
+chunk-context generation and hybrid retrieval pipeline, cited in dimension 9
+alongside the DataCamp source.
+
 ## Code examples
 
 Three implementations follow, Python, TypeScript, and Go. Each demonstrates
@@ -1266,45 +1308,3 @@ to an embedding or generation API, and a scoring function, and the three
 languages above already demonstrate the object-oriented, typed-functional, and
 systems-language shapes of the same mechanism without meaningfully changing
 what a fourth or fifth language would add.
-
-## 18. References
-
-Anthropic, "Introducing Contextual Retrieval," September 19, 2024,
-https://www.anthropic.com/news/contextual-retrieval, verified 2026-08-02. The
-primary source for the pattern name, the reference context-generation prompt
-quoted below verbatim, the retrieval failure rate benchmark numbers, a 35%
-reduction from contextual embeddings alone, from 5.7% to 3.7%, a 49% reduction
-combining contextual embeddings with contextual BM25, to 2.9%, and a 67%
-reduction adding reranking on top of both, to 1.9%, the prompt-caching cost
-figure of approximately $1.02 per million document tokens for the stated
-chunk and context size assumptions, and the statement that Gemini and Voyage
-embeddings performed particularly well among the models tested.
-
-The reference context-generation prompt, quoted verbatim from the source
-above, verified 2026-08-02.
-
-```
-<document>
-{{WHOLE_DOCUMENT}}
-</document>
-Here is the chunk we want to situate within the whole document
-<chunk>
-{{CHUNK_CONTENT}}
-</chunk>
-Please give a short succinct context to situate this chunk within the overall
-document for the purposes of improving search retrieval of the chunk. Answer
-only with the succinct context and nothing else.
-```
-
-DataCamp, "Anthropic's Contextual Retrieval, A Guide With Implementation,"
-https://www.datacamp.com/tutorial/contextual-retrieval-anthropic, verified
-2026-08-02. An independent, third-party reimplementation of the technique
-against the same reference prompt and cost model, cited in dimension 9 as
-evidence the mechanics reproduce outside the originating team.
-
-Towards Data Science, "Implementing Anthropic's Contextual Retrieval for
-Powerful RAG Performance,"
-https://towardsdatascience.com/implementing-anthropics-contextual-retrieval-for-powerful-rag-performance-b85173a65b83/,
-verified 2026-08-02. A second independent walkthrough implementing the same
-chunk-context generation and hybrid retrieval pipeline, cited in dimension 9
-alongside the DataCamp source.

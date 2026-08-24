@@ -749,6 +749,54 @@ on access control entirely, a transaction's snapshot respects the same
 row-level and column-level permissions the database enforces regardless of
 isolation level.
 
+## 18. References
+
+Hal Berenson, Philip A. Bernstein, Jim Gray, Jim Melton, Elizabeth O'Neil,
+Patrick O'Neil, "A Critique of ANSI SQL Isolation Levels", Proceedings of the
+1995 ACM SIGMOD International Conference on Management of Data, pages 1 to
+10. DOI 10.1145/223784.223785. Public mirror https://arxiv.org/pdf/cs/0701157.
+Verified 2026-08-16, both the DOI record on the ACM Digital Library and the
+arXiv mirror's existence and authorship confirmed via search.
+
+PostgreSQL Global Development Group, PostgreSQL Documentation, chapter 13,
+Concurrency Control, section 13.2, Transaction Isolation.
+https://www.postgresql.org/docs/current/transaction-iso.html. Verified
+2026-08-16, sections 13.2.1 through 13.2.3 fetched and quoted directly.
+
+PostgreSQL Global Development Group, PostgreSQL Documentation, chapter 24,
+Routine Database Maintenance Tasks, section 24.1.5, Preventing Transaction
+ID Wraparound Failures. https://www.postgresql.org/docs/current/routine-vacuuming.html.
+Verified 2026-08-16 as the source for the transaction age and VACUUM
+retention discussion in dimensions 11 and 16.
+
+Microsoft Corporation, Microsoft Learn, "SET TRANSACTION ISOLATION LEVEL
+(Transact-SQL)". https://learn.microsoft.com/en-us/sql/t-sql/statements/set-transaction-isolation-level-transact-sql.
+Verified 2026-08-16, fetched in full, quoted directly for the SNAPSHOT and
+READ_COMMITTED_SNAPSHOT sections.
+
+Oracle Corporation, Oracle Database 19c Database Concepts, "Data
+Concurrency and Consistency". https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html.
+Verified 2026-08-16, quoted directly for the multiversion consistency model,
+consistent read clones, and the ORA-08177 serialization failure.
+
+MongoDB, Inc., MongoDB Manual, "Transactions".
+https://www.mongodb.com/docs/manual/core/transactions/. Verified
+2026-08-16, quoted directly for the read concern "snapshot" behaviour.
+
+Cockroach Labs, CockroachDB Documentation, "Transactions".
+https://docs.cockroachlabs.com/docs/stable/transactions. Verified
+2026-08-16, quoted directly for the statement that CockroachDB's
+SERIALIZABLE level exceeds the SNAPSHOT level in strength and that
+SNAPSHOT is not offered as a selectable isolation level.
+
+Michael J. Cahill, Uwe Rohm, Alan D. Fekete, "Serializable Isolation for
+Snapshot Databases", ACM Transactions on Database Systems, volume 34, issue
+4, article 20, 2009, cited in dimension 13 as the source for Serializable
+Snapshot Isolation. This citation was not independently verified against
+the publisher during this authoring pass, unlike every other citation in
+this entry, and should be confirmed before being relied on as a sourced
+claim, it is flagged here rather than silently included as verified.
+
 ## Code examples
 
 Three languages, all implementing the identical algorithm so the trade-offs
@@ -1068,51 +1116,3 @@ Go returns an explicit boolean rather than an optional or a null, which is
 the idiomatic Go shape for "this operation may fail", and it is the same
 first-committer-wins check running against the same data, producing the
 same conflict on the second commit.
-
-## 18. References
-
-Hal Berenson, Philip A. Bernstein, Jim Gray, Jim Melton, Elizabeth O'Neil,
-Patrick O'Neil, "A Critique of ANSI SQL Isolation Levels", Proceedings of the
-1995 ACM SIGMOD International Conference on Management of Data, pages 1 to
-10. DOI 10.1145/223784.223785. Public mirror https://arxiv.org/pdf/cs/0701157.
-Verified 2026-08-16, both the DOI record on the ACM Digital Library and the
-arXiv mirror's existence and authorship confirmed via search.
-
-PostgreSQL Global Development Group, PostgreSQL Documentation, chapter 13,
-Concurrency Control, section 13.2, Transaction Isolation.
-https://www.postgresql.org/docs/current/transaction-iso.html. Verified
-2026-08-16, sections 13.2.1 through 13.2.3 fetched and quoted directly.
-
-PostgreSQL Global Development Group, PostgreSQL Documentation, chapter 24,
-Routine Database Maintenance Tasks, section 24.1.5, Preventing Transaction
-ID Wraparound Failures. https://www.postgresql.org/docs/current/routine-vacuuming.html.
-Verified 2026-08-16 as the source for the transaction age and VACUUM
-retention discussion in dimensions 11 and 16.
-
-Microsoft Corporation, Microsoft Learn, "SET TRANSACTION ISOLATION LEVEL
-(Transact-SQL)". https://learn.microsoft.com/en-us/sql/t-sql/statements/set-transaction-isolation-level-transact-sql.
-Verified 2026-08-16, fetched in full, quoted directly for the SNAPSHOT and
-READ_COMMITTED_SNAPSHOT sections.
-
-Oracle Corporation, Oracle Database 19c Database Concepts, "Data
-Concurrency and Consistency". https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html.
-Verified 2026-08-16, quoted directly for the multiversion consistency model,
-consistent read clones, and the ORA-08177 serialization failure.
-
-MongoDB, Inc., MongoDB Manual, "Transactions".
-https://www.mongodb.com/docs/manual/core/transactions/. Verified
-2026-08-16, quoted directly for the read concern "snapshot" behaviour.
-
-Cockroach Labs, CockroachDB Documentation, "Transactions".
-https://docs.cockroachlabs.com/docs/stable/transactions. Verified
-2026-08-16, quoted directly for the statement that CockroachDB's
-SERIALIZABLE level exceeds the SNAPSHOT level in strength and that
-SNAPSHOT is not offered as a selectable isolation level.
-
-Michael J. Cahill, Uwe Rohm, Alan D. Fekete, "Serializable Isolation for
-Snapshot Databases", ACM Transactions on Database Systems, volume 34, issue
-4, article 20, 2009, cited in dimension 13 as the source for Serializable
-Snapshot Isolation. This citation was not independently verified against
-the publisher during this authoring pass, unlike every other citation in
-this entry, and should be confirmed before being relied on as a sourced
-claim, it is flagged here rather than silently included as verified.

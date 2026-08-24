@@ -419,6 +419,18 @@ lazily loaded route is a loading-timing decision, not a security
 boundary, and treating it as the latter is the specific mistake this
 pattern's own route-per-chunk shape makes easy to fall into.
 
+## 18. References
+
+1. React Router. "Automatic Code Splitting".
+   https://reactrouter.com/explanation/code-splitting
+   Verified 2026-08-21. Source of the defining route-to-bundle mapping
+   quote and the JavaScript footprint reduction quote used in
+   dimensions 1, 3, and 9.
+2. React. "lazy".
+   https://react.dev/reference/react/lazy
+   Verified 2026-08-21. Source of the underlying lazy-loading
+   primitive quote used in dimensions 8 and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -605,15 +617,3 @@ func main() async throws {
 
 try await main()
 ```
-
-## 18. References
-
-1. React Router. "Automatic Code Splitting".
-   https://reactrouter.com/explanation/code-splitting
-   Verified 2026-08-21. Source of the defining route-to-bundle mapping
-   quote and the JavaScript footprint reduction quote used in
-   dimensions 1, 3, and 9.
-2. React. "lazy".
-   https://react.dev/reference/react/lazy
-   Verified 2026-08-21. Source of the underlying lazy-loading
-   primitive quote used in dimensions 8 and 9.

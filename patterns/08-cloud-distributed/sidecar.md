@@ -835,6 +835,38 @@ blast radius of every workload it touches, which argues for pinning and
 auditing sidecar images with the same rigor as application images rather
 than treating platform-injected containers as implicitly trusted.
 
+## 18. References
+
+1. Brendan Burns and David Oppenheimer, "Design patterns for container-based
+   distributed systems," USENIX Workshop on Hot Topics in Cloud Computing
+   (HotCloud '16), 2016, section 4.1, page 2. PDF verified at
+   [static.googleusercontent.com/media/research.google.com/en//pubs/archive/45406.pdf](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45406.pdf),
+   verified 2026-08-02.
+2. Brendan Burns, *Designing Distributed Systems. Patterns and Paradigms for
+   Scalable, Reliable Services*, O'Reilly Media, 2018. Cited here for the
+   book's existence and topic as the expanded successor to reference 1. The
+   exact chapter and page covering Sidecar were not independently
+   re-verified via a live fetch for this entry and should be treated as
+   unverified until confirmed against a copy of the book.
+3. Microsoft, "Sidecar pattern," Azure Architecture Center,
+   [learn.microsoft.com/en-us/azure/architecture/patterns/sidecar](https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar),
+   verified 2026-08-02.
+4. Kubernetes documentation, "Sidecar Containers,"
+   [kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/),
+   verified 2026-08-02.
+5. Istio documentation, "Istio Service Mesh Architecture,"
+   [istio.io/latest/docs/ops/deployment/architecture/](https://istio.io/latest/docs/ops/deployment/architecture/),
+   verified 2026-08-02.
+6. Envoy documentation, "What is Envoy,"
+   [envoyproxy.io/docs/envoy/latest/intro/what_is_envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy),
+   verified 2026-08-02.
+7. Linkerd documentation, "Architecture,"
+   [linkerd.io/2.11/reference/architecture/](https://linkerd.io/2.11/reference/architecture/),
+   verified 2026-08-02.
+8. Dapr documentation, "The Dapr sidecar,"
+   [docs.dapr.io/concepts/dapr-services/sidecar/](https://docs.dapr.io/concepts/dapr-services/sidecar/),
+   verified 2026-08-02.
+
 ## Code examples
 
 Each example below implements the pattern's core mechanism. A small
@@ -1152,35 +1184,3 @@ Verified output.
 app called sidecar, got: {"path":"/v1.0/invoke/orders-service/method/createOrder","base":"http://127.0.0.1:3500","echoed":{"sku":"widget-1","qty":3}}
 app never learned the message broker's address or protocol
 ```
-
-## 18. References
-
-1. Brendan Burns and David Oppenheimer, "Design patterns for container-based
-   distributed systems," USENIX Workshop on Hot Topics in Cloud Computing
-   (HotCloud '16), 2016, section 4.1, page 2. PDF verified at
-   [static.googleusercontent.com/media/research.google.com/en//pubs/archive/45406.pdf](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45406.pdf),
-   verified 2026-08-02.
-2. Brendan Burns, *Designing Distributed Systems. Patterns and Paradigms for
-   Scalable, Reliable Services*, O'Reilly Media, 2018. Cited here for the
-   book's existence and topic as the expanded successor to reference 1. The
-   exact chapter and page covering Sidecar were not independently
-   re-verified via a live fetch for this entry and should be treated as
-   unverified until confirmed against a copy of the book.
-3. Microsoft, "Sidecar pattern," Azure Architecture Center,
-   [learn.microsoft.com/en-us/azure/architecture/patterns/sidecar](https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar),
-   verified 2026-08-02.
-4. Kubernetes documentation, "Sidecar Containers,"
-   [kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/),
-   verified 2026-08-02.
-5. Istio documentation, "Istio Service Mesh Architecture,"
-   [istio.io/latest/docs/ops/deployment/architecture/](https://istio.io/latest/docs/ops/deployment/architecture/),
-   verified 2026-08-02.
-6. Envoy documentation, "What is Envoy,"
-   [envoyproxy.io/docs/envoy/latest/intro/what_is_envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy),
-   verified 2026-08-02.
-7. Linkerd documentation, "Architecture,"
-   [linkerd.io/2.11/reference/architecture/](https://linkerd.io/2.11/reference/architecture/),
-   verified 2026-08-02.
-8. Dapr documentation, "The Dapr sidecar,"
-   [docs.dapr.io/concepts/dapr-services/sidecar/](https://docs.dapr.io/concepts/dapr-services/sidecar/),
-   verified 2026-08-02.

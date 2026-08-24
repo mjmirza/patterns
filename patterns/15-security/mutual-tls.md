@@ -715,6 +715,58 @@ Mutual TLS is silent on payload-level authorization, business object access,
 request intent, and data minimization. Those concerns remain with application
 policy, Complete Mediation, and privacy design.
 
+## 18. References
+
+- Tim Dierks and Christopher Allen, RFC 2246, *The TLS Protocol Version 1.0*,
+  January 1999, sections 7.4.4, 7.4.6, and 7.4.8.
+  [https://www.rfc-editor.org/rfc/rfc2246](https://www.rfc-editor.org/rfc/rfc2246),
+  verified 2026-08-02.
+- Tim Dierks and Eric Rescorla, RFC 5246, *The Transport Layer Security (TLS)
+  Protocol Version 1.2*, August 2008, sections 7.4.4, 7.4.6, and 7.4.8.
+  [https://www.rfc-editor.org/info/rfc5246](https://www.rfc-editor.org/info/rfc5246),
+  verified 2026-08-02.
+- Eric Rescorla, RFC 8446, *The Transport Layer Security (TLS) Protocol Version
+  1.3*, August 2018, sections 1, 4.2.6, 4.3.2, 4.4.2, 4.4.3, 4.6.2, and
+  Appendix E.1.2.
+  [https://www.rfc-editor.org/rfc/rfc8446.html](https://www.rfc-editor.org/rfc/rfc8446.html),
+  verified 2026-08-02.
+- David Cooper, Stefan Santesson, Stephen Farrell, Sharon Boeyen, Russell
+  Housley, and Tim Polk, RFC 5280, *Internet X.509 Public Key Infrastructure
+  Certificate and Certificate Revocation List (CRL) Profile*, May 2008,
+  sections 4.2.1.12 and 5.
+  [https://www.rfc-editor.org/rfc/rfc5280](https://www.rfc-editor.org/rfc/rfc5280),
+  verified 2026-08-02.
+- Brian Campbell, John Bradley, Nat Sakimura, and Torsten Lodderstedt, RFC
+  8705, *OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound
+  Access Tokens*, February 2020, sections 2 and 3.
+  [https://www.rfc-editor.org/rfc/rfc8705.html](https://www.rfc-editor.org/rfc/rfc8705.html),
+  verified 2026-08-02.
+- Kerry McKay and David Cooper, NIST Special Publication 800-52 Revision 2,
+  *Guidelines for the Selection, Configuration, and Use of Transport Layer
+  Security (TLS) Implementations*, August 2019.
+  [https://csrc.nist.gov/pubs/sp/800/52/r2/final](https://csrc.nist.gov/pubs/sp/800/52/r2/final),
+  verified 2026-08-02.
+- Kubernetes documentation, *PKI certificates and requirements*.
+  [https://kubernetes.io/docs/setup/best-practices/certificates/](https://kubernetes.io/docs/setup/best-practices/certificates/),
+  verified 2026-08-02.
+- Kubernetes documentation, *Authenticating*, X.509 client certificates.
+  [https://kubernetes.io/docs/reference/access-authn-authz/authentication/](https://kubernetes.io/docs/reference/access-authn-authz/authentication/),
+  verified 2026-08-02.
+- Istio documentation, *Security*, Mutual TLS authentication and peer
+  authentication sections.
+  [https://istio.io/latest/docs/concepts/security/](https://istio.io/latest/docs/concepts/security/),
+  verified 2026-08-02.
+- Linkerd documentation, *Automatic mTLS*.
+  [https://linkerd.io/docs/features/automatic-mtls/](https://linkerd.io/docs/features/automatic-mtls/),
+  verified 2026-08-02.
+- Cloudflare documentation, *Authenticated Origin Pulls (mTLS)*.
+  [https://developers.cloudflare.com/ssl/origin-configuration/authenticated-origin-pull/](https://developers.cloudflare.com/ssl/origin-configuration/authenticated-origin-pull/),
+  verified 2026-08-02.
+- SPIFFE documentation, *SPIRE Use Cases*, Authenticating workloads in untrusted
+  networks using mTLS.
+  [https://spiffe.io/docs/latest/spire-about/use-cases/](https://spiffe.io/docs/latest/spire-about/use-cases/),
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples use Python, Go, and TypeScript because each has standard or common
@@ -821,55 +873,3 @@ console.assert(
 );
 console.assert(!authorize({ method: "POST", path: "/ledger/entries" }));
 ```
-
-## 18. References
-
-- Tim Dierks and Christopher Allen, RFC 2246, *The TLS Protocol Version 1.0*,
-  January 1999, sections 7.4.4, 7.4.6, and 7.4.8.
-  [https://www.rfc-editor.org/rfc/rfc2246](https://www.rfc-editor.org/rfc/rfc2246),
-  verified 2026-08-02.
-- Tim Dierks and Eric Rescorla, RFC 5246, *The Transport Layer Security (TLS)
-  Protocol Version 1.2*, August 2008, sections 7.4.4, 7.4.6, and 7.4.8.
-  [https://www.rfc-editor.org/info/rfc5246](https://www.rfc-editor.org/info/rfc5246),
-  verified 2026-08-02.
-- Eric Rescorla, RFC 8446, *The Transport Layer Security (TLS) Protocol Version
-  1.3*, August 2018, sections 1, 4.2.6, 4.3.2, 4.4.2, 4.4.3, 4.6.2, and
-  Appendix E.1.2.
-  [https://www.rfc-editor.org/rfc/rfc8446.html](https://www.rfc-editor.org/rfc/rfc8446.html),
-  verified 2026-08-02.
-- David Cooper, Stefan Santesson, Stephen Farrell, Sharon Boeyen, Russell
-  Housley, and Tim Polk, RFC 5280, *Internet X.509 Public Key Infrastructure
-  Certificate and Certificate Revocation List (CRL) Profile*, May 2008,
-  sections 4.2.1.12 and 5.
-  [https://www.rfc-editor.org/rfc/rfc5280](https://www.rfc-editor.org/rfc/rfc5280),
-  verified 2026-08-02.
-- Brian Campbell, John Bradley, Nat Sakimura, and Torsten Lodderstedt, RFC
-  8705, *OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound
-  Access Tokens*, February 2020, sections 2 and 3.
-  [https://www.rfc-editor.org/rfc/rfc8705.html](https://www.rfc-editor.org/rfc/rfc8705.html),
-  verified 2026-08-02.
-- Kerry McKay and David Cooper, NIST Special Publication 800-52 Revision 2,
-  *Guidelines for the Selection, Configuration, and Use of Transport Layer
-  Security (TLS) Implementations*, August 2019.
-  [https://csrc.nist.gov/pubs/sp/800/52/r2/final](https://csrc.nist.gov/pubs/sp/800/52/r2/final),
-  verified 2026-08-02.
-- Kubernetes documentation, *PKI certificates and requirements*.
-  [https://kubernetes.io/docs/setup/best-practices/certificates/](https://kubernetes.io/docs/setup/best-practices/certificates/),
-  verified 2026-08-02.
-- Kubernetes documentation, *Authenticating*, X.509 client certificates.
-  [https://kubernetes.io/docs/reference/access-authn-authz/authentication/](https://kubernetes.io/docs/reference/access-authn-authz/authentication/),
-  verified 2026-08-02.
-- Istio documentation, *Security*, Mutual TLS authentication and peer
-  authentication sections.
-  [https://istio.io/latest/docs/concepts/security/](https://istio.io/latest/docs/concepts/security/),
-  verified 2026-08-02.
-- Linkerd documentation, *Automatic mTLS*.
-  [https://linkerd.io/docs/features/automatic-mtls/](https://linkerd.io/docs/features/automatic-mtls/),
-  verified 2026-08-02.
-- Cloudflare documentation, *Authenticated Origin Pulls (mTLS)*.
-  [https://developers.cloudflare.com/ssl/origin-configuration/authenticated-origin-pull/](https://developers.cloudflare.com/ssl/origin-configuration/authenticated-origin-pull/),
-  verified 2026-08-02.
-- SPIFFE documentation, *SPIRE Use Cases*, Authenticating workloads in untrusted
-  networks using mTLS.
-  [https://spiffe.io/docs/latest/spire-about/use-cases/](https://spiffe.io/docs/latest/spire-about/use-cases/),
-  verified 2026-08-02.

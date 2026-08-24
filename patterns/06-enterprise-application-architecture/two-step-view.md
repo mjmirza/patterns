@@ -609,6 +609,17 @@ bug that a single-stage Transform View makes easy to introduce accidentally.
   not correctly incorporate the identity or authorization context of the
   request.
 
+## 18. References
+
+- Martin Fowler, *Patterns of Enterprise Application Architecture*,
+  Addison-Wesley, 2002, chapter 14, Web Presentation Patterns, Two Step View.
+- Two Step View, Martin Fowler's Enterprise Application Architecture catalog,
+  https://martinfowler.com/eaaCatalog/twoStepView.html, verified 2026-08-02.
+- Cocoon Tutorials, The Apache Software Foundation,
+  https://cocoon.apache.org/2.1/tutorial/index.html, verified 2026-08-02.
+- Apache FOP, XML Graphics Project, The Apache Software Foundation,
+  https://xmlgraphics.apache.org/fop/, verified 2026-08-02.
+
 ## Code examples
 
 Three languages where the in-memory-tree variant of the pattern is genuinely
@@ -914,14 +925,3 @@ func main() {
 	fmt.Println(textFmt.Render(page))
 }
 ```
-
-## 18. References
-
-- Martin Fowler, *Patterns of Enterprise Application Architecture*,
-  Addison-Wesley, 2002, chapter 14, Web Presentation Patterns, Two Step View.
-- Two Step View, Martin Fowler's Enterprise Application Architecture catalog,
-  https://martinfowler.com/eaaCatalog/twoStepView.html, verified 2026-08-02.
-- Cocoon Tutorials, The Apache Software Foundation,
-  https://cocoon.apache.org/2.1/tutorial/index.html, verified 2026-08-02.
-- Apache FOP, XML Graphics Project, The Apache Software Foundation,
-  https://xmlgraphics.apache.org/fop/, verified 2026-08-02.

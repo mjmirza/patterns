@@ -275,6 +275,18 @@ Where the dependent holds personal or otherwise sensitive data, for example an `
 
 Any encryption, masking, or column-level protection a sensitive dependent requires applies identically to the way it would apply on a first-class mapped entity, Dependent Mapping changes nothing about that underlying requirement. What does change is the ease of forgetting the dependent table exists during a data-protection audit, precisely because it has no dedicated mapper class or repository for an auditor searching the codebase to find, a codebase adopting Dependent Mapping for a sensitive dependent should record that table explicitly wherever the application otherwise catalogs which tables hold personal data, since the pattern's own structure will not surface it on its own.
 
+## 18. References
+
+- Martin Fowler, *Patterns of Enterprise Application Architecture*, Addison-Wesley, 2003, chapter 12, "Dependent Mapping."
+- Martin Fowler, "Dependent Mapping," the online catalog entry for the same chapter, <https://martinfowler.com/eaaCatalog/dependentMapping.html>, verified 2026-08-02. Cited for the pattern's one-line intent and the Album-and-Track worked example.
+- Martin Fowler, "Data Mapper," the online catalog entry, <https://martinfowler.com/eaaCatalog/dataMapper.html>, verified 2026-08-02. Cited for the chapter 10 reference to the parent pattern.
+- Martin Fowler, "Catalog of Patterns of Enterprise Application Architecture," <https://martinfowler.com/eaaCatalog/>, verified 2026-08-02. Cited for the chapter 12 structural-pattern grouping and the one-line intents of Identity Field, Foreign Key Mapping, Association Table Mapping, Embedded Value and Serialized LOB referenced throughout this entry.
+- Martin Fowler, "Serialized LOB," <https://martinfowler.com/eaaCatalog/serializedLOB.html>, verified 2026-08-02. Cited for the boundary between Dependent Mapping and its sibling pattern in dimension 8.
+- Eclipse Foundation, "Jakarta Persistence Specification, Version 3.1," <https://jakarta.ee/specifications/persistence/3.1/jakarta-persistence-spec-3.1.html>, verified 2026-08-02. Cited in dimension 9 for the `orphanRemoval` wording in Section 2.10, "Entity Relationships."
+- Doctrine Project, "Working with Associations," <https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/working-with-associations.html>, verified 2026-08-02. Cited in dimension 1 and dimension 9 for Doctrine's own "privately owned" terminology and its Order-and-OrderItems example.
+- Ruby on Rails, "ActiveRecord::NestedAttributes::ClassMethods" API documentation, <https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html>, verified 2026-08-02. Cited in dimension 9 for the atomic parent-save behaviour of `accepts_nested_attributes_for` and the `:allow_destroy` option.
+- Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of Software*, Addison-Wesley, 2003, part III, chapter 6. Cited in dimension 13 for the Aggregate concept as the domain-modeling counterpart of the ownership boundary this pattern implements at the persistence layer.
+
 ## Code examples
 
 Three languages where the Data Mapper family is genuinely idiomatic. Each example implements the same Album-and-Track aggregate from Fowler's own worked example, backed by an in-memory table abstraction that mimics the select, insert and delete operations a real SQL database would perform, so the mapper's reconciliation logic is exercised the same way it would be against a real schema without requiring a database driver to run the sample. The delete-and-reinsert strategy from dimension 8 is the one shown, because it is the baseline the catalog entry itself describes.
@@ -703,15 +715,3 @@ func (m *AlbumMapper) insertTracks(album *Album) {
 	}
 }
 ```
-
-## 18. References
-
-- Martin Fowler, *Patterns of Enterprise Application Architecture*, Addison-Wesley, 2003, chapter 12, "Dependent Mapping."
-- Martin Fowler, "Dependent Mapping," the online catalog entry for the same chapter, <https://martinfowler.com/eaaCatalog/dependentMapping.html>, verified 2026-08-02. Cited for the pattern's one-line intent and the Album-and-Track worked example.
-- Martin Fowler, "Data Mapper," the online catalog entry, <https://martinfowler.com/eaaCatalog/dataMapper.html>, verified 2026-08-02. Cited for the chapter 10 reference to the parent pattern.
-- Martin Fowler, "Catalog of Patterns of Enterprise Application Architecture," <https://martinfowler.com/eaaCatalog/>, verified 2026-08-02. Cited for the chapter 12 structural-pattern grouping and the one-line intents of Identity Field, Foreign Key Mapping, Association Table Mapping, Embedded Value and Serialized LOB referenced throughout this entry.
-- Martin Fowler, "Serialized LOB," <https://martinfowler.com/eaaCatalog/serializedLOB.html>, verified 2026-08-02. Cited for the boundary between Dependent Mapping and its sibling pattern in dimension 8.
-- Eclipse Foundation, "Jakarta Persistence Specification, Version 3.1," <https://jakarta.ee/specifications/persistence/3.1/jakarta-persistence-spec-3.1.html>, verified 2026-08-02. Cited in dimension 9 for the `orphanRemoval` wording in Section 2.10, "Entity Relationships."
-- Doctrine Project, "Working with Associations," <https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/working-with-associations.html>, verified 2026-08-02. Cited in dimension 1 and dimension 9 for Doctrine's own "privately owned" terminology and its Order-and-OrderItems example.
-- Ruby on Rails, "ActiveRecord::NestedAttributes::ClassMethods" API documentation, <https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html>, verified 2026-08-02. Cited in dimension 9 for the atomic parent-save behaviour of `accepts_nested_attributes_for` and the `:allow_destroy` option.
-- Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of Software*, Addison-Wesley, 2003, part III, chapter 6. Cited in dimension 13 for the Aggregate concept as the domain-modeling counterpart of the ownership boundary this pattern implements at the persistence layer.

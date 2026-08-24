@@ -1063,6 +1063,82 @@ element type name can encode a document category, a customer tier or a data
 classification. Where the names carry that, treat the label as attributable data
 and apply the same retention and access rules as to any other identifier.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Visitor. Source of
+   the intent, the five participants, the pairing with Composite and Interpreter,
+   and the broken-encapsulation consequence. The page reference, p. 331 in the
+   1995 printing, is taken from footnote 2 of reference 3 rather than verified
+   against a copy of the book.
+2. Daniel H. H. Ingalls. "A Simple Technique for Handling Multiple Polymorphism".
+   *OOPSLA '86 Proceedings*, ACM, September 1986, page 347.
+   ACM 0-89791-204-7/86/0900-0347.
+   https://algoritmos-iii.github.io/assets/bibliografia/simple-technique-for-handling-multiple-polymorphism.pdf
+   Verified 2026-08-02 by reading page 347 of the scanned proceedings. Source for
+   the double dispatch mechanism predating the catalog, the statement of the
+   multiply polymorphic problem, and the reduction of higher degrees of
+   polymorphism by chained dispatch.
+3. Robert C. Martin. *Acyclic Visitor* (v1.0). Object Mentor. No publication date
+   printed on the paper.
+   https://condor.depaul.edu/dmumaugh/OOT/Design-Principles/acv.pdf
+   Verified 2026-08-02. Source for the dependency cycle description, the
+   degenerate visitor base class, the per-element abstract visitor interfaces,
+   the cross-cast dispatch, the partial visitation benefit, the recommendation to
+   prefer the variant when the element hierarchy is frequently extended, and the
+   listed costs including cast expense and class proliferation.
+4. Philip Wadler. "The Expression Problem". Email to the Java Genericity mailing
+   list, 12 November 1998.
+   https://homepages.inf.ed.ac.uk/wadler/papers/expression/expression.txt
+   Verified 2026-08-02. Source for the statement of the problem, defining a
+   datatype by cases where one can add new cases and new functions without
+   recompiling existing code and while retaining static type safety, and for
+   Wadler's own note that it is a new name for an old problem discussed earlier by
+   Reynolds, Cook, and Krishnamurthi, Felleisen and Friedman.
+5. Oracle. *Java SE 21 API Specification*, `java.nio.file.FileVisitor`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/FileVisitor.html
+   Verified 2026-08-02. Source for the four visit operations, the
+   `FileVisitResult` return values, and the `Files.walkFileTree` production use.
+6. Oracle. *Java Language Updates, Java SE 21*, "Pattern Matching for switch".
+   https://docs.oracle.com/en/java/javase/21/language/pattern-matching-switch.html
+   Verified 2026-08-02. Source for sealed-class type coverage removing the need
+   for a `default` label, and for the requirement that switch blocks using pattern
+   labels be exhaustive.
+7. LLVM Project. *Clang documentation*, "How to write RecursiveASTVisitor based
+   ASTFrontendActions". https://clang.llvm.org/docs/RAVFrontendAction.html
+   Verified 2026-08-02. Source for the `bool VisitNodeType(NodeType *)` hook form
+   and the `TypeLoc` exception.
+8. Python Software Foundation. *Python 3 documentation*, `ast` module,
+   `ast.NodeVisitor` and `ast.NodeTransformer`.
+   https://docs.python.org/3/library/ast.html
+   Verified 2026-08-02. Source for the `visit_<classname>` dispatch convention,
+   the `generic_visit` recursion contract, and the transformer's node replacement
+   and removal semantics.
+9. The Go Authors. *Go package documentation*, `go/ast`.
+   https://pkg.go.dev/go/ast
+   Verified 2026-08-02. Source for the `Visitor` interface declaration and the
+   documented behaviour of `Walk`, including the `w.Visit(nil)` subtree-exit call.
+10. Microsoft. *.NET API documentation*,
+    `Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker`.
+    https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxwalker
+    Verified 2026-08-02. Source for the Roslyn depth-first walker description and
+    its relationship to `CSharpSyntaxVisitor`.
+11. JetBrains. *Kotlin documentation*, "Sealed classes and interfaces".
+    https://kotlinlang.org/docs/sealed-classes.html
+    Verified 2026-08-02. Source for exhaustive `when` over a sealed class removing
+    the need for an `else` clause.
+12. The Rust Project Developers. *The Rust Programming Language*, chapter 6.2,
+    "The match Control Flow Construct".
+    https://doc.rust-lang.org/book/ch06-02-match.html
+    Verified 2026-08-02. Source for match exhaustiveness and the
+    non-exhaustive-patterns compiler error.
+13. Jordan Rose. *Swift Evolution proposal SE-0192, "Handling Future Enum Cases"*.
+    Status implemented, Swift 5.0.
+    https://github.com/swiftlang/swift-evolution/blob/main/proposals/0192-non-exhaustive-enums.md
+    Verified 2026-08-02. Source for the stated benefit of exhaustive enum
+    switching in Swift.
+
 ## Code examples
 
 Six languages, chosen to show the pattern in three different lights. Java shows
@@ -1475,79 +1551,3 @@ inside a module. A `switch` over an enum imported from another module needs
 `@unknown default`, because across that boundary the case set is open again,
 which is the same openness that makes Visitor's element interface a breaking
 change.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Visitor. Source of
-   the intent, the five participants, the pairing with Composite and Interpreter,
-   and the broken-encapsulation consequence. The page reference, p. 331 in the
-   1995 printing, is taken from footnote 2 of reference 3 rather than verified
-   against a copy of the book.
-2. Daniel H. H. Ingalls. "A Simple Technique for Handling Multiple Polymorphism".
-   *OOPSLA '86 Proceedings*, ACM, September 1986, page 347.
-   ACM 0-89791-204-7/86/0900-0347.
-   https://algoritmos-iii.github.io/assets/bibliografia/simple-technique-for-handling-multiple-polymorphism.pdf
-   Verified 2026-08-02 by reading page 347 of the scanned proceedings. Source for
-   the double dispatch mechanism predating the catalog, the statement of the
-   multiply polymorphic problem, and the reduction of higher degrees of
-   polymorphism by chained dispatch.
-3. Robert C. Martin. *Acyclic Visitor* (v1.0). Object Mentor. No publication date
-   printed on the paper.
-   https://condor.depaul.edu/dmumaugh/OOT/Design-Principles/acv.pdf
-   Verified 2026-08-02. Source for the dependency cycle description, the
-   degenerate visitor base class, the per-element abstract visitor interfaces,
-   the cross-cast dispatch, the partial visitation benefit, the recommendation to
-   prefer the variant when the element hierarchy is frequently extended, and the
-   listed costs including cast expense and class proliferation.
-4. Philip Wadler. "The Expression Problem". Email to the Java Genericity mailing
-   list, 12 November 1998.
-   https://homepages.inf.ed.ac.uk/wadler/papers/expression/expression.txt
-   Verified 2026-08-02. Source for the statement of the problem, defining a
-   datatype by cases where one can add new cases and new functions without
-   recompiling existing code and while retaining static type safety, and for
-   Wadler's own note that it is a new name for an old problem discussed earlier by
-   Reynolds, Cook, and Krishnamurthi, Felleisen and Friedman.
-5. Oracle. *Java SE 21 API Specification*, `java.nio.file.FileVisitor`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/FileVisitor.html
-   Verified 2026-08-02. Source for the four visit operations, the
-   `FileVisitResult` return values, and the `Files.walkFileTree` production use.
-6. Oracle. *Java Language Updates, Java SE 21*, "Pattern Matching for switch".
-   https://docs.oracle.com/en/java/javase/21/language/pattern-matching-switch.html
-   Verified 2026-08-02. Source for sealed-class type coverage removing the need
-   for a `default` label, and for the requirement that switch blocks using pattern
-   labels be exhaustive.
-7. LLVM Project. *Clang documentation*, "How to write RecursiveASTVisitor based
-   ASTFrontendActions". https://clang.llvm.org/docs/RAVFrontendAction.html
-   Verified 2026-08-02. Source for the `bool VisitNodeType(NodeType *)` hook form
-   and the `TypeLoc` exception.
-8. Python Software Foundation. *Python 3 documentation*, `ast` module,
-   `ast.NodeVisitor` and `ast.NodeTransformer`.
-   https://docs.python.org/3/library/ast.html
-   Verified 2026-08-02. Source for the `visit_<classname>` dispatch convention,
-   the `generic_visit` recursion contract, and the transformer's node replacement
-   and removal semantics.
-9. The Go Authors. *Go package documentation*, `go/ast`.
-   https://pkg.go.dev/go/ast
-   Verified 2026-08-02. Source for the `Visitor` interface declaration and the
-   documented behaviour of `Walk`, including the `w.Visit(nil)` subtree-exit call.
-10. Microsoft. *.NET API documentation*,
-    `Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker`.
-    https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxwalker
-    Verified 2026-08-02. Source for the Roslyn depth-first walker description and
-    its relationship to `CSharpSyntaxVisitor`.
-11. JetBrains. *Kotlin documentation*, "Sealed classes and interfaces".
-    https://kotlinlang.org/docs/sealed-classes.html
-    Verified 2026-08-02. Source for exhaustive `when` over a sealed class removing
-    the need for an `else` clause.
-12. The Rust Project Developers. *The Rust Programming Language*, chapter 6.2,
-    "The match Control Flow Construct".
-    https://doc.rust-lang.org/book/ch06-02-match.html
-    Verified 2026-08-02. Source for match exhaustiveness and the
-    non-exhaustive-patterns compiler error.
-13. Jordan Rose. *Swift Evolution proposal SE-0192, "Handling Future Enum Cases"*.
-    Status implemented, Swift 5.0.
-    https://github.com/swiftlang/swift-evolution/blob/main/proposals/0192-non-exhaustive-enums.md
-    Verified 2026-08-02. Source for the stated benefit of exhaustive enum
-    switching in Swift.

@@ -743,6 +743,28 @@ verified 2026-08-02). Any system that lets a correlation identifier double as
 an access-control mechanism should apply the same discipline, treat the
 identifier as good for matching, never as good for authorizing.
 
+## References
+
+1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003,
+   Messaging Systems chapter, Correlation Identifier.
+2. Enterprise Integration Patterns companion site, "Correlation Identifier,"
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/CorrelationIdentifier.html,
+   verified 2026-08-02.
+3. Apache Camel documentation, "Aggregate EIP,"
+   https://camel.apache.org/components/next/eips/aggregate-eip.html, verified
+   2026-08-02.
+4. Microsoft Learn, Azure Architecture Center, "Asynchronous Request-Reply
+   pattern,"
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply,
+   verified 2026-08-02.
+5. Microsoft Learn, "Azure Service Bus messages, payloads, and
+   serialization,"
+   https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messages-payloads,
+   verified 2026-08-02.
+6. W3C Recommendation, "Trace Context," https://www.w3.org/TR/trace-context/,
+   verified 2026-08-02.
+
 ## Code examples
 
 ### TypeScript
@@ -1002,25 +1024,3 @@ The Python sample was run directly with `python3` and produced
 `{'status': 'paid:ord-42'}`. The Go sample was compiled and run with `go run`, using only the standard
 library (`crypto/rand`, `encoding/hex`, `sync`, `time`, `errors`, `fmt`), and
 printed `resolved map[status:paid:ord-42]`.
-
-## References
-
-1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003,
-   Messaging Systems chapter, Correlation Identifier.
-2. Enterprise Integration Patterns companion site, "Correlation Identifier,"
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/CorrelationIdentifier.html,
-   verified 2026-08-02.
-3. Apache Camel documentation, "Aggregate EIP,"
-   https://camel.apache.org/components/next/eips/aggregate-eip.html, verified
-   2026-08-02.
-4. Microsoft Learn, Azure Architecture Center, "Asynchronous Request-Reply
-   pattern,"
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply,
-   verified 2026-08-02.
-5. Microsoft Learn, "Azure Service Bus messages, payloads, and
-   serialization,"
-   https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messages-payloads,
-   verified 2026-08-02.
-6. W3C Recommendation, "Trace Context," https://www.w3.org/TR/trace-context/,
-   verified 2026-08-02.

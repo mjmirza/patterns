@@ -845,6 +845,43 @@ against the providers behind the composer without ever touching them
 directly. Bounding and validating fan-out size at the composer, not only at
 each individual provider, is the mitigation.
 
+## 18. References
+
+1. Chris Richardson. microservices.io pattern catalog, "Pattern. API
+   Composition". https://microservices.io/patterns/data/api-composition.html
+   Verified 2026-08-03. Source of the pattern's name, the API Composer and
+   Provider Services vocabulary, the stated problem and solution, and the
+   named relationship to Database per Service and CQRS used throughout
+   dimensions 1, 2, 4, 5, 12, and 13.
+2. Sam Newman. "Pattern. Backend for Frontend".
+   https://samnewman.io/patterns/architectural/bff/
+   Verified 2026-08-03. Source of the Backend for Frontend definition, the
+   SoundCloud and Phil Calcado attribution, and the wishlist parallel-call
+   example used in dimensions 2, 8, and 13.
+3. Netflix Technology Blog. "How Netflix Scales its API with GraphQL
+   Federation (Part 1)".
+   https://netflixtechblog.com/how-netflix-scales-its-api-with-graphql-federation-part-1-ae3557c187e2
+   Verified 2026-08-03. Source of the Domain Graph Service, schema registry,
+   federated gateway, `@key` directive, `_entities` query, the ten
+   millisecond overhead figure, and the seventy-plus Domain Graph Service
+   scale figure used in dimensions 8 and 9.
+4. Shopify. "Storefront API". https://shopify.dev/docs/api/storefront
+   Verified 2026-08-03. Source of the GraphQL-only, single-endpoint,
+   multi-domain commerce composition claims used in dimension 9.
+5. GitHub. "About the GraphQL API".
+   https://docs.github.com/en/graphql/overview/about-the-graphql-api
+   Verified 2026-08-03. Source of the single-round-trip, multi-resource
+   composition claim used in dimension 9.
+
+One claim could not be independently verified in this session and is
+recorded here rather than silently dropped. An attempt to fetch Apollo
+GraphQL's Federation documentation, for the general terms subgraph,
+supergraph, and router named in dimension 8, returned HTTP 404 on both
+candidate URLs tried. No specific figure or quotation attributed to Apollo
+appears anywhere in this entry. The general terms themselves are also
+independently attested by the Netflix Domain Graph Service architecture
+citation above, which uses the equivalent federated-gateway vocabulary.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different ways.
@@ -1173,40 +1210,3 @@ async def main() -> None:
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-
-## 18. References
-
-1. Chris Richardson. microservices.io pattern catalog, "Pattern. API
-   Composition". https://microservices.io/patterns/data/api-composition.html
-   Verified 2026-08-03. Source of the pattern's name, the API Composer and
-   Provider Services vocabulary, the stated problem and solution, and the
-   named relationship to Database per Service and CQRS used throughout
-   dimensions 1, 2, 4, 5, 12, and 13.
-2. Sam Newman. "Pattern. Backend for Frontend".
-   https://samnewman.io/patterns/architectural/bff/
-   Verified 2026-08-03. Source of the Backend for Frontend definition, the
-   SoundCloud and Phil Calcado attribution, and the wishlist parallel-call
-   example used in dimensions 2, 8, and 13.
-3. Netflix Technology Blog. "How Netflix Scales its API with GraphQL
-   Federation (Part 1)".
-   https://netflixtechblog.com/how-netflix-scales-its-api-with-graphql-federation-part-1-ae3557c187e2
-   Verified 2026-08-03. Source of the Domain Graph Service, schema registry,
-   federated gateway, `@key` directive, `_entities` query, the ten
-   millisecond overhead figure, and the seventy-plus Domain Graph Service
-   scale figure used in dimensions 8 and 9.
-4. Shopify. "Storefront API". https://shopify.dev/docs/api/storefront
-   Verified 2026-08-03. Source of the GraphQL-only, single-endpoint,
-   multi-domain commerce composition claims used in dimension 9.
-5. GitHub. "About the GraphQL API".
-   https://docs.github.com/en/graphql/overview/about-the-graphql-api
-   Verified 2026-08-03. Source of the single-round-trip, multi-resource
-   composition claim used in dimension 9.
-
-One claim could not be independently verified in this session and is
-recorded here rather than silently dropped. An attempt to fetch Apollo
-GraphQL's Federation documentation, for the general terms subgraph,
-supergraph, and router named in dimension 8, returned HTTP 404 on both
-candidate URLs tried. No specific figure or quotation attributed to Apollo
-appears anywhere in this entry. The general terms themselves are also
-independently attested by the Netflix Domain Graph Service architecture
-citation above, which uses the equivalent federated-gateway vocabulary.

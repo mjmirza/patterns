@@ -421,6 +421,16 @@ nature, the very property that makes it convenient, is exactly what
 makes an accidentally over-broadly shared reference to sensitive data
 easy to overlook during a security review.
 
+## 18. References
+
+1. Preact Blog. "Introducing Signals". 6 September 2022.
+   https://preactjs.com/blog/introducing-signals/
+   Verified 2026-08-21. Source of the defining sentence and the
+   first_described lineage.
+2. SolidJS documentation. "Signals".
+   https://docs.solidjs.com/concepts/signals
+   Verified 2026-08-21. Source for the production use in dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -530,13 +540,3 @@ counter.count = 1
 counter.count = 2
 print("count is now " + String(counter.count))
 ```
-
-## 18. References
-
-1. Preact Blog. "Introducing Signals". 6 September 2022.
-   https://preactjs.com/blog/introducing-signals/
-   Verified 2026-08-21. Source of the defining sentence and the
-   first_described lineage.
-2. SolidJS documentation. "Signals".
-   https://docs.solidjs.com/concepts/signals
-   Verified 2026-08-21. Source for the production use in dimension 9.

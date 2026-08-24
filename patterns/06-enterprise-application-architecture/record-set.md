@@ -748,6 +748,36 @@ write path. Platform-native reconcilers (ADO.NET `DataAdapter`, JDBC
 `CachedRowSet.acceptChanges`) parameterise generated statements correctly by
 default, but a custom reconciler must be held to the same standard.
 
+## 18. References
+
+1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
+   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 18, "Data Source
+   Architectural Patterns", section "Record Set". Source of the pattern name,
+   the intent, and the identification of ADO Recordset as the motivating
+   example.
+2. Martin Fowler. "Record Set". martinfowler.com.
+   https://martinfowler.com/eaaCatalog/recordSet.html
+   Verified 2026-08-02. Source of the pattern's intent statement and the
+   ADO Recordset attribution.
+3. Microsoft. ".NET API browser, DataSet Class".
+   https://learn.microsoft.com/en-us/dotnet/api/system.data.dataset
+   Verified 2026-08-02. Source for the ADO.NET DataSet production use and
+   its disconnected, in-memory-cache description.
+4. Microsoft. ".NET API browser, DataRelationCollection Class".
+   https://learn.microsoft.com/en-us/dotnet/api/system.data.datarelationcollection
+   Verified 2026-08-02. Source for the multi-table, related-tables variant
+   in dimension 8.
+5. Oracle. "CachedRowSet Interface", Java SE 21 & JDK 21 java.sql.rowset
+   module documentation.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.sql.rowset/javax/sql/rowset/CachedRowSet.html
+   Verified 2026-08-02. Source for the CachedRowSet production use, and the
+   direct quotation describing it as a disconnected rowset that caches its
+   rows in memory.
+6. PHP Documentation Group. `PDOStatement::fetchAll`.
+   https://www.php.net/manual/en/pdostatement.fetchall.php
+   Verified 2026-08-02. Source for the PHP PDO read-only, array-based
+   production use in dimensions 8 and 9.
+
 ## Code examples
 
 Three platforms where the pattern is genuinely native, shown in three
@@ -968,33 +998,3 @@ func main() {
 	fmt.Println("changes after accept:", len(table.Changes()))
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
-   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 18, "Data Source
-   Architectural Patterns", section "Record Set". Source of the pattern name,
-   the intent, and the identification of ADO Recordset as the motivating
-   example.
-2. Martin Fowler. "Record Set". martinfowler.com.
-   https://martinfowler.com/eaaCatalog/recordSet.html
-   Verified 2026-08-02. Source of the pattern's intent statement and the
-   ADO Recordset attribution.
-3. Microsoft. ".NET API browser, DataSet Class".
-   https://learn.microsoft.com/en-us/dotnet/api/system.data.dataset
-   Verified 2026-08-02. Source for the ADO.NET DataSet production use and
-   its disconnected, in-memory-cache description.
-4. Microsoft. ".NET API browser, DataRelationCollection Class".
-   https://learn.microsoft.com/en-us/dotnet/api/system.data.datarelationcollection
-   Verified 2026-08-02. Source for the multi-table, related-tables variant
-   in dimension 8.
-5. Oracle. "CachedRowSet Interface", Java SE 21 & JDK 21 java.sql.rowset
-   module documentation.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.sql.rowset/javax/sql/rowset/CachedRowSet.html
-   Verified 2026-08-02. Source for the CachedRowSet production use, and the
-   direct quotation describing it as a disconnected rowset that caches its
-   rows in memory.
-6. PHP Documentation Group. `PDOStatement::fetchAll`.
-   https://www.php.net/manual/en/pdostatement.fetchall.php
-   Verified 2026-08-02. Source for the PHP PDO read-only, array-based
-   production use in dimensions 8 and 9.

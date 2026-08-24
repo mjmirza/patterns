@@ -126,6 +126,12 @@ Track the count of instances on each version during a rollout, the pass and fail
 
 Because both versions run concurrently, any change to an authentication or authorization check must be compatible in both directions for the length of the rollout, or a request served by the old version could apply a stale security rule. Secrets and credentials used by the new version must already be provisioned and valid before the first batch launches, since there is no separate environment cutover step to gate on.
 
+## References
+
+- Kubernetes, Deployments, https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+- Amazon Web Services, Deploy Amazon ECS services by replacing tasks, https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html
+- Amazon Web Services, Deploy Amazon ECS services by replacing tasks (minimumHealthyPercent), https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html
+
 ## Code Examples
 
 ### Swift
@@ -193,9 +199,3 @@ class RollingDeploymentController:
             replaced += batch
         return replaced
 ```
-
-## References
-
-- Kubernetes, Deployments, https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-- Amazon Web Services, Deploy Amazon ECS services by replacing tasks, https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html
-- Amazon Web Services, Deploy Amazon ECS services by replacing tasks (minimumHealthyPercent), https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html

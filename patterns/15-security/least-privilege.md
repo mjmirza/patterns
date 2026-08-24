@@ -780,6 +780,49 @@ Condition logic can be bypassed if resource tags or identity attributes are
 wrong. Token exchange services, privilege brokers, and approval systems must
 therefore run with their own narrow roles, strong audit, and tested recovery.
 
+## 18. References
+
+- Jerome H. Saltzer and Michael D. Schroeder, "The Protection of Information
+  in Computer Systems," *Proceedings of the IEEE*, volume 63, issue 9, 1975,
+  section I.A.3, "Design Principles." Web copy at
+  https://www.cs.virginia.edu/~evans/cs551/saltzer/, verified 2026-08-02.
+- NIST Computer Security Resource Center, "least privilege," glossary entry,
+  sources include CNSSI 4009-2015, NIST SP 800-12 Rev. 1, NIST SP 800-53 Rev.
+  5, and NIST SP 800-171r3. https://csrc.nist.gov/glossary/term/least_privilege,
+  verified 2026-08-02.
+- Scott Rose, Oliver Borchert, Stu Mitchell, and Sean Connelly, NIST Special
+  Publication 800-207, *Zero Trust Architecture*, final publication, August
+  2020. https://csrc.nist.gov/pubs/sp/800/207/final, verified 2026-08-02.
+- Amazon Web Services, AWS Identity and Access Management User Guide,
+  "Policies and permissions in AWS Identity and Access Management."
+  https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html,
+  verified 2026-08-02.
+- Amazon Web Services, AWS Identity and Access Management User Guide, "Prepare
+  for least-privilege permissions."
+  https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-reduce-permissions.html,
+  verified 2026-08-02.
+- Amazon Web Services, AWS Identity and Access Management User Guide, "IAM
+  Access Analyzer policy generation."
+  https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-policy-generation.html,
+  verified 2026-08-02.
+- Kubernetes Documentation, "Role Based Access Control Good Practices."
+  https://kubernetes.io/docs/concepts/security/rbac-good-practices/, verified
+  2026-08-02.
+- Google Cloud Documentation, Identity and Access Management, "Use IAM
+  securely." https://docs.cloud.google.com/iam/docs/using-iam-securely?authuser=01&hl=en,
+  verified 2026-08-02.
+- Google Cloud Documentation, Policy Intelligence, "Review and apply role
+  recommendations for projects, folders, and organizations."
+  https://docs.cloud.google.com/policy-intelligence/docs/review-apply-role-recommendations,
+  verified 2026-08-02.
+- Michael Kerrisk, Linux man-pages project, "capabilities(7), overview of Linux
+  capabilities." https://man7.org/linux/man-pages/man7/capabilities.7.html,
+  verified 2026-08-02.
+- Niels Provos, Markus Friedl, and Peter Honeyman, "Preventing Privilege
+  Escalation," 12th USENIX Security Symposium, 2003, sections 2 through 5.
+  https://www.usenix.org/legacy/event/sec03/tech/full_papers/provos_et_al/provos_et_al_html/,
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples use the same small model in three languages. A report task receives
@@ -915,46 +958,3 @@ In each language, the concrete store has more authority than the report task.
 The task receives a narrowed view. This is not a replacement for platform IAM,
 but it prevents accidental calls in code and makes tests state the authority
 contract.
-
-## 18. References
-
-- Jerome H. Saltzer and Michael D. Schroeder, "The Protection of Information
-  in Computer Systems," *Proceedings of the IEEE*, volume 63, issue 9, 1975,
-  section I.A.3, "Design Principles." Web copy at
-  https://www.cs.virginia.edu/~evans/cs551/saltzer/, verified 2026-08-02.
-- NIST Computer Security Resource Center, "least privilege," glossary entry,
-  sources include CNSSI 4009-2015, NIST SP 800-12 Rev. 1, NIST SP 800-53 Rev.
-  5, and NIST SP 800-171r3. https://csrc.nist.gov/glossary/term/least_privilege,
-  verified 2026-08-02.
-- Scott Rose, Oliver Borchert, Stu Mitchell, and Sean Connelly, NIST Special
-  Publication 800-207, *Zero Trust Architecture*, final publication, August
-  2020. https://csrc.nist.gov/pubs/sp/800/207/final, verified 2026-08-02.
-- Amazon Web Services, AWS Identity and Access Management User Guide,
-  "Policies and permissions in AWS Identity and Access Management."
-  https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html,
-  verified 2026-08-02.
-- Amazon Web Services, AWS Identity and Access Management User Guide, "Prepare
-  for least-privilege permissions."
-  https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-reduce-permissions.html,
-  verified 2026-08-02.
-- Amazon Web Services, AWS Identity and Access Management User Guide, "IAM
-  Access Analyzer policy generation."
-  https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-policy-generation.html,
-  verified 2026-08-02.
-- Kubernetes Documentation, "Role Based Access Control Good Practices."
-  https://kubernetes.io/docs/concepts/security/rbac-good-practices/, verified
-  2026-08-02.
-- Google Cloud Documentation, Identity and Access Management, "Use IAM
-  securely." https://docs.cloud.google.com/iam/docs/using-iam-securely?authuser=01&hl=en,
-  verified 2026-08-02.
-- Google Cloud Documentation, Policy Intelligence, "Review and apply role
-  recommendations for projects, folders, and organizations."
-  https://docs.cloud.google.com/policy-intelligence/docs/review-apply-role-recommendations,
-  verified 2026-08-02.
-- Michael Kerrisk, Linux man-pages project, "capabilities(7), overview of Linux
-  capabilities." https://man7.org/linux/man-pages/man7/capabilities.7.html,
-  verified 2026-08-02.
-- Niels Provos, Markus Friedl, and Peter Honeyman, "Preventing Privilege
-  Escalation," 12th USENIX Security Symposium, 2003, sections 2 through 5.
-  https://www.usenix.org/legacy/event/sec03/tech/full_papers/provos_et_al/provos_et_al_html/,
-  verified 2026-08-02.

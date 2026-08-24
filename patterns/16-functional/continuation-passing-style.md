@@ -729,6 +729,41 @@ of service when pending work occupies a slot, actor mailbox, socket, timer, or
 workflow record. Put hard age limits on stored continuations and make expiry a
 normal outcome, not an unobserved cleanup thread.
 
+## 18. References
+
+1. John C. Reynolds. "Definitional Interpreters for Higher-Order Programming
+   Languages." ACM Annual Conference, 1972, pages 717-740. DOI
+   10.1145/800194.805852. DBLP record:
+   https://dblp.dagstuhl.de/rec/conf/acm/Reynolds72.html
+   Verified 2026-08-02. Source for the lineage citation.
+2. Andrew W. Appel. *Compiling with Continuations*. Cambridge University Press,
+   1992. Cambridge University Press record:
+   https://www.cambridge.org/core/books/compiling-with-continuations/7CA9C36DCE78AD82218E745F43A4E740
+   Verified 2026-08-02. Source for compiler CPS lineage and the Standard ML
+   compiler representation claim.
+3. Kotlin project. *Kotlin Language Specification*, "Asynchronous programming
+   with coroutines", section "Continuation Passing Style".
+   https://kotlinlang.org/spec/asynchronous-programming-with-coroutines.html
+   Verified 2026-08-02. Source for the generated continuation parameter in
+   suspendable functions.
+4. Kotlin project. *Kotlin Standard Library API*, `kotlin.coroutines.Continuation`.
+   https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-continuation/
+   Verified 2026-08-02. Source for the public `Continuation<T>` interface.
+5. R6RS editors. *Revised^6 Report on the Algorithmic Language Scheme*,
+   section on control features and `call-with-current-continuation`.
+   https://r6rs.org/final/html/r6rs/r6rs-Z-H-14.html
+   Verified 2026-08-02. Source for Scheme continuation terminology.
+6. Racket project. *The Racket Reference*, section 10.4, "Continuations".
+   https://docs.racket-lang.org/reference/cont.html
+   Verified 2026-08-02. Source for captured and delimited continuation
+   operations.
+7. Racket project. *Racket Web Server*, "Stateful Servlets".
+   https://docs.racket-lang.org/web-server/servlet.html
+   Verified 2026-08-02. Source for `send/suspend` and web continuations.
+8. Express project. *Writing middleware for use in Express apps*.
+   https://expressjs.com/en/guide/writing-middleware/
+   Verified 2026-08-02. Source for the `next` continuation in middleware.
+
 ## Code examples
 
 Three languages are shown. TypeScript shows the common web and middleware
@@ -831,38 +866,3 @@ func main() {
 	done("late")
 }
 ```
-
-## 18. References
-
-1. John C. Reynolds. "Definitional Interpreters for Higher-Order Programming
-   Languages." ACM Annual Conference, 1972, pages 717-740. DOI
-   10.1145/800194.805852. DBLP record:
-   https://dblp.dagstuhl.de/rec/conf/acm/Reynolds72.html
-   Verified 2026-08-02. Source for the lineage citation.
-2. Andrew W. Appel. *Compiling with Continuations*. Cambridge University Press,
-   1992. Cambridge University Press record:
-   https://www.cambridge.org/core/books/compiling-with-continuations/7CA9C36DCE78AD82218E745F43A4E740
-   Verified 2026-08-02. Source for compiler CPS lineage and the Standard ML
-   compiler representation claim.
-3. Kotlin project. *Kotlin Language Specification*, "Asynchronous programming
-   with coroutines", section "Continuation Passing Style".
-   https://kotlinlang.org/spec/asynchronous-programming-with-coroutines.html
-   Verified 2026-08-02. Source for the generated continuation parameter in
-   suspendable functions.
-4. Kotlin project. *Kotlin Standard Library API*, `kotlin.coroutines.Continuation`.
-   https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-continuation/
-   Verified 2026-08-02. Source for the public `Continuation<T>` interface.
-5. R6RS editors. *Revised^6 Report on the Algorithmic Language Scheme*,
-   section on control features and `call-with-current-continuation`.
-   https://r6rs.org/final/html/r6rs/r6rs-Z-H-14.html
-   Verified 2026-08-02. Source for Scheme continuation terminology.
-6. Racket project. *The Racket Reference*, section 10.4, "Continuations".
-   https://docs.racket-lang.org/reference/cont.html
-   Verified 2026-08-02. Source for captured and delimited continuation
-   operations.
-7. Racket project. *Racket Web Server*, "Stateful Servlets".
-   https://docs.racket-lang.org/web-server/servlet.html
-   Verified 2026-08-02. Source for `send/suspend` and web continuations.
-8. Express project. *Writing middleware for use in Express apps*.
-   https://expressjs.com/en/guide/writing-middleware/
-   Verified 2026-08-02. Source for the `next` continuation in middleware.

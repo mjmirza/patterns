@@ -424,6 +424,18 @@ configuration is worth verifying directly against the specific chip's
 own documentation, rather than trusting the abstraction layer's
 default behavior without checking it.
 
+## 18. References
+
+1. ARM. "CMSIS-Core (Cortex-M)".
+   https://arm-software.github.io/CMSIS_5/Core/html/index.html
+   Verified 2026-08-21. Source of the hardware abstraction layer
+   definition quotes used in dimensions 1, 2, 3, and 9.
+2. The Zephyr Project. "Device Driver Model".
+   https://docs.zephyrproject.org/latest/kernel/drivers/index.html
+   Verified 2026-08-21. Source of the device-independent subsystem
+   API and application-decoupling quotes used in dimensions 3, 5, 8,
+   and 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -569,15 +581,3 @@ func configureApplicationTimer(_ hal: TimerHal) {
 configureApplicationTimer(VendorATimerHal())
 configureApplicationTimer(VendorBTimerHal())
 ```
-
-## 18. References
-
-1. ARM. "CMSIS-Core (Cortex-M)".
-   https://arm-software.github.io/CMSIS_5/Core/html/index.html
-   Verified 2026-08-21. Source of the hardware abstraction layer
-   definition quotes used in dimensions 1, 2, 3, and 9.
-2. The Zephyr Project. "Device Driver Model".
-   https://docs.zephyrproject.org/latest/kernel/drivers/index.html
-   Verified 2026-08-21. Source of the device-independent subsystem
-   API and application-decoupling quotes used in dimensions 3, 5, 8,
-   and 9.

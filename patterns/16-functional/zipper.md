@@ -703,6 +703,35 @@ On privacy the pattern is neutral in itself. it holds exactly the data
 the structure it walks already holds, and adds no new persistence,
 network, or logging surface of its own.
 
+## 18. References
+
+1. Gerard Huet. "The Zipper". *Journal of Functional Programming*, volume
+   7, issue 5, pages 549 to 554, September 1997.
+   https://www.st.cs.uni-saarland.de/edu/seminare/2005/advanced-fp/docs/huet-zipper.pdf
+   Verified 2026-08-21. Source of the original construction, the name,
+   the location terminology, and the seam metaphor.
+2. Conor McBride. "The Derivative of a Regular Type is its Type of
+   One-Hole Contexts" (extended abstract). 2001.
+   http://strictlypositive.org/diff.pdf
+   Verified 2026-08-21. Source for the derivative connection and the
+   generic derivation of a zipper's context type in dimension 8.
+3. Wikipedia contributors. "Zipper (data structure)".
+   https://en.wikipedia.org/wiki/Zipper_(data_structure)
+   Verified 2026-08-21. Used only to confirm common phrasing, not as a
+   source of explanation.
+4. Clojure. `clojure.zip` API documentation.
+   https://clojure.github.io/clojure/clojure.zip-api.html
+   Verified 2026-08-21. Source for the dynamic, generic zipper variant
+   in dimension 8 and the production use in dimension 9.
+5. Hackage. `xmonad` package documentation, module `XMonad.StackSet`.
+   https://hackage.haskell.org/package/xmonad/docs/XMonad-StackSet.html
+   Verified 2026-08-21. Source for the XMonad production use in
+   dimension 9.
+6. Hackage. `rosezipper` package documentation.
+   https://hackage.haskell.org/package/rosezipper
+   Verified 2026-08-21. Source for the general purpose rose-tree zipper
+   production use in dimension 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -974,32 +1003,3 @@ func main() {
 	fmt.Println(z.Root())
 }
 ```
-
-## 18. References
-
-1. Gerard Huet. "The Zipper". *Journal of Functional Programming*, volume
-   7, issue 5, pages 549 to 554, September 1997.
-   https://www.st.cs.uni-saarland.de/edu/seminare/2005/advanced-fp/docs/huet-zipper.pdf
-   Verified 2026-08-21. Source of the original construction, the name,
-   the location terminology, and the seam metaphor.
-2. Conor McBride. "The Derivative of a Regular Type is its Type of
-   One-Hole Contexts" (extended abstract). 2001.
-   http://strictlypositive.org/diff.pdf
-   Verified 2026-08-21. Source for the derivative connection and the
-   generic derivation of a zipper's context type in dimension 8.
-3. Wikipedia contributors. "Zipper (data structure)".
-   https://en.wikipedia.org/wiki/Zipper_(data_structure)
-   Verified 2026-08-21. Used only to confirm common phrasing, not as a
-   source of explanation.
-4. Clojure. `clojure.zip` API documentation.
-   https://clojure.github.io/clojure/clojure.zip-api.html
-   Verified 2026-08-21. Source for the dynamic, generic zipper variant
-   in dimension 8 and the production use in dimension 9.
-5. Hackage. `xmonad` package documentation, module `XMonad.StackSet`.
-   https://hackage.haskell.org/package/xmonad/docs/XMonad-StackSet.html
-   Verified 2026-08-21. Source for the XMonad production use in
-   dimension 9.
-6. Hackage. `rosezipper` package documentation.
-   https://hackage.haskell.org/package/rosezipper
-   Verified 2026-08-21. Source for the general purpose rose-tree zipper
-   production use in dimension 9.

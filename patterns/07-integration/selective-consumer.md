@@ -860,6 +860,39 @@ consumer whose selector correctly excludes it, which is a genuine, if
 secondary, security-adjacent benefit worth noting alongside the two
 liabilities above.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. Message Endpoints chapter, "Selective Consumer".
+   Source of the pattern name, intent, the Specifying Producer and Selection
+   Value terminology, and the point-to-point versus publish-subscribe
+   distinction.
+2. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns* companion
+   site, "Selective Consumer".
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageSelector.html
+   Verified 2026-08-02. Author-maintained summary mirroring the book's
+   wording, used to confirm intent and problem statement phrasing.
+3. Eclipse Foundation. *Jakarta Messaging Specification*, version 3.1,
+   section 3.8, "Message selection".
+   https://jakarta.ee/specifications/messaging/3.1/jakarta-messaging-spec-3.1
+   Verified 2026-08-02. Source for the message selector definition, syntax
+   reference, and section location cited in dimensions 1, 8, and 9.
+4. RabbitMQ (Broadcom / VMware Tanzu). "RabbitMQ tutorial 5, topics".
+   https://www.rabbitmq.com/tutorials/tutorial-five-python.html
+   Verified 2026-08-02. Source for the topic exchange routing-key
+   pattern-matching production use in dimensions 8 and 9.
+5. Amazon Web Services. "Amazon SNS message filtering".
+   https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html
+   Verified 2026-08-02. Source for the SNS filter policy production use in
+   dimensions 8 and 9.
+6. VMware Tanzu. *Spring Framework Reference Documentation*, integration
+   module, JMS, annotation-driven listener endpoints, `@JmsListener`
+   selector attribute.
+   https://docs.spring.io/spring-framework/reference/integration/jms.html
+   Verified 2026-08-02. Source for the Spring `@JmsListener` `selector`
+   attribute production use in dimension 9.
+
 ## Code examples
 
 Three languages representative of the three shapes the pattern actually
@@ -1047,36 +1080,3 @@ func main() {
 	fmt.Println("matched", consumer.matched, "discarded", consumer.discarded)
 }
 ```
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. Message Endpoints chapter, "Selective Consumer".
-   Source of the pattern name, intent, the Specifying Producer and Selection
-   Value terminology, and the point-to-point versus publish-subscribe
-   distinction.
-2. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns* companion
-   site, "Selective Consumer".
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageSelector.html
-   Verified 2026-08-02. Author-maintained summary mirroring the book's
-   wording, used to confirm intent and problem statement phrasing.
-3. Eclipse Foundation. *Jakarta Messaging Specification*, version 3.1,
-   section 3.8, "Message selection".
-   https://jakarta.ee/specifications/messaging/3.1/jakarta-messaging-spec-3.1
-   Verified 2026-08-02. Source for the message selector definition, syntax
-   reference, and section location cited in dimensions 1, 8, and 9.
-4. RabbitMQ (Broadcom / VMware Tanzu). "RabbitMQ tutorial 5, topics".
-   https://www.rabbitmq.com/tutorials/tutorial-five-python.html
-   Verified 2026-08-02. Source for the topic exchange routing-key
-   pattern-matching production use in dimensions 8 and 9.
-5. Amazon Web Services. "Amazon SNS message filtering".
-   https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html
-   Verified 2026-08-02. Source for the SNS filter policy production use in
-   dimensions 8 and 9.
-6. VMware Tanzu. *Spring Framework Reference Documentation*, integration
-   module, JMS, annotation-driven listener endpoints, `@JmsListener`
-   selector attribute.
-   https://docs.spring.io/spring-framework/reference/integration/jms.html
-   Verified 2026-08-02. Source for the Spring `@JmsListener` `selector`
-   attribute production use in dimension 9.

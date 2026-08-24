@@ -1020,6 +1020,85 @@ application firewall is a category error. It also says nothing about
 authorisation. A caller within its rate is not thereby permitted to do what it is
 asking.
 
+## 18. References
+
+1. Turner, Jonathan S. *New directions in communications (or which way to the
+   information age?)*. IEEE Communications Magazine, volume 24, issue 10, pages 8
+   to 15, 1986. Cited via
+   [https://en.wikipedia.org/wiki/Leaky_bucket](https://en.wikipedia.org/wiki/Leaky_bucket),
+   verified 2026-08-02. The Wikipedia page was read directly, the IEEE paper was
+   not, and the attribution is reported as the encyclopedia states it.
+2. Wikipedia. *Leaky bucket*.
+   [https://en.wikipedia.org/wiki/Leaky_bucket](https://en.wikipedia.org/wiki/Leaky_bucket),
+   verified 2026-08-02. Source for the meter against queue distinction and for
+   the ITU-T I.371 and ATM Forum UNI generic cell rate algorithm references.
+3. Wikipedia. *Token bucket*.
+   [https://en.wikipedia.org/wiki/Token_bucket](https://en.wikipedia.org/wiki/Token_bucket),
+   verified 2026-08-02. Source for the rate and capacity parameters and for the
+   stated mirror-image relationship with the leaky bucket as a meter.
+4. Nottingham, M. and Fielding, R. *RFC 6585, Additional HTTP Status Codes*,
+   IETF, April 2012, section 4.
+   [https://www.rfc-editor.org/rfc/rfc6585.html](https://www.rfc-editor.org/rfc/rfc6585.html),
+   verified 2026-08-02. Defines 429 Too Many Requests, states that the response
+   MAY include a Retry-After header, and states that the specification does not
+   define how the origin server identifies the user or counts requests.
+5. Fielding, R., Nottingham, M. and Reschke, J., editors. *RFC 9110, HTTP
+   Semantics*, IETF, June 2022, section 10.2.3, Retry-After.
+   [https://www.rfc-editor.org/rfc/rfc9110.html#name-retry-after](https://www.rfc-editor.org/rfc/rfc9110.html#name-retry-after),
+   verified 2026-08-02. Defines the two permitted value forms, an HTTP-date and a
+   delay in seconds.
+6. IETF HTTP API Working Group. *RateLimit header fields for HTTP*,
+   draft-ietf-httpapi-ratelimit-headers-11, 23 May 2026, Internet-Draft.
+   [https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/),
+   verified 2026-08-02. Defines RateLimit-Policy and RateLimit. Not yet an RFC,
+   so treat it as a direction of travel rather than a settled standard.
+7. Stripe. *Scaling your API with rate limiters*.
+   [https://stripe.com/blog/rate-limiters](https://stripe.com/blog/rate-limiters),
+   verified 2026-08-02. Source for the four-limiter production structure and for
+   the token bucket in Redis.
+8. Cloudflare. *Counting things, a lot of different things*, 7 June 2017.
+   [https://blog.cloudflare.com/counting-things-a-lot-of-different-things/](https://blog.cloudflare.com/counting-things-a-lot-of-different-things/),
+   verified 2026-08-02. Source for the sliding window counter weighting formula
+   and for the measured 0.003 percent misclassification and 6 percent average
+   deviation over 400 million requests from 270,000 sources.
+9. GitHub. *Rate limits for the REST API*.
+   [https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api),
+   verified 2026-08-02. Source for the 60 and 5,000 per hour figures, the five
+   x-ratelimit headers, and the 403 or 429 behaviour.
+10. Amazon Web Services. *Throttle requests to your REST APIs for better
+    throughput in API Gateway*.
+    [https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html),
+    verified 2026-08-02. Source for the token bucket statement and the four-layer
+    evaluation order.
+11. Envoy Proxy. *Global rate limiting*, architecture overview, latest.
+    [https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_features/global_rate_limiting](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_features/global_rate_limiting),
+    verified 2026-08-02. Source for the argument against per-host limits and for
+    the two-stage local plus global recommendation.
+12. nginx. *Module ngx_http_limit_req_module*.
+    [https://nginx.org/en/docs/http/ngx_http_limit_req_module.html](https://nginx.org/en/docs/http/ngx_http_limit_req_module.html),
+    verified 2026-08-02. Source for the leaky bucket statement, the burst, delay
+    and nodelay parameters, and the 503 default status.
+13. Beyer, B., Jones, C., Petoff, J. and Murphy, N. R., editors. *Site
+    Reliability Engineering*, O'Reilly, 2016, chapter 21, Handling Overload.
+    [https://sre.google/sre-book/handling-overload/](https://sre.google/sre-book/handling-overload/),
+    verified 2026-08-02. Source for per-customer limits in CPU seconds per
+    second, the client-side adaptive throttling formula over requests and accepts
+    with K of 2, and the four criticality levels.
+14. Redis. *Scripting with Lua*.
+    [https://redis.io/docs/latest/develop/programmability/eval-intro/](https://redis.io/docs/latest/develop/programmability/eval-intro/),
+    verified 2026-08-02. Source for the statement that Redis guarantees the
+    script's atomic execution and blocks all server activities during its
+    runtime.
+15. Ellis, Brandur. *redis-cell*.
+    [https://github.com/brandur/redis-cell](https://github.com/brandur/redis-cell),
+    verified 2026-08-02. Source for GCRA as a single Redis command and for the
+    five-element reply carrying limit, remaining, retry-after and reset.
+16. Reactive Streams. *Specification version 1.0.4*, 26 May 2022.
+    [https://www.reactive-streams.org/](https://www.reactive-streams.org/),
+    verified 2026-08-02. Source for back pressure existing so the queues
+    mediating between threads can be bounded, and for the JDK 9 and later
+    `java.util.concurrent.Flow` equivalence.
+
 ## Code
 
 Four implementations, one algorithm each, all compiled or run on 2026-08-02.
@@ -1364,82 +1443,3 @@ injected clock, so a fifth and sixth listing would add length without adding
 information. For the JVM the idiomatic production choice is an existing
 implementation such as a Guava `RateLimiter` or a Resilience4j `RateLimiter`
 rather than a hand-rolled one.
-
-## 18. References
-
-1. Turner, Jonathan S. *New directions in communications (or which way to the
-   information age?)*. IEEE Communications Magazine, volume 24, issue 10, pages 8
-   to 15, 1986. Cited via
-   [https://en.wikipedia.org/wiki/Leaky_bucket](https://en.wikipedia.org/wiki/Leaky_bucket),
-   verified 2026-08-02. The Wikipedia page was read directly, the IEEE paper was
-   not, and the attribution is reported as the encyclopedia states it.
-2. Wikipedia. *Leaky bucket*.
-   [https://en.wikipedia.org/wiki/Leaky_bucket](https://en.wikipedia.org/wiki/Leaky_bucket),
-   verified 2026-08-02. Source for the meter against queue distinction and for
-   the ITU-T I.371 and ATM Forum UNI generic cell rate algorithm references.
-3. Wikipedia. *Token bucket*.
-   [https://en.wikipedia.org/wiki/Token_bucket](https://en.wikipedia.org/wiki/Token_bucket),
-   verified 2026-08-02. Source for the rate and capacity parameters and for the
-   stated mirror-image relationship with the leaky bucket as a meter.
-4. Nottingham, M. and Fielding, R. *RFC 6585, Additional HTTP Status Codes*,
-   IETF, April 2012, section 4.
-   [https://www.rfc-editor.org/rfc/rfc6585.html](https://www.rfc-editor.org/rfc/rfc6585.html),
-   verified 2026-08-02. Defines 429 Too Many Requests, states that the response
-   MAY include a Retry-After header, and states that the specification does not
-   define how the origin server identifies the user or counts requests.
-5. Fielding, R., Nottingham, M. and Reschke, J., editors. *RFC 9110, HTTP
-   Semantics*, IETF, June 2022, section 10.2.3, Retry-After.
-   [https://www.rfc-editor.org/rfc/rfc9110.html#name-retry-after](https://www.rfc-editor.org/rfc/rfc9110.html#name-retry-after),
-   verified 2026-08-02. Defines the two permitted value forms, an HTTP-date and a
-   delay in seconds.
-6. IETF HTTP API Working Group. *RateLimit header fields for HTTP*,
-   draft-ietf-httpapi-ratelimit-headers-11, 23 May 2026, Internet-Draft.
-   [https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/),
-   verified 2026-08-02. Defines RateLimit-Policy and RateLimit. Not yet an RFC,
-   so treat it as a direction of travel rather than a settled standard.
-7. Stripe. *Scaling your API with rate limiters*.
-   [https://stripe.com/blog/rate-limiters](https://stripe.com/blog/rate-limiters),
-   verified 2026-08-02. Source for the four-limiter production structure and for
-   the token bucket in Redis.
-8. Cloudflare. *Counting things, a lot of different things*, 7 June 2017.
-   [https://blog.cloudflare.com/counting-things-a-lot-of-different-things/](https://blog.cloudflare.com/counting-things-a-lot-of-different-things/),
-   verified 2026-08-02. Source for the sliding window counter weighting formula
-   and for the measured 0.003 percent misclassification and 6 percent average
-   deviation over 400 million requests from 270,000 sources.
-9. GitHub. *Rate limits for the REST API*.
-   [https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api),
-   verified 2026-08-02. Source for the 60 and 5,000 per hour figures, the five
-   x-ratelimit headers, and the 403 or 429 behaviour.
-10. Amazon Web Services. *Throttle requests to your REST APIs for better
-    throughput in API Gateway*.
-    [https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html),
-    verified 2026-08-02. Source for the token bucket statement and the four-layer
-    evaluation order.
-11. Envoy Proxy. *Global rate limiting*, architecture overview, latest.
-    [https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_features/global_rate_limiting](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_features/global_rate_limiting),
-    verified 2026-08-02. Source for the argument against per-host limits and for
-    the two-stage local plus global recommendation.
-12. nginx. *Module ngx_http_limit_req_module*.
-    [https://nginx.org/en/docs/http/ngx_http_limit_req_module.html](https://nginx.org/en/docs/http/ngx_http_limit_req_module.html),
-    verified 2026-08-02. Source for the leaky bucket statement, the burst, delay
-    and nodelay parameters, and the 503 default status.
-13. Beyer, B., Jones, C., Petoff, J. and Murphy, N. R., editors. *Site
-    Reliability Engineering*, O'Reilly, 2016, chapter 21, Handling Overload.
-    [https://sre.google/sre-book/handling-overload/](https://sre.google/sre-book/handling-overload/),
-    verified 2026-08-02. Source for per-customer limits in CPU seconds per
-    second, the client-side adaptive throttling formula over requests and accepts
-    with K of 2, and the four criticality levels.
-14. Redis. *Scripting with Lua*.
-    [https://redis.io/docs/latest/develop/programmability/eval-intro/](https://redis.io/docs/latest/develop/programmability/eval-intro/),
-    verified 2026-08-02. Source for the statement that Redis guarantees the
-    script's atomic execution and blocks all server activities during its
-    runtime.
-15. Ellis, Brandur. *redis-cell*.
-    [https://github.com/brandur/redis-cell](https://github.com/brandur/redis-cell),
-    verified 2026-08-02. Source for GCRA as a single Redis command and for the
-    five-element reply carrying limit, remaining, retry-after and reset.
-16. Reactive Streams. *Specification version 1.0.4*, 26 May 2022.
-    [https://www.reactive-streams.org/](https://www.reactive-streams.org/),
-    verified 2026-08-02. Source for back pressure existing so the queues
-    mediating between threads can be bounded, and for the JDK 9 and later
-    `java.util.concurrent.Flow` equivalence.

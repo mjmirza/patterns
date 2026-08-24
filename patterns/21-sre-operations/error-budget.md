@@ -176,6 +176,11 @@ to reliability work
 - An Error Budget Policy under pressure to keep releasing must never be allowed to waive security review or testing as a way to preserve release pace, since that trades a visible reliability metric for an invisible security risk.
 - Incident data feeding the budget calculation should be handled with the same care as any other operational log, avoiding retention of more detail about the underlying cause or affected users than the aggregate budget computation genuinely needs.
 
+## 18. References
+
+- Google, Site Reliability Engineering, Embracing Risk chapter (https://sre.google/sre-book/embracing-risk/)
+- Google, SRE Workbook, Error Budget Policy chapter (https://sre.google/workbook/error-budget-policy/)
+
 ## Code examples
 
 ### Python
@@ -275,8 +280,3 @@ let budget = buildErrorBudget(sloTarget: 0.999, actualSli: 0.9985)
 print("remaining budget " + String(budget.remainingFraction))
 print("release allowed " + String(isReleaseAllowed(budget: budget)))
 ```
-
-## 18. References
-
-- Google, Site Reliability Engineering, Embracing Risk chapter (https://sre.google/sre-book/embracing-risk/)
-- Google, SRE Workbook, Error Budget Policy chapter (https://sre.google/workbook/error-budget-policy/)

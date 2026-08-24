@@ -877,6 +877,44 @@ cost, not a runtime vulnerability, and it is fully mitigated by the logging
 practice named in dimension 16, recording the bound strategy explicitly at
 construction time.
 
+## 18. References
+
+1. Douglas C. Schmidt, "Strategized Locking, Thread-safe Interface, and
+   Scoped Locking. Patterns and Idioms for Simplifying Multi-threaded C++
+   Components," *C++ Report*, SIGS Publications, Volume 11, Number 9,
+   September 1999. Full text at
+   https://www.dre.vanderbilt.edu/~schmidt/PDF/locking-patterns.pdf, verified
+   2026-08-14, retrieved and its text extracted directly for this entry.
+   Listed on the author's own publications page at
+   https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html, verified
+   2026-08-14.
+2. Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann,
+   *Pattern-Oriented Software Architecture, Volume 2. Patterns for Concurrent
+   and Networked Objects*, Wiley, 2000, object-synchronization pattern
+   family including Strategized Locking, Scoped Locking, Thread-Safe
+   Interface, and Double-Checked Locking Optimization. Publication metadata
+   corroborated at
+   https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture,
+   verified 2026-08-14.
+3. `lock_api` crate documentation, https://docs.rs/lock_api/latest/lock_api/,
+   verified 2026-08-14. Generic `Mutex<R, T>` and `RwLock<R, T>` types
+   parameterized over a `RawMutex` or `RawRwLock` trait, the Rust ecosystem's
+   production instance of the parameterized-type form of Strategized
+   Locking, and the foundation of the widely used `parking_lot` crate.
+4. Oracle, `java.util.concurrent.locks.Lock` interface documentation, Java SE
+   21,
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/Lock.html,
+   verified 2026-08-14. The Java Standard Library's production instance of
+   the polymorphic form, implemented by `ReentrantLock` and both views of
+   `ReentrantReadWriteLock`.
+5. DOCGroup, `ACE_TAO` source repository, `ACE/ace/Synch_Traits.h`,
+   https://github.com/DOCGroup/ACE_TAO/blob/master/ACE/ace/Synch_Traits.h,
+   verified 2026-08-14. Defines `ACE_NULL_SYNCH` and `ACE_MT_SYNCH` traits
+   classes and the resulting `ACE_SYNCH_MUTEX` type alias, the macro or
+   conditional-typedef variant of Strategized Locking in active production
+   use, corroborating the source paper's own Known Uses claim that the
+   pattern is used extensively throughout the ACE toolkit.
+
 ## Code examples
 
 Three languages, chosen because each expresses a different binding mechanism
@@ -1194,41 +1232,3 @@ func main() {
 	fmt.Printf("single=%d shared=%d rw=%d\n", single.Value(), shared.Value(), rw.Value())
 }
 ```
-
-## 18. References
-
-1. Douglas C. Schmidt, "Strategized Locking, Thread-safe Interface, and
-   Scoped Locking. Patterns and Idioms for Simplifying Multi-threaded C++
-   Components," *C++ Report*, SIGS Publications, Volume 11, Number 9,
-   September 1999. Full text at
-   https://www.dre.vanderbilt.edu/~schmidt/PDF/locking-patterns.pdf, verified
-   2026-08-14, retrieved and its text extracted directly for this entry.
-   Listed on the author's own publications page at
-   https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html, verified
-   2026-08-14.
-2. Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann,
-   *Pattern-Oriented Software Architecture, Volume 2. Patterns for Concurrent
-   and Networked Objects*, Wiley, 2000, object-synchronization pattern
-   family including Strategized Locking, Scoped Locking, Thread-Safe
-   Interface, and Double-Checked Locking Optimization. Publication metadata
-   corroborated at
-   https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture,
-   verified 2026-08-14.
-3. `lock_api` crate documentation, https://docs.rs/lock_api/latest/lock_api/,
-   verified 2026-08-14. Generic `Mutex<R, T>` and `RwLock<R, T>` types
-   parameterized over a `RawMutex` or `RawRwLock` trait, the Rust ecosystem's
-   production instance of the parameterized-type form of Strategized
-   Locking, and the foundation of the widely used `parking_lot` crate.
-4. Oracle, `java.util.concurrent.locks.Lock` interface documentation, Java SE
-   21,
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/Lock.html,
-   verified 2026-08-14. The Java Standard Library's production instance of
-   the polymorphic form, implemented by `ReentrantLock` and both views of
-   `ReentrantReadWriteLock`.
-5. DOCGroup, `ACE_TAO` source repository, `ACE/ace/Synch_Traits.h`,
-   https://github.com/DOCGroup/ACE_TAO/blob/master/ACE/ace/Synch_Traits.h,
-   verified 2026-08-14. Defines `ACE_NULL_SYNCH` and `ACE_MT_SYNCH` traits
-   classes and the resulting `ACE_SYNCH_MUTEX` type alias, the macro or
-   conditional-typedef variant of Strategized Locking in active production
-   use, corroborating the source paper's own Known Uses claim that the
-   pattern is used extensively throughout the ACE toolkit.

@@ -436,6 +436,20 @@ processing untrusted or external input as a genuine attack surface
 against the entire system's schedulability, not only that one task, is
 a real, necessary part of a security-conscious EDF deployment.
 
+## 18. References
+
+1. Wikipedia. "Earliest deadline first scheduling".
+   https://en.wikipedia.org/wiki/Earliest_deadline_first_scheduling
+   Verified 2026-08-21. Source of the dynamic priority mechanism, the
+   optimality claim, and the 100 percent utilization bound quotes,
+   drawing on Liu and Layland's original analysis, used in dimensions
+   1, 2, 3, 5, 7, 9, and 10.
+2. GeeksforGeeks. "Earliest Deadline First (EDF) CPU scheduling algorithm".
+   https://www.geeksforgeeks.org/operating-systems/earliest-deadline-first-edf-cpu-scheduling-algorithm/
+   Verified 2026-08-21. Source of the utilization-under-100-percent
+   quote and the Transient Overload Problem naming, used in
+   dimensions 3, 4, 7, 9, 10, and 11.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -557,17 +571,3 @@ if let chosen = selectEarliestDeadline(ready) {
 let u = totalUtilization(ready)
 print("total utilization:", u, "schedulable:", u <= 1.0)
 ```
-
-## 18. References
-
-1. Wikipedia. "Earliest deadline first scheduling".
-   https://en.wikipedia.org/wiki/Earliest_deadline_first_scheduling
-   Verified 2026-08-21. Source of the dynamic priority mechanism, the
-   optimality claim, and the 100 percent utilization bound quotes,
-   drawing on Liu and Layland's original analysis, used in dimensions
-   1, 2, 3, 5, 7, 9, and 10.
-2. GeeksforGeeks. "Earliest Deadline First (EDF) CPU scheduling algorithm".
-   https://www.geeksforgeeks.org/operating-systems/earliest-deadline-first-edf-cpu-scheduling-algorithm/
-   Verified 2026-08-21. Source of the utilization-under-100-percent
-   quote and the Transient Overload Problem naming, used in
-   dimensions 3, 4, 7, 9, 10, and 11.

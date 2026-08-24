@@ -969,6 +969,64 @@ whatever privacy obligations attach to the data flowing through any single
 one of the N workers attach identically whether that worker is called
 sequentially or as part of a fan-out.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. The Scatter-Gather pattern page,
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/BroadcastAggregate.html
+   verified 2026-08-02. Source of the pattern's name, its problem statement,
+   its solution as a composition of Recipient List and Aggregator, and the
+   original messaging-form lineage in dimension 1.
+2. Jeffrey Dean, Luiz Andre Barroso. "The Tail at Scale." Communications of
+   the ACM, volume 56, issue 2, February 2013, pages 74 to 80.
+   https://research.google/pubs/the-tail-at-scale/
+   verified 2026-08-14 (cacm.acm.org blocks automated fetches with a 403;
+   this is Google Research's canonical mirror of the same paper). Source
+   of the tail-latency amplification analysis
+   in dimension 3, the straggler-tax failure mode in dimension 11, and the
+   hedged-request variant in dimension 8.
+3. Jeffrey Dean, Sanjay Ghemawat. "MapReduce. Simplified Data Processing on
+   Large Clusters." Proceedings of the 6th USENIX Symposium on Operating
+   Systems Design and Implementation (OSDI), 2004. Source, as commonly
+   cited in distributed-systems literature, for the map and reduce phase
+   distinction used to draw the boundary against MapReduce in dimension 1
+   and dimension 13.
+4. Go project. Package documentation for `golang.org/x/sync/errgroup`.
+   https://pkg.go.dev/golang.org/x/sync/errgroup
+   verified 2026-08-02. Source for the errgroup description, `WithContext`
+   cancellation semantics, and `Wait` behavior used in dimensions 1, 3, 8,
+   and the Go code example.
+5. Oracle. Java SE 21 API Specification,
+   `java.util.concurrent.ExecutorService`, method `invokeAll`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html
+   verified 2026-08-02. Source for the `invokeAll` blocking and `Future`
+   list semantics used in dimensions 8 and 9.
+6. Oracle. Java SE 21 API Specification,
+   `java.util.concurrent.CompletableFuture`, static method `allOf`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html
+   verified 2026-08-02. Source for the `allOf` completion semantics used in
+   dimension 8.
+7. Python Software Foundation. Python 3 documentation, `asyncio` module,
+   `asyncio.gather` and `asyncio.TaskGroup`.
+   https://docs.python.org/3/library/asyncio-task.html#asyncio.gather
+   verified 2026-08-02. Source for the `return_exceptions` behavior, the
+   non-cancellation-on-first-error caveat, and the `TaskGroup` alternative
+   used in dimensions 4, 8, and the Python code example.
+8. Mozilla Developer Network. "Promise.allSettled()."
+   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+   verified 2026-08-02. Source for the settle-without-short-circuiting
+   semantics used in dimensions 8, 9, and the TypeScript code example.
+9. Rust project. Rust standard library documentation, `std::thread::scope`.
+   https://doc.rust-lang.org/std/thread/fn.scope.html
+   verified 2026-08-02. Source for the scoped-thread automatic-join
+   guarantee used in the structured-concurrency variant in dimension 8.
+10. Amazon Web Services. AWS Step Functions Developer Guide, "Parallel
+    workflow state."
+    https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-parallel-state.html
+    verified 2026-08-02. Source for the `Parallel` state's concurrent-
+    branch and fail-fast semantics used in dimension 9.
+
 ## Code examples
 
 Three languages chosen for genuinely different idiomatic shapes of the same
@@ -1166,61 +1224,3 @@ milliseconds, not 90, with two fulfilled outcomes and one rejected outcome
 correctly reported, `Promise.allSettled` never short-circuiting on the
 single failure and instead waiting for all three timers to fire before
 resolving.
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. The Scatter-Gather pattern page,
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/BroadcastAggregate.html
-   verified 2026-08-02. Source of the pattern's name, its problem statement,
-   its solution as a composition of Recipient List and Aggregator, and the
-   original messaging-form lineage in dimension 1.
-2. Jeffrey Dean, Luiz Andre Barroso. "The Tail at Scale." Communications of
-   the ACM, volume 56, issue 2, February 2013, pages 74 to 80.
-   https://research.google/pubs/the-tail-at-scale/
-   verified 2026-08-14 (cacm.acm.org blocks automated fetches with a 403;
-   this is Google Research's canonical mirror of the same paper). Source
-   of the tail-latency amplification analysis
-   in dimension 3, the straggler-tax failure mode in dimension 11, and the
-   hedged-request variant in dimension 8.
-3. Jeffrey Dean, Sanjay Ghemawat. "MapReduce. Simplified Data Processing on
-   Large Clusters." Proceedings of the 6th USENIX Symposium on Operating
-   Systems Design and Implementation (OSDI), 2004. Source, as commonly
-   cited in distributed-systems literature, for the map and reduce phase
-   distinction used to draw the boundary against MapReduce in dimension 1
-   and dimension 13.
-4. Go project. Package documentation for `golang.org/x/sync/errgroup`.
-   https://pkg.go.dev/golang.org/x/sync/errgroup
-   verified 2026-08-02. Source for the errgroup description, `WithContext`
-   cancellation semantics, and `Wait` behavior used in dimensions 1, 3, 8,
-   and the Go code example.
-5. Oracle. Java SE 21 API Specification,
-   `java.util.concurrent.ExecutorService`, method `invokeAll`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html
-   verified 2026-08-02. Source for the `invokeAll` blocking and `Future`
-   list semantics used in dimensions 8 and 9.
-6. Oracle. Java SE 21 API Specification,
-   `java.util.concurrent.CompletableFuture`, static method `allOf`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html
-   verified 2026-08-02. Source for the `allOf` completion semantics used in
-   dimension 8.
-7. Python Software Foundation. Python 3 documentation, `asyncio` module,
-   `asyncio.gather` and `asyncio.TaskGroup`.
-   https://docs.python.org/3/library/asyncio-task.html#asyncio.gather
-   verified 2026-08-02. Source for the `return_exceptions` behavior, the
-   non-cancellation-on-first-error caveat, and the `TaskGroup` alternative
-   used in dimensions 4, 8, and the Python code example.
-8. Mozilla Developer Network. "Promise.allSettled()."
-   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-   verified 2026-08-02. Source for the settle-without-short-circuiting
-   semantics used in dimensions 8, 9, and the TypeScript code example.
-9. Rust project. Rust standard library documentation, `std::thread::scope`.
-   https://doc.rust-lang.org/std/thread/fn.scope.html
-   verified 2026-08-02. Source for the scoped-thread automatic-join
-   guarantee used in the structured-concurrency variant in dimension 8.
-10. Amazon Web Services. AWS Step Functions Developer Guide, "Parallel
-    workflow state."
-    https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-parallel-state.html
-    verified 2026-08-02. Source for the `Parallel` state's concurrent-
-    branch and fail-fast semantics used in dimension 9.

@@ -853,6 +853,52 @@ override without going through it, and should instead be designed with the
 Non-Virtual Interface split from the first line of code, not retrofitted
 after an incident.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design
+   Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
+   1994. ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, Template Method.
+   Source of the hook-method concept that is the documented, catalogued fix
+   for the shape described in this entry.
+2. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018.
+   ISBN 978-0-13-468599-1. Item 19, "Design and document for inheritance or
+   else prohibit it". Source of the requirement that a class designed for
+   inheritance document its self-use of overridable methods, the library
+   author's-side framing of this anti-pattern.
+3. Martin Fowler, with Kent Beck, John Brant, William Opdyke, Don Roberts.
+   *Refactoring. Improving the Design of Existing Code*. Addison-Wesley,
+   1999. ISBN 0-201-48567-2. Chapter 3, the Refused Bequest smell. Source of
+   the related but distinct code smell distinguished in dimension 1 and
+   dimension 13.
+4. Wikibooks contributors. "More C++ Idioms, Non-Virtual Interface".
+   https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Non-Virtual_Interface
+   Verified 2026-08-02. Source of Herb Sutter's guidelines cited in
+   dimension 1, and the structural fix described in dimensions 5, 6, and 14.
+5. Oracle. *Java EE 7 API Specification*, `javax.servlet.GenericServlet`.
+   https://docs.oracle.com/javaee/7/api/javax/servlet/GenericServlet.html
+   Verified 2026-08-02. Source of the `init(ServletConfig)` production use
+   and its exact documented call-super requirement, dimension 9.
+6. Apple Inc. Apple Developer Documentation, `UIViewController.viewDidLoad()`.
+   https://developer.apple.com/documentation/uikit/uiviewcontroller/viewdidload()
+   Verified 2026-08-02. Source of the UIKit production use, dimension 9.
+7. androidx project. `CallSuper.kt`, `androidx-main` branch.
+   https://raw.githubusercontent.com/androidx/androidx/androidx-main/annotation/annotation/src/commonMain/kotlin/androidx/annotation/CallSuper.kt
+   Verified 2026-08-02. Source of the `@CallSuper` annotation's documented
+   purpose, dimensions 8 and 9.
+8. Microsoft. "Implement a Dispose method", .NET documentation.
+   https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose
+   Verified 2026-08-02. Source of the .NET dispose-pattern production use and
+   its documented `base.Dispose(disposing)` requirement, dimensions 8 and 9.
+9. pylint-dev project. `class_checker.py`, `main` branch, message definition
+   for `super-init-not-called` (W0231).
+   https://raw.githubusercontent.com/pylint-dev/pylint/main/pylint/checkers/classes/class_checker.py
+   Verified 2026-08-02. Source of the Pylint constructor-chain check cited in
+   dimensions 8, 14, and the Code examples section.
+10. JetBrains. Kotlin documentation, "Inheritance".
+    https://kotlinlang.org/docs/inheritance.html
+    Verified 2026-08-02. Source of the `open` keyword and explicit `super`
+    call requirement cited in dimension 8.
+
 ## Code examples
 
 Four languages, chosen because each shows a different real production
@@ -1090,49 +1136,3 @@ Running the Python example prints an `AttributeError` naming the missing
 `resources` attribute on the buggy instance, followed by the fixed instance's
 correctly populated `resources` and `cache` attributes, confirming both the
 failure mode and the fix live-executed as described.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design
-   Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
-   1994. ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, Template Method.
-   Source of the hook-method concept that is the documented, catalogued fix
-   for the shape described in this entry.
-2. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018.
-   ISBN 978-0-13-468599-1. Item 19, "Design and document for inheritance or
-   else prohibit it". Source of the requirement that a class designed for
-   inheritance document its self-use of overridable methods, the library
-   author's-side framing of this anti-pattern.
-3. Martin Fowler, with Kent Beck, John Brant, William Opdyke, Don Roberts.
-   *Refactoring. Improving the Design of Existing Code*. Addison-Wesley,
-   1999. ISBN 0-201-48567-2. Chapter 3, the Refused Bequest smell. Source of
-   the related but distinct code smell distinguished in dimension 1 and
-   dimension 13.
-4. Wikibooks contributors. "More C++ Idioms, Non-Virtual Interface".
-   https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Non-Virtual_Interface
-   Verified 2026-08-02. Source of Herb Sutter's guidelines cited in
-   dimension 1, and the structural fix described in dimensions 5, 6, and 14.
-5. Oracle. *Java EE 7 API Specification*, `javax.servlet.GenericServlet`.
-   https://docs.oracle.com/javaee/7/api/javax/servlet/GenericServlet.html
-   Verified 2026-08-02. Source of the `init(ServletConfig)` production use
-   and its exact documented call-super requirement, dimension 9.
-6. Apple Inc. Apple Developer Documentation, `UIViewController.viewDidLoad()`.
-   https://developer.apple.com/documentation/uikit/uiviewcontroller/viewdidload()
-   Verified 2026-08-02. Source of the UIKit production use, dimension 9.
-7. androidx project. `CallSuper.kt`, `androidx-main` branch.
-   https://raw.githubusercontent.com/androidx/androidx/androidx-main/annotation/annotation/src/commonMain/kotlin/androidx/annotation/CallSuper.kt
-   Verified 2026-08-02. Source of the `@CallSuper` annotation's documented
-   purpose, dimensions 8 and 9.
-8. Microsoft. "Implement a Dispose method", .NET documentation.
-   https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose
-   Verified 2026-08-02. Source of the .NET dispose-pattern production use and
-   its documented `base.Dispose(disposing)` requirement, dimensions 8 and 9.
-9. pylint-dev project. `class_checker.py`, `main` branch, message definition
-   for `super-init-not-called` (W0231).
-   https://raw.githubusercontent.com/pylint-dev/pylint/main/pylint/checkers/classes/class_checker.py
-   Verified 2026-08-02. Source of the Pylint constructor-chain check cited in
-   dimensions 8, 14, and the Code examples section.
-10. JetBrains. Kotlin documentation, "Inheritance".
-    https://kotlinlang.org/docs/inheritance.html
-    Verified 2026-08-02. Source of the `open` keyword and explicit `super`
-    call requirement cited in dimension 8.

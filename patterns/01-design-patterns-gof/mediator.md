@@ -1045,6 +1045,65 @@ behavioural data even when no field value is logged. Sample it, redact the event
 payloads by default, and set the retention deliberately rather than inheriting
 the default of the logging system.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Mediator. Source
+   of the intent, the four participants, the `DialogDirector` and
+   `FontDialogDirector` motivating example, and the Dialog Director alias. No
+   page number is cited because I could not verify a specific page from an
+   independently checkable source.
+2. Wikipedia contributors. "Mediator pattern".
+   https://en.wikipedia.org/wiki/Mediator_pattern
+   Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
+   the four participant names, not as a source of explanation.
+3. Martin Fowler. "Event Aggregator".
+   https://martinfowler.com/eaaDev/EventAggregator.html
+   Verified 2026-08-02. Source for the definition of Event Aggregator quoted in
+   dimension 1 and for the Facade comparison quoted there. It is NOT the source
+   of the Event Aggregator versus Mediator contrast in dimensions 1, 12 and 13.
+   That contrast is this entry's own analysis, and the page makes no such
+   comparison.
+4. Internet Engineering Task Force. *RFC 6120, Extensible Messaging and Presence
+   Protocol (XMPP). Core*. March 2011. Section 2, Architecture.
+   https://datatracker.ietf.org/doc/html/rfc6120
+   Verified 2026-08-02. Source of the quoted server-routing responsibility and
+   the XMPP production use.
+5. Kubernetes project. *Cluster Architecture*.
+   https://kubernetes.io/docs/concepts/architecture/
+   Verified 2026-08-02. Source of the API server front-end statement and the
+   horizontal-scaling note in the Kubernetes production use.
+6. Apache Software Foundation. *Apache Camel manual, What is Camel?*.
+   https://camel.apache.org/manual/faq/what-is-camel.html
+   Verified 2026-08-02. Source of the quoted routing and mediation description
+   and the Enterprise Integration Patterns positioning.
+7. Jimmy Bogard and contributors. *MediatR repository README*.
+   https://github.com/jbogard/MediatR
+   Verified 2026-08-02. Source of the quoted tagline and the in-process messaging
+   description used in the dimension 9 analysis.
+
+### Claims I could not verify, and therefore did not make
+
+- No page number is asserted for any passage in the Gang of Four book, because I
+  could not check a specific page against an independently reachable source.
+- The Gang of Four Known Uses section for Mediator is not quoted or summarised,
+  for the same reason.
+- Martin Fowler is not cited as contrasting Event Aggregator with Mediator. A
+  live read of his page on 2026-08-02 confirmed he compares it to Facade and
+  never names Mediator. An earlier draft of this entry asserted that contrast as
+  his, which was wrong, and the correction is recorded here rather than silently
+  removed.
+- The air traffic control analogy is stated as a widely used teaching analogy and
+  explicitly not attributed to the Gang of Four, because no verified source
+  places it in the book.
+- Android's `CoordinatorLayout` and `CoordinatorLayout.Behavior` were considered
+  as a production use and dropped. The official Android reference pages did not
+  return their class summaries on fetch, and only secondary tutorial sites
+  described them, which does not meet the sourcing bar for this repository.
+- No claim is made about how any of these systems performs, scales or fails in
+  practice beyond what the cited documents state.
+
 ## Code examples
 
 Three languages where the pattern is idiomatic in different ways. TypeScript
@@ -1435,62 +1494,3 @@ The single `widgetChanged` operation is the GoF form, and the conditional inside
 it is the growth point warned about in dimension 8. In a real dialog this method
 is where the god mediator begins, which is why the named-operation form in the
 TypeScript example is the one to prefer once the widget count passes a handful.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Mediator. Source
-   of the intent, the four participants, the `DialogDirector` and
-   `FontDialogDirector` motivating example, and the Dialog Director alias. No
-   page number is cited because I could not verify a specific page from an
-   independently checkable source.
-2. Wikipedia contributors. "Mediator pattern".
-   https://en.wikipedia.org/wiki/Mediator_pattern
-   Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
-   the four participant names, not as a source of explanation.
-3. Martin Fowler. "Event Aggregator".
-   https://martinfowler.com/eaaDev/EventAggregator.html
-   Verified 2026-08-02. Source for the definition of Event Aggregator quoted in
-   dimension 1 and for the Facade comparison quoted there. It is NOT the source
-   of the Event Aggregator versus Mediator contrast in dimensions 1, 12 and 13.
-   That contrast is this entry's own analysis, and the page makes no such
-   comparison.
-4. Internet Engineering Task Force. *RFC 6120, Extensible Messaging and Presence
-   Protocol (XMPP). Core*. March 2011. Section 2, Architecture.
-   https://datatracker.ietf.org/doc/html/rfc6120
-   Verified 2026-08-02. Source of the quoted server-routing responsibility and
-   the XMPP production use.
-5. Kubernetes project. *Cluster Architecture*.
-   https://kubernetes.io/docs/concepts/architecture/
-   Verified 2026-08-02. Source of the API server front-end statement and the
-   horizontal-scaling note in the Kubernetes production use.
-6. Apache Software Foundation. *Apache Camel manual, What is Camel?*.
-   https://camel.apache.org/manual/faq/what-is-camel.html
-   Verified 2026-08-02. Source of the quoted routing and mediation description
-   and the Enterprise Integration Patterns positioning.
-7. Jimmy Bogard and contributors. *MediatR repository README*.
-   https://github.com/jbogard/MediatR
-   Verified 2026-08-02. Source of the quoted tagline and the in-process messaging
-   description used in the dimension 9 analysis.
-
-### Claims I could not verify, and therefore did not make
-
-- No page number is asserted for any passage in the Gang of Four book, because I
-  could not check a specific page against an independently reachable source.
-- The Gang of Four Known Uses section for Mediator is not quoted or summarised,
-  for the same reason.
-- Martin Fowler is not cited as contrasting Event Aggregator with Mediator. A
-  live read of his page on 2026-08-02 confirmed he compares it to Facade and
-  never names Mediator. An earlier draft of this entry asserted that contrast as
-  his, which was wrong, and the correction is recorded here rather than silently
-  removed.
-- The air traffic control analogy is stated as a widely used teaching analogy and
-  explicitly not attributed to the Gang of Four, because no verified source
-  places it in the book.
-- Android's `CoordinatorLayout` and `CoordinatorLayout.Behavior` were considered
-  as a production use and dropped. The official Android reference pages did not
-  return their class summaries on fetch, and only secondary tutorial sites
-  described them, which does not meet the sourcing bar for this repository.
-- No claim is made about how any of these systems performs, scales or fails in
-  practice beyond what the cited documents state.

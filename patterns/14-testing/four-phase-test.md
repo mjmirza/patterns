@@ -713,6 +713,38 @@ environment that is not scoped or retained the way a genuine data-handling
 policy would require. Treating teardown as guaranteed-to-run is therefore
 also a data-hygiene control, not purely a correctness one.
 
+## 18. References
+
+1. Gerard Meszaros. *xUnit Test Patterns. Refactoring Test Code*.
+   Addison-Wesley, 2007. ISBN 978-0-13-149505-0. Chapter 4, "Four-Phase
+   Test". Source of the pattern's name, the four phase names, the
+   Arrange-Act-Assert attribution to Bill Wake, and the named test smells
+   Assertion Roulette, Eager Test, and Mystery Guest referenced in
+   dimension 11.
+2. Kent Beck. *Test-Driven Development. By Example*. Addison-Wesley, 2002.
+   ISBN 0-321-14653-0. Part I, the money example. Source of the pre-Meszaros
+   setup-exercise-verify shape in dimension 9.
+3. pytest. "How to use fixtures", section "Yield Fixtures".
+   https://docs.pytest.org/en/stable/how-to/fixtures.html
+   Verified 2026-08-02. Source of the quoted description of yield-based
+   setup and teardown in dimensions 8 and the code example.
+4. JUnit Team. *JUnit 5 User Guide*, current version 6.1.2 as served at the
+   canonical URL. https://docs.junit.org/current/user-guide/
+   Verified 2026-08-02. Source for the existence and role of the
+   `@BeforeEach`, `@AfterEach`, `@BeforeAll`, and `@AfterAll` lifecycle
+   annotations referenced in dimensions 8 and 9.
+5. The Go Authors. "TableDrivenTests", Go Wiki.
+   https://go.dev/wiki/TableDrivenTests
+   Verified 2026-08-02. Source of the quoted description of table-driven
+   testing and its idiomatic status in Go, used in dimensions 8 and 9.
+6. Dan North. Original writing on Behaviour-Driven Development and the
+   Given-When-Then vocabulary, as adopted by the Cucumber and Gherkin
+   toolchains. Cited here for the lineage of the Given-When-Then alias in
+   dimension 1. The Gherkin syntax itself is documented at
+   https://cucumber.io/docs/gherkin/reference/, a live reference rather
+   than a single dated source, consulted for the general shape of
+   Given-When-Then step definitions described in dimension 8.
+
 ## Code examples
 
 Three languages, chosen for genuinely different idiomatic shapes. Java shows
@@ -920,35 +952,3 @@ func TestShoppingCartTotals(t *testing.T) {
 	}
 }
 ```
-
-## 18. References
-
-1. Gerard Meszaros. *xUnit Test Patterns. Refactoring Test Code*.
-   Addison-Wesley, 2007. ISBN 978-0-13-149505-0. Chapter 4, "Four-Phase
-   Test". Source of the pattern's name, the four phase names, the
-   Arrange-Act-Assert attribution to Bill Wake, and the named test smells
-   Assertion Roulette, Eager Test, and Mystery Guest referenced in
-   dimension 11.
-2. Kent Beck. *Test-Driven Development. By Example*. Addison-Wesley, 2002.
-   ISBN 0-321-14653-0. Part I, the money example. Source of the pre-Meszaros
-   setup-exercise-verify shape in dimension 9.
-3. pytest. "How to use fixtures", section "Yield Fixtures".
-   https://docs.pytest.org/en/stable/how-to/fixtures.html
-   Verified 2026-08-02. Source of the quoted description of yield-based
-   setup and teardown in dimensions 8 and the code example.
-4. JUnit Team. *JUnit 5 User Guide*, current version 6.1.2 as served at the
-   canonical URL. https://docs.junit.org/current/user-guide/
-   Verified 2026-08-02. Source for the existence and role of the
-   `@BeforeEach`, `@AfterEach`, `@BeforeAll`, and `@AfterAll` lifecycle
-   annotations referenced in dimensions 8 and 9.
-5. The Go Authors. "TableDrivenTests", Go Wiki.
-   https://go.dev/wiki/TableDrivenTests
-   Verified 2026-08-02. Source of the quoted description of table-driven
-   testing and its idiomatic status in Go, used in dimensions 8 and 9.
-6. Dan North. Original writing on Behaviour-Driven Development and the
-   Given-When-Then vocabulary, as adopted by the Cucumber and Gherkin
-   toolchains. Cited here for the lineage of the Given-When-Then alias in
-   dimension 1. The Gherkin syntax itself is documented at
-   https://cucumber.io/docs/gherkin/reference/, a live reference rather
-   than a single dated source, consulted for the general shape of
-   Given-When-Then step definitions described in dimension 8.

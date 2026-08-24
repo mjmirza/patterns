@@ -669,6 +669,30 @@ event, once published, has already been sent to every current subscriber
 and cannot be recalled the way a request-scoped API response can be
 withheld after the fact.
 
+## 18. References
+
+1. Eric Evans, "Domain-Driven Design. Tackling Complexity in the Heart of
+   Software," Addison-Wesley, 2003, Part IV (Strategic Design, the Open
+   Host Service and Published Language sections and their companion
+   patterns Shared Kernel, Customer-Supplier, Conformist, Anticorruption
+   Layer, and Separate Ways).
+2. Vaughn Vernon, "Implementing Domain-Driven Design," Addison-Wesley,
+   2013, Chapter 3 (Context Maps), for the worked treatment of Open Host
+   Service, Published Language, and domain events published across a
+   bounded context boundary.
+3. arc42 Quality Model, "Open Host Service," verified 2026-08-02,
+   https://quality.arc42.org/approaches/open-host-service, for the
+   working definition, the pairing with Published Language, and the HL7
+   FHIR and iCalendar production examples.
+4. Stripe, "Versioning" (API reference), verified 2026-08-02,
+   https://docs.stripe.com/api/versioning, for the named production
+   example of dated API versions, backward-compatible monthly releases,
+   and named major releases such as "Acacia."
+5. GitHub Docs, "Public schema" (GraphQL API overview), verified
+   2026-08-02, https://docs.github.com/en/graphql/overview/public-schema,
+   for the named production example of a canonical, introspectable,
+   downloadable schema as the Published Language artifact.
+
 ## Code examples
 
 Three languages, each showing the same shape. an Open Host Service class
@@ -827,27 +851,3 @@ translate, the translation-layer shape is identical in any statically typed
 language, but because the three languages above already cover the object-oriented
 class form, the dataclass form, and the struct-with-tags form that between
 them represent every idiomatic variant this pattern takes at the code level.
-
-## 18. References
-
-1. Eric Evans, "Domain-Driven Design. Tackling Complexity in the Heart of
-   Software," Addison-Wesley, 2003, Part IV (Strategic Design, the Open
-   Host Service and Published Language sections and their companion
-   patterns Shared Kernel, Customer-Supplier, Conformist, Anticorruption
-   Layer, and Separate Ways).
-2. Vaughn Vernon, "Implementing Domain-Driven Design," Addison-Wesley,
-   2013, Chapter 3 (Context Maps), for the worked treatment of Open Host
-   Service, Published Language, and domain events published across a
-   bounded context boundary.
-3. arc42 Quality Model, "Open Host Service," verified 2026-08-02,
-   https://quality.arc42.org/approaches/open-host-service, for the
-   working definition, the pairing with Published Language, and the HL7
-   FHIR and iCalendar production examples.
-4. Stripe, "Versioning" (API reference), verified 2026-08-02,
-   https://docs.stripe.com/api/versioning, for the named production
-   example of dated API versions, backward-compatible monthly releases,
-   and named major releases such as "Acacia."
-5. GitHub Docs, "Public schema" (GraphQL API overview), verified
-   2026-08-02, https://docs.github.com/en/graphql/overview/public-schema,
-   for the named production example of a canonical, introspectable,
-   downloadable schema as the Published Language artifact.

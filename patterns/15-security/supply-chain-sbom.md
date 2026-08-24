@@ -744,6 +744,44 @@ The pattern is silent on secure coding inside the components. It tells you
 what is present. It does not tell you whether the component is configured
 securely, reachable, exploited, maintained, or safe for your deployment.
 
+## 18. References
+
+- Executive Office of the President. *Executive Order 14028, Improving the
+  Nation's Cybersecurity*, section 10(j), 2021. Cited through NIST's SBOM
+  guidance page, which quotes the section 10(j) SBOM definition.
+  <https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-supply-chain-security-guidance-20>,
+  verified 2026-08-02.
+- National Institute of Standards and Technology. *Software Security in Supply
+  Chains. Software Bill of Materials (SBOM)*, created 2022, updated 2024.
+  <https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-supply-chain-security-guidance-20>,
+  verified 2026-08-02.
+- National Telecommunications and Information Administration. *The Minimum
+  Elements for a Software Bill of Materials (SBOM)*, 2021. Cited through
+  NIST's reference and summary of the report.
+  <https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-supply-chain-security-guidance-20>,
+  verified 2026-08-02.
+- International Organization for Standardization. *ISO/IEC 5962:2021.
+  Information technology. SPDX Specification V2.2.1*, edition 1, 2021.
+  <https://www.iso.org/standard/81870.html>, verified 2026-08-02.
+- OWASP Foundation and Ecma International. *CycloneDX Specification Overview*,
+  version 1.7 overview.
+  <https://cyclonedx.org/specification/overview/>, verified 2026-08-02.
+- Ecma International. *ECMA-424. CycloneDX Bill of materials specification*,
+  2nd edition, December 2025.
+  <https://ecma-international.org/publications-and-standards/standards/ecma-424/>,
+  verified 2026-08-02.
+- Kubernetes. *Download Kubernetes*, container image signatures and SPDX 2.3
+  SBOM publication note.
+  <https://kubernetes.io/releases/download/>, verified 2026-08-02.
+- GitHub Docs. *REST API endpoints for software bill of materials (SBOM)*.
+  <https://docs.github.com/en/rest/dependency-graph/sboms>, verified
+  2026-08-02.
+- Google Cloud. *SBOM overview. Artifact Analysis*.
+  <https://docs.cloud.google.com/artifact-analysis/docs/sbom-overview>,
+  verified 2026-08-02.
+- Microsoft. *SBOM Tool*, `microsoft/sbom-tool` README.
+  <https://github.com/microsoft/sbom-tool>, verified 2026-08-02.
+
 ## Code examples
 
 The examples use three different languages because SBOM handling appears in
@@ -896,41 +934,3 @@ const bom: Bom = {
 
 console.log(canRelease(bom, "abc123").length === 0 ? "PASS" : "FAIL");
 ```
-
-## 18. References
-
-- Executive Office of the President. *Executive Order 14028, Improving the
-  Nation's Cybersecurity*, section 10(j), 2021. Cited through NIST's SBOM
-  guidance page, which quotes the section 10(j) SBOM definition.
-  <https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-supply-chain-security-guidance-20>,
-  verified 2026-08-02.
-- National Institute of Standards and Technology. *Software Security in Supply
-  Chains. Software Bill of Materials (SBOM)*, created 2022, updated 2024.
-  <https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-supply-chain-security-guidance-20>,
-  verified 2026-08-02.
-- National Telecommunications and Information Administration. *The Minimum
-  Elements for a Software Bill of Materials (SBOM)*, 2021. Cited through
-  NIST's reference and summary of the report.
-  <https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-supply-chain-security-guidance-20>,
-  verified 2026-08-02.
-- International Organization for Standardization. *ISO/IEC 5962:2021.
-  Information technology. SPDX Specification V2.2.1*, edition 1, 2021.
-  <https://www.iso.org/standard/81870.html>, verified 2026-08-02.
-- OWASP Foundation and Ecma International. *CycloneDX Specification Overview*,
-  version 1.7 overview.
-  <https://cyclonedx.org/specification/overview/>, verified 2026-08-02.
-- Ecma International. *ECMA-424. CycloneDX Bill of materials specification*,
-  2nd edition, December 2025.
-  <https://ecma-international.org/publications-and-standards/standards/ecma-424/>,
-  verified 2026-08-02.
-- Kubernetes. *Download Kubernetes*, container image signatures and SPDX 2.3
-  SBOM publication note.
-  <https://kubernetes.io/releases/download/>, verified 2026-08-02.
-- GitHub Docs. *REST API endpoints for software bill of materials (SBOM)*.
-  <https://docs.github.com/en/rest/dependency-graph/sboms>, verified
-  2026-08-02.
-- Google Cloud. *SBOM overview. Artifact Analysis*.
-  <https://docs.cloud.google.com/artifact-analysis/docs/sbom-overview>,
-  verified 2026-08-02.
-- Microsoft. *SBOM Tool*, `microsoft/sbom-tool` README.
-  <https://github.com/microsoft/sbom-tool>, verified 2026-08-02.

@@ -441,6 +441,14 @@ reviewed specifically for this concern, confirming that no sequence of
 externally-triggerable events can reach a security-sensitive state
 through a path the design did not intend to permit.
 
+## 18. References
+
+1. Quantum Leaps. "Finite State Machines".
+   https://www.state-machine.com/fsm
+   Verified 2026-08-21. Source of the state and transition definition
+   quotes, and the spaghetti-code failure-mode quote, used in
+   dimensions 1, 2, 3, 5, and 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -593,11 +601,3 @@ print("after stop: " + String(describing: current))
 current = transition(current: current, event: .reset)
 print("after reset: " + String(describing: current))
 ```
-
-## 18. References
-
-1. Quantum Leaps. "Finite State Machines".
-   https://www.state-machine.com/fsm
-   Verified 2026-08-21. Source of the state and transition definition
-   quotes, and the spaghetti-code failure-mode quote, used in
-   dimensions 1, 2, 3, 5, and 9.

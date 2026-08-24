@@ -755,6 +755,46 @@ effects, it does not itself store, transmit, or expose key contents, only the
 routing decision for where a key's data lives or where a request for it
 should go.
 
+## 18. References
+
+1. David Karger, Eric Lehman, F. Thomson Leighton, Rajmohan Panigrahy, Matthew
+   Levine, Daniel Lewin. "Consistent Hashing and Random Trees. Distributed
+   Caching Protocols for Relieving Hot Spots on the World Wide Web,"
+   Proceedings of the 29th Annual ACM Symposium on Theory of Computing (STOC),
+   1997. Cited via Wikipedia contributors, "Consistent hashing," summary of
+   title, authors, and venue, https://en.wikipedia.org/wiki/Consistent_hashing
+   verified 2026-08-02. Source for dimension 1's origin claim and dimension 9's
+   Akamai founding lineage.
+2. DataStax. "Data Distribution and Replication," Apache Cassandra 3.0
+   documentation,
+   https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/architecture/archDataDistributeHashing.html
+   Verified 2026-08-02. Source for the Cassandra production use in dimension
+   9, quoted directly.
+3. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati,
+   Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall,
+   Werner Vogels. "Dynamo. Amazon's Highly Available Key-value Store,"
+   Proceedings of the 21st ACM Symposium on Operating Systems Principles
+   (SOSP), 2007, section 4.2, "Partitioning Algorithm."
+   https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
+   Verified 2026-08-02, existence and hosting confirmed live. Source for the
+   virtual node and heterogeneity claims in dimensions 8 and 9.
+4. Daniel E. Eisenbud, Cheng Yi, Carlo Contavalli, Cody Smith, Roman Kononov,
+   Eric Mann-Hielscher, Ardas Cilingiroglu, Bin Cheyney, Wentao Shang, Jinnah
+   Dylan Hosein. "Maglev. A Fast and Reliable Software Network Load
+   Balancer," 13th USENIX Symposium on Networked Systems Design and
+   Implementation (NSDI), 2016.
+   https://www.usenix.org/conference/nsdi16/technical-sessions/presentation/eisenbud
+   Verified 2026-08-02. Source for the Maglev production use in dimension 9.
+5. Richard Jones. "libketama, a consistent hashing algo for memcache
+   clients," memcached mailing list announcement, 10 April 2007.
+   https://lists.danga.com/pipermail/memcached/2007-April/003853.html
+   Verified 2026-08-02. Source for the ketama production use in dimension 9
+   and the 100 to 200 points per server figure in dimension 8.
+6. Wikipedia contributors. "Rendezvous hashing."
+   https://en.wikipedia.org/wiki/Rendezvous_hashing Verified 2026-08-02. Used
+   only to confirm rendezvous hashing as a distinct named technique for
+   dimensions 1 and 12, not as a source of technical explanation.
+
 ## Code examples
 
 Three languages chosen for genuinely different idiomatic shapes. Go shows the
@@ -906,43 +946,3 @@ fn main() {
     }
 }
 ```
-
-## 18. References
-
-1. David Karger, Eric Lehman, F. Thomson Leighton, Rajmohan Panigrahy, Matthew
-   Levine, Daniel Lewin. "Consistent Hashing and Random Trees. Distributed
-   Caching Protocols for Relieving Hot Spots on the World Wide Web,"
-   Proceedings of the 29th Annual ACM Symposium on Theory of Computing (STOC),
-   1997. Cited via Wikipedia contributors, "Consistent hashing," summary of
-   title, authors, and venue, https://en.wikipedia.org/wiki/Consistent_hashing
-   verified 2026-08-02. Source for dimension 1's origin claim and dimension 9's
-   Akamai founding lineage.
-2. DataStax. "Data Distribution and Replication," Apache Cassandra 3.0
-   documentation,
-   https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/architecture/archDataDistributeHashing.html
-   Verified 2026-08-02. Source for the Cassandra production use in dimension
-   9, quoted directly.
-3. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati,
-   Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall,
-   Werner Vogels. "Dynamo. Amazon's Highly Available Key-value Store,"
-   Proceedings of the 21st ACM Symposium on Operating Systems Principles
-   (SOSP), 2007, section 4.2, "Partitioning Algorithm."
-   https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
-   Verified 2026-08-02, existence and hosting confirmed live. Source for the
-   virtual node and heterogeneity claims in dimensions 8 and 9.
-4. Daniel E. Eisenbud, Cheng Yi, Carlo Contavalli, Cody Smith, Roman Kononov,
-   Eric Mann-Hielscher, Ardas Cilingiroglu, Bin Cheyney, Wentao Shang, Jinnah
-   Dylan Hosein. "Maglev. A Fast and Reliable Software Network Load
-   Balancer," 13th USENIX Symposium on Networked Systems Design and
-   Implementation (NSDI), 2016.
-   https://www.usenix.org/conference/nsdi16/technical-sessions/presentation/eisenbud
-   Verified 2026-08-02. Source for the Maglev production use in dimension 9.
-5. Richard Jones. "libketama, a consistent hashing algo for memcache
-   clients," memcached mailing list announcement, 10 April 2007.
-   https://lists.danga.com/pipermail/memcached/2007-April/003853.html
-   Verified 2026-08-02. Source for the ketama production use in dimension 9
-   and the 100 to 200 points per server figure in dimension 8.
-6. Wikipedia contributors. "Rendezvous hashing."
-   https://en.wikipedia.org/wiki/Rendezvous_hashing Verified 2026-08-02. Used
-   only to confirm rendezvous hashing as a distinct named technique for
-   dimensions 1 and 12, not as a source of technical explanation.

@@ -670,6 +670,33 @@ privilege if its trigger mechanism is ever, even accidentally, reactivated,
 and because nobody maintains it, its behaviour on reactivation is untested
 against the current state of every system around it.
 
+## 18. References
+
+1. Wiktionary contributors, "boat anchor," Wiktionary, the free dictionary,
+   https://en.wiktionary.org/wiki/boat_anchor, verified 2026-08-02.
+2. Martin Fowler, "Yagni," martinfowler.com bliki,
+   https://martinfowler.com/bliki/Yagni.html, verified 2026-08-02.
+3. Martin Fowler, "Feature Toggles (aka Feature Flags)," martinfowler.com
+   articles, https://martinfowler.com/articles/feature-toggles.html, verified
+   2026-08-02.
+4. Oracle, "Class Vector," Java Platform, Standard Edition 8 API
+   Specification, https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html,
+   verified 2026-08-02.
+5. Oracle, "Class Stack," Java Platform, Standard Edition 8 API
+   Specification, https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html,
+   verified 2026-08-02.
+6. Oracle, "Interface Cloneable," Java Platform, Standard Edition 8 API
+   Specification, https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html,
+   verified 2026-08-02.
+7. Node.js, "Buffer," Node.js API documentation, deprecated constructor
+   section, https://nodejs.org/api/buffer.html, verified 2026-08-02.
+8. Python Software Foundation, "imp, deprecated since version 3.4," Python 3
+   documentation, https://docs.python.org/3/library/imp.html, verified
+   2026-08-02.
+9. Wikipedia contributors, "Knight Capital Group," Wikipedia, the free
+   encyclopedia, https://en.wikipedia.org/wiki/Knight_Capital_Group, verified
+   2026-08-02.
+
 ## Code examples
 
 The pattern is illustrated below in three languages as a "kept for backward
@@ -850,30 +877,3 @@ snippet, confirming the toy reachability check runs correctly. `python3
 report_generator.py` printed the CSV row followed by `candidate boat
 anchors. ['generate_pdf']`, confirming the detector correctly identifies the
 unused public method against the simulated call set.
-
-## 18. References
-
-1. Wiktionary contributors, "boat anchor," Wiktionary, the free dictionary,
-   https://en.wiktionary.org/wiki/boat_anchor, verified 2026-08-02.
-2. Martin Fowler, "Yagni," martinfowler.com bliki,
-   https://martinfowler.com/bliki/Yagni.html, verified 2026-08-02.
-3. Martin Fowler, "Feature Toggles (aka Feature Flags)," martinfowler.com
-   articles, https://martinfowler.com/articles/feature-toggles.html, verified
-   2026-08-02.
-4. Oracle, "Class Vector," Java Platform, Standard Edition 8 API
-   Specification, https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html,
-   verified 2026-08-02.
-5. Oracle, "Class Stack," Java Platform, Standard Edition 8 API
-   Specification, https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html,
-   verified 2026-08-02.
-6. Oracle, "Interface Cloneable," Java Platform, Standard Edition 8 API
-   Specification, https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html,
-   verified 2026-08-02.
-7. Node.js, "Buffer," Node.js API documentation, deprecated constructor
-   section, https://nodejs.org/api/buffer.html, verified 2026-08-02.
-8. Python Software Foundation, "imp, deprecated since version 3.4," Python 3
-   documentation, https://docs.python.org/3/library/imp.html, verified
-   2026-08-02.
-9. Wikipedia contributors, "Knight Capital Group," Wikipedia, the free
-   encyclopedia, https://en.wikipedia.org/wiki/Knight_Capital_Group, verified
-   2026-08-02.

@@ -762,6 +762,38 @@ authenticate callers. It does not sanitize every possible sink. It gives a
 concept one owner. Security still depends on the owner enforcing the correct
 policy.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*. 2nd
+   edition. Addison-Wesley, 2018. Chapter 3, "Bad Smells in Code," and chapter
+   7, "Encapsulation." Source for Primitive Obsession and the refactoring
+   catalog family.
+2. Martin Fowler. "Replace Primitive with Object." Refactoring Catalog.
+   https://refactoring.com/catalog/replacePrimitiveWithObject.html. Verified
+   2026-08-02. Source for the canonical name and aliases.
+3. Martin Fowler. "Value Object." Bliki.
+   https://martinfowler.com/bliki/ValueObject.html. Verified 2026-08-02.
+   Source for the equality and immutability framing used to distinguish the
+   destination pattern from the refactoring.
+4. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*. Addison-Wesley, 2003. Chapter 5, "A Model Expressed in
+   Software," section "Value Objects." Source for the domain modeling relation.
+5. Python Software Foundation. "`pathlib`. Object-oriented filesystem paths."
+   Python 3.14 documentation. https://docs.python.org/3/library/pathlib.html.
+   Verified 2026-08-02. Source for the `pathlib.Path` production use.
+6. Python Software Foundation. "`uuid`. UUID objects according to RFC 9562."
+   Python 3.14 documentation. https://docs.python.org/3/library/uuid.html.
+   Verified 2026-08-02. Source for the `uuid.UUID` production use.
+7. Oracle. "Class LocalDate." Java SE 21 API Specification.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html.
+   Verified 2026-08-02. Source for the `java.time.LocalDate` production use.
+8. Rust Project Developers. "Struct NonZero." Rust standard library.
+   https://doc.rust-lang.org/std/num/struct.NonZero.html. Verified
+   2026-08-02. Source for the `std::num::NonZero` production use.
+9. Python Software Foundation. "`ipaddress`. IPv4/IPv6 manipulation library."
+   Python 3.14 documentation. https://docs.python.org/3/library/ipaddress.html.
+   Verified 2026-08-02. Source for the `ipaddress` production use.
+
 ## Code examples
 
 The examples use TypeScript, Python, and Rust because the refactoring appears
@@ -848,35 +880,3 @@ fn main() {
     println!("{}", discount_cents(2_500, rate));
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*. 2nd
-   edition. Addison-Wesley, 2018. Chapter 3, "Bad Smells in Code," and chapter
-   7, "Encapsulation." Source for Primitive Obsession and the refactoring
-   catalog family.
-2. Martin Fowler. "Replace Primitive with Object." Refactoring Catalog.
-   https://refactoring.com/catalog/replacePrimitiveWithObject.html. Verified
-   2026-08-02. Source for the canonical name and aliases.
-3. Martin Fowler. "Value Object." Bliki.
-   https://martinfowler.com/bliki/ValueObject.html. Verified 2026-08-02.
-   Source for the equality and immutability framing used to distinguish the
-   destination pattern from the refactoring.
-4. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*. Addison-Wesley, 2003. Chapter 5, "A Model Expressed in
-   Software," section "Value Objects." Source for the domain modeling relation.
-5. Python Software Foundation. "`pathlib`. Object-oriented filesystem paths."
-   Python 3.14 documentation. https://docs.python.org/3/library/pathlib.html.
-   Verified 2026-08-02. Source for the `pathlib.Path` production use.
-6. Python Software Foundation. "`uuid`. UUID objects according to RFC 9562."
-   Python 3.14 documentation. https://docs.python.org/3/library/uuid.html.
-   Verified 2026-08-02. Source for the `uuid.UUID` production use.
-7. Oracle. "Class LocalDate." Java SE 21 API Specification.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html.
-   Verified 2026-08-02. Source for the `java.time.LocalDate` production use.
-8. Rust Project Developers. "Struct NonZero." Rust standard library.
-   https://doc.rust-lang.org/std/num/struct.NonZero.html. Verified
-   2026-08-02. Source for the `std::num::NonZero` production use.
-9. Python Software Foundation. "`ipaddress`. IPv4/IPv6 manipulation library."
-   Python 3.14 documentation. https://docs.python.org/3/library/ipaddress.html.
-   Verified 2026-08-02. Source for the `ipaddress` production use.

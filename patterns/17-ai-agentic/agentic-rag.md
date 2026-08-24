@@ -993,6 +993,83 @@ addition to that set with the same scrutiny given to the retrieval tool
 itself, keeps the security surface proportional to what the system is
 actually meant to do.
 
+## 18. References
+
+1. Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+   Karpukhin, Naman Goyal, Heinrich Kuttler, Mike Lewis, Wen-tau Yih, Tim
+   Rocktaschel, Sebastian Riedel, Douwe Kiela. "Retrieval-Augmented
+   Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020, arXiv 2005.11401.
+   https://arxiv.org/abs/2005.11401
+   Verified 2026-08-02. Source of the base RAG architecture Agentic RAG
+   extends, dimension 1.
+2. Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik
+   Narasimhan, Yuan Cao. "ReAct. Synergizing Reasoning and Acting in
+   Language Models." 2022, arXiv 2210.03629.
+   https://arxiv.org/abs/2210.03629
+   Verified 2026-08-02. Source of the interleaved reasoning-and-acting loop,
+   dimensions 1, 8, and 13.
+3. Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, Hannaneh Hajishirzi.
+   "Self-RAG. Learning to Retrieve, Generate, and Critique through
+   Self-Reflection." 2023, arXiv 2310.11511.
+   https://arxiv.org/abs/2310.11511
+   Verified 2026-08-02. Source of the reflection-token, trained-in retrieval
+   decision variant, dimensions 1, 8, 10, and 11.
+4. Shi-Qi Yan, Jia-Chen Gu, Yun Zhu, Zhen-Hua Ling. "Corrective Retrieval
+   Augmented Generation." 2024, arXiv 2401.15884.
+   https://arxiv.org/abs/2401.15884
+   Verified 2026-08-02. Source of the CRAG retrieval evaluator and web-search
+   fallback mechanism, dimensions 5, 7, 8, and 9.
+5. Aditi Singh, Abul Ehtesham, Saket Kumar, Tala Talaei Khoei, Athanasios V.
+   Vasilakos. "Agentic Retrieval-Augmented Generation. A Survey on Agentic
+   RAG." 2025, arXiv 2501.09136.
+   https://arxiv.org/abs/2501.09136
+   Verified 2026-08-02. Source of the term's formal taxonomy and the
+   multi-agent and graph-based variants, dimensions 1 and 8.
+6. Kai Greshake, Sahar Abdelnabi, Shailesh Mishra, Christoph Endres, Thorsten
+   Holz, Mario Fritz. "Not what you've signed up for. Compromising
+   Real-World LLM-Integrated Applications with Indirect Prompt Injection."
+   2023, arXiv 2302.12173.
+   https://arxiv.org/abs/2302.12173
+   Verified 2026-08-02. Source of the indirect prompt injection attack
+   class, dimension 17.
+7. Anthropic. "Building Effective Agents."
+   https://www.anthropic.com/engineering/building-effective-agents
+   Verified 2026-08-02. Source of the workflow versus agent distinction used
+   in dimension 1 and the problem framing in dimension 2.
+8. Anthropic. "Introducing Contextual Retrieval."
+   https://www.anthropic.com/news/contextual-retrieval
+   Verified 2026-08-02. Background source on retrieval-quality techniques
+   that compose with, but are distinct from, the agentic decision loop, used
+   only for context in dimension 2, not for any specific claim about
+   Agentic RAG.
+9. Weaviate. "What is Agentic RAG."
+   https://weaviate.io/blog/what-is-agentic-rag
+   Verified 2026-08-02. Source of the plain definition contrasting vanilla
+   and agentic RAG, dimension 1.
+10. LangChain. "Agentic RAG With LangGraph."
+    https://www.langchain.com/blog/agentic-rag-with-langgraph
+    Verified 2026-08-02. Source of the flow-engineering framing and the
+    CRAG and Self-RAG graph implementations, dimensions 7, 8, and 9.
+11. LangChain. "RAG."
+    https://docs.langchain.com/oss/python/langchain/rag
+    Verified 2026-08-02. Source of the Deep Agents retrieval-tool primitives
+    and grading rubrics, dimensions 9 and 15.
+12. LlamaIndex. "Agents."
+    https://developers.llamaindex.ai/python/framework/use_cases/agents/
+    Verified 2026-08-02. Source of the LlamaIndex agentic RAG production use,
+    dimension 9.
+13. Microsoft. "Agentic Retrieval Overview." Azure AI Search documentation,
+    Microsoft Learn.
+    https://learn.microsoft.com/en-us/azure/search/agentic-retrieval-overview
+    Verified 2026-08-02. Source of the Azure AI Search production use,
+    architecture, and billing figures cited throughout dimensions 3, 4, 7, 9,
+    10, 11, 16, and 17.
+14. NVIDIA. "Build an Agentic RAG Pipeline with Llama 3.1 and NVIDIA NeMo
+    Retriever NIMs." NVIDIA Developer Blog.
+    https://developer.nvidia.com/blog/build-an-agentic-rag-pipeline-with-llama-3-1-and-nvidia-nemo-retriever-nims/
+    Verified 2026-08-02. Source of the NeMo Retriever production reference
+    architecture and router-node fallback behavior, dimensions 7, 8, and 9.
+
 ## Code examples
 
 Three languages, each a bounded, single-agent corrective loop, retrieve,
@@ -1264,80 +1341,3 @@ iteration counts as the Python and TypeScript versions. Java was not
 compiled for this entry because no JDK was present on the authoring machine
 at write time, so this entry omits it rather than presenting an unverified
 sample.
-
-## 18. References
-
-1. Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
-   Karpukhin, Naman Goyal, Heinrich Kuttler, Mike Lewis, Wen-tau Yih, Tim
-   Rocktaschel, Sebastian Riedel, Douwe Kiela. "Retrieval-Augmented
-   Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020, arXiv 2005.11401.
-   https://arxiv.org/abs/2005.11401
-   Verified 2026-08-02. Source of the base RAG architecture Agentic RAG
-   extends, dimension 1.
-2. Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik
-   Narasimhan, Yuan Cao. "ReAct. Synergizing Reasoning and Acting in
-   Language Models." 2022, arXiv 2210.03629.
-   https://arxiv.org/abs/2210.03629
-   Verified 2026-08-02. Source of the interleaved reasoning-and-acting loop,
-   dimensions 1, 8, and 13.
-3. Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, Hannaneh Hajishirzi.
-   "Self-RAG. Learning to Retrieve, Generate, and Critique through
-   Self-Reflection." 2023, arXiv 2310.11511.
-   https://arxiv.org/abs/2310.11511
-   Verified 2026-08-02. Source of the reflection-token, trained-in retrieval
-   decision variant, dimensions 1, 8, 10, and 11.
-4. Shi-Qi Yan, Jia-Chen Gu, Yun Zhu, Zhen-Hua Ling. "Corrective Retrieval
-   Augmented Generation." 2024, arXiv 2401.15884.
-   https://arxiv.org/abs/2401.15884
-   Verified 2026-08-02. Source of the CRAG retrieval evaluator and web-search
-   fallback mechanism, dimensions 5, 7, 8, and 9.
-5. Aditi Singh, Abul Ehtesham, Saket Kumar, Tala Talaei Khoei, Athanasios V.
-   Vasilakos. "Agentic Retrieval-Augmented Generation. A Survey on Agentic
-   RAG." 2025, arXiv 2501.09136.
-   https://arxiv.org/abs/2501.09136
-   Verified 2026-08-02. Source of the term's formal taxonomy and the
-   multi-agent and graph-based variants, dimensions 1 and 8.
-6. Kai Greshake, Sahar Abdelnabi, Shailesh Mishra, Christoph Endres, Thorsten
-   Holz, Mario Fritz. "Not what you've signed up for. Compromising
-   Real-World LLM-Integrated Applications with Indirect Prompt Injection."
-   2023, arXiv 2302.12173.
-   https://arxiv.org/abs/2302.12173
-   Verified 2026-08-02. Source of the indirect prompt injection attack
-   class, dimension 17.
-7. Anthropic. "Building Effective Agents."
-   https://www.anthropic.com/engineering/building-effective-agents
-   Verified 2026-08-02. Source of the workflow versus agent distinction used
-   in dimension 1 and the problem framing in dimension 2.
-8. Anthropic. "Introducing Contextual Retrieval."
-   https://www.anthropic.com/news/contextual-retrieval
-   Verified 2026-08-02. Background source on retrieval-quality techniques
-   that compose with, but are distinct from, the agentic decision loop, used
-   only for context in dimension 2, not for any specific claim about
-   Agentic RAG.
-9. Weaviate. "What is Agentic RAG."
-   https://weaviate.io/blog/what-is-agentic-rag
-   Verified 2026-08-02. Source of the plain definition contrasting vanilla
-   and agentic RAG, dimension 1.
-10. LangChain. "Agentic RAG With LangGraph."
-    https://www.langchain.com/blog/agentic-rag-with-langgraph
-    Verified 2026-08-02. Source of the flow-engineering framing and the
-    CRAG and Self-RAG graph implementations, dimensions 7, 8, and 9.
-11. LangChain. "RAG."
-    https://docs.langchain.com/oss/python/langchain/rag
-    Verified 2026-08-02. Source of the Deep Agents retrieval-tool primitives
-    and grading rubrics, dimensions 9 and 15.
-12. LlamaIndex. "Agents."
-    https://developers.llamaindex.ai/python/framework/use_cases/agents/
-    Verified 2026-08-02. Source of the LlamaIndex agentic RAG production use,
-    dimension 9.
-13. Microsoft. "Agentic Retrieval Overview." Azure AI Search documentation,
-    Microsoft Learn.
-    https://learn.microsoft.com/en-us/azure/search/agentic-retrieval-overview
-    Verified 2026-08-02. Source of the Azure AI Search production use,
-    architecture, and billing figures cited throughout dimensions 3, 4, 7, 9,
-    10, 11, 16, and 17.
-14. NVIDIA. "Build an Agentic RAG Pipeline with Llama 3.1 and NVIDIA NeMo
-    Retriever NIMs." NVIDIA Developer Blog.
-    https://developer.nvidia.com/blog/build-an-agentic-rag-pipeline-with-llama-3-1-and-nvidia-nemo-retriever-nims/
-    Verified 2026-08-02. Source of the NeMo Retriever production reference
-    architecture and router-node fallback behavior, dimensions 7, 8, and 9.

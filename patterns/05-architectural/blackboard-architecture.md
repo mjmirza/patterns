@@ -251,6 +251,15 @@ A malicious or buggy knowledge source can poison the shared solution by writing 
 
 Where the underlying problem domain is itself sensitive, medical diagnosis, financial fraud detection, the audit-trail weakness noted in dimension 4 becomes a compliance concern as well as a debugging one. A shared, continuously mutated store without deliberate versioning makes it hard to reconstruct, after the fact, exactly which piece of evidence led to which conclusion, which many regulated domains require. The fix is the same one recommended in dimension 14 and dimension 16. Log every write with its authoring knowledge source and its input basis, effectively turning the blackboard's mutation history into an append-only audit log rather than relying on the current snapshot alone.
 
+## 18. References
+
+1. Wikipedia contributors. "Blackboard (design pattern)." Wikipedia, The Free Encyclopedia. https://en.wikipedia.org/wiki/Blackboard_(design_pattern) Verified 2026-08-02.
+2. Wikipedia contributors. "Blackboard system." Wikipedia, The Free Encyclopedia. https://en.wikipedia.org/wiki/Blackboard_system Verified 2026-08-02.
+3. Wikipedia contributors. "Pattern-Oriented Software Architecture." Wikipedia, The Free Encyclopedia. https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture Verified 2026-08-02. Confirms authorship, 1996 publication year, ISBN. Does not itself enumerate the chapter list.
+4. Buschmann, F., Meunier, R., Rohnert, H., Sommerlad, P., Stal, M. Pattern-Oriented Software Architecture, Volume 1, A System of Patterns. Wiley, 1996. ISBN 978-0471958697. Blackboard chapter cited from established software architecture literature, not independently re-verified page by page during this write-up.
+5. Nii, H. Penny. "Blackboard Systems, The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures." AI Magazine, 1986. Cited by title, author, journal, and year. Exact volume, issue, and page range could not be independently re-fetched in this session due to bibliographic database access errors, and are therefore not asserted here.
+6. Wikipedia contributors. "Hearsay II." Wikipedia, The Free Encyclopedia. Attempted fetch returned HTTP 404 during verification on 2026-08-02. Hearsay-II's role is instead sourced from references 1 and 2 above, which discuss it directly.
+
 ## Code examples
 
 All three examples build the same minimal system, a two-region diagnosis pipeline with a symptom reader, a rule matcher, and a conflict checker, coordinated by a control component that always picks the first eligible knowledge source. Each was compiled or run directly against the toolchain used to write this entry.
@@ -564,12 +573,3 @@ func main() {
 ```
 
 Java and Rust are omitted for this entry. The pattern's value is almost entirely in the runtime coordination between mutable shared state and a set of registered callbacks, which TypeScript, Python, and Go each express directly with closures, first-class functions, or small structs implementing a one-method interface. A Java or Rust version would add real ceremony, explicit interfaces or trait objects and boilerplate wiring, without demonstrating a genuinely different idiom for the pattern, so three languages were judged sufficient to show the pattern's shape without padding the entry with a fourth near-identical translation.
-
-## 18. References
-
-1. Wikipedia contributors. "Blackboard (design pattern)." Wikipedia, The Free Encyclopedia. https://en.wikipedia.org/wiki/Blackboard_(design_pattern) Verified 2026-08-02.
-2. Wikipedia contributors. "Blackboard system." Wikipedia, The Free Encyclopedia. https://en.wikipedia.org/wiki/Blackboard_system Verified 2026-08-02.
-3. Wikipedia contributors. "Pattern-Oriented Software Architecture." Wikipedia, The Free Encyclopedia. https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture Verified 2026-08-02. Confirms authorship, 1996 publication year, ISBN. Does not itself enumerate the chapter list.
-4. Buschmann, F., Meunier, R., Rohnert, H., Sommerlad, P., Stal, M. Pattern-Oriented Software Architecture, Volume 1, A System of Patterns. Wiley, 1996. ISBN 978-0471958697. Blackboard chapter cited from established software architecture literature, not independently re-verified page by page during this write-up.
-5. Nii, H. Penny. "Blackboard Systems, The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures." AI Magazine, 1986. Cited by title, author, journal, and year. Exact volume, issue, and page range could not be independently re-fetched in this session due to bibliographic database access errors, and are therefore not asserted here.
-6. Wikipedia contributors. "Hearsay II." Wikipedia, The Free Encyclopedia. Attempted fetch returned HTTP 404 during verification on 2026-08-02. Hearsay-II's role is instead sourced from references 1 and 2 above, which discuss it directly.

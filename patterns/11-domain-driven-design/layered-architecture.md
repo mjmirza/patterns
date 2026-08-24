@@ -839,6 +839,32 @@ through, is the practical mitigation, and it is a mitigation the pattern
 makes easy to apply, precisely because each layer boundary is already a
 natural place to transform the shape of the data crossing it.
 
+## 18. References
+
+1. Frank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad, Michael
+   Stal, *Pattern-Oriented Software Architecture, Volume 1. A System of
+   Patterns*, John Wiley and Sons, 1996, chapter 2, the Layers pattern.
+2. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*, Addison-Wesley, 2003, chapter 4, "Isolating the Domain."
+3. Vaughn Vernon, *Implementing Domain-Driven Design*, Addison-Wesley,
+   2013, chapter 4, "Architecture," the section discussing layered,
+   hexagonal, and related architectural styles for a bounded context.
+4. Martin Fowler, "PresentationDomainDataLayering,"
+   <https://martinfowler.com/bliki/PresentationDomainDataLayering.html>,
+   verified 2026-08-02.
+5. Microsoft Learn, Azure Architecture Center, "N-tier architecture
+   style,"
+   <https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier>,
+   verified 2026-08-02.
+6. Alistair Cockburn, "Hexagonal architecture," description of Ports and
+   Adapters, referenced in dimension 8 and dimension 13 as the concentric-
+   ring restatement of the same dependency-inversion principle. Cited here
+   for attribution of the pattern name and its author rather than for a
+   specific quoted claim.
+7. Jeffrey Palermo, description of Onion Architecture, referenced in
+   dimension 8 for attribution of the pattern name and author, in the same
+   context as the Cockburn citation above.
+
 ## Code examples
 
 Three languages, all showing the identical use case, a place order
@@ -1117,29 +1143,3 @@ because the three languages shown already demonstrate the pattern's full
 range, an exception-based rejection path, a structural interface, and an
 explicit error-value rejection path, without repeating the same shape a
 fourth and fifth time.
-
-## 18. References
-
-1. Frank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad, Michael
-   Stal, *Pattern-Oriented Software Architecture, Volume 1. A System of
-   Patterns*, John Wiley and Sons, 1996, chapter 2, the Layers pattern.
-2. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*, Addison-Wesley, 2003, chapter 4, "Isolating the Domain."
-3. Vaughn Vernon, *Implementing Domain-Driven Design*, Addison-Wesley,
-   2013, chapter 4, "Architecture," the section discussing layered,
-   hexagonal, and related architectural styles for a bounded context.
-4. Martin Fowler, "PresentationDomainDataLayering,"
-   <https://martinfowler.com/bliki/PresentationDomainDataLayering.html>,
-   verified 2026-08-02.
-5. Microsoft Learn, Azure Architecture Center, "N-tier architecture
-   style,"
-   <https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier>,
-   verified 2026-08-02.
-6. Alistair Cockburn, "Hexagonal architecture," description of Ports and
-   Adapters, referenced in dimension 8 and dimension 13 as the concentric-
-   ring restatement of the same dependency-inversion principle. Cited here
-   for attribution of the pattern name and its author rather than for a
-   specific quoted claim.
-7. Jeffrey Palermo, description of Onion Architecture, referenced in
-   dimension 8 for attribution of the pattern name and author, in the same
-   context as the Cockburn citation above.

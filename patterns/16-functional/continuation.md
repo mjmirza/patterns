@@ -748,6 +748,51 @@ continuation and never crosses a trust boundary has little security surface
 beyond ordinary function calls. The concern appears when the continuation is
 stored, replayable, remotely addressable, or exposed to untrusted code.
 
+## 18. References
+
+1. John C. Reynolds. "Definitional Interpreters for Higher-Order Programming
+   Languages". ACM Annual Conference, 1972, pages 717-740. DOI
+   10.1145/800194.805852. DBLP record:
+   https://dblp.dagstuhl.de/rec/conf/acm/Reynolds72.html
+   Verified 2026-08-02. Source for the lineage citation.
+2. Andrew W. Appel. *Compiling with Continuations*. Cambridge University Press,
+   1992. ISBN 978-0-521-03311-4. Cambridge Core record:
+   https://www.cambridge.org/core/books/compiling-with-continuations/7CA9C36DCE78AD82218E745F43A4E740
+   Verified 2026-08-02. Source for compiler CPS context and SML compiler use.
+3. R6RS editors. *Revised^6 Report on the Algorithmic Language Scheme*,
+   chapter 11, section 11.15, Control features.
+   https://r6rs.org/final/html/r6rs/r6rs-Z-H-14.html
+   Verified 2026-08-02. Source for `call-with-current-continuation`.
+4. R7RS editors. *Revised^7 Report on the Algorithmic Language Scheme*,
+   corrected HTML, section 4.2.6, Dynamic bindings.
+   https://standards.scheme.org/corrected-r7rs/r7rs-Z-H-6.html
+   Verified 2026-08-02. Source for dynamic extent and continuation reentry.
+5. JetBrains. *Kotlin Language Specification*, section "Asynchronous programming
+   with coroutines".
+   https://kotlinlang.org/spec/asynchronous-programming-with-coroutines.html
+   Verified 2026-08-02. Source for Kotlin CPS transformation and generated
+   continuations.
+6. JetBrains. *Kotlin Standard Library API*, `kotlin.coroutines.Continuation`.
+   https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-continuation/
+   Verified 2026-08-02. Source for the Kotlin `Continuation` production use.
+7. Express project. *Using middleware*.
+   https://expressjs.com/en/guide/using-middleware/
+   Verified 2026-08-02. Source for Express `next` middleware production use.
+8. Eclipse Foundation. *Jakarta Servlet 6.2.0-M1 API*,
+   `jakarta.servlet.FilterChain`.
+   https://jakarta.ee/specifications/servlet/6.2/apidocs/jakarta.servlet/jakarta/servlet/filterchain
+   Verified 2026-08-02. Source for Servlet `FilterChain.doFilter`.
+9. Racket project. *Racket Web Server documentation*, Stateful Servlets,
+   `send/suspend`.
+   https://download.racket-lang.org/docs/5.0.2/html/web-server/servlet.html
+   Verified 2026-08-02. Source for captured web continuations bound to URLs.
+10. Racket project. *Continue: Web Applications in Racket*.
+   https://docs.racket-lang.org/continue/
+   Verified 2026-08-02. Source for `send/suspend/dispatch`.
+11. Haskell `mtl` maintainers. *Control.Monad.Cont* documentation.
+   https://hackage.haskell.org/package/mtl/docs/Control-Monad-Cont.html
+   Verified 2026-08-02. Source for `Cont` and `ContT` terminology.
+
 ## Code examples
 
 Three languages are used because each shows a different production shape.
@@ -863,48 +908,3 @@ func main() {
 	fetch("continuation", done)
 }
 ```
-
-## 18. References
-
-1. John C. Reynolds. "Definitional Interpreters for Higher-Order Programming
-   Languages". ACM Annual Conference, 1972, pages 717-740. DOI
-   10.1145/800194.805852. DBLP record:
-   https://dblp.dagstuhl.de/rec/conf/acm/Reynolds72.html
-   Verified 2026-08-02. Source for the lineage citation.
-2. Andrew W. Appel. *Compiling with Continuations*. Cambridge University Press,
-   1992. ISBN 978-0-521-03311-4. Cambridge Core record:
-   https://www.cambridge.org/core/books/compiling-with-continuations/7CA9C36DCE78AD82218E745F43A4E740
-   Verified 2026-08-02. Source for compiler CPS context and SML compiler use.
-3. R6RS editors. *Revised^6 Report on the Algorithmic Language Scheme*,
-   chapter 11, section 11.15, Control features.
-   https://r6rs.org/final/html/r6rs/r6rs-Z-H-14.html
-   Verified 2026-08-02. Source for `call-with-current-continuation`.
-4. R7RS editors. *Revised^7 Report on the Algorithmic Language Scheme*,
-   corrected HTML, section 4.2.6, Dynamic bindings.
-   https://standards.scheme.org/corrected-r7rs/r7rs-Z-H-6.html
-   Verified 2026-08-02. Source for dynamic extent and continuation reentry.
-5. JetBrains. *Kotlin Language Specification*, section "Asynchronous programming
-   with coroutines".
-   https://kotlinlang.org/spec/asynchronous-programming-with-coroutines.html
-   Verified 2026-08-02. Source for Kotlin CPS transformation and generated
-   continuations.
-6. JetBrains. *Kotlin Standard Library API*, `kotlin.coroutines.Continuation`.
-   https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-continuation/
-   Verified 2026-08-02. Source for the Kotlin `Continuation` production use.
-7. Express project. *Using middleware*.
-   https://expressjs.com/en/guide/using-middleware/
-   Verified 2026-08-02. Source for Express `next` middleware production use.
-8. Eclipse Foundation. *Jakarta Servlet 6.2.0-M1 API*,
-   `jakarta.servlet.FilterChain`.
-   https://jakarta.ee/specifications/servlet/6.2/apidocs/jakarta.servlet/jakarta/servlet/filterchain
-   Verified 2026-08-02. Source for Servlet `FilterChain.doFilter`.
-9. Racket project. *Racket Web Server documentation*, Stateful Servlets,
-   `send/suspend`.
-   https://download.racket-lang.org/docs/5.0.2/html/web-server/servlet.html
-   Verified 2026-08-02. Source for captured web continuations bound to URLs.
-10. Racket project. *Continue: Web Applications in Racket*.
-   https://docs.racket-lang.org/continue/
-   Verified 2026-08-02. Source for `send/suspend/dispatch`.
-11. Haskell `mtl` maintainers. *Control.Monad.Cont* documentation.
-   https://hackage.haskell.org/package/mtl/docs/Control-Monad-Cont.html
-   Verified 2026-08-02. Source for `Cont` and `ContT` terminology.

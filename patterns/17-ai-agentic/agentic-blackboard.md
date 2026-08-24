@@ -763,6 +763,17 @@ should be applied to the blackboard's write log with equal care, not
 treated as exempt because it looks like operational telemetry rather than
 user-facing conversation.
 
+## 18. References
+
+1. Wikipedia, "Blackboard (design pattern)", https://en.wikipedia.org/wiki/Blackboard_(design_pattern), verified 2026-08-02. Origin attribution to the Hearsay-II project, and the description of the blackboard, knowledge source, and control component structure quoted in dimensions 1 and 5.
+2. Wikipedia, "Blackboard system", https://en.wikipedia.org/wiki/Blackboard_system, verified 2026-08-02. History of BB1 by Barbara Hayes-Roth and GBB by Daniel Corkill, and BB1's named application domains, quoted in dimensions 1, 3, and 9.
+3. Lee D. Erman, Frederick Hayes-Roth, Victor R. Lesser, and D. Raj Reddy, "The Hearsay-II Speech Understanding System, Integrating Knowledge to Resolve Uncertainty," ACM Computing Surveys, volume 12, issue 2, 1980. Authorship, venue, and year corroborated by the origin summary in reference 1.
+4. Frank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad, and Michael Stal, "Pattern-Oriented Software Architecture, Volume 1. A System of Patterns," Wiley, 1996. Codification of Blackboard as a software architectural pattern, cited in dimension 1.
+5. GitHub, claudioed/agent-blackboard, https://github.com/claudioed/agent-blackboard, verified 2026-08-02. Named modern production use of the Blackboard Pattern for multi-agent software engineering coordination with Model Context Protocol integration, cited in dimensions 1 and 9.
+6. GitHub, langchain-ai/langgraph, https://github.com/langchain-ai/langgraph, verified 2026-08-02. Description of LangGraph as a stateful agent orchestration framework with shared memory, classified as a software instance of the pattern in dimension 9.
+7. Microsoft, AutoGen core user guide, group chat design pattern, https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/group-chat.html, verified 2026-08-02. Documentation of AutoGen's publish-subscribe group chat mechanism, cited as the negative control case distinguishing this pattern from a message bus in dimension 9.
+8. This repository, multi-agent-supervisor.md, family 17-ai-agentic. Related pattern cited in dimensions 4, 12, and 13 for the coordination-question contrast between centralized supervision and blackboard eligibility ranking.
+
 ## Code examples
 
 The Python implementation below is deliberately close to the classical
@@ -1155,14 +1166,3 @@ the entry within its word budget while still showing the guarded shared
 struct shape in Python, the async single-queue shape in TypeScript, and
 the channel-owned actor shape in Go, which together cover the concurrency
 idioms a reader is most likely to reach for first.
-
-## 18. References
-
-1. Wikipedia, "Blackboard (design pattern)", https://en.wikipedia.org/wiki/Blackboard_(design_pattern), verified 2026-08-02. Origin attribution to the Hearsay-II project, and the description of the blackboard, knowledge source, and control component structure quoted in dimensions 1 and 5.
-2. Wikipedia, "Blackboard system", https://en.wikipedia.org/wiki/Blackboard_system, verified 2026-08-02. History of BB1 by Barbara Hayes-Roth and GBB by Daniel Corkill, and BB1's named application domains, quoted in dimensions 1, 3, and 9.
-3. Lee D. Erman, Frederick Hayes-Roth, Victor R. Lesser, and D. Raj Reddy, "The Hearsay-II Speech Understanding System, Integrating Knowledge to Resolve Uncertainty," ACM Computing Surveys, volume 12, issue 2, 1980. Authorship, venue, and year corroborated by the origin summary in reference 1.
-4. Frank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad, and Michael Stal, "Pattern-Oriented Software Architecture, Volume 1. A System of Patterns," Wiley, 1996. Codification of Blackboard as a software architectural pattern, cited in dimension 1.
-5. GitHub, claudioed/agent-blackboard, https://github.com/claudioed/agent-blackboard, verified 2026-08-02. Named modern production use of the Blackboard Pattern for multi-agent software engineering coordination with Model Context Protocol integration, cited in dimensions 1 and 9.
-6. GitHub, langchain-ai/langgraph, https://github.com/langchain-ai/langgraph, verified 2026-08-02. Description of LangGraph as a stateful agent orchestration framework with shared memory, classified as a software instance of the pattern in dimension 9.
-7. Microsoft, AutoGen core user guide, group chat design pattern, https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/group-chat.html, verified 2026-08-02. Documentation of AutoGen's publish-subscribe group chat mechanism, cited as the negative control case distinguishing this pattern from a message bus in dimension 9.
-8. This repository, multi-agent-supervisor.md, family 17-ai-agentic. Related pattern cited in dimensions 4, 12, and 13 for the coordination-question contrast between centralized supervision and blackboard eligibility ranking.

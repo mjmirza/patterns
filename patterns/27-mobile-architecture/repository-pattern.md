@@ -439,6 +439,15 @@ request is propagated to the local copy and not only the remote
 source, are necessary parts of a security-conscious offline-first
 Repository implementation.
 
+## 18. References
+
+1. Google, Android Developers. "Build an offline-first app".
+   https://developer.android.com/topic/architecture/data-layer/offline-first
+   Verified 2026-08-22. Source of the offline-first definition, the
+   single-source-of-truth rule, the repository's own combining role,
+   the local-data-source requirement, and the read/write ordering,
+   used in dimensions 1, 2, 3, 5, 7, 9, and 10.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -595,12 +604,3 @@ if __name__ == "__main__":
     repo.sync()
     print(repo.read())
 ```
-
-## 18. References
-
-1. Google, Android Developers. "Build an offline-first app".
-   https://developer.android.com/topic/architecture/data-layer/offline-first
-   Verified 2026-08-22. Source of the offline-first definition, the
-   single-source-of-truth rule, the repository's own combining role,
-   the local-data-source requirement, and the read/write ordering,
-   used in dimensions 1, 2, 3, 5, 7, 9, and 10.

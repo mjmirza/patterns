@@ -868,6 +868,45 @@ Reader is silent on encryption, authentication protocols, and network trust. It
 does not supply those controls. It only changes how dependency context reaches
 code that may use those controls.
 
+## 18. References
+
+- Philip Wadler, "Monads for functional programming", in Johan Jeuring and Erik
+  Meijer, editors, *Advanced Functional Programming*, Lecture Notes in Computer
+  Science 925, Springer, 1995, pages 24 to 52.
+  https://www.research.ed.ac.uk/en/publications/monads-for-functional-programming/,
+  verified 2026-08-02.
+- Mark P. Jones, "Functional Programming with Overloading and Higher-Order
+  Polymorphism", in Johan Jeuring and Erik Meijer, editors, *Advanced
+  Functional Programming*, Lecture Notes in Computer Science 925, Springer,
+  1995, pages 97 to 136.
+  https://web.cecs.pdx.edu/~mpj/pubs/springschool.html, verified 2026-08-02.
+- Springer, *Advanced Functional Programming*, Lecture Notes in Computer Science
+  925, table of contents and bibliographic information.
+  https://link.springer.com/book/10.1007/3-540-59451-5, verified 2026-08-02.
+- GHC libraries, `mtl-2.3.1`, `Control.Monad.Reader` documentation.
+  https://downloads.haskell.org/~ghc/9.10.1/docs/libraries/mtl-2.3.1-aac9/Control-Monad-Reader.html,
+  verified 2026-08-02.
+- `fp-ts`, `Reader.ts` module documentation.
+  https://gcanti.github.io/fp-ts/modules/Reader.ts.html, verified 2026-08-02.
+- `fp-ts`, `ReaderT.ts` module documentation.
+  https://gcanti.github.io/fp-ts/modules/ReaderT.ts.html, verified 2026-08-02.
+- Typelevel Cats, Kleisli datatype documentation.
+  https://typelevel.org/cats/datatypes/kleisli.html, verified 2026-08-02.
+- Typelevel Cats, `cats.data.Kleisli` source documentation.
+  https://github.com/typelevel/cats/blob/main/core/src/main/scala/cats/data/Kleisli.scala,
+  verified 2026-08-02.
+- ZIO, contextual effects introduction for `ZIO[-R, +E, +A]`.
+  https://zio.dev/1.0.18/reference/contextual/, verified 2026-08-02.
+- ZIO, reference page for contextual data types including `ZEnvironment` and
+  `ZLayer`. https://zio.dev/reference/, verified 2026-08-02.
+- Effect, `Context` source documentation.
+  https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Context.ts,
+  verified 2026-08-02.
+- Effect, service migration documentation describing `Context.Service` and the
+  typed service map.
+  https://github.com/Effect-TS/effect/blob/main/migration/services.md,
+  verified 2026-08-02.
+
 ## Code examples
 
 Three languages are shown. TypeScript shows the direct higher-order function
@@ -1030,42 +1069,3 @@ func main() {
 	fmt.Println(euTotal(Config{TaxRate: 0.2, Currency: "USD"}))
 }
 ```
-
-## 18. References
-
-- Philip Wadler, "Monads for functional programming", in Johan Jeuring and Erik
-  Meijer, editors, *Advanced Functional Programming*, Lecture Notes in Computer
-  Science 925, Springer, 1995, pages 24 to 52.
-  https://www.research.ed.ac.uk/en/publications/monads-for-functional-programming/,
-  verified 2026-08-02.
-- Mark P. Jones, "Functional Programming with Overloading and Higher-Order
-  Polymorphism", in Johan Jeuring and Erik Meijer, editors, *Advanced
-  Functional Programming*, Lecture Notes in Computer Science 925, Springer,
-  1995, pages 97 to 136.
-  https://web.cecs.pdx.edu/~mpj/pubs/springschool.html, verified 2026-08-02.
-- Springer, *Advanced Functional Programming*, Lecture Notes in Computer Science
-  925, table of contents and bibliographic information.
-  https://link.springer.com/book/10.1007/3-540-59451-5, verified 2026-08-02.
-- GHC libraries, `mtl-2.3.1`, `Control.Monad.Reader` documentation.
-  https://downloads.haskell.org/~ghc/9.10.1/docs/libraries/mtl-2.3.1-aac9/Control-Monad-Reader.html,
-  verified 2026-08-02.
-- `fp-ts`, `Reader.ts` module documentation.
-  https://gcanti.github.io/fp-ts/modules/Reader.ts.html, verified 2026-08-02.
-- `fp-ts`, `ReaderT.ts` module documentation.
-  https://gcanti.github.io/fp-ts/modules/ReaderT.ts.html, verified 2026-08-02.
-- Typelevel Cats, Kleisli datatype documentation.
-  https://typelevel.org/cats/datatypes/kleisli.html, verified 2026-08-02.
-- Typelevel Cats, `cats.data.Kleisli` source documentation.
-  https://github.com/typelevel/cats/blob/main/core/src/main/scala/cats/data/Kleisli.scala,
-  verified 2026-08-02.
-- ZIO, contextual effects introduction for `ZIO[-R, +E, +A]`.
-  https://zio.dev/1.0.18/reference/contextual/, verified 2026-08-02.
-- ZIO, reference page for contextual data types including `ZEnvironment` and
-  `ZLayer`. https://zio.dev/reference/, verified 2026-08-02.
-- Effect, `Context` source documentation.
-  https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Context.ts,
-  verified 2026-08-02.
-- Effect, service migration documentation describing `Context.Service` and the
-  typed service map.
-  https://github.com/Effect-TS/effect/blob/main/migration/services.md,
-  verified 2026-08-02.

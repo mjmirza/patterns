@@ -795,6 +795,50 @@ that boundary. the point of this section is that isolation has to be real,
 demonstrated by different trust levels or different access requirements, not
 assumed as a free side effect of having more services.
 
+## 18. References
+
+1. Arnon Rotem-Gal-Oz. "Services, Microservices, Nanoservices, oh my!"
+   2014. https://arnon.me/2014/03/services-microservices-nanoservices/
+   Verified 2026-08-02. Source of the size-ladder framing and the earliest
+   widely cited definition of nanoservice as the point where overhead
+   outweighs utility.
+2. DZone contributors. "SOA Anti-pattern. Nanoservices."
+   https://dzone.com/articles/soa-anti-pattern-nanoservices
+   Title and framing confirmed via live search index, verified 2026-08-02.
+   Source for the explicit anti-pattern framing in the SOA community.
+3. Haiko van der Schaaf. "Dodging the Lambda Pinball with DDD."
+   https://serverlesscorner.com/dodging-the-lambda-pinball-with-ddd-9a5ed216c7e8
+   Verified 2026-08-02. Source of the Lambda Pinball term and its
+   description of uncoordinated chains of serverless functions.
+4. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Part IV, chapters
+   14 to 15, on bounded contexts. Source of the domain-driven boundary
+   heuristic used throughout dimensions 2, 4, 8 and 14.
+5. Twilio Segment engineering. "Goodbye Microservices, from 100s of
+   problem children to 1 superstar."
+   https://www.twilio.com/en-us/blog/developers/best-practices/goodbye-microservices
+   Verified 2026-08-02, fetched directly. Source for the 140-plus-service
+   case, the operational and testing failures, and the post-consolidation
+   metrics in dimension 9.
+6. Istio project. "Introducing istiod, simplifying the control plane."
+   https://istio.io/latest/blog/2020/istiod/
+   Verified 2026-08-02, fetched directly. Source for the Pilot, Galley,
+   Citadel, Mixer and sidecar-injector consolidation, the stated reasons
+   the original split delivered no isolation benefit, and the security
+   framing in dimension 17.
+7. DevClass. "Reduce costs by 90% by moving from microservices to
+   monolith, Amazon internal case study raises eyebrows."
+   https://www.devclass.com/ci-cd/2023/05/05/reduce-costs-by-90-by-moving-from-microservices-to-monolith-amazon-internal-case-study-raises-eyebrows/1621790
+   Verified 2026-08-02. Secondary source corroborating the Amazon Prime
+   Video Video Quality Analysis case in dimension 9, used because the
+   original primevideotech.com post now redirects and could not be
+   fetched directly.
+8. The New Stack. "Amazon Prime Video's Microservices Move Doesn't Lead
+   to a Monolith after All."
+   https://thenewstack.io/amazon-prime-videos-microservices-move-doesnt-lead-to-a-monolith-after-all/
+   Verified 2026-08-02. Second independent secondary source corroborating
+   the same Amazon Prime Video case, cross-checked against source 7.
+
 ## Code examples
 
 The three examples below model the same five-step checkout across a
@@ -975,47 +1019,3 @@ against a consolidated call completing in under one millisecond, an
 overhead ratio in the tens of thousands to one for pure coordination cost
 on top of near-zero real work, which is the concrete shape of the "overhead
 outweighs utility" framing from dimension 1.
-
-## 18. References
-
-1. Arnon Rotem-Gal-Oz. "Services, Microservices, Nanoservices, oh my!"
-   2014. https://arnon.me/2014/03/services-microservices-nanoservices/
-   Verified 2026-08-02. Source of the size-ladder framing and the earliest
-   widely cited definition of nanoservice as the point where overhead
-   outweighs utility.
-2. DZone contributors. "SOA Anti-pattern. Nanoservices."
-   https://dzone.com/articles/soa-anti-pattern-nanoservices
-   Title and framing confirmed via live search index, verified 2026-08-02.
-   Source for the explicit anti-pattern framing in the SOA community.
-3. Haiko van der Schaaf. "Dodging the Lambda Pinball with DDD."
-   https://serverlesscorner.com/dodging-the-lambda-pinball-with-ddd-9a5ed216c7e8
-   Verified 2026-08-02. Source of the Lambda Pinball term and its
-   description of uncoordinated chains of serverless functions.
-4. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Part IV, chapters
-   14 to 15, on bounded contexts. Source of the domain-driven boundary
-   heuristic used throughout dimensions 2, 4, 8 and 14.
-5. Twilio Segment engineering. "Goodbye Microservices, from 100s of
-   problem children to 1 superstar."
-   https://www.twilio.com/en-us/blog/developers/best-practices/goodbye-microservices
-   Verified 2026-08-02, fetched directly. Source for the 140-plus-service
-   case, the operational and testing failures, and the post-consolidation
-   metrics in dimension 9.
-6. Istio project. "Introducing istiod, simplifying the control plane."
-   https://istio.io/latest/blog/2020/istiod/
-   Verified 2026-08-02, fetched directly. Source for the Pilot, Galley,
-   Citadel, Mixer and sidecar-injector consolidation, the stated reasons
-   the original split delivered no isolation benefit, and the security
-   framing in dimension 17.
-7. DevClass. "Reduce costs by 90% by moving from microservices to
-   monolith, Amazon internal case study raises eyebrows."
-   https://www.devclass.com/ci-cd/2023/05/05/reduce-costs-by-90-by-moving-from-microservices-to-monolith-amazon-internal-case-study-raises-eyebrows/1621790
-   Verified 2026-08-02. Secondary source corroborating the Amazon Prime
-   Video Video Quality Analysis case in dimension 9, used because the
-   original primevideotech.com post now redirects and could not be
-   fetched directly.
-8. The New Stack. "Amazon Prime Video's Microservices Move Doesn't Lead
-   to a Monolith after All."
-   https://thenewstack.io/amazon-prime-videos-microservices-move-doesnt-lead-to-a-monolith-after-all/
-   Verified 2026-08-02. Second independent secondary source corroborating
-   the same Amazon Prime Video case, cross-checked against source 7.

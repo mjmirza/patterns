@@ -771,6 +771,47 @@ to reach, is a reasonable place to also apply data minimization for personal
 data leaving a service, though the Law of Demeter itself did not ask for
 that, it only created the seam where the decision becomes easy to make.
 
+## 18. References
+
+1. Karl J. Lieberherr and Ian M. Holland. "Formulations of the Law of
+   Demeter." Technical Report NU-CCS-88-11 (Demeter-2), Northeastern
+   University College of Computer Science, June 1988. Source of the first
+   written statement of the rule and its origin in Ian Holland's work at
+   Northeastern in late 1987.
+2. Karl J. Lieberherr, Ian M. Holland, and Arthur J. Riel. "Object-Oriented
+   Programming. An Objective Sense of Style." ACM SIGPLAN Notices, OOPSLA '88
+   proceedings, 1988. https://dl.acm.org/doi/10.1145/62084.62113 Verified
+   2026-08-02. The paper that brought the guideline to a wide OOPSLA
+   audience.
+3. Northeastern University Demeter Project. "The Law of Demeter, General
+   Formulation."
+   https://www2.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/general-formulation.html
+   Verified 2026-08-02. Source for the exact wording of both the general
+   formulation and the object-oriented friend list in dimension 5.
+4. Wikipedia contributors. "Law of Demeter."
+   https://en.wikipedia.org/wiki/Law_of_Demeter Verified 2026-08-02. Used to
+   confirm the origin date, the Demeter Project naming, and the standard
+   criticisms restated in dimension 3 and dimension 10.
+5. Wikipedia contributors. "Fluent interface."
+   https://en.wikipedia.org/wiki/Fluent_interface Verified 2026-08-02. Source
+   for the 2005 Evans and Fowler coinage cited in dimension 4.
+6. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
+   edition. Addison-Wesley, 2018. ISBN 978-0-13-475759-9. Catalog entries
+   "Hide Delegate" and "Remove Middle Man." Source for the refactoring steps
+   in dimension 14 and the production use in dimension 9.
+7. Andrew Hunt and David Thomas. *The Pragmatic Programmer*, 2nd edition.
+   Addison-Wesley, 2019. ISBN 978-0-13-595705-9. Source for the Tell, Don't
+   Ask companion discipline referenced in dimension 8.
+8. PMD project. "PMD 6.19.0 released."
+   https://pmd.github.io/2019/10/31/PMD-6.19.0/ Verified 2026-08-02. Source
+   for the `LawOfDemeter` static analysis rule and its builder exception
+   cited in dimension 9.
+9. Ruby on Rails API documentation. `Module#delegate`.
+   https://api.rubyonrails.org/classes/Module.html#method-i-delegate
+   Verified 2026-08-02. Source for the delegation-generator production use in
+   dimension 9. The connection to the Law of Demeter by name is this entry's
+   own analysis, not a claim made by the cited documentation.
+
 ## Code examples
 
 Three languages chosen for how differently the discipline shows up in each.
@@ -939,44 +980,3 @@ if __name__ == "__main__":
     print(shipping_cost(customer))
     print(summary_line(OrderSummary("A. Person", "SF")))
 ```
-
-## 18. References
-
-1. Karl J. Lieberherr and Ian M. Holland. "Formulations of the Law of
-   Demeter." Technical Report NU-CCS-88-11 (Demeter-2), Northeastern
-   University College of Computer Science, June 1988. Source of the first
-   written statement of the rule and its origin in Ian Holland's work at
-   Northeastern in late 1987.
-2. Karl J. Lieberherr, Ian M. Holland, and Arthur J. Riel. "Object-Oriented
-   Programming. An Objective Sense of Style." ACM SIGPLAN Notices, OOPSLA '88
-   proceedings, 1988. https://dl.acm.org/doi/10.1145/62084.62113 Verified
-   2026-08-02. The paper that brought the guideline to a wide OOPSLA
-   audience.
-3. Northeastern University Demeter Project. "The Law of Demeter, General
-   Formulation."
-   https://www2.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/general-formulation.html
-   Verified 2026-08-02. Source for the exact wording of both the general
-   formulation and the object-oriented friend list in dimension 5.
-4. Wikipedia contributors. "Law of Demeter."
-   https://en.wikipedia.org/wiki/Law_of_Demeter Verified 2026-08-02. Used to
-   confirm the origin date, the Demeter Project naming, and the standard
-   criticisms restated in dimension 3 and dimension 10.
-5. Wikipedia contributors. "Fluent interface."
-   https://en.wikipedia.org/wiki/Fluent_interface Verified 2026-08-02. Source
-   for the 2005 Evans and Fowler coinage cited in dimension 4.
-6. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
-   edition. Addison-Wesley, 2018. ISBN 978-0-13-475759-9. Catalog entries
-   "Hide Delegate" and "Remove Middle Man." Source for the refactoring steps
-   in dimension 14 and the production use in dimension 9.
-7. Andrew Hunt and David Thomas. *The Pragmatic Programmer*, 2nd edition.
-   Addison-Wesley, 2019. ISBN 978-0-13-595705-9. Source for the Tell, Don't
-   Ask companion discipline referenced in dimension 8.
-8. PMD project. "PMD 6.19.0 released."
-   https://pmd.github.io/2019/10/31/PMD-6.19.0/ Verified 2026-08-02. Source
-   for the `LawOfDemeter` static analysis rule and its builder exception
-   cited in dimension 9.
-9. Ruby on Rails API documentation. `Module#delegate`.
-   https://api.rubyonrails.org/classes/Module.html#method-i-delegate
-   Verified 2026-08-02. Source for the delegation-generator production use in
-   dimension 9. The connection to the Law of Demeter by name is this entry's
-   own analysis, not a claim made by the cited documentation.

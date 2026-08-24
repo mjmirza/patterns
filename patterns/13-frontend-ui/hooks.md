@@ -437,6 +437,16 @@ sensitive data in principle, but it is worth naming explicitly, since
 an effect's side-effecting nature makes it an easy place to overlook
 during a security review focused mainly on rendered output.
 
+## 18. References
+
+1. React Blog. "React v16.8.0". 6 February 2019.
+   https://legacy.reactjs.org/blog/2019/02/06/react-v16.8.0.html
+   Verified 2026-08-21. Source of the first_described lineage claim
+   and the defining sentence.
+2. Vercel. "SWR README". vercel/swr.
+   https://github.com/vercel/swr
+   Verified 2026-08-21. Source for the production use in dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -567,13 +577,3 @@ model.subscribe(to: subject.eraseToAnyPublisher())
 subject.send("first comment")
 print(model.value)
 ```
-
-## 18. References
-
-1. React Blog. "React v16.8.0". 6 February 2019.
-   https://legacy.reactjs.org/blog/2019/02/06/react-v16.8.0.html
-   Verified 2026-08-21. Source of the first_described lineage claim
-   and the defining sentence.
-2. Vercel. "SWR README". vercel/swr.
-   https://github.com/vercel/swr
-   Verified 2026-08-21. Source for the production use in dimension 9.

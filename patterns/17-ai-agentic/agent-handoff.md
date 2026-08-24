@@ -816,6 +816,34 @@ agent, acting under which instructions, actually produced a given
 user-facing statement when something goes wrong and someone needs to
 determine which specialist's prompt or tool was responsible.
 
+## 18. References
+
+- OpenAI. "Handoffs." OpenAI Agents SDK documentation.
+  [https://openai.github.io/openai-agents-python/handoffs/](https://openai.github.io/openai-agents-python/handoffs/).
+  Verified 2026-08-02.
+- OpenAI. "swarm" repository README.
+  [https://github.com/openai/swarm](https://github.com/openai/swarm).
+  Verified 2026-08-02.
+- Microsoft. "Handoffs." AutoGen core user guide, design patterns.
+  [https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/handoffs.html](https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/handoffs.html).
+  Verified 2026-08-02.
+- Microsoft. "Swarm." AutoGen AgentChat user guide.
+  [https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/swarm.html](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/swarm.html).
+  Verified 2026-08-02.
+- Microsoft. "Handoff Agent Orchestration." Semantic Kernel documentation.
+  [https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/agent-orchestration/handoff](https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/agent-orchestration/handoff).
+  Verified 2026-08-02.
+- LangChain. "Graph API." LangGraph documentation.
+  [https://docs.langchain.com/oss/python/langgraph/graph-api](https://docs.langchain.com/oss/python/langgraph/graph-api).
+  Verified 2026-08-02.
+- Google. "Life of a Task." Agent2Agent (A2A) protocol documentation.
+  [https://a2a-protocol.org/latest/topics/life-of-a-task/](https://a2a-protocol.org/latest/topics/life-of-a-task/).
+  Verified 2026-08-02.
+- Anthropic. "How we built our multi-agent research system." Anthropic
+  Engineering blog.
+  [https://www.anthropic.com/engineering/multi-agent-research-system](https://www.anthropic.com/engineering/multi-agent-research-system).
+  Verified 2026-08-02.
+
 ## Code examples
 
 The following three implementations model the same coordinator, a source
@@ -1180,31 +1208,3 @@ func main() {
 	fmt.Println(c.AuditTrail())
 }
 ```
-
-## 18. References
-
-- OpenAI. "Handoffs." OpenAI Agents SDK documentation.
-  [https://openai.github.io/openai-agents-python/handoffs/](https://openai.github.io/openai-agents-python/handoffs/).
-  Verified 2026-08-02.
-- OpenAI. "swarm" repository README.
-  [https://github.com/openai/swarm](https://github.com/openai/swarm).
-  Verified 2026-08-02.
-- Microsoft. "Handoffs." AutoGen core user guide, design patterns.
-  [https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/handoffs.html](https://microsoft.github.io/autogen/stable/user-guide/core-user-guide/design-patterns/handoffs.html).
-  Verified 2026-08-02.
-- Microsoft. "Swarm." AutoGen AgentChat user guide.
-  [https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/swarm.html](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/swarm.html).
-  Verified 2026-08-02.
-- Microsoft. "Handoff Agent Orchestration." Semantic Kernel documentation.
-  [https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/agent-orchestration/handoff](https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/agent-orchestration/handoff).
-  Verified 2026-08-02.
-- LangChain. "Graph API." LangGraph documentation.
-  [https://docs.langchain.com/oss/python/langgraph/graph-api](https://docs.langchain.com/oss/python/langgraph/graph-api).
-  Verified 2026-08-02.
-- Google. "Life of a Task." Agent2Agent (A2A) protocol documentation.
-  [https://a2a-protocol.org/latest/topics/life-of-a-task/](https://a2a-protocol.org/latest/topics/life-of-a-task/).
-  Verified 2026-08-02.
-- Anthropic. "How we built our multi-agent research system." Anthropic
-  Engineering blog.
-  [https://www.anthropic.com/engineering/multi-agent-research-system](https://www.anthropic.com/engineering/multi-agent-research-system).
-  Verified 2026-08-02.

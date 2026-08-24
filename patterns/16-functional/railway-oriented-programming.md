@@ -759,6 +759,42 @@ still need an audit event. A successful command may need one too. The railway
 can carry the business decision, but audit durability, redaction, retention, and
 access control belong to the system design around the workflow.
 
+## 18. References
+
+- Scott Wlaschin, "Railway oriented programming", *F# for fun and profit*,
+  11 May 2013,
+  https://fsharpforfunandprofit.com/posts/recipe-part2/, verified 2026-08-02.
+- Scott Wlaschin, "Railway Oriented Programming", *F# for fun and profit* talk
+  page, https://fsharpforfunandprofit.com/rop/, verified 2026-08-02.
+- Scott Wlaschin, "Railway Oriented Programming. A functional approach to error
+  handling", Speaker Deck, 14 March 2014,
+  https://speakerdeck.com/swlaschin/railway-oriented-programming-a-functional-approach-to-error-handling,
+  verified 2026-08-02.
+- Scott Wlaschin, "Against Railway-Oriented Programming", *F# for fun and
+  profit*, 20 December 2019,
+  https://fsharpforfunandprofit.com/posts/against-railway-oriented-programming/,
+  verified 2026-08-02.
+- FSharp.Core documentation, "Result Module",
+  https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html,
+  verified 2026-08-02.
+- FSharp.Core documentation, "F# Core Library Documentation",
+  https://fsharp.github.io/fsharp-core-docs/, verified 2026-08-02.
+- Rust project, "Module core::result",
+  https://doc.rust-lang.org/core/result/, verified 2026-08-02.
+- Rust project, "Result in std::result",
+  https://doc.rust-lang.org/stable/std/result/enum.Result.html, verified
+  2026-08-02.
+- Apple Developer Documentation, "Result.flatMap(_:)",
+  https://developer.apple.com/documentation/swift/result/flatmap%28_%3A%29,
+  verified 2026-08-02.
+- supermacro, "neverthrow", npm package documentation,
+  https://www.npmjs.com/package/neverthrow, verified 2026-08-02.
+- ZIO documentation, "ZIO",
+  https://zio.dev/reference/core/zio/, verified 2026-08-02.
+- ZIO documentation, "Map Operations",
+  https://zio.dev/reference/error-management/operations/map-operations/,
+  verified 2026-08-02.
+
 ## Code examples
 
 ### TypeScript
@@ -935,39 +971,3 @@ func main() {
 	fmt.Println(Bind(parse("go"), requireLong))
 }
 ```
-
-## 18. References
-
-- Scott Wlaschin, "Railway oriented programming", *F# for fun and profit*,
-  11 May 2013,
-  https://fsharpforfunandprofit.com/posts/recipe-part2/, verified 2026-08-02.
-- Scott Wlaschin, "Railway Oriented Programming", *F# for fun and profit* talk
-  page, https://fsharpforfunandprofit.com/rop/, verified 2026-08-02.
-- Scott Wlaschin, "Railway Oriented Programming. A functional approach to error
-  handling", Speaker Deck, 14 March 2014,
-  https://speakerdeck.com/swlaschin/railway-oriented-programming-a-functional-approach-to-error-handling,
-  verified 2026-08-02.
-- Scott Wlaschin, "Against Railway-Oriented Programming", *F# for fun and
-  profit*, 20 December 2019,
-  https://fsharpforfunandprofit.com/posts/against-railway-oriented-programming/,
-  verified 2026-08-02.
-- FSharp.Core documentation, "Result Module",
-  https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html,
-  verified 2026-08-02.
-- FSharp.Core documentation, "F# Core Library Documentation",
-  https://fsharp.github.io/fsharp-core-docs/, verified 2026-08-02.
-- Rust project, "Module core::result",
-  https://doc.rust-lang.org/core/result/, verified 2026-08-02.
-- Rust project, "Result in std::result",
-  https://doc.rust-lang.org/stable/std/result/enum.Result.html, verified
-  2026-08-02.
-- Apple Developer Documentation, "Result.flatMap(_:)",
-  https://developer.apple.com/documentation/swift/result/flatmap%28_%3A%29,
-  verified 2026-08-02.
-- supermacro, "neverthrow", npm package documentation,
-  https://www.npmjs.com/package/neverthrow, verified 2026-08-02.
-- ZIO documentation, "ZIO",
-  https://zio.dev/reference/core/zio/, verified 2026-08-02.
-- ZIO documentation, "Map Operations",
-  https://zio.dev/reference/error-management/operations/map-operations/,
-  verified 2026-08-02.

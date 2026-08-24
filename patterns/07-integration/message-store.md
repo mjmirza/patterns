@@ -859,6 +859,59 @@ errors by appending a reversing event rather than editing the log
 ([martinfowler.com, Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html),
 verified 2026-08-02).
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. System Management section, the "Message Store" entry
+   and the "Systems Management Example" that opens the section. Source of
+   the pattern's canonical name, its solution structure, and its positioning
+   relative to Control Bus, Wire Tap, and Message History.
+2. Gregor Hohpe, Bobby Woolf. *EnterpriseIntegrationPatterns.com*, "Message
+   Store".
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageStore.html
+   Verified 2026-08-02. Source of the quoted problem statement and the
+   description of the fire-and-forget secondary channel and Wire Tap feed
+   mechanism.
+3. Gregor Hohpe, Bobby Woolf. *EnterpriseIntegrationPatterns.com*, System
+   Management patterns index.
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/
+   Verified 2026-08-02. Source of the eight-pattern grouping under "Systems
+   Mgmt.".
+4. Gregor Hohpe, Bobby Woolf. *EnterpriseIntegrationPatterns.com*, book
+   table of contents. https://www.enterpriseintegrationpatterns.com/toc.html
+   Verified 2026-08-02. Source of the section's position in the book
+   relative to Message Routing, Message Transformation, and Messaging
+   Endpoints, and the loan broker "Systems Management Example."
+5. VMware Tanzu, Broadcom. *Spring Integration Reference Documentation*,
+   "Message Store".
+   https://docs.spring.io/spring-integration/reference/message-store.html
+   Verified 2026-08-02. Source for the `MessageStore` and `MessageGroupStore`
+   interfaces, their production use inside `QueueChannel`, Aggregator,
+   Delayer, and Claim Check, the `SimpleMessageStore`, `JdbcMessageStore`,
+   `RedisMessageStore`, `MongoDbMessageStore`, and `HazelcastMessageStore`
+   implementations, the serialization limitation on non-serializable
+   headers, the lazy-load and streaming read-path performance note, and the
+   `LockRegistry` thread-safety mechanism.
+6. Salesforce, MuleSoft. *MuleSoft Documentation*, "Object Store".
+   https://docs.mulesoft.com/object-store/
+   Verified 2026-08-02. Source for Object Store v2's purpose, its 10 MB
+   per-value limit, unlimited entry count, FIPS 140-2 compliant encryption
+   and end-to-end TLS, and its rolling and static time-to-live retention
+   model.
+7. Particular Software. *NServiceBus Documentation*, "Outbox".
+   https://docs.particular.net/nservicebus/outbox/
+   Verified 2026-08-02. Source for the transactional write of outgoing
+   messages and deduplication records alongside business data, deduplication
+   by `MessageId`, the two-phase receive-then-dispatch flow, and the list of
+   supported storage backends.
+8. Martin Fowler. "Event Sourcing." *martinfowler.com*, published
+   2005-12-12. https://martinfowler.com/eaaDev/EventSourcing.html
+   Verified 2026-08-02. Source for the Event Sourcing definition used in
+   dimension 4's non-applicability list, dimension 11's misuse case,
+   dimension 12's trade-off matrix, and the append-only correction
+   discipline cited in dimension 17.
+
 ## Code examples
 
 Three implementations below show three of the variants named in dimension 8,
@@ -1076,56 +1129,3 @@ func main() {
 The mutex-guarded map with an explicit TTL and an `Evict` pass mirrors the
 retention discipline of MuleSoft's Object Store v2 in miniature, a bounded
 window applied to every entry rather than left to an unmanaged table.
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. System Management section, the "Message Store" entry
-   and the "Systems Management Example" that opens the section. Source of
-   the pattern's canonical name, its solution structure, and its positioning
-   relative to Control Bus, Wire Tap, and Message History.
-2. Gregor Hohpe, Bobby Woolf. *EnterpriseIntegrationPatterns.com*, "Message
-   Store".
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageStore.html
-   Verified 2026-08-02. Source of the quoted problem statement and the
-   description of the fire-and-forget secondary channel and Wire Tap feed
-   mechanism.
-3. Gregor Hohpe, Bobby Woolf. *EnterpriseIntegrationPatterns.com*, System
-   Management patterns index.
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/
-   Verified 2026-08-02. Source of the eight-pattern grouping under "Systems
-   Mgmt.".
-4. Gregor Hohpe, Bobby Woolf. *EnterpriseIntegrationPatterns.com*, book
-   table of contents. https://www.enterpriseintegrationpatterns.com/toc.html
-   Verified 2026-08-02. Source of the section's position in the book
-   relative to Message Routing, Message Transformation, and Messaging
-   Endpoints, and the loan broker "Systems Management Example."
-5. VMware Tanzu, Broadcom. *Spring Integration Reference Documentation*,
-   "Message Store".
-   https://docs.spring.io/spring-integration/reference/message-store.html
-   Verified 2026-08-02. Source for the `MessageStore` and `MessageGroupStore`
-   interfaces, their production use inside `QueueChannel`, Aggregator,
-   Delayer, and Claim Check, the `SimpleMessageStore`, `JdbcMessageStore`,
-   `RedisMessageStore`, `MongoDbMessageStore`, and `HazelcastMessageStore`
-   implementations, the serialization limitation on non-serializable
-   headers, the lazy-load and streaming read-path performance note, and the
-   `LockRegistry` thread-safety mechanism.
-6. Salesforce, MuleSoft. *MuleSoft Documentation*, "Object Store".
-   https://docs.mulesoft.com/object-store/
-   Verified 2026-08-02. Source for Object Store v2's purpose, its 10 MB
-   per-value limit, unlimited entry count, FIPS 140-2 compliant encryption
-   and end-to-end TLS, and its rolling and static time-to-live retention
-   model.
-7. Particular Software. *NServiceBus Documentation*, "Outbox".
-   https://docs.particular.net/nservicebus/outbox/
-   Verified 2026-08-02. Source for the transactional write of outgoing
-   messages and deduplication records alongside business data, deduplication
-   by `MessageId`, the two-phase receive-then-dispatch flow, and the list of
-   supported storage backends.
-8. Martin Fowler. "Event Sourcing." *martinfowler.com*, published
-   2005-12-12. https://martinfowler.com/eaaDev/EventSourcing.html
-   Verified 2026-08-02. Source for the Event Sourcing definition used in
-   dimension 4's non-applicability list, dimension 11's misuse case,
-   dimension 12's trade-off matrix, and the append-only correction
-   discipline cited in dimension 17.

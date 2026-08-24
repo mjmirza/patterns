@@ -832,6 +832,59 @@ treating the redaction, access control, retention, and third-party review
 steps named in dimensions 3, 4, and 11 as required parts of adopting Agent
 Tracing, not optional hardening to add once time allows.
 
+## 18. References
+
+1. Benjamin H. Sigelman, Luiz Andre Barroso, Mike Burrows, Pat Stephenson,
+   Manoj Plakal, Donald Beaver, Saul Jaspan, Chandan Shanbhag. "Dapper, a
+   Large-Scale Distributed Systems Tracing Infrastructure". Google Technical
+   Report dapper-2010-1, 2010.
+   https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/
+   Verified 2026-08-02. Source for the trace-tree and span vocabulary this
+   entire pattern reuses, and for the low-overhead sampling design goal cited
+   in dimension 1.
+2. World Wide Web Consortium. "Trace Context". W3C Recommendation, 23 November
+   2021. https://www.w3.org/TR/trace-context/
+   Verified 2026-08-02. Source for the `traceparent` header format (version,
+   trace id, parent id, trace flags) cited in dimensions 1, 5, and 11.
+3. OpenTelemetry project. "What is OpenTelemetry".
+   https://opentelemetry.io/docs/what-is-opentelemetry/
+   Verified 2026-08-02. Source for the 2019 OpenTracing and OpenCensus merger
+   and the CNCF project status cited in dimension 1.
+4. OpenTelemetry GenAI Special Interest Group. "Semantic Conventions for
+   Generative AI Agent Spans". semantic-conventions-genai repository.
+   https://github.com/open-telemetry/semantic-conventions-genai/blob/main/docs/gen-ai/gen-ai-agent-spans.md
+   Verified 2026-08-02. Source for the `invoke_agent` span naming convention,
+   the `gen_ai.operation.name`, `gen_ai.agent.name`, `gen_ai.agent.id`, and
+   `gen_ai.provider.name` attributes used throughout dimensions 8, 9, and the
+   code examples.
+5. LangChain, Inc. "Observability". LangSmith documentation.
+   https://docs.langchain.com/langsmith/observability
+   Verified 2026-08-02. Source for the LangSmith production use in dimension 9
+   and the framework-integration variant in dimension 8.
+6. Langfuse GmbH. "Get Started with Observability". Langfuse documentation.
+   https://langfuse.com/docs/observability/get-started
+   Verified 2026-08-02. Source for the trace, observation, and generation
+   terminology and the OpenTelemetry OTLP compatibility cited in dimension 9.
+7. OpenAI. "Tracing". openai-agents-python documentation.
+   https://openai.github.io/openai-agents-python/tracing/
+   Verified 2026-08-02. Source for the `workflow_name`, `group_id`,
+   `function_span()`, `handoff_span()`, and `guardrail_span()` details in
+   dimensions 8 and 9.
+8. Datadog, Inc. "LLM Observability". Datadog documentation.
+   https://docs.datadoghq.com/llm_observability/
+   Verified 2026-08-02. Source for the agent-workflow trace model and
+   automatic-instrumentation claim in dimension 9.
+9. Jaeger project. "Jaeger Documentation".
+   https://www.jaegertracing.io/docs/latest/
+   Verified 2026-08-02. Source for Jaeger's 2016 Uber origin, its CNCF
+   graduated status, and the Jaeger v2 rebuild on the OpenTelemetry Collector,
+   cited in dimensions 1 and 9.
+10. Anthropic. "Monitoring usage". Claude Code documentation.
+    https://code.claude.com/docs/en/monitoring-usage
+    Verified 2026-08-02. Source for the `claude_code.interaction` span
+    hierarchy and the enhanced-telemetry beta flag cited in dimensions 8
+    and 9.
+
 ## Code examples
 
 The three implementations below share one design. A minimal, dependency-free
@@ -1475,56 +1528,3 @@ A real deployment replaces the in-memory exporter shown in all three examples
 with an OTLP client sending to a collector, and replaces the deterministic
 `callLlm`/`callLLM` stand-in with a real model client call wrapped exactly the
 same way, since the span boundary is what matters, not what happens inside it.
-
-## 18. References
-
-1. Benjamin H. Sigelman, Luiz Andre Barroso, Mike Burrows, Pat Stephenson,
-   Manoj Plakal, Donald Beaver, Saul Jaspan, Chandan Shanbhag. "Dapper, a
-   Large-Scale Distributed Systems Tracing Infrastructure". Google Technical
-   Report dapper-2010-1, 2010.
-   https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/
-   Verified 2026-08-02. Source for the trace-tree and span vocabulary this
-   entire pattern reuses, and for the low-overhead sampling design goal cited
-   in dimension 1.
-2. World Wide Web Consortium. "Trace Context". W3C Recommendation, 23 November
-   2021. https://www.w3.org/TR/trace-context/
-   Verified 2026-08-02. Source for the `traceparent` header format (version,
-   trace id, parent id, trace flags) cited in dimensions 1, 5, and 11.
-3. OpenTelemetry project. "What is OpenTelemetry".
-   https://opentelemetry.io/docs/what-is-opentelemetry/
-   Verified 2026-08-02. Source for the 2019 OpenTracing and OpenCensus merger
-   and the CNCF project status cited in dimension 1.
-4. OpenTelemetry GenAI Special Interest Group. "Semantic Conventions for
-   Generative AI Agent Spans". semantic-conventions-genai repository.
-   https://github.com/open-telemetry/semantic-conventions-genai/blob/main/docs/gen-ai/gen-ai-agent-spans.md
-   Verified 2026-08-02. Source for the `invoke_agent` span naming convention,
-   the `gen_ai.operation.name`, `gen_ai.agent.name`, `gen_ai.agent.id`, and
-   `gen_ai.provider.name` attributes used throughout dimensions 8, 9, and the
-   code examples.
-5. LangChain, Inc. "Observability". LangSmith documentation.
-   https://docs.langchain.com/langsmith/observability
-   Verified 2026-08-02. Source for the LangSmith production use in dimension 9
-   and the framework-integration variant in dimension 8.
-6. Langfuse GmbH. "Get Started with Observability". Langfuse documentation.
-   https://langfuse.com/docs/observability/get-started
-   Verified 2026-08-02. Source for the trace, observation, and generation
-   terminology and the OpenTelemetry OTLP compatibility cited in dimension 9.
-7. OpenAI. "Tracing". openai-agents-python documentation.
-   https://openai.github.io/openai-agents-python/tracing/
-   Verified 2026-08-02. Source for the `workflow_name`, `group_id`,
-   `function_span()`, `handoff_span()`, and `guardrail_span()` details in
-   dimensions 8 and 9.
-8. Datadog, Inc. "LLM Observability". Datadog documentation.
-   https://docs.datadoghq.com/llm_observability/
-   Verified 2026-08-02. Source for the agent-workflow trace model and
-   automatic-instrumentation claim in dimension 9.
-9. Jaeger project. "Jaeger Documentation".
-   https://www.jaegertracing.io/docs/latest/
-   Verified 2026-08-02. Source for Jaeger's 2016 Uber origin, its CNCF
-   graduated status, and the Jaeger v2 rebuild on the OpenTelemetry Collector,
-   cited in dimensions 1 and 9.
-10. Anthropic. "Monitoring usage". Claude Code documentation.
-    https://code.claude.com/docs/en/monitoring-usage
-    Verified 2026-08-02. Source for the `claude_code.interaction` span
-    hierarchy and the enhanced-telemetry beta flag cited in dimensions 8
-    and 9.

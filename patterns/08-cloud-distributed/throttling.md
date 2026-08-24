@@ -1045,6 +1045,56 @@ a legitimate caller's identity or address, if either is spoofable or
 sharable, and get the system to deny service to someone it was never
 targeting.
 
+## 18. References
+
+1. Alex Homer, John Sharp, Larry Brader, Masashi Narumoto, Trent Swanson,
+   *Cloud Design Patterns, Prescriptive Architecture Guidance for Cloud
+   Applications*, Microsoft patterns and practices, 2014, ISBN
+   9781621140368, chapter "Throttling Pattern." Verified via
+   [abebooks.com](https://www.abebooks.com/9781621140368/Cloud-Design-Patterns-Prescriptive-Architecture-1621140369/plp),
+   2026-08-02.
+2. Microsoft Learn, "Throttling Pattern, Azure Architecture Center,"
+   [learn.microsoft.com/en-us/azure/architecture/patterns/throttling](https://learn.microsoft.com/en-us/azure/architecture/patterns/throttling),
+   verified 2026-08-02.
+3. Microsoft Learn, "Rate Limiting Pattern, Azure Architecture Center,"
+   [learn.microsoft.com/en-us/azure/architecture/patterns/rate-limiting-pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/rate-limiting-pattern),
+   verified 2026-08-02.
+4. Microsoft Learn, "Microsoft Graph throttling guidance,"
+   [learn.microsoft.com/en-us/graph/throttling](https://learn.microsoft.com/en-us/graph/throttling),
+   verified 2026-08-02.
+5. Shopify, "Rate limits,"
+   [shopify.dev/docs/api/usage/rate-limits](https://shopify.dev/docs/api/usage/rate-limits),
+   verified 2026-08-02.
+6. Kubernetes, "API Priority and Fairness,"
+   [kubernetes.io/docs/concepts/cluster-administration/flow-control](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/),
+   verified 2026-08-02.
+7. Netflix, `concurrency-limits`,
+   [github.com/Netflix/concurrency-limits](https://github.com/Netflix/concurrency-limits),
+   verified 2026-08-02.
+8. Stripe, "Scaling your API with rate limiters,"
+   [stripe.com/blog/rate-limiters](https://stripe.com/blog/rate-limiters),
+   verified 2026-08-02.
+9. Google, *Site Reliability Engineering*, chapter 21, "Handling
+   Overload,"
+   [sre.google/sre-book/handling-overload](https://sre.google/sre-book/handling-overload/),
+   verified 2026-08-02.
+10. nginx, `ngx_http_limit_req_module`,
+    [nginx.org/en/docs/http/ngx_http_limit_req_module.html](https://nginx.org/en/docs/http/ngx_http_limit_req_module.html),
+    verified 2026-08-02.
+11. Envoy, "Local rate limit," HTTP filter documentation,
+    [envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/local_rate_limit_filter](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/local_rate_limit_filter),
+    verified 2026-08-02.
+12. Mark Nottingham, Roy T. Fielding, *RFC 6585, Additional HTTP Status
+    Codes*, April 2012, section 4,
+    [rfc-editor.org/rfc/rfc6585.html](https://www.rfc-editor.org/rfc/rfc6585.html),
+    verified 2026-08-02.
+13. Roy T. Fielding, Julian Reschke, editors, *RFC 9110, HTTP Semantics*,
+    June 2022, section 10.2.3, "Retry-After,"
+    [rfc-editor.org/rfc/rfc9110.html#name-retry-after](https://www.rfc-editor.org/rfc/rfc9110.html#name-retry-after),
+    verified 2026-08-02.
+14. Van Jacobson, "Congestion Avoidance and Control," *ACM SIGCOMM
+    Computer Communication Review*, 18, 4, August 1988, pages 314 to 329.
+
 ## Code
 
 ### Go, graceful degradation with tiered feature shedding and a hysteresis restore band
@@ -1366,53 +1416,3 @@ Environment was available on the machine this entry was authored on, `javac
 -version` returned "Unable to locate a Java Runtime," so no Java sample here
 was compiled, and none is included rather than presented as though it had
 been.
-
-## 18. References
-
-1. Alex Homer, John Sharp, Larry Brader, Masashi Narumoto, Trent Swanson,
-   *Cloud Design Patterns, Prescriptive Architecture Guidance for Cloud
-   Applications*, Microsoft patterns and practices, 2014, ISBN
-   9781621140368, chapter "Throttling Pattern." Verified via
-   [abebooks.com](https://www.abebooks.com/9781621140368/Cloud-Design-Patterns-Prescriptive-Architecture-1621140369/plp),
-   2026-08-02.
-2. Microsoft Learn, "Throttling Pattern, Azure Architecture Center,"
-   [learn.microsoft.com/en-us/azure/architecture/patterns/throttling](https://learn.microsoft.com/en-us/azure/architecture/patterns/throttling),
-   verified 2026-08-02.
-3. Microsoft Learn, "Rate Limiting Pattern, Azure Architecture Center,"
-   [learn.microsoft.com/en-us/azure/architecture/patterns/rate-limiting-pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/rate-limiting-pattern),
-   verified 2026-08-02.
-4. Microsoft Learn, "Microsoft Graph throttling guidance,"
-   [learn.microsoft.com/en-us/graph/throttling](https://learn.microsoft.com/en-us/graph/throttling),
-   verified 2026-08-02.
-5. Shopify, "Rate limits,"
-   [shopify.dev/docs/api/usage/rate-limits](https://shopify.dev/docs/api/usage/rate-limits),
-   verified 2026-08-02.
-6. Kubernetes, "API Priority and Fairness,"
-   [kubernetes.io/docs/concepts/cluster-administration/flow-control](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/),
-   verified 2026-08-02.
-7. Netflix, `concurrency-limits`,
-   [github.com/Netflix/concurrency-limits](https://github.com/Netflix/concurrency-limits),
-   verified 2026-08-02.
-8. Stripe, "Scaling your API with rate limiters,"
-   [stripe.com/blog/rate-limiters](https://stripe.com/blog/rate-limiters),
-   verified 2026-08-02.
-9. Google, *Site Reliability Engineering*, chapter 21, "Handling
-   Overload,"
-   [sre.google/sre-book/handling-overload](https://sre.google/sre-book/handling-overload/),
-   verified 2026-08-02.
-10. nginx, `ngx_http_limit_req_module`,
-    [nginx.org/en/docs/http/ngx_http_limit_req_module.html](https://nginx.org/en/docs/http/ngx_http_limit_req_module.html),
-    verified 2026-08-02.
-11. Envoy, "Local rate limit," HTTP filter documentation,
-    [envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/local_rate_limit_filter](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/local_rate_limit_filter),
-    verified 2026-08-02.
-12. Mark Nottingham, Roy T. Fielding, *RFC 6585, Additional HTTP Status
-    Codes*, April 2012, section 4,
-    [rfc-editor.org/rfc/rfc6585.html](https://www.rfc-editor.org/rfc/rfc6585.html),
-    verified 2026-08-02.
-13. Roy T. Fielding, Julian Reschke, editors, *RFC 9110, HTTP Semantics*,
-    June 2022, section 10.2.3, "Retry-After,"
-    [rfc-editor.org/rfc/rfc9110.html#name-retry-after](https://www.rfc-editor.org/rfc/rfc9110.html#name-retry-after),
-    verified 2026-08-02.
-14. Van Jacobson, "Congestion Avoidance and Control," *ACM SIGCOMM
-    Computer Communication Review*, 18, 4, August 1988, pages 314 to 329.

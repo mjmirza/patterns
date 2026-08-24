@@ -812,6 +812,26 @@ fetch does not change whether data at rest or in transit is encrypted, that
 is a separate, orthogonal control that should already be in place
 regardless of how wide or narrow any given query is.
 
+## 18. References
+
+1. Microsoft. EF Core documentation, Efficient Querying, sections Project
+   only properties you need and Beware of lazy loading.
+   https://learn.microsoft.com/en-us/ef/core/performance/efficient-querying
+   Verified 2026-08-02. Source for the projection example, fetching four
+   unused columns to read one, the generated SQL before and after the fix,
+   and the named N+1 lazy loading warning in dimensions 1, 9, and 11.
+2. Django Software Foundation. Django 5.2 documentation, QuerySet API
+   reference, `select_related()`.
+   https://docs.djangoproject.com/en/5.2/ref/models/querysets/#select-related
+   Verified 2026-08-02. Source for the two query versus one query example
+   and the deluge of database queries framing used in dimension 9.
+3. Ruby on Rails. Active Record Query Interface guide, section Eager
+   Loading Associations.
+   https://guides.rubyonrails.org/active_record_querying.html#eager-loading-associations
+   Verified 2026-08-02. Source for the eleven queries versus two queries
+   worked example cited in dimension 9 and used to illustrate the N+1
+   sibling's dynamics in dimension 7.
+
 ## Code examples
 
 Three languages, each idiomatic for a different layer where this antipattern
@@ -986,26 +1006,6 @@ func main() {
 	_ = full
 }
 ```
-
-## 18. References
-
-1. Microsoft. EF Core documentation, Efficient Querying, sections Project
-   only properties you need and Beware of lazy loading.
-   https://learn.microsoft.com/en-us/ef/core/performance/efficient-querying
-   Verified 2026-08-02. Source for the projection example, fetching four
-   unused columns to read one, the generated SQL before and after the fix,
-   and the named N+1 lazy loading warning in dimensions 1, 9, and 11.
-2. Django Software Foundation. Django 5.2 documentation, QuerySet API
-   reference, `select_related()`.
-   https://docs.djangoproject.com/en/5.2/ref/models/querysets/#select-related
-   Verified 2026-08-02. Source for the two query versus one query example
-   and the deluge of database queries framing used in dimension 9.
-3. Ruby on Rails. Active Record Query Interface guide, section Eager
-   Loading Associations.
-   https://guides.rubyonrails.org/active_record_querying.html#eager-loading-associations
-   Verified 2026-08-02. Source for the eleven queries versus two queries
-   worked example cited in dimension 9 and used to illustrate the N+1
-   sibling's dynamics in dimension 7.
 
 ## Toolchain notes
 

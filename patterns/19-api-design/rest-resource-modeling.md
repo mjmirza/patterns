@@ -161,6 +161,11 @@ Skip it for an API whose primary job is invoking discrete actions or long-runnin
 - A nested resource path that exposes a parent identifier in the URL should not leak information about resources the requester is not authorized to know exist.
 - Standard HTTP method semantics, especially the idempotency expected of PUT and the safety expected of GET, should genuinely hold in the implementation, since a client or an intermediary cache may rely on those guarantees being true.
 
+## 18. References
+
+- Roy Fielding, Architectural Styles and the Design of Network-based Software Architectures, Chapter 5 (https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+- Google, API Improvement Proposals, AIP-121, Resource-oriented design (https://google.aip.dev/121)
+
 ## Code examples
 
 ### Python
@@ -283,8 +288,3 @@ collection.create(teamID: "t1", name: "Platform")
 print("read " + String(describing: collection.get(teamID: "t1")))
 print("list count " + String(collection.list().count))
 ```
-
-## 18. References
-
-- Roy Fielding, Architectural Styles and the Design of Network-based Software Architectures, Chapter 5 (https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
-- Google, API Improvement Proposals, AIP-121, Resource-oriented design (https://google.aip.dev/121)

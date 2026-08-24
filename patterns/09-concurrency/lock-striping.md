@@ -717,6 +717,32 @@ information about which specific keys are hot, but that concern belongs to
 the metrics design generally and is not specific to the striping technique
 itself.
 
+## 18. References
+
+1. Brian Goetz, Tim Peierls, Joshua Bloch, Joseph Bowbeer, David Holmes, Doug
+   Lea, *Java Concurrency in Practice*, Addison-Wesley, 2006, Chapter 11,
+   "Performance and Scalability", section on lock splitting and lock
+   striping.
+2. Doug Lea, *Concurrent Programming in Java. Design Principles and
+   Patterns*, 2nd edition, Addison-Wesley, 1999, discussion of partitioned
+   synchronization for collection classes under heavy concurrent load.
+3. Oracle, ConcurrentHashMap class documentation, Java SE 7,
+   https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html,
+   verified 2026-08-02.
+4. Oracle, ConcurrentHashMap class documentation, Java SE 17,
+   https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html,
+   verified 2026-08-02.
+5. Oracle, LongAdder class documentation, Java SE 17,
+   https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/atomic/LongAdder.html,
+   verified 2026-08-02.
+6. Google, Guava Striped class documentation, release 33.0.0-jre,
+   https://guava.dev/releases/33.0.0-jre/api/docs/com/google/common/util/concurrent/Striped.html,
+   verified 2026-08-02.
+7. PostgreSQL Global Development Group, lock manager internal design notes,
+   src/backend/storage/lmgr/README,
+   https://github.com/postgres/postgres/blob/master/src/backend/storage/lmgr/README,
+   verified 2026-08-02.
+
 ## Code examples
 
 Three languages are used, chosen because each exercises the pattern in a
@@ -1018,29 +1044,3 @@ the same account would both read the same stale `current` value before either
 one wrote back, and the final total would be lower than 500 due to a lost
 update, exactly the same class of bug lock striping prevents with real
 threads, reproduced here in an environment with no threads at all.
-
-## 18. References
-
-1. Brian Goetz, Tim Peierls, Joshua Bloch, Joseph Bowbeer, David Holmes, Doug
-   Lea, *Java Concurrency in Practice*, Addison-Wesley, 2006, Chapter 11,
-   "Performance and Scalability", section on lock splitting and lock
-   striping.
-2. Doug Lea, *Concurrent Programming in Java. Design Principles and
-   Patterns*, 2nd edition, Addison-Wesley, 1999, discussion of partitioned
-   synchronization for collection classes under heavy concurrent load.
-3. Oracle, ConcurrentHashMap class documentation, Java SE 7,
-   https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html,
-   verified 2026-08-02.
-4. Oracle, ConcurrentHashMap class documentation, Java SE 17,
-   https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html,
-   verified 2026-08-02.
-5. Oracle, LongAdder class documentation, Java SE 17,
-   https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/atomic/LongAdder.html,
-   verified 2026-08-02.
-6. Google, Guava Striped class documentation, release 33.0.0-jre,
-   https://guava.dev/releases/33.0.0-jre/api/docs/com/google/common/util/concurrent/Striped.html,
-   verified 2026-08-02.
-7. PostgreSQL Global Development Group, lock manager internal design notes,
-   src/backend/storage/lmgr/README,
-   https://github.com/postgres/postgres/blob/master/src/backend/storage/lmgr/README,
-   verified 2026-08-02.

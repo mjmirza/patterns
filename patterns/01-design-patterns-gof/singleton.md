@@ -856,6 +856,74 @@ next step of logging cache keys to diagnose a duplicate-instance problem, becaus
 a cache key on a process-wide object frequently contains a user or tenant
 identifier. Log key counts and hit rate rather than keys.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 3, Creational Patterns, section Singleton. Source
+   of the two-part intent, the single participant, and the structure.
+2. Bill Pugh (maintainer), signed by David Bacon, Joshua Bloch, Cliff Click,
+   Doug Lea, Jeremy Manson and others. "The 'Double-Checked Locking is Broken'
+   Declaration". University of Maryland.
+   https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
+   Verified 2026-08-02. Source for the reordering failure, the insufficiency of a
+   writer-side barrier alone, and the statement that a volatile field makes the
+   idiom work under the revised memory model delivered in Java 5 and not under
+   JDK 4 or earlier.
+3. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018.
+   ISBN 978-0-13-468599-1. Item 3, "Enforce the singleton property with a private
+   constructor or an enum type". Source for the serialization defence with
+   transient fields and `readResolve`, the reflective construction defence, and
+   the recommendation of the single-element enum.
+4. InformIT, with Erich Gamma, Richard Helm, Ralph Johnson. "Design Patterns 15
+   Years Later. An Interview with Erich Gamma, Richard Helm, and Ralph Johnson",
+   2009. https://www.informit.com/articles/article.aspx?p=1404056
+   Verified 2026-08-02. Source for Gamma's own position that he favours dropping
+   Singleton and that its use is almost always a design smell.
+5. Misko Hevery. "Singletons are Pathological Liars". Google Testing Blog,
+   17 August 2008.
+   https://testing.googleblog.com/2008/08/by-miko-hevery-so-you-join-new-project.html
+   Verified 2026-08-02. Source for the hidden-dependency argument and the test
+   that unexpectedly reaches real systems.
+6. Oracle. *The Java Virtual Machine Specification, Java SE 21 Edition*,
+   section 5.3, Creation and Loading.
+   https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-5.html
+   Verified 2026-08-02. Source for runtime type identity being the pair of binary
+   name and defining loader, which is why the guarantee is per class loader.
+7. VMware Tanzu. *Spring Framework reference documentation*, Core Technologies,
+   Bean Scopes.
+   https://docs.spring.io/spring-framework/reference/core/beans/factory-scopes.html
+   Verified 2026-08-02. Source for the explicit distinction between the GoF
+   pattern and container singleton scope, and for the per-container and per-bean
+   wording.
+8. Oracle. *Java SE 21 API Specification*, `java.lang.Runtime`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runtime.html
+   Verified 2026-08-02. Source for the single-instance-per-application statement
+   and the `getRuntime` accessor.
+9. Python Software Foundation. *Python 3 documentation*, `logging`.
+   https://docs.python.org/3/library/logging.html
+   Verified 2026-08-02. Source for `getLogger` returning the same object per name
+   and for the root logger.
+10. Python Software Foundation. *Python 3 language reference*, The import system.
+    https://docs.python.org/3/reference/import.html
+    Verified 2026-08-02. Source for `sys.modules` acting as the module cache, so a
+    module is a Singleton the runtime supplies.
+11. JetBrains. *Kotlin documentation*, Object declarations and expressions.
+    https://kotlinlang.org/docs/object-declarations.html
+    Verified 2026-08-02. Source for object declarations being lazily and
+    thread-safely initialized on first access.
+12. Rust project. *Rust standard library documentation*, `std::sync::OnceLock`.
+    https://doc.rust-lang.org/std/sync/struct.OnceLock.html
+    Verified 2026-08-02. Source for the thread-safe once-cell usable in statics
+    and the single-execution guarantee of `get_or_init`.
+13. Go project. *Go standard library documentation*, package `sync`.
+    https://pkg.go.dev/sync
+    Verified 2026-08-02. Source for `Once.Do` and `OnceValue` semantics.
+14. Microsoft. *.NET API documentation*, `System.Lazy<T>`.
+    https://learn.microsoft.com/en-us/dotnet/api/system.lazy-1
+    Verified 2026-08-02. Source for `Lazy<T>` being thread safe by default and for
+    the separation of laziness from instance count.
+
 ## Code examples
 
 Six languages, chosen to make three different points. Java shows the classical
@@ -1073,71 +1141,3 @@ var Get = sync.OnceValue(func() *Config {
 	return &Config{Retries: 3}
 })
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 3, Creational Patterns, section Singleton. Source
-   of the two-part intent, the single participant, and the structure.
-2. Bill Pugh (maintainer), signed by David Bacon, Joshua Bloch, Cliff Click,
-   Doug Lea, Jeremy Manson and others. "The 'Double-Checked Locking is Broken'
-   Declaration". University of Maryland.
-   https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
-   Verified 2026-08-02. Source for the reordering failure, the insufficiency of a
-   writer-side barrier alone, and the statement that a volatile field makes the
-   idiom work under the revised memory model delivered in Java 5 and not under
-   JDK 4 or earlier.
-3. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018.
-   ISBN 978-0-13-468599-1. Item 3, "Enforce the singleton property with a private
-   constructor or an enum type". Source for the serialization defence with
-   transient fields and `readResolve`, the reflective construction defence, and
-   the recommendation of the single-element enum.
-4. InformIT, with Erich Gamma, Richard Helm, Ralph Johnson. "Design Patterns 15
-   Years Later. An Interview with Erich Gamma, Richard Helm, and Ralph Johnson",
-   2009. https://www.informit.com/articles/article.aspx?p=1404056
-   Verified 2026-08-02. Source for Gamma's own position that he favours dropping
-   Singleton and that its use is almost always a design smell.
-5. Misko Hevery. "Singletons are Pathological Liars". Google Testing Blog,
-   17 August 2008.
-   https://testing.googleblog.com/2008/08/by-miko-hevery-so-you-join-new-project.html
-   Verified 2026-08-02. Source for the hidden-dependency argument and the test
-   that unexpectedly reaches real systems.
-6. Oracle. *The Java Virtual Machine Specification, Java SE 21 Edition*,
-   section 5.3, Creation and Loading.
-   https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-5.html
-   Verified 2026-08-02. Source for runtime type identity being the pair of binary
-   name and defining loader, which is why the guarantee is per class loader.
-7. VMware Tanzu. *Spring Framework reference documentation*, Core Technologies,
-   Bean Scopes.
-   https://docs.spring.io/spring-framework/reference/core/beans/factory-scopes.html
-   Verified 2026-08-02. Source for the explicit distinction between the GoF
-   pattern and container singleton scope, and for the per-container and per-bean
-   wording.
-8. Oracle. *Java SE 21 API Specification*, `java.lang.Runtime`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runtime.html
-   Verified 2026-08-02. Source for the single-instance-per-application statement
-   and the `getRuntime` accessor.
-9. Python Software Foundation. *Python 3 documentation*, `logging`.
-   https://docs.python.org/3/library/logging.html
-   Verified 2026-08-02. Source for `getLogger` returning the same object per name
-   and for the root logger.
-10. Python Software Foundation. *Python 3 language reference*, The import system.
-    https://docs.python.org/3/reference/import.html
-    Verified 2026-08-02. Source for `sys.modules` acting as the module cache, so a
-    module is a Singleton the runtime supplies.
-11. JetBrains. *Kotlin documentation*, Object declarations and expressions.
-    https://kotlinlang.org/docs/object-declarations.html
-    Verified 2026-08-02. Source for object declarations being lazily and
-    thread-safely initialized on first access.
-12. Rust project. *Rust standard library documentation*, `std::sync::OnceLock`.
-    https://doc.rust-lang.org/std/sync/struct.OnceLock.html
-    Verified 2026-08-02. Source for the thread-safe once-cell usable in statics
-    and the single-execution guarantee of `get_or_init`.
-13. Go project. *Go standard library documentation*, package `sync`.
-    https://pkg.go.dev/sync
-    Verified 2026-08-02. Source for `Once.Do` and `OnceValue` semantics.
-14. Microsoft. *.NET API documentation*, `System.Lazy<T>`.
-    https://learn.microsoft.com/en-us/dotnet/api/system.lazy-1
-    Verified 2026-08-02. Source for `Lazy<T>` being thread safe by default and for
-    the separation of laziness from instance count.

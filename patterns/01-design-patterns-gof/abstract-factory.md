@@ -644,6 +644,33 @@ hold credentials, because it is usually a long-lived shared singleton and a
 credential on it outlives every reasonable rotation window. Pass credentials to the
 product per call or per scope.
 
+## 18. References
+
+1. Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley Professional
+   Computing Series, first edition, 1994. Chapter 3, Creational Patterns, Abstract
+   Factory, page 87. Intent, participants, and the Kit alias are taken from this
+   entry.
+2. Addison-Wesley authorized chapter excerpt, Abstract Factory, Object Creational.
+   https://www.informit.com/articles/article.aspx?p=1398599
+   Verified 2026-08-02. Used to confirm the intent wording and the five participant
+   names AbstractFactory, ConcreteFactory, AbstractProduct, ConcreteProduct, Client.
+3. Oracle. *Java SE 21 API Specification*, class
+   `javax.xml.parsers.DocumentBuilderFactory`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/parsers/DocumentBuilderFactory.html
+   Verified 2026-08-02. Source for the JAXP factory API description, the
+   `newInstance()` lookup mechanism, and `newDocumentBuilder()`.
+4. Microsoft. *.NET API reference*, class `System.Data.Common.DbProviderFactory`,
+   System.Data.Common namespace.
+   https://learn.microsoft.com/en-us/dotnet/api/system.data.common.dbproviderfactory
+   Verified 2026-08-02. Source for the class summary, the `Create*` method family,
+   the derived provider factory list, the `CanCreate*` capability properties, and the
+   `DynamicallyAccessedMembers` trimming attribute.
+5. Oracle. *Java SE 21 API Specification*, class `java.awt.Toolkit`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Toolkit.html
+   Verified 2026-08-02. Source for the AWT peer binding description quoted in
+   dimension 9.
+
 ## Code examples
 
 Four languages are shown. Java is the platform form matching the production uses in
@@ -880,30 +907,3 @@ fn main() {
     println!("{}", out);
 }
 ```
-
-## 18. References
-
-1. Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley Professional
-   Computing Series, first edition, 1994. Chapter 3, Creational Patterns, Abstract
-   Factory, page 87. Intent, participants, and the Kit alias are taken from this
-   entry.
-2. Addison-Wesley authorized chapter excerpt, Abstract Factory, Object Creational.
-   https://www.informit.com/articles/article.aspx?p=1398599
-   Verified 2026-08-02. Used to confirm the intent wording and the five participant
-   names AbstractFactory, ConcreteFactory, AbstractProduct, ConcreteProduct, Client.
-3. Oracle. *Java SE 21 API Specification*, class
-   `javax.xml.parsers.DocumentBuilderFactory`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/parsers/DocumentBuilderFactory.html
-   Verified 2026-08-02. Source for the JAXP factory API description, the
-   `newInstance()` lookup mechanism, and `newDocumentBuilder()`.
-4. Microsoft. *.NET API reference*, class `System.Data.Common.DbProviderFactory`,
-   System.Data.Common namespace.
-   https://learn.microsoft.com/en-us/dotnet/api/system.data.common.dbproviderfactory
-   Verified 2026-08-02. Source for the class summary, the `Create*` method family,
-   the derived provider factory list, the `CanCreate*` capability properties, and the
-   `DynamicallyAccessedMembers` trimming attribute.
-5. Oracle. *Java SE 21 API Specification*, class `java.awt.Toolkit`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Toolkit.html
-   Verified 2026-08-02. Source for the AWT peer binding description quoted in
-   dimension 9.

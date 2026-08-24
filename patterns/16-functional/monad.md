@@ -760,6 +760,41 @@ affects fulfillment or rejection of the returned Promise
 verified 2026-08-02). Engineering judgement. Unhandled rejection monitoring is
 part of using Promise-like monadic sequencing in production.
 
+## 18. References
+
+- Haskell base documentation, `Control.Monad`, base 4.22.0.0,
+  https://hackage.haskell.org/package/base/docs/Control-Monad.html, verified
+  2026-08-02.
+- Haskell 2010 Language Report, chapter 13, `Control.Monad`,
+  https://www.haskell.org/onlinereport/haskell2010/haskellch13.html, verified
+  2026-08-02.
+- Philip Wadler, "The essence of functional programming", 19th ACM Symposium
+  on Principles of Programming Languages, 1992, sections 1 through 3,
+  https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf,
+  verified 2026-08-02.
+- Java SE 21 API documentation, `java.util.Optional`,
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html,
+  verified 2026-08-02.
+- Rust standard library documentation, `std::option::Option`,
+  https://doc.rust-lang.org/stable/std/option/enum.Option.html, verified
+  2026-08-02.
+- Rust standard library documentation, `std::result::Result`,
+  https://doc.rust-lang.org/stable/std/result/enum.Result.html, verified
+  2026-08-02.
+- Typelevel Cats documentation, `Monad`,
+  https://typelevel.org/cats/typeclasses/monad.html, verified 2026-08-02.
+- Cats Effect documentation, `IO`,
+  https://typelevel.org/cats-effect/docs/datatypes/io, verified 2026-08-02.
+- ZIO documentation, core `ZIO`,
+  https://zio.dev/reference/core/zio/, verified 2026-08-02.
+- fp-ts documentation, `Monad.ts`,
+  https://gcanti.github.io/fp-ts/modules/Monad.ts.html, verified 2026-08-02.
+- MDN Web Docs, `Promise.prototype.then()`,
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then,
+  verified 2026-08-02.
+- Typelevel Cats documentation, `Validated`,
+  https://typelevel.org/cats/datatypes/validated.html, verified 2026-08-02.
+
 ## Code examples
 
 The examples use Python, TypeScript, and Rust because those toolchains compiled
@@ -850,38 +885,3 @@ fn main() {
     println!("{}", port.unwrap());
 }
 ```
-
-## 18. References
-
-- Haskell base documentation, `Control.Monad`, base 4.22.0.0,
-  https://hackage.haskell.org/package/base/docs/Control-Monad.html, verified
-  2026-08-02.
-- Haskell 2010 Language Report, chapter 13, `Control.Monad`,
-  https://www.haskell.org/onlinereport/haskell2010/haskellch13.html, verified
-  2026-08-02.
-- Philip Wadler, "The essence of functional programming", 19th ACM Symposium
-  on Principles of Programming Languages, 1992, sections 1 through 3,
-  https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf,
-  verified 2026-08-02.
-- Java SE 21 API documentation, `java.util.Optional`,
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html,
-  verified 2026-08-02.
-- Rust standard library documentation, `std::option::Option`,
-  https://doc.rust-lang.org/stable/std/option/enum.Option.html, verified
-  2026-08-02.
-- Rust standard library documentation, `std::result::Result`,
-  https://doc.rust-lang.org/stable/std/result/enum.Result.html, verified
-  2026-08-02.
-- Typelevel Cats documentation, `Monad`,
-  https://typelevel.org/cats/typeclasses/monad.html, verified 2026-08-02.
-- Cats Effect documentation, `IO`,
-  https://typelevel.org/cats-effect/docs/datatypes/io, verified 2026-08-02.
-- ZIO documentation, core `ZIO`,
-  https://zio.dev/reference/core/zio/, verified 2026-08-02.
-- fp-ts documentation, `Monad.ts`,
-  https://gcanti.github.io/fp-ts/modules/Monad.ts.html, verified 2026-08-02.
-- MDN Web Docs, `Promise.prototype.then()`,
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then,
-  verified 2026-08-02.
-- Typelevel Cats documentation, `Validated`,
-  https://typelevel.org/cats/datatypes/validated.html, verified 2026-08-02.

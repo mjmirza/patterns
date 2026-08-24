@@ -777,6 +777,73 @@ invoice. The resource server must still evaluate ownership, tenant boundary,
 policy, legal hold, and data residency. Judgement. The most damaging OAuth
 misuse is treating token validation as the final authorization decision.
 
+## 18. References
+
+- Dick Hardt, ed., *The OAuth 2.0 Authorization Framework*, RFC 6749,
+  sections 1.1, 1.3, 4, and 4.1, October 2012,
+  https://www.rfc-editor.org/info/rfc6749/, verified 2026-08-02.
+- Michael B. Jones and Dick Hardt, *The OAuth 2.0 Authorization Framework.
+  Bearer Token Usage*, RFC 6750, sections 1.2, 2.1, and 5.3, October 2012,
+  https://www.rfc-editor.org/info/rfc6750/, verified 2026-08-02.
+- Nat Sakimura, John Bradley, and Naveen Agarwal, *Proof Key for Code Exchange
+  by OAuth Public Clients*, RFC 7636, sections 1 and 4, September 2015,
+  https://www.rfc-editor.org/info/rfc7636/, verified 2026-08-02.
+- William Denniss and John Bradley, *OAuth 2.0 for Native Apps*, RFC 8252,
+  section 6, October 2017, https://www.rfc-editor.org/info/rfc8252/, verified
+  2026-08-02.
+- Michael B. Jones, Nat Sakimura, and John Bradley, *OAuth 2.0 Authorization
+  Server Metadata*, RFC 8414, section 3, June 2018,
+  https://www.rfc-editor.org/info/rfc8414/, verified 2026-08-02.
+- William Denniss, John Bradley, Michael B. Jones, and Torsten Lodderstedt,
+  *OAuth 2.0 Device Authorization Grant*, RFC 8628, section 3, August 2019,
+  https://www.rfc-editor.org/info/rfc8628/, verified 2026-08-02.
+- Michael B. Jones, Anthony Nadalin, Brian Campbell, John Bradley, and
+  Charles Mortimore, *OAuth 2.0 Token Exchange*, RFC 8693, section 2, January
+  2020, https://www.rfc-editor.org/info/rfc8693/, verified 2026-08-02.
+- Brian Campbell, John Bradley, Nat Sakimura, and Torsten Lodderstedt, *OAuth
+  2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens*,
+  RFC 8705, sections 2 and 3, February 2020,
+  https://www.rfc-editor.org/info/rfc8705/, verified 2026-08-02.
+- Brian Campbell, John Bradley, and Hannes Tschofenig, *Resource Indicators
+  for OAuth 2.0*, RFC 8707, February 2020,
+  https://www.rfc-editor.org/info/rfc8707/, verified 2026-08-02.
+- Torsten Lodderstedt, Brian Campbell, Nat Sakimura, Dave Tonge, and Filip
+  Skokan, *OAuth 2.0 Pushed Authorization Requests*, RFC 9126, sections 2 and
+  4, September 2021, https://www.rfc-editor.org/info/rfc9126/, verified
+  2026-08-02.
+- Daniel Fett, Brian Campbell, John Bradley, Torsten Lodderstedt, Michael B.
+  Jones, and David Waite, *OAuth 2.0 Demonstrating Proof of Possession*, RFC
+  9449, September 2023, https://www.rfc-editor.org/info/rfc9449/, verified
+  2026-08-02.
+- Torsten Lodderstedt, John Bradley, Andrii Labunets, and Daniel Fett, *Best
+  Current Practice for OAuth 2.0 Security*, RFC 9700, sections 2.1, 2.2, 2.3,
+  and 2.4, January 2025, https://www.rfc-editor.org/info/rfc9700/, verified
+  2026-08-02.
+- Dick Hardt, Aaron Parecki, and Torsten Lodderstedt, *The OAuth 2.1
+  Authorization Framework*, draft-ietf-oauth-v2-1-15, sections 1.1, 1.3, 4.1,
+  and 4.2, March 2026,
+  https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-15, verified
+  2026-08-02.
+- GitHub Docs, *Authorizing OAuth apps*,
+  https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps,
+  verified 2026-08-02.
+- Microsoft Learn, *Authentication flow support in MSAL*,
+  https://learn.microsoft.com/en-us/entra/identity-platform/msal-authentication-flows,
+  verified 2026-08-02.
+- Microsoft Learn, *Microsoft identity platform and OAuth 2.0 authorization
+  code flow*,
+  https://learn.microsoft.com/en-in/entra/identity-platform/v2-oauth2-auth-code-flow,
+  verified 2026-08-02.
+- Spotify for Developers, *Authorization Code with PKCE Flow*,
+  https://developer.spotify.com/documentation/web-api/tutorials/code-pkce-flow,
+  verified 2026-08-02.
+- Spotify for Developers, *Authorization*,
+  https://developer.spotify.com/documentation/web-api/concepts/authorization,
+  verified 2026-08-02.
+- Google Identity, *Using OAuth 2.0 to Access Google APIs*,
+  https://developers.google.com/identity/protocols/oauth2, verified
+  2026-08-02.
+
 ## Code examples
 
 The examples are deliberately small. They model local invariants that must be
@@ -899,70 +966,3 @@ func main() {
 		"https://api.example", "invoice.read", time.Now()) == nil)
 }
 ```
-
-## 18. References
-
-- Dick Hardt, ed., *The OAuth 2.0 Authorization Framework*, RFC 6749,
-  sections 1.1, 1.3, 4, and 4.1, October 2012,
-  https://www.rfc-editor.org/info/rfc6749/, verified 2026-08-02.
-- Michael B. Jones and Dick Hardt, *The OAuth 2.0 Authorization Framework.
-  Bearer Token Usage*, RFC 6750, sections 1.2, 2.1, and 5.3, October 2012,
-  https://www.rfc-editor.org/info/rfc6750/, verified 2026-08-02.
-- Nat Sakimura, John Bradley, and Naveen Agarwal, *Proof Key for Code Exchange
-  by OAuth Public Clients*, RFC 7636, sections 1 and 4, September 2015,
-  https://www.rfc-editor.org/info/rfc7636/, verified 2026-08-02.
-- William Denniss and John Bradley, *OAuth 2.0 for Native Apps*, RFC 8252,
-  section 6, October 2017, https://www.rfc-editor.org/info/rfc8252/, verified
-  2026-08-02.
-- Michael B. Jones, Nat Sakimura, and John Bradley, *OAuth 2.0 Authorization
-  Server Metadata*, RFC 8414, section 3, June 2018,
-  https://www.rfc-editor.org/info/rfc8414/, verified 2026-08-02.
-- William Denniss, John Bradley, Michael B. Jones, and Torsten Lodderstedt,
-  *OAuth 2.0 Device Authorization Grant*, RFC 8628, section 3, August 2019,
-  https://www.rfc-editor.org/info/rfc8628/, verified 2026-08-02.
-- Michael B. Jones, Anthony Nadalin, Brian Campbell, John Bradley, and
-  Charles Mortimore, *OAuth 2.0 Token Exchange*, RFC 8693, section 2, January
-  2020, https://www.rfc-editor.org/info/rfc8693/, verified 2026-08-02.
-- Brian Campbell, John Bradley, Nat Sakimura, and Torsten Lodderstedt, *OAuth
-  2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens*,
-  RFC 8705, sections 2 and 3, February 2020,
-  https://www.rfc-editor.org/info/rfc8705/, verified 2026-08-02.
-- Brian Campbell, John Bradley, and Hannes Tschofenig, *Resource Indicators
-  for OAuth 2.0*, RFC 8707, February 2020,
-  https://www.rfc-editor.org/info/rfc8707/, verified 2026-08-02.
-- Torsten Lodderstedt, Brian Campbell, Nat Sakimura, Dave Tonge, and Filip
-  Skokan, *OAuth 2.0 Pushed Authorization Requests*, RFC 9126, sections 2 and
-  4, September 2021, https://www.rfc-editor.org/info/rfc9126/, verified
-  2026-08-02.
-- Daniel Fett, Brian Campbell, John Bradley, Torsten Lodderstedt, Michael B.
-  Jones, and David Waite, *OAuth 2.0 Demonstrating Proof of Possession*, RFC
-  9449, September 2023, https://www.rfc-editor.org/info/rfc9449/, verified
-  2026-08-02.
-- Torsten Lodderstedt, John Bradley, Andrii Labunets, and Daniel Fett, *Best
-  Current Practice for OAuth 2.0 Security*, RFC 9700, sections 2.1, 2.2, 2.3,
-  and 2.4, January 2025, https://www.rfc-editor.org/info/rfc9700/, verified
-  2026-08-02.
-- Dick Hardt, Aaron Parecki, and Torsten Lodderstedt, *The OAuth 2.1
-  Authorization Framework*, draft-ietf-oauth-v2-1-15, sections 1.1, 1.3, 4.1,
-  and 4.2, March 2026,
-  https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-15, verified
-  2026-08-02.
-- GitHub Docs, *Authorizing OAuth apps*,
-  https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps,
-  verified 2026-08-02.
-- Microsoft Learn, *Authentication flow support in MSAL*,
-  https://learn.microsoft.com/en-us/entra/identity-platform/msal-authentication-flows,
-  verified 2026-08-02.
-- Microsoft Learn, *Microsoft identity platform and OAuth 2.0 authorization
-  code flow*,
-  https://learn.microsoft.com/en-in/entra/identity-platform/v2-oauth2-auth-code-flow,
-  verified 2026-08-02.
-- Spotify for Developers, *Authorization Code with PKCE Flow*,
-  https://developer.spotify.com/documentation/web-api/tutorials/code-pkce-flow,
-  verified 2026-08-02.
-- Spotify for Developers, *Authorization*,
-  https://developer.spotify.com/documentation/web-api/concepts/authorization,
-  verified 2026-08-02.
-- Google Identity, *Using OAuth 2.0 to Access Google APIs*,
-  https://developers.google.com/identity/protocols/oauth2, verified
-  2026-08-02.

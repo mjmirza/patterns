@@ -874,6 +874,64 @@ should be treated with the same retention and access controls as any other
 record containing that data, rather than assumed to be safe simply because it
 sits at an internal system boundary rather than in a user-facing transcript.
 
+## 18. References
+
+1. Anthropic. "How we built our multi-agent research system."
+   [anthropic.com/engineering/multi-agent-research-system](https://www.anthropic.com/engineering/multi-agent-research-system)
+   Verified 2026-08-02. Source for separate per-subagent context windows, the
+   fifteen-times token multiplier, the ninety point two percent evaluation
+   improvement, the documented early duplicate-work and coverage-gap failure,
+   and the synchronous-join and no-mid-run-steering limitation.
+2. Anthropic. "Create custom subagents," Claude Code documentation.
+   [code.claude.com/docs/en/sub-agents](https://code.claude.com/docs/en/sub-agents)
+   Verified 2026-08-02. Source for the per-subagent context window, system
+   prompt, tool access, and independent permissions, and for context
+   preservation and constraint enforcement as stated benefits.
+3. Anthropic. "Explore the context window," Claude Code documentation.
+   [code.claude.com/docs/en/context-window](https://code.claude.com/docs/en/context-window)
+   Verified 2026-08-02. Source for the worked numeric example of a subagent
+   consuming roughly six thousand one hundred tokens internally against a
+   four hundred and twenty token returned summary, and for the default
+   exclusion of the delegation tool from a subagent's own tool access.
+4. OpenAI. "Orchestrating multiple agents," Agents SDK Python documentation.
+   [openai.github.io/openai-agents-python/multi_agent](https://openai.github.io/openai-agents-python/multi_agent/)
+   Verified 2026-08-02. Source for the distinction between handoffs and
+   agents-as-tools as the two primary multi-agent orchestration primitives.
+5. OpenAI. "Handoffs," Agents SDK Python documentation.
+   [openai.github.io/openai-agents-python/handoffs](https://openai.github.io/openai-agents-python/handoffs/)
+   Verified 2026-08-02. Source for full conversation history inheritance as
+   the default handoff behavior, and for input filters and nested-history
+   compaction as opt-in isolation mechanisms layered onto a handoff.
+6. OpenAI. "Tools," Agents SDK Python documentation.
+   [openai.github.io/openai-agents-python/tools](https://openai.github.io/openai-agents-python/tools/)
+   Verified 2026-08-02. Source for the agents-as-tools isolation behavior,
+   that a nested run's conversation state is not inherited automatically
+   unless a session is explicitly shared, and for the custom output
+   extractor mechanism.
+7. Microsoft. "Bulkhead pattern," Azure Architecture Center.
+   [learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead](https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead)
+   Verified 2026-08-02. Source for the reliability-engineering ancestor
+   pattern, its ship-hull naming origin, and its resource-partitioning and
+   failure-containment definition applied in dimension 1 and dimension 10.
+8. Wikipedia contributors. "Actor model."
+   [en.wikipedia.org/wiki/Actor_model](https://en.wikipedia.org/wiki/Actor_model)
+   Verified 2026-08-02. Used only to confirm the 1973 Hewitt, Bishop, and
+   Steiger attribution and the private-state, message-only-communication
+   properties applied in dimension 1 and dimension 8, not as a source of the
+   LLM-specific pattern shape.
+9. Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele
+   Bevilacqua, Fabio Petroni, Percy Liang. "Lost in the Middle. How Language
+   Models Use Long Contexts."
+   [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
+   Verified 2026-08-02. Source for the finding that model performance
+   degrades on information positioned in the middle of a long input, cited in
+   dimension 2 as part of the argument for why unfiltered context growth
+   degrades quality, not only cost.
+10. OWASP Foundation. "OWASP Top 10 for Large Language Model Applications."
+    [owasp.org/www-project-top-10-for-large-language-model-applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+    Verified 2026-08-02. Source for the Excessive Agency risk category cited
+    in dimension 11 and dimension 17 regarding unchecked tool autonomy.
+
 ## Code examples
 
 Three languages where the pattern's mechanics are demonstrated in genuinely
@@ -1178,61 +1236,3 @@ collected into a map keyed by task ID rather than printed in channel-arrival
 order, since two goroutines completing concurrently give no ordering
 guarantee, and that non-determinism is itself part of what this variant is
 demonstrating.
-
-## 18. References
-
-1. Anthropic. "How we built our multi-agent research system."
-   [anthropic.com/engineering/multi-agent-research-system](https://www.anthropic.com/engineering/multi-agent-research-system)
-   Verified 2026-08-02. Source for separate per-subagent context windows, the
-   fifteen-times token multiplier, the ninety point two percent evaluation
-   improvement, the documented early duplicate-work and coverage-gap failure,
-   and the synchronous-join and no-mid-run-steering limitation.
-2. Anthropic. "Create custom subagents," Claude Code documentation.
-   [code.claude.com/docs/en/sub-agents](https://code.claude.com/docs/en/sub-agents)
-   Verified 2026-08-02. Source for the per-subagent context window, system
-   prompt, tool access, and independent permissions, and for context
-   preservation and constraint enforcement as stated benefits.
-3. Anthropic. "Explore the context window," Claude Code documentation.
-   [code.claude.com/docs/en/context-window](https://code.claude.com/docs/en/context-window)
-   Verified 2026-08-02. Source for the worked numeric example of a subagent
-   consuming roughly six thousand one hundred tokens internally against a
-   four hundred and twenty token returned summary, and for the default
-   exclusion of the delegation tool from a subagent's own tool access.
-4. OpenAI. "Orchestrating multiple agents," Agents SDK Python documentation.
-   [openai.github.io/openai-agents-python/multi_agent](https://openai.github.io/openai-agents-python/multi_agent/)
-   Verified 2026-08-02. Source for the distinction between handoffs and
-   agents-as-tools as the two primary multi-agent orchestration primitives.
-5. OpenAI. "Handoffs," Agents SDK Python documentation.
-   [openai.github.io/openai-agents-python/handoffs](https://openai.github.io/openai-agents-python/handoffs/)
-   Verified 2026-08-02. Source for full conversation history inheritance as
-   the default handoff behavior, and for input filters and nested-history
-   compaction as opt-in isolation mechanisms layered onto a handoff.
-6. OpenAI. "Tools," Agents SDK Python documentation.
-   [openai.github.io/openai-agents-python/tools](https://openai.github.io/openai-agents-python/tools/)
-   Verified 2026-08-02. Source for the agents-as-tools isolation behavior,
-   that a nested run's conversation state is not inherited automatically
-   unless a session is explicitly shared, and for the custom output
-   extractor mechanism.
-7. Microsoft. "Bulkhead pattern," Azure Architecture Center.
-   [learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead](https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead)
-   Verified 2026-08-02. Source for the reliability-engineering ancestor
-   pattern, its ship-hull naming origin, and its resource-partitioning and
-   failure-containment definition applied in dimension 1 and dimension 10.
-8. Wikipedia contributors. "Actor model."
-   [en.wikipedia.org/wiki/Actor_model](https://en.wikipedia.org/wiki/Actor_model)
-   Verified 2026-08-02. Used only to confirm the 1973 Hewitt, Bishop, and
-   Steiger attribution and the private-state, message-only-communication
-   properties applied in dimension 1 and dimension 8, not as a source of the
-   LLM-specific pattern shape.
-9. Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele
-   Bevilacqua, Fabio Petroni, Percy Liang. "Lost in the Middle. How Language
-   Models Use Long Contexts."
-   [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
-   Verified 2026-08-02. Source for the finding that model performance
-   degrades on information positioned in the middle of a long input, cited in
-   dimension 2 as part of the argument for why unfiltered context growth
-   degrades quality, not only cost.
-10. OWASP Foundation. "OWASP Top 10 for Large Language Model Applications."
-    [owasp.org/www-project-top-10-for-large-language-model-applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-    Verified 2026-08-02. Source for the Excessive Agency risk category cited
-    in dimension 11 and dimension 17 regarding unchecked tool autonomy.

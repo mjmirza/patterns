@@ -430,6 +430,17 @@ error detail is sent through the logging mechanism inside
 keeping the user-facing fallback and the developer-facing error
 report deliberately separate.
 
+## 18. References
+
+1. React. "Component".
+   https://react.dev/reference/react/Component
+   Verified 2026-08-21. Source of the defining pattern quote and the
+   default-behavior quote used in dimensions 1, 3, and 9.
+2. React (legacy docs). "Error Boundaries".
+   https://legacy.reactjs.org/docs/error-boundaries.html
+   Verified 2026-08-21. Source of the what-is-not-caught quote used
+   in dimensions 3, 4, 9, and 11.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -587,14 +598,3 @@ let failingBoundary = ErrorBoundary()
 print(failingBoundary.render(shouldThrow: true).output)
 print(failingBoundary.render(shouldThrow: false).output)
 ```
-
-## 18. References
-
-1. React. "Component".
-   https://react.dev/reference/react/Component
-   Verified 2026-08-21. Source of the defining pattern quote and the
-   default-behavior quote used in dimensions 1, 3, and 9.
-2. React (legacy docs). "Error Boundaries".
-   https://legacy.reactjs.org/docs/error-boundaries.html
-   Verified 2026-08-21. Source of the what-is-not-caught quote used
-   in dimensions 3, 4, 9, and 11.

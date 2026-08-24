@@ -903,6 +903,21 @@ matters for the same reason any longer-lived copy of sensitive data in memory
 matters, a larger window during which a memory dump or a debugging tool could
 observe it, not a new mechanism of exposure.
 
+## 18. References
+
+- ECMA-262, the ECMAScript Language Specification, TC39. https://tc39.es/ecma262/ (verified 2026-08-02).
+- TC39, `proposal-async-await`, the historical proposal repository for JavaScript async/await. https://github.com/tc39/proposal-async-await (verified 2026-08-02).
+- Yury Selivanov, PEP 492, "Coroutines with async and await syntax," created 9 April 2015, accepted 5 May 2015, target Python 3.5. https://peps.python.org/pep-0492/ (verified 2026-08-02).
+- Python Software Foundation, `asyncio` task documentation, `asyncio.gather`, `asyncio.create_task`, `asyncio.TaskGroup`. https://docs.python.org/3/library/asyncio-task.html (verified 2026-08-02).
+- Microsoft, "Asynchronous programming in C#," Microsoft Learn, describing the Task-based Asynchronous Pattern (TAP) built on `async`/`await`, last updated 2025-03-10 per page metadata. https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/ (verified 2026-08-02).
+- The Rust Project, "Async-await on stable Rust!," the Rust Blog, announcing stabilization in Rust 1.39.0, 7 November 2019. https://blog.rust-lang.org/2019/11/07/Async-await-stable/ (verified 2026-08-02).
+- The Rust Project, "Getting Started," Asynchronous Programming in Rust (the Async Book). https://rust-lang.github.io/async-book/01_getting_started/01_chapter.html (verified 2026-08-02).
+- The Rust Project, "The Future Trait," Asynchronous Programming in Rust (the Async Book), defining `trait Future`, `Poll`, and `Waker`. https://rust-lang.github.io/async-book/02_execution/02_future.html (verified 2026-08-02).
+- John McCall and Doug Gregor (review manager Ben Cohen), Swift Evolution proposal SE-0296, "Async/await," implemented Swift 5.5. https://github.com/apple/swift-evolution/blob/main/proposals/0296-async-await.md (verified 2026-08-02).
+- Node.js Foundation, "The Node.js Event Loop, Timers, and process.nextTick()," Node.js official guides. https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick (verified 2026-08-02).
+- Sebastian Ramirez et al., "Concurrency and async / await," FastAPI documentation. https://fastapi.tiangolo.com/async/ (verified 2026-08-02).
+- The Tokio Project, "Overview," the Tokio tutorial, describing Tokio as the asynchronous runtime built on Rust's async/await. https://tokio.rs/tokio/tutorial (verified 2026-08-02).
+
 ## Code examples
 
 Four dialects, chosen because each exercises a distinct scheduling model from
@@ -1137,18 +1152,3 @@ Output is `total, 60`. This sample uses `withThrowingTaskGroup`, the
 structured concurrency variant from dimension 8, so a failure in any one
 fetch cancels the remaining siblings automatically rather than leaving them
 detached.
-
-## 18. References
-
-- ECMA-262, the ECMAScript Language Specification, TC39. https://tc39.es/ecma262/ (verified 2026-08-02).
-- TC39, `proposal-async-await`, the historical proposal repository for JavaScript async/await. https://github.com/tc39/proposal-async-await (verified 2026-08-02).
-- Yury Selivanov, PEP 492, "Coroutines with async and await syntax," created 9 April 2015, accepted 5 May 2015, target Python 3.5. https://peps.python.org/pep-0492/ (verified 2026-08-02).
-- Python Software Foundation, `asyncio` task documentation, `asyncio.gather`, `asyncio.create_task`, `asyncio.TaskGroup`. https://docs.python.org/3/library/asyncio-task.html (verified 2026-08-02).
-- Microsoft, "Asynchronous programming in C#," Microsoft Learn, describing the Task-based Asynchronous Pattern (TAP) built on `async`/`await`, last updated 2025-03-10 per page metadata. https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/ (verified 2026-08-02).
-- The Rust Project, "Async-await on stable Rust!," the Rust Blog, announcing stabilization in Rust 1.39.0, 7 November 2019. https://blog.rust-lang.org/2019/11/07/Async-await-stable/ (verified 2026-08-02).
-- The Rust Project, "Getting Started," Asynchronous Programming in Rust (the Async Book). https://rust-lang.github.io/async-book/01_getting_started/01_chapter.html (verified 2026-08-02).
-- The Rust Project, "The Future Trait," Asynchronous Programming in Rust (the Async Book), defining `trait Future`, `Poll`, and `Waker`. https://rust-lang.github.io/async-book/02_execution/02_future.html (verified 2026-08-02).
-- John McCall and Doug Gregor (review manager Ben Cohen), Swift Evolution proposal SE-0296, "Async/await," implemented Swift 5.5. https://github.com/apple/swift-evolution/blob/main/proposals/0296-async-await.md (verified 2026-08-02).
-- Node.js Foundation, "The Node.js Event Loop, Timers, and process.nextTick()," Node.js official guides. https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick (verified 2026-08-02).
-- Sebastian Ramirez et al., "Concurrency and async / await," FastAPI documentation. https://fastapi.tiangolo.com/async/ (verified 2026-08-02).
-- The Tokio Project, "Overview," the Tokio tutorial, describing Tokio as the asynchronous runtime built on Rust's async/await. https://tokio.rs/tokio/tutorial (verified 2026-08-02).

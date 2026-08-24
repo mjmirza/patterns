@@ -773,6 +773,38 @@ access policy on the foreign side into a log store governed by different,
 often looser, rules. Redact or allowlist what the layer is permitted to log
 at this specific boundary, rather than logging the raw payload by default.
 
+## 18. References
+
+1. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*, Addison-Wesley, 2003, Part IV, chapter 14, "Maintaining Model
+   Integrity," section "ANTICORRUPTION LAYER."
+2. "Chapter 14," discussion notes on Evans's chapter, dddcommunity.org,
+   verified 2026-08-02, [https://www.dddcommunity.org/uncategorized/ch14/](https://www.dddcommunity.org/uncategorized/ch14/).
+3. "Anti-Corruption Layer Pattern," Azure Architecture Center, Microsoft
+   Learn, verified 2026-08-02,
+   [https://learn.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer](https://learn.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer).
+4. "Anti-corruption layer pattern," AWS Prescriptive Guidance, verified
+   2026-08-02,
+   [https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/acl.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/acl.html).
+5. `aws-samples/anti-corruption-layer-pattern`, GitHub, verified 2026-08-02,
+   [https://github.com/aws-samples/anti-corruption-layer-pattern](https://github.com/aws-samples/anti-corruption-layer-pattern).
+6. "Strangler fig pattern," AWS Prescriptive Guidance, verified 2026-08-02,
+   [https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html).
+7. Ruthie Ballenger, "Anti-Corruption Layer. Transforming Legacy
+   Applications into Modern Cloud Native Applications," Michelin
+   Engineering Blog, published 2026-02-12, verified 2026-08-02,
+   [https://blogit.michelin.io/anti-corruption-layer/](https://blogit.michelin.io/anti-corruption-layer/).
+8. Zhamak Dehghani, "How to break a Monolith into Microservices,"
+   martinfowler.com, verified 2026-08-02,
+   [https://martinfowler.com/articles/break-monolith-into-microservices.html](https://martinfowler.com/articles/break-monolith-into-microservices.html).
+9. "Anti-Corruption Layer Pattern in Java," Java Design Patterns
+   (`iluwatar/java-design-patterns`), verified 2026-08-02,
+   [https://java-design-patterns.com/patterns/anti-corruption-layer/](https://java-design-patterns.com/patterns/anti-corruption-layer/).
+10. Martin Fowler, *Refactoring. Improving the Design of Existing Code*,
+    2nd edition, Addison-Wesley, 2018, catalog entries "Extract Function"
+    and "Extract Class," verified against the online catalog 2026-08-02,
+    [https://refactoring.com/catalog/](https://refactoring.com/catalog/).
+
 ## Code
 
 The four examples below model the same scenario in TypeScript, Python, Go,
@@ -1231,35 +1263,3 @@ do {
     print("translation failure signal:", error)
 }
 ```
-
-## 18. References
-
-1. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*, Addison-Wesley, 2003, Part IV, chapter 14, "Maintaining Model
-   Integrity," section "ANTICORRUPTION LAYER."
-2. "Chapter 14," discussion notes on Evans's chapter, dddcommunity.org,
-   verified 2026-08-02, [https://www.dddcommunity.org/uncategorized/ch14/](https://www.dddcommunity.org/uncategorized/ch14/).
-3. "Anti-Corruption Layer Pattern," Azure Architecture Center, Microsoft
-   Learn, verified 2026-08-02,
-   [https://learn.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer](https://learn.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer).
-4. "Anti-corruption layer pattern," AWS Prescriptive Guidance, verified
-   2026-08-02,
-   [https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/acl.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/acl.html).
-5. `aws-samples/anti-corruption-layer-pattern`, GitHub, verified 2026-08-02,
-   [https://github.com/aws-samples/anti-corruption-layer-pattern](https://github.com/aws-samples/anti-corruption-layer-pattern).
-6. "Strangler fig pattern," AWS Prescriptive Guidance, verified 2026-08-02,
-   [https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html).
-7. Ruthie Ballenger, "Anti-Corruption Layer. Transforming Legacy
-   Applications into Modern Cloud Native Applications," Michelin
-   Engineering Blog, published 2026-02-12, verified 2026-08-02,
-   [https://blogit.michelin.io/anti-corruption-layer/](https://blogit.michelin.io/anti-corruption-layer/).
-8. Zhamak Dehghani, "How to break a Monolith into Microservices,"
-   martinfowler.com, verified 2026-08-02,
-   [https://martinfowler.com/articles/break-monolith-into-microservices.html](https://martinfowler.com/articles/break-monolith-into-microservices.html).
-9. "Anti-Corruption Layer Pattern in Java," Java Design Patterns
-   (`iluwatar/java-design-patterns`), verified 2026-08-02,
-   [https://java-design-patterns.com/patterns/anti-corruption-layer/](https://java-design-patterns.com/patterns/anti-corruption-layer/).
-10. Martin Fowler, *Refactoring. Improving the Design of Existing Code*,
-    2nd edition, Addison-Wesley, 2018, catalog entries "Extract Function"
-    and "Extract Class," verified against the online catalog 2026-08-02,
-    [https://refactoring.com/catalog/](https://refactoring.com/catalog/).

@@ -813,6 +813,34 @@ retention duration in its own right, separate from the Origin's own retention
 policy, and should be accounted for in any data-retention or right-to-erasure
 process rather than assumed to be governed solely by the Origin's rules.
 
+## 18. References
+
+1. Amazon Web Services. "Caching strategies for Memcached". Amazon ElastiCache
+   for Redis OSS User Guide.
+   https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Strategies.html
+   Verified 2026-08-02. Source for the lazy loading definition, hit and miss
+   flow, the pseudocode referenced in dimension 7, and the write-through
+   pairing recommendation in dimension 13.
+2. Amazon Web Services. "In-memory acceleration with DynamoDB Accelerator
+   (DAX)". Amazon DynamoDB Developer Guide.
+   https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.html
+   Verified 2026-08-02. Source for the DAX production use, its use-case and
+   anti-use-case guidance in dimension 4, the 90 percent hit-rate threshold,
+   the unbounded-attribute-name failure mode in dimension 11, and the
+   encryption features cited in dimension 17.
+3. Google. Guava `CacheLoader` API documentation, release 33.0.0-jre.
+   https://guava.dev/releases/33.0.0-jre/api/docs/com/google/common/cache/CacheLoader.html
+   Verified 2026-08-02. Source for the `LoadingCache` and `CacheLoader`
+   production use in dimension 9 and the naming lineage in dimension 1.
+4. VMware. "Cache Abstraction". Spring Framework Reference Documentation.
+   https://docs.spring.io/spring-framework/reference/integration/cache.html
+   Verified 2026-08-02. Source for the `@Cacheable` production use in
+   dimension 9.
+5. Amazon Web Services. "Database Caching". AWS Caching solutions overview.
+   https://aws.amazon.com/caching/database-caching/
+   Verified 2026-08-02. Corroborating source discussing lazy population as an
+   application-level query-then-cache flow, consulted alongside source 1.
+
 ## Code examples
 
 Three languages where the pattern's shape is genuinely idiomatic in
@@ -1036,31 +1064,3 @@ func main() {
 	fmt.Println("origin calls", cache.loadCalls)
 }
 ```
-
-## 18. References
-
-1. Amazon Web Services. "Caching strategies for Memcached". Amazon ElastiCache
-   for Redis OSS User Guide.
-   https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Strategies.html
-   Verified 2026-08-02. Source for the lazy loading definition, hit and miss
-   flow, the pseudocode referenced in dimension 7, and the write-through
-   pairing recommendation in dimension 13.
-2. Amazon Web Services. "In-memory acceleration with DynamoDB Accelerator
-   (DAX)". Amazon DynamoDB Developer Guide.
-   https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.html
-   Verified 2026-08-02. Source for the DAX production use, its use-case and
-   anti-use-case guidance in dimension 4, the 90 percent hit-rate threshold,
-   the unbounded-attribute-name failure mode in dimension 11, and the
-   encryption features cited in dimension 17.
-3. Google. Guava `CacheLoader` API documentation, release 33.0.0-jre.
-   https://guava.dev/releases/33.0.0-jre/api/docs/com/google/common/cache/CacheLoader.html
-   Verified 2026-08-02. Source for the `LoadingCache` and `CacheLoader`
-   production use in dimension 9 and the naming lineage in dimension 1.
-4. VMware. "Cache Abstraction". Spring Framework Reference Documentation.
-   https://docs.spring.io/spring-framework/reference/integration/cache.html
-   Verified 2026-08-02. Source for the `@Cacheable` production use in
-   dimension 9.
-5. Amazon Web Services. "Database Caching". AWS Caching solutions overview.
-   https://aws.amazon.com/caching/database-caching/
-   Verified 2026-08-02. Corroborating source discussing lazy population as an
-   application-level query-then-cache flow, consulted alongside source 1.

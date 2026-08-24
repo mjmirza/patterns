@@ -862,6 +862,26 @@ Ledger's backing store needs the same availability and rate-limiting
 consideration given to any other shared, hot-path dependency, rather than
 being assumed safe because it is "just a counter."
 
+## 18. References
+
+1. AWS Cost Management User Guide, "What is AWS Budgets."
+   [https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html),
+   verified 2026-08-03.
+2. LiteLLM documentation, "Set Budgets, Rate Limits per User."
+   [https://docs.litellm.ai/docs/proxy/users](https://docs.litellm.ai/docs/proxy/users),
+   verified 2026-08-03.
+3. Helicone documentation, "Custom Rate Limits."
+   [https://docs.helicone.ai/features/advanced-usage/custom-rate-limits](https://docs.helicone.ai/features/advanced-usage/custom-rate-limits),
+   verified 2026-08-03.
+4. LangChain documentation, "LangGraph, Graph API" (recursion_limit and
+   GraphRecursionError).
+   [https://docs.langchain.com/oss/python/langgraph/graph-api](https://docs.langchain.com/oss/python/langgraph/graph-api),
+   verified 2026-08-03.
+5. OpenAI developer documentation, "Production best practices" (spend
+   alerts and hard spend limits).
+   [https://developers.openai.com/api/docs/guides/production-best-practices](https://developers.openai.com/api/docs/guides/production-best-practices),
+   verified 2026-08-03.
+
 ## Code examples
 
 The three examples below implement the same minimal shape, a per-scope
@@ -1144,23 +1164,3 @@ confirms the intended behavior, the soft threshold logging starting once
 accumulated spend passes 0.05, and execution stopping with a
 budget-exceeded message once accumulated spend would reach 0.08, after 9
 simulated calls at the token counts and prices used in the samples.
-
-## 18. References
-
-1. AWS Cost Management User Guide, "What is AWS Budgets."
-   [https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html),
-   verified 2026-08-03.
-2. LiteLLM documentation, "Set Budgets, Rate Limits per User."
-   [https://docs.litellm.ai/docs/proxy/users](https://docs.litellm.ai/docs/proxy/users),
-   verified 2026-08-03.
-3. Helicone documentation, "Custom Rate Limits."
-   [https://docs.helicone.ai/features/advanced-usage/custom-rate-limits](https://docs.helicone.ai/features/advanced-usage/custom-rate-limits),
-   verified 2026-08-03.
-4. LangChain documentation, "LangGraph, Graph API" (recursion_limit and
-   GraphRecursionError).
-   [https://docs.langchain.com/oss/python/langgraph/graph-api](https://docs.langchain.com/oss/python/langgraph/graph-api),
-   verified 2026-08-03.
-5. OpenAI developer documentation, "Production best practices" (spend
-   alerts and hard spend limits).
-   [https://developers.openai.com/api/docs/guides/production-best-practices](https://developers.openai.com/api/docs/guides/production-best-practices),
-   verified 2026-08-03.

@@ -424,6 +424,17 @@ from external input is worth auditing directly, treating any path
 where untrusted input can influence feed timing as a genuine security
 concern rather than a purely theoretical one.
 
+## 18. References
+
+1. The Zephyr Project. "Task Watchdog".
+   https://docs.zephyrproject.org/latest/services/task_wdt/index.html
+   Verified 2026-08-21. Source of the purpose, feeding, and
+   hang-recovery quotes used in dimensions 1, 2, 3, 9, and 10.
+2. The Zephyr Project. "Watchdog Interface".
+   https://docs.zephyrproject.org/latest/doxygen/html/group__watchdog__interface.html
+   Verified 2026-08-21. Source of the feed and setup API quotes used
+   in dimensions 5 and 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -572,14 +583,3 @@ wdt.tick()
 
 print("watchdog expired: " + String(wdt.expired))
 ```
-
-## 18. References
-
-1. The Zephyr Project. "Task Watchdog".
-   https://docs.zephyrproject.org/latest/services/task_wdt/index.html
-   Verified 2026-08-21. Source of the purpose, feeding, and
-   hang-recovery quotes used in dimensions 1, 2, 3, 9, and 10.
-2. The Zephyr Project. "Watchdog Interface".
-   https://docs.zephyrproject.org/latest/doxygen/html/group__watchdog__interface.html
-   Verified 2026-08-21. Source of the feed and setup API quotes used
-   in dimensions 5 and 9.

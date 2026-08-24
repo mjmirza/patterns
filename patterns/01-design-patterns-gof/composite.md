@@ -1010,6 +1010,58 @@ customer segment or a document title, so treat that field as attributable data
 and apply the same retention, redaction and access rules as any other identifier
 rather than treating it as a debug string.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Composite,
+   beginning at page 163. Source of the intent, the four participants, the
+   transparency against safety discussion, and the note that the choice splits by
+   language community.
+2. Wikipedia contributors. "Composite pattern".
+   https://en.wikipedia.org/wiki/Composite_pattern
+   Verified 2026-08-02. Used to confirm the wording of the GoF intent, the
+   participant list, and the two child-management design variants. Not used as a
+   source of explanation.
+3. WHATWG. *DOM Standard (Living Standard)*. Section 1.1 Trees, section 4.4
+   Interface Node. https://dom.spec.whatwg.org/
+   Verified 2026-08-02. Source for the node tree production use and for the
+   parent and children definitions.
+4. Mozilla. *MDN Web Docs*, `Node.appendChild()`.
+   https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+   Verified 2026-08-02. Source for `HierarchyRequestError` being thrown when the
+   insertion would lead to a cycle, and for the move-not-copy semantics.
+5. Oracle. *Java SE 21 API Specification*, `java.awt.Container`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Container.html
+   Verified 2026-08-02. Source for the AWT production use, the
+   `Container extends Component` declaration, and the ordered child list.
+6. Oracle. *Java SE 21 API Specification*, `java.nio.file.FileSystemLoopException`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/FileSystemLoopException.html
+   Verified 2026-08-02. Source for cycle detection being a named condition in a
+   production tree walker.
+7. Microsoft. *.NET API documentation*, `Microsoft.CodeAnalysis.SyntaxNode`.
+   https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode
+   Verified 2026-08-02. Source for the Roslyn production use, the non-terminal
+   node description, and the `ChildNodes`, `DescendantNodes`, `Ancestors` and
+   `Parent` members.
+8. Microsoft. *.NET API documentation*,
+   `Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker`.
+   https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxwalker
+   Verified 2026-08-02. Source for the Composite plus Visitor composition and the
+   depth-first descent description.
+9. Google. *Flutter API documentation*, `MultiChildRenderObjectWidget`.
+   https://api.flutter.dev/flutter/widgets/MultiChildRenderObjectWidget-class.html
+   Verified 2026-08-02. Source for the widget tree production use and the
+   `children` property.
+10. Google. *Flutter API documentation*, `Widget`.
+    https://api.flutter.dev/flutter/widgets/Widget-class.html
+    Verified 2026-08-02. Source for a widget describing the configuration for an
+    element.
+11. Meta. *React documentation*, "Your First Component".
+    https://react.dev/learn/your-first-component
+    Verified 2026-08-02. Source for the root component, the parent and child
+    relationship, and components all the way down.
+
 ## Code examples
 
 Four languages chosen because each shows a different genuine shape. TypeScript
@@ -1378,55 +1430,3 @@ func main() {
 	fmt.Println(util.Add(root))
 }
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Composite,
-   beginning at page 163. Source of the intent, the four participants, the
-   transparency against safety discussion, and the note that the choice splits by
-   language community.
-2. Wikipedia contributors. "Composite pattern".
-   https://en.wikipedia.org/wiki/Composite_pattern
-   Verified 2026-08-02. Used to confirm the wording of the GoF intent, the
-   participant list, and the two child-management design variants. Not used as a
-   source of explanation.
-3. WHATWG. *DOM Standard (Living Standard)*. Section 1.1 Trees, section 4.4
-   Interface Node. https://dom.spec.whatwg.org/
-   Verified 2026-08-02. Source for the node tree production use and for the
-   parent and children definitions.
-4. Mozilla. *MDN Web Docs*, `Node.appendChild()`.
-   https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
-   Verified 2026-08-02. Source for `HierarchyRequestError` being thrown when the
-   insertion would lead to a cycle, and for the move-not-copy semantics.
-5. Oracle. *Java SE 21 API Specification*, `java.awt.Container`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Container.html
-   Verified 2026-08-02. Source for the AWT production use, the
-   `Container extends Component` declaration, and the ordered child list.
-6. Oracle. *Java SE 21 API Specification*, `java.nio.file.FileSystemLoopException`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/FileSystemLoopException.html
-   Verified 2026-08-02. Source for cycle detection being a named condition in a
-   production tree walker.
-7. Microsoft. *.NET API documentation*, `Microsoft.CodeAnalysis.SyntaxNode`.
-   https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.syntaxnode
-   Verified 2026-08-02. Source for the Roslyn production use, the non-terminal
-   node description, and the `ChildNodes`, `DescendantNodes`, `Ancestors` and
-   `Parent` members.
-8. Microsoft. *.NET API documentation*,
-   `Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker`.
-   https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.csharp.csharpsyntaxwalker
-   Verified 2026-08-02. Source for the Composite plus Visitor composition and the
-   depth-first descent description.
-9. Google. *Flutter API documentation*, `MultiChildRenderObjectWidget`.
-   https://api.flutter.dev/flutter/widgets/MultiChildRenderObjectWidget-class.html
-   Verified 2026-08-02. Source for the widget tree production use and the
-   `children` property.
-10. Google. *Flutter API documentation*, `Widget`.
-    https://api.flutter.dev/flutter/widgets/Widget-class.html
-    Verified 2026-08-02. Source for a widget describing the configuration for an
-    element.
-11. Meta. *React documentation*, "Your First Component".
-    https://react.dev/learn/your-first-component
-    Verified 2026-08-02. Source for the root component, the parent and child
-    relationship, and components all the way down.

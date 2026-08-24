@@ -754,6 +754,55 @@ controls an authenticator, but it does not answer which resources the user may
 access, whether a transaction is allowed, or whether a privileged action needs
 approval. Pair it with authorization policy and audit logging.
 
+## 18. References
+
+1. World Wide Web Consortium. *Web Authentication. An API for accessing Public
+   Key Credentials. Level 3*. Candidate Recommendation Snapshot, 26 May 2026.
+   Sections Abstract, 7.1, 7.2, 11, 13, and 14.
+   [https://www.w3.org/TR/webauthn-3/](https://www.w3.org/TR/webauthn-3/).
+   Verified 2026-08-02.
+2. NIST. *Digital Identity Guidelines. Authentication and Authenticator
+   Management*, Special Publication 800-63B, 2026 draft publication branch.
+   Sections on authenticator types, phishing resistance, replay resistance,
+   authentication intent, passwords, syncable authenticators, and AAL3.
+   [https://pages.nist.gov/800-63-4/sp800-63b.html](https://pages.nist.gov/800-63-4/sp800-63b.html).
+   Verified 2026-08-02.
+3. FIDO Alliance. *FIDO Passkeys. Passwordless Authentication*.
+   [https://fidoalliance.org/passkeys/](https://fidoalliance.org/passkeys/).
+   Verified 2026-08-02.
+4. GitHub. *Passkeys are Generally Available*, GitHub Changelog,
+   September 21, 2023.
+   [https://github.blog/changelog/2023-09-21-passkeys-are-generally-available/](https://github.blog/changelog/2023-09-21-passkeys-are-generally-available/).
+   Verified 2026-08-02.
+5. Google. *So long passwords, thanks for all the phish*, Google Online
+   Security Blog, May 3, 2023.
+   [https://security.googleblog.com/2023/05/so-long-passwords-thanks-for-all-phish.html](https://security.googleblog.com/2023/05/so-long-passwords-thanks-for-all-phish.html).
+   Verified 2026-08-02.
+6. Microsoft. *Authentication methods in Microsoft Entra ID. Passkeys
+   (FIDO2)*, Microsoft Learn.
+   [https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passkeys-fido2](https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passkeys-fido2).
+   Verified 2026-08-02.
+7. Apple. *iCloud Keychain security overview*, Apple Platform Security.
+   [https://support.apple.com/guide/security/icloud-keychain-security-overview-sec1c89c6f3b/web](https://support.apple.com/guide/security/icloud-keychain-security-overview-sec1c89c6f3b/web).
+   Verified 2026-08-02.
+8. 1Password. *Passkeys in 1Password. The Future of Passwordless
+   Authentication*.
+   [https://1password.com/product/passkeys](https://1password.com/product/passkeys).
+   Verified 2026-08-02.
+9. OWASP Foundation. *Authentication Cheat Sheet*, OWASP Cheat Sheet Series.
+   Sections Authentication Responses, Logging and Monitoring, and Use of
+   authentication protocols that require no password.
+   [https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html).
+   Verified 2026-08-02.
+10. Jim Schaad. *RFC 9052. CBOR Object Signing and Encryption (COSE).
+    Structures and Process*, IETF, August 2022. Jim Schaad. *RFC 9053. CBOR
+    Object Signing and Encryption (COSE). Initial Algorithms*, IETF,
+    August 2022. Used for COSE lineage referenced by WebAuthn.
+    [https://www.rfc-editor.org/rfc/rfc9052](https://www.rfc-editor.org/rfc/rfc9052)
+    and
+    [https://www.rfc-editor.org/rfc/rfc9053](https://www.rfc-editor.org/rfc/rfc9053).
+    Verified 2026-08-02.
+
 ## Code examples
 
 The examples are minimal and runnable. They demonstrate pattern mechanics, not
@@ -969,52 +1018,3 @@ func main() {
 	fmt.Println(verifier.Verify(challenge.ID, signature, time.Now()))
 }
 ```
-
-## 18. References
-
-1. World Wide Web Consortium. *Web Authentication. An API for accessing Public
-   Key Credentials. Level 3*. Candidate Recommendation Snapshot, 26 May 2026.
-   Sections Abstract, 7.1, 7.2, 11, 13, and 14.
-   [https://www.w3.org/TR/webauthn-3/](https://www.w3.org/TR/webauthn-3/).
-   Verified 2026-08-02.
-2. NIST. *Digital Identity Guidelines. Authentication and Authenticator
-   Management*, Special Publication 800-63B, 2026 draft publication branch.
-   Sections on authenticator types, phishing resistance, replay resistance,
-   authentication intent, passwords, syncable authenticators, and AAL3.
-   [https://pages.nist.gov/800-63-4/sp800-63b.html](https://pages.nist.gov/800-63-4/sp800-63b.html).
-   Verified 2026-08-02.
-3. FIDO Alliance. *FIDO Passkeys. Passwordless Authentication*.
-   [https://fidoalliance.org/passkeys/](https://fidoalliance.org/passkeys/).
-   Verified 2026-08-02.
-4. GitHub. *Passkeys are Generally Available*, GitHub Changelog,
-   September 21, 2023.
-   [https://github.blog/changelog/2023-09-21-passkeys-are-generally-available/](https://github.blog/changelog/2023-09-21-passkeys-are-generally-available/).
-   Verified 2026-08-02.
-5. Google. *So long passwords, thanks for all the phish*, Google Online
-   Security Blog, May 3, 2023.
-   [https://security.googleblog.com/2023/05/so-long-passwords-thanks-for-all-phish.html](https://security.googleblog.com/2023/05/so-long-passwords-thanks-for-all-phish.html).
-   Verified 2026-08-02.
-6. Microsoft. *Authentication methods in Microsoft Entra ID. Passkeys
-   (FIDO2)*, Microsoft Learn.
-   [https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passkeys-fido2](https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passkeys-fido2).
-   Verified 2026-08-02.
-7. Apple. *iCloud Keychain security overview*, Apple Platform Security.
-   [https://support.apple.com/guide/security/icloud-keychain-security-overview-sec1c89c6f3b/web](https://support.apple.com/guide/security/icloud-keychain-security-overview-sec1c89c6f3b/web).
-   Verified 2026-08-02.
-8. 1Password. *Passkeys in 1Password. The Future of Passwordless
-   Authentication*.
-   [https://1password.com/product/passkeys](https://1password.com/product/passkeys).
-   Verified 2026-08-02.
-9. OWASP Foundation. *Authentication Cheat Sheet*, OWASP Cheat Sheet Series.
-   Sections Authentication Responses, Logging and Monitoring, and Use of
-   authentication protocols that require no password.
-   [https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html).
-   Verified 2026-08-02.
-10. Jim Schaad. *RFC 9052. CBOR Object Signing and Encryption (COSE).
-    Structures and Process*, IETF, August 2022. Jim Schaad. *RFC 9053. CBOR
-    Object Signing and Encryption (COSE). Initial Algorithms*, IETF,
-    August 2022. Used for COSE lineage referenced by WebAuthn.
-    [https://www.rfc-editor.org/rfc/rfc9052](https://www.rfc-editor.org/rfc/rfc9052)
-    and
-    [https://www.rfc-editor.org/rfc/rfc9053](https://www.rfc-editor.org/rfc/rfc9053).
-    Verified 2026-08-02.

@@ -828,6 +828,27 @@ normal read path would, which is easy to overlook because conflict
 resolution code paths are frequently built and tested separately from the
 main authorization-checked read and write paths.
 
+## 18. References
+
+1. Kleppmann, Martin. Designing Data-Intensive Applications. O'Reilly
+   Media, 2017. Chapter 5, "Replication", section "Multi-Leader
+   Replication". Print and digital edition, ISBN 978-1449373320.
+2. Apache CouchDB documentation. "Replication Protocol."
+   https://docs.couchdb.org/en/stable/replication/protocol.html
+   Verified 2026-08-02.
+3. MySQL 8.0 Reference Manual. "Group Replication, Multi-Primary Mode."
+   https://dev.mysql.com/doc/refman/8.0/en/group-replication-multi-primary-mode.html
+   Verified 2026-08-02.
+4. Microsoft Learn. "Conflict Resolution Types and Resolution Policies,
+   Azure Cosmos DB."
+   https://learn.microsoft.com/en-us/azure/cosmos-db/conflict-resolution-policies
+   Verified 2026-08-02.
+5. Apache Cassandra documentation. "Dynamo."
+   https://cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html
+   Verified 2026-08-02. Cited here for the leaderless-replication
+   distinction in dimension 2, dimension 12, and dimension 13, not as a
+   multi-leader production use.
+
 ## Code examples
 
 Three languages, each implementing the same core mechanism from
@@ -1058,24 +1079,3 @@ func main() {
 ```
 
 Run with `go run`. The run matches the TypeScript and Python runs.
-
-## 18. References
-
-1. Kleppmann, Martin. Designing Data-Intensive Applications. O'Reilly
-   Media, 2017. Chapter 5, "Replication", section "Multi-Leader
-   Replication". Print and digital edition, ISBN 978-1449373320.
-2. Apache CouchDB documentation. "Replication Protocol."
-   https://docs.couchdb.org/en/stable/replication/protocol.html
-   Verified 2026-08-02.
-3. MySQL 8.0 Reference Manual. "Group Replication, Multi-Primary Mode."
-   https://dev.mysql.com/doc/refman/8.0/en/group-replication-multi-primary-mode.html
-   Verified 2026-08-02.
-4. Microsoft Learn. "Conflict Resolution Types and Resolution Policies,
-   Azure Cosmos DB."
-   https://learn.microsoft.com/en-us/azure/cosmos-db/conflict-resolution-policies
-   Verified 2026-08-02.
-5. Apache Cassandra documentation. "Dynamo."
-   https://cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html
-   Verified 2026-08-02. Cited here for the leaderless-replication
-   distinction in dimension 2, dimension 12, and dimension 13, not as a
-   multi-leader production use.

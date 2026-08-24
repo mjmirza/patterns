@@ -725,6 +725,37 @@ denial-of-service vector that must be bounded explicitly, typically with a
 per-connection or per-client cap on outstanding operations, rather than left
 to the pattern's own machinery to police.
 
+## 18. References
+
+- Irfan Pyarali, Tim Harrison, Douglas C. Schmidt, Thomas D. Jordan,
+  "Proactor. An Object Behavioral Pattern for Demultiplexing and
+  Dispatching Handlers for Asynchronous Events", Pattern Languages of
+  Programs (PLoP), 1997. Cited via
+  [Wikipedia, Proactor pattern](https://en.wikipedia.org/wiki/Proactor_pattern),
+  verified 2026-08-02.
+- Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann,
+  *Pattern-Oriented Software Architecture, Volume 2. Patterns for
+  Concurrent and Networked Objects*, John Wiley and Sons, 2000, chapter
+  "Proactor". Cited via
+  [Wikipedia, Proactor pattern](https://en.wikipedia.org/wiki/Proactor_pattern),
+  verified 2026-08-02.
+- Microsoft, "I/O Completion Ports",
+  [learn.microsoft.com/en-us/windows/win32/fileio/i-o-completion-ports](https://learn.microsoft.com/en-us/windows/win32/fileio/i-o-completion-ports),
+  verified 2026-08-02.
+- Boost.Asio documentation, "Core Concepts and Functionality, Proactor
+  Pattern",
+  [boost.org/doc/libs/1_87_0/doc/html/boost_asio/overview/core/async.html](https://www.boost.org/doc/libs/1_87_0/doc/html/boost_asio/overview/core/async.html),
+  verified 2026-08-02.
+- libuv, "Design overview",
+  [docs.libuv.org/en/v1.x/design.html](https://docs.libuv.org/en/v1.x/design.html),
+  verified 2026-08-02.
+- tokio-uring crate documentation,
+  [docs.rs/tokio-uring/latest/tokio_uring](https://docs.rs/tokio-uring/latest/tokio_uring/),
+  verified 2026-08-02.
+- Python Software Foundation, `asyncio` documentation, event loop
+  implementations `ProactorEventLoop` and `SelectorEventLoop`, standard
+  library reference, current as of the verification pass on 2026-08-02.
+
 ## Code
 
 The three implementations below all build the same shape. an Initiator that
@@ -909,34 +940,3 @@ Proactor implementation in the JDK but requires a full JVM toolchain this
 environment was not confirmed to have available at verification time, so it
 is named here as a real production instance in section 9's spirit without
 being included as a compiled sample.
-
-## 18. References
-
-- Irfan Pyarali, Tim Harrison, Douglas C. Schmidt, Thomas D. Jordan,
-  "Proactor. An Object Behavioral Pattern for Demultiplexing and
-  Dispatching Handlers for Asynchronous Events", Pattern Languages of
-  Programs (PLoP), 1997. Cited via
-  [Wikipedia, Proactor pattern](https://en.wikipedia.org/wiki/Proactor_pattern),
-  verified 2026-08-02.
-- Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann,
-  *Pattern-Oriented Software Architecture, Volume 2. Patterns for
-  Concurrent and Networked Objects*, John Wiley and Sons, 2000, chapter
-  "Proactor". Cited via
-  [Wikipedia, Proactor pattern](https://en.wikipedia.org/wiki/Proactor_pattern),
-  verified 2026-08-02.
-- Microsoft, "I/O Completion Ports",
-  [learn.microsoft.com/en-us/windows/win32/fileio/i-o-completion-ports](https://learn.microsoft.com/en-us/windows/win32/fileio/i-o-completion-ports),
-  verified 2026-08-02.
-- Boost.Asio documentation, "Core Concepts and Functionality, Proactor
-  Pattern",
-  [boost.org/doc/libs/1_87_0/doc/html/boost_asio/overview/core/async.html](https://www.boost.org/doc/libs/1_87_0/doc/html/boost_asio/overview/core/async.html),
-  verified 2026-08-02.
-- libuv, "Design overview",
-  [docs.libuv.org/en/v1.x/design.html](https://docs.libuv.org/en/v1.x/design.html),
-  verified 2026-08-02.
-- tokio-uring crate documentation,
-  [docs.rs/tokio-uring/latest/tokio_uring](https://docs.rs/tokio-uring/latest/tokio_uring/),
-  verified 2026-08-02.
-- Python Software Foundation, `asyncio` documentation, event loop
-  implementations `ProactorEventLoop` and `SelectorEventLoop`, standard
-  library reference, current as of the verification pass on 2026-08-02.

@@ -729,6 +729,73 @@ What failing looks like.
   security, authentication, or authorisation decisions themselves. It neither
   opens nor closes those surfaces, and claiming otherwise would be invention.
 
+## 18. References
+
+Books.
+
+1. Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John. *Design
+   Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
+   1994. Chapter 3, Creational Patterns, the Prototype pattern. ISBN
+   0-201-63361-2.
+2. Bloch, Joshua. *Effective Java*, 3rd edition. Addison-Wesley, 2018. Chapter 3,
+   Methods Common to All Objects, Item 13, "Override clone judiciously". ISBN
+   978-0-13-468599-1. The item title and argument, that `Cloneable` fails as a
+   mixin interface because it contains no `clone` method, that the protocol is
+   complex and unenforceable, and that a copy constructor or copy factory is the
+   better approach, were confirmed by web search on 2026-08-02.
+
+Specifications and standards.
+
+3. ECMA International. *ECMAScript Language Specification*, `Object.create ( O,
+   Properties )`, section 7.3.32.
+   https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.create
+   Verified 2026-08-02.
+4. WHATWG. *HTML Standard*, Structured data, `structuredClone(value, options)`.
+   https://html.spec.whatwg.org/multipage/structured-data.html#structuredclone
+   Verified 2026-08-02. Confirms the serialise-then-deserialise algorithm,
+   preservation of circular references and object identity, and the
+   `DataCloneError` `DOMException` thrown when the value is callable.
+
+Language and platform documentation.
+
+5. Oracle. *Java SE 21 API Documentation*, `java.lang.Object`, `clone()`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html
+   Verified 2026-08-02. Confirms the shallow-copy default and the
+   `CloneNotSupportedException` behaviour.
+6. Oracle. *Java SE 21 API Documentation*, `java.lang.Cloneable`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Cloneable.html
+   Verified 2026-08-02. Confirms that the interface contains no `clone` method
+   and that implementing it alone does not make an object cloneable.
+7. Python Software Foundation. *Python 3 Standard Library*, `copy`, Shallow and
+   deep copy operations. https://docs.python.org/3/library/copy.html
+   Verified 2026-08-02. Confirms the shallow and deep definitions, `__copy__`
+   and `__deepcopy__`, and the memo dictionary used to handle recursive objects.
+8. Microsoft. *.NET API Documentation*, `System.ICloneable` Interface.
+   https://learn.microsoft.com/en-us/dotnet/api/system.icloneable
+   Verified 2026-08-02. Confirms that the interface does not specify copy depth
+   and that Microsoft recommends it not be implemented in public APIs.
+9. Mozilla. *MDN Web Docs*, `Object.create()`.
+   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create
+   Verified 2026-08-02. Confirms delegation semantics and property shadowing.
+10. Mozilla. *MDN Web Docs*, `Window.structuredClone()`.
+    https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone
+    Verified 2026-08-02. Confirms circular-reference handling and the
+    `DataCloneError` on functions and DOM nodes.
+
+Production systems.
+
+11. The Kubernetes Authors. *Kubernetes Documentation*, Concepts, Workloads,
+    Pods, Pod templates section.
+    https://kubernetes.io/docs/concepts/workloads/pods/
+    Verified 2026-08-02.
+12. Unity Technologies. *Unity 6 Manual*, Prefabs.
+    https://docs.unity3d.com/6000.0/Documentation/Manual/Prefabs.html
+    Verified 2026-08-02.
+13. Django Software Foundation. *Django 5.2 Documentation*, Making queries,
+    Filtered QuerySets are unique.
+    https://docs.djangoproject.com/en/5.2/topics/db/queries/
+    Verified 2026-08-02.
+
 ## Code examples
 
 ### TypeScript
@@ -999,70 +1066,3 @@ reason. Both make value semantics the default for structs and data classes, and
 Kotlin's generated `copy()` on a data class covers the shallow case without a
 pattern, leaving only the deep-copy decision, which is the same decision already
 shown in the Python and Go examples.
-
-## 18. References
-
-Books.
-
-1. Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John. *Design
-   Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
-   1994. Chapter 3, Creational Patterns, the Prototype pattern. ISBN
-   0-201-63361-2.
-2. Bloch, Joshua. *Effective Java*, 3rd edition. Addison-Wesley, 2018. Chapter 3,
-   Methods Common to All Objects, Item 13, "Override clone judiciously". ISBN
-   978-0-13-468599-1. The item title and argument, that `Cloneable` fails as a
-   mixin interface because it contains no `clone` method, that the protocol is
-   complex and unenforceable, and that a copy constructor or copy factory is the
-   better approach, were confirmed by web search on 2026-08-02.
-
-Specifications and standards.
-
-3. ECMA International. *ECMAScript Language Specification*, `Object.create ( O,
-   Properties )`, section 7.3.32.
-   https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.create
-   Verified 2026-08-02.
-4. WHATWG. *HTML Standard*, Structured data, `structuredClone(value, options)`.
-   https://html.spec.whatwg.org/multipage/structured-data.html#structuredclone
-   Verified 2026-08-02. Confirms the serialise-then-deserialise algorithm,
-   preservation of circular references and object identity, and the
-   `DataCloneError` `DOMException` thrown when the value is callable.
-
-Language and platform documentation.
-
-5. Oracle. *Java SE 21 API Documentation*, `java.lang.Object`, `clone()`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html
-   Verified 2026-08-02. Confirms the shallow-copy default and the
-   `CloneNotSupportedException` behaviour.
-6. Oracle. *Java SE 21 API Documentation*, `java.lang.Cloneable`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Cloneable.html
-   Verified 2026-08-02. Confirms that the interface contains no `clone` method
-   and that implementing it alone does not make an object cloneable.
-7. Python Software Foundation. *Python 3 Standard Library*, `copy`, Shallow and
-   deep copy operations. https://docs.python.org/3/library/copy.html
-   Verified 2026-08-02. Confirms the shallow and deep definitions, `__copy__`
-   and `__deepcopy__`, and the memo dictionary used to handle recursive objects.
-8. Microsoft. *.NET API Documentation*, `System.ICloneable` Interface.
-   https://learn.microsoft.com/en-us/dotnet/api/system.icloneable
-   Verified 2026-08-02. Confirms that the interface does not specify copy depth
-   and that Microsoft recommends it not be implemented in public APIs.
-9. Mozilla. *MDN Web Docs*, `Object.create()`.
-   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create
-   Verified 2026-08-02. Confirms delegation semantics and property shadowing.
-10. Mozilla. *MDN Web Docs*, `Window.structuredClone()`.
-    https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone
-    Verified 2026-08-02. Confirms circular-reference handling and the
-    `DataCloneError` on functions and DOM nodes.
-
-Production systems.
-
-11. The Kubernetes Authors. *Kubernetes Documentation*, Concepts, Workloads,
-    Pods, Pod templates section.
-    https://kubernetes.io/docs/concepts/workloads/pods/
-    Verified 2026-08-02.
-12. Unity Technologies. *Unity 6 Manual*, Prefabs.
-    https://docs.unity3d.com/6000.0/Documentation/Manual/Prefabs.html
-    Verified 2026-08-02.
-13. Django Software Foundation. *Django 5.2 Documentation*, Making queries,
-    Filtered QuerySets are unique.
-    https://docs.djangoproject.com/en/5.2/topics/db/queries/
-    Verified 2026-08-02.

@@ -447,6 +447,13 @@ a payment, must key off the server's real, confirmed response, never
 off the client's optimistic prediction, which exists purely to
 improve perceived responsiveness and carries no authority of its own.
 
+## 18. References
+
+1. React documentation. "useOptimistic".
+   https://react.dev/reference/react/useOptimistic
+   Verified 2026-08-21. Source of the defining sentence and the
+   convergence-behavior explanation quoted in dimensions 1 and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -609,10 +616,3 @@ Task {
     print("final state: " + String(describing: controller.getDisplayState()))
 }
 ```
-
-## 18. References
-
-1. React documentation. "useOptimistic".
-   https://react.dev/reference/react/useOptimistic
-   Verified 2026-08-21. Source of the defining sentence and the
-   convergence-behavior explanation quoted in dimensions 1 and 9.

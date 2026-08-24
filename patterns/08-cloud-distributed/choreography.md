@@ -913,6 +913,51 @@ otherwise separated data, and confirm it does not itself encode personal
 information, such as embedding a customer's email address directly in the
 correlation string.
 
+## 18. References
+
+1. Wikipedia contributors. "Service choreography."
+   https://en.wikipedia.org/wiki/Service_choreography
+   Verified 2026-08-03. Source for the global-versus-local-perspective
+   definition, the dancers-without-a-single-point-of-control summary, and
+   the W3C WS-CDL and WSCI historical lineage in dimension 1.
+2. Chris Richardson. "Pattern, Saga." microservices.io.
+   https://microservices.io/patterns/data/saga.html
+   Verified 2026-08-03. Source for the operational definition of
+   choreography-based sagas, the Create Order saga worked example named in
+   dimension 9, and the explicit statement that big-picture understanding
+   degrades as the number of choreographed steps grows, cited in dimensions
+   4 and 11.
+3. Amazon Web Services. "What Is Amazon EventBridge?" AWS EventBridge User
+   Guide.
+   https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html
+   Verified 2026-08-03. Source for the event-bus and content-based routing
+   description used in dimensions 4, 8, and 9.
+4. Amazon Web Services. "Amazon S3 Event Notifications." Amazon S3 User
+   Guide.
+   https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventNotifications.html
+   Verified 2026-08-03. Source for the storage-triggered choreography
+   variant in dimension 8, the production use in dimension 9, and the
+   documented execution-loop failure mode in dimension 11.
+5. Amazon Web Services. "What Is AWS Step Functions?" AWS Step Functions
+   Developer Guide.
+   https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html
+   Verified 2026-08-03. Source for the contrasting definition of a
+   centrally defined, orchestrated workflow used in dimension 12's
+   trade-off table.
+6. Netflix. Conductor repository README.
+   https://github.com/Netflix/conductor
+   Verified 2026-08-03. Source for the named production orchestration
+   engine cited as counter-evidence in dimension 9.
+7. Hector Garcia-Molina and Kenneth Salem. "Sagas." Proceedings of the 1987
+   ACM SIGMOD International Conference on Management of Data, 1987. Cited
+   for the original transactional mechanism that choreographed and
+   orchestrated sagas both implement, per the citation already established
+   for this venue and year in this repository's Saga entry. Not
+   independently re-verified against the original proceedings text in this
+   session, treated as an established bibliographic fact consistent with
+   standard distributed-systems literature and with this repository's
+   existing Saga entry, not as a page-level quotation.
+
 ## Code examples
 
 Three languages, chosen because they represent genuinely different idiomatic
@@ -1129,48 +1174,3 @@ func main() {
 	<-done
 }
 ```
-
-## 18. References
-
-1. Wikipedia contributors. "Service choreography."
-   https://en.wikipedia.org/wiki/Service_choreography
-   Verified 2026-08-03. Source for the global-versus-local-perspective
-   definition, the dancers-without-a-single-point-of-control summary, and
-   the W3C WS-CDL and WSCI historical lineage in dimension 1.
-2. Chris Richardson. "Pattern, Saga." microservices.io.
-   https://microservices.io/patterns/data/saga.html
-   Verified 2026-08-03. Source for the operational definition of
-   choreography-based sagas, the Create Order saga worked example named in
-   dimension 9, and the explicit statement that big-picture understanding
-   degrades as the number of choreographed steps grows, cited in dimensions
-   4 and 11.
-3. Amazon Web Services. "What Is Amazon EventBridge?" AWS EventBridge User
-   Guide.
-   https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html
-   Verified 2026-08-03. Source for the event-bus and content-based routing
-   description used in dimensions 4, 8, and 9.
-4. Amazon Web Services. "Amazon S3 Event Notifications." Amazon S3 User
-   Guide.
-   https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventNotifications.html
-   Verified 2026-08-03. Source for the storage-triggered choreography
-   variant in dimension 8, the production use in dimension 9, and the
-   documented execution-loop failure mode in dimension 11.
-5. Amazon Web Services. "What Is AWS Step Functions?" AWS Step Functions
-   Developer Guide.
-   https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html
-   Verified 2026-08-03. Source for the contrasting definition of a
-   centrally defined, orchestrated workflow used in dimension 12's
-   trade-off table.
-6. Netflix. Conductor repository README.
-   https://github.com/Netflix/conductor
-   Verified 2026-08-03. Source for the named production orchestration
-   engine cited as counter-evidence in dimension 9.
-7. Hector Garcia-Molina and Kenneth Salem. "Sagas." Proceedings of the 1987
-   ACM SIGMOD International Conference on Management of Data, 1987. Cited
-   for the original transactional mechanism that choreographed and
-   orchestrated sagas both implement, per the citation already established
-   for this venue and year in this repository's Saga entry. Not
-   independently re-verified against the original proceedings text in this
-   session, treated as an established bibliographic fact consistent with
-   standard distributed-systems literature and with this repository's
-   existing Saga entry, not as a page-level quotation.

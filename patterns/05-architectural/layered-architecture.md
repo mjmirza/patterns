@@ -761,6 +761,37 @@ driver exceptions visible at the presentation layer), the system has an
 information-disclosure vulnerability as a direct consequence of the layer
 boundary being violated, not a separate, unrelated bug.
 
+## 18. References
+
+1. Frank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad, Michael
+   Stal, *Pattern-Oriented Software Architecture, Volume 1. A System of
+   Patterns*, Wiley, August 1996, the Layers pattern, cited via
+   [Wikipedia, "Multitier architecture,"](https://en.wikipedia.org/wiki/Multitier_architecture),
+   verified 2026-08-02.
+2. Martin Fowler, "PresentationDomainDataLayering," martinfowler.com,
+   published 26 August 2015,
+   [https://martinfowler.com/bliki/PresentationDomainDataLayering.html](https://martinfowler.com/bliki/PresentationDomainDataLayering.html),
+   verified 2026-08-02.
+3. Microsoft Learn, "Common web application architectures," .NET
+   Architecture Guides (excerpted from *Architect Modern Web Applications
+   with ASP.NET Core and Azure*), original content 12 December 2021, page
+   last updated 8 July 2026,
+   [https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures),
+   verified 2026-08-02.
+4. Wikipedia, "OSI model," section on layering discipline and history,
+   [https://en.wikipedia.org/wiki/OSI_model](https://en.wikipedia.org/wiki/OSI_model),
+   verified 2026-08-02. Cited only as an illustration of strict-layering
+   discipline in a different domain, per the scope note in dimension 1.
+5. Spring PetClinic sample application,
+   `org.springframework.samples.petclinic.owner` package, showing the
+   `OwnerController` / `OwnerRepository` split,
+   [https://github.com/spring-projects/spring-petclinic/tree/main/src/main/java/org/springframework/samples/petclinic/owner](https://github.com/spring-projects/spring-petclinic/tree/main/src/main/java/org/springframework/samples/petclinic/owner),
+   verified 2026-08-02.
+6. eShopOnWeb reference application, demonstrating both the traditional
+   N-Layer form and the inverted Clean Architecture form side by side,
+   [https://github.com/dotnet-architecture/eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb),
+   linked from source 3, verified 2026-08-02.
+
 ## Code examples
 
 The three languages below were chosen because each shows a different degree
@@ -1058,34 +1089,3 @@ their outputs agree, which is the intended demonstration that the layer
 boundary (an interface here, a duck-typed convention in Python) produces the
 same observable behavior regardless of how strictly the host language
 enforces it.
-
-## 18. References
-
-1. Frank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad, Michael
-   Stal, *Pattern-Oriented Software Architecture, Volume 1. A System of
-   Patterns*, Wiley, August 1996, the Layers pattern, cited via
-   [Wikipedia, "Multitier architecture,"](https://en.wikipedia.org/wiki/Multitier_architecture),
-   verified 2026-08-02.
-2. Martin Fowler, "PresentationDomainDataLayering," martinfowler.com,
-   published 26 August 2015,
-   [https://martinfowler.com/bliki/PresentationDomainDataLayering.html](https://martinfowler.com/bliki/PresentationDomainDataLayering.html),
-   verified 2026-08-02.
-3. Microsoft Learn, "Common web application architectures," .NET
-   Architecture Guides (excerpted from *Architect Modern Web Applications
-   with ASP.NET Core and Azure*), original content 12 December 2021, page
-   last updated 8 July 2026,
-   [https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures),
-   verified 2026-08-02.
-4. Wikipedia, "OSI model," section on layering discipline and history,
-   [https://en.wikipedia.org/wiki/OSI_model](https://en.wikipedia.org/wiki/OSI_model),
-   verified 2026-08-02. Cited only as an illustration of strict-layering
-   discipline in a different domain, per the scope note in dimension 1.
-5. Spring PetClinic sample application,
-   `org.springframework.samples.petclinic.owner` package, showing the
-   `OwnerController` / `OwnerRepository` split,
-   [https://github.com/spring-projects/spring-petclinic/tree/main/src/main/java/org/springframework/samples/petclinic/owner](https://github.com/spring-projects/spring-petclinic/tree/main/src/main/java/org/springframework/samples/petclinic/owner),
-   verified 2026-08-02.
-6. eShopOnWeb reference application, demonstrating both the traditional
-   N-Layer form and the inverted Clean Architecture form side by side,
-   [https://github.com/dotnet-architecture/eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb),
-   linked from source 3, verified 2026-08-02.

@@ -908,6 +908,57 @@ genuine trade-off in auditability, stated here as engineering judgement
 rather than a sourced claim, since no cited source makes this comparison
 directly.
 
+## 18. References
+
+1. Hector Garcia-Molina, Kenneth Salem. "Sagas." Proceedings of the 1987 ACM
+   SIGMOD International Conference on Management of Data, pages 249 to 259.
+   https://dl.acm.org/doi/10.1145/38713.38742
+   Verified 2026-08-02. Source of the original saga definition, the
+   compensating transaction concept, and the database-lock-contention
+   problem the pattern was first designed to solve.
+2. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 978-0321200686. Messaging Systems chapter, Process Manager pattern.
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html
+   Verified 2026-08-02. Source of the Process Manager intent, its
+   distinction from Routing Slip, and the named bottleneck drawback used in
+   dimension 3 and dimension 11.
+3. Chris Richardson. *Microservices Patterns*. Manning, 2018.
+   ISBN 978-1617294549. Chapter 4, "Managing transactions with sagas."
+   Source of the modern microservices restatement of the saga pattern, the
+   orchestration versus choreography naming, and the Eventuate Tram
+   reference implementations.
+4. Chris Richardson. microservices.io, "Pattern. Saga."
+   https://microservices.io/patterns/data/saga.html
+   Verified 2026-08-02. Source of the choreography and orchestration
+   definitions cited in dimension 1, and the Eventuate framework production
+   use cited in dimension 9.
+5. Particular Software. NServiceBus documentation, "Sagas."
+   https://docs.particular.net/nservicebus/sagas/
+   Verified 2026-08-02. Source of the `Saga<T>`, `IAmStartedByMessages<T>`,
+   `ContainSagaData`, and correlation-property details cited in dimension 8
+   and dimension 9.
+6. Temporal Technologies. Temporal documentation, "Workflows."
+   https://docs.temporal.io/workflows
+   Verified 2026-08-02. Source of the durable-execution and Event History
+   replay description cited in dimension 8.
+7. Amazon Web Services. AWS Step Functions Developer Guide, "What is Step
+   Functions?"
+   https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html
+   Verified 2026-08-02. Source of the state-machine model, the `Retry` and
+   `Catch` error-handling fields, and the Standard workflow execution
+   guarantees cited in dimension 8 and dimension 9.
+8. Uber Engineering. "Conducting Better Business with Uber's Open Source
+   Orchestration Tool, Cadence."
+   https://www.uber.com/en-CO/blog/open-source-orchestration-tool-cadence-overview/
+   Verified 2026-08-02. Source of the Cadence saga-compensation description
+   and the 12 billion executions per month production-scale figure cited in
+   dimension 9.
+9. Camunda. "Orchestration vs Choreography," Camunda blog, February 2023.
+   https://camunda.com/blog/2023/02/orchestration-vs-choreography/
+   Verified 2026-08-02. Source of Camunda's Process Manager positioning
+   cited in dimension 9.
+
 ## Code examples
 
 Three languages, each showing a different genuine implementation shape from
@@ -1083,54 +1134,3 @@ bus.subscribe("StockReservationFailed", on_stock_reservation_failed)
 
 bus.publish(Event(type="OrderCreated", order_id="order-47291"))
 ```
-
-## 18. References
-
-1. Hector Garcia-Molina, Kenneth Salem. "Sagas." Proceedings of the 1987 ACM
-   SIGMOD International Conference on Management of Data, pages 249 to 259.
-   https://dl.acm.org/doi/10.1145/38713.38742
-   Verified 2026-08-02. Source of the original saga definition, the
-   compensating transaction concept, and the database-lock-contention
-   problem the pattern was first designed to solve.
-2. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 978-0321200686. Messaging Systems chapter, Process Manager pattern.
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html
-   Verified 2026-08-02. Source of the Process Manager intent, its
-   distinction from Routing Slip, and the named bottleneck drawback used in
-   dimension 3 and dimension 11.
-3. Chris Richardson. *Microservices Patterns*. Manning, 2018.
-   ISBN 978-1617294549. Chapter 4, "Managing transactions with sagas."
-   Source of the modern microservices restatement of the saga pattern, the
-   orchestration versus choreography naming, and the Eventuate Tram
-   reference implementations.
-4. Chris Richardson. microservices.io, "Pattern. Saga."
-   https://microservices.io/patterns/data/saga.html
-   Verified 2026-08-02. Source of the choreography and orchestration
-   definitions cited in dimension 1, and the Eventuate framework production
-   use cited in dimension 9.
-5. Particular Software. NServiceBus documentation, "Sagas."
-   https://docs.particular.net/nservicebus/sagas/
-   Verified 2026-08-02. Source of the `Saga<T>`, `IAmStartedByMessages<T>`,
-   `ContainSagaData`, and correlation-property details cited in dimension 8
-   and dimension 9.
-6. Temporal Technologies. Temporal documentation, "Workflows."
-   https://docs.temporal.io/workflows
-   Verified 2026-08-02. Source of the durable-execution and Event History
-   replay description cited in dimension 8.
-7. Amazon Web Services. AWS Step Functions Developer Guide, "What is Step
-   Functions?"
-   https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html
-   Verified 2026-08-02. Source of the state-machine model, the `Retry` and
-   `Catch` error-handling fields, and the Standard workflow execution
-   guarantees cited in dimension 8 and dimension 9.
-8. Uber Engineering. "Conducting Better Business with Uber's Open Source
-   Orchestration Tool, Cadence."
-   https://www.uber.com/en-CO/blog/open-source-orchestration-tool-cadence-overview/
-   Verified 2026-08-02. Source of the Cadence saga-compensation description
-   and the 12 billion executions per month production-scale figure cited in
-   dimension 9.
-9. Camunda. "Orchestration vs Choreography," Camunda blog, February 2023.
-   https://camunda.com/blog/2023/02/orchestration-vs-choreography/
-   Verified 2026-08-02. Source of Camunda's Process Manager positioning
-   cited in dimension 9.

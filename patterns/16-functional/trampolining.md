@@ -778,6 +778,31 @@ logical trace context, it must not swallow security exceptions or convert them
 into ordinary validation failures. Preserve the original exception type where
 callers rely on it, and redact logical context before reporting it.
 
+## 18. References
+
+- Richard Kelsey, William Clinger and Jonathan Rees, editors. *Revised(5)
+  Report on the Algorithmic Language Scheme*, section 3.5, "Proper tail
+  recursion". https://groups.csail.mit.edu/mac/ftpdir/scheme-reports/r5rs-html.old/r5rs_22.html,
+  verified 2026-08-02.
+- Steven D. Ganz, Daniel P. Friedman and Mitchell Wand. "Trampolined Style".
+  *Proceedings of the Fourth ACM SIGPLAN International Conference on Functional
+  Programming*, 1999, pages 18 to 22.
+- Yasuhiko Minamide. "Selective Tail Call Elimination". *Static Analysis,
+  10th International Symposium*, 2003, section 2.
+- Runar Oli Bjarnason. "Stackless Scala With Free Monads". Scala Workshop
+  2012, sections 3 and 4.
+  https://blog.higher-order.com/assets/trampolines.pdf, verified 2026-08-02.
+- Scala standard library API. `scala.util.control.TailCalls`, Scala 3 API.
+  https://scala-lang.org/api/3.x/scala/util/control.html, verified
+  2026-08-02.
+- Clojure API documentation. `clojure.core/trampoline`, Clojure v1.12.4 API.
+  https://clojure.github.io/clojure/clojure.core-api.html, verified
+  2026-08-02.
+- Typelevel Cats documentation. "Eval".
+  https://typelevel.org/cats/datatypes/eval.html, verified 2026-08-02.
+- Typelevel Cats API documentation. `cats.Eval`.
+  https://typelevel.org/cats/api/cats/Eval.html, verified 2026-08-02.
+
 ## Code examples
 
 The following samples use Python, TypeScript, Go, and Rust because those
@@ -952,28 +977,3 @@ fn main() {
     println!("{}", run(even(100000)));
 }
 ```
-
-## 18. References
-
-- Richard Kelsey, William Clinger and Jonathan Rees, editors. *Revised(5)
-  Report on the Algorithmic Language Scheme*, section 3.5, "Proper tail
-  recursion". https://groups.csail.mit.edu/mac/ftpdir/scheme-reports/r5rs-html.old/r5rs_22.html,
-  verified 2026-08-02.
-- Steven D. Ganz, Daniel P. Friedman and Mitchell Wand. "Trampolined Style".
-  *Proceedings of the Fourth ACM SIGPLAN International Conference on Functional
-  Programming*, 1999, pages 18 to 22.
-- Yasuhiko Minamide. "Selective Tail Call Elimination". *Static Analysis,
-  10th International Symposium*, 2003, section 2.
-- Runar Oli Bjarnason. "Stackless Scala With Free Monads". Scala Workshop
-  2012, sections 3 and 4.
-  https://blog.higher-order.com/assets/trampolines.pdf, verified 2026-08-02.
-- Scala standard library API. `scala.util.control.TailCalls`, Scala 3 API.
-  https://scala-lang.org/api/3.x/scala/util/control.html, verified
-  2026-08-02.
-- Clojure API documentation. `clojure.core/trampoline`, Clojure v1.12.4 API.
-  https://clojure.github.io/clojure/clojure.core-api.html, verified
-  2026-08-02.
-- Typelevel Cats documentation. "Eval".
-  https://typelevel.org/cats/datatypes/eval.html, verified 2026-08-02.
-- Typelevel Cats API documentation. `cats.Eval`.
-  https://typelevel.org/cats/api/cats/Eval.html, verified 2026-08-02.

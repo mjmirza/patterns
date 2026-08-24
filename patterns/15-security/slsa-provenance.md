@@ -500,6 +500,26 @@ is one layer in a defence, source review, dependency scanning, and
 provenance verification together, never a single, sufficient check on
 its own.
 
+## 18. References
+
+1. Google Cloud Blog. "Securing the software development lifecycle
+   with Cloud Build and SLSA". 30 July 2021.
+   https://cloud.google.com/blog/products/application-development/google-introduces-slsa-framework
+   Verified 2026-08-21. Source of the first_described lineage claim.
+2. SLSA specification, v1.2. Provenance.
+   https://slsa.dev/spec/v1.2/provenance
+   Verified 2026-08-21. Source of the provenance definition quoted in
+   dimension 9.
+3. SLSA specification. Software attestations.
+   https://slsa.dev/attestation-model
+   Verified 2026-08-21. Source for the in-toto attestation format
+   relationship described in dimensions 5 and 9.
+4. GitHub documentation. Using artifact attestations to establish
+   provenance for builds.
+   https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds
+   Verified 2026-08-21. Source for the GitHub production use in
+   dimension 9.
+
 ## Code examples
 
 Three languages, each showing a minimal in-toto-shaped provenance
@@ -613,23 +633,3 @@ let provenance = Provenance(
 
 print(verify(artifact, against: provenance))
 ```
-
-## 18. References
-
-1. Google Cloud Blog. "Securing the software development lifecycle
-   with Cloud Build and SLSA". 30 July 2021.
-   https://cloud.google.com/blog/products/application-development/google-introduces-slsa-framework
-   Verified 2026-08-21. Source of the first_described lineage claim.
-2. SLSA specification, v1.2. Provenance.
-   https://slsa.dev/spec/v1.2/provenance
-   Verified 2026-08-21. Source of the provenance definition quoted in
-   dimension 9.
-3. SLSA specification. Software attestations.
-   https://slsa.dev/attestation-model
-   Verified 2026-08-21. Source for the in-toto attestation format
-   relationship described in dimensions 5 and 9.
-4. GitHub documentation. Using artifact attestations to establish
-   provenance for builds.
-   https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds
-   Verified 2026-08-21. Source for the GitHub production use in
-   dimension 9.

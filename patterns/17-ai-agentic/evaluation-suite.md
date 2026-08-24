@@ -870,6 +870,47 @@ after the fact, because a suite whose cases or thresholds can be quietly
 adjusted to produce a favorable number is not a control a regulator or an
 internal audit team can rely on.
 
+## 18. References
+
+1. Alex Wang, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, Samuel
+   R. Bowman. "GLUE. A Multi-Task Benchmark and Analysis Platform for Natural
+   Language Understanding." Submitted 20 April 2018, published at ICLR 2019.
+   https://arxiv.org/abs/1804.07461 Verified 2026-08-02. Source for the
+   lineage in dimension 1 and the main-tasks-versus-diagnostic-suite split
+   cited in dimension 11.
+2. OpenAI. "openai/evals" repository. https://github.com/openai/evals
+   Verified 2026-08-02. Source for the framework's template and model-graded
+   eval concepts in dimension 1, the authoring-loop framing in dimension 7,
+   the implementation variants in dimension 8, and the production use in
+   dimension 9.
+3. Percy Liang et al. "Holistic Evaluation of Language Models." Transactions
+   on Machine Learning Research, submitted November 2022.
+   https://arxiv.org/abs/2211.09110 Verified 2026-08-02. Source for the HELM
+   production use and the scenarios-crossed-with-metrics taxonomy in
+   dimension 9.
+4. Promptfoo. "Getting Started" documentation.
+   https://www.promptfoo.dev/docs/intro/ Verified 2026-08-02. Source for the
+   red-team implementation variant in dimension 8 and the production-scale
+   use in dimension 9.
+5. Confident AI. "deepeval" repository.
+   https://github.com/confident-ai/deepeval Verified 2026-08-02. Source for
+   the test-runner-shaped implementation variant in dimension 8 and the
+   production use in dimension 9.
+6. Shahul Es, Jithin James, Luis Espinosa-Anke, Steven Schockaert. "RAGAS.
+   Automated Evaluation of Retrieval Augmented Generation." Submitted
+   September 2023. https://arxiv.org/abs/2309.15217 Verified 2026-08-02.
+   Source for the RAG-specific implementation variant in dimension 8 and the
+   production use in dimension 9.
+7. Ragas project. "Faithfulness" metric documentation.
+   https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/
+   Verified 2026-08-02. Source for the faithfulness metric definition in
+   dimension 8.
+8. Anthropic. "Develop test cases." Claude Docs.
+   https://platform.claude.com/docs/en/test-and-evaluate/develop-tests
+   Verified 2026-08-02. Source for the scorer taxonomy, the different-judge-
+   model recommendation, and the multidimensional success criteria cited in
+   dimensions 8, 9, 11, and 14.
+
 ## Code examples
 
 Three languages, chosen because a case registry, a scorer, a runner, and a
@@ -1242,44 +1283,3 @@ func main() {
 Run with `go run main.go` and checked with `go vet`, producing the same
 baseline, candidate, and regression report shape as the other two languages,
 with `go vet` reporting no issues.
-
-## 18. References
-
-1. Alex Wang, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, Samuel
-   R. Bowman. "GLUE. A Multi-Task Benchmark and Analysis Platform for Natural
-   Language Understanding." Submitted 20 April 2018, published at ICLR 2019.
-   https://arxiv.org/abs/1804.07461 Verified 2026-08-02. Source for the
-   lineage in dimension 1 and the main-tasks-versus-diagnostic-suite split
-   cited in dimension 11.
-2. OpenAI. "openai/evals" repository. https://github.com/openai/evals
-   Verified 2026-08-02. Source for the framework's template and model-graded
-   eval concepts in dimension 1, the authoring-loop framing in dimension 7,
-   the implementation variants in dimension 8, and the production use in
-   dimension 9.
-3. Percy Liang et al. "Holistic Evaluation of Language Models." Transactions
-   on Machine Learning Research, submitted November 2022.
-   https://arxiv.org/abs/2211.09110 Verified 2026-08-02. Source for the HELM
-   production use and the scenarios-crossed-with-metrics taxonomy in
-   dimension 9.
-4. Promptfoo. "Getting Started" documentation.
-   https://www.promptfoo.dev/docs/intro/ Verified 2026-08-02. Source for the
-   red-team implementation variant in dimension 8 and the production-scale
-   use in dimension 9.
-5. Confident AI. "deepeval" repository.
-   https://github.com/confident-ai/deepeval Verified 2026-08-02. Source for
-   the test-runner-shaped implementation variant in dimension 8 and the
-   production use in dimension 9.
-6. Shahul Es, Jithin James, Luis Espinosa-Anke, Steven Schockaert. "RAGAS.
-   Automated Evaluation of Retrieval Augmented Generation." Submitted
-   September 2023. https://arxiv.org/abs/2309.15217 Verified 2026-08-02.
-   Source for the RAG-specific implementation variant in dimension 8 and the
-   production use in dimension 9.
-7. Ragas project. "Faithfulness" metric documentation.
-   https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/
-   Verified 2026-08-02. Source for the faithfulness metric definition in
-   dimension 8.
-8. Anthropic. "Develop test cases." Claude Docs.
-   https://platform.claude.com/docs/en/test-and-evaluate/develop-tests
-   Verified 2026-08-02. Source for the scorer taxonomy, the different-judge-
-   model recommendation, and the multidimensional success criteria cited in
-   dimensions 8, 9, 11, and 14.

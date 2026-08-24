@@ -172,6 +172,11 @@ Skip it for a single site system with nowhere else to evacuate traffic to, since
 - Traffic shifted to a different zone or region during an evacuation still needs to satisfy the same data residency and cross-border transfer requirements at its new destination as it did at the impaired zone.
 - Every evacuation and reversal action should be logged with enough detail (who or what triggered it, when, and why) to reconstruct exactly what happened after a real incident.
 
+## 18. References
+
+- AWS, Application Recovery Controller, zonal shift (https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.html)
+- AWS, Application Recovery Controller best practices, zonal shifts (https://docs.aws.amazon.com/r53recovery/latest/dg/route53-arc-best-practices.zonal-shifts.html)
+
 ## Code examples
 
 ### Python
@@ -308,8 +313,3 @@ let evacuation = Evacuation(zones: zones)
 let target = try evacuation.evacuate(impairedZoneName: "us-east-1a")
 print("evacuated to " + target)
 ```
-
-## 18. References
-
-- AWS, Application Recovery Controller, zonal shift (https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.html)
-- AWS, Application Recovery Controller best practices, zonal shifts (https://docs.aws.amazon.com/r53recovery/latest/dg/route53-arc-best-practices.zonal-shifts.html)

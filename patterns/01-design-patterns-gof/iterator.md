@@ -1043,6 +1043,91 @@ widens the window in which personal data appears in a heap dump or a crash
 report. Where the elements carry personal data, prefer the smallest batch that
 meets the throughput target rather than the largest one that fits.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Iterator, pages
+   257 to 271. Source of the intent, the Cursor alias, the five participants, the
+   external and internal control distinction in the Implementation section, and
+   the Memento pairing for a modification-tolerant cursor.
+2. Barbara Liskov, Alan Snyder, Russell Atkinson, Craig Schaffert. "Abstraction
+   Mechanisms in CLU". *Communications of the ACM*, volume 20, number 8, 1977,
+   pages 564 to 576. https://dl.acm.org/doi/10.1145/359763.359789
+   Verified 2026-08-02. Source for the pre-GoF lineage of iterators as a
+   first-class control abstraction.
+3. Oracle. *Java SE 21 API Specification*, `java.util.Iterator`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Iterator.html
+   Verified 2026-08-02. Source for the four operations and the once-per-advance
+   removal rule.
+4. Oracle. *Java SE 21 API Specification*,
+   `java.util.ConcurrentModificationException`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ConcurrentModificationException.html
+   Verified 2026-08-02. Source for the fail-fast definition, the best-effort
+   caveat, and the statement that the exception should be used only to detect
+   bugs.
+5. Oracle. *Java SE 21 API Specification*,
+   `java.util.concurrent.ConcurrentHashMap`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html
+   Verified 2026-08-02. Source for weakly consistent traversal and for the
+   statement that its cursors do not throw the concurrent modification exception.
+6. Oracle. *Java SE 21 API Specification*, `java.util.Spliterator`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Spliterator.html
+   Verified 2026-08-02. Source for the bulk and splitting traversal variant and
+   for late binding.
+7. Oracle. *Java SE 21 API Specification*, `java.lang.Iterable`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html
+   Verified 2026-08-02. Source for the internal iterator form and for the
+   enhanced loop statement.
+8. Python Software Foundation. *The Python Standard Library*, Built-in Types,
+   Iterator Types.
+   https://docs.python.org/3/library/stdtypes.html#iterator-types
+   Verified 2026-08-02. Source for the protocol operations and for the sticky
+   exhausted state requirement.
+9. Python Software Foundation. *The Python Language Reference*, Expressions,
+   Yield expressions.
+   https://docs.python.org/3/reference/expressions.html#yield-expressions
+   Verified 2026-08-02. Source for generator semantics, suspension and resumption,
+   and the close path used for cleanup.
+10. Python Software Foundation. *The Python Standard Library*, itertools.
+    https://docs.python.org/3/library/itertools.html
+    Verified 2026-08-02. Source for the unbounded producers and for the rule that
+    unbounded streams must only be reached by truncating code.
+11. Microsoft. *.NET API documentation*, `System.Collections.Generic.IEnumerator<T>`.
+    https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1
+    Verified 2026-08-02. Source for the .NET enumerator contract, the undefined
+    current element before the first advance and after the end, the undefined
+    behaviour under modification, and the thread-safety statement.
+12. Microsoft. *C# language reference*, The yield statement.
+    https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/yield
+    Verified 2026-08-02. Source for compiler-generated iterators, deferred
+    execution, and the asynchronous iterator form.
+13. Mozilla. *MDN Web Docs*, Iteration protocols.
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
+    Verified 2026-08-02. Source for the iterable and iterator protocols, the
+    result record, and the optional termination and error operations.
+14. Ecma International. *ECMAScript Language Specification*, Control Abstraction
+    Objects, Operations on Iterator Objects.
+    https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
+    Verified 2026-08-02. Normative source for the JavaScript iteration protocol.
+15. OpenJS Foundation. *Node.js documentation*, Stream,
+    `readable[Symbol.asyncIterator]()`.
+    https://nodejs.org/api/stream.html#readablesymbolasynciterator
+    Verified 2026-08-02. Source for streams as async iterators and for stream
+    destruction on early loop exit.
+16. Rust project. *Rust standard library documentation*, `std::iter::Iterator`.
+    https://doc.rust-lang.org/std/iter/trait.Iterator.html
+    Verified 2026-08-02. Source for the single-operation trait, the associated
+    element type, laziness, and adapters.
+17. The Go project. "Range Over Function Types". *The Go Blog*.
+    https://go.dev/blog/range-functions
+    Verified 2026-08-02. Source for the Go 1.23 push iterator signatures, the
+    yield early exit protocol, and the push to pull conversion.
+18. Wikipedia contributors. "Iterator pattern".
+    https://en.wikipedia.org/wiki/Iterator_pattern
+    Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
+    the page range attribution, not as a source of explanation.
+
 ## Code examples
 
 Five languages, chosen because each shows a different real shape of the pattern
@@ -1354,88 +1439,3 @@ public final class Removal {
     }
 }
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Iterator, pages
-   257 to 271. Source of the intent, the Cursor alias, the five participants, the
-   external and internal control distinction in the Implementation section, and
-   the Memento pairing for a modification-tolerant cursor.
-2. Barbara Liskov, Alan Snyder, Russell Atkinson, Craig Schaffert. "Abstraction
-   Mechanisms in CLU". *Communications of the ACM*, volume 20, number 8, 1977,
-   pages 564 to 576. https://dl.acm.org/doi/10.1145/359763.359789
-   Verified 2026-08-02. Source for the pre-GoF lineage of iterators as a
-   first-class control abstraction.
-3. Oracle. *Java SE 21 API Specification*, `java.util.Iterator`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Iterator.html
-   Verified 2026-08-02. Source for the four operations and the once-per-advance
-   removal rule.
-4. Oracle. *Java SE 21 API Specification*,
-   `java.util.ConcurrentModificationException`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ConcurrentModificationException.html
-   Verified 2026-08-02. Source for the fail-fast definition, the best-effort
-   caveat, and the statement that the exception should be used only to detect
-   bugs.
-5. Oracle. *Java SE 21 API Specification*,
-   `java.util.concurrent.ConcurrentHashMap`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html
-   Verified 2026-08-02. Source for weakly consistent traversal and for the
-   statement that its cursors do not throw the concurrent modification exception.
-6. Oracle. *Java SE 21 API Specification*, `java.util.Spliterator`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Spliterator.html
-   Verified 2026-08-02. Source for the bulk and splitting traversal variant and
-   for late binding.
-7. Oracle. *Java SE 21 API Specification*, `java.lang.Iterable`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html
-   Verified 2026-08-02. Source for the internal iterator form and for the
-   enhanced loop statement.
-8. Python Software Foundation. *The Python Standard Library*, Built-in Types,
-   Iterator Types.
-   https://docs.python.org/3/library/stdtypes.html#iterator-types
-   Verified 2026-08-02. Source for the protocol operations and for the sticky
-   exhausted state requirement.
-9. Python Software Foundation. *The Python Language Reference*, Expressions,
-   Yield expressions.
-   https://docs.python.org/3/reference/expressions.html#yield-expressions
-   Verified 2026-08-02. Source for generator semantics, suspension and resumption,
-   and the close path used for cleanup.
-10. Python Software Foundation. *The Python Standard Library*, itertools.
-    https://docs.python.org/3/library/itertools.html
-    Verified 2026-08-02. Source for the unbounded producers and for the rule that
-    unbounded streams must only be reached by truncating code.
-11. Microsoft. *.NET API documentation*, `System.Collections.Generic.IEnumerator<T>`.
-    https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1
-    Verified 2026-08-02. Source for the .NET enumerator contract, the undefined
-    current element before the first advance and after the end, the undefined
-    behaviour under modification, and the thread-safety statement.
-12. Microsoft. *C# language reference*, The yield statement.
-    https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/yield
-    Verified 2026-08-02. Source for compiler-generated iterators, deferred
-    execution, and the asynchronous iterator form.
-13. Mozilla. *MDN Web Docs*, Iteration protocols.
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
-    Verified 2026-08-02. Source for the iterable and iterator protocols, the
-    result record, and the optional termination and error operations.
-14. Ecma International. *ECMAScript Language Specification*, Control Abstraction
-    Objects, Operations on Iterator Objects.
-    https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
-    Verified 2026-08-02. Normative source for the JavaScript iteration protocol.
-15. OpenJS Foundation. *Node.js documentation*, Stream,
-    `readable[Symbol.asyncIterator]()`.
-    https://nodejs.org/api/stream.html#readablesymbolasynciterator
-    Verified 2026-08-02. Source for streams as async iterators and for stream
-    destruction on early loop exit.
-16. Rust project. *Rust standard library documentation*, `std::iter::Iterator`.
-    https://doc.rust-lang.org/std/iter/trait.Iterator.html
-    Verified 2026-08-02. Source for the single-operation trait, the associated
-    element type, laziness, and adapters.
-17. The Go project. "Range Over Function Types". *The Go Blog*.
-    https://go.dev/blog/range-functions
-    Verified 2026-08-02. Source for the Go 1.23 push iterator signatures, the
-    yield early exit protocol, and the push to pull conversion.
-18. Wikipedia contributors. "Iterator pattern".
-    https://en.wikipedia.org/wiki/Iterator_pattern
-    Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
-    the page range attribution, not as a source of explanation.

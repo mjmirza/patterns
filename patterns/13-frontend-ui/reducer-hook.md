@@ -444,6 +444,18 @@ sensitive values are better kept out of reducer state entirely,
 handled instead through a path that does not pass through
 general-purpose logging or inspection tooling.
 
+## 18. References
+
+1. React. "Extracting State Logic into a Reducer".
+   https://react.dev/learn/extracting-state-logic-into-a-reducer
+   Verified 2026-08-21. Source of the origin-problem quote and the
+   useState-versus-useReducer comparison quotes used in dimensions 1,
+   3, 4, and 9.
+2. React. "useReducer".
+   https://react.dev/reference/react/useReducer
+   Verified 2026-08-21. Source of the hook definition quote used in
+   dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -615,15 +627,3 @@ print("count after two increments: " + String(store.getState().count))
 store.dispatch(.reset)
 print("count after reset: " + String(store.getState().count))
 ```
-
-## 18. References
-
-1. React. "Extracting State Logic into a Reducer".
-   https://react.dev/learn/extracting-state-logic-into-a-reducer
-   Verified 2026-08-21. Source of the origin-problem quote and the
-   useState-versus-useReducer comparison quotes used in dimensions 1,
-   3, 4, and 9.
-2. React. "useReducer".
-   https://react.dev/reference/react/useReducer
-   Verified 2026-08-21. Source of the hook definition quote used in
-   dimension 9.

@@ -714,6 +714,32 @@ Before-and-after logs are often more sensitive than a single event because they
 reveal changed fields. Keep snapshots in test fixtures, not production logs,
 unless there is a retention policy and a clear access boundary.
 
+## 18. References
+
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
+  edition, Addison-Wesley, 2018, chapter 6, "A First Set of Refactorings."
+- Martin Fowler, "Return Modified Value," refactoring catalog,
+  https://refactoring.com/catalog/returnModifiedValue.html, verified
+  2026-08-02.
+- Martin Fowler, "The Second Edition of Refactoring,"
+  https://martinfowler.com/articles/refactoring-2nd-ed.html, verified
+  2026-08-02.
+- Redux documentation, "Redux Fundamentals, Part 3. State, Actions, and
+  Reducers,"
+  https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers,
+  verified 2026-08-02.
+- Immer documentation, "Using produce,"
+  https://immerjs.github.io/immer/produce/, verified 2026-08-02.
+- Python Software Foundation, Python 3.14 documentation, `dataclasses.replace`,
+  https://docs.python.org/3/library/dataclasses.html#dataclasses.replace,
+  verified 2026-08-02.
+- Oracle, Java SE 21 API documentation, `java.util.stream.Stream`,
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html,
+  verified 2026-08-02.
+- MDN Web Docs, "Array.prototype.reduce,"
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce,
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples use TypeScript, Python, Go, and Rust. They are small on purpose.
@@ -845,29 +871,3 @@ basket = addItem(basket, sku: "notebook", cents: 450)
 basket = addItem(basket, sku: "pen", cents: 125)
 print(basket)
 ```
-
-## 18. References
-
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
-  edition, Addison-Wesley, 2018, chapter 6, "A First Set of Refactorings."
-- Martin Fowler, "Return Modified Value," refactoring catalog,
-  https://refactoring.com/catalog/returnModifiedValue.html, verified
-  2026-08-02.
-- Martin Fowler, "The Second Edition of Refactoring,"
-  https://martinfowler.com/articles/refactoring-2nd-ed.html, verified
-  2026-08-02.
-- Redux documentation, "Redux Fundamentals, Part 3. State, Actions, and
-  Reducers,"
-  https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers,
-  verified 2026-08-02.
-- Immer documentation, "Using produce,"
-  https://immerjs.github.io/immer/produce/, verified 2026-08-02.
-- Python Software Foundation, Python 3.14 documentation, `dataclasses.replace`,
-  https://docs.python.org/3/library/dataclasses.html#dataclasses.replace,
-  verified 2026-08-02.
-- Oracle, Java SE 21 API documentation, `java.util.stream.Stream`,
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html,
-  verified 2026-08-02.
-- MDN Web Docs, "Array.prototype.reduce,"
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce,
-  verified 2026-08-02.

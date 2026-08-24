@@ -1115,6 +1115,78 @@ adaptee's raw response codes and identifiers. Where those carry personal data,
 treat the telemetry field with the same retention and access controls as the
 data itself rather than as ordinary operational output.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Adapter,
+   beginning page 139. Source of the intent, the Wrapper alias, the four
+   participants, the class versus object adapter distinction, the applicability
+   list, and the Implementation section covering pluggable adapters and two-way
+   adapters.
+2. InformIT (Pearson). Authorised excerpt of the Adapter chapter of *Design
+   Patterns*, covering Applicability and Implementation.
+   https://www.informit.com/articles/article.aspx?p=1398600&seqNum=2
+   Verified 2026-08-02. Used to confirm the wording of the applicability list,
+   the class versus object adapter sentences, the pluggable adapter techniques,
+   and the two-way adapter transparency note.
+3. Alistair Cockburn. "Hexagonal Architecture", originally HaT Technical Report
+   2005.02, dated 4 September 2005.
+   https://alistair.cockburn.us/hexagonal-architecture/
+   Verified 2026-08-02. Source of the Ports and Adapters intent statement, the
+   primary versus secondary actor distinction, the guidance on port count, and
+   the Related Patterns sentence stating that ports-and-adapters is a particular
+   use of the Adapter pattern.
+4. Oracle. *Java SE 21 API Specification*, `java.util.Arrays`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Arrays.html
+   Verified 2026-08-02. Source for the `asList` production use and the
+   fixed-size backed-by-array wording.
+5. Oracle. *Java SE 21 API Specification*, `java.io.InputStreamReader`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStreamReader.html
+   Verified 2026-08-02. Source for the byte-stream to character-stream
+   production use.
+6. Oracle. *The Java Language Specification, Java SE 21 Edition*, chapter 8,
+   section 8.1.4, Superclasses and Subclasses.
+   https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html
+   Verified 2026-08-02. Source for the single direct superclass rule that makes
+   the class adapter form unavailable in Java.
+7. Microsoft. *C# documentation*, "Object-oriented programming, inheritance".
+   https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance
+   Verified 2026-08-02. Source for the single direct base class rule and the
+   multiple interface implementation rule in C#.
+8. Microsoft. *.NET API documentation*, `System.Data.Common.DbDataAdapter`.
+   https://learn.microsoft.com/en-us/dotnet/api/system.data.common.dbdataadapter
+   Verified 2026-08-02. Source for the ADO.NET data adapter production use, its
+   provider specific subclasses, and the documented behaviour of `Fill` and
+   `Update`.
+9. The Go project. *Go FAQ*, "Why is there no type inheritance?".
+   https://go.dev/doc/faq
+   Verified 2026-08-02. Source for the absence of type inheritance, implicit
+   interface satisfaction, and embedding as an analogue rather than an identity.
+10. The Go project. *`net/http` package documentation*, `HandlerFunc`.
+    https://pkg.go.dev/net/http#HandlerFunc
+    Verified 2026-08-02. Source for the standard library calling `HandlerFunc`
+    an adapter, and for the `ServeHTTP` behaviour.
+11. The Go project. *`io` package documentation*.
+    https://pkg.go.dev/io
+    Verified 2026-08-02. Source for `NopCloser`, `LimitReader`, `MultiReader`
+    and `TeeReader` as stream adapters, including the `WriterTo` forwarding note.
+12. Google. *Android developer documentation*, "Create dynamic lists with
+    RecyclerView".
+    https://developer.android.com/develop/ui/views/layout/recyclerview
+    Verified 2026-08-02. Source for the `RecyclerView.Adapter` production use and
+    the documented roles of `onCreateViewHolder`, `onBindViewHolder` and
+    `getItemCount`.
+13. Wikipedia contributors. "Adapter pattern".
+    https://en.wikipedia.org/wiki/Adapter_pattern
+    Verified 2026-08-02. Used only to confirm the shared Wrapper alias with
+    Decorator, the class versus object adapter phrasing, and the GoF page
+    attribution, not as a source of explanation.
+14. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+    Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Chapter 14, Maintaining
+    Model Integrity, section Anti-Corruption Layer. Cited in dimensions 4, 12
+    and 13 as the larger-scale relative of Adapter.
+
 ## Code examples
 
 Four languages, chosen because each shows a different structural fact. Java
@@ -1332,75 +1404,3 @@ func main() {
 	fmt.Println(out, err)
 }
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Adapter,
-   beginning page 139. Source of the intent, the Wrapper alias, the four
-   participants, the class versus object adapter distinction, the applicability
-   list, and the Implementation section covering pluggable adapters and two-way
-   adapters.
-2. InformIT (Pearson). Authorised excerpt of the Adapter chapter of *Design
-   Patterns*, covering Applicability and Implementation.
-   https://www.informit.com/articles/article.aspx?p=1398600&seqNum=2
-   Verified 2026-08-02. Used to confirm the wording of the applicability list,
-   the class versus object adapter sentences, the pluggable adapter techniques,
-   and the two-way adapter transparency note.
-3. Alistair Cockburn. "Hexagonal Architecture", originally HaT Technical Report
-   2005.02, dated 4 September 2005.
-   https://alistair.cockburn.us/hexagonal-architecture/
-   Verified 2026-08-02. Source of the Ports and Adapters intent statement, the
-   primary versus secondary actor distinction, the guidance on port count, and
-   the Related Patterns sentence stating that ports-and-adapters is a particular
-   use of the Adapter pattern.
-4. Oracle. *Java SE 21 API Specification*, `java.util.Arrays`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Arrays.html
-   Verified 2026-08-02. Source for the `asList` production use and the
-   fixed-size backed-by-array wording.
-5. Oracle. *Java SE 21 API Specification*, `java.io.InputStreamReader`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStreamReader.html
-   Verified 2026-08-02. Source for the byte-stream to character-stream
-   production use.
-6. Oracle. *The Java Language Specification, Java SE 21 Edition*, chapter 8,
-   section 8.1.4, Superclasses and Subclasses.
-   https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html
-   Verified 2026-08-02. Source for the single direct superclass rule that makes
-   the class adapter form unavailable in Java.
-7. Microsoft. *C# documentation*, "Object-oriented programming, inheritance".
-   https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance
-   Verified 2026-08-02. Source for the single direct base class rule and the
-   multiple interface implementation rule in C#.
-8. Microsoft. *.NET API documentation*, `System.Data.Common.DbDataAdapter`.
-   https://learn.microsoft.com/en-us/dotnet/api/system.data.common.dbdataadapter
-   Verified 2026-08-02. Source for the ADO.NET data adapter production use, its
-   provider specific subclasses, and the documented behaviour of `Fill` and
-   `Update`.
-9. The Go project. *Go FAQ*, "Why is there no type inheritance?".
-   https://go.dev/doc/faq
-   Verified 2026-08-02. Source for the absence of type inheritance, implicit
-   interface satisfaction, and embedding as an analogue rather than an identity.
-10. The Go project. *`net/http` package documentation*, `HandlerFunc`.
-    https://pkg.go.dev/net/http#HandlerFunc
-    Verified 2026-08-02. Source for the standard library calling `HandlerFunc`
-    an adapter, and for the `ServeHTTP` behaviour.
-11. The Go project. *`io` package documentation*.
-    https://pkg.go.dev/io
-    Verified 2026-08-02. Source for `NopCloser`, `LimitReader`, `MultiReader`
-    and `TeeReader` as stream adapters, including the `WriterTo` forwarding note.
-12. Google. *Android developer documentation*, "Create dynamic lists with
-    RecyclerView".
-    https://developer.android.com/develop/ui/views/layout/recyclerview
-    Verified 2026-08-02. Source for the `RecyclerView.Adapter` production use and
-    the documented roles of `onCreateViewHolder`, `onBindViewHolder` and
-    `getItemCount`.
-13. Wikipedia contributors. "Adapter pattern".
-    https://en.wikipedia.org/wiki/Adapter_pattern
-    Verified 2026-08-02. Used only to confirm the shared Wrapper alias with
-    Decorator, the class versus object adapter phrasing, and the GoF page
-    attribution, not as a source of explanation.
-14. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-    Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Chapter 14, Maintaining
-    Model Integrity, section Anti-Corruption Layer. Cited in dimensions 4, 12
-    and 13 as the larger-scale relative of Adapter.

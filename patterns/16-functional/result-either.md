@@ -685,6 +685,49 @@ Practical rules.
 - Do not use Result Either as a substitute for access checks. A result can
   carry the result of a check, but something still has to perform the check.
 
+## 18. References
+
+- Haskell `base` documentation, `Data.Either`, `Either`, `Left`, `Right`,
+  `either`, `isLeft`, `isRight`, and `partitionEithers`,
+  https://hackage-content.haskell.org/package/base-4.22.0.0/docs/Data-Either.html,
+  verified 2026-08-02.
+- Rust standard library documentation, `std::result::Result`, enum variants
+  `Ok(T)` and `Err(E)`, methods including `map`, `map_err`, and `and_then`,
+  https://doc.rust-lang.org/std/result/enum.Result.html, verified 2026-08-02.
+- Rust standard library documentation, `std::result` module, returning and
+  propagating errors, https://doc.rust-lang.org/std/result/, verified
+  2026-08-02.
+- Swift standard library documentation, `Result<Success, Failure>`, cases
+  `success` and `failure`, methods `map`, `mapError`, `flatMap`,
+  `flatMapError`, and `get`, https://developer.apple.com/documentation/Swift/Result,
+  verified 2026-08-02.
+- Apple Developer Documentation, `Result.get()`,
+  https://developer.apple.com/documentation/swift/result/get%28%29, verified
+  2026-08-02.
+- Apple Developer Documentation, "Writing Failable Asynchronous APIs",
+  https://developer.apple.com/documentation/swift/writing-failable-asynchronous-apis,
+  verified 2026-08-02.
+- Scala standard library documentation, `scala.util.Either`, right-biased
+  `map` and `flatMap`, https://www.scala-lang.org/api/2.13.16/scala/util/Either.html,
+  verified 2026-08-02.
+- FSharp.Core documentation, `Result` module, `Result<'T,'TError>`, `bind`,
+  `map`, `mapError`, `isOk`, and `isError`,
+  https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html,
+  verified 2026-08-02.
+- Arrow Core API documentation, `Either`, examples using `Either.Left`,
+  `Either.Right`, `flatMap`, and `map`,
+  https://apidocs.arrow-kt.io/arrow-core/arrow.core/-either/index.html,
+  verified 2026-08-02.
+- Arrow documentation, "Typed errors", wrapper types including `Either`,
+  `Option`, and `Result`, https://arrow-kt.io/learn/typed-errors/, verified
+  2026-08-02.
+- Vavr API documentation, `io.vavr.control.Either`,
+  https://javadoc.io/doc/io.vavr/vavr/1.0.1/io/vavr/control/Either.html,
+  verified 2026-08-02.
+- fp-ts core documentation, `Either.ts`, `map`, `mapLeft`, and disjoint-union
+  API, https://fp-ts.github.io/core/modules/Either.ts.html, verified
+  2026-08-02.
+
 ## Code examples
 
 ### TypeScript
@@ -872,46 +915,3 @@ fn main() {
     println!("{:?}", create_login(" Ada ", "long-pass"));
 }
 ```
-
-## 18. References
-
-- Haskell `base` documentation, `Data.Either`, `Either`, `Left`, `Right`,
-  `either`, `isLeft`, `isRight`, and `partitionEithers`,
-  https://hackage-content.haskell.org/package/base-4.22.0.0/docs/Data-Either.html,
-  verified 2026-08-02.
-- Rust standard library documentation, `std::result::Result`, enum variants
-  `Ok(T)` and `Err(E)`, methods including `map`, `map_err`, and `and_then`,
-  https://doc.rust-lang.org/std/result/enum.Result.html, verified 2026-08-02.
-- Rust standard library documentation, `std::result` module, returning and
-  propagating errors, https://doc.rust-lang.org/std/result/, verified
-  2026-08-02.
-- Swift standard library documentation, `Result<Success, Failure>`, cases
-  `success` and `failure`, methods `map`, `mapError`, `flatMap`,
-  `flatMapError`, and `get`, https://developer.apple.com/documentation/Swift/Result,
-  verified 2026-08-02.
-- Apple Developer Documentation, `Result.get()`,
-  https://developer.apple.com/documentation/swift/result/get%28%29, verified
-  2026-08-02.
-- Apple Developer Documentation, "Writing Failable Asynchronous APIs",
-  https://developer.apple.com/documentation/swift/writing-failable-asynchronous-apis,
-  verified 2026-08-02.
-- Scala standard library documentation, `scala.util.Either`, right-biased
-  `map` and `flatMap`, https://www.scala-lang.org/api/2.13.16/scala/util/Either.html,
-  verified 2026-08-02.
-- FSharp.Core documentation, `Result` module, `Result<'T,'TError>`, `bind`,
-  `map`, `mapError`, `isOk`, and `isError`,
-  https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html,
-  verified 2026-08-02.
-- Arrow Core API documentation, `Either`, examples using `Either.Left`,
-  `Either.Right`, `flatMap`, and `map`,
-  https://apidocs.arrow-kt.io/arrow-core/arrow.core/-either/index.html,
-  verified 2026-08-02.
-- Arrow documentation, "Typed errors", wrapper types including `Either`,
-  `Option`, and `Result`, https://arrow-kt.io/learn/typed-errors/, verified
-  2026-08-02.
-- Vavr API documentation, `io.vavr.control.Either`,
-  https://javadoc.io/doc/io.vavr/vavr/1.0.1/io/vavr/control/Either.html,
-  verified 2026-08-02.
-- fp-ts core documentation, `Either.ts`, `map`, `mapLeft`, and disjoint-union
-  API, https://fp-ts.github.io/core/modules/Either.ts.html, verified
-  2026-08-02.

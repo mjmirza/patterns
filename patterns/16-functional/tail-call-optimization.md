@@ -802,6 +802,40 @@ million. That is a better failure mode only if the system has CPU budgets,
 cancellation, and output limits. At trust boundaries, pair TCO with explicit
 limits so stack safety does not become unbounded compute.
 
+## 18. References
+
+- Richard Kelsey, William Clinger, Jonathan Rees, editors. *Revised(5) Report
+  on the Algorithmic Language Scheme*, section 3.5, "Proper tail recursion".
+  https://people.csail.mit.edu/jaffer/r5rs/Proper-tail-recursion.html,
+  verified 2026-08-02.
+- Gerald Jay Sussman and Guy Lewis Steele Jr. "Scheme. An Interpreter for
+  Extended Lambda Calculus", MIT AI Memo 349, 1975. Bibliographic listing:
+  https://conservatory.scheme.org/readscheme/page1.html, verified 2026-08-02.
+- GNU Project. *Using the GNU Compiler Collection. Optimize Options*,
+  `-foptimize-sibling-calls` and `-O2` optimization flag list.
+  https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html, verified
+  2026-08-02.
+- LLVM Project. `TailRecursionElimination.h`, TailRecursionElimination source
+  documentation.
+  https://llvm.org/doxygen/TailRecursionElimination_8h_source.html, verified
+  2026-08-02.
+- Clang Project. *Attribute Reference*, `musttail` and `not_tail_called`.
+  https://clang.llvm.org/docs/AttributeReference.html#musttail, verified
+  2026-08-02.
+- TC39. *ECMAScript 2024 Language Specification*, section 15.10, "Tail
+  Position Calls".
+  https://tc39.es/ecma262/2024/multipage/ecmascript-language-functions-and-classes.html#sec-tail-position-calls,
+  verified 2026-08-02.
+- Michael Saboff. "ECMAScript 6 Proper Tail Calls in WebKit", WebKit Blog,
+  2016.
+  https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/,
+  verified 2026-08-02.
+- Roberto Ierusalimschy, Luiz Henrique de Figueiredo, Waldemar Celes. *Lua 5.4
+  Reference Manual*, section 3.4.10, function calls and tail calls.
+  https://www.lua.org/manual/5.4/manual.html, verified 2026-08-02.
+- Chez Scheme project. Project overview, proper treatment of tail calls.
+  https://cisco.github.io/ChezScheme/, verified 2026-08-02.
+
 ## Code examples
 
 These samples were run locally with `npx tsc` plus `node`, `python3`, and
@@ -864,37 +898,3 @@ The common result is `50005000`. In all three examples, the state that would
 have been passed to the next tail call is stored in loop variables. A compiler
 TCO pass performs an equivalent control-flow replacement when the call shape,
 ABI, and language rules permit it.
-
-## 18. References
-
-- Richard Kelsey, William Clinger, Jonathan Rees, editors. *Revised(5) Report
-  on the Algorithmic Language Scheme*, section 3.5, "Proper tail recursion".
-  https://people.csail.mit.edu/jaffer/r5rs/Proper-tail-recursion.html,
-  verified 2026-08-02.
-- Gerald Jay Sussman and Guy Lewis Steele Jr. "Scheme. An Interpreter for
-  Extended Lambda Calculus", MIT AI Memo 349, 1975. Bibliographic listing:
-  https://conservatory.scheme.org/readscheme/page1.html, verified 2026-08-02.
-- GNU Project. *Using the GNU Compiler Collection. Optimize Options*,
-  `-foptimize-sibling-calls` and `-O2` optimization flag list.
-  https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html, verified
-  2026-08-02.
-- LLVM Project. `TailRecursionElimination.h`, TailRecursionElimination source
-  documentation.
-  https://llvm.org/doxygen/TailRecursionElimination_8h_source.html, verified
-  2026-08-02.
-- Clang Project. *Attribute Reference*, `musttail` and `not_tail_called`.
-  https://clang.llvm.org/docs/AttributeReference.html#musttail, verified
-  2026-08-02.
-- TC39. *ECMAScript 2024 Language Specification*, section 15.10, "Tail
-  Position Calls".
-  https://tc39.es/ecma262/2024/multipage/ecmascript-language-functions-and-classes.html#sec-tail-position-calls,
-  verified 2026-08-02.
-- Michael Saboff. "ECMAScript 6 Proper Tail Calls in WebKit", WebKit Blog,
-  2016.
-  https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/,
-  verified 2026-08-02.
-- Roberto Ierusalimschy, Luiz Henrique de Figueiredo, Waldemar Celes. *Lua 5.4
-  Reference Manual*, section 3.4.10, function calls and tail calls.
-  https://www.lua.org/manual/5.4/manual.html, verified 2026-08-02.
-- Chez Scheme project. Project overview, proper treatment of tail calls.
-  https://cisco.github.io/ChezScheme/, verified 2026-08-02.

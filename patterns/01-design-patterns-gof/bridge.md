@@ -1134,6 +1134,61 @@ name, since implementor names frequently carry vendor and region. Where names
 carry that, treat the field as attributable data and apply the same retention
 and access rules as any other identifier.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Bridge. Source of
+   the intent, the Handle/Body alias, the four participants, the window toolkit
+   motivation, and the pairing with Abstract Factory.
+2. James O. Coplien. *Advanced C++ Programming Styles and Idioms*.
+   Addison-Wesley, 1992. ISBN 0-201-54855-0. Source of the Handle/Body and
+   Envelope/Letter idioms named in dimension 1. Catalogue record verified at
+   https://archive.org/details/advancedcbsprogr00copl on 2026-08-02. The
+   specific chapter number for the Handle/Body sections was not confirmed from a
+   source available at verification time and is therefore not cited.
+3. Wikipedia contributors. "Bridge pattern".
+   https://en.wikipedia.org/wiki/Bridge_pattern
+   Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
+   the attribution, not as a source of explanation.
+4. Editors of the C++ Core Guidelines. *C++ Core Guidelines*, guideline I.27,
+   "For stable library ABI, consider the Pimpl idiom".
+   https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+   Verified 2026-08-02. Source of the class-layout and overload-resolution
+   mechanism behind Pimpl, and of the indirection cost statement.
+5. The Qt Project. *Qt Wiki*, "D-Pointer".
+   https://wiki.qt.io/D-Pointer
+   Verified 2026-08-02. Source of the opaque pointer terminology, the binary
+   compatibility rationale, and the compile-time and header-clarity benefits.
+6. Oracle. *Java SE 21 API Specification*, `java.sql.Driver`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Driver.html
+   Verified 2026-08-02. Source of the JDBC driver contract and the
+   `DriverManager` selection behaviour.
+7. Oracle. *The Java Tutorials*, JDBC Basics, "JDBC Architecture".
+   https://docs.oracle.com/javase/tutorial/jdbc/overview/architecture.html
+   Verified 2026-08-02. Source of the two-tier and three-tier description and
+   the role of the driver in translating calls to the vendor protocol.
+8. QOS.ch. *SLF4J user manual*.
+   https://www.slf4j.org/manual.html
+   Verified 2026-08-02. Source of the facade description, the provider
+   terminology introduced in 2.0.0, the ServiceLoader backend resolution, and
+   the `slf4j.provider` system property.
+9. Oracle. *Java SE 21 API Specification*, `java.awt.Toolkit`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Toolkit.html
+   Verified 2026-08-02. Source of the AWT peer architecture description and the
+   binding of components to native toolkit implementations.
+10. The Linux Kernel documentation. "Overview of the Linux Virtual File System".
+    https://docs.kernel.org/filesystems/vfs.html
+    Verified 2026-08-02. Source of the VFS abstraction description and the
+    operation-structure plug-in mechanism.
+11. Mubin Ozan Onarcan, Yongjian Fu. "A Case Study on Design Patterns and
+    Software Defects in Open Source Software". *Journal of Software Engineering
+    and Applications*, volume 11, number 5, 2018, pages 249 to 273.
+    https://file.scirp.org/Html/5-9302494_85007.htm
+    Verified 2026-08-02. Cited in dimension 11 for the list of twelve
+    detector-supported patterns, which excludes Bridge. Not cited as a source of
+    pattern frequency data, which the paper does not report.
+
 ## Code examples
 
 Five languages, chosen because each one changes the shape of the pattern in a
@@ -1485,58 +1540,3 @@ the expected output. The TypeScript examples were checked by reading only, since
 no compiler was invoked. The Java and C++ examples were not compiled during
 authoring and are stated as unverified in that respect, though both are written
 against standard library features only and use no framework scaffolding.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Bridge. Source of
-   the intent, the Handle/Body alias, the four participants, the window toolkit
-   motivation, and the pairing with Abstract Factory.
-2. James O. Coplien. *Advanced C++ Programming Styles and Idioms*.
-   Addison-Wesley, 1992. ISBN 0-201-54855-0. Source of the Handle/Body and
-   Envelope/Letter idioms named in dimension 1. Catalogue record verified at
-   https://archive.org/details/advancedcbsprogr00copl on 2026-08-02. The
-   specific chapter number for the Handle/Body sections was not confirmed from a
-   source available at verification time and is therefore not cited.
-3. Wikipedia contributors. "Bridge pattern".
-   https://en.wikipedia.org/wiki/Bridge_pattern
-   Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
-   the attribution, not as a source of explanation.
-4. Editors of the C++ Core Guidelines. *C++ Core Guidelines*, guideline I.27,
-   "For stable library ABI, consider the Pimpl idiom".
-   https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
-   Verified 2026-08-02. Source of the class-layout and overload-resolution
-   mechanism behind Pimpl, and of the indirection cost statement.
-5. The Qt Project. *Qt Wiki*, "D-Pointer".
-   https://wiki.qt.io/D-Pointer
-   Verified 2026-08-02. Source of the opaque pointer terminology, the binary
-   compatibility rationale, and the compile-time and header-clarity benefits.
-6. Oracle. *Java SE 21 API Specification*, `java.sql.Driver`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Driver.html
-   Verified 2026-08-02. Source of the JDBC driver contract and the
-   `DriverManager` selection behaviour.
-7. Oracle. *The Java Tutorials*, JDBC Basics, "JDBC Architecture".
-   https://docs.oracle.com/javase/tutorial/jdbc/overview/architecture.html
-   Verified 2026-08-02. Source of the two-tier and three-tier description and
-   the role of the driver in translating calls to the vendor protocol.
-8. QOS.ch. *SLF4J user manual*.
-   https://www.slf4j.org/manual.html
-   Verified 2026-08-02. Source of the facade description, the provider
-   terminology introduced in 2.0.0, the ServiceLoader backend resolution, and
-   the `slf4j.provider` system property.
-9. Oracle. *Java SE 21 API Specification*, `java.awt.Toolkit`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/Toolkit.html
-   Verified 2026-08-02. Source of the AWT peer architecture description and the
-   binding of components to native toolkit implementations.
-10. The Linux Kernel documentation. "Overview of the Linux Virtual File System".
-    https://docs.kernel.org/filesystems/vfs.html
-    Verified 2026-08-02. Source of the VFS abstraction description and the
-    operation-structure plug-in mechanism.
-11. Mubin Ozan Onarcan, Yongjian Fu. "A Case Study on Design Patterns and
-    Software Defects in Open Source Software". *Journal of Software Engineering
-    and Applications*, volume 11, number 5, 2018, pages 249 to 273.
-    https://file.scirp.org/Html/5-9302494_85007.htm
-    Verified 2026-08-02. Cited in dimension 11 for the list of twelve
-    detector-supported patterns, which excludes Bridge. Not cited as a source of
-    pattern frequency data, which the paper does not report.

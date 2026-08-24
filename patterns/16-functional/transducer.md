@@ -704,6 +704,37 @@ the process boundary, and make early termination visible.
 values can contain personal data. Prefer counts, classes of error, and bounded
 state sizes over raw item logging.
 
+## 18. References
+
+1. Rich Hickey. "Transducers." Strange Loop 2014 talk page.
+   https://thestrangeloop.com/2014/transducers.html. Verified 2026-08-02.
+   Source for the public 2014 presentation and motivation.
+2. Clojure project. "Transducers." Clojure reference.
+   https://clojure.org/reference/transducers. Verified 2026-08-02. Source for
+   terminology, shape, composition, early termination, state, and process
+   rules.
+3. Alex Miller. "Clojure 1.7 is now available." Clojure news, 30 June 2015.
+   https://clojure.org/news/2015/06/30/clojure-17. Verified 2026-08-02. Source
+   for Clojure 1.7 release context, listed transducer arities, and application
+   contexts.
+4. Clojure core.async project. `clojure.core.async` API documentation.
+   https://clojure.github.io/core.async/clojure.core.async.html. Verified
+   2026-08-02. Source for `chan`, `promise-chan`, `transduce`, and `pipeline`
+   transducer use.
+5. Ramda project. "Ramda Documentation." `transduce` and `reduced` sections.
+   https://ramdajs.com/docs/. Verified 2026-08-02. Source for the JavaScript
+   transformer object variant and Ramda production use.
+6. Cognitect Labs. "transducers-js" API documentation.
+   https://cognitect-labs.github.io/transducers-js/index.html. Verified
+   2026-08-02. Source for the transducers-js library documentation.
+7. npm, Inc. "transducers-js." npm package page.
+   https://www.npmjs.com/package/transducers-js. Verified 2026-08-02. Source
+   for package metadata and Cognitect package publication.
+8. Alex Miller. "Creating a distinct transducer." Inside Clojure, 17 December
+   2014. https://insideclojure.org/2014/12/17/distinct-transducer/. Verified
+   2026-08-02. Source for stateful distinct discussion, vector reduction note,
+   and the unbounded-channel caution.
+
 ## Code examples
 
 Three runnable examples use TypeScript, Python, and Go because each can express
@@ -867,34 +898,3 @@ func main() {
 	fmt.Println(out)
 }
 ```
-
-## 18. References
-
-1. Rich Hickey. "Transducers." Strange Loop 2014 talk page.
-   https://thestrangeloop.com/2014/transducers.html. Verified 2026-08-02.
-   Source for the public 2014 presentation and motivation.
-2. Clojure project. "Transducers." Clojure reference.
-   https://clojure.org/reference/transducers. Verified 2026-08-02. Source for
-   terminology, shape, composition, early termination, state, and process
-   rules.
-3. Alex Miller. "Clojure 1.7 is now available." Clojure news, 30 June 2015.
-   https://clojure.org/news/2015/06/30/clojure-17. Verified 2026-08-02. Source
-   for Clojure 1.7 release context, listed transducer arities, and application
-   contexts.
-4. Clojure core.async project. `clojure.core.async` API documentation.
-   https://clojure.github.io/core.async/clojure.core.async.html. Verified
-   2026-08-02. Source for `chan`, `promise-chan`, `transduce`, and `pipeline`
-   transducer use.
-5. Ramda project. "Ramda Documentation." `transduce` and `reduced` sections.
-   https://ramdajs.com/docs/. Verified 2026-08-02. Source for the JavaScript
-   transformer object variant and Ramda production use.
-6. Cognitect Labs. "transducers-js" API documentation.
-   https://cognitect-labs.github.io/transducers-js/index.html. Verified
-   2026-08-02. Source for the transducers-js library documentation.
-7. npm, Inc. "transducers-js." npm package page.
-   https://www.npmjs.com/package/transducers-js. Verified 2026-08-02. Source
-   for package metadata and Cognitect package publication.
-8. Alex Miller. "Creating a distinct transducer." Inside Clojure, 17 December
-   2014. https://insideclojure.org/2014/12/17/distinct-transducer/. Verified
-   2026-08-02. Source for stateful distinct discussion, vector reduction note,
-   and the unbounded-channel caution.

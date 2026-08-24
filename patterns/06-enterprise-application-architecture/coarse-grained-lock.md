@@ -694,6 +694,28 @@ to the lock table should be restricted with the same care as access to the
 underlying data, since the presence of a lock row is itself information
 about who is doing what, right now.
 
+## 18. References
+
+- Martin Fowler, *Patterns of Enterprise Application Architecture*,
+  Addison-Wesley, 2002, chapter 16, "Coarse-Grained Lock", entry credited to
+  David Rice and Matt Foemmel. Catalog summary confirmed at
+  [martinfowler.com/eaaCatalog/coarseGrainedLock.html](https://martinfowler.com/eaaCatalog/coarseGrainedLock.html),
+  verified 2026-08-02.
+- Vaughn Vernon, "Effective Aggregate Design, Part I. Modeling a Single
+  Aggregate", dddcommunity.org, 2011,
+  [dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf](https://www.dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf),
+  verified 2026-08-02.
+- Rails API documentation, `ActiveRecord::Associations::ClassMethods`,
+  `belongs_to`, the `touch` option,
+  [api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html](https://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html),
+  verified 2026-08-02.
+- Hibernate ORM Javadoc, `org.hibernate.annotations.OptimisticLockType`,
+  [docs.hibernate.org/orm/current/javadocs/org/hibernate/annotations/OptimisticLockType.html](https://docs.hibernate.org/orm/current/javadocs/org/hibernate/annotations/OptimisticLockType.html),
+  verified 2026-08-02.
+- Doctrine ORM documentation, "Transactions and Concurrency",
+  [doctrine-project.org/projects/doctrine-orm/en/current/reference/transactions-and-concurrency.html](https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/transactions-and-concurrency.html),
+  verified 2026-08-02.
+
 ## Code examples
 
 Three languages where the propagation discipline is easy to see end to end.
@@ -998,25 +1020,3 @@ func main() {
 Passed `go vet` clean and, run with `go run`, printed
 `conflict detected as expected, stale root version, root cust-1 expected 7, found 8`,
 matching the same scenario in the other two languages.
-
-## 18. References
-
-- Martin Fowler, *Patterns of Enterprise Application Architecture*,
-  Addison-Wesley, 2002, chapter 16, "Coarse-Grained Lock", entry credited to
-  David Rice and Matt Foemmel. Catalog summary confirmed at
-  [martinfowler.com/eaaCatalog/coarseGrainedLock.html](https://martinfowler.com/eaaCatalog/coarseGrainedLock.html),
-  verified 2026-08-02.
-- Vaughn Vernon, "Effective Aggregate Design, Part I. Modeling a Single
-  Aggregate", dddcommunity.org, 2011,
-  [dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf](https://www.dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf),
-  verified 2026-08-02.
-- Rails API documentation, `ActiveRecord::Associations::ClassMethods`,
-  `belongs_to`, the `touch` option,
-  [api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html](https://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html),
-  verified 2026-08-02.
-- Hibernate ORM Javadoc, `org.hibernate.annotations.OptimisticLockType`,
-  [docs.hibernate.org/orm/current/javadocs/org/hibernate/annotations/OptimisticLockType.html](https://docs.hibernate.org/orm/current/javadocs/org/hibernate/annotations/OptimisticLockType.html),
-  verified 2026-08-02.
-- Doctrine ORM documentation, "Transactions and Concurrency",
-  [doctrine-project.org/projects/doctrine-orm/en/current/reference/transactions-and-concurrency.html](https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/transactions-and-concurrency.html),
-  verified 2026-08-02.

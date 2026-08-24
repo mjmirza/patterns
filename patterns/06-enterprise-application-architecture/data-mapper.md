@@ -555,6 +555,27 @@ isolation checks belong at the mapper or unit-of-work boundary, not only at
 the API layer, precisely because the mapper is the last point before the
 data reaches shared storage.
 
+## 18. References
+
+- Fowler, Martin. *Patterns of Enterprise Application Architecture*.
+  Addison-Wesley, 2002. Chapter 2, "Organizing Domain Logic," page 30, for the
+  Unit of Work description quoted in dimensions 7 and 13. Chapter 10 covers
+  the Data Mapper pattern itself in full.
+- Fowler, Martin. "Data Mapper." martinfowler.com, PoEAA catalog page.
+  https://martinfowler.com/eaaCatalog/dataMapper.html, verified 2026-08-02.
+- Hibernate documentation team. "Hibernate ORM 6.4 Introduction."
+  https://docs.hibernate.org/orm/6.4/introduction/html_single/Hibernate_Introduction.html,
+  verified 2026-08-02.
+- Microsoft. "Entity Types - EF Core." Microsoft Learn.
+  https://learn.microsoft.com/en-us/ef/core/modeling/entity-types, verified
+  2026-08-02.
+- Doctrine Project. "Architecture - Doctrine Object Relational Mapper (ORM)."
+  https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/architecture.html,
+  verified 2026-08-02.
+- SQLAlchemy documentation. "Mapping Styles."
+  https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html, verified
+  2026-08-02.
+
 ## Code examples
 
 All three samples model the same scenario. an `Employee` domain object with a
@@ -831,24 +852,3 @@ stack, which is a different and heavier mechanism than the plain-object
 mapper shown here, so a Swift sample would need a different worked example to
 be genuinely idiomatic rather than a mechanical translation of the same three
 samples above.
-
-## 18. References
-
-- Fowler, Martin. *Patterns of Enterprise Application Architecture*.
-  Addison-Wesley, 2002. Chapter 2, "Organizing Domain Logic," page 30, for the
-  Unit of Work description quoted in dimensions 7 and 13. Chapter 10 covers
-  the Data Mapper pattern itself in full.
-- Fowler, Martin. "Data Mapper." martinfowler.com, PoEAA catalog page.
-  https://martinfowler.com/eaaCatalog/dataMapper.html, verified 2026-08-02.
-- Hibernate documentation team. "Hibernate ORM 6.4 Introduction."
-  https://docs.hibernate.org/orm/6.4/introduction/html_single/Hibernate_Introduction.html,
-  verified 2026-08-02.
-- Microsoft. "Entity Types - EF Core." Microsoft Learn.
-  https://learn.microsoft.com/en-us/ef/core/modeling/entity-types, verified
-  2026-08-02.
-- Doctrine Project. "Architecture - Doctrine Object Relational Mapper (ORM)."
-  https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/architecture.html,
-  verified 2026-08-02.
-- SQLAlchemy documentation. "Mapping Styles."
-  https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html, verified
-  2026-08-02.

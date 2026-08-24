@@ -650,6 +650,109 @@ Useful test doubles and techniques.
 - **Redaction tests.** Feed sensitive-looking input and assert no output entry
   contains it.
 
+## 16. Observability signals
+
+Writer output is not visible to production systems unless the runner makes it
+visible. Treat that boundary as a first-class observability point.
+
+What to record.
+
+- Count of output entries per run, labelled by computation name.
+- Total output bytes per run, with a configured cap.
+- Count of truncated output entries, if the runner applies a limit.
+- Count of warning codes or explanation categories, not free text.
+- Runner action: returned, discarded, logged, converted to error, or persisted.
+- Failure policy: output kept on failure, output discarded on failure, or output
+  unavailable because the computation did not finish.
+- Time spent appending output when profiling shows Writer overhead.
+
+A healthy instance on a dashboard. Entry count is stable for a fixed input
+class. Output bytes remain below the cap. Warning categories match known
+business cases. Truncation is rare and explained by large input. Runner actions
+match the contract for the endpoint.
+
+A failing instance. Entry count grows linearly with batch size when only a
+summary was expected. Truncation jumps after a deploy. Free-text categories
+explode because callers put raw messages into the output. The runner discards
+output on a path where support tooling expects explanations. Output bytes carry
+sensitive strings in redaction tests.
+
+Engineering judgement. Do not emit every Writer entry as a production log by
+default. Emit counts, categories, and sampled or capped detail. Return full
+output only where the caller has asked for an explanation and authorization has
+been checked.
+
+## 17. Security and privacy implications
+
+Writer is neutral on security in its small pure form. It opens privacy risk when
+the output carries sensitive data longer than intended, and it opens audit risk
+when teams mistake returned output for durable evidence.
+
+**Sensitive data retention.** Writer stores output in memory until the runner
+handles it. If entries include access tokens, customer text, addresses, or raw
+requests, that data may appear in debug responses, failed test artifacts, heap
+dumps, or crash reports. Prefer typed output constructors that accept codes,
+field names, hashes, or redacted summaries rather than raw values.
+
+**Audit durability.** Writer output is not an audit log. A caller can ignore it,
+drop it on exception, or lose it when a process dies. If law, finance, abuse
+response, or incident review requires durable records, write through the
+approved audit mechanism.
+
+**Authorization on explanations.** Explanation output can reveal internal
+rules, feature flags, tenant routing, or validation heuristics. When returning
+Writer output to users, gate it by role and redact rule internals.
+
+**Injection through rendered output.** Writer often accumulates strings that are
+later rendered in HTML, logs, terminals, or markdown. Escape at the rendering
+boundary and prefer structured entries over pre-rendered strings.
+
+**Resource exhaustion.** An attacker who controls input length may force the
+program to accumulate huge output. Apply per-run entry limits, byte limits, and
+summary modes at the runner or in the output monoid.
+
+**Duplicate records.** A runner that both returns Writer output and emits it to
+logs can duplicate sensitive or confusing records. Decide which categories are
+for callers and which are for operators, then encode that distinction in the
+output type.
+
+## 18. References
+
+1. Mark P. Jones. "Functional Programming with Overloading and Higher-Order
+   Polymorphism". *Advanced Functional Programming*, Springer Lecture Notes in
+   Computer Science 925, 1995, pages 97 to 136 per DBLP.
+   https://dblp.org/rec/conf/afp/Jones95
+   Verified 2026-08-02. Source for the lineage cited by Haskell Writer
+   documentation.
+2. Mark P. Jones. Selected Publications.
+   https://web.cecs.pdx.edu/~mpj/pubs.html
+   Verified 2026-08-02. Source for the 1995 publication listing.
+3. GHC. `mtl-2.2.2`, `Control.Monad.Writer.Strict`.
+   https://downloads.haskell.org/ghc/8.6.3/docs/html/libraries/mtl-2.2.2/Control-Monad-Writer-Strict.html
+   Verified 2026-08-02. Source for `MonadWriter`, `Writer`, `WriterT`,
+   `writer`, `tell`, `listen`, and `pass`.
+4. Hackage. `transformers-0.6.3.0`,
+   `Control.Monad.Trans.Writer.Strict`.
+   https://hackage-content.haskell.org/package/transformers-0.6.3.0/docs/Control-Monad-Trans-Writer-Strict.html
+   Verified 2026-08-02. Source for strict `WriterT`, limited output access,
+   and the transformer runner shape.
+5. Typelevel Cats. "Writer".
+   https://typelevel.org/cats/datatypes/writer.html
+   Verified 2026-08-02. Source for Cats `Writer`, log and value tuple,
+   composition through `Semigroup`, and aliasing to `WriterT`.
+6. Typelevel Cats. "WriterT".
+   https://typelevel.org/cats/datatypes/writert.html
+   Verified 2026-08-02. Source for Cats `WriterT` as a wrapper over
+   `F[(L, V)]`.
+7. fp-ts. `Writer.ts`.
+   https://gcanti.github.io/fp-ts/modules/Writer.ts.html
+   Verified 2026-08-02. Source for TypeScript `Writer<W, A>`, `tell`,
+   `getMonad`, `listen`, `pass`, `execute`, and `evaluate`.
+8. Lean community. `Mathlib.Control.Monad.Writer`.
+   https://leanprover-community.github.io/mathlib4_docs/Mathlib/Control/Monad/Writer
+   Verified 2026-08-02. Source for Mathlib `WriterT`, `Writer`, `MonadWriter`,
+   `tell`, `listen`, and `pass`.
+
 ## Code examples
 
 Three languages are shown because the pattern translates well into a small
@@ -813,106 +916,3 @@ public final class WriterMonadDemo {
     }
 }
 ```
-
-## 16. Observability signals
-
-Writer output is not visible to production systems unless the runner makes it
-visible. Treat that boundary as a first-class observability point.
-
-What to record.
-
-- Count of output entries per run, labelled by computation name.
-- Total output bytes per run, with a configured cap.
-- Count of truncated output entries, if the runner applies a limit.
-- Count of warning codes or explanation categories, not free text.
-- Runner action: returned, discarded, logged, converted to error, or persisted.
-- Failure policy: output kept on failure, output discarded on failure, or output
-  unavailable because the computation did not finish.
-- Time spent appending output when profiling shows Writer overhead.
-
-A healthy instance on a dashboard. Entry count is stable for a fixed input
-class. Output bytes remain below the cap. Warning categories match known
-business cases. Truncation is rare and explained by large input. Runner actions
-match the contract for the endpoint.
-
-A failing instance. Entry count grows linearly with batch size when only a
-summary was expected. Truncation jumps after a deploy. Free-text categories
-explode because callers put raw messages into the output. The runner discards
-output on a path where support tooling expects explanations. Output bytes carry
-sensitive strings in redaction tests.
-
-Engineering judgement. Do not emit every Writer entry as a production log by
-default. Emit counts, categories, and sampled or capped detail. Return full
-output only where the caller has asked for an explanation and authorization has
-been checked.
-
-## 17. Security and privacy implications
-
-Writer is neutral on security in its small pure form. It opens privacy risk when
-the output carries sensitive data longer than intended, and it opens audit risk
-when teams mistake returned output for durable evidence.
-
-**Sensitive data retention.** Writer stores output in memory until the runner
-handles it. If entries include access tokens, customer text, addresses, or raw
-requests, that data may appear in debug responses, failed test artifacts, heap
-dumps, or crash reports. Prefer typed output constructors that accept codes,
-field names, hashes, or redacted summaries rather than raw values.
-
-**Audit durability.** Writer output is not an audit log. A caller can ignore it,
-drop it on exception, or lose it when a process dies. If law, finance, abuse
-response, or incident review requires durable records, write through the
-approved audit mechanism.
-
-**Authorization on explanations.** Explanation output can reveal internal
-rules, feature flags, tenant routing, or validation heuristics. When returning
-Writer output to users, gate it by role and redact rule internals.
-
-**Injection through rendered output.** Writer often accumulates strings that are
-later rendered in HTML, logs, terminals, or markdown. Escape at the rendering
-boundary and prefer structured entries over pre-rendered strings.
-
-**Resource exhaustion.** An attacker who controls input length may force the
-program to accumulate huge output. Apply per-run entry limits, byte limits, and
-summary modes at the runner or in the output monoid.
-
-**Duplicate records.** A runner that both returns Writer output and emits it to
-logs can duplicate sensitive or confusing records. Decide which categories are
-for callers and which are for operators, then encode that distinction in the
-output type.
-
-## 18. References
-
-1. Mark P. Jones. "Functional Programming with Overloading and Higher-Order
-   Polymorphism". *Advanced Functional Programming*, Springer Lecture Notes in
-   Computer Science 925, 1995, pages 97 to 136 per DBLP.
-   https://dblp.org/rec/conf/afp/Jones95
-   Verified 2026-08-02. Source for the lineage cited by Haskell Writer
-   documentation.
-2. Mark P. Jones. Selected Publications.
-   https://web.cecs.pdx.edu/~mpj/pubs.html
-   Verified 2026-08-02. Source for the 1995 publication listing.
-3. GHC. `mtl-2.2.2`, `Control.Monad.Writer.Strict`.
-   https://downloads.haskell.org/ghc/8.6.3/docs/html/libraries/mtl-2.2.2/Control-Monad-Writer-Strict.html
-   Verified 2026-08-02. Source for `MonadWriter`, `Writer`, `WriterT`,
-   `writer`, `tell`, `listen`, and `pass`.
-4. Hackage. `transformers-0.6.3.0`,
-   `Control.Monad.Trans.Writer.Strict`.
-   https://hackage-content.haskell.org/package/transformers-0.6.3.0/docs/Control-Monad-Trans-Writer-Strict.html
-   Verified 2026-08-02. Source for strict `WriterT`, limited output access,
-   and the transformer runner shape.
-5. Typelevel Cats. "Writer".
-   https://typelevel.org/cats/datatypes/writer.html
-   Verified 2026-08-02. Source for Cats `Writer`, log and value tuple,
-   composition through `Semigroup`, and aliasing to `WriterT`.
-6. Typelevel Cats. "WriterT".
-   https://typelevel.org/cats/datatypes/writert.html
-   Verified 2026-08-02. Source for Cats `WriterT` as a wrapper over
-   `F[(L, V)]`.
-7. fp-ts. `Writer.ts`.
-   https://gcanti.github.io/fp-ts/modules/Writer.ts.html
-   Verified 2026-08-02. Source for TypeScript `Writer<W, A>`, `tell`,
-   `getMonad`, `listen`, `pass`, `execute`, and `evaluate`.
-8. Lean community. `Mathlib.Control.Monad.Writer`.
-   https://leanprover-community.github.io/mathlib4_docs/Mathlib/Control/Monad/Writer
-   Verified 2026-08-02. Source for Mathlib `WriterT`, `Writer`, `MonadWriter`,
-   `tell`, `listen`, and `pass`.

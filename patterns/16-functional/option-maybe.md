@@ -845,6 +845,30 @@ Privacy note. Absence can itself be sensitive. A field such as recovery phone
 present or absent may reveal account state. Treat presence bits as data when
 they cross trust boundaries.
 
+## 18. References
+
+- Haskell `base` package, `Data.Maybe`, `Maybe`, `Nothing`, `Just`, and related
+  functions. https://hackage-content.haskell.org/package/base-4.22.0.0/docs/Data-Maybe.html,
+  verified 2026-08-02.
+- Rust standard library, `std::option::Option`, variants `None` and `Some(T)`,
+  and methods including `map`, `and_then`, `ok_or`, `unwrap`, `unwrap_or`, and
+  `unwrap_or_else`. https://doc.rust-lang.org/std/option/enum.Option.html,
+  verified 2026-08-02.
+- Oracle, Java SE 21 API, `java.util.Optional<T>`, methods including
+  `ofNullable`, `map`, `flatMap`, `orElse`, `orElseGet`, `orElseThrow`,
+  `stream`, and `get`. https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html,
+  verified 2026-08-02.
+- Scala standard library 2.13.16, `scala.Option`, `Some`, `None`, collection
+  and monadic use through `map`, `flatMap`, `filter`, and `foreach`.
+  https://www.scala-lang.org/api/2.13.16/scala/Option.html, verified
+  2026-08-02.
+- Apple Developer Documentation, Swift `Optional`.
+  https://developer.apple.com/documentation/swift/optional, verified
+  2026-08-02.
+- Python 3.14 documentation, `typing.Optional`.
+  https://docs.python.org/3/library/typing.html#typing.Optional, verified
+  2026-08-02.
+
 ## Code examples
 
 The examples use Python, Go, and Rust because each can be compiled or run with
@@ -978,27 +1002,3 @@ fn main() {
     println!("rust option maybe ok");
 }
 ```
-
-## 18. References
-
-- Haskell `base` package, `Data.Maybe`, `Maybe`, `Nothing`, `Just`, and related
-  functions. https://hackage-content.haskell.org/package/base-4.22.0.0/docs/Data-Maybe.html,
-  verified 2026-08-02.
-- Rust standard library, `std::option::Option`, variants `None` and `Some(T)`,
-  and methods including `map`, `and_then`, `ok_or`, `unwrap`, `unwrap_or`, and
-  `unwrap_or_else`. https://doc.rust-lang.org/std/option/enum.Option.html,
-  verified 2026-08-02.
-- Oracle, Java SE 21 API, `java.util.Optional<T>`, methods including
-  `ofNullable`, `map`, `flatMap`, `orElse`, `orElseGet`, `orElseThrow`,
-  `stream`, and `get`. https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html,
-  verified 2026-08-02.
-- Scala standard library 2.13.16, `scala.Option`, `Some`, `None`, collection
-  and monadic use through `map`, `flatMap`, `filter`, and `foreach`.
-  https://www.scala-lang.org/api/2.13.16/scala/Option.html, verified
-  2026-08-02.
-- Apple Developer Documentation, Swift `Optional`.
-  https://developer.apple.com/documentation/swift/optional, verified
-  2026-08-02.
-- Python 3.14 documentation, `typing.Optional`.
-  https://docs.python.org/3/library/typing.html#typing.Optional, verified
-  2026-08-02.

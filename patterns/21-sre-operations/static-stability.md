@@ -166,6 +166,11 @@ Skip it for a system with a single point of coordination that has no meaningful 
 - The refresh path itself is a real operational dependency, and access to it should be scoped and monitored with the same rigor as any other control-plane-adjacent mechanism.
 - Pre-provisioned capacity that sits idle should still be secured and patched to the same standard as actively serving capacity, since an idle but reachable unit is still a real attack surface.
 
+## 18. References
+
+- AWS Builders Library, Static stability using Availability Zones (https://aws.amazon.com/builders-library/static-stability-using-availability-zones/)
+- AWS Well-Architected Framework, Reliability Pillar, Withstand component failures using static stability (https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_withstand_component_failures_static_stability.html)
+
 ## Code examples
 
 ### Python
@@ -266,8 +271,3 @@ let unit = IndependentUnit(
 print("routed " + unit.routeRequest("search"))
 print("routed on control plane loss " + unit.routeRequest("search"))
 ```
-
-## 18. References
-
-- AWS Builders Library, Static stability using Availability Zones (https://aws.amazon.com/builders-library/static-stability-using-availability-zones/)
-- AWS Well-Architected Framework, Reliability Pillar, Withstand component failures using static stability (https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_withstand_component_failures_static_stability.html)

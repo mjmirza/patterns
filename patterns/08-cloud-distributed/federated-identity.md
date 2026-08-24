@@ -853,6 +853,56 @@ the federated identity pattern's own security guarantees end at the point
 of validation and do not extend to how the Relying Party subsequently
 manages its own session state.
 
+## 18. References
+
+1. OASIS Security Services Technical Committee. "Assertions and Protocols for
+   the OASIS Security Assertion Markup Language (SAML) V2.0", OASIS Standard,
+   15 March 2005. docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf,
+   verified 2026-08-02.
+2. OpenID Foundation. "OpenID Connect Core 1.0 incorporating errata set 2".
+   openid.net/specs/openid-connect-core-1_0.html, verified 2026-08-02. Cited
+   for the ID Token definition, the iss, aud, exp, iat claim definitions,
+   the Authorization Code Flow steps, and the exp clock-skew leeway
+   statement.
+3. OpenID Foundation. "OpenID Connect Discovery 1.0 incorporating errata set
+   2". openid.net/specs/openid-connect-discovery-1_0.html, verified
+   2026-08-02. Cited for the well-known discovery document requirement and
+   the issuer, authorization_endpoint, token_endpoint, jwks_uri fields.
+4. Internet Engineering Task Force. RFC 7519, "JSON Web Token (JWT)", May
+   2015. www.rfc-editor.org/rfc/rfc7519, verified 2026-08-02. Cited for the
+   JWT definition, the exp, nbf, iat, iss, aud, sub registered claims, and
+   the clock-skew leeway language for exp and nbf.
+5. Internet Engineering Task Force. RFC 6749, "The OAuth 2.0 Authorization
+   Framework", October 2012, and RFC 7636, "Proof Key for Code Exchange by
+   OAuth Public Clients (PKCE)", September 2015. Cited for the boundary
+   between OAuth authorization and OIDC authentication described in
+   dimension 1, and the PKCE recommendation in dimension 8.
+6. Amazon Web Services. "SAML 2.0 federation", AWS Identity and Access
+   Management User Guide.
+   docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html,
+   verified 2026-08-02. Cited for the AssumeRoleWithSAML production use in
+   dimension 9.
+7. GitHub, Inc. "About security hardening with OpenID Connect", GitHub Docs.
+   docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect,
+   verified 2026-08-02. Cited for the machine-to-machine OIDC federation
+   production use in dimension 9.
+8. The Kubernetes Authors. "Authenticating", Kubernetes Documentation.
+   kubernetes.io/docs/reference/access-authn-authz/authentication/, verified
+   2026-08-02. Cited for the Kubernetes API server OIDC integration in
+   dimension 9.
+9. Okta, Inc. (Auth0). "Identity Providers", Auth0 Docs.
+   auth0.com/docs/authenticate/identity-providers, verified 2026-08-02.
+   Cited for the identity-broker variant in dimension 8 and its production
+   use in dimension 9.
+10. OneLogin. ruby-saml library README.
+    github.com/onelogin/ruby-saml/blob/master/README.md, verified
+    2026-08-02. Cited for the allowed_clock_drift parameter and its
+    documented rationale, referenced in dimensions 9 and 11.
+11. Kim Cameron. "The Laws of Identity", Microsoft, 2005. Cited in dimension
+    1 as the conceptual lineage for claims-based identity as an
+    architectural style, presented as engineering philosophy and historical
+    context, not as a technical specification to verify claims against.
+
 ## Code examples
 
 Every sample below implements the same claim-validation logic from dimension
@@ -1122,53 +1172,3 @@ func main() {
 }
 
 ```
-
-## 18. References
-
-1. OASIS Security Services Technical Committee. "Assertions and Protocols for
-   the OASIS Security Assertion Markup Language (SAML) V2.0", OASIS Standard,
-   15 March 2005. docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf,
-   verified 2026-08-02.
-2. OpenID Foundation. "OpenID Connect Core 1.0 incorporating errata set 2".
-   openid.net/specs/openid-connect-core-1_0.html, verified 2026-08-02. Cited
-   for the ID Token definition, the iss, aud, exp, iat claim definitions,
-   the Authorization Code Flow steps, and the exp clock-skew leeway
-   statement.
-3. OpenID Foundation. "OpenID Connect Discovery 1.0 incorporating errata set
-   2". openid.net/specs/openid-connect-discovery-1_0.html, verified
-   2026-08-02. Cited for the well-known discovery document requirement and
-   the issuer, authorization_endpoint, token_endpoint, jwks_uri fields.
-4. Internet Engineering Task Force. RFC 7519, "JSON Web Token (JWT)", May
-   2015. www.rfc-editor.org/rfc/rfc7519, verified 2026-08-02. Cited for the
-   JWT definition, the exp, nbf, iat, iss, aud, sub registered claims, and
-   the clock-skew leeway language for exp and nbf.
-5. Internet Engineering Task Force. RFC 6749, "The OAuth 2.0 Authorization
-   Framework", October 2012, and RFC 7636, "Proof Key for Code Exchange by
-   OAuth Public Clients (PKCE)", September 2015. Cited for the boundary
-   between OAuth authorization and OIDC authentication described in
-   dimension 1, and the PKCE recommendation in dimension 8.
-6. Amazon Web Services. "SAML 2.0 federation", AWS Identity and Access
-   Management User Guide.
-   docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html,
-   verified 2026-08-02. Cited for the AssumeRoleWithSAML production use in
-   dimension 9.
-7. GitHub, Inc. "About security hardening with OpenID Connect", GitHub Docs.
-   docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect,
-   verified 2026-08-02. Cited for the machine-to-machine OIDC federation
-   production use in dimension 9.
-8. The Kubernetes Authors. "Authenticating", Kubernetes Documentation.
-   kubernetes.io/docs/reference/access-authn-authz/authentication/, verified
-   2026-08-02. Cited for the Kubernetes API server OIDC integration in
-   dimension 9.
-9. Okta, Inc. (Auth0). "Identity Providers", Auth0 Docs.
-   auth0.com/docs/authenticate/identity-providers, verified 2026-08-02.
-   Cited for the identity-broker variant in dimension 8 and its production
-   use in dimension 9.
-10. OneLogin. ruby-saml library README.
-    github.com/onelogin/ruby-saml/blob/master/README.md, verified
-    2026-08-02. Cited for the allowed_clock_drift parameter and its
-    documented rationale, referenced in dimensions 9 and 11.
-11. Kim Cameron. "The Laws of Identity", Microsoft, 2005. Cited in dimension
-    1 as the conceptual lineage for claims-based identity as an
-    architectural style, presented as engineering philosophy and historical
-    context, not as a technical specification to verify claims against.

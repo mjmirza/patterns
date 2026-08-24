@@ -861,6 +861,27 @@ something that would be much harder to enforce consistently if the
 resource were directly, and independently, reachable by each client
 without a shared chokepoint.
 
+## 18. References
+
+1. Roy Thomas Fielding, *Architectural Styles and the Design of Network-based
+   Software Architectures*, PhD dissertation, University of California,
+   Irvine, 2000, chapter 3, sections 3.4.1 through 3.4.3.
+   https://ics.uci.edu/~fielding/pubs/dissertation/net_arch_styles.htm,
+   verified 2026-08-02.
+2. R. Fielding, M. Nottingham, J. Reschke, editors, *RFC 9110, HTTP
+   Semantics*, Internet Engineering Task Force, June 2022, sections 1 and
+   3.4. https://www.rfc-editor.org/rfc/rfc9110.html, verified 2026-08-02.
+3. PostgreSQL Global Development Group, *PostgreSQL Documentation*, section
+   1.2, Architectural Fundamentals.
+   https://www.postgresql.org/docs/current/tutorial-arch.html, verified
+   2026-08-02.
+4. X Consortium, *X Window System Protocol*, version 11, release 7.7,
+   chapter 8, Connection Setup.
+   https://xorg.freedesktop.org/archive/X11R7.7/doc/xproto/x11protocol.html,
+   verified 2026-08-02.
+5. Google, *Introduction to gRPC*, grpc.io documentation.
+   https://grpc.io/docs/what-is-grpc/introduction/, verified 2026-08-02.
+
 ## Code examples
 
 Three languages carry a runnable example, chosen because they show three
@@ -1037,24 +1058,3 @@ main();
 ```
 
 Type-checked with `tsc --noEmit --strict`, zero errors.
-
-## 18. References
-
-1. Roy Thomas Fielding, *Architectural Styles and the Design of Network-based
-   Software Architectures*, PhD dissertation, University of California,
-   Irvine, 2000, chapter 3, sections 3.4.1 through 3.4.3.
-   https://ics.uci.edu/~fielding/pubs/dissertation/net_arch_styles.htm,
-   verified 2026-08-02.
-2. R. Fielding, M. Nottingham, J. Reschke, editors, *RFC 9110, HTTP
-   Semantics*, Internet Engineering Task Force, June 2022, sections 1 and
-   3.4. https://www.rfc-editor.org/rfc/rfc9110.html, verified 2026-08-02.
-3. PostgreSQL Global Development Group, *PostgreSQL Documentation*, section
-   1.2, Architectural Fundamentals.
-   https://www.postgresql.org/docs/current/tutorial-arch.html, verified
-   2026-08-02.
-4. X Consortium, *X Window System Protocol*, version 11, release 7.7,
-   chapter 8, Connection Setup.
-   https://xorg.freedesktop.org/archive/X11R7.7/doc/xproto/x11protocol.html,
-   verified 2026-08-02.
-5. Google, *Introduction to gRPC*, grpc.io documentation.
-   https://grpc.io/docs/what-is-grpc/introduction/, verified 2026-08-02.

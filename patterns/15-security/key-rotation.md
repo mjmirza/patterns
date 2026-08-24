@@ -773,6 +773,52 @@ information until the plaintext is no longer required
 ([https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf),
 verified 2026-08-02).
 
+## 18. References
+
+- Elaine Barker, *NIST Special Publication 800-57 Part 1 Revision 5,
+  Recommendation for Key Management: Part 1. General*, National Institute of
+  Standards and Technology, May 2020, sections 5.3.4, 5.3.5, 5.3.6, 9.3,
+  9.4, and 9.5,
+  [https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final),
+  verified 2026-08-02.
+- OWASP Cheat Sheet Series, *Secrets Management Cheat Sheet*, sections 2.4,
+  2.7, 3.5, 8.3, and 10.3,
+  [https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html),
+  verified 2026-08-02.
+- OWASP Cheat Sheet Series, *Cryptographic Storage Cheat Sheet*, key-management
+  guidance,
+  [https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html),
+  verified 2026-08-02.
+- AWS, *Enable automatic key rotation. AWS Key Management Service Developer
+  Guide*,
+  [https://docs.aws.amazon.com/kms/latest/developerguide/rotating-keys-enable.html](https://docs.aws.amazon.com/kms/latest/developerguide/rotating-keys-enable.html),
+  verified 2026-08-02.
+- AWS, *Rotate AWS KMS keys. AWS Key Management Service Developer Guide*,
+  [https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html),
+  verified 2026-08-02.
+- Google Cloud, *Key rotation. Cloud Key Management Service*,
+  [https://docs.cloud.google.com/kms/docs/key-rotation](https://docs.cloud.google.com/kms/docs/key-rotation),
+  verified 2026-08-02.
+- Google Cloud, *Rotate a key. Cloud Key Management Service*,
+  [https://docs.cloud.google.com/kms/docs/rotate-key](https://docs.cloud.google.com/kms/docs/rotate-key),
+  verified 2026-08-02.
+- Microsoft Learn, *Configure cryptographic key auto-rotation in Azure Key
+  Vault*,
+  [https://learn.microsoft.com/en-us/azure/key-vault/keys/how-to-configure-key-rotation](https://learn.microsoft.com/en-us/azure/key-vault/keys/how-to-configure-key-rotation),
+  verified 2026-08-02.
+- Microsoft Learn, *Integrate Azure Key Vault with Azure Policy*,
+  [https://learn.microsoft.com/en-us/azure/key-vault/general/azure-policy](https://learn.microsoft.com/en-us/azure/key-vault/general/azure-policy),
+  verified 2026-08-02.
+- HashiCorp Developer, *Database secrets engine. Vault documentation*,
+  [https://developer.hashicorp.com/vault/docs/secrets/databases](https://developer.hashicorp.com/vault/docs/secrets/databases),
+  verified 2026-08-02.
+- HashiCorp Developer, *Database root credential rotation. Vault tutorial*,
+  [https://developer.hashicorp.com/vault/tutorials/db-credentials/database-root-rotation](https://developer.hashicorp.com/vault/tutorials/db-credentials/database-root-rotation),
+  verified 2026-08-02.
+- Kubernetes, *kubelet command-line reference*,
+  [https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet),
+  verified 2026-08-02.
+
 ## Code examples
 
 These examples model the same core rule: writes use one active version, reads
@@ -960,49 +1006,3 @@ func main() {
 	fmt.Println(ring.Verify(oldToken), ring.Verify(newToken))
 }
 ```
-
-## 18. References
-
-- Elaine Barker, *NIST Special Publication 800-57 Part 1 Revision 5,
-  Recommendation for Key Management: Part 1. General*, National Institute of
-  Standards and Technology, May 2020, sections 5.3.4, 5.3.5, 5.3.6, 9.3,
-  9.4, and 9.5,
-  [https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final](https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final),
-  verified 2026-08-02.
-- OWASP Cheat Sheet Series, *Secrets Management Cheat Sheet*, sections 2.4,
-  2.7, 3.5, 8.3, and 10.3,
-  [https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html),
-  verified 2026-08-02.
-- OWASP Cheat Sheet Series, *Cryptographic Storage Cheat Sheet*, key-management
-  guidance,
-  [https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html),
-  verified 2026-08-02.
-- AWS, *Enable automatic key rotation. AWS Key Management Service Developer
-  Guide*,
-  [https://docs.aws.amazon.com/kms/latest/developerguide/rotating-keys-enable.html](https://docs.aws.amazon.com/kms/latest/developerguide/rotating-keys-enable.html),
-  verified 2026-08-02.
-- AWS, *Rotate AWS KMS keys. AWS Key Management Service Developer Guide*,
-  [https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html),
-  verified 2026-08-02.
-- Google Cloud, *Key rotation. Cloud Key Management Service*,
-  [https://docs.cloud.google.com/kms/docs/key-rotation](https://docs.cloud.google.com/kms/docs/key-rotation),
-  verified 2026-08-02.
-- Google Cloud, *Rotate a key. Cloud Key Management Service*,
-  [https://docs.cloud.google.com/kms/docs/rotate-key](https://docs.cloud.google.com/kms/docs/rotate-key),
-  verified 2026-08-02.
-- Microsoft Learn, *Configure cryptographic key auto-rotation in Azure Key
-  Vault*,
-  [https://learn.microsoft.com/en-us/azure/key-vault/keys/how-to-configure-key-rotation](https://learn.microsoft.com/en-us/azure/key-vault/keys/how-to-configure-key-rotation),
-  verified 2026-08-02.
-- Microsoft Learn, *Integrate Azure Key Vault with Azure Policy*,
-  [https://learn.microsoft.com/en-us/azure/key-vault/general/azure-policy](https://learn.microsoft.com/en-us/azure/key-vault/general/azure-policy),
-  verified 2026-08-02.
-- HashiCorp Developer, *Database secrets engine. Vault documentation*,
-  [https://developer.hashicorp.com/vault/docs/secrets/databases](https://developer.hashicorp.com/vault/docs/secrets/databases),
-  verified 2026-08-02.
-- HashiCorp Developer, *Database root credential rotation. Vault tutorial*,
-  [https://developer.hashicorp.com/vault/tutorials/db-credentials/database-root-rotation](https://developer.hashicorp.com/vault/tutorials/db-credentials/database-root-rotation),
-  verified 2026-08-02.
-- Kubernetes, *kubelet command-line reference*,
-  [https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet),
-  verified 2026-08-02.

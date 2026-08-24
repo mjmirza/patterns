@@ -711,6 +711,54 @@ risk lives, not a sourced claim.
   default is to apply access-control filtering as a pre-filter on both legs
   before fusion, not as a post-filter on the fused output.
 
+## 18. References
+
+1. Gordon V. Cormack, Charles L. A. Clarke, Stefan Buettcher, "Reciprocal
+   Rank Fusion outperforms Condorcet and individual Rank Learning Methods",
+   Proceedings of the 32nd international ACM SIGIR conference on Research and
+   development in information retrieval (SIGIR 2009). Referenced directly by
+   name and by the formula it introduces in the Elasticsearch documentation
+   citation below, which links to this paper as its source.
+2. Yu. A. Malkov, D. A. Yashunin, paper on approximate nearest neighbor
+   search using Hierarchical Navigable Small World graphs (the exact title
+   uses a word this repository's prose gate bans and is paraphrased here),
+   arXiv:1603.09320, 2016.
+3. Microsoft Learn, "Hybrid search overview, Azure AI Search",
+   https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview,
+   verified 2026-08-02. Source for the request and response shape, the
+   product-codes and specialized-jargon keyword-search rationale, and the
+   statement that RRF merges the parallel full-text and vector queries.
+4. Microsoft Learn, "Hybrid search scoring, RRF, Azure AI Search",
+   https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking,
+   verified 2026-08-02. Source for the exact RRF formula, one divided by rank
+   plus k, the default k of 60, the vector-weighting mechanism, and the
+   per-leg scoring ranges table.
+5. Elastic, "Reciprocal rank fusion",
+   https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion,
+   verified 2026-08-02. Source for Elasticsearch's implementation formula,
+   the default rank_constant of 60, the minimum-two-retrievers requirement,
+   and the direct link to the Cormack et al. paper as its origin.
+6. Weaviate, "Hybrid search",
+   https://docs.weaviate.io/weaviate/search/hybrid, verified 2026-08-02.
+   Source for the alpha parameter semantics, one is pure vector and zero is
+   pure keyword, the BM25F keyword leg, and the two fusion algorithms,
+   rankedFusion, the legacy method, and relativeScoreFusion, the default
+   from Weaviate 1.24 onward.
+7. OpenSearch documentation, hybrid query type under the Query DSL compound
+   queries section, https://docs.opensearch.org/latest/query-dsl/compound/hybrid/,
+   existence, purpose, and its role combining lexical and k-NN vector search
+   verified 2026-08-02 via the OpenSearch documentation navigation and
+   redirect target. The specific normalization-processor combination
+   technique names, arithmetic_mean, geometric_mean, and harmonic_mean, are
+   OpenSearch's own documented terminology for this feature but were not
+   independently re-confirmed line-by-line in this fetch and should be
+   treated as reported, not independently page-verified, detail.
+8. Stephen E. Robertson, Karen Sparck Jones, and the City University London
+   Okapi team's BM25 development through the TREC series in the 1990s, cited
+   here for the lineage of the sparse retrieval leg. The specific formula and
+   its k1 and b parameters are treated in this repository's separate entry on
+   sparse lexical scoring rather than restated here.
+
 ## Code examples
 
 The fusion function is the part of this pattern that is genuinely portable
@@ -868,51 +916,3 @@ transform, a list of ranked ids in, a scored and sorted list out, with no
 feature in any of those languages that changes its shape, unlike a pattern
 such as Strategy, where a functional language's closures genuinely reshape
 the implementation.
-
-## 18. References
-
-1. Gordon V. Cormack, Charles L. A. Clarke, Stefan Buettcher, "Reciprocal
-   Rank Fusion outperforms Condorcet and individual Rank Learning Methods",
-   Proceedings of the 32nd international ACM SIGIR conference on Research and
-   development in information retrieval (SIGIR 2009). Referenced directly by
-   name and by the formula it introduces in the Elasticsearch documentation
-   citation below, which links to this paper as its source.
-2. Yu. A. Malkov, D. A. Yashunin, paper on approximate nearest neighbor
-   search using Hierarchical Navigable Small World graphs (the exact title
-   uses a word this repository's prose gate bans and is paraphrased here),
-   arXiv:1603.09320, 2016.
-3. Microsoft Learn, "Hybrid search overview, Azure AI Search",
-   https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview,
-   verified 2026-08-02. Source for the request and response shape, the
-   product-codes and specialized-jargon keyword-search rationale, and the
-   statement that RRF merges the parallel full-text and vector queries.
-4. Microsoft Learn, "Hybrid search scoring, RRF, Azure AI Search",
-   https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking,
-   verified 2026-08-02. Source for the exact RRF formula, one divided by rank
-   plus k, the default k of 60, the vector-weighting mechanism, and the
-   per-leg scoring ranges table.
-5. Elastic, "Reciprocal rank fusion",
-   https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion,
-   verified 2026-08-02. Source for Elasticsearch's implementation formula,
-   the default rank_constant of 60, the minimum-two-retrievers requirement,
-   and the direct link to the Cormack et al. paper as its origin.
-6. Weaviate, "Hybrid search",
-   https://docs.weaviate.io/weaviate/search/hybrid, verified 2026-08-02.
-   Source for the alpha parameter semantics, one is pure vector and zero is
-   pure keyword, the BM25F keyword leg, and the two fusion algorithms,
-   rankedFusion, the legacy method, and relativeScoreFusion, the default
-   from Weaviate 1.24 onward.
-7. OpenSearch documentation, hybrid query type under the Query DSL compound
-   queries section, https://docs.opensearch.org/latest/query-dsl/compound/hybrid/,
-   existence, purpose, and its role combining lexical and k-NN vector search
-   verified 2026-08-02 via the OpenSearch documentation navigation and
-   redirect target. The specific normalization-processor combination
-   technique names, arithmetic_mean, geometric_mean, and harmonic_mean, are
-   OpenSearch's own documented terminology for this feature but were not
-   independently re-confirmed line-by-line in this fetch and should be
-   treated as reported, not independently page-verified, detail.
-8. Stephen E. Robertson, Karen Sparck Jones, and the City University London
-   Okapi team's BM25 development through the TREC series in the 1990s, cited
-   here for the lineage of the sparse retrieval leg. The specific formula and
-   its k1 and b parameters are treated in this repository's separate entry on
-   sparse lexical scoring rather than restated here.

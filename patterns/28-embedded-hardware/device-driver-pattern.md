@@ -457,6 +457,15 @@ initialization, and explicitly clearing any sensitive content from a
 driver's data struct once it is genuinely no longer needed, are real,
 necessary parts of a security-conscious device driver implementation.
 
+## 18. References
+
+1. Zephyr Project. "Device Driver Model".
+   https://docs.zephyrproject.org/latest/kernel/drivers/index.html
+   Verified 2026-08-21. Source of the subsystem API struct shape, the
+   application-independence benefit, the per-instance config-data
+   split, and the boot-time initialization-ordering quotes used in
+   dimensions 1, 2, 3, 5, 7, 9, and 10.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -597,12 +606,3 @@ let uart0 = UARTDevice(config: DriverConfig(baseAddress: 0x40000000), data: Driv
 _ = uart0.writeByte(65)
 _ = uart0.writeByte(66)
 ```
-
-## 18. References
-
-1. Zephyr Project. "Device Driver Model".
-   https://docs.zephyrproject.org/latest/kernel/drivers/index.html
-   Verified 2026-08-21. Source of the subsystem API struct shape, the
-   application-independence benefit, the per-instance config-data
-   split, and the boot-time initialization-ordering quotes used in
-   dimensions 1, 2, 3, 5, 7, 9, and 10.

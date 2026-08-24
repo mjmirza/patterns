@@ -886,6 +886,61 @@ obligations that apply are the ordinary ones that apply to any field
 holding that kind of data, and this entry does not add anything specific
 to sequential coupling on top of them.
 
+## 18. References
+
+1. Mark Seemann. "Design Smell. Temporal Coupling". ploeh blog, 24 May
+   2011. https://blog.ploeh.dk/2011/05/24/DesignSmellTemporalCoupling/
+   Verified 2026-08-02. Source of the definition quoted in dimension 1
+   and the `Initialize`/`Spread` example referenced throughout.
+2. connascence.io. "Connascence of Execution".
+   https://connascence.io/execution.html Verified 2026-08-02. Source of
+   the Page-Jones connascence classification of the same defect, and of
+   the `Email`/`setSubject`/`send` example cited in dimension 1.
+3. Wikipedia contributors. "Connascent software components".
+   https://en.wikipedia.org/wiki/Connascent_software_components Verified
+   2026-08-02. Source for Meilir Page-Jones as the originator of the
+   connascence taxonomy and the citation to *Practical Guide to
+   Structured Systems Design*, second edition, 1988.
+4. Wikipedia contributors. "Cohesion (computer science)".
+   https://en.wikipedia.org/wiki/Cohesion_(computer_science) Verified
+   2026-08-02. Source for the Constantine and Yourdon origin of the
+   cohesion taxonomy and for the definition of sequential cohesion used
+   in the disambiguation in dimension 1.
+5. Wikipedia contributors. "Coupling (computer programming)".
+   https://en.wikipedia.org/wiki/Coupling_(computer_programming) Verified
+   2026-08-02. Source for the classic, distinct definition of temporal
+   coupling as bundling unrelated actions that happen to occur at the
+   same time, cited in dimension 1 to show the name is separately
+   overloaded.
+6. Martin Fowler, with Eric Evans. "FluentInterface". martinfowler.com
+   bliki, updated 2008. https://www.martinfowler.com/bliki/FluentInterface.html
+   Verified 2026-08-02. Background source on fluent, chained method
+   interfaces informing the staged-builder discussion in dimensions 8
+   and 13.
+7. Oracle. *Java SE 21 API Specification*, `java.lang.Thread`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Thread.html
+   Verified 2026-08-02. Source for the `Thread.start()` production use
+   in dimension 9.
+8. Oracle. *Java SE 21 API Specification*, `java.sql.ResultSet`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/ResultSet.html
+   Verified 2026-08-02. Source for the `ResultSet` cursor and `next()`
+   production use in dimension 9.
+9. Microsoft. *.NET API documentation*,
+   `SqlConnection.Open` (`System.Data.SqlClient`).
+   https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.open
+   Verified 2026-08-02. Source for the ADO.NET production use in
+   dimension 9.
+10. The Go Authors. *Go package documentation*, `bufio`, `Scanner`.
+    https://pkg.go.dev/bufio#Scanner Verified 2026-08-02. Source for the
+    `bufio.Scanner` production use in dimension 9, presented as an
+    accepted convention rather than an instance of the defect, per
+    dimension 4.
+11. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design
+    Patterns. Elements of Reusable Object-Oriented Software*.
+    Addison-Wesley, 1994. ISBN 0-201-63361-2. Behavioral Patterns
+    chapter, State. Source for the State pattern relationship discussed
+    in dimension 13.
+
 ## Code examples
 
 Three languages, chosen to show three distinct points on the path from
@@ -1098,58 +1153,3 @@ fn main() {
     // preceding call to close(), so it can no longer be used.
 }
 ```
-
-## 18. References
-
-1. Mark Seemann. "Design Smell. Temporal Coupling". ploeh blog, 24 May
-   2011. https://blog.ploeh.dk/2011/05/24/DesignSmellTemporalCoupling/
-   Verified 2026-08-02. Source of the definition quoted in dimension 1
-   and the `Initialize`/`Spread` example referenced throughout.
-2. connascence.io. "Connascence of Execution".
-   https://connascence.io/execution.html Verified 2026-08-02. Source of
-   the Page-Jones connascence classification of the same defect, and of
-   the `Email`/`setSubject`/`send` example cited in dimension 1.
-3. Wikipedia contributors. "Connascent software components".
-   https://en.wikipedia.org/wiki/Connascent_software_components Verified
-   2026-08-02. Source for Meilir Page-Jones as the originator of the
-   connascence taxonomy and the citation to *Practical Guide to
-   Structured Systems Design*, second edition, 1988.
-4. Wikipedia contributors. "Cohesion (computer science)".
-   https://en.wikipedia.org/wiki/Cohesion_(computer_science) Verified
-   2026-08-02. Source for the Constantine and Yourdon origin of the
-   cohesion taxonomy and for the definition of sequential cohesion used
-   in the disambiguation in dimension 1.
-5. Wikipedia contributors. "Coupling (computer programming)".
-   https://en.wikipedia.org/wiki/Coupling_(computer_programming) Verified
-   2026-08-02. Source for the classic, distinct definition of temporal
-   coupling as bundling unrelated actions that happen to occur at the
-   same time, cited in dimension 1 to show the name is separately
-   overloaded.
-6. Martin Fowler, with Eric Evans. "FluentInterface". martinfowler.com
-   bliki, updated 2008. https://www.martinfowler.com/bliki/FluentInterface.html
-   Verified 2026-08-02. Background source on fluent, chained method
-   interfaces informing the staged-builder discussion in dimensions 8
-   and 13.
-7. Oracle. *Java SE 21 API Specification*, `java.lang.Thread`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Thread.html
-   Verified 2026-08-02. Source for the `Thread.start()` production use
-   in dimension 9.
-8. Oracle. *Java SE 21 API Specification*, `java.sql.ResultSet`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/ResultSet.html
-   Verified 2026-08-02. Source for the `ResultSet` cursor and `next()`
-   production use in dimension 9.
-9. Microsoft. *.NET API documentation*,
-   `SqlConnection.Open` (`System.Data.SqlClient`).
-   https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.open
-   Verified 2026-08-02. Source for the ADO.NET production use in
-   dimension 9.
-10. The Go Authors. *Go package documentation*, `bufio`, `Scanner`.
-    https://pkg.go.dev/bufio#Scanner Verified 2026-08-02. Source for the
-    `bufio.Scanner` production use in dimension 9, presented as an
-    accepted convention rather than an instance of the defect, per
-    dimension 4.
-11. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design
-    Patterns. Elements of Reusable Object-Oriented Software*.
-    Addison-Wesley, 1994. ISBN 0-201-63361-2. Behavioral Patterns
-    chapter, State. Source for the State pattern relationship discussed
-    in dimension 13.

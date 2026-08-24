@@ -796,6 +796,50 @@ this anti-pattern, but the longer chains typical of a distributed monolith
 increase the number of boundaries a trace crosses and therefore the number of
 places this can go wrong.
 
+## 18. References
+
+1. InfoQ. `Services or Objects, Distributed Monoliths, and Untangling
+   Deployment from Release`, coverage of Ben Christensen's talk at the
+   Microservices Practitioner Summit.
+   https://www.infoq.com/news/2016/02/services-distributed-monolith/
+   Verified 2026-08-02. Source for the named coinage in dimension 1 and the
+   Netflix and industry-wide pattern in dimension 9.
+2. Sam Newman. *Building Microservices*, 2nd edition. O'Reilly Media, 2021.
+   ISBN 978-1-4920-3402-5. Chapter 4, `Splitting the Monolith`, and chapter
+   11, `Testing`. Source for the shared-database and synchronous-chain
+   coupling analysis, and the business-capability decomposition guidance in
+   dimensions 1, 8, 11, and 13.
+3. Martin Fowler. `MonolithFirst`.
+   https://martinfowler.com/bliki/MonolithFirst.html
+   Verified 2026-08-02. Source for the argument that boundaries drawn before
+   the domain is understood tend to be wrong, cited in dimensions 1 and 13.
+4. Chris Richardson. `Pattern. Shared database`, microservices.io.
+   https://microservices.io/patterns/data/shared-database.html
+   Verified 2026-08-02. Source for the shared-database variant analysis in
+   dimensions 8 and 11.
+5. Microsoft. `Interservice communication in microservices`, Azure
+   Architecture Center.
+   https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
+   Verified 2026-08-02. Source for the synchronous versus asynchronous
+   trade-off, the retry and circuit breaker patterns, and the mutual TLS
+   recommendation in dimensions 8 and 17.
+6. Segment engineering blog, published on the Twilio blog. `Goodbye
+   Microservices. From 100+ Problem Children to 1 Superstar`.
+   https://www.twilio.com/en-us/blog/developers/best-practices/goodbye-microservices/
+   Verified 2026-08-02. Source for the 140-plus service consolidation
+   production case in dimension 9.
+7. InfoQ. `How Deliveroo Moved from a Monolith to Microservices and What
+   They Learned`.
+   https://www.infoq.com/news/2017/03/deliveroo-monolith-distributed
+   Verified 2026-08-02. Source for the third production case in dimension 9.
+8. Wikipedia contributors. `Fallacies of distributed computing`.
+   https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
+   Verified 2026-08-02. Background source confirming the eight fallacies
+   attributed to L. Peter Deutsch and, later, James Gosling at Sun
+   Microsystems, informing the security and reliability discussion in
+   dimension 17 about why synchronous network calls cannot be treated as
+   free or reliable.
+
 ## Code examples
 
 Three languages, chosen to show the anti-pattern's runtime signature rather
@@ -1084,47 +1128,3 @@ Java's version was compiled and run with `javac` and `java` from the JDK
 present on this machine. Python's version was run with `python3`. TypeScript's
 version was compiled with `npx tsc` against a CommonJS target and run with
 `node`. All three produced the output described in the comments above.
-
-## 18. References
-
-1. InfoQ. `Services or Objects, Distributed Monoliths, and Untangling
-   Deployment from Release`, coverage of Ben Christensen's talk at the
-   Microservices Practitioner Summit.
-   https://www.infoq.com/news/2016/02/services-distributed-monolith/
-   Verified 2026-08-02. Source for the named coinage in dimension 1 and the
-   Netflix and industry-wide pattern in dimension 9.
-2. Sam Newman. *Building Microservices*, 2nd edition. O'Reilly Media, 2021.
-   ISBN 978-1-4920-3402-5. Chapter 4, `Splitting the Monolith`, and chapter
-   11, `Testing`. Source for the shared-database and synchronous-chain
-   coupling analysis, and the business-capability decomposition guidance in
-   dimensions 1, 8, 11, and 13.
-3. Martin Fowler. `MonolithFirst`.
-   https://martinfowler.com/bliki/MonolithFirst.html
-   Verified 2026-08-02. Source for the argument that boundaries drawn before
-   the domain is understood tend to be wrong, cited in dimensions 1 and 13.
-4. Chris Richardson. `Pattern. Shared database`, microservices.io.
-   https://microservices.io/patterns/data/shared-database.html
-   Verified 2026-08-02. Source for the shared-database variant analysis in
-   dimensions 8 and 11.
-5. Microsoft. `Interservice communication in microservices`, Azure
-   Architecture Center.
-   https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
-   Verified 2026-08-02. Source for the synchronous versus asynchronous
-   trade-off, the retry and circuit breaker patterns, and the mutual TLS
-   recommendation in dimensions 8 and 17.
-6. Segment engineering blog, published on the Twilio blog. `Goodbye
-   Microservices. From 100+ Problem Children to 1 Superstar`.
-   https://www.twilio.com/en-us/blog/developers/best-practices/goodbye-microservices/
-   Verified 2026-08-02. Source for the 140-plus service consolidation
-   production case in dimension 9.
-7. InfoQ. `How Deliveroo Moved from a Monolith to Microservices and What
-   They Learned`.
-   https://www.infoq.com/news/2017/03/deliveroo-monolith-distributed
-   Verified 2026-08-02. Source for the third production case in dimension 9.
-8. Wikipedia contributors. `Fallacies of distributed computing`.
-   https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
-   Verified 2026-08-02. Background source confirming the eight fallacies
-   attributed to L. Peter Deutsch and, later, James Gosling at Sun
-   Microsystems, informing the security and reliability discussion in
-   dimension 17 about why synchronous network calls cannot be treated as
-   free or reliable.

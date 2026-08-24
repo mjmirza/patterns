@@ -865,6 +865,35 @@ captures the full request body can extend the lifetime of personal data beyond
 the request. The privacy issue is not the compose helper. It is the hidden
 reference held by the returned function.
 
+## 18. References
+
+- Haskell.org. "A Gentle Introduction to Haskell, Version 98. Functions."
+  Function composition operator `(.)`.
+  https://www.haskell.org/tutorial/functions.html, verified 2026-08-02.
+- Haskell Hugs documentation. "Prelude." Entry for `(.)`, function
+  composition. https://www.haskell.org/hugs/pages/libraries/base/Prelude.html,
+  verified 2026-08-02.
+- Oracle. "Interface Function<T,R>." Java SE 22 API documentation,
+  `java.util.function.Function`.
+  https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/Function.html,
+  verified 2026-08-02.
+- Python Software Foundation. "functools. Higher-order functions and operations
+  on callable objects." `functools.reduce`.
+  https://docs.python.org/3/library/functools.html, verified 2026-08-02.
+- Redux documentation. "`compose(...functions)`."
+  https://redux.js.org/api/compose, verified 2026-08-02.
+- Redux documentation. "Redux Fundamentals, Part 4. Store." Store enhancers and
+  `compose`. https://redux.js.org/tutorials/fundamentals/part-4-store,
+  verified 2026-08-02.
+- RxJS documentation. "RxJS Operators." Pipeable operators.
+  https://rxjs.dev/guide/operators, verified 2026-08-02.
+- RxJS documentation. "pipe." API entry.
+  https://rxjs.dev/api/index/function/pipe, verified 2026-08-02.
+- Koa documentation. "Guide." Combining multiple middleware with `koa-compose`.
+  https://github.com/koajs/koa/blob/master/docs/guide.md, verified 2026-08-02.
+- npm. "koa-compose." Package README and API summary.
+  https://www.npmjs.com/package/koa-compose, verified 2026-08-02.
+
 ## Code examples
 
 The examples below use Python, Go, Rust, and TypeScript because each supports
@@ -983,32 +1012,3 @@ const normalize = pipe(
 
 console.log(normalize("  ALICE "));
 ```
-
-## 18. References
-
-- Haskell.org. "A Gentle Introduction to Haskell, Version 98. Functions."
-  Function composition operator `(.)`.
-  https://www.haskell.org/tutorial/functions.html, verified 2026-08-02.
-- Haskell Hugs documentation. "Prelude." Entry for `(.)`, function
-  composition. https://www.haskell.org/hugs/pages/libraries/base/Prelude.html,
-  verified 2026-08-02.
-- Oracle. "Interface Function<T,R>." Java SE 22 API documentation,
-  `java.util.function.Function`.
-  https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/Function.html,
-  verified 2026-08-02.
-- Python Software Foundation. "functools. Higher-order functions and operations
-  on callable objects." `functools.reduce`.
-  https://docs.python.org/3/library/functools.html, verified 2026-08-02.
-- Redux documentation. "`compose(...functions)`."
-  https://redux.js.org/api/compose, verified 2026-08-02.
-- Redux documentation. "Redux Fundamentals, Part 4. Store." Store enhancers and
-  `compose`. https://redux.js.org/tutorials/fundamentals/part-4-store,
-  verified 2026-08-02.
-- RxJS documentation. "RxJS Operators." Pipeable operators.
-  https://rxjs.dev/guide/operators, verified 2026-08-02.
-- RxJS documentation. "pipe." API entry.
-  https://rxjs.dev/api/index/function/pipe, verified 2026-08-02.
-- Koa documentation. "Guide." Combining multiple middleware with `koa-compose`.
-  https://github.com/koajs/koa/blob/master/docs/guide.md, verified 2026-08-02.
-- npm. "koa-compose." Package README and API summary.
-  https://www.npmjs.com/package/koa-compose, verified 2026-08-02.

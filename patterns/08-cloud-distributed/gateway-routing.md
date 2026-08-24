@@ -788,6 +788,64 @@ retention and access controls as any other system holding that data, and
 arguably tighter ones given how much traffic passes through one log
 stream.
 
+## 18. References
+
+1. Microsoft. Azure Architecture Center, "Gateway Routing pattern".
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-routing
+   Verified 2026-08-02. Source of the canonical definition, the three
+   context-and-problem scenarios, the issues and considerations list, the
+   when-to-use and when-not-to-use guidance, the Layer 7 statement, the
+   Nginx example, and the Application Gateway and Front Door references.
+2. Microsoft. Azure Architecture Center, "Gateway Aggregation pattern".
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation
+   Verified 2026-08-02. Source for the discriminating comparison in
+   dimension 4, dimension 12, and dimension 13 against Gateway Aggregation.
+3. Microsoft. Azure Architecture Center, "Gateway Offloading pattern".
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-offloading
+   Verified 2026-08-02. Source for the discriminating comparison in
+   dimension 4, dimension 12, and dimension 13 against Gateway Offloading,
+   and for the "business logic should never be offloaded to the gateway"
+   principle echoed in dimension 11.
+4. The Kubernetes Authors. Kubernetes documentation, "Ingress".
+   https://kubernetes.io/docs/concepts/services-networking/ingress/
+   Verified 2026-08-02. Source for the Ingress alias, the host-and-path
+   rule model, and the Kubernetes production use in dimension 9.
+5. Netflix. `Netflix/zuul` GitHub repository.
+   https://github.com/Netflix/zuul
+   Verified 2026-08-02. Source for the Zuul production use in dimension 9,
+   the Zuul 1 to Zuul 2 asynchronous migration, and the Spring Cloud and
+   Riot Games adoption note.
+6. Kong Inc. Kong Gateway documentation.
+   https://developer.konghq.com/gateway/
+   Verified 2026-08-02. Source for the Kong production use in dimension 9
+   and the Services-and-Routes data model description.
+7. Envoy Proxy project. "What is Envoy".
+   https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy
+   Verified 2026-08-02. Source for the Envoy production use in dimension 9,
+   the L7 proxy and routing-subsystem definition quoted in dimension 1 and
+   dimension 8, and the out-of-process design note.
+8. Go project. Go standard library documentation, `net/http/httputil`
+   package, `ReverseProxy` type.
+   https://pkg.go.dev/net/http/httputil#ReverseProxy
+   Package documentation for the reverse-proxy primitive used in the Go
+   code example. Not independently WebFetch-verified in this session, the
+   API usage was verified empirically by compiling and running the example
+   against the live package with `go run`, confirmed 2026-08-02.
+9. Node.js project. Node.js documentation, `http` module,
+   `http.request()` and `http.createServer()`.
+   https://nodejs.org/api/http.html
+   Package documentation for the primitives used in the TypeScript code
+   example. Not independently WebFetch-verified in this session, the API
+   usage was verified empirically by compiling with `tsc` and running with
+   `node`, confirmed 2026-08-02.
+10. Python Software Foundation. Python 3 documentation, `http.server` and
+    `urllib.request` modules.
+    https://docs.python.org/3/library/http.server.html
+    Standard library documentation for the primitives used in the Python
+    code example. Not independently WebFetch-verified in this session, the
+    API usage was verified empirically by running the example with
+    `python3`, confirmed 2026-08-02.
+
 ## Code examples
 
 Three languages where a hand-rolled Layer 7 gateway is genuinely idiomatic
@@ -1110,61 +1168,3 @@ Rust and Swift are omitted here because a hand-rolled reverse-proxy example
 in either would repeat the identical `startswith`-and-forward shape already
 shown three times above with no new idiom to demonstrate, and the pattern's
 production instances (dimension 9) are not written in either language.
-
-## 18. References
-
-1. Microsoft. Azure Architecture Center, "Gateway Routing pattern".
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-routing
-   Verified 2026-08-02. Source of the canonical definition, the three
-   context-and-problem scenarios, the issues and considerations list, the
-   when-to-use and when-not-to-use guidance, the Layer 7 statement, the
-   Nginx example, and the Application Gateway and Front Door references.
-2. Microsoft. Azure Architecture Center, "Gateway Aggregation pattern".
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation
-   Verified 2026-08-02. Source for the discriminating comparison in
-   dimension 4, dimension 12, and dimension 13 against Gateway Aggregation.
-3. Microsoft. Azure Architecture Center, "Gateway Offloading pattern".
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-offloading
-   Verified 2026-08-02. Source for the discriminating comparison in
-   dimension 4, dimension 12, and dimension 13 against Gateway Offloading,
-   and for the "business logic should never be offloaded to the gateway"
-   principle echoed in dimension 11.
-4. The Kubernetes Authors. Kubernetes documentation, "Ingress".
-   https://kubernetes.io/docs/concepts/services-networking/ingress/
-   Verified 2026-08-02. Source for the Ingress alias, the host-and-path
-   rule model, and the Kubernetes production use in dimension 9.
-5. Netflix. `Netflix/zuul` GitHub repository.
-   https://github.com/Netflix/zuul
-   Verified 2026-08-02. Source for the Zuul production use in dimension 9,
-   the Zuul 1 to Zuul 2 asynchronous migration, and the Spring Cloud and
-   Riot Games adoption note.
-6. Kong Inc. Kong Gateway documentation.
-   https://developer.konghq.com/gateway/
-   Verified 2026-08-02. Source for the Kong production use in dimension 9
-   and the Services-and-Routes data model description.
-7. Envoy Proxy project. "What is Envoy".
-   https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy
-   Verified 2026-08-02. Source for the Envoy production use in dimension 9,
-   the L7 proxy and routing-subsystem definition quoted in dimension 1 and
-   dimension 8, and the out-of-process design note.
-8. Go project. Go standard library documentation, `net/http/httputil`
-   package, `ReverseProxy` type.
-   https://pkg.go.dev/net/http/httputil#ReverseProxy
-   Package documentation for the reverse-proxy primitive used in the Go
-   code example. Not independently WebFetch-verified in this session, the
-   API usage was verified empirically by compiling and running the example
-   against the live package with `go run`, confirmed 2026-08-02.
-9. Node.js project. Node.js documentation, `http` module,
-   `http.request()` and `http.createServer()`.
-   https://nodejs.org/api/http.html
-   Package documentation for the primitives used in the TypeScript code
-   example. Not independently WebFetch-verified in this session, the API
-   usage was verified empirically by compiling with `tsc` and running with
-   `node`, confirmed 2026-08-02.
-10. Python Software Foundation. Python 3 documentation, `http.server` and
-    `urllib.request` modules.
-    https://docs.python.org/3/library/http.server.html
-    Standard library documentation for the primitives used in the Python
-    code example. Not independently WebFetch-verified in this session, the
-    API usage was verified empirically by running the example with
-    `python3`, confirmed 2026-08-02.

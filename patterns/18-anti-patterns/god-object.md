@@ -804,6 +804,61 @@ between the failure domains of its different responsibilities. This is
 the security and reliability analogue of the change-amplification cost
 already described in dimension 3 and dimension 10.
 
+## 18. References
+
+1. Arthur J. Riel. *Object-Oriented Design Heuristics*. Addison-Wesley,
+   1996. ISBN 0-201-63385-X. Source of the earliest documented heuristic
+   warning against classes named Driver, Manager, System, or Subsystem,
+   cited as the earliest traceable source in dimension 1.
+2. Wikipedia contributors. "God object."
+   https://en.wikipedia.org/wiki/God_object
+   Verified 2026-08-02. Used to corroborate the Riel citation and its
+   wording in dimension 1, not as a source of explanation.
+3. William J. Brown, Raphael C. Malveau, Hays W. "Skip" McCormick, Thomas
+   J. Mowbray. *AntiPatterns. Refactoring Software, Architectures, and
+   Projects in Crisis*. John Wiley and Sons, 1998. ISBN 0-471-19713-0.
+   Chapter 5, The Blob. Source of the first catalog entry under a specific
+   name, the description of a monopolizing complex class surrounded by
+   passive data classes, and the general definition of anti-pattern this
+   repository's family 18 follows.
+4. Foutse Khomh, Massimiliano Di Penta, Yann-Gael Gueheneuc, Giuliano
+   Antoniol. "An exploratory study of the impact of antipatterns on class
+   change- and fault-proneness." *Empirical Software Engineering*,
+   Springer Nature, 2012.
+   https://link.springer.com/article/10.1007/s10664-011-9171-y
+   Verified 2026-08-02, verified via publisher listing and abstract. The
+   study measured 13 antipatterns including the Blob across 54 releases of
+   ArgoUML, Eclipse, Mylyn, and Rhino. Source for the four named production
+   uses and the fault-proneness finding in dimensions 9 and 10.
+5. PMD project. *PMD Java Design rule set documentation*, GodClass rule.
+   https://pmd.github.io/pmd/pmd_rules_java_design.html
+   Verified 2026-08-02. Source for the WMC, ATFD, TCC detection algorithm
+   and its citation of Lanza and Marinescu, used in dimensions 9 and 15.
+6. Michele Lanza, Radu Marinescu. *Object-Oriented Metrics in Practice.
+   Using Software Metrics to Characterize, Evaluate, and Improve the
+   Design of Object-Oriented Systems*. Springer, 2006. ISBN
+   978-3-540-24429-5. Page 80. Source of the God Class detection metric
+   combination, high WMC, high ATFD, low TCC, implemented by the PMD rule
+   cited in reference 5.
+7. Checkstyle project. *ClassFanOutComplexity check documentation*.
+   https://checkstyle.sourceforge.io/checks/metrics/classfanoutcomplexity.html
+   Verified 2026-08-02. Source for the fan-out complexity metric and its
+   stated relationship to God Class coupling, used in dimensions 9 and 15.
+8. Martin Fowler. "Refactoring, this class is too large."
+   https://martinfowler.com/articles/class-too-large.html
+   Verified 2026-08-02. Source for the Large Class smell and its
+   recommended treatments, used in dimension 13.
+9. Martin Fowler, with Kent Beck. *Refactoring. Improving the Design of
+   Existing Code*, 2nd edition. Addison-Wesley, 2018. ISBN
+   978-0-13-475759-9. Chapter 3, Bad Smells in Code, section Large Class,
+   and the Extract Class refactoring. Source of the Extract Class
+   refactoring technique used as the primary path out of the anti-pattern
+   in dimension 14.
+10. Robert C. Martin. *Agile Software Development. Principles, Patterns,
+    and Practices*. Prentice Hall, 2002. ISBN 0-13-597444-5. Source of the
+    Single Responsibility Principle, cited in dimension 13 as the
+    principle a God Object structurally violates.
+
 ## Code examples
 
 Three languages, each showing the same shape. A God Object combining
@@ -1117,58 +1172,3 @@ func main() {
 	fmt.Println(handler.Handle("/orders", "bob", "hunter2"), audit.entries)
 }
 ```
-
-## 18. References
-
-1. Arthur J. Riel. *Object-Oriented Design Heuristics*. Addison-Wesley,
-   1996. ISBN 0-201-63385-X. Source of the earliest documented heuristic
-   warning against classes named Driver, Manager, System, or Subsystem,
-   cited as the earliest traceable source in dimension 1.
-2. Wikipedia contributors. "God object."
-   https://en.wikipedia.org/wiki/God_object
-   Verified 2026-08-02. Used to corroborate the Riel citation and its
-   wording in dimension 1, not as a source of explanation.
-3. William J. Brown, Raphael C. Malveau, Hays W. "Skip" McCormick, Thomas
-   J. Mowbray. *AntiPatterns. Refactoring Software, Architectures, and
-   Projects in Crisis*. John Wiley and Sons, 1998. ISBN 0-471-19713-0.
-   Chapter 5, The Blob. Source of the first catalog entry under a specific
-   name, the description of a monopolizing complex class surrounded by
-   passive data classes, and the general definition of anti-pattern this
-   repository's family 18 follows.
-4. Foutse Khomh, Massimiliano Di Penta, Yann-Gael Gueheneuc, Giuliano
-   Antoniol. "An exploratory study of the impact of antipatterns on class
-   change- and fault-proneness." *Empirical Software Engineering*,
-   Springer Nature, 2012.
-   https://link.springer.com/article/10.1007/s10664-011-9171-y
-   Verified 2026-08-02, verified via publisher listing and abstract. The
-   study measured 13 antipatterns including the Blob across 54 releases of
-   ArgoUML, Eclipse, Mylyn, and Rhino. Source for the four named production
-   uses and the fault-proneness finding in dimensions 9 and 10.
-5. PMD project. *PMD Java Design rule set documentation*, GodClass rule.
-   https://pmd.github.io/pmd/pmd_rules_java_design.html
-   Verified 2026-08-02. Source for the WMC, ATFD, TCC detection algorithm
-   and its citation of Lanza and Marinescu, used in dimensions 9 and 15.
-6. Michele Lanza, Radu Marinescu. *Object-Oriented Metrics in Practice.
-   Using Software Metrics to Characterize, Evaluate, and Improve the
-   Design of Object-Oriented Systems*. Springer, 2006. ISBN
-   978-3-540-24429-5. Page 80. Source of the God Class detection metric
-   combination, high WMC, high ATFD, low TCC, implemented by the PMD rule
-   cited in reference 5.
-7. Checkstyle project. *ClassFanOutComplexity check documentation*.
-   https://checkstyle.sourceforge.io/checks/metrics/classfanoutcomplexity.html
-   Verified 2026-08-02. Source for the fan-out complexity metric and its
-   stated relationship to God Class coupling, used in dimensions 9 and 15.
-8. Martin Fowler. "Refactoring, this class is too large."
-   https://martinfowler.com/articles/class-too-large.html
-   Verified 2026-08-02. Source for the Large Class smell and its
-   recommended treatments, used in dimension 13.
-9. Martin Fowler, with Kent Beck. *Refactoring. Improving the Design of
-   Existing Code*, 2nd edition. Addison-Wesley, 2018. ISBN
-   978-0-13-475759-9. Chapter 3, Bad Smells in Code, section Large Class,
-   and the Extract Class refactoring. Source of the Extract Class
-   refactoring technique used as the primary path out of the anti-pattern
-   in dimension 14.
-10. Robert C. Martin. *Agile Software Development. Principles, Patterns,
-    and Practices*. Prentice Hall, 2002. ISBN 0-13-597444-5. Source of the
-    Single Responsibility Principle, cited in dimension 13 as the
-    principle a God Object structurally violates.

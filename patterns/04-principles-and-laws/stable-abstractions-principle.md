@@ -817,6 +817,67 @@ On data privacy specifically the principle is silent; it says nothing
 about what data flows through a package, only about how many other
 packages depend on it and how abstract its types are.
 
+## 18. References
+
+1. Robert C. Martin. *Design Principles and Design Patterns*. 2000. Source
+   of the original statement of the three package coupling principles,
+   the Acyclic Dependencies Principle, the Stable Dependencies Principle,
+   and the Stable Abstractions Principle, as a set. Origin and grouping
+   corroborated via Wikipedia contributors, "Package principles",
+   https://en.wikipedia.org/wiki/Package_principles verified 2026-08-02.
+2. Robert C. Martin. *Agile Software Development, Principles, Patterns,
+   and Practices*. Prentice Hall, 2002. The book-length restatement of the
+   package design principles, cited directly by NDepend and Lattix
+   documentation as the origin of the Ca, Ce, Instability, Abstractness,
+   and Distance formulas, see references 4 and 5 below.
+3. Robert C. Martin. *Clean Architecture. A Craftsman's Guide to Software
+   Structure and Design*. Prentice Hall, 2017. ISBN 978-0-13-449416-6.
+   Part IV, Component Principles, Chapter 14, Component Coupling. Source
+   of the restated principle, the fan-in and fan-out terminology, and the
+   relationship between the Stable Dependencies Principle and the Stable
+   Abstractions Principle. Chapter number and title independently
+   confirmed by a chapter-by-chapter summary,
+   https://www.letscodethemup.com/clean-architecture-chapter-14-component-coupling-sap-the-stable-abstractions-principle/
+   verified 2026-08-02, and by a direct GitHub reading summary,
+   https://github.com/serodriguez68/clean-architecture/blob/master/part-4-component-principles.md
+   verified 2026-08-02.
+4. NDepend documentation. "Code metrics definitions."
+   https://www.ndepend.com/docs/code-metrics
+   Verified 2026-08-02. Source for the NDepend production use in
+   dimension 9, and for the explicit attribution of Ca, Ce, Abstractness,
+   Instability, and Distance to Martin's book.
+5. Lattix documentation. "Metrics."
+   https://docs.lattix.com/lattix/userGuide/Metrics.html
+   Verified 2026-08-02. Source for the Lattix production use in
+   dimension 9.
+6. GitHub, clarkware/jdepend. `src/jdepend/framework/JavaPackage.java`.
+   https://raw.githubusercontent.com/clarkware/jdepend/master/src/jdepend/framework/JavaPackage.java
+   Verified 2026-08-02. Source code read directly for the JDepend
+   production use in dimension 9, including the volatility-weighted
+   distance variant in dimension 8.
+7. ArchUnitTS documentation. `DistanceFromMainSequence` class reference.
+   https://lukasniessen.github.io/ArchUnitTS/classes/DistanceFromMainSequence.html
+   Verified 2026-08-02. Source for the ArchUnitTS production use in
+   dimension 9 and the architecture fitness function technique in
+   dimension 15.
+8. Wikipedia contributors. "Software package metrics."
+   https://en.wikipedia.org/wiki/Software_package_metrics
+   Verified 2026-08-02. Used to confirm the standard forms of the
+   afferent coupling, efferent coupling, instability, abstractness, and
+   distance formulas as commonly restated from Martin's work.
+9. Kevin Buchanan. "The Stable-Abstraction Principle."
+   https://kevbuchanan.github.io/posts/stable-abstraction-principle
+   Verified 2026-08-02. Used to corroborate the exact one-sentence
+   statement of the principle and the zone of pain and zone of
+   uselessness terminology and examples.
+10. Mohammad Raji and Behzad Montazeri. "On the Relationship Between
+    Modularity and Stability in Software Packages." arXiv:1812.01061,
+    2018. University of Tennessee and Razi University. Retrieved and
+    read directly, https://arxiv.org/pdf/1812.01061 verified 2026-08-02.
+    Independent academic restatement of Martin's instability formula and
+    the reasoning behind the Stable Abstractions Principle, used to
+    corroborate the forces described in dimension 3.
+
 ## Code examples
 
 Three languages, all illustrating the metric computation itself, since the
@@ -1005,64 +1066,3 @@ func main() {
 
 Run with `go run`, output confirmed identical to the Python and
 TypeScript runs above.
-
-## 18. References
-
-1. Robert C. Martin. *Design Principles and Design Patterns*. 2000. Source
-   of the original statement of the three package coupling principles,
-   the Acyclic Dependencies Principle, the Stable Dependencies Principle,
-   and the Stable Abstractions Principle, as a set. Origin and grouping
-   corroborated via Wikipedia contributors, "Package principles",
-   https://en.wikipedia.org/wiki/Package_principles verified 2026-08-02.
-2. Robert C. Martin. *Agile Software Development, Principles, Patterns,
-   and Practices*. Prentice Hall, 2002. The book-length restatement of the
-   package design principles, cited directly by NDepend and Lattix
-   documentation as the origin of the Ca, Ce, Instability, Abstractness,
-   and Distance formulas, see references 4 and 5 below.
-3. Robert C. Martin. *Clean Architecture. A Craftsman's Guide to Software
-   Structure and Design*. Prentice Hall, 2017. ISBN 978-0-13-449416-6.
-   Part IV, Component Principles, Chapter 14, Component Coupling. Source
-   of the restated principle, the fan-in and fan-out terminology, and the
-   relationship between the Stable Dependencies Principle and the Stable
-   Abstractions Principle. Chapter number and title independently
-   confirmed by a chapter-by-chapter summary,
-   https://www.letscodethemup.com/clean-architecture-chapter-14-component-coupling-sap-the-stable-abstractions-principle/
-   verified 2026-08-02, and by a direct GitHub reading summary,
-   https://github.com/serodriguez68/clean-architecture/blob/master/part-4-component-principles.md
-   verified 2026-08-02.
-4. NDepend documentation. "Code metrics definitions."
-   https://www.ndepend.com/docs/code-metrics
-   Verified 2026-08-02. Source for the NDepend production use in
-   dimension 9, and for the explicit attribution of Ca, Ce, Abstractness,
-   Instability, and Distance to Martin's book.
-5. Lattix documentation. "Metrics."
-   https://docs.lattix.com/lattix/userGuide/Metrics.html
-   Verified 2026-08-02. Source for the Lattix production use in
-   dimension 9.
-6. GitHub, clarkware/jdepend. `src/jdepend/framework/JavaPackage.java`.
-   https://raw.githubusercontent.com/clarkware/jdepend/master/src/jdepend/framework/JavaPackage.java
-   Verified 2026-08-02. Source code read directly for the JDepend
-   production use in dimension 9, including the volatility-weighted
-   distance variant in dimension 8.
-7. ArchUnitTS documentation. `DistanceFromMainSequence` class reference.
-   https://lukasniessen.github.io/ArchUnitTS/classes/DistanceFromMainSequence.html
-   Verified 2026-08-02. Source for the ArchUnitTS production use in
-   dimension 9 and the architecture fitness function technique in
-   dimension 15.
-8. Wikipedia contributors. "Software package metrics."
-   https://en.wikipedia.org/wiki/Software_package_metrics
-   Verified 2026-08-02. Used to confirm the standard forms of the
-   afferent coupling, efferent coupling, instability, abstractness, and
-   distance formulas as commonly restated from Martin's work.
-9. Kevin Buchanan. "The Stable-Abstraction Principle."
-   https://kevbuchanan.github.io/posts/stable-abstraction-principle
-   Verified 2026-08-02. Used to corroborate the exact one-sentence
-   statement of the principle and the zone of pain and zone of
-   uselessness terminology and examples.
-10. Mohammad Raji and Behzad Montazeri. "On the Relationship Between
-    Modularity and Stability in Software Packages." arXiv:1812.01061,
-    2018. University of Tennessee and Razi University. Retrieved and
-    read directly, https://arxiv.org/pdf/1812.01061 verified 2026-08-02.
-    Independent academic restatement of Martin's instability formula and
-    the reasoning behind the Stable Abstractions Principle, used to
-    corroborate the forces described in dimension 3.

@@ -980,6 +980,54 @@ unvalidated input to a downstream service isolates the resource consumption and
 does nothing about the injection. Claiming security benefit beyond availability
 and segmentation would be inventing a concern.
 
+## 18. References
+
+- Michael T. Nygard, *Release It! Design and Deploy Production-Ready Software*,
+  Pragmatic Bookshelf, 1st edition 2007, stability patterns. The origin of the
+  pattern in software engineering. Publisher page for the second edition, 2018,
+  [pragprog.com/titles/mnee2/release-it-second-edition](https://pragprog.com/titles/mnee2/release-it-second-edition/),
+  verified 2026-08-02. Page numbers are not cited because the physical text was
+  not consulted for this entry.
+- Bulkhead pattern, Wikipedia,
+  [en.wikipedia.org/wiki/Bulkhead_pattern](https://en.wikipedia.org/wiki/Bulkhead_pattern),
+  verified 2026-08-02. Attribution of the pattern to Nygard 2007, the naval
+  metaphor, and the underutilisation caveat.
+- Bulkhead pattern, Azure Architecture Center, Microsoft,
+  [learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead](https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead),
+  page dated 2026-03-19, verified 2026-08-02. Cell-based architecture as an
+  alias, the spreading resource exhaustion, the connection pool and per-client
+  diagrams, the when-not-to-use list, the Kubernetes example, and the
+  Well-Architected pillar mapping.
+- Hystrix, How it Works, Netflix,
+  [github.com/Netflix/Hystrix/wiki/How-it-Works](https://github.com/Netflix/Hystrix/wiki/How-it-Works),
+  verified 2026-08-02. Thread pool versus semaphore isolation, the semaphore's
+  inability to enforce a timeout, the 3 millisecond p90 and 9 millisecond p99
+  overhead measurements at 60 requests per second, and the 10 billion executions
+  per day with 40 or more pools per instance figure.
+- Netflix Hystrix README, [github.com/Netflix/Hystrix](https://github.com/Netflix/Hystrix),
+  verified 2026-08-02. Maintenance mode status at version 1.5.18 and the
+  recommendation of Resilience4j for new projects.
+- Resilience4j Bulkhead documentation,
+  [resilience4j.readme.io/docs/bulkhead](https://resilience4j.readme.io/docs/bulkhead),
+  verified 2026-08-02. The `SemaphoreBulkhead` and `ThreadPoolBulkhead`
+  implementations, and the documented defaults of `maxConcurrentCalls` 25,
+  `maxWaitDuration` 0ms, `maxThreadPoolSize` available processors,
+  `coreThreadPoolSize` available processors minus one, `queueCapacity` 100, and
+  `keepAliveDuration` 20ms.
+- Managing Resources for Containers, Kubernetes documentation,
+  [kubernetes.io/docs/concepts/configuration/manage-resources-containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/),
+  verified 2026-08-02. Requests driving scheduling, limits enforced by the
+  kubelet, CPU throttling as a hard kernel-enforced limit, and memory limits
+  enforced by out-of-memory kill only under detected memory pressure.
+- Circuit breaking, Envoy proxy documentation,
+  [envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/circuit_breaking](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/circuit_breaking),
+  verified 2026-08-02. Per-cluster and per-priority limits on connections,
+  pending requests, requests, retries, and connection pools, and the statement
+  that enforcement happens at the network level rather than per application.
+- Polly documentation, [pollydocs.org](https://www.pollydocs.org/), verified
+  2026-08-02. The .NET resilience library named by Microsoft as a consumer
+  bulkhead framework.
+
 ## Code
 
 Three implementations, each demonstrating a different mechanism. All three were
@@ -1329,51 +1377,3 @@ verified 2026-08-02). Setting requests well below limits gives higher packing
 density and weaker isolation, because the node can become oversubscribed. Setting
 requests equal to limits gives the strongest isolation and the lowest packing
 density, which is the same utilisation trade this pattern makes everywhere.
-
-## 18. References
-
-- Michael T. Nygard, *Release It! Design and Deploy Production-Ready Software*,
-  Pragmatic Bookshelf, 1st edition 2007, stability patterns. The origin of the
-  pattern in software engineering. Publisher page for the second edition, 2018,
-  [pragprog.com/titles/mnee2/release-it-second-edition](https://pragprog.com/titles/mnee2/release-it-second-edition/),
-  verified 2026-08-02. Page numbers are not cited because the physical text was
-  not consulted for this entry.
-- Bulkhead pattern, Wikipedia,
-  [en.wikipedia.org/wiki/Bulkhead_pattern](https://en.wikipedia.org/wiki/Bulkhead_pattern),
-  verified 2026-08-02. Attribution of the pattern to Nygard 2007, the naval
-  metaphor, and the underutilisation caveat.
-- Bulkhead pattern, Azure Architecture Center, Microsoft,
-  [learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead](https://learn.microsoft.com/en-us/azure/architecture/patterns/bulkhead),
-  page dated 2026-03-19, verified 2026-08-02. Cell-based architecture as an
-  alias, the spreading resource exhaustion, the connection pool and per-client
-  diagrams, the when-not-to-use list, the Kubernetes example, and the
-  Well-Architected pillar mapping.
-- Hystrix, How it Works, Netflix,
-  [github.com/Netflix/Hystrix/wiki/How-it-Works](https://github.com/Netflix/Hystrix/wiki/How-it-Works),
-  verified 2026-08-02. Thread pool versus semaphore isolation, the semaphore's
-  inability to enforce a timeout, the 3 millisecond p90 and 9 millisecond p99
-  overhead measurements at 60 requests per second, and the 10 billion executions
-  per day with 40 or more pools per instance figure.
-- Netflix Hystrix README, [github.com/Netflix/Hystrix](https://github.com/Netflix/Hystrix),
-  verified 2026-08-02. Maintenance mode status at version 1.5.18 and the
-  recommendation of Resilience4j for new projects.
-- Resilience4j Bulkhead documentation,
-  [resilience4j.readme.io/docs/bulkhead](https://resilience4j.readme.io/docs/bulkhead),
-  verified 2026-08-02. The `SemaphoreBulkhead` and `ThreadPoolBulkhead`
-  implementations, and the documented defaults of `maxConcurrentCalls` 25,
-  `maxWaitDuration` 0ms, `maxThreadPoolSize` available processors,
-  `coreThreadPoolSize` available processors minus one, `queueCapacity` 100, and
-  `keepAliveDuration` 20ms.
-- Managing Resources for Containers, Kubernetes documentation,
-  [kubernetes.io/docs/concepts/configuration/manage-resources-containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/),
-  verified 2026-08-02. Requests driving scheduling, limits enforced by the
-  kubelet, CPU throttling as a hard kernel-enforced limit, and memory limits
-  enforced by out-of-memory kill only under detected memory pressure.
-- Circuit breaking, Envoy proxy documentation,
-  [envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/circuit_breaking](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/circuit_breaking),
-  verified 2026-08-02. Per-cluster and per-priority limits on connections,
-  pending requests, requests, retries, and connection pools, and the statement
-  that enforcement happens at the network level rather than per application.
-- Polly documentation, [pollydocs.org](https://www.pollydocs.org/), verified
-  2026-08-02. The .NET resilience library named by Microsoft as a consumer
-  bulkhead framework.

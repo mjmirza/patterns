@@ -748,6 +748,46 @@ with service credentials rather than the original user's authority. Include the
 actor or tenant context in the command message and check it before performing
 state changes.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*. 2nd
+   edition. Addison-Wesley, 2018. Chapter 11, "Refactoring APIs", section
+   "Replace Function with Command." Source for the canonical second edition
+   name and inverse relationship.
+2. Martin Fowler, Kent Beck, John Brant, William Opdyke, Don Roberts.
+   *Refactoring. Improving the Design of Existing Code*. 1st edition.
+   Addison-Wesley, 1999. Chapter 6, "Composing Methods", section "Replace
+   Method with Method Object." Source for the earlier name and method-object
+   mechanics.
+3. Martin Fowler. "Replace Function with Command."
+   https://refactoring.com/catalog/replaceFunctionWithCommand.html
+   Verified 2026-08-02. Source for the public catalog name, alias, example
+   shape, and inverse link.
+4. Martin Fowler. "Changes for the 2nd Edition of Refactoring."
+   https://martinfowler.com/articles/refactoring-2nd-changes.html
+   Verified 2026-08-02. Source for the mapping from first edition Replace
+   Method with Method Object to second edition Replace Function with Command.
+5. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   Chapter 5, "Behavioral Patterns", section "Command." Source for the related
+   GoF Command roles and distinction.
+6. Ruby on Rails Guides. "Active Job Basics."
+   https://guides.rubyonrails.org/active_job_basics.html
+   Verified 2026-08-02. Source for Active Job classes, `perform`, callbacks,
+   retry, discard, and queue behavior.
+7. Celery Project. "Tasks. Celery 5.6.3 documentation."
+   https://docs.celeryq.dev/en/stable/userguide/tasks.html
+   Verified 2026-08-02. Source for task classes, `run()`, registry behavior,
+   and task instance lifetime.
+8. Django Software Foundation. "How to create custom django-admin commands."
+   https://docs.djangoproject.com/en/4.2/howto/custom-management-commands/
+   Verified 2026-08-02. Source for `BaseCommand`, `handle()`, parser behavior,
+   system checks, and command output behavior.
+9. Symfony. "Console Commands."
+   https://symfony.com/doc/current/console.html
+   Verified 2026-08-02. Source for Console command classes, lifecycle methods,
+   and method-based commands.
+
 ## Code examples
 
 Three languages are shown because they represent different idioms. TypeScript
@@ -916,43 +956,3 @@ func main() {
 	fmt.Println(result)
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*. 2nd
-   edition. Addison-Wesley, 2018. Chapter 11, "Refactoring APIs", section
-   "Replace Function with Command." Source for the canonical second edition
-   name and inverse relationship.
-2. Martin Fowler, Kent Beck, John Brant, William Opdyke, Don Roberts.
-   *Refactoring. Improving the Design of Existing Code*. 1st edition.
-   Addison-Wesley, 1999. Chapter 6, "Composing Methods", section "Replace
-   Method with Method Object." Source for the earlier name and method-object
-   mechanics.
-3. Martin Fowler. "Replace Function with Command."
-   https://refactoring.com/catalog/replaceFunctionWithCommand.html
-   Verified 2026-08-02. Source for the public catalog name, alias, example
-   shape, and inverse link.
-4. Martin Fowler. "Changes for the 2nd Edition of Refactoring."
-   https://martinfowler.com/articles/refactoring-2nd-changes.html
-   Verified 2026-08-02. Source for the mapping from first edition Replace
-   Method with Method Object to second edition Replace Function with Command.
-5. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   Chapter 5, "Behavioral Patterns", section "Command." Source for the related
-   GoF Command roles and distinction.
-6. Ruby on Rails Guides. "Active Job Basics."
-   https://guides.rubyonrails.org/active_job_basics.html
-   Verified 2026-08-02. Source for Active Job classes, `perform`, callbacks,
-   retry, discard, and queue behavior.
-7. Celery Project. "Tasks. Celery 5.6.3 documentation."
-   https://docs.celeryq.dev/en/stable/userguide/tasks.html
-   Verified 2026-08-02. Source for task classes, `run()`, registry behavior,
-   and task instance lifetime.
-8. Django Software Foundation. "How to create custom django-admin commands."
-   https://docs.djangoproject.com/en/4.2/howto/custom-management-commands/
-   Verified 2026-08-02. Source for `BaseCommand`, `handle()`, parser behavior,
-   system checks, and command output behavior.
-9. Symfony. "Console Commands."
-   https://symfony.com/doc/current/console.html
-   Verified 2026-08-02. Source for Console command classes, lifecycle methods,
-   and method-based commands.

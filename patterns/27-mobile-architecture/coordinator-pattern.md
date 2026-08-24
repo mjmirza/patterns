@@ -454,6 +454,20 @@ entry point still enforces the same real checks the normal path would
 have, are necessary parts of a security-conscious coordinator
 implementation.
 
+## 18. References
+
+1. Soroush Khanlou. "Coordinators Redux".
+   https://khanlou.com/2015/10/coordinators-redux/
+   Verified 2026-08-22. Source of the core coordinator definition, the
+   view-controller-bossing-its-parent failure mode, and the
+   inert-view-controller description, used in dimensions 1, 2, 3, 5,
+   7, and 9.
+2. Soroush Khanlou. "The Coordinator".
+   https://khanlou.com/2015/01/the-coordinator/
+   Verified 2026-08-22. Source of the original coordinator role
+   description and the childCoordinators composition mechanism, used
+   in dimensions 1, 3, 5, 7, 9, 11, and 16.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -619,17 +633,3 @@ if __name__ == "__main__":
     app = AppCoordinator()
     app.start()
 ```
-
-## 18. References
-
-1. Soroush Khanlou. "Coordinators Redux".
-   https://khanlou.com/2015/10/coordinators-redux/
-   Verified 2026-08-22. Source of the core coordinator definition, the
-   view-controller-bossing-its-parent failure mode, and the
-   inert-view-controller description, used in dimensions 1, 2, 3, 5,
-   7, and 9.
-2. Soroush Khanlou. "The Coordinator".
-   https://khanlou.com/2015/01/the-coordinator/
-   Verified 2026-08-22. Source of the original coordinator role
-   description and the childCoordinators composition mechanism, used
-   in dimensions 1, 3, 5, 7, 9, 11, and 16.

@@ -813,6 +813,37 @@ other channel, and it does not itself encrypt or restrict access to leaf
 content. Any confidentiality requirement over the leaf data needs a separate
 mechanism layered alongside the tree, not derived from it.
 
+## 18. References
+
+1. Ralph C. Merkle. "Method of providing digital signatures". United States
+   Patent 4,309,569. Filed September 5, 1979. Google Patents record,
+   https://patents.google.com/patent/US4309569A/en
+   Verified 2026-08-02. Source of the original tree-authentication
+   construction, the authentication path concept, and the historical
+   attribution in dimensions 1 and 13.
+2. IETF. RFC 6962, "Certificate Transparency", Ben Laurie, Adam Langley, Emilia
+   Kasper. Section 2.1, Merkle Tree Hash. https://datatracker.ietf.org/doc/html/rfc6962
+   Verified 2026-08-02. Source of the exact MTH recursive definition, the
+   0x00 and 0x01 domain-separation prefixes used in dimensions 8, 9, 11, and
+   the code examples, and the Certificate Transparency production use.
+3. Bitcoin Wiki contributors. "Protocol Documentation", Merkle Trees section.
+   https://en.bitcoin.it/wiki/Protocol_documentation
+   Verified 2026-08-02. Source of the Bitcoin double-SHA-256 Merkle root
+   description in dimension 9 and background for the duplicate-node failure
+   mode in dimension 11.
+4. The Apache Software Foundation. Apache Cassandra documentation, "Repair".
+   https://cassandra.apache.org/doc/stable/cassandra/managing/operating/repair.html
+   Verified 2026-08-02. Source of the anti-entropy repair production use in
+   dimension 9 and the repair-round observability guidance in dimension 16.
+5. Scott Chacon, Ben Straub. *Pro Git*, 2nd edition. "Git Internals, Git
+   Objects", section on tree objects. https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+   Verified 2026-08-02. Source of the Git tree-object, Merkle DAG production
+   use in dimensions 8 and 9.
+6. Protocol Labs. "IPLD Primer". https://ipld.io/docs/intro/primer/
+   Verified 2026-08-02. Source of the IPFS and IPLD content-addressed
+   Merkle DAG production use in dimension 9 and the content-addressable
+   storage relationship in dimension 13.
+
 ## Code examples
 
 Three languages, chosen because they cover the three shapes production
@@ -1237,37 +1268,6 @@ root 59c906ba9ad23b27
 proof length 3
 verified true
 ```
-
-## 18. References
-
-1. Ralph C. Merkle. "Method of providing digital signatures". United States
-   Patent 4,309,569. Filed September 5, 1979. Google Patents record,
-   https://patents.google.com/patent/US4309569A/en
-   Verified 2026-08-02. Source of the original tree-authentication
-   construction, the authentication path concept, and the historical
-   attribution in dimensions 1 and 13.
-2. IETF. RFC 6962, "Certificate Transparency", Ben Laurie, Adam Langley, Emilia
-   Kasper. Section 2.1, Merkle Tree Hash. https://datatracker.ietf.org/doc/html/rfc6962
-   Verified 2026-08-02. Source of the exact MTH recursive definition, the
-   0x00 and 0x01 domain-separation prefixes used in dimensions 8, 9, 11, and
-   the code examples, and the Certificate Transparency production use.
-3. Bitcoin Wiki contributors. "Protocol Documentation", Merkle Trees section.
-   https://en.bitcoin.it/wiki/Protocol_documentation
-   Verified 2026-08-02. Source of the Bitcoin double-SHA-256 Merkle root
-   description in dimension 9 and background for the duplicate-node failure
-   mode in dimension 11.
-4. The Apache Software Foundation. Apache Cassandra documentation, "Repair".
-   https://cassandra.apache.org/doc/stable/cassandra/managing/operating/repair.html
-   Verified 2026-08-02. Source of the anti-entropy repair production use in
-   dimension 9 and the repair-round observability guidance in dimension 16.
-5. Scott Chacon, Ben Straub. *Pro Git*, 2nd edition. "Git Internals, Git
-   Objects", section on tree objects. https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
-   Verified 2026-08-02. Source of the Git tree-object, Merkle DAG production
-   use in dimensions 8 and 9.
-6. Protocol Labs. "IPLD Primer". https://ipld.io/docs/intro/primer/
-   Verified 2026-08-02. Source of the IPFS and IPLD content-addressed
-   Merkle DAG production use in dimension 9 and the content-addressable
-   storage relationship in dimension 13.
 
 ## Judgement notes
 

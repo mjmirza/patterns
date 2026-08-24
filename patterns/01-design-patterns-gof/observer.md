@@ -1192,6 +1192,113 @@ name encodes a tenant, a region or a data residency tier, that label is
 attributable data and needs the same retention and access controls as any other
 identifier.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Observer. Source of
+   the intent, the Dependents and Publish-Subscribe aliases, the four
+   participants, the applicability conditions, the push and pull model
+   distinction, the ChangeManager option, the dangling reference issue, the
+   runaway update consequence, and the Smalltalk MVC attribution. The chapter
+   text was verified against the reproduction hosted by the University of North
+   Carolina at Chapel Hill,
+   https://www.cs.unc.edu/~stotts/GOF/hires/pat5g.htm verified 2026-08-02.
+   Page numbers are not cited because the reproduction is unpaginated.
+2. Oracle. *Java SE 21 API Specification*, `java.util.Observable`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Observable.html
+   Verified 2026-08-02. Source of the Java 9 deprecation and its three stated
+   reasons, the limited event model, the unspecified notification order, and state
+   changes not being in one to one correspondence with notifications, together
+   with the recommended replacements `java.beans`, `java.util.concurrent` and the
+   `Flow` API.
+3. Oracle. *Java SE 21 API Specification*, `java.beans.PropertyChangeSupport`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/beans/PropertyChangeSupport.html
+   Verified 2026-08-02. Source of the bound property mechanism and the rule that
+   no event is fired when old and new values are equal and non null.
+4. Wikipedia contributors. "Lapsed listener problem".
+   https://en.wikipedia.org/wiki/Lapsed_listener_problem
+   Verified 2026-08-02. Source of the named problem, the strong reference
+   mechanism, the observation that the cost includes an uninterested observer
+   acting on unwanted events, and the weak reference remedy.
+5. Wikipedia contributors. "Observer pattern".
+   https://en.wikipedia.org/wiki/Observer_pattern
+   Verified 2026-08-02. Used only to confirm that the deprecation and the lapsed
+   listener association are the community's common reading, not as a source of
+   explanation.
+6. OpenJS Foundation. *Node.js documentation, Events*.
+   https://nodejs.org/api/events.html
+   Verified 2026-08-02. Source of the synchronous registration order guarantee,
+   the `once` semantics, the ten listener memory leak warning, and the process
+   exit on an unhandled `error` event.
+7. Mozilla. *MDN Web Docs, EventTarget.addEventListener()*.
+   https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+   Verified 2026-08-02. Source of the `signal` and `once` options and of the
+   statement that an anonymous listener cannot be removed because no reference is
+   kept.
+8. Microsoft. *.NET API documentation*, `System.IObservable<T>`.
+   https://learn.microsoft.com/en-us/dotnet/api/system.iobservable-1
+   Verified 2026-08-02. Source of the provider and observer roles, the
+   `IDisposable` returned from `Subscribe`, the three notification kinds, and the
+   statement that no assumption is made about observer count or notification
+   order.
+9. Redux maintainers. *Redux API Reference, Store*.
+   https://redux.js.org/api/store
+   Verified 2026-08-02. Source of the unsubscribe function return, the snapshot
+   before every dispatch, and the two contract statements about not seeing every
+   state change while seeing the latest state by the time dispatch exits.
+10. Kubernetes authors. *client-go, tools/cache/shared_informer.go*.
+    https://raw.githubusercontent.com/kubernetes/client-go/master/tools/cache/shared_informer.go
+    Verified 2026-08-02. Source of the `AddEventHandler` and `RemoveEventHandler`
+    signatures, the sequential per handler delivery with no cross handler
+    coordination, the asynchronous removal semantics, and the guidance to move
+    lengthy processing to a work queue.
+11. Google. *Android Developers, LiveData overview*.
+    https://developer.android.com/topic/libraries/architecture/livedata
+    Verified 2026-08-02. Source of the lifecycle aware behaviour, the active state
+    definition, the automatic removal at `DESTROYED`, and the stated absence of
+    memory leaks.
+12. JetBrains. *kotlinx.coroutines API reference, StateFlow*.
+    https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/
+    Verified 2026-08-02. Source of the hot flow definition, the always present
+    value, the never completing contract, and the equality based conflation by
+    `Any.equals`.
+13. Reactive Streams initiative. *Reactive Streams*.
+    https://www.reactive-streams.org/
+    Verified 2026-08-02. Source of the stated purpose, asynchronous stream
+    processing with non blocking back pressure, the bounded queue rationale, the
+    version 1.0.4 status, and the one to one semantic equivalence with the JDK 9
+    `java.util.concurrent.Flow` interfaces.
+14. TC39. *Signals proposal, proposal-signals*.
+    https://github.com/tc39/proposal-signals
+    Verified 2026-08-02. Source of the State and Computed signal split, the
+    automatic dependency tracking, the pull based rationale for avoiding wasted
+    work, and the Stage 1 status.
+15. The Go Authors. *Go standard library documentation*, `sync.Map.Range`.
+    https://pkg.go.dev/sync#Map.Range
+    Verified 2026-08-02. Source of the statement that `Range` does not
+    necessarily correspond to any consistent snapshot of the map's contents, that
+    no key is visited more than once, that a concurrent store or delete may be
+    reflected from any point during the call, and that the callback may itself
+    call any method on the map.
+16. Oracle. *Java SE 21 API Specification*,
+    `java.util.concurrent.CopyOnWriteArrayList`.
+    https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CopyOnWriteArrayList.html
+    Verified 2026-08-02. Source of the snapshot style iterator, the array that
+    never changes for the iterator's lifetime, and the guarantee that
+    `ConcurrentModificationException` is not thrown.
+17. The Qt Company. *Qt 6 documentation, Signals and Slots*.
+    https://doc.qt.io/qt-6/signalsandslots.html
+    Verified 2026-08-02. Source of the signal and slot definitions used in
+    dimension 1 and of Qt's own framing of the mechanism as an alternative to the
+    callback technique.
+18. Gregor Hohpe and Bobby Woolf. *Enterprise Integration Patterns*,
+    Publish-Subscribe Channel.
+    https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html
+    Verified 2026-08-02. Source of the messaging definition used in dimension 13,
+    one input channel splitting into one output channel per subscriber, with a
+    copy of the message delivered to each.
+
 ## Code examples
 
 Four languages, chosen because each shows a different part of the pattern. Java
@@ -1536,110 +1643,3 @@ func main() {
 	fmt.Println("observers left", ticker.ObserverCount())
 }
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Observer. Source of
-   the intent, the Dependents and Publish-Subscribe aliases, the four
-   participants, the applicability conditions, the push and pull model
-   distinction, the ChangeManager option, the dangling reference issue, the
-   runaway update consequence, and the Smalltalk MVC attribution. The chapter
-   text was verified against the reproduction hosted by the University of North
-   Carolina at Chapel Hill,
-   https://www.cs.unc.edu/~stotts/GOF/hires/pat5g.htm verified 2026-08-02.
-   Page numbers are not cited because the reproduction is unpaginated.
-2. Oracle. *Java SE 21 API Specification*, `java.util.Observable`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Observable.html
-   Verified 2026-08-02. Source of the Java 9 deprecation and its three stated
-   reasons, the limited event model, the unspecified notification order, and state
-   changes not being in one to one correspondence with notifications, together
-   with the recommended replacements `java.beans`, `java.util.concurrent` and the
-   `Flow` API.
-3. Oracle. *Java SE 21 API Specification*, `java.beans.PropertyChangeSupport`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/beans/PropertyChangeSupport.html
-   Verified 2026-08-02. Source of the bound property mechanism and the rule that
-   no event is fired when old and new values are equal and non null.
-4. Wikipedia contributors. "Lapsed listener problem".
-   https://en.wikipedia.org/wiki/Lapsed_listener_problem
-   Verified 2026-08-02. Source of the named problem, the strong reference
-   mechanism, the observation that the cost includes an uninterested observer
-   acting on unwanted events, and the weak reference remedy.
-5. Wikipedia contributors. "Observer pattern".
-   https://en.wikipedia.org/wiki/Observer_pattern
-   Verified 2026-08-02. Used only to confirm that the deprecation and the lapsed
-   listener association are the community's common reading, not as a source of
-   explanation.
-6. OpenJS Foundation. *Node.js documentation, Events*.
-   https://nodejs.org/api/events.html
-   Verified 2026-08-02. Source of the synchronous registration order guarantee,
-   the `once` semantics, the ten listener memory leak warning, and the process
-   exit on an unhandled `error` event.
-7. Mozilla. *MDN Web Docs, EventTarget.addEventListener()*.
-   https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-   Verified 2026-08-02. Source of the `signal` and `once` options and of the
-   statement that an anonymous listener cannot be removed because no reference is
-   kept.
-8. Microsoft. *.NET API documentation*, `System.IObservable<T>`.
-   https://learn.microsoft.com/en-us/dotnet/api/system.iobservable-1
-   Verified 2026-08-02. Source of the provider and observer roles, the
-   `IDisposable` returned from `Subscribe`, the three notification kinds, and the
-   statement that no assumption is made about observer count or notification
-   order.
-9. Redux maintainers. *Redux API Reference, Store*.
-   https://redux.js.org/api/store
-   Verified 2026-08-02. Source of the unsubscribe function return, the snapshot
-   before every dispatch, and the two contract statements about not seeing every
-   state change while seeing the latest state by the time dispatch exits.
-10. Kubernetes authors. *client-go, tools/cache/shared_informer.go*.
-    https://raw.githubusercontent.com/kubernetes/client-go/master/tools/cache/shared_informer.go
-    Verified 2026-08-02. Source of the `AddEventHandler` and `RemoveEventHandler`
-    signatures, the sequential per handler delivery with no cross handler
-    coordination, the asynchronous removal semantics, and the guidance to move
-    lengthy processing to a work queue.
-11. Google. *Android Developers, LiveData overview*.
-    https://developer.android.com/topic/libraries/architecture/livedata
-    Verified 2026-08-02. Source of the lifecycle aware behaviour, the active state
-    definition, the automatic removal at `DESTROYED`, and the stated absence of
-    memory leaks.
-12. JetBrains. *kotlinx.coroutines API reference, StateFlow*.
-    https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/
-    Verified 2026-08-02. Source of the hot flow definition, the always present
-    value, the never completing contract, and the equality based conflation by
-    `Any.equals`.
-13. Reactive Streams initiative. *Reactive Streams*.
-    https://www.reactive-streams.org/
-    Verified 2026-08-02. Source of the stated purpose, asynchronous stream
-    processing with non blocking back pressure, the bounded queue rationale, the
-    version 1.0.4 status, and the one to one semantic equivalence with the JDK 9
-    `java.util.concurrent.Flow` interfaces.
-14. TC39. *Signals proposal, proposal-signals*.
-    https://github.com/tc39/proposal-signals
-    Verified 2026-08-02. Source of the State and Computed signal split, the
-    automatic dependency tracking, the pull based rationale for avoiding wasted
-    work, and the Stage 1 status.
-15. The Go Authors. *Go standard library documentation*, `sync.Map.Range`.
-    https://pkg.go.dev/sync#Map.Range
-    Verified 2026-08-02. Source of the statement that `Range` does not
-    necessarily correspond to any consistent snapshot of the map's contents, that
-    no key is visited more than once, that a concurrent store or delete may be
-    reflected from any point during the call, and that the callback may itself
-    call any method on the map.
-16. Oracle. *Java SE 21 API Specification*,
-    `java.util.concurrent.CopyOnWriteArrayList`.
-    https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CopyOnWriteArrayList.html
-    Verified 2026-08-02. Source of the snapshot style iterator, the array that
-    never changes for the iterator's lifetime, and the guarantee that
-    `ConcurrentModificationException` is not thrown.
-17. The Qt Company. *Qt 6 documentation, Signals and Slots*.
-    https://doc.qt.io/qt-6/signalsandslots.html
-    Verified 2026-08-02. Source of the signal and slot definitions used in
-    dimension 1 and of Qt's own framing of the mechanism as an alternative to the
-    callback technique.
-18. Gregor Hohpe and Bobby Woolf. *Enterprise Integration Patterns*,
-    Publish-Subscribe Channel.
-    https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html
-    Verified 2026-08-02. Source of the messaging definition used in dimension 13,
-    one input channel splitting into one output channel per subscriber, with a
-    copy of the message delivered to each.

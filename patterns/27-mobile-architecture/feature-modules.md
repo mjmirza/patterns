@@ -440,6 +440,21 @@ through a real, broader-than-intended visibility modifier, is a
 necessary part of a security-conscious Feature Modules
 implementation.
 
+## 18. References
+
+1. Google, Android Developers. "Guide to app modularization".
+   https://developer.android.com/topic/modularization
+   Verified 2026-08-22. Source of the core modularization definition,
+   the feature-module definition, the visibility-control and
+   reusability benefits, and the build-performance benefit, used in
+   dimensions 1, 2, 3, 5, 9, and 10.
+2. Google, Android Developers. "Common modularization patterns".
+   https://developer.android.com/topic/modularization/patterns
+   Verified 2026-08-22. Source of the four-module taxonomy, the
+   high-cohesion-low-coupling principle, the cyclic-dependency
+   mediator solution, and the navigation-argument rule, used in
+   dimensions 1, 3, 5, 7, 9, and 11.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -592,18 +607,3 @@ if __name__ == "__main__":
     )
     mediator.notify_order_placed(repository.current_order_id())
 ```
-
-## 18. References
-
-1. Google, Android Developers. "Guide to app modularization".
-   https://developer.android.com/topic/modularization
-   Verified 2026-08-22. Source of the core modularization definition,
-   the feature-module definition, the visibility-control and
-   reusability benefits, and the build-performance benefit, used in
-   dimensions 1, 2, 3, 5, 9, and 10.
-2. Google, Android Developers. "Common modularization patterns".
-   https://developer.android.com/topic/modularization/patterns
-   Verified 2026-08-22. Source of the four-module taxonomy, the
-   high-cohesion-low-coupling principle, the cyclic-dependency
-   mediator solution, and the navigation-argument rule, used in
-   dimensions 1, 3, 5, 7, 9, and 11.

@@ -750,6 +750,27 @@ threat model and cost model, then encode the chosen order in tests. Judgement.
 When in doubt on a public endpoint, prefer an order that prevents cheap
 unbounded traffic and avoids revealing private object existence.
 
+## 18. References
+
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 1st
+  edition, Addison-Wesley, 1999, chapter 9, "Simplifying Conditional
+  Expressions," Replace Nested Conditional with Guard Clauses.
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
+  edition, Addison-Wesley, 2018, chapter 10, "Simplifying Conditionals,"
+  Replace Nested Conditional with Guard Clauses.
+- Martin Fowler, "Replace Nested Conditional with Guard Clauses," refactoring
+  catalog, https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html,
+  verified 2026-08-02.
+- The Go Authors, `net/http/server.go`, Go 1.22.0 source,
+  https://raw.githubusercontent.com/golang/go/go1.22.0/src/net/http/server.go,
+  verified 2026-08-02.
+- Python Software Foundation, `Lib/http/server.py`, CPython 3.12.0 source,
+  https://raw.githubusercontent.com/python/cpython/v3.12.0/Lib/http/server.py,
+  verified 2026-08-02.
+- Express contributors, `lib/router/index.js`, Express 4.18.2 source,
+  https://raw.githubusercontent.com/expressjs/express/4.18.2/lib/router/index.js,
+  verified 2026-08-02.
+
 ## Code examples
 
 The samples are small and runnable. TypeScript shows type narrowing and a typed
@@ -855,24 +876,3 @@ func main() {
 	fmt.Println(err == nil)
 }
 ```
-
-## 18. References
-
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 1st
-  edition, Addison-Wesley, 1999, chapter 9, "Simplifying Conditional
-  Expressions," Replace Nested Conditional with Guard Clauses.
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
-  edition, Addison-Wesley, 2018, chapter 10, "Simplifying Conditionals,"
-  Replace Nested Conditional with Guard Clauses.
-- Martin Fowler, "Replace Nested Conditional with Guard Clauses," refactoring
-  catalog, https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html,
-  verified 2026-08-02.
-- The Go Authors, `net/http/server.go`, Go 1.22.0 source,
-  https://raw.githubusercontent.com/golang/go/go1.22.0/src/net/http/server.go,
-  verified 2026-08-02.
-- Python Software Foundation, `Lib/http/server.py`, CPython 3.12.0 source,
-  https://raw.githubusercontent.com/python/cpython/v3.12.0/Lib/http/server.py,
-  verified 2026-08-02.
-- Express contributors, `lib/router/index.js`, Express 4.18.2 source,
-  https://raw.githubusercontent.com/expressjs/express/4.18.2/lib/router/index.js,
-  verified 2026-08-02.

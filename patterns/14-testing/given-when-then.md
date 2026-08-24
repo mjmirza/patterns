@@ -753,6 +753,33 @@ object, which is a mild net increase in exposure surface for whatever data
 appears in Given clauses and example tables, worth weighing against the
 readability benefit the pattern is chosen for.
 
+## 18. References
+
+1. Martin Fowler. "GivenWhenThen." martinfowler.com bliki.
+   https://martinfowler.com/bliki/GivenWhenThen.html
+   Verified 2026-08-02. Source for the attribution to Daniel Terhorst-North
+   and Chris Matts, the Four-Phase Test and Arrange-Act-Assert relationship,
+   and the definition of the three sections quoted in dimension 1 and
+   dimension 5.
+2. Cucumber Ltd. "Gherkin Reference." cucumber.io documentation.
+   https://cucumber.io/docs/gherkin/reference/
+   Verified 2026-08-02. Source for the Given/When/Then/And/But contract, the
+   "observable output" guidance for Then, and the ambiguous-duplicate-step
+   behavior described in dimensions 1, 5, and 11.
+3. SpecFlow / Reqnroll project. Documentation.
+   https://docs.reqnroll.net/latest/
+   Verified 2026-08-02. Source for the .NET port of Given/When/Then step
+   attributes cited as a production use in dimension 9.
+4. Behave project. Documentation.
+   https://behave.readthedocs.io/en/latest/
+   Verified 2026-08-02. Source for the Python Gherkin runner cited as a
+   production use in dimension 9, and the basis for the Python code example.
+5. REST-assured project. Documentation and usage guide.
+   https://rest-assured.io/
+   Verified 2026-08-02. Source for the fluent given/when/then chain style
+   cited in dimensions 8 and 9, and the basis for the TypeScript fluent
+   example's shape.
+
 ## Code examples
 
 Three languages, chosen because Given-When-Then appears idiomatically in each
@@ -978,30 +1005,3 @@ if __name__ == "__main__":
     test_discount_applies_to_total()
     print("PASS")
 ```
-
-## 18. References
-
-1. Martin Fowler. "GivenWhenThen." martinfowler.com bliki.
-   https://martinfowler.com/bliki/GivenWhenThen.html
-   Verified 2026-08-02. Source for the attribution to Daniel Terhorst-North
-   and Chris Matts, the Four-Phase Test and Arrange-Act-Assert relationship,
-   and the definition of the three sections quoted in dimension 1 and
-   dimension 5.
-2. Cucumber Ltd. "Gherkin Reference." cucumber.io documentation.
-   https://cucumber.io/docs/gherkin/reference/
-   Verified 2026-08-02. Source for the Given/When/Then/And/But contract, the
-   "observable output" guidance for Then, and the ambiguous-duplicate-step
-   behavior described in dimensions 1, 5, and 11.
-3. SpecFlow / Reqnroll project. Documentation.
-   https://docs.reqnroll.net/latest/
-   Verified 2026-08-02. Source for the .NET port of Given/When/Then step
-   attributes cited as a production use in dimension 9.
-4. Behave project. Documentation.
-   https://behave.readthedocs.io/en/latest/
-   Verified 2026-08-02. Source for the Python Gherkin runner cited as a
-   production use in dimension 9, and the basis for the Python code example.
-5. REST-assured project. Documentation and usage guide.
-   https://rest-assured.io/
-   Verified 2026-08-02. Source for the fluent given/when/then chain style
-   cited in dimensions 8 and 9, and the basis for the TypeScript fluent
-   example's shape.

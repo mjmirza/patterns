@@ -771,6 +771,53 @@ protection. Cloudflare documents purge methods and limits for cache operations
 rate-limited. A purge-all button is an outage tool unless the origin is sized
 for the resulting cold cache.
 
+## 18. References
+
+- Mark Nottingham, RFC 9111, "HTTP Caching", Internet Standard, sections 2, 3,
+  4, 4.1, 4.2, 4.2.4, 4.4, and 5.2, https://www.rfc-editor.org/rfc/rfc9111,
+  verified 2026-08-02.
+- MDN Web Docs, "HTTP caching", sections on private caches, shared caches,
+  managed caches, `no-store`, `no-cache`, validation, and cache busting,
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching, verified
+  2026-08-02.
+- MDN Web Docs, "Cache-Control header", directive reference,
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control,
+  verified 2026-08-02.
+- Amazon Web Services, "What is Caching?", overview of cache purpose and storage
+  model, https://aws.amazon.com/caching/, verified 2026-08-02.
+- Amazon Web Services, "Caching Best Practices", sections "How to apply
+  caching" and "Caching design patterns",
+  https://aws.amazon.com/caching/best-practices/, verified 2026-08-02.
+- AWS Well-Architected Framework, "PERF03-BP05 Implement data access patterns
+  that utilize caching", common anti-patterns and implementation guidance,
+  https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/perf_data_access_patterns_caching.html,
+  verified 2026-08-02.
+- Redis Documentation, "Key eviction", eviction policy reference,
+  https://redis.io/docs/latest/develop/reference/eviction/, verified
+  2026-08-02.
+- Rajesh Nishtala and Venkat Venkataramani, Meta Engineering, "Scaling memcache
+  at Facebook", 2013-04-15,
+  https://engineering.fb.com/2013/04/15/core-infra/scaling-memcache-at-facebook/,
+  verified 2026-08-02.
+- Netflix Open Source, "EVCache Introduction",
+  https://netflix.github.io/EVCache/introduction/, verified 2026-08-02.
+- Netflix Open Source, "EVCache Features",
+  https://netflix.github.io/EVCache/features/, verified 2026-08-02.
+- Wikimedia Diff, "Around the world. How Wikipedia became a multi-datacenter
+  deployment", 2023-05-08,
+  https://diff.wikimedia.org/2023/05/08/around-the-world-how-wikipedia-became-a-multi-datacenter-deployment/,
+  verified 2026-08-02.
+- Cloudflare Docs, "Purge cache",
+  https://developers.cloudflare.com/cache/how-to/purge-cache/, verified
+  2026-08-02.
+- Cloudflare API Docs, "Purge Cached Content",
+  https://developers.cloudflare.com/api/resources/cache/methods/purge/,
+  verified 2026-08-02.
+- Google SRE, "Addressing Cascading Failures", sections on resource exhaustion
+  and cold caching,
+  https://sre.google/sre-book/addressing-cascading-failures/, verified
+  2026-08-02.
+
 ## Code examples
 
 The examples show small corrected strategies rather than the anti-pattern. Each
@@ -952,50 +999,3 @@ fn main() {
     println!("loads={}", loads);
 }
 ```
-
-## 18. References
-
-- Mark Nottingham, RFC 9111, "HTTP Caching", Internet Standard, sections 2, 3,
-  4, 4.1, 4.2, 4.2.4, 4.4, and 5.2, https://www.rfc-editor.org/rfc/rfc9111,
-  verified 2026-08-02.
-- MDN Web Docs, "HTTP caching", sections on private caches, shared caches,
-  managed caches, `no-store`, `no-cache`, validation, and cache busting,
-  https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching, verified
-  2026-08-02.
-- MDN Web Docs, "Cache-Control header", directive reference,
-  https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control,
-  verified 2026-08-02.
-- Amazon Web Services, "What is Caching?", overview of cache purpose and storage
-  model, https://aws.amazon.com/caching/, verified 2026-08-02.
-- Amazon Web Services, "Caching Best Practices", sections "How to apply
-  caching" and "Caching design patterns",
-  https://aws.amazon.com/caching/best-practices/, verified 2026-08-02.
-- AWS Well-Architected Framework, "PERF03-BP05 Implement data access patterns
-  that utilize caching", common anti-patterns and implementation guidance,
-  https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/perf_data_access_patterns_caching.html,
-  verified 2026-08-02.
-- Redis Documentation, "Key eviction", eviction policy reference,
-  https://redis.io/docs/latest/develop/reference/eviction/, verified
-  2026-08-02.
-- Rajesh Nishtala and Venkat Venkataramani, Meta Engineering, "Scaling memcache
-  at Facebook", 2013-04-15,
-  https://engineering.fb.com/2013/04/15/core-infra/scaling-memcache-at-facebook/,
-  verified 2026-08-02.
-- Netflix Open Source, "EVCache Introduction",
-  https://netflix.github.io/EVCache/introduction/, verified 2026-08-02.
-- Netflix Open Source, "EVCache Features",
-  https://netflix.github.io/EVCache/features/, verified 2026-08-02.
-- Wikimedia Diff, "Around the world. How Wikipedia became a multi-datacenter
-  deployment", 2023-05-08,
-  https://diff.wikimedia.org/2023/05/08/around-the-world-how-wikipedia-became-a-multi-datacenter-deployment/,
-  verified 2026-08-02.
-- Cloudflare Docs, "Purge cache",
-  https://developers.cloudflare.com/cache/how-to/purge-cache/, verified
-  2026-08-02.
-- Cloudflare API Docs, "Purge Cached Content",
-  https://developers.cloudflare.com/api/resources/cache/methods/purge/,
-  verified 2026-08-02.
-- Google SRE, "Addressing Cascading Failures", sections on resource exhaustion
-  and cold caching,
-  https://sre.google/sre-book/addressing-cascading-failures/, verified
-  2026-08-02.

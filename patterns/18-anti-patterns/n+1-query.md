@@ -893,6 +893,53 @@ or customer identifier appearing in a logged query parameter, the same
 retention and access controls that apply to any other log containing
 identifiers should apply here too.
 
+## 18. References
+
+1. Ruby on Rails Guides. "Active Record Query Interface", section 13.1,
+   "N + 1 Queries Problem".
+   https://guides.rubyonrails.org/active_record_querying.html
+   Verified 2026-08-02. Source for the canonical name, the eleven-query
+   worked example, and the `includes`, `preload`, and `eager_load`
+   methods.
+2. Django Software Foundation. *Django 5.2 documentation*,
+   `QuerySet.select_related()` and `QuerySet.prefetch_related()`.
+   https://docs.djangoproject.com/en/5.2/ref/models/querysets/#select-related
+   Verified 2026-08-02. Source for the Django ORM fix pair, the
+   join-based single-valued fix and the separate-lookup many-valued fix.
+3. Lee Byron and the GraphQL Foundation. `graphql/dataloader`, README.
+   https://github.com/graphql/dataloader
+   Verified 2026-08-02. Source for the batching-and-caching definition
+   and the thirteen-to-four request reduction example used to motivate
+   the GraphQL resolver variant.
+4. Shopify. `Shopify/graphql-batch`, README.
+   https://github.com/Shopify/graphql-batch
+   Verified 2026-08-02. Source for the Ruby GraphQL batching executor
+   used as the production-use example in dimension 9.
+5. Red Hat and the Hibernate community. *Hibernate ORM 6.4 User Guide*,
+   Chapter 12, "Fetching", sections 12.5 through 12.12.
+   https://docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html
+   Verified 2026-08-02. Source for the fetch-strategy machinery, entity
+   graphs, batch fetching, and the `@Fetch` annotation cited in
+   dimensions 1 and 9.
+6. Richard Huang (flyerhzm). `flyerhzm/bullet`, README.
+   https://github.com/flyerhzm/bullet
+   Verified 2026-08-02. Source for the Bullet gem's stated purpose and
+   the direct quotation naming N+1 queries.
+7. Martin Fowler. *Patterns of Enterprise Application Architecture*,
+   Addison-Wesley, 2002. "Lazy Load".
+   https://martinfowler.com/eaaCatalog/lazyLoad.html
+   Verified 2026-08-02. Source for the Lazy Load pattern definition and
+   the general warning that loading one object can trigger loading many
+   related objects, cited in dimensions 1 and 13.
+8. Microsoft. *Entity Framework Core documentation*, "Efficient
+   Querying", sections "Avoid cartesian explosion when loading related
+   entities" and "Beware of lazy loading".
+   https://learn.microsoft.com/en-us/ef/core/performance/efficient-querying
+   Verified 2026-08-02. Source for the explicit "N+1" naming in EF Core's
+   own documentation, the cartesian explosion distinction in dimension
+   1 and dimension 11, and the worked lazy-loading log example in
+   dimension 9.
+
 ## Code examples
 
 Three languages, each demonstrating the naive N+1 shape against a small
@@ -1103,50 +1150,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. Ruby on Rails Guides. "Active Record Query Interface", section 13.1,
-   "N + 1 Queries Problem".
-   https://guides.rubyonrails.org/active_record_querying.html
-   Verified 2026-08-02. Source for the canonical name, the eleven-query
-   worked example, and the `includes`, `preload`, and `eager_load`
-   methods.
-2. Django Software Foundation. *Django 5.2 documentation*,
-   `QuerySet.select_related()` and `QuerySet.prefetch_related()`.
-   https://docs.djangoproject.com/en/5.2/ref/models/querysets/#select-related
-   Verified 2026-08-02. Source for the Django ORM fix pair, the
-   join-based single-valued fix and the separate-lookup many-valued fix.
-3. Lee Byron and the GraphQL Foundation. `graphql/dataloader`, README.
-   https://github.com/graphql/dataloader
-   Verified 2026-08-02. Source for the batching-and-caching definition
-   and the thirteen-to-four request reduction example used to motivate
-   the GraphQL resolver variant.
-4. Shopify. `Shopify/graphql-batch`, README.
-   https://github.com/Shopify/graphql-batch
-   Verified 2026-08-02. Source for the Ruby GraphQL batching executor
-   used as the production-use example in dimension 9.
-5. Red Hat and the Hibernate community. *Hibernate ORM 6.4 User Guide*,
-   Chapter 12, "Fetching", sections 12.5 through 12.12.
-   https://docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html
-   Verified 2026-08-02. Source for the fetch-strategy machinery, entity
-   graphs, batch fetching, and the `@Fetch` annotation cited in
-   dimensions 1 and 9.
-6. Richard Huang (flyerhzm). `flyerhzm/bullet`, README.
-   https://github.com/flyerhzm/bullet
-   Verified 2026-08-02. Source for the Bullet gem's stated purpose and
-   the direct quotation naming N+1 queries.
-7. Martin Fowler. *Patterns of Enterprise Application Architecture*,
-   Addison-Wesley, 2002. "Lazy Load".
-   https://martinfowler.com/eaaCatalog/lazyLoad.html
-   Verified 2026-08-02. Source for the Lazy Load pattern definition and
-   the general warning that loading one object can trigger loading many
-   related objects, cited in dimensions 1 and 13.
-8. Microsoft. *Entity Framework Core documentation*, "Efficient
-   Querying", sections "Avoid cartesian explosion when loading related
-   entities" and "Beware of lazy loading".
-   https://learn.microsoft.com/en-us/ef/core/performance/efficient-querying
-   Verified 2026-08-02. Source for the explicit "N+1" naming in EF Core's
-   own documentation, the cartesian explosion distinction in dimension
-   1 and dimension 11, and the worked lazy-loading log example in
-   dimension 9.

@@ -174,6 +174,11 @@ Skip a formal SLO for a prototype, an internal tool with no real consumer relyin
 - A publicly shared SLO or reliability dashboard can reveal operational detail (traffic patterns, dependency structure) useful to an adversary, so what is exposed externally should be deliberately scoped, separate from the full internal detail used for engineering decisions.
 - An Error Budget governance process that pressures a team to ship faster as budget remains healthy must not be allowed to silently erode security review or testing steps that are unrelated to the SLI the SLO measures.
 
+## 18. References
+
+- Google, Site Reliability Engineering, Service Level Objectives chapter (https://sre.google/sre-book/service-level-objectives/)
+- Google, SRE Workbook, Implementing SLOs chapter (https://sre.google/workbook/implementing-slos/)
+
 ## Code examples
 
 ### Python
@@ -243,8 +248,3 @@ let status = evaluateSlo(successfulRequests: 9987, totalRequests: 10000)
 print("SLI " + String(status.sliValue))
 print("error budget remaining " + String(status.errorBudgetRemaining))
 ```
-
-## 18. References
-
-- Google, Site Reliability Engineering, Service Level Objectives chapter (https://sre.google/sre-book/service-level-objectives/)
-- Google, SRE Workbook, Implementing SLOs chapter (https://sre.google/workbook/implementing-slos/)
