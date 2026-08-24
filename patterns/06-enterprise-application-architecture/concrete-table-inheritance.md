@@ -280,52 +280,57 @@ matters more than the rule.
 ## 6. ASCII structure diagram
 
 ```
-                     +---------------------------+
-                     |     PaymentMethod          |
-                     |     in-memory only,        |
-                     |     no table                |
-                     |-----------------------------|
-                     | + amount                    |
-                     | + currency                  |
-                     | + createdAt                 |
-                     +---------------------------+
-                        ^          ^          ^
-                        |          |          |
-        +---------------+   +------+-----+  +-+----------------+
-        | CreditCardPayment|  | BankTransfer|  | PayPalPayment    |
-        |------------------|  | Payment     |  |------------------|
-        | + maskedPan      |  |-------------|  | + payerEmail     |
-        | + expiryMonth    |  | + iban      |  | + payerId        |
-        +---------+--------+  | + bic       |  +---------+--------+
-                  |            +------+------+            |
-                  |                    |                    |
-                  v                    v                    v
-        +-------------------+ +-------------------+ +-------------------+
-        | credit_card_       | | bank_transfer_    | | paypal_           |
-        | payments TABLE     | | payments TABLE     | | payments TABLE    |
-        |--------------------| |---------------------| |--------------------|
-        | id, PK, seq         | | id, PK, seq          | | id, PK, seq        |
-        | amount              | | amount               | | amount             |
-        | currency            | | currency             | | currency           |
-        | created_at          | | created_at           | | created_at         |
-        | masked_pan          | | iban                 | | payer_email        |
-        | expiry_month        | | bic                  | | payer_id           |
-        +--------------------+ +----------------------+ +--------------------+
++-----------------------------------------+
+| PaymentMethod, in-memory only, no table |
+| + amount                                |
+| + currency                              |
+| + createdAt                             |
++-----------------------------------------+
+     ^ extended by three subclasses
+     |
++-------------------+
+| CreditCardPayment |
+| + maskedPan       |
+| + expiryMonth     |
++-------------------+
+     |
+     v
++------------------------------------------+
+| credit_card_payments TABLE               |
+| id PK seq, amount, currency, created_at, |
+| masked_pan, expiry_month                 |
++------------------------------------------+
 
-     No table exists for PaymentMethod. No foreign key connects the three
-     concrete tables to one another. The shared columns amount, currency,
-     and created_at are physically duplicated in every table.
++---------------------+
+| BankTransferPayment |
+| + iban              |
+| + bic               |
++---------------------+
+     |
+     v
++------------------------------------------------+
+| bank_transfer_payments TABLE                   |
+| id PK seq, amount, currency, created_at, iban, |
+| bic                                            |
++------------------------------------------------+
 
-     A rare polymorphic read is served by a UNION ALL, roughly like this.
++---------------+
+| PayPalPayment |
+| + payerEmail  |
+| + payerId     |
++---------------+
+     |
+     v
++------------------------------------------+
+| paypal_payments TABLE                    |
+| id PK seq, amount, currency, created_at, |
+| payer_email, payer_id                    |
++------------------------------------------+
 
-        SELECT id, amount, currency, created_at, 'card' AS kind
-          FROM credit_card_payments
-        UNION ALL
-        SELECT id, amount, currency, created_at, 'transfer' AS kind
-          FROM bank_transfer_payments
-        UNION ALL
-        SELECT id, amount, currency, created_at, 'paypal' AS kind
-          FROM paypal_payments
+No table exists for PaymentMethod. No foreign key
+connects the three concrete tables to one another. The
+shared columns amount, currency, and created_at are
+physically duplicated in every table.
 ```
 
 ## 7. Dynamics

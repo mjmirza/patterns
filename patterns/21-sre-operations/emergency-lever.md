@@ -50,26 +50,26 @@ Skip it for a feature so essential that disabling it would itself constitute the
 ## 6. ASCII structure diagram
 
 ```
-  Lever definition
-  (scope + Effect boundary,
-   built and tested in advance)
-        |
-        v
-  incident detected, an authorized operator decides to pull it
-        |
-        v
-  Trigger mechanism executed
-        |
-        v
-  Action log records who, what, and why
-        |
-        v
-  incident contained?  ----- yes -----> lever stays pulled until safe to release
-        |
-        no
-        |
-        v
-  operator escalates to a different mitigation
+Lever definition
+scope + Effect boundary, built and tested in advance
+     |
+     v
+Incident detected, an authorized operator decides to
+pull it
+     |
+     v
+Trigger mechanism executed
+     |
+     v
+Action log records who, what, and why
+     |
+     v
+incident contained? yes -> lever stays pulled until
+                           safe to release
+incident contained? no  -> continue below
+     |
+     v
+Operator escalates to a different mitigation
 ```
 
 ## 7. Dynamics

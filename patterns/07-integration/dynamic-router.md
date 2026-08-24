@@ -240,52 +240,56 @@ Iteratively evaluated shape.
 ```
 Self-registering shape
 
-  +--------------+  register(conditions)   +-----------------+
-  | Destination A|------------------------>|                  |
-  +--------------+                         |                  |
-                                            |     Router       |
-  +--------------+  register(conditions)   |  (rule base held |
-  | Destination B|------------------------>|   in memory)     |
-  +--------------+                         |                  |
-                                            +---------+--------+
-                    message                          |
-  Producer -------------------------------------------> match against rule base
-                                            +---------+--------+
-                                                       |
-                                        route to A, B, or neither
-                                                       v
-                                    +--------------+       +--------------+
-                                    | Destination A|       | Destination B|
-                                    +--------------+       +--------------+
++---------------+
+| Destination A |
++---------------+
++---------------+
+| Destination B |
++---------------+
+     | register(conditions), each
+     v
++----------------------------------+
+| Router, rule base held in memory |
++----------------------------------+
+     ^ message
+     |
++----------+
+| Producer |
++----------+
+
+Router matches the message against the rule base and
+routes it to A, to B, to both, or to neither.
 
 
 Iteratively evaluated shape
 
-  Producer --> message --> +------------------+
-                            |     Router       |
-                            +------------------+
-                                     |
-                                     |  call routingFunction(msg, history)
-                                     v
-                            +------------------+
-                            | Routing Function |----> returns Destination 1
-                            +------------------+
-                                     |
-                             forward to Destination 1, append to history
-                                     |
-                                     v
-                            +------------------+
-                            |     Router       |  (message returns for hop 2)
-                            +------------------+
-                                     |
-                                     |  call routingFunction(msg, history)
-                                     v
-                            +------------------+
-                            | Routing Function |----> returns null
-                            +------------------+
-                                     |
-                                     v
-                              routing complete
++----------+
+| Producer |
++----------+
+     | message
+     v
++--------+
+| Router |
++--------+
+     | call routingFunction(msg, history)
+     v
++-----------------------------------------+
+| Routing Function, returns Destination 1 |
++-----------------------------------------+
+     | forward, append Destination 1 to history
+     v
++---------------+
+| Destination 1 |
++---------------+
+     | message returns to the Router for hop 2
+     v
++--------------------------------------------------+
+| Router calls routingFunction(msg, history) again |
++--------------------------------------------------+
+
+Each hop, the Router asks the Routing Function again,
+now with the growing history, until the function
+returns no further destination.
 ```
 
 ## 7. Dynamics

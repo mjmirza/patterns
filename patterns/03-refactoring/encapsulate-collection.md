@@ -153,26 +153,40 @@ class enforces its invariants in those methods.
 ## 6. ASCII structure diagram
 
 ```
-  BEFORE                                  AFTER
-  ------                                  -----
+BEFORE
+------
 
-  class Course:                          class Course:
-    attendees: List<Student>               _attendees: List<Student>  (private)
-                                           MAX = 30
-    getAttendees(): List<Student>
-      return attendees                    getAttendees(): List<Student>
-                                             return unmodifiable(_attendees)
-  caller:
-    course.getAttendees().add(s)          enroll(student):
-      // bypasses capacity check             if len(_attendees) >= MAX:
-                                                 raise FullError
-                                             _attendees.add(student)
+class Course:
+  attendees: List<Student>
 
-                                         cancel(student):
-                                             _attendees.remove(student)
+  getAttendees(): List<Student>
+    return attendees
 
-                                         caller:
-                                             course.enroll(s)  // checked
+caller:
+  course.getAttendees().add(s)
+    // bypasses capacity check
+
+
+AFTER
+-----
+
+class Course:
+  _attendees: List<Student>  (private)
+  MAX = 30
+
+  getAttendees(): List<Student>
+    return unmodifiable(_attendees)
+
+  enroll(student):
+    if len(_attendees) >= MAX:
+      raise FullError
+    _attendees.add(student)
+
+  cancel(student):
+    _attendees.remove(student)
+
+caller:
+  course.enroll(s)  // checked
 ```
 
 ## 7. Dynamics

@@ -218,22 +218,36 @@ rather than client-assigned.
 ## 6. ASCII structure diagram
 
 ```
-+-----------------------+          maps to           +----------------------+
-|     Domain Object     |  <----------------------->  |    Database Table    |
-|  (e.g. Customer)      |                             |   (e.g. customers)   |
-+-----------------------+                             +----------------------+
-| - id: Long            |  <== Identity Field ==>     | id     BIGINT   PK   |
-| - name: String        |                             | name   VARCHAR       |
-| - email: String       |                             | email  VARCHAR       |
-+-----------------------+                             +----------------------+
-        ^                                                       ^
-        |  assigned by                                          |  enforced by
-        |                                                       |
-+-----------------------+                             +----------------------+
-|    Key Generator       |  --- produces next value -> |  PRIMARY KEY and     |
-|  (sequence, UUID gen,  |                             |  UNIQUE constraint   |
-|   IDENTITY column)     |                             +----------------------+
-+-----------------------+
++--------------------------------------+
+| Domain Object, e.g. Customer         |
+| - id: Long        <== Identity Field |
+| - name: String                       |
+| - email: String                      |
++--------------------------------------+
+     | maps to
+     v
++----------------------------------------+
+| Database Table, e.g. customers         |
+| id     BIGINT   PK  <== Identity Field |
+| name   VARCHAR                         |
+| email  VARCHAR                         |
++----------------------------------------+
+
+Domain Object's id is assigned by:
+
++----------------------------------------+
+| Key Generator                          |
+| sequence, UUID gen, or IDENTITY column |
++----------------------------------------+
+     | produces next value
+     v
+(assigned to Domain Object's id)
+
+Database Table's id is enforced by:
+
++-----------------------------------+
+| PRIMARY KEY and UNIQUE constraint |
++-----------------------------------+
 ```
 
 ## 7. Dynamics

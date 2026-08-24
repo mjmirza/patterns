@@ -205,22 +205,40 @@ mechanism carries it out.
 ## 6. ASCII structure diagram
 
 ```
-  Before                              After
+Before
 
-  +----------------+                  +----------------+
-  | Checkout code  |                  | Checkout code  |
-  | tax = p * r    |                  | orderTotal(p,r)|--+
-  +----------------+                  +----------------+  |
-                                                            v
-  +----------------+                  +----------------+  +-----------------+
-  | Receipt code   |                  | Receipt code   |  | orderTotal(p,r) |
-  | tax = p * r    |                  | orderTotal(p,r)|->| single, owned,  |
-  +----------------+                  +----------------+  | authoritative   |
-                                                            +-----------------+
-  Two independent copies of the       One representation, two consumers
-  formula. A tax-law change means     bound to it. A tax-law change means
-  finding and editing both, and       editing one function. Both callers
-  nothing enforces they still match.  agree by construction, not by care.
++---------------+
+| Checkout code |
+| tax = p * r   |
++---------------+
++--------------+
+| Receipt code |
+| tax = p * r  |
++--------------+
+
+Two independent copies of the formula. A tax-law
+change means finding and editing both, and nothing
+enforces they still match.
+
+After
+
++------------------+
+| Checkout code    |
+| orderTotal(p, r) |
++------------------+
++------------------+
+| Receipt code     |
+| orderTotal(p, r) |
++------------------+
+     | both call
+     v
++------------------------------------------------+
+| orderTotal(p, r), single, owned, authoritative |
++------------------------------------------------+
+
+One representation, two consumers bound to it. A
+tax-law change means editing one function. Both
+callers agree by construction, not by care.
 ```
 
 ## 7. Dynamics

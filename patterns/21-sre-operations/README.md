@@ -2,7 +2,7 @@
 
 Origin. Google SRE, AWS Well-Architected
 
-12 entries, 33,507 words. Every entry carries all 18
+12 entries, 33,510 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -11,7 +11,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Chaos Engineering](chaos-engineering.md) | canonical | 2,457 | A distributed system's resilience is, by default, an assumption. |
 | [Checkpoints](checkpoints.md) | canonical | 5,564 | A long-running computation, a stream-processing job, a database, a multi-step workflow, or a distributed training run, must survive a crash without either losing all of its ... |
-| [Emergency Lever](emergency-lever.md) | canonical | 2,472 | During an active incident, an operator often knows which feature or which category of load is causing the problem, but has no fast, safe way to turn it off. |
+| [Emergency Lever](emergency-lever.md) | canonical | 2,475 | During an active incident, an operator often knows which feature or which category of load is causing the problem, but has no fast, safe way to turn it off. |
 | [Error Budget](error-budget.md) | canonical | 2,574 | Engineering teams building on top of a service and the team operating that service structurally want different things. |
 | [Game Day](game-day.md) | canonical | 2,510 | A system's resilience, a runbook's correctness, and a team's readiness are all assumptions until they are tested against a real failure. |
 | [Graceful Degradation](graceful-degradation.md) | canonical | 2,434 | When a system is overloaded, or a dependency it relies on fails, the naive response is to fail every request outright. |
