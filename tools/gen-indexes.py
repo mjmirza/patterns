@@ -14,27 +14,26 @@ PATTERNS = ROOT / "patterns"
 QUEUE = ROOT / "docs" / "AUTHORING-QUEUE.json"
 
 
-def load_planned() -> dict[str, list[str]]:
-    """Groups queued-but-unauthored entry names by family folder name.
-    A queue entry path always starts with patterns then the family slug
-    then the filename, which is the only thing this needs, so a missing
-    or malformed queue entry is skipped rather than crashing the build."""
+def load_planned() -> dict[str, list[tuple[str, str]]]:
+    """Groups queued (name, reason) pairs by family folder name.
+    reason is optional and renders only when a queue entry sets it."""
     if not QUEUE.exists():
         return {}
     try:
         data = json.loads(QUEUE.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError):
         return {}
-    planned: dict[str, list[str]] = {}
+    planned: dict[str, list[tuple[str, str]]] = {}
     for entry in data:
         path = entry.get("path", "")
         name = entry.get("name", "")
+        reason = entry.get("reason", "")
         parts = path.split("/")
         if len(parts) < 3 or parts[0] != "patterns" or not name:
             continue
         if (ROOT / path).exists():
             continue
-        planned.setdefault(parts[1], []).append(name)
+        planned.setdefault(parts[1], []).append((name, reason))
     return planned
 
 
@@ -123,7 +122,7 @@ def first_intent(text: str) -> str:
     return out[:180].rsplit(" ", 1)[0].rstrip(" ,;") + " ..."
 
 
-def build(family: Path, planned_names: list[str]) -> int:
+def build(family: Path, planned_names: list[tuple[str, str]]) -> int:
     entries = sorted(p for p in family.glob("*.md") if p.name.lower() != "readme.md")
     if not entries and not planned_names:
         return 0
@@ -182,8 +181,8 @@ def build(family: Path, planned_names: list[str]) -> int:
             "the entries above before it is published."
         )
         lines.append("")
-        for name in planned_names:
-            lines.append("- " + name)
+        for name, reason in planned_names:
+            lines.append(f"- {name}. {reason}" if reason else f"- {name}")
         lines.append("")
 
     lines += [

@@ -21,7 +21,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Windowing
+- Windowing. Flagged QUEUE COLLISION by tools/check-duplicates.py against the published patterns/13-frontend-ui/virtual-list.md, matched via the shared term Windowing. Deferred pending a human decision on whether stream-processing windowing needs a distinct entry or should be folded into the existing one. Never self-resolve.
 
 ## Reading order
 

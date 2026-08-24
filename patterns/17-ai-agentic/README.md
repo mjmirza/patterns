@@ -134,7 +134,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
 
-- Context Window Auto-Compaction
+- Context Window Auto-Compaction. Deferred as a likely conceptual duplicate of the published patterns/17-ai-agentic/memory-compaction.md entry, both covering the same problem of an agent's accumulated conversation growing past a usable size. This is a recorded human judgment call, not a tool-verified duplicate. tools/check-duplicates.py only matches literal name, slug, or alias terms against published and historical entries, and it currently reports no collision for this slug. Never self-author without first confirming the overlap against memory-compaction.md is genuine.
 
 ## Reading order
 

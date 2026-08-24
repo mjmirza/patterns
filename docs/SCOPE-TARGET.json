@@ -1,11 +1,22 @@
 {
-  "recorded_target": 900,
-  "recorded_at": "2026-08-02",
-  "recorded_source": "docs/ENTRY-TEMPLATE.md, Scope decision section",
-  "true_total_last_reconciled": 887,
-  "reconciled_at": "2026-08-03",
-  "gap_to_target": 13,
-  "gap_reason": "900 was a round estimate recorded before any per-family sourcing was complete. On 2026-08-03 the owner flagged three real categorical gaps: family 03 refactoring techniques was unsourced, and mobile / embedded-hardware / real-time-simulation had no coverage at all. All three were closed with real, independently-verifiable named patterns: family 03 (66 entries, Fowler Refactoring 2nd ed catalog), family 27 mobile architecture (12 entries), family 28 embedded and hardware-software (14 entries), family 29 real-time simulation (9 entries). True total rose from 763 to 887. The remaining 13-entry gap to the round 900 has no identified real source yet; inventing entries to close it would violate the repo's own no-fabrication rule and is refused.",
+  "recorded_target": 893,
+  "recorded_at": "2026-08-24",
+  "recorded_source": "dist/catalogue-status.json, computed live by tools/gen-catalogue-status.py from real files plus docs/AUTHORING-QUEUE.json",
+  "true_total_last_reconciled": 890,
+  "reconciled_at": "2026-08-24",
+  "gap_to_target": 3,
+  "gap_reason": "The 3-entry gap is docs/AUTHORING-QUEUE.json in full. high-cardinality-metrics (permanently deferred, no real source without inventing a taxonomy), windowing (flagged QUEUE COLLISION against patterns/13-frontend-ui/virtual-list.md by tools/check-duplicates.py), and context-window-auto-compaction (a recorded, not tool-verified, likely duplicate of patterns/17-ai-agentic/memory-compaction.md). Full reasons live on each entry's own reason field so they cannot drift from this summary.",
   "families": 29,
-  "note": "This file is the single source of truth for the recorded target vs the true, sourced total. tools/check-catalogue-status.py enforces that the two numbers never silently diverge again without this file being updated in the same commit, and flags loudly (never silently) whenever true_total < recorded_target."
+  "note": "gen-catalogue-status.py computes published, planned, and target live from real files and the queue on every run, so those numbers are never hand-typed and never stale. This file is a periodic, hand-reconciled historical ledger of the ORIGINAL round scope estimate against the true sourced total over time, kept for the record of how the estimate moved. No script currently reads or enforces this file against dist/catalogue-status.json; a prior version of this note claimed tools/check-catalogue-status.py did, but that script does not exist. Reconcile this file by hand whenever the gap composition changes.",
+  "history": [
+    {
+      "recorded_target": 900,
+      "recorded_at": "2026-08-02",
+      "recorded_source": "docs/ENTRY-TEMPLATE.md, Scope decision section",
+      "true_total_last_reconciled": 887,
+      "reconciled_at": "2026-08-03",
+      "gap_to_target": 13,
+      "gap_reason": "900 was a round estimate recorded before any per-family sourcing was complete. On 2026-08-03 the owner flagged three real categorical gaps: family 03 refactoring techniques was unsourced, and mobile / embedded-hardware / real-time-simulation had no coverage at all. All three were closed with real, independently-verifiable named patterns: family 03 (66 entries, Fowler Refactoring 2nd ed catalog), family 27 mobile architecture (12 entries), family 28 embedded and hardware-software (14 entries), family 29 real-time simulation (9 entries). True total rose from 763 to 887. The remaining 13-entry gap to the round 900 has no identified real source yet; inventing entries to close it would violate the repo's own no-fabrication rule and is refused."
+    }
+  ]
 }
