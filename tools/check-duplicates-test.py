@@ -21,6 +21,7 @@ normalize_term = check_duplicates.normalize_term
 tokenize_text = check_duplicates.tokenize_text
 jaccard_similarity = check_duplicates.jaccard_similarity
 analyze_repository = check_duplicates.analyze_repository
+fetch_historical_proposals = check_duplicates.fetch_historical_proposals
 
 
 class TestCheckDuplicates(unittest.TestCase):
@@ -33,6 +34,30 @@ class TestCheckDuplicates(unittest.TestCase):
         self.assertEqual(normalize_term("Pipes and Filters"), "pipesandfilters")
         self.assertEqual(normalize_term("Rate Limiting"), "ratelimiting")
         self.assertEqual(normalize_term("Throttling"), "throttling")
+
+    def test_parenthetical_qualifiers_normalization(self):
+        self.assertEqual(
+            normalize_term("Producer-Consumer (Embedded)"), "producerconsumer"
+        )
+        self.assertEqual(
+            normalize_term("Repository Pattern (Mobile Offline-First)"),
+            "repository",
+        )
+        self.assertEqual(
+            normalize_term("Model-View-Intent (MVI)"),
+            normalize_term("Model-View-Intent"),
+        )
+
+    def test_distinct_near_neighbors(self):
+        self.assertNotEqual(
+            normalize_term("Rate Limiting"), normalize_term("Throttling")
+        )
+        self.assertNotEqual(
+            normalize_term("Circuit Breaker"), normalize_term("Bulkhead")
+        )
+        self.assertNotEqual(
+            normalize_term("Strangler Fig"), normalize_term("Branch by Abstraction")
+        )
 
     def test_tokenize_text(self):
         tokens = tokenize_text(
@@ -52,9 +77,7 @@ class TestCheckDuplicates(unittest.TestCase):
         self.assertEqual(jaccard_similarity(set(), {"b"}), 0.0)
         self.assertEqual(jaccard_similarity({"a", "b"}, {"a", "b"}), 1.0)
         self.assertEqual(jaccard_similarity({"a", "b"}, {"c", "d"}), 0.0)
-        self.assertAlmostEqual(
-            jaccard_similarity({"a", "b"}, {"a", "c"}), 1.0 / 3.0
-        )
+        self.assertAlmostEqual(jaccard_similarity({"a", "b"}, {"a", "c"}), 1.0 / 3.0)
 
     def test_jaccard_similarity_threshold_pruning(self):
         # 1 vs 10 elements cannot exceed 0.70 threshold (max 1/10 = 0.10)
@@ -63,9 +86,7 @@ class TestCheckDuplicates(unittest.TestCase):
         self.assertEqual(jaccard_similarity(s1, s2, threshold=0.70), 0.0)
         # Without threshold constraint, 1 vs 10 evaluates normally
         s1_with_overlap = {"item_0"}
-        self.assertAlmostEqual(
-            jaccard_similarity(s1_with_overlap, s2), 1.0 / 10.0
-        )
+        self.assertAlmostEqual(jaccard_similarity(s1_with_overlap, s2), 1.0 / 10.0)
 
     def test_analyze_repository(self):
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
@@ -73,6 +94,34 @@ class TestCheckDuplicates(unittest.TestCase):
         self.assertGreater(results["published_count"], 0)
         self.assertGreater(results["queue_count"], 0)
         self.assertIsInstance(results["collisions"], list)
+
+    def test_historical_proposal_detection(self):
+        history = fetch_historical_proposals()
+        self.assertIsInstance(history, list)
+        queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
+        results = analyze_repository(queue_file)
+        self.assertIsInstance(results["collisions"], list)
+
+    def test_historical_proposal_collision_mock(self):
+        fake_history = [
+            {
+                "path": "patterns/24-stream-processing/old-windowing-attempt.md",
+                "slug": "windowing",
+            }
+        ]
+        original_fetch = check_duplicates.fetch_historical_proposals
+        check_duplicates.fetch_historical_proposals = lambda: fake_history
+        try:
+            queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
+            results = analyze_repository(queue_file)
+            historical_collisions = [
+                c
+                for c in results["collisions"]
+                if c.get("type") == "HISTORICAL_PROPOSAL_COLLISION"
+            ]
+            self.assertGreater(len(historical_collisions), 0)
+        finally:
+            check_duplicates.fetch_historical_proposals = original_fetch
 
 
 if __name__ == "__main__":
