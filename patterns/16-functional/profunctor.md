@@ -187,24 +187,29 @@ data, and both matter for optics.
 ## 6. ASCII structure diagram
 
 ```
-    Profunctor p, two type parameters, opposite variance
+Profunctor p, two type parameters, opposite variance
 
-    input side (contravariant)          output side (covariant)
-    c --------- f ---------> a          b --------- g ---------> d
-                                |                     ^
-                                v                     |
-                             p a b  ------ dimap f g ------>  p c d
+input side (contravariant)
+  c --- f ---> a
+output side (covariant)
+  b --- g ---> d
 
-    Base instance, functions:
+  p a b  --- dimap f g --->  p c d
 
-    p a b  =  a -> b
+Base instance, functions:
 
-    dimap f g h  =  g . h . f          (precompose f, run h, postcompose g)
+  p a b  =  a -> b
 
-    Subclass Strong (products):        Subclass Choice (sums):
+  dimap f g h  =  g . h . f
+    (precompose f, run h, postcompose g)
 
-    p a b  ---->  p (a, c) (b, c)      p a b  ---->  p (Either a c) (Either b c)
-    (focus one field, pass the rest)   (focus one branch, pass the other through)
+Subclass Strong (products):
+  p a b  ---->  p (a, c) (b, c)
+  (focus one field, pass the rest)
+
+Subclass Choice (sums):
+  p a b  ---->  p (Either a c) (Either b c)
+  (focus one branch, pass the other through)
 ```
 
 ## 7. Dynamics

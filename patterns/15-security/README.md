@@ -2,7 +2,7 @@
 
 Origin. OWASP ASVS
 
-38 entries, 226,876 words. Every entry carries all 18
+38 entries, 226,886 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Authorization
@@ -50,7 +50,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Separation of Duties](separation-of-duties.md) | canonical | 6,652 | A system has operations where one trusted actor can cause damage and hide it. |
 | [Supply Chain SBOM](supply-chain-sbom.md) | established | 6,110 | A software artifact enters production with code from many origins. |
 | [Threat Modeling](threat-modeling.md) | established | 6,225 | A software team is making a design choice that changes who can reach which asset, what data crosses which boundary, what authority a component holds, or what a failed control ... |
-| [Token Binding and DPoP](token-binding-and-dpop.md) | established | 6,233 | Bearer tokens are convenient because a resource server can authorize a request by checking the token. |
+| [Token Binding and DPoP](token-binding-and-dpop.md) | established | 6,243 | Bearer tokens are convenient because a resource server can authorize a request by checking the token. |
 | [Token-based Authentication](token-based-authentication.md) | established | 7,183 | The problem appears when a system must authenticate repeated requests without asking the caller to resend a long-lived secret, such as a password, private key, or root cloud ... |
 | [Webhook Signature Verification](webhook-signature-verification.md) | established | 6,038 | A webhook endpoint receives requests from the public internet, usually without a browser session, an OAuth bearer token, or a mutual TLS client certificate. |
 | [Zero Trust](zero-trust.md) | established | 6,642 | A system has users, services, jobs, devices, and partners that need access to resources from many networks. |

@@ -275,46 +275,51 @@ to update in the same commit that performs the split.
 ## 6. ASCII structure diagram
 
 ```
-Before, one class, several unrelated responsibility clusters:
+Before, one class, several unrelated responsibility
+clusters:
 
-+--------------------------------------------------+
-|                   Order                           |
-|----------------------------------------------------|
-| - lineItems, customerId, discountCode              |  cluster A: pricing
-| - taxRate, currency                                 |
-| - shippingAddress, billingAddress                  |  cluster B: fulfillment
-| - trackingNumber, carrier                           |
-| - emailTemplate, smtpConfig                         |  cluster C: notification
-| - auditLog                                          |  cluster D: audit
-|----------------------------------------------------|
-| + calculateSubtotal()                               |  cluster A methods
-| + applyDiscount()                                    |
-| + calculateTax()                                     |
-| + scheduleShipment()                                 |  cluster B methods
-| + assignCarrier()                                    |
-| + sendConfirmationEmail()                             |  cluster C methods
-| + sendShippingNotice()                                |
-| + recordAuditEntry()                                  |  cluster D methods
-+--------------------------------------------------+
++---------------------------------------------+
+| Order                                       |
+| cluster A, pricing: lineItems, customerId,  |
+| discountCode, taxRate, currency             |
+| cluster B, fulfillment: shippingAddress,    |
+| billingAddress, trackingNumber, carrier     |
+| cluster C, notification: emailTemplate,     |
+| smtpConfig                                  |
+| cluster D, audit: auditLog                  |
+|                                             |
+| cluster A methods: calculateSubtotal(),     |
+| applyDiscount(), calculateTax()             |
+| cluster B methods: scheduleShipment(),      |
+| assignCarrier()                             |
+| cluster C methods: sendConfirmationEmail(), |
+| sendShippingNotice()                        |
+| cluster D methods: recordAuditEntry()       |
++---------------------------------------------+
 
-After, Extract Class applied per cluster, Original Class delegates:
+After, Extract Class applied per cluster, Original
+Class delegates:
 
-  +--------------+     uses      +-------------------+
-  |    Order     | ------------> |    OrderPricer     |
-  | (core state) |               | (cluster A logic)  |
-  +--------------+               +-------------------+
-        |    uses       +-------------------------+
-        +--------------> |   ShipmentScheduler      |
-        |                | (cluster B logic)        |
-        |                +-------------------------+
-        |    uses       +-------------------------+
-        +--------------> |   OrderNotifier           |
-        |                | (cluster C logic)        |
-        |                +-------------------------+
-        |    uses       +-------------------------+
-        +--------------> |   OrderAuditLog           |
-                         | (cluster D logic)        |
-                         +-------------------------+
++--------------------+
+| Order (core state) |
++--------------------+
+     | uses
+     v
++-------------------------------+
+| OrderPricer (cluster A logic) |
++-------------------------------+
++-------------------------------------+
+| ShipmentScheduler (cluster B logic) |
++-------------------------------------+
++---------------------------------+
+| OrderNotifier (cluster C logic) |
++---------------------------------+
++---------------------------------+
+| OrderAuditLog (cluster D logic) |
++---------------------------------+
+
+Order uses all four, each handling one cluster's
+logic.
 ```
 
 ## 7. Dynamics

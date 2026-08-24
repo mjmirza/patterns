@@ -313,40 +313,41 @@ the cap its own parent handed it.
 
 ## 6. ASCII structure diagram
 
-```text
-                         +----------------------+
-                         |   Root Supervisor     |
-                         |  global goal + budget  |
-                         +----------+------------+
-                                    |
-                delegates branch goals, propagates
-                a fraction of the global budget
-                                    |
-          +-------------------------+-------------------------+
-          |                                                   |
-+---------v----------+                             +----------v---------+
-|   Team Lead A       |                             |   Team Lead B       |
-|  (research team)     |                             |  (writing team)      |
-|  local budget = 40%  |                             |  local budget = 40%  |
-+----+-----------+----+                             +----+-----------+----+
-     |           |                                       |           |
-  worker      worker                                  worker      worker
- (search)   (scraper)                              (drafting) (citation-check)
-     |           |                                       |           |
-     +-----+-----+                                       +-----+-----+
-           |                                                    |
-   bounded summary result                             bounded summary result
-   flows upward to Team Lead A                        flows upward to Team Lead B
-           |                                                    |
-           +------------------ synthesize -------------------+
-                                    |
-                        Team Lead A and Team Lead B
-                        each report one summary upward
-                                    |
-                         +----------v------------+
-                         |   Root Supervisor       |
-                         |  synthesizes final answer|
-                         +------------------------+
+```
++----------------------+
+| Root Supervisor      |
+| global goal + budget |
++----------------------+
+     | delegates branch goals, propagates a
+     | fraction of the global budget
+     v
++-----------------------------+
+| Team Lead A (research team) |
+| local budget = 40%          |
++-----------------------------+
+     | workers: search, scraper
+     | bounded summary result flows up
+     v
+(Team Lead A's summary)
+
+Root Supervisor also delegates to a second branch:
+
++----------------------------+
+| Team Lead B (writing team) |
+| local budget = 40%         |
++----------------------------+
+     | workers: drafting, citation-check
+     | bounded summary result flows up
+     v
+(Team Lead B's summary)
+
+Team Lead A and Team Lead B each report one summary
+upward to be synthesized.
+
++--------------------------+
+| Root Supervisor          |
+| synthesizes final answer |
++--------------------------+
 ```
 
 ## 7. Dynamics

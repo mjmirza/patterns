@@ -2,7 +2,7 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-30 entries, 217,026 words. Every entry carries all 18
+30 entries, 217,028 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Test Data
@@ -19,7 +19,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Dummy](dummy.md) | canonical | 6,529 | A constructor, a factory function, or a method signature requires an argument of a particular type, but the code path being exercised by a specific test does not use that argument ... |
 | [Fake](fake.md) | canonical | 6,405 | A piece of code depends on a collaborator that is real, correct, and slow, or real, correct, and hard to set up. |
 | [Mock](mock.md) | canonical | 6,136 | A unit of code under test calls a method on a collaborator, and the whole reason the test exists is to prove that call happens, with the right arguments, in the right ... |
-| [Stub](stub.md) | canonical | 9,016 | Code under test frequently depends on something the test cannot, or should not, use as it really behaves. |
+| [Stub](stub.md) | canonical | 9,010 | Code under test frequently depends on something the test cannot, or should not, use as it really behaves. |
 
 ## Test Structure
 
@@ -33,7 +33,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Approval Test](approval-test.md) | established | 7,682 | Consider a function that renders an invoice as HTML, a compiler pass that lowers an abstract syntax tree to bytecode, a report generator that produces a multi-page PDF summary, or ... |
 | [Arrange-Act-Assert](arrange-act-assert.md) | canonical | 6,255 | A test that has no imposed shape tends to accrete in whatever order the writer thought of things. |
-| [Characterization Test](characterization-test.md) | canonical | 6,412 | A team inherits a module, a service, or a whole codebase with no tests, or with tests too sparse to trust. |
+| [Characterization Test](characterization-test.md) | canonical | 6,420 | A team inherits a module, a service, or a whole codebase with no tests, or with tests too sparse to trust. |
 | [Contract Test](contract-test.md) | canonical | 8,368 | A team splits a monolith into services, or simply has two teams shipping two deployables that talk over HTTP, gRPC, or a message queue. |
 | [Differential Testing](differential-testing.md) | established | 7,373 | A team owns, or depends on, more than one thing that is meant to compute the same answer. |
 | [Fault Injection](fault-injection.md) | established | 7,609 | Software that talks to another process over a network, a disk, a database connection, or any other boundary will eventually see that boundary fail. |

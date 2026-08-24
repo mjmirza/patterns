@@ -286,28 +286,43 @@ leak possible, and the two facts are the same fact.
 ## 6. ASCII structure diagram
 
 ```
-   +--------------------------------+          +----------------------+
-   |            Subject             |   holds  |       Observer       |
-   |--------------------------------|  0..*    |----------------------|
-   | - observers: List<Observer>    |--------->| + update(subject?)   |
-   | + attach(o): Registration      |          +----------------------+
-   | + detach(reg)                  |                     ^        ^
-   | # notify()                     |                     |        |
-   +--------------------------------+                     |        |
-                  ^                                       |        |
-                  | extends                    implements |        | implements
-                  |                                       |        |
-   +--------------------------------+          +--------------------+---------+
-   |        ConcreteSubject         |  reads   | ConcreteObserverA  | ...B     |
-   |--------------------------------|<- - - - -|--------------------|----------|
-   | - state: State                 |  (pull)  | - subject: ref     | - cache  |
-   | + getState(): State            |          | + update(...)      | + update |
-   | + setState(s)  -> notify()     |          +--------------------+----------+
-   +--------------------------------+
++-----------------------------+
+| Subject                     |
+| - observers: List<Observer> |
+| + attach(o): Registration   |
+| + detach(reg)               |
+| # notify()                  |
++-----------------------------+
+     | holds 0..*
+     v
++--------------------+
+| Observer           |
+| + update(subject?) |
++--------------------+
 
-   Solid arrow  = compile time dependency.
-   Dashed arrow = the pull model back reference. Absent in the push model.
-   The Registration returned by attach() is the only thing that can detach.
++----------------------------------+
+| ConcreteSubject, extends Subject |
+| - state: State                   |
+| + getState(): State              |
+| + setState(s) -> notify()        |
++----------------------------------+
+     | reads (pull), dashed back reference
+     v
++----------------------------------------+
+| ConcreteObserverA, implements Observer |
+| - subject: ref                         |
+| + update(...)                          |
++----------------------------------------+
++----------------------------------------+
+| ConcreteObserverB, implements Observer |
+| - cache                                |
+| + update                               |
++----------------------------------------+
+
+Solid arrow means a compile-time dependency. Dashed
+arrow is the pull model's back reference, absent in the
+push model. The Registration returned by attach() is
+the only thing that can detach.
 ```
 
 ## 7. Dynamics

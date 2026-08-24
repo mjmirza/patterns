@@ -251,29 +251,47 @@ from the private key holder before accepting the token.
 
 ## 6. ASCII structure diagram
 
-```text
- +-------------------+        proof at token request       +-------------------+
- |    DPoP Client    |------------------------------------->| Authorization     |
- |-------------------|                                      | Server            |
- | private key       |<-------------------------------------|-------------------|
- | nonce cache       |       DPoP access token              | cnf.jkt issuer    |
- +---------+---------+                                      +---------+---------+
-           |                                                          |
-           | protected request                                        |
-           | Authorization: DPoP <token>                              |
-           | DPoP: <proof jwt>                                        |
-           v                                                          |
- +---------+---------+       token claims or introspection    +--------v--------+
- | Resource Server   |<-------------------------------------->| Token Metadata  |
- |-------------------|                                        | or JWKS         |
- | proof verifier    |                                        +-----------------+
- | binding checker   |
- | replay checker    |---- records jti, key, time ----------> +-----------------+
- +-------------------+                                        | Replay Store    |
-                                                              +-----------------+
+```
++-------------+
+| DPoP Client |
+| private key |
+| nonce cache |
++-------------+
+     | proof at token request
+     v
++----------------------+
+| Authorization Server |
+| cnf.jkt issuer       |
++----------------------+
+     | returns a DPoP access token
+     v
+(client now holds the token, back to DPoP Client)
 
- The token says which public key is bound. The proof shows the caller holds
- the matching private key for this HTTP request.
+DPoP Client sends a protected request:
+  Authorization: DPoP <token>
+  DPoP: <proof jwt>
+
++-----------------+
+| Resource Server |
+| proof verifier  |
+| binding checker |
+| replay checker  |
++-----------------+
+     | token claims or introspection
+     v
++------------------------+
+| Token Metadata or JWKS |
++------------------------+
+
+Resource Server also records jti, key, time to:
+
++--------------+
+| Replay Store |
++--------------+
+
+The token says which public key is bound. The proof
+shows the caller holds the matching private key for
+this HTTP request.
 ```
 
 ## 7. Dynamics

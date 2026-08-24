@@ -2,14 +2,14 @@
 
 Origin. Category theory in practice
 
-39 entries, 240,728 words. Every entry carries all 18
+39 entries, 240,724 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Composition
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Profunctor](profunctor.md) | canonical | 5,397 | A codebase accumulates two families of type constructors that look unrelated on the surface but are secretly the same shape. |
+| [Profunctor](profunctor.md) | canonical | 5,393 | A codebase accumulates two families of type constructors that look unrelated on the surface but are secretly the same shape. |
 
 ## Data and State
 
