@@ -1,9 +1,9 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 884,
+  "published_total": 889,
   "target_total": 892,
   "families_total": 29,
-  "families_complete": 24,
+  "families_complete": 26,
   "stale_entries": 0,
   "references_checked": 5063,
   "rows": [
@@ -11,12 +11,12 @@
       "family": "01-design-patterns-gof",
       "name": "Design Patterns (GoF)",
       "origin": "Gamma, Helm, Johnson, Vlissides 1994",
-      "published": 32,
-      "planned": 1,
+      "published": 33,
+      "planned": 0,
       "target": 33,
-      "percent": 97.0,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 24,
+        "canonical": 25,
         "established": 2,
         "contested": 6
       }
@@ -78,13 +78,13 @@
       "family": "06-enterprise-application-architecture",
       "name": "Enterprise Application Architecture",
       "origin": "Fowler, PoEAA",
-      "published": 56,
-      "planned": 4,
+      "published": 60,
+      "planned": 0,
       "target": 60,
-      "percent": 93.3,
+      "percent": 100.0,
       "maturity": {
-        "canonical": 44,
-        "established": 12
+        "canonical": 47,
+        "established": 13
       }
     },
     {
