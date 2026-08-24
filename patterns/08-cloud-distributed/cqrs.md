@@ -338,38 +338,55 @@ often, and dimension 11 records what it looks like when it breaks.
 ## 6. ASCII structure diagram
 
 ```
-                        +---------------------------+
-   intent               |         Client            |            need
-   (mutate)             +---------------------------+          (display)
-       |                   |                     |                  |
-       v                   v                     v                  v
-+--------------+  Command  |                     |  Query   +---------------+
-|   Command    |<----------+                     +--------->|     Query     |
-|   Handler    |                                            |    Handler    |
-+--------------+                                            +---------------+
-       |                                                            |
-       | load / save                                                | read only
-       v                                                            v
-+--------------+                                            +---------------+
-|  Write Model |                                            |   Read Model  |
-|  (aggregate) |                                            |  (projection) |
-|              |                                            |               |
-| invariants   |                                            | denormalised  |
-| normalised   |                                            | per-screen    |
-| small graph  |                                            | version/offset|
-+--------------+                                            +---------------+
-       |                                                            ^
-       v                                                            |
-+--------------+       +------------------+       +-----------------+
-| Write Store  |------>|   Synchroniser   |------>|   Projection    |
-| (SoR)        | change|  outbox / CDC /  | event | apply(event) ->  |
-+--------------+ feed  |  event stream    |       | mutate view      |
-                       +------------------+       +-----------------+
++--------+
+| Client |
++--------+
+     ^ intent, mutate       ^ need, display
+     |                      |
++--------------------+
+| Command Handler    |
++--------------------+
++--------------------+
+| Query Handler      |
++--------------------+
+(Client sends a Command to mutate, or issues a
+Query to read; the two paths never cross)
 
-   Legend
-   SoR          system of record, the only authority on current state
-   Synchroniser present only in the separate-store variant
-   ------>      data flow, never a call back in the reverse direction
++-------------------------------------+
+| Write Model, aggregate              |
+| invariants, normalised, small graph |
++-------------------------------------+
+     | load / save
+     v
++-----------------------------------------+
+| Write Store, the system of record (SoR) |
++-----------------------------------------+
+     | change feed
+     v
++--------------------------------------------+
+| Synchroniser, outbox, CDC, or event stream |
+| present only in the separate-store variant |
++--------------------------------------------+
+     | event, apply(event) mutates the view
+     v
++------------+
+| Projection |
++------------+
+     | writes
+     v
++-----------------------------------------------+
+| Read Model, projection                        |
+| denormalised, per-screen, versioned or offset |
++-----------------------------------------------+
+     ^ read only
+     |
+(Query Handler reads the Read Model directly, never
+the Write Model)
+
+The one-store variant is the same picture with the
+Write Store through Projection row deleted, and both
+models pointing at the same database. Data flows one
+way only, never a call back in the reverse direction.
 ```
 
 The one-store variant is the same picture with the bottom row deleted and both

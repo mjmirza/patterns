@@ -262,32 +262,39 @@ the rule.
 ## 6. ASCII structure diagram
 
 ```
-                         +----------------------+
-                         |   Service Registry    |
-                         |  (contracts, versions, |
-                         |   network locations)   |
-                         +-----------+------------+
-                                     ^
-                        register /   |   discover
-                        publish  |   |
-                                 v   v
-+----------------+      +--------------------+      +------------------+
-| Service         |----->|   API Gateway /    |<-----| Service          |
-| Consumer         |      |   Enterprise       |      | Consumer          |
-| (client app,     |      |   Service Bus       |      | (another service) |
-|  batch job)       |<-----|   (routing, auth,   |----->|                  |
-+----------------+      |   policy, optional) |      +------------------+
-                         +----------+---------+
-                                    |
-                +-------------------+-------------------+
-                |                   |                    |
-                v                   v                    v
-     +--------------------+ +--------------------+ +--------------------+
-     | Service Provider A  | | Service Provider B  | | Service Provider C  |
-     | (e.g. Orders)        | | (e.g. Inventory)     | | (e.g. Payments)      |
-     |  Contract. OrderAPI  | |  Contract. StockAPI  | |  Contract. PayAPI    |
-     |  Owns. orders DB     | |  Owns. stock DB      | |  Owns. ledger DB     |
-     +--------------------+ +--------------------+ +--------------------+
++----------------------------------------+
+| Service Registry                       |
+| contracts, versions, network locations |
++----------------------------------------+
+     ^ register / publish, discover
+     |
++--------------------------------------+
+| API Gateway / Enterprise Service Bus |
+| routing, auth, policy, optional      |
++--------------------------------------+
+     ^ used by
+     |
++-------------------------------------------+
+| Service Consumer, client app or batch job |
++-------------------------------------------+
++-----------------------------------+
+| Service Consumer, another service |
++-----------------------------------+
+
+API Gateway / ESB routes to three providers:
+
++-----------------------------------+
+| Service Provider A, e.g. Orders   |
+| Contract OrderAPI, owns orders DB |
++-----------------------------------+
++------------------------------------+
+| Service Provider B, e.g. Inventory |
+| Contract StockAPI, owns stock DB   |
++------------------------------------+
++-----------------------------------+
+| Service Provider C, e.g. Payments |
+| Contract PayAPI, owns ledger DB   |
++-----------------------------------+
 ```
 
 ## 7. Dynamics

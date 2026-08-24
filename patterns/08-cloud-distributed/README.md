@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-44 entries, 393,044 words. Every entry carries all 18
+44 entries, 393,059 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Capacity Management
@@ -63,7 +63,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Command Query Responsibility Segregation](cqrs.md) | established | 11,603 | A single model is being asked to serve two jobs whose requirements have diverged, and the model is losing on both. |
+| [Command Query Responsibility Segregation](cqrs.md) | established | 11,618 | A single model is being asked to serve two jobs whose requirements have diverged, and the model is losing on both. |
 
 ## Data and Persistence
 

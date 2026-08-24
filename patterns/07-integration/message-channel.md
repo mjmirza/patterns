@@ -229,37 +229,46 @@ group tracks its own independent read offset.
 ## 6. ASCII structure diagram
 
 ```
-                       MESSAGE CHANNEL (point-to-point shape)
+Point-to-point shape
 
-  +------------+       write        +--------------------+       read
-  |  Sender    | -----------------> |   Message Channel   | <----------------+
-  | (Producer) |                    |  (named, addressed, |                  |
-  +------------+                    |   FIFO or log-based |     +------------+
-                                     |   persistent store) |     | Receiver A |
-                                     +----------+----------+     | (Consumer) |
-                                                |                +------------+
-                                                |  one consumer reads
-                                                |  each message once
-                                                v
-                                     +------------+
-                                     | Receiver B |
-                                     | (Consumer) |
-                                     +------------+
++------------------+
+| Sender, Producer |
++------------------+
+     | write
+     v
++-------------------------------------------+
+| Message Channel                           |
+| named, addressed, FIFO or log-based store |
++-------------------------------------------+
+     | read, one consumer reads each message once
+     v
++----------------------+
+| Receiver A, Consumer |
++----------------------+
++----------------------+
+| Receiver B, Consumer |
++----------------------+
 
 
-                     MESSAGE CHANNEL (publish-subscribe shape)
+Publish-subscribe shape
 
-  +------------+       write        +--------------------+
-  |  Sender    | -----------------> |   Message Channel   |
-  | (Producer) |                    |   (topic / exchange |
-  +------------+                    |    with N sub feeds)|
-                                     +----+-----------+----+
-                                          |           |
-                          each consumer   |           |   each consumer
-                          gets its OWN    v           v   gets its OWN
-                          full copy   +--------+  +--------+
-                                      | Sub A  |  | Sub B  |
-                                      +--------+  +--------+
++------------------+
+| Sender, Producer |
++------------------+
+     | write
+     v
++------------------------------------+
+| Message Channel                    |
+| topic or exchange with N sub feeds |
++------------------------------------+
+     | fans out, each consumer gets its own full copy
+     v
++-------+
+| Sub A |
++-------+
++-------+
+| Sub B |
++-------+
 ```
 
 ## 7. Dynamics
