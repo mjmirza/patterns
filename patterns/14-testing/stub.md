@@ -263,31 +263,31 @@ dimension 14.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+   constructs and   +----------------------+
-|     Test Case      |   injects a stub   |  System Under Test   |
-|---------------------|------------------->|----------------------|
-| arrange canned      |                    |  depends on --------->  Collaborator
-| values in setup     |                    |     (interface)      |
-+----------+----------+                    +----------+-----------+
-           |                                          ^
-           | constructs                               | implemented by,
-           v                                          | only during this
-+---------------------------+                          | test run
-|       Test Stub           |--------------------------+
-|----------------------------|
-| - canned answer(s), set    |
-|   by the test in arrange   |
-| + charge(amount): Result   |
-+---------------------------+
-           ^
-           | never queried
-           | or asserted upon
-           |
-   +-------------------------------------------+
-   | Test asserts only on the SUT's own return  |
-   | value or observable state, never on the    |
-   | Test Stub itself.                          |
-   +-------------------------------------------+
++--------------------------------+
+| Test Case                      |
+| arrange canned values in setup |
++--------------------------------+
+     | constructs
+     v
++------------------------------------------------+
+| Test Stub                                      |
+| - canned answer(s), set by the test in arrange |
+| + charge(amount): Result                       |
++------------------------------------------------+
+     ^ implemented by, only during this test run
+     |
+Test Case also constructs and injects the stub into:
+
++-------------------------------------+
+| System Under Test                   |
+| depends on Collaborator (interface) |
++-------------------------------------+
+
++-------------------------------------------------------+
+| Test asserts only on the SUT's own return value or    |
+| observable state, never on the Test Stub itself. The  |
+| Test Stub is never queried or asserted upon directly. |
++-------------------------------------------------------+
 ```
 
 ## 7. Dynamics

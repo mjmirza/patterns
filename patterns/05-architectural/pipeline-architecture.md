@@ -271,29 +271,54 @@ survives in a variable called pipeline.
 ## 6. ASCII structure diagram
 
 ```
-  DATA SOURCE                                                  DATA SINK
-  (file, socket,                                             (file, socket,
-   queue, request)                                            queue, response)
-        |                                                            ^
-        v                                                            |
-  +-----------+     pipe     +-----------+     pipe     +-----------+
-  |  FILTER A |------------->|  FILTER B |------------->|  FILTER C |
-  | (e.g.     |   [buffer,   | (e.g.     |   [buffer,   | (e.g.     |
-  |  parse)   |   backpress] |  enrich)  |   backpress] |  encode)  |
-  +-----------+              +-----------+              +-----------+
-        ^                          ^                          ^
-        |                          |                          |
-   single input,             single input,               single input,
-   single output              single output               single output
-   (uniform contract          (uniform contract           (uniform contract
-    shared by every            shared by every             shared by every
-    filter in the chain)       filter in the chain)        filter in the chain)
++--------------------------------------------+
+| Data Source (file, socket, queue, request) |
++--------------------------------------------+
+     | single input/output uniform contract
+     v
++----------------------------+
+| Filter A, e.g. parse       |
+| pipe, buffer, backpressure |
++----------------------------+
+     |
+     v
++----------------------------+
+| Filter B, e.g. enrich      |
+| pipe, buffer, backpressure |
++----------------------------+
+     |
+     v
++-----------------------+
+| Filter C, e.g. encode |
++-----------------------+
+     |
+     v
++-------------------------------------------+
+| Data Sink (file, socket, queue, response) |
++-------------------------------------------+
 
-  Optional PUMP drives passive filters that have no thread of their own.
+Every filter shares the same uniform contract, single
+input, single output.
 
-  +------+   calls A(x)   +---+   calls B(A(x))   +---+   calls C(B(A(x)))
-  | PUMP |--------------->| A |------------------->| B |------------------>  out
-  +------+                +---+                    +---+
+Optional PUMP drives passive filters that have no
+thread of their own:
+
++------+
+| PUMP |
++------+
+     | calls A(x)
+     v
++---+
+| A |
++---+
+     | calls B(A(x))
+     v
++---+
+| B |
++---+
+     | calls C(B(A(x)))
+     v
+out
 ```
 
 ## 7. Dynamics

@@ -215,36 +215,41 @@ more physical tables in the same storage system.
 ## 6. ASCII structure diagram
 
 ```
-+------------------+       +------------------+       +------------------+
-|   SOURCE SYSTEMS  |       |                  |       |                  |
-|  ---------------- |       |                  |       |                  |
-|  OLTP database CDC|------>|                  |       |                  |
-|  Third party API  |------>|   BRONZE LAYER   |       |                  |
-|  Event stream      |------>|  raw, append only |       |                  |
-|  File upload       |------>|  source schema     |       |                  |
-+------------------+       |  ingestion metadata|       |                  |
-                            +---------+---------+       |                  |
-                                      |                  |                  |
-                            transform | clean, dedupe,   |                  |
-                            and       | validate, join   |                  |
-                            conform   |                  |                  |
-                                      v                  |                  |
-                            +------------------+         |                  |
-                            |   SILVER LAYER    |         |                  |
-                            |  conformed entity  |         |                  |
-                            |  validated, joined |-------->|                  |
-                            |  read by data sci  |         |                  |
-                            +---------+----------+         |                  |
-                                      |                    |                  |
-                            aggregate | business logic,     |                  |
-                            and shape | metric calc          |                  |
-                                      v                      v                  |
-                            +------------------+   +------------------+
-                            |    GOLD LAYER      |   |    CATALOG /      |
-                            |  business metrics   |<--|  LINEAGE STORE     |
-                            |  ML feature tables   |   |  schema, owner,    |
-                            |  read by BI, ML       |   |  access control    |
-                            +------------------+   +------------------+
++-------------------+
+| Source Systems    |
+| OLTP database CDC |
+| Third party API   |
+| Event stream      |
+| File upload       |
++-------------------+
+     |
+     v
++-----------------------------------------------------+
+| Bronze Layer                                        |
+| raw, append only, source schema, ingestion metadata |
++-----------------------------------------------------+
+     | transform and conform: clean, dedupe,
+     | validate, join
+     v
++-------------------------------------------------------+
+| Silver Layer                                          |
+| conformed entity, validated, joined, read by data sci |
++-------------------------------------------------------+
+     | aggregate and shape: business logic,
+     | metric calc
+     v
++-----------------------------------------------------+
+| Gold Layer                                          |
+| business metrics, ML feature tables, read by BI, ML |
++-----------------------------------------------------+
+
++-------------------------------+
+| Catalog / Lineage Store       |
+| schema, owner, access control |
++-------------------------------+
+
+The Catalog / Lineage Store also feeds into the Gold
+Layer, and is populated from the Silver Layer.
 ```
 
 ## 7. Dynamics

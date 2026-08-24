@@ -50,26 +50,29 @@ Skip it for a service with no SLO yet, since an Error Budget has nothing to be d
 ## 6. ASCII structure diagram
 
 ```
-  SLO target (e.g. 99.9% over 30 days)
-        |
-        v
-  +-------------------------+
-  |   Error Budget = 100% - SLO   |
-  +-------------------------+
-        |
-        v
-  +-------------------------+     real incidents consume     +----------------+
-  |   Budget balance          | <----------------------------  |  Consumption   |
-  |   (updated continuously)  |                                |  events        |
-  +-------------------------+                                +----------------+
-        |
-        v
-  budget healthy?  ----- yes -----> ship at normal or faster pace
-        |
-        no
-        |
-        v
-  Error Budget Policy triggers: freeze releases, shift to reliability work
+SLO target, e.g. 99.9% over 30 days
+     |
+     v
++-------------------------------+
+| Error Budget = 100% minus SLO |
++-------------------------------+
+     |
+     v
++--------------------------------------+
+| Budget balance, updated continuously |
++--------------------------------------+
+     ^ real incidents consume from
+     |
++--------------------+
+| Consumption events |
++--------------------+
+
+budget healthy? yes -> ship at normal or faster pace
+budget healthy? no  -> continue below
+     |
+     v
+Error Budget Policy triggers: freeze releases, shift
+to reliability work
 ```
 
 ## 7. Dynamics
