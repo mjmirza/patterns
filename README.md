@@ -20,6 +20,186 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 There is no documentation site yet (no rendered docs build to badge). Tracked
 as an open item in `docs/GOVERNANCE-AUDIT-2026-08-03.md`.
 
+**[Watch the explainer video](https://youtu.be/V802Fm13ZNA).**
+
+## Why this exists
+
+Say you are adding a long running upload to a product. The obvious version
+takes ten minutes to write. The request comes in, the file uploads, a
+response goes out. Then the real questions show up. Does the upload run
+synchronous inside the request, or does it hand off to a queue. If it hands
+off, does the queue guarantee at least once delivery or exactly once. If it
+is at least once, what happens the second time the same file arrives. Does a
+crashed worker lose the upload or retry it. Does a retry double charge a
+customer if the next step is billing. Who logs the failure, and what gets
+paged. What happens to an in flight upload during a deploy.
+
+None of that is exotic. It is the normal shape of a real system, and every
+one of those questions already has a name, a set of known answers, and a set
+of known failure modes, worked out by people who hit them first and wrote
+down what they learned. That is what a pattern is here. Not a UML diagram.
+A worked answer to a question you are about to hit anyway.
+
+## The simplest way to understand this repository
+
+Think of it as a decision book, not a code library. You do not copy code out
+of it. You read the entry for the situation you are in, see the trade offs
+laid out, and make the call yourself, or hand the entry to your coding agent
+so it makes the call with real information instead of a guess.
+
+Take Circuit Breaker as a worked example. You describe the problem in plain
+words. Our API becomes slow when traffic increases and a dependency starts
+failing. The entry for Circuit Breaker lays out when it fits, what it costs,
+what it does not solve on its own, and what it is usually paired with. You
+read it, and either use it, or explicitly decide not to and know why.
+
+![Describe your problem, explore approaches side by side, then decide and apply with confidence](assets/images/workflow-describe-explore-decide.png)
+
+The three step shape above is the whole loop. Describe the problem in your
+own words, not the pattern name. Pull up two or three relevant entries and
+compare them side by side, including the ones this repository recommends
+against for your case. Decide, write the decision down somewhere your team
+or your AI assistant will see it again, then implement.
+
+## You do not need to be technical to use this
+
+If code is not your job, you can still use this repository to ask better
+questions of the people or the AI building something for you. Five common
+starting points.
+
+- Wondering if a plan for a new system is missing something. Start at
+  [docs/BY-PROBLEM.md](docs/BY-PROBLEM.md) and look for the situation that
+  matches what you are building.
+- Concerned about cost or reliability of something running in the cloud.
+  Read [patterns/08-cloud-distributed/](patterns/08-cloud-distributed/).
+- Curious what an AI agent or chatbot should and should not be allowed to do
+  on its own. Read [patterns/17-ai-agentic/](patterns/17-ai-agentic/).
+- Told that a codebase is a mess and needs a rewrite. Read
+  [patterns/02-code-smells/](patterns/02-code-smells/) and
+  [patterns/03-refactoring/](patterns/03-refactoring/) before agreeing to a
+  rewrite. Most messes have a named smell and a smaller named fix.
+- Handling anything that touches money, health, or identity. Read
+  [patterns/15-security/](patterns/15-security/).
+- Asking whether a launch is actually ready. Read
+  [patterns/21-sre-operations/](patterns/21-sre-operations/) and
+  [patterns/22-observability/](patterns/22-observability/).
+
+![Tell it your problem in plain words, read and compare the options, then decide and take action](assets/images/workflow-plain-language-three-steps.png)
+
+You do not need to understand every dimension of an entry to get value from
+it. The applicability section, what it is for and what it is not for, and
+the trade off table are usually enough to make a call.
+
+## What you can actually do with it
+
+Five concrete ways people and their AI assistants use this repository.
+
+1. **Plan before writing code.** Describe the system you are about to build
+   and ask your assistant to check the relevant families here before it
+   proposes an architecture.
+2. **Review a proposed architecture.** Paste a design doc or a plan and ask
+   what pattern it is really describing, what it is missing, and what named
+   failure mode it is exposed to.
+3. **Use it while coding.** When you hit a decision mid implementation
+   (retry logic, a cache, an event shape) look up the entry instead of
+   guessing from memory.
+4. **Challenge AI generated architecture.** When an agent proposes a design,
+   ask it to name the pattern, cite the entry, and state the trade offs
+   before you accept the plan.
+5. **Turn it into a standing instruction.** Add this repository to your
+   agent's rule file so it is consulted automatically, every time, not only
+   when you remember to ask.
+
+A short instruction that works in `AGENTS.md`, `CLAUDE.md`, a Cursor rule, or
+`.github/copilot-instructions.md`.
+
+```
+# Patterns decision reference
+
+Before proposing an architecture, a retry strategy, a data flow, or a fix
+for a design smell, consult .patterns/docs/BY-PROBLEM.md and the relevant
+family under .patterns/patterns/ for the named pattern that covers this
+situation. State which pattern you are applying, why it fits this specific
+case, and what it costs. If nothing in the reference fits, say so plainly
+and proceed on your own judgment.
+
+Patterns are decision options, not mandatory implementation rules. Do not
+use a pattern simply because it exists. Do not over-engineer simple
+problems.
+```
+
+## Three ways teams put this to work
+
+**Before building a new application.** The value is not more code. It is
+making the important decisions before the code exists. Describe the goal,
+consult the relevant entries, compare the candidates, approve a plan, then
+build.
+
+![Before building a new application, without patterns the first plausible idea wins and architecture appears after code already exists. With patterns, the goal is described, patterns are consulted, choices are compared, and a plan is approved first.](assets/images/scenario-before-building.png)
+
+**On an existing application that already works.** Patterns become a review
+lens instead of a starting point. Show your assistant the app, ask it to
+compare the current design against the entries here, and pick the smallest
+safe change instead of a large risky one.
+
+![On an existing application, without patterns changes are made by guesswork from local code alone. With patterns, the current design is reviewed against the catalogue first and the smallest safe change is chosen.](assets/images/scenario-existing-application.png)
+
+**Inside a coding agent, as a standing habit.** The difference between an
+agent that only reacts to what you type and one that thinks before it
+builds is whether it has a shared playbook to consult. Wiring this
+repository into an agent's rule file, per the `AGENTS.md` example above, is
+what makes that automatic.
+
+![Using patterns inside a coding agent turns it from a fast typist that only relies on its own defaults into a teammate that consults a shared playbook, compares options, and proposes a plan before building.](assets/images/scenario-inside-coding-agent.png)
+
+The same loop applies to a single feature inside an app that is already
+shipped and working. Say what feels wrong in plain words, let the assistant
+check this repository for a safer version of what you already have, and add
+the improvement in small, tested steps rather than a large rewrite.
+
+## A practical workflow
+
+Patterns fits into the middle of the path from an idea to something running
+in production. It does not replace requirements work or testing. It is the
+step where a vague direction becomes a compared, defensible decision.
+
+```
+idea
+  -> requirements
+    -> problems and constraints
+      -> candidate approaches      <- Patterns
+        -> compare trade offs      <- Patterns
+          -> reject the weak ones  <- Patterns
+            -> decision
+              -> plan
+                -> code
+                  -> tests
+                    -> observability
+                      -> production
+                        -> review
+```
+
+![Understand, compare, choose, implement, test, and observe. Think first, build second.](assets/images/workflow-full-decision-cycle.png)
+
+**Worked example.** A team needs a feature that lets a user upload a large
+file and get notified when processing finishes. Without a reference, the
+first working version is often a synchronous request that blocks until the
+file is fully processed, which times out under load. With this repository,
+the team compares an asynchronous request reply pattern against an event
+driven pipeline, reads the failure modes and idempotency requirements for
+each, and picks the one that matches their actual traffic and their actual
+tolerance for a duplicate notification.
+
+## What makes this different from asking an LLM directly
+
+An LLM can describe Circuit Breaker from memory. What it cannot do
+reliably, on its own, is cite a specific named production use with a real
+source, list the trade offs against the alternatives your team actually
+considered, or admit plainly when a pattern does not apply. Every entry
+here is checked for exactly that. A citation that does not resolve fails
+CI. A missing non-applicability list fails CI. The value is not the
+definition. It is the parts a model tends to skip or invent.
+
 ## What this is
 
 A reference you can hand to a staff engineer and have them find something they
@@ -60,6 +240,26 @@ by good intentions.
 
 Dimension 4's second list and dimension 11 are the ones most catalogues skip.
 They are the reason this repository exists.
+
+Eight of the eighteen dimensions above, shown one at a time. Every image in
+this repository lives under `assets/images/`, named for what it shows, and
+each one below illustrates a different dimension. None repeats another.
+
+![Start with the problem in plain language, then use Patterns to find relevant approaches. This is dimension 2, problem and context.](assets/images/dimension-problem-first.png)
+
+![Compare trade offs across candidate approaches on complexity, reliability, speed, and flexibility before choosing. This is dimension 12, the trade off matrix.](assets/images/dimension-compare-tradeoffs.png)
+
+![Know when not to use a pattern, not only when to use it. This is dimension 4's second half, non-applicability.](assets/images/dimension-when-not-to-use.png)
+
+![Cascading failure, missing retries, duplicate processing, and scaling bottlenecks are common failure modes to check for before they happen. This is dimension 11.](assets/images/dimension-failure-modes.png)
+
+![Choose an approach, list what to verify, check its behavior, then build with more confidence. This is dimension 15, testing and verification.](assets/images/dimension-test-before-trust.png)
+
+![Logs, metrics, traces, alerts, and dashboards are what to watch once something is in production. This is dimension 16, observability signals.](assets/images/dimension-observability.png)
+
+![Access, data protection, rate limits, and trust boundaries are what a design opens or exposes. This is dimension 17, security and privacy.](assets/images/dimension-security-privacy.png)
+
+![Current state, a small change, an improved design, and a future migration path. This is dimension 14, the refactoring path in and out.](assets/images/dimension-refactor-paths.png)
 
 ## Terminology
 
@@ -152,6 +352,23 @@ catalogue involved.
 If you hold rights in anything here and believe it goes past fair citation,
 open an issue titled `attribution` and it will be corrected or removed.
 
+## Image assets
+
+Every diagram in this README lives under `assets/images/`, named for what
+it shows. Fourteen appear inline above. Four more were produced covering the
+same three usage scenarios (a new application, an existing application, and
+an application already shipped) in a different visual style. Rather than
+show the same scenario twice, only the version paired with a without and
+with comparison is shown. The other four are kept in `assets/images/` for
+reference and are not repeated in the body, so no scenario appears twice.
+
+| File | Why it exists |
+|---|---|
+| `usage-new-application.png` | Same scenario as `scenario-before-building.png`, a shorter four step version with no before and with comparison. Kept for reference. |
+| `usage-existing-application.png` | Same scenario as `scenario-existing-application.png`, a shorter four step version with no comparison. Kept for reference. |
+| `usage-improve-working-app.png` | The four step version of improving a shipped application, summarized in prose in "Three ways teams put this to work" above. Kept for reference. |
+| `usage-enhance-working-app.png` | A second pass at the same improving a shipped application scenario. Duplicate angle of `usage-improve-working-app.png`. Kept for reference, not shown twice. |
+
 ## Quality gates
 
 Nothing merges without passing all of these.
@@ -173,6 +390,74 @@ Run the whole set locally.
 ```bash
 make check
 ```
+
+## Who this is for
+
+- **Non technical founders and product people.** A way to check whether a
+  plan sounds right before it is built, without needing to read code.
+- **Developers.** A reference to consult mid task instead of guessing from
+  memory or copying the first search result.
+- **Staff and principal engineers.** A tool for review, not for learning.
+  The trade off tables and failure modes are written for someone who
+  already knows the basics and wants the parts a quick summary skips.
+- **AI assisted developers.** A way to hold an agent accountable to a real,
+  citable trade off instead of an invented sounding justification.
+- **Coding agents themselves.** A machine readable reference, laid out
+  identically in every entry, that an agent can consult and cite the same
+  way a person does.
+
+## What this repository is not
+
+- Not a rule saying every system needs a pattern. A good outcome may be, do
+  not use a pattern here, keep the code simple.
+- Not a tutorial. It assumes you already understand basic software design.
+- Not a code generator. There is no scaffolding tool here, only reference
+  entries with illustrative code, and none of it is meant to be copied
+  word for word into a real system.
+- Not a replacement for testing, review, or judgment. It informs a
+  decision. It does not make the decision for you.
+
+## A good rule of thumb
+
+If you are not sure whether a pattern applies, read its non-applicability
+list first, dimension 4's second half. More entries here exist to tell you
+when not to use something than to tell you to use it.
+
+For deeper technical detail on every dimension, read the eighteen
+dimension table, the terminology, and the full family catalogue above.
+
+## Make this part of your AI development workflow
+
+Clone this repository into your own project as a local reference the agent
+can read without leaving the project.
+
+```bash
+git clone --depth 1 https://github.com/mjmirza/patterns.git .patterns
+echo ".patterns/" >> .gitignore
+```
+
+Then add the `AGENTS.md` or `CLAUDE.md` instruction shown earlier in this
+README under "What you can actually do with it," pointing the agent at
+`.patterns/docs/BY-PROBLEM.md` and `.patterns/patterns/`. Nothing else
+changes about how you work with the agent. It reads the same requests it
+always did. It now also has a named reference to check its own answer
+against before it writes code.
+
+What changes in practice.
+
+```
+Before.  You describe a feature.  The agent picks an approach silently
+          and starts writing code.  You find out the trade offs later,
+          usually the first time something breaks.
+
+After.    You describe a feature.  The agent checks .patterns/, names the
+          approach it is choosing, states the trade off against at least
+          one alternative, and asks before it writes code if the choice
+          is not obvious.
+```
+
+This is a reference sitting beside your code that your AI assistant
+consults while planning, not a framework it must adopt.
 
 ## Contributing
 
