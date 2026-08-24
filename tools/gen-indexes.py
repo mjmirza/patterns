@@ -31,7 +31,7 @@ def load_planned() -> dict[str, list[tuple[str, str]]]:
         parts = path.split("/")
         if len(parts) < 3 or parts[0] != "patterns" or not name:
             continue
-        if (ROOT / path).exists():
+        if (ROOT / path).exists() or entry.get("status") == "deferred":
             continue
         planned.setdefault(parts[1], []).append((name, reason))
     return planned

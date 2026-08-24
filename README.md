@@ -5,13 +5,13 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
-![Entries](https://img.shields.io/badge/entries-890%20published%20%2F%20893%20planned-yellow)
+![Entries](https://img.shields.io/badge/entries-890%20published-brightgreen)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blueviolet)
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
-![Catalogue completion](https://img.shields.io/badge/completion-99.7%25-yellow)
+![Catalogue completion](https://img.shields.io/badge/completion-100.0%25-yellow)
 ![References checked](https://img.shields.io/badge/references%20checked-5067-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
@@ -87,12 +87,12 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 
 | # | Family | Origin | Published | Planned | Target |
 |---|---|---|---|---|---|
-| 01 | [Design Patterns (GoF)](patterns/01-design-patterns-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 32 | 1 | 33 |
+| 01 | [Design Patterns (GoF)](patterns/01-design-patterns-gof/) | Gamma, Helm, Johnson, Vlissides 1994 | 33 | 0 | 33 |
 | 02 | [Code Smells](patterns/02-code-smells/) | Fowler and Beck, Refactoring | 28 | 0 | 28 |
 | 03 | [Refactoring Techniques](patterns/03-refactoring/) | Fowler, Refactoring 2nd ed | 66 | 0 | 66 |
 | 04 | [Principles and Laws](patterns/04-principles-and-laws/) | Martin, Larman, Brewer, Conway | 42 | 0 | 42 |
 | 05 | [Architectural Patterns](patterns/05-architectural/) | Buschmann POSA 1, Bass SEI | 31 | 0 | 31 |
-| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 56 | 4 | 60 |
+| 06 | [Enterprise Application Architecture](patterns/06-enterprise-application-architecture/) | Fowler, PoEAA | 60 | 0 | 60 |
 | 07 | [Enterprise Integration](patterns/07-integration/) | Hohpe and Woolf | 54 | 0 | 54 |
 | 08 | [Cloud and Distributed](patterns/08-cloud-distributed/) | Azure Architecture Center | 44 | 0 | 44 |
 | 09 | [Concurrency and Parallelism](patterns/09-concurrency/) | Schmidt POSA 2 | 40 | 0 | 40 |
@@ -103,14 +103,14 @@ A folder's slug always matches the slug linked here, enforced in CI. See
 | 14 | [Testing](patterns/14-testing/) | Meszaros, xUnit Test Patterns | 30 | 0 | 30 |
 | 15 | [Security](patterns/15-security/) | OWASP ASVS | 38 | 0 | 38 |
 | 16 | [Functional Programming](patterns/16-functional/) | Category theory in practice | 39 | 0 | 39 |
-| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 64 | 1 | 65 |
+| 17 | [AI and Agentic](patterns/17-ai-agentic/) | Papers and vendor engineering, 2023 to 2026 | 65 | 0 | 65 |
 | 18 | [Anti-Patterns](patterns/18-anti-patterns/) | Brown et al, AntiPatterns | 51 | 0 | 51 |
 | 19 | [API and Interface Design](patterns/19-api-design/) | REST, GraphQL, gRPC specifications | 11 | 0 | 11 |
 | 20 | [Release and Deployment](patterns/20-release-deployment/) | Humble and Farley | 10 | 0 | 10 |
 | 21 | [SRE and Operations](patterns/21-sre-operations/) | Google SRE, AWS Well-Architected | 12 | 0 | 12 |
-| 22 | [Observability](patterns/22-observability/) | OpenTelemetry, RED and USE methods | 7 | 1 | 8 |
+| 22 | [Observability](patterns/22-observability/) | OpenTelemetry, RED and USE methods | 7 | 0 | 7 |
 | 23 | [Workflow and Orchestration](patterns/23-workflow-orchestration/) | Durable execution literature | 6 | 0 | 6 |
-| 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 7 | 1 | 8 |
+| 24 | [Stream Processing](patterns/24-stream-processing/) | Dataflow model, Kafka docs | 7 | 0 | 7 |
 | 25 | [MLOps](patterns/25-mlops/) | Google ML design patterns | 9 | 0 | 9 |
 | 26 | [Interaction and HCI](patterns/26-interaction-hci/) | Tidwell, Designing Interfaces | 10 | 0 | 10 |
 | 27 | [Mobile Architecture](patterns/27-mobile-architecture/) | Official Android/iOS architecture guidance | 11 | 0 | 11 |

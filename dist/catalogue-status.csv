@@ -15,14 +15,14 @@ family,name,published,planned,target,percent
 14-testing,Testing,30,0,30,100.0
 15-security,Security,38,0,38,100.0
 16-functional,Functional Programming,39,0,39,100.0
-17-ai-agentic,AI and Agentic,65,1,66,98.5
+17-ai-agentic,AI and Agentic,65,0,65,100.0
 18-anti-patterns,Anti-Patterns,51,0,51,100.0
 19-api-design,API and Interface Design,11,0,11,100.0
 20-release-deployment,Release and Deployment,10,0,10,100.0
 21-sre-operations,SRE and Operations,12,0,12,100.0
-22-observability,Observability,7,1,8,87.5
+22-observability,Observability,7,0,7,100.0
 23-workflow-orchestration,Workflow and Orchestration,6,0,6,100.0
-24-stream-processing,Stream Processing,7,1,8,87.5
+24-stream-processing,Stream Processing,7,0,7,100.0
 25-mlops,MLOps,9,0,9,100.0
 26-interaction-hci,Interaction and HCI,10,0,10,100.0
 27-mobile-architecture,Mobile Architecture,11,0,11,100.0

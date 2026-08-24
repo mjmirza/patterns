@@ -2,7 +2,7 @@
 
 Origin. Dataflow model, Kafka documentation
 
-7 entries, 41,933 words, 1 more planned, 8 total when the family is complete. Every entry carries all 18
+7 entries, 41,933 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Stream Processing
@@ -16,12 +16,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Stream Backpressure](stream-backpressure.md) | established | 4,617 | In a single-process reactive pipeline the backpressure problem is a pair, one producer and one consumer, and a demand-signaling or buffer-based protocol between the two is ... |
 | [Stream-Table Duality](stream-table-duality.md) | established | 5,645 | Kafka's own documentation frames the problem as a first-class support gap a stream-processing technology must close, not a hypothetical. |
 | [Watermark](watermark.md) | established | 9,874 | A stream processing system that groups records by when they actually happened, not by when the system happened to receive them, faces a specific unanswerable-looking question. |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Windowing. Flagged QUEUE COLLISION by tools/check-duplicates.py against the published patterns/13-frontend-ui/virtual-list.md, matched via the shared term Windowing. Deferred pending a human decision on whether stream-processing windowing needs a distinct entry or should be folded into the existing one. Never self-resolve.
 
 ## Reading order
 
