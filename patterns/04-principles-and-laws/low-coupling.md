@@ -223,41 +223,57 @@ rather than scattered across every Dependent.
 ## 6. ASCII structure diagram
 
 ```
-  TIGHT COUPLING (what Low Coupling replaces)
+TIGHT COUPLING (what Low Coupling replaces)
 
-  +------------------+          +----------------------+
-  |     Dependent     |--------->|  ConcreteDependency  |
-  | (knows concrete   |  new /   |  (fields, methods,   |
-  |  type, fields,    |  direct  |   internal layout    |
-  |  constructor)     |   call   |   all visible)        |
-  +------------------+          +----------------------+
-
-
-  LOOSE COUPLING (Low Coupling applied via a Contract)
-
-  +------------------+          +--------------------+
-  |     Dependent     |--------->|     Contract       |
-  |  (knows only the  |  calls   |  (interface /       |
-  |   Contract shape) |  via     |   protocol /         |
-  |                    |  Contract|   event schema)      |
-  +------------------+          +----------+---------+
-                                            ^
-                                            | implements
-                                 +----------+----------+
-                                 |  ConcreteDependency  |
-                                 |  (internals hidden   |
-                                 |   from Dependent)    |
-                                 +----------------------+
++-------------------------------+
+| Dependent                     |
+| (knows concrete type, fields, |
+| constructor)                  |
++-------------------------------+
+           | new / direct call
+           v
++----------------------------+
+| ConcreteDependency         |
+| (fields, methods, internal |
+| layout all visible)        |
++----------------------------+
 
 
-  LOOSE COUPLING WITH A MEDIATOR (event bus / DI container)
+LOOSE COUPLING (Low Coupling applied via a Contract)
 
-  +-----------+     publishes/     +--------------+     notifies/     +-----------+
-  | Dependent |------requests----->|   Mediator   |------supplies----->| Dependency |
-  | (unaware  |                    | (bus / DI    |                    | (unaware   |
-  |  who      |                    |  container / |                    |  who       |
-  |  fulfills)|                    |  facade)     |                    |  triggered)|
-  +-----------+                    +--------------+                    +-----------+
++---------------------------------+
+| Dependent                       |
+| (knows only the Contract shape) |
++---------------------------------+
+           | calls via Contract
+           v
++---------------------------------------+
+| Contract                              |
+| (interface / protocol / event schema) |
++---------------------------------------+
+           ^
+           | implements
++-----------------------------------+
+| ConcreteDependency                |
+| (internals hidden from Dependent) |
++-----------------------------------+
+
+
+LOOSE COUPLING WITH A MEDIATOR (event bus / DI container)
+
++----------------------------------+
+| Dependent (unaware who fulfills) |
++----------------------------------+
+           | publishes/requests
+           v
++----------------------------------------+
+| Mediator (bus / DI container / facade) |
++----------------------------------------+
+           | notifies/supplies
+           v
++------------------------------------+
+| Dependency (unaware who triggered) |
++------------------------------------+
 ```
 
 ## 7. Dynamics

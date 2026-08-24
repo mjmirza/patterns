@@ -2,7 +2,7 @@
 
 Origin. OWASP ASVS
 
-38 entries, 226,879 words. Every entry carries all 18
+38 entries, 226,876 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Authorization
@@ -36,7 +36,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [JWT](jwt.md) | established | 6,076 | A resource server needs to accept repeated calls without contacting the issuer for every request, yet it still needs an issuer, subject, audience, expiry, possibly scopes, and a ... |
 | [Key Rotation](key-rotation.md) | established | 6,762 | A system depends on secret material that cannot be treated as permanent. |
 | [Least Privilege](least-privilege.md) | canonical | 6,389 | A system needs trusted actions to happen, but the code, user, service account, container, or job that performs those actions can also fail, be tricked, or be taken over. |
-| [Lethal Trifecta Threat Model](lethal-trifecta-threat-model.md) | emerging | 1,821 | Willison's own text states why the three conditions matter only in combination, not individually. |
+| [Lethal Trifecta Threat Model](lethal-trifecta-threat-model.md) | emerging | 1,818 | Willison's own text states why the three conditions matter only in combination, not individually. |
 | [Mutual TLS](mutual-tls.md) | established | 6,027 | A service accepts network calls from other machines. |
 | [OpenID Connect](openid-connect.md) | established | 7,015 | The problem appears when an application needs to sign in users through an external identity system without copying passwords, duplicating multi-factor logic, or inventing its own ... |
 | [Output Encoding](output-encoding.md) | established | 6,294 | A program has data that may contain characters with special meaning in the output grammar. |

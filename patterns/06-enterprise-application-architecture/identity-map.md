@@ -226,33 +226,40 @@ Do NOT reach for it when any of these hold.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+        find(id)        +------------------------+
-|      Client        | ----------------------> |  Finder / Mapper        |
-| (domain / service   |                        |  (owns the lookup      |
-|  code)              | <----------------------|   sequence)             |
-+-------------------+     domain object       +------------------------+
-                                                  |            ^
-                                     1. lookup(id)|            | 3. register(id, obj)
-                                                  v            |
-                                          +----------------------------+
-                                          |       Identity Map          |
-                                          |  Map<IdentityKey, Object>   |
-                                          |  scoped to a Unit of Work   |
-                                          +----------------------------+
-                                                  |
-                                     2. miss: query, then build
-                                                  v
-                                          +----------------------------+
-                                          |         Database            |
-                                          |  (row identified by key)    |
-                                          +----------------------------+
++--------------------------------+
+| Client (domain / service code) |
++--------------------------------+
+           | find(id)
+           v
++----------------------------+
+| Finder / Mapper            |
+| (owns the lookup sequence) |
++----------------------------+
+           | domain object, returned to Client above
+           |
+           | 1. lookup(id)
+           v
++--------------------------+
+| Identity Map             |
+| Map<IdentityKey, Object> |
+| scoped to a Unit of Work |
++--------------------------+
+           ^
+           | 3. register(id, obj), on a miss
+           |
+           | 2. miss: query, then build
+           v
++-------------------------+
+| Database                |
+| (row identified by key) |
++-------------------------+
 
-  Per-entity-type maps, held by one scope owner:
+Per-entity-type maps, held by one scope owner:
 
-  UnitOfWork
-    +-- CustomerMap : Map<CustomerId, Customer>
-    +-- OrderMap    : Map<OrderId, Order>
-    +-- ProductMap  : Map<ProductId, Product>
+UnitOfWork
+  +-- CustomerMap : Map<CustomerId, Customer>
+  +-- OrderMap    : Map<OrderId, Order>
+  +-- ProductMap  : Map<ProductId, Product>
 ```
 
 ## 7. Dynamics

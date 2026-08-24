@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-42 entries, 327,278 words. Every entry carries all 18
+42 entries, 327,261 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -44,7 +44,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Interface Segregation Principle](interface-segregation-principle.md) | canonical | 9,180 | The problem ISP names is specific and recognizable once you have seen it. |
 | [Keep It Simple](keep-it-simple.md) | canonical | 8,079 | Every non-trivial piece of software accretes complexity over its lifetime, and that accretion happens in two very different ways that are easy to conflate. |
 | [Law of Demeter](law-of-demeter.md) | canonical | 7,910 | A method reaches through an object it was handed to get at a second object, then calls a method on that second object. |
-| [Low Coupling](low-coupling.md) | canonical | 7,299 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
+| [Low Coupling](low-coupling.md) | canonical | 7,282 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
 | [Open Closed Principle](open-closed-principle.md) | canonical | 5,598 | A piece of software that ships once and never changes does not need this principle. |
 | [PACELC Theorem](pacelc-theorem.md) | canonical | 9,039 | A team picks a distributed database, reads that it is "AP" or "CP" under CAP, and believes that single letter fully describes how the system will behave in production. |
 | [Postel's Law](postel-law.md) | contested | 8,878 | Two or more parties implement the same open, published specification independently, without coordinating their release schedules, their source code, or in most cases even knowing ... |

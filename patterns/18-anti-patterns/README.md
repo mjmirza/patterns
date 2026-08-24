@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-51 entries, 398,660 words. Every entry carries all 18
+51 entries, 398,662 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -66,7 +66,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Chatty I/O](chatty-i-o.md) | established | 8,323 | Chatty I/O appears the moment a piece of code that used to run against in-process memory starts running against something on the far side of a boundary that has real per-call cost. |
+| [Chatty I/O](chatty-i-o.md) | established | 8,325 | Chatty I/O appears the moment a piece of code that used to run against in-process memory starts running against something on the far side of a boundary that has real per-call cost. |
 | [Distributed Monolith](distributed-monolith.md) | established | 8,553 | A team decomposes a monolith, or designs a new system, into a set of services with separate repositories, separate deployment pipelines, and separate runtime processes, expecting ... |
 | [Stovepipe System](stovepipe-system.md) | canonical | 8,168 | An organization builds its second system, its second department's application, or its second bounded capability, and the fastest path to delivery is to start from a blank slate ... |
 

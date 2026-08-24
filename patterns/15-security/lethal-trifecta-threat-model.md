@@ -79,25 +79,22 @@ mitigations" (Willison, "Lethal Trifecta," verified 2026-08-23).
 ## 6. ASCII structure diagram
 
 ```
-  +------------------------+  +------------------------+  +------------------------+
-  | LEG 1                  |  | LEG 2                  |  | LEG 3                  |
-  | private data access    |  | untrusted content       |  | external               |
-  |                        |  | exposure                |  | communication          |
-  +------------------------+  +------------------------+  +------------------------+
-              |                          |                          |
-              +--------------------------+--------------------------+
-                                         |
-                                         v
-                          all three present at once, on the
-                          same agent, in the same request:
-                          THE LETHAL TRIFECTA. an attacker's
-                          instructions, smuggled inside LEG 2,
-                          can now reach something worth
-                          stealing (LEG 1) and a channel to
-                          steal it through (LEG 3).
++-----------------------+ +-----------------------+ +-----------------------+
+| LEG 1                 | | LEG 2                 | | LEG 3                 |
+| private data access   | | untrusted content     | | external communication|
+|                       | | exposure              | |                       |
++-----------------------+ +-----------------------+ +-----------------------+
+     |           |           |
+     +-----------+-----------+
+                 v
+all three present at once, on the same agent, in the
+same request: THE LETHAL TRIFECTA. an attacker's
+instructions, smuggled inside LEG 2, can now reach
+something worth stealing (LEG 1) and a channel to
+steal it through (LEG 3).
 
-  removing ANY ONE leg from a given agent's capability set
-  closes the trifecta for that agent, per dimension 5.
+removing ANY ONE leg from a given agent's capability
+set closes the trifecta for that agent (dimension 5).
 ```
 
 ## 7. Dynamics
