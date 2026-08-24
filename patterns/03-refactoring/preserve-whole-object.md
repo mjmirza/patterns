@@ -118,16 +118,26 @@ whole object as a single parameter.
 ## 6. ASCII structure diagram
 
 ```
-  BEFORE                              AFTER
-  ------                              -----
+BEFORE
+------
 
-  charge(nights, rate, taxRate)       charge(room)
-    // uses nights, rate, taxRate      // uses room.nights, room.rate, room.taxRate
+charge(nights, rate, taxRate)
+  // uses nights, rate, taxRate
 
-  caller:                             caller:
-    charge(room.nights,                 charge(room)
-           room.rate,
-           room.taxRate)
+caller:
+  charge(room.nights,
+         room.rate,
+         room.taxRate)
+
+
+AFTER
+-----
+
+charge(room)
+  // uses room.nights, room.rate, room.taxRate
+
+caller:
+  charge(room)
 ```
 
 ## 7. Dynamics

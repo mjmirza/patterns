@@ -2,7 +2,7 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-31 entries, 248,971 words. Every entry carries all 18
+31 entries, 248,947 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
@@ -35,7 +35,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Plugin Architecture](plugin-architecture.md) | canonical | 7,823 | An application needs to support a set of behaviours that is open-ended, unknown at the time the core is built, and likely to be supplied by parties who are not the core's own ... |
 | [Plugin Sandbox](plugin-sandbox.md) | established | 10,826 | A host application defines an extension point, using Plugin Architecture or Microkernel, so that its behavior can grow without every new feature being merged into the core ... |
 | [Primary-Replica](primary-replica.md) | canonical | 7,665 | A single database instance handling both writes and reads eventually hits a ceiling on at least one of three axes, read throughput, availability, and geographic latency. |
-| [Serverless Architecture](serverless-architecture.md) | established | 8,896 | A team owns a backend that must handle a workload with two properties that are hard to satisfy at once with a conventional server fleet, the load is spiky or unpredictable, and ... |
+| [Serverless Architecture](serverless-architecture.md) | established | 8,872 | A team owns a backend that must handle a workload with two properties that are hard to satisfy at once with a conventional server fleet, the load is spiky or unpredictable, and ... |
 | [Service-Oriented Architecture](service-oriented-architecture.md) | contested | 6,727 | A monolithic application starts as the fastest way to ship. |
 | [Shared Nothing](shared-nothing.md) | canonical | 7,785 | A system needs to handle more work than one machine can handle, whether that work is transaction throughput, storage volume, or concurrent connections. |
 | [Space-Based Architecture](space-based-architecture.md) | established | 7,002 | A system built as a stateless application tier in front of a single relational database scales the application tier easily and the database tier badly. |

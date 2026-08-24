@@ -250,41 +250,41 @@ serialise cleanly onto a message bus.
 ## 6. ASCII structure diagram
 
 ```
-                     +----------------------------------------+
-                     |              Message                    |
-                     |  payload: { orderId, items, ... }        |
-                     |------------------------------------------|
-                     |          Routing Slip (attached)          |
-                     |  itinerary:  [ Validate, TaxCalc,          |
-                     |                Reserve, Charge, Ship ]     |
-                     |  completed:  [ ]                          |
-                     |  variables:  { }                          |
-                     +----------------------------------------+
-                                     |
-                                     v
-   +------------------+     +------------------+     +------------------+
-   |  Router / Coord   | --> | Processing Step  | --> |  Router / Coord   |
-   |  reads itinerary  |     |  Validate         |     |  advances slip     |
-   |  hop pointer = 0  |     |  (Activity)        |     |  hop pointer = 1   |
-   +------------------+     +------------------+     +------------------+
-                                                              |
-                                                              v
-                                                     +------------------+
-                                                     | Processing Step  |
-                                                     |  TaxCalc          |
-                                                     +------------------+
-                                                              |
-                                        ... continues for Reserve, Charge, Ship ...
-                                                              |
-                                                              v
-                                                     +------------------+
-                                                     |   Finalize        |
-                                                     |  itinerary empty  |
-                                                     +------------------+
++-----------------------------------------------------+
+| Message                                             |
+| payload: orderId, items, ...                        |
+|                                                     |
+| Routing Slip (attached)                             |
+| itinerary: Validate, TaxCalc, Reserve, Charge, Ship |
+| completed: []                                       |
+| variables: {}                                       |
++-----------------------------------------------------+
+           |
+           v
++----------------------------------+
+| Router / Coordinator             |
+| reads itinerary, hop pointer = 0 |
++----------------------------------+
+           v
++--------------------------------------+
+| Processing Step: Validate (Activity) |
++--------------------------------------+
+           | router advances slip, hop pointer = 1
+           v
++--------------------------+
+| Processing Step: TaxCalc |
++--------------------------+
+           |
+           | continues for Reserve, Charge, Ship
+           v
++---------------------------+
+| Finalize, itinerary empty |
++---------------------------+
 
-  Each box the message visits is generic. it knows only how to read
-  the slip's current hop and how to hand the message to whatever the
-  slip names as the next one. No box hardcodes any other box's name.
+Each box the message visits is generic. It knows only how
+to read the slip's current hop and how to hand the
+message to whatever the slip names as the next one. No
+box hardcodes any other box's name.
 ```
 
 ## 7. Dynamics

@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-28 entries, 221,148 words. Every entry carries all 18
+28 entries, 221,153 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -49,7 +49,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Inappropriate Intimacy](inappropriate-intimacy.md) | canonical | 8,379 | Two classes end up knowing far more about each other's insides than either one's public contract admits to. |
 | [Incomplete Library Class](incomplete-library-class.md) | canonical | 8,434 | A team depends on a class, module, or type that ships from outside the codebase they control. |
 | [Insider Trading](insider-trading.md) | canonical | 8,077 | Two modules were designed to talk to each other through a small, deliberate interface, and over time they grew a second, informal interface nobody designed. |
-| [Message Chains](message-chains.md) | canonical | 6,586 | A client asks one object for a second object, then immediately asks that second object for a third, and continues down the line until it finally reads or calls the field it ... |
+| [Message Chains](message-chains.md) | canonical | 6,591 | A client asks one object for a second object, then immediately asks that second object for a third, and continues down the line until it finally reads or calls the field it ... |
 | [Shotgun Surgery](shotgun-surgery.md) | canonical | 7,839 | A team ships a single logical concept, adding a new payment method, adding a new shipping carrier, adding a new order status, renaming a field that a dozen call sites read. |
 
 ## Object-Orientation Abusers

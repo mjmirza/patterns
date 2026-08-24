@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-42 entries, 327,248 words. Every entry carries all 18
+42 entries, 327,241 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -30,7 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [ACID](acid.md) | canonical | 7,029 | A database serves many concurrent operations against shared, durable state. |
 | [BASE](base.md) | canonical | 8,219 | A system holds one logical piece of data on more than one physical machine, because a single machine cannot serve the read and write volume, cannot survive its own failure, or ... |
 | [CAP Theorem](cap-theorem.md) | canonical | 7,623 | A system holds one piece of mutable state that more than one machine can read and write, and those machines are connected by a network that is not perfectly reliable. |
-| [Common Closure Principle](common-closure-principle.md) | canonical | 7,561 | A codebase reaches the size where a single flat namespace of classes stops being a unit anyone can reason about, and the team splits it into smaller compilation and deployment ... |
+| [Common Closure Principle](common-closure-principle.md) | canonical | 7,574 | A codebase reaches the size where a single flat namespace of classes stops being a unit anyone can reason about, and the team splits it into smaller compilation and deployment ... |
 | [Composition over Inheritance](composition-over-inheritance.md) | canonical | 6,930 | A designer needs an object to have several independent, combinable behaviours, and reaches for a single class hierarchy to express all of them. |
 | [Controller](controller.md) | canonical | 6,874 | A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system ... |
 | [Conway's Law](conway-law.md) | canonical | 7,751 | A team is asked to build a system with several distinct concerns. |
@@ -53,7 +53,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Pure Fabrication](pure-fabrication.md) | canonical | 7,604 | A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. |
 | [Release Reuse Equivalence](release-reuse-equivalence.md) | canonical | 8,321 | The problem REP addresses shows up the moment more than one piece of software wants to depend on the same piece of source code. |
 | [Separation of Concerns](separation-of-concerns.md) | canonical | 10,250 | A codebase grows by accretion. A new requirement lands, and the fastest way to satisfy it is to add a few lines wherever the relevant data already sits in memory. |
-| [Single Responsibility Principle](single-responsibility-principle.md) | canonical | 8,417 | The problem SRP names is a specific, recognizable shape of decay. |
+| [Single Responsibility Principle](single-responsibility-principle.md) | canonical | 8,408 | The problem SRP names is a specific, recognizable shape of decay. |
 | [Single Source of Truth](single-source-of-truth.md) | canonical | 8,258 | A fact about the world gets written down more than once, in more than one system, in more than one file, or in more than one variable, because writing it again was faster than ... |
 | [Stable Dependencies Principle](stable-dependencies-principle.md) | canonical | 8,881 | A system of any real size is built from more than one compilation or deployment unit, whatever the language calls that unit, a package, a module, a JAR, a crate, an npm package ... |
 | [Tell, Don't Ask](tell-do-not-ask.md) | canonical | 9,194 | The problem this principle answers shows up the first time a codebase grows past the size where one person holds the whole design in their head. |
@@ -64,7 +64,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Liskov Substitution Principle](liskov-substitution-principle.md) | canonical | 6,210 | Object-oriented languages let a caller hold a reference typed as a base class or an interface and receive, at runtime, any one of several concrete subtypes. |
-| [Polymorphism](polymorphism.md) | canonical | 7,463 | A piece of client code needs to perform an operation, render a shape, calculate a price, serialize a value, and it needs to do so uniformly over a collection of things that are ... |
+| [Polymorphism](polymorphism.md) | canonical | 7,452 | A piece of client code needs to perform an operation, render a shape, calculate a price, serialize a value, and it needs to do so uniformly over a collection of things that are ... |
 
 ## Structural principle
 

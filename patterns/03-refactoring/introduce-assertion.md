@@ -138,14 +138,23 @@ The refactoring has one participant.
 ## 6. ASCII structure diagram
 
 ```
-  BEFORE                              AFTER
-  ------                              -----
+BEFORE
+------
 
-  def calculate(distance, time):      def calculate(distance, time):
-      return distance / time              assert time != 0, "time must be non-zero"
-                                          return distance / time
+def calculate(distance, time):
+    return distance / time
 
-  (no check, assumption implicit)     (assertion makes assumption explicit)
+(no check, assumption implicit)
+
+
+AFTER
+-----
+
+def calculate(distance, time):
+    assert time != 0, "time must be non-zero"
+    return distance / time
+
+(assertion makes assumption explicit)
 ```
 
 ## 7. Dynamics

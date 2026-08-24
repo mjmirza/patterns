@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-54 entries, 385,766 words. Every entry carries all 18
+54 entries, 385,715 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -47,14 +47,14 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Command Message](command-message.md) | canonical | 6,014 | An application wants another application, or another component in the same system, to perform a specific piece of work. |
 | [Content Enricher](content-enricher.md) | canonical | 6,840 | A message arrives at an integration point carrying less data than the next step needs. |
 | [Content Filter](content-filter.md) | canonical | 8,464 | A consumer receives a message that is far larger, richer, or more deeply nested than anything it needs, and forwarding or storing that full message creates real cost. |
-| [Correlation Identifier](correlation-identifier.md) | canonical | 7,467 | A process sends a message and does not receive its answer over the same connection it used to send it. |
+| [Correlation Identifier](correlation-identifier.md) | canonical | 7,422 | A process sends a message and does not receive its answer over the same connection it used to send it. |
 | [Document Message](document-message.md) | canonical | 7,017 | Two systems need to exchange a structured record, such as a customer record, a purchase order, a lab result, or a shipment manifest. |
 | [Dynamic Router](dynamic-router.md) | canonical | 7,649 | A message-routing component in a system needs to send a message onward, and the set of places it might send that message to is not fixed at the time the router is built, deployed ... |
 | [Event Message](event-message.md) | canonical | 7,035 | An application performs an action that other applications, possibly ones the first application has never heard of and will never know about, need to react to. |
 | [Event-Driven Consumer](event-driven-consumer.md) | canonical | 6,039 | A service needs to react when something happens elsewhere in the system, a payment is captured, an order is placed, a file lands in a bucket, a row is updated in another team's ... |
 | [Format Indicator](format-indicator.md) | canonical | 6,130 | A message travels from a producer to a consumer, and at some point the consumer must decide how to parse the bytes it received. |
 | [Message](message.md) | canonical | 6,901 | Two applications need to exchange information without either one blocking on the other's availability, without either one dictating the other's internal data model, and without a ... |
-| [Message Bus](message-bus.md) | canonical | 7,670 | A system starts with two applications that need to exchange data, and a direct point-to-point integration, a script that reads from one database and writes to another, or a ... |
+| [Message Bus](message-bus.md) | canonical | 7,686 | A system starts with two applications that need to exchange data, and a direct point-to-point integration, a script that reads from one database and writes to another, or a ... |
 | [Message Channel](message-channel.md) | canonical | 6,008 | Two independently deployed pieces of software need to exchange information, and the team building them does not want a synchronous, point-to-point network call between them. |
 | [Message Dispatcher](message-dispatcher.md) | canonical | 7,081 | A single logical stream of work needs to be processed by more capacity than one consumer thread can provide, and the team wants that capacity applied without breaking three ... |
 | [Message Expiration](message-expiration.md) | canonical | 6,898 | A message carries a request or a piece of data across an asynchronous boundary. |
@@ -62,7 +62,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Message Sequence](message-sequence.md) | canonical | 6,955 | A producer has one logical unit of data to move across a messaging channel, and the unit is larger than the channel, the broker, or the receiving application can accept as a ... |
 | [Messaging Gateway](messaging-gateway.md) | canonical | 7,408 | An application needs to send and receive messages through a messaging system, a message queue, an event bus, a Kafka topic, an AMQP exchange, but the team does not want every part ... |
 | [Normalizer](normalizer.md) | canonical | 6,910 | A system receives messages that all describe the same real-world fact, an order was placed, a patient was admitted, a trade was executed, but the messages arrive in several ... |
-| [Routing Slip](routing-slip.md) | canonical | 7,757 | A message needs to pass through a chain of processing steps, and the exact membership and order of that chain differs per message, per tenant, or per business rule, rather than ... |
+| [Routing Slip](routing-slip.md) | canonical | 7,727 | A message needs to pass through a chain of processing steps, and the exact membership and order of that chain differs per message, per tenant, or per business rule, rather than ... |
 
 ## Integration (Message Routing)
 
@@ -93,7 +93,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Competing Consumers](competing-consumers.md) | canonical | 6,366 | A producer or a set of producers places units of work onto a channel faster, or in bursts faster, than a single consumer can process them. |
-| [Content-Based Router](content-based-router.md) | canonical | 6,816 | A single logical message stream must be handled by more than one downstream consumer, and which consumer handles a given message depends on data inside that message, not on which ... |
+| [Content-Based Router](content-based-router.md) | canonical | 6,824 | A single logical message stream must be handled by more than one downstream consumer, and which consumer handles a given message depends on data inside that message, not on which ... |
 | [Durable Subscriber](durable-subscriber.md) | canonical | 6,834 | A publisher broadcasts events on a topic. |
 | [Guaranteed Delivery](guaranteed-delivery.md) | canonical | 6,068 | A service publishes an event or sends a command onto a channel and then proceeds as if the message is on its way. |
 | [Recipient List](recipient-list.md) | canonical | 7,463 | A single message must reach more than one downstream consumer at once, and the exact SET of consumers that should receive a given message is not fixed at design time. |
