@@ -4,20 +4,26 @@
     "slug": "high-cardinality-metrics",
     "category": "observability",
     "path": "patterns/22-observability/high-cardinality-metrics.md",
-    "focus": ""
+    "focus": "",
+    "status": "deferred",
+    "reason": "Permanently deferred. No real, independently verifiable named source has been found for this pattern that does not require inventing an unbounded label or tag taxonomy. Authoring it from an invented taxonomy would violate the repo's own no-fabrication rule. Never self-author until a real, citable source is found. status deferred means this entry is tracked but does not count toward the published, planned, or target numbers anywhere in the repository."
   },
   {
     "name": "Windowing",
     "slug": "windowing",
     "category": "stream processing",
     "path": "patterns/24-stream-processing/windowing.md",
-    "focus": ""
+    "focus": "",
+    "status": "deferred",
+    "reason": "Flagged QUEUE COLLISION by tools/check-duplicates.py against the published patterns/13-frontend-ui/virtual-list.md, matched via the shared term Windowing. Deferred pending a human decision on whether stream-processing windowing needs a distinct entry or should be folded into the existing one. Never self-resolve. status deferred means this entry is tracked but does not count toward the published, planned, or target numbers anywhere in the repository."
   },
   {
     "name": "Context Window Auto-Compaction",
     "slug": "context-window-auto-compaction",
     "category": "ai agentic",
     "path": "patterns/17-ai-agentic/context-window-auto-compaction.md",
-    "focus": ""
+    "focus": "",
+    "status": "deferred",
+    "reason": "Deferred as a likely conceptual duplicate of the published patterns/17-ai-agentic/memory-compaction.md entry, both covering the same problem of an agent's accumulated conversation growing past a usable size. This is a recorded human judgment call, not a tool-verified duplicate. tools/check-duplicates.py only matches literal name, slug, or alias terms against published and historical entries, and it currently reports no collision for this slug. Never self-author without first confirming the overlap against memory-compaction.md is genuine. status deferred means this entry is tracked but does not count toward the published, planned, or target numbers anywhere in the repository."
   }
 ]

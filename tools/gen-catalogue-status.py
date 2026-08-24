@@ -28,12 +28,18 @@ FRONTMATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 VALID_MATURITY = {"canonical", "established", "emerging", "contested", "deprecated"}
 
 FAMILY_ORIGIN = {
-    "01-design-patterns-gof": ("Design Patterns (GoF)", "Gamma, Helm, Johnson, Vlissides 1994"),
+    "01-design-patterns-gof": (
+        "Design Patterns (GoF)",
+        "Gamma, Helm, Johnson, Vlissides 1994",
+    ),
     "02-code-smells": ("Code Smells", "Fowler and Beck, Refactoring"),
     "03-refactoring": ("Refactoring Techniques", "Fowler, Refactoring 2nd ed"),
     "04-principles-and-laws": ("Principles and Laws", "Martin, Larman, Brewer, Conway"),
     "05-architectural": ("Architectural Patterns", "Buschmann POSA 1, Bass SEI"),
-    "06-enterprise-application-architecture": ("Enterprise Application Architecture", "Fowler, PoEAA"),
+    "06-enterprise-application-architecture": (
+        "Enterprise Application Architecture",
+        "Fowler, PoEAA",
+    ),
     "07-integration": ("Enterprise Integration", "Hohpe and Woolf"),
     "08-cloud-distributed": ("Cloud and Distributed", "Azure Architecture Center"),
     "09-concurrency": ("Concurrency and Parallelism", "Schmidt POSA 2"),
@@ -132,7 +138,7 @@ def planned_by_family(published_paths: set[str]) -> dict[str, int]:
     queue = json.loads(QUEUE_PATH.read_text())
     counts: dict[str, int] = {}
     for e in queue:
-        if e["path"] in published_paths:
+        if e["path"] in published_paths or e.get("status") == "deferred":
             continue
         family = Path(e["path"]).parts[1]
         counts[family] = counts.get(family, 0) + 1
@@ -257,9 +263,17 @@ def rewrite_readme(
         f"![Families](https://img.shields.io/badge/families-{len(rows)}-informational)",
         text,
     )
+    if total_target == total_pub:
+        entries_label = f"{total_pub}%20published"
+        entries_color = "brightgreen"
+    else:
+        entries_label = (
+            f"{total_pub}%20published%20%2F%20{total_target}%20planned"
+        )
+        entries_color = "yellow"
     text = re.sub(
         r"!\[Entries\]\(https://img\.shields\.io/badge/entries-[^)]+\)",
-        f"![Entries](https://img.shields.io/badge/entries-{total_pub}%20published%20%2F%20{total_target}%20planned-yellow)",
+        f"![Entries](https://img.shields.io/badge/entries-{entries_label}-{entries_color})",
         text,
     )
 
@@ -268,9 +282,6 @@ def rewrite_readme(
     dynamic_block = "\n".join(
         [
             "![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)",
-            "![Schema version](https://img.shields.io/badge/schema-v1.0-informational)",
-            f"![Published entries](https://img.shields.io/badge/published-{total_pub}-brightgreen)",
-            f"![Planned entries](https://img.shields.io/badge/planned-{total_target - total_pub}-lightgrey)",
             f"![Catalogue completion](https://img.shields.io/badge/completion-{completion}%25-yellow)",
             f"![References checked](https://img.shields.io/badge/references%20checked-{refs}-brightgreen)",
             f"![Stale entries](https://img.shields.io/badge/stale%20entries-{stale}-brightgreen)",
@@ -297,10 +308,10 @@ def rewrite_readme(
     new_table = "\n".join(table_lines)
 
     pattern = re.compile(
-        r"(## The families\n\n)\| # \| Family \|.*?\n\n(?=Family 04)",
+        r"\| # \| Family \| Origin \| Published \| Planned \| Target \|\n\|---\|---\|---\|---\|---\|---\|\n.*?\n\n(?=Family 04)",
         re.S,
     )
-    text = pattern.sub(lambda m: m.group(1) + new_table + "\n\n", text)
+    text = pattern.sub(new_table + "\n\n", text)
 
     README_PATH.write_text(text)
 

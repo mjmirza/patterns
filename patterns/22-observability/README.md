@@ -2,7 +2,7 @@
 
 Origin. OpenTelemetry, RED and USE methods
 
-7 entries, 25,620 words, 1 more planned, 8 total when the family is complete. Every entry carries all 18
+7 entries, 25,620 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Structural
@@ -16,12 +16,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Structured Logging](structured-logging.md) | canonical | 3,327 | A traditional log line is a sentence written for a human eye, something like a request failed for user 42 after 300 milliseconds. |
 | [Synthetic Monitoring](synthetic-monitoring.md) | canonical | 3,746 | A team wants to know when a system is broken before a person using it finds out first, and it wants that signal even during a quiet period when little or no real traffic is ... |
 | [USE Method](use-method.md) | canonical | 3,386 | When a system is running slowly, the obvious first instinct is to start with application level profiling, reading through code paths, adding instrumentation, and guessing at what ... |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- High-Cardinality Metrics
 
 ## Reading order
 

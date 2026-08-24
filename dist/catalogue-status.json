@@ -1,9 +1,9 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
   "published_total": 890,
-  "target_total": 893,
+  "target_total": 890,
   "families_total": 29,
-  "families_complete": 26,
+  "families_complete": 29,
   "stale_entries": 0,
   "references_checked": 5067,
   "rows": [
@@ -227,9 +227,9 @@
       "name": "AI and Agentic",
       "origin": "Papers and vendor engineering, 2023 to 2026",
       "published": 65,
-      "planned": 1,
-      "target": 66,
-      "percent": 98.5,
+      "planned": 0,
+      "target": 65,
+      "percent": 100.0,
       "maturity": {
         "established": 46,
         "emerging": 9,
@@ -293,9 +293,9 @@
       "name": "Observability",
       "origin": "OpenTelemetry, RED and USE methods",
       "published": 7,
-      "planned": 1,
-      "target": 8,
-      "percent": 87.5,
+      "planned": 0,
+      "target": 7,
+      "percent": 100.0,
       "maturity": {
         "canonical": 7
       }
@@ -318,9 +318,9 @@
       "name": "Stream Processing",
       "origin": "Dataflow model, Kafka docs",
       "published": 7,
-      "planned": 1,
-      "target": 8,
-      "percent": 87.5,
+      "planned": 0,
+      "target": 7,
+      "percent": 100.0,
       "maturity": {
         "established": 5,
         "canonical": 2

@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-65 entries, 495,888 words, 1 more planned, 66 total when the family is complete. Every entry carries all 18
+65 entries, 495,888 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -129,12 +129,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Agent Debate](agent-debate.md) | established | 6,739 | A single model call, even a large capable one, has three structural weaknesses that a reader can observe directly. |
 | [Evaluator-Optimizer](evaluator-optimizer.md) | established | 9,063 | A single LLM call is a single roll of the dice against a task that has more than one way to go wrong. |
 | [Routing](routing.md) | canonical | 8,158 | A single LLM call, driven by one prompt, is asked to handle every shape of input a system receives. |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Context Window Auto-Compaction
 
 ## Reading order
 
