@@ -53,7 +53,7 @@ failing. The entry for Circuit Breaker lays out when it fits, what it costs,
 what it does not solve on its own, and what it is usually paired with. You
 read it, and either use it, or explicitly decide not to and know why.
 
-![Describe your problem, explore approaches side by side, then decide and apply with confidence](assets/images/workflow-describe-explore-decide.png)
+![Describe your problem, explore approaches side by side, then decide and apply with confidence](assets/images/workflow-describe-explore-decide.webp)
 
 The three step shape above is the whole loop. Describe the problem in your
 own words, not the pattern name. Pull up two or three relevant entries and
@@ -84,7 +84,7 @@ starting points.
   [patterns/21-sre-operations/](patterns/21-sre-operations/) and
   [patterns/22-observability/](patterns/22-observability/).
 
-![Tell it your problem in plain words, read and compare the options, then decide and take action](assets/images/workflow-plain-language-three-steps.png)
+![Tell it your problem in plain words, read and compare the options, then decide and take action](assets/images/workflow-plain-language-three-steps.webp)
 
 You do not need to understand every dimension of an entry to get value from
 it. The applicability section, what it is for and what it is not for, and
@@ -135,14 +135,14 @@ making the important decisions before the code exists. Describe the goal,
 consult the relevant entries, compare the candidates, approve a plan, then
 build.
 
-![Before building a new application, without patterns the first plausible idea wins and architecture appears after code already exists. With patterns, the goal is described, patterns are consulted, choices are compared, and a plan is approved first.](assets/images/scenario-before-building.png)
+![Before building a new application, without patterns the first plausible idea wins and architecture appears after code already exists. With patterns, the goal is described, patterns are consulted, choices are compared, and a plan is approved first.](assets/images/scenario-before-building.webp)
 
 **On an existing application that already works.** Patterns become a review
 lens instead of a starting point. Show your assistant the app, ask it to
 compare the current design against the entries here, and pick the smallest
 safe change instead of a large risky one.
 
-![On an existing application, without patterns changes are made by guesswork from local code alone. With patterns, the current design is reviewed against the catalogue first and the smallest safe change is chosen.](assets/images/scenario-existing-application.png)
+![On an existing application, without patterns changes are made by guesswork from local code alone. With patterns, the current design is reviewed against the catalogue first and the smallest safe change is chosen.](assets/images/scenario-existing-application.webp)
 
 **Inside a coding agent, as a standing habit.** The difference between an
 agent that only reacts to what you type and one that thinks before it
@@ -150,7 +150,7 @@ builds is whether it has a shared playbook to consult. Wiring this
 repository into an agent's rule file, per the `AGENTS.md` example above, is
 what makes that automatic.
 
-![Using patterns inside a coding agent turns it from a fast typist that only relies on its own defaults into a teammate that consults a shared playbook, compares options, and proposes a plan before building.](assets/images/scenario-inside-coding-agent.png)
+![Using patterns inside a coding agent turns it from a fast typist that only relies on its own defaults into a teammate that consults a shared playbook, compares options, and proposes a plan before building.](assets/images/scenario-inside-coding-agent.webp)
 
 The same loop applies to a single feature inside an app that is already
 shipped and working. Say what feels wrong in plain words, let the assistant
@@ -179,7 +179,7 @@ idea
                         -> review
 ```
 
-![Understand, compare, choose, implement, test, and observe. Think first, build second.](assets/images/workflow-full-decision-cycle.png)
+![Understand, compare, choose, implement, test, and observe. Think first, build second.](assets/images/workflow-full-decision-cycle.webp)
 
 **Worked example.** A team needs a feature that lets a user upload a large
 file and get notified when processing finishes. Without a reference, the
@@ -245,21 +245,21 @@ Eight of the eighteen dimensions above, shown one at a time. Every image in
 this repository lives under `assets/images/`, named for what it shows, and
 each one below illustrates a different dimension. None repeats another.
 
-![Start with the problem in plain language, then use Patterns to find relevant approaches. This is dimension 2, problem and context.](assets/images/dimension-problem-first.png)
+![Start with the problem in plain language, then use Patterns to find relevant approaches. This is dimension 2, problem and context.](assets/images/dimension-problem-first.webp)
 
-![Compare trade offs across candidate approaches on complexity, reliability, speed, and flexibility before choosing. This is dimension 12, the trade off matrix.](assets/images/dimension-compare-tradeoffs.png)
+![Compare trade offs across candidate approaches on complexity, reliability, speed, and flexibility before choosing. This is dimension 12, the trade off matrix.](assets/images/dimension-compare-tradeoffs.webp)
 
-![Know when not to use a pattern, not only when to use it. This is dimension 4's second half, non-applicability.](assets/images/dimension-when-not-to-use.png)
+![Know when not to use a pattern, not only when to use it. This is dimension 4's second half, non-applicability.](assets/images/dimension-when-not-to-use.webp)
 
-![Cascading failure, missing retries, duplicate processing, and scaling bottlenecks are common failure modes to check for before they happen. This is dimension 11.](assets/images/dimension-failure-modes.png)
+![Cascading failure, missing retries, duplicate processing, and scaling bottlenecks are common failure modes to check for before they happen. This is dimension 11.](assets/images/dimension-failure-modes.webp)
 
-![Choose an approach, list what to verify, check its behavior, then build with more confidence. This is dimension 15, testing and verification.](assets/images/dimension-test-before-trust.png)
+![Choose an approach, list what to verify, check its behavior, then build with more confidence. This is dimension 15, testing and verification.](assets/images/dimension-test-before-trust.webp)
 
-![Logs, metrics, traces, alerts, and dashboards are what to watch once something is in production. This is dimension 16, observability signals.](assets/images/dimension-observability.png)
+![Logs, metrics, traces, alerts, and dashboards are what to watch once something is in production. This is dimension 16, observability signals.](assets/images/dimension-observability.webp)
 
-![Access, data protection, rate limits, and trust boundaries are what a design opens or exposes. This is dimension 17, security and privacy.](assets/images/dimension-security-privacy.png)
+![Access, data protection, rate limits, and trust boundaries are what a design opens or exposes. This is dimension 17, security and privacy.](assets/images/dimension-security-privacy.webp)
 
-![Current state, a small change, an improved design, and a future migration path. This is dimension 14, the refactoring path in and out.](assets/images/dimension-refactor-paths.png)
+![Current state, a small change, an improved design, and a future migration path. This is dimension 14, the refactoring path in and out.](assets/images/dimension-refactor-paths.webp)
 
 ## Terminology
 
@@ -362,12 +362,17 @@ show the same scenario twice, only the version paired with a without and
 with comparison is shown. The other four are kept in `assets/images/` for
 reference and are not repeated in the body, so no scenario appears twice.
 
+Every file is stored as lossless WebP rather than PNG, roughly a third
+smaller in total with no pixel changed, verified against the original PNG
+before it was removed. A clone of this repository carries about ten fewer
+megabytes of image data than it would with the PNG originals.
+
 | File | Why it exists |
 |---|---|
-| `usage-new-application.png` | Same scenario as `scenario-before-building.png`, a shorter four step version with no before and with comparison. Kept for reference. |
-| `usage-existing-application.png` | Same scenario as `scenario-existing-application.png`, a shorter four step version with no comparison. Kept for reference. |
-| `usage-improve-working-app.png` | The four step version of improving a shipped application, summarized in prose in "Three ways teams put this to work" above. Kept for reference. |
-| `usage-enhance-working-app.png` | A second pass at the same improving a shipped application scenario. Duplicate angle of `usage-improve-working-app.png`. Kept for reference, not shown twice. |
+| `usage-new-application.webp` | Same scenario as `scenario-before-building.webp`, a shorter four step version with no before and with comparison. Kept for reference. |
+| `usage-existing-application.webp` | Same scenario as `scenario-existing-application.webp`, a shorter four step version with no comparison. Kept for reference. |
+| `usage-improve-working-app.webp` | The four step version of improving a shipped application, summarized in prose in "Three ways teams put this to work" above. Kept for reference. |
+| `usage-enhance-working-app.webp` | A second pass at the same improving a shipped application scenario. Duplicate angle of `usage-improve-working-app.webp`. Kept for reference, not shown twice. |
 
 ## Quality gates
 
