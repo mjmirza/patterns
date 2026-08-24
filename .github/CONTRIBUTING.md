@@ -96,5 +96,5 @@ discusses those exact strings.
 ## License
 
 By contributing, you agree your contribution is licensed under this
-repository's CC BY 4.0 license (see `LICENSE`), and that you have the right to
-license it that way.
+repository's OpenRoots Agent License 1.0 (see `LICENSE`), and that you have
+the right to license it that way.
