@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-42 entries, 327,241 words. Every entry carries all 18
+42 entries, 327,228 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -30,7 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [ACID](acid.md) | canonical | 7,029 | A database serves many concurrent operations against shared, durable state. |
 | [BASE](base.md) | canonical | 8,219 | A system holds one logical piece of data on more than one physical machine, because a single machine cannot serve the read and write volume, cannot survive its own failure, or ... |
 | [CAP Theorem](cap-theorem.md) | canonical | 7,623 | A system holds one piece of mutable state that more than one machine can read and write, and those machines are connected by a network that is not perfectly reliable. |
-| [Common Closure Principle](common-closure-principle.md) | canonical | 7,574 | A codebase reaches the size where a single flat namespace of classes stops being a unit anyone can reason about, and the team splits it into smaller compilation and deployment ... |
+| [Common Closure Principle](common-closure-principle.md) | canonical | 7,561 | A codebase reaches the size where a single flat namespace of classes stops being a unit anyone can reason about, and the team splits it into smaller compilation and deployment ... |
 | [Composition over Inheritance](composition-over-inheritance.md) | canonical | 6,930 | A designer needs an object to have several independent, combinable behaviours, and reaches for a single class hierarchy to express all of them. |
 | [Controller](controller.md) | canonical | 6,874 | A team wiring a new interaction into an object-oriented system reaches a concrete, recurring question the moment a user clicks a button, submits a form, or an external system ... |
 | [Conway's Law](conway-law.md) | canonical | 7,751 | A team is asked to build a system with several distinct concerns. |

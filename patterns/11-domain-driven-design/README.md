@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-35 entries, 264,811 words. Every entry carries all 18
+35 entries, 264,620 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -21,7 +21,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Event Storming](event-storming.md) | established | 8,210 | A team is about to build software for a business domain nobody on the team fully understands alone. |
+| [Event Storming](event-storming.md) | established | 8,206 | A team is about to build software for a business domain nobody on the team fully understands alone. |
 | [Process Manager](process-manager.md) | canonical | 8,296 | A business process spans more than one service, more than one aggregate, or more than one external system, and it cannot complete in a single local transaction. |
 
 ## Domain-Driven Design
@@ -33,10 +33,10 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Application Service](application-service.md) | canonical | 7,949 | A rich domain model, built from entities, value objects, and aggregates that enforce their own invariants, still needs a caller. |
 | [Domain Service](domain-service.md) | canonical | 7,032 | A team modeling a domain in an object-oriented style eventually meets an operation that genuinely spans more than one object and does not belong to either. |
 | [Factory](factory.md) | canonical | 8,338 | A domain model accumulates two kinds of complexity as it grows. |
-| [Module](module.md) | canonical | 7,323 | A domain model that stays in one undifferentiated pile of classes becomes unreadable long before it becomes incorrect. |
+| [Module](module.md) | canonical | 7,280 | A domain model that stays in one undifferentiated pile of classes becomes unreadable long before it becomes incorrect. |
 | [Repository](repository.md) | canonical | 6,776 | A domain layer needs to load and save the objects it works with, but the code that expresses business rules should not know whether an order lives in PostgreSQL, in a document ... |
 | [Specification](specification.md) | canonical | 7,066 | A domain accumulates rules that decide whether an object qualifies for something. |
-| [Value Object](value-object.md) | canonical | 7,610 | A domain model accumulates concepts that are not things, they are measurements, descriptions, or quantities. |
+| [Value Object](value-object.md) | canonical | 7,547 | A domain model accumulates concepts that are not things, they are measurements, descriptions, or quantities. |
 
 ## Domain-Driven Design, Strategic
 
@@ -68,7 +68,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Context Map](context-map.md) | canonical | 7,294 | A system reaches a certain size and a certain number of contributing teams before a single, internally consistent domain model stops being achievable. |
 | [Core Domain](core-domain.md) | canonical | 6,670 | A team building a non-trivial system faces a resource allocation problem long before it faces a technical one. |
 | [Customer-Supplier](customer-supplier.md) | canonical | 7,914 | Any system large enough to be split across more than one Bounded Context, see the bounded-context entry in this repository, produces integration points where one context's model ... |
-| [Open Host Service](open-host-service.md) | canonical | 9,358 | A bounded context that has real internal complexity attracts multiple downstream consumers over time. |
+| [Open Host Service](open-host-service.md) | canonical | 9,277 | A bounded context that has real internal complexity attracts multiple downstream consumers over time. |
 | [Partnership](partnership.md) | canonical | 7,024 | Two teams each own a Bounded Context, and the two Contexts must integrate, but neither team can honestly claim to be upstream of the other. |
 | [Separate Ways](separate-ways.md) | canonical | 9,250 | A team splits a system into more than one Bounded Context for good reasons, because two departments' vocabularies genuinely diverge, because two teams cannot coordinate closely ... |
 | [Shared Kernel](shared-kernel.md) | canonical | 7,403 | Two Bounded Contexts model a piece of the domain in a compatible way, not because either team designed it that way on purpose, but because the concept genuinely is the same ... |
