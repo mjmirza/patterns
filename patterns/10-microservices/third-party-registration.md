@@ -81,46 +81,37 @@ The Service Registry is the datastore of currently available instances and their
 ## 6. Diagram
 
 ```
-+------------------------------------------------------------------+
-|                     Deployment Host / Cluster                    |
-|                                                                    |
-|   +-----------------+   +-----------------+   +-----------------+ |
-|   | Service Instance |   | Service Instance |   | Service Instance| |
-|   |   (unmodified)    |   |   (unmodified)    |   |   (unmodified)   | |
-|   |  no registration   |   |  no registration   |   |  no registration  | |
-|   |     client code     |   |     client code     |   |     client code    | |
-|   +---------+---------+   +---------+---------+   +---------+--------+ |
-|             |  container lifecycle events (start / stop / health)  |
-|             v                       v                       v      |
-|      +---------------------------------------------------------+  |
-|      |         Container / Orchestrator Runtime Events           |  |
-|      |     (Docker Engine events, Marathon events, Mesos API)    |  |
-|      +----------------------------+------------------------------+  |
-|                                    |                                 |
-|                                    v                                 |
-|                       +------------------------+                    |
-|                       |       Registrar         |                   |
-|                       |  (third party component) |                   |
-|                       |  e.g. Registrator, Prana,  |                  |
-|                       |  a custom watcher process  |                  |
-|                       +-----------+--------------+                   |
-|                                   |                                  |
-|                                   | register(instance, address, port) |
-|                                   | deregister(instance)              |
-|                                   v                                  |
-|                       +------------------------+                    |
-|                       |     Service Registry     |                  |
-|                       |   (Consul / etcd / ZK)    |                  |
-|                       +-----------+--------------+                  |
-|                                   ^                                 |
-|                                   | query registered instances       |
-+-----------------------------------|---------------------------------+
-                                     |
-                        +------------+-------------+
-                        |    Discovery Client         |
-                        |  (client side or server     |
-                        |   side discovery consumer)  |
-                        +----------------------------+
+Deployment Host / Cluster
+
++------------------------------------------------------------+
+| Service Instance (unmodified, no registration client code) |
++------------------------------------------------------------+
+(three such instances, each identical)
+     | container lifecycle events (start / stop /
+     | health)
+     v
++--------------------------------------------------+
+| Container / Orchestrator Runtime Events          |
+| Docker Engine events, Marathon events, Mesos API |
++--------------------------------------------------+
+     |
+     v
++---------------------------------------------------+
+| Registrar (third party component)                 |
+| e.g. Registrator, Prana, a custom watcher process |
++---------------------------------------------------+
+     | register(instance, address, port)
+     | deregister(instance)
+     v
++---------------------------------------+
+| Service Registry (Consul / etcd / ZK) |
++---------------------------------------+
+     ^ query registered instances
+     |
++-----------------------------------------------+
+| Discovery Client                              |
+| client side or server side discovery consumer |
++-----------------------------------------------+
 ```
 
 ## 7. Dynamics

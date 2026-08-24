@@ -201,30 +201,28 @@ compare unequal, which is exactly the limitation dimension 4 names.
 
 ## 6. ASCII structure diagram
 
-```text
-+----------------------+          +----------------------+
-|      Process P        |          |      Process Q        |
-|  local_clock: int      |          |  local_clock: int      |
-+-----------+------------+          +-----------+------------+
-            |                                    |
-            | on internal event:                  | on internal event:
-            |   local_clock += 1                   |   local_clock += 1
-            |                                    |
-            | on send(msg) event:                  |
-            |   local_clock += 1                   |
-            |   msg.timestamp = local_clock         |
-            +---------- msg [ts] --------------->  |
-                                                    |
-                                                    | on receive(msg) event:
-                                                    |   local_clock =
-                                                    |     max(local_clock,
-                                                    |         msg.timestamp) + 1
-                                                    |
-+------------------------------------------------------------------+
-|                 Clock Condition (Lamport, 1978)                    |
-|   a happened-before b   implies   C(a) < C(b)                      |
-|   C(a) < C(b)            does NOT imply   a happened-before b       |
-+------------------------------------------------------------------+
+```
++-----------------------------+
+| Process P, local_clock: int |
++-----------------------------+
+     | on internal event: local_clock += 1
+     | on send(msg) event: local_clock += 1,
+     | msg.timestamp = local_clock
+     v
+msg [ts] sent to Process Q
+
++-----------------------------+
+| Process Q, local_clock: int |
++-----------------------------+
+     | on internal event: local_clock += 1
+     | on receive(msg) event: local_clock =
+     |   max(local_clock, msg.timestamp) + 1
+
++------------------------------------------------+
+| Clock Condition (Lamport, 1978)                |
+| a happened-before b implies C(a) < C(b)        |
+| C(a) < C(b) does NOT imply a happened-before b |
++------------------------------------------------+
 ```
 
 ## 7. Dynamics

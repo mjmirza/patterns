@@ -266,32 +266,47 @@ Do not reach for a Microservice Chassis when any of the following hold.
 ## 6. ASCII structure diagram
 
 ```
-                     +-----------------------------+
-                     |   Chassis (versioned lib)    |
-                     +-------------------------------+
-                     | Config loader                |
-                     | Health check module           |
-                     | Structured logging module     |
-                     | Metrics exporter               |
-                     | Trace propagation              |
-                     | Circuit breaker wrapper         |
-                     | Auth / token validation         |
-                     | Extension points (hooks)         |
-                     +---------------+-----------------+
-                                     ^
-              depends on (compile/build time)
-        +-----------------+---------+---------+-----------------+
-        |                 |                   |                 |
-+---------------+ +---------------+   +---------------+ +---------------+
-| Order Service  | | Payment Svc    |   | Shipping Svc   | | Catalog Svc    |
-+----------------+ +----------------+   +----------------+ +----------------+
-| Domain logic   | | Domain logic    |   | Domain logic    | | Domain logic    |
-| Service config | | Service config  |   | Service config  | | Service config  |
-| Custom hooks   | | Custom hooks    |   | Custom hooks    | | Custom hooks    |
-+---------------+ +---------------+   +---------------+ +---------------+
++---------------------------+
+| Chassis (versioned lib)   |
+| Config loader             |
+| Health check module       |
+| Structured logging module |
+| Metrics exporter          |
+| Trace propagation         |
+| Circuit breaker wrapper   |
+| Auth / token validation   |
+| Extension points (hooks)  |
++---------------------------+
+     ^ depends on (compile/build time)
+     |
++----------------+
+| Order Service  |
+| Domain logic   |
+| Service config |
+| Custom hooks   |
++----------------+
++----------------+
+| Payment Svc    |
+| Domain logic   |
+| Service config |
+| Custom hooks   |
++----------------+
++----------------+
+| Shipping Svc   |
+| Domain logic   |
+| Service config |
+| Custom hooks   |
++----------------+
++----------------+
+| Catalog Svc    |
+| Domain logic   |
+| Service config |
+| Custom hooks   |
++----------------+
 
-     Each service inherits health check, logging, metrics, tracing,
-     circuit breaker, auth. Each service supplies everything else.
+Each service inherits health check, logging, metrics,
+tracing, circuit breaker, auth. Each service supplies
+everything else.
 ```
 
 ## 7. Dynamics
