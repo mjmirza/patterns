@@ -240,43 +240,30 @@ Do NOT reach for it in these cases, and the reason matters more than the rule.
 ## 6. ASCII structure diagram
 
 ```
-                         +----------------------------+
-                         |        Trigger source      |
-                         |  HTTP route / queue / blob  |
-                         |  notification / schedule    |
-                         +--------------+---------------+
-                                        |
-                                        v
-                         +----------------------------+
-                         |        Orchestrator         |
-                         |  decides. reuse a warm env,  |
-                         |  or cold-start a new one     |
-                         +--------------+---------------+
-                                        |
-                     +------------------+------------------+
-                     |                                      |
-                     v                                      v
-         +----------------------+              +----------------------+
-         |  Execution env #1     |              |  Execution env #2     |
-         |  (warm, reused)       |              |  (cold-started now)   |
-         |                        |              |                        |
-         |  +------------------+  |              |  +------------------+  |
-         |  |  Runtime          |  |              |  |  Runtime          |  |
-         |  |  +-------------+  |  |              |  |  +-------------+  |  |
-         |  |  |  Function    |  |  |              |  |  |  Function    |  |  |
-         |  |  |  handler     |  |  |              |  |  |  handler     |  |  |
-         |  |  +-------------+  |  |              |  |  +-------------+  |  |
-         |  +------------------+  |              |  +------------------+  |
-         +-----------+-----------+              +-----------+-----------+
-                     |                                      |
-                     +------------------+-------------------+
-                                        |
-                                        v
-                         +----------------------------+
-                         |     External state store     |
-                         |  database / object store /    |
-                         |  cache / message bus           |
-                         +----------------------------+
++---------------------------------------------------------------+
+| Trigger source, an HTTP route, queue, blob event, or schedule |
++---------------------------------------------------------------+
+     |
+     v
++--------------------------------------------------+
+| Orchestrator, decides: reuse a warm env, or cold-start|
++--------------------------------------------------+
+     | routes to one of two possible envs
+     v
++--------------------------------+
+| Execution env #1, warm, reused |
+| Runtime -> Function handler    |
++--------------------------------+
++------------------------------------+
+| Execution env #2, cold-started now |
+| Runtime -> Function handler        |
++------------------------------------+
+     | either env
+     v
++-------------------------------------------------+
+| External state store                            |
+| a database, object store, cache, or message bus |
++-------------------------------------------------+
 ```
 
 ## 7. Dynamics

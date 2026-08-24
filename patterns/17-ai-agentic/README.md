@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-64 entries, 492,513 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
+64 entries, 492,490 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -27,7 +27,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Input Guardrails](input-guardrails.md) | established | 8,596 | An agent built on a large language model treats every token in its context window with roughly the same weight, whether that token came from the person operating the agent, from a ... |
 | [LLM as Judge](llm-as-judge.md) | established | 7,737 | A team ships a feature whose output is open-ended text, a chat reply, a document summary, a retrieval-augmented answer, or an autonomous agent's final report. |
 | [Language Agent Tree Search](language-agent-tree-search.md) | established | 1,913 | The paper's own text names the specific limitation of the prior baseline directly, ReAct. |
-| [Late Chunking](late-chunking.md) | emerging | 8,222 | Picture a retrieval pipeline built over a long, single-narrative source, a Wikipedia article, a signed contract, a meeting transcript, a product manual. |
+| [Late Chunking](late-chunking.md) | emerging | 8,199 | Picture a retrieval pipeline built over a long, single-narrative source, a Wikipedia article, a signed contract, a meeting transcript, a product manual. |
 | [Memory Compaction](memory-compaction.md) | established | 8,946 | An agent that runs for a long time accumulates a conversation. |
 | [PII Redaction](pii-redaction.md) | established | 8,577 | An agent pipeline routinely moves text through places where a human name, an email address, a card number, or a medical record number does not belong. |
 | [Parallelization](parallelization.md) | established | 9,204 | An agentic pipeline built as a single sequential chain of LLM calls has one throughput limit, the wall-clock latency of the slowest single call multiplied by the number of calls ... |

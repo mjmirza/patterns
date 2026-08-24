@@ -2,7 +2,7 @@
 
 Origin. Category theory in practice
 
-39 entries, 240,724 words. Every entry carries all 18
+39 entries, 240,720 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Composition
@@ -47,7 +47,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Function Composition](function-composition.md) | canonical | 7,310 | A program has several small transformations that must run in a fixed order. |
 | [Functor](functor.md) | canonical | 6,739 | A codebase has many values that are not plain values. |
 | [Lazy Evaluation](lazy-evaluation.md) | canonical | 6,415 | A program has a chain of computations, but early execution would do work that may never be observed. |
-| [Lens](lens.md) | established | 6,096 | A program owns nested immutable data and needs to update a small part without losing the larger value. |
+| [Lens](lens.md) | established | 6,092 | A program owns nested immutable data and needs to update a small part without losing the larger value. |
 | [Memoization](memoization.md) | canonical | 6,478 | A program repeatedly asks the same pure question, and each answer costs more than a map lookup. |
 | [Monad](monad.md) | canonical | 6,350 | A program has computations that return values inside a policy, and later computations depend on the successful, present, parsed, or completed result of earlier computations. |
 | [Monoid](monoid.md) | canonical | 6,362 | A codebase has many places that reduce many values into one value. |

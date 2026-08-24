@@ -234,35 +234,35 @@ for library authors than for most application code.
 
 ## 6. ASCII structure diagram
 
-```text
-  +-------------------+       contains        +------------------+
-  |       Whole S     |---------------------->|      Focus A     |
-  |-------------------|                       +------------------+
-  | other fields      |                                ^
-  | focus field       |                                |
-  +-------------------+                                |
-           ^                                           |
-           | rebuilds                                  | reads
-           |                                           |
-  +-------------------+       packages        +------------------+
-  |      Updater      |<----------------------|      Getter      |
-  |-------------------|                       |------------------|
-  | set A in S -> S   |                       | get S -> A       |
-  | over A -> A       |                       +------------------+
-  +-------------------+                                ^
-           ^                                           |
-           |                                           |
-           +-------------------+-----------------------+
-                               |
-                       +---------------+
-                       |   Lens S A    |
-                       |---------------|
-                       | view          |
-                       | set           |
-                       | over          |
-                       +---------------+
+```
++--------------+
+| Whole S      |
+| other fields |
+| focus field  |
++--------------+
+     | contains
+     v
++---------+
+| Focus A |
++---------+
 
-  The lens is the reusable focus. It does not own the whole or the focus value.
++--------------------+
+| Getter, get S -> A |
++--------------------+
+     | reads Focus A out of Whole S
+
++---------------------------------------+
+| Updater, set A in S -> S, over A -> A |
++---------------------------------------+
+     | packages the Getter's read, then rebuilds Whole S
+
++---------------------------+
+| Lens S A, view, set, over |
++---------------------------+
+     | bundles the Getter and the Updater as one pair
+
+The lens is the reusable focus. It does not own the
+whole or the focus value.
 ```
 
 ## 7. Dynamics

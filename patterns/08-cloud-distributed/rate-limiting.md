@@ -249,47 +249,48 @@ from a wall into a protocol.
 ## 6. ASCII structure diagram
 
 ```
-                        ,-------------------------.
-   inbound request ---> |    Enforcement Point    |
-                        |  (gateway / middleware) |
-                        `------------+------------'
-                                     |
-             (1) key                 v
-        ,--------------------------------------------------.
-        |            Identity Extractor                    |
-        |  api key > account > session > net addr (/64)    |
-        `----------------------+---------------------------'
-                               | key
-                               v
-        ,--------------------------------------------------.
-        |            Policy Resolver                       |
-        |  route + plan -> {limit, window, burst, cost}    |
-        `----------------------+---------------------------'
-                               | key + policy
-                               v
-        ,--------------------------------------------------.
-        |            Decision Engine                       |     atomic
-        |  token bucket | leaky | fixed | log | sliding    |<--> read
-        `----------------------+---------------------------'     modify
-                               | verdict                          write
-                               |  {conform, remaining, reset,       |
-                               |   retry_after, policy_id}          v
-                               |                        ,---------------------.
-        ,----------------------+--------------.         |     Quota Store     |
-        |                                     |         | in-proc map | Redis |
-        v                                     v         |  | DynamoDB | mesh  |
-  ,-----------.                       ,---------------. `---------------------'
-  |  handler  |                       |   Response    |
-  | (admitted)|                       |   Annotator   |
-  `-----------'                       | 429 + headers |
-                                      `-------+-------'
-                                              |
-                                              v
-                                    ,---------------------.
-                                    |   Client Governor   |
-                                    | wait, jitter, self  |
-                                    | throttle, retry     |
-                                    `---------------------'
++------------------------------------------+
+| Enforcement Point, gateway or middleware |
++------------------------------------------+
+     ^ inbound request
+     |
+     v
++-----------------------------------------------------+
+| Identity Extractor                                  |
+| api key over account over session over /64 net addr |
++-----------------------------------------------------+
+     | key
+     v
++--------------------------------------------+
+| Policy Resolver                            |
+| route + plan -> limit, window, burst, cost |
++--------------------------------------------+
+     | key + policy
+     v
++-----------------------------------------------+
+| Decision Engine                               |
+| token bucket, leaky, fixed, log, or sliding   |
+| reads and modifies the Quota Store atomically |
++-----------------------------------------------+
+     | verdict, conform or deny, plus remaining,
+     | reset, retry_after, and policy_id
+     v
+conform? yes -> handler (admitted)
+conform? no  -> Response Annotator
+
++-------------------------------------------+
+| Response Annotator, sets 429 plus headers |
++-------------------------------------------+
+     |
+     v
++---------------------------------------------+
+| Client Governor                             |
+| waits, adds jitter, self-throttles, retries |
++---------------------------------------------+
+
+The Decision Engine's atomic read, modify, write cycle
+runs against the Quota Store, an in-process map, Redis,
+DynamoDB, or a mesh sidecar, held out of this chain.
 ```
 
 ## 7. Dynamics

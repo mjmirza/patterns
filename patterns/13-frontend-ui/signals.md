@@ -114,19 +114,20 @@ Signals have two structural parts.
 ## 6. ASCII structure diagram
 
 ```
-    count = signal(0)              (the signal itself)
+count = signal(0)              (the signal itself)
 
-              |
-              v  read inside a reactive context
+          |
+          v  read inside a reactive context
 
-    <span>{count}</span>            (a subscriber, a rendered UI fragment)
-    doubled = computed(() => count.value * 2)   (a subscriber, a derived value)
+<span>{count}</span>          (a subscriber, a UI fragment)
+doubled = computed(() => count.value * 2)
+                               (a subscriber, a derived value)
 
-              |
-              v  count.value = 1
+          |
+          v  count.value = 1
 
-    Only the subscribers that actually read count re-evaluate.
-    A sibling component that never reads count does not re-render.
+Only the subscribers that actually read count re-evaluate.
+A sibling component that never reads count does not re-render.
 ```
 
 ## 7. Dynamics

@@ -139,23 +139,22 @@ would have read at the time.
 ## 6. ASCII structure diagram
 
 ```
-Partition (append-only log, growing right)
+Partition, an append-only log, growing left to right
 
- head                                                    tail
- (oldest, subject to retention)              (newest, producer appends here)
-   |                                                        |
-   v                                                        v
- +----+----+----+----+----+----+----+----+----+----+----+----+
- | 0  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 |  --> new records
- +----+----+----+----+----+----+----+----+----+----+----+----+
-             ^                        ^                  ^
-             |                        |                  |
-   Consumer Group B            Consumer Group A    Consumer Group C
-   offset 1, replaying         offset 8, caught up  offset 11, just joined
-   from near the start                              (auto.offset.reset=earliest
-                                                       would instead seek to 0)
+head, oldest, subject to retention
+tail, newest, producer appends here
 
-Three independent groups, three independent cursors, one unchanged log.
+records:  0  1  2  3  4  5  6  7  8  9  10  11
+                                              ^
+                                    new records land here
+
+Consumer Group B, offset 1, replaying from near the start
+Consumer Group A, offset 8, caught up
+Consumer Group C, offset 11, just joined
+  (auto.offset.reset=earliest would instead seek to 0)
+
+Three independent groups, three independent cursors, one
+unchanged log.
 ```
 
 ## 7. Dynamics
