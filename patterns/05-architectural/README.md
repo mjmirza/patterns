@@ -2,7 +2,7 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-31 entries, 248,947 words. Every entry carries all 18
+31 entries, 248,931 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
@@ -30,7 +30,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Multi-Tenant Architecture](multi-tenant-architecture.md) | canonical | 5,015 | A SaaS provider serves many customers, called tenants, from one running application. |
 | [Onion Architecture](onion-architecture.md) | canonical | 8,637 | A team builds a business application against a specific database, a specific web framework, and a specific set of third party integrations, because those are the concrete ... |
 | [Peer-to-Peer](peer-to-peer.md) | canonical | 8,950 | A system needs many participants to exchange data or share work, and at least one of the following forces makes a single, dedicated server the wrong place to put that coordination. |
-| [Pipeline Architecture](pipeline-architecture.md) | canonical | 8,757 | A system needs to transform a stream of data through a sequence of independent processing steps, and the set of steps, their order, or their implementation is expected to change ... |
+| [Pipeline Architecture](pipeline-architecture.md) | canonical | 8,741 | A system needs to transform a stream of data through a sequence of independent processing steps, and the set of steps, their order, or their implementation is expected to change ... |
 | [Pipes and Filters](pipes-filters.md) | canonical | 7,870 | A system must transform a stream of data through several independent processing steps, and the set of steps, their order, or the data source itself is expected to change over the ... |
 | [Plugin Architecture](plugin-architecture.md) | canonical | 7,823 | An application needs to support a set of behaviours that is open-ended, unknown at the time the core is built, and likely to be supplied by parties who are not the core's own ... |
 | [Plugin Sandbox](plugin-sandbox.md) | established | 10,826 | A host application defines an extension point, using Plugin Architecture or Microkernel, so that its behavior can grow without every new feature being merged into the core ... |

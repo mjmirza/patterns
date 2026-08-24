@@ -2,7 +2,7 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-30 entries, 217,034 words. Every entry carries all 18
+30 entries, 217,028 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Test Data
@@ -19,7 +19,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Dummy](dummy.md) | canonical | 6,529 | A constructor, a factory function, or a method signature requires an argument of a particular type, but the code path being exercised by a specific test does not use that argument ... |
 | [Fake](fake.md) | canonical | 6,405 | A piece of code depends on a collaborator that is real, correct, and slow, or real, correct, and hard to set up. |
 | [Mock](mock.md) | canonical | 6,136 | A unit of code under test calls a method on a collaborator, and the whole reason the test exists is to prove that call happens, with the right arguments, in the right ... |
-| [Stub](stub.md) | canonical | 9,016 | Code under test frequently depends on something the test cannot, or should not, use as it really behaves. |
+| [Stub](stub.md) | canonical | 9,010 | Code under test frequently depends on something the test cannot, or should not, use as it really behaves. |
 
 ## Test Structure
 

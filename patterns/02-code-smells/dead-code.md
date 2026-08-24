@@ -270,41 +270,46 @@ indistinguishable, to the next reader, from a claim that happens to be wrong.
 ## 6. ASCII structure diagram
 
 ```
-                        REACHABILITY GRAPH
-                        ===================
+REACHABILITY GRAPH
 
-  entry points                 live subgraph            dead subgraph
-  -------------                --------------            -------------
+Entry points: main(), httpRoute /orders, cronJob nightly
 
-  main() ----+                 +--> handleOrder()        applyLegacyDiscount()
-             |                 |         |                    (no incoming edge
-  httpRoute  +---> dispatch() -+--> applyTax()                 from any entry
-  /orders                      |         |                     point below)
-             |                 +--> validate()
-  cronJob    |
-  nightly    +---> reconcile()-+--> readLedger()          [dead subgraph has
-                                |                            zero paths back
-                                +--> writeLedger()           to any entry point]
+main() and httpRoute /orders both call dispatch(), which
+calls:
+  handleOrder()
+  applyTax()
+  validate()
+
+cronJob nightly calls reconcile(), which calls:
+  readLedger()
+  writeLedger()
+
+This is the live subgraph, every function above has a path
+back to an entry point.
+
+Dead subgraph: applyLegacyDiscount(). No incoming edge from
+any entry point above, zero paths back to any entry point.
 
 
-                        GUARD-GATED BRANCH
-                        ===================
+GUARD-GATED BRANCH
 
-  process(order)
-       |
-       v
-  +---------------------------+
-  | if legacyFlag.isEnabled() |   <-- legacyFlag hardcoded false
-  |     doLegacyPath(order)   |       in every environment since
-  | else                      |       the rollout finished
-  |     doCurrentPath(order)  |
-  +---------------------------+
-         |             |
-         v             v
-   doLegacyPath   doCurrentPath   <-- structurally reachable,
-   (dead: guard   (live: the      practically dead, needs the
-    never true)    only path      guard's known value as evidence,
-                    taken)        not the call graph alone
+process(order)
+     |
+     v
+if legacyFlag.isEnabled():
+    doLegacyPath(order)
+else:
+    doCurrentPath(order)
+
+legacyFlag is hardcoded false in every environment since the
+rollout finished.
+
+doLegacyPath: dead, guard never true.
+doCurrentPath: live, the only path actually taken.
+
+doLegacyPath is structurally reachable but practically dead,
+needs the guard's known value as evidence, not the call
+graph alone.
 ```
 
 ## 7. Dynamics

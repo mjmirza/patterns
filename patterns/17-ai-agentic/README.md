@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-64 entries, 492,522 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
+64 entries, 492,513 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -85,7 +85,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Agent Handoff](agent-handoff.md) | established | 8,432 | A team building an LLM-driven assistant for a domain with more than one kind of request quickly runs into a shape problem. |
-| [Hierarchical Agents](hierarchical-agents.md) | established | 9,783 | A single agent with a tool belt and a large context window handles a surprising amount of real work, and the correct starting point for almost any agentic system is exactly that ... |
+| [Hierarchical Agents](hierarchical-agents.md) | established | 9,774 | A single agent with a tool belt and a large context window handles a surprising amount of real work, and the correct starting point for almost any agentic system is exactly that ... |
 | [Orchestrator-Worker](orchestrator-worker.md) | established | 10,095 | A task arrives whose internal shape cannot be known until the model has already looked at it. |
 | [Sub-Agent Isolation](sub-agent-isolation.md) | established | 9,798 | An agent delegates a subtask to another agent, and the subtask involves work whose intermediate output the delegating agent will never need again. |
 

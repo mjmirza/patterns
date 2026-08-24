@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-28 entries, 221,153 words. Every entry carries all 18
+28 entries, 221,119 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -11,7 +11,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Data Clumps](data-clumps.md) | canonical | 5,832 | The smell shows up first in method signatures. |
 | [Duplicate Code](duplicate-code.md) | canonical | 8,029 | The same idea is written down twice, or more, in a codebase, so that changing the idea means finding and editing every copy. |
-| [Large Class](large-class.md) | canonical | 9,844 | A class keeps absorbing new fields and new methods until it is doing the job of what should have been five or six separate collaborators. |
+| [Large Class](large-class.md) | canonical | 9,817 | A class keeps absorbing new fields and new methods until it is doing the job of what should have been five or six separate collaborators. |
 | [Lazy Class](lazy-class.md) | canonical | 7,708 | A codebase accretes classes over time for reasons that have nothing to do with present-day need. |
 | [Long Method](long-method.md) | canonical | 7,675 | A method starts small. It does one clear thing, and its name says what that thing is. |
 
@@ -28,7 +28,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Comments](comments.md) | canonical | 8,795 | A comment is a message from one point in time to a later reader, and it is never checked by anything that runs. |
-| [Dead Code](dead-code.md) | canonical | 9,473 | Dead code accumulates as an ordinary, unavoidable byproduct of change. |
+| [Dead Code](dead-code.md) | canonical | 9,466 | Dead code accumulates as an ordinary, unavoidable byproduct of change. |
 | [Long Parameter List](long-parameter-list.md) | canonical | 7,502 | A function, method, or constructor accumulates parameters over its lifetime, usually one at a time, usually each addition individually reasonable, until the call site becomes ... |
 | [Loops](loops.md) | canonical | 8,826 | A loop is the most flexible construct available in an imperative language. |
 | [Middle Man](middle-man.md) | canonical | 7,237 | The smell shows up during evolution, almost never at the moment a class is first written. |
