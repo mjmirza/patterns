@@ -15616,6 +15616,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - starting point. The observable symptom is a system with several named agent
 - / Symptom / Cause / Fix /
 
+#### [Speculative Decoding](../patterns/17-ai-agentic/speculative-decoding.md)
+
+**Core Problem:** Autoregressive inference in Transformer-based language models proceeds token by token. Generating each token requires fetching billions of model parameters from High Bandwidth Memory (HBM) into GPU compute units. During the decoding phase (where sequence batch size or context length is modest relative to parameter scale), execution is severely memory-bandwidth bound rather than compute bound. Tensor cores spend significant clock cycles waiting for parameter weights to arrive from memory.
+
 #### [Structured Output](../patterns/17-ai-agentic/structured-output.md)
 
 **Core Problem:** A program that calls a large language model eventually has to do something with the words that come back. If the next step is a person reading the words, near enough is good enough, a sentence that trails off oddly or uses an unexpected synonym rarely breaks anything. If the next step is code, near enough is not good enough. A price extraction pipeline needs a number in a field named total, not a paragraph that happens to contain a price somewhere in the middle of a sentence. A support ticket router needs one of a fixed set of category strings, not a category the model half invents by combining two real ones. A tool-calling agent needs an argument object whose keys exactly match the function signature the calling code is about to parse and unpack, because a missing key or a string where an integer was expected raises an exception three stack frames from where the mistake actually happened.

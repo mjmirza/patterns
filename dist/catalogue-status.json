@@ -1,7 +1,7 @@
 {
   "generated_by": "tools/gen-catalogue-status.py",
-  "published_total": 889,
-  "target_total": 892,
+  "published_total": 890,
+  "target_total": 893,
   "families_total": 29,
   "families_complete": 26,
   "stale_entries": 0,
@@ -226,14 +226,14 @@
       "family": "17-ai-agentic",
       "name": "AI and Agentic",
       "origin": "Papers and vendor engineering, 2023 to 2026",
-      "published": 64,
+      "published": 65,
       "planned": 1,
-      "target": 65,
+      "target": 66,
       "percent": 98.5,
       "maturity": {
         "established": 46,
         "emerging": 9,
-        "canonical": 9
+        "canonical": 10
       }
     },
     {
