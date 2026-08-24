@@ -196,33 +196,45 @@ than one instance per service.
 ## 6. ASCII structure diagram
 
 ```
-+------------------+                          +------------------+
-|      Client       |                          |      Server      |
-|  (calling code)   |                          | (service impl.)  |
-+---------+----------+                          +----------+-------+
-          |                                                 ^
-          | in-process call                                 | in-process call
-          v                                                 |
-+------------------+                          +------------------+
-|   Client Stub     |                          |   Server Stub    |
-| (generated proxy) |                          | (generated skel) |
-+---------+----------+                          +----------+-------+
-          |  serialize request                             ^  deserialize request
-          |  (protobuf, thrift, JSON)                       |  serialize response
-          v                                                 |
-   +--------------+       wire protocol            +--------------+
-   |  Network I/O  |<---- HTTP/1.1, HTTP/2, --------|  Network I/O |
-   |  (transport)  |      TCP, TLS                  | (transport)  |
-   +--------------+                                 +--------------+
++-----------------------+
+| Client (calling code) |
++-----------------------+
+     | in-process call
+     v
++-------------------------------+
+| Client Stub (generated proxy) |
++-------------------------------+
+     | serialize request (protobuf, thrift, JSON)
+     v
++-------------------------+
+| Network I/O (transport) |
++-------------------------+
+     | wire protocol, HTTP/1.1, HTTP/2, TCP, TLS
+     v
++-------------------------+
+| Network I/O (transport) |
++-------------------------+
+     | deserialize request
+     v
++----------------------------------+
+| Server Stub (generated skeleton) |
++----------------------------------+
+     | in-process call
+     v
++---------------------------------+
+| Server (service implementation) |
++---------------------------------+
 
-                +--------------------------+
-                |     Service Registry      |
-                |  (resolves logical name    |
-                |   -> live network address) |
-                +--------------------------+
-                        ^              ^
-                        | consulted by |
-                Client Stub        Server (registers on start)
+The response returns serialized back through the same
+chain in reverse.
+
++-----------------------------------------------+
+| Service Registry                              |
+| resolves logical name to live network address |
++-----------------------------------------------+
+
+Consulted by Client Stub before each call. Server
+registers itself on start.
 ```
 
 ## 7. Dynamics

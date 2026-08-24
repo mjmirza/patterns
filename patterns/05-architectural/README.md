@@ -2,7 +2,7 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-31 entries, 248,931 words. Every entry carries all 18
+31 entries, 248,953 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
@@ -15,7 +15,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Clean Architecture](clean-architecture.md) | canonical | 7,521 | A non-trivial application accumulates business rules that answer questions no framework, database, or user interface technology can answer for it. |
 | [Client-Server](client-server.md) | canonical | 8,189 | An application needs to let more than one user, device, or process operate on data or capability that must be shared, kept consistent, and protected from direct, uncoordinated ... |
 | [Event-Carried State Transfer](event-carried-state-transfer.md) | established | 7,462 | A system grows a second consumer that needs data owned by a first system. |
-| [Event-Driven Architecture](event-driven-architecture.md) | canonical | 9,420 | A system built from several independently deployable components needs to react to things that happen elsewhere in the system, without each component knowing the internal state ... |
+| [Event-Driven Architecture](event-driven-architecture.md) | canonical | 9,405 | A system built from several independently deployable components needs to react to things that happen elsewhere in the system, without each component knowing the internal state ... |
 | [Hexagonal Architecture](hexagonal-architecture.md) | canonical | 10,373 | A codebase reaches a specific, recognizable moment. |
 | [Interpreter Architecture](interpreter-architecture.md) | canonical | 8,034 | A system needs to accept a piece of behaviour, a rule, a query, a formula, a policy, that was not known when the system was compiled, and that behaviour must be safe to run inside ... |
 | [Layered Architecture](layered-architecture.md) | canonical | 7,640 | A non-trivial application has at least three concerns that change for different reasons and at different rates. |
@@ -30,8 +30,8 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Multi-Tenant Architecture](multi-tenant-architecture.md) | canonical | 5,015 | A SaaS provider serves many customers, called tenants, from one running application. |
 | [Onion Architecture](onion-architecture.md) | canonical | 8,637 | A team builds a business application against a specific database, a specific web framework, and a specific set of third party integrations, because those are the concrete ... |
 | [Peer-to-Peer](peer-to-peer.md) | canonical | 8,950 | A system needs many participants to exchange data or share work, and at least one of the following forces makes a single, dedicated server the wrong place to put that coordination. |
-| [Pipeline Architecture](pipeline-architecture.md) | canonical | 8,741 | A system needs to transform a stream of data through a sequence of independent processing steps, and the set of steps, their order, or their implementation is expected to change ... |
-| [Pipes and Filters](pipes-filters.md) | canonical | 7,870 | A system must transform a stream of data through several independent processing steps, and the set of steps, their order, or the data source itself is expected to change over the ... |
+| [Pipeline Architecture](pipeline-architecture.md) | canonical | 8,757 | A system needs to transform a stream of data through a sequence of independent processing steps, and the set of steps, their order, or their implementation is expected to change ... |
+| [Pipes and Filters](pipes-filters.md) | canonical | 7,891 | A system must transform a stream of data through several independent processing steps, and the set of steps, their order, or the data source itself is expected to change over the ... |
 | [Plugin Architecture](plugin-architecture.md) | canonical | 7,823 | An application needs to support a set of behaviours that is open-ended, unknown at the time the core is built, and likely to be supplied by parties who are not the core's own ... |
 | [Plugin Sandbox](plugin-sandbox.md) | established | 10,826 | A host application defines an extension point, using Plugin Architecture or Microkernel, so that its behavior can grow without every new feature being merged into the core ... |
 | [Primary-Replica](primary-replica.md) | canonical | 7,665 | A single database instance handling both writes and reads eventually hits a ceiling on at least one of three axes, read throughput, availability, and geographic latency. |

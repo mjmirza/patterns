@@ -229,38 +229,47 @@ Do not reach for distributed tracing when any of the following hold.
 ## 6. ASCII structure diagram
 
 ```
-+------------------+        traceparent header        +------------------+
-|   API Gateway     |  --------------------------->    |  Auth Service     |
-|  (root span S1)   |   trace-id=T1, span-id=S1        |  (span S2,        |
-|                    |                                  |   parent=S1)      |
-+---------+----------+                                  +---------+--------+
-          |                                                        |
-          | trace-id=T1, span-id=S1                                | trace-id=T1
-          v                                                        v span-id=S2
-+------------------+                                    +------------------+
-|  Pricing Service  |                                    |  User Profile    |
-|  (span S3,        |                                    |  Service         |
-|   parent=S1)       |                                    | (span S4,        |
-+---------+----------+                                    |  parent=S2)      |
-          |                                               +---------+--------+
-          | trace-id=T1, span-id=S3                                |
-          v                                                        v
-+------------------+                                    +------------------+
-| Inventory Service |                                    |  Cache            |
-| (span S5,          |                                    | (span S6,         |
-|  parent=S3)         |                                    |  parent=S4)        |
-+--------------------+                                    +--------------------+
++----------------------------+
+| API Gateway (root span S1) |
++----------------------------+
+     | traceparent header, trace-id=T1, span-id=S1
+     v
++-----------------------------------+
+| Auth Service (span S2, parent=S1) |
++-----------------------------------+
+     | trace-id=T1, span-id=S2
+     v
++-------------------------------------------+
+| User Profile Service (span S4, parent=S2) |
++-------------------------------------------+
+     |
+     v
++----------------------------+
+| Cache (span S6, parent=S4) |
++----------------------------+
 
-All spans share one Trace ID, T1. Each span records its own Span ID and its
-parent's Span ID, so the tree above is reconstructed purely from that data
-once every span reaches the collector.
+API Gateway also starts a second branch directly:
 
-    Collector / trace backend
-    +-----------------------------------------------------+
-    |  T1  root S1 -> S2 -> S4 -> S6                       |
-    |             \-> S3 -> S5                              |
-    |  reconstructed timeline, per-span duration, status    |
-    +-----------------------------------------------------+
++--------------------------------------+
+| Pricing Service (span S3, parent=S1) |
++--------------------------------------+
+     | trace-id=T1, span-id=S3
+     v
++----------------------------------------+
+| Inventory Service (span S5, parent=S3) |
++----------------------------------------+
+
+All spans share one Trace ID, T1. Each span records its
+own Span ID and its parent's Span ID, so the tree above
+is reconstructed purely from that data once every span
+reaches the collector.
+
++---------------------------------------------------+
+| Collector / trace backend                         |
+| T1  root S1 -> S2 -> S4 -> S6                     |
+|             -> S3 -> S5                           |
+| reconstructed timeline, per-span duration, status |
++---------------------------------------------------+
 ```
 
 ## 7. Dynamics
