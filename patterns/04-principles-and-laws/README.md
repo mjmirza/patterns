@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-42 entries, 327,293 words. Every entry carries all 18
+42 entries, 327,278 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -12,7 +12,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Acyclic Dependencies Principle](acyclic-dependencies-principle.md) | canonical | 8,479 | A codebase of any real size is not one file. |
 | [Composable](composable.md) | canonical | 7,680 | Every system with more than one moving part eventually needs behavior that no single unit provides on its own. |
 | [Dependency Inversion Principle](dependency-inversion-principle.md) | canonical | 7,097 | A codebase grows outward from a small number of policy decisions, what the system does, in what order, and why. |
-| [Inversion of Control](inversion-of-control.md) | canonical | 4,792 | In an ordinary, un-inverted call structure, application code owns the entry point. |
+| [Inversion of Control](inversion-of-control.md) | canonical | 4,789 | In an ordinary, un-inverted call structure, application code owns the entry point. |
 | [Predictable](predictable.md) | canonical | 9,475 | A caller who invokes an operation, reads an API's documentation, or pulls a dependency's published version needs to know, before acting, what is going to happen. |
 | [Stable Abstractions Principle](stable-abstractions-principle.md) | canonical | 8,095 | A codebase accumulates two kinds of code over its life. |
 | [Unix Philosophy (CUPID)](unix-philosophy-cupid.md) | established | 5,536 | A function, class, module, or service accumulates responsibility over time because adding one more branch to something that already exists is almost always locally cheaper than ... |
@@ -47,9 +47,9 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Low Coupling](low-coupling.md) | canonical | 7,299 | Every nontrivial system is built from more than one unit of code, whether those units are classes in one process, packages in one codebase, or services across a network. |
 | [Open Closed Principle](open-closed-principle.md) | canonical | 5,598 | A piece of software that ships once and never changes does not need this principle. |
 | [PACELC Theorem](pacelc-theorem.md) | canonical | 9,039 | A team picks a distributed database, reads that it is "AP" or "CP" under CAP, and believes that single letter fully describes how the system will behave in production. |
-| [Postel's Law](postel-law.md) | contested | 8,891 | Two or more parties implement the same open, published specification independently, without coordinating their release schedules, their source code, or in most cases even knowing ... |
+| [Postel's Law](postel-law.md) | contested | 8,878 | Two or more parties implement the same open, published specification independently, without coordinating their release schedules, their source code, or in most cases even knowing ... |
 | [Principle of Least Astonishment](principle-of-least-astonishment.md) | canonical | 9,080 | A person interacts with a piece of software, whether by reading its code, by calling its API, by typing a command at a shell, or by clicking a button in a user interface, and ... |
-| [Protected Variations](protected-variations.md) | canonical | 8,160 | A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ... |
+| [Protected Variations](protected-variations.md) | canonical | 8,161 | A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ... |
 | [Pure Fabrication](pure-fabrication.md) | canonical | 7,604 | A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. |
 | [Release Reuse Equivalence](release-reuse-equivalence.md) | canonical | 8,321 | The problem REP addresses shows up the moment more than one piece of software wants to depend on the same piece of source code. |
 | [Separation of Concerns](separation-of-concerns.md) | canonical | 10,250 | A codebase grows by accretion. A new requirement lands, and the fastest way to satisfy it is to add a few lines wherever the relevant data already sits in memory. |

@@ -275,53 +275,45 @@ uses for single-object loads.
 ## 6. ASCII structure diagram
 
 ```
-+----------------------+        holds 0..*        +----------------------+
-|   Client (caller)     |-------------------------->|      Query          |
-+----------------------+                            +----------------------+
-                                                      | + where(Criterion)   |
-                                                      | + orderBy(Field)     |
-                                                      | + execute() Result   |
-                                                      +----------------------+
-                                                              | 0..*
-                                                              v
-                                                      +----------------------+
-                                                      |     Criterion        |<------+
-                                                      |  (abstract)          |       |
-                                                      +----------------------+       |
-                                                      | + toSql(Mapping)      |       |
-                                                      +----------------------+       |
-                                                        ^          ^        ^        |
-                                                        |          |        |        |
-                                            +-----------+  +------+---+  +--+--------+
-                                            | Comparison |  |  And / Or |  |  Field    |
-                                            | (=, <, IN) |  | (composite)| |  reference |
-                                            +-----------+  +-----------+  +-----------+
-                                                                              |
-                                                                              v
-                                                                     +------------------+
-                                                                     | Metadata Mapping |
-                                                                     | class.field ->   |
-                                                                     | table.column     |
-                                                                     +------------------+
-                                                                              |
-                                                                              v
-                                                                    +--------------------+
-                                                                    | Query Translator   |
-                                                                    | criterion tree ->  |
-                                                                    | SQL + parameters   |
-                                                                    +--------------------+
-                                                                              |
-                                                                              v
-                                                                    +--------------------+
-                                                                    | Data source /      |
-                                                                    | Gateway / driver   |
-                                                                    +--------------------+
-                                                                              |
-                                                                              v
-                                                                    +--------------------+
-                                                                    | Result mapper ->   |
-                                                                    | domain objects     |
-                                                                    +--------------------+
++-----------------+
+| Client (caller) |
++-----------------+
+           | holds 0..*
+           v
++-------------------+
+| Query             |
+| where(Criterion)  |
+| orderBy(Field)    |
+| execute(): Result |
++-------------------+
+           | 0..*
+           v
++----------------------+
+| Criterion (abstract) |
+| toSql(Mapping)       |
++----------------------+
+           ^
+           | extended by
+     +-----+-----+-----+
+     |           |     |
++---------------+ +---------------+ +---------------+
+| Comparison    | | And / Or      | | Field         |
+| (=, <, IN)    | | (composite,   | | reference     |
++---------------+ | holds more    | +---------------+
+                | Criterion)    |                
+                +---------------+                
+                             |
+                             v
++-----------------------------+
+| Metadata Mapping            |
+| class.field -> table.column |
++-----------------------------+
+           |
+           v
++------------------------------------+
+| Query Translator                   |
+| criterion tree -> SQL + parameters |
++------------------------------------+
 ```
 
 ## 7. Dynamics

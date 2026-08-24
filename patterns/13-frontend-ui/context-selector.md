@@ -123,19 +123,22 @@ Context Selector has three structural parts.
 ## 6. ASCII structure diagram
 
 ```
-  Context provider
+Context provider
 
-  +----------------------------------------------------------+
-  | value = { user: {...}, theme: {...}, notifications: [...] } |
-  +----------------------------------------------------------+
-             |                  |                    |
-             v                  v                    v
-  +----------------+ +----------------+  +--------------------+
-  | Consumer A        | | Consumer B        |  | Consumer C            |
-  | selector: v => v.user | selector: v => v.theme |  | selector: v => v.notifications |
-  | re-renders only     | re-renders only     |  | re-renders only          |
-  | when user changes    | when theme changes    |  | when notifications change |
-  +----------------+ +----------------+  +--------------------+
++-------------------------------------------------------------+
+| value = { user: {...}, theme: {...}, notifications: [...] } |
++-------------------------------------------------------------+
+           |
+     +-----+-----+-----+
+     |           |     |
++----------------------+ +----------------------+ +----------------------+
+| Consumer A           | | Consumer B           | | Consumer C           |
+| selector:            | | selector:            | | selector:            |
+| v => v.user          | | v => v.theme         | | v => v.notifications |
+| re-renders only      | | re-renders only      | | re-renders only      |
+| when user changes    | | when theme changes   | | when notifications   |
+|                      | |                      | | change               |
++----------------------+ +----------------------+ +----------------------+
 ```
 
 ## 7. Dynamics

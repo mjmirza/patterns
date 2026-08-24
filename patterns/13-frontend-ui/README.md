@@ -2,7 +2,7 @@
 
 Origin. Framework documentation
 
-34 entries, 123,823 words. Every entry carries all 18
+34 entries, 123,837 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Application Architecture
@@ -97,7 +97,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Context Selector](context-selector.md) | established | 3,663 | React's own documentation states plainly how context re-rendering works. |
+| [Context Selector](context-selector.md) | established | 3,677 | React's own documentation states plainly how context re-rendering works. |
 | [Flux](flux.md) | deprecated | 3,629 | Traditional MVC-style architectures let a view update a model directly, and let multiple models observe and update one another, which becomes difficult to reason about as an ... |
 | [Reducer Hook](reducer-hook.md) | canonical | 3,580 | A component whose state updates are spread across many individual event handlers, each directly calling its own state setter, becomes hard to reason about as the number of related ... |
 | [Redux](redux.md) | canonical | 3,663 | Flux's original architecture solved unidirectional data flow with several independent stores, each holding its own slice of state and its own update logic, which worked but left ... |

@@ -259,38 +259,47 @@ genuinely low-risk choice, not an endorsement of the anti-pattern itself.
 ```
 Busy Front End structure, work stays on the shared pool
 
-  +----------+   HTTP request     +---------------------------------+
-  |  Client  | -----------------> |         Front End Process        |
-  |          | <----------------- |  accepts request, spawns work    |
-  +----------+  fast "Accepted"   |  on a background thread inside   |
-                                  |  the SAME process                |
-                                  |                                   |
-                                  |   +---------------------------+   |
-                                  |   |   Shared Resource Pool    |   |
-                                  |   |  (CPU cores, thread pool) |   |
-                                  |   |                           |   |
-                                  |   |  [foreground request A]   |   |
-                                  |   |  [foreground request B]   |   |
-                                  |   |  [background CPU work]  <-+---+-- starves A and B
-                                  |   +---------------------------+   |
-                                  +---------------------------------+
++--------+
+| Client |
++--------+
+     | HTTP request      ^ fast "Accepted"
+     v                   |
++----------------------------------------------+
+| Front End Process                            |
+| accepts request, spawns work on a background |
+| thread inside the SAME process               |
++----------------------------------------------+
+           |
+           v
++-----------------------------------------------+
+| Shared Resource Pool (CPU cores, thread pool) |
+| [foreground request A]                        |
+| [foreground request B]                        |
+| [background CPU work]  <-- starves A and B    |
++-----------------------------------------------+
 
 Corrected structure, work moves to an independent tier
 
-  +----------+   HTTP request     +----------------+     +----------+
-  |  Client  | -----------------> |   Front End    | --> |  Durable |
-  |          | <----------------- |  (thin, only   |     |  Queue   |
-  +----------+  fast "Accepted"   |   accepts and  |     +----+-----+
-                                  |   enqueues)     |          |
-                                  +----------------+          |
-                                                               v
-                                                       +----------------+
-                                                       |  Worker Tier   |
-                                                       |  (separate     |
-                                                       |   process,     |
-                                                       |   grows on     |
-                                                       |   queue depth) |
-                                                       +----------------+
++--------+
+| Client |
++--------+
+     | HTTP request      ^ fast "Accepted"
+     v                   |
++-----------------------------------+
+| Front End                         |
+| (thin, only accepts and enqueues) |
++-----------------------------------+
+           |
+           v
++---------------+
+| Durable Queue |
++---------------+
+           |
+           v
++------------------------------------------+
+| Worker Tier                              |
+| (separate process, grows on queue depth) |
++------------------------------------------+
 ```
 
 ## 7. Dynamics

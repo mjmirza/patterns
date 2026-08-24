@@ -216,34 +216,38 @@ differently than the default shape, when.
 ## 6. ASCII structure diagram
 
 ```
-        +----------------------+          +---------------------+
-        |   Load Balancer /    |  poll    |  Health Endpoint     |
-        |   Orchestrator /     +--------->|  /healthz/ready      |
-        |   Service Mesh       |<---------+  /healthz/live       |
-        +----------------------+  200/503 +----------+-----------+
-                                                       |
-                                                       | reads cached snapshot
-                                                       v
-                                            +----------------------+
-                                            |   Aggregator          |
-                                            |   AND over checks,    |
-                                            |   or weighted status  |
-                                            +----------+-----------+
-                                                       ^
-                                                       | writes snapshot
-                                                       |
-                                            +----------+-----------+
-                                            |   Poller (background)|
-                                            |   runs on interval N |
-                                            +----------+-----------+
-                                                       |
-                              +------------------------+------------------------+
-                              |                         |                        |
-                              v                         v                        v
-                     +----------------+       +-----------------+     +------------------+
-                     |  Check DB      |       |  Check Cache    |     |  Check Message    |
-                     |  ping, timeout |       |  ping, timeout  |     |  queue reachable  |
-                     +----------------+       +-----------------+     +------------------+
++---------------------------------------------+
+| Load Balancer / Orchestrator / Service Mesh |
++---------------------------------------------+
+           | poll
+           v
++-----------------+
+| Health Endpoint |
+| /healthz/ready  |
+| /healthz/live   |
++-----------------+
+           | 200/503, returned to caller above
+           v
+           | reads cached snapshot
+           v
++-------------------------------------+
+| Aggregator                          |
+| AND over checks, or weighted status |
++-------------------------------------+
+           ^
+           | writes snapshot
+           |
++---------------------+
+| Poller (background) |
+| runs on interval N  |
++---------------------+
+           |
+     +-----+-----+-----+
+     |           |     |
++------------------+ +------------------+ +------------------+
+| Check DB         | | Check Cache      | | Check Message    |
+| ping, timeout    | | ping, timeout    | | queue reachable  |
++------------------+ +------------------+ +------------------+
 ```
 
 ## 7. Dynamics

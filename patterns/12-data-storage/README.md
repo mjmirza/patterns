@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-45 entries, 319,824 words. Every entry carries all 18
+45 entries, 319,830 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -40,7 +40,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Database Federation](database-federation.md) | established | 1,721 | Data that a person or an application needs often lives in more than one system, a transactional database here, an analytical warehouse there, a data lake elsewhere, and copying ... |
 | [Denormalization](denormalization.md) | canonical | 1,923 | The normalization article states directly why a fully normalized schema exists in the first place, and denormalization is the deliberate trade against exactly this protection. |
 | [Distributed Hash Table](distributed-hash-table.md) | canonical | 1,561 | A centralized lookup directory is a single point of failure and a single scaling bottleneck, every lookup depends on that one directory staying up and staying fast as the number ... |
-| [ELT](elt.md) | established | 7,149 | A team needs data from several operational systems, a payments database, a support ticket system, a marketing platform's API, a stream of application events, made available for ... |
+| [ELT](elt.md) | established | 7,155 | A team needs data from several operational systems, a payments database, a support ticket system, a marketing platform's API, a stream of application events, made available for ... |
 | [ETL](etl.md) | canonical | 7,204 | An organization has data that lives in one shape, in one place, produced for one purpose, and it needs that data in a different shape, in a different place, usable for a different ... |
 | [Gossip Protocol](gossip-protocol.md) | canonical | 9,783 | A set of processes, potentially numbering in the hundreds or thousands, needs to keep a piece of shared state consistent, or needs to agree on who is currently alive, without a ... |
 | [Hinted Handoff](hinted-handoff.md) | canonical | 5,677 | A leaderless, replicated key-value store assigns each key to a fixed set of N nodes, typically the next N nodes clockwise on a consistent-hashing ring. |

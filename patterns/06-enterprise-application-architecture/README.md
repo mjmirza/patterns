@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-56 entries, 371,867 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
+56 entries, 371,835 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -44,7 +44,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Query Object](query-object.md) | canonical | 9,067 | An application needs to ask its data source for a set of objects that satisfy some condition, and the condition is not known ahead of time. |
+| [Query Object](query-object.md) | canonical | 9,035 | An application needs to ask its data source for a set of objects that satisfy some condition, and the condition is not known ahead of time. |
 | [Row Data Gateway](row-data-gateway.md) | canonical | 8,173 | A codebase has business logic that needs to read a single row from a relational table, change some of its columns, and write the row back. |
 | [Table Data Gateway](table-data-gateway.md) | canonical | 7,315 | An application needs to read and write rows in a table, and the two paths that seem obvious both go wrong at scale. |
 

@@ -249,37 +249,50 @@ terminates at the Stable Point and never at a Variant.
 ## 6. ASCII structure diagram
 
 ```
-   Before protection (unprotected variation point)
+Before protection (unprotected variation point)
 
-   +-----------+          direct dependency          +-----------------+
-   |  Client   | ------------------------------------>|  ConcreteVendorX |
-   +-----------+                                       +-----------------+
++--------+
+| Client |
++--------+
+           | direct dependency
+           v
++-----------------+
+| ConcreteVendorX |
++-----------------+
 
-   A change inside ConcreteVendorX's contract reaches Client directly.
-   Replacing the vendor means editing Client.
+A change inside ConcreteVendorX's contract reaches
+Client directly. Replacing the vendor means editing
+Client.
 
 
-   After protection (Protected Variations applied)
+After protection (Protected Variations applied)
 
-   +-----------+        depends on         +----------------+
-   |  Client   | -------------------------> |  Stable Point  |  (interface,
-   +-----------+                            |----------------|   format,
-                                             | + operation()  |   protocol,
-                                             +----------------+   or lookup)
-                                                     ^
-                                                     | implemented by
-                          +--------------------------+--------------------------+
-                          |                                                     |
-                +-----------------+                                  +-----------------+
-                | ConcreteVendorX |                                  | ConcreteVendorY |
-                |-----------------|                                  |-----------------|
-                | + operation()   |                                  | + operation()   |
-                +-----------------+                                  +-----------------+
++--------+
+| Client |
++--------+
+           | depends on
+           v
++----------------------+
+| Stable Point         |
+| (interface, format,  |
+| protocol, or lookup) |
+| operation()          |
++----------------------+
+           ^
+           | implemented by
+     +-----+-----+
+     |           |
++--------------------+ +--------------------+
+| ConcreteVendorX    | | ConcreteVendorY    |
+| operation()        | | operation()        |
++--------------------+ +--------------------+
 
-   Client's only dependency arrow terminates at Stable Point.
-   A Binder (a constructor call, DI container, or lookup service, not
-   drawn) decides which Variant answers a given call at runtime.
-   Adding ConcreteVendorZ later touches neither Client nor Stable Point.
+Client's only dependency arrow terminates at Stable
+Point. A Binder (a constructor call, DI container, or
+lookup service, not drawn) decides which Variant
+answers a given call at runtime. Adding
+ConcreteVendorZ later touches neither Client nor
+Stable Point.
 ```
 
 ## 7. Dynamics

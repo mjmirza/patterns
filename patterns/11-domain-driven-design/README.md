@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-35 entries, 264,791 words. Every entry carries all 18
+35 entries, 264,784 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -34,7 +34,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Domain Service](domain-service.md) | canonical | 7,032 | A team modeling a domain in an object-oriented style eventually meets an operation that genuinely spans more than one object and does not belong to either. |
 | [Factory](factory.md) | canonical | 8,338 | A domain model accumulates two kinds of complexity as it grows. |
 | [Module](module.md) | canonical | 7,323 | A domain model that stays in one undifferentiated pile of classes becomes unreadable long before it becomes incorrect. |
-| [Repository](repository.md) | canonical | 6,783 | A domain layer needs to load and save the objects it works with, but the code that expresses business rules should not know whether an order lives in PostgreSQL, in a document ... |
+| [Repository](repository.md) | canonical | 6,776 | A domain layer needs to load and save the objects it works with, but the code that expresses business rules should not know whether an order lives in PostgreSQL, in a document ... |
 | [Specification](specification.md) | canonical | 7,066 | A domain accumulates rules that decide whether an object qualifies for something. |
 | [Value Object](value-object.md) | canonical | 7,547 | A domain model accumulates concepts that are not things, they are measurements, descriptions, or quantities. |
 
