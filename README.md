@@ -3,7 +3,7 @@
 A master level reference for software patterns. Every entry is written from
 primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
-![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue)
+![License](https://img.shields.io/badge/license-ORA%201.0-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
 ![Entries](https://img.shields.io/badge/entries-890%20published-brightgreen)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
@@ -471,7 +471,8 @@ version.
 4. Every claim cited. Every cited URL verified on the day you submit.
 5. Production usage names a real system with a real source.
 
-Contributions are licensed under CC BY 4.0.
+Contributions are licensed under the same OpenRoots Agent License 1.0 as
+the rest of this repository.
 
 ### Contributing with an AI coding agent
 
@@ -532,12 +533,21 @@ not claim it.
 
 ## License
 
-Content is licensed under
-[Creative Commons Attribution 4.0 International](LICENSE).
+Content is licensed under the
+[OpenRoots Agent License 1.0](LICENSE), effective 2026-08-24. The
+[NOTICE](NOTICE) file carries the short summary, the canonical legal text
+lives at [openroots.org](https://openroots.org/licenses/ora/1.0).
 
-Use it, adapt it, sell work built on it. Give credit and link back.
+Free and unconditional at or below two million US dollars in annual
+revenue, and for any individual, nonprofit, school, or government body.
+Above that threshold, a revenue share applies, capped per year. AI
+training on this work is not granted by either tier and requires a
+separate Compute license. On 2029-08-24 this release converts
+automatically to Apache-2.0. Anyone who obtained an earlier release under
+this repository's prior license keeps those rights permanently, that
+grant does not change.
 
 ```text
-"Patterns" by Mirza Iqbal, CC BY 4.0
+"Patterns" by Mirza Iqbal, OpenRoots Agent License 1.0
 https://github.com/mjmirza/patterns
 ```
