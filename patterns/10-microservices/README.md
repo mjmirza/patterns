@@ -2,7 +2,7 @@
 
 Origin. Richardson
 
-49 entries, 364,485 words. Every entry carries all 18
+49 entries, 364,349 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Antipattern
@@ -35,7 +35,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Microservice Chassis](microservice-chassis.md) | canonical | 8,226 | A single microservice, considered in isolation, is a small and cheap thing to write. |
+| [Microservice Chassis](microservice-chassis.md) | canonical | 8,217 | A single microservice, considered in isolation, is a small and cheap thing to write. |
 
 ## Data
 
@@ -70,7 +70,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Third Party Registration](third-party-registration.md) | canonical | 8,071 | A caller wants to invoke a service that runs as more than one instance, and those instances are not static. |
+| [Third Party Registration](third-party-registration.md) | canonical | 7,960 | A caller wants to invoke a service that runs as more than one instance, and those instances are not static. |
 
 ## Domain Modeling
 
@@ -115,7 +115,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Distributed Tracing](distributed-tracing.md) | canonical | 7,618 | A single user-facing request in a microservice architecture fans out into a call graph. |
 | [Exception Tracking](exception-tracking.md) | established | 8,433 | A request arrives at a service instance and, partway through handling it, code raises an exception the calling frames do not catch. |
 | [Log Aggregation](log-aggregation.md) | canonical | 8,736 | A service in a microservices system emits log lines to its own local standard output or to a file inside its own container. |
-| [Log Deployments and Changes](log-deployments-changes.md) | established | 9,444 | An engineer is paged. A service that was healthy an hour ago now returns higher error rates, or its latency has doubled, or a queue is backing up. |
+| [Log Deployments and Changes](log-deployments-changes.md) | established | 9,428 | An engineer is paged. A service that was healthy an hour ago now returns higher error rates, or its latency has doubled, or a queue is backing up. |
 
 ## Reliability
 

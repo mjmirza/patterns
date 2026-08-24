@@ -93,42 +93,48 @@ The relationship worth naming explicitly is that the Change Origin depends on th
 ## 6. ASCII structure diagram
 
 ```
-+------------------+        +------------------+        +------------------+
-|  Change Origin    |        |   Change Event    |        |   Event Sink      |
-|------------------|  emits |------------------|  writes|------------------|
-| CI/CD pipeline    | -----> | subject           | -----> | metrics annotator |
-| GitOps reconciler |        | version/sha       |        | log aggregator    |
-| kubectl / terraform|       | environment       |        | release tracker   |
-| feature flag flip |        | actor, timestamp  |        | audit log         |
-+------------------+        +------------------+        +--------+---------+
-                                                                   |
-                                                                   | persists
-                                                                   v
-                                                          +------------------+
-                                                          |   Change Ledger   |
-                                                          |------------------|
-                                                          | queryable history |
-                                                          | of every change,  |
-                                                          | per service and   |
-                                                          | environment       |
-                                                          +--------+---------+
-                                                                   |
-                                                                   | queried by
-                                                                   v
-                                                          +------------------+
-                                                          |    Correlator      |
-                                                          |------------------|
-                                                          | overlays events on |
-                                                          | metrics/logs/traces|
-                                                          | surfaces "what     |
-                                                          | changed recently"  |
-                                                          +------------------+
-                                                                   ^
-                                                                   |
-                                                          +------------------+
-                                                          |     Responder      |
-                                                          | (on-call engineer) |
-                                                          +------------------+
++---------------------+
+| Change Origin       |
+| CI/CD pipeline      |
+| GitOps reconciler   |
+| kubectl / terraform |
+| feature flag flip   |
++---------------------+
+     | emits
+     v
++-----------------------------------+
+| Change Event                      |
+| subject, version/sha, environment |
+| actor, timestamp                  |
++-----------------------------------+
+     | writes
+     v
++-------------------+
+| Event Sink        |
+| metrics annotator |
+| log aggregator    |
+| release tracker   |
+| audit log         |
++-------------------+
+     | persists
+     v
++------------------------------------------------+
+| Change Ledger                                  |
+| queryable history of every change, per service |
+| and environment                                |
++------------------------------------------------+
+     | queried by
+     v
++----------------------------------------+
+| Correlator                             |
+| overlays events on metrics/logs/traces |
+| surfaces what changed recently         |
++----------------------------------------+
+     ^
+     |
++------------------------------+
+| Responder (on-call engineer) |
++------------------------------+
 ```
 
 ## 7. Dynamics

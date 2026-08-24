@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-54 entries, 385,688 words. Every entry carries all 18
+54 entries, 385,674 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -43,19 +43,19 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Canonical Data Model](canonical-data-model.md) | canonical | 7,238 | An enterprise with N independently developed systems that must exchange data pairwise needs, in the worst case, N times (N minus one) point-to-point translators if each system ... |
 | [Channel Purger](channel-purger.md) | canonical | 6,622 | A messaging system accumulates state on its channels in the form of undelivered or unconsumed messages sitting in a queue, a topic partition, or a durable subscription. |
-| [Claim Check](claim-check.md) | canonical | 8,722 | A component in a message-based system needs to communicate a large amount of data, an image, a video, a document, a bulk export, a machine learning feature vector, a full customer ... |
+| [Claim Check](claim-check.md) | canonical | 8,719 | A component in a message-based system needs to communicate a large amount of data, an image, a video, a document, a bulk export, a machine learning feature vector, a full customer ... |
 | [Command Message](command-message.md) | canonical | 6,014 | An application wants another application, or another component in the same system, to perform a specific piece of work. |
 | [Content Enricher](content-enricher.md) | canonical | 6,840 | A message arrives at an integration point carrying less data than the next step needs. |
 | [Content Filter](content-filter.md) | canonical | 8,464 | A consumer receives a message that is far larger, richer, or more deeply nested than anything it needs, and forwarding or storing that full message creates real cost. |
 | [Correlation Identifier](correlation-identifier.md) | canonical | 7,422 | A process sends a message and does not receive its answer over the same connection it used to send it. |
 | [Document Message](document-message.md) | canonical | 7,017 | Two systems need to exchange a structured record, such as a customer record, a purchase order, a lab result, or a shipment manifest. |
-| [Dynamic Router](dynamic-router.md) | canonical | 7,665 | A message-routing component in a system needs to send a message onward, and the set of places it might send that message to is not fixed at the time the router is built, deployed ... |
+| [Dynamic Router](dynamic-router.md) | canonical | 7,649 | A message-routing component in a system needs to send a message onward, and the set of places it might send that message to is not fixed at the time the router is built, deployed ... |
 | [Event Message](event-message.md) | canonical | 7,035 | An application performs an action that other applications, possibly ones the first application has never heard of and will never know about, need to react to. |
 | [Event-Driven Consumer](event-driven-consumer.md) | canonical | 6,039 | A service needs to react when something happens elsewhere in the system, a payment is captured, an order is placed, a file lands in a bucket, a row is updated in another team's ... |
 | [Format Indicator](format-indicator.md) | canonical | 6,130 | A message travels from a producer to a consumer, and at some point the consumer must decide how to parse the bytes it received. |
 | [Message](message.md) | canonical | 6,901 | Two applications need to exchange information without either one blocking on the other's availability, without either one dictating the other's internal data model, and without a ... |
 | [Message Bus](message-bus.md) | canonical | 7,670 | A system starts with two applications that need to exchange data, and a direct point-to-point integration, a script that reads from one database and writes to another, or a ... |
-| [Message Channel](message-channel.md) | canonical | 5,981 | Two independently deployed pieces of software need to exchange information, and the team building them does not want a synchronous, point-to-point network call between them. |
+| [Message Channel](message-channel.md) | canonical | 6,008 | Two independently deployed pieces of software need to exchange information, and the team building them does not want a synchronous, point-to-point network call between them. |
 | [Message Dispatcher](message-dispatcher.md) | canonical | 7,081 | A single logical stream of work needs to be processed by more capacity than one consumer thread can provide, and the team wants that capacity applied without breaking three ... |
 | [Message Expiration](message-expiration.md) | canonical | 6,898 | A message carries a request or a piece of data across an asynchronous boundary. |
 | [Message Filter](message-filter.md) | canonical | 7,478 | A component sits on a message channel and receives every message that flows past, but it only knows how to handle a subset of them. |
@@ -120,7 +120,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Channel Adapter](channel-adapter.md) | canonical | 7,811 | An application was written to be called, to poll a database, to read a file, or to raise an in-process event. |
-| [Polling Consumer](polling-consumer.md) | canonical | 5,802 | An application needs to consume messages from a channel, a queue, a topic partition, or any buffered source of work items, but it needs to control the timing and the volume of ... |
+| [Polling Consumer](polling-consumer.md) | canonical | 5,780 | An application needs to consume messages from a channel, a queue, a topic partition, or any buffered source of work items, but it needs to control the timing and the volume of ... |
 
 ## System Management
 

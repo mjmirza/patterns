@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-45 entries, 319,776 words. Every entry carries all 18
+45 entries, 319,760 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -46,7 +46,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Hinted Handoff](hinted-handoff.md) | canonical | 5,677 | A leaderless, replicated key-value store assigns each key to a fixed set of N nodes, typically the next N nodes clockwise on a consistent-hashing ring. |
 | [Kappa Architecture](kappa-architecture.md) | established | 6,510 | A team running analytics or derived views over an event stream commonly starts with a batch pipeline. |
 | [LSM Tree](lsm-tree.md) | canonical | 9,064 | A key-value or wide-column store needs to sustain a high rate of writes, including writes that touch keys scattered across the entire key space, while still answering point ... |
-| [Lamport Clock](lamport-clock.md) | canonical | 6,460 | A distributed system has no shared memory and no shared clock. |
+| [Lamport Clock](lamport-clock.md) | canonical | 6,444 | A distributed system has no shared memory and no shared clock. |
 | [Leaderless Replication](leaderless-replication.md) | canonical | 7,925 | A single-leader replicated database routes every write through one node. |
 | [Log Compaction](log-compaction.md) | established | 8,019 | An append-only log is the simplest and most dependable storage primitive a distributed system offers. |
 | [Medallion Architecture](medallion-architecture.md) | established | 7,047 | A data platform ingests information from many upstream systems. |

@@ -2,7 +2,7 @@
 
 Origin. Evans, Vernon
 
-35 entries, 264,687 words. Every entry carries all 18
+35 entries, 264,653 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-pattern
@@ -56,14 +56,14 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Domain Storytelling](domain-storytelling.md) | established | 8,120 | A team building software for a business domain needs an accurate, shared picture of how work actually happens before it can decide what the software should do. |
 | [Generic Subdomain](generic-subdomain.md) | canonical | 6,775 | A team building a real product spends real engineering time on things the business does not actually compete on. |
-| [Ubiquitous Language](ubiquitous-language.md) | canonical | 6,581 | A software team building a system for a business domain sits between two worlds that speak differently about the same reality. |
+| [Ubiquitous Language](ubiquitous-language.md) | canonical | 6,566 | A software team building a system for a business domain sits between two worlds that speak differently about the same reality. |
 
 ## Strategic Design
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Bounded Context](bounded-context.md) | canonical | 6,827 | A software system of any real size accumulates more than one team, more than one department's worldview, and more than one legitimate meaning for the same word. |
-| [Conformist](conformist.md) | canonical | 6,538 | Two bounded contexts need to exchange data or invoke each other's behaviour, and one of the two, the upstream, owns a model neither side is free to renegotiate. |
+| [Conformist](conformist.md) | canonical | 6,519 | Two bounded contexts need to exchange data or invoke each other's behaviour, and one of the two, the upstream, owns a model neither side is free to renegotiate. |
 | [Context Canvas](context-canvas.md) | established | 7,622 | A team has decided, usually from an Event Storming session or from a Context Map already in hand, that a particular slice of the domain deserves its own bounded context. |
 | [Context Map](context-map.md) | canonical | 7,294 | A system reaches a certain size and a certain number of contributing teams before a single, internally consistent domain model stops being achievable. |
 | [Core Domain](core-domain.md) | canonical | 6,670 | A team building a non-trivial system faces a resource allocation problem long before it faces a technical one. |

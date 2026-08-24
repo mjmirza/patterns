@@ -218,34 +218,38 @@ contexts rather than objects.
 
 ## 6. ASCII structure diagram
 
-```text
-                     no negotiating power
-    +----------------------------------------------+
-    |                                                v
-+---+---------------------+                +----------------------+
-|  Upstream Bounded        |                |  Downstream Bounded   |
-|  Context (e.g. Stripe)   |                |  Context (Booking)    |
-|                          |                |                       |
-|  Charge                  |------------->  |  uses Charge directly |
-|  Refund                  |   published    |  uses Refund directly |
-|  PaymentIntent           |   API/SDK      |  no BookingPayment    |
-|  IdempotencyKey          |                |  type exists          |
-+--------------------------+                +-----------------------+
-                                                        |
-                                                        v
-                                             Downstream's own domain
-                                             logic now speaks in the
-                                             upstream's vocabulary,
-                                             wired directly, with no
-                                             translation boundary in
-                                             between the two.
+```
++-----------------------------------------------+
+| Upstream Bounded Context, e.g. Stripe         |
+| Charge, Refund, PaymentIntent, IdempotencyKey |
++-----------------------------------------------+
+     | published API/SDK, no negotiating power
+     v
++--------------------------------------------+
+| Downstream Bounded Context (Booking)       |
+| uses Charge directly, uses Refund directly |
+| no BookingPayment type exists              |
++--------------------------------------------+
 
-  Compare with an Anticorruption Layer relationship.
+Downstream's own domain logic now speaks in the
+upstream's vocabulary, wired directly, with no
+translation boundary in between the two.
 
-+--------------------------+      +-----------+      +-----------------------+
-|  Upstream Bounded         |----->|  ACL      |----->|  Downstream Bounded    |
-|  Context                  |      |(translate)|      |  Context, own model    |
-+--------------------------+      +-----------+      +-----------------------+
+Compare with an Anticorruption Layer relationship.
+
++--------------------------+
+| Upstream Bounded Context |
++--------------------------+
+     |
+     v
++-----------------+
+| ACL (translate) |
++-----------------+
+     |
+     v
++---------------------------------------+
+| Downstream Bounded Context, own model |
++---------------------------------------+
 ```
 
 ## 7. Dynamics

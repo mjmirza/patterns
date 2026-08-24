@@ -300,34 +300,41 @@ store enforces different access policies for writers and readers.
 
 ## 6. ASCII structure diagram
 
-```text
-                         +-------------------------------+
-                         |          Data Store            |
-                         |  (object storage / blob /       |
-                         |   file share / database)        |
-                         +----------------+-----------------+
-                                  ^                |
-                         (2) put  |                | (5) get
-                         payload  |                | payload
-                                  |                v
-   +----------+        +---------+---------+     +------------------+
-   |  Sender  |  (1)   |     Check-In       |     |    Check-Out     |
-   |          |------->|  (mints the claim  |     | (resolves the    |
-   +----------+ large  |     check)         |     |  claim check)    |
-                payload +---------+---------+     +---------+--------+
-                                  |                          ^
-                         (3) send | thin message              | (4) thin message
-                         (claim   | + claim check              | + claim check
-                          check)  v                          |
-                          +---------------------------+--------+
-                          |      Message Channel                |
-                          |  (queue, topic, event bus)           |
-                          +---------------------------------------+
-                                         |
-                                         v
-                                 +---------------+
-                                 |   Receiver    |
-                                 +---------------+
+```
++--------+
+| Sender |
++--------+
+     | (1) large payload
+     v
++---------------------------------+
+| Check-In, mints the claim check |
++---------------------------------+
+     | (2) put payload
+     v
++-----------------------------------------------------------+
+| Data Store, object storage, blob, file share, or database |
++-----------------------------------------------------------+
+
+Check-In also sends onward, the thin message:
+
+     | (3) thin message + claim check
+     v
++---------------------------------------------+
+| Message Channel, queue, topic, or event bus |
++---------------------------------------------+
+     | routes / filters on metadata only
+     v
++----------+
+| Receiver |
++----------+
+     | (4) if it needs the payload, calls
+     v
++-------------------------------------+
+| Check-Out, resolves the claim check |
++-------------------------------------+
+     | (5) get payload
+     v
+(back to Data Store, payload returns to Receiver)
 ```
 
 ## 7. Dynamics

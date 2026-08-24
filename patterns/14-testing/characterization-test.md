@@ -207,21 +207,30 @@ unprotected.
 ## 6. ASCII structure diagram
 
 ```
-+-----------------------+        drives         +---------------------------+
-|      Test Driver       | ---------------------> | System Under              |
-|  (owns chosen inputs)  |                        | Characterization          |
-+-----------------------+ <--------------------- |  (existing legacy code)   |
-            |               observed output       +---------------------------+
-            |
-            v
-+-----------------------+     compares against   +---------------------------+
-|      Comparator        | ---------------------> |     Captured Reference    |
-|  (equality or diff)     |                        |  (inline literal, or a    |
-|                         |                        |   stored golden file)     |
-+-----------------------+                        +---------------------------+
-            |
-            v
-      pass / fail signal
++----------------------------------+
+| Test Driver (owns chosen inputs) |
++----------------------------------+
+     | drives
+     v
++------------------------------------------------------+
+| System Under Characterization (existing legacy code) |
++------------------------------------------------------+
+     | observed output
+     v
+(back to Test Driver)
+
++-------------------------------+
+| Comparator (equality or diff) |
++-------------------------------+
+     | compares against
+     v
++-----------------------------------------+
+| Captured Reference                      |
+| inline literal, or a stored golden file |
++-----------------------------------------+
+     |
+     v
+pass / fail signal
 ```
 
 ## 7. Dynamics
