@@ -2,7 +2,7 @@
 
 Origin. Schmidt POSA 2
 
-40 entries, 318,562 words. Every entry carries all 18
+40 entries, 318,550 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency
@@ -41,7 +41,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Read-Write Lock](read-write-lock.md) | canonical | 7,855 | A single piece of shared, mutable state is accessed by multiple threads. |
 | [Scheduler](scheduler.md) | canonical | 6,621 | A system has more units of work that want to run than it has execution resources to run them on, or those units of work become eligible at different and unpredictable times, and ... |
 | [Scoped Locking](scoped-locking.md) | canonical | 8,785 | A piece of code acquires a lock to protect a critical section, and every path out of that critical section, the normal return, the early return, the thrown exception, the break ... |
-| [Semaphore](semaphore.md) | canonical | 8,341 | A fixed, known number of interchangeable resources exist. |
+| [Semaphore](semaphore.md) | canonical | 8,329 | A fixed, known number of interchangeable resources exist. |
 | [Strategized Locking](strategized-locking.md) | canonical | 9,027 | A reusable component, a cache, a connection pool, a queue, a counter, a buffer manager, is built once and deployed into more than one concurrency environment. |
 | [Structured Concurrency](structured-concurrency.md) | established | 7,965 | A function spawns concurrent work, a network call, a background computation, a fan-out to several services, and returns before that work is guaranteed to be done. |
 | [Thread Pool](thread-pool.md) | canonical | 7,592 | A server, or any long-running process, receives a stream of independent units of work. |

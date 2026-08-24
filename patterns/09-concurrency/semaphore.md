@@ -225,39 +225,34 @@ failure modes in dimension 11.
 ## 6. ASCII structure diagram
 
 ```
-                         +--------------------------+
-                         |        Semaphore          |
-                         |----------------------------|
-                         | counter: int (permits left)|
-                         | waitSet: queue of Waiter   |
-                         |----------------------------|
-                         | + acquire()                |
-                         | + tryAcquire(): bool        |
-                         | + acquire(timeout): bool    |
-                         | + release()                 |
-                         +--------------------------+
-                              ^                |
-                    acquire() |                | wakes on release()
-                    blocks if |                v
-                    counter=0 |         +----------------+
-                              |         |    Waiter A    |
-                              |         | (blocked task) |
-                              |         +----------------+
-                              |
-                              |         +----------------+
-                              +-------->|    Waiter B    |
-                                        | (blocked task) |
-                                        +----------------+
++------------------------------------------------------+
+| Semaphore                                            |
+| counter: int, permits left                           |
+| waitSet: queue of Waiter                             |
+| acquire(), tryAcquire(), acquire(timeout), release() |
++------------------------------------------------------+
+     ^ blocks and enqueues here when counter is 0
+     |
++------------------------+
+| Waiter A, blocked task |
++------------------------+
++------------------------+
+| Waiter B, blocked task |
++------------------------+
 
-     Holder 1 -- acquire() --> [permit 1 taken] --> uses resource --> release()
-     Holder 2 -- acquire() --> [permit 2 taken] --> uses resource --> release()
-     Holder 3 -- acquire() --> counter is 0, BLOCKS ---------------> woken here
-                                                                       when a
-                                                                       permit
-                                                                       frees up
+Each blocked Waiter is woken in turn when a holder
+calls release() and a permit frees up.
 
-     A semaphore initialised with N permits admits up to N concurrent
-     holders. Holder N+1 blocks in the wait set until any holder releases.
+A semaphore initialised with N permits admits up to N
+concurrent holders. Holder N+1 blocks in the wait set
+until any holder releases.
+
+Holder 1. acquire() -> permit 1 taken -> uses resource
+          -> release()
+Holder 2. acquire() -> permit 2 taken -> uses resource
+          -> release()
+Holder 3. acquire() -> counter is 0, BLOCKS -> woken
+          only when a permit frees up
 ```
 
 ## 7. Dynamics

@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-44 entries, 393,044 words. Every entry carries all 18
+44 entries, 393,045 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Capacity Management
@@ -137,7 +137,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Competing Consumers](competing-consumers.md) | canonical | 7,217 | A system produces units of work faster, or in bursts larger, than a single consumer process can absorb, and the units of work are independent of one another, meaning any one of ... |
 | [Priority Queue](priority-queue.md) | canonical | 10,299 | A distributed system that processes work through a queue, whether that queue is a message broker topic, a job table, a task list, or a pending pod list, eventually accumulates ... |
 | [Queue-Based Load Leveling](queue-based-load-leveling.md) | canonical | 9,730 | A system accepts work at a rate that varies over time, sometimes sharply, while the component that actually performs the work has a roughly fixed processing capacity per unit time. |
-| [Rate Limiting](rate-limiting.md) | canonical | 10,988 | A service exposes an operation that costs something to perform. |
+| [Rate Limiting](rate-limiting.md) | canonical | 10,989 | A service exposes an operation that costs something to perform. |
 | [Throttling](throttling.md) | canonical | 10,477 | A service exposes an operation that costs something to run. |
 
 ## Security

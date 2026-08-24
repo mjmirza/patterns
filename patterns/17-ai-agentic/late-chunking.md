@@ -255,47 +255,52 @@ Five participants, named by the role each plays in the pipeline.
 ## 6. ASCII structure diagram
 
 ```
-NAIVE / EARLY CHUNKING (chunk first, embed each chunk alone)
+Naive / early chunking, chunk first, embed each alone
 
-  Document text
-       |
-       v
-  +-----------+     +---------+   +---------+   +---------+
-  |  Chunker  | --> | Chunk 1 |   | Chunk 2 |   | Chunk 3 |
-  +-----------+     +---------+   +---------+   +---------+
-                         |             |             |
-                         v             v             v
-                   +----------+  +----------+  +----------+
-                   | Encoder  |  | Encoder  |  | Encoder  |   <- 3 separate
-                   | (call 1) |  | (call 2) |  | (call 3) |      calls, no
-                   +----------+  +----------+  +----------+      shared context
-                         |             |             |
-                         v             v             v
-                     [ v1 ]        [ v2 ]        [ v3 ]
++---------------+
+| Document text |
++---------------+
+     v
++---------+
+| Chunker |
++---------+
+     | splits into
+     v
++---------+
+| Chunk 1 |
++---------+
++---------+
+| Chunk 2 |
++---------+
++---------+
+| Chunk 3 |
++---------+
+     | each chunk to its own Encoder call, no shared
+     | context between the three calls
+     v
+v1, v2, v3, three vectors, each blind to the others
 
 
-LATE CHUNKING (embed whole document once, chunk the token vectors after)
+Late chunking, embed the whole document once, then
+chunk the token vectors after
 
-  Document text
-       |
-       v
-  +--------------------------------------------------------+
-  |                 Long-context Encoder                   |
-  |             (single call, full attention)               |
-  +--------------------------------------------------------+
-       |
-       v
-  Token vectors:  [t1][t2][t3][t4][t5][t6][t7][t8][t9][t10]
-                    \___span1___/  \___span2___/  \_span3_/
-                        |               |              |
-                        v               v              v
-                   mean-pool       mean-pool       mean-pool
-                        |               |              |
-                        v               v              v
-                     [ v1' ]         [ v2' ]        [ v3' ]
++---------------+
+| Document text |
++---------------+
+     v
++------------------------------------------------------------------------+
+| Long-context Encoder, one call, full attention over the whole document |
++------------------------------------------------------------------------+
+     | produces token vectors t1 through t10
+     v
+span1 = t1..t4, span2 = t5..t7, span3 = t8..t10
+     | mean-pool each span
+     v
+v1', v2', v3'
 
-  Every t(i) above already attended across all 10 tokens, so
-  v1', v2', v3' each carry context that v1, v2, v3 above could not.
+Every token above already attended across all ten
+tokens, so v1', v2', v3' each carry context that v1,
+v2, v3 above could not.
 ```
 
 ## 7. Dynamics
