@@ -1,53 +1,40 @@
-Creative Commons Attribution 4.0 International (CC BY 4.0)
+OpenRoots Agent License 1.0
+===========================
 
-Copyright (c) 2026 Mirza Iqbal
+Canonical text: https://openroots.org/licenses/ora/1.0/legalcode
+Plain summary:  https://openroots.org/licenses/ora/1.0
 
-All prose, diagrams, tables, and code examples in this repository are licensed
-under the Creative Commons Attribution 4.0 International License.
+Effective:   2026-08-24
+Sunset Date: 2029-08-24
+Fallback:    Apache-2.0
 
-You are free to:
+This licence is one fixed text, adopted word for word. The canonical
+version lives at the address above and is never edited. A correction
+is issued as a new version and this text remains reachable permanently.
 
-  Share. Copy and redistribute the material in any medium or format.
-  Adapt. Remix, transform, and build upon the material for any purpose,
-  including commercially.
+PRIOR LICENCE NOTICE
+--------------------
+This repository was previously distributed under custom.
+That grant is irrevocable for every version released under it.
+Anyone who obtained an earlier release keeps their custom rights
+in perpetuity. This licence governs releases from 2026-08-24 onward.
 
-Under the following terms:
+SUMMARY OF TERMS
+----------------
+Root tier     Free and unconditional at or below USD 2,000,000 annual
+              revenue, and for any individual, nonprofit, school, or
+              government body. Rights equivalent in kind to MIT.
 
-  Attribution. You must give appropriate credit, provide a link to the license,
-  and indicate if changes were made. You may do so in any reasonable manner, but
-  not in any way that suggests the licensor endorses you or your use.
+Canopy tier   Above the threshold, 0.5% of revenue attributable to
+              this work, capped at USD 250,000 per year. Self-reported
+              quarterly. The rate is never negotiated.
 
-  No additional restrictions. You may not apply legal terms or technological
-  measures that legally restrict others from doing anything the license permits.
+Compute tier  AI training is not granted by either tier above. It
+              requires a separate Compute licence at every tier.
+              Human reading and search indexing are unaffected.
 
-Full legal text:
-https://creativecommons.org/licenses/by/4.0/legalcode
+Sunset        On 2029-08-24 this release converts to Apache-2.0,
+              automatically, binding successors and insolvency trustees.
 
-Human readable summary:
-https://creativecommons.org/licenses/by/4.0/
-
-SUGGESTED ATTRIBUTION
-
-  "Patterns" by Mirza Iqbal, licensed under CC BY 4.0.
-  https://github.com/mjmirza/patterns
-
-SCOPE AND LIMITS OF THIS LICENSE
-
-This license covers the original work in this repository only. It does not and
-cannot grant rights over third party material that this repository cites,
-references, or describes.
-
-  1. Pattern NAMES are not owned by this repository. They originate with their
-     authors and communities. See ATTRIBUTION.md for the full lineage.
-
-  2. Cited works remain under their own copyright. Quoting or citing a book,
-     specification, paper, or website in this repository does not place that
-     work under CC BY 4.0. Readers who wish to reuse a cited source must obtain
-     rights from that source.
-
-  3. Every entry here is written originally by the authors of this repository.
-     Where a concept originates elsewhere, the origin is credited in the entry's
-     references section and in ATTRIBUTION.md.
-
-See ATTRIBUTION.md for the complete list of original providers whose work is
-credited, and for the sourcing policy this repository follows.
+The operative text is the canonical version linked above. This file is
+a pointer to it, not a substitute for it.
