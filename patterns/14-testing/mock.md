@@ -186,21 +186,36 @@ originally described.
 ## 6. ASCII structure diagram
 
 ```
-+------------------+           depends on            +---------------------+
-|  Test Code       |------------------------------->  | Collaborator        |
-|                  |         (constructs, injects)    | Interface           |
-|  1. build mock   |                                  | (the seam)          |
-|  2. set          |                                  +----------^----------+
-|     expectations |                                             |
-|  3. inject mock  |                                    implements|implements
-|  4. exercise SUT |                                             |
-|  5. verify mock  |         +--------------------------+   +----+----------+
-+---------+--------+         |  System Under Test        |   | Mock Object   |
-          |    2, 5           |                          |   |               |
-          +-------------------> uses Collaborator via ---+-->| expected calls|
-                               | injected reference        |   | actual calls  |
-                               +----------------------------+  | verify()      |
-                                                                 +---------------+
++---------------------+
+| Test Code           |
+| 1. build mock       |
+| 2. set expectations |
+| 3. inject mock      |
+| 4. exercise SUT     |
+| 5. verify mock      |
++---------------------+
+     | depends on (constructs, injects)
+     v
++-----------------------------------+
+| Collaborator Interface (the seam) |
++-----------------------------------+
+     ^ implemented by two classes
+
++-----------------------+
+| System Under Test     |
+| uses Collaborator via |
+| injected reference    |
++-----------------------+
++----------------+
+| Mock Object    |
+| expected calls |
+| actual calls   |
+| verify()       |
++----------------+
+
+Test Code exercises the SUT (step 4) and later verifies
+the Mock (step 5). The SUT reaches the Mock only through
+the Collaborator Interface, never a concrete reference.
 ```
 
 ## 7. Dynamics

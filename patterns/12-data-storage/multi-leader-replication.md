@@ -256,28 +256,35 @@ The participants in a multi-leader replication topology are as follows.
 ## 6. ASCII structure diagram
 
 ```
-                        MULTI-LEADER REPLICATION
-                        (all-to-all mesh, 3 regions)
+MULTI-LEADER REPLICATION
+all-to-all mesh, 3 regions
 
-        +-------------------+       replication link       +-------------------+
-        |  Leader A (EU)    | <---------------------------> |  Leader B (US)    |
-        |  local WAL / log  |                                |  local WAL / log  |
-        |  version metadata |                                |  version metadata |
-        +---------+---------+                                +---------+---------+
-                  ^                                                     ^
-                  |            replication link                        |
-                  |     +---------------------------------------+      |
-                  +---> |          Leader C (APAC)              | <----+
-                        |  local WAL / log                       |
-                        |  version metadata                      |
-                        +-----------------------------------------+
++------------------+
+| Leader A (EU)    |
+| local WAL / log  |
+| version metadata |
++------------------+
+        <-- replication link -->
++------------------+
+| Leader B (US)    |
+| local WAL / log  |
+| version metadata |
++------------------+
+        <-- replication link -->
++------------------+
+| Leader C (APAC)  |
+| local WAL / log  |
+| version metadata |
++------------------+
+        <-- replication link, A and C connect directly too -->
 
-        Each leader accepts local reads and writes.
-        Each replication link is async, may lag, may partition independently.
-        A write applied at A is queued to replicate to both B and C.
-        A write applied concurrently at B for the same record is a
-        conflict once it arrives at A or C. neither write happened
-        before the other in the version metadata's partial order.
+Each leader accepts local reads and writes. Each
+replication link is async, may lag, may partition
+independently. A write applied at A is queued to
+replicate to both B and C. A write applied concurrently
+at B for the same record is a conflict once it arrives
+at A or C, neither write happened before the other in
+the version metadata's partial order.
 ```
 
 ## 7. Dynamics

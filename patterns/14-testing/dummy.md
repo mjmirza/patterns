@@ -198,22 +198,32 @@ contract, never behavioral.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+           depends on           +----------------------+
-|  Test method       |------------------------------->|  Dependency interface |
-|                     |  constructs SUT with           |  (PaymentGateway,     |
-|                     |    - realArg  (matters)        |   Logger, etc.)       |
-|                     |    - dummyArg (does not matter) +----------------------+
-+---------+-----------+                                          ^
-          |                                                       |
-          | passes both args                                     | implements
-          v                                                       |
-+---------------------------+                          +----------------------+
-|  System under test         |----- calls realArg ---->|  Real / Stub / Fake   |
-|  (OrderProcessor)          |                          |  (behavior matters)  |
-|                             |----- calls dummyArg ---X|  Dummy                |
-+---------------------------+   never actually invoked  |  (no behavior,       |
-                                 by this test path       |   or throws if used) |
-                                                          +----------------------+
++------------------------------+
+| Test method                  |
+| constructs SUT with          |
+|   realArg  (matters)         |
+|   dummyArg (does not matter) |
++------------------------------+
+     | passes both args
+     v
++------------------------------------+
+| System under test (OrderProcessor) |
++------------------------------------+
+     | calls realArg
+     v
++--------------------------------------+
+| Real / Stub / Fake, behavior matters |
++--------------------------------------+
+
+The same SUT also calls dummyArg on its constructor
+interface, but this test path never actually invokes it:
+
++---------------------------------------+
+| Dummy, no behavior, or throws if used |
++---------------------------------------+
+
+Both Real / Stub / Fake and Dummy implement the same
+Dependency interface, e.g. PaymentGateway or Logger.
 ```
 
 ## 7. Dynamics

@@ -233,31 +233,52 @@ dependency graph would reveal.
 ## 6. ASCII structure diagram
 
 ```
-BEFORE CCP: classes grouped by object type, not by reason for change
+BEFORE CCP, classes grouped by object type, not by reason
+for change
 
-  +------------------+   +------------------+   +------------------+
-  |    Entities      |   |    Services      |   |   Formatters     |
-  |------------------|   |------------------|   |------------------|
-  | Invoice          |   | TaxService       |   | TaxLineFormatter |
-  | Customer         |   | ShippingService  |   | ShipLineFormatter|
-  | ShipmentRecord   |   | DiscountService  |   | InvoicePDF       |
-  +------------------+   +------------------+   +------------------+
-         ^                       ^                       ^
-         |                       |                       |
-     a "tax rule" requirement touches all three components
++----------------+
+| Entities       |
+| Invoice        |
+| Customer       |
+| ShipmentRecord |
++----------------+
++-----------------+
+| Services        |
+| TaxService      |
+| ShippingService |
+| DiscountService |
++-----------------+
++-------------------+
+| Formatters        |
+| TaxLineFormatter  |
+| ShipLineFormatter |
+| InvoicePDF        |
++-------------------+
 
-AFTER CCP: classes grouped by axis of change
+A tax rule requirement touches all three components.
 
-  +--------------------+   +---------------------+   +---------------------+
-  |   TaxCalculation    |   |   ShippingRules      |   |   DiscountEngine    |
-  |----------------------|   |-----------------------|   |-----------------------|
-  | TaxService            |  | ShippingService       |  | DiscountService       |
-  | TaxLineFormatter       |  | ShipLineFormatter     |  | DiscountFormatter     |
-  | TaxRateSource          |  | ShipZoneSource        |  | PromoCodeSource       |
-  +--------------------+   +---------------------+   +---------------------+
-         ^
-         |
-     a "tax rule" requirement now touches exactly one component
+AFTER CCP, classes grouped by axis of change
+
++------------------+
+| TaxCalculation   |
+| TaxService       |
+| TaxLineFormatter |
+| TaxRateSource    |
++------------------+
++-------------------+
+| ShippingRules     |
+| ShippingService   |
+| ShipLineFormatter |
+| ShipZoneSource    |
++-------------------+
++-------------------+
+| DiscountEngine    |
+| DiscountService   |
+| DiscountFormatter |
+| PromoCodeSource   |
++-------------------+
+
+A tax rule requirement now touches exactly one component.
 ```
 
 ## 7. Dynamics

@@ -129,19 +129,27 @@ directly below it.
 ## 6. ASCII structure diagram
 
 ```
-  Pages          [ Real content assembled into a template's layout ]
-                              ^
-                              |
-  Templates      [ Organisms arranged to show layout, placeholder content ]
-                              ^
-                              |
-  Organisms      [ Header = Logo(atom) + NavMenu(molecule) + SearchBar(molecule) ]
-                              ^
-                              |
-  Molecules      [ SearchBar = Label(atom) + Input(atom) + Button(atom) ]
-                              ^
-                              |
-  Atoms          [ Label ]  [ Input ]  [ Button ]
+Pages
+  Real content assembled into a template's layout
+    ^
+    |
+Templates
+  Organisms arranged to show layout, placeholder
+  content
+    ^
+    |
+Organisms
+  Header = Logo (atom) + NavMenu (molecule) +
+  SearchBar (molecule)
+    ^
+    |
+Molecules
+  SearchBar = Label (atom) + Input (atom) +
+  Button (atom)
+    ^
+    |
+Atoms
+  Label, Input, Button
 ```
 
 ## 7. Dynamics
