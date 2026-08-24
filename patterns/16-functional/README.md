@@ -2,7 +2,7 @@
 
 Origin. Category theory in practice
 
-39 entries, 240,728 words. Every entry carries all 18
+39 entries, 240,724 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Composition
