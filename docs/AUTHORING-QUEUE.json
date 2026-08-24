@@ -14,41 +14,6 @@
     "focus": ""
   },
   {
-    "name": "Null Object",
-    "slug": "null-object",
-    "category": "design patterns gof",
-    "path": "patterns/01-design-patterns-gof/null-object.md",
-    "focus": ""
-  },
-  {
-    "name": "Service Layer",
-    "slug": "service-layer",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/service-layer.md",
-    "focus": ""
-  },
-  {
-    "name": "Presentation Model",
-    "slug": "presentation-model",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/presentation-model.md",
-    "focus": ""
-  },
-  {
-    "name": "Session Facade",
-    "slug": "session-facade",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/session-facade.md",
-    "focus": ""
-  },
-  {
-    "name": "Intercepting Filter",
-    "slug": "intercepting-filter",
-    "category": "enterprise application architecture",
-    "path": "patterns/06-enterprise-application-architecture/intercepting-filter.md",
-    "focus": ""
-  },
-  {
     "name": "Context Window Auto-Compaction",
     "slug": "context-window-auto-compaction",
     "category": "ai agentic",

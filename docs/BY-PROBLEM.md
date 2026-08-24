@@ -10,6 +10,7 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 | Observed Symptom | Applicable Pattern | Family |
 |---|---|---|
 | "Only a programmer can use it" despite being built for non-programmers. | [Inner-Platform Effect](../patterns/18-anti-patterns/inner-platform-effect.md) | Anti-Patterns |
+| "The basic symptom of an Anemic Domain Model is that at first blush it | [Service Layer](../patterns/06-enterprise-application-architecture/service-layer.md) | Enterprise Application Architecture |
 | (Section 9). The observable symptom is a runtime crash at a call site that has never | [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) | Principles and Laws |
 | , a barrier that should reset for the next round instead throws a | [Barrier](../patterns/09-concurrency/barrier.md) | Concurrency and Parallelism |
 | , a bug report describing behavior that is correct for most variants | [Shotgun Surgery](../patterns/02-code-smells/shotgun-surgery.md) | Code Smells |
@@ -5889,6 +5890,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - A naive check-then-act race under concurrent access. Described in full in dimension 7, two threads racing to create an instance for the same key in an unsynchronized registry, producing a duplicated or corrupted entry. The symptom an engineer actually observes is two logically distinct objects both believed to be "the" instance for one key, with client code silently operating on different instances depending on which one it happened to receive.
 - Treating the static registry as invisible in tests. Because the registry is static and persists across test methods within the same run unless explicitly reset, a test that populates a given key can leak state into a later, unrelated test that reuses that key. Baeldung's own treatment of the closely related Singleton case states the mechanism directly, that when a class is "used as global objects, it becomes difficult to choose the configuration for the test environment. Therefore, when we run the tests, the production database gets spoiled with the test data, which is hardly acceptable," a criticism that transfers to Multiton unchanged, and in fact compounds, since an entire map of keyed state must be isolated between tests rather than one field.
 
+#### [Null Object](../patterns/01-design-patterns-gof/null-object.md)
+
+**Core Problem:** Client code that collaborates with an optional object is, in most languages, forced to check for absence before every call. "if (x != null) x.method()" scattered through a codebase is the visible symptom. The deeper cause is what Tony Hoare, in a talk at QCon London 2009, called his billion-dollar mistake. "It was the invention of the null reference in 1965... My goal was to guarantee that all use of references should be absolutely safe... But I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years."
+
 #### [Observer](../patterns/01-design-patterns-gof/observer.md)
 
 **Core Problem:** A piece of state changes, and an unknown number of other pieces of the system need to react. The set of reactors is not known when the state holder is written, changes at runtime, and belongs to layers the state holder must not depend on.
@@ -8697,6 +8702,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. A polymorphic find across a Concrete Table Inheritance schema
 - Symptom. A concrete mapper's insertSubclassRow writes its row before
 
+#### [Intercepting Filter](../patterns/06-enterprise-application-architecture/intercepting-filter.md)
+
+**Core Problem:** Cross-cutting pre-processing and post-processing concerns, authentication, logging, compression, encoding, need to run before and after core request-handling logic without being hardcoded into every handler that needs them. The Jakarta Servlet Specification states the motivation directly. filters "intercept requests and responses to transform or use the information contained in them," with named use cases including "authentication, logging, image conversion, data compression, encryption, tokenizing streams, XML transformations, and triggering resource access events." Core J2EE Patterns' own framing is consistent with this. the pattern "creates pluggable filters to process common services in a standard manner without requiring changes to core request processing code," with filters "easily removable without affecting existing code."
+
 #### [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md)
 
 **Core Problem:** An enterprise application is organized into layers, most often domain logic, data source access, and presentation, and each layer accumulates many sibling types over the life of the project. A domain layer ends up with dozens of entity classes, Order, Customer, Invoice, Shipment. A data source layer ends up with one mapper or repository class per entity. A presentation layer ends up with one controller per resource or one page handler per screen.
@@ -8799,6 +8808,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Symptom. Start-up time grows linearly, then worse, with the number of
 - Symptom. A plugin update breaks the host, or the host's update breaks
 - Symptom. An npm postinstall script, a WordPress plugin, or a browser
+
+#### [Presentation Model](../patterns/06-enterprise-application-architecture/presentation-model.md)
+
+**Core Problem:** Conventional GUI code stores presentation state directly inside widget or control instances, a checkbox's checked property, a textbox's text property, and so on. This makes presentation logic hard to unit test, because exercising it requires an instantiated, often platform-specific, UI toolkit. it bloats view classes with both rendering and behavioral logic combined. and it makes keeping multiple views of the same conceptual state in sync error prone, because there is no single authoritative object representing "what should currently be displayed" independent of the widgets themselves.
 
 #### [Query Object](../patterns/06-enterprise-application-architecture/query-object.md)
 
@@ -8904,6 +8917,14 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - The logout that did not log out. Symptom. A user who clicked logout on
 - The silently corrupted session. Symptom. Session data intermittently
 
+#### [Service Layer](../patterns/06-enterprise-application-architecture/service-layer.md)
+
+**Core Problem:** Enterprise applications commonly need multiple interfaces, a web presentation, a batch loader, an integration gateway, that require identical interactions with the same underlying data and logic. Without a named boundary, that interaction logic gets duplicated across each interface, or scattered into controllers and data-access code with no clear line between them. Microsoft's own architecture guidance for a layered .NET solution describes the resulting failure mode plainly. business logic scattered "between Models and Services folders with no clear indication of which classes in which folders should depend on which others."
+
+**Failure Mode Symptoms:**
+
+- "The basic symptom of an Anemic Domain Model is that at first blush it
+
 #### [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md)
 
 **Core Problem:** An enterprise system routinely depends on a service it does not own and cannot fully control. A credit bureau that scores an applicant. A government tax authority that returns the rate for a jurisdiction. A payment processor. An address-validation vendor. A partner's pricing engine that has not shipped yet, or has shipped but only to a staging environment the whole team shares.
@@ -8915,6 +8936,10 @@ A scannable index of codebase symptoms and the matching patterns to explore:
 - Stub over-fitted to the happy path. Symptom. A fully green test suite, and
 - Business logic creeping into the stub. Symptom. The stub grows
 - Team-wide flake from a shared local stub. Symptom. An identical commit
+
+#### [Session Facade](../patterns/06-enterprise-application-architecture/session-facade.md)
+
+**Core Problem:** Business logic that requires entity-bean-to-entity-bean interaction introduces overheads that impede application performance. The book states the underlying guidance directly. "It is desirable to investigate the design to avoid inter-entity-bean dependencies as much as possible... it may be necessary to identify, extract, and move business logic that introduces entity-bean-to-entity-bean interaction from the entity bean into a session bean by applying the Session Facade pattern." And directly on workflow. "If any workflow associated with multiple entity beans is identified, then you can implement the workflow in a session bean instead of in an entity bean."
 
 #### [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md)
 

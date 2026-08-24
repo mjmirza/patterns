@@ -28,6 +28,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Mediator](../patterns/01-design-patterns-gof/mediator.md) | Design Patterns (GoF) |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Memento](../patterns/01-design-patterns-gof/memento.md) | Design Patterns (GoF) |  | Yes |  | Yes |  | Yes |  |  | Yes |
 | [Multiton](../patterns/01-design-patterns-gof/multiton.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Null Object](../patterns/01-design-patterns-gof/null-object.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Observer](../patterns/01-design-patterns-gof/observer.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
 | [Private Class Data](../patterns/01-design-patterns-gof/private-class-data.md) | Design Patterns (GoF) |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prototype](../patterns/01-design-patterns-gof/prototype.md) | Design Patterns (GoF) |  |  | Yes | Yes |  | Yes |  |  | Yes |
@@ -233,6 +234,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Identity Map](../patterns/06-enterprise-application-architecture/identity-map.md) | Enterprise Application Architecture |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Implicit Lock](../patterns/06-enterprise-application-architecture/implicit-lock.md) | Enterprise Application Architecture |  |  |  |  |  | Yes | Yes |  | Yes |
 | [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Intercepting Filter](../patterns/06-enterprise-application-architecture/intercepting-filter.md) | Enterprise Application Architecture |  | Yes | Yes | Yes |  | Yes |  |  | Yes |
 | [Layer Supertype](../patterns/06-enterprise-application-architecture/layer-supertype.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  | Yes | Yes |
 | [Lazy Load](../patterns/06-enterprise-application-architecture/lazy-load.md) | Enterprise Application Architecture |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Mapper](../patterns/06-enterprise-application-architecture/mapper.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -242,6 +244,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Page Controller](../patterns/06-enterprise-application-architecture/page-controller.md) | Enterprise Application Architecture |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Pessimistic Offline Lock](../patterns/06-enterprise-application-architecture/pessimistic-offline-lock.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Plugin](../patterns/06-enterprise-application-architecture/plugin.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Presentation Model](../patterns/06-enterprise-application-architecture/presentation-model.md) | Enterprise Application Architecture |  | Yes |  |  | Yes | Yes |  | Yes | Yes |
 | [Query Object](../patterns/06-enterprise-application-architecture/query-object.md) | Enterprise Application Architecture |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) | Enterprise Application Architecture |  | Yes | Yes |  |  | Yes |  |  |  |
 | [Registry](../patterns/06-enterprise-application-architecture/registry.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes | Yes |  | Yes |
@@ -250,7 +253,9 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) | Enterprise Application Architecture |  |  | Yes | Yes |  | Yes | Yes |  | Yes |
 | [Serialized LOB](../patterns/06-enterprise-application-architecture/serialized-lob.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Server Session State](../patterns/06-enterprise-application-architecture/server-session-state.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
+| [Service Layer](../patterns/06-enterprise-application-architecture/service-layer.md) | Enterprise Application Architecture |  | Yes |  | Yes |  | Yes |  |  | Yes |
 | [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes | Yes |  | Yes |
+| [Session Facade](../patterns/06-enterprise-application-architecture/session-facade.md) | Enterprise Application Architecture |  | Yes |  | Yes |  |  |  |  | Yes |
 | [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) | Enterprise Application Architecture |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Special Case](../patterns/06-enterprise-application-architecture/special-case.md) | Enterprise Application Architecture |  |  |  | Yes |  | Yes |  |  | Yes |
 | [Table Data Gateway](../patterns/06-enterprise-application-architecture/table-data-gateway.md) | Enterprise Application Architecture |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -943,8 +948,12 @@ No language-level redundancies recorded.
 
 These patterns contain runnable code examples written in C#:
 
+- [Intercepting Filter](../patterns/06-enterprise-application-architecture/intercepting-filter.md) (Enterprise Application Architecture)
 - [Memento](../patterns/01-design-patterns-gof/memento.md) (Design Patterns (GoF))
+- [Presentation Model](../patterns/06-enterprise-application-architecture/presentation-model.md) (Enterprise Application Architecture)
 - [Record Set](../patterns/06-enterprise-application-architecture/record-set.md) (Enterprise Application Architecture)
+- [Service Layer](../patterns/06-enterprise-application-architecture/service-layer.md) (Enterprise Application Architecture)
+- [Session Facade](../patterns/06-enterprise-application-architecture/session-facade.md) (Enterprise Application Architecture)
 
 #### Changes Shape in C#
 
@@ -999,6 +1008,7 @@ These patterns have unique implementation variants or change their design struct
 - [Money](../patterns/06-enterprise-application-architecture/money.md) (Enterprise Application Architecture)
 - [Monitor Object](../patterns/09-concurrency/monitor-object.md) (Concurrency and Parallelism)
 - [Mutation Test](../patterns/14-testing/mutation-test.md) (Testing)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
@@ -1356,6 +1366,7 @@ These patterns contain runnable code examples written in Go:
 - [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) (AI and Agentic)
 - [Input Validation](../patterns/15-security/input-validation.md) (Security)
 - [Insider Trading](../patterns/02-code-smells/insider-trading.md) (Code Smells)
+- [Intercepting Filter](../patterns/06-enterprise-application-architecture/intercepting-filter.md) (Enterprise Application Architecture)
 - [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) (Principles and Laws)
 - [Interpreter Architecture](../patterns/05-architectural/interpreter-architecture.md) (Architectural Patterns)
 - [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) (Enterprise Integration)
@@ -1449,6 +1460,7 @@ These patterns contain runnable code examples written in Go:
 - [No Caching](../patterns/18-anti-patterns/no-caching.md) (Anti-Patterns)
 - [Normalizer](../patterns/07-integration/normalizer.md) (Enterprise Integration)
 - [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) (Anti-Patterns)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Object Pool](../patterns/29-realtime-simulation/object-pool.md) (Real-Time Simulation)
@@ -1857,6 +1869,7 @@ These patterns have unique implementation variants or change their design struct
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Information Expert](../patterns/04-principles-and-laws/information-expert.md) (Principles and Laws)
 - [Inheritance Mappers](../patterns/06-enterprise-application-architecture/inheritance-mappers.md) (Enterprise Application Architecture)
+- [Intercepting Filter](../patterns/06-enterprise-application-architecture/intercepting-filter.md) (Enterprise Application Architecture)
 - [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) (Principles and Laws)
 - [Interpreter](../patterns/01-design-patterns-gof/interpreter.md) (Design Patterns (GoF))
 - [Invalid Message Channel](../patterns/07-integration/invalid-message-channel.md) (Enterprise Integration)
@@ -1896,6 +1909,7 @@ These patterns have unique implementation variants or change their design struct
 - [Monoid](../patterns/16-functional/monoid.md) (Functional Programming)
 - [Multiversion Concurrency Control](../patterns/12-data-storage/mvcc.md) (Data and Storage)
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
@@ -2168,6 +2182,7 @@ These patterns contain runnable code examples written in Java:
 - [Inline Class](../patterns/03-refactoring/inline-class.md) (Refactoring Techniques)
 - [Inline Function](../patterns/03-refactoring/inline-function.md) (Refactoring Techniques)
 - [Inline Variable](../patterns/03-refactoring/inline-variable.md) (Refactoring Techniques)
+- [Intercepting Filter](../patterns/06-enterprise-application-architecture/intercepting-filter.md) (Enterprise Application Architecture)
 - [Interpreter](../patterns/01-design-patterns-gof/interpreter.md) (Design Patterns (GoF))
 - [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) (Refactoring Techniques)
 - [Introduce Parameter Object](../patterns/03-refactoring/introduce-parameter-object.md) (Refactoring Techniques)
@@ -2187,6 +2202,7 @@ These patterns contain runnable code examples written in Java:
 - [Move Function](../patterns/03-refactoring/move-function.md) (Refactoring Techniques)
 - [Move Statements into Function](../patterns/03-refactoring/move-statements-into-function.md) (Refactoring Techniques)
 - [Move Statements to Callers](../patterns/03-refactoring/move-statements-to-callers.md) (Refactoring Techniques)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Optimistic Offline Lock](../patterns/06-enterprise-application-architecture/optimistic-offline-lock.md) (Enterprise Application Architecture)
 - [Over-Agentification](../patterns/18-anti-patterns/over-agentification.md) (Anti-Patterns)
@@ -2218,6 +2234,8 @@ These patterns contain runnable code examples written in Java:
 - [Semaphore](../patterns/09-concurrency/semaphore.md) (Concurrency and Parallelism)
 - [Separated Interface](../patterns/06-enterprise-application-architecture/separated-interface.md) (Enterprise Application Architecture)
 - [Service Activator](../patterns/07-integration/service-activator.md) (Enterprise Integration)
+- [Service Layer](../patterns/06-enterprise-application-architecture/service-layer.md) (Enterprise Application Architecture)
+- [Session Facade](../patterns/06-enterprise-application-architecture/session-facade.md) (Enterprise Application Architecture)
 - [Single Table Inheritance](../patterns/06-enterprise-application-architecture/single-table-inheritance.md) (Enterprise Application Architecture)
 - [Singleton](../patterns/01-design-patterns-gof/singleton.md) (Design Patterns (GoF))
 - [Smart Proxy](../patterns/07-integration/smart-proxy.md) (Enterprise Integration)
@@ -2414,6 +2432,7 @@ These patterns have unique implementation variants or change their design struct
 - [Multiton](../patterns/01-design-patterns-gof/multiton.md) (Design Patterns (GoF))
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
 - [Mutation Test](../patterns/14-testing/mutation-test.md) (Testing)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Onion Architecture](../patterns/05-architectural/onion-architecture.md) (Architectural Patterns)
@@ -2633,6 +2652,7 @@ These patterns contain runnable code examples written in Kotlin:
 - [Multi-Site Active Active](../patterns/21-sre-operations/multi-site-active-active.md) (SRE and Operations)
 - [Offline-First Sync](../patterns/27-mobile-architecture/offline-first-sync.md) (Mobile Architecture)
 - [Pagination Pattern](../patterns/19-api-design/pagination-pattern.md) (API and Interface Design)
+- [Presentation Model](../patterns/06-enterprise-application-architecture/presentation-model.md) (Enterprise Application Architecture)
 - [REST Resource Modeling](../patterns/19-api-design/rest-resource-modeling.md) (API and Interface Design)
 - [Redux for Mobile](../patterns/27-mobile-architecture/redux-for-mobile.md) (Mobile Architecture)
 - [Regional Evacuation](../patterns/21-sre-operations/regional-evacuation.md) (SRE and Operations)
@@ -2708,6 +2728,7 @@ These patterns have unique implementation variants or change their design struct
 - [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) (Architectural Patterns)
 - [Model-View-Intent](../patterns/05-architectural/model-view-intent.md) (Architectural Patterns)
 - [Modular Monolith](../patterns/05-architectural/modular-monolith.md) (Architectural Patterns)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
@@ -2751,6 +2772,7 @@ These patterns have native features in Kotlin that make the pattern unnecessary,
 - [Introduce Special Case](../patterns/03-refactoring/introduce-special-case.md) (Refactoring Techniques)
 - [Iterator](../patterns/01-design-patterns-gof/iterator.md) (Design Patterns (GoF))
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
 - [Semaphore](../patterns/09-concurrency/semaphore.md) (Concurrency and Parallelism)
 - [Singleton](../patterns/01-design-patterns-gof/singleton.md) (Design Patterns (GoF))
@@ -3142,6 +3164,7 @@ These patterns contain runnable code examples written in Python:
 - [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) (AI and Agentic)
 - [Input Validation](../patterns/15-security/input-validation.md) (Security)
 - [Insider Trading](../patterns/02-code-smells/insider-trading.md) (Code Smells)
+- [Intercepting Filter](../patterns/06-enterprise-application-architecture/intercepting-filter.md) (Enterprise Application Architecture)
 - [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) (Principles and Laws)
 - [Interpreter Architecture](../patterns/05-architectural/interpreter-architecture.md) (Architectural Patterns)
 - [Interpreter](../patterns/01-design-patterns-gof/interpreter.md) (Design Patterns (GoF))
@@ -3256,6 +3279,7 @@ These patterns contain runnable code examples written in Python:
 - [No Caching](../patterns/18-anti-patterns/no-caching.md) (Anti-Patterns)
 - [Normalizer](../patterns/07-integration/normalizer.md) (Enterprise Integration)
 - [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) (Anti-Patterns)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Object Pool](../patterns/29-realtime-simulation/object-pool.md) (Real-Time Simulation)
@@ -3318,6 +3342,7 @@ These patterns contain runnable code examples written in Python:
 - [Prebuilt Fixture](../patterns/14-testing/prebuilt-fixture.md) (Testing)
 - [Predictable](../patterns/04-principles-and-laws/predictable.md) (Principles and Laws)
 - [Premature Optimization](../patterns/18-anti-patterns/premature-optimization.md) (Anti-Patterns)
+- [Presentation Model](../patterns/06-enterprise-application-architecture/presentation-model.md) (Enterprise Application Architecture)
 - [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) (Refactoring Techniques)
 - [Primary-Replica](../patterns/05-architectural/primary-replica.md) (Architectural Patterns)
 - [Primitive Obsession](../patterns/02-code-smells/primitive-obsession.md) (Code Smells)
@@ -3472,6 +3497,7 @@ These patterns contain runnable code examples written in Python:
 - [Service Instance per Container](../patterns/10-microservices/service-instance-per-container.md) (Microservices)
 - [Service Instance per Host](../patterns/10-microservices/service-instance-per-host.md) (Microservices)
 - [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) (Microservices)
+- [Service Layer](../patterns/06-enterprise-application-architecture/service-layer.md) (Enterprise Application Architecture)
 - [Service Level Objective](../patterns/21-sre-operations/service-level-objective.md) (SRE and Operations)
 - [Service Locator Antipattern](../patterns/18-anti-patterns/service-locator-antipattern.md) (Anti-Patterns)
 - [Service Locator](../patterns/18-anti-patterns/service-locator.md) (Anti-Patterns)
@@ -3755,6 +3781,7 @@ These patterns have unique implementation variants or change their design struct
 - [Inline Function](../patterns/03-refactoring/inline-function.md) (Refactoring Techniques)
 - [Inline Variable](../patterns/03-refactoring/inline-variable.md) (Refactoring Techniques)
 - [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) (AI and Agentic)
+- [Intercepting Filter](../patterns/06-enterprise-application-architecture/intercepting-filter.md) (Enterprise Application Architecture)
 - [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) (Principles and Laws)
 - [Interpreter](../patterns/01-design-patterns-gof/interpreter.md) (Design Patterns (GoF))
 - [Introduce Assertion](../patterns/03-refactoring/introduce-assertion.md) (Refactoring Techniques)
@@ -4252,6 +4279,7 @@ These patterns have unique implementation variants or change their design struct
 - [Multiversion Concurrency Control](../patterns/12-data-storage/mvcc.md) (Data and Storage)
 - [Mutable Data](../patterns/02-code-smells/mutable-data.md) (Code Smells)
 - [Mutation Test](../patterns/14-testing/mutation-test.md) (Testing)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Open Closed Principle](../patterns/04-principles-and-laws/open-closed-principle.md) (Principles and Laws)
 - [Option Maybe](../patterns/16-functional/option-maybe.md) (Functional Programming)
@@ -4366,6 +4394,7 @@ These patterns have native features in Rust that make the pattern unnecessary, o
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
 - [Monad](../patterns/16-functional/monad.md) (Functional Programming)
 - [Monitor Object](../patterns/09-concurrency/monitor-object.md) (Concurrency and Parallelism)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Proxy](../patterns/01-design-patterns-gof/proxy.md) (Design Patterns (GoF))
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) (Refactoring Techniques)
@@ -4475,6 +4504,7 @@ These patterns contain runnable code examples written in Swift:
 - [Parameterized Query](../patterns/15-security/parameterized-query.md) (Security)
 - [Pattern Matching](../patterns/16-functional/pattern-matching.md) (Functional Programming)
 - [Polling Loop](../patterns/28-embedded-hardware/polling-loop.md) (Embedded and Hardware-Software)
+- [Presentation Model](../patterns/06-enterprise-application-architecture/presentation-model.md) (Enterprise Application Architecture)
 - [Producer-Consumer (Embedded)](../patterns/28-embedded-hardware/producer-consumer.md) (Embedded and Hardware-Software)
 - [Profunctor](../patterns/16-functional/profunctor.md) (Functional Programming)
 - [Progressive Enhancement](../patterns/13-frontend-ui/progressive-enhancement.md) (Frontend and UI)
@@ -4565,6 +4595,7 @@ These patterns have unique implementation variants or change their design struct
 - [Low Coupling](../patterns/04-principles-and-laws/low-coupling.md) (Principles and Laws)
 - [Model Context Protocol](../patterns/17-ai-agentic/model-context-protocol.md) (AI and Agentic)
 - [Model View ViewModel](../patterns/05-architectural/model-view-viewmodel.md) (Architectural Patterns)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Observer](../patterns/01-design-patterns-gof/observer.md) (Design Patterns (GoF))
 - [Open Host Service and Published Language](../patterns/11-domain-driven-design/open-host-service-and-published-language.md) (Domain-Driven Design)
@@ -4625,6 +4656,7 @@ These patterns have native features in Swift that make the pattern unnecessary, 
 - [Functor](../patterns/16-functional/functor.md) (Functional Programming)
 - [Incomplete Library Class](../patterns/02-code-smells/incomplete-library-class.md) (Code Smells)
 - [Liskov Substitution Principle](../patterns/04-principles-and-laws/liskov-substitution-principle.md) (Principles and Laws)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [Point-free Style](../patterns/16-functional/point-free-style.md) (Functional Programming)
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Replace Conditional with Polymorphism](../patterns/03-refactoring/replace-conditional-with-polymorphism.md) (Refactoring Techniques)
@@ -4975,6 +5007,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Input Guardrails](../patterns/17-ai-agentic/input-guardrails.md) (AI and Agentic)
 - [Input Validation](../patterns/15-security/input-validation.md) (Security)
 - [Insider Trading](../patterns/02-code-smells/insider-trading.md) (Code Smells)
+- [Intercepting Filter](../patterns/06-enterprise-application-architecture/intercepting-filter.md) (Enterprise Application Architecture)
 - [Interface Segregation Principle](../patterns/04-principles-and-laws/interface-segregation-principle.md) (Principles and Laws)
 - [Interpreter Architecture](../patterns/05-architectural/interpreter-architecture.md) (Architectural Patterns)
 - [Interpreter](../patterns/01-design-patterns-gof/interpreter.md) (Design Patterns (GoF))
@@ -5081,6 +5114,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [No Caching](../patterns/18-anti-patterns/no-caching.md) (Anti-Patterns)
 - [Normalizer](../patterns/07-integration/normalizer.md) (Enterprise Integration)
 - [Not Invented Here](../patterns/18-anti-patterns/not-invented-here.md) (Anti-Patterns)
+- [Null Object](../patterns/01-design-patterns-gof/null-object.md) (Design Patterns (GoF))
 - [OAuth 2.1 Flows](../patterns/15-security/oauth-2-1-flows.md) (Security)
 - [Object Mother](../patterns/14-testing/object-mother.md) (Testing)
 - [Object Pool](../patterns/29-realtime-simulation/object-pool.md) (Real-Time Simulation)
@@ -5134,6 +5168,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Prebuilt Fixture](../patterns/14-testing/prebuilt-fixture.md) (Testing)
 - [Predictable](../patterns/04-principles-and-laws/predictable.md) (Principles and Laws)
 - [Premature Optimization](../patterns/18-anti-patterns/premature-optimization.md) (Anti-Patterns)
+- [Presentation Model](../patterns/06-enterprise-application-architecture/presentation-model.md) (Enterprise Application Architecture)
 - [Preserve Whole Object](../patterns/03-refactoring/preserve-whole-object.md) (Refactoring Techniques)
 - [Primary-Replica](../patterns/05-architectural/primary-replica.md) (Architectural Patterns)
 - [Primitive Obsession](../patterns/02-code-smells/primitive-obsession.md) (Code Smells)
@@ -5279,12 +5314,14 @@ These patterns contain runnable code examples written in TypeScript:
 - [Service Instance per Container](../patterns/10-microservices/service-instance-per-container.md) (Microservices)
 - [Service Instance per Host](../patterns/10-microservices/service-instance-per-host.md) (Microservices)
 - [Service Instance per VM](../patterns/10-microservices/service-instance-per-vm.md) (Microservices)
+- [Service Layer](../patterns/06-enterprise-application-architecture/service-layer.md) (Enterprise Application Architecture)
 - [Service Locator Antipattern](../patterns/18-anti-patterns/service-locator-antipattern.md) (Anti-Patterns)
 - [Service Locator](../patterns/18-anti-patterns/service-locator.md) (Anti-Patterns)
 - [Service Registry](../patterns/10-microservices/service-registry.md) (Microservices)
 - [Service Stub](../patterns/06-enterprise-application-architecture/service-stub.md) (Enterprise Application Architecture)
 - [Service per Team](../patterns/10-microservices/service-per-team.md) (Microservices)
 - [Service-Oriented Architecture](../patterns/05-architectural/service-oriented-architecture.md) (Architectural Patterns)
+- [Session Facade](../patterns/06-enterprise-application-architecture/session-facade.md) (Enterprise Application Architecture)
 - [Session Management](../patterns/15-security/session-management.md) (Security)
 - [Shadow Model](../patterns/25-mlops/shadow-model.md) (MLOps)
 - [Sharding](../patterns/08-cloud-distributed/sharding.md) (Cloud and Distributed)

@@ -2,7 +2,7 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-32 entries, 306,348 words, 1 more planned, 33 total when the family is complete. Every entry carries all 18
+33 entries, 309,854 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
@@ -15,6 +15,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Iterator](iterator.md) | canonical | 11,672 | A client needs to visit every element of a collection, and the collection knows how it stores those elements while the client does not and should not. |
 | [Mediator](mediator.md) | canonical | 11,878 | A set of objects has to cooperate, and every one of them needs to know something about the others in order to do its part. |
 | [Memento](memento.md) | canonical | 11,628 | An object holds state that changes over time, and something outside that object needs the ability to put the state back the way it was. |
+| [Null Object](null-object.md) | canonical | 3,506 | Client code that collaborates with an optional object is, in most languages, forced to check for absence before every call. |
 | [Observer](observer.md) | canonical | 13,315 | A piece of state changes, and an unknown number of other pieces of the system need to react. |
 | [Servant](servant.md) | contested | 5,677 | Wikipedia's own definition, quoted directly. |
 | [State](state.md) | canonical | 14,281 | An object behaves differently depending on a mode it is in, and every method that depends on that mode has grown the same conditional. |
@@ -51,12 +52,6 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Proxy](proxy.md) | canonical | 9,732 | Some object is expensive, remote, dangerous, or shared, and the code that wants to use it should not have to know that. |
 | [Role Object](role-object.md) | established | 8,705 | A single key abstraction is used from more than one context, and each context needs its own, different view of it. |
 | [Twin](twin.md) | contested | 6,116 | A designer working in a single inheritance language sometimes needs one conceptual object to behave as two unrelated, already existing base types at once, each carrying its own ... |
-
-## Planned
-
-Named, not yet authored. Queued in [docs/AUTHORING-QUEUE.json](../../docs/AUTHORING-QUEUE.json), each one to be built to the same 18-dimension standard as the entries above before it is published.
-
-- Null Object
 
 ## Reading order
 
