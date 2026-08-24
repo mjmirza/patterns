@@ -140,29 +140,45 @@ The refactoring has one participant.
 ## 6. ASCII structure diagram
 
 ```
-  BEFORE                                  AFTER
-  ------                                  -----
+BEFORE
+------
 
-  record ConnectionConfig:                class ConnectionConfig:
-    host: str                               _host: str   (private)
-    port: int                               _port: int   (private)
-    timeout: int                            _timeout: int (private)
-    retryCount: int                         _retry: int   (private)
+record ConnectionConfig:
+  host: str
+  port: int
+  timeout: int
+  retryCount: int
 
-  caller:                                 constructor(host, port, timeout, retry):
-    config = ConnectionConfig()                if not (1 <= port <= 65535):
-    config.host = "db.example"                     raise ValueError("port")
-    config.port = 0                           if timeout < 0:
-    config.timeout = -1                           raise ValueError("timeout")
-                                              ...
+caller:
+  config = ConnectionConfig()
+  config.host = "db.example"
+  config.port = 0
+  config.timeout = -1
 
-                                          getPort(): int
-                                              return _port
 
-                                          setPort(port):
-                                              if not (1 <= port <= 65535):
-                                                  raise ValueError
-                                              _port = port
+AFTER
+-----
+
+class ConnectionConfig:
+  _host: str      (private)
+  _port: int      (private)
+  _timeout: int   (private)
+  _retry: int     (private)
+
+constructor(host, port, timeout, retry):
+  if not (1 <= port <= 65535):
+    raise ValueError("port")
+  if timeout < 0:
+    raise ValueError("timeout")
+  ...
+
+getPort(): int
+  return _port
+
+setPort(port):
+  if not (1 <= port <= 65535):
+    raise ValueError
+  _port = port
 ```
 
 ## 7. Dynamics

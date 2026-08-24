@@ -300,32 +300,36 @@ Collection each thread resolves the key against is private to that thread.
 ## 6. ASCII structure diagram
 
 ```
-   +----------------------+
-   |  Application Thread  |
-   |----------------------|
-   |  calls getspecific()  |
-   |  calls setspecific()  |
-   +-----------+----------+
-               |
-               v
-   +----------------------+          key           +------------------------+
-   |    TS Object Proxy    | --------------------->  |   TS Object Collection |
-   |------------------------|                        |   (one per thread)      |
-   | + getspecific(): TSObj |                        |-------------------------|
-   | + setspecific(v: TSObj)|                        | + get_object(key): TSObj|
-   | - key                  |                        | + set_object(key, v)    |
-   +------------------------+                        +------------+------------+
-                                                                    |
-                                                                    v
-                                                       +------------------------+
-                                                       |        TS Object        |
-                                                       |  (this thread's copy)   |
-                                                       +------------------------+
++---------------------+
+| Application Thread  |
+| calls getspecific() |
+| calls setspecific() |
++---------------------+
+           |
+           v
++-------------------------+
+| TS Object Proxy         |
+| + getspecific(): TSObj  |
+| + setspecific(v: TSObj) |
+| - key                   |
++-------------------------+
+           | resolves key against
+           v
++---------------------------------------+
+| TS Object Collection (one per thread) |
+| + get_object(key): TSObj              |
+| + set_object(key, v)                  |
++---------------------------------------+
+           |
+           v
++--------------------------------+
+| TS Object (this thread's copy) |
++--------------------------------+
 
-   One Proxy instance is shared by every Application Thread.
-   Each thread's Collection is private to that thread.
-   The same key, resolved against a different Collection,
-   reaches a different TS Object.
+One Proxy instance is shared by every Application
+Thread. Each thread's Collection is private to that
+thread. The same key, resolved against a different
+Collection, reaches a different TS Object.
 ```
 
 ## 7. Dynamics

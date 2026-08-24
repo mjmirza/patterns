@@ -265,41 +265,44 @@ frontend.
 ## 6. ASCII structure diagram
 
 ```
-   Upstream Bounded Context
-   +-----------------------------------------------------------+
-   |                                                            |
-   |   +------------------+          +----------------------+  |
-   |   |  Internal Domain |  reads   |   Host Translator    |  |
-   |   |  Model           |  ------->|   (Open Host Service  |  |
-   |   |  (aggregates,    |          |    adapter layer)     |  |
-   |   |  invariants)     |          +-----------+----------+  |
-   |   +------------------+                      |             |
-   |          ^  changes freely,                 | emits       |
-   |          |  no external notice needed        v             |
-   |          |                       +----------------------+  |
-   |          +---------------------- | Published Language   |  |
-   |                                  | (versioned schema.   |  |
-   |                                  |  OpenAPI, Protobuf,  |  |
-   |                                  |  event contract)     |  |
-   |                                  +-----------+----------+  |
-   +----------------------------------------------|-------------+
-                                                    |
-                        one stable, documented, versioned protocol
-                                                    |
-            +---------------------+----------------+---------------------+
-            |                     |                                      |
-            v                     v                                      v
-   +-----------------+   +-----------------+                   +-----------------+
-   |  Consumer A     |   |  Consumer B     |        ...        |  Consumer N     |
-   |  (own model,    |   |  (own model,    |                   |  (own model,    |
-   |  translates     |   |  translates     |                   |  translates     |
-   |  Published Lang |   |  Published Lang |                   |  Published Lang |
-   |  into its own)  |   |  into its own)  |                   |  into its own)  |
-   +-----------------+   +-----------------+                   +-----------------+
+Upstream Bounded Context
 
-   Only the Host Translator sees both the internal model and the
-   Published Language. No consumer, and no part of the internal model,
-   ever crosses that boundary directly.
++------------------------+
+| Internal Domain Model  |
+| aggregates, invariants |
++------------------------+
+     | reads
+     v
++---------------------------------------------------+
+| Host Translator (Open Host Service adapter layer) |
++---------------------------------------------------+
+     | emits
+     v
++--------------------------------------------+
+| Published Language                         |
+| versioned schema, OpenAPI, Protobuf, event |
+| contract                                   |
++--------------------------------------------+
+
+Internal Domain Model changes freely, no external notice
+needed. Only the Host Translator sees both the internal
+model and the Published Language.
+
+One stable, documented, versioned protocol, downstream:
+
++--------------------------------------------------+
+| Consumer A, own model, translates Published Lang |
++--------------------------------------------------+
++--------------------------------------------------+
+| Consumer B, own model, translates Published Lang |
++--------------------------------------------------+
+...
++--------------------------------------------------+
+| Consumer N, own model, translates Published Lang |
++--------------------------------------------------+
+
+No consumer, and no part of the internal model, ever
+crosses the Host Translator boundary directly.
 ```
 
 ## 7. Dynamics

@@ -2,7 +2,7 @@
 
 Origin. Kleppmann
 
-45 entries, 319,818 words. Every entry carries all 18
+45 entries, 319,823 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency Control
@@ -50,7 +50,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Leaderless Replication](leaderless-replication.md) | canonical | 7,925 | A single-leader replicated database routes every write through one node. |
 | [Log Compaction](log-compaction.md) | established | 8,019 | An append-only log is the simplest and most dependable storage primitive a distributed system offers. |
 | [Medallion Architecture](medallion-architecture.md) | established | 7,094 | A data platform ingests information from many upstream systems. |
-| [Multi-Leader Replication](multi-leader-replication.md) | established | 7,906 | A team runs a database that serves write traffic from more than one geographic region, or from more than one autonomous system that must keep working during a network partition ... |
+| [Multi-Leader Replication](multi-leader-replication.md) | established | 7,911 | A team runs a database that serves write traffic from more than one geographic region, or from more than one autonomous system that must keep working during a network partition ... |
 | [Multiversion Concurrency Control](mvcc.md) | canonical | 7,230 | A database serves many concurrent transactions. |
 | [Quorum](quorum.md) | canonical | 7,448 | A system replicates the same piece of data onto several nodes so that the loss of any one node, or the temporary unavailability of any one node, does not lose data or stop the ... |
 | [Read Repair](read-repair.md) | canonical | 6,416 | A system with leaderless, quorum-based replication accepts writes on any of several replicas for a key, and a temporarily unreachable replica, a dropped message, or a slow node ... |

@@ -2,7 +2,7 @@
 
 Origin. Schmidt POSA 2
 
-40 entries, 318,564 words. Every entry carries all 18
+40 entries, 318,562 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Concurrency
@@ -46,7 +46,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Structured Concurrency](structured-concurrency.md) | established | 7,965 | A function spawns concurrent work, a network call, a background computation, a fan-out to several services, and returns before that work is guaranteed to be done. |
 | [Thread Pool](thread-pool.md) | canonical | 7,592 | A server, or any long-running process, receives a stream of independent units of work. |
 | [Thread-Safe Interface](thread-safe-interface.md) | canonical | 8,248 | An object holds mutable state that more than one thread can reach at the same time, and the object exposes more than one public operation on that state. |
-| [Thread-Specific Storage](thread-specific-storage.md) | canonical | 10,259 | A piece of state is logically global, in the sense that every function in a call chain wants to read or write it through one shared name, and yet the state must physically differ ... |
+| [Thread-Specific Storage](thread-specific-storage.md) | canonical | 10,257 | A piece of state is logically global, in the sense that every function in a call chain wants to read or write it through one shared name, and yet the state must physically differ ... |
 | [Work Queue](work-queue.md) | canonical | 7,614 | A system receives units of work that are independent of each other, and the rate at which work arrives does not match the rate at which any single processor can do it. |
 | [Work Stealing](work-stealing.md) | canonical | 9,657 | A program decomposes into many small units of work, and the units are created dynamically during execution rather than known up front. |
 

@@ -197,33 +197,37 @@ kind tends to grow and is the one most often split later.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------------------------------------------------+
-|                     Bounded Context. Ordering                |
-|                                                                |
-|  +----------------------+       +--------------------------+ |
-|  |  Module. order        |       |  Module. shipping         | |
-|  |------------------------|       |----------------------------| |
-|  |  Order (Aggregate)     |------>|  ShippingLabel (Aggregate)| |
-|  |  OrderLine (Entity)    | reads |  Carrier (Value Object)   | |
-|  |  Money (Value Object)  |       |  ShippingRepository       | |
-|  |  OrderRepository       |       |  (interface)               | |
-|  |  (interface)           |       +--------------------------+ |
-|  +-----------+------------+                                    |
-|              |                                                 |
-|              | publishes                                       |
-|              v                                                 |
-|  +----------------------------------+                          |
-|  |  Module. shared_kernel            |                          |
-|  |------------------------------------| <-- referenced by both  |
-|  |  CustomerId (Value Object)         |     order and shipping  |
-|  |  Money (Value Object, shared type) |                          |
-|  |  DomainEvent (marker interface)    |                          |
-|  +----------------------------------+                          |
-+-------------------------------------------------------------+
+Bounded Context, Ordering
 
-Legend
-  ------->   a public dependency, arrow points from consumer to depended-on module
-  A box's inner list is that module's exported model elements only
++-----------------------------+
+| Module: order               |
+| Order (Aggregate)           |
+| OrderLine (Entity)          |
+| Money (Value Object)        |
+| OrderRepository (interface) |
++-----------------------------+
+           | reads
+           v
++--------------------------------+
+| Module: shipping               |
+| ShippingLabel (Aggregate)      |
+| Carrier (Value Object)         |
+| ShippingRepository (interface) |
++--------------------------------+
+           |
+           | both publish to
+           v
++---------------------------------------+
+| Module: shared_kernel                 |
+| referenced by both order and shipping |
+| CustomerId (Value Object)             |
+| Money (Value Object, shared type)     |
+| DomainEvent (marker interface)        |
++---------------------------------------+
+
+Legend. an arrow is a public dependency, pointing from
+consumer to depended-on module. A box's inner list is
+that module's exported model elements only.
 ```
 
 The diagram deliberately shows one shared, small module (`shared_kernel`)

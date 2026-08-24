@@ -239,31 +239,34 @@ alternative named instead.
 ## 6. ASCII structure diagram
 
 ```
-                          +-----------------------+
-                          |     Message Bus        |
-                          |  (common data model,   |
-                          |   command set, infra)  |
-                          |                         |
-        publish           |  +-------------------+  |     deliver
-   Order Service --------->  | topic  order.*    |  ---------> Billing Service
-                          |  +-------------------+  |
-                          |                         |     deliver
-                          |  +-------------------+  ---------> Inventory Service
-                          |  | topic  payment.*  |  |
-   Payment Service ------->  +-------------------+  |     deliver
-        publish           |                         ---------> Fraud Check Service
-                          |  +-------------------+  |
-                          |  | topic  shipment.* |  ---------> Shipping Service
-                          |  +-------------------+  |     deliver
-                          +-----------------------+
-                          | Channel Adapter layer  |
-                          | (per-system format     |
-                          |  translation, at edge)  |
-                          +-----------------------+
++-----------------+
+| Order Service   |
+| Payment Service |
++-----------------+
+     | publish
+     v
++----------------------------------------------------+
+| Message Bus, common data model, command set, infra |
+|                                                    |
+| topic order.*                                      |
+| topic payment.*                                    |
+| topic shipment.*                                   |
+|                                                    |
+| Channel Adapter layer (per-system format           |
+| translation, at edge)                              |
++----------------------------------------------------+
+     | deliver
+     v
++---------------------+
+| Billing Service     |
+| Inventory Service   |
+| Fraud Check Service |
+| Shipping Service    |
++---------------------+
 
-  Producers know only. the bus address, the common data model.
-  Consumers know only. the topic(s) they subscribe to.
-  Neither side holds a reference to the other.
+Producers know only the bus address and the common data
+model. Consumers know only the topics they subscribe to.
+Neither side holds a reference to the other.
 ```
 
 ## 7. Dynamics
