@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-56 entries, 371,836 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
+56 entries, 371,825 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -77,7 +77,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Composite Entity](composite-entity.md) | established | 1,572 | A domain model made of many small, related objects, mapped one-to-one to individually remote, individually persistent components, pays a real network and management cost for every ... |
 | [Composite View](composite-view.md) | established | 1,561 | A page is commonly built from parts that are shared across many other pages, a header, a footer, a navigation block, and duplicating those shared parts directly inside every page ... |
 | [Connection Pooling](connection-pooling.md) | canonical | 1,662 | PostgreSQL's own documentation states the direct constraint this pattern works against. |
-| [Context Object](context-object.md) | established | 1,501 | A component or a service somewhere in an application needs access to system information, such as request parameters or configuration values, that originates from a specific ... |
+| [Context Object](context-object.md) | established | 1,490 | A component or a service somewhere in an application needs access to system information, such as request parameters or configuration values, that originates from a specific ... |
 | [Tolerant Reader](tolerant-reader.md) | established | 1,517 | Fowler's own text states the underlying problem directly. |
 | [View Helper](view-helper.md) | established | 1,467 | A template-based view, such as a JSP page, is easy to fill with embedded processing logic simply because the logic and the markup live in the same file, and once that happens, the ... |
 

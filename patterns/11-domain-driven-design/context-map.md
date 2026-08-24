@@ -244,34 +244,47 @@ Map figures.
 ## 6. ASCII structure diagram
 
 ```
-+-----------------------------+          U/D          +---------------------+
-|   Billing Context           |----------------------->|  Payment Gateway    |
-|   (Sales subdomain)         |   Conformist            |  (third-party,     |
-|                              |   D: no negotiation     |   upstream)         |
-+---------------+--------------+                        +---------------------+
-                |
-                | Anticorruption Layer
-                | D: Billing owns translation
-                v
-+-----------------------------+   Open Host Service     +---------------------+
-|   Support Context           |<------------------------|  Published Lang.    |
-|   (Support subdomain)       |   U: exposes stable API |  (shared JSON       |
-|                              |   contract               |  ticket schema)     |
-+---------------+--------------+                        +---------------------+
-                |
-                | Shared Kernel
-                | (jointly owned "Account" module)
-                v
-+-----------------------------+                        +---------------------+
-|   Identity Context           |<----------------------|  Legacy Order System |
-|   (Core subdomain)           |   Conformist            |  (upstream, no      |
-|                               |   D: no negotiation     |   negotiation)      |
-+-------------------------------+                        +---------------------+
++-----------------------------------+
+| Billing Context (Sales subdomain) |
++-----------------------------------+
+           | Conformist, U/D, D: no negotiation
+           v
++-----------------------------------------+
+| Payment Gateway (third-party, upstream) |
++-----------------------------------------+
 
-+-----------------------------+          Separate Ways          +----------------+
-|   Marketing Analytics        |<--------------------------------|  Support        |
-|   (no integration needed)    |          no connection drawn    |  Context        |
-+-----------------------------+                                  +----------------+
++-------------------------------------+
+| Support Context (Support subdomain) |
++-------------------------------------+
+           ^
+           | Open Host Service, U: exposes stable
+           | API contract
++---------------------------------------------+
+| Published Lang. (shared JSON ticket schema) |
++---------------------------------------------+
+
+Billing -> Support: Anticorruption Layer, D: Billing
+owns translation.
+
++-----------------------------------+
+| Identity Context (Core subdomain) |
++-----------------------------------+
+           ^
+           | Conformist, D: no negotiation
++------------------------------------------------+
+| Legacy Order System (upstream, no negotiation) |
++------------------------------------------------+
+
+Support -> Identity: Shared Kernel (jointly owned
+"Account" module).
+
++---------------------------------------------+
+| Marketing Analytics (no integration needed) |
++---------------------------------------------+
+           . Separate Ways, no connection drawn
++-----------------+
+| Support Context |
++-----------------+
 ```
 
 ## 7. Dynamics

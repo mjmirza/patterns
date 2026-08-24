@@ -304,38 +304,51 @@ skip:
 ```
 CHOREOGRAPHY (no Process Manager, no central object)
 
-   +-------------+  OrderCreated   +-------------+  PaymentCharged  +-------------+
-   |    Order    | -------------> |   Payment   | --------------> |  Inventory  |
-   |   Service   |                |   Service   |                 |   Service   |
-   +-------------+                +-------------+                 +-------------+
-         ^                              |                                |
-         | PaymentFailed                | InventoryReservationFailed     |
-         +------------------------------+--------------------------------+
-   No single object holds the whole flow. Each arrow is a pub/sub event.
++---------------+
+| Order Service |
++---------------+
+           | OrderCreated
+           v
++-----------------+
+| Payment Service |
++-----------------+
+           | PaymentCharged
+           v
++-------------------+
+| Inventory Service |
++-------------------+
+
+Failure paths, each its own pub/sub event:
+  Payment Service --PaymentFailed--> Order Service
+  Inventory Service --InventoryReservationFailed-->
+  Order Service
+
+No single object holds the whole flow. Each arrow
+is a pub/sub event.
 
 
-ORCHESTRATION (a Process Manager coordinates the same steps)
+ORCHESTRATION (a Process Manager coordinates the
+same steps)
 
-                          +----------------------------+
-                          |   Order Saga Orchestrator   |
-                          |  (a Process Manager)        |
-                          |  state = AWAITING_PAYMENT   |
-                          +----------------------------+
-                             |  command        ^ reply
-                             v                 |
-                          +-------------+
-                          |   Payment   |
-                          |   Service   |
-                          +-------------+
-                             |  command        ^ reply
-                             v                 |
-                          +-------------+
-                          |  Inventory  |
-                          |   Service   |
-                          +-------------+
++--------------------------+
+| Order Saga Orchestrator  |
+| (a Process Manager)      |
+| state = AWAITING_PAYMENT |
++--------------------------+
+           | command      ^ reply
+           v              |
++-----------------+
+| Payment Service |
++-----------------+
+           | command      ^ reply
+           v              |
++-------------------+
+| Inventory Service |
++-------------------+
 
-   The orchestrator sends one command at a time and owns the whole
-   sequence. Participants know only the orchestrator, not each other.
+The orchestrator sends one command at a time and
+owns the whole sequence. Participants know only the
+orchestrator, not each other.
 ```
 
 ## 7. Dynamics

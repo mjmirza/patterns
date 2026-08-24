@@ -2,14 +2,14 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-30 entries, 217,027 words. Every entry carries all 18
+30 entries, 217,017 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Test Data
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Derived Value](derived-value.md) | canonical | 5,157 | A test needs data. Every object under test, and every collaborator it talks to, has fields that must be filled in before the test can run, and the overwhelming majority of those ... |
+| [Derived Value](derived-value.md) | canonical | 5,147 | A test needs data. Every object under test, and every collaborator it talks to, has fields that must be filled in before the test can run, and the overwhelming majority of those ... |
 | [Generated Value](generated-value.md) | canonical | 6,233 | A fixture object almost always has more fields than the test actually cares about. |
 
 ## Test Double
