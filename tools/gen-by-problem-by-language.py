@@ -90,49 +90,80 @@ def extract_problem_statement(sec2: str) -> str:
 
 
 def clean_symptom_prefix(text: str) -> str:
-    # Strips leading numbers, bullets, bold Symptom headers, etc.
+    # Strips leading numbers, bullets, bold Symptom headers, punctuation, etc.
     t = text.strip()
     t = re.sub(r"^\d+\.\s*", "", t)
     if t.startswith(("-", "*")):
         t = t[1:].strip()
     t = re.sub(r"^\*\*symptom\.?\*\*\s*", "", t, flags=re.I)
-    t = re.sub(r"^symptom\.?\s*", "", t, flags=re.I)
-    return clean_text(t)
+    t = re.sub(r"^symptom[\.,:]?\s*", "", t, flags=re.I)
+    t = re.sub(r"^[,\.\:\;\s]+", "", t)
+    cleaned = clean_text(t)
+    if cleaned and cleaned[0].isalpha():
+        cleaned = cleaned[0].upper() + cleaned[1:]
+    return cleaned
 
 
 def extract_symptoms_sec2(sec2: str) -> list[str]:
-    # Extracts bullet points/symptoms from Section 2
+    # Extracts bullet points/symptoms from Section 2 handling multi-line items
     symptoms = []
-    lines = sec2.splitlines()
-    for line in lines:
-        line = line.strip()
-        if line.startswith(("-", "*")) and len(line) > 2:
-            cleaned = clean_symptom_prefix(line)
+    blocks = sec2.split("\n\n")
+    for block in blocks:
+        block_str = block.strip()
+        if not block_str:
+            continue
+        lines = block_str.splitlines()
+        current_item: list[str] = []
+        for line in lines:
+            line_s = line.strip()
+            if line_s.startswith(("-", "*")) or re.match(r"^\d+\.\s", line_s):
+                if current_item:
+                    item_text = " ".join(current_item)
+                    cleaned = clean_symptom_prefix(item_text)
+                    if cleaned:
+                        symptoms.append(cleaned)
+                    current_item = []
+                current_item.append(line_s)
+            elif current_item:
+                current_item.append(line_s)
+        if current_item:
+            item_text = " ".join(current_item)
+            cleaned = clean_symptom_prefix(item_text)
             if cleaned:
                 symptoms.append(cleaned)
     return symptoms
 
 
 def extract_symptoms_sec11(sec11: str) -> list[str]:
-    # Extracts symptoms/failure modes from Section 11 while filtering out Cause, Fix, Triple lines
+    # Extracts symptoms/failure modes from Section 11 while filtering out Cause, Fix, Triple, or table header lines
     symptoms = []
-    for line in sec11.splitlines():
-        line_str = line.strip()
-        low = line_str.lower()
-        if not line_str:
+    blocks = sec11.split("\n\n")
+    for block in blocks:
+        block_str = " ".join(line.strip() for line in block.splitlines() if line.strip())
+        low = block_str.lower()
+        if not block_str:
             continue
-        # Filter out lines that are Cause, Fix, or Triple lines
+        # Filter out HTML/markdown table tags/headers/separators or blocks that are Cause, Fix, or Triple lines/paragraphs
         if (
-            low.startswith(("cause.", "fix.", "triple"))
+            block_str.startswith("|")
+            or block_str.startswith("<table")
+            or "<tr" in low
+            or "<th>" in low
+            or low.startswith(("cause.", "fix.", "triple"))
             or "cause." in low[:10]
             or "fix." in low[:10]
         ):
             continue
 
-        if "symptom" in low or line_str.startswith(("-", "*")):
-            cleaned = clean_symptom_prefix(line_str)
-            # Make sure it didn't turn into a Cause or Fix
-            if cleaned and not cleaned.lower().startswith(("cause.", "fix.", "triple")):
+        if "symptom" in low or block_str.startswith(("-", "*", "**")):
+            cleaned = clean_symptom_prefix(block_str)
+            # Make sure it didn't turn into a Cause or Fix, or a table header residue
+            if (
+                cleaned
+                and not cleaned.lower().startswith(("cause.", "fix.", "triple", "/ symptom /"))
+                and not cleaned.startswith("/ ")
+                and len(cleaned) > 10
+            ):
                 symptoms.append(cleaned)
     return symptoms
 
