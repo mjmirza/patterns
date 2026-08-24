@@ -209,27 +209,34 @@ invariants.
 ## 6. ASCII structure diagram
 
 ```
-+----------------------+          holds / compares
-|   Client (Entity or   |------------------------------+
-|   Aggregate or        |                               |
-|   another Value Object|                               v
-+----------------------+                       +-----------------------+
-                                                |     Value Object      |
-                                                |------------------------|
-                                                | - attribute1: Type    |
-                                                | - attribute2: Type    |
-                                                |------------------------|
-                                                | + equals(other): bool |
-                                                | + hashCode(): int     |
-                                                | + withX(x): ValueObj  |
-                                                +-----------------------+
-                                                          ^
-                                                          | constructs, validates
-                                                          |
-                                                +-----------------------+
-                                                |   Factory (optional)  |
-                                                | + of(raw...): ValueObj|
-                                                +-----------------------+
++-----------------------------------------------------+
+| Client (Entity, Aggregate, or another Value Object) |
++-----------------------------------------------------+
+     | holds / compares
+     v
++-----------------------+
+| Value Object          |
+| - attribute1: Type    |
+| - attribute2: Type    |
+| + equals(other): bool |
+| + hashCode(): int     |
+| + withX(x): ValueObj  |
++-----------------------+
+     ^ constructs, validates
+     |
++------------------------+
+| Factory (optional)     |
+| + of(raw...): ValueObj |
++------------------------+
+
+No arrow in this diagram points from the Value Object
+back to a database row, a registry, or any store of
+the one true instance. Any number of equal instances
+may exist simultaneously in memory, and none of them
+is more authoritative than any other. This is the
+structural feature that most sharply distinguishes
+this diagram from an Entity's, where a repository or
+identity map is a required participant.
 ```
 
 No arrow in this diagram points from the Value Object back to a database row,

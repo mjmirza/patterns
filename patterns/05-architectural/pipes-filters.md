@@ -223,28 +223,56 @@ implementation most often loses first, described further under dimension 11.
 
 ## 6. ASCII structure diagram
 
-```text
-                Filter                Filter                Filter
-              +--------+            +--------+            +--------+
-Data Source ->|  A     |--- Pipe -->|  B     |--- Pipe -->|  C     |--> Data Sink
-              +--------+            +--------+            +--------+
+```
++-------------+
+| Data Source |
++-------------+
+     | pipe
+     v
++----------+
+| Filter A |
++----------+
+     | pipe
+     v
++----------+
+| Filter B |
++----------+
+     | pipe
+     v
++----------+
+| Filter C |
++----------+
+     | pipe
+     v
++-----------+
+| Data Sink |
++-----------+
 
-   each filter:
-     - reads only from its own inbound pipe(s)
-     - writes only to its own outbound pipe(s)
-     - has no reference to any other filter
+Each filter reads only from its own inbound pipe(s),
+writes only to its own outbound pipe(s), and has no
+reference to any other filter.
 
-   the general form is a directed acyclic graph, not only a line:
+The general form is a directed acyclic graph, not only
+a line.
 
-              +--------+
-              | Filter |----+
-   Source --->|   A    |    |    +--------+
-              +--------+    +--->| Filter |---> Sink
-                             |    |   C    |
-              +--------+     |    +--------+
-              | Filter |-----+
-   Source --->|   B    |
-              +--------+
++----------+
+| Source   |
+| Filter A |
++----------+
++----------+
+| Source   |
+| Filter B |
++----------+
+     | both feed
+     v
++----------+
+| Filter C |
++----------+
+     |
+     v
++------+
+| Sink |
++------+
 ```
 
 ## 7. Dynamics

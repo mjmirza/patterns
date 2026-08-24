@@ -2,7 +2,7 @@
 
 Origin. Category theory in practice
 
-39 entries, 240,732 words. Every entry carries all 18
+39 entries, 240,728 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Composition
@@ -31,7 +31,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Validation Applicative](validation-applicative.md) | canonical | 4,681 | A form, a configuration file, or an API request body carries several independent fields, and each field has its own validation rule, a required field, a numeric range, a format ... |
+| [Validation Applicative](validation-applicative.md) | canonical | 4,677 | A form, a configuration file, or an API request body carries several independent fields, and each field has its own validation rule, a required field, a numeric range, a format ... |
 
 ## Functional
 

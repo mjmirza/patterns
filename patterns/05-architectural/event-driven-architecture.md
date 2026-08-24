@@ -273,60 +273,82 @@ by style, but a common vocabulary covers all of them.
 ## 6. ASCII structure diagram
 
 ```
-                     EVENT NOTIFICATION / EVENT-CARRIED STATE TRANSFER
-                     (the two most common styles in service integration)
+EVENT NOTIFICATION / EVENT-CARRIED STATE TRANSFER
+the two most common styles in service integration
 
-  +----------------+   emits    +-------------------------+
-  |    Producer    | ---------> |     Event Channel        |
-  |  (Order Svc)   |  "Order    |  (topic / queue / log)   |
-  +----------------+   Placed"  +-------------------------+
-                                        |        |        |
-                             delivers   |        |        |  delivers
-                                        v        v        v
-                          +----------+  +----------+  +----------+
-                          | Consumer |  | Consumer |  | Consumer |
-                          | (Stock)  |  | (Email)  |  | (Fraud)  |
-                          +----------+  +----------+  +----------+
-                                |
-                                | may itself emit a
-                                | derived event
-                                v
-                          +----------------+
-                          | Event Channel  |  "Stock Reserved"
-                          +----------------+
-                                |
-                                v
-                          +----------+
-                          | Consumer |
-                          | (Ship)   |
-                          +----------+
++----------------------+
+| Producer (Order Svc) |
++----------------------+
+     | emits Order Placed
+     v
++-------------------------------------+
+| Event Channel (topic / queue / log) |
++-------------------------------------+
+     | delivers to all subscribers
+     v
++------------------+
+| Consumer (Stock) |
++------------------+
++------------------+
+| Consumer (Email) |
++------------------+
++------------------+
+| Consumer (Fraud) |
++------------------+
 
-  Producer has NO reference to any Consumer. Consumers have NO reference
-  to Producer or to each other. Only the Event Channel and the shared
-  event schema couple them.
+Consumer (Stock) may itself emit a derived event.
 
++-------------------------------+
+| Event Channel, Stock Reserved |
++-------------------------------+
+     |
+     v
++-----------------+
+| Consumer (Ship) |
++-----------------+
 
-                     EVENT SOURCING (the state IS the event log)
+Producer has NO reference to any Consumer. Consumers
+have NO reference to Producer or to each other. Only
+the Event Channel and the shared event schema couple
+them.
 
-  +----------------+  append   +-------------------------+  replay
-  |   Command      | -------->  |      Event Store         | -------->  current
-  |   Handler      |  event(s) |  (append-only, ordered    |            state,
-  +----------------+           |   per aggregate/stream)   |            derived
-                                +-------------------------+            not stored
+EVENT SOURCING, the state IS the event log
 
++-----------------+
+| Command Handler |
++-----------------+
+     | append event(s)
+     v
++-------------------------------------------------+
+| Event Store, append-only, ordered per aggregate |
++-------------------------------------------------+
+     | replay
+     v
+current state, derived, not stored
 
-                     CQRS (read and write are separately optimised)
+CQRS, read and write are separately optimised
 
-  +------------+   command    +---------------+   event(s)   +--------------+
-  |   Client   | -----------> |  Write Model  | -----------> |  Projector   |
-  +------------+              +---------------+              +--------------+
-        ^                                                            |
-        |                     query                                 v
-        +------------------------------------------------  +----------------+
-                                                              | Read Model(s) |
-                                                              | (denormalised,|
-                                                              |  fast reads)  |
-                                                              +----------------+
++--------+
+| Client |
++--------+
+     | command
+     v
++-------------+
+| Write Model |
++-------------+
+     | event(s)
+     v
++-----------+
+| Projector |
++-----------+
+     |
+     v
++-----------------------------------------+
+| Read Model(s), denormalised, fast reads |
++-----------------------------------------+
+
+Client also queries the Read Model(s) directly, never
+through the Write Model.
 ```
 
 ## 7. Dynamics
