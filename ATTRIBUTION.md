@@ -176,4 +176,4 @@ content will be reviewed and corrected or removed promptly.
 ## Contributing attribution
 
 Contributors agree that their contribution is original and is licensed under
-CC BY 4.0. See `.github/CONTRIBUTING.md`.
+this repository's OpenRoots Agent License 1.0. See `.github/CONTRIBUTING.md`.
