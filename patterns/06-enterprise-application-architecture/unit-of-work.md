@@ -247,46 +247,55 @@ discussion cross-reference).
 ## 6. ASCII structure diagram
 
 ```
-     +--------------------------+
-     |    Business Transaction  |
-     |   (client / domain svc)  |
-     +--------------------------+
-                 |
-                 | uses
-                 v
-     +--------------------------+          holds          +-------------------+
-     |       Unit of Work       | -----------------------> |    Identity Map   |
-     |--------------------------|                          |-------------------|
-     | - newObjects: []         |                          | id -> object      |
-     | - dirtyObjects: []       |                          +-------------------+
-     | - removedObjects: []     |
-     | + registerNew(obj)       |
-     | + registerDirty(obj)     |
-     | + registerRemoved(obj)   |
-     | + commit()               |
-     +--------------------------+
-          |          ^
-          | uses      | tracks / holds a reference to
-          v          |
-     +--------------------------+          maps            +-------------------+
-     |       Data Mapper        | <----------------------- |   Domain Object   |
-     |--------------------------|                          |-------------------|
-     | + insert(obj)            |                          | + markDirty()     |
-     | + update(obj)            |    (registered variant   |   (calls back     |
-     | + delete(obj)            |     only, dashed line)   |    into UoW)      |
-     +--------------------------+                          +-------------------+
-          |
-          | issues SQL inside one transaction
-          v
-     +--------------------------+
-     |         Database         |
-     +--------------------------+
++--------------------------------------------+
+| Business Transaction (client / domain svc) |
++--------------------------------------------+
+     | uses
+     v
++------------------------+
+| Unit of Work           |
+| - newObjects: []       |
+| - dirtyObjects: []     |
+| - removedObjects: []   |
+| + registerNew(obj)     |
+| + registerDirty(obj)   |
+| + registerRemoved(obj) |
+| + commit()             |
++------------------------+
+     | holds
+     v
++----------------------------+
+| Identity Map, id -> object |
++----------------------------+
 
-     In the automatic variant, the arrow from Domain Object back to
-     Unit of Work does not exist. Dirtiness is computed by the Unit of
-     Work comparing the live object against a snapshot it took at load
-     time, so Domain Object has no reference to, and no knowledge of,
-     the Unit of Work tracking it.
+Unit of Work also uses:
+
++---------------+
+| Data Mapper   |
+| + insert(obj) |
+| + update(obj) |
+| + delete(obj) |
++---------------+
+     | issues SQL inside one transaction
+     v
++----------+
+| Database |
++----------+
+
+Data Mapper maps a Domain Object:
+
++-----------------------------------+
+| Domain Object                     |
+| + markDirty() calls back into UoW |
++-----------------------------------+
+
+In the registered variant only, a dashed line runs from
+Domain Object back to Unit of Work, tracking a
+reference. In the automatic variant that arrow does not
+exist. Dirtiness is computed by the Unit of Work
+comparing the live object against a snapshot it took at
+load time, so Domain Object has no reference to, and no
+knowledge of, the Unit of Work tracking it.
 ```
 
 ## 7. Dynamics

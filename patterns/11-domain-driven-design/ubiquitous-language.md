@@ -203,44 +203,41 @@ given moment, corrected as understanding sharpens.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+          converses with          +-------------------+
-|   Domain Expert    | <-------------------------------> |     Developer      |
-|  (owns real-world   |                                   | (owns code that    |
-|   domain knowledge) |                                   |  encodes the model)|
-+-------------------+                                    +-------------------+
-          \                                                        /
-           \   both sides correct terms that feel wrong           /
-            \   ("this word is not what we mean")                /
-             v                                                  v
-                     +---------------------------------+
-                     |      Ubiquitous Language          |
-                     |  (one vocabulary, used in         |
-                     |   speech, code, tests, docs)       |
-                     +---------------------------------+
-                                     |
-                          grounds and is grounded by
-                                     v
-                     +---------------------------------+
-                     |          Domain Model             |
-                     |  (entities, rules, relationships)  |
-                     +---------------------------------+
-                                     |
-                        holds only within
-                                     v
-                     +---------------------------------+
-                     |         Bounded Context           |
-                     |  (the boundary where this exact    |
-                     |   language and model apply)        |
-                     +---------------------------------+
-                                     |
-                    outside this boundary, terms may
-                    legitimately mean something else,
-                    reconciled via Context Mapping
-                                     v
-                     +---------------------------------+
-                     |     Neighboring Bounded Context    |
-                     |    (its own Ubiquitous Language)   |
-                     +---------------------------------+
++-------------------------------------------------+
+| Domain Expert, owns real-world domain knowledge |
++-------------------------------------------------+
++---------------------------------------------+
+| Developer, owns code that encodes the model |
++---------------------------------------------+
+
+Both sides converse with each other, correcting terms
+that feel wrong, this word is not what we mean.
+     |
+     v
++---------------------------------------------------+
+| Ubiquitous Language                               |
+| one vocabulary, used in speech, code, tests, docs |
++---------------------------------------------------+
+     | grounds and is grounded by
+     v
++----------------------------------------------+
+| Domain Model, entities, rules, relationships |
++----------------------------------------------+
+     | holds only within
+     v
++--------------------------------------------------------+
+| Bounded Context                                        |
+| the boundary where this exact language and model apply |
++--------------------------------------------------------+
+     |
+     | outside this boundary, terms may legitimately
+     | mean something else, reconciled via Context
+     | Mapping
+     v
++-----------------------------+
+| Neighboring Bounded Context |
+| its own Ubiquitous Language |
++-----------------------------+
 ```
 
 ## 7. Dynamics

@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-54 entries, 385,699 words. Every entry carries all 18
+54 entries, 385,674 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -43,7 +43,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 |---|---|---|---|
 | [Canonical Data Model](canonical-data-model.md) | canonical | 7,238 | An enterprise with N independently developed systems that must exchange data pairwise needs, in the worst case, N times (N minus one) point-to-point translators if each system ... |
 | [Channel Purger](channel-purger.md) | canonical | 6,622 | A messaging system accumulates state on its channels in the form of undelivered or unconsumed messages sitting in a queue, a topic partition, or a durable subscription. |
-| [Claim Check](claim-check.md) | canonical | 8,722 | A component in a message-based system needs to communicate a large amount of data, an image, a video, a document, a bulk export, a machine learning feature vector, a full customer ... |
+| [Claim Check](claim-check.md) | canonical | 8,719 | A component in a message-based system needs to communicate a large amount of data, an image, a video, a document, a bulk export, a machine learning feature vector, a full customer ... |
 | [Command Message](command-message.md) | canonical | 6,014 | An application wants another application, or another component in the same system, to perform a specific piece of work. |
 | [Content Enricher](content-enricher.md) | canonical | 6,840 | A message arrives at an integration point carrying less data than the next step needs. |
 | [Content Filter](content-filter.md) | canonical | 8,464 | A consumer receives a message that is far larger, richer, or more deeply nested than anything it needs, and forwarding or storing that full message creates real cost. |
@@ -120,7 +120,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Channel Adapter](channel-adapter.md) | canonical | 7,811 | An application was written to be called, to poll a database, to read a file, or to raise an in-process event. |
-| [Polling Consumer](polling-consumer.md) | canonical | 5,802 | An application needs to consume messages from a channel, a queue, a topic partition, or any buffered source of work items, but it needs to control the timing and the volume of ... |
+| [Polling Consumer](polling-consumer.md) | canonical | 5,780 | An application needs to consume messages from a channel, a queue, a topic partition, or any buffered source of work items, but it needs to control the timing and the volume of ... |
 
 ## System Management
 

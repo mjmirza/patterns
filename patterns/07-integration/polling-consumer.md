@@ -196,34 +196,29 @@ Do NOT reach for Polling Consumer when.
 ## 6. ASCII structure diagram
 
 ```
-+-----------------+          poll(timeout, limit)         +------------------+
-|                 | -------------------------------------> |                  |
-|  Polling        |                                        |  Source          |
-|  Consumer       | <------------------------------------- |  (Channel, Queue,|
-|                 |     items[0..limit] or empty            |  Topic, Table)   |
-+--------+--------+                                        +------------------+
-         ^
-         | schedules next call
-         |
-+--------+--------+
-|                 |
-|  Trigger        |
-|  (interval,     |
-|  cron, backoff) |
-|                 |
-+-----------------+
++-----------------------------------+
+| Trigger (interval, cron, backoff) |
++-----------------------------------+
+     | schedules next call
+     v
++------------------+
+| Polling Consumer |
++------------------+
+     | poll(timeout, limit)
+     v
++---------------------------------------+
+| Source (Channel, Queue, Topic, Table) |
++---------------------------------------+
+     | returns items[0..limit], or empty
+     v
+(back to Polling Consumer)
 
-         +------------------------+
-         | Offset / Ack Tracker   |
-         | (last processed index) |
-         +------------------------+
-                    ^
-                    | updated after each
-                    | successfully handled batch
-                    |
-         +----------+----------+
-         |  Polling Consumer   |
-         +---------------------+
+Polling Consumer also updates, after each successfully
+handled batch:
+
++---------------------------------------------+
+| Offset / Ack Tracker (last processed index) |
++---------------------------------------------+
 ```
 
 ## 7. Dynamics

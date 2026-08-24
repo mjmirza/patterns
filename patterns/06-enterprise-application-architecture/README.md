@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-56 entries, 371,818 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
+56 entries, 371,808 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -88,7 +88,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Data Mapper](data-mapper.md) | canonical | 5,828 | An application has a domain model made of objects with behavior, and a relational database made of tables, rows, and columns with no behavior. |
 | [Identity Map](identity-map.md) | canonical | 6,357 | An object-relational mapping layer loads rows from a database and turns them into in-memory objects. |
 | [Lazy Load](lazy-load.md) | canonical | 7,284 | An object graph persisted in a relational database is, by its nature, larger than any single query needs. |
-| [Unit of Work](unit-of-work.md) | canonical | 8,827 | An operation touches several objects that came from, or are destined for, a database. |
+| [Unit of Work](unit-of-work.md) | canonical | 8,817 | An operation touches several objects that came from, or are destined for, a database. |
 
 ## Object-Relational Behavioral Patterns
 
