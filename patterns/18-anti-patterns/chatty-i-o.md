@@ -270,35 +270,39 @@ call graph rather than fixed types.
 
 ## 6. ASCII structure diagram
 
-```text
+```
 CHATTY, the anti-pattern
 
-  Caller                    Boundary          Data Source
-  ------                    --------          -----------
-   |
-   | for each of N items -->|--- call 1 --->  [ answer 1 ]
-   |                        |<-- reply 1 ---
-   |                        |--- call 2 --->  [ answer 2 ]
-   |                        |<-- reply 2 ---
-   |                        |      ...
-   |                        |--- call N --->  [ answer N ]
-   |<-----------------------|<-- reply N ---
-   |
-   N round trips, N x fixed overhead paid, payload scales with N.
+Caller       Boundary       Data Source
+------       --------       -----------
+ |
+ | for each of N items
+ |------------>|-- call 1 -->  [ answer 1 ]
+ |             |<- reply 1 --
+ |             |-- call 2 -->  [ answer 2 ]
+ |             |<- reply 2 --
+ |             |     ...
+ |             |-- call N -->  [ answer N ]
+ |<------------|<- reply N --
+ |
+ N round trips, N x fixed overhead paid,
+ payload scales with N.
 
 
 CHUNKY, after the fix
 
-  Caller          Aggregation Point       Boundary          Data Source
-  ------          -----------------       --------          -----------
-   |                       |
-   | one intent ---------->|
-   |                       |--- single batched or joined call -->  [ all N answers ]
-   |                       |<-------- single reply -----------
-   |<----------------------|
-   |
-   1 round trip, 1 x fixed overhead paid, payload scales with N,
-   round trip count no longer scales with N.
+Caller    Aggregation Point    Boundary    Data Source
+------    -----------------    --------    -----------
+ |               |
+ | one intent -->|
+ |               |-- single batched
+ |               |   or joined call -->  [ all N answers ]
+ |               |<---- single reply ---
+ |<--------------|
+ |
+ 1 round trip, 1 x fixed overhead paid,
+ payload scales with N, round trip count
+ no longer scales with N.
 ```
 
 ## 7. Dynamics

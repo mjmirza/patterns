@@ -208,29 +208,37 @@ Do NOT reach for Registry when:
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+          +----------------------+
-|   Bootstrapper     |--------->|      Registry        |
-|  (composition root) | register|  entries: Map<K, V>  |
-+-------------------+          |  register(key, val)  |
-                                |  resolve(key): V     |
-                                |  freeze()            |
-                                +-----------+-----------+
-                                            ^
-                                            | resolve
-                                            |
-                +---------------------------+---------------------------+
-                |                           |                           |
-       +--------+--------+        +---------+---------+       +---------+---------+
-       |  OrderService    |        |  NotificationSvc   |       |  ReportRunner     |
-       |  (client)        |        |  (client)          |       |  (client)         |
-       +------------------+        +--------------------+       +-------------------+
++---------------------------------+
+| Bootstrapper (composition root) |
++---------------------------------+
+           | register
+           v
++--------------------+
+| Registry           |
+| entries: Map<K, V> |
+| register(key, val) |
+| resolve(key): V    |
+| freeze()           |
++--------------------+
+           ^
+           | resolve
+     +-----+-----+-----+
+     |           |     |
++-----------------+ +-----------------+ +-----------------+
+| OrderService    | | NotificationSvc | | ReportRunner    |
+| (client)        | | (client)        | | (client)        |
++-----------------+ +-----------------+ +-----------------+
 
-       registered value types, held opaquely by the Registry:
+Registered value types, held opaquely by the Registry:
 
-       +----------------+   implements   +----------------+
-       |  Clock          |<--------------|  SystemClock    |
-       |  (interface)    |               |  (impl)         |
-       +----------------+               +----------------+
++-------------------+
+| Clock (interface) |
++-------------------+
+           ^
+           | implements
++--------------------+
+| SystemClock (impl) |
++--------------------+
 ```
 
 ## 7. Dynamics

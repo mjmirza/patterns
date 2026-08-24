@@ -157,26 +157,38 @@ exclusive allotment, plus the floating pool.
 ## 6. ASCII structure diagram
 
 ```
-  Upstream subtask                          Downstream subtask
-  +-------------------+                     +-------------------+
-  | ResultSubpartition |   credits granted   |   InputChannel     |
-  | (tracks backlog,   | <------------------ |  exclusive buffers |
-  |  per-channel       |                     |  (default 2)       |
-  |  credit balance)   |   data + backlog    |                    |
-  |                    | -------------------> |  floating buffers  |
-  +-------------------+   count (per buffer)  |  (default 8,       |
-                                               |   shared per gate) |
-                                               +---------+---------+
-                                                         |
-                                          buffer pool exhausted?
-                                                         |
-                                                     yes v  no
-                                        subtask marked "backpressured"  keep granting
-                                        no further credit granted       credits
-                                                         |
-                                              stall propagates upstream
-                                              to THIS subtask's own
-                                              upstream senders in turn
+Upstream subtask
++------------------------------+
+| ResultSubpartition           |
+| (tracks backlog, per-channel |
+| credit balance)              |
++------------------------------+
+           ^
+           | credits granted
+           |
+           | data + backlog count (per buffer)
+           v
+
+Downstream subtask
++-------------------------------+
+| InputChannel                  |
+| exclusive buffers (default 2) |
+| floating buffers (default 8,  |
+| shared per gate)              |
++-------------------------------+
+           |
+           | buffer pool exhausted?
+     +-----+-----+
+     | yes       | no
+     v           v
+subtask marked      keep granting
+"backpressured",    credits
+no further credit
+granted
+     |
+     v
+stall propagates upstream to THIS subtask's own
+upstream senders in turn
 ```
 
 ## 7. Dynamics

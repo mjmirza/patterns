@@ -249,38 +249,46 @@ Do NOT reach for Aggregate Root in these situations, each with its reason.
 ## 6. ASCII structure diagram
 
 ```
-                     +---------------------------+
-   outside code ---->|      AGGREGATE ROOT        |
-   (holds only        |  (has global identity:     |
-   the root's id,      |   OrderId)                 |
-   never a child       |                            |
-   reference)          |  + placeOrder()            |
-                        |  + addLine(sku, qty)       |
-                        |  + applyDiscount(code)     |
-                        |  + total(): Money          |
-                        |  - checkInvariant()        |
-                        +-------------+---------------+
-                                      |
-                       owns and enforces access to
-                                      |
-              +-----------------------+-----------------------+
-              |                       |                       |
-    +---------v---------+   +---------v---------+   +---------v---------+
-    |  INTERNAL ENTITY    |   |  INTERNAL ENTITY    |   |   VALUE OBJECT      |
-    |  OrderLine (local    |   |  OrderLine (local    |   |   Money             |
-    |  id: "line-1", no     |   |  id: "line-2", no     |   |   (amount, currency)|
-    |  meaning outside      |   |  meaning outside      |   |   compared by value |
-    |  this Order)          |   |  this Order)          |   |                     |
-    +-----------------------+   +-----------------------+   +---------------------+
+outside code holds only the root's id, never a child
+reference
+           |
+           v
++--------------------------------+
+| AGGREGATE ROOT                 |
+| (has global identity: OrderId) |
+| placeOrder()                   |
+| addLine(sku, qty)              |
+| applyDiscount(code)            |
+| total(): Money                 |
+| checkInvariant()               |
++--------------------------------+
+           |
+           | owns and enforces access to
+     +-----+-----+-----+
+     |           |     |
++----------------------+ +----------------------+ +----------------------+
+| INTERNAL ENTITY      | | INTERNAL ENTITY      | | VALUE OBJECT         |
+| OrderLine (local id: | | OrderLine (local id: | | Money                |
+| "line-1", no meaning | | "line-2", no meaning | | (amount, currency)   |
+| outside this Order)  | | outside this Order)  | | compared by value    |
++----------------------+ +----------------------+ +----------------------+
 
-    (unreachable directly)     (unreachable directly)      (freely shared, immutable)
+(unreachable directly)  (unreachable
+                        directly)          (freely shared,
+                                            immutable)
 
-    +---------------------------+          +----------------------------+
-    | ANOTHER AGGREGATE ROOT     |          |         REPOSITORY          |
-    | Customer                   |<---------+  loads/saves ONE root and   |
-    | (Order references it by    | id only  |  its whole internal cluster |
-    |  CustomerId, not by object) |          |  atomically, as one unit    |
-    +-----------------------------+          +------------------------------+
++----------------------------+
+| ANOTHER AGGREGATE ROOT     |
+| Customer                   |
+| (Order references it by    |
+| CustomerId, not by object) |
++----------------------------+
+           ^
+           | loads/saves ONE root and its whole internal
+           | cluster atomically, as one unit, id only
++------------+
+| REPOSITORY |
++------------+
 ```
 
 ## 7. Dynamics

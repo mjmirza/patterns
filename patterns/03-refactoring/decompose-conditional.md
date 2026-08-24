@@ -165,19 +165,24 @@ statement: `if condition() then branch() else otherBranch()`.
 ## 6. ASCII structure diagram
 
 ```
-  BEFORE                                      AFTER
-  ------                                      -----
+BEFORE (condition, then, else all inline)
 
-  if date.before(SUMMER_START)                 if isWinter(date):
-         || date.after(SUMMER_END) {                charge = winterCharge(quantity)
-      charge = q * winterRate                     else:
-                          * winterServiceFee;         charge = summerCharge(quantity)
-  } else {
-      charge = q * summerRate;
-  }
+if date.before(SUMMER_START)
+       || date.after(SUMMER_END) {
+    charge = q * winterRate
+                  * winterServiceFee;
+} else {
+    charge = q * summerRate;
+}
 
-  (condition, then, else all inline)          (3 named functions,
-                                                conditional reads as a sentence)
+
+AFTER (3 named functions, conditional reads
+as a sentence)
+
+if isWinter(date):
+    charge = winterCharge(quantity)
+else:
+    charge = summerCharge(quantity)
 ```
 
 ## 7. Dynamics

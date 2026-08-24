@@ -116,21 +116,22 @@ The Provider Pattern has three structural parts.
 ## 6. ASCII structure diagram
 
 ```
-    ThemeContext = createContext(defaultTheme)
+ThemeContext = createContext(defaultTheme)
 
-    <ThemeContext.Provider value={currentTheme}>   (the provider)
-        |
-        +-- Header                                  (no prop needed)
-        |     |
-        |     +-- Logo                               (reads useContext(ThemeContext))
-        |
-        +-- Sidebar                                  (no prop needed)
-              |
-              +-- NavItem                            (reads useContext(ThemeContext))
-    </ThemeContext.Provider>
+<ThemeContext.Provider value={currentTheme}>  (the provider)
+    |
+    +-- Header  (no prop needed)
+    |     |
+    |     +-- Logo  (reads useContext(ThemeContext))
+    |
+    +-- Sidebar  (no prop needed)
+          |
+          +-- NavItem  (reads useContext(ThemeContext))
+</ThemeContext.Provider>
 
-    Every descendant, at any depth, reads the same currentTheme value
-    directly, with no intermediate component passing it as a prop.
+Every descendant, at any depth, reads the same
+currentTheme value directly, with no intermediate
+component passing it as a prop.
 ```
 
 ## 7. Dynamics

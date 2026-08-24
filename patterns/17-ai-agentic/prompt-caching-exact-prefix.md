@@ -103,28 +103,28 @@ effort level has its own cache for the same model" (same source).
 ## 6. ASCII structure diagram
 
 ```
-  request N minus 1:
+request N minus 1:
 
-  +-----------------+  +-----------------+  +-----------------+
-  | system prompt    |  | project context  |  | conversation     |
-  +-----------------+  +-----------------+  +-----------------+
-                    cache breakpoint, prefix hashed and stored
+  [system prompt] [project context] [conversation]
+       cache breakpoint, prefix hashed and stored
 
-  request N, unchanged prefix, new turn appended:
+request N, unchanged prefix, new turn appended:
 
-  +-----------------+  +-----------------+  +-----------------+   +----------+
-  | system prompt    |  | project context  |  | conversation     |   | new turn |
-  | read from cache   |  | read from cache   |  | read from cache   |   | fresh    |
-  +-----------------+  +-----------------+  +-----------------+   +----------+
+  [system prompt]     read from cache
+  [project context]   read from cache
+  [conversation]      read from cache
+  [new turn]          fresh
 
-  request N plus 1, a change lands inside the prefix, for example a
-  model switch:
+request N plus 1, a change lands inside the prefix,
+for example a model switch:
 
-  +-----------------+  +-----------------+  +-----------------+   +----------+
-  | system prompt*    |  | project context  |  | conversation     |   | new turn |
-  +-----------------+  +-----------------+  +-----------------+   +----------+
-   * changed here, so everything after this point reprocesses and
-     re-caches, in full, at full cost
+  [system prompt*]
+  [project context]
+  [conversation]
+  [new turn]
+
+  * changed here, so everything after this point
+    reprocesses and re-caches, in full, at full cost
 ```
 
 ## 7. Dynamics

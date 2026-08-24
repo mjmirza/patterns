@@ -2,7 +2,7 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-66 entries, 262,770 words. Every entry carries all 18
+66 entries, 262,768 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Composing Functions
@@ -35,7 +35,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Combine Functions into Class](combine-functions-into-class.md) | canonical | 3,579 | You have a set of functions, typically free functions in a module, that all operate on the same data structure or the same set of parameters. |
 | [Combine Functions into Transform](combine-functions-into-transform.md) | canonical | 3,278 | You have a pipeline of functions, each taking the output of the previous and producing input for the next, forming a chain of transformations. |
 | [Consolidate Conditional Expression](consolidate-conditional-expression.md) | canonical | 3,243 | You have a series of conditional checks, each of which leads to the same result or the same action. |
-| [Decompose Conditional](decompose-conditional.md) | canonical | 3,393 | You have a conditional whose complexity lies not in the branching but in the readability of its parts. |
+| [Decompose Conditional](decompose-conditional.md) | canonical | 3,391 | You have a conditional whose complexity lies not in the branching but in the readability of its parts. |
 | [Encapsulate Collection](encapsulate-collection.md) | canonical | 3,249 | A class has a collection field, typically a list or a map, that is exposed to callers. |
 | [Encapsulate Record](encapsulate-record.md) | canonical | 3,025 | You have a data record, a structure with public fields and no behaviour, that callers read and write directly. |
 | [Encapsulate Variable](encapsulate-variable.md) | canonical | 3,123 | You have a variable, typically a public field on a class or a module level variable, that callers read and write directly. |

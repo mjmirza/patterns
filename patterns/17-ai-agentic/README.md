@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-64 entries, 492,574 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
+64 entries, 492,522 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -31,7 +31,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Memory Compaction](memory-compaction.md) | established | 8,946 | An agent that runs for a long time accumulates a conversation. |
 | [PII Redaction](pii-redaction.md) | established | 8,577 | An agent pipeline routinely moves text through places where a human name, an email address, a card number, or a medical record number does not belong. |
 | [Parallelization](parallelization.md) | established | 9,204 | An agentic pipeline built as a single sequential chain of LLM calls has one throughput limit, the wall-clock latency of the slowest single call multiplied by the number of calls ... |
-| [Prompt Caching via Exact Prefix Preservation](prompt-caching-exact-prefix.md) | established | 2,384 | The chapter's own text, meaning Claude Code's own documentation, states the underlying problem directly. |
+| [Prompt Caching via Exact Prefix Preservation](prompt-caching-exact-prefix.md) | established | 2,332 | The chapter's own text, meaning Claude Code's own documentation, states the underlying problem directly. |
 | [Prompt Injection Defense](prompt-injection-defense.md) | emerging | 7,008 | An LLM-integrated system is built around one structural weakness. |
 | [RLAIF](rlaif.md) | established | 1,618 | The paper's own text states the underlying constraint directly, already implied in dimension 1, human preference labeling does not scale, it is slow and expensive to collect at ... |
 | [Reranking](reranking.md) | canonical | 7,225 | A reader who has never heard the word reranking has still hit the problem it solves. |
