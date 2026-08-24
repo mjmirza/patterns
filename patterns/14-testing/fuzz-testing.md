@@ -285,43 +285,56 @@ regression suite that the engine curates automatically.
 ## 6. ASCII structure diagram
 
 ```
-   +----------------------+        provides seeds        +------------------+
-   |     Seed Corpus       | ---------------------------> |   Fuzzing Engine  |
-   | (real valid examples) |                               | (AFL, libFuzzer,  |
-   +----------------------+                                |  go test -fuzz,   |
-             ^                                              |  Atheris, Jazzer) |
-             | interesting input added back                 +------------------+
-             |                                                     |   |
-             |                                          mutates    |   | executes
-             |                                          candidate  |   | candidate
-   +----------------------+                                        v   v
-   |   Generated Corpus     |                           +--------------------------+
-   |  (grown during a run)  |                           |       Fuzz Target         |
-   +----------------------+                             | (thin wrapper function)   |
-                                                          +--------------------------+
-                                                                     |
-                                                            calls into
-                                                                     v
-   +----------------------+   coverage feedback   +--------------------------+
-   |    Instrumentation    | <-------------------- |    Code Under Test        |
-   | (SanitizerCoverage,   |    (edges hit this    | (parser, decoder, codec)  |
-   |  Go coverage counters,|     execution)         +--------------------------+
-   |  JaCoCo for Jazzer)   |                                      |
-   +----------------------+                                      | crash, panic,
-             |                                                    | assertion failure,
-             | feeds coverage signal back to engine                | sanitizer trap
-             v                                                     v
-   +--------------------------------------------------------------------------------+
-   |                                    Oracle                                       |
-   |   process alive check  |  explicit assertion  |  sanitizer trap  |  diff check   |
-   +--------------------------------------------------------------------------------+
-                                          |
-                                          | on failure
-                                          v
-                          +--------------------------------------+
-                          |     Minimised, saved crash input       |
-                          |  (becomes a permanent regression test) |
-                          +--------------------------------------+
++-----------------------+
+| Seed Corpus           |
+| (real valid examples) |
++-----------------------+
+           | provides seeds
+           v
++---------------------------------+
+| Fuzzing Engine                  |
+| (AFL, libFuzzer, go test -fuzz, |
+| Atheris, Jazzer)                |
++---------------------------------+
+           | mutates candidate, executes candidate
+           v
++-------------------------+
+| Fuzz Target             |
+| (thin wrapper function) |
++-------------------------+
+           | calls into
+           v
++--------------------------+
+| Code Under Test          |
+| (parser, decoder, codec) |
++--------------------------+
+           | crash, panic, assertion failure,
+           | sanitizer trap
+           v
++--------------------------------------------+
+| Oracle                                     |
+| process alive check | explicit assertion | |
+| sanitizer trap | diff check                |
++--------------------------------------------+
+           | on failure
+           v
++---------------------------------------+
+| Minimised, saved crash input          |
+| (becomes a permanent regression test) |
++---------------------------------------+
+
+Two feedback loops close this diagram, not drawn as
+arrows to keep it readable:
+
+  Instrumentation (SanitizerCoverage, Go coverage
+  counters, JaCoCo for Jazzer) watches Code Under Test,
+  the edges hit this execution, and feeds that coverage
+  signal back to the Fuzzing Engine.
+
+  An interesting input found during a run is added back
+  into a Generated Corpus (grown during the run), which
+  the engine draws on the same way it draws on the Seed
+  Corpus.
 ```
 
 ## 7. Dynamics

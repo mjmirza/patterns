@@ -256,46 +256,42 @@ graph.
 ## 6. ASCII structure diagram
 
 ```
-                 +----------------------------+
-                 |          Client            |
-                 |  parses/builds source into  |
-                 |     an AST, drives eval      |
-                 +--------------+--------------+
-                                |
-                                v
-   +----------------+   +--------------+   +------------------+
-   |     Lexer      |-->|    Parser    |-->|   AST (tree of    |
-   | text -> tokens |   | tokens -> AST|   | AbstractExpression |
-   +----------------+   +--------------+   |     nodes)         |
-                                            +---------+----------+
-                                                      |
-                                     +----------------+----------------+
-                                     |                                 |
-                                     v                                 v
-                        +------------------------+       +------------------------+
-                        |  TerminalExpression     |       | NonTerminalExpression  |
-                        |  (literal, variable ref) |       | (and, or, +, function  |
-                        |  interpret(ctx) -> value |       |  call). holds children |
-                        +------------------------+       |  interpret(ctx) ->      |
-                                                            |  combine children      |
-                                                            +------------------------+
-                                     |                                 |
-                                     +----------------+----------------+
-                                                      |
-                                                      v
-                                          +------------------------+
-                                          |        Context         |
-                                          | variable bindings,      |
-                                          | function registry,      |
-                                          | the object under test   |
-                                          +-----------+-------------+
-                                                      |
-                                                      v
-                                          +------------------------+
-                                          |  Host integration       |
-                                          |  boundary (explicit,    |
-                                          |  audited accessors)     |
-                                          +------------------------+
++---------------------------+
+| Client                    |
+| parses/builds source into |
+| an AST, drives eval       |
++---------------------------+
+           v
+Lexer (text -> tokens) -> Parser (tokens -> AST)
+           |
+           v
++----------------------------------------+
+| AST (tree of AbstractExpression nodes) |
++----------------------------------------+
+           |
+     +-----+-----+
+     |           |
++---------------------------+ +---------------------------+
+| TerminalExpression        | | NonTerminalExpression     |
+| (literal, variable ref)   | | (and, or, +, function call).|
+| interpret(ctx) -> value   | | holds children            |
+|                           | | interpret(ctx) -> combine |
+|                           | | children                  |
++---------------------------+ +---------------------------+
+     |           |
+     +-----+-----+
+           v
++---------------------------------------+
+| Context                               |
+| variable bindings, function registry, |
+| the object under test                 |
++---------------------------------------+
+           |
+           v
++-------------------------------+
+| Host integration boundary     |
+| (explicit, audited accessors) |
++-------------------------------+
 ```
 
 ## 7. Dynamics

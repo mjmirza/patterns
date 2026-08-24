@@ -314,36 +314,26 @@ implicitly shard your data"
 ## 6. ASCII structure diagram
 
 ```
-                         +------------------------------+
-                         |   Traffic routing service      |
-                         |   (tenant -> stamp lookup)      |
-                         +---------------+----------------+
-                                         |
-              +--------------------------+--------------------------+
-              |                          |                          |
-              v                          v                          v
-   +----------------------+   +----------------------+   +----------------------+
-   |  Stamp: unit1-westus2 |   |  Stamp: unit2-westus2 |   |  Stamp: unit1-eu     |
-   |  region West US 2      |   |  region West US 2      |   |  region West Europe  |
-   |                        |   |                        |   |                        |
-   |  +------------------+ |   |  +------------------+ |   |  +------------------+ |
-   |  | Application tier | |   |  | Application tier | |   |  | Application tier | |
-   |  +--------+---------+ |   |  +--------+---------+ |   |  +--------+---------+ |
-   |           |            |   |           |            |   |           |            |
-   |  +--------v---------+ |   |  +--------v---------+ |   |  +--------v---------+ |
-   |  |    Data tier      | |   |  |    Data tier      | |   |  |    Data tier      | |
-   |  +------------------+ |   |  +------------------+ |   |  +------------------+ |
-   |                        |   |                        |   |                        |
-   |  tenants A, B, C      |   |  tenants D             |   |  tenants E, F         |
-   +-----------+------------+   +-----------+------------+   +-----------+------------+
-               |                            |                            |
-               +-------------+   +----------+----------+   +-------------+
-                              |   |                     |   |
-                              v   v                     v   v
-                     +----------------------------------------+
-                     |   Cross-stamp aggregation pipeline       |
-                     |   (metrics, logs, billing rollups)       |
-                     +----------------------------------------+
++--------------------------+
+| Traffic routing service  |
+| (tenant -> stamp lookup) |
++--------------------------+
+           |
+     +-----+-----+-----+
+     |           |     |
++----------------------+ +----------------------+ +----------------------+
+| Stamp: unit1-westus2 | | Stamp: unit2-westus2 | | Stamp: unit1-eu      |
+| region West US 2     | | region West US 2     | | region West Europe   |
+| App tier -> Data tier| | App tier -> Data tier| | App tier -> Data tier|
+| tenants A, B, C      | | tenants D            | | tenants E, F         |
++----------------------+ +----------------------+ +----------------------+
+     |           |     |
+     +-----+-----+-----+
+           v
++----------------------------------+
+| Cross-stamp aggregation pipeline |
+| (metrics, logs, billing rollups) |
++----------------------------------+
 ```
 
 ## 7. Dynamics

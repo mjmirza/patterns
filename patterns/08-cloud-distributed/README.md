@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-44 entries, 393,247 words. Every entry carries all 18
+44 entries, 393,160 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Capacity Management
@@ -82,7 +82,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Deployment Stamps](deployment-stamps.md) | canonical | 9,272 | A team ships a SaaS product as a single deployed instance, one application tier, one database, one everything, and every customer's traffic and data flow through that one instance. |
+| [Deployment Stamps](deployment-stamps.md) | canonical | 9,185 | A team ships a SaaS product as a single deployed instance, one application tier, one database, one everything, and every customer's traffic and data flow through that one instance. |
 
 ## Geo-Distribution and Availability
 

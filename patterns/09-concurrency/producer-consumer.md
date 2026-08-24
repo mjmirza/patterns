@@ -169,21 +169,29 @@ from all N+M threads.
 ## 6. ASCII structure diagram
 
 ```
-+------------+     put(item)      +------------------+
-| Producer 1 |------------------->|                  |
-+------------+                    |                  |     take()      +------------+
-                                   |   Bounded Buffer |<----------------| Consumer 1 |
-+------------+     put(item)      |  (capacity N)     |                +------------+
-| Producer 2 |------------------->|                  |
-+------------+                    |  lock             |     take()      +------------+
-                                   |  notEmpty cond    |<----------------| Consumer 2 |
-+------------+     put(item)      |  notFull cond     |                +------------+
-| Producer M |------------------->|                  |
-+------------+                    +------------------+
++------------+ +------------+ +------------+
+| Producer 1 | | Producer 2 | | Producer M |
++------------+ +------------+ +------------+
+    |          |          |
+    +----------+----------+
+        put(item), each producer blocks when full
+                 v
++-----------------------------+
+| Bounded Buffer (capacity N) |
+| lock                        |
+| notEmpty cond               |
+| notFull cond                |
++-----------------------------+
+                 |
+        take(), each consumer blocks when empty
+    +----------+----------+
+    |          |          |
++------------+ +------------+ +------------+
+| Consumer 1 | | Consumer 2 | | Consumer N |
++------------+ +------------+ +------------+
 
-  Producers block on put() when the buffer is at capacity.
-  Consumers block on take() when the buffer is empty.
-  The buffer is the only shared mutable state either side touches.
+The buffer is the only shared mutable state either
+side touches.
 ```
 
 ## 7. Dynamics

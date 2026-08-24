@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-64 entries, 492,586 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
+64 entries, 492,574 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -19,7 +19,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Evaluation Suite](evaluation-suite.md) | established | 9,431 | A function built from deterministic code either compiles or it does not, and a passing unit test today keeps passing tomorrow unless the code under test changes. |
 | [Filesystem-Based Agent State](filesystem-based-agent-state.md) | established | 2,488 | The chapter's own text, meaning Anthropic's own documentation, states the problem directly in one sentence. |
 | [Golden Dataset](golden-dataset.md) | established | 9,529 | An engineer changes a system prompt, swaps a retrieval step, upgrades from one model version to another, or adjusts a temperature setting, and then has to answer one question ... |
-| [GraphRAG](graphrag.md) | emerging | 7,850 | A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. |
+| [GraphRAG](graphrag.md) | emerging | 7,839 | A team has a large private corpus, contracts, incident postmortems, research notes, support transcripts, and wants an LLM to answer questions grounded in that corpus. |
 | [Hook-Based Safety Guard Rails](hook-based-safety-guard-rails.md) | established | 1,796 | The chapter's own text states the underlying problem directly, already quoted in dimension 1. |
 | [Human in the Loop](human-in-the-loop.md) | established | 7,618 | An agent is given a goal and a set of tools, and it plans and executes a sequence of tool calls autonomously. |
 | [Incident-to-Eval Synthesis](incident-to-eval-synthesis.md) | established | 2,151 | An eval suite built once, at project start, from imagined or synthetic inputs drifts away from what a system actually gets wrong in production, and a real failure a user or an ... |
@@ -114,7 +114,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [HyDE (Hypothetical Document Embeddings)](hyde.md) | established | 7,932 | Dense retrieval works by embedding a query into the same vector space as a corpus of documents and finding the nearest neighbors by cosine similarity or inner product. |
-| [Hybrid Search](hybrid-search.md) | established | 7,225 | A retrieval-augmented generation system, an internal document search box, or an agent's memory lookup all face the same underlying failure. |
+| [Hybrid Search](hybrid-search.md) | established | 7,224 | A retrieval-augmented generation system, an internal document search box, or an agent's memory lookup all face the same underlying failure. |
 
 ## Workflow
 

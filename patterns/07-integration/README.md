@@ -2,7 +2,7 @@
 
 Origin. Hohpe and Woolf
 
-54 entries, 385,760 words. Every entry carries all 18
+54 entries, 385,782 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Enterprise Integration
@@ -80,7 +80,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Messaging Mapper](messaging-mapper.md) | canonical | 7,462 | An application has a domain model, the classes that hold its business state and enforce its business rules, an Order, a Customer, a ShipmentPlan. |
+| [Messaging Mapper](messaging-mapper.md) | canonical | 7,490 | An application has a domain model, the classes that hold its business state and enforce its business rules, an Order, a Customer, a ShipmentPlan. |
 
 ## Message Routing
 
@@ -126,7 +126,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Process Manager](process-manager.md) | canonical | 6,457 | Picture an order fulfillment system built from independently owned services. |
+| [Process Manager](process-manager.md) | canonical | 6,451 | Picture an order fulfillment system built from independently owned services. |
 | [Test Message](test-message.md) | canonical | 7,694 | A messaging system is built from components that receive a message, do work on it, and emit a message. |
 
 ## Reading order

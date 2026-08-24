@@ -2,7 +2,7 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-30 entries, 217,016 words. Every entry carries all 18
+30 entries, 217,027 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Test Data
@@ -38,7 +38,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Differential Testing](differential-testing.md) | established | 7,373 | A team owns, or depends on, more than one thing that is meant to compute the same answer. |
 | [Fault Injection](fault-injection.md) | established | 7,609 | Software that talks to another process over a network, a disk, a database connection, or any other boundary will eventually see that boundary fail. |
 | [Fresh Fixture](fresh-fixture.md) | canonical | 7,305 | A test needs an environment in which to run its assertions, objects to act on, data in a database, files on disk, a running process. |
-| [Fuzz Testing](fuzz-testing.md) | canonical | 9,710 | A function, parser, decoder or protocol handler accepts input from outside the program's control, and the person who wrote it can only imagine a finite set of test cases by hand. |
+| [Fuzz Testing](fuzz-testing.md) | canonical | 9,721 | A function, parser, decoder or protocol handler accepts input from outside the program's control, and the person who wrote it can only imagine a finite set of test cases by hand. |
 | [Given-When-Then](given-when-then.md) | canonical | 7,476 | A test file with no shape reads as an undifferentiated block of setup calls, one action, and a pile of assertions, and a reader cannot tell at a glance which lines are ... |
 | [Golden Master](golden-master.md) | established | 7,989 | A piece of code produces output that is expensive or awkward to specify by hand, one field at a time, and a person needs confidence that a change to the code did not alter that ... |
 | [Humble Object](humble-object.md) | canonical | 7,022 | Some classes are hard to unit test not because their logic is hard, but because constructing or invoking them at all requires something a fast, isolated test cannot or should not ... |

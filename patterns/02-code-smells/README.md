@@ -2,7 +2,7 @@
 
 Origin. Fowler and Beck, Refactoring
 
-28 entries, 221,162 words. Every entry carries all 18
+28 entries, 221,148 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Bloaters
@@ -38,7 +38,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Alternative Classes with Different Interfaces](alternative-classes-with-different-interfaces.md) | canonical | 8,373 | Two classes exist in the same codebase that do, in substance, the same job. |
+| [Alternative Classes with Different Interfaces](alternative-classes-with-different-interfaces.md) | canonical | 8,359 | Two classes exist in the same codebase that do, in substance, the same job. |
 
 ## Coupling
 

@@ -228,23 +228,45 @@ most catalogs skip, and it is the more useful half.
 ## 6. ASCII structure diagram
 
 ```
-+------------------+          +---------------------+          +------------------+
-|   Domain Object   |          |   Messaging Mapper   |          |      Message      |
-|------------------|          |---------------------|          |------------------|
-| Order            |<-------->| toMessage(Order)      |<-------->| OrderPlacedMsg    |
-|  - id            |  knows   | toDomain(OrderPlaced) |  knows   |  - orderId       |
-|  - customer ref  |          |                       |          |  - customerId    |
-|  - lineItems[]   |          | (neither side knows   |          |  - total decimal |
-|  - status enum   |          |  the mapper exists)   |          |  - lineItems[]    |
-+------------------+          +----------+------------+          +------------------+
-                                          |
-                                          | serializes / deserializes
-                                          v
-                               +---------------------+
-                               |  Messaging Channel   |
-                               |  (queue / topic /    |
-                               |   HTTP body / socket)|
-                               +---------------------+
++-----------------------+
+| Domain Object (Order) |
+| id                    |
+| customer ref          |
+| lineItems[]           |
+| status enum           |
++-----------------------+
+           ^
+           | knows
+           v
++----------------------------------------+
+| Messaging Mapper                       |
+| toMessage(Order)                       |
+| toDomain(OrderPlaced)                  |
+| (neither side knows the mapper exists) |
++----------------------------------------+
+           ^
+           | knows
+           v
++--------------------------+
+| Message (OrderPlacedMsg) |
+| orderId                  |
+| customerId               |
+| total decimal            |
+| lineItems[]              |
++--------------------------+
+           |
+           | serializes / deserializes,
+           | this arrow leaves the mapper
+           v
++--------------------------------------+
+| Messaging Channel                    |
+| (queue / topic / HTTP body / socket) |
++--------------------------------------+
+
+The Domain Object box and the Message box each have an
+arrow only to the Messaging Mapper, never to each
+other. That absence of a direct edge is the entire
+point of the pattern.
 ```
 
 The Domain Object box and the Message box each have an arrow only to the
