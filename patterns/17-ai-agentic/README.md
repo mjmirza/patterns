@@ -2,7 +2,7 @@
 
 Origin. Papers and vendor engineering, 2023 to 2026
 
-64 entries, 492,490 words, 1 more planned, 65 total when the family is complete. Every entry carries all 18
+65 entries, 495,888 words, 1 more planned, 66 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## AI Agentic
@@ -40,6 +40,12 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Self-Discover](self-discover.md) | established | 1,835 | The paper's own text states directly what a fixed, one-size-fits-all prompting method misses, already implied in dimension 1, a single reasoning strategy applied uniformly is not ... |
 | [Semantic Caching](semantic-caching.md) | established | 8,544 | A production system built on a hosted large language model pays for every call, in latency and in metered tokens, and a meaningful share of real traffic is not novel. |
 | [Tool Result Caching](tool-result-caching.md) | established | 9,391 | An agent built on a tool-calling loop, the mechanism the Function Calling entry in this family describes, asks a model to decide, turn by turn, whether to answer directly or ... |
+
+## AI Inference & Serving
+
+| Pattern | Maturity | Words | Intent |
+|---|---|---|---|
+| [Speculative Decoding](speculative-decoding.md) | canonical | 3,398 | Autoregressive inference in Transformer-based language models proceeds token by token. |
 
 ## AI and Agentic
 
