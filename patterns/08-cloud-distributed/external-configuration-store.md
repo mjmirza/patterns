@@ -273,44 +273,40 @@ Problems and considerations, verified 2026-08-03).
 ## 6. ASCII structure diagram
 
 ```
-                        +------------------------------+
-                        |  External Configuration Store |
-                        |  (Azure App Config / AWS      |
-                        |   AppConfig / etcd / Consul /  |
-                        |   Spring Cloud Config server)  |
-                        |                                |
-                        |  key  rate.limit.checkout      |
-                        |  val  500                      |
-                        |  ver  42     label  production  |
-                        +---------------+----------------+
-                                |    ^         |    ^
-                        fetch / watch |         |    |
-                                |    | write    |    |
-              +-----------------+    +----------+    +------------------+
-              |                                                          |
-     +--------v--------+                                       +--------v--------+
-     | App instance A   |                                       | App instance B   |
-     |                  |                                       |                  |
-     |  +------------+  |                                       |  +------------+  |
-     |  | Config     |  |                                       |  | Config     |  |
-     |  | interface  |  |                                       |  | interface  |  |
-     |  +-----+------+  |                                       |  +-----+------+  |
-     |        |         |                                       |        |         |
-     |  +-----v------+  |                                       |  +-----v------+  |
-     |  | Local cache|  |                                       |  | Local cache|  |
-     |  +-----+------+  |                                       |  +-----+------+  |
-     |        |         |                                       |        |         |
-     |  +-----v------+  |                                       |  +-----v------+  |
-     |  | Fallback   |  |                                       |  | Fallback   |  |
-     |  | (baked in  |  |                                       |  | (baked in  |  |
-     |  |  artifact) |  |                                       |  |  artifact) |  |
-     |  +------------+  |                                       |  +------------+  |
-     +------------------+                                       +------------------+
++--------------------------------------+
+| External Configuration Store         |
+| (Azure App Config / AWS AppConfig /  |
+| etcd / Consul / Spring Cloud Config) |
+|                                      |
+| key  rate.limit.checkout             |
+| val  500                             |
+| ver  42     label  production        |
++--------------------------------------+
+           ^  |
+     write |  | fetch / watch
+           |  v
+     +-----+--+-----+
+     |               |
+(App instance A)  (App instance B, identical shape)
 
-        A and B are two instances of the SAME application, or two
-        DIFFERENT applications sharing one setting. Both read the
-        same key from the same store, so both converge on the same
-        value once each cache refreshes.
++------------------+
+| Config interface |
++------------------+
+           |
+           v
++-------------+
+| Local cache |
++-------------+
+           |
+           v
++------------------------------+
+| Fallback (baked in artifact) |
++------------------------------+
+
+Each app instance independently fetches from and
+watches the store, reads through its local cache, and
+falls back to its baked-in artifact if the store is
+unreachable.
 ```
 
 ## 7. Dynamics

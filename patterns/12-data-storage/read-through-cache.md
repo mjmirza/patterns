@@ -254,25 +254,37 @@ depends on both the Cache and the Origin and coordinates between them itself.
 ## 6. ASCII structure diagram
 
 ```
-      +-------------+          +---------------------+          +-----------+
-      |   Client    |  get(k)  |        Cache         |  load(k) |  Loader   |
-      |-------------|--------->|----------------------|--------->|-----------|
-      | (no origin  |          | map<K,V> store        |          | fetch(K):V|
-      |  dependency)|<---------| eviction policy (TTL, |<---------|           |
-      +-------------+  value   | size bound)           |  value   +-----------+
-                                +----------+-----------+                |
-                                           ^                            | query
-                                           |                            v
-                                     (cache hit path,               +-----------+
-                                      no Loader call)                |  Origin   |
-                                                                      | database, |
-                                                                      | API, or   |
-                                                                      | expensive |
-                                                                      | compute   |
-                                                                      +-----------+
++-------------------------------+
+| Client (no origin dependency) |
++-------------------------------+
+           | get(k)
+           v
++-----------------------------------+
+| Cache                             |
+| map<K,V> store                    |
+| eviction policy (TTL, size bound) |
++-----------------------------------+
+           | value, returned to Client above
+           |
+           | load(k), only on a cache miss
+           v
++-------------+
+| Loader      |
+| fetch(K): V |
++-------------+
+           | value, returned to Cache above
+           |
+           | query
+           v
++-------------------------------------+
+| Origin                              |
+| database, API, or expensive compute |
++-------------------------------------+
 
-   The Client's only compile time dependency is Cache. Origin is reachable
-   only through Loader, which the Cache owns and calls, never the Client.
+A cache hit answers from the Cache directly, no Loader
+call. The Client's only compile-time dependency is
+Cache. Origin is reachable only through Loader, which
+the Cache owns and calls, never the Client.
 ```
 
 ## 7. Dynamics

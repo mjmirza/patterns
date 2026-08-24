@@ -2,7 +2,7 @@
 
 Origin. Azure Architecture Center, Nygard
 
-44 entries, 393,160 words. Every entry carries all 18
+44 entries, 393,044 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Capacity Management
@@ -24,7 +24,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [External Configuration Store](external-configuration-store.md) | canonical | 8,367 | An application reads its behavior-controlling values, a database connection string, a feature toggle, a rate limit, a UI theme choice, a downstream service URL, from a file that ... |
+| [External Configuration Store](external-configuration-store.md) | canonical | 8,251 | An application reads its behavior-controlling values, a database connection string, a feature toggle, a rate limit, a UI theme choice, a downstream service URL, from a file that ... |
 
 ## Cloud and Distributed
 

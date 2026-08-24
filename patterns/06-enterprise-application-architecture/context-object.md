@@ -70,14 +70,22 @@ Strategies," and "General Context Object Strategies."
 ## 6. ASCII structure diagram
 
 ```
-  +----------------------+     +----------------+     +------------------+
-  | protocol-specific       | --> | Context Object   | --> | application       |
-  | object, e.g. HTTP        |     | protocol-        |     | components and     |
-  | request                  |     | independent state |     | services            |
-  +----------------------+     +----------------+     +------------------+
++---------------------------------------------+
+| protocol-specific object, e.g. HTTP request |
++---------------------------------------------+
+           v
++----------------------------+
+| Context Object             |
+| protocol-independent state |
++----------------------------+
+           v
++-------------------------------------+
+| application components and services |
++-------------------------------------+
 
-  a component only ever reads from the context object, never the
-  protocol-specific object directly, per dimension 5
+A component only ever reads from the context object,
+never the protocol-specific object directly, per
+dimension 5.
 ```
 
 ## 7. Dynamics

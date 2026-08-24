@@ -261,38 +261,40 @@ concerns into the domain layer.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+          reads           +--------------------+
-|   Domain Class     |<------------------------ |   Mapping Engine    |
-|   (Customer)        |    populates fields via  |  (generic, one per  |
-|                     |    reflection/accessors  |   application)      |
-+-------------------+                            +----------+---------+
-                                                              |
-                                                              | consults
-                                                              v
-                                                   +----------------------+
-                                                   |      Metadata        |
-                                                   |  class -> table      |
-                                                   |  field -> column     |
-                                                   |  assoc -> FK / join  |
-                                                   +----------+-----------+
-                                                              ^
-                                                              | parses at startup
-                                                              |
-                                                   +----------------------+
-                                                   |   Metadata Loader     |
-                                                   |  (XML / annotations / |
-                                                   |   fluent config)      |
-                                                   +----------------------+
++-------------------------------------+
+| Metadata Loader                     |
+| (XML / annotations / fluent config) |
++-------------------------------------+
+           |
+           | parses at startup
+           v
++--------------------+
+| Metadata           |
+| class -> table     |
+| field -> column    |
+| assoc -> FK / join |
++--------------------+
+           ^
+           | consults
+           |
++--------------------------------+
+| Mapping Engine                 |
+| (generic, one per application) |
++--------------------------------+
+           |
+           | reads, populates fields via
+           | reflection/accessors
+           v
++-------------------------+
+| Domain Class (Customer) |
++-------------------------+
 
-                                                   +----------------------+
-                                                   |   Relational Schema   |
-                                                   |   (tables, columns,   |
-                                                   |    FKs)               |
-                                                   +----------+-----------+
-                                                              ^
-                                                              | executes SQL against
-                                                              |
-                                                       (Mapping Engine, above)
++------------------------------------------+
+| Relational Schema (tables, columns, FKs) |
++------------------------------------------+
+
+The Mapping Engine executes SQL against the Relational
+Schema above to load and save Domain Class instances.
 ```
 
 ## 7. Dynamics

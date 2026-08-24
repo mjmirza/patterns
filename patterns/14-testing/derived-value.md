@@ -163,20 +163,27 @@ never need to know, and should not depend on, how the value was produced.
 ## 6. ASCII structure diagram
 
 ```
-+---------------------+     +------------------------+     +----------------+
-|        Seed          |     |   Derivation Function   |     | Derived Value  |
-|-----------------------|---->|--------------------------|---->|----------------|
-| counter, test name,   |     | prefix + seed            |     | "user-0007"    |
-| or a sibling field     |     | hash(seed) mod range      |     | (unique, or    |
-|                        |     | slugify(title)            |     |  consistent    |
-+---------------------+     +------------------------+     |  with sibling) |
-                                                             +----------------+
-                                                                     |
-                                                                     v
-                                                             +----------------+
-                                                             | Fixture Object |
-                                                             | under test     |
-                                                             +----------------+
++---------------------+
+| Seed                |
+| counter, test name, |
+| or a sibling field  |
++---------------------+
+           v
++----------------------+
+| Derivation Function  |
+| prefix + seed        |
+| hash(seed) mod range |
+| slugify(title)       |
++----------------------+
+           v
++--------------------------------------+
+| Derived Value: "user-0007"           |
+| (unique, or consistent with sibling) |
++--------------------------------------+
+           v
++---------------------------+
+| Fixture Object under test |
++---------------------------+
 ```
 
 ## 7. Dynamics

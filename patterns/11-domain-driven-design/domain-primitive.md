@@ -251,36 +251,38 @@ the more important half of the dimension and the one most catalogs skip.
 ## 6. ASCII structure diagram
 
 ```
-                     +-----------------------------+
-                     |  Domain Primitive             |
-                     |  (e.g. EmailAddress)          |
-                     +-------------------------------+
-                     | - value: String  (private)    |
-                     +-------------------------------+
-                     | + of(raw: String): Result      |<-- validates, never throws
-                     | + toString(): String            |     across a trust boundary
-                     | + equals(other): boolean         |
-                     | + hashCode(): int                 |
-                     +-------------------------------+
-                              ^ constructed by
-                              |
-        +---------------------+---------------------+
-        |                                             |
-+---------------+                          +----------------------+
-| Boundary       |  raw String, int, etc.  | Validation rule set   |
-| translator     |------------------------->| (inline or delegated |
-| (controller,   |                          |  to a Specification) |
-| deserializer)  |                          +----------------------+
-+---------------+
-        |
-        | constructs, on success
-        v
++--------------------------------------+
+| Domain Primitive (e.g. EmailAddress) |
+| value: String  (private)             |
+| of(raw: String): Result              |
+| toString(): String                   |
+| equals(other): boolean               |
+| hashCode(): int                      |
++--------------------------------------+
+(of() validates, never throws across a trust boundary)
+           ^ constructed by
+           |
+     +-----+-----+
+     |           |
++---------------------+ +---------------------+
+| Boundary translator | | Validation rule set |
+| (controller,        | | (inline or delegated|
+| deserializer)       | | to a Specification) |
++---------------------+ +---------------------+
+
+(raw String, int, etc. flows from translator into
+the rule set)
+
+     |
+     | constructs, on success
+     v
 +----------------------------------------------+
-| Consumer (application service, Entity field,  |
-| another Domain Primitive)                     |
+| Consumer (application service, Entity field, |
+| another Domain Primitive)                    |
 +----------------------------------------------+
-        never receives the raw, unvalidated
-        primitive once this boundary is crossed
+
+Never receives the raw, unvalidated primitive once
+this boundary is crossed.
 ```
 
 ## 7. Dynamics

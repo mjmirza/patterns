@@ -244,29 +244,30 @@ depends on.
 ## 6. ASCII structure diagram
 
 ```
-+-----------------------------+          +-----------------------------+
-|   Bounded Context. Billing  |          | Bounded Context. Fulfillment|
-|   (owned by Team Billing)   |          | (owned by Team Fulfillment) |
-|                              |          |                              |
-|  Invoice, Payment,           |          |  Shipment, Route,            |
-|  BillingAccount               |          |  DeliveryWindow              |
-+---------------+---------------+          +---------------+---------------+
-                |                                            |
-                | imports / depends on                       | imports / depends on
-                v                                            v
-        +-------------------------------------------------------+
-        |                     SHARED KERNEL                     |
-        |  Money (currency, amount, rounding rule)               |
-        |  OrderId (identifier type, equality, parsing)          |
-        |  ShipmentRequested (domain event, field shape)         |
-        +-------------------------------------------------------+
-                                    |
-                                    | governed by
-                                    v
-                +---------------------------------------+
-                |  Joint review + shared CI + version tag |
-                |  (both teams sign off, both teams test) |
-                +---------------------------------------+
++------------------------------+ +------------------------------+
+| Bounded Context: Billing     | | Bounded Context: Fulfillment |
+| (owned by Team Billing)      | | (owned by Team Fulfillment)  |
+|                              | |                              |
+| Invoice, Payment,            | | Shipment, Route,             |
+| BillingAccount               | | DeliveryWindow               |
++------------------------------+ +------------------------------+
+     |                          |
+     +-----------+--------------+
+         imports / depends on
+                 v
++-----------------------------------------------+
+| SHARED KERNEL                                 |
+| Money (currency, amount, rounding rule)       |
+| OrderId (identifier type, equality, parsing)  |
+| ShipmentRequested (domain event, field shape) |
++-----------------------------------------------+
+                 |
+                 | governed by
+                 v
++----------------------------------------+
+| Joint review + shared CI + version tag |
+| (both teams sign off, both teams test) |
++----------------------------------------+
 ```
 
 The kernel sits below both contexts, not beside them, because it is a

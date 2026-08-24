@@ -236,36 +236,42 @@ avoid the fixed overhead of a compaction pass for marginal space savings.
 ## 6. ASCII structure diagram
 
 ```
-                              PARTITION (single log)
-  +------------------------------------------------------------------+
-  |  TAIL (compacted, <=1 record/key)  |  HEAD (dirty, duplicates ok) |
-  |  segment.0   segment.1  segment.2  |   segment.3     segment.4    |
-  |  [k1=v1]     [k3=v2]    [k2=v3]    |   [k1=v4][k3=T] [k4=v5][k1=v6]|
-  +------------------------------------------------------------------+
-        ^ closed, immutable                    ^ segment.4 = active
-        |                                       | (still being appended)
-        |                                       |
-        +---- log cleaner reads dirty segments --+
-              builds offset map, key to highest offset
-              rewrites tail with duplicates dropped, tombstones kept
-              (tombstones dropped only after delete.retention.ms elapses)
+PARTITION (single log)
 
-  Cleaner selection loop (one pass, repeats):
+TAIL (compacted, <=1 record/key), closed, immutable
+  segment.0   segment.1   segment.2
+  [k1=v1]     [k3=v2]     [k2=v3]
 
-    for each partition P in cluster (round robin by dirty ratio):
-        dirty_ratio = bytes(head(P)) / bytes(P)
-        if dirty_ratio < min.cleanable.dirty.ratio:
-            skip P this round
-        else:
-            build_offset_map(head(P))          # key -> highest offset
-            for segment in dirty_segments(P):
-                for record in segment:
-                    if record.offset == offset_map[record.key]:
-                        keep record             # this IS the latest
-                    elif record.is_tombstone and age(record) < delete.retention.ms:
-                        keep record             # grace window
-                    else:
-                        drop record              # superseded, space freed
+HEAD (dirty, duplicates ok)
+  segment.3         segment.4 (active,
+  [k1=v4][k3=T]     still being appended)
+                    [k4=v5][k1=v6]
+
+log cleaner reads dirty segments (HEAD), then:
+  builds offset map, key to highest offset
+  rewrites TAIL with duplicates dropped,
+  tombstones kept (tombstones dropped only
+  after delete.retention.ms elapses)
+
+Cleaner selection loop (one pass, repeats):
+
+for each partition P in cluster (round robin by
+dirty ratio):
+    dirty_ratio = bytes(head(P)) / bytes(P)
+    if dirty_ratio < min.cleanable.dirty.ratio:
+        skip P this round
+    else:
+        build_offset_map(head(P))  # key -> offset
+        for segment in dirty_segments(P):
+            for record in segment:
+                if record.offset ==
+                   offset_map[record.key]:
+                    keep record  # latest
+                elif record.is_tombstone and
+                     age(record) < delete.retention.ms:
+                    keep record  # grace window
+                else:
+                    drop record  # superseded
 ```
 
 ## 7. Dynamics
