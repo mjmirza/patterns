@@ -2,7 +2,7 @@
 
 Origin. OWASP ASVS
 
-38 entries, 226,886 words. Every entry carries all 18
+38 entries, 226,885 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Authorization
@@ -34,7 +34,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Idempotency Key](idempotency-key.md) | established | 6,606 | A client sends a mutating request and then loses the answer. |
 | [Input Validation](input-validation.md) | canonical | 6,182 | A program accepts bytes, strings, numbers, objects, headers, files, paths, identifiers, query parameters, form fields, JSON bodies, environment variables, messages, or records ... |
 | [JWT](jwt.md) | established | 6,076 | A resource server needs to accept repeated calls without contacting the issuer for every request, yet it still needs an issuer, subject, audience, expiry, possibly scopes, and a ... |
-| [Key Rotation](key-rotation.md) | established | 6,762 | A system depends on secret material that cannot be treated as permanent. |
+| [Key Rotation](key-rotation.md) | established | 6,761 | A system depends on secret material that cannot be treated as permanent. |
 | [Least Privilege](least-privilege.md) | canonical | 6,389 | A system needs trusted actions to happen, but the code, user, service account, container, or job that performs those actions can also fail, be tricked, or be taken over. |
 | [Lethal Trifecta Threat Model](lethal-trifecta-threat-model.md) | emerging | 1,818 | Willison's own text states why the three conditions matter only in combination, not individually. |
 | [Mutual TLS](mutual-tls.md) | established | 6,027 | A service accepts network calls from other machines. |

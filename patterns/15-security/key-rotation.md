@@ -257,27 +257,42 @@ make old ciphertext unrecoverable.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+        +-----------------------+
-| Rotation          | create | Logical Key Name      |
-| Coordinator       |------->| payments-signing      |
-+---------+---------+        +-----------+-----------+
-          |                              |
-          | publishes state              | owns versions
-          v                              v
-+---------+---------+        +-----------+-----------+
-| Distribution Path |<-------| Version Registry      |
-| store, JWKS, KMS  |        | v1, v2, v3 states     |
-+---------+---------+        +-----------+-----------+
-          |                              |
-          | fetch current and accepted   | records events
-          v                              v
-+---------+---------+        +-----------+-----------+
-| Consumers         |------->| Audit Sink            |
-| writers, readers  | use    | logs and metrics      |
-+-------------------+        +-----------------------+
++----------------------+
+| Rotation Coordinator |
++----------------------+
+     | create
+     v
++-----------------------------------------+
+| Logical Key Name, e.g. payments-signing |
++-----------------------------------------+
+     | owns versions
+     v
++-------------------------------------+
+| Version Registry, v1, v2, v3 states |
++-------------------------------------+
+     | records events
+     v
++------------------------------+
+| Audit Sink, logs and metrics |
++------------------------------+
 
-Writers use one active version. Readers accept a bounded version set.
-Old versions leave the set only after their protected work can no longer appear.
+Rotation Coordinator also publishes state to:
+
++-------------------------------------+
+| Distribution Path, store, JWKS, KMS |
++-------------------------------------+
+     | fetch current and accepted
+     v
++-----------------------------+
+| Consumers, writers, readers |
++-----------------------------+
+     | use
+     v
+(reports to Audit Sink above)
+
+Writers use one active version. Readers accept a
+bounded version set. Old versions leave the set only
+after their protected work can no longer appear.
 ```
 
 ## 7. Dynamics

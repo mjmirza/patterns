@@ -2,7 +2,7 @@
 
 Origin. Fowler, PoEAA
 
-56 entries, 371,808 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
+56 entries, 371,715 words, 4 more planned, 60 total when the family is complete. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Base Pattern
@@ -122,13 +122,13 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
 | [Embedded Value](embedded-value.md) | canonical | 7,871 | An application's domain model routinely needs small objects that group a handful of related fields into one meaningful unit. |
-| [Identity Field](identity-field.md) | canonical | 6,033 | An in-memory object system and a relational database use two different, and incompatible, notions of identity. |
+| [Identity Field](identity-field.md) | canonical | 6,034 | An in-memory object system and a relational database use two different, and incompatible, notions of identity. |
 
 ## Object-Relational Structural Patterns
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Concrete Table Inheritance](concrete-table-inheritance.md) | canonical | 8,078 | An application's domain model contains a base type with several concrete subtypes, each subtype adding its own fields, and the persistence layer must map that hierarchy onto ... |
+| [Concrete Table Inheritance](concrete-table-inheritance.md) | canonical | 7,984 | An application's domain model contains a base type with several concrete subtypes, each subtype adding its own fields, and the persistence layer must map that hierarchy onto ... |
 | [Inheritance Mappers](inheritance-mappers.md) | canonical | 8,397 | A domain model with an inheritance hierarchy, a base Employee class with SalariedEmployee, CommissionedEmployee, and HourlyEmployee subclasses, needs a persistence layer that can ... |
 | [Single Table Inheritance](single-table-inheritance.md) | canonical | 9,071 | An object model has a natural inheritance hierarchy. |
 
