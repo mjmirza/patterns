@@ -1,4 +1,4 @@
-# Patterns
+![patterns](assets/logo.png)
 
 A master level reference for software patterns. Every entry is written from
 primary sources, carries eighteen mandatory dimensions, and cites every claim.
@@ -8,14 +8,9 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 ![Entries](https://img.shields.io/badge/entries-890%20published%20%2F%20893%20planned-yellow)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
 ![Citations](https://img.shields.io/badge/citations-verified%20in%20CI-brightgreen)
-![Original prose](https://img.shields.io/badge/prose-100%25%20original-brightgreen)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blueviolet)
-
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
-![Schema version](https://img.shields.io/badge/schema-v1.0-informational)
-![Published entries](https://img.shields.io/badge/published-890-brightgreen)
-![Planned entries](https://img.shields.io/badge/planned-3-lightgrey)
 ![Catalogue completion](https://img.shields.io/badge/completion-99.7%25-yellow)
 ![References checked](https://img.shields.io/badge/references%20checked-5067-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
