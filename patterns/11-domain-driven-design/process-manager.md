@@ -806,6 +806,38 @@ should be subject to the same access and retention rules as the Process
 State they describe, not treated as exempt because they appear in
 operational telemetry rather than the primary data store.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 978-0-321-20068-6. Message Routing chapter, Process Manager.
+   Source of the canonical name, the intent, the solution statement, and the
+   Process Manager versus Routing Slip distinction in dimension 1.
+2. enterpriseintegrationpatterns.com. "Process Manager".
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html
+   Verified 2026-08-02. Source for the direct quotations of the pattern's
+   intent and solution in dimension 1 and dimension 2.
+3. Hector Garcia Molina, Kenneth Salem. "Sagas". ACM SIGMOD Record, Volume
+   16, Issue 3, 1987. Source of the original Saga concept referenced in
+   dimension 1 as the origin of the Saga Orchestrator alias.
+4. Particular Software. NServiceBus documentation, "Sagas".
+   https://docs.particular.net/nservicebus/sagas/
+   Verified 2026-08-02. Source for the ContainSagaData and production use
+   quotations in dimension 8 and dimension 9.
+5. MassTransit. Documentation, "Saga State Machines".
+   https://masstransit.io/documentation/patterns/saga/state-machine
+   Verified 2026-08-02. Source for the MassTransitStateMachine production
+   use in dimension 9 and the SagaTestHarness reference in dimension 15.
+6. Temporal Technologies. Temporal documentation, "Workflows".
+   https://docs.temporal.io/workflows
+   Verified 2026-08-02. Source for the Workflow Execution and Event History
+   quotations in dimension 8, dimension 9, and dimension 15.
+7. Amazon Web Services. AWS Step Functions Developer Guide, "What is AWS
+   Step Functions".
+   https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html
+   Verified 2026-08-02. Source for the Step Functions production use in
+   dimension 9.
+
 ## Code examples
 
 Three languages, chosen because the pattern shows up idiomatically differently
@@ -1015,35 +1047,3 @@ if __name__ == "__main__":
     print(pm.handle_reply(Reply("PaymentDeclined", "order-1")))
     print(pm.handle_reply(Reply("InventoryReleased", "order-1")))
 ```
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 978-0-321-20068-6. Message Routing chapter, Process Manager.
-   Source of the canonical name, the intent, the solution statement, and the
-   Process Manager versus Routing Slip distinction in dimension 1.
-2. enterpriseintegrationpatterns.com. "Process Manager".
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html
-   Verified 2026-08-02. Source for the direct quotations of the pattern's
-   intent and solution in dimension 1 and dimension 2.
-3. Hector Garcia Molina, Kenneth Salem. "Sagas". ACM SIGMOD Record, Volume
-   16, Issue 3, 1987. Source of the original Saga concept referenced in
-   dimension 1 as the origin of the Saga Orchestrator alias.
-4. Particular Software. NServiceBus documentation, "Sagas".
-   https://docs.particular.net/nservicebus/sagas/
-   Verified 2026-08-02. Source for the ContainSagaData and production use
-   quotations in dimension 8 and dimension 9.
-5. MassTransit. Documentation, "Saga State Machines".
-   https://masstransit.io/documentation/patterns/saga/state-machine
-   Verified 2026-08-02. Source for the MassTransitStateMachine production
-   use in dimension 9 and the SagaTestHarness reference in dimension 15.
-6. Temporal Technologies. Temporal documentation, "Workflows".
-   https://docs.temporal.io/workflows
-   Verified 2026-08-02. Source for the Workflow Execution and Event History
-   quotations in dimension 8, dimension 9, and dimension 15.
-7. Amazon Web Services. AWS Step Functions Developer Guide, "What is AWS
-   Step Functions".
-   https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html
-   Verified 2026-08-02. Source for the Step Functions production use in
-   dimension 9.

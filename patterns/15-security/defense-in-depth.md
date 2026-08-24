@@ -752,6 +752,38 @@ dependency becomes a shared failure source. Separate duties, scoped break-glass
 roles, hardware-backed keys, tested recovery, and independent audit trails can
 reduce that risk.
 
+## 18. References
+
+- NIST CSRC, "defense-in-depth", glossary term, sources listed include CNSSI
+  4009-2015, NIST SP 800-53 Rev. 5, NIST SP 800-30 Rev. 1, NIST SP 800-39,
+  and NISTIR 8183, https://csrc.nist.gov/glossary/term/defense_in_depth,
+  verified 2026-08-02.
+- R. Shirey, *Internet Security Glossary, Version 2*, RFC 4949, August 2007,
+  section "defense in depth", https://datatracker.ietf.org/doc/rfc4949/,
+  verified 2026-08-02.
+- Amazon Web Services, *AWS Well-Architected Framework, Security Pillar*,
+  "Security foundations", design principle "Apply security at all layers",
+  https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/security.html,
+  verified 2026-08-02.
+- Amazon Web Services, *AWS Prescriptive Guidance, Security Reference
+  Architecture*, "Apply security services across your AWS organization",
+  https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture/security-services.html,
+  verified 2026-08-02.
+- Google Cloud, *Enterprise foundations blueprint*, "A defense-in-depth
+  security model",
+  https://docs.cloud.google.com/architecture/blueprints/security-foundations,
+  verified 2026-08-02.
+- Microsoft Learn, *Azure Government security*,
+  https://learn.microsoft.com/en-us/azure/azure-government/documentation-government-plan-security,
+  verified 2026-08-02.
+- Kubernetes Documentation, *Cloud Native Security and Kubernetes*,
+  https://kubernetes.io/docs/concepts/security/cloud-native-security/,
+  verified 2026-08-02.
+- Rory Ward and Betsy Beyer, "BeyondCorp: A New Approach to Enterprise
+  Security", ;login:, Vol. 39, No. 6, 2014, pp. 6-11,
+  https://research.google/pubs/beyondcorp-a-new-approach-to-enterprise-security/,
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples model a small document export path. The point is not the business
@@ -921,35 +953,3 @@ func main() {
 	fmt.Println(result)
 }
 ```
-
-## 18. References
-
-- NIST CSRC, "defense-in-depth", glossary term, sources listed include CNSSI
-  4009-2015, NIST SP 800-53 Rev. 5, NIST SP 800-30 Rev. 1, NIST SP 800-39,
-  and NISTIR 8183, https://csrc.nist.gov/glossary/term/defense_in_depth,
-  verified 2026-08-02.
-- R. Shirey, *Internet Security Glossary, Version 2*, RFC 4949, August 2007,
-  section "defense in depth", https://datatracker.ietf.org/doc/rfc4949/,
-  verified 2026-08-02.
-- Amazon Web Services, *AWS Well-Architected Framework, Security Pillar*,
-  "Security foundations", design principle "Apply security at all layers",
-  https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/security.html,
-  verified 2026-08-02.
-- Amazon Web Services, *AWS Prescriptive Guidance, Security Reference
-  Architecture*, "Apply security services across your AWS organization",
-  https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture/security-services.html,
-  verified 2026-08-02.
-- Google Cloud, *Enterprise foundations blueprint*, "A defense-in-depth
-  security model",
-  https://docs.cloud.google.com/architecture/blueprints/security-foundations,
-  verified 2026-08-02.
-- Microsoft Learn, *Azure Government security*,
-  https://learn.microsoft.com/en-us/azure/azure-government/documentation-government-plan-security,
-  verified 2026-08-02.
-- Kubernetes Documentation, *Cloud Native Security and Kubernetes*,
-  https://kubernetes.io/docs/concepts/security/cloud-native-security/,
-  verified 2026-08-02.
-- Rory Ward and Betsy Beyer, "BeyondCorp: A New Approach to Enterprise
-  Security", ;login:, Vol. 39, No. 6, 2014, pp. 6-11,
-  https://research.google/pubs/beyondcorp-a-new-approach-to-enterprise-security/,
-  verified 2026-08-02.

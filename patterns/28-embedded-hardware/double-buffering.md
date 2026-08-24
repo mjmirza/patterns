@@ -415,6 +415,14 @@ before the swap makes it visible is a real, necessary part of a
 security-conscious double-buffering implementation, not merely a
 visual-quality concern.
 
+## 18. References
+
+1. LVGL. "Display interface".
+   https://lvgl.io/docs/open/8.3/porting/display
+   Verified 2026-08-21. Source of the double-buffering mechanism,
+   swap, and buffer-sizing quotes used in dimensions 1, 2, 3, 8, 9,
+   and 10.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -561,11 +569,3 @@ writeFrame(back, value: 7)
 (front, back) = swapIfReady(front: front, back: back)
 print("front buffer: " + String(describing: front.pixels))
 ```
-
-## 18. References
-
-1. LVGL. "Display interface".
-   https://lvgl.io/docs/open/8.3/porting/display
-   Verified 2026-08-21. Source of the double-buffering mechanism,
-   swap, and buffer-sizing quotes used in dimensions 1, 2, 3, 8, 9,
-   and 10.

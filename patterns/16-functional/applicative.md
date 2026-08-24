@@ -742,6 +742,29 @@ the product explicitly needs the value echoed back. For example, returning
 message attached. Applicative makes it easy to gather many failures, so it must
 also make it easy to gather them without gathering secrets.
 
+## 18. References
+
+- Conor McBride and Ross Paterson, "Applicative Programming with Effects",
+  *Journal of Functional Programming*, volume 18, issue 1, 2008, pages 1 to
+  13. https://www.staff.city.ac.uk/~ross/papers/Applicative.html, verified
+  2026-08-02.
+- Haskell `base` library, `Control.Applicative`, version shown by Hackage as
+  base 4.22.0.0 at fetch time.
+  https://hackage.haskell.org/package/base/docs/Control-Applicative.html,
+  verified 2026-08-02.
+- fp-ts documentation, `Apply.ts`.
+  https://gcanti.github.io/fp-ts/modules/Apply.ts.html, verified 2026-08-02.
+- Typelevel Cats documentation, `Applicative`.
+  https://typelevel.org/cats/typeclasses/applicative.html, verified
+  2026-08-02.
+- Typelevel Cats documentation, `Validated`.
+  https://typelevel.org/cats/datatypes/validated.html, verified 2026-08-02.
+- Elm Guide, JSON decoders.
+  https://guide.elm-lang.org/effects/json, verified 2026-08-02.
+- ZIO Prelude documentation, `ForEach` and `Validation`.
+  https://zio.github.io/zio-prelude/docs/functionalabstractions/parameterizedtypes/foreach,
+  verified 2026-08-02.
+
 ## Code examples
 
 TypeScript, Python, and Rust are used here because they show three practical
@@ -839,26 +862,3 @@ fn main() {
     println!("{:?}", result);
 }
 ```
-
-## 18. References
-
-- Conor McBride and Ross Paterson, "Applicative Programming with Effects",
-  *Journal of Functional Programming*, volume 18, issue 1, 2008, pages 1 to
-  13. https://www.staff.city.ac.uk/~ross/papers/Applicative.html, verified
-  2026-08-02.
-- Haskell `base` library, `Control.Applicative`, version shown by Hackage as
-  base 4.22.0.0 at fetch time.
-  https://hackage.haskell.org/package/base/docs/Control-Applicative.html,
-  verified 2026-08-02.
-- fp-ts documentation, `Apply.ts`.
-  https://gcanti.github.io/fp-ts/modules/Apply.ts.html, verified 2026-08-02.
-- Typelevel Cats documentation, `Applicative`.
-  https://typelevel.org/cats/typeclasses/applicative.html, verified
-  2026-08-02.
-- Typelevel Cats documentation, `Validated`.
-  https://typelevel.org/cats/datatypes/validated.html, verified 2026-08-02.
-- Elm Guide, JSON decoders.
-  https://guide.elm-lang.org/effects/json, verified 2026-08-02.
-- ZIO Prelude documentation, `ForEach` and `Validation`.
-  https://zio.github.io/zio-prelude/docs/functionalabstractions/parameterizedtypes/foreach,
-  verified 2026-08-02.

@@ -786,6 +786,65 @@ Privacy implications.
   the user. Keep UI copy precise and avoid exposing account existence in server
   errors.
 
+## 18. References
+
+1. W3C Web Authentication Working Group. *Web Authentication: An API for
+   accessing Public Key Credentials, Level 3*. Candidate Recommendation
+   Snapshot, 26 May 2026.
+   [https://www.w3.org/TR/webauthn-3/](https://www.w3.org/TR/webauthn-3/).
+   Verified 2026-08-02. Source for WebAuthn terminology, ceremony structure,
+   relying party operations, authenticator model, attestation, automation,
+   security considerations, and privacy considerations.
+2. W3C Web Authentication Working Group. *Web Authentication: An API for
+   accessing Public Key Credentials, Level 2*. W3C Recommendation, 8 April
+   2021.
+   [https://www.w3.org/TR/2021/REC-webauthn-2-20210408/](https://www.w3.org/TR/2021/REC-webauthn-2-20210408/).
+   Verified 2026-08-02. Source for lineage as a stable W3C Recommendation.
+3. FIDO Alliance. *Passkeys FAQ*.
+   [https://fidoalliance.org/passkeys/](https://fidoalliance.org/passkeys/).
+   Verified 2026-08-02. Source for passkey terminology, FIDO2 relationship,
+   synced and device-bound passkey distinction, and phishing-resistance claims.
+4. passkeys.dev contributors. *Terms*.
+   [https://passkeys.dev/docs/reference/terms/](https://passkeys.dev/docs/reference/terms/).
+   Verified 2026-08-02. Source for implementation vocabulary used by passkey
+   deployment guides.
+5. MDN Web Docs. *Web Authentication API*.
+   [https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API).
+   Verified 2026-08-02. Source for browser API context.
+6. National Institute of Standards and Technology. *Digital Identity Guidelines,
+   Authentication and Authenticator Management, SP 800-63B*.
+   [https://pages.nist.gov/800-63-4/sp800-63b.html](https://pages.nist.gov/800-63-4/sp800-63b.html).
+   Verified 2026-08-02. Source for AAL2 phishing-resistant option, AAL3 public
+   key and non-exportability requirements, and biometric activation-factor
+   treatment.
+7. GitHub. Hirsch Singhal. *Passkeys are generally available*. GitHub Blog,
+   21 September 2023.
+   [https://github.blog/news-insights/product-news/passkeys-are-generally-available/](https://github.blog/news-insights/product-news/passkeys-are-generally-available/).
+   Verified 2026-08-02. Source for GitHub production use and rollout lessons.
+8. GitHub Docs. *About passkeys*.
+   [https://docs.github.com/en/authentication/authenticating-with-a-passkey/about-passkeys](https://docs.github.com/en/authentication/authenticating-with-a-passkey/about-passkeys).
+   Verified 2026-08-02. Source for GitHub account passkey documentation.
+9. Google. Sriram Karra and Christiaan Brand. *Passwordless by default: Make the
+   switch to passkeys*. Google Blog, 10 October 2023.
+   [https://blog.google/innovation-and-ai/technology/safety-security/passkeys-default-google-accounts/](https://blog.google/innovation-and-ai/technology/safety-security/passkeys-default-google-accounts/).
+   Verified 2026-08-02. Source for Google Account production use.
+10. Google for Developers. *Passkeys*.
+   [https://developers.google.com/identity/passkeys](https://developers.google.com/identity/passkeys).
+   Verified 2026-08-02. Source for Google developer guidance.
+11. Amazon Staff. *Amazon is making it easier and safer for you to access your
+   account with passwordless sign-in*. About Amazon, 23 October 2023, updated
+   15 October 2024.
+   [https://www.aboutamazon.com/news/retail/amazon-passwordless-sign-in-passkey](https://www.aboutamazon.com/news/retail/amazon-passwordless-sign-in-passkey).
+   Verified 2026-08-02. Source for Amazon production use and adoption number.
+12. Microsoft Security. Vasu Jakkal and Joy Chik. *Microsoft introduces passkeys
+   for consumer accounts*. Microsoft Security Blog, 2 May 2024.
+   [https://www.microsoft.com/en-us/security/blog/2024/05/02/microsoft-introduces-passkeys-for-consumer-accounts/](https://www.microsoft.com/en-us/security/blog/2024/05/02/microsoft-introduces-passkeys-for-consumer-accounts/).
+   Verified 2026-08-02. Source for Microsoft consumer account production use.
+13. Apple Developer Documentation. *Passkey use in web browsers*.
+   [https://developer.apple.com/documentation/authenticationservices/passkey-use-in-web-browsers](https://developer.apple.com/documentation/authenticationservices/passkey-use-in-web-browsers).
+   Verified 2026-08-02. Source for Apple AuthenticationServices browser passkey
+   API context.
+
 ## Code examples
 
 Three languages are used because they are common for identity services and can
@@ -1011,62 +1070,3 @@ func main() {
 	))
 }
 ```
-
-## 18. References
-
-1. W3C Web Authentication Working Group. *Web Authentication: An API for
-   accessing Public Key Credentials, Level 3*. Candidate Recommendation
-   Snapshot, 26 May 2026.
-   [https://www.w3.org/TR/webauthn-3/](https://www.w3.org/TR/webauthn-3/).
-   Verified 2026-08-02. Source for WebAuthn terminology, ceremony structure,
-   relying party operations, authenticator model, attestation, automation,
-   security considerations, and privacy considerations.
-2. W3C Web Authentication Working Group. *Web Authentication: An API for
-   accessing Public Key Credentials, Level 2*. W3C Recommendation, 8 April
-   2021.
-   [https://www.w3.org/TR/2021/REC-webauthn-2-20210408/](https://www.w3.org/TR/2021/REC-webauthn-2-20210408/).
-   Verified 2026-08-02. Source for lineage as a stable W3C Recommendation.
-3. FIDO Alliance. *Passkeys FAQ*.
-   [https://fidoalliance.org/passkeys/](https://fidoalliance.org/passkeys/).
-   Verified 2026-08-02. Source for passkey terminology, FIDO2 relationship,
-   synced and device-bound passkey distinction, and phishing-resistance claims.
-4. passkeys.dev contributors. *Terms*.
-   [https://passkeys.dev/docs/reference/terms/](https://passkeys.dev/docs/reference/terms/).
-   Verified 2026-08-02. Source for implementation vocabulary used by passkey
-   deployment guides.
-5. MDN Web Docs. *Web Authentication API*.
-   [https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API).
-   Verified 2026-08-02. Source for browser API context.
-6. National Institute of Standards and Technology. *Digital Identity Guidelines,
-   Authentication and Authenticator Management, SP 800-63B*.
-   [https://pages.nist.gov/800-63-4/sp800-63b.html](https://pages.nist.gov/800-63-4/sp800-63b.html).
-   Verified 2026-08-02. Source for AAL2 phishing-resistant option, AAL3 public
-   key and non-exportability requirements, and biometric activation-factor
-   treatment.
-7. GitHub. Hirsch Singhal. *Passkeys are generally available*. GitHub Blog,
-   21 September 2023.
-   [https://github.blog/news-insights/product-news/passkeys-are-generally-available/](https://github.blog/news-insights/product-news/passkeys-are-generally-available/).
-   Verified 2026-08-02. Source for GitHub production use and rollout lessons.
-8. GitHub Docs. *About passkeys*.
-   [https://docs.github.com/en/authentication/authenticating-with-a-passkey/about-passkeys](https://docs.github.com/en/authentication/authenticating-with-a-passkey/about-passkeys).
-   Verified 2026-08-02. Source for GitHub account passkey documentation.
-9. Google. Sriram Karra and Christiaan Brand. *Passwordless by default: Make the
-   switch to passkeys*. Google Blog, 10 October 2023.
-   [https://blog.google/innovation-and-ai/technology/safety-security/passkeys-default-google-accounts/](https://blog.google/innovation-and-ai/technology/safety-security/passkeys-default-google-accounts/).
-   Verified 2026-08-02. Source for Google Account production use.
-10. Google for Developers. *Passkeys*.
-   [https://developers.google.com/identity/passkeys](https://developers.google.com/identity/passkeys).
-   Verified 2026-08-02. Source for Google developer guidance.
-11. Amazon Staff. *Amazon is making it easier and safer for you to access your
-   account with passwordless sign-in*. About Amazon, 23 October 2023, updated
-   15 October 2024.
-   [https://www.aboutamazon.com/news/retail/amazon-passwordless-sign-in-passkey](https://www.aboutamazon.com/news/retail/amazon-passwordless-sign-in-passkey).
-   Verified 2026-08-02. Source for Amazon production use and adoption number.
-12. Microsoft Security. Vasu Jakkal and Joy Chik. *Microsoft introduces passkeys
-   for consumer accounts*. Microsoft Security Blog, 2 May 2024.
-   [https://www.microsoft.com/en-us/security/blog/2024/05/02/microsoft-introduces-passkeys-for-consumer-accounts/](https://www.microsoft.com/en-us/security/blog/2024/05/02/microsoft-introduces-passkeys-for-consumer-accounts/).
-   Verified 2026-08-02. Source for Microsoft consumer account production use.
-13. Apple Developer Documentation. *Passkey use in web browsers*.
-   [https://developer.apple.com/documentation/authenticationservices/passkey-use-in-web-browsers](https://developer.apple.com/documentation/authenticationservices/passkey-use-in-web-browsers).
-   Verified 2026-08-02. Source for Apple AuthenticationServices browser passkey
-   API context.

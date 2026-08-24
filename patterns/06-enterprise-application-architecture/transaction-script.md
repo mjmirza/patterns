@@ -805,6 +805,47 @@ apply field-level redaction at the logging boundary explicitly rather than
 relying on the pattern's structure to keep sensitive data away from logs,
 since it does not.
 
+## 18. References
+
+1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
+   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 9, "Domain Logic
+   Patterns," section "Transaction Script," and "The Revenue Recognition
+   Problem," page 112. Source of the pattern's name, intent, structure, and
+   the originating case study. Page number confirmed via the excerpted quote
+   at https://lorenzo-dee.blogspot.com/2015/08/domain-logic-patterns.html,
+   verified 2026-08-02.
+2. Martin Fowler. "Transaction Script." Catalog of Patterns of Enterprise
+   Application Architecture. https://martinfowler.com/eaaCatalog/transactionScript.html
+   Verified 2026-08-02. Source of the one-sentence pattern intent quoted in
+   dimension 1.
+3. Martin Fowler. "AnemicDomainModel." Bliki.
+   https://martinfowler.com/bliki/AnemicDomainModel.html Verified 2026-08-02.
+   Source for Fowler's own statement that an anemic Domain Model degenerates
+   into Transaction Script in practice, used in dimension 10's discussion of
+   the boundary between the two patterns.
+4. Martin Fowler. "Mocks Aren't Stubs."
+   https://martinfowler.com/articles/mocksArentStubs.html Verified
+   2026-08-02. Source of the Fake versus Mock test-double vocabulary used in
+   dimension 15.
+5. IBM. "CICS transaction processing environment." CICS Transaction Server
+   for z/OS documentation. https://www.ibm.com/docs/en/cics-ts/6.x Verified
+   2026-08-02. Source for the CICS production use in dimension 9.
+6. IBM, via DBzTech. "How COBOL Programs Connect to CICS, IMS, and DB2."
+   https://dbztech.blog/cics-ims-and-db2-connecting-cobol-programs-in-z-os/
+   Verified 2026-08-02. Source for the description of embedded EXEC SQL
+   inside CICS COBOL transaction programs in dimensions 1 and 9.
+7. SAP. "Describing Remote Function Calls and BAPIs." SAP Learning,
+   technical implementation and operation of SAP S/4HANA and SAP Business
+   Suite course documentation.
+   https://learning.sap.com/courses/technical-implementation-and-operation-i-of-sap-s-4hana-and-sap-business-suite/describing-remote-function-calls-and-bapis
+   Verified 2026-08-02. Source for the BAPI and function module production
+   use in dimension 9.
+8. iluwatar. "Transaction Script Pattern in Java." Java Design Patterns.
+   https://java-design-patterns.com/patterns/transaction-script/ Verified
+   2026-08-02. Confirmed to be published from the iluwatar/java-design-patterns
+   open source GitHub project. Source for the `Hotel` and `HotelDaoImpl`
+   reference implementation cited in dimension 9.
+
 ## Code examples
 
 The three languages below were chosen because Transaction Script is
@@ -1075,44 +1116,3 @@ func Example() {
 	fmt.Println("rejected", err)
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
-   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 9, "Domain Logic
-   Patterns," section "Transaction Script," and "The Revenue Recognition
-   Problem," page 112. Source of the pattern's name, intent, structure, and
-   the originating case study. Page number confirmed via the excerpted quote
-   at https://lorenzo-dee.blogspot.com/2015/08/domain-logic-patterns.html,
-   verified 2026-08-02.
-2. Martin Fowler. "Transaction Script." Catalog of Patterns of Enterprise
-   Application Architecture. https://martinfowler.com/eaaCatalog/transactionScript.html
-   Verified 2026-08-02. Source of the one-sentence pattern intent quoted in
-   dimension 1.
-3. Martin Fowler. "AnemicDomainModel." Bliki.
-   https://martinfowler.com/bliki/AnemicDomainModel.html Verified 2026-08-02.
-   Source for Fowler's own statement that an anemic Domain Model degenerates
-   into Transaction Script in practice, used in dimension 10's discussion of
-   the boundary between the two patterns.
-4. Martin Fowler. "Mocks Aren't Stubs."
-   https://martinfowler.com/articles/mocksArentStubs.html Verified
-   2026-08-02. Source of the Fake versus Mock test-double vocabulary used in
-   dimension 15.
-5. IBM. "CICS transaction processing environment." CICS Transaction Server
-   for z/OS documentation. https://www.ibm.com/docs/en/cics-ts/6.x Verified
-   2026-08-02. Source for the CICS production use in dimension 9.
-6. IBM, via DBzTech. "How COBOL Programs Connect to CICS, IMS, and DB2."
-   https://dbztech.blog/cics-ims-and-db2-connecting-cobol-programs-in-z-os/
-   Verified 2026-08-02. Source for the description of embedded EXEC SQL
-   inside CICS COBOL transaction programs in dimensions 1 and 9.
-7. SAP. "Describing Remote Function Calls and BAPIs." SAP Learning,
-   technical implementation and operation of SAP S/4HANA and SAP Business
-   Suite course documentation.
-   https://learning.sap.com/courses/technical-implementation-and-operation-i-of-sap-s-4hana-and-sap-business-suite/describing-remote-function-calls-and-bapis
-   Verified 2026-08-02. Source for the BAPI and function module production
-   use in dimension 9.
-8. iluwatar. "Transaction Script Pattern in Java." Java Design Patterns.
-   https://java-design-patterns.com/patterns/transaction-script/ Verified
-   2026-08-02. Confirmed to be published from the iluwatar/java-design-patterns
-   open source GitHub project. Source for the `Hotel` and `HotelDaoImpl`
-   reference implementation cited in dimension 9.

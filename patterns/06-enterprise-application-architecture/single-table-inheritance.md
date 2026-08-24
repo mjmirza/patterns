@@ -854,6 +854,46 @@ against the table are constructed and parameterised, which is a general SQL
 hygiene concern applying equally to any table, not one specific to this
 pattern.
 
+## 18. References
+
+1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
+   Addison-Wesley, 2002. ISBN 0-321-12742-0. Object-Relational Structural
+   Patterns, catalog entry "Single Table Inheritance",
+   https://martinfowler.com/eaaCatalog/singleTableInheritance.html
+   Verified 2026-08-02. Source of the pattern's name, intent, and its place
+   alongside Class Table Inheritance and Concrete Table Inheritance.
+2. Ruby on Rails project. *Ruby on Rails API documentation*,
+   `ActiveRecord::Inheritance`.
+   https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html
+   Verified 2026-08-02. Source for the `type` column convention, the
+   `Base.inheritance_column` override, and the class-name-to-column-value
+   mapping described in dimensions 8 and 9.
+3. Ruby on Rails project. *Ruby on Rails Guides*, "Active Record
+   Associations", section on Single Table Inheritance.
+   https://guides.rubyonrails.org/association_basics.html
+   Verified 2026-08-02. Source for the query-scoping behaviour and the
+   association-handling caveats referenced in dimension 9.
+4. Baeldung. "Hibernate Inheritance Mapping".
+   https://www.baeldung.com/hibernate-inheritance
+   Verified 2026-08-02. Source for the `InheritanceType.SINGLE_TABLE`
+   default strategy, the `DTYPE` discriminator column convention, and the
+   `@DiscriminatorColumn` and `@DiscriminatorValue` annotations described in
+   dimensions 8 and 9.
+5. WordPress developer and hosting documentation on the `wp_posts` table and
+   the `post_type` discriminator column, confirmed via live search of
+   WordPress core database structure references, verified 2026-08-02.
+   Source for the WordPress production use in dimension 9. This claim is
+   corroborated across multiple independent WordPress documentation and
+   hosting-provider sources rather than a single canonical page, because
+   WordPress core does not publish one authoritative schema reference page
+   for `wp_posts`.
+6. PostgreSQL Global Development Group. *PostgreSQL Documentation*, chapter
+   on partial indexes and `CHECK` constraints. Cited as engineering
+   judgement in dimension 8 for the conditional-constraint variant that
+   recovers per-subtype `NOT NULL` semantics; readers should consult the
+   current PostgreSQL documentation for their deployed version's exact
+   syntax rather than relying on this entry for syntax specifics.
+
 ## Code examples
 
 Three languages, each showing the pattern's defining behaviour, a single
@@ -1275,43 +1315,3 @@ for (const vehicle of loadAll()) {
   console.log(vehicle.describe());
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
-   Addison-Wesley, 2002. ISBN 0-321-12742-0. Object-Relational Structural
-   Patterns, catalog entry "Single Table Inheritance",
-   https://martinfowler.com/eaaCatalog/singleTableInheritance.html
-   Verified 2026-08-02. Source of the pattern's name, intent, and its place
-   alongside Class Table Inheritance and Concrete Table Inheritance.
-2. Ruby on Rails project. *Ruby on Rails API documentation*,
-   `ActiveRecord::Inheritance`.
-   https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html
-   Verified 2026-08-02. Source for the `type` column convention, the
-   `Base.inheritance_column` override, and the class-name-to-column-value
-   mapping described in dimensions 8 and 9.
-3. Ruby on Rails project. *Ruby on Rails Guides*, "Active Record
-   Associations", section on Single Table Inheritance.
-   https://guides.rubyonrails.org/association_basics.html
-   Verified 2026-08-02. Source for the query-scoping behaviour and the
-   association-handling caveats referenced in dimension 9.
-4. Baeldung. "Hibernate Inheritance Mapping".
-   https://www.baeldung.com/hibernate-inheritance
-   Verified 2026-08-02. Source for the `InheritanceType.SINGLE_TABLE`
-   default strategy, the `DTYPE` discriminator column convention, and the
-   `@DiscriminatorColumn` and `@DiscriminatorValue` annotations described in
-   dimensions 8 and 9.
-5. WordPress developer and hosting documentation on the `wp_posts` table and
-   the `post_type` discriminator column, confirmed via live search of
-   WordPress core database structure references, verified 2026-08-02.
-   Source for the WordPress production use in dimension 9. This claim is
-   corroborated across multiple independent WordPress documentation and
-   hosting-provider sources rather than a single canonical page, because
-   WordPress core does not publish one authoritative schema reference page
-   for `wp_posts`.
-6. PostgreSQL Global Development Group. *PostgreSQL Documentation*, chapter
-   on partial indexes and `CHECK` constraints. Cited as engineering
-   judgement in dimension 8 for the conditional-constraint variant that
-   recovers per-subtype `NOT NULL` semantics; readers should consult the
-   current PostgreSQL documentation for their deployed version's exact
-   syntax rather than relying on this entry for syntax specifics.

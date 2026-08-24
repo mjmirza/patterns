@@ -734,6 +734,40 @@ depend on being able to enumerate every place a particular piece of sensitive
 data is currently held in memory, since a shared instance is, by definition,
 held in more than one logical place at once.
 
+## 18. References
+
+- Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
+  Software*, Addison-Wesley, 2003, chapter 5, "A Model Expressed in Software",
+  section "Value Objects".
+- Martin Fowler, *Patterns of Enterprise Application Architecture*,
+  Addison-Wesley, 2002, Base Patterns chapter, the `Money` class example.
+- Martin Fowler, "ValueObject",
+  [martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html),
+  verified 2026-08-02.
+- Oracle, "Records", Java SE 17 Language documentation,
+  [docs.oracle.com/en/java/javase/17/language/records.html](https://docs.oracle.com/en/java/javase/17/language/records.html),
+  verified 2026-08-02.
+- Oracle, `java.time` package summary, Java SE 17 API documentation,
+  [docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html),
+  verified 2026-08-02.
+- Kotlin documentation, "Data classes",
+  [kotlinlang.org/docs/data-classes.html](https://kotlinlang.org/docs/data-classes.html),
+  verified 2026-08-02.
+- Microsoft Learn, "C# record types",
+  [learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/records](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/records),
+  verified 2026-08-02.
+- Python Software Foundation, "dataclasses, Data Classes", Python 3
+  documentation,
+  [docs.python.org/3/library/dataclasses.html](https://docs.python.org/3/library/dataclasses.html),
+  verified 2026-08-02.
+- Eclipse Foundation, Jakarta Persistence 3.1 Specification, section 2.6,
+  "Embeddable Classes",
+  [jakarta.ee/specifications/persistence/3.1/jakarta-persistence-spec-3.1.html](https://jakarta.ee/specifications/persistence/3.1/jakarta-persistence-spec-3.1.html),
+  verified 2026-08-02.
+- Vaughn Vernon, *Implementing Domain-Driven Design*, Addison-Wesley, 2013,
+  chapter 6, "Value Objects", for the interned-instance and self-validation
+  refinements to Evans's original description.
+
 ## Code examples
 
 ### TypeScript
@@ -918,37 +952,3 @@ generates every property demonstrated above automatically, and reproducing
 it as a full example would add length without adding a distinct
 implementation technique beyond what dimension 8 already documents with
 citations to each language's own reference material.
-
-## 18. References
-
-- Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
-  Software*, Addison-Wesley, 2003, chapter 5, "A Model Expressed in Software",
-  section "Value Objects".
-- Martin Fowler, *Patterns of Enterprise Application Architecture*,
-  Addison-Wesley, 2002, Base Patterns chapter, the `Money` class example.
-- Martin Fowler, "ValueObject",
-  [martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html),
-  verified 2026-08-02.
-- Oracle, "Records", Java SE 17 Language documentation,
-  [docs.oracle.com/en/java/javase/17/language/records.html](https://docs.oracle.com/en/java/javase/17/language/records.html),
-  verified 2026-08-02.
-- Oracle, `java.time` package summary, Java SE 17 API documentation,
-  [docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html),
-  verified 2026-08-02.
-- Kotlin documentation, "Data classes",
-  [kotlinlang.org/docs/data-classes.html](https://kotlinlang.org/docs/data-classes.html),
-  verified 2026-08-02.
-- Microsoft Learn, "C# record types",
-  [learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/records](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/records),
-  verified 2026-08-02.
-- Python Software Foundation, "dataclasses, Data Classes", Python 3
-  documentation,
-  [docs.python.org/3/library/dataclasses.html](https://docs.python.org/3/library/dataclasses.html),
-  verified 2026-08-02.
-- Eclipse Foundation, Jakarta Persistence 3.1 Specification, section 2.6,
-  "Embeddable Classes",
-  [jakarta.ee/specifications/persistence/3.1/jakarta-persistence-spec-3.1.html](https://jakarta.ee/specifications/persistence/3.1/jakarta-persistence-spec-3.1.html),
-  verified 2026-08-02.
-- Vaughn Vernon, *Implementing Domain-Driven Design*, Addison-Wesley, 2013,
-  chapter 6, "Value Objects", for the interned-instance and self-validation
-  refinements to Evans's original description.

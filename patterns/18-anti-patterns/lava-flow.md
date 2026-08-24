@@ -657,6 +657,17 @@ is also, incidentally, one of the more effective security and privacy
 maintenance activities a team can undertake, because it is precisely the
 activity that surfaces the blind spots described here.
 
+## 18. References
+
+1. "Lava flow (programming)", Wikipedia. https://en.wikipedia.org/wiki/Lava_flow_(programming). Verified 2026-08-02.
+2. "Anti-pattern", Wikipedia. https://en.wikipedia.org/wiki/Anti-pattern. Verified 2026-08-02.
+3. "Dead code", Wikipedia. https://en.wikipedia.org/wiki/Dead_code. Verified 2026-08-02.
+4. "G. K. Chesterton", Wikipedia, section 4.8, "Chesterton's Fence". https://en.wikipedia.org/wiki/G._K._Chesterton. Verified 2026-08-02.
+5. Martin Fowler, "TechnicalDebt". https://martinfowler.com/bliki/TechnicalDebt.html. Verified 2026-08-02.
+6. Joel Spolsky, "Things You Should Never Do, Part I", 2000-04-06. https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/. Verified 2026-08-02.
+7. Mike Hadlow, "The Lava Layer Anti-Pattern", 2014. Commonly cited at https://mikehadlow.blogspot.com/2014/04/the-lava-layer-anti-pattern.html. This entry could not independently retrieve the live page content during verification on 2026-08-02, reported here as a commonly referenced practitioner source for the Lava Layer naming, not independently re-verified against the live page.
+8. William J. Brown, Raphael C. Malveau, Hays W. McCormick, Thomas J. Mowbray, "AntiPatterns. Refactoring Software, Architectures, and Projects in Crisis", Wiley Computer Publishing, 1998, ISBN 0471197130. Publisher, title, year, and ISBN verified via the Internet Archive catalog record on 2026-08-02. This entry could not independently verify a specific chapter or page number for "Lava Flow" within this book during authoring, and does not claim one. The book is cited here only as the widely credited source of the software anti-pattern cataloging tradition that the Wikipedia Anti-pattern article itself attributes the popularization to.
+
 ## Code examples
 
 Three languages illustrate the anti-pattern and one honest approach to
@@ -805,14 +816,3 @@ regular constant rather than a build tag, so Go's compiler has no structural
 reason to flag the branch as dead. A dedicated tool such as `staticcheck`,
 run separately from the ordinary build, is the practical way to surface a
 constant-guarded dead branch like this one in a real Go codebase.
-
-## 18. References
-
-1. "Lava flow (programming)", Wikipedia. https://en.wikipedia.org/wiki/Lava_flow_(programming). Verified 2026-08-02.
-2. "Anti-pattern", Wikipedia. https://en.wikipedia.org/wiki/Anti-pattern. Verified 2026-08-02.
-3. "Dead code", Wikipedia. https://en.wikipedia.org/wiki/Dead_code. Verified 2026-08-02.
-4. "G. K. Chesterton", Wikipedia, section 4.8, "Chesterton's Fence". https://en.wikipedia.org/wiki/G._K._Chesterton. Verified 2026-08-02.
-5. Martin Fowler, "TechnicalDebt". https://martinfowler.com/bliki/TechnicalDebt.html. Verified 2026-08-02.
-6. Joel Spolsky, "Things You Should Never Do, Part I", 2000-04-06. https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/. Verified 2026-08-02.
-7. Mike Hadlow, "The Lava Layer Anti-Pattern", 2014. Commonly cited at https://mikehadlow.blogspot.com/2014/04/the-lava-layer-anti-pattern.html. This entry could not independently retrieve the live page content during verification on 2026-08-02, reported here as a commonly referenced practitioner source for the Lava Layer naming, not independently re-verified against the live page.
-8. William J. Brown, Raphael C. Malveau, Hays W. McCormick, Thomas J. Mowbray, "AntiPatterns. Refactoring Software, Architectures, and Projects in Crisis", Wiley Computer Publishing, 1998, ISBN 0471197130. Publisher, title, year, and ISBN verified via the Internet Archive catalog record on 2026-08-02. This entry could not independently verify a specific chapter or page number for "Lava Flow" within this book during authoring, and does not claim one. The book is cited here only as the widely credited source of the software anti-pattern cataloging tradition that the Wikipedia Anti-pattern article itself attributes the popularization to.

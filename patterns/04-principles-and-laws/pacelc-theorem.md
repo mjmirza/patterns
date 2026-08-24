@@ -767,6 +767,64 @@ should be audited the same way an authorization path is, since a PA/EL-
 configured delete can leave a replica serving the supposedly-deleted data for
 the length of the replication lag window.
 
+## 18. References
+
+- Daniel Abadi, "Problems with CAP, and Yahoo's little known NoSQL system,"
+  DBMS Musings blog, 23 April 2010,
+  [dbmsmusings.blogspot.com/2010/04/problems-with-cap-and-yahoos-little.html](https://dbmsmusings.blogspot.com/2010/04/problems-with-cap-and-yahoos-little.html),
+  verified 2026-08-02. The original coinage of PACELC.
+- Daniel J. Abadi, "Consistency Tradeoffs in Modern Distributed Database
+  System Design. CAP is Only Part of the Story," IEEE Computer, volume 45,
+  issue 2, 2012, pages 37 to 42, DOI 10.1109/MC.2012.33,
+  [dl.acm.org/doi/10.1109/MC.2012.33](https://dl.acm.org/doi/10.1109/MC.2012.33),
+  verified 2026-08-02. The formal, peer-reviewed statement of PACELC.
+- Seth Gilbert and Nancy Lynch, "Brewer's Conjecture and the Feasibility of
+  Consistent, Available, Partition-Tolerant Web Services," ACM SIGACT News,
+  volume 33, issue 2, 2002, pages 51 to 59, DOI 10.1145/564585.564601,
+  [dl.acm.org/doi/10.1145/564585.564601](https://dl.acm.org/doi/10.1145/564585.564601),
+  verified 2026-08-02. The formal proof underlying PACELC's P clause.
+- David K. Gifford, "Weighted Voting for Replicated Data," Proceedings of the
+  Seventh ACM Symposium on Operating Systems Principles, SOSP 1979, pages 150
+  to 162, DOI 10.1145/800215.806583,
+  [dl.acm.org/doi/10.1145/800215.806583](https://dl.acm.org/doi/10.1145/800215.806583),
+  verified 2026-08-02. The quorum-intersection arithmetic, W plus R greater
+  than N, most tunable PACELC implementations use.
+- James C. Corbett et al., "Spanner. Google's Globally-Distributed Database,"
+  Proceedings of the 10th USENIX Symposium on Operating Systems Design and
+  Implementation, OSDI 2012, pages 251 to 264,
+  [usenix.org/system/files/conference/osdi12/osdi12-final-16.pdf](https://www.usenix.org/system/files/conference/osdi12/osdi12-final-16.pdf),
+  verified 2026-08-02. The canonical production PC/EC system using
+  TrueTime-bounded synchronous replication.
+- Michael Stonebraker, Samuel Madden, Daniel J. Abadi, Stavros Harizopoulos,
+  Nabil Hachem, Pat Helland, "The End of an Architectural Era (It's Time for
+  a Complete Rewrite)," Proceedings of the 33rd International Conference on
+  Very Large Data Bases, VLDB 2007, pages 1150 to 1160,
+  [vldb.org/conf/2007/papers/industrial/p1150-stonebraker.pdf](https://www.vldb.org/conf/2007/papers/industrial/p1150-stonebraker.pdf),
+  verified 2026-08-02. The H-Store architecture behind VoltDB's PC/EC design.
+- Brian F. Cooper et al., "PNUTS. Yahoo!'s Hosted Data Serving Platform,"
+  Proceedings of the VLDB Endowment, volume 1, issue 2, 2008, pages 1277 to
+  1288, DOI 10.14778/1454159.1454167,
+  [vldb.org/pvldb/1/1454167.pdf](https://www.vldb.org/pvldb/1/1454167.pdf),
+  verified 2026-08-02. The PC/EL system Abadi used as a founding PACELC
+  example.
+- Apache Cassandra documentation, "Consistency,"
+  [cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html](https://cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html),
+  verified 2026-08-02. The tunable per-statement consistency level system.
+- Amazon Web Services, "Read Consistency," Amazon DynamoDB Developer Guide,
+  [docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html),
+  verified 2026-08-02. DynamoDB's eventually-consistent-by-default read
+  behavior and its documented latency and cost trade-off.
+- MongoDB, Inc., "Read Concern," MongoDB Manual,
+  [www.mongodb.com/docs/manual/reference/read-concern/](https://www.mongodb.com/docs/manual/reference/read-concern/),
+  verified 2026-08-02, and "Write Concern," MongoDB Manual,
+  [www.mongodb.com/docs/manual/reference/write-concern/](https://www.mongodb.com/docs/manual/reference/write-concern/),
+  verified 2026-08-02. MongoDB's configurable read and write concern, which
+  moves the same product between PA/EC-leaning and PC/EC-leaning behavior.
+- Microsoft, "Consistency levels in Azure Cosmos DB," Microsoft Learn,
+  [learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels](https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels),
+  verified 2026-08-02. The five named consistency levels as an explicit
+  product-level exposure of the PACELC spectrum.
+
 ## Code examples
 
 The examples below implement the same tunable, quorum-based key-value store
@@ -1105,61 +1163,3 @@ func main() {
 	fmt.Printf("During partition, PA/EL write ok=%v (consistency at risk, availability kept)\n", ok)
 }
 ```
-
-## 18. References
-
-- Daniel Abadi, "Problems with CAP, and Yahoo's little known NoSQL system,"
-  DBMS Musings blog, 23 April 2010,
-  [dbmsmusings.blogspot.com/2010/04/problems-with-cap-and-yahoos-little.html](https://dbmsmusings.blogspot.com/2010/04/problems-with-cap-and-yahoos-little.html),
-  verified 2026-08-02. The original coinage of PACELC.
-- Daniel J. Abadi, "Consistency Tradeoffs in Modern Distributed Database
-  System Design. CAP is Only Part of the Story," IEEE Computer, volume 45,
-  issue 2, 2012, pages 37 to 42, DOI 10.1109/MC.2012.33,
-  [dl.acm.org/doi/10.1109/MC.2012.33](https://dl.acm.org/doi/10.1109/MC.2012.33),
-  verified 2026-08-02. The formal, peer-reviewed statement of PACELC.
-- Seth Gilbert and Nancy Lynch, "Brewer's Conjecture and the Feasibility of
-  Consistent, Available, Partition-Tolerant Web Services," ACM SIGACT News,
-  volume 33, issue 2, 2002, pages 51 to 59, DOI 10.1145/564585.564601,
-  [dl.acm.org/doi/10.1145/564585.564601](https://dl.acm.org/doi/10.1145/564585.564601),
-  verified 2026-08-02. The formal proof underlying PACELC's P clause.
-- David K. Gifford, "Weighted Voting for Replicated Data," Proceedings of the
-  Seventh ACM Symposium on Operating Systems Principles, SOSP 1979, pages 150
-  to 162, DOI 10.1145/800215.806583,
-  [dl.acm.org/doi/10.1145/800215.806583](https://dl.acm.org/doi/10.1145/800215.806583),
-  verified 2026-08-02. The quorum-intersection arithmetic, W plus R greater
-  than N, most tunable PACELC implementations use.
-- James C. Corbett et al., "Spanner. Google's Globally-Distributed Database,"
-  Proceedings of the 10th USENIX Symposium on Operating Systems Design and
-  Implementation, OSDI 2012, pages 251 to 264,
-  [usenix.org/system/files/conference/osdi12/osdi12-final-16.pdf](https://www.usenix.org/system/files/conference/osdi12/osdi12-final-16.pdf),
-  verified 2026-08-02. The canonical production PC/EC system using
-  TrueTime-bounded synchronous replication.
-- Michael Stonebraker, Samuel Madden, Daniel J. Abadi, Stavros Harizopoulos,
-  Nabil Hachem, Pat Helland, "The End of an Architectural Era (It's Time for
-  a Complete Rewrite)," Proceedings of the 33rd International Conference on
-  Very Large Data Bases, VLDB 2007, pages 1150 to 1160,
-  [vldb.org/conf/2007/papers/industrial/p1150-stonebraker.pdf](https://www.vldb.org/conf/2007/papers/industrial/p1150-stonebraker.pdf),
-  verified 2026-08-02. The H-Store architecture behind VoltDB's PC/EC design.
-- Brian F. Cooper et al., "PNUTS. Yahoo!'s Hosted Data Serving Platform,"
-  Proceedings of the VLDB Endowment, volume 1, issue 2, 2008, pages 1277 to
-  1288, DOI 10.14778/1454159.1454167,
-  [vldb.org/pvldb/1/1454167.pdf](https://www.vldb.org/pvldb/1/1454167.pdf),
-  verified 2026-08-02. The PC/EL system Abadi used as a founding PACELC
-  example.
-- Apache Cassandra documentation, "Consistency,"
-  [cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html](https://cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html),
-  verified 2026-08-02. The tunable per-statement consistency level system.
-- Amazon Web Services, "Read Consistency," Amazon DynamoDB Developer Guide,
-  [docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html),
-  verified 2026-08-02. DynamoDB's eventually-consistent-by-default read
-  behavior and its documented latency and cost trade-off.
-- MongoDB, Inc., "Read Concern," MongoDB Manual,
-  [www.mongodb.com/docs/manual/reference/read-concern/](https://www.mongodb.com/docs/manual/reference/read-concern/),
-  verified 2026-08-02, and "Write Concern," MongoDB Manual,
-  [www.mongodb.com/docs/manual/reference/write-concern/](https://www.mongodb.com/docs/manual/reference/write-concern/),
-  verified 2026-08-02. MongoDB's configurable read and write concern, which
-  moves the same product between PA/EC-leaning and PC/EC-leaning behavior.
-- Microsoft, "Consistency levels in Azure Cosmos DB," Microsoft Learn,
-  [learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels](https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels),
-  verified 2026-08-02. The five named consistency levels as an explicit
-  product-level exposure of the PACELC spectrum.

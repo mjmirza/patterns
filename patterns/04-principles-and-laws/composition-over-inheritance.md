@@ -692,6 +692,37 @@ interface boundary is exactly where a least-privilege review should focus,
 since it is the single, enumerable point every implementation, trusted or not,
 must pass through.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, *Design
+   Patterns. Elements of Reusable Object-Oriented Software*, Addison-Wesley,
+   1994, Chapter 1, guideline "Favor object composition over class
+   inheritance."
+2. Wikipedia, "Composition over inheritance," https://en.wikipedia.org/wiki/Composition_over_inheritance,
+   verified 2026-08-02, for the page-20 location and the encapsulation and
+   compile-time-fixed-inheritance summary of the GoF passage, and for the
+   citation to Eric Freeman, Elisabeth Robson, Bert Bates, and Kathy Sierra,
+   *Head First Design Patterns*, O'Reilly, 2004, page 23.
+3. Joshua Bloch, *Effective Java*, 3rd edition, Addison-Wesley, 2018, Chapter
+   4, Item 18, "Favor composition over inheritance."
+4. Course excerpt confirming Item 18's chapter and item number,
+   https://cs108.epfl.ch/archive/19/c/i/EffectiveJava_Item18.pdf, verified
+   2026-08-02.
+5. Leonid Mikhajlov and Emil Sekerinski, "A Study of The Fragile Base Class
+   Problem," Proceedings of the 12th European Conference on Object-Oriented
+   Programming, ECOOP '98, pages 355 to 382, https://link.springer.com/chapter/10.1007/BFb0054099,
+   verified 2026-08-02.
+6. Unity Technologies, "GameObject," Unity Manual, https://docs.unity3d.com/Manual/class-GameObject.html,
+   verified 2026-08-02.
+7. JetBrains, "Delegation," Kotlin documentation, https://kotlinlang.org/docs/delegation.html,
+   verified 2026-08-02.
+8. Meta, "Composition vs Inheritance," React documentation, https://legacy.reactjs.org/docs/composition-vs-inheritance.html,
+   verified 2026-08-02.
+9. Oracle, "BufferedInputStream," Java SE 17 API documentation, https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/BufferedInputStream.html,
+   verified 2026-08-02.
+10. The Go Authors, "Effective Go," section "Embedding," https://go.dev/doc/effective_go#embedding,
+    verified 2026-08-02.
+
 ## Code examples
 
 Three languages, chosen to show the pattern under three different type
@@ -906,34 +937,3 @@ another type's behaviour does so either by holding a field and calling through
 it, as shown above, or by embedding, described in dimension 8, which is
 itself a form of composition with automatic call forwarding rather than a
 separate mechanism.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, *Design
-   Patterns. Elements of Reusable Object-Oriented Software*, Addison-Wesley,
-   1994, Chapter 1, guideline "Favor object composition over class
-   inheritance."
-2. Wikipedia, "Composition over inheritance," https://en.wikipedia.org/wiki/Composition_over_inheritance,
-   verified 2026-08-02, for the page-20 location and the encapsulation and
-   compile-time-fixed-inheritance summary of the GoF passage, and for the
-   citation to Eric Freeman, Elisabeth Robson, Bert Bates, and Kathy Sierra,
-   *Head First Design Patterns*, O'Reilly, 2004, page 23.
-3. Joshua Bloch, *Effective Java*, 3rd edition, Addison-Wesley, 2018, Chapter
-   4, Item 18, "Favor composition over inheritance."
-4. Course excerpt confirming Item 18's chapter and item number,
-   https://cs108.epfl.ch/archive/19/c/i/EffectiveJava_Item18.pdf, verified
-   2026-08-02.
-5. Leonid Mikhajlov and Emil Sekerinski, "A Study of The Fragile Base Class
-   Problem," Proceedings of the 12th European Conference on Object-Oriented
-   Programming, ECOOP '98, pages 355 to 382, https://link.springer.com/chapter/10.1007/BFb0054099,
-   verified 2026-08-02.
-6. Unity Technologies, "GameObject," Unity Manual, https://docs.unity3d.com/Manual/class-GameObject.html,
-   verified 2026-08-02.
-7. JetBrains, "Delegation," Kotlin documentation, https://kotlinlang.org/docs/delegation.html,
-   verified 2026-08-02.
-8. Meta, "Composition vs Inheritance," React documentation, https://legacy.reactjs.org/docs/composition-vs-inheritance.html,
-   verified 2026-08-02.
-9. Oracle, "BufferedInputStream," Java SE 17 API documentation, https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/BufferedInputStream.html,
-   verified 2026-08-02.
-10. The Go Authors, "Effective Go," section "Embedding," https://go.dev/doc/effective_go#embedding,
-    verified 2026-08-02.

@@ -616,6 +616,29 @@ because the speed and convenience that make a Fake attractive also make it
 an easy, low-visibility place for real data to end up somewhere nobody
 intended it to persist.
 
+## 18. References
+
+- Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
+  Addison-Wesley, 2007. The original taxonomy naming Dummy, Fake, Stub,
+  Spy, and Mock Object as five distinct kinds of test double.
+- Martin Fowler, "Mocks Aren't Stubs",
+  https://martinfowler.com/articles/mocksArentStubs.html, published
+  2 January 2007, verified 2026-08-02. The widely cited summary quoting
+  Meszaros's definitions of Dummy, Fake, Stub, Spy, and Mock, used
+  throughout dimensions 1, 4, 10, 12, and 13 of this entry.
+- SQLite Documentation, "In-Memory Databases",
+  https://sqlite.org/inmemorydb.html, verified 2026-08-02. Describes the
+  `:memory:` special filename and its isolation and lifetime semantics,
+  cited in dimensions 1, 8, and 9.
+- H2 Database Engine, GitHub repository,
+  https://github.com/h2database/h2database, verified 2026-08-02. Describes
+  H2's embedded and in-memory modes, cited in dimensions 8 and 9.
+- Testcontainers, project homepage, https://testcontainers.com/, verified
+  2026-08-02. Describes providing throwaway, containerised real
+  dependencies as the named alternative to a hand-written Fake when
+  fidelity requirements exceed what a Fake can provide, cited in
+  dimensions 4, 9, and 12.
+
 ## Code examples
 
 Four languages, chosen because each shows a genuinely different idiomatic
@@ -835,26 +858,3 @@ method that changes its stored state must say so explicitly, and the
 `RepoError.notFound` case gives the delete-missing-row failure mode a typed
 shape a caller can switch on, rather than the generic runtime exception the
 Python and TypeScript versions raise.
-
-## 18. References
-
-- Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
-  Addison-Wesley, 2007. The original taxonomy naming Dummy, Fake, Stub,
-  Spy, and Mock Object as five distinct kinds of test double.
-- Martin Fowler, "Mocks Aren't Stubs",
-  https://martinfowler.com/articles/mocksArentStubs.html, published
-  2 January 2007, verified 2026-08-02. The widely cited summary quoting
-  Meszaros's definitions of Dummy, Fake, Stub, Spy, and Mock, used
-  throughout dimensions 1, 4, 10, 12, and 13 of this entry.
-- SQLite Documentation, "In-Memory Databases",
-  https://sqlite.org/inmemorydb.html, verified 2026-08-02. Describes the
-  `:memory:` special filename and its isolation and lifetime semantics,
-  cited in dimensions 1, 8, and 9.
-- H2 Database Engine, GitHub repository,
-  https://github.com/h2database/h2database, verified 2026-08-02. Describes
-  H2's embedded and in-memory modes, cited in dimensions 8 and 9.
-- Testcontainers, project homepage, https://testcontainers.com/, verified
-  2026-08-02. Describes providing throwaway, containerised real
-  dependencies as the named alternative to a hand-written Fake when
-  fidelity requirements exceed what a Fake can provide, cited in
-  dimensions 4, 9, and 12.

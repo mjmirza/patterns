@@ -963,6 +963,42 @@ field definition, and to route classification tags above a defined
 sensitivity threshold through the same review process a real schema
 migration would receive.
 
+## 18. References
+
+1. Alex Papadimoulis. "The Inner-Platform Effect." The Daily WTF, 21 April
+   2006. https://thedailywtf.com/articles/The_Inner-Platform_Effect
+   Verified 2026-08-02. Source of the coined term, the founding definition,
+   and the loan-origination "Data Structure Modeler" production example in
+   dimension 9 and dimension 11.
+2. Wikipedia contributors. "Inner-platform effect."
+   https://en.wikipedia.org/wiki/Inner-platform_effect
+   Verified 2026-08-02. Source of the widely repeated working definition
+   quoted in dimension 1, the Entity-Attribute-Value example cited in
+   dimension 8, and the pointer to the AntiPatterns literature.
+3. William J. Brown, Raphael C. Malveau, Hays W. McCormick III, Thomas J.
+   Mowbray. *AntiPatterns. Refactoring Software, Architectures, and Projects
+   in Crisis*. Wiley, 1998. ISBN 0-471-19713-0. Cited by the Wikipedia entry
+   above as the broader anti-pattern literature this term sits within.
+   Referenced for context in dimension 1, not for a page-specific claim.
+4. Matt Rickard. "The Inner-Platform Effect." 17 October 2023.
+   https://blog.matt-rickard.com/p/the-inner-platform-effect
+   Verified 2026-08-02. Source of the modern internal-platform-engineering
+   application of the term, discussed in dimension 1 and dimension 8.
+5. Webkul Software. "Why wp_postmeta Slows Large WooCommerce Stores."
+   https://webkul.com/blog/wp-postmeta-slows-large-woocommerce-stores/
+   Verified 2026-08-02. Source of the WordPress `wp_postmeta`
+   Entity-Attribute-Value production example and its documented performance
+   cost, dimension 9 and dimension 11.
+6. Magento (Adobe Commerce) open-source project. GitHub Issue #39554,
+   "Magento EAV query performance issue on the product view page."
+   https://github.com/magento/magento2/issues/39554
+   Verified 2026-08-02. Source of the Magento EAV production example and
+   its documented join-cost failure mode, dimension 9 and dimension 11.
+7. Frederick P. Brooks Jr. *The Mythical Man-Month. Essays on Software
+   Engineering*. Addison-Wesley, 1975. Chapter 5, "The Second-System
+   Effect." Cited for the contrast, and the boundary, with the related but
+   distinct second-system effect discussed in dimension 1.
+
 ## Code examples
 
 Three languages illustrate the pattern from different angles. TypeScript
@@ -1120,39 +1156,3 @@ func main() {
 	fmt.Println(qualifiesForFreeShipping(o2, rules))
 }
 ```
-
-## 18. References
-
-1. Alex Papadimoulis. "The Inner-Platform Effect." The Daily WTF, 21 April
-   2006. https://thedailywtf.com/articles/The_Inner-Platform_Effect
-   Verified 2026-08-02. Source of the coined term, the founding definition,
-   and the loan-origination "Data Structure Modeler" production example in
-   dimension 9 and dimension 11.
-2. Wikipedia contributors. "Inner-platform effect."
-   https://en.wikipedia.org/wiki/Inner-platform_effect
-   Verified 2026-08-02. Source of the widely repeated working definition
-   quoted in dimension 1, the Entity-Attribute-Value example cited in
-   dimension 8, and the pointer to the AntiPatterns literature.
-3. William J. Brown, Raphael C. Malveau, Hays W. McCormick III, Thomas J.
-   Mowbray. *AntiPatterns. Refactoring Software, Architectures, and Projects
-   in Crisis*. Wiley, 1998. ISBN 0-471-19713-0. Cited by the Wikipedia entry
-   above as the broader anti-pattern literature this term sits within.
-   Referenced for context in dimension 1, not for a page-specific claim.
-4. Matt Rickard. "The Inner-Platform Effect." 17 October 2023.
-   https://blog.matt-rickard.com/p/the-inner-platform-effect
-   Verified 2026-08-02. Source of the modern internal-platform-engineering
-   application of the term, discussed in dimension 1 and dimension 8.
-5. Webkul Software. "Why wp_postmeta Slows Large WooCommerce Stores."
-   https://webkul.com/blog/wp-postmeta-slows-large-woocommerce-stores/
-   Verified 2026-08-02. Source of the WordPress `wp_postmeta`
-   Entity-Attribute-Value production example and its documented performance
-   cost, dimension 9 and dimension 11.
-6. Magento (Adobe Commerce) open-source project. GitHub Issue #39554,
-   "Magento EAV query performance issue on the product view page."
-   https://github.com/magento/magento2/issues/39554
-   Verified 2026-08-02. Source of the Magento EAV production example and
-   its documented join-cost failure mode, dimension 9 and dimension 11.
-7. Frederick P. Brooks Jr. *The Mythical Man-Month. Essays on Software
-   Engineering*. Addison-Wesley, 1975. Chapter 5, "The Second-System
-   Effect." Cited for the contrast, and the boundary, with the related but
-   distinct second-system effect discussed in dimension 1.

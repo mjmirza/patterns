@@ -427,6 +427,16 @@ context to carry sensitive values should scope the provider as
 narrowly as the data warrants, and never assume the mere existence of
 a provider boundary constitutes an authorization check.
 
+## 18. References
+
+1. React documentation. "createContext".
+   https://react.dev/reference/react/createContext
+   Verified 2026-08-21. Source of the canonical definition and the
+   prop-drilling motivation.
+2. react-redux documentation. "Provider".
+   https://react-redux.js.org/api/provider
+   Verified 2026-08-21. Source for the production use in dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -552,13 +562,3 @@ struct RootView: View {
     }
 }
 ```
-
-## 18. References
-
-1. React documentation. "createContext".
-   https://react.dev/reference/react/createContext
-   Verified 2026-08-21. Source of the canonical definition and the
-   prop-drilling motivation.
-2. react-redux documentation. "Provider".
-   https://react-redux.js.org/api/provider
-   Verified 2026-08-21. Source for the production use in dimension 9.

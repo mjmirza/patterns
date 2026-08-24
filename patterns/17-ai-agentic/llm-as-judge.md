@@ -771,6 +771,60 @@ sending any other proprietary prompt to that provider. A self-hosted or
 open judge, such as the Prometheus approach in dimension 8, removes this
 exposure at the cost of running and maintaining that model.
 
+## 18. References
+
+1. Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu,
+   Yonghao Zhuang, Zi Lin, Zhuohan Li, Dacheng Li, Eric P. Xing, Hao Zhang,
+   Joseph E. Gonzalez, Ion Stoica. "Judging LLM-as-a-Judge with MT-Bench and
+   Chatbot Arena." Submitted 9 June 2023, revised 24 December 2023.
+   https://arxiv.org/abs/2306.05685
+   Verified 2026-08-02. Source of the term, MT-Bench, the Chatbot Arena
+   preference dataset, the 80 percent human-agreement figure, and the
+   position, verbosity, and self-enhancement bias taxonomy.
+2. Yang Liu, Dan Iter, Yichong Xu, Shuohang Wang, Ruochen Xu, Chenguang Zhu.
+   "G-Eval, NLG Evaluation using GPT-4 with Better Human Alignment."
+   Submitted 29 March 2023, revised 23 May 2023.
+   https://arxiv.org/abs/2303.16634
+   Verified 2026-08-02. Source of the chain-of-thought, form-filling
+   grading method and the 0.514 Spearman correlation figure.
+3. Yuntao Bai et al. "Constitutional AI, Harmlessness from AI Feedback."
+   Submitted 15 December 2022. https://arxiv.org/abs/2212.08073
+   Verified 2026-08-02. Source of Reinforcement Learning from AI Feedback,
+   RLAIF, the training-time sibling distinguished in dimension 1.
+4. OpenAI. "Graders." Developer documentation.
+   https://developers.openai.com/api/docs/guides/graders
+   Verified 2026-08-02. Source of the score_model grader description and
+   the "grader hacking" terminology used in dimensions 3, 9, and 11.
+5. Anthropic. "Using the evaluation tool." Claude Developer Platform
+   documentation.
+   https://platform.claude.com/docs/en/test-and-evaluate/eval-tool
+   Verified 2026-08-02. Source of the Likert-scale grading example and the
+   recommendation to use a different model to grade than to generate.
+6. LangChain. "Evaluation." LangSmith documentation.
+   https://docs.langchain.com/langsmith/evaluation
+   Verified 2026-08-02. Source of the offline reference-based versus online
+   reference-free LLM-as-judge distinction.
+7. Ragas. "Faithfulness." Metrics documentation.
+   https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/
+   Verified 2026-08-02. Source of the claim-decomposition judge variant and
+   the Ragas production use.
+8. Yann Dubois, Balazs Galambosi, Percy Liang, Tatsunori B. Hashimoto.
+   "Length-Controlled AlpacaEval, A Simple Way to Debias Automatic
+   Evaluators." Submitted 6 April 2024, revised 10 March 2025.
+   https://arxiv.org/abs/2404.04475
+   Verified 2026-08-02. Source of the AlpacaEval production use, the
+   verbosity bias correction, and the 0.94 to 0.98 correlation improvement.
+9. Seungone Kim et al. "Prometheus, Inducing Fine-grained Evaluation
+   Capability in Language Models." Submitted 12 October 2023, revised
+   9 March 2024, accepted ICLR 2024.
+   https://arxiv.org/abs/2310.08491
+   Verified 2026-08-02. Source of the fine-tuned specialist judge variant
+   and its correlation figures against GPT-4.
+10. Eugene Yan. "Evaluating the Effectiveness of LLM-Evaluators."
+    https://eugeneyan.com/writing/llm-evaluators/
+    Verified 2026-08-02. Source of the specific position-bias and
+    self-enhancement-bias percentage figures cited in dimensions 10 and 11.
+
 ## Code examples
 
 Three languages, all implementing the same position-swap-and-confirm
@@ -993,57 +1047,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu,
-   Yonghao Zhuang, Zi Lin, Zhuohan Li, Dacheng Li, Eric P. Xing, Hao Zhang,
-   Joseph E. Gonzalez, Ion Stoica. "Judging LLM-as-a-Judge with MT-Bench and
-   Chatbot Arena." Submitted 9 June 2023, revised 24 December 2023.
-   https://arxiv.org/abs/2306.05685
-   Verified 2026-08-02. Source of the term, MT-Bench, the Chatbot Arena
-   preference dataset, the 80 percent human-agreement figure, and the
-   position, verbosity, and self-enhancement bias taxonomy.
-2. Yang Liu, Dan Iter, Yichong Xu, Shuohang Wang, Ruochen Xu, Chenguang Zhu.
-   "G-Eval, NLG Evaluation using GPT-4 with Better Human Alignment."
-   Submitted 29 March 2023, revised 23 May 2023.
-   https://arxiv.org/abs/2303.16634
-   Verified 2026-08-02. Source of the chain-of-thought, form-filling
-   grading method and the 0.514 Spearman correlation figure.
-3. Yuntao Bai et al. "Constitutional AI, Harmlessness from AI Feedback."
-   Submitted 15 December 2022. https://arxiv.org/abs/2212.08073
-   Verified 2026-08-02. Source of Reinforcement Learning from AI Feedback,
-   RLAIF, the training-time sibling distinguished in dimension 1.
-4. OpenAI. "Graders." Developer documentation.
-   https://developers.openai.com/api/docs/guides/graders
-   Verified 2026-08-02. Source of the score_model grader description and
-   the "grader hacking" terminology used in dimensions 3, 9, and 11.
-5. Anthropic. "Using the evaluation tool." Claude Developer Platform
-   documentation.
-   https://platform.claude.com/docs/en/test-and-evaluate/eval-tool
-   Verified 2026-08-02. Source of the Likert-scale grading example and the
-   recommendation to use a different model to grade than to generate.
-6. LangChain. "Evaluation." LangSmith documentation.
-   https://docs.langchain.com/langsmith/evaluation
-   Verified 2026-08-02. Source of the offline reference-based versus online
-   reference-free LLM-as-judge distinction.
-7. Ragas. "Faithfulness." Metrics documentation.
-   https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/
-   Verified 2026-08-02. Source of the claim-decomposition judge variant and
-   the Ragas production use.
-8. Yann Dubois, Balazs Galambosi, Percy Liang, Tatsunori B. Hashimoto.
-   "Length-Controlled AlpacaEval, A Simple Way to Debias Automatic
-   Evaluators." Submitted 6 April 2024, revised 10 March 2025.
-   https://arxiv.org/abs/2404.04475
-   Verified 2026-08-02. Source of the AlpacaEval production use, the
-   verbosity bias correction, and the 0.94 to 0.98 correlation improvement.
-9. Seungone Kim et al. "Prometheus, Inducing Fine-grained Evaluation
-   Capability in Language Models." Submitted 12 October 2023, revised
-   9 March 2024, accepted ICLR 2024.
-   https://arxiv.org/abs/2310.08491
-   Verified 2026-08-02. Source of the fine-tuned specialist judge variant
-   and its correlation figures against GPT-4.
-10. Eugene Yan. "Evaluating the Effectiveness of LLM-Evaluators."
-    https://eugeneyan.com/writing/llm-evaluators/
-    Verified 2026-08-02. Source of the specific position-bias and
-    self-enhancement-bias percentage figures cited in dimensions 10 and 11.

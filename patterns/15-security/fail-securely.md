@@ -684,6 +684,132 @@ button should map to a policy action. The matrix should include owner, reviewer,
 and expected default. A blank cell is not neutral. It is a denied action until
 filled.
 
+## 16. Observability signals
+
+This dimension is engineering judgement.
+
+Fail Securely should be visible without disclosing the protected data. Record
+the decision and enough context to debug, but not the secret, row contents,
+token, full policy document, or private subject attributes.
+
+Useful logs and span attributes.
+
+- `decision`, with values such as `allow`, `deny`, `missing_policy`,
+  `stale_policy`, `timeout`, `malformed_input`, and `evaluation_error`.
+- `enforcement_point`, naming the route, interceptor, gateway rule, database
+  policy, or queue worker.
+- `protected_action`, using a stable action name rather than free-form text.
+- `resource_type`, not the full sensitive resource value unless the log sink is
+  approved for it.
+- `policy_version`, `bundle_hash`, or `configuration_generation`.
+- `principal_type` and a hashed or internal principal identifier where allowed.
+- `correlation_id` shared with the external generic error response.
+
+Useful metrics.
+
+- Allow and deny counters by action, resource type, and policy version.
+- Non-allow counters by reason, especially timeout, missing policy, and
+  malformed input.
+- Policy decision latency histogram.
+- Policy bundle age gauge.
+- Cache hit, miss, and stale-hit counters for cached policy decisions.
+- Break-glass counter by action and approver group.
+- Protected side-effect counter, compared with allow counter. The side-effect
+  count must not exceed the allow count.
+
+A healthy dashboard shows stable deny rates, low decision latency, current
+policy versions, and a small number of missing-policy denies during planned
+rollouts. A failing dashboard shows sudden missing-policy growth after deploy,
+timeout denies during a dependency outage, allow counts with no matching policy
+version, or protected side effects that outnumber allowed decisions.
+
+Alerting should separate security incidents from availability incidents. A high
+deny rate may mean an attack, a bad rollout, a broken identity sync, or a true
+policy change. The alert should include the reason distribution so responders
+know which runbook to open.
+
+A useful operational invariant is this: every protected side effect must be
+explainable by a prior allow event with the same correlation ID or transaction
+ID. If the side effect exists without the allow event, either telemetry is
+broken or the action bypassed the enforcement point. Both cases need attention.
+The invariant is simple enough for batch reconciliation and strong enough to
+catch many placement mistakes.
+
+Another useful invariant is policy freshness. A service can continue to run
+with a locally cached deny set longer than it can run with a locally cached
+allow set. Dashboards should make that distinction visible. A stale-deny cache
+is an availability issue. A stale-allow cache can be a security issue.
+
+## 17. Security and privacy implications
+
+This dimension is engineering judgement except where sources are cited.
+
+The pattern closes a common attack path: make the guard confused, absent, late,
+or unable to load policy, then proceed through the default branch. OWASP's
+Secure Coding Practices checklist says access-control failure handling should
+deny by default and that access-control failures should be logged
+([OWASP Secure Coding Practices checklist](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist),
+verified 2026-08-02). The security benefit is strongest when the protected
+action is placed behind one enforcement point and the action cannot run before
+the decision.
+
+The attack surface moves rather than disappears.
+
+- Attackers may try to cause policy-service outages and create denial of
+  service. Rate limits, bulkheads, local deny caches, and clear SLOs matter.
+- Attackers may look for endpoints that bypass the central enforcement point.
+  Route inventory and negative tests matter.
+- Attackers may exploit stale cached allows after revocation. Short expiry and
+  revocation events matter.
+- Attackers may target break-glass because it is designed to bypass normal
+  denial under defined conditions. Strong authentication, two-person review,
+  time limits, and noisy audit matter.
+- Attackers may mine error messages for policy internals. External responses
+  should stay generic while internal logs carry the detail.
+
+Privacy improves when missing or failed policy cannot reveal data. It can also
+be harmed by over-detailed audit events. A deny log that records full resource
+IDs, query text, group names, location, device posture, and raw user attributes
+can become a sensitive dataset. Treat deny telemetry as security data with
+restricted access, retention limits, and redaction.
+
+Fail Securely is silent on cryptographic strength, identity proofing, policy
+quality, and role design. It does not make a bad allow rule good. It means that
+no rule, broken rule, late rule, or unreadable rule does not become an allow.
+
+## 18. References
+
+1. Jerome H. Saltzer and Michael D. Schroeder. "The Protection of Information
+   in Computer Systems." Proceedings of the IEEE, volume 63, number 9, 1975.
+   Section I.A.3, Design Principles, Fail-safe defaults and Complete mediation.
+   https://web.mit.edu/Saltzer/www/publications/protection/Basic.html
+   Verified 2026-08-02.
+2. OWASP Cheat Sheet Series. "Authorization Cheat Sheet." Sections "Deny by
+   Default," "Validate the Permissions on Every Request," and "Exit Safely when
+   Authorization Checks Fail."
+   https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html
+   Verified 2026-08-02.
+3. OWASP Foundation. "Secure Coding Practices Quick Reference Guide." Checklist
+   sections Access Control, Error handling and logging, and Communication
+   security.
+   https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist
+   Verified 2026-08-02.
+4. Amazon Web Services. "How AWS enforcement code logic evaluates requests to
+   allow or deny access." AWS Identity and Access Management User Guide.
+   https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic_policy-eval-denyallow.html
+   Verified 2026-08-02.
+5. Kubernetes project. "Network Policies." Kubernetes Documentation, Default
+   policies section.
+   https://kubernetes.io/docs/concepts/services-networking/network-policies/
+   Verified 2026-08-02.
+6. PostgreSQL Global Development Group. "Row Security Policies." PostgreSQL 18
+   Documentation, chapter 5.9.
+   https://www.postgresql.org/docs/current/ddl-rowsecurity.html
+   Verified 2026-08-02.
+7. Open Policy Agent project. "Policy Language." Default Keyword section.
+   https://www.openpolicyagent.org/docs/policy-language
+   Verified 2026-08-02.
+
 ## Code examples
 
 Three languages are shown because the pattern is mostly a control-flow contract,
@@ -829,129 +955,3 @@ func main() {
 	fmt.Println("ok")
 }
 ```
-
-## 16. Observability signals
-
-This dimension is engineering judgement.
-
-Fail Securely should be visible without disclosing the protected data. Record
-the decision and enough context to debug, but not the secret, row contents,
-token, full policy document, or private subject attributes.
-
-Useful logs and span attributes.
-
-- `decision`, with values such as `allow`, `deny`, `missing_policy`,
-  `stale_policy`, `timeout`, `malformed_input`, and `evaluation_error`.
-- `enforcement_point`, naming the route, interceptor, gateway rule, database
-  policy, or queue worker.
-- `protected_action`, using a stable action name rather than free-form text.
-- `resource_type`, not the full sensitive resource value unless the log sink is
-  approved for it.
-- `policy_version`, `bundle_hash`, or `configuration_generation`.
-- `principal_type` and a hashed or internal principal identifier where allowed.
-- `correlation_id` shared with the external generic error response.
-
-Useful metrics.
-
-- Allow and deny counters by action, resource type, and policy version.
-- Non-allow counters by reason, especially timeout, missing policy, and
-  malformed input.
-- Policy decision latency histogram.
-- Policy bundle age gauge.
-- Cache hit, miss, and stale-hit counters for cached policy decisions.
-- Break-glass counter by action and approver group.
-- Protected side-effect counter, compared with allow counter. The side-effect
-  count must not exceed the allow count.
-
-A healthy dashboard shows stable deny rates, low decision latency, current
-policy versions, and a small number of missing-policy denies during planned
-rollouts. A failing dashboard shows sudden missing-policy growth after deploy,
-timeout denies during a dependency outage, allow counts with no matching policy
-version, or protected side effects that outnumber allowed decisions.
-
-Alerting should separate security incidents from availability incidents. A high
-deny rate may mean an attack, a bad rollout, a broken identity sync, or a true
-policy change. The alert should include the reason distribution so responders
-know which runbook to open.
-
-A useful operational invariant is this: every protected side effect must be
-explainable by a prior allow event with the same correlation ID or transaction
-ID. If the side effect exists without the allow event, either telemetry is
-broken or the action bypassed the enforcement point. Both cases need attention.
-The invariant is simple enough for batch reconciliation and strong enough to
-catch many placement mistakes.
-
-Another useful invariant is policy freshness. A service can continue to run
-with a locally cached deny set longer than it can run with a locally cached
-allow set. Dashboards should make that distinction visible. A stale-deny cache
-is an availability issue. A stale-allow cache can be a security issue.
-
-## 17. Security and privacy implications
-
-This dimension is engineering judgement except where sources are cited.
-
-The pattern closes a common attack path: make the guard confused, absent, late,
-or unable to load policy, then proceed through the default branch. OWASP's
-Secure Coding Practices checklist says access-control failure handling should
-deny by default and that access-control failures should be logged
-([OWASP Secure Coding Practices checklist](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist),
-verified 2026-08-02). The security benefit is strongest when the protected
-action is placed behind one enforcement point and the action cannot run before
-the decision.
-
-The attack surface moves rather than disappears.
-
-- Attackers may try to cause policy-service outages and create denial of
-  service. Rate limits, bulkheads, local deny caches, and clear SLOs matter.
-- Attackers may look for endpoints that bypass the central enforcement point.
-  Route inventory and negative tests matter.
-- Attackers may exploit stale cached allows after revocation. Short expiry and
-  revocation events matter.
-- Attackers may target break-glass because it is designed to bypass normal
-  denial under defined conditions. Strong authentication, two-person review,
-  time limits, and noisy audit matter.
-- Attackers may mine error messages for policy internals. External responses
-  should stay generic while internal logs carry the detail.
-
-Privacy improves when missing or failed policy cannot reveal data. It can also
-be harmed by over-detailed audit events. A deny log that records full resource
-IDs, query text, group names, location, device posture, and raw user attributes
-can become a sensitive dataset. Treat deny telemetry as security data with
-restricted access, retention limits, and redaction.
-
-Fail Securely is silent on cryptographic strength, identity proofing, policy
-quality, and role design. It does not make a bad allow rule good. It means that
-no rule, broken rule, late rule, or unreadable rule does not become an allow.
-
-## 18. References
-
-1. Jerome H. Saltzer and Michael D. Schroeder. "The Protection of Information
-   in Computer Systems." Proceedings of the IEEE, volume 63, number 9, 1975.
-   Section I.A.3, Design Principles, Fail-safe defaults and Complete mediation.
-   https://web.mit.edu/Saltzer/www/publications/protection/Basic.html
-   Verified 2026-08-02.
-2. OWASP Cheat Sheet Series. "Authorization Cheat Sheet." Sections "Deny by
-   Default," "Validate the Permissions on Every Request," and "Exit Safely when
-   Authorization Checks Fail."
-   https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html
-   Verified 2026-08-02.
-3. OWASP Foundation. "Secure Coding Practices Quick Reference Guide." Checklist
-   sections Access Control, Error handling and logging, and Communication
-   security.
-   https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist
-   Verified 2026-08-02.
-4. Amazon Web Services. "How AWS enforcement code logic evaluates requests to
-   allow or deny access." AWS Identity and Access Management User Guide.
-   https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic_policy-eval-denyallow.html
-   Verified 2026-08-02.
-5. Kubernetes project. "Network Policies." Kubernetes Documentation, Default
-   policies section.
-   https://kubernetes.io/docs/concepts/services-networking/network-policies/
-   Verified 2026-08-02.
-6. PostgreSQL Global Development Group. "Row Security Policies." PostgreSQL 18
-   Documentation, chapter 5.9.
-   https://www.postgresql.org/docs/current/ddl-rowsecurity.html
-   Verified 2026-08-02.
-7. Open Policy Agent project. "Policy Language." Default Keyword section.
-   https://www.openpolicyagent.org/docs/policy-language
-   Verified 2026-08-02.

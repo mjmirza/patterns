@@ -1028,6 +1028,43 @@ retention and access discipline to correlation identifiers in log
 infrastructure as to any other piece of data that can be used to track an
 individual across systems.
 
+## 18. References
+
+1. Martin Fowler. "What do you mean by 'Event-Driven'". martinfowler.com,
+   2017. https://martinfowler.com/articles/201701-event-driven.html
+   Verified 2026-08-02. Source of the four-style taxonomy (Event
+   Notification, Event-Carried State Transfer, Event Sourcing, CQRS) used
+   throughout dimensions 1, 5, and 8.
+2. Amazon Web Services. "What Is Amazon EventBridge?". AWS documentation.
+   https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html
+   Verified 2026-08-02. Source of the working definition of event-driven
+   architecture and the EventBridge event-bus production use in dimensions
+   1, 8, and 9.
+3. Chris Richardson. microservices.io, "Pattern. Event-driven architecture".
+   https://microservices.io/patterns/data/event-driven-architecture.html
+   Verified 2026-08-02. Source of the cross-service data consistency
+   problem framing in dimension 2, and the named microservices production
+   use in dimension 9. See also Chris Richardson, *Microservices Patterns*,
+   Manning Publications, 2018, for the extended treatment of this pattern.
+4. Confluent. "What is Apache Kafka?". Confluent Developer documentation.
+   https://developer.confluent.io/what-is-apache-kafka/ Verified 2026-08-02.
+   Source of the append-only log, partitioning, and consumer-offset model
+   described in dimensions 8 and 9.
+5. Stripe. "Registrieren Sie Stripe-Ereignisse in Ihrem Webhook-Endpoint".
+   Stripe Docs. https://docs.stripe.com/webhooks Verified 2026-08-02.
+   Source of the Stripe webhook production use in dimension 9. Page served
+   in German at time of verification; quoted text translated in the entry
+   with the original German preserved alongside it.
+6. GitHub. "About webhooks". GitHub Docs.
+   https://docs.github.com/en/webhooks/about-webhooks Verified 2026-08-02.
+   Source of the webhook implementation variant description in dimension 8
+   and the GitHub production use in dimension 9.
+7. LMAX. "The LMAX Disruptor. High Performance, Low-Latency, and Simple
+   Too". Technical paper.
+   https://lmax-exchange.github.io/disruptor/disruptor.html Verified
+   2026-08-02. Source of the in-process, single-machine implementation
+   variant and the LMAX production use in dimensions 8 and 9.
+
 ## Code examples
 
 Three languages, chosen because each demonstrates a genuinely different
@@ -1215,40 +1252,3 @@ func main() {
 	emailConsumer.Poll()
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. "What do you mean by 'Event-Driven'". martinfowler.com,
-   2017. https://martinfowler.com/articles/201701-event-driven.html
-   Verified 2026-08-02. Source of the four-style taxonomy (Event
-   Notification, Event-Carried State Transfer, Event Sourcing, CQRS) used
-   throughout dimensions 1, 5, and 8.
-2. Amazon Web Services. "What Is Amazon EventBridge?". AWS documentation.
-   https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html
-   Verified 2026-08-02. Source of the working definition of event-driven
-   architecture and the EventBridge event-bus production use in dimensions
-   1, 8, and 9.
-3. Chris Richardson. microservices.io, "Pattern. Event-driven architecture".
-   https://microservices.io/patterns/data/event-driven-architecture.html
-   Verified 2026-08-02. Source of the cross-service data consistency
-   problem framing in dimension 2, and the named microservices production
-   use in dimension 9. See also Chris Richardson, *Microservices Patterns*,
-   Manning Publications, 2018, for the extended treatment of this pattern.
-4. Confluent. "What is Apache Kafka?". Confluent Developer documentation.
-   https://developer.confluent.io/what-is-apache-kafka/ Verified 2026-08-02.
-   Source of the append-only log, partitioning, and consumer-offset model
-   described in dimensions 8 and 9.
-5. Stripe. "Registrieren Sie Stripe-Ereignisse in Ihrem Webhook-Endpoint".
-   Stripe Docs. https://docs.stripe.com/webhooks Verified 2026-08-02.
-   Source of the Stripe webhook production use in dimension 9. Page served
-   in German at time of verification; quoted text translated in the entry
-   with the original German preserved alongside it.
-6. GitHub. "About webhooks". GitHub Docs.
-   https://docs.github.com/en/webhooks/about-webhooks Verified 2026-08-02.
-   Source of the webhook implementation variant description in dimension 8
-   and the GitHub production use in dimension 9.
-7. LMAX. "The LMAX Disruptor. High Performance, Low-Latency, and Simple
-   Too". Technical paper.
-   https://lmax-exchange.github.io/disruptor/disruptor.html Verified
-   2026-08-02. Source of the in-process, single-machine implementation
-   variant and the LMAX production use in dimensions 8 and 9.

@@ -717,6 +717,58 @@ memorized answers. Controls that look bureaucratic in ordinary testing, such as
 state labels, access logs, and export reviews, become security controls when
 the score affects deployment or public trust.
 
+## 18. References
+
+1. Shachar Kaufman, Saharon Rosset, Claudia Perlich, Ori Stitelman. "Leakage in
+   Data Mining. Formulation, Detection, and Avoidance." *ACM Transactions on
+   Knowledge Discovery from Data*, 6(4), article 15, 2012. DOI
+   10.1145/2382577.2382579. Metadata and abstract verified through CiNii
+   Research, https://cir.nii.ac.jp/crid/1361699995332168704, verified
+   2026-08-02.
+2. Cynthia Dwork, Vitaly Feldman, Moritz Hardt, Toniann Pitassi, Omer
+   Reingold, Aaron Roth. "Generalization in Adaptive Data Analysis and Holdout
+   Reuse." arXiv:1506.02629, 2015. https://arxiv.org/abs/1506.02629, verified
+   2026-08-02.
+3. scikit-learn developers. "12. Common pitfalls and recommended practices."
+   scikit-learn documentation. https://scikit-learn.org/stable/common_pitfalls.html,
+   verified 2026-08-02.
+4. Google. "The Transform TFX Pipeline Component." TensorFlow documentation.
+   https://www.tensorflow.org/tfx/guide/transform, verified 2026-08-02.
+5. Kaggle. "Competitions Documentation." https://www.kaggle.com/docs/competitions,
+   verified 2026-08-02.
+6. Kaggle. "The 3rd RePSS, Competition Rules." Section 9, determining
+   leaderboard. https://www.kaggle.com/competitions/repss/rules, verified
+   2026-08-02.
+7. Tom B. Brown et al. "Language Models are Few-Shot Learners."
+   arXiv:2005.14165, 2020. https://arxiv.org/abs/2005.14165, verified
+   2026-08-02.
+8. Percy Liang et al. "Holistic Evaluation of Language Models."
+   arXiv:2211.09110, 2022, revised 2023. https://arxiv.org/abs/2211.09110,
+   verified 2026-08-02.
+9. Stanford CRFM. HELM contamination metadata,
+   `src/helm/benchmark/static/contamination.yaml`.
+   https://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/static/contamination.yaml,
+   verified 2026-08-02.
+10. Changmao Li, Jeffrey Flanigan. "Task Contamination. Language Models May Not
+   Be Few-Shot Anymore." *Proceedings of the AAAI Conference on Artificial
+   Intelligence*, 38(16), 18471-18480, 2024.
+   https://ojs.aaai.org/index.php/AAAI/article/view/29808, verified
+   2026-08-02.
+11. Oscar Sainz, Jon Ander Campos, Iker Garcia-Ferrero, Julen Etxaniz, Oier
+   Lopez de Lacalle, Eneko Agirre. "NLP Evaluation in trouble. On the Need to
+   Measure LLM Data Contamination for each Benchmark." Findings of ACL EMNLP
+   2023, pages 10776-10787.
+   https://aclanthology.org/2023.findings-emnlp.722/, verified 2026-08-02.
+12. OpenAI. "Introducing SWE-bench Verified." August 13, 2024.
+   https://openai.com/index/introducing-swe-bench-verified/, verified
+   2026-08-02.
+13. OpenAI. "Why SWE-bench Verified no longer measures frontier coding
+   capabilities." February 23, 2026.
+   https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/,
+   verified 2026-08-02.
+14. SWE-bench. "Datasets." https://www.swebench.com/SWE-bench/guides/datasets/,
+   verified 2026-08-02.
+
 ## Code examples
 
 The examples implement the same small guard in three languages. They reject a
@@ -857,55 +909,3 @@ func main() {
 	fmt.Println("no leakage found")
 }
 ```
-
-## 18. References
-
-1. Shachar Kaufman, Saharon Rosset, Claudia Perlich, Ori Stitelman. "Leakage in
-   Data Mining. Formulation, Detection, and Avoidance." *ACM Transactions on
-   Knowledge Discovery from Data*, 6(4), article 15, 2012. DOI
-   10.1145/2382577.2382579. Metadata and abstract verified through CiNii
-   Research, https://cir.nii.ac.jp/crid/1361699995332168704, verified
-   2026-08-02.
-2. Cynthia Dwork, Vitaly Feldman, Moritz Hardt, Toniann Pitassi, Omer
-   Reingold, Aaron Roth. "Generalization in Adaptive Data Analysis and Holdout
-   Reuse." arXiv:1506.02629, 2015. https://arxiv.org/abs/1506.02629, verified
-   2026-08-02.
-3. scikit-learn developers. "12. Common pitfalls and recommended practices."
-   scikit-learn documentation. https://scikit-learn.org/stable/common_pitfalls.html,
-   verified 2026-08-02.
-4. Google. "The Transform TFX Pipeline Component." TensorFlow documentation.
-   https://www.tensorflow.org/tfx/guide/transform, verified 2026-08-02.
-5. Kaggle. "Competitions Documentation." https://www.kaggle.com/docs/competitions,
-   verified 2026-08-02.
-6. Kaggle. "The 3rd RePSS, Competition Rules." Section 9, determining
-   leaderboard. https://www.kaggle.com/competitions/repss/rules, verified
-   2026-08-02.
-7. Tom B. Brown et al. "Language Models are Few-Shot Learners."
-   arXiv:2005.14165, 2020. https://arxiv.org/abs/2005.14165, verified
-   2026-08-02.
-8. Percy Liang et al. "Holistic Evaluation of Language Models."
-   arXiv:2211.09110, 2022, revised 2023. https://arxiv.org/abs/2211.09110,
-   verified 2026-08-02.
-9. Stanford CRFM. HELM contamination metadata,
-   `src/helm/benchmark/static/contamination.yaml`.
-   https://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/static/contamination.yaml,
-   verified 2026-08-02.
-10. Changmao Li, Jeffrey Flanigan. "Task Contamination. Language Models May Not
-   Be Few-Shot Anymore." *Proceedings of the AAAI Conference on Artificial
-   Intelligence*, 38(16), 18471-18480, 2024.
-   https://ojs.aaai.org/index.php/AAAI/article/view/29808, verified
-   2026-08-02.
-11. Oscar Sainz, Jon Ander Campos, Iker Garcia-Ferrero, Julen Etxaniz, Oier
-   Lopez de Lacalle, Eneko Agirre. "NLP Evaluation in trouble. On the Need to
-   Measure LLM Data Contamination for each Benchmark." Findings of ACL EMNLP
-   2023, pages 10776-10787.
-   https://aclanthology.org/2023.findings-emnlp.722/, verified 2026-08-02.
-12. OpenAI. "Introducing SWE-bench Verified." August 13, 2024.
-   https://openai.com/index/introducing-swe-bench-verified/, verified
-   2026-08-02.
-13. OpenAI. "Why SWE-bench Verified no longer measures frontier coding
-   capabilities." February 23, 2026.
-   https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/,
-   verified 2026-08-02.
-14. SWE-bench. "Datasets." https://www.swebench.com/SWE-bench/guides/datasets/,
-   verified 2026-08-02.

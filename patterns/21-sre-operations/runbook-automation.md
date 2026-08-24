@@ -170,6 +170,11 @@ Skip it for a runbook that still requires genuine diagnostic judgment (deciding 
 - The automation commonly needs broader system access than any single on-call engineer would have had to perform the runbook manually, since it runs unattended, and that access should be scoped as narrowly as the automated step set actually requires.
 - The execution log should record what the automation did and why, with the same care as the incident record a manual response would have left, so an automated action remains fully traceable after the fact.
 
+## 18. References
+
+- Google, Site Reliability Engineering, Effective Troubleshooting chapter (https://sre.google/sre-book/effective-troubleshooting/)
+- Google, SRE Workbook, Incident Response chapter (https://sre.google/workbook/incident-response/)
+
 ## Code examples
 
 ### Python
@@ -305,8 +310,3 @@ let finalLabel = finalResult == .resolved ? "resolved" : "needsEscalation"
 print("result " + finalLabel)
 print("log entries " + String(runner.log.count))
 ```
-
-## 18. References
-
-- Google, Site Reliability Engineering, Effective Troubleshooting chapter (https://sre.google/sre-book/effective-troubleshooting/)
-- Google, SRE Workbook, Incident Response chapter (https://sre.google/workbook/incident-response/)

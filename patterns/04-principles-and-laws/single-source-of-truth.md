@@ -800,6 +800,39 @@ precisely because the principle deliberately removed the natural load
 distribution that duplicated, independent copies would otherwise have
 provided.
 
+## 18. References
+
+1. Wikipedia contributors. "Single source of truth."
+   https://en.wikipedia.org/wiki/Single_source_of_truth verified 2026-08-02.
+   Source of the definition quoted in dimension 1 and the "rarely possible in
+   most enterprises" caveat used in dimension 4.
+2. E. F. Codd. "A Relational Model of Data for Large Shared Data Banks."
+   Communications of the ACM, volume 13, issue 6, 1970. Source of the
+   normalization foundation the principle generalizes, referenced in
+   dimension 1 as engineering-history judgement about lineage, not a directly
+   quoted claim.
+3. Redux maintainers. "Three Principles," Redux documentation.
+   https://redux.js.org/understanding/thinking-in-redux/three-principles
+   verified 2026-08-02. Source of the single-store principle quoted in
+   dimensions 8 and 9.
+4. React core team. "Sharing State Between Components," React documentation.
+   https://react.dev/learn/sharing-state-between-components verified
+   2026-08-02. Source of the lifting-state-up and single-source-of-truth
+   language quoted in dimensions 8 and 9.
+5. HashiCorp. "State," Terraform documentation.
+   https://developer.hashicorp.com/terraform/language/state verified
+   2026-08-02. Source of the state-as-mapping-authority description quoted in
+   dimensions 8 and 9.
+6. Kubernetes maintainers. "Kubernetes Components," Kubernetes documentation.
+   https://kubernetes.io/docs/concepts/overview/components/ verified
+   2026-08-02. Source of the etcd backing-store description quoted in
+   dimensions 8 and 9.
+7. PostgreSQL Global Development Group. "Constraints," PostgreSQL 17
+   documentation, section 5.4.5, Foreign Keys.
+   https://www.postgresql.org/docs/current/ddl-constraints.html verified
+   2026-08-02. Source of the foreign-key referential-integrity quotation used
+   in dimension 9.
+
 ## Code examples
 
 Three languages, chosen because the principle appears idiomatically in each in
@@ -993,36 +1026,3 @@ func main() {
 	fmt.Println("remaining stock:", authority.Stock("widget-1"))
 }
 ```
-
-## 18. References
-
-1. Wikipedia contributors. "Single source of truth."
-   https://en.wikipedia.org/wiki/Single_source_of_truth verified 2026-08-02.
-   Source of the definition quoted in dimension 1 and the "rarely possible in
-   most enterprises" caveat used in dimension 4.
-2. E. F. Codd. "A Relational Model of Data for Large Shared Data Banks."
-   Communications of the ACM, volume 13, issue 6, 1970. Source of the
-   normalization foundation the principle generalizes, referenced in
-   dimension 1 as engineering-history judgement about lineage, not a directly
-   quoted claim.
-3. Redux maintainers. "Three Principles," Redux documentation.
-   https://redux.js.org/understanding/thinking-in-redux/three-principles
-   verified 2026-08-02. Source of the single-store principle quoted in
-   dimensions 8 and 9.
-4. React core team. "Sharing State Between Components," React documentation.
-   https://react.dev/learn/sharing-state-between-components verified
-   2026-08-02. Source of the lifting-state-up and single-source-of-truth
-   language quoted in dimensions 8 and 9.
-5. HashiCorp. "State," Terraform documentation.
-   https://developer.hashicorp.com/terraform/language/state verified
-   2026-08-02. Source of the state-as-mapping-authority description quoted in
-   dimensions 8 and 9.
-6. Kubernetes maintainers. "Kubernetes Components," Kubernetes documentation.
-   https://kubernetes.io/docs/concepts/overview/components/ verified
-   2026-08-02. Source of the etcd backing-store description quoted in
-   dimensions 8 and 9.
-7. PostgreSQL Global Development Group. "Constraints," PostgreSQL 17
-   documentation, section 5.4.5, Foreign Keys.
-   https://www.postgresql.org/docs/current/ddl-constraints.html verified
-   2026-08-02. Source of the foreign-key referential-integrity quotation used
-   in dimension 9.

@@ -1139,6 +1139,70 @@ it bounds the caller's exposure to a compromised or hijacked upstream, since a
 dependency returning malformed responses at volume will trip the breaker and
 stop being called.
 
+## 18. References
+
+1. Michael T. Nygard. *Release It! Second Edition. Design and Deploy
+   Production-Ready Software*. The Pragmatic Programmers, 2018.
+   ISBN 9781680502398. Part I "Create Stability", chapter "Stability Patterns",
+   section "Circuit Breaker". Publisher listing and table of contents at
+   https://pragprog.com/titles/mnee2/release-it-second-edition/
+   Verified 2026-08-02. Source of the pattern's naming, its place among the
+   stability patterns, and its pairing with the matching antipattern.
+   The chapter and section were confirmed from the publisher table of contents.
+   No page number is claimed because no page was independently confirmed.
+2. Microsoft. *Azure Architecture Center*, "Circuit Breaker pattern", page dated
+   2025-02-05.
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
+   Verified 2026-08-02. Source of the three-state proxy formulation, the exact
+   transition rules, the time-based failure counter, the Half-Open flooding
+   rationale, and the considerations list covering exception types, monitoring,
+   recoverability, failed operations testing, manual override, concurrency,
+   resource differentiation, accelerated circuit breaking, failed request
+   replay, inappropriate timeouts, and the unsuitability list.
+3. Netflix. *Hystrix README*.
+   https://github.com/Netflix/Hystrix
+   Verified 2026-08-02. Source for the maintenance mode statement, the final
+   1.5.18 release, the recommendation of Resilience4j, and the stated shift
+   toward adaptive implementations such as adaptive concurrency limits.
+4. Netflix. *Hystrix wiki, "How it Works"*.
+   https://github.com/Netflix/Hystrix/wiki/How-it-Works
+   Verified 2026-08-02. Source for the request volume threshold and error
+   percentage threshold logic, the single-request Half-Open probe, the sleep
+   window, the 10 billion command executions per day figure, and the 40-plus
+   thread pools per API instance.
+5. Resilience4j project. *CircuitBreaker documentation*.
+   https://resilience4j.readme.io/docs/circuitbreaker
+   Verified 2026-08-02. Source for the six states including METRICS_ONLY,
+   DISABLED and FORCED_OPEN, the count-based and time-based sliding windows with
+   subtract-on-evict, the default values for failureRateThreshold,
+   slowCallRateThreshold, minimumNumberOfCalls, waitDurationInOpenState and
+   permittedNumberOfCallsInHalfOpenState, and the CallNotPermittedException
+   behaviour in Half-Open.
+6. App-vNext. *Polly documentation, Circuit breaker resilience strategy*.
+   https://www.pollydocs.org/strategies/circuit-breaker.html
+   Verified 2026-08-02. Source for the Isolated state and
+   CircuitBreakerManualControl, the rate-based design, the defaults for
+   FailureRatio, SamplingDuration, MinimumThroughput and BreakDuration, and the
+   BrokenCircuitException RetryAfter property.
+7. Microsoft. *.NET documentation, HTTP resilience page in the fundamentals
+   section*, page dated 2026-02-24.
+   https://learn.microsoft.com/en-us/dotnet/core/resilience/http-resilience
+   Verified 2026-08-02. Source for the standard resilience handler's
+   five-strategy ordering from rate limiter to attempt timeout, the circuit
+   breaker defaults in that handler, the handled status codes and exceptions,
+   and the per-authority breaker pool used by the standard hedging handler.
+8. Envoy Project. *Envoy documentation, "Circuit breaking"*.
+   https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/circuit_breaking
+   Verified 2026-08-02. Source for the five concurrency limits Envoy calls
+   circuit breaking and for the statement that they are enforced at the network
+   level rather than per application.
+9. Envoy Project. *Envoy documentation, "Outlier detection"*.
+   https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/outlier
+   Verified 2026-08-02. Source for passive ejection on consecutive 5xx and
+   success rate, the base_ejection_time multiplier on consecutive ejections,
+   max_ejection_percent and max_ejection_time, and the unejection on a
+   successful active health check.
+
 ## Code
 
 Four implementations of the same minimal breaker. Each takes an injected clock,
@@ -1715,67 +1779,3 @@ translate but because in both communities the idiomatic answer is to adopt a
 library rather than hand-roll. On the JVM that is Resilience4j, which supplies
 the sliding windows, the administrative states and the metrics binding that a
 hand-written version would have to reinvent.
-
-## 18. References
-
-1. Michael T. Nygard. *Release It! Second Edition. Design and Deploy
-   Production-Ready Software*. The Pragmatic Programmers, 2018.
-   ISBN 9781680502398. Part I "Create Stability", chapter "Stability Patterns",
-   section "Circuit Breaker". Publisher listing and table of contents at
-   https://pragprog.com/titles/mnee2/release-it-second-edition/
-   Verified 2026-08-02. Source of the pattern's naming, its place among the
-   stability patterns, and its pairing with the matching antipattern.
-   The chapter and section were confirmed from the publisher table of contents.
-   No page number is claimed because no page was independently confirmed.
-2. Microsoft. *Azure Architecture Center*, "Circuit Breaker pattern", page dated
-   2025-02-05.
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
-   Verified 2026-08-02. Source of the three-state proxy formulation, the exact
-   transition rules, the time-based failure counter, the Half-Open flooding
-   rationale, and the considerations list covering exception types, monitoring,
-   recoverability, failed operations testing, manual override, concurrency,
-   resource differentiation, accelerated circuit breaking, failed request
-   replay, inappropriate timeouts, and the unsuitability list.
-3. Netflix. *Hystrix README*.
-   https://github.com/Netflix/Hystrix
-   Verified 2026-08-02. Source for the maintenance mode statement, the final
-   1.5.18 release, the recommendation of Resilience4j, and the stated shift
-   toward adaptive implementations such as adaptive concurrency limits.
-4. Netflix. *Hystrix wiki, "How it Works"*.
-   https://github.com/Netflix/Hystrix/wiki/How-it-Works
-   Verified 2026-08-02. Source for the request volume threshold and error
-   percentage threshold logic, the single-request Half-Open probe, the sleep
-   window, the 10 billion command executions per day figure, and the 40-plus
-   thread pools per API instance.
-5. Resilience4j project. *CircuitBreaker documentation*.
-   https://resilience4j.readme.io/docs/circuitbreaker
-   Verified 2026-08-02. Source for the six states including METRICS_ONLY,
-   DISABLED and FORCED_OPEN, the count-based and time-based sliding windows with
-   subtract-on-evict, the default values for failureRateThreshold,
-   slowCallRateThreshold, minimumNumberOfCalls, waitDurationInOpenState and
-   permittedNumberOfCallsInHalfOpenState, and the CallNotPermittedException
-   behaviour in Half-Open.
-6. App-vNext. *Polly documentation, Circuit breaker resilience strategy*.
-   https://www.pollydocs.org/strategies/circuit-breaker.html
-   Verified 2026-08-02. Source for the Isolated state and
-   CircuitBreakerManualControl, the rate-based design, the defaults for
-   FailureRatio, SamplingDuration, MinimumThroughput and BreakDuration, and the
-   BrokenCircuitException RetryAfter property.
-7. Microsoft. *.NET documentation, HTTP resilience page in the fundamentals
-   section*, page dated 2026-02-24.
-   https://learn.microsoft.com/en-us/dotnet/core/resilience/http-resilience
-   Verified 2026-08-02. Source for the standard resilience handler's
-   five-strategy ordering from rate limiter to attempt timeout, the circuit
-   breaker defaults in that handler, the handled status codes and exceptions,
-   and the per-authority breaker pool used by the standard hedging handler.
-8. Envoy Project. *Envoy documentation, "Circuit breaking"*.
-   https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/circuit_breaking
-   Verified 2026-08-02. Source for the five concurrency limits Envoy calls
-   circuit breaking and for the statement that they are enforced at the network
-   level rather than per application.
-9. Envoy Project. *Envoy documentation, "Outlier detection"*.
-   https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/outlier
-   Verified 2026-08-02. Source for passive ejection on consecutive 5xx and
-   success rate, the base_ejection_time multiplier on consecutive ejections,
-   max_ejection_percent and max_ejection_time, and the unejection on a
-   successful active health check.

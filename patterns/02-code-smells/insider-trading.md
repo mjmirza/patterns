@@ -762,6 +762,38 @@ On plain data privacy in the narrower sense, the pattern is silent beyond the
 sensitive-data-exposure point above. It does not itself introduce a specific
 compliance obligation, and this entry does not claim one.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
+   edition. Addison-Wesley, 2018. ISBN 978-0134757599. Chapter 3, "Insider
+   Trading". Source of the current canonical name and the 2018 generalisation
+   from classes to modules.
+2. Martin Fowler and Kent Beck. *Refactoring. Improving the Design of Existing
+   Code*, 1st edition. Addison-Wesley, 1999. ISBN 0-201-48567-2. Chapter 3.
+   Source of the original 1999 name, Inappropriate Intimacy, for the same
+   underlying pressure at the class level.
+3. luzkan.github.io. "Insider Trading". https://luzkan.github.io/smells/insider-trading
+   Verified 2026-08-02. Used only to corroborate the historical relationship
+   between the 1999 and 2018 names and the class-to-module generalisation
+   described in dimension 1, not as a source of this entry's analysis.
+4. Oracle. *The Java Language Specification, Java SE 21 Edition*, section 7.7,
+   "Module Directives". https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html#jls-7.7
+   Verified 2026-08-02. Source for the qualified module export production use
+   in dimension 9.
+5. Microsoft. *.NET API documentation*,
+   `System.Runtime.CompilerServices.InternalsVisibleToAttribute`.
+   https://learn.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute
+   Verified 2026-08-02. Source for the .NET friend-assembly production use in
+   dimension 9.
+6. Wikipedia contributors. "Friend class". https://en.wikipedia.org/wiki/Friend_class
+   Verified 2026-08-02. Used only to confirm the wording of the C++ `friend`
+   mechanism's definition and purpose, not as a source of this entry's
+   analysis.
+7. ArchUnit. *ArchUnit User Guide*, sections on slice rules and package access
+   rules. https://www.archunit.org/userguide/html/000_Index.html
+   Verified 2026-08-02. Source for the architecture-testing production use in
+   dimension 9 and the boundary-test technique in dimension 15.
+
 ## Code examples
 
 Three languages chosen for three genuinely idiomatic angles. TypeScript shows
@@ -940,35 +972,3 @@ at all, not merely outside the same package, which is the closest thing a
 mainstream language offers to a compiler-enforced module boundary that makes
 this smell impossible to introduce by accident across a repository, rather
 than merely inconvenient.
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
-   edition. Addison-Wesley, 2018. ISBN 978-0134757599. Chapter 3, "Insider
-   Trading". Source of the current canonical name and the 2018 generalisation
-   from classes to modules.
-2. Martin Fowler and Kent Beck. *Refactoring. Improving the Design of Existing
-   Code*, 1st edition. Addison-Wesley, 1999. ISBN 0-201-48567-2. Chapter 3.
-   Source of the original 1999 name, Inappropriate Intimacy, for the same
-   underlying pressure at the class level.
-3. luzkan.github.io. "Insider Trading". https://luzkan.github.io/smells/insider-trading
-   Verified 2026-08-02. Used only to corroborate the historical relationship
-   between the 1999 and 2018 names and the class-to-module generalisation
-   described in dimension 1, not as a source of this entry's analysis.
-4. Oracle. *The Java Language Specification, Java SE 21 Edition*, section 7.7,
-   "Module Directives". https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html#jls-7.7
-   Verified 2026-08-02. Source for the qualified module export production use
-   in dimension 9.
-5. Microsoft. *.NET API documentation*,
-   `System.Runtime.CompilerServices.InternalsVisibleToAttribute`.
-   https://learn.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute
-   Verified 2026-08-02. Source for the .NET friend-assembly production use in
-   dimension 9.
-6. Wikipedia contributors. "Friend class". https://en.wikipedia.org/wiki/Friend_class
-   Verified 2026-08-02. Used only to confirm the wording of the C++ `friend`
-   mechanism's definition and purpose, not as a source of this entry's
-   analysis.
-7. ArchUnit. *ArchUnit User Guide*, sections on slice rules and package access
-   rules. https://www.archunit.org/userguide/html/000_Index.html
-   Verified 2026-08-02. Source for the architecture-testing production use in
-   dimension 9 and the boundary-test technique in dimension 15.

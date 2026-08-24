@@ -876,6 +876,49 @@ exactly this kind of data-flow claim, because each collaborator's inputs
 and outputs are explicit and enumerable rather than implicit in shared
 state.
 
+## 18. References
+
+1. Wikipedia, "Spaghetti code," citing Martin Hopkins (1972), Richard
+   Conway, *A Primer on Disciplined Programming Using PL/I, PL/CS, and
+   PL/CT* (1978), Paul Noll, *Structured Programming for the COBOL
+   Programmer* (1979), and a 1981 piece in *The Michigan Technic*.
+   https://en.wikipedia.org/wiki/Spaghetti_code, verified 2026-08-02.
+2. Edsger W. Dijkstra, "Letters to the editor. Go to statement considered
+   harmful," *Communications of the ACM*, volume 11, issue 3, pages 147
+   to 148, March 1968, cited via
+   https://en.wikipedia.org/wiki/Goto, verified 2026-08-02.
+3. Thomas J. McCabe, "A Complexity Measure," *IEEE Transactions on
+   Software Engineering*, volume SE-2, issue 4, pages 308 to 320,
+   December 1976, cited via
+   https://en.wikipedia.org/wiki/Cyclomatic_complexity, verified
+   2026-08-02.
+4. Brian Foote and Joseph Yoder, "Big Ball of Mud," Fourth Conference on
+   Pattern Languages of Programs, PLoP '97 / EuroPLoP '97, Monticello,
+   Illinois, September 1997, cited via
+   https://en.wikipedia.org/wiki/Big_ball_of_mud, verified 2026-08-02.
+5. Martin Fowler with Kent Beck, *Refactoring. Improving the Design of
+   Existing Code*, first edition 1999, second edition 2018.
+   https://martinfowler.com/books/refactoring.html, verified 2026-08-02.
+6. G. Ann Campbell, "Cognitive Complexity," SonarSource.
+   https://www.sonarsource.com/resources/cognitive-complexity/, verified
+   2026-08-02.
+7. Linux kernel documentation, "A Tour Through the Kernel's Coding Style,"
+   section "Centralized exiting of functions."
+   https://www.kernel.org/doc/html/latest/process/coding-style.html,
+   verified 2026-08-02.
+8. Wikipedia, "COBOL," section on the COVID-19 pandemic COBOL programmer
+   shortage and IRS CARES Act payment systems.
+   https://en.wikipedia.org/wiki/COBOL, verified 2026-08-02.
+9. Joel Spolsky, "Things You Should Never Do, Part I,"
+   joelonsoftware.com, April 2000.
+   https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/,
+   verified 2026-08-02.
+10. Max Ogden, callbackhell.com, source at github.com/maxogden/callback-hell.
+    http://callbackhell.com/, verified 2026-08-02.
+11. Wikipedia, "ISO/IEC 25010," maintainability characteristic and
+    sub-characteristics.
+    https://en.wikipedia.org/wiki/ISO/IEC_25010, verified 2026-08-02.
+
 ## Code examples
 
 Three languages, each showing the same order-processing flow first as
@@ -1125,46 +1168,3 @@ Running this file with `go run` prints `27 true` followed by `27 <nil>`,
 confirming both implementations reserve the same quantity and compute the
 same discounted total for the same input, and that the structured version
 returns an idiomatic Go error rather than a bare boolean.
-
-## 18. References
-
-1. Wikipedia, "Spaghetti code," citing Martin Hopkins (1972), Richard
-   Conway, *A Primer on Disciplined Programming Using PL/I, PL/CS, and
-   PL/CT* (1978), Paul Noll, *Structured Programming for the COBOL
-   Programmer* (1979), and a 1981 piece in *The Michigan Technic*.
-   https://en.wikipedia.org/wiki/Spaghetti_code, verified 2026-08-02.
-2. Edsger W. Dijkstra, "Letters to the editor. Go to statement considered
-   harmful," *Communications of the ACM*, volume 11, issue 3, pages 147
-   to 148, March 1968, cited via
-   https://en.wikipedia.org/wiki/Goto, verified 2026-08-02.
-3. Thomas J. McCabe, "A Complexity Measure," *IEEE Transactions on
-   Software Engineering*, volume SE-2, issue 4, pages 308 to 320,
-   December 1976, cited via
-   https://en.wikipedia.org/wiki/Cyclomatic_complexity, verified
-   2026-08-02.
-4. Brian Foote and Joseph Yoder, "Big Ball of Mud," Fourth Conference on
-   Pattern Languages of Programs, PLoP '97 / EuroPLoP '97, Monticello,
-   Illinois, September 1997, cited via
-   https://en.wikipedia.org/wiki/Big_ball_of_mud, verified 2026-08-02.
-5. Martin Fowler with Kent Beck, *Refactoring. Improving the Design of
-   Existing Code*, first edition 1999, second edition 2018.
-   https://martinfowler.com/books/refactoring.html, verified 2026-08-02.
-6. G. Ann Campbell, "Cognitive Complexity," SonarSource.
-   https://www.sonarsource.com/resources/cognitive-complexity/, verified
-   2026-08-02.
-7. Linux kernel documentation, "A Tour Through the Kernel's Coding Style,"
-   section "Centralized exiting of functions."
-   https://www.kernel.org/doc/html/latest/process/coding-style.html,
-   verified 2026-08-02.
-8. Wikipedia, "COBOL," section on the COVID-19 pandemic COBOL programmer
-   shortage and IRS CARES Act payment systems.
-   https://en.wikipedia.org/wiki/COBOL, verified 2026-08-02.
-9. Joel Spolsky, "Things You Should Never Do, Part I,"
-   joelonsoftware.com, April 2000.
-   https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/,
-   verified 2026-08-02.
-10. Max Ogden, callbackhell.com, source at github.com/maxogden/callback-hell.
-    http://callbackhell.com/, verified 2026-08-02.
-11. Wikipedia, "ISO/IEC 25010," maintainability characteristic and
-    sub-characteristics.
-    https://en.wikipedia.org/wiki/ISO/IEC_25010, verified 2026-08-02.

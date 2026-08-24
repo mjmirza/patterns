@@ -725,6 +725,53 @@ and acknowledge messages from the source subscription
 2026-08-02). Those are security controls and reliability controls at the same
 time.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns*. Addison-Wesley,
+   2003. Chapter "Messaging Channels", section "Dead Letter Channel". Public
+   pattern page:
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html
+   Verified 2026-08-02. Source for Dead Letter Channel lineage and messaging
+   terminology.
+2. Microsoft. *Asynchronous messaging options*. Azure Architecture Center.
+   Section "Dead-letter queue".
+   https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+   Verified 2026-08-02. Source for the Azure poison message definition and
+   Service Bus DLQ handling description.
+3. Microsoft. *Prevent message loss and duplicate processing in Azure Service
+   Bus*. Section "Where missing messages actually go".
+   https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-message-loss-and-duplicates
+   Verified 2026-08-02. Source for peek-lock and receive-and-delete behavior.
+4. Microsoft. *Messaging exceptions*. Azure Service Bus.
+   https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-exceptions
+   Verified 2026-08-02. Source for default dead-letter movement after repeated
+   reads and Service Bus troubleshooting signals.
+5. Amazon Web Services. *Using dead-letter queues in Amazon SQS*. Amazon Simple
+   Queue Service Developer Guide.
+   https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html
+   Verified 2026-08-02. Source for SQS redrive policy and `maxReceiveCount`.
+6. Google Cloud. *Dead-letter topics*. Pub/Sub documentation.
+   https://docs.cloud.google.com/pubsub/docs/dead-letter-topics
+   Verified 2026-08-02. Source for Pub/Sub dead-letter topic configuration,
+   delivery attempt limits, and permissions.
+7. Google Cloud. *Handle message failures*. Pub/Sub documentation.
+   https://docs.cloud.google.com/pubsub/docs/handling-failures
+   Verified 2026-08-02. Source for Pub/Sub forwarding behavior and wrapped
+   dead-letter message attributes.
+8. Broadcom. *RabbitMQ Dead Letter Exchanges*. RabbitMQ documentation.
+   https://www.rabbitmq.com/docs/next/dlx
+   Verified 2026-08-02. Source for RabbitMQ dead-letter triggers, cycle
+   behavior, headers, and safety notes.
+9. Apache Software Foundation. *Kafka Connect User Guide*, version 2.6,
+   section "Error Reporting in Connect".
+   https://kafka.apache.org/26/kafka-connect/user-guide/
+   Verified 2026-08-02. Source for Kafka Connect DLQ topic configuration and
+   sensitive logging warning.
+10. Solace. *Queues*. Solace documentation, section "Dead Message Queues".
+    https://docs.solace.com/Messaging/Guaranteed-Msg/Queues.htm
+    Verified 2026-08-02. Source for Solace DMQ behavior, Max Redelivery, and
+    endpoint-specific DMQ guidance.
+
 ## Code examples
 
 Three languages are shown because the pattern is less about syntax than about a
@@ -855,50 +902,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns*. Addison-Wesley,
-   2003. Chapter "Messaging Channels", section "Dead Letter Channel". Public
-   pattern page:
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html
-   Verified 2026-08-02. Source for Dead Letter Channel lineage and messaging
-   terminology.
-2. Microsoft. *Asynchronous messaging options*. Azure Architecture Center.
-   Section "Dead-letter queue".
-   https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
-   Verified 2026-08-02. Source for the Azure poison message definition and
-   Service Bus DLQ handling description.
-3. Microsoft. *Prevent message loss and duplicate processing in Azure Service
-   Bus*. Section "Where missing messages actually go".
-   https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-message-loss-and-duplicates
-   Verified 2026-08-02. Source for peek-lock and receive-and-delete behavior.
-4. Microsoft. *Messaging exceptions*. Azure Service Bus.
-   https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-exceptions
-   Verified 2026-08-02. Source for default dead-letter movement after repeated
-   reads and Service Bus troubleshooting signals.
-5. Amazon Web Services. *Using dead-letter queues in Amazon SQS*. Amazon Simple
-   Queue Service Developer Guide.
-   https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html
-   Verified 2026-08-02. Source for SQS redrive policy and `maxReceiveCount`.
-6. Google Cloud. *Dead-letter topics*. Pub/Sub documentation.
-   https://docs.cloud.google.com/pubsub/docs/dead-letter-topics
-   Verified 2026-08-02. Source for Pub/Sub dead-letter topic configuration,
-   delivery attempt limits, and permissions.
-7. Google Cloud. *Handle message failures*. Pub/Sub documentation.
-   https://docs.cloud.google.com/pubsub/docs/handling-failures
-   Verified 2026-08-02. Source for Pub/Sub forwarding behavior and wrapped
-   dead-letter message attributes.
-8. Broadcom. *RabbitMQ Dead Letter Exchanges*. RabbitMQ documentation.
-   https://www.rabbitmq.com/docs/next/dlx
-   Verified 2026-08-02. Source for RabbitMQ dead-letter triggers, cycle
-   behavior, headers, and safety notes.
-9. Apache Software Foundation. *Kafka Connect User Guide*, version 2.6,
-   section "Error Reporting in Connect".
-   https://kafka.apache.org/26/kafka-connect/user-guide/
-   Verified 2026-08-02. Source for Kafka Connect DLQ topic configuration and
-   sensitive logging warning.
-10. Solace. *Queues*. Solace documentation, section "Dead Message Queues".
-    https://docs.solace.com/Messaging/Guaranteed-Msg/Queues.htm
-    Verified 2026-08-02. Source for Solace DMQ behavior, Max Redelivery, and
-    endpoint-specific DMQ guidance.

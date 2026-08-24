@@ -457,6 +457,17 @@ validation and authorization as the actual security boundary, and
 never rely on a client-side enhancement to enforce a rule the server
 does not also enforce.
 
+## 18. References
+
+1. MDN Web Docs. "Progressive Enhancement".
+   https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement
+   Verified 2026-08-21. Source of the defining sentence and the
+   graceful-degradation comparison quoted in dimensions 1, 8, and 9.
+2. Simon Willison. "Interview with Steve Champeon".
+   https://simonwillison.net/2003/Apr/4/interviewWithSteveChampeon/
+   Verified 2026-08-21. Source of the term's origin and Champeon's own
+   account of the philosophy, quoted in dimensions 1, 2, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -570,14 +581,3 @@ func submitForm(formData: [String: String]) -> FormResult {
 let result = submitForm(formData: ["email": "user@example.com"])
 print("used enhancement: " + String(result.usedEnhancement))
 ```
-
-## 18. References
-
-1. MDN Web Docs. "Progressive Enhancement".
-   https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement
-   Verified 2026-08-21. Source of the defining sentence and the
-   graceful-degradation comparison quoted in dimensions 1, 8, and 9.
-2. Simon Willison. "Interview with Steve Champeon".
-   https://simonwillison.net/2003/Apr/4/interviewWithSteveChampeon/
-   Verified 2026-08-21. Source of the term's origin and Champeon's own
-   account of the philosophy, quoted in dimensions 1, 2, and 9.

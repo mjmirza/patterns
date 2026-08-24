@@ -125,6 +125,11 @@ Track which implementation (old or new) is actually being used behind the abstra
 
 Any security review or access-control property the old implementation satisfied must be verified against the new implementation before the switch, since the abstraction can otherwise silently hide a security regression behind an interface that looks unchanged from the caller's perspective. If the change involves data storage or a data-handling boundary, both implementations existing simultaneously means the data-protection requirements apply to both for as long as they coexist.
 
+## References
+
+- trunkbaseddevelopment.com, Branch by Abstraction, https://trunkbaseddevelopment.com/branch-by-abstraction/
+- Martin Fowler, BranchByAbstraction, https://martinfowler.com/bliki/BranchByAbstraction.html
+
 ## Code Examples
 
 ### Swift
@@ -204,8 +209,3 @@ class PaymentProcessorSwitch:
         # never see which one is live behind the switch.
         return NewPaymentProcessor() if self.use_new_implementation else LegacyPaymentProcessor()
 ```
-
-## References
-
-- trunkbaseddevelopment.com, Branch by Abstraction, https://trunkbaseddevelopment.com/branch-by-abstraction/
-- Martin Fowler, BranchByAbstraction, https://martinfowler.com/bliki/BranchByAbstraction.html

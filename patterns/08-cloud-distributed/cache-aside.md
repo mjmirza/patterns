@@ -991,6 +991,96 @@ security properties. Claims that caching improves security by reducing origin
 exposure are not supported by anything in the pattern, because the origin is still
 reached on every miss.
 
+## 18. References
+
+### Primary pattern sources
+
+1. Microsoft, *Cache-Aside pattern*, Azure Architecture Center, page dated
+   2025-09-11.
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
+   Verified 2026-08-02. Source for the pattern name, the solution steps, the
+   considerations list (lifetime, eviction, configuration, priming, consistency,
+   staleness after writes), the when-to-use and when-not-to-use lists, the
+   commit-before-delete ordering rule, and the C# example.
+2. Amazon Web Services, *Caching strategies for Memcached*, Amazon ElastiCache
+   Developer Guide.
+   https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/Strategies.html
+   Verified 2026-08-02. Source for the lazy loading name, the three-trip miss
+   penalty, the node-failure resilience property, the write-through comparison
+   including cache churn and missing data on new nodes, and the recommendation to
+   add a TTL to both strategies.
+
+### Stampede prevention
+
+3. Andrea Vattani, Flavio Chierichetti, Keegan Lowenstein, *Optimal Probabilistic
+   Cache Stampede Prevention*, Proceedings of the VLDB Endowment, volume 8, pages
+   886 to 897, 2015. https://dl.acm.org/doi/10.14778/2757807.2757813
+   Author copy at https://cseweb.ucsd.edu/~avattani/papers/cache_stampede.pdf
+   Verified 2026-08-02. Source for the XFetch algorithm, the recomputation test
+   `time() - delta * beta * ln(rand()) >= expiry`, and the meaning of the beta
+   parameter.
+4. Rajesh Nishtala, Hans Fugal, Steven Grimm, Marc Kwiatkowski, Herman Lee, Harry
+   C. Li, Ryan McElroy, Mike Paleczny, Daniel Peek, Paul Saab, David Stafford,
+   Tony Tung, Venkateshwaran Venkataramani, *Scaling Memcache at Facebook*, 10th
+   USENIX Symposium on Networked Systems Design and Implementation, NSDI 2013.
+   https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/nishtala
+   Verified 2026-08-02. Source for the demand-filled look-aside characterisation,
+   the lease mechanism, the definitions of stale set and thundering herd, and the
+   default of one token per key per ten seconds.
+5. Wikimedia Foundation, *MediaWiki Engineering, Guides, Backend performance
+   practices*, Wikitech.
+   https://wikitech.wikimedia.org/wiki/MediaWiki_Engineering/Guides/Backend_performance_practices
+   Verified 2026-08-02. Source for WANObjectCache handling stampede protection,
+   purging and mutex locks, preemptive regeneration of values before expiry, and
+   time-dependent randomisation via the TTL argument and the hotTTR option.
+
+### Library and platform behaviour
+
+6. Ben Manes and contributors, *Caffeine wiki, Population*.
+   https://github.com/ben-manes/caffeine/wiki/Population
+   Verified 2026-08-02. Source for the manual `Cache` versus `LoadingCache`
+   distinction and the read-through characterisation of `LoadingCache`.
+7. Ben Manes and contributors, *Caffeine wiki, Refresh*.
+   https://github.com/ben-manes/caffeine/wiki/Refresh
+   Verified 2026-08-02. Source for `refreshAfterWrite` semantics, the old value
+   being returned during refresh, and in-flight refresh deduplication.
+8. The Go Authors, *Package singleflight*, `golang.org/x/sync/singleflight`.
+   https://pkg.go.dev/golang.org/x/sync/singleflight
+   Verified 2026-08-02. Source for the duplicate call suppression contract, the
+   `Do` and `DoChan` signatures, and the `Shared` return value.
+9. Netflix, *EVCache*, GitHub repository.
+   https://github.com/Netflix/EVCache
+   Verified 2026-08-02. Source for the memcached and spymemcached basis and the
+   Ephemeral, Volatile, Cache expansion of the name.
+10. InfoQ, *Netflix global cache*.
+    https://www.infoq.com/articles/netflix-global-cache/
+    Verified 2026-08-02. Source for the reported EVCache scale figures of 22,000
+    server instances, 400 million operations per second, 2 trillion items,
+    14.3 petabytes, and 200 memcached clusters.
+
+### Negative caching and membership filtering
+
+11. Mark Andrews, *Negative Caching of DNS Queries (DNS NCACHE)*, RFC 2308, IETF,
+    March 1998. https://www.rfc-editor.org/rfc/rfc2308.html
+    Verified 2026-08-02. Source for the definition of negative caching as the
+    storage of knowledge that something does not exist, and the guidance that one
+    to three hours works well while values exceeding one day are problematic.
+12. Redis, *Bloom filter*, Redis documentation.
+    https://redis.io/docs/latest/develop/data-types/probabilistic/bloom-filter/
+    Verified 2026-08-02. Source for the guarantee that a negative answer is certain
+    while one in N positive answers is wrong, the bits-per-item figures, and the
+    Bloom versus cuckoo comparison.
+13. Burton H. Bloom, *Space/Time Trade-offs in Hash Coding with Allowable Errors*,
+    Communications of the ACM, 1970. Linked as an academic source from reference
+    12. http://www.dragonwins.com/domains/getteched/bbc/literature/Bloom70.pdf
+    Verified 2026-08-02 as a link present on the Redis page above.
+
+### Unverified claims in this entry
+
+None. Every factual claim above traces to a source in this list. Statements in
+dimensions 3, 10, 11, 15, 16 and 17 that are engineering judgement rather than
+sourced fact are labelled as such at the point they appear.
+
 ## Code examples
 
 Four samples follow, in Go, Python, TypeScript and Rust. All four were compiled and
@@ -1459,93 +1549,3 @@ Three origin calls covers the initial fill, one rebuild shared by sixteen thread
 after the fresh window closed, and one lookup of the absent key. Fifteen of the
 sixteen threads were served the stale value without waiting, which is the property
 that keeps tail latency flat during a rebuild.
-
-## 18. References
-
-### Primary pattern sources
-
-1. Microsoft, *Cache-Aside pattern*, Azure Architecture Center, page dated
-   2025-09-11.
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
-   Verified 2026-08-02. Source for the pattern name, the solution steps, the
-   considerations list (lifetime, eviction, configuration, priming, consistency,
-   staleness after writes), the when-to-use and when-not-to-use lists, the
-   commit-before-delete ordering rule, and the C# example.
-2. Amazon Web Services, *Caching strategies for Memcached*, Amazon ElastiCache
-   Developer Guide.
-   https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/Strategies.html
-   Verified 2026-08-02. Source for the lazy loading name, the three-trip miss
-   penalty, the node-failure resilience property, the write-through comparison
-   including cache churn and missing data on new nodes, and the recommendation to
-   add a TTL to both strategies.
-
-### Stampede prevention
-
-3. Andrea Vattani, Flavio Chierichetti, Keegan Lowenstein, *Optimal Probabilistic
-   Cache Stampede Prevention*, Proceedings of the VLDB Endowment, volume 8, pages
-   886 to 897, 2015. https://dl.acm.org/doi/10.14778/2757807.2757813
-   Author copy at https://cseweb.ucsd.edu/~avattani/papers/cache_stampede.pdf
-   Verified 2026-08-02. Source for the XFetch algorithm, the recomputation test
-   `time() - delta * beta * ln(rand()) >= expiry`, and the meaning of the beta
-   parameter.
-4. Rajesh Nishtala, Hans Fugal, Steven Grimm, Marc Kwiatkowski, Herman Lee, Harry
-   C. Li, Ryan McElroy, Mike Paleczny, Daniel Peek, Paul Saab, David Stafford,
-   Tony Tung, Venkateshwaran Venkataramani, *Scaling Memcache at Facebook*, 10th
-   USENIX Symposium on Networked Systems Design and Implementation, NSDI 2013.
-   https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/nishtala
-   Verified 2026-08-02. Source for the demand-filled look-aside characterisation,
-   the lease mechanism, the definitions of stale set and thundering herd, and the
-   default of one token per key per ten seconds.
-5. Wikimedia Foundation, *MediaWiki Engineering, Guides, Backend performance
-   practices*, Wikitech.
-   https://wikitech.wikimedia.org/wiki/MediaWiki_Engineering/Guides/Backend_performance_practices
-   Verified 2026-08-02. Source for WANObjectCache handling stampede protection,
-   purging and mutex locks, preemptive regeneration of values before expiry, and
-   time-dependent randomisation via the TTL argument and the hotTTR option.
-
-### Library and platform behaviour
-
-6. Ben Manes and contributors, *Caffeine wiki, Population*.
-   https://github.com/ben-manes/caffeine/wiki/Population
-   Verified 2026-08-02. Source for the manual `Cache` versus `LoadingCache`
-   distinction and the read-through characterisation of `LoadingCache`.
-7. Ben Manes and contributors, *Caffeine wiki, Refresh*.
-   https://github.com/ben-manes/caffeine/wiki/Refresh
-   Verified 2026-08-02. Source for `refreshAfterWrite` semantics, the old value
-   being returned during refresh, and in-flight refresh deduplication.
-8. The Go Authors, *Package singleflight*, `golang.org/x/sync/singleflight`.
-   https://pkg.go.dev/golang.org/x/sync/singleflight
-   Verified 2026-08-02. Source for the duplicate call suppression contract, the
-   `Do` and `DoChan` signatures, and the `Shared` return value.
-9. Netflix, *EVCache*, GitHub repository.
-   https://github.com/Netflix/EVCache
-   Verified 2026-08-02. Source for the memcached and spymemcached basis and the
-   Ephemeral, Volatile, Cache expansion of the name.
-10. InfoQ, *Netflix global cache*.
-    https://www.infoq.com/articles/netflix-global-cache/
-    Verified 2026-08-02. Source for the reported EVCache scale figures of 22,000
-    server instances, 400 million operations per second, 2 trillion items,
-    14.3 petabytes, and 200 memcached clusters.
-
-### Negative caching and membership filtering
-
-11. Mark Andrews, *Negative Caching of DNS Queries (DNS NCACHE)*, RFC 2308, IETF,
-    March 1998. https://www.rfc-editor.org/rfc/rfc2308.html
-    Verified 2026-08-02. Source for the definition of negative caching as the
-    storage of knowledge that something does not exist, and the guidance that one
-    to three hours works well while values exceeding one day are problematic.
-12. Redis, *Bloom filter*, Redis documentation.
-    https://redis.io/docs/latest/develop/data-types/probabilistic/bloom-filter/
-    Verified 2026-08-02. Source for the guarantee that a negative answer is certain
-    while one in N positive answers is wrong, the bits-per-item figures, and the
-    Bloom versus cuckoo comparison.
-13. Burton H. Bloom, *Space/Time Trade-offs in Hash Coding with Allowable Errors*,
-    Communications of the ACM, 1970. Linked as an academic source from reference
-    12. http://www.dragonwins.com/domains/getteched/bbc/literature/Bloom70.pdf
-    Verified 2026-08-02 as a link present on the Redis page above.
-
-### Unverified claims in this entry
-
-None. Every factual claim above traces to a source in this list. Statements in
-dimensions 3, 10, 11, 15, 16 and 17 that are engineering judgement rather than
-sourced fact are labelled as such at the point they appear.

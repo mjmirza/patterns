@@ -705,6 +705,38 @@ which tenant owns a row, whether a field is personal data, how long an
 intermediate result may live, or whether a transform is legally permitted. Those
 rules belong in policy, schema, access control, and retention mechanisms.
 
+## 18. References
+
+- Martin Fowler, with Kent Beck, *Refactoring. Improving the Design of Existing
+  Code*, second edition, Addison-Wesley, 2018, chapter 3, "Bad Smells in Code,"
+  and chapter 6, catalog entry "Replace Loop with Pipeline." The page reference
+  to Replace Loop with Pipeline at page 231 is confirmed by the InformIT excerpt
+  "Loops": https://www.informit.com/articles/article.aspx?p=2952392&seqNum=13,
+  verified 2026-08-02.
+- Martin Fowler, "Replace Loop with Pipeline," refactoring catalog:
+  https://refactoring.com/catalog/replaceLoopWithPipeline.html, verified
+  2026-08-02.
+- Martin Fowler, "Refactoring with Loops and Collection Pipelines," 14 July
+  2015: https://martinfowler.com/articles/refactoring-pipelines.html, verified
+  2026-08-02.
+- Martin Fowler, "Collection Pipeline," 25 June 2015:
+  https://martinfowler.com/articles/collection-pipeline/, verified 2026-08-02.
+- Oracle, Java SE 21 API documentation, package `java.util.stream`:
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html,
+  verified 2026-08-02.
+- Python Software Foundation, Python 3.14 documentation, `itertools`:
+  https://docs.python.org/3/library/itertools.html, verified 2026-08-02.
+- Apache Software Foundation, "RDD Programming Guide," Spark 4.2.0
+  documentation: https://spark.apache.org/docs/latest/rdd-programming-guide,
+  verified 2026-08-02.
+- Apache Software Foundation, "Spark SQL, DataFrames and Datasets Guide," Spark
+  4.2.0 documentation: https://spark.apache.org/docs/latest/sql-programming-guide,
+  verified 2026-08-02.
+- pandas project, "User-Defined Functions," pandas 3.0.5 documentation, section
+  "`Series.pipe()` and `DataFrame.pipe()`":
+  https://pandas.pydata.org/docs/user_guide/user_defined_functions.html,
+  verified 2026-08-02.
+
 ## Code examples
 
 TypeScript-flavored JavaScript, run with `node`.
@@ -820,35 +852,3 @@ func main() {
 	fmt.Println(strings.Join(billableCustomerIDs(orders), ","))
 }
 ```
-
-## 18. References
-
-- Martin Fowler, with Kent Beck, *Refactoring. Improving the Design of Existing
-  Code*, second edition, Addison-Wesley, 2018, chapter 3, "Bad Smells in Code,"
-  and chapter 6, catalog entry "Replace Loop with Pipeline." The page reference
-  to Replace Loop with Pipeline at page 231 is confirmed by the InformIT excerpt
-  "Loops": https://www.informit.com/articles/article.aspx?p=2952392&seqNum=13,
-  verified 2026-08-02.
-- Martin Fowler, "Replace Loop with Pipeline," refactoring catalog:
-  https://refactoring.com/catalog/replaceLoopWithPipeline.html, verified
-  2026-08-02.
-- Martin Fowler, "Refactoring with Loops and Collection Pipelines," 14 July
-  2015: https://martinfowler.com/articles/refactoring-pipelines.html, verified
-  2026-08-02.
-- Martin Fowler, "Collection Pipeline," 25 June 2015:
-  https://martinfowler.com/articles/collection-pipeline/, verified 2026-08-02.
-- Oracle, Java SE 21 API documentation, package `java.util.stream`:
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html,
-  verified 2026-08-02.
-- Python Software Foundation, Python 3.14 documentation, `itertools`:
-  https://docs.python.org/3/library/itertools.html, verified 2026-08-02.
-- Apache Software Foundation, "RDD Programming Guide," Spark 4.2.0
-  documentation: https://spark.apache.org/docs/latest/rdd-programming-guide,
-  verified 2026-08-02.
-- Apache Software Foundation, "Spark SQL, DataFrames and Datasets Guide," Spark
-  4.2.0 documentation: https://spark.apache.org/docs/latest/sql-programming-guide,
-  verified 2026-08-02.
-- pandas project, "User-Defined Functions," pandas 3.0.5 documentation, section
-  "`Series.pipe()` and `DataFrame.pipe()`":
-  https://pandas.pydata.org/docs/user_guide/user_defined_functions.html,
-  verified 2026-08-02.

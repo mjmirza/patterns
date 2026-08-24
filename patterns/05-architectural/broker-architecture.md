@@ -790,6 +790,53 @@ technology should treat authentication, transport encryption, and
 per-resource authorization as explicit requirements to configure rather than
 assumptions to make about the default install.
 
+## 18. References
+
+1. Buschmann, F., Meunier, R., Rohnert, H., Sommerlad, P., Stal, M.
+   *Pattern-Oriented Software Architecture, Volume 1. A System of Patterns*.
+   Wiley, 1996. Distributed systems patterns chapter, Broker pattern. This
+   book is the original primary source for the six-role structure described
+   in dimension 5. it was not directly fetched during this verification pass
+   and is cited from the well-established secondary consensus about its
+   contents (Wikipedia's Broker pattern entry, reference 8 below, and the
+   general software architecture literature), so the exact page numbers are
+   not independently confirmed here.
+
+2. Object Management Group. CORBA specification landing page.
+   https://www.omg.org/spec/CORBA/. Verified 2026-08-02. Source for the ORB
+   definition and location-transparency claim.
+
+3. Oracle. Java RMI Hello World tutorial.
+   https://docs.oracle.com/javase/8/docs/technotes/guides/rmi/hello/hello-world.html.
+   Verified 2026-08-02. Source for the RMI registry's lookup-once behavior
+   and the registry-as-simplified-name-service framing.
+
+4. Android Open Source Project. Binder IPC documentation.
+   https://source.android.com/docs/core/architecture/hidl/binder-ipc.
+   Verified 2026-08-02. Source for servicemanager as a registry and the
+   framework and vendor servicemanager split introduced in Android 8.
+
+5. RabbitMQ. AMQP 0-9-1 concepts guide.
+   https://www.rabbitmq.com/tutorials/amqp-concepts. Verified 2026-08-02.
+   Source for the broker, exchange, binding, and queue routing model, and
+   the push and pull consumption API description.
+
+6. freedesktop.org. D-Bus specification.
+   https://dbus.freedesktop.org/doc/dbus-specification.html. Verified
+   2026-08-02. Source for the D-Bus message bus daemon's forwarding role and
+   destination-header-based routing.
+
+7. Google. gRPC introduction, What is gRPC.
+   https://grpc.io/docs/what-is-grpc/introduction/. Verified 2026-08-02.
+   Source for the client stub and channel-based RPC framing used as a
+   contrast case to a shared broker process.
+
+8. Wikipedia. Broker pattern.
+   https://en.wikipedia.org/wiki/Broker_pattern. Verified 2026-08-02.
+   Source for the three-role vocabulary (broker, server, client) and the
+   many-to-one-to-many versus many-to-many distinction against
+   Publish-Subscribe.
+
 ## Code examples
 
 Three languages, all run and verified. Python and Go, being the target
@@ -1010,50 +1057,3 @@ All three examples model the synchronous-RPC variant from dimension 8
 rather than the message-broker variant, because the registry-plus-proxy
 shape is the structural core POSA1 names, and it is the shape every other
 variant, including the asynchronous ones, specializes from.
-
-## 18. References
-
-1. Buschmann, F., Meunier, R., Rohnert, H., Sommerlad, P., Stal, M.
-   *Pattern-Oriented Software Architecture, Volume 1. A System of Patterns*.
-   Wiley, 1996. Distributed systems patterns chapter, Broker pattern. This
-   book is the original primary source for the six-role structure described
-   in dimension 5. it was not directly fetched during this verification pass
-   and is cited from the well-established secondary consensus about its
-   contents (Wikipedia's Broker pattern entry, reference 8 below, and the
-   general software architecture literature), so the exact page numbers are
-   not independently confirmed here.
-
-2. Object Management Group. CORBA specification landing page.
-   https://www.omg.org/spec/CORBA/. Verified 2026-08-02. Source for the ORB
-   definition and location-transparency claim.
-
-3. Oracle. Java RMI Hello World tutorial.
-   https://docs.oracle.com/javase/8/docs/technotes/guides/rmi/hello/hello-world.html.
-   Verified 2026-08-02. Source for the RMI registry's lookup-once behavior
-   and the registry-as-simplified-name-service framing.
-
-4. Android Open Source Project. Binder IPC documentation.
-   https://source.android.com/docs/core/architecture/hidl/binder-ipc.
-   Verified 2026-08-02. Source for servicemanager as a registry and the
-   framework and vendor servicemanager split introduced in Android 8.
-
-5. RabbitMQ. AMQP 0-9-1 concepts guide.
-   https://www.rabbitmq.com/tutorials/amqp-concepts. Verified 2026-08-02.
-   Source for the broker, exchange, binding, and queue routing model, and
-   the push and pull consumption API description.
-
-6. freedesktop.org. D-Bus specification.
-   https://dbus.freedesktop.org/doc/dbus-specification.html. Verified
-   2026-08-02. Source for the D-Bus message bus daemon's forwarding role and
-   destination-header-based routing.
-
-7. Google. gRPC introduction, What is gRPC.
-   https://grpc.io/docs/what-is-grpc/introduction/. Verified 2026-08-02.
-   Source for the client stub and channel-based RPC framing used as a
-   contrast case to a shared broker process.
-
-8. Wikipedia. Broker pattern.
-   https://en.wikipedia.org/wiki/Broker_pattern. Verified 2026-08-02.
-   Source for the three-role vocabulary (broker, server, client) and the
-   many-to-one-to-many versus many-to-many distinction against
-   Publish-Subscribe.

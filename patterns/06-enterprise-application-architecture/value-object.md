@@ -816,6 +816,61 @@ zeroed on garbage collection, is acceptable for that data's sensitivity level,
 or whether a different, explicitly-zeroable representation is required
 instead.
 
+## 18. References
+
+1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
+   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 18, Base Patterns, section
+   Value Object. Source of the canonical definition and the pattern's chapter
+   placement.
+2. Martin Fowler. Online catalog entry, "Value Object."
+   https://martinfowler.com/eaaCatalog/valueObject.html
+   Verified 2026-08-02. Source for the definition quote and the money and date
+   range examples.
+3. Martin Fowler. Bliki entry, "ValueObject."
+   https://martinfowler.com/bliki/ValueObject.html
+   Verified 2026-08-02. Source for the aliasing-bug rationale for immutability
+   and the reference-versus-value-object framing used in dimension 3 and
+   dimension 13.
+4. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Chapter 5, "A Model
+   Expressed in Software," section "Value Objects." Source for the
+   independent, identity-first framing of the pattern described in dimension
+   1.
+5. Martin Fowler, Kent Beck, John Brant, William Opdyke, Don Roberts.
+   *Refactoring. Improving the Design of Existing Code*, 2nd edition.
+   Addison-Wesley, 2018. ISBN 978-0-13-475759-9. Chapter 3, "Code Smells,"
+   section "Primitive Obsession." Source for the problem-context framing in
+   dimension 2.
+6. refactoring.com catalog. "Change Value to Reference."
+   https://refactoring.com/catalog/changeValueToReference.html
+   Verified 2026-08-02. Source for the named, paired refactoring used in
+   dimension 14.
+7. Oracle. *Java SE 21 API Specification*, `java.time.LocalDate`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html
+   Verified 2026-08-02. Source for the value-based class production use in
+   dimension 9.
+8. Oracle. *Java SE 21 API Specification*, `java.math.BigDecimal`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html
+   Verified 2026-08-02. Source for the equals-versus-compareTo scale failure in
+   dimension 11.
+9. Microsoft. *C# record types*.
+   https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/records
+   Verified 2026-08-02. Source for the record-type implementation variant in
+   dimension 8 and the production use in dimension 9.
+10. Python Software Foundation. *Python 3 documentation*, `dataclasses`.
+    https://docs.python.org/3/library/dataclasses.html
+    Verified 2026-08-02. Source for the frozen dataclass semantics in
+    dimension 8, including the `eq` and `frozen` interaction governing
+    `__hash__` generation.
+11. Stripe. *Stripe Docs*, "Supported currencies."
+    https://docs.stripe.com/currencies
+    Verified 2026-08-02. Source for the smallest-currency-unit representation
+    used as a production use in dimension 9.
+12. Joda-Money project page.
+    https://www.joda.org/joda-money/
+    Verified 2026-08-02. Source for the `Money` and `BigMoney` production use
+    in dimension 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different ways,
@@ -997,58 +1052,3 @@ Compiled with `rustc -O` and run directly. `derive(Copy)` is only legal here
 because every field is itself `Copy`, so the compiler enforces value-copy
 semantics rather than shared mutable references at the type level, the
 strongest form of the immutability guarantee among the three languages shown.
-
-## 18. References
-
-1. Martin Fowler. *Patterns of Enterprise Application Architecture*.
-   Addison-Wesley, 2002. ISBN 0-321-12742-0. Chapter 18, Base Patterns, section
-   Value Object. Source of the canonical definition and the pattern's chapter
-   placement.
-2. Martin Fowler. Online catalog entry, "Value Object."
-   https://martinfowler.com/eaaCatalog/valueObject.html
-   Verified 2026-08-02. Source for the definition quote and the money and date
-   range examples.
-3. Martin Fowler. Bliki entry, "ValueObject."
-   https://martinfowler.com/bliki/ValueObject.html
-   Verified 2026-08-02. Source for the aliasing-bug rationale for immutability
-   and the reference-versus-value-object framing used in dimension 3 and
-   dimension 13.
-4. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Chapter 5, "A Model
-   Expressed in Software," section "Value Objects." Source for the
-   independent, identity-first framing of the pattern described in dimension
-   1.
-5. Martin Fowler, Kent Beck, John Brant, William Opdyke, Don Roberts.
-   *Refactoring. Improving the Design of Existing Code*, 2nd edition.
-   Addison-Wesley, 2018. ISBN 978-0-13-475759-9. Chapter 3, "Code Smells,"
-   section "Primitive Obsession." Source for the problem-context framing in
-   dimension 2.
-6. refactoring.com catalog. "Change Value to Reference."
-   https://refactoring.com/catalog/changeValueToReference.html
-   Verified 2026-08-02. Source for the named, paired refactoring used in
-   dimension 14.
-7. Oracle. *Java SE 21 API Specification*, `java.time.LocalDate`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html
-   Verified 2026-08-02. Source for the value-based class production use in
-   dimension 9.
-8. Oracle. *Java SE 21 API Specification*, `java.math.BigDecimal`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html
-   Verified 2026-08-02. Source for the equals-versus-compareTo scale failure in
-   dimension 11.
-9. Microsoft. *C# record types*.
-   https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/records
-   Verified 2026-08-02. Source for the record-type implementation variant in
-   dimension 8 and the production use in dimension 9.
-10. Python Software Foundation. *Python 3 documentation*, `dataclasses`.
-    https://docs.python.org/3/library/dataclasses.html
-    Verified 2026-08-02. Source for the frozen dataclass semantics in
-    dimension 8, including the `eq` and `frozen` interaction governing
-    `__hash__` generation.
-11. Stripe. *Stripe Docs*, "Supported currencies."
-    https://docs.stripe.com/currencies
-    Verified 2026-08-02. Source for the smallest-currency-unit representation
-    used as a production use in dimension 9.
-12. Joda-Money project page.
-    https://www.joda.org/joda-money/
-    Verified 2026-08-02. Source for the `Money` and `BigMoney` production use
-    in dimension 9.

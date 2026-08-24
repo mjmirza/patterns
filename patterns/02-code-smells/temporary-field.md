@@ -895,6 +895,38 @@ sourced or judgement-based claim beyond the general data-leakage
 mechanism above, and it would be inventing a concern to assert a
 narrower one.
 
+## 18. References
+
+1. Martin Fowler, with Kent Beck, John Brant, William Opdyke, Don
+   Roberts. Refactoring, Improving the Design of Existing Code.
+   Addison-Wesley, 1999. ISBN 0-201-48567-2. Chapter 3, the smell
+   Temporary Field, and Chapter 7 for the Extract Class refactoring used
+   as the primary fix throughout this entry.
+2. SourceMaking. Refactoring Guru's sibling catalogue site,
+   "Temporary Field". https://sourcemaking.com/refactoring/smells/temporary-field
+   Verified 2026-08-02. Cited only to confirm the smell's definition and
+   its attribution to the Fowler catalogue, not used as a source of any
+   copied text in this entry.
+3. PMD project. Java Design Rules, SingularField.
+   https://docs.pmd-code.org/latest/pmd_rules_java_design.html
+   Verified 2026-08-02. Source for the automated-detection production
+   evidence in dimension 9.
+4. Oracle. Java SE 8 API Specification,
+   `org.xml.sax.helpers.DefaultHandler`.
+   https://docs.oracle.com/javase/8/docs/api/org/xml/sax/helpers/DefaultHandler.html
+   Verified 2026-08-02. Source for the SAX callback-accumulation
+   production context in dimension 9.
+5. Python Software Foundation. Python 3 documentation,
+   `xml.sax.handler`, ContentHandler.
+   https://docs.python.org/3/library/xml.sax.handler.html
+   Verified 2026-08-02. Source for the Python SAX callback-accumulation
+   caution cited in dimension 9.
+6. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. Design
+   Patterns, Elements of Reusable Object-Oriented Software.
+   Addison-Wesley, 1994. ISBN 0-201-63361-2. Chapter 5, Behavioral
+   Patterns, Visitor, Implementation section, the discussion of
+   accumulating state, cited in dimension 9 and dimension 13.
+
 ## Code examples
 
 Three languages, chosen because the smell and its fix are equally
@@ -1228,35 +1260,3 @@ console.log(fixed.applyRegionalTax(200, "DE-reduced"));
 console.log("processed:", fixed.processedCount);
 console.log(computeRegionalTax(1500, "DE-standard"));
 ```
-
-## 18. References
-
-1. Martin Fowler, with Kent Beck, John Brant, William Opdyke, Don
-   Roberts. Refactoring, Improving the Design of Existing Code.
-   Addison-Wesley, 1999. ISBN 0-201-48567-2. Chapter 3, the smell
-   Temporary Field, and Chapter 7 for the Extract Class refactoring used
-   as the primary fix throughout this entry.
-2. SourceMaking. Refactoring Guru's sibling catalogue site,
-   "Temporary Field". https://sourcemaking.com/refactoring/smells/temporary-field
-   Verified 2026-08-02. Cited only to confirm the smell's definition and
-   its attribution to the Fowler catalogue, not used as a source of any
-   copied text in this entry.
-3. PMD project. Java Design Rules, SingularField.
-   https://docs.pmd-code.org/latest/pmd_rules_java_design.html
-   Verified 2026-08-02. Source for the automated-detection production
-   evidence in dimension 9.
-4. Oracle. Java SE 8 API Specification,
-   `org.xml.sax.helpers.DefaultHandler`.
-   https://docs.oracle.com/javase/8/docs/api/org/xml/sax/helpers/DefaultHandler.html
-   Verified 2026-08-02. Source for the SAX callback-accumulation
-   production context in dimension 9.
-5. Python Software Foundation. Python 3 documentation,
-   `xml.sax.handler`, ContentHandler.
-   https://docs.python.org/3/library/xml.sax.handler.html
-   Verified 2026-08-02. Source for the Python SAX callback-accumulation
-   caution cited in dimension 9.
-6. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. Design
-   Patterns, Elements of Reusable Object-Oriented Software.
-   Addison-Wesley, 1994. ISBN 0-201-63361-2. Chapter 5, Behavioral
-   Patterns, Visitor, Implementation section, the discussion of
-   accumulating state, cited in dimension 9 and dimension 13.

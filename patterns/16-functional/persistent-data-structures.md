@@ -797,6 +797,51 @@ Practical controls:
 - Document whether element values must be immutable and reject known mutable
   types where the language permits that.
 
+## 18. References
+
+- James R. Driscoll, Neil Sarnak, Daniel D. Sleator, Robert E. Tarjan, "Making
+  Data Structures Persistent", *Journal of Computer and System Sciences*,
+  volume 38, issue 1, 1989, pages 86-124.
+  https://dblp.org/rec/journals/jcss/DriscollSST89, verified 2026-08-02.
+- CRC Press LLC, "persistent data structure", in Paul E. Black, editor,
+  *Dictionary of Algorithms and Data Structures*, NIST-hosted page.
+  https://xlinux.nist.gov/dads/HTML/persistentDataStructure.html, verified
+  2026-08-02.
+- Chris Okasaki, *Purely Functional Data Structures*, Cambridge University
+  Press, 1998, chapters 1 through 3. Cambridge Core contents page:
+  https://www.cambridge.org/core/books/purely-functional-data-structures/persistence/BEB36D6BF24898A7CA3A188DA5C35ED1,
+  verified 2026-08-02.
+- Phil Bagwell, "Ideal Hash Trees", 2001.
+  https://www.researchgate.net/publication/2378571_Ideal_Hash_Trees,
+  verified 2026-08-02.
+- Clojure Reference, "Data Structures".
+  https://clojure.org/reference/data_structures, verified 2026-08-02.
+- Clojure Reference, "Transient Data Structures".
+  https://clojure.org/reference/transients, verified 2026-08-02.
+- Clojure Reference, "Atoms". https://clojure.org/reference/atoms,
+  verified 2026-08-02.
+- Clojure Reference, "Refs and Transactions".
+  https://clojure.org/reference/refs, verified 2026-08-02.
+- Scala Documentation, "Concrete Immutable Collection Classes".
+  https://docs.scala-lang.org/overviews/collections-2.13/concrete-immutable-collection-classes.html,
+  verified 2026-08-02.
+- Scala API, `scala.collection.immutable.Vector`.
+  https://www.scala-lang.org/api/current/scala/collection/immutable/Vector.html,
+  verified 2026-08-02.
+- Immutable.js README, "Immutable collections for JavaScript".
+  https://github.com/immutable-js/immutable-js, verified 2026-08-02.
+- Vavr User Guide, version 0.11.0. https://docs.vavr.io/, verified
+  2026-08-02.
+- Redux FAQ, "Immutable Data". https://redux.js.org/faq/immutable-data,
+  verified 2026-08-02.
+- Git documentation, `gitdatamodel`. https://git-scm.com/docs/gitdatamodel.html,
+  verified 2026-08-02.
+- Git Book, "Git Internals. Git Objects".
+  https://git-scm.com/book/en/v2/Git-Internals-Git-Objects.html, verified
+  2026-08-02.
+- Rust crate documentation, `im_rc`. https://docs.rs/im-rc, verified
+  2026-08-02.
+
 ## Code examples
 
 Python. Persistent binary search tree using path copying.
@@ -939,48 +984,3 @@ fn main() {
 These examples use small structures to make the sharing visible. Production
 vectors and maps use wider nodes, balancing, collision handling, and batched
 editing APIs.
-
-## 18. References
-
-- James R. Driscoll, Neil Sarnak, Daniel D. Sleator, Robert E. Tarjan, "Making
-  Data Structures Persistent", *Journal of Computer and System Sciences*,
-  volume 38, issue 1, 1989, pages 86-124.
-  https://dblp.org/rec/journals/jcss/DriscollSST89, verified 2026-08-02.
-- CRC Press LLC, "persistent data structure", in Paul E. Black, editor,
-  *Dictionary of Algorithms and Data Structures*, NIST-hosted page.
-  https://xlinux.nist.gov/dads/HTML/persistentDataStructure.html, verified
-  2026-08-02.
-- Chris Okasaki, *Purely Functional Data Structures*, Cambridge University
-  Press, 1998, chapters 1 through 3. Cambridge Core contents page:
-  https://www.cambridge.org/core/books/purely-functional-data-structures/persistence/BEB36D6BF24898A7CA3A188DA5C35ED1,
-  verified 2026-08-02.
-- Phil Bagwell, "Ideal Hash Trees", 2001.
-  https://www.researchgate.net/publication/2378571_Ideal_Hash_Trees,
-  verified 2026-08-02.
-- Clojure Reference, "Data Structures".
-  https://clojure.org/reference/data_structures, verified 2026-08-02.
-- Clojure Reference, "Transient Data Structures".
-  https://clojure.org/reference/transients, verified 2026-08-02.
-- Clojure Reference, "Atoms". https://clojure.org/reference/atoms,
-  verified 2026-08-02.
-- Clojure Reference, "Refs and Transactions".
-  https://clojure.org/reference/refs, verified 2026-08-02.
-- Scala Documentation, "Concrete Immutable Collection Classes".
-  https://docs.scala-lang.org/overviews/collections-2.13/concrete-immutable-collection-classes.html,
-  verified 2026-08-02.
-- Scala API, `scala.collection.immutable.Vector`.
-  https://www.scala-lang.org/api/current/scala/collection/immutable/Vector.html,
-  verified 2026-08-02.
-- Immutable.js README, "Immutable collections for JavaScript".
-  https://github.com/immutable-js/immutable-js, verified 2026-08-02.
-- Vavr User Guide, version 0.11.0. https://docs.vavr.io/, verified
-  2026-08-02.
-- Redux FAQ, "Immutable Data". https://redux.js.org/faq/immutable-data,
-  verified 2026-08-02.
-- Git documentation, `gitdatamodel`. https://git-scm.com/docs/gitdatamodel.html,
-  verified 2026-08-02.
-- Git Book, "Git Internals. Git Objects".
-  https://git-scm.com/book/en/v2/Git-Internals-Git-Objects.html, verified
-  2026-08-02.
-- Rust crate documentation, `im_rc`. https://docs.rs/im-rc, verified
-  2026-08-02.

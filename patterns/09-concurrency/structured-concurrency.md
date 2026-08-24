@@ -772,6 +772,47 @@ and the observability advice in dimension 16 to log per-child duration and
 outcome should avoid including payload contents in those labels for the same
 reason any other structured log field should.
 
+## 18. References
+
+1. Nathaniel J. Smith. "Notes on structured concurrency, or. go statement
+   considered harmful." vorpus.org, 2018.
+   https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/
+   Verified 2026-08-02. Source of the go-statement analogy and the nursery
+   terminology's popularization in dimension 1 and dimension 2.
+2. Trio project. "Trio reference," sections on nurseries, `open_nursery`, and
+   `start_soon`. https://trio.readthedocs.io/en/stable/reference-core.html
+   Verified 2026-08-02. Source for the nursery implementation variant in
+   dimension 8 and the production-use citation in dimension 9.
+3. Python Software Foundation. "asyncio task groups," `asyncio.TaskGroup`.
+   https://docs.python.org/3/library/asyncio-task.html#task-groups
+   Verified 2026-08-02. Source for the Python 3.11 `TaskGroup` behaviour,
+   exception-group aggregation, and the cancellation-on-first-failure policy
+   in dimension 8 and dimension 9.
+4. Apple. Swift Standard Library documentation, `TaskGroup`.
+   https://developer.apple.com/documentation/swift/taskgroup
+   Verified 2026-08-02. Source for the Swift Concurrency implementation
+   variant in dimension 8 and the production-use citation in dimension 9.
+5. Oracle. Java SE 25 API Specification,
+   `java.util.concurrent.StructuredTaskScope`.
+   https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/StructuredTaskScope.html
+   Verified 2026-08-02. Source for the JEP 505 `StructuredTaskScope` shape,
+   the owner-thread enforcement, and the `Joiner` policies in dimension 8,
+   dimension 9, and dimension 11.
+6. Go project. `golang.org/x/sync/errgroup` package documentation.
+   https://pkg.go.dev/golang.org/x/sync/errgroup
+   Verified 2026-08-02. Source for the `errgroup.Group`, `WithContext`, `Go`,
+   and `Wait` behaviour in dimension 8 and the Go code sample.
+7. JetBrains. Kotlin documentation, "Coroutines basics," section "Structured
+   concurrency." https://kotlinlang.org/docs/coroutines-basics.html
+   Verified 2026-08-02. Source for the `coroutineScope` implementation
+   variant in dimension 8, the attribution of the Kotlin design to Roman
+   Elizarov in dimension 1, and the production-use citation in dimension 9.
+8. Wikipedia contributors. "Structured concurrency."
+   https://en.wikipedia.org/wiki/Structured_concurrency
+   Verified 2026-08-02. Used only to corroborate the historical attribution
+   of the term to Martin Sustrik's 2016 libdill design notes in dimension 1,
+   not as a source of technical explanation.
+
 ## Code examples
 
 Four languages, chosen because each represents a materially different shape
@@ -1034,44 +1075,3 @@ but nothing in the type system stops a developer from writing a bare
 would compile cleanly and silently escape the group's guarantee. the real
 `golang.org/x/sync/errgroup` package has the same property, cited with its
 actual API in dimension 8 and dimension 9.
-
-## 18. References
-
-1. Nathaniel J. Smith. "Notes on structured concurrency, or. go statement
-   considered harmful." vorpus.org, 2018.
-   https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/
-   Verified 2026-08-02. Source of the go-statement analogy and the nursery
-   terminology's popularization in dimension 1 and dimension 2.
-2. Trio project. "Trio reference," sections on nurseries, `open_nursery`, and
-   `start_soon`. https://trio.readthedocs.io/en/stable/reference-core.html
-   Verified 2026-08-02. Source for the nursery implementation variant in
-   dimension 8 and the production-use citation in dimension 9.
-3. Python Software Foundation. "asyncio task groups," `asyncio.TaskGroup`.
-   https://docs.python.org/3/library/asyncio-task.html#task-groups
-   Verified 2026-08-02. Source for the Python 3.11 `TaskGroup` behaviour,
-   exception-group aggregation, and the cancellation-on-first-failure policy
-   in dimension 8 and dimension 9.
-4. Apple. Swift Standard Library documentation, `TaskGroup`.
-   https://developer.apple.com/documentation/swift/taskgroup
-   Verified 2026-08-02. Source for the Swift Concurrency implementation
-   variant in dimension 8 and the production-use citation in dimension 9.
-5. Oracle. Java SE 25 API Specification,
-   `java.util.concurrent.StructuredTaskScope`.
-   https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/StructuredTaskScope.html
-   Verified 2026-08-02. Source for the JEP 505 `StructuredTaskScope` shape,
-   the owner-thread enforcement, and the `Joiner` policies in dimension 8,
-   dimension 9, and dimension 11.
-6. Go project. `golang.org/x/sync/errgroup` package documentation.
-   https://pkg.go.dev/golang.org/x/sync/errgroup
-   Verified 2026-08-02. Source for the `errgroup.Group`, `WithContext`, `Go`,
-   and `Wait` behaviour in dimension 8 and the Go code sample.
-7. JetBrains. Kotlin documentation, "Coroutines basics," section "Structured
-   concurrency." https://kotlinlang.org/docs/coroutines-basics.html
-   Verified 2026-08-02. Source for the `coroutineScope` implementation
-   variant in dimension 8, the attribution of the Kotlin design to Roman
-   Elizarov in dimension 1, and the production-use citation in dimension 9.
-8. Wikipedia contributors. "Structured concurrency."
-   https://en.wikipedia.org/wiki/Structured_concurrency
-   Verified 2026-08-02. Used only to corroborate the historical attribution
-   of the term to Martin Sustrik's 2016 libdill design notes in dimension 1,
-   not as a source of technical explanation.

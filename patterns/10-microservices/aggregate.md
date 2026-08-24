@@ -698,6 +698,70 @@ encryption at rest, all of which are the responsibility of the surrounding
 service and its persistence layer, not of the aggregate's modeling
 discipline.
 
+## 18. References
+
+1. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Tactical patterns
+   chapter, source of the Aggregate, Aggregate Root, Entity, and Value Object
+   definitions used throughout dimensions 1, 5, and 6.
+2. Vaughn Vernon. *Implementing Domain-Driven Design*. Addison-Wesley, 2013.
+   ISBN 978-0-321-83457-7. Chapter 10, Aggregates. Source of the "design small
+   aggregates" and "reference other aggregates by identity only" rules used
+   in dimensions 1, 4, and 11.
+3. Wikipedia contributors. "Domain-driven design".
+   https://en.wikipedia.org/wiki/Domain-driven_design
+   Verified 2026-08-02. Used to confirm the aggregate root reference rule and
+   the citation to Evans 2003, quoted in dimension 1.
+4. Martin Fowler. "DDD_Aggregate".
+   https://martinfowler.com/bliki/DDD_Aggregate.html
+   Verified 2026-08-02. Source of the working definition, "a cluster of
+   domain objects that can be treated as a single unit," and the
+   root-only-reference rule quoted in dimension 1.
+5. Chris Richardson. "Pattern. Aggregate". microservices.io.
+   https://microservices.io/patterns/data/aggregate.html
+   Verified 2026-08-02. Source of the framework-neutral definition, "a graph
+   of objects that can be treated as a unit," quoted in dimension 1, and the
+   pointer to Richardson's book for the microservices-specific argument.
+6. Chris Richardson. *Microservices Patterns*. Manning, 2019.
+   ISBN 978-1-61729-454-9. Source of the argument that an aggregate is the
+   largest unit updatable inside one local ACID transaction in a
+   microservices architecture, used in dimension 1 and dimension 3.
+7. Microsoft. "Use Tactical DDD to Design Microservices". Azure Architecture
+   Center.
+   https://learn.microsoft.com/en-us/azure/architecture/microservices/model/tactical-domain-driven-design
+   Verified 2026-08-02. Source of the drone delivery `Delivery`, `Package`,
+   `Drone`, `Account` aggregate example, the "design small aggregates" and
+   "reference other aggregates by identity only" restatement, and the "no
+   smaller than an aggregate and no larger than a bounded context" sizing
+   principle, used in dimensions 8, 9, and 12.
+8. Microsoft. "Use Domain Analysis to Model Microservices". Azure
+   Architecture Center.
+   https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
+   Verified 2026-08-02. Used for the bounded context and strategic DDD
+   context surrounding tactical patterns, referenced in dimension 2.
+9. Microsoft. `eShopOnContainers` source repository, `Order.cs`.
+   https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs
+   Verified 2026-08-02. Source of the `IAggregateRoot` and `OrderAggregate`
+   naming used as a named production use in dimension 9.
+10. Microsoft. ".NET Microservices Architecture for Containerized .NET
+    Applications", "Applying simplified CQRS and DDD patterns in a
+    microservice".
+    https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns
+    Verified 2026-08-02. Source of the CQRS description of the
+    eShopOnContainers ordering microservice quoted in dimension 9, and the
+    relationship between CQRS and aggregates discussed in dimension 13.
+11. Microsoft. "CQRS pattern". Azure Architecture Center.
+    https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
+    Verified 2026-08-02. Source of the direct statement that the CQRS write
+    model treats "a set of associated objects as a single unit for data
+    changes, which is known as an aggregate in domain-driven design
+    terminology," quoted in dimension 13.
+12. AxonIQ. "Axon Framework".
+    https://www.axoniq.io/products/axon-framework
+    Verified 2026-08-02. Source of the Axon Framework named production use
+    in dimension 9 and the event-sourced aggregate variant description in
+    dimension 8.
+
 ## Code examples
 
 Three languages that show the pattern in genuinely different idioms.
@@ -1133,67 +1197,3 @@ which is idiomatic Go, and every caller in `PlaceOrder` and `main` checks that
 error immediately rather than letting an invalid state propagate silently,
 the same discipline the guard clauses enforce in the other two languages
 through exceptions instead.
-
-## 18. References
-
-1. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Tactical patterns
-   chapter, source of the Aggregate, Aggregate Root, Entity, and Value Object
-   definitions used throughout dimensions 1, 5, and 6.
-2. Vaughn Vernon. *Implementing Domain-Driven Design*. Addison-Wesley, 2013.
-   ISBN 978-0-321-83457-7. Chapter 10, Aggregates. Source of the "design small
-   aggregates" and "reference other aggregates by identity only" rules used
-   in dimensions 1, 4, and 11.
-3. Wikipedia contributors. "Domain-driven design".
-   https://en.wikipedia.org/wiki/Domain-driven_design
-   Verified 2026-08-02. Used to confirm the aggregate root reference rule and
-   the citation to Evans 2003, quoted in dimension 1.
-4. Martin Fowler. "DDD_Aggregate".
-   https://martinfowler.com/bliki/DDD_Aggregate.html
-   Verified 2026-08-02. Source of the working definition, "a cluster of
-   domain objects that can be treated as a single unit," and the
-   root-only-reference rule quoted in dimension 1.
-5. Chris Richardson. "Pattern. Aggregate". microservices.io.
-   https://microservices.io/patterns/data/aggregate.html
-   Verified 2026-08-02. Source of the framework-neutral definition, "a graph
-   of objects that can be treated as a unit," quoted in dimension 1, and the
-   pointer to Richardson's book for the microservices-specific argument.
-6. Chris Richardson. *Microservices Patterns*. Manning, 2019.
-   ISBN 978-1-61729-454-9. Source of the argument that an aggregate is the
-   largest unit updatable inside one local ACID transaction in a
-   microservices architecture, used in dimension 1 and dimension 3.
-7. Microsoft. "Use Tactical DDD to Design Microservices". Azure Architecture
-   Center.
-   https://learn.microsoft.com/en-us/azure/architecture/microservices/model/tactical-domain-driven-design
-   Verified 2026-08-02. Source of the drone delivery `Delivery`, `Package`,
-   `Drone`, `Account` aggregate example, the "design small aggregates" and
-   "reference other aggregates by identity only" restatement, and the "no
-   smaller than an aggregate and no larger than a bounded context" sizing
-   principle, used in dimensions 8, 9, and 12.
-8. Microsoft. "Use Domain Analysis to Model Microservices". Azure
-   Architecture Center.
-   https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
-   Verified 2026-08-02. Used for the bounded context and strategic DDD
-   context surrounding tactical patterns, referenced in dimension 2.
-9. Microsoft. `eShopOnContainers` source repository, `Order.cs`.
-   https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs
-   Verified 2026-08-02. Source of the `IAggregateRoot` and `OrderAggregate`
-   naming used as a named production use in dimension 9.
-10. Microsoft. ".NET Microservices Architecture for Containerized .NET
-    Applications", "Applying simplified CQRS and DDD patterns in a
-    microservice".
-    https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns
-    Verified 2026-08-02. Source of the CQRS description of the
-    eShopOnContainers ordering microservice quoted in dimension 9, and the
-    relationship between CQRS and aggregates discussed in dimension 13.
-11. Microsoft. "CQRS pattern". Azure Architecture Center.
-    https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
-    Verified 2026-08-02. Source of the direct statement that the CQRS write
-    model treats "a set of associated objects as a single unit for data
-    changes, which is known as an aggregate in domain-driven design
-    terminology," quoted in dimension 13.
-12. AxonIQ. "Axon Framework".
-    https://www.axoniq.io/products/axon-framework
-    Verified 2026-08-02. Source of the Axon Framework named production use
-    in dimension 9 and the event-sourced aggregate variant description in
-    dimension 8.

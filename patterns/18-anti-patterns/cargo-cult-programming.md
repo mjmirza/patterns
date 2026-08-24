@@ -709,6 +709,17 @@ regulatory regime, a different data classification, or a different user
 population can silently violate its own obligations while running code
 that looks, and was, entirely correct somewhere else.
 
+## 18. References
+
+- Wikipedia. ["Cargo cult programming"](https://en.wikipedia.org/wiki/Cargo_cult_programming). Verified 2026-08-02. Used for the lead definition, the Jargon File version 2.5.1, January 1991 attribution, the Acar et al. citation, and the McConnell citation details.
+- Wikipedia. ["Cargo cult science"](https://en.wikipedia.org/wiki/Cargo_cult_science). Verified 2026-08-02. Used for Feynman's 1974 Caltech commencement address, its publication as "Cargo Cult Science" in *Engineering and Science*, volume 37, number 7, June 1974, pages 10 through 13, and its reprinting in *Surely You're Joking, Mr. Feynman*, W. W. Norton, 1985, pages 338 through 346.
+- Feynman, Richard P., and Ralph Leighton. *Surely You're Joking, Mr. Feynman. Adventures of a Curious Character*. W. W. Norton and Company, 1985. Chapter "Cargo Cult Science," pages 338 through 346, per Wikipedia's bibliographic entry, verified 2026-08-02.
+- McConnell, Steve. "Cargo Cult Software Engineering." *IEEE Software*, volume 17, issue 2, March and April 2000, pages 11 through 13, per Wikipedia's bibliographic entry, verified 2026-08-02.
+- McConnell, Steve. *Professional Software Development*. Addison-Wesley, 2003, pages 23 through 26, per Wikipedia's bibliographic entry, verified 2026-08-02.
+- Acar, Yasemin, Michael Backes, Sascha Fahl, Doowon Kim, Michelle L. Mazurek, and Christian Stransky. "You Get Where You're Looking For. The Impact of Information Sources on Code Security." 2016 IEEE Symposium on Security and Privacy, San Jose, California, 2016, pages 289 through 305. PDF confirmed reachable at https://www.cs.umd.edu/class/fall2017/cmsc818O/papers/get-where-look.pdf, verified 2026-08-02. Bibliographic detail and findings summary cross-checked against Wikipedia's citation of the same paper, verified 2026-08-02.
+- ESLint. ["no-unused-vars" rule documentation](https://eslint.org/docs/latest/rules/no-unused-vars). Verified 2026-08-02. Used for the rule's stated purpose regarding leftover code from incomplete refactoring.
+- Raymond, Eric S., editor. *The New Hacker's Dictionary*. 3rd edition, MIT Press, 1996. Print publication of the Jargon File, referenced for the term's lineage per Wikipedia's citation, verified 2026-08-02.
+
 ## Code examples
 
 The failure shown next is a common, real shape of snippet-level
@@ -940,14 +951,3 @@ during authoring. `python3` ran both Python scripts directly. `npx tsc`
 compiled both TypeScript files to CommonJS and `node` ran the output.
 `go run` compiled and ran both Go files. Every run reproduced the output
 shown.
-
-## 18. References
-
-- Wikipedia. ["Cargo cult programming"](https://en.wikipedia.org/wiki/Cargo_cult_programming). Verified 2026-08-02. Used for the lead definition, the Jargon File version 2.5.1, January 1991 attribution, the Acar et al. citation, and the McConnell citation details.
-- Wikipedia. ["Cargo cult science"](https://en.wikipedia.org/wiki/Cargo_cult_science). Verified 2026-08-02. Used for Feynman's 1974 Caltech commencement address, its publication as "Cargo Cult Science" in *Engineering and Science*, volume 37, number 7, June 1974, pages 10 through 13, and its reprinting in *Surely You're Joking, Mr. Feynman*, W. W. Norton, 1985, pages 338 through 346.
-- Feynman, Richard P., and Ralph Leighton. *Surely You're Joking, Mr. Feynman. Adventures of a Curious Character*. W. W. Norton and Company, 1985. Chapter "Cargo Cult Science," pages 338 through 346, per Wikipedia's bibliographic entry, verified 2026-08-02.
-- McConnell, Steve. "Cargo Cult Software Engineering." *IEEE Software*, volume 17, issue 2, March and April 2000, pages 11 through 13, per Wikipedia's bibliographic entry, verified 2026-08-02.
-- McConnell, Steve. *Professional Software Development*. Addison-Wesley, 2003, pages 23 through 26, per Wikipedia's bibliographic entry, verified 2026-08-02.
-- Acar, Yasemin, Michael Backes, Sascha Fahl, Doowon Kim, Michelle L. Mazurek, and Christian Stransky. "You Get Where You're Looking For. The Impact of Information Sources on Code Security." 2016 IEEE Symposium on Security and Privacy, San Jose, California, 2016, pages 289 through 305. PDF confirmed reachable at https://www.cs.umd.edu/class/fall2017/cmsc818O/papers/get-where-look.pdf, verified 2026-08-02. Bibliographic detail and findings summary cross-checked against Wikipedia's citation of the same paper, verified 2026-08-02.
-- ESLint. ["no-unused-vars" rule documentation](https://eslint.org/docs/latest/rules/no-unused-vars). Verified 2026-08-02. Used for the rule's stated purpose regarding leftover code from incomplete refactoring.
-- Raymond, Eric S., editor. *The New Hacker's Dictionary*. 3rd edition, MIT Press, 1996. Print publication of the Jargon File, referenced for the term's lineage per Wikipedia's citation, verified 2026-08-02.

@@ -779,6 +779,61 @@ strategy has to be implemented, because it is the one code path guaranteed to
 touch every historical record of the affected Aggregate on its way back into
 memory.
 
+## 18. References
+
+- Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+  Software*. Addison-Wesley, 2003. Chapter 6, "The Life Cycle of a Domain
+  Object", section "Factories". Original source for the pattern, its
+  placement alongside Aggregate and Repository, and the atomicity and
+  invariant-enforcement rules quoted in dimensions 3 and 4.
+- rudradixit, "Chapter 6, The Lifecycle Of A Domain Object", GitHub wiki
+  summary of Evans's chapter, used here for verified direct-quote wording of
+  Evans's Factory rules. Verified 2026-08-02.
+  https://github.com/rudradixit/domain-driven-design-notes/wiki/Chapter-6-The-Lifecycle-Of-A-Domain-Object
+- Herberto Graca. "DDD.6, The lifecycle of a domain object". Independent
+  summary of Evans's Chapter 6, used here for the three-way Factory Method,
+  Abstract Factory Class, Builder Class classification in dimensions 1 and
+  8. Verified 2026-08-02.
+  https://herbertograca.com/2015/10/04/domain-driven-design-by-eric-evans-chap-6-the-lifecycle-of-a-domain-object/
+- Vaughn Vernon. *Implementing Domain-Driven Design*. Addison-Wesley, 2013.
+  Chapter 11, "Factories", page 389. Section "Factory Method on Aggregate
+  Root", page 391, `Product.planBacklogItem()` example. Source for the
+  naming discipline that most real Factories are methods on an existing
+  Aggregate Root, used in dimensions 1, 3, and 13.
+- InformIT. "Implementing Domain-Driven Design, Aggregates, Using Aggregates
+  in the Scrum Core Domain". Excerpt corroborating the
+  `planBacklogItem()` example and its Factory Method characterization.
+  Verified 2026-08-02.
+  https://www.informit.com/articles/article.aspx?p=2020371
+- O'Reilly. "Chapter 10. Aggregates", table of contents for *Implementing
+  Domain-Driven Design*, used to confirm chapter and page numbering.
+  Verified 2026-08-02.
+  https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/ch10.html
+- Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design
+  Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
+  1994. Chapter 3, Creational Patterns. Source for the ancestor Factory
+  Method and Abstract Factory patterns referenced in dimensions 1 and 13.
+  See this repository's `01-design-patterns-gof/factory-method.md` and
+  `01-design-patterns-gof/abstract-factory.md` entries for full treatment.
+- AxonIQ. "AggregateFactory (Axon Framework 2.0.6 API)". Java framework API
+  documentation, used as a named production use in dimension 9 and a failure
+  mode source in dimension 11. Verified 2026-08-02.
+  https://apidocs.axoniq.io/2.0/org/axonframework/eventsourcing/AggregateFactory.html
+- EventFlow. "Aggregates", official documentation for the open-source
+  EventFlow CQRS and event-sourcing framework for .NET. Used as a named
+  production use in dimension 9. Verified 2026-08-02.
+  https://geteventflow.net/basics/aggregates/
+- EventFlow. GitHub repository, github.com/eventflow/EventFlow. Confirms the
+  framework's identity, purpose, and open-source status cited in dimension
+  9. Verified 2026-08-02.
+  https://github.com/eventflow/EventFlow
+- Broadway. GitHub repository, github.com/broadway/broadway. Open-source PHP
+  CQRS and event-sourcing framework, confirms its `AggregateFactory`
+  component and its stated lineage from Axon Framework and prior CQRS
+  frameworks, used as a named production use in dimension 9. Verified
+  2026-08-02.
+  https://github.com/broadway/broadway
+
 ## Code examples
 
 TypeScript, Factory Method on Aggregate Root, matching Vernon's shape where an
@@ -1155,58 +1210,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-- Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-  Software*. Addison-Wesley, 2003. Chapter 6, "The Life Cycle of a Domain
-  Object", section "Factories". Original source for the pattern, its
-  placement alongside Aggregate and Repository, and the atomicity and
-  invariant-enforcement rules quoted in dimensions 3 and 4.
-- rudradixit, "Chapter 6, The Lifecycle Of A Domain Object", GitHub wiki
-  summary of Evans's chapter, used here for verified direct-quote wording of
-  Evans's Factory rules. Verified 2026-08-02.
-  https://github.com/rudradixit/domain-driven-design-notes/wiki/Chapter-6-The-Lifecycle-Of-A-Domain-Object
-- Herberto Graca. "DDD.6, The lifecycle of a domain object". Independent
-  summary of Evans's Chapter 6, used here for the three-way Factory Method,
-  Abstract Factory Class, Builder Class classification in dimensions 1 and
-  8. Verified 2026-08-02.
-  https://herbertograca.com/2015/10/04/domain-driven-design-by-eric-evans-chap-6-the-lifecycle-of-a-domain-object/
-- Vaughn Vernon. *Implementing Domain-Driven Design*. Addison-Wesley, 2013.
-  Chapter 11, "Factories", page 389. Section "Factory Method on Aggregate
-  Root", page 391, `Product.planBacklogItem()` example. Source for the
-  naming discipline that most real Factories are methods on an existing
-  Aggregate Root, used in dimensions 1, 3, and 13.
-- InformIT. "Implementing Domain-Driven Design, Aggregates, Using Aggregates
-  in the Scrum Core Domain". Excerpt corroborating the
-  `planBacklogItem()` example and its Factory Method characterization.
-  Verified 2026-08-02.
-  https://www.informit.com/articles/article.aspx?p=2020371
-- O'Reilly. "Chapter 10. Aggregates", table of contents for *Implementing
-  Domain-Driven Design*, used to confirm chapter and page numbering.
-  Verified 2026-08-02.
-  https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/ch10.html
-- Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design
-  Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
-  1994. Chapter 3, Creational Patterns. Source for the ancestor Factory
-  Method and Abstract Factory patterns referenced in dimensions 1 and 13.
-  See this repository's `01-design-patterns-gof/factory-method.md` and
-  `01-design-patterns-gof/abstract-factory.md` entries for full treatment.
-- AxonIQ. "AggregateFactory (Axon Framework 2.0.6 API)". Java framework API
-  documentation, used as a named production use in dimension 9 and a failure
-  mode source in dimension 11. Verified 2026-08-02.
-  https://apidocs.axoniq.io/2.0/org/axonframework/eventsourcing/AggregateFactory.html
-- EventFlow. "Aggregates", official documentation for the open-source
-  EventFlow CQRS and event-sourcing framework for .NET. Used as a named
-  production use in dimension 9. Verified 2026-08-02.
-  https://geteventflow.net/basics/aggregates/
-- EventFlow. GitHub repository, github.com/eventflow/EventFlow. Confirms the
-  framework's identity, purpose, and open-source status cited in dimension
-  9. Verified 2026-08-02.
-  https://github.com/eventflow/EventFlow
-- Broadway. GitHub repository, github.com/broadway/broadway. Open-source PHP
-  CQRS and event-sourcing framework, confirms its `AggregateFactory`
-  component and its stated lineage from Axon Framework and prior CQRS
-  frameworks, used as a named production use in dimension 9. Verified
-  2026-08-02.
-  https://github.com/broadway/broadway

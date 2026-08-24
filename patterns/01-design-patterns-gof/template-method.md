@@ -1077,6 +1077,96 @@ frequently the axis the variants vary along. Where the name carries that, the
 telemetry label is attributable data and inherits the retention and access rules
 of any other identifier.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Template Method,
+   for the intent, the participants, the hook and primitive operation
+   distinction, and the Hollywood Principle framing of the inverted control
+   structure. Chapter 1, section 1.6 "Inheritance versus Composition", page 20,
+   for the "Favor object composition over class inheritance" principle and the
+   white-box against black-box reuse distinction used in dimension 12.
+2. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018.
+   ISBN 978-0-13-468599-1. Item 19, "Design and document for inheritance or else
+   prohibit it". Source of the prohibition on constructors invoking overridable
+   methods, of the requirement to document self-use of overridable methods, and
+   of the advice to prohibit subclassing where inheritance was not designed for.
+3. Leonid Mikhajlov, Emil Sekerinski. "A Study of the Fragile Base Class
+   Problem". Proceedings of the 12th European Conference on Object-Oriented
+   Programming, ECOOP 1998. Lecture Notes in Computer Science volume 1445,
+   pages 355 to 382. DOI 10.1007/BFb0054099.
+   https://link.springer.com/chapter/10.1007/BFb0054099
+   Verified 2026-08-02. SpringerLink bounces this link through an identity
+   provider before serving the record, so the DOI above is the stable
+   identifier to resolve if the direct link does not open. Source of the fragile
+   base class characterisation in dimension 11.
+4. Eclipse Foundation. *Jakarta Servlet 6.0 API documentation*,
+   `jakarta.servlet.http.HttpServlet`.
+   https://jakarta.ee/specifications/servlet/6.0/apidocs/jakarta.servlet/jakarta/servlet/http/httpservlet
+   Verified 2026-08-02. Source for the `service()` dispatch production use and
+   for the guidance that subclasses override `doXxx` rather than `service`.
+5. Python Software Foundation. *Python 3 documentation*, `unittest`.
+   https://docs.python.org/3/library/unittest.html
+   Verified 2026-08-02. Source for the `TestCase.run()` fixture lifecycle and
+   the documented `setUp` and `tearDown` ordering and failure semantics.
+6. Django Software Foundation. *Django 5.2 documentation*, "Base views".
+   https://docs.djangoproject.com/en/5.2/ref/class-based-views/base/
+   Verified 2026-08-02. Source for `View.dispatch()` verb delegation and the
+   `http_method_not_allowed()` hook.
+7. VMware Tanzu. *Spring Framework API documentation*,
+   `org.springframework.context.support.AbstractApplicationContext`.
+   https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/support/AbstractApplicationContext.html
+   Verified 2026-08-02. Source for the `refresh()` skeleton, the explicit
+   Template Method attribution in the class documentation, and the abstract
+   methods concrete subclasses supply.
+8. Oracle. *Java SE 21 API Specification*, `java.util.AbstractList`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/AbstractList.html
+   Verified 2026-08-02. Source for the skeletal implementation production use
+   and the exact set of primitive operations a subclass supplies.
+9. Rust project. *Rust standard library documentation*, `std::iter::Iterator`.
+   https://doc.rust-lang.org/std/iter/trait.Iterator.html
+   Verified 2026-08-02. Source for the required-method against provided-method
+   split used as the trait-based variant in dimension 8 and the production use
+   in dimension 9.
+10. Microsoft. *.NET API documentation*,
+    `Microsoft.Extensions.Hosting.BackgroundService`.
+    https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.hosting.backgroundservice
+    Verified 2026-08-02. Source for the hosted-service lifecycle production use
+    and the description of `ExecuteAsync`.
+11. Wikipedia contributors. "Template method pattern".
+    https://en.wikipedia.org/wiki/Template_method_pattern
+    Verified 2026-08-02. Used to confirm the GoF category placement, the intent
+    wording, and the description of hook methods as helper methods with empty
+    bodies that give a place to hang variant implementations.
+12. SourceMaking. "Template Method Design Pattern".
+    https://sourcemaking.com/design_patterns/template_method
+    Verified 2026-08-02. Used to confirm the labelling of the inverted control
+    structure as the Hollywood Principle in the context of this pattern, and the
+    framework framing of invariant parts plus customisation placeholders.
+13. Brandon Rhodes. "The Composition Over Inheritance Principle", Python Patterns
+    Guide. https://python-patterns.guide/gang-of-four/composition-over-inheritance/
+    Verified 2026-08-02. Used to corroborate the page 20 location of the GoF
+    composition principle and the white-box against black-box reuse framing.
+14. Apple. *The Swift Programming Language*, Initialization, section "Two-Phase
+    Initialization".
+    https://docs.swift.org/swift-book/documentation/the-swift-programming-language/initialization/
+    Verified 2026-08-02 against the book's source at
+    https://github.com/swiftlang/swift-book/blob/main/TSPL.docc/LanguageGuide/Initialization.md
+    Source of safety checks 1 and 4 quoted in dimension 7, which are the reason
+    the constructor hazard cannot occur in Swift.
+15. Microsoft. "Execution order between base and derived inline instance field
+    initializers", Microsoft Learn archived engineering blog, 2007.
+    https://learn.microsoft.com/en-us/archive/blogs/marcod/execution-order-between-base-and-derived-inline-instance-field-initializers
+    Verified 2026-08-02. Source for the C# ordering in dimension 7, that a
+    derived class's inline field initialisers run before the base constructor,
+    which is the reverse of Java. Specified in ECMA-334, the C# language
+    specification, in the instance constructors section.
+16. David Sauvage. *Effective Java 3rd edition summary*.
+    https://github.com/david-sauvage/effective-java-summary/blob/master/README.md
+    Verified 2026-08-02. Used in dimension 7 as a publicly readable restatement
+    of Item 19's prohibition on calling overridable methods from a constructor.
+
 ## Code examples
 
 Four languages, chosen because each shows a different structural answer to the
@@ -1490,93 +1580,3 @@ JDK runtime, so the Java code is hand-checked against the language rules only.
 The Go sample is deliberately absent for the reason given above. The TypeScript
 higher-order sample uses optional chaining and nullish coalescing, so it needs
 TypeScript 3.7 or later.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Template Method,
-   for the intent, the participants, the hook and primitive operation
-   distinction, and the Hollywood Principle framing of the inverted control
-   structure. Chapter 1, section 1.6 "Inheritance versus Composition", page 20,
-   for the "Favor object composition over class inheritance" principle and the
-   white-box against black-box reuse distinction used in dimension 12.
-2. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018.
-   ISBN 978-0-13-468599-1. Item 19, "Design and document for inheritance or else
-   prohibit it". Source of the prohibition on constructors invoking overridable
-   methods, of the requirement to document self-use of overridable methods, and
-   of the advice to prohibit subclassing where inheritance was not designed for.
-3. Leonid Mikhajlov, Emil Sekerinski. "A Study of the Fragile Base Class
-   Problem". Proceedings of the 12th European Conference on Object-Oriented
-   Programming, ECOOP 1998. Lecture Notes in Computer Science volume 1445,
-   pages 355 to 382. DOI 10.1007/BFb0054099.
-   https://link.springer.com/chapter/10.1007/BFb0054099
-   Verified 2026-08-02. SpringerLink bounces this link through an identity
-   provider before serving the record, so the DOI above is the stable
-   identifier to resolve if the direct link does not open. Source of the fragile
-   base class characterisation in dimension 11.
-4. Eclipse Foundation. *Jakarta Servlet 6.0 API documentation*,
-   `jakarta.servlet.http.HttpServlet`.
-   https://jakarta.ee/specifications/servlet/6.0/apidocs/jakarta.servlet/jakarta/servlet/http/httpservlet
-   Verified 2026-08-02. Source for the `service()` dispatch production use and
-   for the guidance that subclasses override `doXxx` rather than `service`.
-5. Python Software Foundation. *Python 3 documentation*, `unittest`.
-   https://docs.python.org/3/library/unittest.html
-   Verified 2026-08-02. Source for the `TestCase.run()` fixture lifecycle and
-   the documented `setUp` and `tearDown` ordering and failure semantics.
-6. Django Software Foundation. *Django 5.2 documentation*, "Base views".
-   https://docs.djangoproject.com/en/5.2/ref/class-based-views/base/
-   Verified 2026-08-02. Source for `View.dispatch()` verb delegation and the
-   `http_method_not_allowed()` hook.
-7. VMware Tanzu. *Spring Framework API documentation*,
-   `org.springframework.context.support.AbstractApplicationContext`.
-   https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/support/AbstractApplicationContext.html
-   Verified 2026-08-02. Source for the `refresh()` skeleton, the explicit
-   Template Method attribution in the class documentation, and the abstract
-   methods concrete subclasses supply.
-8. Oracle. *Java SE 21 API Specification*, `java.util.AbstractList`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/AbstractList.html
-   Verified 2026-08-02. Source for the skeletal implementation production use
-   and the exact set of primitive operations a subclass supplies.
-9. Rust project. *Rust standard library documentation*, `std::iter::Iterator`.
-   https://doc.rust-lang.org/std/iter/trait.Iterator.html
-   Verified 2026-08-02. Source for the required-method against provided-method
-   split used as the trait-based variant in dimension 8 and the production use
-   in dimension 9.
-10. Microsoft. *.NET API documentation*,
-    `Microsoft.Extensions.Hosting.BackgroundService`.
-    https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.hosting.backgroundservice
-    Verified 2026-08-02. Source for the hosted-service lifecycle production use
-    and the description of `ExecuteAsync`.
-11. Wikipedia contributors. "Template method pattern".
-    https://en.wikipedia.org/wiki/Template_method_pattern
-    Verified 2026-08-02. Used to confirm the GoF category placement, the intent
-    wording, and the description of hook methods as helper methods with empty
-    bodies that give a place to hang variant implementations.
-12. SourceMaking. "Template Method Design Pattern".
-    https://sourcemaking.com/design_patterns/template_method
-    Verified 2026-08-02. Used to confirm the labelling of the inverted control
-    structure as the Hollywood Principle in the context of this pattern, and the
-    framework framing of invariant parts plus customisation placeholders.
-13. Brandon Rhodes. "The Composition Over Inheritance Principle", Python Patterns
-    Guide. https://python-patterns.guide/gang-of-four/composition-over-inheritance/
-    Verified 2026-08-02. Used to corroborate the page 20 location of the GoF
-    composition principle and the white-box against black-box reuse framing.
-14. Apple. *The Swift Programming Language*, Initialization, section "Two-Phase
-    Initialization".
-    https://docs.swift.org/swift-book/documentation/the-swift-programming-language/initialization/
-    Verified 2026-08-02 against the book's source at
-    https://github.com/swiftlang/swift-book/blob/main/TSPL.docc/LanguageGuide/Initialization.md
-    Source of safety checks 1 and 4 quoted in dimension 7, which are the reason
-    the constructor hazard cannot occur in Swift.
-15. Microsoft. "Execution order between base and derived inline instance field
-    initializers", Microsoft Learn archived engineering blog, 2007.
-    https://learn.microsoft.com/en-us/archive/blogs/marcod/execution-order-between-base-and-derived-inline-instance-field-initializers
-    Verified 2026-08-02. Source for the C# ordering in dimension 7, that a
-    derived class's inline field initialisers run before the base constructor,
-    which is the reverse of Java. Specified in ECMA-334, the C# language
-    specification, in the instance constructors section.
-16. David Sauvage. *Effective Java 3rd edition summary*.
-    https://github.com/david-sauvage/effective-java-summary/blob/master/README.md
-    Verified 2026-08-02. Used in dimension 7 as a publicly readable restatement
-    of Item 19's prohibition on calling overridable methods from a constructor.

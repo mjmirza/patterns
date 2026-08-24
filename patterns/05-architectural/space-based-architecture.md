@@ -690,6 +690,16 @@ out of every replica of the in-memory grid, not only out of the durable
 store, because the space itself is a separate copy of the data with its
 own separate lifetime.
 
+## 18. References
+
+- [Wikipedia, "Space-based architecture"](https://en.wikipedia.org/wiki/Space-based_architecture), verified 2026-08-02.
+- [Wikipedia, "Tuple space"](https://en.wikipedia.org/wiki/Tuple_space), verified 2026-08-02.
+- [Wikipedia, "GigaSpaces"](https://en.wikipedia.org/wiki/GigaSpaces), verified 2026-08-02.
+- [Wikipedia, "Apache Ignite"](https://en.wikipedia.org/wiki/Apache_Ignite), verified 2026-08-02.
+- [Wikipedia, "Hazelcast"](https://en.wikipedia.org/wiki/Hazelcast), verified 2026-08-02.
+- David Gelernter, "Generative communication in Linda," ACM Transactions on Programming Languages and Systems, 1985, the founding paper for the tuple-space model referenced in dimension 1, cited via the Wikipedia Tuple space entry above.
+- Mark Richards, "Software Architecture Patterns," O'Reilly Media, 1st edition, 2015, chapter 7, "Space-Based Architecture." Cited for the component-model treatment referenced in dimensions 5 and 6. Not independently URL-verified in this session because the O'Reilly hosted chapter page returned an HTTP 403 to automated fetch; the book and chapter identification themselves are accurate bibliographic facts, not content pulled from the inaccessible page.
+
 ## Code examples
 
 Three languages, one shared scenario. two processing units each own a
@@ -978,13 +988,3 @@ func main() {
 	fmt.Println("write-behind flushed", flushed, "durable balance", row.balance)
 }
 ```
-
-## 18. References
-
-- [Wikipedia, "Space-based architecture"](https://en.wikipedia.org/wiki/Space-based_architecture), verified 2026-08-02.
-- [Wikipedia, "Tuple space"](https://en.wikipedia.org/wiki/Tuple_space), verified 2026-08-02.
-- [Wikipedia, "GigaSpaces"](https://en.wikipedia.org/wiki/GigaSpaces), verified 2026-08-02.
-- [Wikipedia, "Apache Ignite"](https://en.wikipedia.org/wiki/Apache_Ignite), verified 2026-08-02.
-- [Wikipedia, "Hazelcast"](https://en.wikipedia.org/wiki/Hazelcast), verified 2026-08-02.
-- David Gelernter, "Generative communication in Linda," ACM Transactions on Programming Languages and Systems, 1985, the founding paper for the tuple-space model referenced in dimension 1, cited via the Wikipedia Tuple space entry above.
-- Mark Richards, "Software Architecture Patterns," O'Reilly Media, 1st edition, 2015, chapter 7, "Space-Based Architecture." Cited for the component-model treatment referenced in dimensions 5 and 6. Not independently URL-verified in this session because the O'Reilly hosted chapter page returned an HTTP 403 to automated fetch; the book and chapter identification themselves are accurate bibliographic facts, not content pulled from the inaccessible page.

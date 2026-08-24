@@ -1058,6 +1058,64 @@ the label as attributable data under the same retention and access rules as any
 other identifier, and prefer a stable opaque identifier over a descriptive class
 name in the metric.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Memento. Source
+   of the intent, the Token alias, the three participants, the wide and narrow
+   interface distinction, and the pairing with Command and Iterator.
+2. Wikipedia contributors. "Memento pattern".
+   https://en.wikipedia.org/wiki/Memento_pattern
+   Verified 2026-08-02. Used only to confirm the wording of the stated intent
+   and the three participant names, not as a source of explanation.
+3. Microsoft. *.NET API documentation*, `System.Web.UI.Control.SaveViewState`
+   and `System.Web.UI.Control.LoadViewState`.
+   https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.control.saveviewstate
+   Verified 2026-08-02. Source for the ASP.NET view state production use and the
+   quoted description of explicit view state management.
+4. Google. *Android Developers documentation*, "Save UI states" (Views).
+   https://developer.android.com/topic/libraries/architecture/views/saving-states-views
+   Verified 2026-08-02. Source for the Android instance state production use and
+   for the quoted warnings on serialization cost, main-thread stutter, and
+   restricting captured state to primitives and small objects.
+5. The PostgreSQL Global Development Group. *PostgreSQL documentation*, SQL
+   Commands, `SAVEPOINT`.
+   https://www.postgresql.org/docs/current/sql-savepoint.html
+   Verified 2026-08-02. Source for the transaction savepoint production use, the
+   quoted definition, and the documented difference from the SQL standard on
+   duplicate savepoint names.
+6. The Apache Software Foundation. *Apache Flink documentation*, State and Fault
+   Tolerance, Savepoints.
+   https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/savepoints/
+   Verified 2026-08-02. Source for the distributed snapshot production use, the
+   quoted definition of a savepoint, and the operator identifier requirement
+   cited in the incremental snapshot variant.
+7. Oracle. *Java SE 8 API Specification*, `javax.swing.undo.UndoManager`.
+   https://docs.oracle.com/javase/8/docs/api/javax/swing/undo/UndoManager.html
+   Verified 2026-08-02. Source for the Memento plus Command undo stack
+   production use and the quoted class description.
+8. Python Software Foundation. *Python 3 documentation*, `pickle`, sections on
+   `object.__getstate__` and `object.__setstate__`.
+   https://docs.python.org/3/library/pickle.html
+   Verified 2026-08-02. Source for the serialization mechanism, the quoted hook
+   descriptions, and the documented file-handle exclusion example.
+9. Oracle. *Java SE 21 API Specification*, `java.io.Serializable`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/Serializable.html
+   Verified 2026-08-02. Source for the quoted `serialVersionUID` description and
+   the `InvalidClassException` behaviour on mismatch, cited in the versioning
+   discussion.
+10. Oracle. *Java Object Serialization Specification*, Java SE 8 platform, chapter on
+    versioning of serializable objects.
+    https://docs.oracle.com/javase/8/docs/platform/serialization/spec/version.html
+    Verified 2026-08-02. Source for the stream unique identifier description and
+    the list of incompatible changes cited in the versioning discussion.
+11. Redis Ltd. *Redis documentation*, Redis persistence.
+    https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/
+    Verified 2026-08-02. Source for the RDB snapshot production use and for the
+    quoted snapshot against append-only-log trade used in the memory cost and
+    command-based alternative discussion.
+
 ## Code examples
 
 Four languages chosen for what each shows about the encapsulation rule. Java
@@ -1478,61 +1536,3 @@ class Connection:
         self.__dict__.update(state)
         self.socket = object()
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Memento. Source
-   of the intent, the Token alias, the three participants, the wide and narrow
-   interface distinction, and the pairing with Command and Iterator.
-2. Wikipedia contributors. "Memento pattern".
-   https://en.wikipedia.org/wiki/Memento_pattern
-   Verified 2026-08-02. Used only to confirm the wording of the stated intent
-   and the three participant names, not as a source of explanation.
-3. Microsoft. *.NET API documentation*, `System.Web.UI.Control.SaveViewState`
-   and `System.Web.UI.Control.LoadViewState`.
-   https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.control.saveviewstate
-   Verified 2026-08-02. Source for the ASP.NET view state production use and the
-   quoted description of explicit view state management.
-4. Google. *Android Developers documentation*, "Save UI states" (Views).
-   https://developer.android.com/topic/libraries/architecture/views/saving-states-views
-   Verified 2026-08-02. Source for the Android instance state production use and
-   for the quoted warnings on serialization cost, main-thread stutter, and
-   restricting captured state to primitives and small objects.
-5. The PostgreSQL Global Development Group. *PostgreSQL documentation*, SQL
-   Commands, `SAVEPOINT`.
-   https://www.postgresql.org/docs/current/sql-savepoint.html
-   Verified 2026-08-02. Source for the transaction savepoint production use, the
-   quoted definition, and the documented difference from the SQL standard on
-   duplicate savepoint names.
-6. The Apache Software Foundation. *Apache Flink documentation*, State and Fault
-   Tolerance, Savepoints.
-   https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/savepoints/
-   Verified 2026-08-02. Source for the distributed snapshot production use, the
-   quoted definition of a savepoint, and the operator identifier requirement
-   cited in the incremental snapshot variant.
-7. Oracle. *Java SE 8 API Specification*, `javax.swing.undo.UndoManager`.
-   https://docs.oracle.com/javase/8/docs/api/javax/swing/undo/UndoManager.html
-   Verified 2026-08-02. Source for the Memento plus Command undo stack
-   production use and the quoted class description.
-8. Python Software Foundation. *Python 3 documentation*, `pickle`, sections on
-   `object.__getstate__` and `object.__setstate__`.
-   https://docs.python.org/3/library/pickle.html
-   Verified 2026-08-02. Source for the serialization mechanism, the quoted hook
-   descriptions, and the documented file-handle exclusion example.
-9. Oracle. *Java SE 21 API Specification*, `java.io.Serializable`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/Serializable.html
-   Verified 2026-08-02. Source for the quoted `serialVersionUID` description and
-   the `InvalidClassException` behaviour on mismatch, cited in the versioning
-   discussion.
-10. Oracle. *Java Object Serialization Specification*, Java SE 8 platform, chapter on
-    versioning of serializable objects.
-    https://docs.oracle.com/javase/8/docs/platform/serialization/spec/version.html
-    Verified 2026-08-02. Source for the stream unique identifier description and
-    the list of incompatible changes cited in the versioning discussion.
-11. Redis Ltd. *Redis documentation*, Redis persistence.
-    https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/
-    Verified 2026-08-02. Source for the RDB snapshot production use and for the
-    quoted snapshot against append-only-log trade used in the memory cost and
-    command-based alternative discussion.

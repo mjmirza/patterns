@@ -897,6 +897,34 @@ assumes overwriting a file removes its prior contents needs to account for
 whether the underlying storage is copy-on-write, and if so needs to confirm
 earlier snapshots or layers are also purged on the same schedule.
 
+## 18. References
+
+1. Linux man-pages project. `fork(2)` manual page, NOTES section.
+   https://man7.org/linux/man-pages/man2/fork.2.html
+   Verified 2026-08-14. Source for kernel page-table copy-on-write and the
+   Linux `fork` production use.
+2. The Rust Project. `std::borrow::Cow` documentation, standard library
+   API reference.
+   https://doc.rust-lang.org/std/borrow/enum.Cow.html
+   Verified 2026-08-14. Source for the `Cow` type's intent, the two-state
+   enum implementation variant, and the `to_mut` Write Gate semantics.
+3. Redis Ltd. "Redis persistence", sections "Snapshotting" and "How it
+   works".
+   https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/
+   Verified 2026-08-14. Source for the Redis fork-based RDB snapshotting
+   production use.
+4. Apple Inc. Swift standard library source, `Array` type documentation
+   comment, `stdlib/public/core/Array.swift`.
+   https://github.com/apple/swift/blob/main/stdlib/public/core/Array.swift
+   Verified 2026-08-14. Source for the Swift `Array` and `Dictionary`
+   copy-on-write production use and the `isKnownUniquelyReferenced`
+   implementation variant.
+5. Docker Inc. "Storage drivers".
+   https://docs.docker.com/storage/storagedriver/
+   Verified 2026-08-14. Source for the OverlayFS layered-filesystem
+   copy-on-write production use and the "copy up" amplification failure
+   mode.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in distinct ways.
@@ -1025,31 +1053,3 @@ func main() {
 	fmt.Println(a.get(0), b.get(0))
 }
 ```
-
-## 18. References
-
-1. Linux man-pages project. `fork(2)` manual page, NOTES section.
-   https://man7.org/linux/man-pages/man2/fork.2.html
-   Verified 2026-08-14. Source for kernel page-table copy-on-write and the
-   Linux `fork` production use.
-2. The Rust Project. `std::borrow::Cow` documentation, standard library
-   API reference.
-   https://doc.rust-lang.org/std/borrow/enum.Cow.html
-   Verified 2026-08-14. Source for the `Cow` type's intent, the two-state
-   enum implementation variant, and the `to_mut` Write Gate semantics.
-3. Redis Ltd. "Redis persistence", sections "Snapshotting" and "How it
-   works".
-   https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/
-   Verified 2026-08-14. Source for the Redis fork-based RDB snapshotting
-   production use.
-4. Apple Inc. Swift standard library source, `Array` type documentation
-   comment, `stdlib/public/core/Array.swift`.
-   https://github.com/apple/swift/blob/main/stdlib/public/core/Array.swift
-   Verified 2026-08-14. Source for the Swift `Array` and `Dictionary`
-   copy-on-write production use and the `isKnownUniquelyReferenced`
-   implementation variant.
-5. Docker Inc. "Storage drivers".
-   https://docs.docker.com/storage/storagedriver/
-   Verified 2026-08-14. Source for the OverlayFS layered-filesystem
-   copy-on-write production use and the "copy up" amplification failure
-   mode.

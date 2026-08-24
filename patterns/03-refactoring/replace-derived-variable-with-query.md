@@ -717,6 +717,39 @@ derived outputs. Treat those logs as sensitive when the formula touches personal
 data, prices, health data, permissions, or location. Log identifiers and counts
 where possible instead of raw inputs.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
+   edition. Addison-Wesley, 2018. Chapter 9, "Organizing Data." Source for the
+   canonical name and refactoring family placement.
+2. Martin Fowler. "Replace Derived Variable with Query."
+   https://refactoring.com/catalog/replaceDerivedVariableWithQuery.html
+   Verified 2026-08-02. Source for the catalog name and public before and after
+   example.
+3. Martin Fowler. "Update to refactoring.com."
+   https://martinfowler.com/articles/201811-update-refactoring-com.html
+   Verified 2026-08-02. Source for the statement that the updated public
+   catalog tracks the second edition refactorings.
+4. Meta Open Source. React documentation, "Choosing the State Structure."
+   https://react.dev/learn/choosing-the-state-structure
+   Verified 2026-08-02. Source for React's redundant state guidance and the
+   `fullName` example.
+5. Meta Open Source. React documentation, "You Might Not Need an Effect."
+   https://react.dev/learn/you-might-not-need-an-effect
+   Verified 2026-08-02. Source for removing effect-managed derived state.
+6. Redux documentation. "Deriving Data with Selectors."
+   https://redux.js.org/usage/deriving-data-selectors
+   Verified 2026-08-02. Source for minimal Redux state, selectors, and Reselect
+   memoized selector behavior.
+7. React Redux documentation. "Hooks."
+   https://react-redux.js.org/api/hooks
+   Verified 2026-08-02. Source for `useSelector` derived return values and
+   reference comparison behavior.
+8. Vue documentation. "Computed Properties."
+   https://vuejs.org/guide/essentials/computed
+   Verified 2026-08-02. Source for reactive computed values, dependency
+   tracking, and computed caching.
+
 ## Code examples
 
 Four languages are shown because the refactoring is idiomatic across object,
@@ -899,36 +932,3 @@ fn main() {
     println!("{}", cart.total_cents());
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
-   edition. Addison-Wesley, 2018. Chapter 9, "Organizing Data." Source for the
-   canonical name and refactoring family placement.
-2. Martin Fowler. "Replace Derived Variable with Query."
-   https://refactoring.com/catalog/replaceDerivedVariableWithQuery.html
-   Verified 2026-08-02. Source for the catalog name and public before and after
-   example.
-3. Martin Fowler. "Update to refactoring.com."
-   https://martinfowler.com/articles/201811-update-refactoring-com.html
-   Verified 2026-08-02. Source for the statement that the updated public
-   catalog tracks the second edition refactorings.
-4. Meta Open Source. React documentation, "Choosing the State Structure."
-   https://react.dev/learn/choosing-the-state-structure
-   Verified 2026-08-02. Source for React's redundant state guidance and the
-   `fullName` example.
-5. Meta Open Source. React documentation, "You Might Not Need an Effect."
-   https://react.dev/learn/you-might-not-need-an-effect
-   Verified 2026-08-02. Source for removing effect-managed derived state.
-6. Redux documentation. "Deriving Data with Selectors."
-   https://redux.js.org/usage/deriving-data-selectors
-   Verified 2026-08-02. Source for minimal Redux state, selectors, and Reselect
-   memoized selector behavior.
-7. React Redux documentation. "Hooks."
-   https://react-redux.js.org/api/hooks
-   Verified 2026-08-02. Source for `useSelector` derived return values and
-   reference comparison behavior.
-8. Vue documentation. "Computed Properties."
-   https://vuejs.org/guide/essentials/computed
-   Verified 2026-08-02. Source for reactive computed values, dependency
-   tracking, and computed caching.

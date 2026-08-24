@@ -920,6 +920,40 @@ logged, intercepted, or to leak arguments in transit, though this is a side
 effect of reduced volume, not a designed security property, and should not
 be relied on as one.
 
+## 18. References
+
+- Donald Michie, "'Memo' Functions and Machine Learning", Nature, volume
+  218, issue 5136, pages 19 to 22, 1968, as summarized in the "History"
+  section of the Wikipedia article on memoization,
+  https://en.wikipedia.org/wiki/Memoization, verified 2026-08-02.
+- Model Context Protocol, "Tools", server specification, revision
+  2025-06-18, https://modelcontextprotocol.io/specification/2025-06-18/server/tools,
+  verified 2026-08-02.
+- Model Context Protocol, `ToolAnnotations` interface, `schema.ts`,
+  revision 2025-06-18,
+  https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/2025-06-18/schema.ts,
+  verified 2026-08-02.
+- Anthropic, "Prompt caching",
+  https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching,
+  verified 2026-08-02.
+- LangChain, `BaseCache`, `langchain_core.caches`,
+  https://github.com/langchain-ai/langchain/blob/master/libs/core/langchain_core/caches.py,
+  verified 2026-08-02.
+- LangChain, "Graph API", LangGraph documentation, node `CachePolicy`
+  section, https://docs.langchain.com/oss/python/langgraph/graph-api,
+  verified 2026-08-02.
+- Zilliz, `GPTCache` repository, README and repository metadata,
+  https://github.com/zilliztech/GPTCache, verified 2026-08-02.
+- Redis, "LangCache", https://redis.io/langcache/, verified 2026-08-02.
+- Vercel, "Tools and Tool Calling", AI SDK Core documentation,
+  https://ai-sdk.dev/docs/ai-sdk-core/tools-and-tool-calling, verified
+  2026-08-02.
+- Anthropic, "Building Effective Agents",
+  https://www.anthropic.com/engineering/building-effective-agents, verified
+  2026-08-02, consulted directly and confirmed to contain no guidance on
+  tool result caching, cited here to support the honest claim in dimension
+  1 that no single canonical publication names this pattern for agents.
+
 ## Code examples
 
 Three languages, each demonstrating a distinct facet of the pattern rather
@@ -1158,37 +1192,3 @@ async function main(): Promise<void> {
 
 main();
 ```
-
-## 18. References
-
-- Donald Michie, "'Memo' Functions and Machine Learning", Nature, volume
-  218, issue 5136, pages 19 to 22, 1968, as summarized in the "History"
-  section of the Wikipedia article on memoization,
-  https://en.wikipedia.org/wiki/Memoization, verified 2026-08-02.
-- Model Context Protocol, "Tools", server specification, revision
-  2025-06-18, https://modelcontextprotocol.io/specification/2025-06-18/server/tools,
-  verified 2026-08-02.
-- Model Context Protocol, `ToolAnnotations` interface, `schema.ts`,
-  revision 2025-06-18,
-  https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/2025-06-18/schema.ts,
-  verified 2026-08-02.
-- Anthropic, "Prompt caching",
-  https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching,
-  verified 2026-08-02.
-- LangChain, `BaseCache`, `langchain_core.caches`,
-  https://github.com/langchain-ai/langchain/blob/master/libs/core/langchain_core/caches.py,
-  verified 2026-08-02.
-- LangChain, "Graph API", LangGraph documentation, node `CachePolicy`
-  section, https://docs.langchain.com/oss/python/langgraph/graph-api,
-  verified 2026-08-02.
-- Zilliz, `GPTCache` repository, README and repository metadata,
-  https://github.com/zilliztech/GPTCache, verified 2026-08-02.
-- Redis, "LangCache", https://redis.io/langcache/, verified 2026-08-02.
-- Vercel, "Tools and Tool Calling", AI SDK Core documentation,
-  https://ai-sdk.dev/docs/ai-sdk-core/tools-and-tool-calling, verified
-  2026-08-02.
-- Anthropic, "Building Effective Agents",
-  https://www.anthropic.com/engineering/building-effective-agents, verified
-  2026-08-02, consulted directly and confirmed to contain no guidance on
-  tool result caching, cited here to support the honest claim in dimension
-  1 that no single canonical publication names this pattern for agents.

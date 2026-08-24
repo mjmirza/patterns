@@ -598,6 +598,36 @@ the inline code. That can reveal field names, internal IDs, file paths, or
 policy details. Wrap or map errors at the boundary where external users can see
 them.
 
+## 18. References
+
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
+  edition, Addison-Wesley, 2018, chapter 8, "Moving Features," section 8.5,
+  "Replace Inline Code with Function Call."
+- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
+  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
+  2026-08-02.
+- MDN Web Docs, "Array.prototype.includes(),"
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes,
+  verified 2026-08-02.
+- Python Software Foundation, "Built-in Functions," entries for `any` and
+  `all`, https://docs.python.org/3/library/functions.html#any, verified
+  2026-08-02.
+- Go standard library documentation, package `slices`, entries for `Contains`
+  and `ContainsFunc`, https://pkg.go.dev/slices#Contains, verified
+  2026-08-02.
+- Go extension for Visual Studio Code, settings wiki, `slicescontains`
+  analyzer, https://github.com/golang/vscode-go/wiki/settings, verified
+  2026-08-02.
+- Kubernetes, `hack/golangci.yaml`, modernize analyzer policy,
+  https://github.com/kubernetes/kubernetes/blob/master/hack/golangci.yaml,
+  verified 2026-08-02.
+- Cloud Posse Atmos, release v1.222.0 notes,
+  https://newreleases.io/project/github/cloudposse/atmos/release/v1.222.0,
+  verified 2026-08-02.
+- Apache Airflow, release notes for 2.8.0,
+  https://airflow.apache.org/docs/apache-airflow/2.8.0/release_notes.html,
+  verified 2026-08-02.
+
 ## Code examples
 
 ### TypeScript
@@ -708,33 +738,3 @@ $ go run /tmp/replace-inline.go
 true
 false
 ```
-
-## 18. References
-
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
-  edition, Addison-Wesley, 2018, chapter 8, "Moving Features," section 8.5,
-  "Replace Inline Code with Function Call."
-- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
-  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
-  2026-08-02.
-- MDN Web Docs, "Array.prototype.includes(),"
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes,
-  verified 2026-08-02.
-- Python Software Foundation, "Built-in Functions," entries for `any` and
-  `all`, https://docs.python.org/3/library/functions.html#any, verified
-  2026-08-02.
-- Go standard library documentation, package `slices`, entries for `Contains`
-  and `ContainsFunc`, https://pkg.go.dev/slices#Contains, verified
-  2026-08-02.
-- Go extension for Visual Studio Code, settings wiki, `slicescontains`
-  analyzer, https://github.com/golang/vscode-go/wiki/settings, verified
-  2026-08-02.
-- Kubernetes, `hack/golangci.yaml`, modernize analyzer policy,
-  https://github.com/kubernetes/kubernetes/blob/master/hack/golangci.yaml,
-  verified 2026-08-02.
-- Cloud Posse Atmos, release v1.222.0 notes,
-  https://newreleases.io/project/github/cloudposse/atmos/release/v1.222.0,
-  verified 2026-08-02.
-- Apache Airflow, release notes for 2.8.0,
-  https://airflow.apache.org/docs/apache-airflow/2.8.0/release_notes.html,
-  verified 2026-08-02.

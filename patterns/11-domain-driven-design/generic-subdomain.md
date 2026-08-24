@@ -694,6 +694,51 @@ security gap this pattern's own success tends to create, precisely because
 the rest of the integration is genuinely low-risk enough to lull a reviewer
 into skipping the part that is not.
 
+## 18. References
+
+1. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*, Addison-Wesley, 2003, chapter 15, "Distillation," sections
+   "Core Domain," "Generic Subdomains," and "Generic Doesn't Mean Reusable."
+   Section structure confirmed against
+   [Eric Evans, DDD Reference (domainlanguage.com)](https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf)
+   and the archived manuscript index at
+   [fabiofumarola.github.io/nosql/readingMaterial/Evans03.pdf](https://fabiofumarola.github.io/nosql/readingMaterial/Evans03.pdf),
+   verified 2026-08-02.
+2. Vaughn Vernon, *Implementing Domain-Driven Design*, Addison-Wesley, 2013.
+   The SaaSOvation case study, its Collaboration Context, the Core Domain, and
+   its Identity and Access Context, the Generic Subdomain, described via the
+   publisher listing at
+   [O'Reilly, Implementing Domain-Driven Design](https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/),
+   verified 2026-08-02.
+3. Vaughn Vernon, *Domain-Driven Design Distilled*, Addison-Wesley, 2016.
+   Restates the Core, Supporting, Generic classification as the first
+   strategic step, per the publisher's own description at
+   [Amazon listing, Domain-Driven Design Distilled](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420),
+   verified 2026-08-02.
+4. Vladik Khononov, *Learning Domain-Driven Design*, O'Reilly, 2021, chapter
+   1, "Analyzing Business Domains." Chapter title and the three-way subdomain
+   classification confirmed via the publisher's chapter listing search
+   result, verified 2026-08-02.
+5. Martin Fowler, "Bounded Context," martinfowler.com bliki, 15 January 2014,
+   [martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html),
+   verified 2026-08-02. Cited for the strategic-design framing that Generic
+   Subdomain classification depends on.
+6. "Domain-Driven Design. Core, Supporting and Generic Subdomains,"
+   [lazebny.io](https://lazebny.io/domain-driven-design-core-supporting-generic-subdomains/),
+   verified 2026-08-02. Cited for the Figma production-use case, treating
+   Stripe (payments) and AWS S3 (storage) as generic subdomains.
+7. Auth0, "Get Started" documentation,
+   [auth0.com/docs/get-started](https://auth0.com/docs/get-started), verified
+   2026-08-02. Cited for Auth0's own description of itself as an identity
+   platform assembled instead of built in-house.
+8. Stripe, "Payments" product page,
+   [stripe.com/payments](https://stripe.com/payments), verified 2026-08-02.
+   Cited for Stripe's stated value proposition of transferring development
+   effort and compliance burden away from the adopting business.
+9. Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
+   edition, Addison-Wesley, 2018. Cited for the Extract Interface refactoring
+   used in dimension 14's introduction path.
+
 ## Code examples
 
 Three languages, chosen because they show the pattern in a statically typed
@@ -844,48 +889,3 @@ classification rather than a code-level structural pattern, so the port and
 adapter shape above is identical in spirit across every language this
 repository targets, and a fourth or fifth translation of the same twenty
 lines would not show anything the three above do not already demonstrate.
-
-## 18. References
-
-1. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*, Addison-Wesley, 2003, chapter 15, "Distillation," sections
-   "Core Domain," "Generic Subdomains," and "Generic Doesn't Mean Reusable."
-   Section structure confirmed against
-   [Eric Evans, DDD Reference (domainlanguage.com)](https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf)
-   and the archived manuscript index at
-   [fabiofumarola.github.io/nosql/readingMaterial/Evans03.pdf](https://fabiofumarola.github.io/nosql/readingMaterial/Evans03.pdf),
-   verified 2026-08-02.
-2. Vaughn Vernon, *Implementing Domain-Driven Design*, Addison-Wesley, 2013.
-   The SaaSOvation case study, its Collaboration Context, the Core Domain, and
-   its Identity and Access Context, the Generic Subdomain, described via the
-   publisher listing at
-   [O'Reilly, Implementing Domain-Driven Design](https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/),
-   verified 2026-08-02.
-3. Vaughn Vernon, *Domain-Driven Design Distilled*, Addison-Wesley, 2016.
-   Restates the Core, Supporting, Generic classification as the first
-   strategic step, per the publisher's own description at
-   [Amazon listing, Domain-Driven Design Distilled](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420),
-   verified 2026-08-02.
-4. Vladik Khononov, *Learning Domain-Driven Design*, O'Reilly, 2021, chapter
-   1, "Analyzing Business Domains." Chapter title and the three-way subdomain
-   classification confirmed via the publisher's chapter listing search
-   result, verified 2026-08-02.
-5. Martin Fowler, "Bounded Context," martinfowler.com bliki, 15 January 2014,
-   [martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html),
-   verified 2026-08-02. Cited for the strategic-design framing that Generic
-   Subdomain classification depends on.
-6. "Domain-Driven Design. Core, Supporting and Generic Subdomains,"
-   [lazebny.io](https://lazebny.io/domain-driven-design-core-supporting-generic-subdomains/),
-   verified 2026-08-02. Cited for the Figma production-use case, treating
-   Stripe (payments) and AWS S3 (storage) as generic subdomains.
-7. Auth0, "Get Started" documentation,
-   [auth0.com/docs/get-started](https://auth0.com/docs/get-started), verified
-   2026-08-02. Cited for Auth0's own description of itself as an identity
-   platform assembled instead of built in-house.
-8. Stripe, "Payments" product page,
-   [stripe.com/payments](https://stripe.com/payments), verified 2026-08-02.
-   Cited for Stripe's stated value proposition of transferring development
-   effort and compliance burden away from the adopting business.
-9. Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
-   edition, Addison-Wesley, 2018. Cited for the Extract Interface refactoring
-   used in dimension 14's introduction path.

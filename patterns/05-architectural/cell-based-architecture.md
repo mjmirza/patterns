@@ -845,6 +845,38 @@ each cell still needs the same encryption, key management, and access
 control discipline any single deployment would need, cell-based architecture
 neither weakens nor strengthens that layer on its own.
 
+## 18. References
+
+1. AWS Well-Architected. "Reducing the Scope of Impact with Cell-Based
+   Architecture", section "What is a cell-based architecture?".
+   https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html
+   Verified 2026-08-09. Source for the bulkhead origin story, the definitions
+   of cell, cell router, and control plane, the partition-key and grain
+   concept, and the ten-cell blast-radius example.
+2. Colm MacCarthaigh, AWS Builders Library. "Workload isolation using
+   shuffle-sharding".
+   https://aws.amazon.com/builders-library/workload-isolation-using-shuffle-sharding/
+   Verified 2026-08-09. Source for the shuffle-sharding variant, the
+   eight-cell twenty-eight-combination example, and AWS's own internal use of
+   the technique.
+3. Slack Engineering. "Slack's Migration to a Cellular Architecture".
+   https://slack.engineering/slacks-migration-to-a-cellular-architecture/
+   Verified 2026-08-09. Source for the availability-zone cell variant, the
+   June 2021 triggering incident, the Envoy and Rotor routing mechanism, and
+   the 1-percent-granularity graceful traffic-draining description.
+4. Microsoft, Azure Architecture Center. "Deployment Stamps pattern".
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/deployment-stamp
+   Verified 2026-08-09. Source for the stamp terminology and its explicit
+   equivalence to cell, the applicability and non-applicability lists, the
+   cost, governance-drift, and cross-stamp-migration considerations, and the
+   five-stamp three-region worked example.
+5. AWS Well-Architected. "Reducing the Scope of Impact with Cell-Based
+   Architecture" (guide landing page).
+   https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/reducing-scope-of-impact-with-cell-based-architecture.html
+   Verified 2026-08-09. Source for AWS treating cell-based architecture as a
+   dedicated recommended pattern in its own right, distinct from the general
+   Well-Architected Framework, and as the fourth named production reference.
+
 ## Code examples
 
 Three languages, TypeScript, Python, and Go, chosen because a cell router is
@@ -1084,35 +1116,3 @@ All three examples were run locally against their respective toolchains
 (`npx tsc` plus `node`, `python3`, and `go run`) and produced the expected
 output, including the fallback to a healthy cell once `cell-2` was marked
 unhealthy.
-
-## 18. References
-
-1. AWS Well-Architected. "Reducing the Scope of Impact with Cell-Based
-   Architecture", section "What is a cell-based architecture?".
-   https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html
-   Verified 2026-08-09. Source for the bulkhead origin story, the definitions
-   of cell, cell router, and control plane, the partition-key and grain
-   concept, and the ten-cell blast-radius example.
-2. Colm MacCarthaigh, AWS Builders Library. "Workload isolation using
-   shuffle-sharding".
-   https://aws.amazon.com/builders-library/workload-isolation-using-shuffle-sharding/
-   Verified 2026-08-09. Source for the shuffle-sharding variant, the
-   eight-cell twenty-eight-combination example, and AWS's own internal use of
-   the technique.
-3. Slack Engineering. "Slack's Migration to a Cellular Architecture".
-   https://slack.engineering/slacks-migration-to-a-cellular-architecture/
-   Verified 2026-08-09. Source for the availability-zone cell variant, the
-   June 2021 triggering incident, the Envoy and Rotor routing mechanism, and
-   the 1-percent-granularity graceful traffic-draining description.
-4. Microsoft, Azure Architecture Center. "Deployment Stamps pattern".
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/deployment-stamp
-   Verified 2026-08-09. Source for the stamp terminology and its explicit
-   equivalence to cell, the applicability and non-applicability lists, the
-   cost, governance-drift, and cross-stamp-migration considerations, and the
-   five-stamp three-region worked example.
-5. AWS Well-Architected. "Reducing the Scope of Impact with Cell-Based
-   Architecture" (guide landing page).
-   https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/reducing-scope-of-impact-with-cell-based-architecture.html
-   Verified 2026-08-09. Source for AWS treating cell-based architecture as a
-   dedicated recommended pattern in its own right, distinct from the general
-   Well-Architected Framework, and as the fourth named production reference.

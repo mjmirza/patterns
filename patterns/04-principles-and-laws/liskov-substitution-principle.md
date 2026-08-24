@@ -496,6 +496,57 @@ weakening in exactly this class of interface has real security and privacy conse
 even though the general LSP literature discusses the principle primarily as a correctness
 and maintainability concern rather than a security control.
 
+## 18. References
+
+1. Barbara Liskov, "Data Abstraction and Hierarchy," OOPSLA 1987 addendum, *ACM SIGPLAN
+   Notices*. The originating keynote for the principle, per the lineage summarized at
+   [Liskov substitution principle, Wikipedia](https://en.wikipedia.org/wiki/Liskov_substitution_principle),
+   verified 2026-08-09.
+2. Barbara H. Liskov and Jeannette M. Wing, "A Behavioral Notion of Subtyping," *ACM
+   Transactions on Programming Languages and Systems* (TOPLAS), Volume 16, Issue 6,
+   November 1994, pages 1811 to 1841. The formal paper establishing the precondition and
+   postcondition inequality and the history-constraint concept, per
+   [Liskov substitution principle, Wikipedia](https://en.wikipedia.org/wiki/Liskov_substitution_principle),
+   verified 2026-08-09.
+3. Robert C. Martin, *Agile Software Development, Principles, Patterns, and Practices*,
+   Prentice Hall, 2002. Source of the SOLID acronym in which LSP is the L.
+4. Oracle, *Java SE 8 API Specification*, `java.util.List` interface documentation,
+   [docs.oracle.com/javase/8/docs/api/java/util/List.html](https://docs.oracle.com/javase/8/docs/api/java/util/List.html),
+   verified 2026-08-09. Source for the "optional operations" characterization discussed in
+   Sections 9 and 11.
+5. Eiffel Software, "Design by Contract and Assertions,"
+   [eiffel.org/doc/eiffel/Design%20by%20Contract%20and%20Assertions](https://www.eiffel.org/doc/eiffel/Design%20by%20Contract%20and%20Assertions),
+   verified 2026-08-09. Source for Eiffel's `require`/`ensure` inheritance rule discussed
+   in Sections 8 and 9.
+6. Bertrand Meyer, *Object-Oriented Software Construction*, 2nd edition, Prentice Hall,
+   1997. Source of the Design by Contract methodology referenced throughout this entry.
+7. Joshua Bloch, *Effective Java*, 3rd edition, Addison-Wesley, 2018. Referenced for the
+   Collections Framework's documented tension with strict interface contracts, discussed
+   in Section 9.
+
+### Verification notes
+
+The three code examples above were executed locally in this session. the TypeScript
+example via `npx tsx notification.ts`, cross-checked by transpiling with `tsc` and running
+the output with `node`. the Python example via `python3 collections_lsp.py`. the Go example
+via `go run main.go`. All three produced the exact output blocks shown inline, and none of
+the output was edited after the run.
+
+The task instructions for this entry called for a minimum of three named production uses
+with individually verifiable sources. Within this session, live verification could confirm
+one clear, independently checkable production instance, the JDK Collections Framework's
+documented optional-operation behavior in `java.util.List` and its `Collections.unmodifiableList`
+family of wrappers, plus Eiffel's language-level enforcement of the LSP inequality as a
+second, and SOLID's broad industry adoption as evidenced by Martin's own published work as
+a third. distinct, individually sourced, named-company production incident write-ups that
+explicitly invoke "Liskov Substitution Principle" by name at three different named
+commercial systems could not be located and verified within this session, and no such claim
+is made in Section 9. Where this entry states engineering judgement rather than a sourced
+claim, that is in the code examples throughout the Code examples section, and in the
+Symptom-Cause-Fix narrative style used in Section 11, Failure modes and misuse, both of
+which are original synthesis illustrating how LSP violations manifest and are fixed in
+practice, rather than citations of a specific documented external incident.
+
 ## Code examples
 
 ### TypeScript, notification channels, contract-tested across subtypes
@@ -802,54 +853,3 @@ substitutable because the base interface never promised unbounded retention. Had
 indefinitely, `BoundedStore` would violate LSP by silently evicting old entries, and the
 fix would follow the same pattern as the refund example, exposing eviction as a queryable
 capability rather than letting it silently violate an assumed but undocumented guarantee.
-
-## 18. References
-
-1. Barbara Liskov, "Data Abstraction and Hierarchy," OOPSLA 1987 addendum, *ACM SIGPLAN
-   Notices*. The originating keynote for the principle, per the lineage summarized at
-   [Liskov substitution principle, Wikipedia](https://en.wikipedia.org/wiki/Liskov_substitution_principle),
-   verified 2026-08-09.
-2. Barbara H. Liskov and Jeannette M. Wing, "A Behavioral Notion of Subtyping," *ACM
-   Transactions on Programming Languages and Systems* (TOPLAS), Volume 16, Issue 6,
-   November 1994, pages 1811 to 1841. The formal paper establishing the precondition and
-   postcondition inequality and the history-constraint concept, per
-   [Liskov substitution principle, Wikipedia](https://en.wikipedia.org/wiki/Liskov_substitution_principle),
-   verified 2026-08-09.
-3. Robert C. Martin, *Agile Software Development, Principles, Patterns, and Practices*,
-   Prentice Hall, 2002. Source of the SOLID acronym in which LSP is the L.
-4. Oracle, *Java SE 8 API Specification*, `java.util.List` interface documentation,
-   [docs.oracle.com/javase/8/docs/api/java/util/List.html](https://docs.oracle.com/javase/8/docs/api/java/util/List.html),
-   verified 2026-08-09. Source for the "optional operations" characterization discussed in
-   Sections 9 and 11.
-5. Eiffel Software, "Design by Contract and Assertions,"
-   [eiffel.org/doc/eiffel/Design%20by%20Contract%20and%20Assertions](https://www.eiffel.org/doc/eiffel/Design%20by%20Contract%20and%20Assertions),
-   verified 2026-08-09. Source for Eiffel's `require`/`ensure` inheritance rule discussed
-   in Sections 8 and 9.
-6. Bertrand Meyer, *Object-Oriented Software Construction*, 2nd edition, Prentice Hall,
-   1997. Source of the Design by Contract methodology referenced throughout this entry.
-7. Joshua Bloch, *Effective Java*, 3rd edition, Addison-Wesley, 2018. Referenced for the
-   Collections Framework's documented tension with strict interface contracts, discussed
-   in Section 9.
-
-### Verification notes
-
-The three code examples above were executed locally in this session. the TypeScript
-example via `npx tsx notification.ts`, cross-checked by transpiling with `tsc` and running
-the output with `node`. the Python example via `python3 collections_lsp.py`. the Go example
-via `go run main.go`. All three produced the exact output blocks shown inline, and none of
-the output was edited after the run.
-
-The task instructions for this entry called for a minimum of three named production uses
-with individually verifiable sources. Within this session, live verification could confirm
-one clear, independently checkable production instance, the JDK Collections Framework's
-documented optional-operation behavior in `java.util.List` and its `Collections.unmodifiableList`
-family of wrappers, plus Eiffel's language-level enforcement of the LSP inequality as a
-second, and SOLID's broad industry adoption as evidenced by Martin's own published work as
-a third. distinct, individually sourced, named-company production incident write-ups that
-explicitly invoke "Liskov Substitution Principle" by name at three different named
-commercial systems could not be located and verified within this session, and no such claim
-is made in Section 9. Where this entry states engineering judgement rather than a sourced
-claim, that is in the code examples throughout the Code examples section, and in the
-Symptom-Cause-Fix narrative style used in Section 11, Failure modes and misuse, both of
-which are original synthesis illustrating how LSP violations manifest and are fixed in
-practice, rather than citations of a specific documented external incident.

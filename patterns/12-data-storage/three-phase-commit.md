@@ -826,6 +826,46 @@ transaction touching a specific customer record was in flight at a specific
 site at a specific time, even if the record's contents never cross that
 boundary.
 
+## 18. References
+
+1. Dale Skeen. "Nonblocking Commit Protocols." Proceedings of the 1981 ACM
+   SIGMOD International Conference on Management of Data, pages 133 to 142.
+   https://dl.acm.org/doi/pdf/10.1145/582318.582339 Verified 2026-08-02. Source of
+   the original nonblocking-condition proof and the protocol's origin.
+2. Dale Skeen. "A Quorum-Based Commit Protocol." Cornell University
+   Technical Report, February 1982. Source of the quorum-based construction
+   most later texts summarize as CanCommit, PreCommit, DoCommit. cited via
+   secondary academic index, the dl.acm.org listing and cross-referenced
+   course bibliographies, since the original technical report is not hosted
+   at a single stable public URL, verified 2026-08-02.
+3. Dale Skeen and Michael Stonebraker. "A Formal Model of Crash Recovery in
+   a Distributed System." IEEE Transactions on Software Engineering, volume
+   SE-9, 1983, pages 219 to 228. DOI 10.1109/TSE.1983.236608. Verified
+   2026-08-02 via the ACM Digital Library listing,
+   https://dl.acm.org/doi/abs/10.1109/TSE.1983.236608, and the IEEE Xplore listing,
+   https://ieeexplore.ieee.org/abstract/document/1703048/ Source of the formal
+   resilience proof, including the partition-tolerance negative result
+   cited in dimensions 3, 4, and 11.
+4. Idit Keidar and Danny Dolev. "Increasing the Resilience of Distributed
+   and Replicated Database Systems." Journal of Computer and System
+   Sciences, volume 57, issue 3, 1998, pages 309 to 324. DOI
+   10.1006/jcss.1998.1566, https://doi.org/10.1006/jcss.1998.1566.
+   Verified 2026-08-18, resolved via Crossref metadata confirming title,
+   authors, volume, issue, and page range. Source of the Extended
+   Three-Phase Commit variant described in dimension 8.
+5. Wikipedia contributors. "Three-phase commit protocol."
+   https://en.wikipedia.org/wiki/Three-phase_commit_protocol Verified 2026-08-02.
+   Used only to confirm the bounded-delay synchrony assumption and the
+   message-count figures cited in dimensions 3, 9, and 11, cross-checked
+   against the primary Skeen and Skeen-Stonebraker papers above for the
+   underlying claims.
+6. Cockroach Labs. "Parallel Commits. An atomic commit protocol for
+   globally distributed transactions."
+   https://cockroachlabs.com/blog/parallel-commits/ Verified 2026-08-02. Source for
+   the documented production choice of a Two-Phase Commit derivative,
+   cited in dimension 9's discussion of what modern distributed databases
+   actually deploy in place of classical Three-Phase Commit.
+
 ## Code examples
 
 Three languages, each chosen for a different reason. Python shows the
@@ -1144,43 +1184,3 @@ enum-and-dataclass form, a discriminated-union form that gets compile-time
 exhaustiveness checking, and a struct-and-method form close to how a real
 Go network service would be organized. A fourth or fifth language would
 repeat one of these three shapes without adding a new idiom.
-
-## 18. References
-
-1. Dale Skeen. "Nonblocking Commit Protocols." Proceedings of the 1981 ACM
-   SIGMOD International Conference on Management of Data, pages 133 to 142.
-   https://dl.acm.org/doi/pdf/10.1145/582318.582339 Verified 2026-08-02. Source of
-   the original nonblocking-condition proof and the protocol's origin.
-2. Dale Skeen. "A Quorum-Based Commit Protocol." Cornell University
-   Technical Report, February 1982. Source of the quorum-based construction
-   most later texts summarize as CanCommit, PreCommit, DoCommit. cited via
-   secondary academic index, the dl.acm.org listing and cross-referenced
-   course bibliographies, since the original technical report is not hosted
-   at a single stable public URL, verified 2026-08-02.
-3. Dale Skeen and Michael Stonebraker. "A Formal Model of Crash Recovery in
-   a Distributed System." IEEE Transactions on Software Engineering, volume
-   SE-9, 1983, pages 219 to 228. DOI 10.1109/TSE.1983.236608. Verified
-   2026-08-02 via the ACM Digital Library listing,
-   https://dl.acm.org/doi/abs/10.1109/TSE.1983.236608, and the IEEE Xplore listing,
-   https://ieeexplore.ieee.org/abstract/document/1703048/ Source of the formal
-   resilience proof, including the partition-tolerance negative result
-   cited in dimensions 3, 4, and 11.
-4. Idit Keidar and Danny Dolev. "Increasing the Resilience of Distributed
-   and Replicated Database Systems." Journal of Computer and System
-   Sciences, volume 57, issue 3, 1998, pages 309 to 324. DOI
-   10.1006/jcss.1998.1566, https://doi.org/10.1006/jcss.1998.1566.
-   Verified 2026-08-18, resolved via Crossref metadata confirming title,
-   authors, volume, issue, and page range. Source of the Extended
-   Three-Phase Commit variant described in dimension 8.
-5. Wikipedia contributors. "Three-phase commit protocol."
-   https://en.wikipedia.org/wiki/Three-phase_commit_protocol Verified 2026-08-02.
-   Used only to confirm the bounded-delay synchrony assumption and the
-   message-count figures cited in dimensions 3, 9, and 11, cross-checked
-   against the primary Skeen and Skeen-Stonebraker papers above for the
-   underlying claims.
-6. Cockroach Labs. "Parallel Commits. An atomic commit protocol for
-   globally distributed transactions."
-   https://cockroachlabs.com/blog/parallel-commits/ Verified 2026-08-02. Source for
-   the documented production choice of a Two-Phase Commit derivative,
-   cited in dimension 9's discussion of what modern distributed databases
-   actually deploy in place of classical Three-Phase Commit.

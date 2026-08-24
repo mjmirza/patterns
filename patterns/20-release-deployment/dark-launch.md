@@ -126,6 +126,11 @@ Track the error rate, latency, and resource usage of the dark-launched code path
 
 Because the dark-launched code runs against real production data for real users, it must meet the same data-handling, access-control, and privacy requirements as any other live production code, there is no relaxed bar just because the output is hidden. Any logging or telemetry added to observe the dark-launched path must not itself become an unintended way the hidden feature's existence or behavior leaks to someone who should not see it.
 
+## References
+
+- Martin Fowler, DarkLaunching, https://martinfowler.com/bliki/DarkLaunching.html
+- Facebook Engineering, Facebook Chat (2008), https://engineering.fb.com/2008/05/13/web/facebook-chat/
+
 ## Code Examples
 
 ### Swift
@@ -174,8 +179,3 @@ class DarkLaunchGate:
         result = self.run_new_backend()
         return result if self.is_flag_enabled() else None
 ```
-
-## References
-
-- Martin Fowler, DarkLaunching, https://martinfowler.com/bliki/DarkLaunching.html
-- Facebook Engineering, Facebook Chat (2008), https://engineering.fb.com/2008/05/13/web/facebook-chat/

@@ -923,6 +923,37 @@ Anthropic's own container scoping to the API key's workspace
 tenant-level isolation that also supports this kind of accountable audit
 trail.
 
+## 18. References
+
+1. Wang, Xingyao and Chen, Yangyi and Yuan, Lifan and Zhang, Yizhe and Li,
+   Yunzhu and Peng, Hao and Ji, Heng. "Executable Code Actions Elicit Better
+   LLM Agents." arXiv:2402.01030, submitted 1 February 2024, accepted ICML
+   2024. https://arxiv.org/abs/2402.01030 (verified 2026-08-02).
+2. Anthropic. "Code execution tool." Claude Developer Platform documentation. https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool (verified 2026-08-02).
+3. Anthropic. "Programmatic tool calling." Claude Developer Platform
+   documentation, cross-linked from the code execution tool page and
+   referenced for the outer-tool-bridge behavior described in dimensions 7
+   and 8. https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling (verified 2026-08-02, page existence and cross-link confirmed via the code execution tool page fetched the same date).
+4. E2B. "Sandbox" product documentation, ephemeral cloud sandboxes for
+   AI-agent code execution. https://e2b.dev (verified 2026-08-02).
+5. Cloudflare. Agents SDK and Sandbox SDK documentation, including the
+   code-mode pattern for executing agent-authored code against Model
+   Context Protocol tools. https://developers.cloudflare.com (verified
+   2026-08-02, cross-referenced against this repository's `sandbox-sdk`
+   entry).
+6. OpenAI. Code Interpreter product documentation (ChatGPT and, historically,
+   the Assistants API `code_interpreter` tool), the shipping precedent that
+   established the common industry name for the pattern, cited here as
+   established product history and cross-checked against Anthropic's own
+   comparable feature description (verified 2026-08-02).
+
+Two of the sources above, items 3 and 6, are cited for the general shape of
+a documented capability rather than a specific quoted figure, per the
+judgement-versus-sourced-claim guidance in the entry template, because the
+individual page for item 3 was reached only via its cross-link from item 2
+and item 6 reflects a widely known product history rather than one single
+canonical document.
+
 ## Code examples
 
 Each example implements the same minimal execution runner. run a submitted
@@ -1193,34 +1224,3 @@ isolation model (the same family as the OS-container isolation named in
 dimension 8) rather than an in-language sandbox, which is closer to how a
 production execution runtime actually enforces its timeout, killing an
 external process rather than interrupting a shared interpreter.
-
-## 18. References
-
-1. Wang, Xingyao and Chen, Yangyi and Yuan, Lifan and Zhang, Yizhe and Li,
-   Yunzhu and Peng, Hao and Ji, Heng. "Executable Code Actions Elicit Better
-   LLM Agents." arXiv:2402.01030, submitted 1 February 2024, accepted ICML
-   2024. https://arxiv.org/abs/2402.01030 (verified 2026-08-02).
-2. Anthropic. "Code execution tool." Claude Developer Platform documentation. https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool (verified 2026-08-02).
-3. Anthropic. "Programmatic tool calling." Claude Developer Platform
-   documentation, cross-linked from the code execution tool page and
-   referenced for the outer-tool-bridge behavior described in dimensions 7
-   and 8. https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling (verified 2026-08-02, page existence and cross-link confirmed via the code execution tool page fetched the same date).
-4. E2B. "Sandbox" product documentation, ephemeral cloud sandboxes for
-   AI-agent code execution. https://e2b.dev (verified 2026-08-02).
-5. Cloudflare. Agents SDK and Sandbox SDK documentation, including the
-   code-mode pattern for executing agent-authored code against Model
-   Context Protocol tools. https://developers.cloudflare.com (verified
-   2026-08-02, cross-referenced against this repository's `sandbox-sdk`
-   entry).
-6. OpenAI. Code Interpreter product documentation (ChatGPT and, historically,
-   the Assistants API `code_interpreter` tool), the shipping precedent that
-   established the common industry name for the pattern, cited here as
-   established product history and cross-checked against Anthropic's own
-   comparable feature description (verified 2026-08-02).
-
-Two of the sources above, items 3 and 6, are cited for the general shape of
-a documented capability rather than a specific quoted figure, per the
-judgement-versus-sourced-claim guidance in the entry template, because the
-individual page for item 3 was reached only via its cross-link from item 2
-and item 6 reflects a widely known product history rather than one single
-canonical document.

@@ -871,6 +871,64 @@ authentication mechanism, or transport security. Those are properties of the
 messaging and API layers beneath it, and inventing a saga specific concern where
 none exists would be wrong.
 
+## 18. References
+
+1. Hector Garcia-Molina, Kenneth Salem. "SAGAS". *Proceedings of the 1987 ACM
+   SIGMOD International Conference on Management of Data*, pages 249 to 259.
+   DOI 10.1145/38713.38742. Full text PDF verified 2026-08-02 at
+   https://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf
+   Source for the definition of a saga, the semantic nature of compensating
+   transactions, the T1 through Tn and Cj through C1 guarantee, the saga execution
+   component, and the log before act discipline.
+2. Microsoft. "Saga design pattern", Azure Architecture Center, page dated
+   2025-02-25.
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
+   Verified 2026-08-02. Source for the compensable, pivot, and retryable
+   classification, the choreography and orchestration benefit and drawback tables,
+   the three data anomalies, and the six countermeasures.
+3. Amazon Web Services. "Saga orchestration pattern", AWS Prescriptive Guidance,
+   Cloud Design Patterns.
+   https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/saga-orchestration.html
+   Verified 2026-08-02. Source for the two phase commit comparison in a database
+   per service architecture, the idempotency requirement, the isolation and
+   observability considerations, and the Step Functions production use.
+4. Pat Helland. "Life beyond Distributed Transactions, an Apostate's Opinion".
+   *3rd Biennial CIDR Conference*, 2007, page 137. PDF verified 2026-08-02 at
+   https://www.cidrdb.org/cidr2007/papers/cidr07p15.pdf
+   Source for the argument that large scale applications reject distributed
+   transactions and reach for workflow style updates over asynchronous messaging.
+5. Dale Skeen. "Nonblocking commit protocols". *Proceedings of the 1981 ACM SIGMOD
+   International Conference on Management of Data*, pages 133 to 142.
+   DOI 10.1145/582318.582339. Record verified 2026-08-02 at
+   https://dl.acm.org/doi/10.1145/582318.582339
+   Source for the blocking versus nonblocking distinction used in the two phase
+   commit comparison. The full text sits behind the ACM paywall, so this citation
+   rests on the indexed record and the paper's abstract, not on a full read.
+6. Eclipse MicroProfile. *MicroProfile LRA Specification, version 2.0*, final,
+   14 February 2023.
+   https://download.eclipse.org/microprofile/microprofile-lra-2.0/microprofile-lra-spec-2.0.html
+   Verified 2026-08-02. Source for the Long Running Action lineage, the
+   compensatable activity model, and the annotation set.
+7. Temporal Technologies. "Temporal use cases and design patterns", Temporal
+   Platform Documentation.
+   https://docs.temporal.io/evaluate/use-cases-design-patterns
+   Verified 2026-08-02. Source for the durable workflow engine production use.
+8. Camunda. "Compensation events", Camunda 8 Docs.
+   https://docs.camunda.io/docs/components/modeler/bpmn/compensation-events/
+   Verified 2026-08-02. Source for BPMN compensation semantics and the unordered
+   handler invocation default.
+9. Eventuate. *eventuate-tram-sagas* repository README.
+   https://github.com/eventuate-tram/eventuate-tram-sagas
+   Verified 2026-08-02. Source for the framework DSL variant and the Java
+   production use.
+10. Chris Richardson. "Pattern, Saga", microservices.io.
+    https://microservices.io/patterns/data/saga.html
+    Verified 2026-08-02. Used to confirm the choreography and orchestration
+    definitions and the attribution of the countermeasure catalog to chapter 4
+    section 4.3 of *Microservices Patterns*, Manning, 2018. The countermeasure
+    names themselves are cited to reference 2, because the microservices.io page
+    names the concept without listing them.
+
 ## Code
 
 ### Go, orchestrated saga with a compensation stack
@@ -1246,61 +1304,3 @@ type rather than a runtime null, which is the same guarantee the TypeScript
 A Java sample was drafted around a saga log with idempotency keys, but no Java
 runtime is installed on the authoring machine, so it is omitted rather than
 shipped uncompiled.
-
-## 18. References
-
-1. Hector Garcia-Molina, Kenneth Salem. "SAGAS". *Proceedings of the 1987 ACM
-   SIGMOD International Conference on Management of Data*, pages 249 to 259.
-   DOI 10.1145/38713.38742. Full text PDF verified 2026-08-02 at
-   https://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf
-   Source for the definition of a saga, the semantic nature of compensating
-   transactions, the T1 through Tn and Cj through C1 guarantee, the saga execution
-   component, and the log before act discipline.
-2. Microsoft. "Saga design pattern", Azure Architecture Center, page dated
-   2025-02-25.
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
-   Verified 2026-08-02. Source for the compensable, pivot, and retryable
-   classification, the choreography and orchestration benefit and drawback tables,
-   the three data anomalies, and the six countermeasures.
-3. Amazon Web Services. "Saga orchestration pattern", AWS Prescriptive Guidance,
-   Cloud Design Patterns.
-   https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/saga-orchestration.html
-   Verified 2026-08-02. Source for the two phase commit comparison in a database
-   per service architecture, the idempotency requirement, the isolation and
-   observability considerations, and the Step Functions production use.
-4. Pat Helland. "Life beyond Distributed Transactions, an Apostate's Opinion".
-   *3rd Biennial CIDR Conference*, 2007, page 137. PDF verified 2026-08-02 at
-   https://www.cidrdb.org/cidr2007/papers/cidr07p15.pdf
-   Source for the argument that large scale applications reject distributed
-   transactions and reach for workflow style updates over asynchronous messaging.
-5. Dale Skeen. "Nonblocking commit protocols". *Proceedings of the 1981 ACM SIGMOD
-   International Conference on Management of Data*, pages 133 to 142.
-   DOI 10.1145/582318.582339. Record verified 2026-08-02 at
-   https://dl.acm.org/doi/10.1145/582318.582339
-   Source for the blocking versus nonblocking distinction used in the two phase
-   commit comparison. The full text sits behind the ACM paywall, so this citation
-   rests on the indexed record and the paper's abstract, not on a full read.
-6. Eclipse MicroProfile. *MicroProfile LRA Specification, version 2.0*, final,
-   14 February 2023.
-   https://download.eclipse.org/microprofile/microprofile-lra-2.0/microprofile-lra-spec-2.0.html
-   Verified 2026-08-02. Source for the Long Running Action lineage, the
-   compensatable activity model, and the annotation set.
-7. Temporal Technologies. "Temporal use cases and design patterns", Temporal
-   Platform Documentation.
-   https://docs.temporal.io/evaluate/use-cases-design-patterns
-   Verified 2026-08-02. Source for the durable workflow engine production use.
-8. Camunda. "Compensation events", Camunda 8 Docs.
-   https://docs.camunda.io/docs/components/modeler/bpmn/compensation-events/
-   Verified 2026-08-02. Source for BPMN compensation semantics and the unordered
-   handler invocation default.
-9. Eventuate. *eventuate-tram-sagas* repository README.
-   https://github.com/eventuate-tram/eventuate-tram-sagas
-   Verified 2026-08-02. Source for the framework DSL variant and the Java
-   production use.
-10. Chris Richardson. "Pattern, Saga", microservices.io.
-    https://microservices.io/patterns/data/saga.html
-    Verified 2026-08-02. Used to confirm the choreography and orchestration
-    definitions and the attribution of the countermeasure catalog to chapter 4
-    section 4.3 of *Microservices Patterns*, Manning, 2018. The countermeasure
-    names themselves are cited to reference 2, because the microservices.io page
-    names the concept without listing them.

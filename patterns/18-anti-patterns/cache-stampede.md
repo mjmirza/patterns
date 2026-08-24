@@ -835,6 +835,54 @@ rest, access scoping, retention limits, apply identically whether or not a
 stampede mitigation is present, and this entry has no additional privacy
 guidance beyond what already governs the cache and the origin independently.
 
+## 18. References
+
+1. Wikipedia contributors, "Cache stampede," Wikipedia, The Free
+   Encyclopedia, https://en.wikipedia.org/wiki/Cache_stampede, verified
+   2026-08-02. Source for the definition, the dog-piling alias, the
+   attribution to Galbraith 2009 and Allspaw and Robbins 2010, and the
+   summary of the Vattani, Chierichetti, and Lowenstein probabilistic early
+   expiration formula.
+2. Wikipedia contributors, "Thundering herd problem," Wikipedia, The Free
+   Encyclopedia, https://en.wikipedia.org/wiki/Thundering_herd_problem,
+   verified 2026-08-02. Source for the operating-systems origin of the
+   broader problem family, the `accept()` and process-scheduling cases, and
+   the `EPOLLEXCLUSIVE` kernel-level mitigation.
+3. Asaf Vattani, Flavio Chierichetti, and Keegan Lowenstein, "Optimal
+   Probabilistic Cache Stampede Prevention," Proceedings of the VLDB
+   Endowment, 2015, as cited and summarized in reference 1. The original
+   paper itself was not independently fetched for this entry, its content is
+   reported here as summarized by reference 1.
+4. nginx documentation, "Module ngx_http_proxy_module," directives
+   `proxy_cache_lock` and `proxy_cache_use_stale`,
+   https://nginx.org/en/docs/http/ngx_http_proxy_module.html, verified
+   2026-08-02. Source for the named production single-flight and
+   stale-serving implementation.
+5. Redis documentation, "SET," https://redis.io/docs/latest/commands/set/,
+   verified 2026-08-02. Source for the `NX` and `EX` conditional-write lock
+   pattern and for Redis's own documented caveat that this pattern is
+   superseded by Redlock for fault-tolerant use.
+6. memcached project, "Protocol specification," storage commands section,
+   https://raw.githubusercontent.com/memcached/memcached/master/doc/protocol.txt,
+   verified 2026-08-02. Source for the `add` command's conditional-store
+   semantics.
+7. M. Nottingham, "HTTP Cache-Control Extensions for Stale Content," RFC
+   5861, Internet Engineering Task Force, May 2010,
+   https://www.rfc-editor.org/rfc/rfc5861, verified 2026-08-02. Source for
+   the `stale-while-revalidate` and `stale-if-error` standardized directives.
+
+Engineering judgement disclosure. Dimension 3, forces, dimension 10,
+consequences, dimension 11, failure modes, and dimension 16, observability
+signals, draw on general, widely shared operational experience with caching
+systems rather than on a single citable source for every individual
+statement, and are labeled here as judgement per the entry template's
+distinction between sourced claims and engineering reasoning. A widely
+referenced production use of a lease-based mechanism at a large-scale social
+media memcache deployment was deliberately omitted from dimension 9 because
+the primary paper describing it could not be independently fetched and
+verified during authoring, and an unverifiable claim was judged worse than a
+shorter, fully verified list of three named production systems.
+
 ## Code examples
 
 Three languages, each independently compiled or run, and each producing the
@@ -1163,51 +1211,3 @@ event-loop promises, OS threads with locks, and goroutines with channels, and
 a fourth idiomatic variant would repeat the same coordinating-mutex shape
 already shown rather than reveal a genuinely different implementation
 concern.
-
-## 18. References
-
-1. Wikipedia contributors, "Cache stampede," Wikipedia, The Free
-   Encyclopedia, https://en.wikipedia.org/wiki/Cache_stampede, verified
-   2026-08-02. Source for the definition, the dog-piling alias, the
-   attribution to Galbraith 2009 and Allspaw and Robbins 2010, and the
-   summary of the Vattani, Chierichetti, and Lowenstein probabilistic early
-   expiration formula.
-2. Wikipedia contributors, "Thundering herd problem," Wikipedia, The Free
-   Encyclopedia, https://en.wikipedia.org/wiki/Thundering_herd_problem,
-   verified 2026-08-02. Source for the operating-systems origin of the
-   broader problem family, the `accept()` and process-scheduling cases, and
-   the `EPOLLEXCLUSIVE` kernel-level mitigation.
-3. Asaf Vattani, Flavio Chierichetti, and Keegan Lowenstein, "Optimal
-   Probabilistic Cache Stampede Prevention," Proceedings of the VLDB
-   Endowment, 2015, as cited and summarized in reference 1. The original
-   paper itself was not independently fetched for this entry, its content is
-   reported here as summarized by reference 1.
-4. nginx documentation, "Module ngx_http_proxy_module," directives
-   `proxy_cache_lock` and `proxy_cache_use_stale`,
-   https://nginx.org/en/docs/http/ngx_http_proxy_module.html, verified
-   2026-08-02. Source for the named production single-flight and
-   stale-serving implementation.
-5. Redis documentation, "SET," https://redis.io/docs/latest/commands/set/,
-   verified 2026-08-02. Source for the `NX` and `EX` conditional-write lock
-   pattern and for Redis's own documented caveat that this pattern is
-   superseded by Redlock for fault-tolerant use.
-6. memcached project, "Protocol specification," storage commands section,
-   https://raw.githubusercontent.com/memcached/memcached/master/doc/protocol.txt,
-   verified 2026-08-02. Source for the `add` command's conditional-store
-   semantics.
-7. M. Nottingham, "HTTP Cache-Control Extensions for Stale Content," RFC
-   5861, Internet Engineering Task Force, May 2010,
-   https://www.rfc-editor.org/rfc/rfc5861, verified 2026-08-02. Source for
-   the `stale-while-revalidate` and `stale-if-error` standardized directives.
-
-Engineering judgement disclosure. Dimension 3, forces, dimension 10,
-consequences, dimension 11, failure modes, and dimension 16, observability
-signals, draw on general, widely shared operational experience with caching
-systems rather than on a single citable source for every individual
-statement, and are labeled here as judgement per the entry template's
-distinction between sourced claims and engineering reasoning. A widely
-referenced production use of a lease-based mechanism at a large-scale social
-media memcache deployment was deliberately omitted from dimension 9 because
-the primary paper describing it could not be independently fetched and
-verified during authoring, and an unverifiable claim was judged worse than a
-shorter, fully verified list of three named production systems.

@@ -443,6 +443,14 @@ data before it is copied into the hand-off mechanism is a real,
 necessary part of the interrupt context's own implementation, not an
 optional hardening step.
 
+## 18. References
+
+1. FreeRTOS. "FreeRTOS-Kernel-Book, Chapter 7, Interrupt Management".
+   https://github.com/FreeRTOS/FreeRTOS-Kernel-Book/blob/main/ch07.md
+   Verified 2026-08-21. Source of the FromISR naming convention, the
+   ISR API restriction, and the deferred interrupt processing quotes
+   used in dimensions 1, 2, 3, 5, 9, and 10.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -602,11 +610,3 @@ adcInterruptHandler(queue, capturedValue: 42)
 adcInterruptHandler(queue, capturedValue: 17)
 deferredTaskStep(queue)
 ```
-
-## 18. References
-
-1. FreeRTOS. "FreeRTOS-Kernel-Book, Chapter 7, Interrupt Management".
-   https://github.com/FreeRTOS/FreeRTOS-Kernel-Book/blob/main/ch07.md
-   Verified 2026-08-21. Source of the FromISR naming convention, the
-   ISR API restriction, and the deferred interrupt processing quotes
-   used in dimensions 1, 2, 3, 5, 9, and 10.

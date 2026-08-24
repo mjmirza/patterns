@@ -648,6 +648,34 @@ absence should be treated as a finding in any security review of a service built
 Pool. This paragraph is engineering analysis of the pattern's structural properties, not a
 sourced claim about a specific documented exploit.
 
+## 18. References
+
+1. Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann, *Pattern-Oriented Software
+   Architecture, Volume 2. Patterns for Concurrent and Networked Objects*, Wiley, 2000.
+2. Douglas C. Schmidt, Charles D. Cranor, "Half-Sync/Half-Async. An Architectural Pattern for
+   Efficient and Well-structured Concurrent I/O", Proceedings of the 2nd Pattern Languages of
+   Programs Conference, 1995.
+3. Oracle, "ThreadPoolExecutor" class documentation, Java SE 21.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html,
+   verified 2026-08-02.
+4. Oracle, "ForkJoinPool" class documentation, Java SE 21.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ForkJoinPool.html,
+   verified 2026-08-02.
+5. Microsoft, "ThreadPool Class (System.Threading)", .NET API documentation.
+   https://learn.microsoft.com/en-us/dotnet/api/system.threading.threadpool, verified
+   2026-08-02.
+6. Python Software Foundation, "concurrent.futures. Launching parallel tasks", Python 3
+   documentation, section "ThreadPoolExecutor".
+   https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor, verified
+   2026-08-02.
+7. The Go Authors, "Effective Go", section "Goroutines".
+   https://go.dev/doc/effective_go#goroutines, verified 2026-08-02.
+8. The Apache Software Foundation, "The Executor (thread pool)", Apache Tomcat 10.1
+   configuration reference.
+   https://tomcat.apache.org/tomcat-10.1-doc/config/executor.html, verified 2026-08-02.
+9. libuv contributors, "Thread pool work scheduling", libuv 1.x documentation.
+   https://docs.libuv.org/en/v1.x/threadpool.html, verified 2026-08-02.
+
 ## Code examples
 
 Every example below implements the same shape, a bounded pool of workers pulling from a
@@ -905,31 +933,3 @@ and C# shapes, Executors.newFixedThreadPool and ThreadPool.QueueUserWorkItem
 respectively, are already shown as direct API usage in the citations for dimension 8 and
 dimension 9 rather than reimplemented here, since both are single-call standard library
 invocations rather than a structure worth reproducing in full.
-
-## 18. References
-
-1. Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann, *Pattern-Oriented Software
-   Architecture, Volume 2. Patterns for Concurrent and Networked Objects*, Wiley, 2000.
-2. Douglas C. Schmidt, Charles D. Cranor, "Half-Sync/Half-Async. An Architectural Pattern for
-   Efficient and Well-structured Concurrent I/O", Proceedings of the 2nd Pattern Languages of
-   Programs Conference, 1995.
-3. Oracle, "ThreadPoolExecutor" class documentation, Java SE 21.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html,
-   verified 2026-08-02.
-4. Oracle, "ForkJoinPool" class documentation, Java SE 21.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ForkJoinPool.html,
-   verified 2026-08-02.
-5. Microsoft, "ThreadPool Class (System.Threading)", .NET API documentation.
-   https://learn.microsoft.com/en-us/dotnet/api/system.threading.threadpool, verified
-   2026-08-02.
-6. Python Software Foundation, "concurrent.futures. Launching parallel tasks", Python 3
-   documentation, section "ThreadPoolExecutor".
-   https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor, verified
-   2026-08-02.
-7. The Go Authors, "Effective Go", section "Goroutines".
-   https://go.dev/doc/effective_go#goroutines, verified 2026-08-02.
-8. The Apache Software Foundation, "The Executor (thread pool)", Apache Tomcat 10.1
-   configuration reference.
-   https://tomcat.apache.org/tomcat-10.1-doc/config/executor.html, verified 2026-08-02.
-9. libuv contributors, "Thread pool work scheduling", libuv 1.x documentation.
-   https://docs.libuv.org/en/v1.x/threadpool.html, verified 2026-08-02.

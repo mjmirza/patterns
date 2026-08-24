@@ -124,6 +124,11 @@ Track the volume and error rate of mirrored requests separately from primary req
 
 A mirrored request carries the same real user data as the primary request, so the shadow destination must meet the same data-handling, access-control, and retention requirements as the primary service. Logging or storing shadow responses for comparison must not retain more real user data than the primary service itself is permitted to retain, and any authentication or authorization applied to the primary request must also be honored (or the request rejected) on the shadow path.
 
+## References
+
+- Istio, Mirroring, https://istio.io/latest/docs/tasks/traffic-management/mirroring/
+- Envoy Proxy, RequestMirrorPolicy (route_components.proto), https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route_components.proto
+
 ## Code Examples
 
 ### Swift
@@ -172,8 +177,3 @@ class ShadowTrafficRouter:
         self.forward_shadow(request)
         return self.forward_primary(request)
 ```
-
-## References
-
-- Istio, Mirroring, https://istio.io/latest/docs/tasks/traffic-management/mirroring/
-- Envoy Proxy, RequestMirrorPolicy (route_components.proto), https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route_components.proto

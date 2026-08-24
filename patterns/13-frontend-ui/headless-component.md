@@ -443,6 +443,17 @@ whichever consumer happens to render it, and a headless component
 exposing a permission flag is providing a rendering hint, not
 enforcing an actual restriction on its own.
 
+## 18. References
+
+1. Martin Fowler. "Headless Component".
+   https://martinfowler.com/articles/headless-component.html
+   Verified 2026-08-21. Source of the defining pattern quote used in
+   dimensions 1 and 9.
+2. Radix UI. "Introduction".
+   https://www.radix-ui.com/primitives/docs/overview/introduction
+   Verified 2026-08-21. Source of the unstyled-library and
+   full-visual-control quotes used in dimensions 3 and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -592,14 +603,3 @@ renderCustomOverlayConsumer(disclosureB)
 disclosureB.open()
 renderCustomOverlayConsumer(disclosureB)
 ```
-
-## 18. References
-
-1. Martin Fowler. "Headless Component".
-   https://martinfowler.com/articles/headless-component.html
-   Verified 2026-08-21. Source of the defining pattern quote used in
-   dimensions 1 and 9.
-2. Radix UI. "Introduction".
-   https://www.radix-ui.com/primitives/docs/overview/introduction
-   Verified 2026-08-21. Source of the unstyled-library and
-   full-visual-control quotes used in dimensions 3 and 9.

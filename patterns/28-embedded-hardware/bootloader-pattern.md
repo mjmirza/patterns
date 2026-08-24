@@ -434,6 +434,18 @@ preventing a downgrade to a bootloader version with a known
 vulnerability, are both real, necessary parts of a security-conscious
 bootloader deployment, not optional hardening.
 
+## 18. References
+
+1. MCUboot Project. "Design".
+   https://docs.mcuboot.com/design.html
+   Verified 2026-08-21. Source of the bootloader structure, swap
+   mechanism, power-cut resilience, and rollback quotes used in
+   dimensions 1, 2, 3, 5, 7, 9, and 10.
+2. MCUboot Project. "Readme (Zephyr)".
+   https://docs.mcuboot.com/readme-zephyr.html
+   Verified 2026-08-21. Source of the image-signing and public-key
+   verification quotes used in dimensions 3, 5, 9, and 10.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -594,15 +606,3 @@ _ = loader.tryNewImage(signatureValid: true)
 loader.confirmImage()
 print("after confirmed image:", loader.state)
 ```
-
-## 18. References
-
-1. MCUboot Project. "Design".
-   https://docs.mcuboot.com/design.html
-   Verified 2026-08-21. Source of the bootloader structure, swap
-   mechanism, power-cut resilience, and rollback quotes used in
-   dimensions 1, 2, 3, 5, 7, 9, and 10.
-2. MCUboot Project. "Readme (Zephyr)".
-   https://docs.mcuboot.com/readme-zephyr.html
-   Verified 2026-08-21. Source of the image-signing and public-key
-   verification quotes used in dimensions 3, 5, 9, and 10.

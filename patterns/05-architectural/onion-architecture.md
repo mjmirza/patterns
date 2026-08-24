@@ -769,6 +769,61 @@ composition root's configuration source with the same care as any other
 secrets store, rather than treating it as ordinary application code, follows
 directly from that concentration.
 
+## 18. References
+
+1. Jeffrey Palermo. "The Onion Architecture. Part 1". jeffreypalermo.com,
+   29 July 2008.
+   https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/
+   Verified 2026-08-02. Coining source for the name, the four ring
+   structure, and the "database is not the center" statement.
+2. Jeffrey Palermo. "The Onion Architecture. Part 2". jeffreypalermo.com,
+   2008. https://jeffreypalermo.com/2008/07/the-onion-architecture-part-2/
+   Verified 2026-08-02. Source for the constructor injection and IoC
+   container wiring example used in dimensions 7 and 8.
+3. Jeffrey Palermo. "The Onion Architecture. Part 3". jeffreypalermo.com,
+   August 2008.
+   https://jeffreypalermo.com/2008/08/the-onion-architecture-part-3/
+   Verified 2026-08-02. Source for the infrastructure as commodity framing
+   used in dimensions 2 and 17, and the direct quote on testability.
+4. Alistair Cockburn. "Hexagonal Architecture". alistair.cockburn.us,
+   version 0.9, first published 4 September 2005.
+   https://alistair.cockburn.us/hexagonal-architecture
+   Verified 2026-08-02. Source for the ports and adapters sibling pattern
+   discussed in dimensions 1, 8, and 13.
+5. Robert C. Martin. "The Clean Architecture". blog.cleancoder.com,
+   13 August 2012.
+   https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+   Verified 2026-08-02. Source for the direct statement that Hexagonal,
+   Onion, and Clean Architecture share one objective.
+6. Robert C. Martin. *Clean Architecture. A Craftsman's Guide to Software
+   Structure and Design*. Pearson, 2017. ISBN 978-0-13-449416-6. Part V,
+   chapter 22, "The Clean Architecture", page 201. Source for the four
+   named rings, Entities, Use Cases, Interface Adapters, Frameworks and
+   Drivers, discussed in dimension 8.
+7. Microsoft. "Common web application architectures". learn.microsoft.com.
+   https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures
+   Verified 2026-08-02. Source for the eShopOnWeb and Ardalis Clean
+   Architecture Template production uses in dimension 9, and for the
+   explicit statement that Onion Architecture is one of the names this
+   concentric ring design has gone by.
+8. GitHub. Repository metadata for `dotnet-architecture/eShopOnWeb`.
+   https://github.com/dotnet-architecture/eShopOnWeb
+   Verified 2026-08-02 via the GitHub API. Star count and description cited
+   in dimension 9.
+9. GitHub. Repository metadata for `ardalis/CleanArchitecture`.
+   https://github.com/ardalis/CleanArchitecture
+   Verified 2026-08-02 via the GitHub API. Star count and description cited
+   in dimension 9.
+10. ABP.IO. "Layered solution structure".
+    https://abp.io/docs/latest/solution-templates/layered-web-application/solution-structure
+    Verified 2026-08-02. Source for the ABP Framework production use in
+    dimension 9, including the named project layout and the dependency
+    direction between the `EntityFrameworkCore`, `Domain`, and `Web`
+    projects.
+11. GitHub. Repository metadata for `abpframework/abp`.
+    https://github.com/abpframework/abp
+    Verified 2026-08-02 via the GitHub API. Star count cited in dimension 9.
+
 ## Code examples
 
 Four languages where the pattern's dependency inversion mechanics differ in
@@ -1135,58 +1190,3 @@ fn main() {
     println!("Order {} is now {:?}", result.id, result.status);
 }
 ```
-
-## 18. References
-
-1. Jeffrey Palermo. "The Onion Architecture. Part 1". jeffreypalermo.com,
-   29 July 2008.
-   https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/
-   Verified 2026-08-02. Coining source for the name, the four ring
-   structure, and the "database is not the center" statement.
-2. Jeffrey Palermo. "The Onion Architecture. Part 2". jeffreypalermo.com,
-   2008. https://jeffreypalermo.com/2008/07/the-onion-architecture-part-2/
-   Verified 2026-08-02. Source for the constructor injection and IoC
-   container wiring example used in dimensions 7 and 8.
-3. Jeffrey Palermo. "The Onion Architecture. Part 3". jeffreypalermo.com,
-   August 2008.
-   https://jeffreypalermo.com/2008/08/the-onion-architecture-part-3/
-   Verified 2026-08-02. Source for the infrastructure as commodity framing
-   used in dimensions 2 and 17, and the direct quote on testability.
-4. Alistair Cockburn. "Hexagonal Architecture". alistair.cockburn.us,
-   version 0.9, first published 4 September 2005.
-   https://alistair.cockburn.us/hexagonal-architecture
-   Verified 2026-08-02. Source for the ports and adapters sibling pattern
-   discussed in dimensions 1, 8, and 13.
-5. Robert C. Martin. "The Clean Architecture". blog.cleancoder.com,
-   13 August 2012.
-   https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
-   Verified 2026-08-02. Source for the direct statement that Hexagonal,
-   Onion, and Clean Architecture share one objective.
-6. Robert C. Martin. *Clean Architecture. A Craftsman's Guide to Software
-   Structure and Design*. Pearson, 2017. ISBN 978-0-13-449416-6. Part V,
-   chapter 22, "The Clean Architecture", page 201. Source for the four
-   named rings, Entities, Use Cases, Interface Adapters, Frameworks and
-   Drivers, discussed in dimension 8.
-7. Microsoft. "Common web application architectures". learn.microsoft.com.
-   https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures
-   Verified 2026-08-02. Source for the eShopOnWeb and Ardalis Clean
-   Architecture Template production uses in dimension 9, and for the
-   explicit statement that Onion Architecture is one of the names this
-   concentric ring design has gone by.
-8. GitHub. Repository metadata for `dotnet-architecture/eShopOnWeb`.
-   https://github.com/dotnet-architecture/eShopOnWeb
-   Verified 2026-08-02 via the GitHub API. Star count and description cited
-   in dimension 9.
-9. GitHub. Repository metadata for `ardalis/CleanArchitecture`.
-   https://github.com/ardalis/CleanArchitecture
-   Verified 2026-08-02 via the GitHub API. Star count and description cited
-   in dimension 9.
-10. ABP.IO. "Layered solution structure".
-    https://abp.io/docs/latest/solution-templates/layered-web-application/solution-structure
-    Verified 2026-08-02. Source for the ABP Framework production use in
-    dimension 9, including the named project layout and the dependency
-    direction between the `EntityFrameworkCore`, `Domain`, and `Web`
-    projects.
-11. GitHub. Repository metadata for `abpframework/abp`.
-    https://github.com/abpframework/abp
-    Verified 2026-08-02 via the GitHub API. Star count cited in dimension 9.

@@ -629,6 +629,41 @@ class name can encode a customer, a region or a data-residency tier. Where names
 carry that, treat the log field as attributable data and apply the same
 retention and access rules as any other identifier.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 3, Creational Patterns, section Factory Method.
+   Source of the intent, the Virtual Constructor alias, the four participants,
+   and the pairing with Template Method.
+2. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018.
+   ISBN 978-0-13-468599-1. Item 1, "Consider static factory methods instead of
+   constructors". Source of the static factory method distinction in dimension 1.
+3. Oracle. *Java SE 21 API Specification*, `java.util.Collection`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html
+   Verified 2026-08-02. Source for the `iterator()` production use.
+4. Django Software Foundation. *Django 5.2 documentation*, "How to create custom
+   model fields", section "Specifying the form field for a model field".
+   https://docs.djangoproject.com/en/5.2/howto/custom-model-fields/
+   Verified 2026-08-02. Source for the `formfield()` production use.
+5. Microsoft. *.NET API documentation*,
+   `Microsoft.Extensions.Logging.ILoggerProvider.CreateLogger(String)`.
+   https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.iloggerprovider.createlogger
+   Verified 2026-08-02. Source for the .NET logging production use.
+6. Rust project. *Rust standard library documentation*,
+   `std::iter::IntoIterator`.
+   https://doc.rust-lang.org/std/iter/trait.IntoIterator.html
+   Verified 2026-08-02. Source for the associated-type variant and the Rust
+   production use.
+7. VMware Tanzu. *Spring Framework API documentation*,
+   `org.springframework.beans.factory.FactoryBean`.
+   https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/FactoryBean.html
+   Verified 2026-08-02. Source for the `getObject()` production use.
+8. Wikipedia contributors. "Factory method pattern".
+   https://en.wikipedia.org/wiki/Factory_method_pattern
+   Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
+   the attribution, not as a source of explanation.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different ways.
@@ -811,38 +846,3 @@ class TypedReportJob(ReportJob):
 class JsonTypedReportJob(TypedReportJob):
     export_class = JsonExport
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 3, Creational Patterns, section Factory Method.
-   Source of the intent, the Virtual Constructor alias, the four participants,
-   and the pairing with Template Method.
-2. Joshua Bloch. *Effective Java*, 3rd edition. Addison-Wesley, 2018.
-   ISBN 978-0-13-468599-1. Item 1, "Consider static factory methods instead of
-   constructors". Source of the static factory method distinction in dimension 1.
-3. Oracle. *Java SE 21 API Specification*, `java.util.Collection`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html
-   Verified 2026-08-02. Source for the `iterator()` production use.
-4. Django Software Foundation. *Django 5.2 documentation*, "How to create custom
-   model fields", section "Specifying the form field for a model field".
-   https://docs.djangoproject.com/en/5.2/howto/custom-model-fields/
-   Verified 2026-08-02. Source for the `formfield()` production use.
-5. Microsoft. *.NET API documentation*,
-   `Microsoft.Extensions.Logging.ILoggerProvider.CreateLogger(String)`.
-   https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.iloggerprovider.createlogger
-   Verified 2026-08-02. Source for the .NET logging production use.
-6. Rust project. *Rust standard library documentation*,
-   `std::iter::IntoIterator`.
-   https://doc.rust-lang.org/std/iter/trait.IntoIterator.html
-   Verified 2026-08-02. Source for the associated-type variant and the Rust
-   production use.
-7. VMware Tanzu. *Spring Framework API documentation*,
-   `org.springframework.beans.factory.FactoryBean`.
-   https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/FactoryBean.html
-   Verified 2026-08-02. Source for the `getObject()` production use.
-8. Wikipedia contributors. "Factory method pattern".
-   https://en.wikipedia.org/wiki/Factory_method_pattern
-   Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
-   the attribution, not as a source of explanation.

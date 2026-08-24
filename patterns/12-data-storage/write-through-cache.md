@@ -765,6 +765,45 @@ those are properties of the chosen Cache and BackingStore technologies, not
 of the write-through coordination logic itself, and no additional claim is
 made here beyond the two points above.
 
+## 18. References
+
+1. John L. Hennessy and David A. Patterson. *Computer Architecture. A
+   Quantitative Approach*, 6th edition. Morgan Kaufmann, 2017.
+   ISBN 978-0-12-811905-1. Appendix B, "Review of Memory Hierarchy", the
+   comparison of write-through and write-back cache write policies. Source
+   for the pattern's originating usage in dimension 1 and dimension 9.
+2. Amazon Web Services. "Caching strategies for Memcached", Amazon
+   ElastiCache for Memcached User Guide.
+   https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/Strategies.html
+   Verified 2026-08-02. Source for the write-through definition and the
+   cache-churn cost warning in dimensions 1 and 3.
+3. Amazon Web Services. "DAX and DynamoDB consistency models", Amazon
+   DynamoDB Developer Guide.
+   https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.consistency.html
+   Verified 2026-08-02. Source for the DAX write-through consistency model
+   in dimensions 3, 4, and 7.
+4. Amazon Web Services. "DAX. How it works", Amazon DynamoDB Developer
+   Guide.
+   https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.html
+   Verified 2026-08-02. Source for the DAX write-through behaviour
+   description in dimension 4 and dimension 8.
+5. Amazon Web Services. "Amazon DynamoDB Accelerator (DAX). A
+   Read-Through/Write-Through Cache for DynamoDB", AWS Database Blog.
+   https://aws.amazon.com/blogs/database/amazon-dynamodb-accelerator-dax-a-read-throughwrite-through-cache-for-dynamodb
+   Verified 2026-08-02. Source for the DAX production use in dimension 8 and
+   dimension 9.
+6. Ehcache Project. "Write-through and Write-behind Caching", Ehcache 2.8
+   Documentation.
+   https://www.ehcache.org/documentation/2.8/apis/write-through-caching.html
+   Verified 2026-08-02. Source for the `CacheWriter` write-through default
+   mode and its synchronous failure propagation, in dimensions 8 and 9.
+7. Oracle Corporation. "Read-Through, Write-Through, Refresh-Ahead and
+   Write-Behind Caching", Coherence 3.2 User Guide.
+   https://docs.oracle.com/cd/E14039_01/coh.320/coh32ug/read_through.htm
+   Verified 2026-08-02. Source for the `CacheStore` write-through
+   configuration and the `write-delay-seconds` distinction, in dimensions 8
+   and 9.
+
 ## Code examples
 
 Three languages, chosen because the pattern is a coordination shape rather
@@ -1008,42 +1047,3 @@ func main() {
 	fmt.Println(value, ok)
 }
 ```
-
-## 18. References
-
-1. John L. Hennessy and David A. Patterson. *Computer Architecture. A
-   Quantitative Approach*, 6th edition. Morgan Kaufmann, 2017.
-   ISBN 978-0-12-811905-1. Appendix B, "Review of Memory Hierarchy", the
-   comparison of write-through and write-back cache write policies. Source
-   for the pattern's originating usage in dimension 1 and dimension 9.
-2. Amazon Web Services. "Caching strategies for Memcached", Amazon
-   ElastiCache for Memcached User Guide.
-   https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/Strategies.html
-   Verified 2026-08-02. Source for the write-through definition and the
-   cache-churn cost warning in dimensions 1 and 3.
-3. Amazon Web Services. "DAX and DynamoDB consistency models", Amazon
-   DynamoDB Developer Guide.
-   https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.consistency.html
-   Verified 2026-08-02. Source for the DAX write-through consistency model
-   in dimensions 3, 4, and 7.
-4. Amazon Web Services. "DAX. How it works", Amazon DynamoDB Developer
-   Guide.
-   https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.html
-   Verified 2026-08-02. Source for the DAX write-through behaviour
-   description in dimension 4 and dimension 8.
-5. Amazon Web Services. "Amazon DynamoDB Accelerator (DAX). A
-   Read-Through/Write-Through Cache for DynamoDB", AWS Database Blog.
-   https://aws.amazon.com/blogs/database/amazon-dynamodb-accelerator-dax-a-read-throughwrite-through-cache-for-dynamodb
-   Verified 2026-08-02. Source for the DAX production use in dimension 8 and
-   dimension 9.
-6. Ehcache Project. "Write-through and Write-behind Caching", Ehcache 2.8
-   Documentation.
-   https://www.ehcache.org/documentation/2.8/apis/write-through-caching.html
-   Verified 2026-08-02. Source for the `CacheWriter` write-through default
-   mode and its synchronous failure propagation, in dimensions 8 and 9.
-7. Oracle Corporation. "Read-Through, Write-Through, Refresh-Ahead and
-   Write-Behind Caching", Coherence 3.2 User Guide.
-   https://docs.oracle.com/cd/E14039_01/coh.320/coh32ug/read_through.htm
-   Verified 2026-08-02. Source for the `CacheStore` write-through
-   configuration and the `write-delay-seconds` distinction, in dimensions 8
-   and 9.

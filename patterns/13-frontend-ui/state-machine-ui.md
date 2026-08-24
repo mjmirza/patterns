@@ -443,6 +443,16 @@ naming explicitly here because the visualization tooling that makes
 state machines so legible is exactly what makes an accidental
 exposure of sensitive context easy to produce.
 
+## 18. References
+
+1. Stately documentation. "XState".
+   https://stately.ai/docs/xstate
+   Verified 2026-08-21. Source of the defining sentence in dimension 9.
+2. David Khourshid. "XState Version 4 Released".
+   https://medium.com/@DavidKPiano/xstate-version-4-released-665b59409f99
+   Verified 2026-08-21. Source for the 2017 origin and the
+   impossible-states-prevention statement in dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -594,13 +604,3 @@ print("after fetch: " + String(describing: machine.current))
 machine.send(.resolve)
 print("after resolve: " + String(describing: machine.current))
 ```
-
-## 18. References
-
-1. Stately documentation. "XState".
-   https://stately.ai/docs/xstate
-   Verified 2026-08-21. Source of the defining sentence in dimension 9.
-2. David Khourshid. "XState Version 4 Released".
-   https://medium.com/@DavidKPiano/xstate-version-4-released-665b59409f99
-   Verified 2026-08-21. Source for the 2017 origin and the
-   impossible-states-prevention statement in dimension 9.

@@ -770,6 +770,46 @@ specific product's default configuration, and each deployment needs to
 verify its own replica placement and repair scope against its actual
 residency obligations.
 
+## 18. References
+
+1. Alan Demers, Dan Greene, Carl Hauser, Wes Irish, John Larson, Scott
+   Shenker, Howard Sturgis, Dan Swinehart, Doug Terry, "Epidemic
+   Algorithms for Replicated Database Maintenance", Proceedings of the
+   Sixth ACM Symposium on Principles of Distributed Computing (PODC),
+   1987. Author list and description of anti-entropy versus rumor
+   mongering confirmed via Alberto Montresor, "Gossip and Epidemic
+   Protocols", http://disi.unitn.it/~montreso/ds/papers/montresor17.pdf,
+   verified 2026-08-02.
+2. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan
+   Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan
+   Sivasubramanian, Peter Vosshall, Werner Vogels, "Dynamo. Amazon's
+   Highly Available Key-value Store", Proceedings of the 21st ACM
+   Symposium on Operating Systems Principles (SOSP), 2007, section 4.7,
+   "Handling Permanent Failures. Replica synchronization". Section
+   content confirmed via Aditya Shete, "Anti-Entropy and Merkle Trees.
+   Amazon DynamoDB (Part 4)",
+   https://medium.com/@adityashete009/anti-entropy-and-merkel-trees-amazon-dynamodb-part-4-efbf1f7285c0,
+   verified 2026-08-02.
+3. Apache Cassandra Documentation, "Repair",
+   https://cassandra.apache.org/doc/latest/cassandra/managing/operating/repair.html,
+   verified 2026-08-02.
+4. Riak KV Documentation, "Active Anti-Entropy",
+   https://docs.riak.com/riak/kv/2.2.3/learn/concepts/active-anti-entropy/index.html,
+   verified 2026-08-02.
+5. ScyllaDB Documentation, "Repair",
+   https://opensource.docs.scylladb.com/stable/operating-scylla/procedures/maintenance/repair.html,
+   description of repair as ScyllaDB's anti-entropy mechanism, modeled
+   on the Cassandra repair process.
+6. Seth Gilbert, Nancy Lynch, "Brewer's Conjecture and the Feasibility
+   of Consistent, Available, Partition-Tolerant Web Services", ACM
+   SIGACT News, Volume 33, Issue 2, 2002. Formalization of the CAP
+   theorem referenced in dimension 3.
+7. Kyle Kingsbury, Jepsen distributed systems testing analyses,
+   published series covering Cassandra, Riak, and other replicated
+   databases under injected network partitions, referenced in dimension
+   15 as the methodology for end-to-end convergence testing under
+   failure.
+
 ## Code examples
 
 Three languages, each showing the same core comparison logic in a
@@ -1054,43 +1094,3 @@ All three were compiled and run locally. python3 s.py, go vet plus go run, and
 rustc plus the produced binary all printed the same result, out of sync keys
 holding exactly k4, confirming the comparator correctly isolates the single
 mismatched key without inspecting the branch that already agrees.
-
-## 18. References
-
-1. Alan Demers, Dan Greene, Carl Hauser, Wes Irish, John Larson, Scott
-   Shenker, Howard Sturgis, Dan Swinehart, Doug Terry, "Epidemic
-   Algorithms for Replicated Database Maintenance", Proceedings of the
-   Sixth ACM Symposium on Principles of Distributed Computing (PODC),
-   1987. Author list and description of anti-entropy versus rumor
-   mongering confirmed via Alberto Montresor, "Gossip and Epidemic
-   Protocols", http://disi.unitn.it/~montreso/ds/papers/montresor17.pdf,
-   verified 2026-08-02.
-2. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan
-   Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan
-   Sivasubramanian, Peter Vosshall, Werner Vogels, "Dynamo. Amazon's
-   Highly Available Key-value Store", Proceedings of the 21st ACM
-   Symposium on Operating Systems Principles (SOSP), 2007, section 4.7,
-   "Handling Permanent Failures. Replica synchronization". Section
-   content confirmed via Aditya Shete, "Anti-Entropy and Merkle Trees.
-   Amazon DynamoDB (Part 4)",
-   https://medium.com/@adityashete009/anti-entropy-and-merkel-trees-amazon-dynamodb-part-4-efbf1f7285c0,
-   verified 2026-08-02.
-3. Apache Cassandra Documentation, "Repair",
-   https://cassandra.apache.org/doc/latest/cassandra/managing/operating/repair.html,
-   verified 2026-08-02.
-4. Riak KV Documentation, "Active Anti-Entropy",
-   https://docs.riak.com/riak/kv/2.2.3/learn/concepts/active-anti-entropy/index.html,
-   verified 2026-08-02.
-5. ScyllaDB Documentation, "Repair",
-   https://opensource.docs.scylladb.com/stable/operating-scylla/procedures/maintenance/repair.html,
-   description of repair as ScyllaDB's anti-entropy mechanism, modeled
-   on the Cassandra repair process.
-6. Seth Gilbert, Nancy Lynch, "Brewer's Conjecture and the Feasibility
-   of Consistent, Available, Partition-Tolerant Web Services", ACM
-   SIGACT News, Volume 33, Issue 2, 2002. Formalization of the CAP
-   theorem referenced in dimension 3.
-7. Kyle Kingsbury, Jepsen distributed systems testing analyses,
-   published series covering Cassandra, Riak, and other replicated
-   databases under injected network partitions, referenced in dimension
-   15 as the methodology for end-to-end convergence testing under
-   failure.

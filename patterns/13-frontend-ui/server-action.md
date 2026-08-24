@@ -463,6 +463,18 @@ does not need to interact with the application's UI at all to invoke
 the function, only to send a correctly shaped POST request to its
 endpoint.
 
+## 18. References
+
+1. React. "Server Functions".
+   https://react.dev/reference/rsc/server-functions
+   Verified 2026-08-21. Source of the defining mechanism quotes used
+   in dimensions 1, 2, and 9.
+2. Next.js. "Mutating Data".
+   https://nextjs.org/docs/app/getting-started/mutating-data
+   Verified 2026-08-21. Source of the Server Function versus Server
+   Action distinction and the direct-POST-reachability security
+   warning quotes used in dimensions 1, 3, 9, 11, and 17.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -615,15 +627,3 @@ func main() async {
 
 await main()
 ```
-
-## 18. References
-
-1. React. "Server Functions".
-   https://react.dev/reference/rsc/server-functions
-   Verified 2026-08-21. Source of the defining mechanism quotes used
-   in dimensions 1, 2, and 9.
-2. Next.js. "Mutating Data".
-   https://nextjs.org/docs/app/getting-started/mutating-data
-   Verified 2026-08-21. Source of the Server Function versus Server
-   Action distinction and the direct-POST-reachability security
-   warning quotes used in dimensions 1, 3, 9, 11, and 17.

@@ -766,6 +766,30 @@ state.
 **Serialization boundary.** Do not serialize closures or treat them as durable
 authorization facts. Send data and re-check authority on the receiving side.
 
+## 18. References
+
+- Haskell.org, *A Gentle Introduction to Haskell, Version 98*, section 3,
+  "Functions", https://www.haskell.org/tutorial/functions.html, verified
+  2026-08-02.
+- Python Software Foundation, *Python 3 Standard Library Documentation*,
+  `functools.partial` and `partial` objects,
+  https://docs.python.org/3/library/functools.html#functools.partial and
+  https://docs.python.org/3/library/functools.html#partial-objects, verified
+  2026-08-02.
+- MDN Web Docs, *Function.prototype.bind()*,
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind,
+  verified 2026-08-02.
+- Lodash documentation, `_.partial`, https://lodash.com/docs/#partial,
+  verified 2026-08-02.
+- Ramda documentation, `R.partial`, `R.partialRight`, and placeholder `R.__`,
+  https://ramdajs.com/docs/#partial, https://ramdajs.com/docs/#partialRight,
+  and https://ramdajs.com/docs/#__, verified 2026-08-02.
+- Redux documentation, `bindActionCreators(actionCreators, dispatch)`,
+  https://redux.js.org/api/bindactioncreators, verified 2026-08-02.
+- Steve Klabnik, Carol Nichols, and Rust community contributors, *The Rust
+  Programming Language*, chapter 13.1, "Closures",
+  https://doc.rust-lang.org/book/ch13-01-closures.html, verified 2026-08-02.
+
 ## Code examples
 
 TypeScript. Bind policy and currency once, then pass the narrower function to
@@ -830,27 +854,3 @@ fn main() {
 ```
 
 These samples were run locally with `npx tsc`, `node`, `python3`, and `rustc`.
-
-## 18. References
-
-- Haskell.org, *A Gentle Introduction to Haskell, Version 98*, section 3,
-  "Functions", https://www.haskell.org/tutorial/functions.html, verified
-  2026-08-02.
-- Python Software Foundation, *Python 3 Standard Library Documentation*,
-  `functools.partial` and `partial` objects,
-  https://docs.python.org/3/library/functools.html#functools.partial and
-  https://docs.python.org/3/library/functools.html#partial-objects, verified
-  2026-08-02.
-- MDN Web Docs, *Function.prototype.bind()*,
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind,
-  verified 2026-08-02.
-- Lodash documentation, `_.partial`, https://lodash.com/docs/#partial,
-  verified 2026-08-02.
-- Ramda documentation, `R.partial`, `R.partialRight`, and placeholder `R.__`,
-  https://ramdajs.com/docs/#partial, https://ramdajs.com/docs/#partialRight,
-  and https://ramdajs.com/docs/#__, verified 2026-08-02.
-- Redux documentation, `bindActionCreators(actionCreators, dispatch)`,
-  https://redux.js.org/api/bindactioncreators, verified 2026-08-02.
-- Steve Klabnik, Carol Nichols, and Rust community contributors, *The Rust
-  Programming Language*, chapter 13.1, "Closures",
-  https://doc.rust-lang.org/book/ch13-01-closures.html, verified 2026-08-02.

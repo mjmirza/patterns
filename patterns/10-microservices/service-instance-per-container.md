@@ -881,6 +881,41 @@ its tracing and logging pipeline as a data-handling surface subject to the
 same retention and access rules as any other store of personal data, not as
 purely an operational convenience.
 
+## 18. References
+
+1. Docker Inc. *Docker documentation*, "Multi-service containers".
+   https://docs.docker.com/config/containers/multi-service_container/
+   Verified 2026-08-02. Source of the one-service-per-container best-practice
+   quotation, the multi-process exception, and the `--init` flag guidance in
+   dimensions 1 and 8.
+2. Kubernetes Authors. *Kubernetes documentation*, "Pods".
+   https://kubernetes.io/docs/concepts/workloads/pods/
+   Verified 2026-08-02. Source of the Pod definition, the co-location and
+   co-scheduling quotation, and the multi-container Pod guidance used in
+   dimensions 4, 6, 8, 9, and 13.
+3. Chris Richardson. *microservices.io pattern catalog*, "Service per Container".
+   https://microservices.io/patterns/deployment/service-per-container.html
+   Verified 2026-08-02. Source of the pattern's name, its forces, and its
+   contrast with Service Instance per Host and Service Instance per VM, used
+   throughout dimensions 1, 2, 3, and 12.
+4. Amazon Web Services. *Amazon ECS Developer Guide*, "Amazon ECS task
+   definitions".
+   https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html
+   Verified 2026-08-02. Source of the ECS task definition production use in
+   dimension 9.
+5. Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric
+   Tune, John Wilkes. "Large-scale cluster management at Google with Borg."
+   EuroSys 2015. Published by Google Research.
+   https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/
+   Verified 2026-08-02. Source of the Borg production use and abstract
+   quotation in dimension 9, and of the historical lineage claim in dimension
+   1, applied narrowly to what the paper itself supports.
+
+Netflix's Titus platform is named as a production use in dimension 9 based on
+widely reported industry knowledge rather than a single independently
+quoted primary source verified during authoring, and is flagged there
+explicitly as carrying a lower sourcing bar than references 1 through 5 above.
+
 ## Code examples
 
 Three languages, chosen because each represents a genuinely different way a
@@ -1086,38 +1121,3 @@ available in the authoring environment; their shape follows Docker's own
 documented multi-service and best-practice guidance cited in dimensions 1, 8,
 and 18, and each mirrors a conventional, widely used base-image pattern for
 its respective language.
-
-## 18. References
-
-1. Docker Inc. *Docker documentation*, "Multi-service containers".
-   https://docs.docker.com/config/containers/multi-service_container/
-   Verified 2026-08-02. Source of the one-service-per-container best-practice
-   quotation, the multi-process exception, and the `--init` flag guidance in
-   dimensions 1 and 8.
-2. Kubernetes Authors. *Kubernetes documentation*, "Pods".
-   https://kubernetes.io/docs/concepts/workloads/pods/
-   Verified 2026-08-02. Source of the Pod definition, the co-location and
-   co-scheduling quotation, and the multi-container Pod guidance used in
-   dimensions 4, 6, 8, 9, and 13.
-3. Chris Richardson. *microservices.io pattern catalog*, "Service per Container".
-   https://microservices.io/patterns/deployment/service-per-container.html
-   Verified 2026-08-02. Source of the pattern's name, its forces, and its
-   contrast with Service Instance per Host and Service Instance per VM, used
-   throughout dimensions 1, 2, 3, and 12.
-4. Amazon Web Services. *Amazon ECS Developer Guide*, "Amazon ECS task
-   definitions".
-   https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html
-   Verified 2026-08-02. Source of the ECS task definition production use in
-   dimension 9.
-5. Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric
-   Tune, John Wilkes. "Large-scale cluster management at Google with Borg."
-   EuroSys 2015. Published by Google Research.
-   https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/
-   Verified 2026-08-02. Source of the Borg production use and abstract
-   quotation in dimension 9, and of the historical lineage claim in dimension
-   1, applied narrowly to what the paper itself supports.
-
-Netflix's Titus platform is named as a production use in dimension 9 based on
-widely reported industry knowledge rather than a single independently
-quoted primary source verified during authoring, and is flagged there
-explicitly as carrying a lower sourcing bar than references 1 through 5 above.

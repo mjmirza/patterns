@@ -690,6 +690,48 @@ The pattern is silent on cryptography, authentication, and transport security.
 It neither encrypts data nor exposes a network port by itself. Its real security
 effect is capability spread through ambient access.
 
+## 18. References
+
+1. Deepak Alur, John Crupi, Dan Malks. *Core J2EE Patterns. Best Practices and
+   Design Strategies*. Prentice Hall, 1st edition, 2001. Chapter 8, "Service
+   Locator". Source for the original J2EE lineage.
+2. Martin Fowler. "Inversion of Control Containers and the Dependency Injection
+   pattern", sections "Using a Service Locator" and "Service Locator vs
+   Dependency Injection". https://martinfowler.com/articles/injection.html
+   Verified 2026-08-02.
+3. Mark Seemann. "Service Locator is an Anti-Pattern".
+   https://blog.ploeh.dk/2010/02/03/ServiceLocatorisanAnti-Pattern/
+   Verified 2026-08-02.
+4. Steven van Deursen, Mark Seemann. *Dependency Injection Principles,
+   Practices, and Patterns*. Manning, 2019. Chapter 5, anti-patterns. Manning
+   excerpt, "The Service Locator Anti-Pattern".
+   https://freecontent.manning.com/the-service-locator-anti-pattern/
+   Verified 2026-08-02.
+5. Microsoft. ".NET dependency injection guidelines", section
+   "Recommendations".
+   https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/guidelines
+   Verified 2026-08-02.
+6. Microsoft. "Dependency injection in ASP.NET Core", section
+   "Request Services".
+   https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
+   Verified 2026-08-02.
+7. Microsoft. `Microsoft.AspNetCore.Http.HttpContext.RequestServices` API.
+   https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpcontext.requestservices
+   Verified 2026-08-02.
+8. Spring Framework Reference. "Container Overview", section
+   "Using the Container".
+   https://docs.spring.io/spring-framework/reference/core/beans/basics.html
+   Verified 2026-08-02.
+9. Angular. `Injector` API reference.
+   https://angular.dev/api/core/Injector
+   Verified 2026-08-02.
+10. Oracle. Java SE 17 API Specification, `java.util.ServiceLoader`.
+    https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ServiceLoader.html
+    Verified 2026-08-02.
+11. Laravel. "Service Container", section "Resolving".
+    https://laravel.com/docs/10.x/container
+    Verified 2026-08-02.
+
 ## Code examples
 
 The examples are intentionally small and runnable. They show the antipattern and
@@ -866,45 +908,3 @@ fn main() {
     println!("{}", checkout_explicit(gateway.as_ref(), 1200));
 }
 ```
-
-## 18. References
-
-1. Deepak Alur, John Crupi, Dan Malks. *Core J2EE Patterns. Best Practices and
-   Design Strategies*. Prentice Hall, 1st edition, 2001. Chapter 8, "Service
-   Locator". Source for the original J2EE lineage.
-2. Martin Fowler. "Inversion of Control Containers and the Dependency Injection
-   pattern", sections "Using a Service Locator" and "Service Locator vs
-   Dependency Injection". https://martinfowler.com/articles/injection.html
-   Verified 2026-08-02.
-3. Mark Seemann. "Service Locator is an Anti-Pattern".
-   https://blog.ploeh.dk/2010/02/03/ServiceLocatorisanAnti-Pattern/
-   Verified 2026-08-02.
-4. Steven van Deursen, Mark Seemann. *Dependency Injection Principles,
-   Practices, and Patterns*. Manning, 2019. Chapter 5, anti-patterns. Manning
-   excerpt, "The Service Locator Anti-Pattern".
-   https://freecontent.manning.com/the-service-locator-anti-pattern/
-   Verified 2026-08-02.
-5. Microsoft. ".NET dependency injection guidelines", section
-   "Recommendations".
-   https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/guidelines
-   Verified 2026-08-02.
-6. Microsoft. "Dependency injection in ASP.NET Core", section
-   "Request Services".
-   https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
-   Verified 2026-08-02.
-7. Microsoft. `Microsoft.AspNetCore.Http.HttpContext.RequestServices` API.
-   https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpcontext.requestservices
-   Verified 2026-08-02.
-8. Spring Framework Reference. "Container Overview", section
-   "Using the Container".
-   https://docs.spring.io/spring-framework/reference/core/beans/basics.html
-   Verified 2026-08-02.
-9. Angular. `Injector` API reference.
-   https://angular.dev/api/core/Injector
-   Verified 2026-08-02.
-10. Oracle. Java SE 17 API Specification, `java.util.ServiceLoader`.
-    https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ServiceLoader.html
-    Verified 2026-08-02.
-11. Laravel. "Service Container", section "Resolving".
-    https://laravel.com/docs/10.x/container
-    Verified 2026-08-02.

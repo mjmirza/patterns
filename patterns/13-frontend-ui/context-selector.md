@@ -442,6 +442,17 @@ from it, so any genuine access restriction on sensitive data belongs
 to a real authorization layer, never to which slice a particular
 selector happens to derive.
 
+## 18. References
+
+1. React. "useContext".
+   https://react.dev/reference/react/useContext
+   Verified 2026-08-21. Source of the re-render mechanism quotes used
+   in dimensions 2, 3, and 9.
+2. dai-shi. "use-context-selector".
+   https://github.com/dai-shi/use-context-selector
+   Verified 2026-08-21. Source of the problem-and-fix quotes used in
+   dimensions 1, 3, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -596,14 +607,3 @@ store.subscribe(id: "themeConsumer", selector: { $0.theme }, listener: { print("
 store.setState { $0.theme = "dark" }
 store.setState { $0.user = "grace" }
 ```
-
-## 18. References
-
-1. React. "useContext".
-   https://react.dev/reference/react/useContext
-   Verified 2026-08-21. Source of the re-render mechanism quotes used
-   in dimensions 2, 3, and 9.
-2. dai-shi. "use-context-selector".
-   https://github.com/dai-shi/use-context-selector
-   Verified 2026-08-21. Source of the problem-and-fix quotes used in
-   dimensions 1, 3, and 9.

@@ -423,6 +423,17 @@ and the action function must validate the submitted data itself rather
 than assuming it matches whatever shape the form's own client-side
 markup happened to define.
 
+## 18. References
+
+1. React. "`<form>`".
+   https://react.dev/reference/react-dom/components/form
+   Verified 2026-08-21. Source of the defining and progressive-
+   enhancement quotes used in dimensions 1, 2, 3, and 9.
+2. React. "useActionState".
+   https://react.dev/reference/react/useActionState
+   Verified 2026-08-21. Source of the companion state hook's return-
+   shape quotes used in dimensions 3, 5, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -574,14 +585,3 @@ func run() async {
 
 await run()
 ```
-
-## 18. References
-
-1. React. "`<form>`".
-   https://react.dev/reference/react-dom/components/form
-   Verified 2026-08-21. Source of the defining and progressive-
-   enhancement quotes used in dimensions 1, 2, 3, and 9.
-2. React. "useActionState".
-   https://react.dev/reference/react/useActionState
-   Verified 2026-08-21. Source of the companion state hook's return-
-   shape quotes used in dimensions 3, 5, and 9.

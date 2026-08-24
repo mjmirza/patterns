@@ -726,6 +726,27 @@ delete statement against one shared database. This entry treats this last
 point as engineering judgement rather than a sourced legal claim. Consult
 counsel for the specific compliance obligations of any given deployment.
 
+## 18. References
+
+1. World Wide Web Consortium, Web Services Architecture, W3C Working Group
+   Note, 11 February 2004. https://www.w3.org/TR/ws-arch/. Verified
+   2026-08-02.
+2. Martin Fowler, "Service Oriented Ambiguity," martinfowler.com bliki.
+   https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html. Verified
+   2026-08-02.
+3. James Lewis and Martin Fowler, "Microservices," martinfowler.com, 25
+   March 2014. https://martinfowler.com/articles/microservices.html.
+   Verified 2026-08-02.
+4. Randy Shoup, "The eBay Architecture," InfoQ, 27 May 2008.
+   https://www.infoq.com/articles/ebay-scalability-best-practices/.
+   Verified 2026-08-02.
+5. Uber Engineering, "Rethinking Microservice Architecture as Uber Grows,"
+   uber.com engineering blog. https://www.uber.com/blog/microservice-architecture/.
+   Verified 2026-08-02.
+6. Thomas Erl, *Service-Oriented Architecture. Concepts, Technology, and
+   Design*, Prentice Hall, 2005.
+7. Thomas Erl, *SOA. Principles of Service Design*, Prentice Hall, 2007.
+
 ## Code examples
 
 Three languages, each showing a different real shape SOA takes in practice.
@@ -903,24 +924,3 @@ func main() {
 	fmt.Println("order placed")
 }
 ```
-
-## 18. References
-
-1. World Wide Web Consortium, Web Services Architecture, W3C Working Group
-   Note, 11 February 2004. https://www.w3.org/TR/ws-arch/. Verified
-   2026-08-02.
-2. Martin Fowler, "Service Oriented Ambiguity," martinfowler.com bliki.
-   https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html. Verified
-   2026-08-02.
-3. James Lewis and Martin Fowler, "Microservices," martinfowler.com, 25
-   March 2014. https://martinfowler.com/articles/microservices.html.
-   Verified 2026-08-02.
-4. Randy Shoup, "The eBay Architecture," InfoQ, 27 May 2008.
-   https://www.infoq.com/articles/ebay-scalability-best-practices/.
-   Verified 2026-08-02.
-5. Uber Engineering, "Rethinking Microservice Architecture as Uber Grows,"
-   uber.com engineering blog. https://www.uber.com/blog/microservice-architecture/.
-   Verified 2026-08-02.
-6. Thomas Erl, *Service-Oriented Architecture. Concepts, Technology, and
-   Design*, Prentice Hall, 2005.
-7. Thomas Erl, *SOA. Principles of Service Design*, Prentice Hall, 2007.

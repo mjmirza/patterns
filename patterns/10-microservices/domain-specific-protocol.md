@@ -822,6 +822,37 @@ should be reviewed for whether it inadvertently logs regulated content, a
 patient identifier embedded in a DICOM error message, an order's economic
 terms in a FIX reject log line, rather than only protocol-level metadata.
 
+## 18. References
+
+1. Chris Richardson. microservices.io, "Domain-specific protocol pattern."
+   https://microservices.io/patterns/communication-style/domain-specific.html
+   Verified 2026-08-02. Source of the pattern name, the solution statement,
+   and the SMTP, IMAP, RTMP, HLS, HDS examples.
+2. Internet Engineering Task Force. RFC 5321, "Simple Mail Transfer
+   Protocol." October 2008.
+   https://datatracker.ietf.org/doc/html/rfc5321
+   Verified 2026-08-02. Source for the SMTP production use in dimension 9
+   and the Go code example.
+3. Internet Engineering Task Force. RFC 6120, "Extensible Messaging and
+   Presence Protocol, XMPP Core." March 2011.
+   https://datatracker.ietf.org/doc/html/rfc6120
+   Verified 2026-08-02. Source for the XMPP production use in dimension 9.
+4. Amazon Web Services. AWS IoT Core Developer Guide, "MQTT."
+   https://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html
+   Verified 2026-08-02. Source for the AWS IoT Core MQTT production use in
+   dimension 9 and the Python code example.
+5. Wikipedia contributors. "MQTT."
+   https://en.wikipedia.org/wiki/MQTT
+   Verified 2026-08-02. Source for the OASIS MQTT standardization history
+   in dimension 9.
+6. Wikipedia contributors. "Financial Information eXchange."
+   https://en.wikipedia.org/wiki/Financial_Information_eXchange
+   Verified 2026-08-02. Source for the FIX protocol production use in
+   dimension 9 and the TypeScript code example.
+7. Wikipedia contributors. "DICOM."
+   https://en.wikipedia.org/wiki/DICOM
+   Verified 2026-08-02. Source for the DICOM production use in dimension 9.
+
 ## Code examples
 
 Three languages chosen because each shows a different domain-specific
@@ -1010,34 +1041,3 @@ console.log("ok");
 place tag 35 for MsgType, tag 11 for ClOrdID, and the rest of the FIX field
 numbering live, matching the shape an order management service uses to reach
 a real exchange session.
-
-## 18. References
-
-1. Chris Richardson. microservices.io, "Domain-specific protocol pattern."
-   https://microservices.io/patterns/communication-style/domain-specific.html
-   Verified 2026-08-02. Source of the pattern name, the solution statement,
-   and the SMTP, IMAP, RTMP, HLS, HDS examples.
-2. Internet Engineering Task Force. RFC 5321, "Simple Mail Transfer
-   Protocol." October 2008.
-   https://datatracker.ietf.org/doc/html/rfc5321
-   Verified 2026-08-02. Source for the SMTP production use in dimension 9
-   and the Go code example.
-3. Internet Engineering Task Force. RFC 6120, "Extensible Messaging and
-   Presence Protocol, XMPP Core." March 2011.
-   https://datatracker.ietf.org/doc/html/rfc6120
-   Verified 2026-08-02. Source for the XMPP production use in dimension 9.
-4. Amazon Web Services. AWS IoT Core Developer Guide, "MQTT."
-   https://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html
-   Verified 2026-08-02. Source for the AWS IoT Core MQTT production use in
-   dimension 9 and the Python code example.
-5. Wikipedia contributors. "MQTT."
-   https://en.wikipedia.org/wiki/MQTT
-   Verified 2026-08-02. Source for the OASIS MQTT standardization history
-   in dimension 9.
-6. Wikipedia contributors. "Financial Information eXchange."
-   https://en.wikipedia.org/wiki/Financial_Information_eXchange
-   Verified 2026-08-02. Source for the FIX protocol production use in
-   dimension 9 and the TypeScript code example.
-7. Wikipedia contributors. "DICOM."
-   https://en.wikipedia.org/wiki/DICOM
-   Verified 2026-08-02. Source for the DICOM production use in dimension 9.

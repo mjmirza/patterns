@@ -800,6 +800,32 @@ specific customer, that logging stream inherits the same retention and
 access-control obligations as any other system that stores customer
 activity history.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. Message Routing chapter, Routing Slip pattern. Source
+   of the original name, the problem statement, and the router-plus-attached-
+   list solution described in dimension 1 and dimension 2. Web summary
+   consulted at https://www.enterpriseintegrationpatterns.com/patterns/messaging/RoutingTable.html
+   verified 2026-08-02.
+2. MassTransit documentation. "Routing Slip".
+   https://masstransit.io/documentation/patterns/routing-slip
+   verified 2026-08-02, fetched via current redirect target
+   masstransit.massient.com. Source of the itinerary terminology, the
+   execution and compensation log description in dimension 8, and the
+   production use in dimension 9.
+3. Apache Camel documentation. "Routing Slip EIP".
+   https://camel.apache.org/components/latest/eips/routingSlip-eip.html
+   verified 2026-08-02. Source of the header and delimiter mechanism, the
+   ignoreInvalidEndpoints option, and the explicit distinction from Dynamic
+   Router used across dimensions 1, 4, 8, 11, and 13.
+4. Spring Integration reference documentation. "Message Routing".
+   https://docs.spring.io/spring-integration/reference/message-routing.html
+   verified 2026-08-02. Source confirming Routing Slip as a documented,
+   maintained router implementation in Spring Integration, used in dimension
+   9.
+
 ## Code examples
 
 Three languages chosen for how the pattern is genuinely built in each
@@ -1005,29 +1031,3 @@ if __name__ == "__main__":
     result = coordinator.run(slip, {"orderId": "1001"})
     print(result)
 ```
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. Message Routing chapter, Routing Slip pattern. Source
-   of the original name, the problem statement, and the router-plus-attached-
-   list solution described in dimension 1 and dimension 2. Web summary
-   consulted at https://www.enterpriseintegrationpatterns.com/patterns/messaging/RoutingTable.html
-   verified 2026-08-02.
-2. MassTransit documentation. "Routing Slip".
-   https://masstransit.io/documentation/patterns/routing-slip
-   verified 2026-08-02, fetched via current redirect target
-   masstransit.massient.com. Source of the itinerary terminology, the
-   execution and compensation log description in dimension 8, and the
-   production use in dimension 9.
-3. Apache Camel documentation. "Routing Slip EIP".
-   https://camel.apache.org/components/latest/eips/routingSlip-eip.html
-   verified 2026-08-02. Source of the header and delimiter mechanism, the
-   ignoreInvalidEndpoints option, and the explicit distinction from Dynamic
-   Router used across dimensions 1, 4, 8, 11, and 13.
-4. Spring Integration reference documentation. "Message Routing".
-   https://docs.spring.io/spring-integration/reference/message-routing.html
-   verified 2026-08-02. Source confirming Routing Slip as a documented,
-   maintained router implementation in Spring Integration, used in dimension
-   9.

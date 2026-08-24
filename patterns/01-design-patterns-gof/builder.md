@@ -664,6 +664,78 @@ On data residency and personal data the pattern is silent. Builder does not move
 data across a boundary and imposes no retention behaviour of its own. Claiming
 otherwise would be inventing a concern.
 
+## 18. References
+
+Books.
+
+- Gamma, Erich, Richard Helm, Ralph Johnson and John Vlissides. *Design
+  Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
+  1994. ISBN 0-201-63361-2. Builder, chapter 3 Creational Patterns, page 97.
+  Source of the intent statement, the four participants, the director role, and
+  the Rich Text Format converter example.
+- Bloch, Joshua. *Effective Java*, third edition. Addison-Wesley, 2018. ISBN
+  978-0-13-468599-1. Chapter 2, Item 2, "Consider a builder when faced with many
+  constructor parameters". Source of the telescoping constructor argument, the
+  Nutrition Facts example, the guidance on more than a handful of parameters,
+  and the recursive generic hierarchical builder idiom.
+- Fowler, Martin. *Refactoring. Improving the Design of Existing Code*, second
+  edition. Addison-Wesley, 2019. Named refactorings referenced in dimension 14,
+  Introduce Parameter Object, Extract Class, and Replace Conditional with
+  Polymorphism.
+
+Specifications and primary documentation, each fetched and read on 2026-08-02.
+
+- Oracle. *Java SE 21 API Specification*, interface `java.net.http.HttpRequest.Builder`.
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.net.http/java/net/http/HttpRequest.Builder.html
+  Verified 2026-08-02. Quoted description "A builder of HTTP requests", and the
+  `IllegalStateException` on a missing URI.
+- Oracle. *Java SE 21 API Specification*, class `java.util.Locale.Builder`.
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Locale.Builder.html
+  Verified 2026-08-02. Quoted description of syntax checking versus the
+  constructors and `Locale.of()`.
+- Google. *Protocol Buffers, Java Generated Code Guide*, section Builders.
+  https://protobuf.dev/reference/java/java-generated/ Verified 2026-08-02.
+  Quoted "Message objects ... are immutable" and "To construct a message object,
+  you need to use a builder."
+- Google. *Protocol Buffers, Python Generated Code Guide*.
+  https://protobuf.dev/reference/python/python-generated/ Verified 2026-08-02.
+  Confirms Python generates mutable message classes with direct property
+  assignment and no builder, the language contrast used in dimension 4.
+- Rust project. *Standard library documentation*, `std::process::Command`.
+  https://doc.rust-lang.org/std/process/struct.Command.html Verified 2026-08-02.
+  Quoted "Builder methods are provided to change these defaults and otherwise
+  configure the process."
+- Square. *OkHttp README*.
+  https://raw.githubusercontent.com/square/okhttp/master/README.md Verified
+  2026-08-02. GET example using `new Request.Builder().url(url).build()`,
+  version 5.4.0 at time of verification.
+- Swift project. *Swift Evolution proposal SE-0289, Result builders*.
+  https://github.com/swiftlang/swift-evolution/blob/main/proposals/0289-result-builders.md
+  Verified 2026-08-02. Status Implemented in Swift 5.4. Quoted introduction on
+  implicitly building a result value from a sequence of components.
+
+Articles.
+
+- Cheney, Dave. "Functional options for friendly APIs", 17 October 2014,
+  originally presented at dotGo 2014.
+  https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
+  Verified 2026-08-02. Quoted "customisation of the Server is performed not with
+  configuration parameters stored in a structure, but with functions which
+  operate on the Server value itself", and the attribution to Rob Pike.
+- Pike, Rob. "Self-referential functions and the design of options", January
+  2014. http://commandcenter.blogspot.com.au/2014/01/self-referential-functions-and-design.html
+  Cited by Cheney as the origin of the functional options idea. Link taken from
+  the Cheney article verified 2026-08-02. The blog host was not independently
+  fetched, so this reference is recorded as a secondary attribution rather than
+  a primary read.
+- Pryce, Nat. "Test Data Builders. an alternative to the Object Mother pattern",
+  27 August 2007. http://www.natpryce.com/articles/000714.html Title, author and
+  date confirmed by search on 2026-08-02. The host serves plain HTTP and refused
+  a direct HTTPS fetch, so the article body was not independently retrieved. The
+  companion library by the same author is at
+  https://github.com/npryce/make-it-easy and is described as "A tiny framework
+  that makes it easy to write Test Data Builders in Java".
+
 ## Code examples
 
 Java, the Bloch form with required fields, validation, and a defensive copy.
@@ -933,75 +1005,3 @@ and in both the idiomatic answer to the Bloch problem is a record or data class
 with default parameter values rather than a builder. Writing a builder in either
 language reproduces a Java limitation that neither has, and would demonstrate
 the misuse described in dimension 11 rather than the pattern.
-
-## 18. References
-
-Books.
-
-- Gamma, Erich, Richard Helm, Ralph Johnson and John Vlissides. *Design
-  Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
-  1994. ISBN 0-201-63361-2. Builder, chapter 3 Creational Patterns, page 97.
-  Source of the intent statement, the four participants, the director role, and
-  the Rich Text Format converter example.
-- Bloch, Joshua. *Effective Java*, third edition. Addison-Wesley, 2018. ISBN
-  978-0-13-468599-1. Chapter 2, Item 2, "Consider a builder when faced with many
-  constructor parameters". Source of the telescoping constructor argument, the
-  Nutrition Facts example, the guidance on more than a handful of parameters,
-  and the recursive generic hierarchical builder idiom.
-- Fowler, Martin. *Refactoring. Improving the Design of Existing Code*, second
-  edition. Addison-Wesley, 2019. Named refactorings referenced in dimension 14,
-  Introduce Parameter Object, Extract Class, and Replace Conditional with
-  Polymorphism.
-
-Specifications and primary documentation, each fetched and read on 2026-08-02.
-
-- Oracle. *Java SE 21 API Specification*, interface `java.net.http.HttpRequest.Builder`.
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.net.http/java/net/http/HttpRequest.Builder.html
-  Verified 2026-08-02. Quoted description "A builder of HTTP requests", and the
-  `IllegalStateException` on a missing URI.
-- Oracle. *Java SE 21 API Specification*, class `java.util.Locale.Builder`.
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Locale.Builder.html
-  Verified 2026-08-02. Quoted description of syntax checking versus the
-  constructors and `Locale.of()`.
-- Google. *Protocol Buffers, Java Generated Code Guide*, section Builders.
-  https://protobuf.dev/reference/java/java-generated/ Verified 2026-08-02.
-  Quoted "Message objects ... are immutable" and "To construct a message object,
-  you need to use a builder."
-- Google. *Protocol Buffers, Python Generated Code Guide*.
-  https://protobuf.dev/reference/python/python-generated/ Verified 2026-08-02.
-  Confirms Python generates mutable message classes with direct property
-  assignment and no builder, the language contrast used in dimension 4.
-- Rust project. *Standard library documentation*, `std::process::Command`.
-  https://doc.rust-lang.org/std/process/struct.Command.html Verified 2026-08-02.
-  Quoted "Builder methods are provided to change these defaults and otherwise
-  configure the process."
-- Square. *OkHttp README*.
-  https://raw.githubusercontent.com/square/okhttp/master/README.md Verified
-  2026-08-02. GET example using `new Request.Builder().url(url).build()`,
-  version 5.4.0 at time of verification.
-- Swift project. *Swift Evolution proposal SE-0289, Result builders*.
-  https://github.com/swiftlang/swift-evolution/blob/main/proposals/0289-result-builders.md
-  Verified 2026-08-02. Status Implemented in Swift 5.4. Quoted introduction on
-  implicitly building a result value from a sequence of components.
-
-Articles.
-
-- Cheney, Dave. "Functional options for friendly APIs", 17 October 2014,
-  originally presented at dotGo 2014.
-  https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
-  Verified 2026-08-02. Quoted "customisation of the Server is performed not with
-  configuration parameters stored in a structure, but with functions which
-  operate on the Server value itself", and the attribution to Rob Pike.
-- Pike, Rob. "Self-referential functions and the design of options", January
-  2014. http://commandcenter.blogspot.com.au/2014/01/self-referential-functions-and-design.html
-  Cited by Cheney as the origin of the functional options idea. Link taken from
-  the Cheney article verified 2026-08-02. The blog host was not independently
-  fetched, so this reference is recorded as a secondary attribution rather than
-  a primary read.
-- Pryce, Nat. "Test Data Builders. an alternative to the Object Mother pattern",
-  27 August 2007. http://www.natpryce.com/articles/000714.html Title, author and
-  date confirmed by search on 2026-08-02. The host serves plain HTTP and refused
-  a direct HTTPS fetch, so the article body was not independently retrieved. The
-  companion library by the same author is at
-  https://github.com/npryce/make-it-easy and is described as "A tiny framework
-  that makes it easy to write Test Data Builders in Java".

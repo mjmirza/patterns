@@ -798,6 +798,60 @@ correlated, and should be retained and access-controlled under the same
 policy as any other identifier rather than assumed to be safe because it
 originated as operational telemetry.
 
+## 18. References
+
+1. Arcitura Patterns. "Entity Services", part of Thomas Erl's SOA Patterns
+   catalog.
+   https://patterns.arcitura.com/soa-patterns/basics/soamethodology/entity_services
+   Verified 2026-08-02. Source for the original, neutral SOA definition of
+   entity-centric business services and the reuse rationale behind them.
+2. Michael Nygard. "The Entity Service Antipattern". December 2017.
+   https://www.michaelnygard.com/blog/2017/12/the-entity-service-antipattern/
+   Verified 2026-08-02. Source for the microservices-era naming of the
+   antipattern, the operational and semantic coupling claims, and the
+   Zipkin observation in dimension 16.
+3. Ben Morris. "Entity services. when microservices are worse than
+   monoliths".
+   https://www.ben-morris.com/entity-services-when-microservices-are-worse-than-monoliths/
+   Verified 2026-08-02. Source for the CRUD-only definition and the
+   cascading-failure claim in dimension 3 and dimension 11.
+4. Tareq Abedrabbo. "Entity Services Complexity". InfoQ, July 2018.
+   https://www.infoq.com/news/2018/07/entity-services-complexity/
+   Verified 2026-08-02. Source for the "shallow" characterization quoted in
+   dimension 1.
+5. Spring Data REST reference documentation.
+   https://docs.spring.io/spring-data/rest/reference/index.html
+   Verified 2026-08-02. Source for the framework-generated entity-service
+   production use in dimension 9 and the applicability case in dimension 4.
+6. Alexandra Noonan. "Goodbye Microservices. From 100s of Problem Children
+   to 1 Superstar". Twilio Segment engineering blog, July 10, 2018.
+   https://www.twilio.com/en-us/blog/developers/best-practices/goodbye-microservices
+   Verified 2026-08-02. Source for the Segment production migration and its
+   numbers in dimension 9.
+7. .NET Docs (Microsoft). "Applying simplified CQRS and DDD patterns in a
+   microservice", eShopOnContainers reference architecture.
+   https://github.com/dotnet/docs/blob/main/docs/architecture/microservices/microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md
+   Verified 2026-08-02. Source for the eShopOnContainers production use and
+   the applicability quote in dimension 4.
+8. Martin Fowler. "AnemicDomainModel". martinfowler.com bliki, 2003.
+   https://martinfowler.com/bliki/AnemicDomainModel.html
+   Verified 2026-08-02. Source for the Anemic Domain Model definition and
+   quotes in dimension 13.
+9. Eric Evans. Domain-Driven Design. Tackling Complexity in the Heart of
+   Software. Addison-Wesley, 2003. ISBN 0-321-12521-5. The chapters covering
+   Entities and Aggregates. Source for the Aggregate and Entity definitions
+   in dimension 13.
+10. Phil Calcado. "The Back-end for Front-end Pattern (BFF)". September 18,
+    2015.
+    https://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html
+    Verified 2026-08-02. Source for the Backend for Frontend variant in
+    dimension 8 and its origin at SoundCloud.
+11. John Ousterhout. A Philosophy of Software Design, 2nd edition. Yaknyam
+    Press, 2021. ISBN 978-1732102217. The chapter on module depth. Source
+    for the deep-module and shallow-module concept referenced in dimension
+    1, offered as a parallel framing rather than a claim that Ousterhout
+    wrote about entity services directly.
+
 ## Code examples
 
 Three languages, each illustrating a different facet of the pattern.
@@ -1044,57 +1098,3 @@ func main() {
 	fmt.Println(total)
 }
 ```
-
-## 18. References
-
-1. Arcitura Patterns. "Entity Services", part of Thomas Erl's SOA Patterns
-   catalog.
-   https://patterns.arcitura.com/soa-patterns/basics/soamethodology/entity_services
-   Verified 2026-08-02. Source for the original, neutral SOA definition of
-   entity-centric business services and the reuse rationale behind them.
-2. Michael Nygard. "The Entity Service Antipattern". December 2017.
-   https://www.michaelnygard.com/blog/2017/12/the-entity-service-antipattern/
-   Verified 2026-08-02. Source for the microservices-era naming of the
-   antipattern, the operational and semantic coupling claims, and the
-   Zipkin observation in dimension 16.
-3. Ben Morris. "Entity services. when microservices are worse than
-   monoliths".
-   https://www.ben-morris.com/entity-services-when-microservices-are-worse-than-monoliths/
-   Verified 2026-08-02. Source for the CRUD-only definition and the
-   cascading-failure claim in dimension 3 and dimension 11.
-4. Tareq Abedrabbo. "Entity Services Complexity". InfoQ, July 2018.
-   https://www.infoq.com/news/2018/07/entity-services-complexity/
-   Verified 2026-08-02. Source for the "shallow" characterization quoted in
-   dimension 1.
-5. Spring Data REST reference documentation.
-   https://docs.spring.io/spring-data/rest/reference/index.html
-   Verified 2026-08-02. Source for the framework-generated entity-service
-   production use in dimension 9 and the applicability case in dimension 4.
-6. Alexandra Noonan. "Goodbye Microservices. From 100s of Problem Children
-   to 1 Superstar". Twilio Segment engineering blog, July 10, 2018.
-   https://www.twilio.com/en-us/blog/developers/best-practices/goodbye-microservices
-   Verified 2026-08-02. Source for the Segment production migration and its
-   numbers in dimension 9.
-7. .NET Docs (Microsoft). "Applying simplified CQRS and DDD patterns in a
-   microservice", eShopOnContainers reference architecture.
-   https://github.com/dotnet/docs/blob/main/docs/architecture/microservices/microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md
-   Verified 2026-08-02. Source for the eShopOnContainers production use and
-   the applicability quote in dimension 4.
-8. Martin Fowler. "AnemicDomainModel". martinfowler.com bliki, 2003.
-   https://martinfowler.com/bliki/AnemicDomainModel.html
-   Verified 2026-08-02. Source for the Anemic Domain Model definition and
-   quotes in dimension 13.
-9. Eric Evans. Domain-Driven Design. Tackling Complexity in the Heart of
-   Software. Addison-Wesley, 2003. ISBN 0-321-12521-5. The chapters covering
-   Entities and Aggregates. Source for the Aggregate and Entity definitions
-   in dimension 13.
-10. Phil Calcado. "The Back-end for Front-end Pattern (BFF)". September 18,
-    2015.
-    https://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html
-    Verified 2026-08-02. Source for the Backend for Frontend variant in
-    dimension 8 and its origin at SoundCloud.
-11. John Ousterhout. A Philosophy of Software Design, 2nd edition. Yaknyam
-    Press, 2021. ISBN 978-1732102217. The chapter on module depth. Source
-    for the deep-module and shallow-module concept referenced in dimension
-    1, offered as a parallel framing rather than a claim that Ousterhout
-    wrote about entity services directly.

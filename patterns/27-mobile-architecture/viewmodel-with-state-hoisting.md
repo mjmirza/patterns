@@ -431,6 +431,16 @@ genuinely need it, per Google's own own placement rules applied
 strictly, is a necessary part of a security-conscious implementation
 of this pattern.
 
+## 18. References
+
+1. Google. "State and Jetpack Compose".
+   https://developer.android.com/develop/ui/compose/state
+   Verified 2026-08-22. Source of the state-hoisting definition, the
+   value/onValueChange parameter pattern, the single-source-of-truth,
+   encapsulated, shareable, and interceptable properties, and the
+   three hoisting-placement rules, used in dimensions 1, 2, 3, 5, 7,
+   9, and 11.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -544,13 +554,3 @@ if __name__ == "__main__":
     counter.user_taps_increment()
     print("viewmodel count is now", view_model.count)
 ```
-
-## 18. References
-
-1. Google. "State and Jetpack Compose".
-   https://developer.android.com/develop/ui/compose/state
-   Verified 2026-08-22. Source of the state-hoisting definition, the
-   value/onValueChange parameter pattern, the single-source-of-truth,
-   encapsulated, shareable, and interceptable properties, and the
-   three hoisting-placement rules, used in dimensions 1, 2, 3, 5, 7,
-   9, and 11.

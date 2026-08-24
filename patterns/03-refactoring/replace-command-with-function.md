@@ -667,6 +667,48 @@ have received a narrow collaborator from the container. A function moved to a
 module may reach for a global client instead. Keep dependencies explicit so the
 operation keeps the same permission boundary after the refactor.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*. 2nd
+   edition. Addison-Wesley, 2018. Chapter 11, "Refactoring APIs," section
+   "Replace Command with Function." Source for the canonical name and the
+   refactoring's catalog placement.
+2. Martin Fowler. "Replace Command with Function." Refactoring catalog.
+   https://refactoring.com/catalog/replaceCommandWithFunction.html. Verified
+   2026-08-02. Source for the public before and after shape and inverse
+   relationship.
+3. Martin Fowler. "Replace Function with Command." Refactoring catalog.
+   https://refactoring.com/catalog/replaceFunctionWithCommand.html. Verified
+   2026-08-02. Source for the inverse refactoring and the older alias Replace
+   Method with Method Object.
+4. Martin Fowler. "Changes for the 2nd Edition of Refactoring." 5 September
+   2018. https://martinfowler.com/articles/refactoring-2nd-changes.html.
+   Verified 2026-08-02. Source for the statement that Replace Command with
+   Function was new in the second edition.
+5. Pallets. *Click Documentation*, version 8.5.x, "Quickstart."
+   https://click.palletsprojects.com/en/stable/quickstart/. Verified
+   2026-08-02. Source for function-decorated command declaration.
+6. Pallets. *Click Documentation*, version 8.5.x, "API."
+   https://click.palletsprojects.com/en/stable/api/. Verified 2026-08-02.
+   Source for `click.command` creating a `Command` with the decorated function
+   as callback.
+7. Python Software Foundation. "black/src/black/`__init__.py`."
+   https://github.com/psf/black/blob/main/src/black/__init__.py. Verified
+   2026-08-02. Source for Black's Click-decorated `main` function.
+8. Pallets. *Flask Documentation*, version 3.1.x, "Quickstart."
+   https://flask.palletsprojects.com/en/stable/quickstart/. Verified
+   2026-08-02. Source for the minimal route function example.
+9. Pallets. *Flask Documentation*, version 3.1.x, "API."
+   https://flask.palletsprojects.com/en/stable/api/. Verified 2026-08-02.
+   Source for `route()` as a shortcut for registering a view function.
+10. Meta Open Source. *React Documentation*, "Component."
+    https://react.dev/reference/react/Component. Verified 2026-08-02. Source
+    for the recommendation to define new components as functions rather than
+    classes.
+11. Meta Open Source. *React Documentation*, "Your First Component."
+    https://react.dev/learn/your-first-component. Verified 2026-08-02. Source
+    for React components as JavaScript functions.
+
 ## Code examples
 
 The examples use TypeScript, Python, and Go because each language has a natural
@@ -783,45 +825,3 @@ func main() {
 	fmt.Println(after)
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*. 2nd
-   edition. Addison-Wesley, 2018. Chapter 11, "Refactoring APIs," section
-   "Replace Command with Function." Source for the canonical name and the
-   refactoring's catalog placement.
-2. Martin Fowler. "Replace Command with Function." Refactoring catalog.
-   https://refactoring.com/catalog/replaceCommandWithFunction.html. Verified
-   2026-08-02. Source for the public before and after shape and inverse
-   relationship.
-3. Martin Fowler. "Replace Function with Command." Refactoring catalog.
-   https://refactoring.com/catalog/replaceFunctionWithCommand.html. Verified
-   2026-08-02. Source for the inverse refactoring and the older alias Replace
-   Method with Method Object.
-4. Martin Fowler. "Changes for the 2nd Edition of Refactoring." 5 September
-   2018. https://martinfowler.com/articles/refactoring-2nd-changes.html.
-   Verified 2026-08-02. Source for the statement that Replace Command with
-   Function was new in the second edition.
-5. Pallets. *Click Documentation*, version 8.5.x, "Quickstart."
-   https://click.palletsprojects.com/en/stable/quickstart/. Verified
-   2026-08-02. Source for function-decorated command declaration.
-6. Pallets. *Click Documentation*, version 8.5.x, "API."
-   https://click.palletsprojects.com/en/stable/api/. Verified 2026-08-02.
-   Source for `click.command` creating a `Command` with the decorated function
-   as callback.
-7. Python Software Foundation. "black/src/black/`__init__.py`."
-   https://github.com/psf/black/blob/main/src/black/__init__.py. Verified
-   2026-08-02. Source for Black's Click-decorated `main` function.
-8. Pallets. *Flask Documentation*, version 3.1.x, "Quickstart."
-   https://flask.palletsprojects.com/en/stable/quickstart/. Verified
-   2026-08-02. Source for the minimal route function example.
-9. Pallets. *Flask Documentation*, version 3.1.x, "API."
-   https://flask.palletsprojects.com/en/stable/api/. Verified 2026-08-02.
-   Source for `route()` as a shortcut for registering a view function.
-10. Meta Open Source. *React Documentation*, "Component."
-    https://react.dev/reference/react/Component. Verified 2026-08-02. Source
-    for the recommendation to define new components as functions rather than
-    classes.
-11. Meta Open Source. *React Documentation*, "Your First Component."
-    https://react.dev/learn/your-first-component. Verified 2026-08-02. Source
-    for React components as JavaScript functions.

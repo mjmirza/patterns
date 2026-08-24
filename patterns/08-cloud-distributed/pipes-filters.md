@@ -848,6 +848,42 @@ correlation identifier that is easy to link back to a specific individual
 across every stage of the pipeline is exactly the kind of persistent
 identifier privacy regulations are often concerned with.
 
+## 18. References
+
+1. Wikipedia contributors. "Pipeline (Unix)".
+   https://en.wikipedia.org/wiki/Pipeline_(Unix) Verified 2026-08-02. Source
+   for the McIlroy 1964 concept, Ken Thompson's 1973 `pipe()` implementation
+   in Version 3 Unix, and the `|` notation added in Version 4 Unix.
+2. Microsoft. "Pipes and Filters pattern". Azure Architecture Center.
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters
+   Verified 2026-08-02. Source for the Context and problem framing, the
+   Issues and considerations (idempotency, repeated messages, context and
+   state, message tolerance), the When to use and When not to use lists, the
+   pairing with Compensating Transaction, and the Azure Functions plus Azure
+   Queue Storage plus Azure Blob Storage worked example with claim check.
+3. The Apache Software Foundation. "Pipeline EIP". Apache Camel documentation.
+   https://camel.apache.org/components/latest/eips/pipeline-eip.html
+   Verified 2026-08-02. Source for Apache Camel's implementation of the
+   Pipes and Filters pattern as a named EIP construct.
+4. The GStreamer team. "Basic concepts". GStreamer Application Development
+   Manual.
+   https://gstreamer.freedesktop.org/documentation/application-development/introduction/basics.html
+   Verified 2026-08-02. Source for the elements-and-pads pipeline
+   architecture used as a production example.
+5. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. Messaging Systems chapter, Pipes and Filters pattern.
+   Source for the message-based cataloguing of the pattern and its pipe and
+   filter terminology as applied to enterprise integration rather than to
+   operating-system processes.
+6. David Garlan, Mary Shaw. "An Introduction to Software Architecture".
+   Carnegie Mellon University, School of Computer Science, Technical Report
+   CMU-CS-94-166, 1994 (an earlier version circulated as a 1993 technical
+   report). Source for the architectural-style formalisation of Pipes and
+   Filters as a named style with filters as components and pipes as
+   connectors, cited here for the taxonomy the pattern's lineage draws on
+   rather than for a specific quoted claim.
+
 ## Code examples
 
 Three languages chosen for genuinely different idiomatic shapes. Go shows the
@@ -1014,39 +1050,3 @@ const output = runPipeline(source, [
 
 console.log(output);
 ```
-
-## 18. References
-
-1. Wikipedia contributors. "Pipeline (Unix)".
-   https://en.wikipedia.org/wiki/Pipeline_(Unix) Verified 2026-08-02. Source
-   for the McIlroy 1964 concept, Ken Thompson's 1973 `pipe()` implementation
-   in Version 3 Unix, and the `|` notation added in Version 4 Unix.
-2. Microsoft. "Pipes and Filters pattern". Azure Architecture Center.
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters
-   Verified 2026-08-02. Source for the Context and problem framing, the
-   Issues and considerations (idempotency, repeated messages, context and
-   state, message tolerance), the When to use and When not to use lists, the
-   pairing with Compensating Transaction, and the Azure Functions plus Azure
-   Queue Storage plus Azure Blob Storage worked example with claim check.
-3. The Apache Software Foundation. "Pipeline EIP". Apache Camel documentation.
-   https://camel.apache.org/components/latest/eips/pipeline-eip.html
-   Verified 2026-08-02. Source for Apache Camel's implementation of the
-   Pipes and Filters pattern as a named EIP construct.
-4. The GStreamer team. "Basic concepts". GStreamer Application Development
-   Manual.
-   https://gstreamer.freedesktop.org/documentation/application-development/introduction/basics.html
-   Verified 2026-08-02. Source for the elements-and-pads pipeline
-   architecture used as a production example.
-5. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. Messaging Systems chapter, Pipes and Filters pattern.
-   Source for the message-based cataloguing of the pattern and its pipe and
-   filter terminology as applied to enterprise integration rather than to
-   operating-system processes.
-6. David Garlan, Mary Shaw. "An Introduction to Software Architecture".
-   Carnegie Mellon University, School of Computer Science, Technical Report
-   CMU-CS-94-166, 1994 (an earlier version circulated as a 1993 technical
-   report). Source for the architectural-style formalisation of Pipes and
-   Filters as a named style with filters as components and pipes as
-   connectors, cited here for the taxonomy the pattern's lineage draws on
-   rather than for a specific quoted claim.

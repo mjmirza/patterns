@@ -687,6 +687,39 @@ processing. Apply the same retention and access-control policy to envelope
 headers stored in logs and traces as would apply to the equivalent data if
 it appeared directly in the payload.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. Message Construction chapter, Envelope Wrapper.
+   Source of the problem statement, solution summary, and the pattern's
+   relationship to Message, Correlation Identifier, Return Address, and
+   Format Indicator.
+2. Enterprise Integration Patterns companion site. "Envelope Wrapper".
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/EnvelopeWrapper.html
+   Verified 2026-08-02. Reproduces the book's problem and solution wording
+   used in dimension 1.
+3. World Wide Web Consortium. "SOAP Version 1.2 Part 1. Messaging
+   Framework (Second Edition)", section 5, "SOAP Envelope".
+   https://www.w3.org/TR/soap12-part1/
+   Verified 2026-08-02. Source for the SOAP Envelope production use in
+   dimension 9 and the nested-envelope implementation variant in dimension 8.
+4. Apache Software Foundation, Apache Kafka project. "KIP-82 - Add Record
+   Headers", Apache Kafka wiki.
+   https://cwiki.apache.org/confluence/display/KAFKA/KIP-82+-+Add+Record+Headers
+   Verified 2026-08-02. Source for the Kafka record headers production use
+   in dimension 9.
+5. Broadcom (RabbitMQ). "Publishers", RabbitMQ documentation.
+   https://www.rabbitmq.com/docs/publishers
+   Verified 2026-08-02. Source for AMQP 0-9-1 basic message properties as a
+   production use in dimension 9.
+6. Broadcom (VMware Tanzu), Spring Integration project. "Message", Spring
+   Integration Reference documentation.
+   https://docs.spring.io/spring-integration/reference/message.html
+   Verified 2026-08-02. Source for the `Message<T>` and `MessageHeaders`
+   production use in dimension 9, and the immutable-headers detail in
+   dimension 10.
+
 ## Code examples
 
 Three languages, chosen for three genuinely different framing of the
@@ -839,36 +872,3 @@ if __name__ == "__main__":
     print(f"correlation_id={envelope.correlation_id}")
     print(f"restored equals original: {restored == original}")
 ```
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. Message Construction chapter, Envelope Wrapper.
-   Source of the problem statement, solution summary, and the pattern's
-   relationship to Message, Correlation Identifier, Return Address, and
-   Format Indicator.
-2. Enterprise Integration Patterns companion site. "Envelope Wrapper".
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/EnvelopeWrapper.html
-   Verified 2026-08-02. Reproduces the book's problem and solution wording
-   used in dimension 1.
-3. World Wide Web Consortium. "SOAP Version 1.2 Part 1. Messaging
-   Framework (Second Edition)", section 5, "SOAP Envelope".
-   https://www.w3.org/TR/soap12-part1/
-   Verified 2026-08-02. Source for the SOAP Envelope production use in
-   dimension 9 and the nested-envelope implementation variant in dimension 8.
-4. Apache Software Foundation, Apache Kafka project. "KIP-82 - Add Record
-   Headers", Apache Kafka wiki.
-   https://cwiki.apache.org/confluence/display/KAFKA/KIP-82+-+Add+Record+Headers
-   Verified 2026-08-02. Source for the Kafka record headers production use
-   in dimension 9.
-5. Broadcom (RabbitMQ). "Publishers", RabbitMQ documentation.
-   https://www.rabbitmq.com/docs/publishers
-   Verified 2026-08-02. Source for AMQP 0-9-1 basic message properties as a
-   production use in dimension 9.
-6. Broadcom (VMware Tanzu), Spring Integration project. "Message", Spring
-   Integration Reference documentation.
-   https://docs.spring.io/spring-integration/reference/message.html
-   Verified 2026-08-02. Source for the `Message<T>` and `MessageHeaders`
-   production use in dimension 9, and the immutable-headers detail in
-   dimension 10.

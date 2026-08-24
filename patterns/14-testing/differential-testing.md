@@ -742,6 +742,35 @@ On privacy specifically, the pattern is neutral where inputs are synthetic
 and generated, and materially not neutral where inputs come from real
 production traffic, per the shadow-traffic caveat above.
 
+## 18. References
+
+1. William M. McKeeman. "Differential Testing for Software." Digital
+   Technical Journal, volume 10, number 1, 1998, pages 100 to 107. Origin of
+   the term and its definition, confirmed via the citation as reproduced in
+   Wikipedia contributors, "Differential testing,"
+   https://en.wikipedia.org/wiki/Differential_testing, verified 2026-08-02.
+2. Wikipedia contributors. "Differential testing."
+   https://en.wikipedia.org/wiki/Differential_testing
+   Verified 2026-08-02. Source for the McKeeman citation, the "also known as
+   differential fuzzing" synonym, and the named examples Frankencerts,
+   Mucerts, the Chen et al. JVM differential testing work, NEZHA, and
+   HVLearn.
+3. Xuejun Yang, Yang Chen, Eric Eide, John Regehr. "Finding and Understanding
+   Bugs in C Compilers." Proceedings of the 32nd ACM SIGPLAN Conference on
+   Programming Language Design and Implementation (PLDI), 2011.
+   https://users.cs.utah.edu/~regehr/papers/pldi11-preprint.pdf
+   Verified 2026-08-02, URL resolves to the paper on the lead author's
+   research group page. Source for the Csmith production use in dimension 9.
+4. SQLite Consortium. "How SQLite Is Tested," section "Test Rigs,
+   SQL Logic Test." https://www.sqlite.org/testing.html
+   Verified 2026-08-02. Source for the SQL Logic Test cross-engine
+   differential-testing production use in dimension 9.
+5. SQLancer project contributors. SQLancer repository README.
+   https://github.com/sqlancer/sqlancer
+   Verified 2026-08-02. Source for the SQLancer production use, Pivoted
+   Query Synthesis, Ternary Logic Partitioning, and Non-optimizing Reference
+   Engine Construction in dimension 9.
+
 ## Code examples
 
 Three languages, each showing the same differential test. an old, unescaped
@@ -914,32 +943,3 @@ different sequence than the other two languages at the same seed, so the
 exact count is implementation-specific to each PRNG, while the underlying
 finding, that the legacy quoting function is broken, is consistent across
 all three independently implemented rigs.
-
-## 18. References
-
-1. William M. McKeeman. "Differential Testing for Software." Digital
-   Technical Journal, volume 10, number 1, 1998, pages 100 to 107. Origin of
-   the term and its definition, confirmed via the citation as reproduced in
-   Wikipedia contributors, "Differential testing,"
-   https://en.wikipedia.org/wiki/Differential_testing, verified 2026-08-02.
-2. Wikipedia contributors. "Differential testing."
-   https://en.wikipedia.org/wiki/Differential_testing
-   Verified 2026-08-02. Source for the McKeeman citation, the "also known as
-   differential fuzzing" synonym, and the named examples Frankencerts,
-   Mucerts, the Chen et al. JVM differential testing work, NEZHA, and
-   HVLearn.
-3. Xuejun Yang, Yang Chen, Eric Eide, John Regehr. "Finding and Understanding
-   Bugs in C Compilers." Proceedings of the 32nd ACM SIGPLAN Conference on
-   Programming Language Design and Implementation (PLDI), 2011.
-   https://users.cs.utah.edu/~regehr/papers/pldi11-preprint.pdf
-   Verified 2026-08-02, URL resolves to the paper on the lead author's
-   research group page. Source for the Csmith production use in dimension 9.
-4. SQLite Consortium. "How SQLite Is Tested," section "Test Rigs,
-   SQL Logic Test." https://www.sqlite.org/testing.html
-   Verified 2026-08-02. Source for the SQL Logic Test cross-engine
-   differential-testing production use in dimension 9.
-5. SQLancer project contributors. SQLancer repository README.
-   https://github.com/sqlancer/sqlancer
-   Verified 2026-08-02. Source for the SQLancer production use, Pivoted
-   Query Synthesis, Ternary Logic Partitioning, and Non-optimizing Reference
-   Engine Construction in dimension 9.

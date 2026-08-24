@@ -841,6 +841,46 @@ encode a customer, tenant or user identifier, that field should be treated as
 attributable data under the application's existing retention and access
 rules, not as an exempt piece of internal plumbing.
 
+## 18. References
+
+1. Wikipedia contributors. "Guarded suspension".
+   https://en.wikipedia.org/wiki/Guarded_suspension
+   Verified 2026-08-02. Source for the pattern name, its definition, the
+   attribution to Doug Lea, *Concurrent Programming in Java, Second Edition*
+   (Addison-Wesley, 2000), and the related Balking and Guarded Command
+   Language references in dimension 1.
+2. Wikipedia contributors. "Concurrency pattern".
+   https://en.wikipedia.org/wiki/Concurrency_pattern
+   Verified 2026-08-02. Source for Guarded Suspension's place alongside
+   Balking, Monitor Object and Active Object in the Schmidt, Stal, Rohnert,
+   Buschmann concurrency pattern catalog, *Pattern-Oriented Software
+   Architecture, Volume 2* (Wiley, 2000), used in dimension 1.
+3. Oracle. *Java SE 21 API Specification*,
+   `java.util.concurrent.locks.Condition`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/Condition.html
+   Verified 2026-08-02. Source for the `BoundedBuffer` example, the
+   two-condition-variable variant in dimension 8, and the `await`/`signal`
+   contract description used throughout.
+4. Oracle. *Java SE 21 API Specification*,
+   `java.util.concurrent.BlockingQueue`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/BlockingQueue.html
+   Verified 2026-08-02. Source for the `put`/`take` blocking contract and the
+   producer-consumer production use in dimension 9.
+5. Python Software Foundation. *Python 3 documentation*, `queue`.
+   https://docs.python.org/3/library/queue.html
+   Verified 2026-08-02. Source for `queue.Queue`'s blocking `put`/`get`
+   contract used as a production use in dimension 9.
+6. The Go Authors. *Go standard library documentation*, `sync.Cond`.
+   https://pkg.go.dev/sync#Cond
+   Verified 2026-08-02. Source for the `Wait`/`Signal`/`Broadcast` contract,
+   the mandatory loop-around-`Wait` guidance, and the production use in
+   dimension 9.
+7. Microsoft. *.NET API documentation*,
+   `System.Collections.Concurrent.BlockingCollection<T>`.
+   https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1
+   Verified 2026-08-02. Source for the bounded-capacity blocking `Add`/`Take`
+   contract used as a production use in dimension 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in materially
@@ -996,43 +1036,3 @@ func main() {
 	<-done
 }
 ```
-
-## 18. References
-
-1. Wikipedia contributors. "Guarded suspension".
-   https://en.wikipedia.org/wiki/Guarded_suspension
-   Verified 2026-08-02. Source for the pattern name, its definition, the
-   attribution to Doug Lea, *Concurrent Programming in Java, Second Edition*
-   (Addison-Wesley, 2000), and the related Balking and Guarded Command
-   Language references in dimension 1.
-2. Wikipedia contributors. "Concurrency pattern".
-   https://en.wikipedia.org/wiki/Concurrency_pattern
-   Verified 2026-08-02. Source for Guarded Suspension's place alongside
-   Balking, Monitor Object and Active Object in the Schmidt, Stal, Rohnert,
-   Buschmann concurrency pattern catalog, *Pattern-Oriented Software
-   Architecture, Volume 2* (Wiley, 2000), used in dimension 1.
-3. Oracle. *Java SE 21 API Specification*,
-   `java.util.concurrent.locks.Condition`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/Condition.html
-   Verified 2026-08-02. Source for the `BoundedBuffer` example, the
-   two-condition-variable variant in dimension 8, and the `await`/`signal`
-   contract description used throughout.
-4. Oracle. *Java SE 21 API Specification*,
-   `java.util.concurrent.BlockingQueue`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/BlockingQueue.html
-   Verified 2026-08-02. Source for the `put`/`take` blocking contract and the
-   producer-consumer production use in dimension 9.
-5. Python Software Foundation. *Python 3 documentation*, `queue`.
-   https://docs.python.org/3/library/queue.html
-   Verified 2026-08-02. Source for `queue.Queue`'s blocking `put`/`get`
-   contract used as a production use in dimension 9.
-6. The Go Authors. *Go standard library documentation*, `sync.Cond`.
-   https://pkg.go.dev/sync#Cond
-   Verified 2026-08-02. Source for the `Wait`/`Signal`/`Broadcast` contract,
-   the mandatory loop-around-`Wait` guidance, and the production use in
-   dimension 9.
-7. Microsoft. *.NET API documentation*,
-   `System.Collections.Concurrent.BlockingCollection<T>`.
-   https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.blockingcollection-1
-   Verified 2026-08-02. Source for the bounded-capacity blocking `Add`/`Take`
-   contract used as a production use in dimension 9.

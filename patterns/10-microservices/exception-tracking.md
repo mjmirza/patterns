@@ -856,6 +856,46 @@ applied to production logs and infrastructure credentials, not a lighter
 standard, since it frequently holds a superset of what the logs alone
 would reveal once request context is attached.
 
+## 18. References
+
+1. Chris Richardson. *microservices.io*. "Pattern. Exception tracking".
+   https://microservices.io/patterns/observability/exception-tracking.html
+   Verified 2026-08-02. Source for the pattern name, its Observability
+   category placement, the stated problem and solution, and the linkage to
+   log aggregation in dimension 13.
+2. Sentry. *Sentry documentation*. "Grouping and Fingerprints".
+   https://docs.sentry.io/concepts/data-management/event-grouping/
+   Verified 2026-08-02. Source for the default fingerprint priority order
+   and the custom fingerprint override behaviour in dimension 8.
+3. Sentry. *Customer stories*. https://sentry.io/customers/ Verified
+   2026-08-02. Source for the named production use in dimension 9.
+4. Microsoft. *Azure Monitor documentation*. "Diagnose exceptions in
+   ASP.NET web apps with Application Insights".
+   https://learn.microsoft.com/en-us/azure/azure-monitor/app/asp-net-exceptions
+   Verified 2026-08-02. Source for the `UnhandledExceptionTelemetryModule`
+   and `TrackException` production use in dimension 9 and the framework
+   integrated variant in dimension 8.
+5. Django Software Foundation. *Django 5.2 documentation*. "Error
+   reporting". https://docs.djangoproject.com/en/5.2/howto/error-reporting/
+   Verified 2026-08-02. Source for the `AdminEmailHandler` default
+   behaviour, the `DEFAULT_EXCEPTION_REPORTER` extension point, and the
+   sensitive data by default caution in dimension 17.
+6. OpenJS Foundation. *Node.js documentation*. "process, the
+   uncaughtException event".
+   https://nodejs.org/api/process.html#event-uncaughtexception Verified
+   2026-08-02. Source for the global uncaught handler variant in
+   dimension 8, its last resort framing, and the production use in
+   dimension 9.
+7. Python Software Foundation. *Python 3 documentation*. "sys.excepthook".
+   https://docs.python.org/3/library/sys.html#sys.excepthook Verified
+   2026-08-02. Source for the Python global uncaught handler mechanism used
+   in the code example and dimension 8.
+8. Oracle. *Java SE 21 API Specification*. `java.lang.Thread`,
+   `setDefaultUncaughtExceptionHandler`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Thread.html
+   Verified 2026-08-02. Source for the Java global uncaught handler
+   mechanism used in the code example and dimension 8.
+
 ## Code examples
 
 Three languages where a Reporter is idiomatically built differently.
@@ -1103,43 +1143,3 @@ public final class ExceptionTrackingDemo {
     }
 }
 ```
-
-## 18. References
-
-1. Chris Richardson. *microservices.io*. "Pattern. Exception tracking".
-   https://microservices.io/patterns/observability/exception-tracking.html
-   Verified 2026-08-02. Source for the pattern name, its Observability
-   category placement, the stated problem and solution, and the linkage to
-   log aggregation in dimension 13.
-2. Sentry. *Sentry documentation*. "Grouping and Fingerprints".
-   https://docs.sentry.io/concepts/data-management/event-grouping/
-   Verified 2026-08-02. Source for the default fingerprint priority order
-   and the custom fingerprint override behaviour in dimension 8.
-3. Sentry. *Customer stories*. https://sentry.io/customers/ Verified
-   2026-08-02. Source for the named production use in dimension 9.
-4. Microsoft. *Azure Monitor documentation*. "Diagnose exceptions in
-   ASP.NET web apps with Application Insights".
-   https://learn.microsoft.com/en-us/azure/azure-monitor/app/asp-net-exceptions
-   Verified 2026-08-02. Source for the `UnhandledExceptionTelemetryModule`
-   and `TrackException` production use in dimension 9 and the framework
-   integrated variant in dimension 8.
-5. Django Software Foundation. *Django 5.2 documentation*. "Error
-   reporting". https://docs.djangoproject.com/en/5.2/howto/error-reporting/
-   Verified 2026-08-02. Source for the `AdminEmailHandler` default
-   behaviour, the `DEFAULT_EXCEPTION_REPORTER` extension point, and the
-   sensitive data by default caution in dimension 17.
-6. OpenJS Foundation. *Node.js documentation*. "process, the
-   uncaughtException event".
-   https://nodejs.org/api/process.html#event-uncaughtexception Verified
-   2026-08-02. Source for the global uncaught handler variant in
-   dimension 8, its last resort framing, and the production use in
-   dimension 9.
-7. Python Software Foundation. *Python 3 documentation*. "sys.excepthook".
-   https://docs.python.org/3/library/sys.html#sys.excepthook Verified
-   2026-08-02. Source for the Python global uncaught handler mechanism used
-   in the code example and dimension 8.
-8. Oracle. *Java SE 21 API Specification*. `java.lang.Thread`,
-   `setDefaultUncaughtExceptionHandler`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Thread.html
-   Verified 2026-08-02. Source for the Java global uncaught handler
-   mechanism used in the code example and dimension 8.

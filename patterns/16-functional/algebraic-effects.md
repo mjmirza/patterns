@@ -513,6 +513,22 @@ log entry exactly once, needs an explicit guarantee from its handler
 contract that it will be resumed at most once, rather than an assumption
 carried over from single-resume intuition.
 
+## 18. References
+
+1. Gordon Plotkin and Matija Pretnar. "Handlers of Algebraic Effects".
+   18th European Symposium on Programming, ESOP 2009, part of ETAPS
+   2009, York, UK.
+   https://www.research.ed.ac.uk/en/publications/handlers-of-algebraic-effects
+   Verified 2026-08-21. Source of the first_described lineage claim.
+2. OCaml manual. Effect handlers.
+   https://ocaml.org/manual/effects.html
+   Verified 2026-08-21. Source for the OCaml production use in
+   dimension 9 and the quoted definition there.
+3. Koka language documentation.
+   https://koka-lang.github.io/koka/doc/book.html
+   Verified 2026-08-21. Source for the Koka production use in
+   dimension 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -592,19 +608,3 @@ func greet(handler: (String) -> Void) {
 
 greet { _ in }
 ```
-
-## 18. References
-
-1. Gordon Plotkin and Matija Pretnar. "Handlers of Algebraic Effects".
-   18th European Symposium on Programming, ESOP 2009, part of ETAPS
-   2009, York, UK.
-   https://www.research.ed.ac.uk/en/publications/handlers-of-algebraic-effects
-   Verified 2026-08-21. Source of the first_described lineage claim.
-2. OCaml manual. Effect handlers.
-   https://ocaml.org/manual/effects.html
-   Verified 2026-08-21. Source for the OCaml production use in
-   dimension 9 and the quoted definition there.
-3. Koka language documentation.
-   https://koka-lang.github.io/koka/doc/book.html
-   Verified 2026-08-21. Source for the Koka production use in
-   dimension 9.

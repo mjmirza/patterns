@@ -829,6 +829,63 @@ parameter values as three different data classes. SQL text can usually be
 logged. Parameter metadata often can be logged. Raw values need field-level
 approval.
 
+## 18. References
+
+1. OWASP Cheat Sheet Series. "SQL Injection Prevention Cheat Sheet", sections
+   "Primary Defenses" and "Defense Option 1: Prepared Statements (with
+   Parameterized Queries)".
+   https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+   Verified 2026-08-02. Source for the primary defense framing, prepared
+   statement guidance, and warning against escaping as the main defense.
+2. MITRE. CWE-89, "Improper Neutralization of Special Elements used in an SQL
+   Command ('SQL Injection')", architecture and design mitigation section.
+   https://cwe.mitre.org/data/definitions/89.html
+   Verified 2026-08-02. Source for the CWE classification and parameterization
+   mitigation guidance.
+3. Oracle. Java SE 17 API Specification, `java.sql.PreparedStatement`.
+   https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/PreparedStatement.html
+   Verified 2026-08-02. Source for JDBC `PreparedStatement`, typed setter
+   methods, and parameter marker behaviour.
+4. Oracle. The Java Tutorials, "Using Prepared Statements", sections "Creating a
+   PreparedStatement Object" and "Supplying Values for PreparedStatement
+   Parameters".
+   https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html
+   Verified 2026-08-02. Source for question mark placeholders, setting values,
+   and repeated execution examples.
+5. Python Software Foundation. Python 3 standard library documentation,
+   `sqlite3`, section "How to use placeholders to bind values in SQL queries".
+   https://docs.python.org/3/library/sqlite3.html
+   Verified 2026-08-02. Source for qmark and named placeholder styles,
+   parameter substitution, and arity behaviour.
+6. The Go Authors. `database/sql` package documentation.
+   https://pkg.go.dev/database/sql
+   Verified 2026-08-02. Source for Go query methods, prepared statements, and
+   placeholder parameter arguments.
+7. The Go Authors. "Querying for data", Go database documentation.
+   https://go.dev/doc/database/querying
+   Verified 2026-08-02. Source for Go examples and DBMS-specific placeholder
+   syntax notes.
+8. PostgreSQL Global Development Group. PostgreSQL documentation, "Message
+   Formats", `Parse` and `Bind` messages.
+   https://www.postgresql.org/docs/current/protocol-message-formats.html
+   Verified 2026-08-02. Source for protocol-level separation of statement text
+   and parameter values.
+9. Prisma. Prisma ORM documentation, "Raw queries".
+   https://www.prisma.io/docs/orm/prisma-client/using-raw-sql/raw-queries
+   Verified 2026-08-02. Source for tagged raw queries, unsafe raw methods, and
+   the limit that variables cannot replace identifiers or SQL keywords.
+10. SQLx project. Rust SQLx documentation, `sqlx::query`.
+    https://docs.rs/sqlx/latest/sqlx/fn.query.html
+    Verified 2026-08-02. Source for SQLx prepared execution, transparent
+    caching, `.bind`, and database-specific placeholder syntax.
+11. SQLx project. Rust SQLx documentation, `query!` macro.
+    https://docs.rs/sqlx/latest/sqlx/macro.query.html
+    Verified 2026-08-02. Source for compile-time checked bind parameters.
+12. Node.js project. Node.js API documentation, `node:sqlite`.
+    https://nodejs.org/api/sqlite.html
+    Verified 2026-08-02. Source for `database.prepare`, `StatementSync`
+    parameter binding, and tagged SQLite statement behaviour.
+
 ## Code examples
 
 Three languages are shown because they represent different common shapes.
@@ -933,60 +990,3 @@ print(query.sql)
 print(query.values.map(\.description))
 print(activeUsersByRole("admin", limit: 10).values.count)
 ```
-
-## 18. References
-
-1. OWASP Cheat Sheet Series. "SQL Injection Prevention Cheat Sheet", sections
-   "Primary Defenses" and "Defense Option 1: Prepared Statements (with
-   Parameterized Queries)".
-   https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
-   Verified 2026-08-02. Source for the primary defense framing, prepared
-   statement guidance, and warning against escaping as the main defense.
-2. MITRE. CWE-89, "Improper Neutralization of Special Elements used in an SQL
-   Command ('SQL Injection')", architecture and design mitigation section.
-   https://cwe.mitre.org/data/definitions/89.html
-   Verified 2026-08-02. Source for the CWE classification and parameterization
-   mitigation guidance.
-3. Oracle. Java SE 17 API Specification, `java.sql.PreparedStatement`.
-   https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/PreparedStatement.html
-   Verified 2026-08-02. Source for JDBC `PreparedStatement`, typed setter
-   methods, and parameter marker behaviour.
-4. Oracle. The Java Tutorials, "Using Prepared Statements", sections "Creating a
-   PreparedStatement Object" and "Supplying Values for PreparedStatement
-   Parameters".
-   https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html
-   Verified 2026-08-02. Source for question mark placeholders, setting values,
-   and repeated execution examples.
-5. Python Software Foundation. Python 3 standard library documentation,
-   `sqlite3`, section "How to use placeholders to bind values in SQL queries".
-   https://docs.python.org/3/library/sqlite3.html
-   Verified 2026-08-02. Source for qmark and named placeholder styles,
-   parameter substitution, and arity behaviour.
-6. The Go Authors. `database/sql` package documentation.
-   https://pkg.go.dev/database/sql
-   Verified 2026-08-02. Source for Go query methods, prepared statements, and
-   placeholder parameter arguments.
-7. The Go Authors. "Querying for data", Go database documentation.
-   https://go.dev/doc/database/querying
-   Verified 2026-08-02. Source for Go examples and DBMS-specific placeholder
-   syntax notes.
-8. PostgreSQL Global Development Group. PostgreSQL documentation, "Message
-   Formats", `Parse` and `Bind` messages.
-   https://www.postgresql.org/docs/current/protocol-message-formats.html
-   Verified 2026-08-02. Source for protocol-level separation of statement text
-   and parameter values.
-9. Prisma. Prisma ORM documentation, "Raw queries".
-   https://www.prisma.io/docs/orm/prisma-client/using-raw-sql/raw-queries
-   Verified 2026-08-02. Source for tagged raw queries, unsafe raw methods, and
-   the limit that variables cannot replace identifiers or SQL keywords.
-10. SQLx project. Rust SQLx documentation, `sqlx::query`.
-    https://docs.rs/sqlx/latest/sqlx/fn.query.html
-    Verified 2026-08-02. Source for SQLx prepared execution, transparent
-    caching, `.bind`, and database-specific placeholder syntax.
-11. SQLx project. Rust SQLx documentation, `query!` macro.
-    https://docs.rs/sqlx/latest/sqlx/macro.query.html
-    Verified 2026-08-02. Source for compile-time checked bind parameters.
-12. Node.js project. Node.js API documentation, `node:sqlite`.
-    https://nodejs.org/api/sqlite.html
-    Verified 2026-08-02. Source for `database.prepare`, `StatementSync`
-    parameter binding, and tagged SQLite statement behaviour.

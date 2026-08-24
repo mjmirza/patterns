@@ -937,6 +937,62 @@ key management or data residency. It does not create a new data flow, it repeats
 an existing one, so the privacy posture of a retried call is the privacy posture
 of the call. Saying otherwise would be inventing a concern.
 
+## 18. References
+
+- Metcalfe, R. M. and Boggs, D. R. "Ethernet. Distributed Packet Switching for
+  Local Computer Networks", *Communications of the ACM* 19(7), July 1976, pages
+  395 to 404. Origin of binary exponential backoff. Attribution and the
+  algorithm description confirmed through the ACM Digital Library record for the
+  later stability analysis of the same algorithm,
+  https://dl.acm.org/doi/10.1145/44483.44488, verified 2026-08-02.
+- Brooker, Marc. "Exponential Backoff And Jitter", AWS Architecture Blog,
+  4 March 2015.
+  https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/,
+  verified 2026-08-02. Source for the four named variants and their comparison.
+- Amazon Web Services. "Retry behavior", *AWS SDKs and Tools Reference Guide*.
+  https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html,
+  verified 2026-08-02. Source for standard, adaptive and legacy modes, the
+  `delay = random(0, 1) x min(20,000 ms, base_delay x 2^retry)` formula, the
+  50 ms and 1000 ms base delays, the 500 token retry quota with 14 and 5 token
+  costs, the error classification tables, and the `x-amz-retry-after` clamp.
+- Beyer, B., Jones, C., Petoff, J. and Murphy, N. R., editors. *Site Reliability
+  Engineering*, O'Reilly, 2016, chapter 21, "Handling Overload".
+  https://sre.google/sre-book/handling-overload/, verified 2026-08-02. Source
+  for the three-attempt limit, the 10 percent client retry budget, the
+  retry-at-one-layer rule, and the load figures near 3x and 1.1x.
+- gRPC. "A6, client retries", gRPC proposal.
+  https://github.com/grpc/proposal/blob/master/A6-client-retries.md, verified
+  2026-08-02. Source for `maxTokens`, `tokenRatio`, the `maxTokens / 2`
+  threshold, `maxAttempts`, `initialBackoff`, `backoffMultiplier`,
+  `retryableStatusCodes` and the `random(0.8, 1.2)` jitter multiplier.
+- Envoy Proxy. "Router", HTTP filters configuration.
+  https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/router_filter,
+  verified 2026-08-02. Source for the 25 ms default base interval, the ten times
+  maximum, `x-envoy-max-retries` and the `retry-on` policy vocabulary.
+- Envoy Proxy. "CircuitBreakers", cluster API v3.
+  https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/cluster/v3/circuit_breaker.proto,
+  verified 2026-08-02. Source for `RetryBudget`, `budget_percent` default 20 and
+  `min_retry_concurrency` default 3.
+- Stripe. "Idempotent requests", Stripe API reference.
+  https://docs.stripe.com/api/idempotent_requests, verified 2026-08-02. Source
+  for the `Idempotency-Key` header, the 24 hour key lifetime, response replay
+  including 500s, parameter comparison, and the guidance against personal
+  identifiers as keys.
+- Twitter. "Clients", Finagle user guide.
+  https://twitter.github.io/finagle/guide/Clients.html, verified 2026-08-02.
+  Source for `RetryBudget`, its `ttl`, `minRetriesPerSec` and `percentCanRetry`
+  parameters, the 20 percent plus 10 per second default, `RequeueFilter`, and
+  the shared-budget guidance.
+- Internet Engineering Task Force. RFC 9110, *HTTP Semantics*, June 2022,
+  sections 2.4.3, 9.2.2, 10.2.3 and 15.6.4.
+  https://www.rfc-editor.org/rfc/rfc9110.html#name-503-service-unavailable,
+  verified 2026-08-02. Source for the definition of idempotent methods, the
+  automatic retry allowance, `Retry-After`, and 503 Service Unavailable.
+- Nygard, Michael T. *Release It!*, Pragmatic Bookshelf, 2007, stability
+  patterns chapter. Source for the framing of Retry alongside Circuit Breaker,
+  Timeout and Bulkhead. Page numbers are not cited because the edition was not
+  opened during authoring.
+
 ## Code
 
 ### TypeScript
@@ -1509,59 +1565,3 @@ change in shape, and the four samples above already cover the two axes that
 change the code, whether the deadline is ambient as in Go through the context
 or explicit as in the other three, and whether the classifier is exhaustive at
 compile time as in Rust or open as in the rest.
-
-## 18. References
-
-- Metcalfe, R. M. and Boggs, D. R. "Ethernet. Distributed Packet Switching for
-  Local Computer Networks", *Communications of the ACM* 19(7), July 1976, pages
-  395 to 404. Origin of binary exponential backoff. Attribution and the
-  algorithm description confirmed through the ACM Digital Library record for the
-  later stability analysis of the same algorithm,
-  https://dl.acm.org/doi/10.1145/44483.44488, verified 2026-08-02.
-- Brooker, Marc. "Exponential Backoff And Jitter", AWS Architecture Blog,
-  4 March 2015.
-  https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/,
-  verified 2026-08-02. Source for the four named variants and their comparison.
-- Amazon Web Services. "Retry behavior", *AWS SDKs and Tools Reference Guide*.
-  https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html,
-  verified 2026-08-02. Source for standard, adaptive and legacy modes, the
-  `delay = random(0, 1) x min(20,000 ms, base_delay x 2^retry)` formula, the
-  50 ms and 1000 ms base delays, the 500 token retry quota with 14 and 5 token
-  costs, the error classification tables, and the `x-amz-retry-after` clamp.
-- Beyer, B., Jones, C., Petoff, J. and Murphy, N. R., editors. *Site Reliability
-  Engineering*, O'Reilly, 2016, chapter 21, "Handling Overload".
-  https://sre.google/sre-book/handling-overload/, verified 2026-08-02. Source
-  for the three-attempt limit, the 10 percent client retry budget, the
-  retry-at-one-layer rule, and the load figures near 3x and 1.1x.
-- gRPC. "A6, client retries", gRPC proposal.
-  https://github.com/grpc/proposal/blob/master/A6-client-retries.md, verified
-  2026-08-02. Source for `maxTokens`, `tokenRatio`, the `maxTokens / 2`
-  threshold, `maxAttempts`, `initialBackoff`, `backoffMultiplier`,
-  `retryableStatusCodes` and the `random(0.8, 1.2)` jitter multiplier.
-- Envoy Proxy. "Router", HTTP filters configuration.
-  https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/router_filter,
-  verified 2026-08-02. Source for the 25 ms default base interval, the ten times
-  maximum, `x-envoy-max-retries` and the `retry-on` policy vocabulary.
-- Envoy Proxy. "CircuitBreakers", cluster API v3.
-  https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/cluster/v3/circuit_breaker.proto,
-  verified 2026-08-02. Source for `RetryBudget`, `budget_percent` default 20 and
-  `min_retry_concurrency` default 3.
-- Stripe. "Idempotent requests", Stripe API reference.
-  https://docs.stripe.com/api/idempotent_requests, verified 2026-08-02. Source
-  for the `Idempotency-Key` header, the 24 hour key lifetime, response replay
-  including 500s, parameter comparison, and the guidance against personal
-  identifiers as keys.
-- Twitter. "Clients", Finagle user guide.
-  https://twitter.github.io/finagle/guide/Clients.html, verified 2026-08-02.
-  Source for `RetryBudget`, its `ttl`, `minRetriesPerSec` and `percentCanRetry`
-  parameters, the 20 percent plus 10 per second default, `RequeueFilter`, and
-  the shared-budget guidance.
-- Internet Engineering Task Force. RFC 9110, *HTTP Semantics*, June 2022,
-  sections 2.4.3, 9.2.2, 10.2.3 and 15.6.4.
-  https://www.rfc-editor.org/rfc/rfc9110.html#name-503-service-unavailable,
-  verified 2026-08-02. Source for the definition of idempotent methods, the
-  automatic retry allowance, `Retry-After`, and 503 Service Unavailable.
-- Nygard, Michael T. *Release It!*, Pragmatic Bookshelf, 2007, stability
-  patterns chapter. Source for the framing of Retry alongside Circuit Breaker,
-  Timeout and Bulkhead. Page numbers are not cited because the edition was not
-  opened during authoring.

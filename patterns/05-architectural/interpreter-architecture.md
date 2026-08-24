@@ -802,6 +802,45 @@ echoes back a fragment of the data it was evaluating against can leak
 another tenant's data through what looks like an innocuous diagnostic
 message, and error paths deserve the same audit applied to the success path.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, *Design
+   Patterns. Elements of Reusable Object-Oriented Software*, Addison-Wesley,
+   1994, chapter 3, Behavioral Patterns, Interpreter. Primary source for the
+   pattern's name, intent, and canonical class structure.
+2. [Wikipedia, "Interpreter pattern"](https://en.wikipedia.org/wiki/Interpreter_pattern),
+   verified 2026-08-02. Secondary summary of the GoF intent, structure, and
+   the SQL production example.
+3. Robert Nystrom, *Crafting Interpreters*, Genever Benning, 2021, part two,
+   "A Tree-Walk Interpreter." Online edition,
+   [craftinginterpreters.com, "Representing Code"](https://craftinginterpreters.com/representing-code.html),
+   verified 2026-08-02. Source for the Tree-Walking Interpreter alias, the
+   Visitor pattern's role as the expression-problem fix, and the explicit
+   statement that method-per-node dispatch is literally called the
+   Interpreter pattern.
+4. [Apache Commons JEXL, project overview](https://commons.apache.org/proper/commons-jexl/),
+   verified 2026-08-02. Source for the JEXL production use and its explicit
+   architectural rationale for tree-walking interpretation over bytecode
+   compilation.
+5. [jq manual](https://jqlang.org/manual/), verified 2026-08-02. Source for
+   the jq production use and its filter composition model.
+6. Russ Cox, "Regular Expression Matching Can Be Simple And Fast",
+   [swtch.com/~rsc/regexp/regexp1.html](https://swtch.com/~rsc/regexp/regexp1.html),
+   2007, verified 2026-08-02. Source for the backtracking regex engine
+   production example and the tree-walking versus automaton-simulation
+   performance comparison.
+7. Joshua Bloch, *Effective Java*, 3rd edition, Addison-Wesley, 2018.
+   Cross-referenced from the Factory Method entry in this catalog for the
+   related discussion of static factories, not directly cited for a claim in
+   this entry.
+
+Engineering judgement, not independently sourced. The grammar creep failure
+mode in dimension 11, the specific node-count and tree-depth budgeting
+recommendation, and the resource-exhaustion limits in dimension 17 are drawn
+from general production engineering practice with interpreters and rule
+engines rather than from a single citable source, and are labelled as
+judgement per this repository's dimension 11 convention.
+
 ## Code examples
 
 A small boolean rule interpreter, the shape a business rule engine or an
@@ -1081,42 +1120,3 @@ false
 All three samples compiled and ran, TypeScript via `tsc --strict` and `node`,
 Python via `python3`, Go via `go run`, and produced the identical four-line
 result shown above for each.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, *Design
-   Patterns. Elements of Reusable Object-Oriented Software*, Addison-Wesley,
-   1994, chapter 3, Behavioral Patterns, Interpreter. Primary source for the
-   pattern's name, intent, and canonical class structure.
-2. [Wikipedia, "Interpreter pattern"](https://en.wikipedia.org/wiki/Interpreter_pattern),
-   verified 2026-08-02. Secondary summary of the GoF intent, structure, and
-   the SQL production example.
-3. Robert Nystrom, *Crafting Interpreters*, Genever Benning, 2021, part two,
-   "A Tree-Walk Interpreter." Online edition,
-   [craftinginterpreters.com, "Representing Code"](https://craftinginterpreters.com/representing-code.html),
-   verified 2026-08-02. Source for the Tree-Walking Interpreter alias, the
-   Visitor pattern's role as the expression-problem fix, and the explicit
-   statement that method-per-node dispatch is literally called the
-   Interpreter pattern.
-4. [Apache Commons JEXL, project overview](https://commons.apache.org/proper/commons-jexl/),
-   verified 2026-08-02. Source for the JEXL production use and its explicit
-   architectural rationale for tree-walking interpretation over bytecode
-   compilation.
-5. [jq manual](https://jqlang.org/manual/), verified 2026-08-02. Source for
-   the jq production use and its filter composition model.
-6. Russ Cox, "Regular Expression Matching Can Be Simple And Fast",
-   [swtch.com/~rsc/regexp/regexp1.html](https://swtch.com/~rsc/regexp/regexp1.html),
-   2007, verified 2026-08-02. Source for the backtracking regex engine
-   production example and the tree-walking versus automaton-simulation
-   performance comparison.
-7. Joshua Bloch, *Effective Java*, 3rd edition, Addison-Wesley, 2018.
-   Cross-referenced from the Factory Method entry in this catalog for the
-   related discussion of static factories, not directly cited for a claim in
-   this entry.
-
-Engineering judgement, not independently sourced. The grammar creep failure
-mode in dimension 11, the specific node-count and tree-depth budgeting
-recommendation, and the resource-exhaustion limits in dimension 17 are drawn
-from general production engineering practice with interpreters and rule
-engines rather than from a single citable source, and are labelled as
-judgement per this repository's dimension 11 convention.

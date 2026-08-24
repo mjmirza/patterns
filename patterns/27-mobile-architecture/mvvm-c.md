@@ -199,6 +199,17 @@ the coordinator that already owns the flow.
 
 ## 9. Known production uses
 
+This dimension rests on weaker evidence than the rest of the entry, and the
+template's rule is to say so at the top rather than let the citations imply
+more than they carry. MVVM-C as a named composite is thinly documented in
+public company engineering writing, while its two halves, MVVM and the
+coordinator pattern, are each documented well. The two sources below are
+therefore evidence for the design of the halves and for the community
+definition that joins them, not evidence of a named product that publishes
+its use of the composite. A reader weighing adoption should read them as a
+sourced pattern definition with wide community uptake, and should not read
+them as a named production deployment.
+
 **Microsoft's own MVVM documentation, the presentation half of the
 composition.** Microsoft states the core separation and its benefit
 directly. "The MVVM pattern helps cleanly separate an application's
@@ -434,6 +445,19 @@ model's own bindable property for longer than the screen's real
 lifetime genuinely requires, are necessary parts of a
 security-conscious MVVM-C implementation.
 
+## 18. References
+
+1. Microsoft. "Model-View-ViewModel - .NET".
+   https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm
+   Verified 2026-08-22. Source of the core MVVM definition, the
+   view/view model/model isolation description, and the testability
+   benefit, used in dimensions 1, 2, 3, 5, 7, 9, 10, and 15.
+2. Soroush Khanlou. "Coordinators Redux".
+   https://khanlou.com/2015/10/coordinators-redux/
+   Verified 2026-08-22. Source of the coordinator half of the
+   composition, already the primary citation of the coordinator-
+   pattern entry, used here in dimensions 1, 2, 3, 5, 7, and 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -563,16 +587,3 @@ if __name__ == "__main__":
     coordinator = LoginCoordinator()
     coordinator.start()
 ```
-
-## 18. References
-
-1. Microsoft. "Model-View-ViewModel - .NET".
-   https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm
-   Verified 2026-08-22. Source of the core MVVM definition, the
-   view/view model/model isolation description, and the testability
-   benefit, used in dimensions 1, 2, 3, 5, 7, 9, 10, and 15.
-2. Soroush Khanlou. "Coordinators Redux".
-   https://khanlou.com/2015/10/coordinators-redux/
-   Verified 2026-08-22. Source of the coordinator half of the
-   composition, already the primary citation of the coordinator-
-   pattern entry, used here in dimensions 1, 2, 3, 5, 7, and 9.

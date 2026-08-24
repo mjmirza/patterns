@@ -66,6 +66,152 @@ def generate_valid_pattern() -> str:
     return frontmatter + "\n\n".join(sections) + "\n\n" + code_samples + prose_filler
 
 
+NL = chr(10)
+
+
+def joined(*lines: str) -> str:
+    return NL.join(lines) + NL
+
+
+class TestSectionOrder(unittest.TestCase):
+    """The gate must catch a dimension out of place, not merely a missing one."""
+
+    def test_ascending_dimensions_pass(self):
+        text = joined(
+            "## 1. Name, aliases, and lineage",
+            "",
+            "Lineage prose.",
+            "",
+            "## 2. Problem and context",
+            "",
+            "Context prose.",
+            "",
+            "## 18. References",
+            "",
+            "1. https://example.com/one",
+        )
+        self.assertEqual(check_structure.check_section_order(text), [])
+
+    def test_descending_dimension_is_flagged(self):
+        text = joined(
+            "## 1. Name, aliases, and lineage",
+            "",
+            "Lineage prose.",
+            "",
+            "## 17. Security and privacy implications",
+            "",
+            "Security prose.",
+            "",
+            "## 9. Known production uses",
+            "",
+            "Production prose.",
+        )
+        errors = check_structure.check_section_order(text)
+        self.assertTrue(any("numbered dimensions must ascend" in e for e in errors))
+        self.assertTrue(any("9. Known production uses" in e for e in errors))
+
+    def test_code_section_after_references_passes(self):
+        text = joined(
+            "## 17. Security and privacy implications",
+            "",
+            "Security prose.",
+            "",
+            "## 18. References",
+            "",
+            "1. https://example.com/one",
+            "",
+            "## Code examples",
+            "",
+            "### Python",
+        )
+        self.assertEqual(check_structure.check_section_order(text), [])
+
+    def test_code_section_before_references_is_flagged(self):
+        text = joined(
+            "## 17. Security and privacy implications",
+            "",
+            "Security prose.",
+            "",
+            "## Code examples",
+            "",
+            "### Python",
+            "",
+            "## 18. References",
+            "",
+            "1. https://example.com/one",
+        )
+        errors = check_structure.check_section_order(text)
+        self.assertTrue(any("the code section closes the entry" in e for e in errors))
+        self.assertTrue(any("'Code examples' at line 5" in e for e in errors))
+
+    def test_bare_code_heading_variant_is_flagged(self):
+        text = joined(
+            "## Code",
+            "",
+            "### Python",
+            "",
+            "## References",
+            "",
+            "1. https://example.com/one",
+        )
+        errors = check_structure.check_section_order(text)
+        self.assertTrue(any("the code section closes the entry" in e for e in errors))
+
+    def test_heading_inside_fence_is_ignored(self):
+        text = joined(
+            "## 18. References",
+            "",
+            "1. https://example.com/one",
+            "",
+            "## Code examples",
+            "",
+            "```markdown",
+            "## Code examples",
+            "```",
+        )
+        self.assertEqual(check_structure.check_section_order(text), [])
+
+    def test_entry_without_code_section_is_not_flagged(self):
+        text = joined(
+            "## 17. Security and privacy implications",
+            "",
+            "Security prose.",
+            "",
+            "## 18. References",
+            "",
+            "1. https://example.com/one",
+        )
+        self.assertEqual(check_structure.check_section_order(text), [])
+
+    # RENAME_OK: split the draft test into a green case and a red case
+    def test_check_file_accepts_code_after_references(self):
+        good = generate_valid_pattern() + joined(
+            "",
+            "## Code examples",
+            "",
+            "### Python",
+        )
+        with tempfile.TemporaryDirectory() as td:
+            file_path = Path(td) / "ordered.md"
+            file_path.write_text(good, encoding="utf-8")
+            errors = check_structure.check_file(file_path)
+            self.assertEqual([e for e in errors if "section order" in e], [])
+
+    def test_check_file_rejects_code_before_references(self):
+        code_block = joined("## Code examples", "", "### Python", "")
+        broken = generate_valid_pattern().replace(
+            "## 18. References", code_block + "## 18. References", 1
+        )
+        with tempfile.TemporaryDirectory() as td:
+            file_path = Path(td) / "misordered.md"
+            file_path.write_text(broken, encoding="utf-8")
+            errors = check_structure.check_file(file_path)
+            self.assertTrue(
+                any("the code section closes the entry" in e for e in errors),
+                f"expected an order error, got {errors}",
+            )
+
+
 class TestCheckStructure(unittest.TestCase):
     def test_strip_fences(self):
         text = "Prose before\n```python\ncode_line = 1\n```\nProse after"
@@ -107,7 +253,9 @@ class TestCheckStructure(unittest.TestCase):
             )
             file_path.write_text(content, encoding="utf-8")
             errors = check_structure.check_file(file_path)
-            self.assertTrue(any("invalid maturity 'fake_maturity'" in e for e in errors))
+            self.assertTrue(
+                any("invalid maturity 'fake_maturity'" in e for e in errors)
+            )
 
     def test_check_file_missing_required_section(self):
         with tempfile.TemporaryDirectory() as td:
@@ -153,16 +301,16 @@ class TestCheckStructure(unittest.TestCase):
             content = generate_valid_pattern().replace("```typescript", "```python")
             file_path.write_text(content, encoding="utf-8")
             errors = check_structure.check_file(file_path)
-            self.assertTrue(
-                any("needs 3 code languages, found" in e for e in errors)
-            )
+            self.assertTrue(any("needs 3 code languages, found" in e for e in errors))
 
     def test_check_file_insufficient_urls(self):
         with tempfile.TemporaryDirectory() as td:
             file_path = Path(td) / "invalid.md"
-            content = generate_valid_pattern().replace(
-                "https://example.com/ref2", "no_url_2"
-            ).replace("https://example.com/ref3", "no_url_3")
+            content = (
+                generate_valid_pattern()
+                .replace("https://example.com/ref2", "no_url_2")
+                .replace("https://example.com/ref3", "no_url_3")
+            )
             file_path.write_text(content, encoding="utf-8")
             errors = check_structure.check_file(file_path)
             self.assertTrue(any("needs at least 3 cited URLs" in e for e in errors))
@@ -181,9 +329,7 @@ class TestCheckStructure(unittest.TestCase):
             content = generate_valid_pattern().replace("Word " * 1200, "Short prose.")
             file_path.write_text(content, encoding="utf-8")
             errors = check_structure.check_file(file_path)
-            self.assertTrue(
-                any("too short for master level" in e for e in errors)
-            )
+            self.assertTrue(any("too short for master level" in e for e in errors))
 
 
 if __name__ == "__main__":

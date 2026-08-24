@@ -918,6 +918,61 @@ data the contract exposes is forced to be a deliberate, reviewable,
 version-bumping decision rather than an accidental byproduct of an
 unrelated internal refactor.
 
+## 18. References
+
+1. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Chapter 14,
+   "Maintaining Model Integrity". Origin of Open Host Service and Published
+   Language, and the source for the pattern's intent statement in
+   dimension 1 and the context described in dimension 2.
+2. Vaughn Vernon. *Implementing Domain-Driven Design*. Addison-Wesley,
+   2013. ISBN 978-0-321-83457-7. Chapter 3, "Context Maps". Restates the
+   pattern paired with Published Language and illustrates it with a
+   RESTful resource design. Table of contents confirmed against
+   https://gist.github.com/dimabory/4cda22040d23994a31087ffc61060ad2 and
+   the publisher's own chapter listing at
+   https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/ch03.html
+   both verified 2026-08-02.
+3. Domain-driven Design. A Practitioner's Guide. Glossary entry, "Open
+   Host Service".
+   https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/open-host-service/
+   Verified 2026-08-02. Source for the statement that Published Language is
+   commonly combined with Open Host Service, cited in dimension 5.
+4. Microsoft. Azure Architecture Center. "Use Domain Analysis to Model
+   Microservices".
+   https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
+   Verified 2026-08-02. Source for the explicit naming of Open Host Service
+   and Published Language as a microservices context-mapping
+   recommendation, and the pointer to OpenAPI as the concrete Published
+   Language artifact, cited in dimensions 8 and 9.
+5. Stripe. "SDK versioning" and "API versioning".
+   https://docs.stripe.com/sdks/versioning and
+   https://docs.stripe.com/api/versioning
+   Verified 2026-08-02. Source for the Stripe production use in dimension
+   9, the `Stripe-Version` header mechanism, and the monthly-additive,
+   semi-annual-breaking release model.
+6. GitHub. "API Versions".
+   https://docs.github.com/en/rest/about-the-rest-api/api-versions
+   Verified 2026-08-02. Source for the GitHub REST API production use in
+   dimension 9, the `X-GitHub-Api-Version` header, the default version
+   behaviour, the HTTP 410 response for unsupported versions, and the
+   24-month support commitment.
+7. Shopify. "About Shopify API versioning" and "About REST Admin API
+   versioning". https://shopify.dev/docs/api/usage/versioning and
+   https://shopify.dev/docs/api/admin-rest/usage/versioning
+   Verified 2026-08-02. Source for the Shopify production use in dimension
+   9, the quarterly dated-version release schedule, and the twelve-month
+   minimum support with nine-month overlap policy.
+8. Kubernetes. "Kubernetes Deprecation Policy".
+   https://kubernetes.io/docs/reference/using-api/deprecation-policy/
+   mirrored at
+   https://github.com/kubernetes/website/blob/main/content/en/docs/reference/using-api/deprecation-policy.md
+   Verified 2026-08-02. Source for the Kubernetes production use in
+   dimension 9, the versioned API group model, the alpha, beta, and stable
+   support windows, the rule that removal requires an API group version
+   increment, and the deprecated-endpoint `Warning` header behaviour since
+   Kubernetes 1.19.
+
 ## Code examples
 
 Three languages, chosen because each demonstrates a distinct, real
@@ -1158,58 +1213,3 @@ TypeScript samples do, and the boundary function raises rather than
 silently accepting an unrecognised version, which is the same fail-closed
 behaviour the other two samples apply to a protocol negotiation the Host
 Translator does not recognise.
-
-## 18. References
-
-1. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-   Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Chapter 14,
-   "Maintaining Model Integrity". Origin of Open Host Service and Published
-   Language, and the source for the pattern's intent statement in
-   dimension 1 and the context described in dimension 2.
-2. Vaughn Vernon. *Implementing Domain-Driven Design*. Addison-Wesley,
-   2013. ISBN 978-0-321-83457-7. Chapter 3, "Context Maps". Restates the
-   pattern paired with Published Language and illustrates it with a
-   RESTful resource design. Table of contents confirmed against
-   https://gist.github.com/dimabory/4cda22040d23994a31087ffc61060ad2 and
-   the publisher's own chapter listing at
-   https://www.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/ch03.html
-   both verified 2026-08-02.
-3. Domain-driven Design. A Practitioner's Guide. Glossary entry, "Open
-   Host Service".
-   https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/open-host-service/
-   Verified 2026-08-02. Source for the statement that Published Language is
-   commonly combined with Open Host Service, cited in dimension 5.
-4. Microsoft. Azure Architecture Center. "Use Domain Analysis to Model
-   Microservices".
-   https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
-   Verified 2026-08-02. Source for the explicit naming of Open Host Service
-   and Published Language as a microservices context-mapping
-   recommendation, and the pointer to OpenAPI as the concrete Published
-   Language artifact, cited in dimensions 8 and 9.
-5. Stripe. "SDK versioning" and "API versioning".
-   https://docs.stripe.com/sdks/versioning and
-   https://docs.stripe.com/api/versioning
-   Verified 2026-08-02. Source for the Stripe production use in dimension
-   9, the `Stripe-Version` header mechanism, and the monthly-additive,
-   semi-annual-breaking release model.
-6. GitHub. "API Versions".
-   https://docs.github.com/en/rest/about-the-rest-api/api-versions
-   Verified 2026-08-02. Source for the GitHub REST API production use in
-   dimension 9, the `X-GitHub-Api-Version` header, the default version
-   behaviour, the HTTP 410 response for unsupported versions, and the
-   24-month support commitment.
-7. Shopify. "About Shopify API versioning" and "About REST Admin API
-   versioning". https://shopify.dev/docs/api/usage/versioning and
-   https://shopify.dev/docs/api/admin-rest/usage/versioning
-   Verified 2026-08-02. Source for the Shopify production use in dimension
-   9, the quarterly dated-version release schedule, and the twelve-month
-   minimum support with nine-month overlap policy.
-8. Kubernetes. "Kubernetes Deprecation Policy".
-   https://kubernetes.io/docs/reference/using-api/deprecation-policy/
-   mirrored at
-   https://github.com/kubernetes/website/blob/main/content/en/docs/reference/using-api/deprecation-policy.md
-   Verified 2026-08-02. Source for the Kubernetes production use in
-   dimension 9, the versioned API group model, the alpha, beta, and stable
-   support windows, the rule that removal requires an API group version
-   increment, and the deprecated-endpoint `Warning` header behaviour since
-   Kubernetes 1.19.

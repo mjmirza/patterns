@@ -435,6 +435,17 @@ mechanism itself, and a component accepting a slot should document
 clearly whether it expects the consumer to have already ensured the
 content is safe.
 
+## 18. References
+
+1. React. "Passing Props to a Component".
+   https://react.dev/learn/passing-props-to-a-component
+   Verified 2026-08-21. Source of the children prop and "hole" analogy
+   quotes used in dimensions 1, 3, and 9.
+2. MDN Web Docs. "Using templates and slots".
+   https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots
+   Verified 2026-08-21. Source of the web-standard slot definition and
+   named-slot quotes used in dimensions 1, 8, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -550,14 +561,3 @@ let cardB = renderCardShell(CardShellOptions(title: "Signup", renderContent: ren
 print(cardA)
 print(cardB)
 ```
-
-## 18. References
-
-1. React. "Passing Props to a Component".
-   https://react.dev/learn/passing-props-to-a-component
-   Verified 2026-08-21. Source of the children prop and "hole" analogy
-   quotes used in dimensions 1, 3, and 9.
-2. MDN Web Docs. "Using templates and slots".
-   https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots
-   Verified 2026-08-21. Source of the web-standard slot definition and
-   named-slot quotes used in dimensions 1, 8, and 9.

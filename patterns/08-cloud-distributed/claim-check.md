@@ -852,6 +852,24 @@ reviewed for what they leak. A predictable key or a descriptive metadata
 field can quietly reconstruct exactly the sensitive information the
 pattern was adopted to hide.
 
+## 18. References
+
+- Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns.
+  Designing, Building, and Deploying Messaging Solutions*, Addison-Wesley,
+  2003, Message Transformation chapter, the Claim Check pattern.
+- [Enterprise Integration Patterns, Claim Check (Store In Library)](https://www.enterpriseintegrationpatterns.com/patterns/messaging/StoreInLibrary.html),
+  verified 2026-08-02.
+- [Enterprise Integration Patterns, messaging pattern index](https://www.enterpriseintegrationpatterns.com/patterns/messaging/),
+  verified 2026-08-02.
+- [Microsoft Learn, Claim-Check pattern, Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/patterns/claim-check),
+  verified 2026-08-02.
+- [AWS documentation, Managing large Amazon SQS messages using Java and Amazon S3](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/s3-messages.html),
+  verified 2026-08-02.
+- [Apache Camel documentation, Claim Check EIP](https://camel.apache.org/components/latest/eips/claimCheck-eip.html),
+  verified 2026-08-02.
+- [AWS open source, amazon-sqs-java-extended-client-lib](https://github.com/awslabs/amazon-sqs-java-extended-client-lib),
+  linked directly from the AWS documentation above, verified 2026-08-02.
+
 ## Code examples
 
 Three languages, each idiomatic to a different implementation shape of
@@ -1253,21 +1271,3 @@ through a channel, does not change in a way that would justify a fourth
 near identical example once TypeScript, Python, and Go each already show a
 distinct implementation angle, conditional dispatch, time based cleanup,
 and concurrency safety respectively.
-
-## 18. References
-
-- Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns.
-  Designing, Building, and Deploying Messaging Solutions*, Addison-Wesley,
-  2003, Message Transformation chapter, the Claim Check pattern.
-- [Enterprise Integration Patterns, Claim Check (Store In Library)](https://www.enterpriseintegrationpatterns.com/patterns/messaging/StoreInLibrary.html),
-  verified 2026-08-02.
-- [Enterprise Integration Patterns, messaging pattern index](https://www.enterpriseintegrationpatterns.com/patterns/messaging/),
-  verified 2026-08-02.
-- [Microsoft Learn, Claim-Check pattern, Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/patterns/claim-check),
-  verified 2026-08-02.
-- [AWS documentation, Managing large Amazon SQS messages using Java and Amazon S3](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/s3-messages.html),
-  verified 2026-08-02.
-- [Apache Camel documentation, Claim Check EIP](https://camel.apache.org/components/latest/eips/claimCheck-eip.html),
-  verified 2026-08-02.
-- [AWS open source, amazon-sqs-java-extended-client-lib](https://github.com/awslabs/amazon-sqs-java-extended-client-lib),
-  linked directly from the AWS documentation above, verified 2026-08-02.

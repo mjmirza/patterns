@@ -447,6 +447,17 @@ who is authorized to see the data that component ultimately renders,
 and that authorization decision belongs to the server the client
 fetches from, exactly as with any other client-rendered content.
 
+## 18. References
+
+1. Astro. "Islands".
+   https://docs.astro.build/en/concepts/islands/
+   Verified 2026-08-21. Source of the general directive-mechanism
+   quote used in dimensions 1 and 9.
+2. Astro. "Directives reference".
+   https://docs.astro.build/en/reference/directives-reference/
+   Verified 2026-08-21. Source of the individual directive definition
+   quotes used in dimensions 3, 8, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -618,14 +629,3 @@ scheduler.scheduleIdle(IslandDeclaration(name: "NewsletterForm", directive: .idl
 scheduler.scheduleVisible(IslandDeclaration(name: "ImageCarousel", directive: .visible, mediaQuery: nil))
 scheduler.scheduleMedia(IslandDeclaration(name: "SidebarToggle", directive: .media, mediaQuery: "(max-width: 768px)"))
 ```
-
-## 18. References
-
-1. Astro. "Islands".
-   https://docs.astro.build/en/concepts/islands/
-   Verified 2026-08-21. Source of the general directive-mechanism
-   quote used in dimensions 1 and 9.
-2. Astro. "Directives reference".
-   https://docs.astro.build/en/reference/directives-reference/
-   Verified 2026-08-21. Source of the individual directive definition
-   quotes used in dimensions 3, 8, and 9.

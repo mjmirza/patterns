@@ -724,6 +724,43 @@ parameters appear under a safe method
 (https://www.rfc-editor.org/rfc/rfc9110.html, verified 2026-08-02). Treat that
 as a security rule for crawlers, prefetchers, chat unfurlers, and link scanners.
 
+## 18. References
+
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
+  edition, Addison-Wesley, 2018, chapter 11, "Refactoring APIs."
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*,
+  Addison-Wesley, 1999, chapter 10, "Making Method Calls Simpler."
+- Martin Fowler, "Separate Query from Modifier," refactoring.com catalog,
+  https://refactoring.com/catalog/separateQueryFromModifier.html, verified
+  2026-08-02.
+- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
+  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
+  2026-08-02.
+- Martin Fowler, "Command Query Separation,"
+  https://martinfowler.com/bliki/CommandQuerySeparation.html, verified
+  2026-08-02.
+- Martin Fowler, "CQRS," https://martinfowler.com/bliki/CQRS.html, verified
+  2026-08-02.
+- Bertrand Meyer, *Object-Oriented Software Construction*, 2nd edition,
+  Prentice Hall, 1997, chapter 23, "The principles of class design."
+- R. Fielding, M. Nottingham, and J. Reschke, RFC 9110, "HTTP Semantics,"
+  June 2022, sections 9.2.1 and 9.3,
+  https://www.rfc-editor.org/rfc/rfc9110.html, verified 2026-08-02.
+- GraphQL Foundation, *GraphQL Specification*, September 2025 edition,
+  sections 6.2 and 6.3.4, https://spec.graphql.org/September2025/, verified
+  2026-08-02.
+- GitHub Docs, "GitHub GraphQL API documentation,"
+  https://docs.github.com/en/graphql, verified 2026-08-02.
+- Amazon Web Services, "GetObject. Amazon S3 API Reference,"
+  https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html, verified
+  2026-08-02.
+- Amazon Web Services, "PutObject. Amazon S3 API Reference,"
+  https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html, verified
+  2026-08-02.
+- Kubernetes Documentation, "Kubernetes API Concepts,"
+  https://kubernetes.io/docs/reference/using-api/api-concepts/, verified
+  2026-08-02.
+
 ## Code examples
 
 The examples use TypeScript, Python, and Go because the split is idiomatic in
@@ -832,40 +869,3 @@ func main() {
 	fmt.Println(cart.paid)
 }
 ```
-
-## 18. References
-
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
-  edition, Addison-Wesley, 2018, chapter 11, "Refactoring APIs."
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*,
-  Addison-Wesley, 1999, chapter 10, "Making Method Calls Simpler."
-- Martin Fowler, "Separate Query from Modifier," refactoring.com catalog,
-  https://refactoring.com/catalog/separateQueryFromModifier.html, verified
-  2026-08-02.
-- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
-  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
-  2026-08-02.
-- Martin Fowler, "Command Query Separation,"
-  https://martinfowler.com/bliki/CommandQuerySeparation.html, verified
-  2026-08-02.
-- Martin Fowler, "CQRS," https://martinfowler.com/bliki/CQRS.html, verified
-  2026-08-02.
-- Bertrand Meyer, *Object-Oriented Software Construction*, 2nd edition,
-  Prentice Hall, 1997, chapter 23, "The principles of class design."
-- R. Fielding, M. Nottingham, and J. Reschke, RFC 9110, "HTTP Semantics,"
-  June 2022, sections 9.2.1 and 9.3,
-  https://www.rfc-editor.org/rfc/rfc9110.html, verified 2026-08-02.
-- GraphQL Foundation, *GraphQL Specification*, September 2025 edition,
-  sections 6.2 and 6.3.4, https://spec.graphql.org/September2025/, verified
-  2026-08-02.
-- GitHub Docs, "GitHub GraphQL API documentation,"
-  https://docs.github.com/en/graphql, verified 2026-08-02.
-- Amazon Web Services, "GetObject. Amazon S3 API Reference,"
-  https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html, verified
-  2026-08-02.
-- Amazon Web Services, "PutObject. Amazon S3 API Reference,"
-  https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html, verified
-  2026-08-02.
-- Kubernetes Documentation, "Kubernetes API Concepts,"
-  https://kubernetes.io/docs/reference/using-api/api-concepts/, verified
-  2026-08-02.

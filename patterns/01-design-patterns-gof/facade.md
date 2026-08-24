@@ -1000,6 +1000,65 @@ every downstream log line by design and inherits the longest retention of any of
 them. Use an opaque request identifier and join to the subject elsewhere under
 the access controls that apply to identifiers.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Facade. Source of
+   the pattern's intent, the Facade and subsystem-classes participants, and the
+   placement among the structural patterns. Page numbers are not cited because I
+   could not verify a specific pagination against an authoritative source on
+   2026-08-02.
+2. Wikipedia contributors. "Design Patterns".
+   https://en.wikipedia.org/wiki/Design_Patterns
+   Verified 2026-08-02. Used only to confirm that Facade sits in the structural
+   group alongside Adapter, Bridge, Composite, Decorator, Flyweight and Proxy,
+   and to confirm the book's authorship and year. Not used as a source of
+   explanation.
+3. Martin Fowler. *Patterns of Enterprise Application Architecture*.
+   Addison-Wesley, 2003. Catalog entry for Remote Facade, chapter 15 per the
+   online catalog page. https://martinfowler.com/eaaCatalog/remoteFacade.html
+   Verified 2026-08-02. Source of the coarse-grained-facade definition used in
+   dimensions 1 and 13.
+4. Martin Fowler. *Patterns of Enterprise Application Architecture*.
+   Addison-Wesley, 2003. Catalog entry for Service Layer, chapter 9 per the
+   online catalog page. https://martinfowler.com/eaaCatalog/serviceLayer.html
+   Verified 2026-08-02. Source of the Service Layer definition used in dimension
+   13.
+5. QOS.ch. *SLF4J user manual*. https://www.slf4j.org/manual.html
+   Verified 2026-08-02. Source of the self-description as a simple facade or
+   abstraction for various logging frameworks, and of the deployment-time
+   plug-in claim used in dimensions 9 and 13.
+6. Broadcom. *Spring Framework API documentation*,
+   `org.springframework.jdbc.core.JdbcTemplate`.
+   https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html
+   Verified 2026-08-02. Source of the simplification claim and of the exception
+   translation to the `org.springframework.dao` hierarchy used in dimensions 7
+   and 9.
+7. Kenneth Reitz and contributors. *Requests documentation*, release v2.34.2.
+   https://requests.readthedocs.io/en/latest/
+   Verified 2026-08-02. Source of the claim that Requests sends HTTP/1.1
+   requests without manual query-string or form encoding, and that connection
+   pooling comes from urllib3, used in dimension 9.
+8. Rust project. *Rust standard library documentation*, `std::fs::read_to_string`.
+   https://doc.rust-lang.org/std/fs/fn.read_to_string.html
+   Verified 2026-08-02. Source of the convenience-function description used in
+   dimensions 8 and 9.
+9. Django Software Foundation. *Django 5.2 documentation*, "Built-in shortcut
+   functions", `django.shortcuts.render`.
+   https://docs.djangoproject.com/en/5.2/topics/http/shortcuts/
+   Verified 2026-08-02. Source of the `render` description and of the long-form
+   equivalent shown beside it, used in dimensions 1 and 9.
+10. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
+    edition. Addison-Wesley, 2018. ISBN 978-0-13-475759-9. Named refactorings
+    Extract Function, Move Function, Extract Class and Inline Function,
+    referenced by name in dimension 14. Page numbers are not cited because I did
+    not verify a pagination for this edition on 2026-08-02.
+11. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
+    Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Source of the
+    Anti-Corruption Layer concept referenced in dimensions 1 and 13. Page
+    numbers are not cited for the same reason.
+
 ## Code examples
 
 Three languages chosen to show three genuinely different shapes rather than the
@@ -1270,62 +1329,3 @@ error by passing an empty subject and body, but the encoder still produced a
 non-empty payload, so the failure path never ran and the run printed
 `translated. false`. The fault flag on the transport replaced that, which is both
 correct and closer to the fault-injection technique in dimension 15.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Facade. Source of
-   the pattern's intent, the Facade and subsystem-classes participants, and the
-   placement among the structural patterns. Page numbers are not cited because I
-   could not verify a specific pagination against an authoritative source on
-   2026-08-02.
-2. Wikipedia contributors. "Design Patterns".
-   https://en.wikipedia.org/wiki/Design_Patterns
-   Verified 2026-08-02. Used only to confirm that Facade sits in the structural
-   group alongside Adapter, Bridge, Composite, Decorator, Flyweight and Proxy,
-   and to confirm the book's authorship and year. Not used as a source of
-   explanation.
-3. Martin Fowler. *Patterns of Enterprise Application Architecture*.
-   Addison-Wesley, 2003. Catalog entry for Remote Facade, chapter 15 per the
-   online catalog page. https://martinfowler.com/eaaCatalog/remoteFacade.html
-   Verified 2026-08-02. Source of the coarse-grained-facade definition used in
-   dimensions 1 and 13.
-4. Martin Fowler. *Patterns of Enterprise Application Architecture*.
-   Addison-Wesley, 2003. Catalog entry for Service Layer, chapter 9 per the
-   online catalog page. https://martinfowler.com/eaaCatalog/serviceLayer.html
-   Verified 2026-08-02. Source of the Service Layer definition used in dimension
-   13.
-5. QOS.ch. *SLF4J user manual*. https://www.slf4j.org/manual.html
-   Verified 2026-08-02. Source of the self-description as a simple facade or
-   abstraction for various logging frameworks, and of the deployment-time
-   plug-in claim used in dimensions 9 and 13.
-6. Broadcom. *Spring Framework API documentation*,
-   `org.springframework.jdbc.core.JdbcTemplate`.
-   https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html
-   Verified 2026-08-02. Source of the simplification claim and of the exception
-   translation to the `org.springframework.dao` hierarchy used in dimensions 7
-   and 9.
-7. Kenneth Reitz and contributors. *Requests documentation*, release v2.34.2.
-   https://requests.readthedocs.io/en/latest/
-   Verified 2026-08-02. Source of the claim that Requests sends HTTP/1.1
-   requests without manual query-string or form encoding, and that connection
-   pooling comes from urllib3, used in dimension 9.
-8. Rust project. *Rust standard library documentation*, `std::fs::read_to_string`.
-   https://doc.rust-lang.org/std/fs/fn.read_to_string.html
-   Verified 2026-08-02. Source of the convenience-function description used in
-   dimensions 8 and 9.
-9. Django Software Foundation. *Django 5.2 documentation*, "Built-in shortcut
-   functions", `django.shortcuts.render`.
-   https://docs.djangoproject.com/en/5.2/topics/http/shortcuts/
-   Verified 2026-08-02. Source of the `render` description and of the long-form
-   equivalent shown beside it, used in dimensions 1 and 9.
-10. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
-    edition. Addison-Wesley, 2018. ISBN 978-0-13-475759-9. Named refactorings
-    Extract Function, Move Function, Extract Class and Inline Function,
-    referenced by name in dimension 14. Page numbers are not cited because I did
-    not verify a pagination for this edition on 2026-08-02.
-11. Eric Evans. *Domain-Driven Design. Tackling Complexity in the Heart of
-    Software*. Addison-Wesley, 2003. ISBN 0-321-12521-5. Source of the
-    Anti-Corruption Layer concept referenced in dimensions 1 and 13. Page
-    numbers are not cited for the same reason.

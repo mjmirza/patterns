@@ -701,6 +701,60 @@ granted to that credential. In database-per-service, the same compromise is
 bounded by the service's own store. That is a security argument for ownership,
 not only an architecture argument.
 
+## 18. References
+
+1. Chris Richardson. *Microservices Patterns*. Manning, 2018. Chapter 4,
+   "Managing transactions with sagas." Source for the microservices data
+   pattern family: shared database, database-per-service, saga, API composition,
+   CQRS, and event sourcing.
+2. Chris Richardson. "Pattern: Shared database." Microservices.io.
+   https://microservices.io/patterns/data/shared-database.html
+   Verified 2026-08-02. Source for the shared database name, context, benefits,
+   and drawbacks.
+3. AWS Prescriptive Guidance. "Shared-database-per-service pattern."
+   https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/shared-database.html
+   Verified 2026-08-02. Source for AWS naming, applicability, and coupling
+   warnings.
+4. AWS Prescriptive Guidance. "Database-per-service pattern."
+   https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/database-per-service.html
+   Verified 2026-08-02. Source for the service-owned database alternative.
+5. AWS Prescriptive Guidance. "FAQ."
+   https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/faq.html
+   Verified 2026-08-02. Source for data privacy, shared database cautions, and
+   saga guidance.
+6. Microsoft Learn. "Microservices architecture style."
+   https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
+   Verified 2026-08-02. Source for service autonomy, bounded context, and
+   service-owned data guidance.
+7. Microsoft Learn. "Data considerations for microservices."
+   https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations
+   Verified 2026-08-02. Source for the rule that services should not share a
+   data store and the distinction between physical server sharing and shared
+   schemas or tables.
+8. Microsoft Learn. "Cloud-native data patterns."
+   https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/distributed-data
+   Verified 2026-08-02. Source for database-per-microservice, materialized
+   views, saga, CQRS, and event sourcing discussion.
+9. Datadog Engineering. Fabiana Scala and Tali Gutman. "Breaking up a monolith:
+   How we're unwinding a shared database at scale." Datadog, June 17, 2025.
+   https://www.datadoghq.com/blog/engineering/unwinding-shared-database/
+   Verified 2026-08-02. Source for the Datadog production example and migration
+   practices.
+10. GitLab. Dylan Griffith. "Decomposing the GitLab backend database, Part 1:
+    Designing and planning." GitLab Blog, August 4, 2022.
+    https://about.gitlab.com/blog/path-to-decomposing-gitlab-database-part1/
+    Verified 2026-08-02. Source for the GitLab.com production example and
+    decomposition process.
+11. GitLab Docs. "Multiple Databases."
+    https://docs.gitlab.com/development/database/multiple_databases/
+    Verified 2026-08-02. Source for GitLab's decomposed database state and
+    schema classification.
+12. AWS Case Study. "Samsung Migrates 1.1 Billion Users across Three Continents
+    from Oracle to Amazon Aurora with AWS Database Migration Service."
+    https://aws.amazon.com/solutions/case-studies/samsung-migrates-off-oracle-to-amazon-aurora/
+    Verified 2026-08-02. Source for the Samsung Account production migration
+    example.
+
 ## Code examples
 
 The samples model the same small checkout domain. Each first sample shows the
@@ -891,57 +945,3 @@ func main() {
 	fmt.Println(ShippingServiceWithAPI{orders: orders}.CanShip("o1"))
 }
 ```
-
-## 18. References
-
-1. Chris Richardson. *Microservices Patterns*. Manning, 2018. Chapter 4,
-   "Managing transactions with sagas." Source for the microservices data
-   pattern family: shared database, database-per-service, saga, API composition,
-   CQRS, and event sourcing.
-2. Chris Richardson. "Pattern: Shared database." Microservices.io.
-   https://microservices.io/patterns/data/shared-database.html
-   Verified 2026-08-02. Source for the shared database name, context, benefits,
-   and drawbacks.
-3. AWS Prescriptive Guidance. "Shared-database-per-service pattern."
-   https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/shared-database.html
-   Verified 2026-08-02. Source for AWS naming, applicability, and coupling
-   warnings.
-4. AWS Prescriptive Guidance. "Database-per-service pattern."
-   https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/database-per-service.html
-   Verified 2026-08-02. Source for the service-owned database alternative.
-5. AWS Prescriptive Guidance. "FAQ."
-   https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/faq.html
-   Verified 2026-08-02. Source for data privacy, shared database cautions, and
-   saga guidance.
-6. Microsoft Learn. "Microservices architecture style."
-   https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
-   Verified 2026-08-02. Source for service autonomy, bounded context, and
-   service-owned data guidance.
-7. Microsoft Learn. "Data considerations for microservices."
-   https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations
-   Verified 2026-08-02. Source for the rule that services should not share a
-   data store and the distinction between physical server sharing and shared
-   schemas or tables.
-8. Microsoft Learn. "Cloud-native data patterns."
-   https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/distributed-data
-   Verified 2026-08-02. Source for database-per-microservice, materialized
-   views, saga, CQRS, and event sourcing discussion.
-9. Datadog Engineering. Fabiana Scala and Tali Gutman. "Breaking up a monolith:
-   How we're unwinding a shared database at scale." Datadog, June 17, 2025.
-   https://www.datadoghq.com/blog/engineering/unwinding-shared-database/
-   Verified 2026-08-02. Source for the Datadog production example and migration
-   practices.
-10. GitLab. Dylan Griffith. "Decomposing the GitLab backend database, Part 1:
-    Designing and planning." GitLab Blog, August 4, 2022.
-    https://about.gitlab.com/blog/path-to-decomposing-gitlab-database-part1/
-    Verified 2026-08-02. Source for the GitLab.com production example and
-    decomposition process.
-11. GitLab Docs. "Multiple Databases."
-    https://docs.gitlab.com/development/database/multiple_databases/
-    Verified 2026-08-02. Source for GitLab's decomposed database state and
-    schema classification.
-12. AWS Case Study. "Samsung Migrates 1.1 Billion Users across Three Continents
-    from Oracle to Amazon Aurora with AWS Database Migration Service."
-    https://aws.amazon.com/solutions/case-studies/samsung-migrates-off-oracle-to-amazon-aurora/
-    Verified 2026-08-02. Source for the Samsung Account production migration
-    example.

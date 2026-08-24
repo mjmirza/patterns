@@ -909,6 +909,45 @@ access logs and traces becomes attributable data and should be handled
 under the same retention and access controls as any other customer
 identifier, rather than treated as pure infrastructure telemetry.
 
+## 18. References
+
+1. Chris Richardson. "Server-Side Service Discovery pattern". microservices.io.
+   https://microservices.io/patterns/server-side-discovery.html
+   Verified 2026-08-16. Source of the pattern's canonical problem and solution
+   statement, its file-path-derived name, and the AWS ELB and Kubernetes
+   examples named in dimensions 1 and 9.
+2. Chris Richardson. *Microservices Patterns*. Manning, 2018. ISBN
+   978-1617294549. Chapter 3, "Interprocess communication", section on
+   service discovery. Source of the broader discussion pairing server-side
+   and client-side discovery inside the book-length treatment of the
+   pattern catalog.
+3. Sam Newman. *Building Microservices*, 2nd edition. O'Reilly, 2021. ISBN
+   978-1492034025. Chapter 4, "Communication Styles", section on service
+   discovery. Source of the smart-pipe framing used in dimension 1 to
+   connect this pattern to pre-microservices load-balancer practice.
+4. Kubernetes documentation. "Service". Section "Virtual IPs and Service
+   Proxies". https://kubernetes.io/docs/concepts/services-networking/service/
+   Verified 2026-08-16. Source of the Kubernetes Service definition and
+   virtual IP mechanism described in dimension 8 and dimension 9.
+5. Amazon Web Services documentation. "What is an Application Load
+   Balancer?".
+   https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html
+   Verified 2026-08-16. Source of the target group, listener, and health
+   check description in dimension 8 and dimension 9.
+6. Istio documentation. "Architecture". Section "Envoy".
+   https://istio.io/latest/docs/concepts/traffic-management/
+   Verified 2026-08-16. Source of the Envoy sidecar proxy and least-requests
+   load balancing description in dimension 8 and dimension 9.
+7. Microsoft Learn. "What is Azure Application Gateway".
+   https://learn.microsoft.com/en-us/azure/application-gateway/overview
+   Verified 2026-08-16. Source of the Azure Application Gateway description
+   in dimension 9.
+8. HashiCorp Consul documentation. Service catalog and health checking
+   overview, developer.hashicorp.com/consul/docs. Referenced in dimension 9
+   for the self-hosted registry-plus-proxy production shape described from
+   general, publicly documented Consul architecture rather than a single
+   quoted page.
+
 ## Code examples
 
 Three languages where the pattern's defining property, that the caller
@@ -1113,42 +1152,3 @@ if __name__ == "__main__":
     except RuntimeError as exc:
         print(exc)
 ```
-
-## 18. References
-
-1. Chris Richardson. "Server-Side Service Discovery pattern". microservices.io.
-   https://microservices.io/patterns/server-side-discovery.html
-   Verified 2026-08-16. Source of the pattern's canonical problem and solution
-   statement, its file-path-derived name, and the AWS ELB and Kubernetes
-   examples named in dimensions 1 and 9.
-2. Chris Richardson. *Microservices Patterns*. Manning, 2018. ISBN
-   978-1617294549. Chapter 3, "Interprocess communication", section on
-   service discovery. Source of the broader discussion pairing server-side
-   and client-side discovery inside the book-length treatment of the
-   pattern catalog.
-3. Sam Newman. *Building Microservices*, 2nd edition. O'Reilly, 2021. ISBN
-   978-1492034025. Chapter 4, "Communication Styles", section on service
-   discovery. Source of the smart-pipe framing used in dimension 1 to
-   connect this pattern to pre-microservices load-balancer practice.
-4. Kubernetes documentation. "Service". Section "Virtual IPs and Service
-   Proxies". https://kubernetes.io/docs/concepts/services-networking/service/
-   Verified 2026-08-16. Source of the Kubernetes Service definition and
-   virtual IP mechanism described in dimension 8 and dimension 9.
-5. Amazon Web Services documentation. "What is an Application Load
-   Balancer?".
-   https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html
-   Verified 2026-08-16. Source of the target group, listener, and health
-   check description in dimension 8 and dimension 9.
-6. Istio documentation. "Architecture". Section "Envoy".
-   https://istio.io/latest/docs/concepts/traffic-management/
-   Verified 2026-08-16. Source of the Envoy sidecar proxy and least-requests
-   load balancing description in dimension 8 and dimension 9.
-7. Microsoft Learn. "What is Azure Application Gateway".
-   https://learn.microsoft.com/en-us/azure/application-gateway/overview
-   Verified 2026-08-16. Source of the Azure Application Gateway description
-   in dimension 9.
-8. HashiCorp Consul documentation. Service catalog and health checking
-   overview, developer.hashicorp.com/consul/docs. Referenced in dimension 9
-   for the self-hosted registry-plus-proxy production shape described from
-   general, publicly documented Consul architecture rather than a single
-   quoted page.

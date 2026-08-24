@@ -717,6 +717,73 @@ Logs must avoid token material. Do not log access tokens, proof JWTs, nonce
 values, private keys, or full public JWKs. Log thumbprints, key IDs, route
 templates, reject categories, and correlation IDs.
 
+## 18. References
+
+- Daniel Fett, Brian Campbell, John Bradley, Torsten Lodderstedt, Michael
+  Jones, David Waite. RFC 9449, *OAuth 2.0 Demonstrating Proof of Possession
+  (DPoP)*, September 2023. Sections 1, 2, 4, 7, 8, and 11.
+  [https://www.rfc-editor.org/info/rfc9449/](https://www.rfc-editor.org/info/rfc9449/),
+  verified 2026-08-02.
+- Andrei Popov, Magnus Nystroem, Dirk Balfanz, Jeff Hodges. RFC 8471, *The
+  Token Binding Protocol Version 1.0*, October 2018. Sections 1, 2, 5, 7, and
+  8.
+  [https://www.rfc-editor.org/info/rfc8471/](https://www.rfc-editor.org/info/rfc8471/),
+  verified 2026-08-02.
+- Andrei Popov, Magnus Nystroem, Dirk Balfanz, Nick Harper, Jeff Hodges. RFC
+  8473, *Token Binding over HTTP*, October 2018. Sections 1 and 2.
+  [https://www.rfc-editor.org/info/rfc8473/](https://www.rfc-editor.org/info/rfc8473/),
+  verified 2026-08-02.
+- Brian Campbell, John Bradley, Nat Sakimura, Torsten Lodderstedt. RFC 8705,
+  *OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access
+  Tokens*, February 2020. Sections 2, 3, 4, and 7.
+  [https://www.rfc-editor.org/rfc/rfc8705.html](https://www.rfc-editor.org/rfc/rfc8705.html),
+  verified 2026-08-02.
+- Michael Jones, Dick Hardt. RFC 6750, *The OAuth 2.0 Authorization Framework:
+  Bearer Token Usage*, October 2012. Sections 1, 2, and 5.
+  [https://www.rfc-editor.org/info/rfc6750/](https://www.rfc-editor.org/info/rfc6750/),
+  verified 2026-08-02.
+- Michael Jones, Nat Sakimura. RFC 7638, *JSON Web Key (JWK) Thumbprint*,
+  September 2015. Section 3.
+  [https://www.rfc-editor.org/info/rfc7638/](https://www.rfc-editor.org/info/rfc7638/),
+  verified 2026-08-02.
+- Michael Jones, John Bradley, Hannes Tschofenig. RFC 7800,
+  *Proof-of-Possession Key Semantics for JSON Web Tokens (JWTs)*, April 2016.
+  Sections 1 and 3.
+  [https://www.rfc-editor.org/info/rfc7800/](https://www.rfc-editor.org/info/rfc7800/),
+  verified 2026-08-02.
+- Yaron Sheffer, Dick Hardt, Michael Jones. RFC 8725, *JSON Web Token Best
+  Current Practices*, February 2020. Section 3.
+  [https://www.rfc-editor.org/info/rfc8725/](https://www.rfc-editor.org/info/rfc8725/),
+  verified 2026-08-02.
+- Torsten Lodderstedt, John Bradley, Andrii Labunets, Daniel Fett. RFC 9700,
+  *Best Current Practice for OAuth 2.0 Security*, January 2025. Section 2.2.
+  [https://www.rfc-editor.org/info/rfc9700/](https://www.rfc-editor.org/info/rfc9700/),
+  verified 2026-08-02.
+- Okta Developer. *Configure OAuth 2.0 Demonstrating Proof-of-Possession*.
+  [https://developer.okta.com/docs/guides/dpop/-/main/](https://developer.okta.com/docs/guides/dpop/-/main/),
+  verified 2026-08-02.
+- Curity. *DPoP (Demonstrating Proof of Possession)*.
+  [https://curity.io/docs/identity-server/profiles/token-profile/clients/client-config/dpop/](https://curity.io/docs/identity-server/profiles/token-profile/clients/client-config/dpop/),
+  verified 2026-08-02.
+- Duende Software. *Proof-of-Possession Access Tokens*.
+  [https://docs.duendesoftware.com/identityserver/tokens/pop/](https://docs.duendesoftware.com/identityserver/tokens/pop/),
+  verified 2026-08-02.
+- Auth0. *Configure Enterprise Connections with Demonstrating
+  Proof-of-Possession (DPoP)*.
+  [https://auth0.com/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections](https://auth0.com/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections),
+  verified 2026-08-02.
+- OpenID Foundation. *FAPI 2.0 Security Profile*. Section 5.3.
+  [https://openid.net/specs/fapi-security-profile-2_0.html](https://openid.net/specs/fapi-security-profile-2_0.html),
+  verified 2026-08-02.
+- Mark Nottingham, Poul-Henning Kamp, Lucas Pardue, Martin Thomson, Brian
+  Campbell. RFC 9421, *HTTP Message Signatures*, February 2024. Sections 1 and
+  2.
+  [https://www.rfc-editor.org/info/rfc9421/](https://www.rfc-editor.org/info/rfc9421/),
+  verified 2026-08-02.
+- Nick Harper. *Intent to Remove: Token Binding*, blink-dev, August 2018.
+  [https://groups.google.com/a/chromium.org/g/blink-dev/c/OkdLUyYmY1E](https://groups.google.com/a/chromium.org/g/blink-dev/c/OkdLUyYmY1E),
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples model the resource-server check after JWT signature verification
@@ -942,70 +1009,3 @@ func main() {
 	fmt.Println(authorize("GET", proof.Htu, token, proof, 1700000001, replay))
 }
 ```
-
-## 18. References
-
-- Daniel Fett, Brian Campbell, John Bradley, Torsten Lodderstedt, Michael
-  Jones, David Waite. RFC 9449, *OAuth 2.0 Demonstrating Proof of Possession
-  (DPoP)*, September 2023. Sections 1, 2, 4, 7, 8, and 11.
-  [https://www.rfc-editor.org/info/rfc9449/](https://www.rfc-editor.org/info/rfc9449/),
-  verified 2026-08-02.
-- Andrei Popov, Magnus Nystroem, Dirk Balfanz, Jeff Hodges. RFC 8471, *The
-  Token Binding Protocol Version 1.0*, October 2018. Sections 1, 2, 5, 7, and
-  8.
-  [https://www.rfc-editor.org/info/rfc8471/](https://www.rfc-editor.org/info/rfc8471/),
-  verified 2026-08-02.
-- Andrei Popov, Magnus Nystroem, Dirk Balfanz, Nick Harper, Jeff Hodges. RFC
-  8473, *Token Binding over HTTP*, October 2018. Sections 1 and 2.
-  [https://www.rfc-editor.org/info/rfc8473/](https://www.rfc-editor.org/info/rfc8473/),
-  verified 2026-08-02.
-- Brian Campbell, John Bradley, Nat Sakimura, Torsten Lodderstedt. RFC 8705,
-  *OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access
-  Tokens*, February 2020. Sections 2, 3, 4, and 7.
-  [https://www.rfc-editor.org/rfc/rfc8705.html](https://www.rfc-editor.org/rfc/rfc8705.html),
-  verified 2026-08-02.
-- Michael Jones, Dick Hardt. RFC 6750, *The OAuth 2.0 Authorization Framework:
-  Bearer Token Usage*, October 2012. Sections 1, 2, and 5.
-  [https://www.rfc-editor.org/info/rfc6750/](https://www.rfc-editor.org/info/rfc6750/),
-  verified 2026-08-02.
-- Michael Jones, Nat Sakimura. RFC 7638, *JSON Web Key (JWK) Thumbprint*,
-  September 2015. Section 3.
-  [https://www.rfc-editor.org/info/rfc7638/](https://www.rfc-editor.org/info/rfc7638/),
-  verified 2026-08-02.
-- Michael Jones, John Bradley, Hannes Tschofenig. RFC 7800,
-  *Proof-of-Possession Key Semantics for JSON Web Tokens (JWTs)*, April 2016.
-  Sections 1 and 3.
-  [https://www.rfc-editor.org/info/rfc7800/](https://www.rfc-editor.org/info/rfc7800/),
-  verified 2026-08-02.
-- Yaron Sheffer, Dick Hardt, Michael Jones. RFC 8725, *JSON Web Token Best
-  Current Practices*, February 2020. Section 3.
-  [https://www.rfc-editor.org/info/rfc8725/](https://www.rfc-editor.org/info/rfc8725/),
-  verified 2026-08-02.
-- Torsten Lodderstedt, John Bradley, Andrii Labunets, Daniel Fett. RFC 9700,
-  *Best Current Practice for OAuth 2.0 Security*, January 2025. Section 2.2.
-  [https://www.rfc-editor.org/info/rfc9700/](https://www.rfc-editor.org/info/rfc9700/),
-  verified 2026-08-02.
-- Okta Developer. *Configure OAuth 2.0 Demonstrating Proof-of-Possession*.
-  [https://developer.okta.com/docs/guides/dpop/-/main/](https://developer.okta.com/docs/guides/dpop/-/main/),
-  verified 2026-08-02.
-- Curity. *DPoP (Demonstrating Proof of Possession)*.
-  [https://curity.io/docs/identity-server/profiles/token-profile/clients/client-config/dpop/](https://curity.io/docs/identity-server/profiles/token-profile/clients/client-config/dpop/),
-  verified 2026-08-02.
-- Duende Software. *Proof-of-Possession Access Tokens*.
-  [https://docs.duendesoftware.com/identityserver/tokens/pop/](https://docs.duendesoftware.com/identityserver/tokens/pop/),
-  verified 2026-08-02.
-- Auth0. *Configure Enterprise Connections with Demonstrating
-  Proof-of-Possession (DPoP)*.
-  [https://auth0.com/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections](https://auth0.com/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections),
-  verified 2026-08-02.
-- OpenID Foundation. *FAPI 2.0 Security Profile*. Section 5.3.
-  [https://openid.net/specs/fapi-security-profile-2_0.html](https://openid.net/specs/fapi-security-profile-2_0.html),
-  verified 2026-08-02.
-- Mark Nottingham, Poul-Henning Kamp, Lucas Pardue, Martin Thomson, Brian
-  Campbell. RFC 9421, *HTTP Message Signatures*, February 2024. Sections 1 and
-  2.
-  [https://www.rfc-editor.org/info/rfc9421/](https://www.rfc-editor.org/info/rfc9421/),
-  verified 2026-08-02.
-- Nick Harper. *Intent to Remove: Token Binding*, blink-dev, August 2018.
-  [https://groups.google.com/a/chromium.org/g/blink-dev/c/OkdLUyYmY1E](https://groups.google.com/a/chromium.org/g/blink-dev/c/OkdLUyYmY1E),
-  verified 2026-08-02.

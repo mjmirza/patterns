@@ -446,6 +446,19 @@ a debugging history, and are instead re-fetched or recomputed from a
 secure source only when genuinely needed for display, is a necessary
 part of a security-conscious Unidirectional Data Flow implementation.
 
+## 18. References
+
+1. Google, Android Developers. "UI layer".
+   https://developer.android.com/topic/architecture/ui-layer
+   Verified 2026-08-22. Source of the core UDF rule, the state-down-
+   events-up cycle, and the data-consistency, testability, and
+   maintainability benefits, used in dimensions 1, 2, 3, 5, 7, 9, 10,
+   and 15.
+2. Point-Free. "The Composable Architecture".
+   https://github.com/pointfreeco/swift-composable-architecture
+   Verified 2026-08-22. Source of the iOS-side State, Action, Reducer,
+   and Store definitions, used in dimensions 1, 3, 5, 7, 9, 11, and 15.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -600,16 +613,3 @@ if __name__ == "__main__":
     store.send(LoadPersonsEvent())
     view.render(store.state)
 ```
-
-## 18. References
-
-1. Google, Android Developers. "UI layer".
-   https://developer.android.com/topic/architecture/ui-layer
-   Verified 2026-08-22. Source of the core UDF rule, the state-down-
-   events-up cycle, and the data-consistency, testability, and
-   maintainability benefits, used in dimensions 1, 2, 3, 5, 7, 9, 10,
-   and 15.
-2. Point-Free. "The Composable Architecture".
-   https://github.com/pointfreeco/swift-composable-architecture
-   Verified 2026-08-22. Source of the iOS-side State, Action, Reducer,
-   and Store definitions, used in dimensions 1, 3, 5, 7, 9, 11, and 15.

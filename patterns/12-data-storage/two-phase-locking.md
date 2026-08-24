@@ -771,6 +771,44 @@ is exported to a general-purpose observability platform, that telemetry
 should be treated as carrying the same sensitivity as the underlying data,
 not assumed to be safe because it is only a lock name.
 
+## 18. References
+
+1. K. P. Eswaran, J. N. Gray, R. A. Lorie, I. L. Traiger. "The Notions of
+   Consistency and Predicate Locks in a Database System". Communications of
+   the ACM, vol. 19, no. 11, November 1976, pp. 624 to 633.
+   https://dl.acm.org/doi/10.1145/360363.360369
+   Verified 2026-08-02. Source of the pattern's name, its origin, and the
+   growing-shrinking phase rule proved to guarantee serializability.
+2. PostgreSQL Global Development Group. "PostgreSQL 18 Documentation",
+   chapter 13, "Concurrency Control", section 13.3, "Explicit Locking".
+   https://www.postgresql.org/docs/current/explicit-locking.html
+   Verified 2026-08-02. Source for the table-level lock mode set, the
+   compatibility rules, and the statement that PostgreSQL does not escalate
+   row locks into table locks.
+3. Oracle Corporation. "MySQL 9.7 Reference Manual", section 17.7.1, "InnoDB
+   Locking", and section 17.7.4, "Locking Reads".
+   https://dev.mysql.com/doc/en/innodb-locking.html
+   Verified 2026-08-02. Source for InnoDB's stated design combining
+   multi-versioning with two-phase locking, and for next-key locking under
+   `REPEATABLE READ`.
+4. Microsoft. "SQL Server Transaction Locking and Row Versioning Guide",
+   section "Lock Escalation".
+   https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide
+   Verified 2026-08-02. Source for the approximately 5,000-lock escalation
+   threshold and the retry-at-1,250-new-locks behavior.
+5. Google Cloud. "Concurrency control | Spanner | Google Cloud
+   Documentation".
+   https://docs.cloud.google.com/spanner/docs/concurrency-control
+   Verified 2026-08-02. Source for Spanner's pessimistic, lock-based
+   concurrency control and its use of the wound-wait algorithm to resolve
+   lock conflicts by transaction age.
+6. IBM. "Db2 for Linux, UNIX, and Windows Knowledge Center", topic "Lock
+   escalation".
+   https://www.ibm.com/docs/en/db2/12.1?topic=locking-lock-escalation
+   Verified 2026-08-02. Source for Db2's memory-pressure-triggered lock
+   escalation as a second, independently documented production instance of
+   the mechanism.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic to implement
@@ -1202,41 +1240,3 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
-
-## 18. References
-
-1. K. P. Eswaran, J. N. Gray, R. A. Lorie, I. L. Traiger. "The Notions of
-   Consistency and Predicate Locks in a Database System". Communications of
-   the ACM, vol. 19, no. 11, November 1976, pp. 624 to 633.
-   https://dl.acm.org/doi/10.1145/360363.360369
-   Verified 2026-08-02. Source of the pattern's name, its origin, and the
-   growing-shrinking phase rule proved to guarantee serializability.
-2. PostgreSQL Global Development Group. "PostgreSQL 18 Documentation",
-   chapter 13, "Concurrency Control", section 13.3, "Explicit Locking".
-   https://www.postgresql.org/docs/current/explicit-locking.html
-   Verified 2026-08-02. Source for the table-level lock mode set, the
-   compatibility rules, and the statement that PostgreSQL does not escalate
-   row locks into table locks.
-3. Oracle Corporation. "MySQL 9.7 Reference Manual", section 17.7.1, "InnoDB
-   Locking", and section 17.7.4, "Locking Reads".
-   https://dev.mysql.com/doc/en/innodb-locking.html
-   Verified 2026-08-02. Source for InnoDB's stated design combining
-   multi-versioning with two-phase locking, and for next-key locking under
-   `REPEATABLE READ`.
-4. Microsoft. "SQL Server Transaction Locking and Row Versioning Guide",
-   section "Lock Escalation".
-   https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide
-   Verified 2026-08-02. Source for the approximately 5,000-lock escalation
-   threshold and the retry-at-1,250-new-locks behavior.
-5. Google Cloud. "Concurrency control | Spanner | Google Cloud
-   Documentation".
-   https://docs.cloud.google.com/spanner/docs/concurrency-control
-   Verified 2026-08-02. Source for Spanner's pessimistic, lock-based
-   concurrency control and its use of the wound-wait algorithm to resolve
-   lock conflicts by transaction age.
-6. IBM. "Db2 for Linux, UNIX, and Windows Knowledge Center", topic "Lock
-   escalation".
-   https://www.ibm.com/docs/en/db2/12.1?topic=locking-lock-escalation
-   Verified 2026-08-02. Source for Db2's memory-pressure-triggered lock
-   escalation as a second, independently documented production instance of
-   the mechanism.

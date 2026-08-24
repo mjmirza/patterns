@@ -752,6 +752,53 @@ An attacker who can edit the policy bundle can often grant quieter access than
 an attacker who steals one user's token. Treat policy code, policy data, and
 policy signing keys as production assets.
 
+## 18. References
+
+1. John Kindervag. "No More Chewy Centers. The Zero-Trust Model Of Information
+   Security." Forrester webinar, original broadcast August 9, 2010.
+   https://www.forrester.com/webinar/No%2BMore%2BChewy%2BCenters%2BThe%2BZeroTrust%2BModel%2BOf%2BInformation%2BSecurity/WEB6741
+   Verified 2026-08-02. Source for the naming lineage.
+2. John Kindervag. "Build Security Into Your Network's DNA. The Zero Trust
+   Network Architecture." Forrester report page.
+   https://www.forrester.com/report/build-security-into-your-networks-dna-the-zero-trust-network-architecture/RES57047
+   Verified 2026-08-02. Source for the Zero Trust Network Architecture label.
+3. Scott Rose, Oliver Borchert, Stu Mitchell, Sean Connelly. *Zero Trust
+   Architecture*. NIST Special Publication 800-207, August 2020, sections 1,
+   2.1, 3, 3.1, 5, and 7.3.
+   https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf
+   Verified 2026-08-02. Source for the public architecture definition, logical
+   components, approaches, threats, and migration sequence.
+4. Google. "BeyondCorp Zero Trust Enterprise Security."
+   https://cloud.google.com/beyondcorp?hl=en
+   Verified 2026-08-02. Source for Google's BeyondCorp description and internal
+   production use.
+5. Rory Ward and Betsy Beyer. "BeyondCorp. A New Approach to Enterprise
+   Security." ;login:, Vol. 39, No. 6, 2014, pp. 6-11.
+   https://research.google/pubs/beyondcorp-a-new-approach-to-enterprise-security/
+   Verified 2026-08-02. Source for Google's move away from a privileged
+   intranet.
+6. Microsoft. "Zero Trust adoption framework overview." Microsoft Learn.
+   https://learn.microsoft.com/en-us/security/zero-trust/adopt/zero-trust-adoption-overview
+   Verified 2026-08-02. Source for the three Microsoft Zero Trust principles
+   and adoption framing.
+7. Microsoft. "Implementing a Zero Trust security model at Microsoft." Inside
+   Track, April 24, 2025.
+   https://www.microsoft.com/insidetrack/blog/implementing-a-zero-trust-security-model-at-microsoft/
+   Verified 2026-08-02. Source for Microsoft's internal production use.
+8. Google Cloud. "NYC Cyber Command. Keeping New York City's digital services
+   more secure at massive scale."
+   https://cloud.google.com/customers/nyc-cyber-command
+   Verified 2026-08-02. Source for NYC Cyber Command's BeyondCorp and
+   Identity-Aware Proxy use.
+9. Microsoft. "NTT Communications achieves a safe hybrid work environment with
+   Microsoft Entra ID and Intune." Microsoft Customer Stories.
+   https://www.microsoft.com/en/customers/story/24348-ntt-communications-corporation-microsoft-intune
+   Verified 2026-08-02. Source for NTT Communications production use.
+10. Office of Management and Budget. *Moving the U.S. Government Toward Zero
+   Trust Cybersecurity Principles*. Memorandum M-22-09, January 26, 2022.
+   https://www.whitehouse.gov/wp-content/uploads/2022/01/M-22-09.pdf
+   Verified 2026-08-02. Source for federal strategy context.
+
 ## Code examples
 
 The examples model the policy decision at the heart of the pattern. TypeScript
@@ -898,50 +945,3 @@ func main() {
 	fmt.Println(Decide(req))
 }
 ```
-
-## 18. References
-
-1. John Kindervag. "No More Chewy Centers. The Zero-Trust Model Of Information
-   Security." Forrester webinar, original broadcast August 9, 2010.
-   https://www.forrester.com/webinar/No%2BMore%2BChewy%2BCenters%2BThe%2BZeroTrust%2BModel%2BOf%2BInformation%2BSecurity/WEB6741
-   Verified 2026-08-02. Source for the naming lineage.
-2. John Kindervag. "Build Security Into Your Network's DNA. The Zero Trust
-   Network Architecture." Forrester report page.
-   https://www.forrester.com/report/build-security-into-your-networks-dna-the-zero-trust-network-architecture/RES57047
-   Verified 2026-08-02. Source for the Zero Trust Network Architecture label.
-3. Scott Rose, Oliver Borchert, Stu Mitchell, Sean Connelly. *Zero Trust
-   Architecture*. NIST Special Publication 800-207, August 2020, sections 1,
-   2.1, 3, 3.1, 5, and 7.3.
-   https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf
-   Verified 2026-08-02. Source for the public architecture definition, logical
-   components, approaches, threats, and migration sequence.
-4. Google. "BeyondCorp Zero Trust Enterprise Security."
-   https://cloud.google.com/beyondcorp?hl=en
-   Verified 2026-08-02. Source for Google's BeyondCorp description and internal
-   production use.
-5. Rory Ward and Betsy Beyer. "BeyondCorp. A New Approach to Enterprise
-   Security." ;login:, Vol. 39, No. 6, 2014, pp. 6-11.
-   https://research.google/pubs/beyondcorp-a-new-approach-to-enterprise-security/
-   Verified 2026-08-02. Source for Google's move away from a privileged
-   intranet.
-6. Microsoft. "Zero Trust adoption framework overview." Microsoft Learn.
-   https://learn.microsoft.com/en-us/security/zero-trust/adopt/zero-trust-adoption-overview
-   Verified 2026-08-02. Source for the three Microsoft Zero Trust principles
-   and adoption framing.
-7. Microsoft. "Implementing a Zero Trust security model at Microsoft." Inside
-   Track, April 24, 2025.
-   https://www.microsoft.com/insidetrack/blog/implementing-a-zero-trust-security-model-at-microsoft/
-   Verified 2026-08-02. Source for Microsoft's internal production use.
-8. Google Cloud. "NYC Cyber Command. Keeping New York City's digital services
-   more secure at massive scale."
-   https://cloud.google.com/customers/nyc-cyber-command
-   Verified 2026-08-02. Source for NYC Cyber Command's BeyondCorp and
-   Identity-Aware Proxy use.
-9. Microsoft. "NTT Communications achieves a safe hybrid work environment with
-   Microsoft Entra ID and Intune." Microsoft Customer Stories.
-   https://www.microsoft.com/en/customers/story/24348-ntt-communications-corporation-microsoft-intune
-   Verified 2026-08-02. Source for NTT Communications production use.
-10. Office of Management and Budget. *Moving the U.S. Government Toward Zero
-   Trust Cybersecurity Principles*. Memorandum M-22-09, January 26, 2022.
-   https://www.whitehouse.gov/wp-content/uploads/2022/01/M-22-09.pdf
-   Verified 2026-08-02. Source for federal strategy context.

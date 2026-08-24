@@ -456,6 +456,17 @@ actually rendered into the visible window, not only once when the
 underlying data was first fetched, so a later change to what a user is
 authorized to see is correctly reflected as items scroll into view.
 
+## 18. References
+
+1. TanStack documentation. "Virtual, Introduction".
+   https://tanstack.com/virtual/latest/docs/introduction
+   Verified 2026-08-21. Source of the defining sentence quoted in
+   dimensions 1 and 9.
+2. Web.dev. "Virtualize long lists with react-window".
+   https://web.dev/articles/virtualize-long-lists-react-window
+   Verified 2026-08-21. Source of the windowing definition and the
+   performance-benefit quotes in dimensions 1, 2, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -585,14 +596,3 @@ let range = computeVisibleRange(
 print("visible items: " + String(range.startIndex) + " to " + String(range.endIndex))
 print("total scroll height: " + String(totalScrollHeight(totalItems: 10000, itemHeight: 50)))
 ```
-
-## 18. References
-
-1. TanStack documentation. "Virtual, Introduction".
-   https://tanstack.com/virtual/latest/docs/introduction
-   Verified 2026-08-21. Source of the defining sentence quoted in
-   dimensions 1 and 9.
-2. Web.dev. "Virtualize long lists with react-window".
-   https://web.dev/articles/virtualize-long-lists-react-window
-   Verified 2026-08-21. Source of the windowing definition and the
-   performance-benefit quotes in dimensions 1, 2, and 9.

@@ -708,6 +708,53 @@ email domain, user id, or tenant id may be personal or commercially sensitive.
 Hash, bucket, or omit values according to the system's privacy policy. Do not
 turn a removed parameter into a new high cardinality log label without review.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 1st
+   edition. Addison-Wesley, 1999. Chapter 10, "Making Method Calls Simpler,"
+   section "Replace Parameter with Method." Source for the original name and
+   first edition placement.
+2. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
+   edition. Addison-Wesley, 2018. Chapter 11, "Refactoring APIs," section
+   "Replace Parameter with Query," page 324. Page confirmed through the
+   InformIT excerpt cited below.
+3. Martin Fowler. "Replace Parameter with Query."
+   https://refactoring.com/catalog/replaceParameterWithQuery.html
+   Verified 2026-08-02. Source for the public catalog name, example shape,
+   alias, and inverse link.
+4. Martin Fowler. "Replace Query with Parameter."
+   https://refactoring.com/catalog/replaceQueryWithParameter.html
+   Verified 2026-08-02. Source for the inverse refactoring.
+5. Martin Fowler. "Changes for the 2nd Edition of Refactoring."
+   https://martinfowler.com/articles/refactoring-2nd-changes.html
+   Verified 2026-08-02. Source for the rename from Replace Parameter with
+   Method to Replace Parameter with Query.
+6. Martin Fowler and Kent Beck. "Long Parameter List," excerpt from
+   *Refactoring. Improving the Design of Existing Code*, 2nd edition.
+   https://www.informit.com/articles/article.aspx?p=2952392&seqNum=4
+   Verified 2026-08-02. Source for the Long Parameter List connection and page
+   references to Replace Parameter with Query, Preserve Whole Object, Introduce
+   Parameter Object, and Remove Flag Argument.
+7. Martin Fowler. "Command Query Separation."
+   https://martinfowler.com/bliki/CommandQuerySeparation.html
+   Verified 2026-08-02. Source for the query and command terminology and
+   attribution to Bertrand Meyer.
+8. Pallets. "The Request Context," Flask Documentation 3.1.x.
+   https://flask.palletsprojects.com/en/stable/reqcontext/
+   Verified 2026-08-02. Source for Flask request and session proxies.
+9. Ruby on Rails. "ActionController::Base."
+   https://api.rubyonrails.org/classes/ActionController/Base.html
+   Verified 2026-08-02. Source for Rails controller accessors for params,
+   session data, and request data.
+10. Django Software Foundation. "The Django admin site," Django documentation.
+    https://docs.djangoproject.com/en/6.0/ref/contrib/admin/
+    Verified 2026-08-02. Source for `ModelAdmin.has_change_permission(request,
+    obj=None)` and admin middleware requirements.
+11. Django Software Foundation. `django.contrib.auth.middleware`, Django source.
+    https://github.com/django/django/blob/main/django/contrib/auth/middleware.py
+    Verified 2026-08-02. Source for `AuthenticationMiddleware` assigning
+    `request.user`.
+
 ## Code examples
 
 The examples use TypeScript, Python, and Go. They are small enough to run
@@ -806,50 +853,3 @@ func main() {
 The Go version keeps the query as a free function because that is idiomatic for
 a small value type in many packages. A method `account.TaxRegion()` would be
 equally valid when the query belongs to the type's public contract.
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 1st
-   edition. Addison-Wesley, 1999. Chapter 10, "Making Method Calls Simpler,"
-   section "Replace Parameter with Method." Source for the original name and
-   first edition placement.
-2. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
-   edition. Addison-Wesley, 2018. Chapter 11, "Refactoring APIs," section
-   "Replace Parameter with Query," page 324. Page confirmed through the
-   InformIT excerpt cited below.
-3. Martin Fowler. "Replace Parameter with Query."
-   https://refactoring.com/catalog/replaceParameterWithQuery.html
-   Verified 2026-08-02. Source for the public catalog name, example shape,
-   alias, and inverse link.
-4. Martin Fowler. "Replace Query with Parameter."
-   https://refactoring.com/catalog/replaceQueryWithParameter.html
-   Verified 2026-08-02. Source for the inverse refactoring.
-5. Martin Fowler. "Changes for the 2nd Edition of Refactoring."
-   https://martinfowler.com/articles/refactoring-2nd-changes.html
-   Verified 2026-08-02. Source for the rename from Replace Parameter with
-   Method to Replace Parameter with Query.
-6. Martin Fowler and Kent Beck. "Long Parameter List," excerpt from
-   *Refactoring. Improving the Design of Existing Code*, 2nd edition.
-   https://www.informit.com/articles/article.aspx?p=2952392&seqNum=4
-   Verified 2026-08-02. Source for the Long Parameter List connection and page
-   references to Replace Parameter with Query, Preserve Whole Object, Introduce
-   Parameter Object, and Remove Flag Argument.
-7. Martin Fowler. "Command Query Separation."
-   https://martinfowler.com/bliki/CommandQuerySeparation.html
-   Verified 2026-08-02. Source for the query and command terminology and
-   attribution to Bertrand Meyer.
-8. Pallets. "The Request Context," Flask Documentation 3.1.x.
-   https://flask.palletsprojects.com/en/stable/reqcontext/
-   Verified 2026-08-02. Source for Flask request and session proxies.
-9. Ruby on Rails. "ActionController::Base."
-   https://api.rubyonrails.org/classes/ActionController/Base.html
-   Verified 2026-08-02. Source for Rails controller accessors for params,
-   session data, and request data.
-10. Django Software Foundation. "The Django admin site," Django documentation.
-    https://docs.djangoproject.com/en/6.0/ref/contrib/admin/
-    Verified 2026-08-02. Source for `ModelAdmin.has_change_permission(request,
-    obj=None)` and admin middleware requirements.
-11. Django Software Foundation. `django.contrib.auth.middleware`, Django source.
-    https://github.com/django/django/blob/main/django/contrib/auth/middleware.py
-    Verified 2026-08-02. Source for `AuthenticationMiddleware` assigning
-    `request.user`.

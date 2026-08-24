@@ -924,6 +924,49 @@ caller is allowed to read the specific data being requested. ISP narrows
 the compile-time capability surface, it does not substitute for runtime
 access control.
 
+## 18. References
+
+1. Wikipedia contributors, "Interface segregation principle," Wikipedia,
+   verified 2026-08-02,
+   https://en.wikipedia.org/wiki/Interface_segregation_principle. Used for
+   the definition, the Xerox origin story, the SOLID summary, and the
+   microservice-design extension.
+2. Robert C. Martin, *Agile Software Development, Principles, Patterns, and
+   Practices*, Prentice Hall, 2002. Original book-form statement of ISP as
+   one chapter of the SOLID principles, cited per the Wikipedia summary
+   above for publication details. Used for the general characterization of
+   ISP's origin and its restatement from the earlier 1996 C++ Report
+   article.
+3. Go standard library documentation, package `io`, verified 2026-08-02,
+   https://pkg.go.dev/io. Used for the exact method signatures of
+   `io.Reader` and `io.Writer`, and for the composed interfaces
+   `io.ReadWriter`, `io.ReadCloser`, `io.ReadWriteCloser`.
+4. Rob Pike, "Go Proverbs," talk at Gopherfest, November 2015, transcript
+   and slide list at https://go-proverbs.github.io/, verified 2026-08-02.
+   Used for the proverb "the bigger the interface, the weaker the
+   abstraction," cited as the Go-idiomatic restatement of ISP's underlying
+   motivation.
+5. Microsoft Learn, "IReadOnlyList<T> Interface (System.Collections.Generic),"
+   verified 2026-08-02,
+   https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.
+   Used for the description and member set of `IReadOnlyList<T>`, and for
+   the distinction from the mutable `IList<T>` interface it deliberately
+   omits members from.
+6. Oracle, "Interface Closeable," Java SE 21 API documentation, verified
+   2026-08-02,
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/Closeable.html.
+   Used for the single-method definition of `Closeable`, its relationship
+   to `AutoCloseable`, and the deliberate separation from `Flushable`.
+
+Book page numbers were not independently confirmed for Martin's 2002 book
+because a physical or searchable copy was not available during
+verification. The chapter-level attribution of ISP and its restatement of
+the 1996 C++ Report article are corroborated by the Wikipedia summary
+cited in reference 1, which itself cites the book directly. Where this
+entry states a specific claim about the book's content beyond that
+corroborated summary, it is labelled as drawn from the secondary
+literature rather than confirmed against a page.
+
 ## Code examples
 
 Compiled or checked locally before this entry was written. TypeScript
@@ -1105,46 +1148,3 @@ fn main() {
     let _contents = summarize(&handle);
 }
 ```
-
-## 18. References
-
-1. Wikipedia contributors, "Interface segregation principle," Wikipedia,
-   verified 2026-08-02,
-   https://en.wikipedia.org/wiki/Interface_segregation_principle. Used for
-   the definition, the Xerox origin story, the SOLID summary, and the
-   microservice-design extension.
-2. Robert C. Martin, *Agile Software Development, Principles, Patterns, and
-   Practices*, Prentice Hall, 2002. Original book-form statement of ISP as
-   one chapter of the SOLID principles, cited per the Wikipedia summary
-   above for publication details. Used for the general characterization of
-   ISP's origin and its restatement from the earlier 1996 C++ Report
-   article.
-3. Go standard library documentation, package `io`, verified 2026-08-02,
-   https://pkg.go.dev/io. Used for the exact method signatures of
-   `io.Reader` and `io.Writer`, and for the composed interfaces
-   `io.ReadWriter`, `io.ReadCloser`, `io.ReadWriteCloser`.
-4. Rob Pike, "Go Proverbs," talk at Gopherfest, November 2015, transcript
-   and slide list at https://go-proverbs.github.io/, verified 2026-08-02.
-   Used for the proverb "the bigger the interface, the weaker the
-   abstraction," cited as the Go-idiomatic restatement of ISP's underlying
-   motivation.
-5. Microsoft Learn, "IReadOnlyList<T> Interface (System.Collections.Generic),"
-   verified 2026-08-02,
-   https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1.
-   Used for the description and member set of `IReadOnlyList<T>`, and for
-   the distinction from the mutable `IList<T>` interface it deliberately
-   omits members from.
-6. Oracle, "Interface Closeable," Java SE 21 API documentation, verified
-   2026-08-02,
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/Closeable.html.
-   Used for the single-method definition of `Closeable`, its relationship
-   to `AutoCloseable`, and the deliberate separation from `Flushable`.
-
-Book page numbers were not independently confirmed for Martin's 2002 book
-because a physical or searchable copy was not available during
-verification. The chapter-level attribution of ISP and its restatement of
-the 1996 C++ Report article are corroborated by the Wikipedia summary
-cited in reference 1, which itself cites the book directly. Where this
-entry states a specific claim about the book's content beyond that
-corroborated summary, it is labelled as drawn from the secondary
-literature rather than confirmed against a page.

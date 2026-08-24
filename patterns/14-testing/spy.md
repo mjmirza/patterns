@@ -707,6 +707,35 @@ into a production artifact in any of the mainstream frameworks discussed in
 dimension 9, and carries no network, storage, or execution privileges beyond
 what the test process itself already has.
 
+## 18. References
+
+1. Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
+   Addison-Wesley, 2007, chapter 11, "Types of Test Doubles" (introduces
+   Dummy, Fake, Stub, Spy, Mock as distinct roles) and chapter 16,
+   "Overspecified Software" (the fragile-test failure mode referenced in
+   dimension 11).
+2. Martin Fowler, "Mocks Aren't Stubs",
+   https://martinfowler.com/articles/mocksArentStubs.html, verified
+   2026-08-02. Direct quote used, "Spies are stubs that also record some
+   information based on how they were called."
+3. Sinon.js official documentation, spies reference,
+   https://sinonjs.org/concepts/spies/, verified 2026-08-04.
+4. Mockito official project site, https://site.mockito.org/, verified
+   2026-08-02. Direct quote used, "spy()/@Spy, partial mocking, real methods
+   are invoked but still can be verified and stubbed."
+5. Jest official documentation, "The Jest Object", `jest.spyOn` section,
+   https://jestjs.io/docs/jest-object#jestspyonobject-methodname, verified
+   2026-08-02.
+6. Python Software Foundation, Python 3 standard library documentation,
+   `unittest.mock`, https://docs.python.org/3/library/unittest.mock.html,
+   verified 2026-08-02, for call tracking attributes `call_args`,
+   `call_count`, `call_args_list`, and the `wraps` parameter for pass-through
+   spy behavior.
+7. Michael C. Feathers, *Working Effectively with Legacy Code*, Prentice
+   Hall, 2004, chapter 4, "The Seam Model", for the seam-introduction
+   technique referenced for the legacy-code monkey-patch spy variant in
+   dimensions 8 and 14.
+
 ## Code examples
 
 Three languages showing three different mechanical shapes a spy takes. Go
@@ -924,32 +953,3 @@ func main() {
 	fmt.Println("Go spy test passed for", user.Email)
 }
 ```
-
-## 18. References
-
-1. Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
-   Addison-Wesley, 2007, chapter 11, "Types of Test Doubles" (introduces
-   Dummy, Fake, Stub, Spy, Mock as distinct roles) and chapter 16,
-   "Overspecified Software" (the fragile-test failure mode referenced in
-   dimension 11).
-2. Martin Fowler, "Mocks Aren't Stubs",
-   https://martinfowler.com/articles/mocksArentStubs.html, verified
-   2026-08-02. Direct quote used, "Spies are stubs that also record some
-   information based on how they were called."
-3. Sinon.js official documentation, spies reference,
-   https://sinonjs.org/concepts/spies/, verified 2026-08-04.
-4. Mockito official project site, https://site.mockito.org/, verified
-   2026-08-02. Direct quote used, "spy()/@Spy, partial mocking, real methods
-   are invoked but still can be verified and stubbed."
-5. Jest official documentation, "The Jest Object", `jest.spyOn` section,
-   https://jestjs.io/docs/jest-object#jestspyonobject-methodname, verified
-   2026-08-02.
-6. Python Software Foundation, Python 3 standard library documentation,
-   `unittest.mock`, https://docs.python.org/3/library/unittest.mock.html,
-   verified 2026-08-02, for call tracking attributes `call_args`,
-   `call_count`, `call_args_list`, and the `wraps` parameter for pass-through
-   spy behavior.
-7. Michael C. Feathers, *Working Effectively with Legacy Code*, Prentice
-   Hall, 2004, chapter 4, "The Seam Model", for the seam-introduction
-   technique referenced for the legacy-code monkey-patch spy variant in
-   dimensions 8 and 14.

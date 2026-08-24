@@ -819,6 +819,57 @@ role, or delete this record. Authorization must run after CSRF validation and
 must use server-side policy, not form fields. Treating CSRF pass as permission
 is a category error.
 
+## 18. References
+
+- OWASP Cheat Sheet Series, "Cross-Site Request Forgery Prevention Cheat
+  Sheet." URL:
+  [https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html),
+  verified 2026-08-02.
+- OWASP Foundation, "Cross Site Request Forgery (CSRF)." URL:
+  [https://owasp.org/www-community/attacks/csrf](https://owasp.org/www-community/attacks/csrf),
+  verified 2026-08-02.
+- OWASP Foundation, "Reviewing Code for Cross-Site Request Forgery Issues."
+  URL:
+  [https://owasp.org/www-project-code-review-guide/reviewing-code-for-csrf-issues](https://owasp.org/www-project-code-review-guide/reviewing-code-for-csrf-issues),
+  verified 2026-08-02.
+- Adam Barth, "RFC 6265. HTTP State Management Mechanism." IETF, April 2011.
+  URL:
+  [https://www.rfc-editor.org/info/rfc6265/](https://www.rfc-editor.org/info/rfc6265/),
+  verified 2026-08-02.
+- Roy T. Fielding, Mark Nottingham, and Julian Reschke, "RFC 9110. HTTP
+  Semantics." IETF, June 2022. URL:
+  [https://www.ietf.org/ietf-ftp/rfc/rfc9110.html](https://www.ietf.org/ietf-ftp/rfc/rfc9110.html),
+  verified 2026-08-02.
+- MDN Web Docs, "Set-Cookie header." URL:
+  [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie),
+  verified 2026-08-02.
+- W3C Web Application Security Working Group, "Fetch Metadata Request Headers,"
+  Working Draft, 1 April 2025. URL:
+  [https://www.w3.org/TR/fetch-metadata/](https://www.w3.org/TR/fetch-metadata/),
+  verified 2026-08-02.
+- Django Software Foundation, "How to use Django's CSRF protection." URL:
+  [https://docs.djangoproject.com/en/stable/howto/csrf/](https://docs.djangoproject.com/en/stable/howto/csrf/),
+  verified 2026-08-02.
+- Ruby on Rails Guides, "Securing Rails Applications." URL:
+  [https://guides.rubyonrails.org/security.html](https://guides.rubyonrails.org/security.html),
+  verified 2026-08-02.
+- Spring Security Reference, "Cross Site Request Forgery (CSRF)." URL:
+  [https://docs.spring.io/spring-security/reference/7.0/servlet/exploits/csrf.html](https://docs.spring.io/spring-security/reference/7.0/servlet/exploits/csrf.html),
+  verified 2026-08-02.
+- Spring Security API, "CsrfFilter." URL:
+  [https://docs.spring.io/spring-security/reference/api/java/org/springframework/security/web/csrf/CsrfFilter.html](https://docs.spring.io/spring-security/reference/api/java/org/springframework/security/web/csrf/CsrfFilter.html),
+  verified 2026-08-02.
+- Laravel Documentation, "CSRF Protection." URL:
+  [https://laravel.com/docs/12.x/csrf](https://laravel.com/docs/12.x/csrf),
+  verified 2026-08-02.
+- PortSwigger Web Security Academy, "Bypassing CSRF token validation." URL:
+  [https://portswigger.net/web-security/csrf/bypassing-token-validation](https://portswigger.net/web-security/csrf/bypassing-token-validation),
+  verified 2026-08-02.
+- PortSwigger Web Security Academy, "Bypassing SameSite cookie restrictions."
+  URL:
+  [https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions),
+  verified 2026-08-02.
+
 ## Code examples
 
 The following examples are intentionally framework-free. They model the token
@@ -962,54 +1013,3 @@ if accept(session: session, form: ["csrf": "attacker"]) {
 
 print("swift csrf token ok")
 ```
-
-## 18. References
-
-- OWASP Cheat Sheet Series, "Cross-Site Request Forgery Prevention Cheat
-  Sheet." URL:
-  [https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html),
-  verified 2026-08-02.
-- OWASP Foundation, "Cross Site Request Forgery (CSRF)." URL:
-  [https://owasp.org/www-community/attacks/csrf](https://owasp.org/www-community/attacks/csrf),
-  verified 2026-08-02.
-- OWASP Foundation, "Reviewing Code for Cross-Site Request Forgery Issues."
-  URL:
-  [https://owasp.org/www-project-code-review-guide/reviewing-code-for-csrf-issues](https://owasp.org/www-project-code-review-guide/reviewing-code-for-csrf-issues),
-  verified 2026-08-02.
-- Adam Barth, "RFC 6265. HTTP State Management Mechanism." IETF, April 2011.
-  URL:
-  [https://www.rfc-editor.org/info/rfc6265/](https://www.rfc-editor.org/info/rfc6265/),
-  verified 2026-08-02.
-- Roy T. Fielding, Mark Nottingham, and Julian Reschke, "RFC 9110. HTTP
-  Semantics." IETF, June 2022. URL:
-  [https://www.ietf.org/ietf-ftp/rfc/rfc9110.html](https://www.ietf.org/ietf-ftp/rfc/rfc9110.html),
-  verified 2026-08-02.
-- MDN Web Docs, "Set-Cookie header." URL:
-  [https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie),
-  verified 2026-08-02.
-- W3C Web Application Security Working Group, "Fetch Metadata Request Headers,"
-  Working Draft, 1 April 2025. URL:
-  [https://www.w3.org/TR/fetch-metadata/](https://www.w3.org/TR/fetch-metadata/),
-  verified 2026-08-02.
-- Django Software Foundation, "How to use Django's CSRF protection." URL:
-  [https://docs.djangoproject.com/en/stable/howto/csrf/](https://docs.djangoproject.com/en/stable/howto/csrf/),
-  verified 2026-08-02.
-- Ruby on Rails Guides, "Securing Rails Applications." URL:
-  [https://guides.rubyonrails.org/security.html](https://guides.rubyonrails.org/security.html),
-  verified 2026-08-02.
-- Spring Security Reference, "Cross Site Request Forgery (CSRF)." URL:
-  [https://docs.spring.io/spring-security/reference/7.0/servlet/exploits/csrf.html](https://docs.spring.io/spring-security/reference/7.0/servlet/exploits/csrf.html),
-  verified 2026-08-02.
-- Spring Security API, "CsrfFilter." URL:
-  [https://docs.spring.io/spring-security/reference/api/java/org/springframework/security/web/csrf/CsrfFilter.html](https://docs.spring.io/spring-security/reference/api/java/org/springframework/security/web/csrf/CsrfFilter.html),
-  verified 2026-08-02.
-- Laravel Documentation, "CSRF Protection." URL:
-  [https://laravel.com/docs/12.x/csrf](https://laravel.com/docs/12.x/csrf),
-  verified 2026-08-02.
-- PortSwigger Web Security Academy, "Bypassing CSRF token validation." URL:
-  [https://portswigger.net/web-security/csrf/bypassing-token-validation](https://portswigger.net/web-security/csrf/bypassing-token-validation),
-  verified 2026-08-02.
-- PortSwigger Web Security Academy, "Bypassing SameSite cookie restrictions."
-  URL:
-  [https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions),
-  verified 2026-08-02.

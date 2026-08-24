@@ -673,6 +673,42 @@ The pattern is silent on access control. It makes dependencies visible; it does
 not decide who is allowed to supply them. That decision belongs at the trust
 boundary around the caller.
 
+## 18. References
+
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
+  edition, Addison-Wesley, 2018, chapter 11, "Refactoring APIs," section
+  "Replace Query with Parameter."
+- Martin Fowler, "Replace Query with Parameter," refactoring catalog,
+  https://refactoring.com/catalog/replaceQueryWithParameter.html, verified
+  2026-08-02.
+- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
+  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
+  2026-08-02.
+- Martin Fowler, "Refactoring Module Dependencies,"
+  https://martinfowler.com/articles/refactoring-dependencies.html, verified
+  2026-08-02.
+- Oracle, "Class Clock," Java SE 17 API specification,
+  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Clock.html,
+  verified 2026-08-02.
+- Oracle, "LocalDate.now(Clock)," Java SE 17 API specification,
+  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/LocalDate.html#now(java.time.Clock),
+  verified 2026-08-02.
+- The Go Authors, "Package context," Go standard library documentation,
+  https://pkg.go.dev/context, verified 2026-08-02.
+- OpenTelemetry Authors, "Instrumentation," OpenTelemetry Go documentation,
+  https://opentelemetry.io/docs/languages/go/instrumentation/, verified
+  2026-08-02.
+- Kubernetes Authors, "pkg/scheduler/scheduler.go," Kubernetes source,
+  https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler.go,
+  verified 2026-08-02.
+- Kubernetes Authors, "pkg/scheduler/scheduler_test.go," Kubernetes source,
+  https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler_test.go,
+  verified 2026-08-02.
+- Kubernetes Authors, "pkg/controller/disruption/disruption.go," Kubernetes
+  source,
+  https://github.com/kubernetes/kubernetes/blob/master/pkg/controller/disruption/disruption.go,
+  verified 2026-08-02.
+
 ## Code examples
 
 ### TypeScript
@@ -754,39 +790,3 @@ func main() {
 The Go example passes a snapshot time. If the function called `time.Now()`
 inside, tests would depend on wall time and event replay would be harder to
 reason about.
-
-## 18. References
-
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*, 2nd
-  edition, Addison-Wesley, 2018, chapter 11, "Refactoring APIs," section
-  "Replace Query with Parameter."
-- Martin Fowler, "Replace Query with Parameter," refactoring catalog,
-  https://refactoring.com/catalog/replaceQueryWithParameter.html, verified
-  2026-08-02.
-- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
-  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
-  2026-08-02.
-- Martin Fowler, "Refactoring Module Dependencies,"
-  https://martinfowler.com/articles/refactoring-dependencies.html, verified
-  2026-08-02.
-- Oracle, "Class Clock," Java SE 17 API specification,
-  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Clock.html,
-  verified 2026-08-02.
-- Oracle, "LocalDate.now(Clock)," Java SE 17 API specification,
-  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/LocalDate.html#now(java.time.Clock),
-  verified 2026-08-02.
-- The Go Authors, "Package context," Go standard library documentation,
-  https://pkg.go.dev/context, verified 2026-08-02.
-- OpenTelemetry Authors, "Instrumentation," OpenTelemetry Go documentation,
-  https://opentelemetry.io/docs/languages/go/instrumentation/, verified
-  2026-08-02.
-- Kubernetes Authors, "pkg/scheduler/scheduler.go," Kubernetes source,
-  https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler.go,
-  verified 2026-08-02.
-- Kubernetes Authors, "pkg/scheduler/scheduler_test.go," Kubernetes source,
-  https://github.com/kubernetes/kubernetes/blob/master/pkg/scheduler/scheduler_test.go,
-  verified 2026-08-02.
-- Kubernetes Authors, "pkg/controller/disruption/disruption.go," Kubernetes
-  source,
-  https://github.com/kubernetes/kubernetes/blob/master/pkg/controller/disruption/disruption.go,
-  verified 2026-08-02.

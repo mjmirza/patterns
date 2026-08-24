@@ -551,6 +551,28 @@ way a single error message would be reviewed, and consider stripping or
 generalising individual messages before they reach an unauthenticated
 caller.
 
+## 18. References
+
+1. Conor McBride and Ross Paterson. "Applicative Programming with
+   Effects". Journal of Functional Programming, volume 18, issue 1,
+   2008.
+   https://www.staff.city.ac.uk/~ross/papers/Applicative.pdf
+   Verified 2026-08-21. Source of the Applicative abstraction Validation
+   is an instance of.
+2. Chris Allen, Julie Moronuki, and contributors. `validation` package
+   documentation.
+   https://hackage.haskell.org/package/validation
+   Verified 2026-08-21. Source for the Haskell production use in
+   dimension 9.
+3. Typelevel Cats documentation. `Validated`.
+   https://typelevel.org/cats/datatypes/validated.html
+   Verified 2026-08-21. Source for the Scala production use in
+   dimension 9.
+4. `either` package documentation. `Data.Either.Validation`.
+   https://hackage.haskell.org/package/either/docs/Data-Either-Validation.html
+   Verified 2026-08-21. Source for the wrapper implementation variant in
+   dimension 8 and the second Haskell production use in dimension 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -699,25 +721,3 @@ let result = map2(checkName(""), checkAge(-5)) { name, age in (name, age) }
 
 print(result)
 ```
-
-## 18. References
-
-1. Conor McBride and Ross Paterson. "Applicative Programming with
-   Effects". Journal of Functional Programming, volume 18, issue 1,
-   2008.
-   https://www.staff.city.ac.uk/~ross/papers/Applicative.pdf
-   Verified 2026-08-21. Source of the Applicative abstraction Validation
-   is an instance of.
-2. Chris Allen, Julie Moronuki, and contributors. `validation` package
-   documentation.
-   https://hackage.haskell.org/package/validation
-   Verified 2026-08-21. Source for the Haskell production use in
-   dimension 9.
-3. Typelevel Cats documentation. `Validated`.
-   https://typelevel.org/cats/datatypes/validated.html
-   Verified 2026-08-21. Source for the Scala production use in
-   dimension 9.
-4. `either` package documentation. `Data.Either.Validation`.
-   https://hackage.haskell.org/package/either/docs/Data-Either-Validation.html
-   Verified 2026-08-21. Source for the wrapper implementation variant in
-   dimension 8 and the second Haskell production use in dimension 9.

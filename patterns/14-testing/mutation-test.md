@@ -718,6 +718,58 @@ project's own test fixtures, so there is no runtime attack surface or data
 exposure risk from running the technique itself, beyond the report storage
 concern above.
 
+## 18. References
+
+1. DeMillo, Richard A., Lipton, Richard J., Sayward, Frederick G. "Hints on
+   Test Data Selection. Help for the Practicing Programmer." IEEE Computer,
+   volume 11, issue 4, 1978, pages 34 to 41. Cited via Wikipedia contributors,
+   "Mutation testing", https://en.wikipedia.org/wiki/Mutation_testing verified
+   2026-08-02. Source for the original publication, the competent programmer
+   hypothesis, and the 1971 attribution to Richard Lipton.
+2. Acree, Philip G., Budd, Timothy A., DeMillo, Richard A., Lipton, Richard
+   J., Sayward, Frederick G. "Mutation Analysis." Georgia Institute of
+   Technology Technical Report, 1979. Cited via Wikipedia contributors,
+   "Mutation testing", https://en.wikipedia.org/wiki/Mutation_testing verified
+   2026-08-02. Source for the coupling effect hypothesis.
+3. Offutt, A. Jefferson. "Investigations of the software testing coupling
+   effect." ACM Transactions on Software Engineering and Methodology, 1992.
+   Cited via Wikipedia contributors, "Mutation testing",
+   https://en.wikipedia.org/wiki/Mutation_testing verified 2026-08-02.
+   Source for the formal investigation of the coupling effect.
+4. Budd, Timothy A. "Mutation Analysis." PhD dissertation, Yale University,
+   1980. Cited via Wikipedia contributors, "Mutation testing",
+   https://en.wikipedia.org/wiki/Mutation_testing verified 2026-08-02. Source
+   for the first working mutation testing implementation.
+5. Wikipedia contributors. "Mutation testing."
+   https://en.wikipedia.org/wiki/Mutation_testing verified 2026-08-02. Source
+   for the mutation score formula, the equivalent mutant problem, the 2014
+   systematic review of equivalent mutant detection techniques, and the
+   muJava class-level operator reference.
+6. Petrovic, Goran, Ivankovic, Marko. "State of Mutation Testing at Google."
+   Proceedings of the 40th International Conference on Software Engineering,
+   Software Engineering in Practice track, 2018.
+   https://research.google/pubs/state-of-mutation-testing-at-google/ verified
+   2026-08-02. Source for Google's production mutation testing system, its
+   scale, and the diff-based arid-line filtering approach.
+7. pitest.org. "PIT Mutation Testing." https://pitest.org verified
+   2026-08-02. Source for PIT's description of mutation testing and its
+   "gold standard" framing relative to coverage.
+8. pitest.org. "PIT Maven Quick Start."
+   https://pitest.org/quickstart/maven/ verified 2026-08-02. Source for PIT's
+   Maven integration, `dryRun`, `crossModule`, and Arcmutate reference.
+9. stryker-mutator.io. "Stryker Mutator Documentation."
+   https://stryker-mutator.io/docs/ verified 2026-08-02. Source for
+   StrykerJS, Stryker.NET, and Stryker4s, and the mutation score definition.
+10. mutmut documentation. "mutmut."
+    https://mutmut.readthedocs.io/en/latest/ verified 2026-08-02. Source for
+    mutmut's Python mutation operators, commands, and the WSL requirement on
+    Windows.
+11. mutants.rs. "cargo-mutants." https://mutants.rs/ verified 2026-08-02.
+    Source for cargo-mutants' design goals and its `cargo mutants` command.
+12. mull-project/mull. GitHub repository.
+    https://github.com/mull-project/mull verified 2026-08-02. Source for
+    Mull's LLVM IR mutation approach for C and C++ and its Apache 2.0 license.
+
 ## Code examples
 
 Three languages, chosen because each represents a genuinely different
@@ -1028,55 +1080,3 @@ returned "Unable to locate a Java Runtime"), so a `javac`-compiled example was
 not produced or claimed. Dimension 9's PIT description above is sourced
 entirely from PIT's own published documentation rather than from a run in
 this environment.
-
-## 18. References
-
-1. DeMillo, Richard A., Lipton, Richard J., Sayward, Frederick G. "Hints on
-   Test Data Selection. Help for the Practicing Programmer." IEEE Computer,
-   volume 11, issue 4, 1978, pages 34 to 41. Cited via Wikipedia contributors,
-   "Mutation testing", https://en.wikipedia.org/wiki/Mutation_testing verified
-   2026-08-02. Source for the original publication, the competent programmer
-   hypothesis, and the 1971 attribution to Richard Lipton.
-2. Acree, Philip G., Budd, Timothy A., DeMillo, Richard A., Lipton, Richard
-   J., Sayward, Frederick G. "Mutation Analysis." Georgia Institute of
-   Technology Technical Report, 1979. Cited via Wikipedia contributors,
-   "Mutation testing", https://en.wikipedia.org/wiki/Mutation_testing verified
-   2026-08-02. Source for the coupling effect hypothesis.
-3. Offutt, A. Jefferson. "Investigations of the software testing coupling
-   effect." ACM Transactions on Software Engineering and Methodology, 1992.
-   Cited via Wikipedia contributors, "Mutation testing",
-   https://en.wikipedia.org/wiki/Mutation_testing verified 2026-08-02.
-   Source for the formal investigation of the coupling effect.
-4. Budd, Timothy A. "Mutation Analysis." PhD dissertation, Yale University,
-   1980. Cited via Wikipedia contributors, "Mutation testing",
-   https://en.wikipedia.org/wiki/Mutation_testing verified 2026-08-02. Source
-   for the first working mutation testing implementation.
-5. Wikipedia contributors. "Mutation testing."
-   https://en.wikipedia.org/wiki/Mutation_testing verified 2026-08-02. Source
-   for the mutation score formula, the equivalent mutant problem, the 2014
-   systematic review of equivalent mutant detection techniques, and the
-   muJava class-level operator reference.
-6. Petrovic, Goran, Ivankovic, Marko. "State of Mutation Testing at Google."
-   Proceedings of the 40th International Conference on Software Engineering,
-   Software Engineering in Practice track, 2018.
-   https://research.google/pubs/state-of-mutation-testing-at-google/ verified
-   2026-08-02. Source for Google's production mutation testing system, its
-   scale, and the diff-based arid-line filtering approach.
-7. pitest.org. "PIT Mutation Testing." https://pitest.org verified
-   2026-08-02. Source for PIT's description of mutation testing and its
-   "gold standard" framing relative to coverage.
-8. pitest.org. "PIT Maven Quick Start."
-   https://pitest.org/quickstart/maven/ verified 2026-08-02. Source for PIT's
-   Maven integration, `dryRun`, `crossModule`, and Arcmutate reference.
-9. stryker-mutator.io. "Stryker Mutator Documentation."
-   https://stryker-mutator.io/docs/ verified 2026-08-02. Source for
-   StrykerJS, Stryker.NET, and Stryker4s, and the mutation score definition.
-10. mutmut documentation. "mutmut."
-    https://mutmut.readthedocs.io/en/latest/ verified 2026-08-02. Source for
-    mutmut's Python mutation operators, commands, and the WSL requirement on
-    Windows.
-11. mutants.rs. "cargo-mutants." https://mutants.rs/ verified 2026-08-02.
-    Source for cargo-mutants' design goals and its `cargo mutants` command.
-12. mull-project/mull. GitHub repository.
-    https://github.com/mull-project/mull verified 2026-08-02. Source for
-    Mull's LLVM IR mutation approach for C and C++ and its Apache 2.0 license.

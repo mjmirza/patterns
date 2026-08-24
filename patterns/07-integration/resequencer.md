@@ -781,6 +781,27 @@ message store. Any data classification or retention policy applied to the
 payload should account for the Resequencer's hold duration, not only for
 its final resting place after release.
 
+## 18. References
+
+1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003,
+   Message Routing chapter, Resequencer pattern.
+2. Enterprise Integration Patterns companion site, "Resequencer",
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/Resequencer.html,
+   verified 2026-08-02.
+3. Apache Camel Documentation, "Resequence EIP",
+   https://camel.apache.org/components/next/eips/resequence-eip.html,
+   verified 2026-08-02.
+4. Spring Integration Reference Documentation, "Resequencer",
+   https://docs.spring.io/spring-integration/reference/resequencer.html,
+   verified 2026-08-02.
+5. Apache Kafka Javadoc, `org.apache.kafka.streams.kstream.TimeWindows`,
+   https://kafka.apache.org/38/javadoc/org/apache/kafka/streams/kstream/TimeWindows.html,
+   verified 2026-08-02.
+6. H. Schulzrinne, S. Casner, R. Frederick, V. Jacobson, IETF RFC 3550,
+   "RTP. A Transport Protocol for Real-Time Applications," Section 5.1,
+   https://www.rfc-editor.org/rfc/rfc3550.html, verified 2026-08-02.
+
 ## Code examples
 
 Three languages, each showing the stream-mode, contiguous-release variant
@@ -949,24 +970,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. Gregor Hohpe and Bobby Woolf, *Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions*, Addison-Wesley, 2003,
-   Message Routing chapter, Resequencer pattern.
-2. Enterprise Integration Patterns companion site, "Resequencer",
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/Resequencer.html,
-   verified 2026-08-02.
-3. Apache Camel Documentation, "Resequence EIP",
-   https://camel.apache.org/components/next/eips/resequence-eip.html,
-   verified 2026-08-02.
-4. Spring Integration Reference Documentation, "Resequencer",
-   https://docs.spring.io/spring-integration/reference/resequencer.html,
-   verified 2026-08-02.
-5. Apache Kafka Javadoc, `org.apache.kafka.streams.kstream.TimeWindows`,
-   https://kafka.apache.org/38/javadoc/org/apache/kafka/streams/kstream/TimeWindows.html,
-   verified 2026-08-02.
-6. H. Schulzrinne, S. Casner, R. Frederick, V. Jacobson, IETF RFC 3550,
-   "RTP. A Transport Protocol for Real-Time Applications," Section 5.1,
-   https://www.rfc-editor.org/rfc/rfc3550.html, verified 2026-08-02.

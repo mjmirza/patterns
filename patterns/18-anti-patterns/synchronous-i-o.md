@@ -902,6 +902,17 @@ practices in this repository, and this entry takes no position on them
 beyond noting explicitly that fixing this anti-pattern does not fix, and
 is not a substitute for fixing, any of those separate concerns.
 
+## 18. References
+
+1. Dan Kegel, "The C10k problem", 1999, http://www.kegel.com/c10k.html, verified 2026-08-02.
+2. Node.js documentation, "Blocking the Event Loop. Node.js Core Modules", https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop, verified 2026-08-02.
+3. Python documentation, "Developing with asyncio", section "Running Blocking Code", https://docs.python.org/3/library/asyncio-dev.html, verified 2026-08-02.
+4. Netflix, Hystrix Wiki, "How it Works", https://github.com/Netflix/Hystrix/wiki/How-it-Works, verified 2026-08-02.
+5. Microsoft, "Asynchronous programming scenarios - C#", Microsoft Learn, https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios, verified 2026-08-02.
+6. The Go Authors, "Effective Go", section "Goroutines", https://go.dev/doc/effective_go, verified 2026-08-02.
+7. Brett Wooldridge, "About Pool Sizing", HikariCP wiki, https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing, verified 2026-08-02.
+8. PostgreSQL Global Development Group, "Connection Settings", PostgreSQL documentation, section on max_connections, https://www.postgresql.org/docs/current/runtime-config-connection.html, verified 2026-08-02.
+
 ## Code examples
 
 The five examples below share one structure on purpose. a periodic
@@ -1205,14 +1216,3 @@ limit of eight, reproducing the same exhaustion curve as the Rust and Go
 examples, and demonstrating that this specific anti-pattern is not tied to
 any one language's I/O primitives. it reappears wherever an async API is
 forced back into a blocking shape.
-
-## 18. References
-
-1. Dan Kegel, "The C10k problem", 1999, http://www.kegel.com/c10k.html, verified 2026-08-02.
-2. Node.js documentation, "Blocking the Event Loop. Node.js Core Modules", https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop, verified 2026-08-02.
-3. Python documentation, "Developing with asyncio", section "Running Blocking Code", https://docs.python.org/3/library/asyncio-dev.html, verified 2026-08-02.
-4. Netflix, Hystrix Wiki, "How it Works", https://github.com/Netflix/Hystrix/wiki/How-it-Works, verified 2026-08-02.
-5. Microsoft, "Asynchronous programming scenarios - C#", Microsoft Learn, https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios, verified 2026-08-02.
-6. The Go Authors, "Effective Go", section "Goroutines", https://go.dev/doc/effective_go, verified 2026-08-02.
-7. Brett Wooldridge, "About Pool Sizing", HikariCP wiki, https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing, verified 2026-08-02.
-8. PostgreSQL Global Development Group, "Connection Settings", PostgreSQL documentation, section on max_connections, https://www.postgresql.org/docs/current/runtime-config-connection.html, verified 2026-08-02.

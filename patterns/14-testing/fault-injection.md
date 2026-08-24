@@ -813,6 +813,30 @@ targeting a security-critical dependency should explicitly verify, as part
 of its steady-state hypothesis, that the system fails closed under the
 injected condition, not merely that it remains available.
 
+## 18. References
+
+1. Jean Arlat, Yves Crouzet, Jean-Claude Laprie, "Fault Injection for
+   Dependability Validation of Fault-Tolerant Computing Systems," Digest of
+   Papers, 19th International Symposium on Fault-Tolerant Computing
+   (FTCS-19), IEEE, 1989.
+2. Casey Rosenthal, Nora Jones, *Chaos Engineering. System Resiliency in
+   Practice*, O'Reilly Media, 2020, chapters 1, 2, and 9.
+3. Netflix Technology Blog, "The Netflix Simian Army," 2011, verified
+   2026-08-02, https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116
+4. Naresh Gopalani et al., "FIT. Failure Injection Testing," Netflix
+   Technology Blog, 2014.
+5. AWS, "AWS Fault Injection Service," verified 2026-08-02,
+   https://aws.amazon.com/fis/
+6. Shopify, toxiproxy README, verified 2026-08-02,
+   https://github.com/Shopify/toxiproxy
+7. Jepsen, "Analyses," verified 2026-08-02, https://jepsen.io/analyses
+8. Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy,
+   editors, *Site Reliability Engineering. How Google Runs Production
+   Systems*, O'Reilly Media, 2016, chapter 20, "Disaster Recovery
+   Testing."
+9. Wikipedia, "Chaos engineering," verified 2026-08-02,
+   https://en.wikipedia.org/wiki/Chaos_engineering
+
 ## Code examples
 
 All three examples model the same scenario, a client wrapped in a
@@ -981,27 +1005,3 @@ func main() {
 	fmt.Println("retry succeeded after", client.calls, "attempts")
 }
 ```
-
-## 18. References
-
-1. Jean Arlat, Yves Crouzet, Jean-Claude Laprie, "Fault Injection for
-   Dependability Validation of Fault-Tolerant Computing Systems," Digest of
-   Papers, 19th International Symposium on Fault-Tolerant Computing
-   (FTCS-19), IEEE, 1989.
-2. Casey Rosenthal, Nora Jones, *Chaos Engineering. System Resiliency in
-   Practice*, O'Reilly Media, 2020, chapters 1, 2, and 9.
-3. Netflix Technology Blog, "The Netflix Simian Army," 2011, verified
-   2026-08-02, https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116
-4. Naresh Gopalani et al., "FIT. Failure Injection Testing," Netflix
-   Technology Blog, 2014.
-5. AWS, "AWS Fault Injection Service," verified 2026-08-02,
-   https://aws.amazon.com/fis/
-6. Shopify, toxiproxy README, verified 2026-08-02,
-   https://github.com/Shopify/toxiproxy
-7. Jepsen, "Analyses," verified 2026-08-02, https://jepsen.io/analyses
-8. Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy,
-   editors, *Site Reliability Engineering. How Google Runs Production
-   Systems*, O'Reilly Media, 2016, chapter 20, "Disaster Recovery
-   Testing."
-9. Wikipedia, "Chaos engineering," verified 2026-08-02,
-   https://en.wikipedia.org/wiki/Chaos_engineering

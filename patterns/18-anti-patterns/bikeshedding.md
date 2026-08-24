@@ -743,6 +743,52 @@ harder to route around than an open forum with no accountable closer.
 Privacy is not implicated by the pattern in any way this entry can source,
 and no claim is made here.
 
+## 18. References
+
+1. C. Northcote Parkinson. *Parkinson's Law, or the Pursuit of Progress*.
+   John Murray, 1958. Chapter "High Finance, or the Point of Vanishing
+   Interest". Source of the law of triviality and the committee example of
+   the reactor, the bicycle shed, and the refreshment budget, as summarised
+   at https://en.wikipedia.org/wiki/Law_of_triviality and
+   https://en.wikipedia.org/wiki/Parkinson%27s_law, both verified
+   2026-08-02.
+2. Wikipedia contributors. "Law of triviality".
+   https://en.wikipedia.org/wiki/Law_of_triviality
+   Verified 2026-08-02. Source for the figures in Parkinson's illustrative
+   example, the inverse-proportion statement, and the attribution of the
+   software term's popularisation to Poul-Henning Kamp and the FreeBSD
+   community in 1999.
+3. Wikipedia contributors. "Parkinson's law".
+   https://en.wikipedia.org/wiki/Parkinson%27s_law
+   Verified 2026-08-02. Source for the 1958 publication date and Parkinson's
+   background as a naval historian and Civil Service observer.
+4. FreeBSD Documentation Project. *FreeBSD FAQ*, section "Why should I care
+   what color the bikeshed is?".
+   https://docs.freebsd.org/en_US.ISO8859-1/books/faq/misc.html
+   Verified 2026-08-02. Source for Poul-Henning Kamp's authorship, the
+   2 October 1999 dating of the originating message, the `sleep(1)`
+   fractional-seconds dispute, and the exact wording of the essay's opening
+   summary.
+5. speced project contributors. *Bikeshed*, GitHub repository README.
+   https://github.com/speced/bikeshed
+   Verified 2026-08-02. Source for the named production use of the
+   `Bikeshed` specification-authoring tool across the CSS Working Group,
+   WHATWG, and the C++ standards committee, and for its authorship credit to
+   Tab Atkins-Bittner.
+6. Karl Fogel. *Producing Open Source Software, How to Run a Successful
+   Free Software Project*. O'Reilly Media. Online edition, chapter 6,
+   Communications, section "The Smaller the Topic, the Longer the Debate".
+   https://producingoss.com/en/producingoss.html
+   Verified 2026-08-02. Source for the general open-source governance
+   framing of the pattern independent of any single named codebase.
+7. Amazon.com, Inc. *1997 Letter to Shareholders*, filed as an exhibit to a
+   subsequent SEC filing.
+   https://www.sec.gov/Archives/edgar/data/1018724/000119312513151836/d511111dex991.htm
+   Verified 2026-08-02. Source for the reversibility-of-decision framing
+   used as engineering judgement in dimension 8 to describe the
+   reversibility-scaled delegation variant, the letter does not use the
+   term bikeshedding and this entry does not claim it does.
+
 ## Code examples
 
 The pattern is a process, not a data structure, so the three examples below
@@ -988,49 +1034,3 @@ async function main() {
 
 main();
 ```
-
-## 18. References
-
-1. C. Northcote Parkinson. *Parkinson's Law, or the Pursuit of Progress*.
-   John Murray, 1958. Chapter "High Finance, or the Point of Vanishing
-   Interest". Source of the law of triviality and the committee example of
-   the reactor, the bicycle shed, and the refreshment budget, as summarised
-   at https://en.wikipedia.org/wiki/Law_of_triviality and
-   https://en.wikipedia.org/wiki/Parkinson%27s_law, both verified
-   2026-08-02.
-2. Wikipedia contributors. "Law of triviality".
-   https://en.wikipedia.org/wiki/Law_of_triviality
-   Verified 2026-08-02. Source for the figures in Parkinson's illustrative
-   example, the inverse-proportion statement, and the attribution of the
-   software term's popularisation to Poul-Henning Kamp and the FreeBSD
-   community in 1999.
-3. Wikipedia contributors. "Parkinson's law".
-   https://en.wikipedia.org/wiki/Parkinson%27s_law
-   Verified 2026-08-02. Source for the 1958 publication date and Parkinson's
-   background as a naval historian and Civil Service observer.
-4. FreeBSD Documentation Project. *FreeBSD FAQ*, section "Why should I care
-   what color the bikeshed is?".
-   https://docs.freebsd.org/en_US.ISO8859-1/books/faq/misc.html
-   Verified 2026-08-02. Source for Poul-Henning Kamp's authorship, the
-   2 October 1999 dating of the originating message, the `sleep(1)`
-   fractional-seconds dispute, and the exact wording of the essay's opening
-   summary.
-5. speced project contributors. *Bikeshed*, GitHub repository README.
-   https://github.com/speced/bikeshed
-   Verified 2026-08-02. Source for the named production use of the
-   `Bikeshed` specification-authoring tool across the CSS Working Group,
-   WHATWG, and the C++ standards committee, and for its authorship credit to
-   Tab Atkins-Bittner.
-6. Karl Fogel. *Producing Open Source Software, How to Run a Successful
-   Free Software Project*. O'Reilly Media. Online edition, chapter 6,
-   Communications, section "The Smaller the Topic, the Longer the Debate".
-   https://producingoss.com/en/producingoss.html
-   Verified 2026-08-02. Source for the general open-source governance
-   framing of the pattern independent of any single named codebase.
-7. Amazon.com, Inc. *1997 Letter to Shareholders*, filed as an exhibit to a
-   subsequent SEC filing.
-   https://www.sec.gov/Archives/edgar/data/1018724/000119312513151836/d511111dex991.htm
-   Verified 2026-08-02. Source for the reversibility-of-decision framing
-   used as engineering judgement in dimension 8 to describe the
-   reversibility-scaled delegation variant, the letter does not use the
-   term bikeshedding and this entry does not claim it does.

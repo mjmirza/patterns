@@ -1015,6 +1015,58 @@ coexistence must be confirmed to actually propagate to the other, or the
 organization can find itself still holding data it told a person, and
 possibly a regulator, it had deleted.
 
+## 18. References
+
+1. Martin Fowler. "Strangler Fig Application". martinfowler.com bliki.
+   Originally published 2004, title changed and page revised 22 August 2024.
+   https://martinfowler.com/bliki/StranglerFigApplication.html
+   Verified 2026-08-02. Source of the name, the rename rationale, the tree
+   metaphor, and the original narrow framing of the pattern.
+2. Microsoft. "Strangler Fig pattern". Azure Architecture Center.
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
+   Verified 2026-08-02. Source for the context and problem framing, the
+   four-phase facade diagram, the issues and considerations list, the
+   database-level migration example, and the option to retain the facade
+   permanently after migration.
+3. AWS. "Strangler fig pattern". AWS Prescriptive Guidance, Cloud Design
+   Patterns guide.
+   https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html
+   Verified 2026-08-02. Source for the code-base-access and small-application
+   non-applicability points, the anti-corruption layer worked example, the
+   data synchronization guidance, the proxy layer failure risk, and the AWS
+   Migration Hub Refactor Spaces reference architecture.
+4. AWS. "What is AWS Migration Hub Refactor Spaces?"
+   https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/what-is-mhub-refactor-spaces.html
+   Verified 2026-08-02. Source for the named production tool that explicitly
+   states it models the Strangler Fig pattern, and its retirement to new
+   customers as of 7 November 2025.
+5. GOV.UK Service Manual. "Moving away from legacy systems".
+   https://www.gov.uk/service-manual/technology/moving-away-from-legacy-systems
+   Verified 2026-08-02. Source for the named production use by the UK
+   Government Digital Service, and for the reverse strangler variant.
+6. Shang-Pin Ma, Chia-Yu Li, Wen-Tin Lee, and Shin-Jie Lee. "Microservice
+   Migration Using Strangler Fig Pattern and Domain-Driven Design". Journal
+   of Information Science and Engineering, volume 38, issue 6, November
+   2022. Publication record verified 2026-08-02 via
+   https://researchoutput.ncku.edu.tw/en/publications/microservice-migration-using-strangler-fig-pattern-and-domain-dri/
+   Source for the peer-reviewed Green Button DataCustodian production case
+   study, and for pairing the pattern with domain-driven design.
+7. ThoughtWorks. "Embracing the Strangler Fig pattern for legacy
+   modernization, part one".
+   https://www.thoughtworks.com/en-us/insights/articles/embracing-strangler-fig-pattern-legacy-modernization-part-one
+   Verified 2026-08-02. Source for the anonymized retailer coupon-management
+   worked example and the API gateway passthrough implementation detail.
+8. Sam Newman. "Pattern. Strangler Fig Application". Companion reference site
+   for the book Monolith to Microservices. O'Reilly Media, 2019, ISBN
+   978-1-4920-4783-4.
+   https://samnewman.io/patterns/refactoring/strangler-fig-application/
+   Verified 2026-08-02. Source confirming the pattern's coverage in Newman's
+   book and its wrap-and-intercept framing.
+9. Wikipedia contributors. "Strangler fig pattern".
+   https://en.wikipedia.org/wiki/Strangler_fig_pattern
+   Verified 2026-08-02. Used only to confirm the Fowler attribution and the
+   Ship of Theseus alias, not as a source of technical explanation.
+
 ## Code examples
 
 Three languages, chosen because each shows a different, genuinely idiomatic
@@ -1229,55 +1281,3 @@ func readAll(resp *http.Response) string {
 	return string(buf[:n])
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. "Strangler Fig Application". martinfowler.com bliki.
-   Originally published 2004, title changed and page revised 22 August 2024.
-   https://martinfowler.com/bliki/StranglerFigApplication.html
-   Verified 2026-08-02. Source of the name, the rename rationale, the tree
-   metaphor, and the original narrow framing of the pattern.
-2. Microsoft. "Strangler Fig pattern". Azure Architecture Center.
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
-   Verified 2026-08-02. Source for the context and problem framing, the
-   four-phase facade diagram, the issues and considerations list, the
-   database-level migration example, and the option to retain the facade
-   permanently after migration.
-3. AWS. "Strangler fig pattern". AWS Prescriptive Guidance, Cloud Design
-   Patterns guide.
-   https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html
-   Verified 2026-08-02. Source for the code-base-access and small-application
-   non-applicability points, the anti-corruption layer worked example, the
-   data synchronization guidance, the proxy layer failure risk, and the AWS
-   Migration Hub Refactor Spaces reference architecture.
-4. AWS. "What is AWS Migration Hub Refactor Spaces?"
-   https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/what-is-mhub-refactor-spaces.html
-   Verified 2026-08-02. Source for the named production tool that explicitly
-   states it models the Strangler Fig pattern, and its retirement to new
-   customers as of 7 November 2025.
-5. GOV.UK Service Manual. "Moving away from legacy systems".
-   https://www.gov.uk/service-manual/technology/moving-away-from-legacy-systems
-   Verified 2026-08-02. Source for the named production use by the UK
-   Government Digital Service, and for the reverse strangler variant.
-6. Shang-Pin Ma, Chia-Yu Li, Wen-Tin Lee, and Shin-Jie Lee. "Microservice
-   Migration Using Strangler Fig Pattern and Domain-Driven Design". Journal
-   of Information Science and Engineering, volume 38, issue 6, November
-   2022. Publication record verified 2026-08-02 via
-   https://researchoutput.ncku.edu.tw/en/publications/microservice-migration-using-strangler-fig-pattern-and-domain-dri/
-   Source for the peer-reviewed Green Button DataCustodian production case
-   study, and for pairing the pattern with domain-driven design.
-7. ThoughtWorks. "Embracing the Strangler Fig pattern for legacy
-   modernization, part one".
-   https://www.thoughtworks.com/en-us/insights/articles/embracing-strangler-fig-pattern-legacy-modernization-part-one
-   Verified 2026-08-02. Source for the anonymized retailer coupon-management
-   worked example and the API gateway passthrough implementation detail.
-8. Sam Newman. "Pattern. Strangler Fig Application". Companion reference site
-   for the book Monolith to Microservices. O'Reilly Media, 2019, ISBN
-   978-1-4920-4783-4.
-   https://samnewman.io/patterns/refactoring/strangler-fig-application/
-   Verified 2026-08-02. Source confirming the pattern's coverage in Newman's
-   book and its wrap-and-intercept framing.
-9. Wikipedia contributors. "Strangler fig pattern".
-   https://en.wikipedia.org/wiki/Strangler_fig_pattern
-   Verified 2026-08-02. Used only to confirm the Fowler attribution and the
-   Ship of Theseus alias, not as a source of technical explanation.

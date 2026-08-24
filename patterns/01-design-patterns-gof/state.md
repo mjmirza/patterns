@@ -1249,6 +1249,118 @@ meaning, treat the label as attributable data under the same retention and acces
 rules as any other identifier, or map to an opaque code for external telemetry
 while keeping the readable name in access-controlled logs.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section State. Source of
+   the pattern's intent, the Objects for States alias, the three participants,
+   the TCPConnection worked example, and the Flyweight and Singleton
+   relationships. Page numbers are not cited because they were not verified
+   against a copy of the book during authoring.
+2. Wikipedia contributors. "State pattern".
+   https://en.wikipedia.org/wiki/State_pattern
+   Verified 2026-08-02. Used to confirm the wording of the GoF intent, the two
+   problems the pattern addresses, the `setState` callback structure in the
+   sequence diagram, and the observation that the pattern can be read as a
+   Strategy whose strategy switches itself.
+3. David Harel. "Statecharts. A visual formalism for complex systems". *Science
+   of Computer Programming*, volume 8, 1987, pages 231 to 274.
+   https://www.sciencedirect.com/science/article/pii/0167642387900359
+   Verified 2026-08-02. Source for the statechart formalism and the three
+   extensions of hierarchy, concurrency and communication. The publisher page
+   was reachable through search indexing but returned HTTP 403 to direct
+   retrieval, so the bibliographic details were confirmed from the ScienceDirect
+   record and the Weizmann Institute publication listing rather than from the
+   article text.
+4. World Wide Web Consortium. *State Chart XML (SCXML). State Machine Notation
+   for Control Abstraction*. W3C Recommendation, 1 September 2015.
+   https://www.w3.org/TR/scxml/
+   Verified 2026-08-02. Source for the SCXML abstract wording and its lineage
+   from CCXML and Harel State Tables.
+5. Object Management Group. *Unified Modeling Language*, version 2.5.1, OMG
+   document formal/17-12-05, December 2017.
+   https://www.omg.org/spec/UML/
+   Verified 2026-08-02. Source for the current formal UML version and document
+   number. The specification PDF itself exceeded the retrieval size limit during
+   authoring, so no section or page of the PDF is cited.
+6. uml-diagrams.org. "UML State Machine Diagrams".
+   https://www.uml-diagrams.org/state-machine-diagrams.html
+   Verified 2026-08-02. Secondary source for the distinction between behavioral
+   and protocol state machines and for the description of UML behavioral state
+   machines as an object-based variant of Harel statecharts.
+7. Internet Engineering Task Force. RFC 9293, *Transmission Control Protocol*,
+   August 2022. https://www.rfc-editor.org/rfc/rfc9293.html
+   Verified 2026-08-02. Source for the eleven TCP connection states and the
+   state diagram in section 3.3.2, figure 5.
+8. Ericsson and the Erlang/OTP team. *Erlang/OTP stdlib documentation*,
+   `gen_statem`. https://www.erlang.org/doc/apps/stdlib/gen_statem.html
+   Verified 2026-08-02. Source for the `state_functions` and
+   `handle_event_function` callback modes, the `{next_state, NextState, NewData}`
+   return shape, and the `keep_state` versus `repeat_state` distinction.
+9. Lightbend and the Akka team. *Akka documentation*, Behaviors as finite state
+   machines. https://doc.akka.io/libraries/akka-core/current/typed/fsm.html
+   Verified 2026-08-02. Source for the state-as-`Behavior` model and the named
+   `Behaviors.receiveMessage`, `Behaviors.withTimers`, `Behaviors.unhandled` and
+   `Behaviors.ignore` constructors.
+10. Broadcom and the Spring team. *Spring Statemachine reference documentation*.
+    https://docs.spring.io/spring-statemachine/docs/current/reference/
+    Verified 2026-08-02. Source for hierarchical states, regions, guards,
+    actions, triggers, extended state, pseudostates, and the
+    `withExternal().source().target().event()` transition declaration form.
+11. Andreas Huber Dönni. *Boost.Statechart documentation*.
+    https://www.boost.org/doc/libs/release/libs/statechart/doc/index.html
+    Verified 2026-08-02. Source for the C++ UML-statechart library, its author,
+    and its support for hierarchical states, orthogonal states, entry and exit
+    actions, guards, history and event deferral.
+12. Stately. *XState documentation*, State machines and statecharts.
+    https://stately.ai/docs/state-machines-and-statecharts
+    Verified 2026-08-02. Source for XState's core concepts of states,
+    transitions and events, and for its support of hierarchy, parallel states
+    and actor-model communication.
+13. Amazon Web Services. *AWS Step Functions Developer Guide*, Discovering
+    workflow states.
+    https://docs.aws.amazon.com/step-functions/latest/dg/concepts-states.html
+    Verified 2026-08-02. Source for the Amazon States Language `Type` and `Next`
+    fields and the eight state types.
+14. The Rust Project. *The Rust Programming Language*, chapter 18,
+    Object-Oriented Design Pattern Implementations.
+    https://doc.rust-lang.org/book/ch18-03-oo-design-patterns.html
+    Verified 2026-08-02. Source for the Draft, PendingReview and Published
+    worked example, the quoted downside that states which implement transitions
+    become coupled to each other, and the argument that encoding states as types
+    makes invalid states impossible at compile time.
+15. statecharts.dev. "State machine state explosion".
+    https://statecharts.dev/state-machine-state-explosion.html
+    Verified 2026-08-02. Source for the state explosion description, the worked
+    two-to-four-to-eight state progression with twelve transitions, and the
+    hierarchy-based remedy.
+16. Apple. *The Swift Programming Language*, Initialization.
+    https://docs.swift.org/swift-book/documentation/the-swift-programming-language/initialization/
+    Verified 2026-08-02. Source for two-phase initialisation and the safety check
+    that an initializer cannot call an instance method, read an instance property
+    or refer to `self` before phase one of initialisation completes. Cited in
+    dimension 7 to correct the common assumption that the constructor
+    virtual-call hazard applies uniformly across object-oriented languages.
+
+### Claims deliberately not made
+
+Three things a reader might expect here are absent because they could not be
+verified during authoring on 2026-08-02, and asserting them would be worse than
+omitting them.
+
+- No page numbers are cited for the GoF book. The chapter and section are cited
+  because they are stable and well established, but no page was confirmed against
+  a copy.
+- No direct quotation is taken from the GoF book's Implementation section on who
+  defines the state transitions. The trade-off is instead argued from the
+  Wikipedia structural description of `setState`, from the Rust book's explicit
+  statement about inter-state coupling, and from the observable design choices of
+  Spring Statemachine, SCXML and Amazon States Language.
+- No claim is made about which UML 2.5.1 chapter covers state machines. The
+  specification PDF exceeded the retrieval size limit, and the version and
+  document number are cited from the OMG specification page instead.
+
 ## Code examples
 
 Four languages, chosen because each shows a different genuine face of the
@@ -1627,115 +1739,3 @@ idle false
 paid true
 idle
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section State. Source of
-   the pattern's intent, the Objects for States alias, the three participants,
-   the TCPConnection worked example, and the Flyweight and Singleton
-   relationships. Page numbers are not cited because they were not verified
-   against a copy of the book during authoring.
-2. Wikipedia contributors. "State pattern".
-   https://en.wikipedia.org/wiki/State_pattern
-   Verified 2026-08-02. Used to confirm the wording of the GoF intent, the two
-   problems the pattern addresses, the `setState` callback structure in the
-   sequence diagram, and the observation that the pattern can be read as a
-   Strategy whose strategy switches itself.
-3. David Harel. "Statecharts. A visual formalism for complex systems". *Science
-   of Computer Programming*, volume 8, 1987, pages 231 to 274.
-   https://www.sciencedirect.com/science/article/pii/0167642387900359
-   Verified 2026-08-02. Source for the statechart formalism and the three
-   extensions of hierarchy, concurrency and communication. The publisher page
-   was reachable through search indexing but returned HTTP 403 to direct
-   retrieval, so the bibliographic details were confirmed from the ScienceDirect
-   record and the Weizmann Institute publication listing rather than from the
-   article text.
-4. World Wide Web Consortium. *State Chart XML (SCXML). State Machine Notation
-   for Control Abstraction*. W3C Recommendation, 1 September 2015.
-   https://www.w3.org/TR/scxml/
-   Verified 2026-08-02. Source for the SCXML abstract wording and its lineage
-   from CCXML and Harel State Tables.
-5. Object Management Group. *Unified Modeling Language*, version 2.5.1, OMG
-   document formal/17-12-05, December 2017.
-   https://www.omg.org/spec/UML/
-   Verified 2026-08-02. Source for the current formal UML version and document
-   number. The specification PDF itself exceeded the retrieval size limit during
-   authoring, so no section or page of the PDF is cited.
-6. uml-diagrams.org. "UML State Machine Diagrams".
-   https://www.uml-diagrams.org/state-machine-diagrams.html
-   Verified 2026-08-02. Secondary source for the distinction between behavioral
-   and protocol state machines and for the description of UML behavioral state
-   machines as an object-based variant of Harel statecharts.
-7. Internet Engineering Task Force. RFC 9293, *Transmission Control Protocol*,
-   August 2022. https://www.rfc-editor.org/rfc/rfc9293.html
-   Verified 2026-08-02. Source for the eleven TCP connection states and the
-   state diagram in section 3.3.2, figure 5.
-8. Ericsson and the Erlang/OTP team. *Erlang/OTP stdlib documentation*,
-   `gen_statem`. https://www.erlang.org/doc/apps/stdlib/gen_statem.html
-   Verified 2026-08-02. Source for the `state_functions` and
-   `handle_event_function` callback modes, the `{next_state, NextState, NewData}`
-   return shape, and the `keep_state` versus `repeat_state` distinction.
-9. Lightbend and the Akka team. *Akka documentation*, Behaviors as finite state
-   machines. https://doc.akka.io/libraries/akka-core/current/typed/fsm.html
-   Verified 2026-08-02. Source for the state-as-`Behavior` model and the named
-   `Behaviors.receiveMessage`, `Behaviors.withTimers`, `Behaviors.unhandled` and
-   `Behaviors.ignore` constructors.
-10. Broadcom and the Spring team. *Spring Statemachine reference documentation*.
-    https://docs.spring.io/spring-statemachine/docs/current/reference/
-    Verified 2026-08-02. Source for hierarchical states, regions, guards,
-    actions, triggers, extended state, pseudostates, and the
-    `withExternal().source().target().event()` transition declaration form.
-11. Andreas Huber Dönni. *Boost.Statechart documentation*.
-    https://www.boost.org/doc/libs/release/libs/statechart/doc/index.html
-    Verified 2026-08-02. Source for the C++ UML-statechart library, its author,
-    and its support for hierarchical states, orthogonal states, entry and exit
-    actions, guards, history and event deferral.
-12. Stately. *XState documentation*, State machines and statecharts.
-    https://stately.ai/docs/state-machines-and-statecharts
-    Verified 2026-08-02. Source for XState's core concepts of states,
-    transitions and events, and for its support of hierarchy, parallel states
-    and actor-model communication.
-13. Amazon Web Services. *AWS Step Functions Developer Guide*, Discovering
-    workflow states.
-    https://docs.aws.amazon.com/step-functions/latest/dg/concepts-states.html
-    Verified 2026-08-02. Source for the Amazon States Language `Type` and `Next`
-    fields and the eight state types.
-14. The Rust Project. *The Rust Programming Language*, chapter 18,
-    Object-Oriented Design Pattern Implementations.
-    https://doc.rust-lang.org/book/ch18-03-oo-design-patterns.html
-    Verified 2026-08-02. Source for the Draft, PendingReview and Published
-    worked example, the quoted downside that states which implement transitions
-    become coupled to each other, and the argument that encoding states as types
-    makes invalid states impossible at compile time.
-15. statecharts.dev. "State machine state explosion".
-    https://statecharts.dev/state-machine-state-explosion.html
-    Verified 2026-08-02. Source for the state explosion description, the worked
-    two-to-four-to-eight state progression with twelve transitions, and the
-    hierarchy-based remedy.
-16. Apple. *The Swift Programming Language*, Initialization.
-    https://docs.swift.org/swift-book/documentation/the-swift-programming-language/initialization/
-    Verified 2026-08-02. Source for two-phase initialisation and the safety check
-    that an initializer cannot call an instance method, read an instance property
-    or refer to `self` before phase one of initialisation completes. Cited in
-    dimension 7 to correct the common assumption that the constructor
-    virtual-call hazard applies uniformly across object-oriented languages.
-
-### Claims deliberately not made
-
-Three things a reader might expect here are absent because they could not be
-verified during authoring on 2026-08-02, and asserting them would be worse than
-omitting them.
-
-- No page numbers are cited for the GoF book. The chapter and section are cited
-  because they are stable and well established, but no page was confirmed against
-  a copy.
-- No direct quotation is taken from the GoF book's Implementation section on who
-  defines the state transitions. The trade-off is instead argued from the
-  Wikipedia structural description of `setState`, from the Rust book's explicit
-  statement about inter-state coupling, and from the observable design choices of
-  Spring Statemachine, SCXML and Amazon States Language.
-- No claim is made about which UML 2.5.1 chapter covers state machines. The
-  specification PDF exceeded the retrieval size limit, and the version and
-  document number are cited from the OMG specification page instead.

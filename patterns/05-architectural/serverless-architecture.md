@@ -901,6 +901,44 @@ data-handling review, not only the function's own code, because the function
 is frequently the thinnest, least persistent part of the whole path the data
 travels through.
 
+## References
+
+1. Mike Roberts. "Serverless Architectures". martinfowler.com.
+   https://martinfowler.com/articles/serverless.html
+   Verified 2026-08-02. Source for the FaaS-plus-BaaS definition, the cold
+   start, vendor lock-in, and testability trade-offs.
+2. Amazon Web Services. "What is AWS Lambda?" AWS Lambda Developer Guide.
+   https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+   Verified 2026-08-02. Source for the Lambda definition, the
+   Lambda Functions versus Lambda MicroVMs distinction, Firecracker
+   virtualization, and the 15-minute execution duration limit.
+3. Amazon Web Services. "Operating Lambda, Performance optimization, Part 1".
+   AWS Compute Blog.
+   https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-1/
+   Verified 2026-08-02. Source for the sub-one-percent steady-state cold-start
+   rate, cold-start duration range, Provisioned Concurrency behaviour, and the
+   function-warmer limitation.
+4. Amazon Web Services. "Reducing Java cold starts on AWS Lambda functions
+   with SnapStart". AWS Compute Blog.
+   https://aws.amazon.com/blogs/compute/reducing-java-cold-starts-on-aws-lambda-functions-with-snapstart/
+   Verified 2026-08-02. Source for the SnapStart mechanism and the p99.9
+   latency benchmark figures.
+5. Cloudflare. "How Workers works". Cloudflare Workers documentation.
+   https://developers.cloudflare.com/workers/reference/how-workers-works/
+   Verified 2026-08-02. Source for the V8 isolate execution model and its
+   stated startup speed and memory advantage over a per-invocation container
+   or virtual machine.
+6. Amazon Web Services. "AWS Lambda customer case studies". AWS Lambda
+   resources index.
+   https://aws.amazon.com/lambda/resources/customer-case-studies/
+   Verified 2026-08-02. Source for the Thomson Reuters, iRobot, FINRA, Square
+   Enix, Financial Engines, Bustle, and T-Mobile production-use figures in
+   dimension 9.
+7. Microsoft. "Azure Functions". Azure product documentation.
+   https://azure.microsoft.com/en-us/products/functions
+   Verified 2026-08-02. Source for the consumption-plan, pay-per-use billing
+   description used as background for the cost forces in dimension 3.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic across different
@@ -1089,41 +1127,3 @@ lambda.Start passing handler, from the aws-lambda-go module, but the
 architecturally relevant part, the package-level poolSize initialized
 exactly once, is identical either way, and the standalone form here compiled
 and ran without requiring network access to fetch that dependency.
-
-## References
-
-1. Mike Roberts. "Serverless Architectures". martinfowler.com.
-   https://martinfowler.com/articles/serverless.html
-   Verified 2026-08-02. Source for the FaaS-plus-BaaS definition, the cold
-   start, vendor lock-in, and testability trade-offs.
-2. Amazon Web Services. "What is AWS Lambda?" AWS Lambda Developer Guide.
-   https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
-   Verified 2026-08-02. Source for the Lambda definition, the
-   Lambda Functions versus Lambda MicroVMs distinction, Firecracker
-   virtualization, and the 15-minute execution duration limit.
-3. Amazon Web Services. "Operating Lambda, Performance optimization, Part 1".
-   AWS Compute Blog.
-   https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-1/
-   Verified 2026-08-02. Source for the sub-one-percent steady-state cold-start
-   rate, cold-start duration range, Provisioned Concurrency behaviour, and the
-   function-warmer limitation.
-4. Amazon Web Services. "Reducing Java cold starts on AWS Lambda functions
-   with SnapStart". AWS Compute Blog.
-   https://aws.amazon.com/blogs/compute/reducing-java-cold-starts-on-aws-lambda-functions-with-snapstart/
-   Verified 2026-08-02. Source for the SnapStart mechanism and the p99.9
-   latency benchmark figures.
-5. Cloudflare. "How Workers works". Cloudflare Workers documentation.
-   https://developers.cloudflare.com/workers/reference/how-workers-works/
-   Verified 2026-08-02. Source for the V8 isolate execution model and its
-   stated startup speed and memory advantage over a per-invocation container
-   or virtual machine.
-6. Amazon Web Services. "AWS Lambda customer case studies". AWS Lambda
-   resources index.
-   https://aws.amazon.com/lambda/resources/customer-case-studies/
-   Verified 2026-08-02. Source for the Thomson Reuters, iRobot, FINRA, Square
-   Enix, Financial Engines, Bustle, and T-Mobile production-use figures in
-   dimension 9.
-7. Microsoft. "Azure Functions". Azure product documentation.
-   https://azure.microsoft.com/en-us/products/functions
-   Verified 2026-08-02. Source for the consumption-plan, pay-per-use billing
-   description used as background for the cost forces in dimension 3.

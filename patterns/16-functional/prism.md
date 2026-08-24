@@ -819,6 +819,46 @@ verified 2026-08-02). Engineering judgement: that shape is useful for typed
 validation boundaries, but it does not replace a security review of the setter
 side. A setter that can build a privileged variant is a capability.
 
+## 18. References
+
+- Matthew Pickering, Jeremy Gibbons, Nicolas Wu, "Profunctor Optics. Modular
+  Data Accessors", *The Art, Science, and Engineering of Programming*, volume
+  1, issue 2, article 7, 2017. DOI 10.22152/programming-journal.org/2017/1/7.
+  https://programming-journal.org/2017/1/7/, verified 2026-08-02.
+- Monocle documentation, "Prism", including `getOption`, `reverseGet`,
+  `Prism.partial`, `GenPrism`, composition examples, and prism laws.
+  https://www.optics.dev/Monocle/docs/optics/prism, verified 2026-08-02.
+- Monocle documentation, "Optics", composition table for Fold, Getter, Setter,
+  Traversal, Optional, Prism, Lens, and Iso.
+  https://www.optics.dev/Monocle/docs/optics, verified 2026-08-02.
+- Haskell `lens` package documentation, `Control.Lens.Prism`, including the
+  `Prism` type, `_left`, `_right`, `_just`, `review`, `remit`, and the statement
+  that every Prism is a Traversal and every Iso is a Prism.
+  https://hackage.haskell.org/package/lens-3.7.0.1/docs/Control-Lens-Prism.html,
+  verified 2026-08-02.
+- Haskell `lens-properties` package documentation, `Control.Lens.Properties`,
+  including `isPrism` for QuickCheck property testing.
+  https://hackage.haskell.org/package/lens-properties/docs/Control-Lens-Properties.html,
+  verified 2026-08-02.
+- monocle-ts documentation, `Prism.ts`, including `Prism<S, A>`, `getOption`,
+  `reverseGet`, laws, constructors, combinators, composition, `asOptional`, and
+  `asTraversal`. https://gcanti.github.io/monocle-ts/modules/Prism.ts.html,
+  verified 2026-08-02.
+- optics-ts documentation, "Introduction", optic focus counts and composition
+  rules. https://akheron.github.io/optics-ts/reference-intro/, verified
+  2026-08-02.
+- optics-ts documentation, "Standalone API", including `preview`, `collect`,
+  `modify`, `set`, `optional`, `guard`, `at`, `atKey`, `find`, `when`, and
+  RemovablePrism. https://akheron.github.io/optics-ts/reference-standalone/,
+  verified 2026-08-02.
+- optics-ts documentation, "Tutorial", Prism examples for optional fields,
+  guards over union types, and no-match update behavior.
+  https://akheron.github.io/optics-ts/tutorial/, verified 2026-08-02.
+- Effect source, `packages/effect/src/Optic.ts`, including `Prism<S, A>`,
+  `makePrism`, and `fromChecks`.
+  https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Optic.ts,
+  verified 2026-08-02.
+
 ## Code examples
 
 TypeScript is idiomatic for Prism when data is modeled as discriminated unions.
@@ -971,43 +1011,3 @@ not lawful for preserving the whole branch after preview. They demonstrate the
 mechanics, and they also show why law tests matter. In production code, the
 focus would include enough data to rebuild the original branch, or the prism
 would focus the branch object and compose with a lens for `cents`.
-
-## 18. References
-
-- Matthew Pickering, Jeremy Gibbons, Nicolas Wu, "Profunctor Optics. Modular
-  Data Accessors", *The Art, Science, and Engineering of Programming*, volume
-  1, issue 2, article 7, 2017. DOI 10.22152/programming-journal.org/2017/1/7.
-  https://programming-journal.org/2017/1/7/, verified 2026-08-02.
-- Monocle documentation, "Prism", including `getOption`, `reverseGet`,
-  `Prism.partial`, `GenPrism`, composition examples, and prism laws.
-  https://www.optics.dev/Monocle/docs/optics/prism, verified 2026-08-02.
-- Monocle documentation, "Optics", composition table for Fold, Getter, Setter,
-  Traversal, Optional, Prism, Lens, and Iso.
-  https://www.optics.dev/Monocle/docs/optics, verified 2026-08-02.
-- Haskell `lens` package documentation, `Control.Lens.Prism`, including the
-  `Prism` type, `_left`, `_right`, `_just`, `review`, `remit`, and the statement
-  that every Prism is a Traversal and every Iso is a Prism.
-  https://hackage.haskell.org/package/lens-3.7.0.1/docs/Control-Lens-Prism.html,
-  verified 2026-08-02.
-- Haskell `lens-properties` package documentation, `Control.Lens.Properties`,
-  including `isPrism` for QuickCheck property testing.
-  https://hackage.haskell.org/package/lens-properties/docs/Control-Lens-Properties.html,
-  verified 2026-08-02.
-- monocle-ts documentation, `Prism.ts`, including `Prism<S, A>`, `getOption`,
-  `reverseGet`, laws, constructors, combinators, composition, `asOptional`, and
-  `asTraversal`. https://gcanti.github.io/monocle-ts/modules/Prism.ts.html,
-  verified 2026-08-02.
-- optics-ts documentation, "Introduction", optic focus counts and composition
-  rules. https://akheron.github.io/optics-ts/reference-intro/, verified
-  2026-08-02.
-- optics-ts documentation, "Standalone API", including `preview`, `collect`,
-  `modify`, `set`, `optional`, `guard`, `at`, `atKey`, `find`, `when`, and
-  RemovablePrism. https://akheron.github.io/optics-ts/reference-standalone/,
-  verified 2026-08-02.
-- optics-ts documentation, "Tutorial", Prism examples for optional fields,
-  guards over union types, and no-match update behavior.
-  https://akheron.github.io/optics-ts/tutorial/, verified 2026-08-02.
-- Effect source, `packages/effect/src/Optic.ts`, including `Prism<S, A>`,
-  `makePrism`, and `fromChecks`.
-  https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Optic.ts,
-  verified 2026-08-02.

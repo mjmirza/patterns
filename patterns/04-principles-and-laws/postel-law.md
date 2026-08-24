@@ -850,6 +850,68 @@ as any other identifier the system stores, and the deviation log itself
 reviewed for whether it needs to retain the raw payload or only the fact
 that a deviation of a given type occurred.
 
+## 18. References
+
+1. Jon Postel. RFC 761, "Transmission Control Protocol". Internet
+   Engineering Task Force, January 1980, section 2.10.
+   https://datatracker.ietf.org/doc/html/rfc761
+   Verified 2026-08-02. Source of the original wording of the robustness
+   principle, in dimensions 1, 2, and the Code examples header.
+2. Jon Postel, ed. RFC 793, "Transmission Control Protocol". Internet
+   Engineering Task Force, September 1981, section 2.10.
+   https://datatracker.ietf.org/doc/html/rfc793
+   Verified 2026-08-02. Source of the superseding TCP specification's
+   restatement of the principle, quoted in dimension 1.
+3. Robert Braden, ed. RFC 1122, "Requirements for Internet Hosts,
+   Communication Layers". Internet Engineering Task Force, October 1989,
+   section 1.2.2. https://datatracker.ietf.org/doc/html/rfc1122
+   Verified 2026-08-02. Source of the generalized, host-wide statement of
+   the principle and the "malevolent entities" language, in dimensions 1,
+   3, and 9.
+4. Marshall T. Rose. RFC 3117, "On the Design of Application Protocols".
+   Internet Engineering Task Force, November 2001, section 4.5.
+   https://datatracker.ietf.org/doc/html/rfc3117
+   Verified 2026-08-02. Source of the flag-day critique quoted in
+   dimensions 1, 3, and 11, and referenced in dimension 15.
+5. Martin Thomson and David Schinazi. RFC 9413, `"Maintaining Robust Protocols"`. Internet Architecture Board, Internet Engineering Task
+   Force, 2023. https://www.rfc-editor.org/rfc/rfc9413
+   Verified 2026-08-02. Source of the active-maintenance argument against
+   unbounded tolerance, quoted in dimensions 1, 3, and 17.
+6. Martin Thomson. Internet-Draft, "The Harmful Consequences of the
+   Robustness Principle" (draft-thomson-postel-was-wrong).
+   https://datatracker.ietf.org/doc/draft-thomson-postel-was-wrong/
+   Verified 2026-08-02. Predecessor draft to RFC 9413, cited in dimension 1
+   for its original working title.
+7. J. Klensin. RFC 5321, "Simple Mail Transfer Protocol". Internet
+   Engineering Task Force, October 2008, section 4.1.1.
+   https://datatracker.ietf.org/doc/html/rfc5321
+   Verified 2026-08-02. Source of the SMTP trailing-whitespace tolerance
+   cited as a named production use in dimension 9.
+8. Google LLC. Protocol Buffers Language Guide (proto3), section
+   "Unknowns". https://protobuf.dev/programming-guides/proto3/
+   Verified 2026-08-02. Source of the unknown-field preservation behavior
+   cited as a named production use in dimensions 8 and 9.
+9. WHATWG. "HTML Standard", section 13.2, "Parsing HTML documents".
+   https://html.spec.whatwg.org/multipage/parsing.html
+   Verified 2026-08-02. Source of the deterministic error-recovery parsing
+   variant and its historical framing, cited in dimensions 8 and 9.
+10. Florentin Rochet and Olivier Pereira. "Dropping on the Edge,
+    Flexibility and Traffic Confirmation in Onion Routing Protocols".
+    Proceedings on Privacy Enhancing Technologies (PoPETs), 2018. Cited
+    by title, venue, and year in dimension 17 as a documented security
+    finding against tolerant handling of protocol traffic in Tor's onion
+    routing; its full text was not independently rendered during
+    verification for this entry, and the claim rests on a corroborated
+    search-engine summary of the published work rather than a direct
+    quotation.
+11. Eric Allman. "The Robustness Principle Reconsidered". ACM Queue,
+    volume 9, issue 6, 2011. Referenced by title, author, venue, and year
+    for its framing of the principle needing to be applied in moderation
+    once security concerns are weighed against interoperability; the
+    article's full text returned an access error during verification for
+    this entry and is cited here from its corroborated public summary
+    rather than a direct quotation from the article body.
+
 ## Code examples
 
 Three languages, chosen because each demonstrates a different, idiomatic way
@@ -1022,65 +1084,3 @@ func main() {
 	fmt.Println(string(out))
 }
 ```
-
-## 18. References
-
-1. Jon Postel. RFC 761, "Transmission Control Protocol". Internet
-   Engineering Task Force, January 1980, section 2.10.
-   https://datatracker.ietf.org/doc/html/rfc761
-   Verified 2026-08-02. Source of the original wording of the robustness
-   principle, in dimensions 1, 2, and the Code examples header.
-2. Jon Postel, ed. RFC 793, "Transmission Control Protocol". Internet
-   Engineering Task Force, September 1981, section 2.10.
-   https://datatracker.ietf.org/doc/html/rfc793
-   Verified 2026-08-02. Source of the superseding TCP specification's
-   restatement of the principle, quoted in dimension 1.
-3. Robert Braden, ed. RFC 1122, "Requirements for Internet Hosts,
-   Communication Layers". Internet Engineering Task Force, October 1989,
-   section 1.2.2. https://datatracker.ietf.org/doc/html/rfc1122
-   Verified 2026-08-02. Source of the generalized, host-wide statement of
-   the principle and the "malevolent entities" language, in dimensions 1,
-   3, and 9.
-4. Marshall T. Rose. RFC 3117, "On the Design of Application Protocols".
-   Internet Engineering Task Force, November 2001, section 4.5.
-   https://datatracker.ietf.org/doc/html/rfc3117
-   Verified 2026-08-02. Source of the flag-day critique quoted in
-   dimensions 1, 3, and 11, and referenced in dimension 15.
-5. Martin Thomson and David Schinazi. RFC 9413, `"Maintaining Robust Protocols"`. Internet Architecture Board, Internet Engineering Task
-   Force, 2023. https://www.rfc-editor.org/rfc/rfc9413
-   Verified 2026-08-02. Source of the active-maintenance argument against
-   unbounded tolerance, quoted in dimensions 1, 3, and 17.
-6. Martin Thomson. Internet-Draft, "The Harmful Consequences of the
-   Robustness Principle" (draft-thomson-postel-was-wrong).
-   https://datatracker.ietf.org/doc/draft-thomson-postel-was-wrong/
-   Verified 2026-08-02. Predecessor draft to RFC 9413, cited in dimension 1
-   for its original working title.
-7. J. Klensin. RFC 5321, "Simple Mail Transfer Protocol". Internet
-   Engineering Task Force, October 2008, section 4.1.1.
-   https://datatracker.ietf.org/doc/html/rfc5321
-   Verified 2026-08-02. Source of the SMTP trailing-whitespace tolerance
-   cited as a named production use in dimension 9.
-8. Google LLC. Protocol Buffers Language Guide (proto3), section
-   "Unknowns". https://protobuf.dev/programming-guides/proto3/
-   Verified 2026-08-02. Source of the unknown-field preservation behavior
-   cited as a named production use in dimensions 8 and 9.
-9. WHATWG. "HTML Standard", section 13.2, "Parsing HTML documents".
-   https://html.spec.whatwg.org/multipage/parsing.html
-   Verified 2026-08-02. Source of the deterministic error-recovery parsing
-   variant and its historical framing, cited in dimensions 8 and 9.
-10. Florentin Rochet and Olivier Pereira. "Dropping on the Edge,
-    Flexibility and Traffic Confirmation in Onion Routing Protocols".
-    Proceedings on Privacy Enhancing Technologies (PoPETs), 2018. Cited
-    by title, venue, and year in dimension 17 as a documented security
-    finding against tolerant handling of protocol traffic in Tor's onion
-    routing; its full text was not independently rendered during
-    verification for this entry, and the claim rests on a corroborated
-    search-engine summary of the published work rather than a direct
-    quotation.
-11. Eric Allman. "The Robustness Principle Reconsidered". ACM Queue,
-    volume 9, issue 6, 2011. Referenced by title, author, venue, and year
-    for its framing of the principle needing to be applied in moderation
-    once security concerns are weighed against interoperability; the
-    article's full text returned an access error during verification for
-    this entry and is cited here from its corroborated public summary
-    rather than a direct quotation from the article body.

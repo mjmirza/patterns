@@ -414,6 +414,19 @@ than only at the moment of the next allocation, is a real, necessary
 part of a security-conscious memory pool implementation for any
 application handling sensitive data.
 
+## 18. References
+
+1. Zephyr Project. "Memory Slabs".
+   https://docs.zephyrproject.org/latest/kernel/memory_management/slabs.html
+   Verified 2026-08-21. Source of the memory slab definition,
+   fragmentation-relief benefit, block structure, and waiting-queue
+   ordering quotes used in dimensions 1, 2, 3, 5, 6, 7, 9, and 10.
+2. Zephyr Project. "Memory Blocks Allocator".
+   https://docs.zephyrproject.org/latest/kernel/memory_management/sys_mem_blocks.html
+   Verified 2026-08-21. Source of the external-bookkeeping variant and
+   power-management distinction quotes used in dimensions 4, 8, 9,
+   10, and 11.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -566,16 +579,3 @@ if let a = a {
 let c = pool.alloc()
 print("allocated block", c as Any, ",", pool.available, "remaining")
 ```
-
-## 18. References
-
-1. Zephyr Project. "Memory Slabs".
-   https://docs.zephyrproject.org/latest/kernel/memory_management/slabs.html
-   Verified 2026-08-21. Source of the memory slab definition,
-   fragmentation-relief benefit, block structure, and waiting-queue
-   ordering quotes used in dimensions 1, 2, 3, 5, 6, 7, 9, and 10.
-2. Zephyr Project. "Memory Blocks Allocator".
-   https://docs.zephyrproject.org/latest/kernel/memory_management/sys_mem_blocks.html
-   Verified 2026-08-21. Source of the external-bookkeeping variant and
-   power-management distinction quotes used in dimensions 4, 8, 9,
-   10, and 11.

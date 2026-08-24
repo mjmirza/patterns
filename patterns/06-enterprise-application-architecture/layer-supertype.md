@@ -695,6 +695,53 @@ supertype's default serialization or logging behavior exclude fields unless a
 field is explicitly opted in, rather than defaulting to including every field
 a subtype happens to declare.
 
+## 18. References
+
+1. Martin Fowler, "Layer Supertype", Patterns of Enterprise Application
+   Architecture catalog, [martinfowler.com/eaaCatalog/layerSupertype.html](https://martinfowler.com/eaaCatalog/layerSupertype.html),
+   verified 2026-08-02.
+2. Martin Fowler, *Patterns of Enterprise Application Architecture*,
+   Addison-Wesley, 2002, chapter 18, "Base Patterns".
+3. Martin Fowler, full pattern catalog, [martinfowler.com/eaaCatalog/](https://martinfowler.com/eaaCatalog/),
+   verified 2026-08-02, used to confirm the Base Patterns grouping and the
+   full list of related architectural patterns in the book.
+4. Rails Guides, "Active Record Basics", [guides.rubyonrails.org/active_record_basics.html](https://guides.rubyonrails.org/active_record_basics.html),
+   verified 2026-08-02, source for the `ActiveRecord::Base` and
+   `ApplicationRecord` production use in dimension 9.
+5. Django Software Foundation, "Models", Django documentation, version 5.0,
+   [docs.djangoproject.com/en/5.0/topics/db/models/](https://docs.djangoproject.com/en/5.0/topics/db/models/),
+   verified 2026-08-02, source for the `django.db.models.Model` production use
+   in dimension 9.
+6. Microsoft, "Handle requests with controllers in ASP.NET Core MVC",
+   Microsoft Learn, [learn.microsoft.com/en-us/aspnet/core/mvc/controllers/actions](https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/actions?view=aspnetcore-8.0),
+   verified 2026-08-02, source for the ASP.NET Core `Controller` base class
+   production use in dimension 9 and the Go sample's structural model.
+7. Red Hat, Hibernate ORM 6.4 User Guide, section 3.14.1, "Inheritance",
+   [docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html](https://docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html),
+   verified 2026-08-02, source for the `@MappedSuperclass` production use in
+   dimension 9.
+8. Martin Fowler, *Refactoring, Improving the Design of Existing Code*, 2nd
+   edition, Addison-Wesley, 2018, refactorings Extract Superclass, Pull Up
+   Method, Pull Up Field, Push Down Method, Push Down Field, and Replace
+   Superclass with Delegate.
+9. Refactoring.com, refactoring catalog, [refactoring.com/catalog/](https://refactoring.com/catalog/),
+   verified 2026-08-02, used to confirm the exact current names of the six
+   refactorings cited in dimension 14.
+10. Oracle, "Default Methods", The Java Tutorials, [docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html),
+    verified 2026-08-02, source for the Java interface default method
+    implementation variant in dimension 8.
+11. Apple, "Protocols", *The Swift Programming Language*, [docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols/](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols/),
+    verified 2026-08-02, source for the Swift protocol extension
+    implementation variant in dimension 8 and the Swift code sample.
+12. The Go Authors, "Effective Go", Embedding section, [go.dev/doc/effective_go#embedding](https://go.dev/doc/effective_go#embedding),
+    verified 2026-08-02, source for the Go struct embedding implementation
+    variant in dimension 8, dimension 11's promoted method receiver failure
+    mode, and the Go code sample.
+13. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, *Design
+    Patterns, Elements of Reusable Object-Oriented Software*, Addison-Wesley,
+    1994, used for the Template Method, Decorator, and Strategy patterns
+    named in dimensions 12 and 13.
+
 ## Code examples
 
 The languages below deliberately cover four different implementation
@@ -1106,50 +1153,3 @@ valid=false errors=["username is required", "password must be at least 8 charact
 valid=false errors=["email looks malformed"]
 valid=true errors=[]
 ```
-
-## 18. References
-
-1. Martin Fowler, "Layer Supertype", Patterns of Enterprise Application
-   Architecture catalog, [martinfowler.com/eaaCatalog/layerSupertype.html](https://martinfowler.com/eaaCatalog/layerSupertype.html),
-   verified 2026-08-02.
-2. Martin Fowler, *Patterns of Enterprise Application Architecture*,
-   Addison-Wesley, 2002, chapter 18, "Base Patterns".
-3. Martin Fowler, full pattern catalog, [martinfowler.com/eaaCatalog/](https://martinfowler.com/eaaCatalog/),
-   verified 2026-08-02, used to confirm the Base Patterns grouping and the
-   full list of related architectural patterns in the book.
-4. Rails Guides, "Active Record Basics", [guides.rubyonrails.org/active_record_basics.html](https://guides.rubyonrails.org/active_record_basics.html),
-   verified 2026-08-02, source for the `ActiveRecord::Base` and
-   `ApplicationRecord` production use in dimension 9.
-5. Django Software Foundation, "Models", Django documentation, version 5.0,
-   [docs.djangoproject.com/en/5.0/topics/db/models/](https://docs.djangoproject.com/en/5.0/topics/db/models/),
-   verified 2026-08-02, source for the `django.db.models.Model` production use
-   in dimension 9.
-6. Microsoft, "Handle requests with controllers in ASP.NET Core MVC",
-   Microsoft Learn, [learn.microsoft.com/en-us/aspnet/core/mvc/controllers/actions](https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/actions?view=aspnetcore-8.0),
-   verified 2026-08-02, source for the ASP.NET Core `Controller` base class
-   production use in dimension 9 and the Go sample's structural model.
-7. Red Hat, Hibernate ORM 6.4 User Guide, section 3.14.1, "Inheritance",
-   [docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html](https://docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html),
-   verified 2026-08-02, source for the `@MappedSuperclass` production use in
-   dimension 9.
-8. Martin Fowler, *Refactoring, Improving the Design of Existing Code*, 2nd
-   edition, Addison-Wesley, 2018, refactorings Extract Superclass, Pull Up
-   Method, Pull Up Field, Push Down Method, Push Down Field, and Replace
-   Superclass with Delegate.
-9. Refactoring.com, refactoring catalog, [refactoring.com/catalog/](https://refactoring.com/catalog/),
-   verified 2026-08-02, used to confirm the exact current names of the six
-   refactorings cited in dimension 14.
-10. Oracle, "Default Methods", The Java Tutorials, [docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html),
-    verified 2026-08-02, source for the Java interface default method
-    implementation variant in dimension 8.
-11. Apple, "Protocols", *The Swift Programming Language*, [docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols/](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols/),
-    verified 2026-08-02, source for the Swift protocol extension
-    implementation variant in dimension 8 and the Swift code sample.
-12. The Go Authors, "Effective Go", Embedding section, [go.dev/doc/effective_go#embedding](https://go.dev/doc/effective_go#embedding),
-    verified 2026-08-02, source for the Go struct embedding implementation
-    variant in dimension 8, dimension 11's promoted method receiver failure
-    mode, and the Go code sample.
-13. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, *Design
-    Patterns, Elements of Reusable Object-Oriented Software*, Addison-Wesley,
-    1994, used for the Template Method, Decorator, and Strategy patterns
-    named in dimensions 12 and 13.

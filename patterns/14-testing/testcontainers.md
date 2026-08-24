@@ -655,6 +655,35 @@ runner itself that access, which is the analytical implication this dimension
 draws from the existence of that product category rather than a claim
 sourced from a specific security audit.
 
+## References
+
+1. Testcontainers.com, "What is Testcontainers", https://testcontainers.com/,
+   verified 2026-08-02.
+2. Testcontainers Java documentation, project home,
+   https://java.testcontainers.org/, verified 2026-08-02.
+3. Testcontainers Java documentation, "Manual container lifecycle control",
+   https://java.testcontainers.org/test_framework_integration/manual_lifecycle_control/,
+   verified 2026-08-02.
+4. moby-ryuk repository, testcontainers organization,
+   https://github.com/testcontainers/moby-ryuk, verified 2026-08-02.
+5. Spring Boot blog, "Improved Testcontainers support in Spring Boot 3.1",
+   https://spring.io/blog/2023/06/23/improved-testcontainers-support-in-spring-boot-3-1,
+   verified 2026-08-02.
+6. Quarkus documentation, "Dev Services overview",
+   https://quarkus.io/guides/dev-services, verified 2026-08-02.
+7. Testcontainers for Go documentation, https://golang.testcontainers.org/,
+   verified 2026-08-02.
+8. Testcontainers.com guides, "Container lifecycle management",
+   https://testcontainers.com/guides/testcontainers-container-lifecycle/,
+   verified 2026-08-02.
+9. Testcontainers Java documentation, "Wait strategies",
+   https://java.testcontainers.org/features/startup_and_waits/, verified
+   2026-08-02.
+10. Testcontainers Cloud product page, https://testcontainers.com/cloud/,
+    verified 2026-08-02.
+11. Testcontainers for Node.js documentation, https://node.testcontainers.org/,
+    verified 2026-08-02.
+
 ## Code examples
 
 The library's real public API, its real class names, and its real method
@@ -985,32 +1014,3 @@ output.
 ```
 postgres://fake/pg-1/orders -> 1 order(s)
 ```
-
-## References
-
-1. Testcontainers.com, "What is Testcontainers", https://testcontainers.com/,
-   verified 2026-08-02.
-2. Testcontainers Java documentation, project home,
-   https://java.testcontainers.org/, verified 2026-08-02.
-3. Testcontainers Java documentation, "Manual container lifecycle control",
-   https://java.testcontainers.org/test_framework_integration/manual_lifecycle_control/,
-   verified 2026-08-02.
-4. moby-ryuk repository, testcontainers organization,
-   https://github.com/testcontainers/moby-ryuk, verified 2026-08-02.
-5. Spring Boot blog, "Improved Testcontainers support in Spring Boot 3.1",
-   https://spring.io/blog/2023/06/23/improved-testcontainers-support-in-spring-boot-3-1,
-   verified 2026-08-02.
-6. Quarkus documentation, "Dev Services overview",
-   https://quarkus.io/guides/dev-services, verified 2026-08-02.
-7. Testcontainers for Go documentation, https://golang.testcontainers.org/,
-   verified 2026-08-02.
-8. Testcontainers.com guides, "Container lifecycle management",
-   https://testcontainers.com/guides/testcontainers-container-lifecycle/,
-   verified 2026-08-02.
-9. Testcontainers Java documentation, "Wait strategies",
-   https://java.testcontainers.org/features/startup_and_waits/, verified
-   2026-08-02.
-10. Testcontainers Cloud product page, https://testcontainers.com/cloud/,
-    verified 2026-08-02.
-11. Testcontainers for Node.js documentation, https://node.testcontainers.org/,
-    verified 2026-08-02.

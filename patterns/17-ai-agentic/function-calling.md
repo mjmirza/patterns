@@ -938,6 +938,53 @@ applies to the conversation transcript apply to the Tool Call and Tool
 Result log the same way, never a looser one, purely because the data is now
 easier to search.
 
+## 18. References
+
+1. OpenAI. "Function calling", developer platform documentation.
+   https://developers.openai.com/api/docs/guides/function-calling
+   Verified 2026-08-03. Source for the model-does-not-execute description,
+   the parallel tool call behavior, and the strict-mode schema-conformance
+   requirements described in dimensions 1, 8, and 9. Redirected from
+   platform.openai.com/docs/guides/function-calling at fetch time.
+2. Anthropic. "Tool use with Claude", API documentation.
+   https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview
+   Verified 2026-08-03. Source for the tool_use and tool_result round
+   trip, the client-tool versus server-tool distinction, the
+   disable_parallel_tool_use option, the per-model token overhead table,
+   the required-parameter inference caveat, and the tool search capability
+   description used across dimensions 3, 5, 8, 9, 11, and 16. Redirected
+   from docs.claude.com/en/docs/agents-and-tools/tool-use/overview at fetch
+   time.
+3. Google. "Function calling with the Gemini API", Gemini API documentation.
+   https://ai.google.dev/gemini-api/docs/function-calling
+   Verified 2026-08-03. Source for the FunctionDeclaration and OpenAPI
+   schema subset, the parallel function calling behavior, and the
+   compositional multi-step calling description in dimensions 8 and 9.
+4. Model Context Protocol. "Tools", protocol specification.
+   https://modelcontextprotocol.io/docs/concepts/tools
+   Verified 2026-08-03. Source for the tools/list and tools/call
+   methods, the JSON Schema requirement on inputSchema, the
+   protocol-error versus tool-execution-error distinction, the
+   human-confirmation and untrusted-annotation security guidance, and the
+   x-mcp-header sensitive-value warning used across dimensions 9, 11, and
+   17.
+5. Timo Schick, Jane Dwivedi-Yu, Roberto Dessi, Roberta Raileanu, Maria
+   Lomeli, Luke Zettlemoyer, Nicola Cancedda, Thomas Scialom. "Toolformer.
+   Language Models Can Teach Themselves to Use Tools." arXiv `2302.04761`,
+   submitted 9 February 2023. https://arxiv.org/abs/2302.04761
+   Verified 2026-08-03. Source for the self-supervised, fine-tuning-based
+   academic precursor described in dimension 1.
+6. Shishir G. Patil, Tianjun Zhang, Xin Wang, Joseph E. Gonzalez. "Gorilla.
+   Large Language Model Connected with Massive APIs." arXiv `2305.15334`,
+   submitted 24 May 2023. https://arxiv.org/abs/2305.15334
+   Verified 2026-08-03. Source for the documented hallucinated-API-call
+   failure motivating dimension 1 and dimension 11's first failure mode.
+7. UC Berkeley Gorilla project. "Berkeley Function-Calling Leaderboard."
+   https://gorilla.cs.berkeley.edu/leaderboard.html
+   Verified 2026-08-03. Source for the cross-vendor evaluation benchmark and
+   the native-versus-prompt-based scoring distinction described in
+   dimensions 1, 8, 9, and 15.
+
 ## Code examples
 
 Three languages, each showing a different genuinely idiomatic angle of the
@@ -1326,50 +1373,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. OpenAI. "Function calling", developer platform documentation.
-   https://developers.openai.com/api/docs/guides/function-calling
-   Verified 2026-08-03. Source for the model-does-not-execute description,
-   the parallel tool call behavior, and the strict-mode schema-conformance
-   requirements described in dimensions 1, 8, and 9. Redirected from
-   platform.openai.com/docs/guides/function-calling at fetch time.
-2. Anthropic. "Tool use with Claude", API documentation.
-   https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview
-   Verified 2026-08-03. Source for the tool_use and tool_result round
-   trip, the client-tool versus server-tool distinction, the
-   disable_parallel_tool_use option, the per-model token overhead table,
-   the required-parameter inference caveat, and the tool search capability
-   description used across dimensions 3, 5, 8, 9, 11, and 16. Redirected
-   from docs.claude.com/en/docs/agents-and-tools/tool-use/overview at fetch
-   time.
-3. Google. "Function calling with the Gemini API", Gemini API documentation.
-   https://ai.google.dev/gemini-api/docs/function-calling
-   Verified 2026-08-03. Source for the FunctionDeclaration and OpenAPI
-   schema subset, the parallel function calling behavior, and the
-   compositional multi-step calling description in dimensions 8 and 9.
-4. Model Context Protocol. "Tools", protocol specification.
-   https://modelcontextprotocol.io/docs/concepts/tools
-   Verified 2026-08-03. Source for the tools/list and tools/call
-   methods, the JSON Schema requirement on inputSchema, the
-   protocol-error versus tool-execution-error distinction, the
-   human-confirmation and untrusted-annotation security guidance, and the
-   x-mcp-header sensitive-value warning used across dimensions 9, 11, and
-   17.
-5. Timo Schick, Jane Dwivedi-Yu, Roberto Dessi, Roberta Raileanu, Maria
-   Lomeli, Luke Zettlemoyer, Nicola Cancedda, Thomas Scialom. "Toolformer.
-   Language Models Can Teach Themselves to Use Tools." arXiv `2302.04761`,
-   submitted 9 February 2023. https://arxiv.org/abs/2302.04761
-   Verified 2026-08-03. Source for the self-supervised, fine-tuning-based
-   academic precursor described in dimension 1.
-6. Shishir G. Patil, Tianjun Zhang, Xin Wang, Joseph E. Gonzalez. "Gorilla.
-   Large Language Model Connected with Massive APIs." arXiv `2305.15334`,
-   submitted 24 May 2023. https://arxiv.org/abs/2305.15334
-   Verified 2026-08-03. Source for the documented hallucinated-API-call
-   failure motivating dimension 1 and dimension 11's first failure mode.
-7. UC Berkeley Gorilla project. "Berkeley Function-Calling Leaderboard."
-   https://gorilla.cs.berkeley.edu/leaderboard.html
-   Verified 2026-08-03. Source for the cross-vendor evaluation benchmark and
-   the native-versus-prompt-based scoring distinction described in
-   dimensions 1, 8, 9, and 15.

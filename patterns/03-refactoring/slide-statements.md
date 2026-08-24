@@ -689,6 +689,40 @@ When statement order is part of a security invariant, write that invariant as a
 test. The test should name the order directly: validate before query, authorize
 before load, redact before log, audit after commit, release after final use.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
+   edition. Addison-Wesley, 2018. Chapter 8, "Moving Features," section "Slide
+   Statements." Source for the canonical name and catalog placement.
+2. Martin Fowler. "Slide Statements." Refactoring catalog.
+   https://refactoring.com/catalog/slideStatements.html. Verified 2026-08-02.
+   Source for the public catalog entry, alias listing, and example shape.
+3. Martin Fowler. "Changes for the 2nd Edition of Refactoring."
+   https://martinfowler.com/articles/refactoring-2nd-changes.html. Verified
+   2026-08-02. Source for the replacement of Consolidate Duplicate Conditional
+   Fragments by Slide Statements.
+4. Martin Fowler. "Refactoring."
+   https://www.martinfowler.com/books/refactoring.html. Verified 2026-08-02.
+   Source for the second-edition publication context and public description of
+   refactoring as small behavior-preserving transformations.
+5. GNOME. "commits-list 2017-March Archive by Date."
+   https://mail.gnome.org/archives/commits-list/2017-March/date.html. Verified
+   2026-08-02. Source for the librsvg `marker.rs` production use.
+6. EngineHub. "WorldEdit Builds, branch improve-hollow."
+   https://builds.enginehub.org/job/worldedit?branch=improve-hollow. Verified
+   2026-08-02. Source for the WorldEdit `EditSession.hollowOutRegion`
+   production use.
+7. LLVM Project. "LLVM's Analysis and Transform Passes."
+   https://llvm.org/docs/Passes.html. Verified 2026-08-02. Source for the
+   `sink` pass production compiler analogue.
+8. LLVM Project. "`MachineSink.cpp` Source File."
+   https://llvm.org/doxygen/MachineSink_8cpp_source.html. Verified 2026-08-02.
+   Source for machine-instruction sinking safety checks and register-pressure
+   comments.
+9. Standard ML of New Jersey project. "Standard ML of New Jersey Change Log."
+   https://www.smlnj.org/dist/working/110.80/HISTORY.html. Verified
+   2026-08-02. Source for the MLRiscGen use-site code motion analogue.
+
 ## Code examples
 
 The examples use Python, Go, and Rust because each language makes a different
@@ -823,37 +857,3 @@ fn main() {
     println!("{}", charge_after(plan, order));
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
-   edition. Addison-Wesley, 2018. Chapter 8, "Moving Features," section "Slide
-   Statements." Source for the canonical name and catalog placement.
-2. Martin Fowler. "Slide Statements." Refactoring catalog.
-   https://refactoring.com/catalog/slideStatements.html. Verified 2026-08-02.
-   Source for the public catalog entry, alias listing, and example shape.
-3. Martin Fowler. "Changes for the 2nd Edition of Refactoring."
-   https://martinfowler.com/articles/refactoring-2nd-changes.html. Verified
-   2026-08-02. Source for the replacement of Consolidate Duplicate Conditional
-   Fragments by Slide Statements.
-4. Martin Fowler. "Refactoring."
-   https://www.martinfowler.com/books/refactoring.html. Verified 2026-08-02.
-   Source for the second-edition publication context and public description of
-   refactoring as small behavior-preserving transformations.
-5. GNOME. "commits-list 2017-March Archive by Date."
-   https://mail.gnome.org/archives/commits-list/2017-March/date.html. Verified
-   2026-08-02. Source for the librsvg `marker.rs` production use.
-6. EngineHub. "WorldEdit Builds, branch improve-hollow."
-   https://builds.enginehub.org/job/worldedit?branch=improve-hollow. Verified
-   2026-08-02. Source for the WorldEdit `EditSession.hollowOutRegion`
-   production use.
-7. LLVM Project. "LLVM's Analysis and Transform Passes."
-   https://llvm.org/docs/Passes.html. Verified 2026-08-02. Source for the
-   `sink` pass production compiler analogue.
-8. LLVM Project. "`MachineSink.cpp` Source File."
-   https://llvm.org/doxygen/MachineSink_8cpp_source.html. Verified 2026-08-02.
-   Source for machine-instruction sinking safety checks and register-pressure
-   comments.
-9. Standard ML of New Jersey project. "Standard ML of New Jersey Change Log."
-   https://www.smlnj.org/dist/working/110.80/HISTORY.html. Verified
-   2026-08-02. Source for the MLRiscGen use-site code motion analogue.

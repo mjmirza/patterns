@@ -65,6 +65,75 @@ KNOWN_LANGS = {
 
 MIN_PROSE_WORDS = 1200
 
+CODE_SECTION_TITLES = {"code examples", "code", "code samples"}
+REFERENCE_SECTION_TITLES = {"references"}
+
+
+def top_level_headings(text: str) -> list[tuple[int, str]]:
+    """Return (line number, title) for each level-2 heading outside a fenced block."""
+    out: list[tuple[int, str]] = []
+    inside = False
+    for number, line in enumerate(text.splitlines(), start=1):
+        if line.lstrip().startswith("```"):
+            inside = not inside
+            continue
+        if inside:
+            continue
+        stripped = line.strip()
+        if stripped.startswith("## ") and not stripped.startswith("### "):
+            out.append((number, stripped[3:].strip()))
+    return out
+
+
+def split_heading_number(title: str) -> tuple[int | None, str]:
+    """Return (dimension number, bare title). The number is None when unnumbered."""
+    head, sep, rest = title.partition(". ")
+    if sep and head.isdigit():
+        return int(head), rest.strip()
+    return None, title.strip()
+
+
+def check_section_order(text: str) -> list[str]:
+    """Numbered dimensions must ascend, and the code section must follow references.
+    Presence alone is not enough, a dimension out of place still misleads the reader."""
+    errors: list[str] = []
+    headings = top_level_headings(text)
+
+    previous: tuple[int, str, int] | None = None
+    for line_no, title in headings:
+        number, _bare = split_heading_number(title)
+        if number is None:
+            continue
+        if previous is not None and number <= previous[0]:
+            errors.append(
+                f"section order: '{title}' at line {line_no} follows "
+                f"'{previous[1]}' at line {previous[2]}, "
+                "numbered dimensions must ascend"
+            )
+        previous = (number, title, line_no)
+
+    code = [
+        (n, t)
+        for n, t in headings
+        if split_heading_number(t)[0] is None
+        and split_heading_number(t)[1].lower() in CODE_SECTION_TITLES
+    ]
+    refs = [
+        (n, t)
+        for n, t in headings
+        if split_heading_number(t)[1].lower() in REFERENCE_SECTION_TITLES
+    ]
+    if len(code) == 1 and len(refs) == 1:
+        code_line, code_title = code[0]
+        ref_line, ref_title = refs[0]
+        if code_line < ref_line:
+            errors.append(
+                f"section order: '{code_title}' at line {code_line} precedes "
+                f"'{ref_title}' at line {ref_line}, "
+                "the code section closes the entry"
+            )
+    return errors
+
 
 def strip_fences(text: str) -> str:
     # Prose checks must not fire inside code blocks or ASCII diagrams.
@@ -100,6 +169,8 @@ def check_file(path: Path) -> list[str]:
         probe = section.split(",")[0].lower()
         if probe not in joined:
             errors.append(f"missing dimension '{section}'")
+
+    errors.extend(check_section_order(text))
 
     body = text if not fm else text[fm.end() :]
     prose = strip_fences(body)

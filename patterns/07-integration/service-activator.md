@@ -746,6 +746,39 @@ alongside this, correlation identifiers are safe to log broadly, full
 payload bodies containing personal data are not, and the two should not be
 logged at the same verbosity by default.
 
+## 18. References
+
+1. Gregor Hohpe, Bobby Woolf. Enterprise Integration Patterns. Designing,
+   Building, and Deploying Messaging Solutions. Addison-Wesley, 2003.
+   ISBN 0-321-20068-3. Messaging Endpoints chapter, Service Activator.
+   Source of the pattern name, the intent, and the definition of the
+   Service Activator role as an object connecting a channel to a service
+   it invokes like any other client.
+2. Enterprise Integration Patterns website. "Service Activator" (canonical
+   page hosted at the historical Messaging Adapter URL).
+   https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingAdapter.html
+   Verified 2026-08-02. Source for the exact intent wording and the
+   Messaging Adapter alias.
+3. VMware Tanzu, Spring Integration Reference Documentation. "Service
+   Activator". https://docs.spring.io/spring-integration/reference/service-activator.html
+   Verified 2026-08-02. Source for the @ServiceActivator annotation
+   behaviour, requiresReply, method-selection rules, and the
+   Message-Driven POJO framing.
+4. Apache Software Foundation, Apache Camel documentation. "Bean Binding".
+   https://camel.apache.org/manual/bean-binding.html Verified 2026-08-02.
+   Source for the Bean EIP's method-selection priority and automatic
+   body-to-parameter binding, used in dimension 8, 9, and the code
+   examples' framing.
+5. Eclipse Foundation, Jakarta Messaging API v3.1.0. MessageListener
+   interface documentation. Verified 2026-08-02. Source for the
+   onMessage(Message) contract and the serial, non-concurrent delivery
+   guarantee within a session, used in dimensions 8 and 9.
+6. Eclipse Foundation. Jakarta Enterprise Beans specification, Message-
+   Driven Beans. Used as the source for the container-managed
+   Message-Driven Bean production use in dimension 9, describing container
+   invocation of a pooled bean's onMessage method in response to a
+   destination-delivered message.
+
 ## Code examples
 
 Two languages where the pattern is idiomatic with strong native framework
@@ -974,36 +1007,3 @@ if __name__ == "__main__":
     # Directly testable with no messaging involved.
     print(service.quote("WIDGET", 2))
 ```
-
-## 18. References
-
-1. Gregor Hohpe, Bobby Woolf. Enterprise Integration Patterns. Designing,
-   Building, and Deploying Messaging Solutions. Addison-Wesley, 2003.
-   ISBN 0-321-20068-3. Messaging Endpoints chapter, Service Activator.
-   Source of the pattern name, the intent, and the definition of the
-   Service Activator role as an object connecting a channel to a service
-   it invokes like any other client.
-2. Enterprise Integration Patterns website. "Service Activator" (canonical
-   page hosted at the historical Messaging Adapter URL).
-   https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingAdapter.html
-   Verified 2026-08-02. Source for the exact intent wording and the
-   Messaging Adapter alias.
-3. VMware Tanzu, Spring Integration Reference Documentation. "Service
-   Activator". https://docs.spring.io/spring-integration/reference/service-activator.html
-   Verified 2026-08-02. Source for the @ServiceActivator annotation
-   behaviour, requiresReply, method-selection rules, and the
-   Message-Driven POJO framing.
-4. Apache Software Foundation, Apache Camel documentation. "Bean Binding".
-   https://camel.apache.org/manual/bean-binding.html Verified 2026-08-02.
-   Source for the Bean EIP's method-selection priority and automatic
-   body-to-parameter binding, used in dimension 8, 9, and the code
-   examples' framing.
-5. Eclipse Foundation, Jakarta Messaging API v3.1.0. MessageListener
-   interface documentation. Verified 2026-08-02. Source for the
-   onMessage(Message) contract and the serial, non-concurrent delivery
-   guarantee within a session, used in dimensions 8 and 9.
-6. Eclipse Foundation. Jakarta Enterprise Beans specification, Message-
-   Driven Beans. Used as the source for the container-managed
-   Message-Driven Bean production use in dimension 9, describing container
-   invocation of a pooled bean's onMessage method in response to a
-   destination-delivered message.

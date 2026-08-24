@@ -843,6 +843,63 @@ clock field itself when it is retained after the record's primary value has
 been deleted, since a stale vector clock can itself be a small residual
 trace of activity that a strict deletion policy should also clear.
 
+## 18. References
+
+1. Colin J. Fidge. "Timestamps in Message-Passing Systems That Preserve the
+   Partial Ordering". Proceedings of the 11th Australian Computer Science
+   Conference, 1988, pages 56 to 66.
+   https://www.semanticscholar.org/paper/Timestamps-in-Message-Passing-Systems-That-Preserve-Fidge/e706b8ae2952740cb95c0182c4c44b0d11cc54c1
+   Verified 2026-08-02. Source of the independent original algorithm and the
+   Fidge attribution in dimension 1.
+2. Friedemann Mattern. "Virtual Time and Global States of Distributed
+   Systems". In Parallel and Distributed Algorithms, North-Holland, 1989,
+   pages 215 to 226. Source of the independent "vector time" formulation
+   and the Mattern attribution in dimension 1, confirmed via publication
+   record at https://www.researchgate.net/publication/2949837_Virtual_Time_and_Global_States_of_Distributed_Systems
+   verified 2026-08-02.
+3. Leslie Lamport. "Time, Clocks, and the Ordering of Events in a
+   Distributed System". Communications of the ACM, volume 21, number 7,
+   July 1978.
+   https://www.cs.cmu.edu/afs/cs/academic/class/15712-f08/www/lectures/Lamport78lecture.pdf
+   Verified 2026-08-02. Source of the antecedent Lamport scalar clock and
+   the happens-before relation discussed in dimension 1 and dimension 2.
+4. D. Stott Parker Jr. et al. "Detection of Mutual Inconsistency in
+   Distributed Systems". IEEE Transactions on Software Engineering, volume
+   SE-9, number 3, May 1983. Source of the original version vector
+   construction distinguished from the vector clock in dimension 1.
+5. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati,
+   Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter
+   Vosshall, Werner Vogels. "Dynamo. Amazon's Highly Available Key-value
+   Store". Proceedings of the 21st ACM Symposium on Operating Systems
+   Principles, Stevenson WA, October 2007.
+   https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
+   Verified 2026-08-02. Source of the Dynamo production use in dimension 9
+   and the truncation trade-off discussed in dimension 11.
+6. Basho Technologies. "Riak KV. Causal Context" documentation.
+   https://docs.riak.com/riak/kv/2.1.1/learn/concepts/causal-context/
+   Verified 2026-08-02. Source of the Riak vector clock to dotted version
+   vector migration in dimension 8 and dimension 9.
+7. Basho Technologies engineering blog. "Vector Clocks Revisited Part 2.
+   Dotted Version Vectors".
+   https://riak.com/posts/technical/vector-clocks-revisited-part-2-dotted-version-vectors/index.html
+   Verified 2026-08-02. Source of the specific correctness defect in plain
+   vector clocks that motivated the dotted version vector, dimension 8 and
+   dimension 9.
+8. Voldemort source repository. `VectorClock.java`.
+   https://github.com/voldemort/voldemort
+   Verified 2026-08-18. Source of the Voldemort production use in
+   dimension 9.
+9. Avinash Lakshman, Prashant Malik. "Cassandra. A Decentralized Structured
+   Storage System". ACM SIGOPS Operating Systems Review, volume 44, issue
+   2, April 2010. Source of Cassandra's documented Dynamo lineage and its
+   deliberate choice of last-write-wins over vector clocks, referenced in
+   dimension 9 and dimension 12.
+10. Seth Gilbert, Nancy Lynch. "Brewer's Conjecture and the Feasibility of
+    Consistent, Available, Partition-Tolerant Web Services". ACM SIGACT
+    News, volume 33, issue 2, June 2002. Source of the CAP framing used in
+    dimension 2 to motivate why availability-preserving conflict detection
+    is needed at all.
+
 ## Code examples
 
 Three languages chosen for genuinely different idiomatic shapes. Go, because
@@ -1059,60 +1116,3 @@ fn main() {
     println!("{:?}", a2.compare(&b));
 }
 ```
-
-## 18. References
-
-1. Colin J. Fidge. "Timestamps in Message-Passing Systems That Preserve the
-   Partial Ordering". Proceedings of the 11th Australian Computer Science
-   Conference, 1988, pages 56 to 66.
-   https://www.semanticscholar.org/paper/Timestamps-in-Message-Passing-Systems-That-Preserve-Fidge/e706b8ae2952740cb95c0182c4c44b0d11cc54c1
-   Verified 2026-08-02. Source of the independent original algorithm and the
-   Fidge attribution in dimension 1.
-2. Friedemann Mattern. "Virtual Time and Global States of Distributed
-   Systems". In Parallel and Distributed Algorithms, North-Holland, 1989,
-   pages 215 to 226. Source of the independent "vector time" formulation
-   and the Mattern attribution in dimension 1, confirmed via publication
-   record at https://www.researchgate.net/publication/2949837_Virtual_Time_and_Global_States_of_Distributed_Systems
-   verified 2026-08-02.
-3. Leslie Lamport. "Time, Clocks, and the Ordering of Events in a
-   Distributed System". Communications of the ACM, volume 21, number 7,
-   July 1978.
-   https://www.cs.cmu.edu/afs/cs/academic/class/15712-f08/www/lectures/Lamport78lecture.pdf
-   Verified 2026-08-02. Source of the antecedent Lamport scalar clock and
-   the happens-before relation discussed in dimension 1 and dimension 2.
-4. D. Stott Parker Jr. et al. "Detection of Mutual Inconsistency in
-   Distributed Systems". IEEE Transactions on Software Engineering, volume
-   SE-9, number 3, May 1983. Source of the original version vector
-   construction distinguished from the vector clock in dimension 1.
-5. Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati,
-   Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter
-   Vosshall, Werner Vogels. "Dynamo. Amazon's Highly Available Key-value
-   Store". Proceedings of the 21st ACM Symposium on Operating Systems
-   Principles, Stevenson WA, October 2007.
-   https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
-   Verified 2026-08-02. Source of the Dynamo production use in dimension 9
-   and the truncation trade-off discussed in dimension 11.
-6. Basho Technologies. "Riak KV. Causal Context" documentation.
-   https://docs.riak.com/riak/kv/2.1.1/learn/concepts/causal-context/
-   Verified 2026-08-02. Source of the Riak vector clock to dotted version
-   vector migration in dimension 8 and dimension 9.
-7. Basho Technologies engineering blog. "Vector Clocks Revisited Part 2.
-   Dotted Version Vectors".
-   https://riak.com/posts/technical/vector-clocks-revisited-part-2-dotted-version-vectors/index.html
-   Verified 2026-08-02. Source of the specific correctness defect in plain
-   vector clocks that motivated the dotted version vector, dimension 8 and
-   dimension 9.
-8. Voldemort source repository. `VectorClock.java`.
-   https://github.com/voldemort/voldemort
-   Verified 2026-08-18. Source of the Voldemort production use in
-   dimension 9.
-9. Avinash Lakshman, Prashant Malik. "Cassandra. A Decentralized Structured
-   Storage System". ACM SIGOPS Operating Systems Review, volume 44, issue
-   2, April 2010. Source of Cassandra's documented Dynamo lineage and its
-   deliberate choice of last-write-wins over vector clocks, referenced in
-   dimension 9 and dimension 12.
-10. Seth Gilbert, Nancy Lynch. "Brewer's Conjecture and the Feasibility of
-    Consistent, Available, Partition-Tolerant Web Services". ACM SIGACT
-    News, volume 33, issue 2, June 2002. Source of the CAP framing used in
-    dimension 2 to motivate why availability-preserving conflict detection
-    is needed at all.

@@ -801,6 +801,39 @@ the display string is masked, unsafe if it preserves the token. The Functor
 interface will not warn about that. The mapper is where the data classification
 change occurs.
 
+## 18. References
+
+- Samuel Eilenberg and Saunders Mac Lane, "General Theory of Natural
+  Equivalences", *Transactions of the American Mathematical Society*, volume
+  58, 1945.
+- Saunders Mac Lane, *Categories for the Working Mathematician*, second
+  edition, Springer, 1998, chapter I, section 3.
+- Simon Marlow, editor, *Haskell 2010 Language Report*, section 6.3.5, Functor
+  class, https://www.haskell.org/onlinereport/haskell2010/, verified
+  2026-08-02.
+- GHC `base-4.18.0.0`, `Data.Functor`, https://downloads.haskell.org/~ghc/9.6.1/docs/libraries/base-4.18.0.0/Data-Functor.html,
+  verified 2026-08-02.
+- Typelevel Cats API, `cats.Functor`,
+  https://typelevel.org/cats/api/cats/Functor.html, verified 2026-08-02.
+- fp-ts API, `Functor.ts`,
+  https://gcanti.github.io/fp-ts/modules/Functor.ts.html, verified
+  2026-08-02.
+- Oracle, Java SE 21 API, `java.util.Optional`,
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html,
+  verified 2026-08-02.
+- Oracle, Java SE 8 API, `java.util.stream.Stream`,
+  https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html,
+  verified 2026-08-02.
+- Apple Developer Documentation, Swift `Optional.map`,
+  https://developer.apple.com/documentation/swift/optional/map%28_%3A%29,
+  verified 2026-08-02.
+- Rust standard library, `std::option`,
+  https://doc.rust-lang.org/stable/std/option/index.html, verified
+  2026-08-02.
+- Rust standard library, `Option<T>` methods,
+  https://doc.rust-lang.org/stable/std/option/enum.Option.html, verified
+  2026-08-02.
+
 ## Code examples
 
 The examples are intentionally small and concrete. They model `map` for a
@@ -946,36 +979,3 @@ I ran the Python, Swift, Go, and Rust samples locally with `python3`, `swiftc`,
 `go run`, and `rustc`. Java citations are still used for production examples,
 but the Java compiler was not usable in this sandbox because no Java runtime was
 available.
-
-## 18. References
-
-- Samuel Eilenberg and Saunders Mac Lane, "General Theory of Natural
-  Equivalences", *Transactions of the American Mathematical Society*, volume
-  58, 1945.
-- Saunders Mac Lane, *Categories for the Working Mathematician*, second
-  edition, Springer, 1998, chapter I, section 3.
-- Simon Marlow, editor, *Haskell 2010 Language Report*, section 6.3.5, Functor
-  class, https://www.haskell.org/onlinereport/haskell2010/, verified
-  2026-08-02.
-- GHC `base-4.18.0.0`, `Data.Functor`, https://downloads.haskell.org/~ghc/9.6.1/docs/libraries/base-4.18.0.0/Data-Functor.html,
-  verified 2026-08-02.
-- Typelevel Cats API, `cats.Functor`,
-  https://typelevel.org/cats/api/cats/Functor.html, verified 2026-08-02.
-- fp-ts API, `Functor.ts`,
-  https://gcanti.github.io/fp-ts/modules/Functor.ts.html, verified
-  2026-08-02.
-- Oracle, Java SE 21 API, `java.util.Optional`,
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html,
-  verified 2026-08-02.
-- Oracle, Java SE 8 API, `java.util.stream.Stream`,
-  https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html,
-  verified 2026-08-02.
-- Apple Developer Documentation, Swift `Optional.map`,
-  https://developer.apple.com/documentation/swift/optional/map%28_%3A%29,
-  verified 2026-08-02.
-- Rust standard library, `std::option`,
-  https://doc.rust-lang.org/stable/std/option/index.html, verified
-  2026-08-02.
-- Rust standard library, `Option<T>` methods,
-  https://doc.rust-lang.org/stable/std/option/enum.Option.html, verified
-  2026-08-02.

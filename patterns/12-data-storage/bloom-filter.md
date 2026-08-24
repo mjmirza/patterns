@@ -821,6 +821,44 @@ cryptographically keyed hash function, rather than a fast non-cryptographic
 one, is the standard mitigation direction when untrusted input construction is
 a genuine threat model.
 
+## 18. References
+
+1. Burton H. Bloom, "Space/Time Trade-offs in Hash Coding with Allowable
+   Errors," Communications of the ACM, volume 13, issue 7, July 1970, pages 422
+   to 426, cited via the academic sources section of the Redis Bloom filter
+   documentation, https://redis.io/docs/latest/develop/data-types/probabilistic/bloom-filter/,
+   verified 2026-08-02.
+2. "Bloom filter," Wikipedia, https://en.wikipedia.org/wiki/Bloom_filter,
+   verified 2026-08-02.
+3. Li Fan, Pei Cao, Jussara Almeida, Andrei Z. Broder, "Summary Cache. A
+   Scalable Wide-Area Web Cache Sharing Protocol," IEEE/ACM Transactions on
+   Networking, volume 8, number 3, June 2000, pages 281 to 293,
+   https://www.cs.utexas.edu/~lam/396m/papers/SummaryCache.pdf, verified
+   2026-08-02.
+4. "Scalable Bloom Filters," Almeida, Baquero, Preguica, Hutchison, linked from
+   the Redis Bloom filter documentation's academic sources section,
+   https://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf, verified 2026-08-02.
+5. "Bloom filter," Redis documentation, "Total size of a Bloom filter" and
+   "Reserving Bloom filters" sections,
+   https://redis.io/docs/latest/develop/data-types/probabilistic/bloom-filter/,
+   verified 2026-08-02.
+6. "RocksDB Bloom Filter," RocksDB wiki,
+   https://github.com/facebook/rocksdb/wiki/RocksDB-Bloom-Filter, verified
+   2026-08-02.
+7. "Bloom Filters," Apache Cassandra documentation,
+   https://cassandra.apache.org/doc/latest/cassandra/managing/operating/bloom_filters.html,
+   verified 2026-08-02.
+8. "BloomFilter (Guava 33.5.0-jre API)," Guava documentation,
+   https://guava.dev/releases/33.5.0-jre/api/docs/com/google/common/hash/BloomFilter.html,
+   verified 2026-08-02.
+9. Bin Fan, David G. Andersen, Michael Kaminsky, Michael D. Mitzenmacher,
+   "Cuckoo Filter. Practically Better Than Bloom," ACM CoNEXT 2014, cited via
+   "Cuckoo filter," Wikipedia, https://en.wikipedia.org/wiki/Cuckoo_filter,
+   verified 2026-08-02.
+10. "BIP 37. Connection Bloom filtering," Bitcoin Improvement Proposals,
+    https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki, verified
+    2026-08-02.
+
 ## Code examples
 
 The four implementations below share one design, computing two independent
@@ -1077,41 +1115,3 @@ exceed the three-language minimum and the double-hashing technique shown is
 identical in shape across every mainstream language, so a fifth or sixth sample
 would repeat the same logic without adding a genuinely new implementation
 consideration.
-
-## 18. References
-
-1. Burton H. Bloom, "Space/Time Trade-offs in Hash Coding with Allowable
-   Errors," Communications of the ACM, volume 13, issue 7, July 1970, pages 422
-   to 426, cited via the academic sources section of the Redis Bloom filter
-   documentation, https://redis.io/docs/latest/develop/data-types/probabilistic/bloom-filter/,
-   verified 2026-08-02.
-2. "Bloom filter," Wikipedia, https://en.wikipedia.org/wiki/Bloom_filter,
-   verified 2026-08-02.
-3. Li Fan, Pei Cao, Jussara Almeida, Andrei Z. Broder, "Summary Cache. A
-   Scalable Wide-Area Web Cache Sharing Protocol," IEEE/ACM Transactions on
-   Networking, volume 8, number 3, June 2000, pages 281 to 293,
-   https://www.cs.utexas.edu/~lam/396m/papers/SummaryCache.pdf, verified
-   2026-08-02.
-4. "Scalable Bloom Filters," Almeida, Baquero, Preguica, Hutchison, linked from
-   the Redis Bloom filter documentation's academic sources section,
-   https://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf, verified 2026-08-02.
-5. "Bloom filter," Redis documentation, "Total size of a Bloom filter" and
-   "Reserving Bloom filters" sections,
-   https://redis.io/docs/latest/develop/data-types/probabilistic/bloom-filter/,
-   verified 2026-08-02.
-6. "RocksDB Bloom Filter," RocksDB wiki,
-   https://github.com/facebook/rocksdb/wiki/RocksDB-Bloom-Filter, verified
-   2026-08-02.
-7. "Bloom Filters," Apache Cassandra documentation,
-   https://cassandra.apache.org/doc/latest/cassandra/managing/operating/bloom_filters.html,
-   verified 2026-08-02.
-8. "BloomFilter (Guava 33.5.0-jre API)," Guava documentation,
-   https://guava.dev/releases/33.5.0-jre/api/docs/com/google/common/hash/BloomFilter.html,
-   verified 2026-08-02.
-9. Bin Fan, David G. Andersen, Michael Kaminsky, Michael D. Mitzenmacher,
-   "Cuckoo Filter. Practically Better Than Bloom," ACM CoNEXT 2014, cited via
-   "Cuckoo filter," Wikipedia, https://en.wikipedia.org/wiki/Cuckoo_filter,
-   verified 2026-08-02.
-10. "BIP 37. Connection Bloom filtering," Bitcoin Improvement Proposals,
-    https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki, verified
-    2026-08-02.

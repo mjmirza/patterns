@@ -797,6 +797,38 @@ security-relevant logic to live, and this entry does not treat every unit of
 database-side logic as a security concern, only the general-purpose
 processing and formatting logic this anti-pattern specifically names.
 
+## 18. References
+
+- Microsoft Azure Architecture Center, "Busy Database antipattern," authored
+  by claytonsiemens77, originally dated 2017-06-05, most recently updated
+  2026-05-07.
+  https://learn.microsoft.com/en-us/azure/architecture/antipatterns/busy-database/
+  Verified 2026-08-02.
+- Microsoft Azure Architecture Center, "Performance testing and
+  antipatterns," the catalog index page listing all ten antipatterns in this
+  series, most recently updated 2026-06-03.
+  https://learn.microsoft.com/en-us/azure/architecture/antipatterns/
+  Verified 2026-08-02.
+- Salesforce Developer Documentation, "Execution Governors and Limits,"
+  Apex Developer Guide.
+  https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_gov_limits.htm
+  Verified 2026-08-02.
+- Amazon Web Services Documentation, "Monitoring DB load with Performance
+  Insights on Amazon RDS," Amazon RDS User Guide.
+  https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html
+  Verified 2026-08-02.
+- Chris Richardson, "Shared Database" pattern description, microservices.io.
+  https://microservices.io/patterns/data/shared-database.html
+  Verified 2026-08-02.
+- PostgreSQL Global Development Group, "37.1. Overview of Trigger Behavior,"
+  PostgreSQL 18 Documentation.
+  https://www.postgresql.org/docs/current/trigger-definition.html
+  Verified 2026-08-02.
+- Microsoft Learn, "FOR XML (SQL Server)," SQL Server documentation, most
+  recently updated 2026-06-23.
+  https://learn.microsoft.com/en-us/sql/relational-databases/xml/for-xml-sql-server
+  Verified 2026-08-02.
+
 ## Code examples
 
 The examples below are original and runnable. They model the anti-pattern's
@@ -1102,35 +1134,3 @@ is a cross-tier architectural property, not something a single language's
 type system or memory model changes, and three languages already
 demonstrate it faithfully across a dynamically typed, a statically typed
 with garbage collection, and a statically typed compiled-to-native runtime.
-
-## 18. References
-
-- Microsoft Azure Architecture Center, "Busy Database antipattern," authored
-  by claytonsiemens77, originally dated 2017-06-05, most recently updated
-  2026-05-07.
-  https://learn.microsoft.com/en-us/azure/architecture/antipatterns/busy-database/
-  Verified 2026-08-02.
-- Microsoft Azure Architecture Center, "Performance testing and
-  antipatterns," the catalog index page listing all ten antipatterns in this
-  series, most recently updated 2026-06-03.
-  https://learn.microsoft.com/en-us/azure/architecture/antipatterns/
-  Verified 2026-08-02.
-- Salesforce Developer Documentation, "Execution Governors and Limits,"
-  Apex Developer Guide.
-  https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_gov_limits.htm
-  Verified 2026-08-02.
-- Amazon Web Services Documentation, "Monitoring DB load with Performance
-  Insights on Amazon RDS," Amazon RDS User Guide.
-  https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html
-  Verified 2026-08-02.
-- Chris Richardson, "Shared Database" pattern description, microservices.io.
-  https://microservices.io/patterns/data/shared-database.html
-  Verified 2026-08-02.
-- PostgreSQL Global Development Group, "37.1. Overview of Trigger Behavior,"
-  PostgreSQL 18 Documentation.
-  https://www.postgresql.org/docs/current/trigger-definition.html
-  Verified 2026-08-02.
-- Microsoft Learn, "FOR XML (SQL Server)," SQL Server documentation, most
-  recently updated 2026-06-23.
-  https://learn.microsoft.com/en-us/sql/relational-databases/xml/for-xml-sql-server
-  Verified 2026-08-02.

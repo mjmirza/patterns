@@ -679,6 +679,38 @@ pools, queues, and subprocess wrappers need limits. Without them, the fix for
 event-loop blocking can become a memory exhaustion path or a process-spawning
 denial of service path.
 
+## 18. References
+
+1. Node.js Project. "Don't Block the Event Loop (or the Worker Pool)." Node.js
+   Learn documentation. https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop.
+   Verified 2026-08-02. Source for Node.js event-loop and worker-pool guidance,
+   synchronous API cautions, and denial-of-service framing.
+2. Microsoft. "Kestrel web server in ASP.NET Core." Microsoft Learn.
+   https://learn.microsoft.com/en-sg/aspnet/core/fundamentals/servers/kestrel.
+   Verified 2026-08-02. Source for Kestrel `AllowSynchronousIO` default and
+   thread-pool starvation warning.
+3. Google. "StrictMode." Android API reference.
+   https://developer.android.com/reference/android/os/StrictMode. Verified
+   2026-08-02. Source for detecting disk and network access on the application
+   main thread and for main-thread responsiveness guidance.
+4. Eclipse Vert.x Project. "Vert.x Core." https://vertx.io/docs/vertx-core/java/.
+   Verified 2026-08-02. Source for Vert.x event-loop blocking guidance and
+   blocked-thread warning behavior.
+5. Eclipse Vert.x Project. "Vert.x Web." https://vertx.io/docs/vertx-web/java/.
+   Verified 2026-08-02. Source for `blockingHandler` running work on a worker
+   pool rather than an event loop.
+6. Python Software Foundation. "Event loop." Python 3 asyncio documentation.
+   https://docs.python.org/3/library/asyncio-eventloop.html. Verified
+   2026-08-02. Source for `loop.run_in_executor` and its use with blocking file
+   operations.
+7. NGINX. "Core functionality." NGINX documentation.
+   https://nginx.org/en/docs/ngx_core_module.html. Verified 2026-08-02. Source
+   for the `thread_pool` directive and file I O offload.
+8. NGINX. "Development guide." NGINX documentation.
+   https://nginx.org/en/docs/dev/development_guide.html. Verified 2026-08-02.
+   Source for offloading tasks that would otherwise block NGINX worker
+   processes.
+
 ## Code examples
 
 The examples use TypeScript, Python, Go, and Swift because they show four
@@ -808,35 +840,3 @@ struct Demo {
     }
 }
 ```
-
-## 18. References
-
-1. Node.js Project. "Don't Block the Event Loop (or the Worker Pool)." Node.js
-   Learn documentation. https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop.
-   Verified 2026-08-02. Source for Node.js event-loop and worker-pool guidance,
-   synchronous API cautions, and denial-of-service framing.
-2. Microsoft. "Kestrel web server in ASP.NET Core." Microsoft Learn.
-   https://learn.microsoft.com/en-sg/aspnet/core/fundamentals/servers/kestrel.
-   Verified 2026-08-02. Source for Kestrel `AllowSynchronousIO` default and
-   thread-pool starvation warning.
-3. Google. "StrictMode." Android API reference.
-   https://developer.android.com/reference/android/os/StrictMode. Verified
-   2026-08-02. Source for detecting disk and network access on the application
-   main thread and for main-thread responsiveness guidance.
-4. Eclipse Vert.x Project. "Vert.x Core." https://vertx.io/docs/vertx-core/java/.
-   Verified 2026-08-02. Source for Vert.x event-loop blocking guidance and
-   blocked-thread warning behavior.
-5. Eclipse Vert.x Project. "Vert.x Web." https://vertx.io/docs/vertx-web/java/.
-   Verified 2026-08-02. Source for `blockingHandler` running work on a worker
-   pool rather than an event loop.
-6. Python Software Foundation. "Event loop." Python 3 asyncio documentation.
-   https://docs.python.org/3/library/asyncio-eventloop.html. Verified
-   2026-08-02. Source for `loop.run_in_executor` and its use with blocking file
-   operations.
-7. NGINX. "Core functionality." NGINX documentation.
-   https://nginx.org/en/docs/ngx_core_module.html. Verified 2026-08-02. Source
-   for the `thread_pool` directive and file I O offload.
-8. NGINX. "Development guide." NGINX documentation.
-   https://nginx.org/en/docs/dev/development_guide.html. Verified 2026-08-02.
-   Source for offloading tasks that would otherwise block NGINX worker
-   processes.

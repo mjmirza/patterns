@@ -615,6 +615,32 @@ or privacy dimension. it is a mathematical relationship between two
 categories, and any security implication belongs entirely to what a
 concrete profunctor instance is used to model.
 
+## 18. References
+
+1. nLab contributors. "Profunctor".
+   https://ncatlab.org/nlab/show/profunctor
+   Verified 2026-08-21. Source of the categorical lineage, the
+   attribution to Jean Benabou, and the alternate name Distributor.
+2. Matthew Pickering, Jeremy Gibbons, Nicolas Wu. "Profunctor Optics,
+   Modular Data Accessors". arXiv paper 1703.10857.
+   https://arxiv.org/abs/1703.10857
+   Verified 2026-08-21. Source for the profunctor optics implementation
+   variant in dimension 8, formalising Lens, Prism, and Traversal as
+   profunctor-polymorphic functions.
+3. Edward Kmett and contributors. `profunctors` package documentation.
+   https://hackage.haskell.org/package/profunctors
+   Verified 2026-08-21. Source for the Haskell production use in
+   dimension 9 and the Strong, Choice, Star building blocks in
+   dimension 8.
+4. `lens` package documentation, module `Control.Lens.Iso`.
+   https://hackage.haskell.org/package/lens/docs/Control-Lens-Iso.html
+   Verified 2026-08-21. Source for the profunctor-polymorphic optics
+   production use in dimension 9.
+5. Typelevel Cats API documentation. `cats.arrow.Profunctor`.
+   https://typelevel.org/cats/api/cats/arrow/Profunctor.html
+   Verified 2026-08-21. Source for the Scala production use in
+   dimension 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely expressible in different
@@ -733,29 +759,3 @@ let composed = double.dimap(
 
 print(composed.run("21"))
 ```
-
-## 18. References
-
-1. nLab contributors. "Profunctor".
-   https://ncatlab.org/nlab/show/profunctor
-   Verified 2026-08-21. Source of the categorical lineage, the
-   attribution to Jean Benabou, and the alternate name Distributor.
-2. Matthew Pickering, Jeremy Gibbons, Nicolas Wu. "Profunctor Optics,
-   Modular Data Accessors". arXiv paper 1703.10857.
-   https://arxiv.org/abs/1703.10857
-   Verified 2026-08-21. Source for the profunctor optics implementation
-   variant in dimension 8, formalising Lens, Prism, and Traversal as
-   profunctor-polymorphic functions.
-3. Edward Kmett and contributors. `profunctors` package documentation.
-   https://hackage.haskell.org/package/profunctors
-   Verified 2026-08-21. Source for the Haskell production use in
-   dimension 9 and the Strong, Choice, Star building blocks in
-   dimension 8.
-4. `lens` package documentation, module `Control.Lens.Iso`.
-   https://hackage.haskell.org/package/lens/docs/Control-Lens-Iso.html
-   Verified 2026-08-21. Source for the profunctor-polymorphic optics
-   production use in dimension 9.
-5. Typelevel Cats API documentation. `cats.arrow.Profunctor`.
-   https://typelevel.org/cats/api/cats/arrow/Profunctor.html
-   Verified 2026-08-21. Source for the Scala production use in
-   dimension 9.

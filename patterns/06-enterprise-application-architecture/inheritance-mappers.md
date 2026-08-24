@@ -806,6 +806,42 @@ redaction or encryption-at-rest handling inside that subtype's own
 concrete mapper, rather than adding a conditional to a shared method
 that redacts fields it should never have needed to know existed.
 
+## 18. References
+
+1. Martin Fowler, *Patterns of Enterprise Application Architecture*,
+   Addison-Wesley, 2002, ISBN 0-321-12742-0, Chapter 12, "Object-Relational
+   Structural Patterns."
+2. Fowler, "Inheritance Mappers," online catalog page,
+   https://martinfowler.com/eaaCatalog/inheritanceMappers.html verified
+   2026-08-02.
+3. Fowler, "Single Table Inheritance," online catalog page,
+   https://martinfowler.com/eaaCatalog/singleTableInheritance.html verified
+   2026-08-02.
+4. Gamma, Helm, Johnson, Vlissides, *Design Patterns, Elements of Reusable
+   Object-Oriented Software*, Addison-Wesley, 1994, ISBN 0-201-63361-2,
+   "Template Method," pages 325 to 330.
+5. Hibernate ORM Javadoc, `AbstractEntityPersister`,
+   https://docs.hibernate.org/orm/6.2/javadocs/org/hibernate/persister/entity/AbstractEntityPersister.html
+   verified 2026-08-02.
+6. Hibernate ORM User Guide, section 3.14, "Entity inheritance," MappedSuperclass,
+   https://docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html#entity-inheritance
+   verified 2026-08-02.
+7. SQLAlchemy documentation, "Mapping Class Inheritance Hierarchies,"
+   https://docs.sqlalchemy.org/en/20/orm/inheritance.html verified
+   2026-08-02.
+8. SQLAlchemy API documentation, "Mapping API," `Mapper.inherits` and
+   `Mapper.polymorphic_identity`,
+   https://docs.sqlalchemy.org/en/20/orm/mapping_api.html verified
+   2026-08-02.
+9. Doctrine ORM documentation, "Inheritance Mapping,"
+   https://www.doctrine-project.org/projects/doctrine-orm/en/3.6/reference/inheritance-mapping.html
+   verified 2026-08-02.
+10. Ruby on Rails API documentation, `ActiveRecord::Inheritance`,
+    https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html
+    verified 2026-08-02.
+11. Baeldung, "Hibernate Inheritance Mapping,"
+    https://www.baeldung.com/hibernate-inheritance verified 2026-08-02.
+
 ## Code examples
 
 The three examples below implement the same domain, a `SalariedEmployee`,
@@ -1283,39 +1319,3 @@ func main() {
 	fmt.Printf("%T %+v\n", loadedCommissioned, loadedCommissioned)
 }
 ```
-
-## 18. References
-
-1. Martin Fowler, *Patterns of Enterprise Application Architecture*,
-   Addison-Wesley, 2002, ISBN 0-321-12742-0, Chapter 12, "Object-Relational
-   Structural Patterns."
-2. Fowler, "Inheritance Mappers," online catalog page,
-   https://martinfowler.com/eaaCatalog/inheritanceMappers.html verified
-   2026-08-02.
-3. Fowler, "Single Table Inheritance," online catalog page,
-   https://martinfowler.com/eaaCatalog/singleTableInheritance.html verified
-   2026-08-02.
-4. Gamma, Helm, Johnson, Vlissides, *Design Patterns, Elements of Reusable
-   Object-Oriented Software*, Addison-Wesley, 1994, ISBN 0-201-63361-2,
-   "Template Method," pages 325 to 330.
-5. Hibernate ORM Javadoc, `AbstractEntityPersister`,
-   https://docs.hibernate.org/orm/6.2/javadocs/org/hibernate/persister/entity/AbstractEntityPersister.html
-   verified 2026-08-02.
-6. Hibernate ORM User Guide, section 3.14, "Entity inheritance," MappedSuperclass,
-   https://docs.hibernate.org/orm/6.4/userguide/html_single/Hibernate_User_Guide.html#entity-inheritance
-   verified 2026-08-02.
-7. SQLAlchemy documentation, "Mapping Class Inheritance Hierarchies,"
-   https://docs.sqlalchemy.org/en/20/orm/inheritance.html verified
-   2026-08-02.
-8. SQLAlchemy API documentation, "Mapping API," `Mapper.inherits` and
-   `Mapper.polymorphic_identity`,
-   https://docs.sqlalchemy.org/en/20/orm/mapping_api.html verified
-   2026-08-02.
-9. Doctrine ORM documentation, "Inheritance Mapping,"
-   https://www.doctrine-project.org/projects/doctrine-orm/en/3.6/reference/inheritance-mapping.html
-   verified 2026-08-02.
-10. Ruby on Rails API documentation, `ActiveRecord::Inheritance`,
-    https://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html
-    verified 2026-08-02.
-11. Baeldung, "Hibernate Inheritance Mapping,"
-    https://www.baeldung.com/hibernate-inheritance verified 2026-08-02.

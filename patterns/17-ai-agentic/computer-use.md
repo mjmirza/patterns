@@ -738,6 +738,27 @@ same discipline any team already applies to a build environment, because a
 compromised base image would compromise every task the agent subsequently
 runs inside it.
 
+## 18. References
+
+- Anthropic, "Developing a computer use model", 22 October 2024,
+  https://www.anthropic.com/news/developing-computer-use, verified
+  2026-08-02.
+- Anthropic, "Computer use tool", platform documentation,
+  https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool,
+  verified 2026-08-02.
+- Anthropic, "Claude for Chrome", 25 August 2025,
+  https://claude.com/blog/claude-for-chrome, verified 2026-08-02.
+- OpenAI, "Computer use", API documentation,
+  https://developers.openai.com/api/docs/guides/tools-computer-use, verified
+  2026-08-02.
+- browser-use, GitHub repository,
+  https://github.com/browser-use/browser-use, verified 2026-08-02.
+- Xie, Zhang, Chen, Li, Zhao, Cao, Hua, Cheng, Shin, Lei, Liu, Xu, Zhou,
+  Savarese, Xiong, Zhong, Yu, "OSWorld, Benchmarking Multimodal Agents for
+  Open-Ended Tasks in Real Computer Environments", arXiv:2404.07972,
+  submitted 11 April 2024, https://arxiv.org/abs/2404.07972, verified
+  2026-08-02.
+
 ## Code examples
 
 Three implementation-adjacent excerpts, chosen because each demonstrates a
@@ -1082,24 +1103,3 @@ func main() {
 	// log: [navigate to https://docs.internal.example/page submit_payment]
 }
 ```
-
-## 18. References
-
-- Anthropic, "Developing a computer use model", 22 October 2024,
-  https://www.anthropic.com/news/developing-computer-use, verified
-  2026-08-02.
-- Anthropic, "Computer use tool", platform documentation,
-  https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool,
-  verified 2026-08-02.
-- Anthropic, "Claude for Chrome", 25 August 2025,
-  https://claude.com/blog/claude-for-chrome, verified 2026-08-02.
-- OpenAI, "Computer use", API documentation,
-  https://developers.openai.com/api/docs/guides/tools-computer-use, verified
-  2026-08-02.
-- browser-use, GitHub repository,
-  https://github.com/browser-use/browser-use, verified 2026-08-02.
-- Xie, Zhang, Chen, Li, Zhao, Cao, Hua, Cheng, Shin, Lei, Liu, Xu, Zhou,
-  Savarese, Xiong, Zhong, Yu, "OSWorld, Benchmarking Multimodal Agents for
-  Open-Ended Tasks in Real Computer Environments", arXiv:2404.07972,
-  submitted 11 April 2024, https://arxiv.org/abs/2404.07972, verified
-  2026-08-02.

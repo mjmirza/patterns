@@ -780,6 +780,42 @@ it does not remove the need for connection-level limits and timeouts, which
 remain the primary defense against a slow-connection or slow-request style
 denial-of-service attempt regardless of which concurrency pattern is in use.
 
+## 18. References
+
+1. Douglas C. Schmidt and Chuck Cranor, "Half-Sync/Half-Async - An
+   Architectural Pattern for Efficient and Well-Structured Concurrent I/O",
+   Proceedings of the Second Pattern Languages of Programs conference,
+   Monticello, Illinois, September 6-8, 1995, collected in James O. Coplien,
+   John Vlissides, and Norman Kerth (editors), *Pattern Languages of Program
+   Design 2*, Addison-Wesley, 1996. Publication record at
+   [dre.vanderbilt.edu/~schmidt/patterns-ace.html](https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html),
+   verified 2026-08-02.
+2. Douglas C. Schmidt, Michael Stal, Hans Rohnert, and Frank Buschmann,
+   *Pattern-Oriented Software Architecture, Volume 2. Patterns for Concurrent
+   and Networked Objects*, John Wiley and Sons, 2000, ISBN 978-0-471-60695-6.
+   Publisher and authorship confirmed via
+   [en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture](https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture),
+   verified 2026-08-02.
+3. libuv project, "Design overview", section on the shared thread pool used
+   for file system operations, DNS functions, and user-submitted work.
+   [docs.libuv.org/en/v1.x/design.html](https://docs.libuv.org/en/v1.x/design.html),
+   verified 2026-08-02.
+4. Netty project, `ChannelPipeline` API documentation, entry for
+   `addLast(EventExecutorGroup, ChannelHandler...)`, describing running a
+   handler off the I/O thread to avoid blocking it.
+   [netty.io/4.1/api/io/netty/channel/ChannelPipeline.html](https://netty.io/4.1/api/io/netty/channel/ChannelPipeline.html),
+   verified 2026-08-02.
+5. The Linux Kernel Documentation project, "A guide to the Kernel Development
+   Process, Unreliable Guide To Hacking The Linux Kernel", section describing
+   top-half interrupt handlers and deferred bottom-half processing.
+   [kernel.org/doc/html/latest/kernel-hacking/hacking.html](https://www.kernel.org/doc/html/latest/kernel-hacking/hacking.html),
+   verified 2026-08-02.
+6. Apache Software Foundation, "Apache Tomcat 9 Configuration Reference, The
+   HTTP Connector", entries for `pollerThreadPriority`, `selectorTimeout`,
+   `maxThreads`, and the internal executor thread pool.
+   [tomcat.apache.org/tomcat-9.0-doc/config/http.html](https://tomcat.apache.org/tomcat-9.0-doc/config/http.html),
+   verified 2026-08-02.
+
 ## Code examples
 
 Three languages chosen for how differently each one expresses the two
@@ -1064,39 +1100,3 @@ fn main() {
     }
 }
 ```
-
-## 18. References
-
-1. Douglas C. Schmidt and Chuck Cranor, "Half-Sync/Half-Async - An
-   Architectural Pattern for Efficient and Well-Structured Concurrent I/O",
-   Proceedings of the Second Pattern Languages of Programs conference,
-   Monticello, Illinois, September 6-8, 1995, collected in James O. Coplien,
-   John Vlissides, and Norman Kerth (editors), *Pattern Languages of Program
-   Design 2*, Addison-Wesley, 1996. Publication record at
-   [dre.vanderbilt.edu/~schmidt/patterns-ace.html](https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html),
-   verified 2026-08-02.
-2. Douglas C. Schmidt, Michael Stal, Hans Rohnert, and Frank Buschmann,
-   *Pattern-Oriented Software Architecture, Volume 2. Patterns for Concurrent
-   and Networked Objects*, John Wiley and Sons, 2000, ISBN 978-0-471-60695-6.
-   Publisher and authorship confirmed via
-   [en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture](https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture),
-   verified 2026-08-02.
-3. libuv project, "Design overview", section on the shared thread pool used
-   for file system operations, DNS functions, and user-submitted work.
-   [docs.libuv.org/en/v1.x/design.html](https://docs.libuv.org/en/v1.x/design.html),
-   verified 2026-08-02.
-4. Netty project, `ChannelPipeline` API documentation, entry for
-   `addLast(EventExecutorGroup, ChannelHandler...)`, describing running a
-   handler off the I/O thread to avoid blocking it.
-   [netty.io/4.1/api/io/netty/channel/ChannelPipeline.html](https://netty.io/4.1/api/io/netty/channel/ChannelPipeline.html),
-   verified 2026-08-02.
-5. The Linux Kernel Documentation project, "A guide to the Kernel Development
-   Process, Unreliable Guide To Hacking The Linux Kernel", section describing
-   top-half interrupt handlers and deferred bottom-half processing.
-   [kernel.org/doc/html/latest/kernel-hacking/hacking.html](https://www.kernel.org/doc/html/latest/kernel-hacking/hacking.html),
-   verified 2026-08-02.
-6. Apache Software Foundation, "Apache Tomcat 9 Configuration Reference, The
-   HTTP Connector", entries for `pollerThreadPriority`, `selectorTimeout`,
-   `maxThreads`, and the internal executor thread pool.
-   [tomcat.apache.org/tomcat-9.0-doc/config/http.html](https://tomcat.apache.org/tomcat-9.0-doc/config/http.html),
-   verified 2026-08-02.

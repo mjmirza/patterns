@@ -1060,6 +1060,66 @@ per request, and handler names can encode a tenant, a region or a data-residency
 tier. Where they do, treat that field as attributable data with the same retention
 and access rules as any other identifier.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Chain of
+   Responsibility. Source of the intent, the applicability list, the participants,
+   and the consequence that receipt is not guaranteed and a request can fall off
+   the end of the chain. Authorized publisher excerpt of the chapter at
+   https://www.informit.com/articles/article.aspx?p=1398601 verified 2026-08-02.
+2. Eclipse Foundation. *Jakarta Servlet Specification 6.1*, chapter 6, Filtering.
+   https://jakarta.ee/specifications/servlet/6.1/jakarta-servlet-spec-6.1
+   Verified 2026-08-02. Source for the location of the filtering chapter.
+3. Eclipse Foundation. *Jakarta Servlet 6.1 API documentation*,
+   `jakarta.servlet.FilterChain`.
+   https://jakarta.ee/specifications/servlet/6.1/apidocs/jakarta.servlet/jakarta/servlet/filterchain
+   Verified 2026-08-02. Source for the quoted description of the invocation chain
+   and the doFilter contract.
+4. Eclipse Foundation. *Jakarta Servlet 6.1 API documentation*,
+   `jakarta.servlet.Filter`.
+   https://jakarta.ee/specifications/servlet/6.1/apidocs/jakarta.servlet/jakarta/servlet/filter
+   Verified 2026-08-02. Source for the list of intended filter uses.
+5. Eclipse Foundation. *Jakarta EE Tutorial*, Jakarta Servlet chapter.
+   https://jakarta.ee/learn/docs/jakartaee-tutorial/current/web/servlets/servlets.html
+   Verified 2026-08-02. Source for the statement that filters are invoked in the
+   order in which filter mappings appear in the deployment descriptor.
+6. OpenJS Foundation. *Express documentation*, "Using middleware".
+   https://expressjs.com/en/guide/using-middleware.html
+   Verified 2026-08-02. Source for the middleware definition, the continuation
+   contract, and the statement that a request will be left hanging when the
+   continuation is not called.
+7. Koa contributors. *Koa guide*.
+   https://github.com/koajs/koa/blob/master/docs/guide.md
+   Verified 2026-08-02. Source for the capture and bubble phases and the effect of
+   omitting the continuation.
+8. Microsoft. *ASP.NET Core Middleware*, Microsoft Learn.
+   https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/
+   Verified 2026-08-02. Source for short-circuiting, terminal middleware, the
+   ordering statement, and the static-file authorization warning.
+9. Netty project. *Netty 4.1 API documentation*, `io.netty.channel.ChannelPipeline`.
+   https://netty.io/4.1/api/io/netty/channel/ChannelPipeline.html
+   Verified 2026-08-02. Source for the Intercepting Filter attribution,
+   bidirectional event flow, and silent discard of unhandled inbound events.
+10. Python Software Foundation. *Python 3 documentation*, `logging` module.
+    https://docs.python.org/3/library/logging.html
+    Verified 2026-08-02. Source for logger propagation through ancestors and the
+    handler of last resort.
+11. Apple Inc. *Apple Developer documentation archive*, "Responder".
+    https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/Responder.html
+    Verified 2026-08-02. Source for the responder chain, the next responder, and
+    the discard of an unhandled event.
+12. Broadcom. *Spring Security reference documentation*, "Architecture".
+    https://docs.spring.io/spring-security/reference/servlet/architecture.html
+    Verified 2026-08-02. Source for the filter chain proxy, the ordering
+    requirement between authentication and authorization, and prevention of
+    downstream invocation.
+13. Wikipedia contributors. "Chain-of-responsibility pattern".
+    https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern
+    Verified 2026-08-02. Used only to confirm the tree-of-responsibility variant
+    and the wording of the Decorator contrast, not as a source of explanation.
+
 ## Code examples
 
 Four languages, chosen because each shows a different shape the pattern takes.
@@ -1348,63 +1408,3 @@ public final class Demo {
     }
 }
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Chain of
-   Responsibility. Source of the intent, the applicability list, the participants,
-   and the consequence that receipt is not guaranteed and a request can fall off
-   the end of the chain. Authorized publisher excerpt of the chapter at
-   https://www.informit.com/articles/article.aspx?p=1398601 verified 2026-08-02.
-2. Eclipse Foundation. *Jakarta Servlet Specification 6.1*, chapter 6, Filtering.
-   https://jakarta.ee/specifications/servlet/6.1/jakarta-servlet-spec-6.1
-   Verified 2026-08-02. Source for the location of the filtering chapter.
-3. Eclipse Foundation. *Jakarta Servlet 6.1 API documentation*,
-   `jakarta.servlet.FilterChain`.
-   https://jakarta.ee/specifications/servlet/6.1/apidocs/jakarta.servlet/jakarta/servlet/filterchain
-   Verified 2026-08-02. Source for the quoted description of the invocation chain
-   and the doFilter contract.
-4. Eclipse Foundation. *Jakarta Servlet 6.1 API documentation*,
-   `jakarta.servlet.Filter`.
-   https://jakarta.ee/specifications/servlet/6.1/apidocs/jakarta.servlet/jakarta/servlet/filter
-   Verified 2026-08-02. Source for the list of intended filter uses.
-5. Eclipse Foundation. *Jakarta EE Tutorial*, Jakarta Servlet chapter.
-   https://jakarta.ee/learn/docs/jakartaee-tutorial/current/web/servlets/servlets.html
-   Verified 2026-08-02. Source for the statement that filters are invoked in the
-   order in which filter mappings appear in the deployment descriptor.
-6. OpenJS Foundation. *Express documentation*, "Using middleware".
-   https://expressjs.com/en/guide/using-middleware.html
-   Verified 2026-08-02. Source for the middleware definition, the continuation
-   contract, and the statement that a request will be left hanging when the
-   continuation is not called.
-7. Koa contributors. *Koa guide*.
-   https://github.com/koajs/koa/blob/master/docs/guide.md
-   Verified 2026-08-02. Source for the capture and bubble phases and the effect of
-   omitting the continuation.
-8. Microsoft. *ASP.NET Core Middleware*, Microsoft Learn.
-   https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/
-   Verified 2026-08-02. Source for short-circuiting, terminal middleware, the
-   ordering statement, and the static-file authorization warning.
-9. Netty project. *Netty 4.1 API documentation*, `io.netty.channel.ChannelPipeline`.
-   https://netty.io/4.1/api/io/netty/channel/ChannelPipeline.html
-   Verified 2026-08-02. Source for the Intercepting Filter attribution,
-   bidirectional event flow, and silent discard of unhandled inbound events.
-10. Python Software Foundation. *Python 3 documentation*, `logging` module.
-    https://docs.python.org/3/library/logging.html
-    Verified 2026-08-02. Source for logger propagation through ancestors and the
-    handler of last resort.
-11. Apple Inc. *Apple Developer documentation archive*, "Responder".
-    https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/Responder.html
-    Verified 2026-08-02. Source for the responder chain, the next responder, and
-    the discard of an unhandled event.
-12. Broadcom. *Spring Security reference documentation*, "Architecture".
-    https://docs.spring.io/spring-security/reference/servlet/architecture.html
-    Verified 2026-08-02. Source for the filter chain proxy, the ordering
-    requirement between authentication and authorization, and prevention of
-    downstream invocation.
-13. Wikipedia contributors. "Chain-of-responsibility pattern".
-    https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern
-    Verified 2026-08-02. Used only to confirm the tree-of-responsibility variant
-    and the wording of the Decorator contrast, not as a source of explanation.

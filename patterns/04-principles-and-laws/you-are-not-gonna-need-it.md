@@ -848,6 +848,69 @@ correctly applies to the SPECULATIVE extras layered on top of that baseline,
 an elaborate, unused permission model with roles nobody has been assigned,
 for example, and correctly does not apply to the baseline itself.
 
+## 18. References
+
+1. Martin Fowler. "Yagni." Bliki entry. https://martinfowler.com/bliki/Yagni.html
+   Verified 2026-08-02. Source for the C3-project origin account, the Kent
+   Beck and Chet Hendrickson exchange, the "Simple Design" framing, and the
+   Jeremy Miller extensibility-point quote used in dimension 11's misuse
+   discussion.
+2. Ron Jeffries. "You're NOT gonna need it!" 4 April 1998.
+   https://ronjeffries.com/xprog/articles/practices/pracnotneed/
+   Verified 2026-08-02. Earliest dated print appearance of the argument for
+   the principle by name, source for the three-cost argument in dimension 2
+   and the getter and setter example in dimension 1.
+3. Ronald E. Jeffries, Ann Anderson, Chet Hendrickson. *Extreme Programming
+   Installed*. Addison-Wesley, 2001. ISBN 0-201-70842-6. Page 190, per the
+   Wikipedia citation verified against
+   https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it, verified
+   2026-08-02. Book-form source for YAGNI as one of XP's most quoted
+   slogans.
+4. Martin Fowler and Kent Beck. *Refactoring. Improving the Design of
+   Existing Code*. Addison-Wesley, 1999. ISBN 0-201-48567-2. Page 68, per
+   the Wikipedia citation verified against the same URL as reference 3,
+   verified 2026-08-02, for the alternate wording "you aren't going to need
+   it," and the book's own code smell catalog, cited generally for
+   Speculative Generality and the Collapse Hierarchy, Inline Class, Remove
+   Parameter, and Remove Dead Code refactorings referenced in dimension 14.
+5. Kent Beck. *Extreme Programming Explained. Embrace Change*. 1st edition,
+   Addison-Wesley, 1999. ISBN 0-201-61641-6. Source for the C3 project
+   context in which YAGNI and the rest of XP's practices were developed,
+   cited generally, referenced in dimension 9.
+6. Wikipedia contributors. "You aren't gonna need it."
+   https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it
+   Verified 2026-08-02. Used to cross-check the page citations for
+   references 3 and 4 and the general attribution timeline, not as a source
+   of original explanation.
+7. Segment Engineering. Alexandra Noonan. "Goodbye Microservices. From 100s
+   of problem children to 1 superstar." 10 July 2018.
+   https://segment.com/blog/goodbye-microservices/
+   Verified 2026-08-02. Source for the production use in dimension 9.
+8. David Heinemeier Hansson. "The Majestic Monolith." Signal v. Noise,
+   Basecamp engineering blog. 29 February 2016.
+   https://signalvnoise.com/svn3/the-majestic-monolith/
+   Verified 2026-08-02. Source for the Basecamp production use in dimension
+   9.
+9. Google. "Google Engineering Practices Documentation. How to do a code
+   review. What to look for in a code review."
+   https://google.github.io/eng-practices/review/reviewer/looking-for.html
+   Verified 2026-08-02. Source for the Google code review guidance on
+   speculative, overly general designs cited in dimension 9.
+10. Sam Newman. *Building Microservices*. 2nd edition, O'Reilly, 2021. ISBN
+    978-1-4920-3402-5. Cited at the publisher description level, not a
+    page-specific quote, for the cost asymmetry between internal and
+    published interface changes discussed in dimension 4.
+11. Andrew Hunt and David Thomas. *The Pragmatic Programmer*.
+    Addison-Wesley, 1999. ISBN 0-201-61622-X. Cited generally for the Rule
+    of Three heuristic discussed as YAGNI's resolution with Do Not Repeat
+    Yourself in dimension 13.
+12. C2 Wiki contributors. "YouArentGonnaNeedIt." Community-maintained wiki
+    record of Extreme Programming practitioner discussion.
+    http://wiki.c2.com/?YouArentGonnaNeedIt
+    Verified 2026-08-02. Cited only as a record of practitioner discussion
+    of Kent Beck's looser application of YAGNI to test code, referenced in
+    dimension 4, not as a primary authored source.
+
 ## Code examples
 
 Three languages chosen to show YAGNI's effect at different points along the
@@ -986,66 +1049,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. "Yagni." Bliki entry. https://martinfowler.com/bliki/Yagni.html
-   Verified 2026-08-02. Source for the C3-project origin account, the Kent
-   Beck and Chet Hendrickson exchange, the "Simple Design" framing, and the
-   Jeremy Miller extensibility-point quote used in dimension 11's misuse
-   discussion.
-2. Ron Jeffries. "You're NOT gonna need it!" 4 April 1998.
-   https://ronjeffries.com/xprog/articles/practices/pracnotneed/
-   Verified 2026-08-02. Earliest dated print appearance of the argument for
-   the principle by name, source for the three-cost argument in dimension 2
-   and the getter and setter example in dimension 1.
-3. Ronald E. Jeffries, Ann Anderson, Chet Hendrickson. *Extreme Programming
-   Installed*. Addison-Wesley, 2001. ISBN 0-201-70842-6. Page 190, per the
-   Wikipedia citation verified against
-   https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it, verified
-   2026-08-02. Book-form source for YAGNI as one of XP's most quoted
-   slogans.
-4. Martin Fowler and Kent Beck. *Refactoring. Improving the Design of
-   Existing Code*. Addison-Wesley, 1999. ISBN 0-201-48567-2. Page 68, per
-   the Wikipedia citation verified against the same URL as reference 3,
-   verified 2026-08-02, for the alternate wording "you aren't going to need
-   it," and the book's own code smell catalog, cited generally for
-   Speculative Generality and the Collapse Hierarchy, Inline Class, Remove
-   Parameter, and Remove Dead Code refactorings referenced in dimension 14.
-5. Kent Beck. *Extreme Programming Explained. Embrace Change*. 1st edition,
-   Addison-Wesley, 1999. ISBN 0-201-61641-6. Source for the C3 project
-   context in which YAGNI and the rest of XP's practices were developed,
-   cited generally, referenced in dimension 9.
-6. Wikipedia contributors. "You aren't gonna need it."
-   https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it
-   Verified 2026-08-02. Used to cross-check the page citations for
-   references 3 and 4 and the general attribution timeline, not as a source
-   of original explanation.
-7. Segment Engineering. Alexandra Noonan. "Goodbye Microservices. From 100s
-   of problem children to 1 superstar." 10 July 2018.
-   https://segment.com/blog/goodbye-microservices/
-   Verified 2026-08-02. Source for the production use in dimension 9.
-8. David Heinemeier Hansson. "The Majestic Monolith." Signal v. Noise,
-   Basecamp engineering blog. 29 February 2016.
-   https://signalvnoise.com/svn3/the-majestic-monolith/
-   Verified 2026-08-02. Source for the Basecamp production use in dimension
-   9.
-9. Google. "Google Engineering Practices Documentation. How to do a code
-   review. What to look for in a code review."
-   https://google.github.io/eng-practices/review/reviewer/looking-for.html
-   Verified 2026-08-02. Source for the Google code review guidance on
-   speculative, overly general designs cited in dimension 9.
-10. Sam Newman. *Building Microservices*. 2nd edition, O'Reilly, 2021. ISBN
-    978-1-4920-3402-5. Cited at the publisher description level, not a
-    page-specific quote, for the cost asymmetry between internal and
-    published interface changes discussed in dimension 4.
-11. Andrew Hunt and David Thomas. *The Pragmatic Programmer*.
-    Addison-Wesley, 1999. ISBN 0-201-61622-X. Cited generally for the Rule
-    of Three heuristic discussed as YAGNI's resolution with Do Not Repeat
-    Yourself in dimension 13.
-12. C2 Wiki contributors. "YouArentGonnaNeedIt." Community-maintained wiki
-    record of Extreme Programming practitioner discussion.
-    http://wiki.c2.com/?YouArentGonnaNeedIt
-    Verified 2026-08-02. Cited only as a record of practitioner discussion
-    of Kent Beck's looser application of YAGNI to test code, referenced in
-    dimension 4, not as a primary authored source.

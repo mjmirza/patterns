@@ -447,6 +447,17 @@ first-party code, and confirm a compromised or outdated service worker
 can be reliably updated or unregistered, rather than treating it as a
 low-risk caching detail once it is initially deployed.
 
+## 18. References
+
+1. web.dev. "Apply instant loading with the PRPL pattern".
+   https://web.dev/articles/apply-instant-loading-with-prpl
+   Verified 2026-08-21. Source of the defining PRPL quote and the
+   repeat-visit performance quote used in dimensions 1, 3, 9.
+2. web.dev. "PWA architecture".
+   https://web.dev/learn/pwa/architecture/
+   Verified 2026-08-21. Source of the related app shell model quote
+   used in dimension 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -650,14 +661,3 @@ lazyLoader.loadOnDemand("/dashboard")
 
 print("dashboard precached: " + String(precacheManager.isCached("dashboard.js")))
 ```
-
-## 18. References
-
-1. web.dev. "Apply instant loading with the PRPL pattern".
-   https://web.dev/articles/apply-instant-loading-with-prpl
-   Verified 2026-08-21. Source of the defining PRPL quote and the
-   repeat-visit performance quote used in dimensions 1, 3, 9.
-2. web.dev. "PWA architecture".
-   https://web.dev/learn/pwa/architecture/
-   Verified 2026-08-21. Source of the related app shell model quote
-   used in dimension 9.

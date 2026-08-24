@@ -438,6 +438,17 @@ easily the two can look similar, since both bound request frequency,
 but only the server-side version is enforced against a client that
 does not cooperate.
 
+## 18. References
+
+1. CSS-Tricks. "Debouncing and Throttling Explained Through Examples".
+   https://css-tricks.com/debouncing-throttling-explained-examples/
+   Verified 2026-08-21. Source of the defining debounce and throttle
+   quotes used in dimensions 1, 3, and 9.
+2. lodash. "Documentation".
+   https://lodash.com/docs/4.17.15
+   Verified 2026-08-21. Source of the precise function-contract quotes
+   used in dimensions 1 and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -613,14 +624,3 @@ throttler.call { updatePosition(10) }
 throttler.call { updatePosition(20) }
 throttler.call { updatePosition(30) }
 ```
-
-## 18. References
-
-1. CSS-Tricks. "Debouncing and Throttling Explained Through Examples".
-   https://css-tricks.com/debouncing-throttling-explained-examples/
-   Verified 2026-08-21. Source of the defining debounce and throttle
-   quotes used in dimensions 1, 3, and 9.
-2. lodash. "Documentation".
-   https://lodash.com/docs/4.17.15
-   Verified 2026-08-21. Source of the precise function-contract quotes
-   used in dimensions 1 and 9.

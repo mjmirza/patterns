@@ -859,6 +859,46 @@ intercepted, and encryption at rest in the backing store protects against
 disclosure from a compromised storage layer even when the values are not
 formally classified as secret.
 
+## 18. References
+
+1. Microsoft Learn, External Configuration Store Pattern, Azure
+   Architecture Center, `ms.date` 2026-04-30.
+   https://learn.microsoft.com/en-us/azure/architecture/patterns/external-configuration-store
+   verified 2026-08-03.
+2. Microsoft Learn, Azure App Configuration overview.
+   https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview
+   referenced from source 1, verified 2026-08-03.
+3. Kubernetes documentation, Components of Kubernetes, description of
+   etcd as the consistent and highly-available key value store for all
+   API server data.
+   https://kubernetes.io/docs/concepts/overview/components/
+   verified 2026-08-03.
+4. Spring Cloud Config reference documentation, sections on the Config
+   Server, supported backend stores, the `/actuator/refresh` endpoint, and
+   Spring Cloud Bus for push notifications.
+   https://docs.spring.io/spring-cloud-config/reference/
+   verified 2026-08-03.
+5. Adam Wiggins, The Twelve-Factor App, factor III, Config.
+   https://12factor.net/config
+   verified 2026-08-03.
+6. Patrick Hunt, Mahadev Konar, Flavio P. Junqueira, Benjamin Reed,
+   ZooKeeper, Wait-free coordination for Internet-scale systems, USENIX
+   Annual Technical Conference 2010. Foundational paper describing the
+   watch-based coordination model that etcd and later configuration
+   stores build on.
+7. etcd documentation, v3.6, project overview and operations guide.
+   https://etcd.io/docs/v3.6/
+   verified 2026-08-03, page confirmed reachable and current, etcd's role
+   as Kubernetes's backing store is independently confirmed by source 3.
+
+Engineering judgement, not independently sourced. The forces analysis in
+dimension 3, most of the failure-mode-to-fix mapping in dimension 11
+beyond the two items directly attributed to Microsoft's guidance, the
+testing strategy in dimension 15, and the observability signal list in
+dimension 16, all reflect the author's synthesis of the sourced material
+above plus general distributed-systems operating experience, not a single
+citable source per sentence.
+
 ## Code examples
 
 Three minimal, runnable implementations of the configuration interface from
@@ -1095,43 +1135,3 @@ gain a new idiom from a fourth language the way, for example, a
 closure-based Strategy gains from a functional language, so three
 languages already cover the pattern's variation surface without padding
 the entry with a repeat of the same twenty lines in a fourth syntax.
-
-## 18. References
-
-1. Microsoft Learn, External Configuration Store Pattern, Azure
-   Architecture Center, `ms.date` 2026-04-30.
-   https://learn.microsoft.com/en-us/azure/architecture/patterns/external-configuration-store
-   verified 2026-08-03.
-2. Microsoft Learn, Azure App Configuration overview.
-   https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview
-   referenced from source 1, verified 2026-08-03.
-3. Kubernetes documentation, Components of Kubernetes, description of
-   etcd as the consistent and highly-available key value store for all
-   API server data.
-   https://kubernetes.io/docs/concepts/overview/components/
-   verified 2026-08-03.
-4. Spring Cloud Config reference documentation, sections on the Config
-   Server, supported backend stores, the `/actuator/refresh` endpoint, and
-   Spring Cloud Bus for push notifications.
-   https://docs.spring.io/spring-cloud-config/reference/
-   verified 2026-08-03.
-5. Adam Wiggins, The Twelve-Factor App, factor III, Config.
-   https://12factor.net/config
-   verified 2026-08-03.
-6. Patrick Hunt, Mahadev Konar, Flavio P. Junqueira, Benjamin Reed,
-   ZooKeeper, Wait-free coordination for Internet-scale systems, USENIX
-   Annual Technical Conference 2010. Foundational paper describing the
-   watch-based coordination model that etcd and later configuration
-   stores build on.
-7. etcd documentation, v3.6, project overview and operations guide.
-   https://etcd.io/docs/v3.6/
-   verified 2026-08-03, page confirmed reachable and current, etcd's role
-   as Kubernetes's backing store is independently confirmed by source 3.
-
-Engineering judgement, not independently sourced. The forces analysis in
-dimension 3, most of the failure-mode-to-fix mapping in dimension 11
-beyond the two items directly attributed to Microsoft's guidance, the
-testing strategy in dimension 15, and the observability signal list in
-dimension 16, all reflect the author's synthesis of the sourced material
-above plus general distributed-systems operating experience, not a single
-citable source per sentence.

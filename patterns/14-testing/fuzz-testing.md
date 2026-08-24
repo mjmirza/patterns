@@ -909,6 +909,53 @@ rather than synthetic ones. Prefer synthetic or clearly anonymised seed
 material, and treat any crash artifact derived from a production-sourced seed
 with the same handling rules as the production data it was drawn from.
 
+## 18. References
+
+1. Barton P. Miller, Lars Fredriksen, Bryan So. "An Empirical Study of the
+   Reliability of UNIX Utilities". *Communications of the ACM*, volume 33,
+   issue 12, December 1990. Origin of the term "fuzz" and the founding
+   measurement that 25 to 33 percent of tested UNIX utilities crashed or
+   hung on random input, summarized and cited via Wikipedia, "Fuzzing",
+   https://en.wikipedia.org/wiki/Fuzzing verified 2026-08-02.
+2. Wikipedia contributors. "Fuzzing".
+   https://en.wikipedia.org/wiki/Fuzzing verified 2026-08-02. Source for the
+   Miller history, the mutation-based versus generation-based distinction,
+   grey-box fuzzing, and the Shellshock and Heartbleed discovery accounts.
+3. LLVM Project. "libFuzzer, a library for coverage-guided fuzz testing".
+   https://llvm.org/docs/LibFuzzer.html verified 2026-08-02. Source for
+   libFuzzer's in-process design, the `-fsanitize=fuzzer` compiler flag,
+   Clang integration since version 6.0, and the named list of projects it
+   has found bugs in.
+4. Google. "OSS-Fuzz documentation".
+   https://google.github.io/oss-fuzz/ verified 2026-08-02. Source for the
+   2016 launch following Heartbleed, the reported vulnerability and bug
+   counts, the four supported fuzzing engines, ClusterFuzz, and the
+   approximately 1,000 integrated projects.
+5. Michal Zalewski and contributors. "American Fuzzy Lop (AFL)".
+   https://github.com/google/AFL verified 2026-08-02. Source for AFL's
+   authorship, its description of itself as an instrumentation-guided
+   genetic algorithm, and the claim that fuzzing is responsible for the
+   majority of remote code execution and privilege escalation bugs found to
+   date.
+6. The Go Authors. "Go Fuzzing".
+   https://go.dev/security/fuzz/ verified 2026-08-02. Source for the Go
+   1.18 native fuzzing addition, `testing.F`, `go test -fuzz`, seed and
+   generated corpus behaviour, and automatic minimisation with
+   `-fuzzminimizetime`.
+7. The Rust Fuzz Project. "cargo-fuzz, The Rust Fuzz Book".
+   https://rust-fuzz.github.io/book/cargo-fuzz.html verified 2026-08-02.
+   Source for cargo-fuzz being a wrapper around libFuzzer via the
+   libfuzzer-sys crate, and for structure-aware fuzzing via the `arbitrary`
+   crate.
+8. Google. "Atheris, a coverage-guided Python fuzzing engine".
+   https://github.com/google/atheris verified 2026-08-02. Source for
+   Atheris's libFuzzer basis, `instrument_imports`, `TestOneInput`, and
+   `FuzzedDataProvider`.
+9. Code Intelligence. "Jazzer, coverage-guided fuzzing for the JVM".
+   https://github.com/CodeIntelligenceTesting/jazzer verified 2026-08-02.
+   Source for Jazzer's libFuzzer-derived design, JaCoCo-based bytecode
+   coverage instrumentation, and the `@FuzzTest` annotation.
+
 ## Code examples
 
 Three languages, each verified to actually run. Go and Python demonstrate
@@ -1135,50 +1182,3 @@ would be expected to discover an equivalent failing input on its own within
 seconds, given how shallow the defect is, but that specific claim was not
 verified by execution in this environment and is stated as an expectation,
 not as an observed result.
-
-## 18. References
-
-1. Barton P. Miller, Lars Fredriksen, Bryan So. "An Empirical Study of the
-   Reliability of UNIX Utilities". *Communications of the ACM*, volume 33,
-   issue 12, December 1990. Origin of the term "fuzz" and the founding
-   measurement that 25 to 33 percent of tested UNIX utilities crashed or
-   hung on random input, summarized and cited via Wikipedia, "Fuzzing",
-   https://en.wikipedia.org/wiki/Fuzzing verified 2026-08-02.
-2. Wikipedia contributors. "Fuzzing".
-   https://en.wikipedia.org/wiki/Fuzzing verified 2026-08-02. Source for the
-   Miller history, the mutation-based versus generation-based distinction,
-   grey-box fuzzing, and the Shellshock and Heartbleed discovery accounts.
-3. LLVM Project. "libFuzzer, a library for coverage-guided fuzz testing".
-   https://llvm.org/docs/LibFuzzer.html verified 2026-08-02. Source for
-   libFuzzer's in-process design, the `-fsanitize=fuzzer` compiler flag,
-   Clang integration since version 6.0, and the named list of projects it
-   has found bugs in.
-4. Google. "OSS-Fuzz documentation".
-   https://google.github.io/oss-fuzz/ verified 2026-08-02. Source for the
-   2016 launch following Heartbleed, the reported vulnerability and bug
-   counts, the four supported fuzzing engines, ClusterFuzz, and the
-   approximately 1,000 integrated projects.
-5. Michal Zalewski and contributors. "American Fuzzy Lop (AFL)".
-   https://github.com/google/AFL verified 2026-08-02. Source for AFL's
-   authorship, its description of itself as an instrumentation-guided
-   genetic algorithm, and the claim that fuzzing is responsible for the
-   majority of remote code execution and privilege escalation bugs found to
-   date.
-6. The Go Authors. "Go Fuzzing".
-   https://go.dev/security/fuzz/ verified 2026-08-02. Source for the Go
-   1.18 native fuzzing addition, `testing.F`, `go test -fuzz`, seed and
-   generated corpus behaviour, and automatic minimisation with
-   `-fuzzminimizetime`.
-7. The Rust Fuzz Project. "cargo-fuzz, The Rust Fuzz Book".
-   https://rust-fuzz.github.io/book/cargo-fuzz.html verified 2026-08-02.
-   Source for cargo-fuzz being a wrapper around libFuzzer via the
-   libfuzzer-sys crate, and for structure-aware fuzzing via the `arbitrary`
-   crate.
-8. Google. "Atheris, a coverage-guided Python fuzzing engine".
-   https://github.com/google/atheris verified 2026-08-02. Source for
-   Atheris's libFuzzer basis, `instrument_imports`, `TestOneInput`, and
-   `FuzzedDataProvider`.
-9. Code Intelligence. "Jazzer, coverage-guided fuzzing for the JVM".
-   https://github.com/CodeIntelligenceTesting/jazzer verified 2026-08-02.
-   Source for Jazzer's libFuzzer-derived design, JaCoCo-based bytecode
-   coverage instrumentation, and the `@FuzzTest` annotation.

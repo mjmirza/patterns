@@ -558,6 +558,44 @@ boundary, and any security property the fix appears to add is really a
 consequence of having a single enforceable place for a rule that
 previously had none.
 
+## 18. References
+
+Fowler, Martin, Kent Beck, John Brant, William Opdyke, Don Roberts.
+Refactoring, Improving the Design of Existing Code. Addison-Wesley, 1999.
+Chapter 3, Bad Smells in Code, the Data Clumps entry.
+
+Fowler, Martin. Refactoring catalog, Introduce Parameter Object.
+https://refactoring.com/catalog/introduceParameterObject.html, verified
+2026-08-02.
+
+Fowler, Martin. Refactoring catalog, full listing.
+https://refactoring.com/catalog/, verified 2026-08-02.
+
+Fowler, Martin. RefactoringMalapropism.
+https://martinfowler.com/bliki/RefactoringMalapropism.html, verified
+2026-08-02, used to confirm the precise, narrow definition of refactoring
+Fowler applies throughout the catalogue that this entry's dimension 7
+relies on.
+
+Stripe. Customers API reference, the address object.
+https://docs.stripe.com/api/customers/object, verified 2026-08-02.
+
+Oracle. The Java Language Specification companion guide, Record Classes.
+https://docs.oracle.com/en/java/javase/17/language/records.html, verified
+2026-08-02.
+
+Python Software Foundation. dataclasses, Data Classes.
+https://docs.python.org/3/library/dataclasses.html, verified 2026-08-02.
+
+PMD. Java Design rules, ExcessiveParameterList and UseObjectForClearerAPI.
+https://docs.pmd-code.org/latest/pmd_rules_java_design.html, verified
+2026-08-02.
+
+Evans, Eric. Domain-Driven Design, Tackling Complexity in the Heart of
+Software. Addison-Wesley, 2003. Chapter 5, on Value Objects, used as the
+sourced attribution for the domain-modelled variant described in
+dimension 8 and the maturity target described in dimension 13.
+
 ## Code examples
 
 Three languages where the fix is genuinely idiomatic in a different way.
@@ -748,41 +786,3 @@ IllegalArgumentException on an invalid range is the idiomatic Java 16-plus
 equivalent of the three examples above, and it was written and reviewed for
 correctness, but `java` and `javac` in this environment reported no Java
 Runtime available, so the claim that it compiles is not made here.
-
-## 18. References
-
-Fowler, Martin, Kent Beck, John Brant, William Opdyke, Don Roberts.
-Refactoring, Improving the Design of Existing Code. Addison-Wesley, 1999.
-Chapter 3, Bad Smells in Code, the Data Clumps entry.
-
-Fowler, Martin. Refactoring catalog, Introduce Parameter Object.
-https://refactoring.com/catalog/introduceParameterObject.html, verified
-2026-08-02.
-
-Fowler, Martin. Refactoring catalog, full listing.
-https://refactoring.com/catalog/, verified 2026-08-02.
-
-Fowler, Martin. RefactoringMalapropism.
-https://martinfowler.com/bliki/RefactoringMalapropism.html, verified
-2026-08-02, used to confirm the precise, narrow definition of refactoring
-Fowler applies throughout the catalogue that this entry's dimension 7
-relies on.
-
-Stripe. Customers API reference, the address object.
-https://docs.stripe.com/api/customers/object, verified 2026-08-02.
-
-Oracle. The Java Language Specification companion guide, Record Classes.
-https://docs.oracle.com/en/java/javase/17/language/records.html, verified
-2026-08-02.
-
-Python Software Foundation. dataclasses, Data Classes.
-https://docs.python.org/3/library/dataclasses.html, verified 2026-08-02.
-
-PMD. Java Design rules, ExcessiveParameterList and UseObjectForClearerAPI.
-https://docs.pmd-code.org/latest/pmd_rules_java_design.html, verified
-2026-08-02.
-
-Evans, Eric. Domain-Driven Design, Tackling Complexity in the Heart of
-Software. Addison-Wesley, 2003. Chapter 5, on Value Objects, used as the
-sourced attribution for the domain-modelled variant described in
-dimension 8 and the maturity target described in dimension 13.

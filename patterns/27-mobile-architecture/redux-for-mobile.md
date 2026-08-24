@@ -173,6 +173,11 @@ Skip it for a small app, a screen with genuinely local and simple state, or a te
 - Action logging, valuable for debugging, must exclude or redact sensitive payload fields before it is written to any log or analytics pipeline, since a logged action is effectively a permanent, searchable record of what state changed and with what data.
 - Because every state change flows through one traceable path, the store is also a natural place to enforce a consistent authorization check before a sensitive action is allowed to reach its reducer, rather than trusting every dispatch site to have checked independently.
 
+## 18. References
+
+- Redux documentation, The Three Principles (https://redux.js.org/understanding/thinking-in-redux/three-principles)
+- ReSwift, GitHub repository README (https://github.com/ReSwift/ReSwift)
+
 ## Code examples
 
 ### Python
@@ -309,8 +314,3 @@ let store = Store(initialState: AppState(counter: 0, lastAction: "init"), reduce
 store.subscribe { print("state now " + String($0.counter)) }
 store.dispatch(.increment(5))
 ```
-
-## 18. References
-
-- Redux documentation, The Three Principles (https://redux.js.org/understanding/thinking-in-redux/three-principles)
-- ReSwift, GitHub repository README (https://github.com/ReSwift/ReSwift)

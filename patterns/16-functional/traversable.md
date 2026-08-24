@@ -747,6 +747,32 @@ The pattern is silent on encryption, authentication, and access control by
 itself. Its security relevance comes from concentrating per-element work and
 effect accumulation in one reusable path.
 
+## 18. References
+
+- Conor McBride and Ross Paterson, "Applicative Programming with Effects",
+  *Journal of Functional Programming*, volume 18, issue 1, 2008, pages 1 to
+  13. Linked from Haskell `Control.Applicative`,
+  https://hackage.haskell.org/package/base/docs/Control-Applicative.html,
+  verified 2026-08-02.
+- Haskell `base` 4.22.0.0, `Data.Traversable`, Hackage documentation,
+  https://hackage-content.haskell.org/package/base-4.22.0.0/docs/Data-Traversable.html,
+  verified 2026-08-02.
+- Jeremy Gibbons and Bruno C. d. S. Oliveira, "The Essence of the Iterator
+  Pattern", *Journal of Functional Programming*, volume 19, issues 3 and 4,
+  2009, pages 377 to 402. Oxford publication page,
+  https://www.cs.ox.ac.uk/publications/publication1409-abstract.html,
+  verified 2026-08-02.
+- Typelevel Cats, "Traverse" type class documentation,
+  https://typelevel.org/cats/typeclasses/traverse.html, verified 2026-08-02.
+- Typelevel Cats, `Validated` data type documentation,
+  https://typelevel.org/cats/datatypes/validated.html, verified 2026-08-02.
+- fp-ts, `Traversable.ts` module documentation,
+  https://gcanti.github.io/fp-ts/modules/Traversable.ts.html, verified
+  2026-08-02.
+- ZIO Prelude, "ForEach" parameterized type documentation,
+  https://zio.github.io/zio-prelude/docs/functionalabstractions/parameterizedtypes/foreach,
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples use TypeScript, Python, and Rust because those toolchains are
@@ -888,29 +914,3 @@ fn main() {
     println!("{parsed:?}");
 }
 ```
-
-## 18. References
-
-- Conor McBride and Ross Paterson, "Applicative Programming with Effects",
-  *Journal of Functional Programming*, volume 18, issue 1, 2008, pages 1 to
-  13. Linked from Haskell `Control.Applicative`,
-  https://hackage.haskell.org/package/base/docs/Control-Applicative.html,
-  verified 2026-08-02.
-- Haskell `base` 4.22.0.0, `Data.Traversable`, Hackage documentation,
-  https://hackage-content.haskell.org/package/base-4.22.0.0/docs/Data-Traversable.html,
-  verified 2026-08-02.
-- Jeremy Gibbons and Bruno C. d. S. Oliveira, "The Essence of the Iterator
-  Pattern", *Journal of Functional Programming*, volume 19, issues 3 and 4,
-  2009, pages 377 to 402. Oxford publication page,
-  https://www.cs.ox.ac.uk/publications/publication1409-abstract.html,
-  verified 2026-08-02.
-- Typelevel Cats, "Traverse" type class documentation,
-  https://typelevel.org/cats/typeclasses/traverse.html, verified 2026-08-02.
-- Typelevel Cats, `Validated` data type documentation,
-  https://typelevel.org/cats/datatypes/validated.html, verified 2026-08-02.
-- fp-ts, `Traversable.ts` module documentation,
-  https://gcanti.github.io/fp-ts/modules/Traversable.ts.html, verified
-  2026-08-02.
-- ZIO Prelude, "ForEach" parameterized type documentation,
-  https://zio.github.io/zio-prelude/docs/functionalabstractions/parameterizedtypes/foreach,
-  verified 2026-08-02.

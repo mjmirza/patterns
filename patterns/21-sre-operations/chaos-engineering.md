@@ -168,6 +168,11 @@ Skip it for a system with no real redundancy or fault tolerance design to test i
 - An experiment that touches a system carrying real user data should never expose that data to unintended observers as a side effect of the injected failure, even when the failure itself is deliberate.
 - The experiment record, especially when it captures a genuine security or access-control weakness, should be handled with the same care as any other sensitive incident record.
 
+## 18. References
+
+- Principles of Chaos Engineering manifesto (https://principlesofchaos.org/)
+- Netflix Technology Blog, The Netflix Simian Army (https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116)
+
 ## Code examples
 
 ### Python
@@ -286,8 +291,3 @@ print("holds " + String(experiment.observe(0.995)))
 print("holds " + String(experiment.observe(0.80)))
 print("findings " + String(experiment.findings.count))
 ```
-
-## 18. References
-
-- Principles of Chaos Engineering manifesto (https://principlesofchaos.org/)
-- Netflix Technology Blog, The Netflix Simian Army (https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116)

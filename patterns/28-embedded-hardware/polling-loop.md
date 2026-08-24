@@ -397,6 +397,15 @@ security-conscious polling loop implementation whenever the awaited
 condition could plausibly be influenced by an untrusted or external
 source, not only a defensive habit for reliability.
 
+## 18. References
+
+1. Zephyr Project. "UART (Universal Asynchronous Receiver-Transmitter)".
+   https://docs.zephyrproject.org/latest/hardware/peripherals/uart.html
+   Verified 2026-08-21. Source of the polling-mode definition,
+   non-blocking read and blocking write behavior, the interrupt-driven
+   comparison, and the warning against mixing access modes, used in
+   dimensions 1, 2, 3, 4, 9, 10, and 11.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -506,12 +515,3 @@ status.ready = true
 let okAfter = pollForReady(readStatus: { status.ready }, maxIterations: 10)
 print("polled after ready, succeeded:", okAfter)
 ```
-
-## 18. References
-
-1. Zephyr Project. "UART (Universal Asynchronous Receiver-Transmitter)".
-   https://docs.zephyrproject.org/latest/hardware/peripherals/uart.html
-   Verified 2026-08-21. Source of the polling-mode definition,
-   non-blocking read and blocking write behavior, the interrupt-driven
-   comparison, and the warning against mixing access modes, used in
-   dimensions 1, 2, 3, 4, 9, 10, and 11.

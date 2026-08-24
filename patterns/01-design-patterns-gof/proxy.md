@@ -929,6 +929,87 @@ the data's retention policy allows. A cache with personal data in it needs a tim
 to live chosen against that policy, not against performance alone, and it needs
 an invalidation path for deletion requests.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Proxy. Source of
+   the intent, the Surrogate alias, the three participants, and the four named
+   variants remote, virtual, protection and smart reference.
+2. Oracle. *Java SE 21 API Specification*, `java.lang.reflect.Proxy`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/Proxy.html
+   Verified 2026-08-02. Source for dynamic proxy classes, `newProxyInstance`,
+   `InvocationHandler` dispatch, and the interfaces-only restriction.
+3. Oracle. *Java SE 21 API Specification*, `java.util.Collections`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html
+   Verified 2026-08-02. Source for the unmodifiable view as a protection proxy,
+   including the read-through and `UnsupportedOperationException` behaviour.
+4. Oracle. *Java SE 21 API Specification*, `java.rmi` package summary.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/package-summary.html
+   Verified 2026-08-02. Source for remote objects, marshalling, and the stub
+   terminology.
+5. Broadcom. *Spring Framework Reference*, Core, AOP, Proxying Mechanisms.
+   https://docs.spring.io/spring-framework/reference/core/aop/proxying.html
+   Verified 2026-08-02. Source for the JDK dynamic proxy against CGLIB subclass
+   choice, the self-invocation behaviour, and the discouraged
+   `AopContext.currentProxy()` workaround.
+6. Broadcom. *Spring Framework Reference*, Data Access, Declarative Transaction
+   Management, Using `@Transactional`.
+   https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html
+   Verified 2026-08-02. Source for the statement that in proxy mode only external
+   calls through the proxy are intercepted, and for the AspectJ mode remedy.
+7. Red Hat. *Hibernate ORM 6.6 Javadoc*, `org.hibernate.LazyInitializationException`.
+   https://docs.hibernate.org/orm/6.6/javadocs/org/hibernate/LazyInitializationException.html
+   Verified 2026-08-02. Source for access to unfetched data outside an open
+   stateful session.
+8. Red Hat. *Hibernate ORM 6.6 Javadoc*, `org.hibernate.annotations.BatchSize`.
+   https://docs.hibernate.org/orm/6.6/javadocs/org/hibernate/annotations/BatchSize.html
+   Verified 2026-08-02. Source for batch fetching of proxies as the N+1
+   mitigation.
+9. Red Hat. *Hibernate ORM 5.2 User Guide*, Fetching chapter.
+   https://docs.hibernate.org/orm/5.2/userguide/html_single/chapters/fetching/Fetching.html
+   Verified 2026-08-02. Source for the N+1 selects problem, the warning about
+   `FetchMode.SELECT`, and the preference for a join fetch or a projection over
+   `@BatchSize`.
+10. Red Hat. *Hibernate ORM 6.6 Javadoc*, `org.hibernate.Session`.
+    https://docs.hibernate.org/orm/6.6/javadocs/org/hibernate/Session.html
+    Verified 2026-08-02. Source for `getReference` returning a reference without
+    initialising the instance.
+11. Mozilla. *MDN Web Docs*, `Proxy`.
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
+    Verified 2026-08-02. Source for the target and handler terms and the trap
+    list used in dimension 8.
+12. Vue.js. *Reactivity in Depth*.
+    https://vuejs.org/guide/extras/reactivity-in-depth.html
+    Verified 2026-08-02. Source for Vue 3 using proxies for reactive objects and
+    for the identity difference under strict equality.
+13. gRPC Authors. *gRPC Core Concepts, Architecture and Lifecycle*.
+    https://grpc.io/docs/what-is-grpc/core-concepts/
+    Verified 2026-08-02. Source for the client stub as a local object
+    implementing the service methods.
+14. Envoy Project. *What is Envoy*.
+    https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy
+    Verified 2026-08-02. Source for the sidecar deployment model and the
+    transparent-network position.
+15. Microsoft. *.NET API documentation*, `System.Reflection.DispatchProxy`.
+    https://learn.microsoft.com/en-us/dotnet/api/system.reflection.dispatchproxy
+    Verified 2026-08-02. Source for the standard-library interception facility
+    and its `Invoke` dispatch.
+16. Python Software Foundation. *Python 3 Standard Library*, `weakref`.
+    https://docs.python.org/3/library/weakref.html
+    Verified 2026-08-02. Source for `weakref.proxy`, its non-hashability, and the
+    `ReferenceError` raised after collection of the referent.
+17. Django Software Foundation. *Django 4.2 source documentation*,
+    `django.utils.functional`.
+    https://docs.djangoproject.com/en/4.2/_modules/django/utils/functional/
+    Verified 2026-08-02. Source for `LazyObject` as a wrapper that delays
+    instantiation and for `SimpleLazyObject` built from a callable.
+18. Wikipedia contributors. "Proxy pattern".
+    https://en.wikipedia.org/wiki/Proxy_pattern
+    Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
+    the remote, virtual and protection variants. It does not list the smart
+    reference variant, which is taken from the book.
+
 ## Code examples
 
 Four languages, chosen because each shows a different shape of the pattern. Java
@@ -1171,84 +1252,3 @@ func main() {
 	fmt.Println(s.Put("region", "us-east"))
 }
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Proxy. Source of
-   the intent, the Surrogate alias, the three participants, and the four named
-   variants remote, virtual, protection and smart reference.
-2. Oracle. *Java SE 21 API Specification*, `java.lang.reflect.Proxy`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/Proxy.html
-   Verified 2026-08-02. Source for dynamic proxy classes, `newProxyInstance`,
-   `InvocationHandler` dispatch, and the interfaces-only restriction.
-3. Oracle. *Java SE 21 API Specification*, `java.util.Collections`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html
-   Verified 2026-08-02. Source for the unmodifiable view as a protection proxy,
-   including the read-through and `UnsupportedOperationException` behaviour.
-4. Oracle. *Java SE 21 API Specification*, `java.rmi` package summary.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/package-summary.html
-   Verified 2026-08-02. Source for remote objects, marshalling, and the stub
-   terminology.
-5. Broadcom. *Spring Framework Reference*, Core, AOP, Proxying Mechanisms.
-   https://docs.spring.io/spring-framework/reference/core/aop/proxying.html
-   Verified 2026-08-02. Source for the JDK dynamic proxy against CGLIB subclass
-   choice, the self-invocation behaviour, and the discouraged
-   `AopContext.currentProxy()` workaround.
-6. Broadcom. *Spring Framework Reference*, Data Access, Declarative Transaction
-   Management, Using `@Transactional`.
-   https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html
-   Verified 2026-08-02. Source for the statement that in proxy mode only external
-   calls through the proxy are intercepted, and for the AspectJ mode remedy.
-7. Red Hat. *Hibernate ORM 6.6 Javadoc*, `org.hibernate.LazyInitializationException`.
-   https://docs.hibernate.org/orm/6.6/javadocs/org/hibernate/LazyInitializationException.html
-   Verified 2026-08-02. Source for access to unfetched data outside an open
-   stateful session.
-8. Red Hat. *Hibernate ORM 6.6 Javadoc*, `org.hibernate.annotations.BatchSize`.
-   https://docs.hibernate.org/orm/6.6/javadocs/org/hibernate/annotations/BatchSize.html
-   Verified 2026-08-02. Source for batch fetching of proxies as the N+1
-   mitigation.
-9. Red Hat. *Hibernate ORM 5.2 User Guide*, Fetching chapter.
-   https://docs.hibernate.org/orm/5.2/userguide/html_single/chapters/fetching/Fetching.html
-   Verified 2026-08-02. Source for the N+1 selects problem, the warning about
-   `FetchMode.SELECT`, and the preference for a join fetch or a projection over
-   `@BatchSize`.
-10. Red Hat. *Hibernate ORM 6.6 Javadoc*, `org.hibernate.Session`.
-    https://docs.hibernate.org/orm/6.6/javadocs/org/hibernate/Session.html
-    Verified 2026-08-02. Source for `getReference` returning a reference without
-    initialising the instance.
-11. Mozilla. *MDN Web Docs*, `Proxy`.
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
-    Verified 2026-08-02. Source for the target and handler terms and the trap
-    list used in dimension 8.
-12. Vue.js. *Reactivity in Depth*.
-    https://vuejs.org/guide/extras/reactivity-in-depth.html
-    Verified 2026-08-02. Source for Vue 3 using proxies for reactive objects and
-    for the identity difference under strict equality.
-13. gRPC Authors. *gRPC Core Concepts, Architecture and Lifecycle*.
-    https://grpc.io/docs/what-is-grpc/core-concepts/
-    Verified 2026-08-02. Source for the client stub as a local object
-    implementing the service methods.
-14. Envoy Project. *What is Envoy*.
-    https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy
-    Verified 2026-08-02. Source for the sidecar deployment model and the
-    transparent-network position.
-15. Microsoft. *.NET API documentation*, `System.Reflection.DispatchProxy`.
-    https://learn.microsoft.com/en-us/dotnet/api/system.reflection.dispatchproxy
-    Verified 2026-08-02. Source for the standard-library interception facility
-    and its `Invoke` dispatch.
-16. Python Software Foundation. *Python 3 Standard Library*, `weakref`.
-    https://docs.python.org/3/library/weakref.html
-    Verified 2026-08-02. Source for `weakref.proxy`, its non-hashability, and the
-    `ReferenceError` raised after collection of the referent.
-17. Django Software Foundation. *Django 4.2 source documentation*,
-    `django.utils.functional`.
-    https://docs.djangoproject.com/en/4.2/_modules/django/utils/functional/
-    Verified 2026-08-02. Source for `LazyObject` as a wrapper that delays
-    instantiation and for `SimpleLazyObject` built from a callable.
-18. Wikipedia contributors. "Proxy pattern".
-    https://en.wikipedia.org/wiki/Proxy_pattern
-    Verified 2026-08-02. Used only to confirm the wording of the GoF intent and
-    the remote, virtual and protection variants. It does not list the smart
-    reference variant, which is taken from the book.

@@ -832,6 +832,23 @@ verified 2026-08-03), which is a small but real acknowledgment that the
 security guarantee this pattern provides is bounded by the accuracy of
 clocks the application does not fully control.
 
+## 18. References
+
+1. Homer, A., Sharp, J., Brader, L., Narumoto, M., Swanson, T., "Valet Key
+   pattern," in *Cloud Design Patterns. Prescriptive Architecture Guidance
+   for Cloud Applications*, Microsoft patterns and practices, first
+   published 2014, maintained on the Azure Architecture Center, verified
+   2026-08-03. https://learn.microsoft.com/en-us/azure/architecture/patterns/valet-key
+2. Amazon Web Services, "Sharing objects with presigned URLs," Amazon S3
+   User Guide, verified 2026-08-03.
+   https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html
+3. Google Cloud, "Signed URLs," Cloud Storage documentation, verified
+   2026-08-03. https://docs.cloud.google.com/storage/docs/access-control/signed-urls
+4. Cloudflare, "Presigned URLs," R2 API documentation, verified 2026-08-03.
+   https://developers.cloudflare.com/r2/api/s3/presigned-urls/
+5. Microsoft, Azure Architecture Center, "Cloud Design Patterns" index,
+   verified 2026-08-03. https://learn.microsoft.com/en-us/azure/architecture/patterns/
+
 ## Code
 
 The pattern is shown here in TypeScript, Python, Go and Java, an issuer that
@@ -1068,20 +1085,3 @@ public final class ValetKeyService {
     }
 }
 ```
-
-## 18. References
-
-1. Homer, A., Sharp, J., Brader, L., Narumoto, M., Swanson, T., "Valet Key
-   pattern," in *Cloud Design Patterns. Prescriptive Architecture Guidance
-   for Cloud Applications*, Microsoft patterns and practices, first
-   published 2014, maintained on the Azure Architecture Center, verified
-   2026-08-03. https://learn.microsoft.com/en-us/azure/architecture/patterns/valet-key
-2. Amazon Web Services, "Sharing objects with presigned URLs," Amazon S3
-   User Guide, verified 2026-08-03.
-   https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html
-3. Google Cloud, "Signed URLs," Cloud Storage documentation, verified
-   2026-08-03. https://docs.cloud.google.com/storage/docs/access-control/signed-urls
-4. Cloudflare, "Presigned URLs," R2 API documentation, verified 2026-08-03.
-   https://developers.cloudflare.com/r2/api/s3/presigned-urls/
-5. Microsoft, Azure Architecture Center, "Cloud Design Patterns" index,
-   verified 2026-08-03. https://learn.microsoft.com/en-us/azure/architecture/patterns/

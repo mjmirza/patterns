@@ -440,6 +440,17 @@ when it is fetched, not who is able to fetch it, and the real
 authorization decision belongs entirely to the server handling the
 requests that chunk's code goes on to make.
 
+## 18. References
+
+1. web.dev. "Reduce JavaScript payloads with code splitting".
+   https://web.dev/articles/reduce-javascript-payloads-with-code-splitting
+   Verified 2026-08-21. Source of the defining startup-time quote used
+   in dimensions 1, 3, and 9.
+2. MDN Web Docs. "import".
+   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import
+   Verified 2026-08-21. Source of the dynamic import mechanism quotes
+   used in dimensions 3 and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -595,14 +606,3 @@ func main() async {
 
 await main()
 ```
-
-## 18. References
-
-1. web.dev. "Reduce JavaScript payloads with code splitting".
-   https://web.dev/articles/reduce-javascript-payloads-with-code-splitting
-   Verified 2026-08-21. Source of the defining startup-time quote used
-   in dimensions 1, 3, and 9.
-2. MDN Web Docs. "import".
-   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import
-   Verified 2026-08-21. Source of the dynamic import mechanism quotes
-   used in dimensions 3 and 9.

@@ -432,6 +432,17 @@ right, and the palette's own command list should be filtered
 according to the current user's real permissions, not merely a
 static, unconditional catalog of everything the application can do.
 
+## 18. References
+
+1. cmdk. "cmdk".
+   https://github.com/pacocoursey/cmdk
+   Verified 2026-08-21. Source of the defining pattern quotes used in
+   dimensions 1, 3, 8, and 9.
+2. Radix UI. "Dialog".
+   https://www.radix-ui.com/primitives/docs/components/dialog
+   Verified 2026-08-21. Source of the accessible focus-trapping quote
+   used in dimensions 3 and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -579,14 +590,3 @@ let adminResults = filterCommands(commands, query: "doc", user: adminUser).map {
 print("regular user, query 'doc': " + regularResults.joined(separator: ", "))
 print("admin user, query 'doc': " + adminResults.joined(separator: ", "))
 ```
-
-## 18. References
-
-1. cmdk. "cmdk".
-   https://github.com/pacocoursey/cmdk
-   Verified 2026-08-21. Source of the defining pattern quotes used in
-   dimensions 1, 3, 8, and 9.
-2. Radix UI. "Dialog".
-   https://www.radix-ui.com/primitives/docs/components/dialog
-   Verified 2026-08-21. Source of the accessible focus-trapping quote
-   used in dimensions 3 and 9.

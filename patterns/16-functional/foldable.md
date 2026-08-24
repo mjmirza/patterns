@@ -855,6 +855,38 @@ separates supplier, accumulator, and combiner for this reason
 (https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html,
 verified 2026-08-02).
 
+## 18. References
+
+- Erik Meijer, Maarten M. Fokkinga, Ross Paterson, "Functional Programming with
+  Bananas, Lenses, Envelopes and Barbed Wire", FPCA 1991, pages 124-144,
+  https://research.utwente.nl/en/publications/functional-programming-with-bananas-lenses-envelopes-and-barbed-w/,
+  verified 2026-08-02.
+- Graham Hutton, "A Tutorial on the Universality and Expressiveness of Fold",
+  *Journal of Functional Programming*, volume 9, issue 4, 1999,
+  https://people.cs.nott.ac.uk/pszgmh/fold.pdf,
+  verified 2026-08-02.
+- Haskell `base-4.21.0.0`, `Data.Foldable`,
+  https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-Foldable.html,
+  verified 2026-08-02.
+- Typelevel Cats, "Foldable",
+  https://typelevel.org/cats/typeclasses/foldable.html, verified 2026-08-02.
+- Typelevel Cats API, `cats.Foldable`,
+  https://typelevel.org/cats/api/cats/Foldable.html, verified 2026-08-02.
+- fp-ts, `Foldable.ts`,
+  https://gcanti.github.io/fp-ts/modules/Foldable.ts.html, verified
+  2026-08-02.
+- Rust standard library, `std::iter::Iterator`,
+  https://doc.rust-lang.org/std/iter/trait.Iterator.html, verified
+  2026-08-02.
+- Oracle, Java SE 21 API, `java.util.stream.Stream`,
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html,
+  verified 2026-08-02.
+- Python 3.14 documentation, `functools`,
+  https://docs.python.org/3/library/functools.html, verified 2026-08-02.
+- MDN Web Docs, `Array.prototype.reduce`,
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce,
+  verified 2026-08-02.
+
 ## Code examples
 
 The examples use TypeScript, Python, and Rust. TypeScript shows a lightweight
@@ -966,35 +998,3 @@ fn main() {
     println!("{:?}", checked_total(&charges));
 }
 ```
-
-## 18. References
-
-- Erik Meijer, Maarten M. Fokkinga, Ross Paterson, "Functional Programming with
-  Bananas, Lenses, Envelopes and Barbed Wire", FPCA 1991, pages 124-144,
-  https://research.utwente.nl/en/publications/functional-programming-with-bananas-lenses-envelopes-and-barbed-w/,
-  verified 2026-08-02.
-- Graham Hutton, "A Tutorial on the Universality and Expressiveness of Fold",
-  *Journal of Functional Programming*, volume 9, issue 4, 1999,
-  https://people.cs.nott.ac.uk/pszgmh/fold.pdf,
-  verified 2026-08-02.
-- Haskell `base-4.21.0.0`, `Data.Foldable`,
-  https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-Foldable.html,
-  verified 2026-08-02.
-- Typelevel Cats, "Foldable",
-  https://typelevel.org/cats/typeclasses/foldable.html, verified 2026-08-02.
-- Typelevel Cats API, `cats.Foldable`,
-  https://typelevel.org/cats/api/cats/Foldable.html, verified 2026-08-02.
-- fp-ts, `Foldable.ts`,
-  https://gcanti.github.io/fp-ts/modules/Foldable.ts.html, verified
-  2026-08-02.
-- Rust standard library, `std::iter::Iterator`,
-  https://doc.rust-lang.org/std/iter/trait.Iterator.html, verified
-  2026-08-02.
-- Oracle, Java SE 21 API, `java.util.stream.Stream`,
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html,
-  verified 2026-08-02.
-- Python 3.14 documentation, `functools`,
-  https://docs.python.org/3/library/functools.html, verified 2026-08-02.
-- MDN Web Docs, `Array.prototype.reduce`,
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce,
-  verified 2026-08-02.

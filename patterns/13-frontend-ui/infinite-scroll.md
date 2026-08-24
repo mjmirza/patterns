@@ -449,6 +449,14 @@ the same authorization and rate-limiting discipline to the batch
 endpoint that any other data-fetching API would need, rather than
 assuming the feed's continuous framing makes it a lower-risk surface.
 
+## 18. References
+
+1. MDN Web Docs. "Intersection Observer API".
+   https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+   Verified 2026-08-21. Source of the defining infinite-scrolling
+   quote and the off-main-thread efficiency explanation quoted in
+   dimensions 1, 3, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -599,11 +607,3 @@ feed.loadInitial()
 feed.onSentinelVisible()
 print("total items loaded: " + String(feed.items.count))
 ```
-
-## 18. References
-
-1. MDN Web Docs. "Intersection Observer API".
-   https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
-   Verified 2026-08-21. Source of the defining infinite-scrolling
-   quote and the off-main-thread efficiency explanation quoted in
-   dimensions 1, 3, and 9.

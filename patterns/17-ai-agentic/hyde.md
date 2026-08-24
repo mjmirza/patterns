@@ -722,6 +722,40 @@ store holding model-generated text keyed by user query, and should be
 subject to the same retention and access-control policy as any other store
 of derived user query data.
 
+## 18. References
+
+1. Luyu Gao, Xueguang Ma, Jimmy Lin, and Jamie Callan. "Precise Zero-Shot
+   Dense Retrieval without Relevance Labels". Proceedings of the 61st
+   Annual Meeting of the Association for Computational Linguistics (Volume
+   1, Long Papers), 2023, pages 1762 to 1777.
+   https://aclanthology.org/2023.acl-long.99/ (verified 2026-08-02)
+2. Luyu Gao, Xueguang Ma, Jimmy Lin, and Jamie Callan. "Precise Zero-Shot
+   Dense Retrieval without Relevance Labels". arXiv preprint, first posted
+   December 2022. https://arxiv.org/abs/2212.10496 (verified 2026-08-02)
+3. Vladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu,
+   Sergey Edunov, Danqi Chen, and Wen-tau Yih. "Dense Passage Retrieval for
+   Open-Domain Question Answering". Proceedings of EMNLP 2020.
+   https://arxiv.org/abs/2004.04906 (verified 2026-08-02)
+4. Gautier Izacard, Mathilde Caron, Lucas Hosseini, Sebastian Riedel,
+   Piotr Bojanowski, Armand Joulin, and Edouard Grave. "Unsupervised Dense
+   Information Retrieval with Contrastive Learning" (the Contriever paper).
+   https://arxiv.org/abs/2112.09118 (verified 2026-08-02)
+5. LlamaIndex. `HyDEQueryTransform` example notebook, query transformations
+   documentation. https://developers.llamaindex.ai/python/examples/query_transformations/hydequerytransformdemo/
+   (verified 2026-08-02)
+6. LangChain. `HypotheticalDocumentEmbedder` chain source, `langchain_classic`
+   package. https://github.com/langchain-ai/langchain/blob/master/libs/langchain/langchain_classic/chains/hyde/base.py
+   (verified 2026-08-02)
+7. Haystack (deepset). "Boosting Retrieval Performance with Hypothetical
+   Document Embeddings (HyDE)". Cookbook.
+   https://haystack.deepset.ai/cookbook/using_hyde_for_improved_retrieval
+   (verified 2026-08-02)
+8. Sean MacAvaney, Nicola Tonellotto, and Craig Macdonald. "Reproducibility,
+   Replicability, and Insights into Dense Multi-Representation Retrieval
+   Models. from ColBERT to Col*". Discussing the lineage from classical
+   pseudo-relevance feedback into dense retrieval query expansion.
+   https://arxiv.org/abs/2110.06051 (verified 2026-08-02)
+
 ## Code examples
 
 Three languages, chosen to cover the shapes HyDE actually gets built in.
@@ -1116,37 +1150,3 @@ func main() {
 	fmt.Println("HyDE ranked the correct document first, as expected.")
 }
 ```
-
-## 18. References
-
-1. Luyu Gao, Xueguang Ma, Jimmy Lin, and Jamie Callan. "Precise Zero-Shot
-   Dense Retrieval without Relevance Labels". Proceedings of the 61st
-   Annual Meeting of the Association for Computational Linguistics (Volume
-   1, Long Papers), 2023, pages 1762 to 1777.
-   https://aclanthology.org/2023.acl-long.99/ (verified 2026-08-02)
-2. Luyu Gao, Xueguang Ma, Jimmy Lin, and Jamie Callan. "Precise Zero-Shot
-   Dense Retrieval without Relevance Labels". arXiv preprint, first posted
-   December 2022. https://arxiv.org/abs/2212.10496 (verified 2026-08-02)
-3. Vladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu,
-   Sergey Edunov, Danqi Chen, and Wen-tau Yih. "Dense Passage Retrieval for
-   Open-Domain Question Answering". Proceedings of EMNLP 2020.
-   https://arxiv.org/abs/2004.04906 (verified 2026-08-02)
-4. Gautier Izacard, Mathilde Caron, Lucas Hosseini, Sebastian Riedel,
-   Piotr Bojanowski, Armand Joulin, and Edouard Grave. "Unsupervised Dense
-   Information Retrieval with Contrastive Learning" (the Contriever paper).
-   https://arxiv.org/abs/2112.09118 (verified 2026-08-02)
-5. LlamaIndex. `HyDEQueryTransform` example notebook, query transformations
-   documentation. https://developers.llamaindex.ai/python/examples/query_transformations/hydequerytransformdemo/
-   (verified 2026-08-02)
-6. LangChain. `HypotheticalDocumentEmbedder` chain source, `langchain_classic`
-   package. https://github.com/langchain-ai/langchain/blob/master/libs/langchain/langchain_classic/chains/hyde/base.py
-   (verified 2026-08-02)
-7. Haystack (deepset). "Boosting Retrieval Performance with Hypothetical
-   Document Embeddings (HyDE)". Cookbook.
-   https://haystack.deepset.ai/cookbook/using_hyde_for_improved_retrieval
-   (verified 2026-08-02)
-8. Sean MacAvaney, Nicola Tonellotto, and Craig Macdonald. "Reproducibility,
-   Replicability, and Insights into Dense Multi-Representation Retrieval
-   Models. from ColBERT to Col*". Discussing the lineage from classical
-   pseudo-relevance feedback into dense retrieval query expansion.
-   https://arxiv.org/abs/2110.06051 (verified 2026-08-02)

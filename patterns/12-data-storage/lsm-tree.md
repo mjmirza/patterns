@@ -871,6 +871,38 @@ identically to LSM-backed storage as to any other persistent storage
 mechanism, and this entry does not identify any LSM-specific concern beyond
 the deletion-timing issue above.
 
+## 18. References
+
+- Patrick E. O'Neil, Edward Cheng, Dieter Gawlick, and Elizabeth J. O'Neil,
+  "The Log-Structured Merge-Tree (LSM-Tree)," Acta Informatica, volume 33,
+  issue 4, 1996, pages 351 to 385, cross-referenced via
+  https://dblp.org/rec/journals/acta/ONeilCGO96.html, verified 2026-08-02.
+- Siying Dong, Andrew Kryczka, Yanqin Jin, and Michael Stumm, "Evolution of
+  Development Priorities in Key-value Stores Serving Large-scale
+  Applications. The RocksDB Experience," 19th USENIX Conference on File
+  and Storage Technologies (FAST 21), 2021, pages 33 to 49, cross-referenced
+  via https://www.usenix.org/conference/fast21/presentation/dong, verified
+  2026-08-02.
+- RocksDB project, "RocksDB Tuning Guide," GitHub wiki,
+  https://github.com/facebook/rocksdb/wiki/RocksDB-Tuning-Guide, verified
+  2026-08-02.
+- LevelDB project, "LevelDB Implementation Notes,"
+  https://github.com/google/leveldb/blob/main/doc/impl.md, verified
+  2026-08-02.
+- Apache Cassandra project, "Compaction," Cassandra documentation,
+  https://cassandra.apache.org/doc/latest/cassandra/managing/operating/compaction/index.html,
+  verified 2026-08-02.
+- ScyllaDB project, "Choose a Compaction Strategy," ScyllaDB documentation,
+  https://docs.scylladb.com/manual/stable/architecture/compaction/compaction-strategies.html,
+  verified 2026-08-02.
+- Niv Dayan, Manos Athanassoulis, and Stratos Idreos, "Monkey. Optimal
+  Navigable Key-Value Store," Proceedings of the 2017 ACM International
+  Conference on Management of Data (SIGMOD 2017), engineering-judgement
+  cross-reference only, cited for the formal tiering-versus-leveling cost
+  model discussed in the literature; not independently re-verified for
+  this entry beyond confirming the paper's existence and venue via
+  standard bibliographic search, 2026-08-02.
+
 ## Code examples
 
 Each sample below builds a minimal LSM tree with an in-memory memtable, a
@@ -1253,35 +1285,3 @@ adding a new idea; real production LSM engines in the JVM ecosystem
 (Cassandra, HBase) are themselves large, long-lived C++ or Java codebases
 consumed as a dependency rather than reimplemented per project, which is the
 same point made in dimension 8's language-idiomatic notes.
-
-## 18. References
-
-- Patrick E. O'Neil, Edward Cheng, Dieter Gawlick, and Elizabeth J. O'Neil,
-  "The Log-Structured Merge-Tree (LSM-Tree)," Acta Informatica, volume 33,
-  issue 4, 1996, pages 351 to 385, cross-referenced via
-  https://dblp.org/rec/journals/acta/ONeilCGO96.html, verified 2026-08-02.
-- Siying Dong, Andrew Kryczka, Yanqin Jin, and Michael Stumm, "Evolution of
-  Development Priorities in Key-value Stores Serving Large-scale
-  Applications. The RocksDB Experience," 19th USENIX Conference on File
-  and Storage Technologies (FAST 21), 2021, pages 33 to 49, cross-referenced
-  via https://www.usenix.org/conference/fast21/presentation/dong, verified
-  2026-08-02.
-- RocksDB project, "RocksDB Tuning Guide," GitHub wiki,
-  https://github.com/facebook/rocksdb/wiki/RocksDB-Tuning-Guide, verified
-  2026-08-02.
-- LevelDB project, "LevelDB Implementation Notes,"
-  https://github.com/google/leveldb/blob/main/doc/impl.md, verified
-  2026-08-02.
-- Apache Cassandra project, "Compaction," Cassandra documentation,
-  https://cassandra.apache.org/doc/latest/cassandra/managing/operating/compaction/index.html,
-  verified 2026-08-02.
-- ScyllaDB project, "Choose a Compaction Strategy," ScyllaDB documentation,
-  https://docs.scylladb.com/manual/stable/architecture/compaction/compaction-strategies.html,
-  verified 2026-08-02.
-- Niv Dayan, Manos Athanassoulis, and Stratos Idreos, "Monkey. Optimal
-  Navigable Key-Value Store," Proceedings of the 2017 ACM International
-  Conference on Management of Data (SIGMOD 2017), engineering-judgement
-  cross-reference only, cited for the formal tiering-versus-leveling cost
-  model discussed in the literature; not independently re-verified for
-  this entry beyond confirming the paper's existence and venue via
-  standard bibliographic search, 2026-08-02.

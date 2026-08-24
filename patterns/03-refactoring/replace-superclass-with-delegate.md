@@ -739,6 +739,40 @@ delegate by bounded role, not by tenant-specific class names or raw storage
 keys. If serialization changes, confirm that new payloads do not expose the
 delegate's internal fields.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
+   edition. Addison-Wesley, 2018. Chapter 12, "Dealing with Inheritance."
+   Source for the catalog lineage and placement of the refactoring.
+2. Martin Fowler. "Replace Superclass with Delegate."
+   https://refactoring.com/catalog/replaceSuperclassWithDelegate.html
+   Verified 2026-08-02. Source for the canonical name and alias.
+3. Martin Fowler. "Catalog of Refactorings."
+   https://refactoring.com/catalog/index.html
+   Verified 2026-08-02. Source for catalog membership and index alias.
+4. JetBrains. "Replace inheritance with delegation." IntelliJ IDEA 2026.2 Help.
+   https://www.jetbrains.com/help/idea/replace-inheritance-with-delegation.html
+   Verified 2026-08-02. Source for IDE refactoring support and tool behavior.
+5. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   Chapter 4, "Structural Patterns." Source for Adapter and Decorator lineage.
+6. Oracle. *Java SE 21 API Specification*, `java.util.Collections`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html
+   Verified 2026-08-02. Source for collection wrappers backed by supplied
+   collections.
+7. Python Software Foundation. *Python 3.14 documentation*, `collections`,
+   section "`UserList` objects."
+   https://docs.python.org/3/library/collections.html
+   Verified 2026-08-02. Source for the `UserList` wrapper production use.
+8. The Go Authors. *Go package documentation*, `io`, `LimitReader`.
+   https://pkg.go.dev/io#LimitReader
+   Verified 2026-08-02. Source for the `LimitReader` wrapper production use.
+9. Steve Klabnik, Carol Nichols, and Rust community contributors. *The Rust
+   Programming Language*, chapter 18.2, "Using Trait Objects to Abstract over
+   Shared Behavior."
+   https://doc.rust-lang.org/book/ch18-02-trait-objects.html
+   Verified 2026-08-02. Source for the Rust trait-object language note.
+
 ## Code examples
 
 Three languages are used because they show the refactoring in different type
@@ -873,37 +907,3 @@ func main() {
 	fmt.Println(invoice.TotalCharacters())
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
-   edition. Addison-Wesley, 2018. Chapter 12, "Dealing with Inheritance."
-   Source for the catalog lineage and placement of the refactoring.
-2. Martin Fowler. "Replace Superclass with Delegate."
-   https://refactoring.com/catalog/replaceSuperclassWithDelegate.html
-   Verified 2026-08-02. Source for the canonical name and alias.
-3. Martin Fowler. "Catalog of Refactorings."
-   https://refactoring.com/catalog/index.html
-   Verified 2026-08-02. Source for catalog membership and index alias.
-4. JetBrains. "Replace inheritance with delegation." IntelliJ IDEA 2026.2 Help.
-   https://www.jetbrains.com/help/idea/replace-inheritance-with-delegation.html
-   Verified 2026-08-02. Source for IDE refactoring support and tool behavior.
-5. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   Chapter 4, "Structural Patterns." Source for Adapter and Decorator lineage.
-6. Oracle. *Java SE 21 API Specification*, `java.util.Collections`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html
-   Verified 2026-08-02. Source for collection wrappers backed by supplied
-   collections.
-7. Python Software Foundation. *Python 3.14 documentation*, `collections`,
-   section "`UserList` objects."
-   https://docs.python.org/3/library/collections.html
-   Verified 2026-08-02. Source for the `UserList` wrapper production use.
-8. The Go Authors. *Go package documentation*, `io`, `LimitReader`.
-   https://pkg.go.dev/io#LimitReader
-   Verified 2026-08-02. Source for the `LimitReader` wrapper production use.
-9. Steve Klabnik, Carol Nichols, and Rust community contributors. *The Rust
-   Programming Language*, chapter 18.2, "Using Trait Objects to Abstract over
-   Shared Behavior."
-   https://doc.rust-lang.org/book/ch18-02-trait-objects.html
-   Verified 2026-08-02. Source for the Rust trait-object language note.

@@ -873,6 +873,48 @@ risk, because the engineer calling that method in a new context has no way
 to predict, from the name alone, that personal data is being sent
 somewhere new.
 
+## 18. References
+
+1. Wikipedia contributors. "Principle of least astonishment".
+   https://en.wikipedia.org/wiki/Principle_of_least_astonishment
+   Verified 2026-08-02. Source for the 1967 PL/I Bulletin origin, the 1972
+   Multics-era formulation, and the summary of Raymond's Rule of Least
+   Surprise chapter used in dimension 1.
+2. Eric S. Raymond. *The Art of Unix Programming*. Addison-Wesley, 2003.
+   ISBN 0-13-142901-9. Chapter 1, section "Applying the Rule of Least
+   Surprise". Source of the formalized interface-design instruction quoted
+   in dimension 1, accessed via the summary at
+   https://en.wikipedia.org/wiki/Principle_of_least_astonishment, verified
+   2026-08-02.
+3. Bill Venners and Yukihiro Matsumoto. "The Philosophy of Ruby". Artima,
+   interview series. https://www.artima.com/articles/the-philosophy-of-ruby
+   Verified 2026-08-02. Source for Matsumoto's own clarification of "the
+   principle of least MY surprise" used in dimensions 1, 3, and 9.
+4. Stripe. API Reference, "Idempotent requests".
+   https://docs.stripe.com/api/idempotent_requests
+   Verified 2026-08-02. Source for the Idempotency-Key production use in
+   dimension 9.
+5. IETF. RFC 9110, "HTTP Semantics", section 9.2.1, "Safe Methods".
+   https://www.rfc-editor.org/rfc/rfc9110.html
+   Verified 2026-08-02. Source for the safe-methods production use in
+   dimension 9 and the discussion of idempotent and safe interfaces in
+   dimensions 8 and 15.
+6. Rust Project. "Rust API Guidelines", "Predictability" section.
+   https://rust-lang.github.io/api-guidelines/predictability.html
+   Verified 2026-08-02. Source for the smart-pointer inherent-method
+   restraint and the `unsafe`-naming convention discussed in dimensions 8
+   and 9.
+7. Python Software Foundation. PEP 20, "The Zen of Python".
+   https://peps.python.org/pep-0020/
+   Verified 2026-08-02. Source for "Explicit is better than implicit" and
+   "There should be one, and preferably only one, obvious way to do it",
+   used in the trade-off matrix in dimension 12.
+8. Nielsen Norman Group. "10 Usability Heuristics for User Interface
+   Design", heuristic 4, "Consistency and standards".
+   https://www.nngroup.com/articles/ten-usability-heuristics/
+   Verified 2026-08-02. Source for the user-interface-layer statement of
+   the principle referenced in dimension 2.
+
 ## Code examples
 
 Three languages, chosen because each demonstrates a different concrete
@@ -1039,45 +1081,3 @@ func main() {
 	fmt.Println(ok, err)
 }
 ```
-
-## 18. References
-
-1. Wikipedia contributors. "Principle of least astonishment".
-   https://en.wikipedia.org/wiki/Principle_of_least_astonishment
-   Verified 2026-08-02. Source for the 1967 PL/I Bulletin origin, the 1972
-   Multics-era formulation, and the summary of Raymond's Rule of Least
-   Surprise chapter used in dimension 1.
-2. Eric S. Raymond. *The Art of Unix Programming*. Addison-Wesley, 2003.
-   ISBN 0-13-142901-9. Chapter 1, section "Applying the Rule of Least
-   Surprise". Source of the formalized interface-design instruction quoted
-   in dimension 1, accessed via the summary at
-   https://en.wikipedia.org/wiki/Principle_of_least_astonishment, verified
-   2026-08-02.
-3. Bill Venners and Yukihiro Matsumoto. "The Philosophy of Ruby". Artima,
-   interview series. https://www.artima.com/articles/the-philosophy-of-ruby
-   Verified 2026-08-02. Source for Matsumoto's own clarification of "the
-   principle of least MY surprise" used in dimensions 1, 3, and 9.
-4. Stripe. API Reference, "Idempotent requests".
-   https://docs.stripe.com/api/idempotent_requests
-   Verified 2026-08-02. Source for the Idempotency-Key production use in
-   dimension 9.
-5. IETF. RFC 9110, "HTTP Semantics", section 9.2.1, "Safe Methods".
-   https://www.rfc-editor.org/rfc/rfc9110.html
-   Verified 2026-08-02. Source for the safe-methods production use in
-   dimension 9 and the discussion of idempotent and safe interfaces in
-   dimensions 8 and 15.
-6. Rust Project. "Rust API Guidelines", "Predictability" section.
-   https://rust-lang.github.io/api-guidelines/predictability.html
-   Verified 2026-08-02. Source for the smart-pointer inherent-method
-   restraint and the `unsafe`-naming convention discussed in dimensions 8
-   and 9.
-7. Python Software Foundation. PEP 20, "The Zen of Python".
-   https://peps.python.org/pep-0020/
-   Verified 2026-08-02. Source for "Explicit is better than implicit" and
-   "There should be one, and preferably only one, obvious way to do it",
-   used in the trade-off matrix in dimension 12.
-8. Nielsen Norman Group. "10 Usability Heuristics for User Interface
-   Design", heuristic 4, "Consistency and standards".
-   https://www.nngroup.com/articles/ten-usability-heuristics/
-   Verified 2026-08-02. Source for the user-interface-layer statement of
-   the principle referenced in dimension 2.

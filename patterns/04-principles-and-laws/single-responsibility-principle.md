@@ -840,6 +840,57 @@ reviewed for what personal data it touches without also reviewing whatever
 unrelated concern used to share its file, which makes a data-protection
 impact assessment tractable rather than automatically correct.
 
+## 18. References
+
+1. Wikipedia contributors. "Single-responsibility principle."
+   https://en.wikipedia.org/wiki/Single-responsibility_principle
+   Verified 2026-08-02. Source for Martin's "one reason to change" and
+   "gather together things that change for the same reasons" formulations,
+   and for the attribution of the underlying cohesion concept to Tom DeMarco
+   and Meilir Page-Jones.
+2. Tom DeMarco. *Structured Analysis and System Specification*. Yourdon
+   Press, 1979. Cited via the Wikipedia summary above as the earlier source
+   of the cohesion concept SRP builds on. Original chapter and page not
+   independently re-verified in this pass, cited at the level the summary
+   source supports.
+3. Meilir Page-Jones. *The Practical Guide to Structured Systems Design*.
+   Yourdon Press, 1988. Cited via the Wikipedia summary above alongside
+   DeMarco as the second source of the cohesion concept. Same caveat as
+   reference 2.
+4. Robert C. Martin. *Clean Architecture. A Craftsman's Guide to Software
+   Structure and Design*. Prentice Hall, 2017. ISBN 978-0-13-449416-6.
+   Chapter 7, "The Single Responsibility Principle." Source for the
+   later "actor" reframing of "reason to change," used in dimension 5.
+   Chapter number confirmed against the book's published table of contents
+   at the publisher and standard retail listings, page numbers not
+   independently re-verified in this pass.
+5. Martin Fowler. "AnemicDomainModel." martinfowler.com.
+   https://martinfowler.com/bliki/AnemicDomainModel.html
+   Verified 2026-08-02. Source for the Anemic Domain Model failure mode
+   described in dimensions 4, 10, and 11.
+6. Martin Fowler. *Patterns of Enterprise Application Architecture*.
+   Addison-Wesley, 2002. ISBN 0-321-12742-0. Cited alongside reference 5 as
+   the book-length treatment of domain modelling that the bliki entry
+   summarizes, not independently re-verified page by page in this pass.
+7. Wikipedia contributors. "Unix philosophy."
+   https://en.wikipedia.org/wiki/Unix_philosophy
+   Verified 2026-08-02. Source for Doug McIlroy's "write programs that do
+   one thing and do it well" and its attribution to Peter H. Salus, *A
+   Quarter Century of Unix*, Addison-Wesley, 1994.
+8. Oracle. *Java SE 21 API Specification*,
+   `java.nio.file.spi.FileSystemProvider`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/spi/FileSystemProvider.html
+   Verified 2026-08-02. Source for the one-URI-scheme-per-provider
+   production use in dimension 9.
+9. Kubernetes documentation. "Pods."
+   https://kubernetes.io/docs/concepts/workloads/pods/
+   Verified 2026-08-02. Source for the one-container-per-Pod default and
+   the tightly-coupled exception used in dimension 9.
+10. Microsoft. ".NET documentation, ASP.NET Core Middleware."
+    https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/
+    Verified 2026-08-02. Source for the middleware-pipeline production use
+    in dimension 9.
+
 ## Code examples
 
 Three languages chosen for different reasons. TypeScript shows the
@@ -1091,54 +1142,3 @@ declaration, which is Go's idiomatic way of expressing the interface-based
 variant from dimension 8. the calculator, the printer, and the store each
 have one reason to change, and the use case depends on the store only
 through the narrow interface, not the concrete in-memory type.
-
-## 18. References
-
-1. Wikipedia contributors. "Single-responsibility principle."
-   https://en.wikipedia.org/wiki/Single-responsibility_principle
-   Verified 2026-08-02. Source for Martin's "one reason to change" and
-   "gather together things that change for the same reasons" formulations,
-   and for the attribution of the underlying cohesion concept to Tom DeMarco
-   and Meilir Page-Jones.
-2. Tom DeMarco. *Structured Analysis and System Specification*. Yourdon
-   Press, 1979. Cited via the Wikipedia summary above as the earlier source
-   of the cohesion concept SRP builds on. Original chapter and page not
-   independently re-verified in this pass, cited at the level the summary
-   source supports.
-3. Meilir Page-Jones. *The Practical Guide to Structured Systems Design*.
-   Yourdon Press, 1988. Cited via the Wikipedia summary above alongside
-   DeMarco as the second source of the cohesion concept. Same caveat as
-   reference 2.
-4. Robert C. Martin. *Clean Architecture. A Craftsman's Guide to Software
-   Structure and Design*. Prentice Hall, 2017. ISBN 978-0-13-449416-6.
-   Chapter 7, "The Single Responsibility Principle." Source for the
-   later "actor" reframing of "reason to change," used in dimension 5.
-   Chapter number confirmed against the book's published table of contents
-   at the publisher and standard retail listings, page numbers not
-   independently re-verified in this pass.
-5. Martin Fowler. "AnemicDomainModel." martinfowler.com.
-   https://martinfowler.com/bliki/AnemicDomainModel.html
-   Verified 2026-08-02. Source for the Anemic Domain Model failure mode
-   described in dimensions 4, 10, and 11.
-6. Martin Fowler. *Patterns of Enterprise Application Architecture*.
-   Addison-Wesley, 2002. ISBN 0-321-12742-0. Cited alongside reference 5 as
-   the book-length treatment of domain modelling that the bliki entry
-   summarizes, not independently re-verified page by page in this pass.
-7. Wikipedia contributors. "Unix philosophy."
-   https://en.wikipedia.org/wiki/Unix_philosophy
-   Verified 2026-08-02. Source for Doug McIlroy's "write programs that do
-   one thing and do it well" and its attribution to Peter H. Salus, *A
-   Quarter Century of Unix*, Addison-Wesley, 1994.
-8. Oracle. *Java SE 21 API Specification*,
-   `java.nio.file.spi.FileSystemProvider`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/spi/FileSystemProvider.html
-   Verified 2026-08-02. Source for the one-URI-scheme-per-provider
-   production use in dimension 9.
-9. Kubernetes documentation. "Pods."
-   https://kubernetes.io/docs/concepts/workloads/pods/
-   Verified 2026-08-02. Source for the one-container-per-Pod default and
-   the tightly-coupled exception used in dimension 9.
-10. Microsoft. ".NET documentation, ASP.NET Core Middleware."
-    https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/
-    Verified 2026-08-02. Source for the middleware-pipeline production use
-    in dimension 9.

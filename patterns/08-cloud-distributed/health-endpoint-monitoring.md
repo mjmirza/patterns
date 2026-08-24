@@ -821,6 +821,35 @@ unauthenticated tier is a real security decision, not a cosmetic one, and
 the safe default is to expose the least detail that still lets the
 infrastructure make its routing and restart decisions correctly.
 
+## 18. References
+
+- Microsoft patterns and practices group, *Cloud Design Patterns,
+  Prescriptive Architecture Guidance for Cloud Applications*, January 2014,
+  Health Endpoint Monitoring Pattern chapter,
+  [learn.microsoft.com, archived guide](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/dn568099(v=pandp.10)),
+  verified 2026-08-02.
+- Microsoft, "Health Endpoint Monitoring pattern," Azure Architecture
+  Center, [learn.microsoft.com](https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring),
+  verified 2026-08-02.
+- Kubernetes documentation, "Configure Liveness, Readiness and Startup
+  Probes," [kubernetes.io](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/),
+  verified 2026-08-02.
+- Amazon Web Services, "Health checks for your Application Load Balancer
+  target groups,"
+  [docs.aws.amazon.com](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-health-checks.html),
+  verified 2026-08-02.
+- VMware Tanzu and Spring, "Endpoints," Spring Boot Reference Documentation,
+  health endpoint and Kubernetes probes section,
+  [docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html),
+  verified 2026-08-02.
+- Docker Inc, "Dockerfile reference," HEALTHCHECK instruction,
+  [docs.docker.com](https://docs.docker.com/reference/dockerfile/#healthcheck),
+  verified 2026-08-02.
+- Microsoft, "Cloud design patterns," Azure Architecture Center pattern
+  catalog index,
+  [learn.microsoft.com](https://learn.microsoft.com/en-us/azure/architecture/patterns/),
+  verified 2026-08-02.
+
 ## Code examples
 
 Three implementations follow, each demonstrating a different facet of the
@@ -1209,32 +1238,3 @@ three shown already cover three distinct implementation techniques this
 entry names, a raw async runtime, a thread-and-lock based server, and a
 statically typed concurrent server, and a fourth sample would repeat one of
 those three techniques in different syntax rather than teach a new one.
-
-## 18. References
-
-- Microsoft patterns and practices group, *Cloud Design Patterns,
-  Prescriptive Architecture Guidance for Cloud Applications*, January 2014,
-  Health Endpoint Monitoring Pattern chapter,
-  [learn.microsoft.com, archived guide](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/dn568099(v=pandp.10)),
-  verified 2026-08-02.
-- Microsoft, "Health Endpoint Monitoring pattern," Azure Architecture
-  Center, [learn.microsoft.com](https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring),
-  verified 2026-08-02.
-- Kubernetes documentation, "Configure Liveness, Readiness and Startup
-  Probes," [kubernetes.io](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/),
-  verified 2026-08-02.
-- Amazon Web Services, "Health checks for your Application Load Balancer
-  target groups,"
-  [docs.aws.amazon.com](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-health-checks.html),
-  verified 2026-08-02.
-- VMware Tanzu and Spring, "Endpoints," Spring Boot Reference Documentation,
-  health endpoint and Kubernetes probes section,
-  [docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html),
-  verified 2026-08-02.
-- Docker Inc, "Dockerfile reference," HEALTHCHECK instruction,
-  [docs.docker.com](https://docs.docker.com/reference/dockerfile/#healthcheck),
-  verified 2026-08-02.
-- Microsoft, "Cloud design patterns," Azure Architecture Center pattern
-  catalog index,
-  [learn.microsoft.com](https://learn.microsoft.com/en-us/azure/architecture/patterns/),
-  verified 2026-08-02.

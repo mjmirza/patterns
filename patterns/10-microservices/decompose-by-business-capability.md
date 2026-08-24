@@ -678,6 +678,17 @@ reaches every copy, not only the capability of record, or a GDPR deletion
 request satisfied against the source capability can leave stale personal
 data sitting in a downstream capability's event-derived store.
 
+## 18. References
+
+1. Chris Richardson, [Pattern. Decompose by business capability](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html), microservices.io, verified 2026-08-02.
+2. Chris Richardson, *Microservices Patterns. With Examples in Java*, Manning Publications, 2018, chapter 2, "Decomposition strategies".
+3. Martin Fowler and James Lewis, [Microservices](https://martinfowler.com/articles/microservices.html), martinfowler.com, 2014, verified 2026-08-02.
+4. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of Software*, Addison-Wesley, 2003, ISBN 978-032-112521-7, part on Bounded Context and Ubiquitous Language, checked against a Wikipedia summary of the book's key concepts, verified 2026-08-02.
+5. Matthew Skelton and Manuel Pais, *Team Topologies. Organizing Business and Technology Teams for Fast Flow*, IT Revolution Press, 2019, chapters on stream-aligned teams and cognitive load.
+6. Steve Yegge, [Google Platforms Rant](https://gist.github.com/chitchcock/1281611), publicly republished gist recording the 2006 internal memo, verified 2026-08-02, describing the Amazon service-interface mandate attributed to Jeff Bezos.
+7. Sam Newman, *Building Microservices. Designing Fine-Grained Systems*, 2nd edition, O'Reilly Media, 2021, chapter 2, "How to Model Microservices".
+8. Melvin E. Conway, "How Do Committees Invent?", Datamation, April 1968, cited as Conway's Law by Fowler and Lewis in reference 3 above.
+
 ## Code examples
 
 Three languages, each showing the same shape, two capability services with
@@ -896,14 +907,3 @@ func main() {
 	}
 }
 ```
-
-## 18. References
-
-1. Chris Richardson, [Pattern. Decompose by business capability](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html), microservices.io, verified 2026-08-02.
-2. Chris Richardson, *Microservices Patterns. With Examples in Java*, Manning Publications, 2018, chapter 2, "Decomposition strategies".
-3. Martin Fowler and James Lewis, [Microservices](https://martinfowler.com/articles/microservices.html), martinfowler.com, 2014, verified 2026-08-02.
-4. Eric Evans, *Domain-Driven Design. Tackling Complexity in the Heart of Software*, Addison-Wesley, 2003, ISBN 978-032-112521-7, part on Bounded Context and Ubiquitous Language, checked against a Wikipedia summary of the book's key concepts, verified 2026-08-02.
-5. Matthew Skelton and Manuel Pais, *Team Topologies. Organizing Business and Technology Teams for Fast Flow*, IT Revolution Press, 2019, chapters on stream-aligned teams and cognitive load.
-6. Steve Yegge, [Google Platforms Rant](https://gist.github.com/chitchcock/1281611), publicly republished gist recording the 2006 internal memo, verified 2026-08-02, describing the Amazon service-interface mandate attributed to Jeff Bezos.
-7. Sam Newman, *Building Microservices. Designing Fine-Grained Systems*, 2nd edition, O'Reilly Media, 2021, chapter 2, "How to Model Microservices".
-8. Melvin E. Conway, "How Do Committees Invent?", Datamation, April 1968, cited as Conway's Law by Fowler and Lewis in reference 3 above.

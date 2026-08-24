@@ -710,6 +710,53 @@ This is a narrow, low-severity concern relative to the erasure issue above,
 but worth naming. An API response that includes a raw internal transaction
 identifier is exposing more than the value of the row.
 
+## 18. References
+
+1. Reed, D. P. "Naming and Synchronization in a Decentralized Computer
+   System." PhD thesis, MIT, 1978. Foundational proposal of timestamp-ordered
+   multiversion storage.
+2. Bernstein, P. A. and Goodman, N. "Multiversion Concurrency Control,
+   Theory and Algorithms." ACM Computing Surveys, Vol. 15, No. 4, December
+   1983. The formalizing survey most texts cite for the MVCC name and
+   correctness proofs.
+3. PostgreSQL Global Development Group. "Chapter 13. Concurrency Control,"
+   PostgreSQL Documentation, current version.
+   https://www.postgresql.org/docs/current/mvcc-intro.html
+   Verified 2026-08-02.
+4. PostgreSQL Global Development Group. "Serializable Isolation Level,"
+   PostgreSQL Documentation, current version.
+   https://www.postgresql.org/docs/current/transaction-iso.html#XACT-SERIALIZABLE
+   Verified 2026-08-02.
+5. PostgreSQL Global Development Group. "Routine Vacuuming," PostgreSQL
+   Documentation, current version.
+   https://www.postgresql.org/docs/current/routine-vacuuming.html
+   Verified 2026-08-02.
+6. PostgreSQL Global Development Group. "Preventing Transaction ID Wraparound
+   Failures," PostgreSQL Documentation, current version.
+   https://www.postgresql.org/docs/current/routine-vacuuming.html#VACUUM-FOR-WRAPAROUND
+   Verified 2026-08-02.
+7. Oracle Corporation. "Data Concurrency and Consistency," Oracle Database
+   19c Database Concepts.
+   https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html
+   Verified 2026-08-02.
+8. Oracle Corporation. MySQL 8.4 Reference Manual, "InnoDB Multi-Versioning."
+   https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html
+   Verified 2026-08-02.
+9. Cockroach Labs. "Storage Layer," CockroachDB Docs, stable release.
+   https://docs.cockroachlabs.com/docs/stable/architecture/storage-layer
+   Verified 2026-08-02.
+10. Microsoft. "Snapshot Isolation in SQL Server," SQL Server Documentation.
+    https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server
+    Judgement note. Title and general content confirmed against Microsoft
+    Learn's SQL Server isolation-level documentation family. Not re-fetched
+    live in this session, treat the specific quoted phrasing as
+    representative rather than an exact quote.
+11. SQLite Consortium. "Write-Ahead Logging," SQLite Documentation.
+    https://sqlite.org/wal.html
+    Judgement note. Cited for the general claim that SQLite's default
+    rollback-journal mode is not MVCC and WAL mode is the closer analogue.
+    Not re-fetched live in this session.
+
 ## Code examples
 
 Three languages, each compiled or run against the exact source shown. Go and
@@ -907,50 +954,3 @@ fn main() {
 Compiled with `rustc -O mvcc.rs -o mvcc_rs` and run as `./mvcc_rs`. Output.
 `Some(100)`. All three implementations were compiled or run against these
 exact sources during authoring of this entry, not hand-verified only.
-
-## 18. References
-
-1. Reed, D. P. "Naming and Synchronization in a Decentralized Computer
-   System." PhD thesis, MIT, 1978. Foundational proposal of timestamp-ordered
-   multiversion storage.
-2. Bernstein, P. A. and Goodman, N. "Multiversion Concurrency Control,
-   Theory and Algorithms." ACM Computing Surveys, Vol. 15, No. 4, December
-   1983. The formalizing survey most texts cite for the MVCC name and
-   correctness proofs.
-3. PostgreSQL Global Development Group. "Chapter 13. Concurrency Control,"
-   PostgreSQL Documentation, current version.
-   https://www.postgresql.org/docs/current/mvcc-intro.html
-   Verified 2026-08-02.
-4. PostgreSQL Global Development Group. "Serializable Isolation Level,"
-   PostgreSQL Documentation, current version.
-   https://www.postgresql.org/docs/current/transaction-iso.html#XACT-SERIALIZABLE
-   Verified 2026-08-02.
-5. PostgreSQL Global Development Group. "Routine Vacuuming," PostgreSQL
-   Documentation, current version.
-   https://www.postgresql.org/docs/current/routine-vacuuming.html
-   Verified 2026-08-02.
-6. PostgreSQL Global Development Group. "Preventing Transaction ID Wraparound
-   Failures," PostgreSQL Documentation, current version.
-   https://www.postgresql.org/docs/current/routine-vacuuming.html#VACUUM-FOR-WRAPAROUND
-   Verified 2026-08-02.
-7. Oracle Corporation. "Data Concurrency and Consistency," Oracle Database
-   19c Database Concepts.
-   https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html
-   Verified 2026-08-02.
-8. Oracle Corporation. MySQL 8.4 Reference Manual, "InnoDB Multi-Versioning."
-   https://dev.mysql.com/doc/refman/8.4/en/innodb-multi-versioning.html
-   Verified 2026-08-02.
-9. Cockroach Labs. "Storage Layer," CockroachDB Docs, stable release.
-   https://docs.cockroachlabs.com/docs/stable/architecture/storage-layer
-   Verified 2026-08-02.
-10. Microsoft. "Snapshot Isolation in SQL Server," SQL Server Documentation.
-    https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server
-    Judgement note. Title and general content confirmed against Microsoft
-    Learn's SQL Server isolation-level documentation family. Not re-fetched
-    live in this session, treat the specific quoted phrasing as
-    representative rather than an exact quote.
-11. SQLite Consortium. "Write-Ahead Logging," SQLite Documentation.
-    https://sqlite.org/wal.html
-    Judgement note. Cited for the general claim that SQLite's default
-    rollback-journal mode is not MVCC and WAL mode is the closer analogue.
-    Not re-fetched live in this session.

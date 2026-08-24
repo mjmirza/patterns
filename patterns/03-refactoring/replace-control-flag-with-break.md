@@ -722,6 +722,46 @@ Privacy implications.
 - Early exit can also leave data unredacted if redaction used to run in the
   loop tail. Move redaction before every exit or into a cleanup phase.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*.
+   Addison-Wesley, 1999. Page 245, "Remove Control Flag." Page number
+   confirmed by Fowler's second edition change note.
+2. Martin Fowler. "Replace Control Flag with Break." Refactoring catalog.
+   https://refactoring.com/catalog/replaceControlFlagWithBreak.html
+   Verified 2026-08-02. Source for the current name, alias, and catalog shape.
+3. Martin Fowler. "Changes for the 2nd Edition of Refactoring." 05 September
+   2018.
+   https://martinfowler.com/articles/refactoring-2nd-changes.html
+   Verified 2026-08-02. Source for the first edition page number and the
+   replacement naming in the web edition.
+4. MDN Web Docs. "break." JavaScript reference.
+   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break
+   Verified 2026-08-02. Source for JavaScript `break` semantics and labelled
+   `break` behavior.
+5. Python Software Foundation. *Python 3.14 Language Reference*, section 7.9,
+   "The break statement."
+   https://docs.python.org/3/reference/simple_stmts.html#the-break-statement
+   Verified 2026-08-02. Source for Python `break`, loop `else`, and `finally`
+   behavior.
+6. The Go Authors. *The Go Programming Language Specification*, "Break
+   statements."
+   https://go.dev/ref/spec#Break_statements
+   Verified 2026-08-02. Source for Go `break` and labelled `break` behavior.
+7. The Rust Project Developers. *The Rust Reference*, "Loop expressions",
+   "`break` expressions."
+   https://doc.rust-lang.org/reference/expressions/loop-expr.html#break-expressions
+   Verified 2026-08-02. Source for Rust `break` and labelled loop behavior.
+8. Microsoft. *TypeScript*, `src/compiler/scanner.ts`.
+   https://github.com/microsoft/TypeScript/blob/94b4f8b79e370020cb31995e8fb0b78f9ba94349/src/compiler/scanner.ts
+   Verified 2026-08-20. Source for the TypeScript compiler production use.
+9. Python Software Foundation. *CPython*, `Lib/tokenize.py`.
+   https://github.com/python/cpython/blob/main/Lib/tokenize.py
+   Verified 2026-08-02. Source for the CPython tokenizer production use.
+10. The Go Authors. *Go standard library*, `encoding/csv/reader.go`.
+    https://github.com/golang/go/blob/master/src/encoding/csv/reader.go
+    Verified 2026-08-02. Source for the CSV reader production use.
+
 ## Code examples
 
 The examples are intentionally small. TypeScript shows the common search loop.
@@ -837,43 +877,3 @@ func main() {
 	fmt.Println(cell.Row, cell.Col)
 }
 ```
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*.
-   Addison-Wesley, 1999. Page 245, "Remove Control Flag." Page number
-   confirmed by Fowler's second edition change note.
-2. Martin Fowler. "Replace Control Flag with Break." Refactoring catalog.
-   https://refactoring.com/catalog/replaceControlFlagWithBreak.html
-   Verified 2026-08-02. Source for the current name, alias, and catalog shape.
-3. Martin Fowler. "Changes for the 2nd Edition of Refactoring." 05 September
-   2018.
-   https://martinfowler.com/articles/refactoring-2nd-changes.html
-   Verified 2026-08-02. Source for the first edition page number and the
-   replacement naming in the web edition.
-4. MDN Web Docs. "break." JavaScript reference.
-   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break
-   Verified 2026-08-02. Source for JavaScript `break` semantics and labelled
-   `break` behavior.
-5. Python Software Foundation. *Python 3.14 Language Reference*, section 7.9,
-   "The break statement."
-   https://docs.python.org/3/reference/simple_stmts.html#the-break-statement
-   Verified 2026-08-02. Source for Python `break`, loop `else`, and `finally`
-   behavior.
-6. The Go Authors. *The Go Programming Language Specification*, "Break
-   statements."
-   https://go.dev/ref/spec#Break_statements
-   Verified 2026-08-02. Source for Go `break` and labelled `break` behavior.
-7. The Rust Project Developers. *The Rust Reference*, "Loop expressions",
-   "`break` expressions."
-   https://doc.rust-lang.org/reference/expressions/loop-expr.html#break-expressions
-   Verified 2026-08-02. Source for Rust `break` and labelled loop behavior.
-8. Microsoft. *TypeScript*, `src/compiler/scanner.ts`.
-   https://github.com/microsoft/TypeScript/blob/94b4f8b79e370020cb31995e8fb0b78f9ba94349/src/compiler/scanner.ts
-   Verified 2026-08-20. Source for the TypeScript compiler production use.
-9. Python Software Foundation. *CPython*, `Lib/tokenize.py`.
-   https://github.com/python/cpython/blob/main/Lib/tokenize.py
-   Verified 2026-08-02. Source for the CPython tokenizer production use.
-10. The Go Authors. *Go standard library*, `encoding/csv/reader.go`.
-    https://github.com/golang/go/blob/master/src/encoding/csv/reader.go
-    Verified 2026-08-02. Source for the CSV reader production use.

@@ -765,6 +765,34 @@ reads wall-clock time, random numbers, mutable process state, or network data,
 then two legal groupings may return different values. That breaks correctness
 and can create security gaps when retries or shard counts are attacker-visible.
 
+## 18. References
+
+- P. B. Bhattacharya, S. K. Jain, and S. R. Nagpaul. *Basic Abstract Algebra*.
+  Cambridge University Press, 1994. Chapter 4, "Groups", pages 61 to 90 as
+  listed by Cambridge Core. URL verified 2026-08-02:
+  https://www.cambridge.org/core/books/abs/basic-abstract-algebra/groups/B094AF8C8F6569FADB7BA8AF290AD852
+- Saunders Mac Lane. *Categories for the Working Mathematician*. Second
+  edition. Springer, 1998. Chapter VI section 4, "Words and Free Semigroups";
+  chapter VII section 3, "Monoids". Cited by chapter and section only.
+- Haskell `base` documentation. `Data.Semigroup`, `base-4.22.0.0`. URL
+  verified 2026-08-02:
+  https://hackage.haskell.org/package/base/docs/Data-Semigroup.html
+- Typelevel Cats documentation. `Semigroup`. URL verified 2026-08-02:
+  https://typelevel.org/cats/typeclasses/semigroup.html
+- fp-ts documentation. `Semigroup.ts`. URL verified 2026-08-02:
+  https://gcanti.github.io/fp-ts/modules/Semigroup.ts.html
+- Twitter Algebird documentation. Home page. URL verified 2026-08-02:
+  https://twitter.github.io/algebird/
+- Twitter Algebird documentation. `Min and Max`. URL verified 2026-08-02:
+  https://twitter.github.io/algebird/datatypes/min_and_max.html
+- Twitter Algebird documentation. `First and Last`. URL verified 2026-08-02:
+  https://twitter.github.io/algebird/datatypes/first_and_last.html
+- Twitter Algebird documentation. `Batched`. URL verified 2026-08-02:
+  https://twitter.github.io/algebird/datatypes/summer/batched.html
+- Oracle Java SE 21 API documentation. `java.util.stream.Stream`. URL verified
+  2026-08-02:
+  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html
+
 ## Code examples
 
 The examples are intentionally small. They model validation error accumulation,
@@ -898,31 +926,3 @@ func main() {
 	fmt.Println(ReduceNonEmpty(a, []Patch{b, c}, patches).Ops)
 }
 ```
-
-## 18. References
-
-- P. B. Bhattacharya, S. K. Jain, and S. R. Nagpaul. *Basic Abstract Algebra*.
-  Cambridge University Press, 1994. Chapter 4, "Groups", pages 61 to 90 as
-  listed by Cambridge Core. URL verified 2026-08-02:
-  https://www.cambridge.org/core/books/abs/basic-abstract-algebra/groups/B094AF8C8F6569FADB7BA8AF290AD852
-- Saunders Mac Lane. *Categories for the Working Mathematician*. Second
-  edition. Springer, 1998. Chapter VI section 4, "Words and Free Semigroups";
-  chapter VII section 3, "Monoids". Cited by chapter and section only.
-- Haskell `base` documentation. `Data.Semigroup`, `base-4.22.0.0`. URL
-  verified 2026-08-02:
-  https://hackage.haskell.org/package/base/docs/Data-Semigroup.html
-- Typelevel Cats documentation. `Semigroup`. URL verified 2026-08-02:
-  https://typelevel.org/cats/typeclasses/semigroup.html
-- fp-ts documentation. `Semigroup.ts`. URL verified 2026-08-02:
-  https://gcanti.github.io/fp-ts/modules/Semigroup.ts.html
-- Twitter Algebird documentation. Home page. URL verified 2026-08-02:
-  https://twitter.github.io/algebird/
-- Twitter Algebird documentation. `Min and Max`. URL verified 2026-08-02:
-  https://twitter.github.io/algebird/datatypes/min_and_max.html
-- Twitter Algebird documentation. `First and Last`. URL verified 2026-08-02:
-  https://twitter.github.io/algebird/datatypes/first_and_last.html
-- Twitter Algebird documentation. `Batched`. URL verified 2026-08-02:
-  https://twitter.github.io/algebird/datatypes/summer/batched.html
-- Oracle Java SE 21 API documentation. `java.util.stream.Stream`. URL verified
-  2026-08-02:
-  https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html

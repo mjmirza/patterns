@@ -600,6 +600,33 @@ it is a data-provisioning technique for tests rather than a runtime
 mechanism, and inventing a broader security claim for it here would not be
 honest.
 
+## 18. References
+
+1. Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
+   Addison-Wesley, 2007, chapter 11 (test data provision strategies,
+   Literal Value, Generated Value, Derived Value) and chapter 18 (Test
+   Logic in Production, the coincidental correctness discussion).
+2. Nat Pryce, "Test Data Builders. an alternative to the Object Mother
+   pattern", published 2007. The live site is unreachable (connection
+   refused domain-wide), archived copy verified 2026-08-04.
+   http://web.archive.org/web/20260801032913/http://www.natpryce.com/articles/000714.html
+3. Faker (Python) documentation, "Overview", verified 2026-08-04.
+   https://faker.readthedocs.io/en/master/
+4. faker-js documentation, "Introduction", verified 2026-08-04.
+   https://fakerjs.dev/guide/
+5. DiUS `java-faker` repository, "README", verified 2026-08-04.
+   https://github.com/DiUS/java-faker
+6. Hypothesis documentation, "Quickstart", verified 2026-08-04.
+   https://hypothesis.readthedocs.io/en/latest/quickstart.html
+7. Koen Claessen and John Hughes, "QuickCheck. A Lightweight Tool for
+   Random Testing of Haskell Programs", Proceedings of the Fifth ACM
+   SIGPLAN International Conference on Functional Programming (ICFP 2000),
+   pages 268 to 279.
+8. Wikipedia contributors, "Universally unique identifier", verified
+   2026-08-04. https://en.wikipedia.org/wiki/Universally_unique_identifier
+9. Python documentation, "random. Generate pseudo-random numbers",
+   verified 2026-08-04. https://docs.python.org/3/library/random.html
+
 ## Code examples
 
 Each example builds a small generator function with a pinned starting state
@@ -731,30 +758,3 @@ func main() {
 	fmt.Println("Go generated-value tests passed")
 }
 ```
-
-## 18. References
-
-1. Gerard Meszaros, *xUnit Test Patterns. Refactoring Test Code*,
-   Addison-Wesley, 2007, chapter 11 (test data provision strategies,
-   Literal Value, Generated Value, Derived Value) and chapter 18 (Test
-   Logic in Production, the coincidental correctness discussion).
-2. Nat Pryce, "Test Data Builders. an alternative to the Object Mother
-   pattern", published 2007. The live site is unreachable (connection
-   refused domain-wide), archived copy verified 2026-08-04.
-   http://web.archive.org/web/20260801032913/http://www.natpryce.com/articles/000714.html
-3. Faker (Python) documentation, "Overview", verified 2026-08-04.
-   https://faker.readthedocs.io/en/master/
-4. faker-js documentation, "Introduction", verified 2026-08-04.
-   https://fakerjs.dev/guide/
-5. DiUS `java-faker` repository, "README", verified 2026-08-04.
-   https://github.com/DiUS/java-faker
-6. Hypothesis documentation, "Quickstart", verified 2026-08-04.
-   https://hypothesis.readthedocs.io/en/latest/quickstart.html
-7. Koen Claessen and John Hughes, "QuickCheck. A Lightweight Tool for
-   Random Testing of Haskell Programs", Proceedings of the Fifth ACM
-   SIGPLAN International Conference on Functional Programming (ICFP 2000),
-   pages 268 to 279.
-8. Wikipedia contributors, "Universally unique identifier", verified
-   2026-08-04. https://en.wikipedia.org/wiki/Universally_unique_identifier
-9. Python documentation, "random. Generate pseudo-random numbers",
-   verified 2026-08-04. https://docs.python.org/3/library/random.html

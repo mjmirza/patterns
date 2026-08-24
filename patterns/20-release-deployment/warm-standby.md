@@ -109,6 +109,12 @@ Cross-region database replication lag is tracked exactly as it is for Pilot Ligh
 
 Because the secondary region's compute tier is genuinely running and, in the traffic-shadowed variant, may handle real production requests, it carries the full production security posture at all times, patching, access control, network policy, not a reduced posture appropriate to an idle environment. The secondary's data tier holds a full, current copy of production data continuously, the same encryption-at-rest, encryption-in-transit, and data-residency obligations as the primary apply without exception. IAM roles, credentials, and secrets provisioned for the secondary region's live fleet must be managed and rotated on the same schedule as the primary's, a live environment that receives less day-to-day attention than the primary is exactly where stale credentials or drifted access policy tend to accumulate unnoticed.
 
+## References
+
+- Amazon Web Services, AWS Well-Architected Framework, Reliability Pillar, REL13-BP02 Use defined recovery strategies to meet the recovery objectives, Warm standby definition and its distinction from Pilot Light, https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html
+- Amazon Web Services, Disaster Recovery of Workloads on AWS, Recovery in the Cloud, Warm Standby section, https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html
+- Microsoft, Azure Well-Architected Framework, Develop a disaster recovery plan for multi-region deployments, active-passive warm standby, https://learn.microsoft.com/en-us/azure/well-architected/design-guides/disaster-recovery
+
 ## Code examples
 
 ### Swift
@@ -220,9 +226,3 @@ class WarmStandbyController:
     def scale_back_to_steady_state(self) -> None:
         self._fleet.current_instance_count = self._fleet.steady_state_instance_count
 ```
-
-## References
-
-- Amazon Web Services, AWS Well-Architected Framework, Reliability Pillar, REL13-BP02 Use defined recovery strategies to meet the recovery objectives, Warm standby definition and its distinction from Pilot Light, https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_planning_for_recovery_disaster_recovery.html
-- Amazon Web Services, Disaster Recovery of Workloads on AWS, Recovery in the Cloud, Warm Standby section, https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html
-- Microsoft, Azure Well-Architected Framework, Develop a disaster recovery plan for multi-region deployments, active-passive warm standby, https://learn.microsoft.com/en-us/azure/well-architected/design-guides/disaster-recovery

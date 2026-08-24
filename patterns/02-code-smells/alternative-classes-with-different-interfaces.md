@@ -810,6 +810,52 @@ method inherits from its own data handling**, which this entry does not have
 grounds to generalise about, since the smell is name-and-shape level and says
 nothing about what data either method actually touches.
 
+## 18. References
+
+1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
+   edition. Addison-Wesley, 2018. ISBN 978-0134757599. Chapter 3, "Bad Smells
+   in Code" (credited in the book's front matter to Kent Beck), section
+   "Alternative Classes with Different Interfaces". Primary source for the
+   smell's name and origin. Not independently page-verified for this entry;
+   the chapter and section are confirmed via the two independent secondary
+   summaries listed as items 2 and 3 below, both of which name this exact
+   book and edition as their source.
+2. sammancoaching.org. "Alternative Classes with Different Interfaces".
+   https://sammancoaching.org/code_smells/alternative_classes_different_interfaces.html
+   Verified 2026-08-03. Source for the definition quoted in dimensions 1 and
+   8, and for confirming the 2nd edition attribution.
+3. codesmells.org. "Alternative Classes with Different Interfaces".
+   https://www.codesmells.org/smells/alternative-classes-with-different-interfaces
+   Verified 2026-08-03. Source for the Snowman and Zombie illustrative
+   example referenced in dimension 1, and for the 1999 first-edition
+   attribution and ISBN.
+4. refactoring-assistant.github.io. "Alternative Classes With Different
+   Interfaces".
+   https://refactoring-assistant.github.io/object-oriented-abusers/alternative-classes-with-different-interfaces
+   Verified 2026-08-03. Source for the "Object-Oriented Abusers" category
+   label used by this and other derivative catalogs, and for the named
+   Rename Method, Extract Superclass, and delete-the-duplicate fix
+   techniques referenced in dimensions 1 and 8.
+5. Oracle. *Java SE 21 API Specification*, `java.util.Iterator`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Iterator.html
+   Verified 2026-08-03. Source for the Enumeration versus Iterator
+   production use in dimension 9.
+6. Oracle. *The Java Tutorials*, "Legacy File I/O Code".
+   https://docs.oracle.com/javase/tutorial/essential/io/legacy.html
+   Verified 2026-08-03. Source for the `java.io.File` versus
+   `java.nio.file.Path` production use in dimension 9.
+7. Python Software Foundation. *Python 3 documentation*, `pathlib`.
+   Object-oriented filesystem paths.
+   https://docs.python.org/3/library/pathlib.html
+   Verified 2026-08-03. Source for the `pathlib.Path` versus `os.path`
+   production use in dimension 9, including the explicit non-drop-in-
+   replacement caveat referenced in dimensions 11 and 15.
+8. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design
+   Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
+   1994. ISBN 0-201-63361-2. Cited only for the Factory Method
+   cross-references in dimensions 4, 13, and 15, not for any claim about this
+   entry's own smell.
+
 ## Code examples
 
 Four languages, chosen to show the fix under three different type
@@ -1046,49 +1092,3 @@ This is included as a short note rather than a full before-and-after example
 because it would otherwise duplicate the TypeScript example's structural
 point without adding a new idea, per the entry's stated reason for omitting a
 full Rust example above.
-
-## 18. References
-
-1. Martin Fowler. *Refactoring. Improving the Design of Existing Code*, 2nd
-   edition. Addison-Wesley, 2018. ISBN 978-0134757599. Chapter 3, "Bad Smells
-   in Code" (credited in the book's front matter to Kent Beck), section
-   "Alternative Classes with Different Interfaces". Primary source for the
-   smell's name and origin. Not independently page-verified for this entry;
-   the chapter and section are confirmed via the two independent secondary
-   summaries listed as items 2 and 3 below, both of which name this exact
-   book and edition as their source.
-2. sammancoaching.org. "Alternative Classes with Different Interfaces".
-   https://sammancoaching.org/code_smells/alternative_classes_different_interfaces.html
-   Verified 2026-08-03. Source for the definition quoted in dimensions 1 and
-   8, and for confirming the 2nd edition attribution.
-3. codesmells.org. "Alternative Classes with Different Interfaces".
-   https://www.codesmells.org/smells/alternative-classes-with-different-interfaces
-   Verified 2026-08-03. Source for the Snowman and Zombie illustrative
-   example referenced in dimension 1, and for the 1999 first-edition
-   attribution and ISBN.
-4. refactoring-assistant.github.io. "Alternative Classes With Different
-   Interfaces".
-   https://refactoring-assistant.github.io/object-oriented-abusers/alternative-classes-with-different-interfaces
-   Verified 2026-08-03. Source for the "Object-Oriented Abusers" category
-   label used by this and other derivative catalogs, and for the named
-   Rename Method, Extract Superclass, and delete-the-duplicate fix
-   techniques referenced in dimensions 1 and 8.
-5. Oracle. *Java SE 21 API Specification*, `java.util.Iterator`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Iterator.html
-   Verified 2026-08-03. Source for the Enumeration versus Iterator
-   production use in dimension 9.
-6. Oracle. *The Java Tutorials*, "Legacy File I/O Code".
-   https://docs.oracle.com/javase/tutorial/essential/io/legacy.html
-   Verified 2026-08-03. Source for the `java.io.File` versus
-   `java.nio.file.Path` production use in dimension 9.
-7. Python Software Foundation. *Python 3 documentation*, `pathlib`.
-   Object-oriented filesystem paths.
-   https://docs.python.org/3/library/pathlib.html
-   Verified 2026-08-03. Source for the `pathlib.Path` versus `os.path`
-   production use in dimension 9, including the explicit non-drop-in-
-   replacement caveat referenced in dimensions 11 and 15.
-8. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design
-   Patterns. Elements of Reusable Object-Oriented Software*. Addison-Wesley,
-   1994. ISBN 0-201-63361-2. Cited only for the Factory Method
-   cross-references in dimensions 4, 13, and 15, not for any claim about this
-   entry's own smell.

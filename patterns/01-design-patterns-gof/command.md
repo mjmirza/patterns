@@ -1025,6 +1025,83 @@ the document, so text a user removed before saving survives on disk. Decide
 explicitly whether history is persisted, and where it is, say so in the product
 rather than leaving it to be discovered.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Command. Source
+   of the intent, the Action and Transaction aliases, and the five participants.
+   Same chapter, section Memento, for the state restoration pairing.
+2. Bertrand Meyer. *Object Oriented Software Construction*, 2nd edition.
+   Prentice Hall, 1997. ISBN 0-13-629155-4. Source of Command Query Separation,
+   cited through Fowler in dimension 1 rather than by page, because the page was
+   not independently confirmed.
+3. Martin Fowler. "CommandQuerySeparation".
+   https://martinfowler.com/bliki/CommandQuerySeparation.html
+   Verified 2026-08-02. Source for the attribution to Meyer and the query versus
+   modifier distinction in dimension 1.
+4. Martin Fowler. "CQRS". https://martinfowler.com/bliki/CQRS.html
+   Verified 2026-08-02. Source for the CQRS definition, its relationship to
+   event collaboration, and the caution quoted in dimension 4.
+5. Martin Fowler. "Event Sourcing". https://martinfowler.com/eaaDev/EventSourcing.html
+   Verified 2026-08-02. Source for the Event Sourcing definition, the complete
+   rebuild and temporal query facilities, and the observation that reversal is
+   most direct when a change is expressed as a difference.
+6. Oracle. *Java SE 17 API Specification*, `java.lang.Runnable`.
+   https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html
+   Verified 2026-08-02. Source for the statement that Runnable lets a class be
+   active without subclassing Thread.
+7. Oracle. *Java SE 21 API Specification*, `java.lang.Runnable`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html
+   Verified 2026-08-02. Source for the current wording, an operation that does
+   not return a result, and for the functional interface status.
+8. Oracle. *Java SE 21 API Specification*, `java.util.concurrent.Callable`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Callable.html
+   Verified 2026-08-02. Source for the Callable contract and its stated
+   difference from Runnable.
+9. Oracle. *Java SE 21 API Specification*, `java.util.concurrent.Executor`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Executor.html
+   Verified 2026-08-02. Source for the decoupling of task submission from
+   execution mechanics and the `execute(Runnable command)` contract.
+10. Oracle. *Java SE 21 API Specification*, `javax.swing.undo.UndoableEdit`.
+    https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/undo/UndoableEdit.html
+    Verified 2026-08-02. Source for the Swing undo production use and the
+    `addEdit()` coalescing mechanism.
+11. The Qt Company. *Qt 6 documentation*, `QUndoCommand`.
+    https://doc.qt.io/qt-6/qundocommand.html
+    Verified 2026-08-02. Source for the undo and redo contract, stack ownership,
+    and the `id()` plus `mergeWith()` compression mechanism.
+12. Apple. *Undo Architecture*, article "Undo Manager", Apple Developer Archive.
+    https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UndoArchitecture/Articles/UndoManager.html
+    Verified 2026-08-02. Source for the definition of an undo operation, undo
+    grouping, and the rule that registering a new undo operation clears the redo
+    stack.
+13. Microsoft. *Visual Studio Code API documentation*, "Commands".
+    https://code.visualstudio.com/api/extension-guides/command
+    Verified 2026-08-02. Source for `registerCommand`, `executeCommand`, and the
+    binding of one command to the palette, keybindings, and menus.
+14. Redis. *Redis documentation*, "Redis persistence".
+    https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/
+    Verified 2026-08-02. Source for AOF logging every write operation, replay at
+    startup, and log rewriting.
+15. Wikipedia contributors. "Command pattern".
+    https://en.wikipedia.org/wiki/Command_pattern
+    Verified 2026-08-02. Used to confirm the four participant naming and the
+    undo stack description, not as a source of explanation.
+16. Wikipedia contributors. "Memento pattern".
+    https://en.wikipedia.org/wiki/Memento_pattern
+    Verified 2026-08-02. Used to confirm the originator, caretaker and memento
+    roles and the undo application referenced in dimension 8.
+
+Code verification note, recorded 2026-08-02. The Python example was executed and
+printed two matching ledger states, which is the replay assertion it exists to
+demonstrate. The Go example was compiled and run with `go run`. The TypeScript
+block was type checked clean with `tsc --strict --target es2020`, and the undo
+history class is named `UndoHistory` because `History` collides with the DOM
+global of that name. The Java example was NOT compiled, because the authoring
+machine has no Java runtime installed, only the macOS `javac` stub, so it is
+reviewed rather than verified. No example depends on a third party library.
+
 ## Code examples
 
 Four languages chosen to show different points on the variant axis. Java shows
@@ -1348,80 +1425,3 @@ func main() {
 	fmt.Println(total)
 }
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Command. Source
-   of the intent, the Action and Transaction aliases, and the five participants.
-   Same chapter, section Memento, for the state restoration pairing.
-2. Bertrand Meyer. *Object Oriented Software Construction*, 2nd edition.
-   Prentice Hall, 1997. ISBN 0-13-629155-4. Source of Command Query Separation,
-   cited through Fowler in dimension 1 rather than by page, because the page was
-   not independently confirmed.
-3. Martin Fowler. "CommandQuerySeparation".
-   https://martinfowler.com/bliki/CommandQuerySeparation.html
-   Verified 2026-08-02. Source for the attribution to Meyer and the query versus
-   modifier distinction in dimension 1.
-4. Martin Fowler. "CQRS". https://martinfowler.com/bliki/CQRS.html
-   Verified 2026-08-02. Source for the CQRS definition, its relationship to
-   event collaboration, and the caution quoted in dimension 4.
-5. Martin Fowler. "Event Sourcing". https://martinfowler.com/eaaDev/EventSourcing.html
-   Verified 2026-08-02. Source for the Event Sourcing definition, the complete
-   rebuild and temporal query facilities, and the observation that reversal is
-   most direct when a change is expressed as a difference.
-6. Oracle. *Java SE 17 API Specification*, `java.lang.Runnable`.
-   https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html
-   Verified 2026-08-02. Source for the statement that Runnable lets a class be
-   active without subclassing Thread.
-7. Oracle. *Java SE 21 API Specification*, `java.lang.Runnable`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html
-   Verified 2026-08-02. Source for the current wording, an operation that does
-   not return a result, and for the functional interface status.
-8. Oracle. *Java SE 21 API Specification*, `java.util.concurrent.Callable`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Callable.html
-   Verified 2026-08-02. Source for the Callable contract and its stated
-   difference from Runnable.
-9. Oracle. *Java SE 21 API Specification*, `java.util.concurrent.Executor`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Executor.html
-   Verified 2026-08-02. Source for the decoupling of task submission from
-   execution mechanics and the `execute(Runnable command)` contract.
-10. Oracle. *Java SE 21 API Specification*, `javax.swing.undo.UndoableEdit`.
-    https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/undo/UndoableEdit.html
-    Verified 2026-08-02. Source for the Swing undo production use and the
-    `addEdit()` coalescing mechanism.
-11. The Qt Company. *Qt 6 documentation*, `QUndoCommand`.
-    https://doc.qt.io/qt-6/qundocommand.html
-    Verified 2026-08-02. Source for the undo and redo contract, stack ownership,
-    and the `id()` plus `mergeWith()` compression mechanism.
-12. Apple. *Undo Architecture*, article "Undo Manager", Apple Developer Archive.
-    https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UndoArchitecture/Articles/UndoManager.html
-    Verified 2026-08-02. Source for the definition of an undo operation, undo
-    grouping, and the rule that registering a new undo operation clears the redo
-    stack.
-13. Microsoft. *Visual Studio Code API documentation*, "Commands".
-    https://code.visualstudio.com/api/extension-guides/command
-    Verified 2026-08-02. Source for `registerCommand`, `executeCommand`, and the
-    binding of one command to the palette, keybindings, and menus.
-14. Redis. *Redis documentation*, "Redis persistence".
-    https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/
-    Verified 2026-08-02. Source for AOF logging every write operation, replay at
-    startup, and log rewriting.
-15. Wikipedia contributors. "Command pattern".
-    https://en.wikipedia.org/wiki/Command_pattern
-    Verified 2026-08-02. Used to confirm the four participant naming and the
-    undo stack description, not as a source of explanation.
-16. Wikipedia contributors. "Memento pattern".
-    https://en.wikipedia.org/wiki/Memento_pattern
-    Verified 2026-08-02. Used to confirm the originator, caretaker and memento
-    roles and the undo application referenced in dimension 8.
-
-Code verification note, recorded 2026-08-02. The Python example was executed and
-printed two matching ledger states, which is the replay assertion it exists to
-demonstrate. The Go example was compiled and run with `go run`. The TypeScript
-block was type checked clean with `tsc --strict --target es2020`, and the undo
-history class is named `UndoHistory` because `History` collides with the DOM
-global of that name. The Java example was NOT compiled, because the authoring
-machine has no Java runtime installed, only the macOS `javac` stub, so it is
-reviewed rather than verified. No example depends on a third party library.

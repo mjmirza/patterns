@@ -460,6 +460,17 @@ direct request to that origin would carry, rather than treating a
 hint as a lower-risk action than an actual fetch simply because it is
 speculative.
 
+## 18. References
+
+1. MDN Web Docs. "rel=preload".
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload
+   Verified 2026-08-21. Source of the defining preload quote used in
+   dimensions 1, 3, and 9.
+2. MDN Web Docs. "Speculative loading".
+   https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Speculative_loading
+   Verified 2026-08-21. Source of the prefetch, dns-prefetch, and
+   preconnect quotes used in dimensions 3, 5, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -638,14 +649,3 @@ for line in manager.renderLines() {
     print(line)
 }
 ```
-
-## 18. References
-
-1. MDN Web Docs. "rel=preload".
-   https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload
-   Verified 2026-08-21. Source of the defining preload quote used in
-   dimensions 1, 3, and 9.
-2. MDN Web Docs. "Speculative loading".
-   https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Speculative_loading
-   Verified 2026-08-21. Source of the prefetch, dns-prefetch, and
-   preconnect quotes used in dimensions 3, 5, and 9.

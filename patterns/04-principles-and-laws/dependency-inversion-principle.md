@@ -744,6 +744,35 @@ class introduced through a compromised dependency. Explicit registration at
 the composition root, naming each concrete type rather than relying on a
 scan, closes this specific risk at a small cost in verbosity.
 
+## 18. References
+
+- Robert C. Martin. "The Dependency Inversion Principle." C++ Report, June
+  1996. Original article date and the principle's two rules confirmed via
+  "Dependency inversion principle." Wikipedia.
+  https://en.wikipedia.org/wiki/Dependency_inversion_principle (verified
+  2026-08-02).
+- Robert C. Martin. Agile Software Development, Principles, Patterns, and
+  Practices. Prentice Hall, 2002. Chapter 11, "The Dependency-Inversion
+  Principle."
+- Robert C. Martin. Clean Architecture, A Craftsman's Guide to Software
+  Structure and Design. Prentice Hall, 2017. The Dependency Rule, chapters 22
+  through 23.
+- Martin Fowler. "Inversion of Control Containers and the Dependency
+  Injection pattern." martinfowler.com, 23 January 2004.
+  https://martinfowler.com/articles/injection.html (verified 2026-08-02).
+- Martin Fowler. Refactoring, Improving the Design of Existing Code, 2nd
+  edition. Addison-Wesley, 2018.
+- Mark Seemann and Steven van Deursen. Dependency Injection Principles,
+  Practices, and Patterns. Manning Publications, 2019.
+- Spring Framework Reference Documentation. "Dependencies." docs.spring.io.
+  https://docs.spring.io/spring-framework/reference/core/beans/dependencies.html
+  (verified 2026-08-02).
+- Microsoft Learn. "Dependency injection, .NET." learn.microsoft.com.
+  https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection
+  (verified 2026-08-02, page last updated per page metadata 2026-04-23).
+- Angular documentation. "Dependency injection in Angular." angular.dev.
+  https://angular.dev/guide/di (verified 2026-08-02).
+
 ## Code examples
 
 Every example implements the same scenario. an `OrderProcessor` that needs to
@@ -907,32 +936,3 @@ meaningfully different in either language from the Go and TypeScript
 listings above, an interface or trait plus constructor injection, and a
 fourth near-identical listing would not add depth beyond what the three
 languages above already demonstrate.
-
-## 18. References
-
-- Robert C. Martin. "The Dependency Inversion Principle." C++ Report, June
-  1996. Original article date and the principle's two rules confirmed via
-  "Dependency inversion principle." Wikipedia.
-  https://en.wikipedia.org/wiki/Dependency_inversion_principle (verified
-  2026-08-02).
-- Robert C. Martin. Agile Software Development, Principles, Patterns, and
-  Practices. Prentice Hall, 2002. Chapter 11, "The Dependency-Inversion
-  Principle."
-- Robert C. Martin. Clean Architecture, A Craftsman's Guide to Software
-  Structure and Design. Prentice Hall, 2017. The Dependency Rule, chapters 22
-  through 23.
-- Martin Fowler. "Inversion of Control Containers and the Dependency
-  Injection pattern." martinfowler.com, 23 January 2004.
-  https://martinfowler.com/articles/injection.html (verified 2026-08-02).
-- Martin Fowler. Refactoring, Improving the Design of Existing Code, 2nd
-  edition. Addison-Wesley, 2018.
-- Mark Seemann and Steven van Deursen. Dependency Injection Principles,
-  Practices, and Patterns. Manning Publications, 2019.
-- Spring Framework Reference Documentation. "Dependencies." docs.spring.io.
-  https://docs.spring.io/spring-framework/reference/core/beans/dependencies.html
-  (verified 2026-08-02).
-- Microsoft Learn. "Dependency injection, .NET." learn.microsoft.com.
-  https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection
-  (verified 2026-08-02, page last updated per page metadata 2026-04-23).
-- Angular documentation. "Dependency injection in Angular." angular.dev.
-  https://angular.dev/guide/di (verified 2026-08-02).

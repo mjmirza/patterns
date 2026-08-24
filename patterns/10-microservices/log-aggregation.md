@@ -879,6 +879,40 @@ for tamper-evidence. A pipeline built this way should never be represented,
 to an auditor or to internal stakeholders, as providing a tamper-proof
 record, which is the precise misuse already named in dimension 11.
 
+## 18. References
+
+1. Sam Newman. *Building Microservices*. O'Reilly Media, 2015.
+   ISBN 978-1-491-95035-7. Chapter 8, "Monitoring". Source of the
+   cross-service debugging problem framing in dimensions 1 and 2.
+2. Rainer Gerhards, Adiscon GmbH. "The Syslog Protocol". RFC 5424, IETF,
+   March 2009. https://www.rfc-editor.org/rfc/rfc5424 Verified 2026-08-02.
+   Source for the pre-microservices lineage, severity levels, and
+   structured-data elements referenced in dimension 1.
+3. Cloud Native Computing Foundation. "Fluentd". https://www.cncf.io/projects/fluentd/
+   Verified 2026-08-02. Source for Fluentd's graduation date and its
+   description as a unified logging layer, dimensions 1, 5, and 9.
+4. Grafana Labs. "Loki overview". Grafana Loki documentation.
+   https://grafana.com/docs/loki/latest/get-started/overview/
+   Verified 2026-08-02. Source for Loki's label-based indexing model and
+   architecture, dimensions 3, 5, and 9.
+5. Amazon Web Services. "What is Amazon CloudWatch Logs?". AWS documentation.
+   https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html
+   Verified 2026-08-02. Source for CloudWatch Logs' centralization
+   description and its data-protection masking feature, dimensions 9 and 17.
+6. OpenTelemetry Authors. "Logs". OpenTelemetry documentation.
+   https://opentelemetry.io/docs/concepts/signals/logs/
+   Verified 2026-08-02. Source for the log record data model and
+   TraceId/SpanId correlation described in dimensions 1, 8, and 15.
+7. Elastic NV. "Documents, indices, and other core concepts". Elasticsearch
+   Reference documentation.
+   https://www.elastic.co/guide/en/elasticsearch/reference/current/documents-indices.html
+   Verified 2026-08-02. Source for the Elasticsearch document and index
+   model and the data-stream recommendation for logs, dimensions 5 and 9.
+8. The Kubernetes Authors. "Logging Architecture". Kubernetes documentation.
+   https://kubernetes.io/docs/concepts/cluster-administration/logging/
+   Verified 2026-08-02. Source for the cluster-level logging definition and
+   the node-agent and sidecar architecture variants, dimensions 5, 8, and 9.
+
 ## Code examples
 
 Three languages, each showing a different, genuinely idiomatic piece of the
@@ -1081,37 +1115,3 @@ withRequestId("req-8f3c1e", () => {
   logEvent("order-service", "info", "order confirmed");
 });
 ```
-
-## 18. References
-
-1. Sam Newman. *Building Microservices*. O'Reilly Media, 2015.
-   ISBN 978-1-491-95035-7. Chapter 8, "Monitoring". Source of the
-   cross-service debugging problem framing in dimensions 1 and 2.
-2. Rainer Gerhards, Adiscon GmbH. "The Syslog Protocol". RFC 5424, IETF,
-   March 2009. https://www.rfc-editor.org/rfc/rfc5424 Verified 2026-08-02.
-   Source for the pre-microservices lineage, severity levels, and
-   structured-data elements referenced in dimension 1.
-3. Cloud Native Computing Foundation. "Fluentd". https://www.cncf.io/projects/fluentd/
-   Verified 2026-08-02. Source for Fluentd's graduation date and its
-   description as a unified logging layer, dimensions 1, 5, and 9.
-4. Grafana Labs. "Loki overview". Grafana Loki documentation.
-   https://grafana.com/docs/loki/latest/get-started/overview/
-   Verified 2026-08-02. Source for Loki's label-based indexing model and
-   architecture, dimensions 3, 5, and 9.
-5. Amazon Web Services. "What is Amazon CloudWatch Logs?". AWS documentation.
-   https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html
-   Verified 2026-08-02. Source for CloudWatch Logs' centralization
-   description and its data-protection masking feature, dimensions 9 and 17.
-6. OpenTelemetry Authors. "Logs". OpenTelemetry documentation.
-   https://opentelemetry.io/docs/concepts/signals/logs/
-   Verified 2026-08-02. Source for the log record data model and
-   TraceId/SpanId correlation described in dimensions 1, 8, and 15.
-7. Elastic NV. "Documents, indices, and other core concepts". Elasticsearch
-   Reference documentation.
-   https://www.elastic.co/guide/en/elasticsearch/reference/current/documents-indices.html
-   Verified 2026-08-02. Source for the Elasticsearch document and index
-   model and the data-stream recommendation for logs, dimensions 5 and 9.
-8. The Kubernetes Authors. "Logging Architecture". Kubernetes documentation.
-   https://kubernetes.io/docs/concepts/cluster-administration/logging/
-   Verified 2026-08-02. Source for the cluster-level logging definition and
-   the node-agent and sidecar architecture variants, dimensions 5, 8, and 9.

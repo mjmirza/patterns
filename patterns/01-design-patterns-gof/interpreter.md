@@ -1103,6 +1103,71 @@ the artifact that explains the decision. That is an advantage over conditionals
 buried in compiled code, and it becomes one only if rule versions are retained
 alongside the decisions they produced.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Interpreter.
+   Source of the intent, the five participants, the applicability limits on
+   grammar size and efficiency, the consequences, and the Related Patterns links
+   to Composite, Flyweight, Iterator and Visitor. Reference text verified against
+   the University of North Carolina teaching mirror,
+   https://www.cs.unc.edu/~stotts/GOF/hires/pat5c.htm verified 2026-08-02.
+2. Refactoring.Guru. *Design Patterns Catalog*.
+   https://refactoring.guru/design-patterns/catalog
+   Verified 2026-08-02. Source for the claim in dimension 1 that this catalogue
+   lists twenty-two GoF patterns and omits Interpreter.
+3. Wikipedia contributors. "Interpreter pattern".
+   https://en.wikipedia.org/wiki/Interpreter_pattern
+   Verified 2026-08-02. Used to confirm the participant names and the statement
+   that the pattern does not describe how the abstract syntax tree is built.
+4. Robert Nystrom. *Crafting Interpreters*, chapter 14, "Chunks of Bytecode".
+   https://craftinginterpreters.com/chunks-of-bytecode.html
+   Verified 2026-08-02. Source for the analysis of tree-walking performance,
+   pointer overhead per node, spatial locality, cache stalls, and the position of
+   bytecode between a tree walker and native code.
+5. Oracle. *Java SE 21 API Specification*, `java.util.regex.Pattern`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html
+   Verified 2026-08-02. Source for the compiled-pattern production use and for
+   the immutable-tree plus mutable-matcher split in dimension 8.
+6. Microsoft. *C# documentation*, "Expression Trees".
+   https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/expression-trees/
+   Verified 2026-08-02. Source for the expression tree production use, the
+   immutability and visitor-based modification, and the Entity Framework
+   translation to SQL.
+7. Django Software Foundation. *Django 5.2 documentation*, "Making queries",
+   section "Complex lookups with Q objects".
+   https://docs.djangoproject.com/en/5.2/topics/db/queries/
+   Verified 2026-08-02. Source for the `Q` object production use and the operator
+   composition with `&`, `|`, `^` and `~`.
+8. SQLAlchemy authors. *SQLAlchemy 2.0 documentation*, "Using SELECT Statements".
+   https://docs.sqlalchemy.org/en/20/tutorial/data_select.html
+   Verified 2026-08-02. Source for the claim that Python comparison operators
+   generate SQL expression objects rather than boolean values, and that those
+   objects build the WHERE clause.
+9. VMware Tanzu. *Spring Framework reference documentation*, "Spring Expression
+   Language (SpEL)", Evaluation section.
+   https://docs.spring.io/spring-framework/reference/core/expressions/evaluation.html
+   Verified 2026-08-02. Source for the `ExpressionParser`, `Expression` and
+   `EvaluationContext` shape, and for the two evaluation context implementations
+   cited as a security control in dimension 17.
+10. Drools project. *Drools User Guide 8.44.0.Final*, "Rule Language Reference".
+    https://docs.drools.org/latest/drools-docs/drools/language-reference/index.html
+    Verified 2026-08-02. Source for the DRL rule structure of name, `when`
+    conditions and `then` actions.
+11. Eric Evans, Martin Fowler. "Specifications".
+    https://martinfowler.com/apsupp/spec.pdf
+    URL verified 2026-08-02 to resolve and return the paper. The document body
+    could not be extracted from the PDF by the tooling used here, so no direct
+    quotation is made from it and the description of its content in dimensions 9
+    and 13 is corroborated by reference 12.
+12. Wikipedia contributors. "Specification pattern".
+    https://en.wikipedia.org/wiki/Specification_pattern
+    Verified 2026-08-02. Used to corroborate the attribution of the Specification
+    pattern to Eric Evans and Martin Fowler, its presence in Evans,
+    *Domain-Driven Design*, Addison-Wesley, 2003, and the composite form with
+    and, or and not combinators over an `isSatisfiedBy` operation.
+
 ## Code examples
 
 Three languages where the pattern is idiomatic in visibly different ways. Java
@@ -1365,68 +1430,3 @@ Verification note. The Python examples were executed and produce `True` then
 for the same inputs. The Java and TypeScript examples were written against the
 same logic and reviewed by hand but were not compiled in this environment, so
 they are stated as reviewed rather than as executed.
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 5, Behavioral Patterns, section Interpreter.
-   Source of the intent, the five participants, the applicability limits on
-   grammar size and efficiency, the consequences, and the Related Patterns links
-   to Composite, Flyweight, Iterator and Visitor. Reference text verified against
-   the University of North Carolina teaching mirror,
-   https://www.cs.unc.edu/~stotts/GOF/hires/pat5c.htm verified 2026-08-02.
-2. Refactoring.Guru. *Design Patterns Catalog*.
-   https://refactoring.guru/design-patterns/catalog
-   Verified 2026-08-02. Source for the claim in dimension 1 that this catalogue
-   lists twenty-two GoF patterns and omits Interpreter.
-3. Wikipedia contributors. "Interpreter pattern".
-   https://en.wikipedia.org/wiki/Interpreter_pattern
-   Verified 2026-08-02. Used to confirm the participant names and the statement
-   that the pattern does not describe how the abstract syntax tree is built.
-4. Robert Nystrom. *Crafting Interpreters*, chapter 14, "Chunks of Bytecode".
-   https://craftinginterpreters.com/chunks-of-bytecode.html
-   Verified 2026-08-02. Source for the analysis of tree-walking performance,
-   pointer overhead per node, spatial locality, cache stalls, and the position of
-   bytecode between a tree walker and native code.
-5. Oracle. *Java SE 21 API Specification*, `java.util.regex.Pattern`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html
-   Verified 2026-08-02. Source for the compiled-pattern production use and for
-   the immutable-tree plus mutable-matcher split in dimension 8.
-6. Microsoft. *C# documentation*, "Expression Trees".
-   https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/expression-trees/
-   Verified 2026-08-02. Source for the expression tree production use, the
-   immutability and visitor-based modification, and the Entity Framework
-   translation to SQL.
-7. Django Software Foundation. *Django 5.2 documentation*, "Making queries",
-   section "Complex lookups with Q objects".
-   https://docs.djangoproject.com/en/5.2/topics/db/queries/
-   Verified 2026-08-02. Source for the `Q` object production use and the operator
-   composition with `&`, `|`, `^` and `~`.
-8. SQLAlchemy authors. *SQLAlchemy 2.0 documentation*, "Using SELECT Statements".
-   https://docs.sqlalchemy.org/en/20/tutorial/data_select.html
-   Verified 2026-08-02. Source for the claim that Python comparison operators
-   generate SQL expression objects rather than boolean values, and that those
-   objects build the WHERE clause.
-9. VMware Tanzu. *Spring Framework reference documentation*, "Spring Expression
-   Language (SpEL)", Evaluation section.
-   https://docs.spring.io/spring-framework/reference/core/expressions/evaluation.html
-   Verified 2026-08-02. Source for the `ExpressionParser`, `Expression` and
-   `EvaluationContext` shape, and for the two evaluation context implementations
-   cited as a security control in dimension 17.
-10. Drools project. *Drools User Guide 8.44.0.Final*, "Rule Language Reference".
-    https://docs.drools.org/latest/drools-docs/drools/language-reference/index.html
-    Verified 2026-08-02. Source for the DRL rule structure of name, `when`
-    conditions and `then` actions.
-11. Eric Evans, Martin Fowler. "Specifications".
-    https://martinfowler.com/apsupp/spec.pdf
-    URL verified 2026-08-02 to resolve and return the paper. The document body
-    could not be extracted from the PDF by the tooling used here, so no direct
-    quotation is made from it and the description of its content in dimensions 9
-    and 13 is corroborated by reference 12.
-12. Wikipedia contributors. "Specification pattern".
-    https://en.wikipedia.org/wiki/Specification_pattern
-    Verified 2026-08-02. Used to corroborate the attribution of the Specification
-    pattern to Eric Evans and Martin Fowler, its presence in Evans,
-    *Domain-Driven Design*, Addison-Wesley, 2003, and the composite form with
-    and, or and not combinators over an `isSatisfiedBy` operation.

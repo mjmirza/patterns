@@ -798,6 +798,51 @@ the pattern has no additional implications this entry can source, and
 inventing further ones would be exactly the fabrication the sourcing
 standard for this repository forbids.
 
+## 18. References
+
+1. Brian Foote and Joseph Yoder. "Big Ball of Mud." Technical Report
+   WUCS-97-34, Department of Computer Science, Washington University in
+   St. Louis. Presented at the Fourth Conference on Pattern Languages of
+   Programs (PLoP '97 / EuroPLoP '97), Monticello, Illinois, September 1997.
+   Later published as Chapter 29 in Neil Harrison, Brian Foote, and Hans
+   Rohnert, editors, Pattern Languages of Program Design 4, Addison-Wesley,
+   2000. https://hillside.net/plop/plop97/Proceedings/foote.pdf
+   Verified 2026-08-02. Source of the pattern's origin, its publication
+   venue, the six named sub-patterns, and the shantytown metaphor.
+2. Brian Foote and Joseph Yoder. "Big Ball of Mud," mirrored full text.
+   http://www.laputan.org/mud/mud.html
+   Verified 2026-08-02. Cross-referenced against source 1 for the pattern's
+   structure and sub-pattern names.
+3. David Baum, Jens Dietrich, Craig Anslow, and Richard Muller. "Visualizing
+   Design Erosion. How Big Balls of Mud are Made." IEEE Working Conference
+   on Software Visualization (VISSOFT), 2018.
+   https://arxiv.org/abs/1807.06136
+   Verified 2026-08-02. Source of the empirical production-use finding for
+   ANTLR, JavaMail, MongoDB Java Driver, and Undertow in dimension 9, and the
+   dependency-cycle observability metric in dimension 16.
+4. Philip Muller. "Under Deconstruction. The State of Shopify's Monolith."
+   Shopify Engineering blog. Published 2020-09-16.
+   https://shopify.engineering/shopify-monolith
+   Verified 2026-08-02. Source of the Shopify production use in dimension 9.
+5. Martin Fowler. "Microservice Trade-Offs."
+   https://martinfowler.com/articles/microservice-trade-offs.html
+   Verified 2026-08-02. Source of the practitioner observation quoted in
+   dimension 9.
+6. Michael Feathers. Working Effectively with Legacy Code. Prentice Hall,
+   2004. ISBN 0-13-117705-2. Chapter 2, "The Legacy Code Change Algorithm,"
+   Chapter 8, "How Do I Add a Feature," Chapter 13, "I Need to Make a Change,
+   but I Don't Know What Tests to Write." Source of Sprout Method, Sprout
+   Class, Wrap Method, and characterisation testing, applied throughout
+   dimensions 11, 14, and 15.
+7. DevIQ. "Big Ball of Mud."
+   https://deviq.com/antipatterns/big-ball-of-mud/
+   Verified 2026-08-02. Source, alongside item 8, for the informal
+   secondary-usage aliases noted in dimension 1.
+8. GeeksforGeeks. "Big Ball of Mud Anti-Pattern."
+   https://www.geeksforgeeks.org/system-design/big-ball-of-mud-anti-pattern/
+   Verified 2026-08-02. Source for the spaghetti-code-versus-architecture
+   distinction discussed in dimension 1.
+
 ## Code examples
 
 The code below shows the pathology honestly, in three languages, rather than
@@ -970,48 +1015,3 @@ func chargeV2(s *State, id string) {
 	order.paid = true
 }
 ```
-
-## 18. References
-
-1. Brian Foote and Joseph Yoder. "Big Ball of Mud." Technical Report
-   WUCS-97-34, Department of Computer Science, Washington University in
-   St. Louis. Presented at the Fourth Conference on Pattern Languages of
-   Programs (PLoP '97 / EuroPLoP '97), Monticello, Illinois, September 1997.
-   Later published as Chapter 29 in Neil Harrison, Brian Foote, and Hans
-   Rohnert, editors, Pattern Languages of Program Design 4, Addison-Wesley,
-   2000. https://hillside.net/plop/plop97/Proceedings/foote.pdf
-   Verified 2026-08-02. Source of the pattern's origin, its publication
-   venue, the six named sub-patterns, and the shantytown metaphor.
-2. Brian Foote and Joseph Yoder. "Big Ball of Mud," mirrored full text.
-   http://www.laputan.org/mud/mud.html
-   Verified 2026-08-02. Cross-referenced against source 1 for the pattern's
-   structure and sub-pattern names.
-3. David Baum, Jens Dietrich, Craig Anslow, and Richard Muller. "Visualizing
-   Design Erosion. How Big Balls of Mud are Made." IEEE Working Conference
-   on Software Visualization (VISSOFT), 2018.
-   https://arxiv.org/abs/1807.06136
-   Verified 2026-08-02. Source of the empirical production-use finding for
-   ANTLR, JavaMail, MongoDB Java Driver, and Undertow in dimension 9, and the
-   dependency-cycle observability metric in dimension 16.
-4. Philip Muller. "Under Deconstruction. The State of Shopify's Monolith."
-   Shopify Engineering blog. Published 2020-09-16.
-   https://shopify.engineering/shopify-monolith
-   Verified 2026-08-02. Source of the Shopify production use in dimension 9.
-5. Martin Fowler. "Microservice Trade-Offs."
-   https://martinfowler.com/articles/microservice-trade-offs.html
-   Verified 2026-08-02. Source of the practitioner observation quoted in
-   dimension 9.
-6. Michael Feathers. Working Effectively with Legacy Code. Prentice Hall,
-   2004. ISBN 0-13-117705-2. Chapter 2, "The Legacy Code Change Algorithm,"
-   Chapter 8, "How Do I Add a Feature," Chapter 13, "I Need to Make a Change,
-   but I Don't Know What Tests to Write." Source of Sprout Method, Sprout
-   Class, Wrap Method, and characterisation testing, applied throughout
-   dimensions 11, 14, and 15.
-7. DevIQ. "Big Ball of Mud."
-   https://deviq.com/antipatterns/big-ball-of-mud/
-   Verified 2026-08-02. Source, alongside item 8, for the informal
-   secondary-usage aliases noted in dimension 1.
-8. GeeksforGeeks. "Big Ball of Mud Anti-Pattern."
-   https://www.geeksforgeeks.org/system-design/big-ball-of-mud-anti-pattern/
-   Verified 2026-08-02. Source for the spaghetti-code-versus-architecture
-   distinction discussed in dimension 1.

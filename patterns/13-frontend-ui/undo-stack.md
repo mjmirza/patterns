@@ -408,6 +408,18 @@ gone. Bounding the history, or deliberately excluding genuinely
 sensitive fields from what gets snapshotted, is a real consideration
 for any application whose undoable state includes sensitive data.
 
+## 18. References
+
+1. Refactoring.Guru. "Command".
+   https://refactoring.guru/design-patterns/command
+   Verified 2026-08-21. Source of the command-history-as-a-stack quote
+   used in dimensions 1, 2, 3, 8, 9, and 10.
+2. omnidan. "redux-undo".
+   https://github.com/omnidan/redux-undo
+   Verified 2026-08-21. Source of the reducer-enhancer mechanism quote
+   and the past-present-future state shape quote used in dimensions 1,
+   2, 5, and 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -597,15 +609,3 @@ print("after undo: " + history.present.text)
 history = redo(history)
 print("after redo: " + history.present.text)
 ```
-
-## 18. References
-
-1. Refactoring.Guru. "Command".
-   https://refactoring.guru/design-patterns/command
-   Verified 2026-08-21. Source of the command-history-as-a-stack quote
-   used in dimensions 1, 2, 3, 8, 9, and 10.
-2. omnidan. "redux-undo".
-   https://github.com/omnidan/redux-undo
-   Verified 2026-08-21. Source of the reducer-enhancer mechanism quote
-   and the past-present-future state shape quote used in dimensions 1,
-   2, 5, and 9.

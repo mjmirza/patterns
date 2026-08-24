@@ -437,6 +437,14 @@ structure do not vary based on the real content's actual value,
 keeping the placeholder genuinely uninformative until the real,
 authorized content has actually loaded.
 
+## 18. References
+
+1. React documentation. "Suspense".
+   https://react.dev/reference/react/Suspense
+   Verified 2026-08-21. Source of the defining sentence, the
+   recommended fallback shape, and the coverage limitation quoted in
+   dimensions 1, 3, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -579,11 +587,3 @@ let article = Article(title: "How Suspense Works", body: "A real article body.")
 boundary.resolve(article)
 print(renderArticle(article: article))
 ```
-
-## 18. References
-
-1. React documentation. "Suspense".
-   https://react.dev/reference/react/Suspense
-   Verified 2026-08-21. Source of the defining sentence, the
-   recommended fallback shape, and the coverage limitation quoted in
-   dimensions 1, 3, and 9.

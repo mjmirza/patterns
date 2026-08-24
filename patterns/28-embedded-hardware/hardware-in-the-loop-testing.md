@@ -451,6 +451,19 @@ before and after each test run, are real, necessary parts of a
 security-conscious HIL testing process, not only a test-quality
 concern.
 
+## 18. References
+
+1. Wikipedia. "Hardware-in-the-loop simulation".
+   https://en.wikipedia.org/wiki/Hardware-in-the-loop_simulation
+   Verified 2026-08-21. Source of the HIL definition, plant-simulation
+   description, and safety, cost, and early-availability quotes used
+   in dimensions 1, 2, 3, 5, 7, 9, and 10.
+2. National Instruments. "What Is Hardware-in-the-Loop (HIL)?".
+   https://www.ni.com/en/solutions/transportation/hardware-in-the-loop/what-is-hardware-in-the-loop-.html
+   Verified 2026-08-21. Source of the real-time deterministic-compute
+   requirement and risk-avoidance quotes used in dimensions 3, 4, 5,
+   9, 10, and 11.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -564,16 +577,3 @@ for step in 0..<5 {
     plant = plantStep(plant, heaterOn: heaterOn)
 }
 ```
-
-## 18. References
-
-1. Wikipedia. "Hardware-in-the-loop simulation".
-   https://en.wikipedia.org/wiki/Hardware-in-the-loop_simulation
-   Verified 2026-08-21. Source of the HIL definition, plant-simulation
-   description, and safety, cost, and early-availability quotes used
-   in dimensions 1, 2, 3, 5, 7, 9, and 10.
-2. National Instruments. "What Is Hardware-in-the-Loop (HIL)?".
-   https://www.ni.com/en/solutions/transportation/hardware-in-the-loop/what-is-hardware-in-the-loop-.html
-   Verified 2026-08-21. Source of the real-time deterministic-compute
-   requirement and risk-avoidance quotes used in dimensions 3, 4, 5,
-   9, 10, and 11.

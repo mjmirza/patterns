@@ -852,6 +852,68 @@ different tenant in a multi-tenant deployment. Aggregate observability
 signals across tenants before they leave the reactor's own process boundary,
 the same discipline any shared-infrastructure metric needs.
 
+## 18. References
+
+1. Douglas C. Schmidt. "Reactor. An Object Behavioral Pattern for
+   Demultiplexing and Dispatching Handles for Synchronous Events." In James
+   O. Coplien and Douglas C. Schmidt (editors), *Pattern Languages of Program
+   Design*. Addison-Wesley, 1995. Title and venue confirmed via
+   [Wikipedia's Reactor pattern article](https://en.wikipedia.org/wiki/Reactor_pattern),
+   verified 2026-08-02, and Schmidt's own publications page at
+   [dre.vanderbilt.edu](https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html),
+   verified 2026-08-02.
+2. Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann.
+   *Pattern-Oriented Software Architecture, Volume 2. Patterns for Concurrent
+   and Networked Objects*. John Wiley and Sons, 2000. ISBN 978-0-471-60695-6.
+   Source of the four-participant terminology used in dimension 5 and the
+   pairing with Proactor, Half-Sync/Half-Async, Leader/Followers, and Active
+   Object. Authors, year, and ISBN confirmed via
+   [Wikipedia's Pattern-Oriented Software Architecture article](https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture),
+   verified 2026-08-02.
+3. Oracle. *Java SE 21 API Specification*, `java.nio.channels.Selector`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/channels/Selector.html
+   Verified 2026-08-02. Source for the JDK's built-in Synchronous Event
+   Demultiplexer description in dimensions 8 and 9.
+4. The Netty Project. *Netty 4.1 API documentation*,
+   `io.netty.channel.nio.NioEventLoop`.
+   https://netty.io/4.1/api/io/netty/channel/nio/NioEventLoop.html
+   Verified 2026-08-02. Source for the Netty production use in dimension 9.
+5. Python Software Foundation. *Python 3 documentation*, `selectors` module.
+   https://docs.python.org/3/library/selectors.html
+   Verified 2026-08-02. Source for the `DefaultSelector` abstraction used in
+   the Python code example and dimension 8.
+6. F5, Inc. (nginx). *nginx documentation*, "Connection processing methods."
+   https://nginx.org/en/docs/events.html
+   Verified 2026-08-02. Source for the nginx production use in dimension 9.
+7. libuv project. *libuv design overview*.
+   https://docs.libuv.org/en/v1.x/design.html
+   Verified 2026-08-02. Source for the Node.js and libuv production use in
+   dimension 9.
+8. Redis Ltd. *Redis documentation*, "Redis FAQ."
+   https://redis.io/docs/latest/develop/get-started/faq/
+   Verified 2026-08-02. Source for the Redis single-threaded command
+   execution claim in dimension 9.
+9. Twisted Matrix Labs. *Twisted documentation*, "Reactor Basics."
+   https://docs.twisted.org/en/stable/core/howto/reactor-basics.html
+   Verified 2026-08-02. Source for the Twisted production use in dimension 9.
+10. The Tokio project. *Tokio API documentation*, `tokio::runtime` module.
+    https://docs.rs/tokio/latest/tokio/runtime/index.html
+    Verified 2026-08-02. Source for the async-task-plus-driver variant in
+    dimension 8.
+11. Christopher M. Kohlhoff. *Asio C++ Library documentation*, "Core
+    Concepts, Proactor Design Pattern."
+    https://think-async.com/Asio/asio-1.30.2/doc/asio/overview/core/async.html
+    Verified 2026-08-02. Source for the Proactor distinction in dimensions 1,
+    4, and 13.
+12. unixism.net. "What is io_uring."
+    https://unixism.net/loti/what_is_io_uring.html
+    Verified 2026-08-02. Source for the submission and completion queue
+    description of `io_uring` in dimension 4.
+13. The Go Authors. *Go standard library source*, `runtime/netpoll_epoll.go`.
+    https://github.com/golang/go/blob/master/src/runtime/netpoll_epoll.go
+    Verified 2026-08-02. Source for the Go runtime's internal epoll-based
+    network poller described in dimension 8.
+
 ## Code examples
 
 Three languages, chosen because each maps to a real, cited production use
@@ -1062,65 +1124,3 @@ registration surface, `server.on`, `socket.on`, which is the Reactor pattern
 with its Initiation Dispatcher and Synchronous Event Demultiplexer both
 implemented once, in C, and never re-implemented by application authors, the
 same relocation described for Go in dimension 8.
-
-## 18. References
-
-1. Douglas C. Schmidt. "Reactor. An Object Behavioral Pattern for
-   Demultiplexing and Dispatching Handles for Synchronous Events." In James
-   O. Coplien and Douglas C. Schmidt (editors), *Pattern Languages of Program
-   Design*. Addison-Wesley, 1995. Title and venue confirmed via
-   [Wikipedia's Reactor pattern article](https://en.wikipedia.org/wiki/Reactor_pattern),
-   verified 2026-08-02, and Schmidt's own publications page at
-   [dre.vanderbilt.edu](https://www.dre.vanderbilt.edu/~schmidt/patterns-ace.html),
-   verified 2026-08-02.
-2. Douglas C. Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann.
-   *Pattern-Oriented Software Architecture, Volume 2. Patterns for Concurrent
-   and Networked Objects*. John Wiley and Sons, 2000. ISBN 978-0-471-60695-6.
-   Source of the four-participant terminology used in dimension 5 and the
-   pairing with Proactor, Half-Sync/Half-Async, Leader/Followers, and Active
-   Object. Authors, year, and ISBN confirmed via
-   [Wikipedia's Pattern-Oriented Software Architecture article](https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture),
-   verified 2026-08-02.
-3. Oracle. *Java SE 21 API Specification*, `java.nio.channels.Selector`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/channels/Selector.html
-   Verified 2026-08-02. Source for the JDK's built-in Synchronous Event
-   Demultiplexer description in dimensions 8 and 9.
-4. The Netty Project. *Netty 4.1 API documentation*,
-   `io.netty.channel.nio.NioEventLoop`.
-   https://netty.io/4.1/api/io/netty/channel/nio/NioEventLoop.html
-   Verified 2026-08-02. Source for the Netty production use in dimension 9.
-5. Python Software Foundation. *Python 3 documentation*, `selectors` module.
-   https://docs.python.org/3/library/selectors.html
-   Verified 2026-08-02. Source for the `DefaultSelector` abstraction used in
-   the Python code example and dimension 8.
-6. F5, Inc. (nginx). *nginx documentation*, "Connection processing methods."
-   https://nginx.org/en/docs/events.html
-   Verified 2026-08-02. Source for the nginx production use in dimension 9.
-7. libuv project. *libuv design overview*.
-   https://docs.libuv.org/en/v1.x/design.html
-   Verified 2026-08-02. Source for the Node.js and libuv production use in
-   dimension 9.
-8. Redis Ltd. *Redis documentation*, "Redis FAQ."
-   https://redis.io/docs/latest/develop/get-started/faq/
-   Verified 2026-08-02. Source for the Redis single-threaded command
-   execution claim in dimension 9.
-9. Twisted Matrix Labs. *Twisted documentation*, "Reactor Basics."
-   https://docs.twisted.org/en/stable/core/howto/reactor-basics.html
-   Verified 2026-08-02. Source for the Twisted production use in dimension 9.
-10. The Tokio project. *Tokio API documentation*, `tokio::runtime` module.
-    https://docs.rs/tokio/latest/tokio/runtime/index.html
-    Verified 2026-08-02. Source for the async-task-plus-driver variant in
-    dimension 8.
-11. Christopher M. Kohlhoff. *Asio C++ Library documentation*, "Core
-    Concepts, Proactor Design Pattern."
-    https://think-async.com/Asio/asio-1.30.2/doc/asio/overview/core/async.html
-    Verified 2026-08-02. Source for the Proactor distinction in dimensions 1,
-    4, and 13.
-12. unixism.net. "What is io_uring."
-    https://unixism.net/loti/what_is_io_uring.html
-    Verified 2026-08-02. Source for the submission and completion queue
-    description of `io_uring` in dimension 4.
-13. The Go Authors. *Go standard library source*, `runtime/netpoll_epoll.go`.
-    https://github.com/golang/go/blob/master/src/runtime/netpoll_epoll.go
-    Verified 2026-08-02. Source for the Go runtime's internal epoll-based
-    network poller described in dimension 8.

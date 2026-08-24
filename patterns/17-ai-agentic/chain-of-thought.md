@@ -851,6 +851,65 @@ externalized rather than opaque. The caveat from the unfaithfulness finding
 above still applies. that review catches what the chain happens to disclose,
 not necessarily the true cause of the model's answer.
 
+## 18. References
+
+1. Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei
+   Xia, Ed Chi, Quoc Le, Denny Zhou. "Chain-of-Thought Prompting Elicits
+   Reasoning in Large Language Models." arXiv 2201.11903, first posted 2022,
+   revised 2023. https://arxiv.org/abs/2201.11903 Verified 2026-08-02. Source
+   of the pattern's name, the original manual few-shot form, the GSM8K and
+   PaLM-540B production evaluation, and the scale-dependence finding.
+2. Takeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, Yusuke
+   Iwasawa. "Large Language Models are Zero-Shot Reasoners." arXiv 2205.11916,
+   NeurIPS 2022. https://arxiv.org/abs/2205.11916 Verified 2026-08-02. Source
+   of the Zero-Shot CoT variant, the trigger phrase, and the two-stage
+   extraction method.
+3. Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang,
+   Aakanksha Chowdhery, Denny Zhou. "Self-Consistency Improves Chain of
+   Thought Reasoning in Language Models." arXiv 2203.11171.
+   https://arxiv.org/abs/2203.11171 Verified 2026-08-02. Source of the
+   self-consistency decoding variant and its benchmark gains.
+4. Miles Turpin, Julian Michael, Ethan Perez, Samuel R. Bowman. "Language
+   Models Don't Always Say What They Think. Unfaithful Explanations in
+   Chain-of-Thought Prompting." arXiv 2305.04388.
+   https://arxiv.org/abs/2305.04388 Verified 2026-08-02. Source of the
+   unfaithfulness finding used across dimensions 3, 11, 15, and 17.
+5. Denny Zhou, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi
+   Wang, Dale Schuurmans, Claire Cui, Olivier Bousquet, Quoc Le, Ed Chi.
+   "Least-to-Most Prompting Enables Complex Reasoning in Large Language
+   Models." arXiv 2205.10625. https://arxiv.org/abs/2205.10625 Verified
+   2026-08-02. Source of the least-to-most decomposition variant.
+6. Luyu Gao, Aman Madaan, Shuyan Zhou, Uri Alon, Pengfei Liu, Yiming Yang,
+   Jamie Callan, Graham Neubig. "PAL. Program-aided Language Models."
+   arXiv 2211.10435. https://arxiv.org/abs/2211.10435 Verified 2026-08-02.
+   Source of the program-aided execution variant and the GSM8K comparison
+   against PaLM-540B CoT.
+7. Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik
+   Narasimhan, Yuan Cao. "ReAct. Synergizing Reasoning and Acting in
+   Language Models." arXiv 2210.03629, ICLR 2023.
+   https://arxiv.org/abs/2210.03629 Verified 2026-08-02. Source of the
+   ReAct relationship described in dimension 13.
+8. Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L. Griffiths,
+   Yuan Cao, Karthik Narasimhan. "Tree of Thoughts. Deliberate Problem
+   Solving with Large Language Models." arXiv 2305.10601.
+   https://arxiv.org/abs/2305.10601 Verified 2026-08-02. Source of the Tree
+   of Thoughts relationship and the Game of 24 comparison figures.
+9. DeepSeek-AI, Daya Guo, Dejian Yang, et al. "DeepSeek-R1. Incentivizing
+   Reasoning Capability in LLMs via Reinforcement Learning."
+   arXiv 2501.12948. https://arxiv.org/abs/2501.12948 Verified 2026-08-02.
+   Source of the RL-trained inference-time chain generation description and
+   the distillation transfer finding.
+10. Anthropic. "Extended thinking."
+    https://platform.claude.com/docs/en/build-with-claude/extended-thinking
+    Verified 2026-08-02. Source of the Claude thinking-block behaviour, the
+    `budget_tokens` and `effort` mechanisms, and the batch-processing latency
+    guidance.
+11. Wikipedia contributors. "OpenAI o1."
+    https://en.wikipedia.org/wiki/OpenAI_o1 Verified 2026-08-02. Used only
+    to confirm the wording of OpenAI's own quoted statements about o1's
+    hidden chain-of-thought policy and the accuracy-versus-compute
+    correlation, not as a source of independent explanation.
+
 ## Code examples
 
 Chain of Thought is a prompting and orchestration technique rather than a
@@ -1034,62 +1093,3 @@ func main() {
 	fmt.Println("answer", result.Answer)
 }
 ```
-
-## 18. References
-
-1. Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei
-   Xia, Ed Chi, Quoc Le, Denny Zhou. "Chain-of-Thought Prompting Elicits
-   Reasoning in Large Language Models." arXiv 2201.11903, first posted 2022,
-   revised 2023. https://arxiv.org/abs/2201.11903 Verified 2026-08-02. Source
-   of the pattern's name, the original manual few-shot form, the GSM8K and
-   PaLM-540B production evaluation, and the scale-dependence finding.
-2. Takeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, Yusuke
-   Iwasawa. "Large Language Models are Zero-Shot Reasoners." arXiv 2205.11916,
-   NeurIPS 2022. https://arxiv.org/abs/2205.11916 Verified 2026-08-02. Source
-   of the Zero-Shot CoT variant, the trigger phrase, and the two-stage
-   extraction method.
-3. Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang,
-   Aakanksha Chowdhery, Denny Zhou. "Self-Consistency Improves Chain of
-   Thought Reasoning in Language Models." arXiv 2203.11171.
-   https://arxiv.org/abs/2203.11171 Verified 2026-08-02. Source of the
-   self-consistency decoding variant and its benchmark gains.
-4. Miles Turpin, Julian Michael, Ethan Perez, Samuel R. Bowman. "Language
-   Models Don't Always Say What They Think. Unfaithful Explanations in
-   Chain-of-Thought Prompting." arXiv 2305.04388.
-   https://arxiv.org/abs/2305.04388 Verified 2026-08-02. Source of the
-   unfaithfulness finding used across dimensions 3, 11, 15, and 17.
-5. Denny Zhou, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi
-   Wang, Dale Schuurmans, Claire Cui, Olivier Bousquet, Quoc Le, Ed Chi.
-   "Least-to-Most Prompting Enables Complex Reasoning in Large Language
-   Models." arXiv 2205.10625. https://arxiv.org/abs/2205.10625 Verified
-   2026-08-02. Source of the least-to-most decomposition variant.
-6. Luyu Gao, Aman Madaan, Shuyan Zhou, Uri Alon, Pengfei Liu, Yiming Yang,
-   Jamie Callan, Graham Neubig. "PAL. Program-aided Language Models."
-   arXiv 2211.10435. https://arxiv.org/abs/2211.10435 Verified 2026-08-02.
-   Source of the program-aided execution variant and the GSM8K comparison
-   against PaLM-540B CoT.
-7. Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik
-   Narasimhan, Yuan Cao. "ReAct. Synergizing Reasoning and Acting in
-   Language Models." arXiv 2210.03629, ICLR 2023.
-   https://arxiv.org/abs/2210.03629 Verified 2026-08-02. Source of the
-   ReAct relationship described in dimension 13.
-8. Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L. Griffiths,
-   Yuan Cao, Karthik Narasimhan. "Tree of Thoughts. Deliberate Problem
-   Solving with Large Language Models." arXiv 2305.10601.
-   https://arxiv.org/abs/2305.10601 Verified 2026-08-02. Source of the Tree
-   of Thoughts relationship and the Game of 24 comparison figures.
-9. DeepSeek-AI, Daya Guo, Dejian Yang, et al. "DeepSeek-R1. Incentivizing
-   Reasoning Capability in LLMs via Reinforcement Learning."
-   arXiv 2501.12948. https://arxiv.org/abs/2501.12948 Verified 2026-08-02.
-   Source of the RL-trained inference-time chain generation description and
-   the distillation transfer finding.
-10. Anthropic. "Extended thinking."
-    https://platform.claude.com/docs/en/build-with-claude/extended-thinking
-    Verified 2026-08-02. Source of the Claude thinking-block behaviour, the
-    `budget_tokens` and `effort` mechanisms, and the batch-processing latency
-    guidance.
-11. Wikipedia contributors. "OpenAI o1."
-    https://en.wikipedia.org/wiki/OpenAI_o1 Verified 2026-08-02. Used only
-    to confirm the wording of OpenAI's own quoted statements about o1's
-    hidden chain-of-thought policy and the accuracy-versus-compute
-    correlation, not as a source of independent explanation.

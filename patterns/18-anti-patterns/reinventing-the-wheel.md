@@ -735,6 +735,58 @@ Security review checklist:
 - Who tracks advisories and upstream protocol changes?
 - What is the deprecation path if the design is found weak?
 
+## 18. References
+
+- Brown, William J., Raphael C. Malveau, Hays W. "Skip" McCormick III, and
+  Thomas J. Mowbray. *AntiPatterns. Refactoring Software, Architectures, and
+  Projects in Crisis*. First edition. John Wiley & Sons, 1998. Chapter 6,
+  "Reinvent The Wheel." Bibliographic details verified through Wiley product
+  page, https://www.wiley-vch.de/en/areas-interest/computing-computer-sciences/computer-science-17cs/object-technologies-17cs6/antipatterns-978-0-471-19713-3,
+  verified 2026-08-02. Chapter metadata checked against
+  https://studylib.net/doc/27213058/antipatterns-refactoring-architectures,
+  verified 2026-08-02.
+- Dictionary.com. "reinvent the wheel." https://www.dictionary.com/browse/reinvent-the-wheel,
+  verified 2026-08-02.
+- Wikipedia. "Reinventing the Wheel." https://en.wikipedia.org/wiki/Reinventing_the_square_wheel,
+  verified 2026-08-20.
+- Selikoff, Scott. "The 'Reinventing the Wheel' Anti-Pattern." Down Home
+  Country Coding, December 10, 2009. https://www.selikoff.net/2009/12/10/why-reinvent-the-wheel/,
+  verified 2026-08-02.
+- Spolsky, Joel. "Things You Should Never Do, Part I." Joel on Software, April
+  6, 2000. https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/,
+  verified 2026-08-02.
+- Mozilla Community Archive. "Milestone: Netscape 6 released based on open
+  source code." May 6, 2013. https://blog.mozilla.org/community/2013/05/06/milestone-netscape-6-released-based-on-open-source-code/,
+  verified 2026-08-02.
+- Marczak, Bill, and John Scott-Railton. "Move Fast and Roll Your Own Crypto. A
+  Quick Look at the Confidentiality of Zoom Meetings." Citizen Lab Research
+  Report No. 126, University of Toronto, April 2020.
+  https://citizenlab.ca/research/move-fast-roll-your-own-crypto-a-quick-look-at-the-confidentiality-of-zoom-meetings/,
+  verified 2026-08-02.
+- Zoom Support. "Using end-to-end encryption in Zoom meetings."
+  https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0065408,
+  verified 2026-08-02.
+- Jakobsen, Jakob, and Claudio Orlandi. "On the CCA (in)security of MTProto."
+  ACM Workshop on Privacy in the Electronic Society, 2016. Publication page:
+  https://pure.au.dk/portal/en/publications/on-the-cca-insecurity-of-mtproto/,
+  verified 2026-08-02.
+- OWASP Foundation. "Using a broken or risky cryptographic algorithm."
+  https://owasp.org/www-community/vulnerabilities/Using_a_broken_or_risky_cryptographic_algorithm,
+  verified 2026-08-02.
+- Meta Engineering. "The HipHop Virtual Machine." December 9, 2011.
+  https://engineering.fb.com/2011/12/09/open-source/the-hiphop-virtual-machine/,
+  verified 2026-08-02.
+- Meta Engineering. "Speeding up PHP-based development with HipHop VM."
+  November 29, 2012. https://engineering.fb.com/2012/11/29/open-source/speeding-up-php-based-development-with-hiphop-vm/,
+  verified 2026-08-02.
+- Amazon Science. "Dynamo: Amazon's highly available key-value store."
+  https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store,
+  verified 2026-08-02.
+- Google SRE Book. "Production Environment." https://sre.google/sre-book/production-environment/,
+  verified 2026-08-02.
+- Fowler, Martin. *Refactoring. Improving the Design of Existing Code*. Second
+  edition. Addison-Wesley, 2018. Catalog chapters.
+
 ## Code examples
 
 The samples below use the same rule in three languages. They implement a small
@@ -843,55 +895,3 @@ Run with:
 ```text
 go run reinventing_wheel.go
 ```
-
-## 18. References
-
-- Brown, William J., Raphael C. Malveau, Hays W. "Skip" McCormick III, and
-  Thomas J. Mowbray. *AntiPatterns. Refactoring Software, Architectures, and
-  Projects in Crisis*. First edition. John Wiley & Sons, 1998. Chapter 6,
-  "Reinvent The Wheel." Bibliographic details verified through Wiley product
-  page, https://www.wiley-vch.de/en/areas-interest/computing-computer-sciences/computer-science-17cs/object-technologies-17cs6/antipatterns-978-0-471-19713-3,
-  verified 2026-08-02. Chapter metadata checked against
-  https://studylib.net/doc/27213058/antipatterns-refactoring-architectures,
-  verified 2026-08-02.
-- Dictionary.com. "reinvent the wheel." https://www.dictionary.com/browse/reinvent-the-wheel,
-  verified 2026-08-02.
-- Wikipedia. "Reinventing the Wheel." https://en.wikipedia.org/wiki/Reinventing_the_square_wheel,
-  verified 2026-08-20.
-- Selikoff, Scott. "The 'Reinventing the Wheel' Anti-Pattern." Down Home
-  Country Coding, December 10, 2009. https://www.selikoff.net/2009/12/10/why-reinvent-the-wheel/,
-  verified 2026-08-02.
-- Spolsky, Joel. "Things You Should Never Do, Part I." Joel on Software, April
-  6, 2000. https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/,
-  verified 2026-08-02.
-- Mozilla Community Archive. "Milestone: Netscape 6 released based on open
-  source code." May 6, 2013. https://blog.mozilla.org/community/2013/05/06/milestone-netscape-6-released-based-on-open-source-code/,
-  verified 2026-08-02.
-- Marczak, Bill, and John Scott-Railton. "Move Fast and Roll Your Own Crypto. A
-  Quick Look at the Confidentiality of Zoom Meetings." Citizen Lab Research
-  Report No. 126, University of Toronto, April 2020.
-  https://citizenlab.ca/research/move-fast-roll-your-own-crypto-a-quick-look-at-the-confidentiality-of-zoom-meetings/,
-  verified 2026-08-02.
-- Zoom Support. "Using end-to-end encryption in Zoom meetings."
-  https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0065408,
-  verified 2026-08-02.
-- Jakobsen, Jakob, and Claudio Orlandi. "On the CCA (in)security of MTProto."
-  ACM Workshop on Privacy in the Electronic Society, 2016. Publication page:
-  https://pure.au.dk/portal/en/publications/on-the-cca-insecurity-of-mtproto/,
-  verified 2026-08-02.
-- OWASP Foundation. "Using a broken or risky cryptographic algorithm."
-  https://owasp.org/www-community/vulnerabilities/Using_a_broken_or_risky_cryptographic_algorithm,
-  verified 2026-08-02.
-- Meta Engineering. "The HipHop Virtual Machine." December 9, 2011.
-  https://engineering.fb.com/2011/12/09/open-source/the-hiphop-virtual-machine/,
-  verified 2026-08-02.
-- Meta Engineering. "Speeding up PHP-based development with HipHop VM."
-  November 29, 2012. https://engineering.fb.com/2012/11/29/open-source/speeding-up-php-based-development-with-hiphop-vm/,
-  verified 2026-08-02.
-- Amazon Science. "Dynamo: Amazon's highly available key-value store."
-  https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store,
-  verified 2026-08-02.
-- Google SRE Book. "Production Environment." https://sre.google/sre-book/production-environment/,
-  verified 2026-08-02.
-- Fowler, Martin. *Refactoring. Improving the Design of Existing Code*. Second
-  edition. Addison-Wesley, 2018. Catalog chapters.

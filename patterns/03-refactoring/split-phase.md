@@ -723,6 +723,37 @@ Risks.
   protected by tests and API visibility. A phase split is not an access control
   system by itself.
 
+## 18. References
+
+- Martin Fowler, *Refactoring. Improving the Design of Existing Code*,
+  Addison-Wesley, 2nd edition, 2018, chapter 6, "A First Set of Refactorings,"
+  Split Phase.
+- Martin Fowler, "Split Phase," Refactoring catalog,
+  https://refactoring.com/catalog/splitPhase.html, verified 2026-08-02.
+- Martin Fowler, "Refactoring Module Dependencies,"
+  https://martinfowler.com/articles/refactoring-dependencies.html, verified
+  2026-08-02.
+- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
+  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
+  2026-08-02.
+- Microsoft TypeScript Wiki, "Architectural Overview,"
+  https://github.com/microsoft/TypeScript/wiki/Architectural-Overview/1afea54fbb7a4af15d613708ac0d1951f73aca14,
+  verified 2026-08-02.
+- Go project, "`cmd/compile` README,"
+  https://github.com/golang/go/blob/master/src/cmd/compile/README.md,
+  verified 2026-08-02.
+- Python Software Foundation, "Compiler design," CPython internal
+  documentation, https://github.com/python/cpython/blob/main/InternalDocs/compiler.md,
+  verified 2026-08-02.
+- LLVM Project, "Getting Started with the LLVM System,"
+  https://llvm.org/docs/GettingStarted.html, verified 2026-08-02.
+- Clang project, "Clang Compiler User's Manual,"
+  https://clang.llvm.org/docs/UsersManual.html, verified 2026-08-02.
+- LLVM Project, "LLVM's Analysis and Transform Passes,"
+  https://www.llvm.org/docs/Passes.html, verified 2026-08-02.
+- LLVM Project, "The LLVM Target-Independent Code Generator,"
+  https://llvm.org/docs/CodeGenerator.html, verified 2026-08-02.
+
 ## Code examples
 
 ### TypeScript
@@ -848,34 +879,3 @@ func main() {
 	fmt.Println(total)
 }
 ```
-
-## 18. References
-
-- Martin Fowler, *Refactoring. Improving the Design of Existing Code*,
-  Addison-Wesley, 2nd edition, 2018, chapter 6, "A First Set of Refactorings,"
-  Split Phase.
-- Martin Fowler, "Split Phase," Refactoring catalog,
-  https://refactoring.com/catalog/splitPhase.html, verified 2026-08-02.
-- Martin Fowler, "Refactoring Module Dependencies,"
-  https://martinfowler.com/articles/refactoring-dependencies.html, verified
-  2026-08-02.
-- Martin Fowler, "Changes for the 2nd Edition of Refactoring,"
-  https://martinfowler.com/articles/refactoring-2nd-changes.html, verified
-  2026-08-02.
-- Microsoft TypeScript Wiki, "Architectural Overview,"
-  https://github.com/microsoft/TypeScript/wiki/Architectural-Overview/1afea54fbb7a4af15d613708ac0d1951f73aca14,
-  verified 2026-08-02.
-- Go project, "`cmd/compile` README,"
-  https://github.com/golang/go/blob/master/src/cmd/compile/README.md,
-  verified 2026-08-02.
-- Python Software Foundation, "Compiler design," CPython internal
-  documentation, https://github.com/python/cpython/blob/main/InternalDocs/compiler.md,
-  verified 2026-08-02.
-- LLVM Project, "Getting Started with the LLVM System,"
-  https://llvm.org/docs/GettingStarted.html, verified 2026-08-02.
-- Clang project, "Clang Compiler User's Manual,"
-  https://clang.llvm.org/docs/UsersManual.html, verified 2026-08-02.
-- LLVM Project, "LLVM's Analysis and Transform Passes,"
-  https://www.llvm.org/docs/Passes.html, verified 2026-08-02.
-- LLVM Project, "The LLVM Target-Independent Code Generator,"
-  https://llvm.org/docs/CodeGenerator.html, verified 2026-08-02.

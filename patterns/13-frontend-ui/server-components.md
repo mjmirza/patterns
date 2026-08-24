@@ -471,6 +471,14 @@ browser, and deliberately narrow what is fetched and passed to
 exactly what the Client Component needs, never passing a full
 data-layer object through by default.
 
+## 18. References
+
+1. React documentation. "Server Components".
+   https://react.dev/reference/rsc/server-components
+   Verified 2026-08-21. Source of the defining sentence, the
+   interactivity constraint, and the data-access and architecture
+   quotes in dimensions 1, 3, and 9.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -610,11 +618,3 @@ let page = renderServerArticlePage(articleId: "article-1")
 print(page.html)
 print("client components to hydrate: " + String(page.clientComponents.count))
 ```
-
-## 18. References
-
-1. React documentation. "Server Components".
-   https://react.dev/reference/rsc/server-components
-   Verified 2026-08-21. Source of the defining sentence, the
-   interactivity constraint, and the data-access and architecture
-   quotes in dimensions 1, 3, and 9.

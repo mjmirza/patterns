@@ -857,6 +857,56 @@ Where the pattern is silent. It does not authenticate data, authorize access,
 encrypt storage, or validate business rules. It only makes a value stable after
 the moment it is accepted.
 
+## 18. References
+
+1. John McCarthy. "Recursive Functions of Symbolic Expressions and Their
+   Computation by Machine, Part I." *Communications of the ACM*, 1960. Source
+   for early Lisp lineage around symbolic expression data and recursive
+   functions.
+   https://www-formal.stanford.edu/jmc/recursive.html
+   Verified 2026-08-02.
+2. Chris Okasaki. *Purely Functional Data Structures*. Cambridge University
+   Press, 1998. Chapters 2 through 5. Source for the algorithmic lineage of
+   persistent data structures.
+   https://www.cambridge.org/core/books/abs/purely-functional-data-structures/contents/9DA321DB54345B01758FE0107B9824E2
+   Verified 2026-08-02.
+3. Oracle. *Java SE 21 API Specification*, `java.lang.String`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html
+   Verified 2026-08-02. Source for Java `String` immutability and sharing.
+4. Clojure. "Data Structures."
+   https://clojure.org/reference/data_structures
+   Verified 2026-08-02. Source for Clojure immutable persistent collections,
+   structural sharing, and collection operation notes.
+5. Meta Open Source. React documentation, "Updating Objects in State."
+   https://react.dev/learn/updating-objects-in-state
+   Verified 2026-08-02. Source for React state replacement guidance.
+6. Redux documentation. "Immutable Update Patterns."
+   https://redux.js.org/usage/structuring-reducers/immutable-update-patterns
+   Verified 2026-08-02. Source for nested copy rules, common immutable update
+   mistakes, and Redux Toolkit with Immer.
+7. Immer documentation. "Using produce."
+   https://immerjs.github.io/immer/produce/
+   Verified 2026-08-02. Source for draft mutation with untouched base state and
+   produced next state.
+8. Immutable.js documentation. "Persistent, immutable data structures for
+   JavaScript / TypeScript."
+   https://immutable-js.com/
+   Verified 2026-08-02. Source for JavaScript persistent collections and
+   structural sharing claims.
+9. Python Software Foundation. Python 3 documentation, `dataclasses`.
+   https://docs.python.org/3/library/dataclasses.html
+   Verified 2026-08-02. Source for `frozen=True`, `FrozenInstanceError`, and
+   hash behavior tied to frozen dataclasses.
+10. TypeScript documentation. "Object Types", `readonly` properties.
+    https://www.typescriptlang.org/docs/handbook/2/objects.html
+    Verified 2026-08-02. Source for `readonly` as a type-checking property
+    modifier with no runtime behavior change.
+11. Scott Chacon and Ben Straub. *Pro Git*, 2nd edition, chapter 10.2, "Git
+    Objects."
+    https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+    Verified 2026-08-02. Source for Git content-addressed object storage and
+    separate stored file versions.
+
 ## Code examples
 
 Three languages are used because they express different parts of the pattern.
@@ -1013,53 +1063,3 @@ fn main() {
     println!("{}", third.lines[0].quantity);
 }
 ```
-
-## 18. References
-
-1. John McCarthy. "Recursive Functions of Symbolic Expressions and Their
-   Computation by Machine, Part I." *Communications of the ACM*, 1960. Source
-   for early Lisp lineage around symbolic expression data and recursive
-   functions.
-   https://www-formal.stanford.edu/jmc/recursive.html
-   Verified 2026-08-02.
-2. Chris Okasaki. *Purely Functional Data Structures*. Cambridge University
-   Press, 1998. Chapters 2 through 5. Source for the algorithmic lineage of
-   persistent data structures.
-   https://www.cambridge.org/core/books/abs/purely-functional-data-structures/contents/9DA321DB54345B01758FE0107B9824E2
-   Verified 2026-08-02.
-3. Oracle. *Java SE 21 API Specification*, `java.lang.String`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html
-   Verified 2026-08-02. Source for Java `String` immutability and sharing.
-4. Clojure. "Data Structures."
-   https://clojure.org/reference/data_structures
-   Verified 2026-08-02. Source for Clojure immutable persistent collections,
-   structural sharing, and collection operation notes.
-5. Meta Open Source. React documentation, "Updating Objects in State."
-   https://react.dev/learn/updating-objects-in-state
-   Verified 2026-08-02. Source for React state replacement guidance.
-6. Redux documentation. "Immutable Update Patterns."
-   https://redux.js.org/usage/structuring-reducers/immutable-update-patterns
-   Verified 2026-08-02. Source for nested copy rules, common immutable update
-   mistakes, and Redux Toolkit with Immer.
-7. Immer documentation. "Using produce."
-   https://immerjs.github.io/immer/produce/
-   Verified 2026-08-02. Source for draft mutation with untouched base state and
-   produced next state.
-8. Immutable.js documentation. "Persistent, immutable data structures for
-   JavaScript / TypeScript."
-   https://immutable-js.com/
-   Verified 2026-08-02. Source for JavaScript persistent collections and
-   structural sharing claims.
-9. Python Software Foundation. Python 3 documentation, `dataclasses`.
-   https://docs.python.org/3/library/dataclasses.html
-   Verified 2026-08-02. Source for `frozen=True`, `FrozenInstanceError`, and
-   hash behavior tied to frozen dataclasses.
-10. TypeScript documentation. "Object Types", `readonly` properties.
-    https://www.typescriptlang.org/docs/handbook/2/objects.html
-    Verified 2026-08-02. Source for `readonly` as a type-checking property
-    modifier with no runtime behavior change.
-11. Scott Chacon and Ben Straub. *Pro Git*, 2nd edition, chapter 10.2, "Git
-    Objects."
-    https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
-    Verified 2026-08-02. Source for Git content-addressed object storage and
-    separate stored file versions.

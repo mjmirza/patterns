@@ -1057,6 +1057,70 @@ inspection endpoint that dumps keys would expose whatever was interned, so if su
 an endpoint exists it inherits the classification of the most sensitive value in
 the pool and should be treated accordingly.
 
+## 18. References
+
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
+   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
+   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Flyweight. Source
+   of the five participants including UnsharedConcreteFlyweight, the intrinsic
+   and extrinsic split as the organising idea, and the pairing with Composite.
+   The page range was not independently confirmed and is therefore not cited.
+2. Paul R. Calder, Mark A. Linton. "Glyphs: flyweight objects for user
+   interfaces". Proceedings of the 3rd annual ACM SIGGRAPH symposium on User
+   Interface Software and Technology, UIST 1990, Snowbird, Utah, pages 92 to 101.
+   DOI 10.1145/97924.97935. Bibliographic record verified at
+   https://dblp.uni-trier.de/rec/conf/uist/CalderL90.html
+   Verified 2026-08-02. Source of the pattern's origin and the WYSIWYG document
+   editor motivation. The full text was not read, so no claim in this entry
+   quotes its contents beyond the title and the bibliographic facts.
+3. Oracle. *The Java Language Specification, Java SE 21 Edition*, section 3.10.5,
+   String Literals.
+   https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html
+   Verified 2026-08-02. Source of the mandated string literal interning behaviour.
+4. Oracle. *Java SE 21 API Specification*, `java.lang.Integer`, method
+   `valueOf(int)`.
+   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html
+   Verified 2026-08-02. Source of the mandated -128 to 127 cache and the optional
+   caching outside that range.
+5. Microsoft. *.NET API documentation*, `System.String.Intern(String)`, including
+   the Remarks and Performance considerations sections.
+   https://learn.microsoft.com/en-us/dotnet/api/system.string.intern
+   Verified 2026-08-02. Source of the intern pool description, the statement that
+   automatic literal interning is not guaranteed, and the retention warning used
+   in dimensions 3, 10, 11 and 17.
+6. Python Software Foundation. *Python 3 documentation*, `sys` module,
+   `sys.intern`.
+   https://docs.python.org/3/library/sys.html
+   Verified 2026-08-02. Source of the pointer-comparison benefit for interned
+   dictionary keys and the note that interned strings are not immortal.
+7. CPython project. `Include/internal/pycore_global_objects.h`, definitions of
+   `_PY_NSMALLPOSINTS` and `_PY_NSMALLNEGINTS`.
+   https://raw.githubusercontent.com/python/cpython/3.13/Include/internal/pycore_global_objects.h
+   Verified 2026-08-02. Source of the CPython small integer pool range of -5 to
+   256. This is an implementation detail of CPython, not a language guarantee.
+8. FreeType project. *FreeType 2 API Reference*, Cache Sub-System.
+   https://freetype.org/freetype2/docs/reference/ft2-cache_subsystem.html
+   Verified 2026-08-02. Source of the text rendering production use and the
+   bounded-pool variant.
+9. Epic Games. *Unreal Engine 5.8 Documentation*, "Instanced Static Mesh Component
+   in Unreal Engine".
+   https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component-in-unreal-engine
+   Verified 2026-08-02. Source of the game engine production use and the 672 bytes
+   against 64 bytes per-instance memory comparison.
+10. Robert Nystrom. *Game Programming Patterns*, chapter on Flyweight.
+    https://gameprogrammingpatterns.com/flyweight.html
+    Verified 2026-08-02. Source of the forest and terrain tile examples and the
+    description of instanced rendering as two data streams.
+11. Google. *Guava API documentation*, `com.google.common.collect.Interners`.
+    https://guava.dev/releases/snapshot-jre/api/docs/com/google/common/collect/Interners.html
+    Verified 2026-08-02. Source of the weak and strong interner variants and the
+    documented thread-safety guarantee used in dimensions 8 and 11.
+12. Wikipedia contributors. "Flyweight pattern".
+    https://en.wikipedia.org/wiki/Flyweight_pattern
+    Verified 2026-08-02. Used only to confirm the GoF category, the wording of the
+    intrinsic and extrinsic state distinction, and the Calder and Linton
+    attribution. Not used as a source of explanation.
+
 ## Code examples
 
 Four languages, each showing a part of the pattern the others cannot. Python
@@ -1303,67 +1367,3 @@ fn main() {
     println!();
 }
 ```
-
-## 18. References
-
-1. Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides. *Design Patterns.
-   Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1994.
-   ISBN 0-201-63361-2. Chapter 4, Structural Patterns, section Flyweight. Source
-   of the five participants including UnsharedConcreteFlyweight, the intrinsic
-   and extrinsic split as the organising idea, and the pairing with Composite.
-   The page range was not independently confirmed and is therefore not cited.
-2. Paul R. Calder, Mark A. Linton. "Glyphs: flyweight objects for user
-   interfaces". Proceedings of the 3rd annual ACM SIGGRAPH symposium on User
-   Interface Software and Technology, UIST 1990, Snowbird, Utah, pages 92 to 101.
-   DOI 10.1145/97924.97935. Bibliographic record verified at
-   https://dblp.uni-trier.de/rec/conf/uist/CalderL90.html
-   Verified 2026-08-02. Source of the pattern's origin and the WYSIWYG document
-   editor motivation. The full text was not read, so no claim in this entry
-   quotes its contents beyond the title and the bibliographic facts.
-3. Oracle. *The Java Language Specification, Java SE 21 Edition*, section 3.10.5,
-   String Literals.
-   https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html
-   Verified 2026-08-02. Source of the mandated string literal interning behaviour.
-4. Oracle. *Java SE 21 API Specification*, `java.lang.Integer`, method
-   `valueOf(int)`.
-   https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html
-   Verified 2026-08-02. Source of the mandated -128 to 127 cache and the optional
-   caching outside that range.
-5. Microsoft. *.NET API documentation*, `System.String.Intern(String)`, including
-   the Remarks and Performance considerations sections.
-   https://learn.microsoft.com/en-us/dotnet/api/system.string.intern
-   Verified 2026-08-02. Source of the intern pool description, the statement that
-   automatic literal interning is not guaranteed, and the retention warning used
-   in dimensions 3, 10, 11 and 17.
-6. Python Software Foundation. *Python 3 documentation*, `sys` module,
-   `sys.intern`.
-   https://docs.python.org/3/library/sys.html
-   Verified 2026-08-02. Source of the pointer-comparison benefit for interned
-   dictionary keys and the note that interned strings are not immortal.
-7. CPython project. `Include/internal/pycore_global_objects.h`, definitions of
-   `_PY_NSMALLPOSINTS` and `_PY_NSMALLNEGINTS`.
-   https://raw.githubusercontent.com/python/cpython/3.13/Include/internal/pycore_global_objects.h
-   Verified 2026-08-02. Source of the CPython small integer pool range of -5 to
-   256. This is an implementation detail of CPython, not a language guarantee.
-8. FreeType project. *FreeType 2 API Reference*, Cache Sub-System.
-   https://freetype.org/freetype2/docs/reference/ft2-cache_subsystem.html
-   Verified 2026-08-02. Source of the text rendering production use and the
-   bounded-pool variant.
-9. Epic Games. *Unreal Engine 5.8 Documentation*, "Instanced Static Mesh Component
-   in Unreal Engine".
-   https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component-in-unreal-engine
-   Verified 2026-08-02. Source of the game engine production use and the 672 bytes
-   against 64 bytes per-instance memory comparison.
-10. Robert Nystrom. *Game Programming Patterns*, chapter on Flyweight.
-    https://gameprogrammingpatterns.com/flyweight.html
-    Verified 2026-08-02. Source of the forest and terrain tile examples and the
-    description of instanced rendering as two data streams.
-11. Google. *Guava API documentation*, `com.google.common.collect.Interners`.
-    https://guava.dev/releases/snapshot-jre/api/docs/com/google/common/collect/Interners.html
-    Verified 2026-08-02. Source of the weak and strong interner variants and the
-    documented thread-safety guarantee used in dimensions 8 and 11.
-12. Wikipedia contributors. "Flyweight pattern".
-    https://en.wikipedia.org/wiki/Flyweight_pattern
-    Verified 2026-08-02. Used only to confirm the GoF category, the wording of the
-    intrinsic and extrinsic state distinction, and the Calder and Linton
-    attribution. Not used as a source of explanation.

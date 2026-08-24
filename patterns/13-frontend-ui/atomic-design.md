@@ -456,6 +456,21 @@ a higher bar of security and accessibility review than a one-off,
 feature-specific component would need, precisely because a defect at
 that level reaches so much of the system at once.
 
+## 18. References
+
+1. Brad Frost. "Atomic Web Design".
+   https://bradfrost.com/blog/post/atomic-web-design/
+   Verified 2026-08-21. Source of the defining sentence and all five
+   level definitions quoted in dimensions 1, 5, and 9.
+2. Brad Frost. "Atomic Design," Chapter 2.
+   https://atomicdesign.bradfrost.com/chapter-2/
+   Verified 2026-08-21. Source of the molecules definition quoted in
+   dimension 5.
+3. Brad Frost. "Atomic Design and Storybook".
+   https://bradfrost.com/blog/post/atomic-design-and-storybook/
+   Verified 2026-08-21. Source of the Storybook organization quote in
+   dimension 8.
+
 ## Code examples
 
 Three languages and frameworks where the pattern is genuinely
@@ -621,18 +636,3 @@ let searchBar = SearchBarMolecule(
 
 print(searchBar.render())
 ```
-
-## 18. References
-
-1. Brad Frost. "Atomic Web Design".
-   https://bradfrost.com/blog/post/atomic-web-design/
-   Verified 2026-08-21. Source of the defining sentence and all five
-   level definitions quoted in dimensions 1, 5, and 9.
-2. Brad Frost. "Atomic Design," Chapter 2.
-   https://atomicdesign.bradfrost.com/chapter-2/
-   Verified 2026-08-21. Source of the molecules definition quoted in
-   dimension 5.
-3. Brad Frost. "Atomic Design and Storybook".
-   https://bradfrost.com/blog/post/atomic-design-and-storybook/
-   Verified 2026-08-21. Source of the Storybook organization quote in
-   dimension 8.

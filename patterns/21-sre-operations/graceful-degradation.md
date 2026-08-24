@@ -167,6 +167,11 @@ Skip it for a request where a partial or degraded answer is actually worse than 
 - A cached or stale-data fallback used as a degraded response should respect the same data retention and freshness requirements as the normal path, rather than silently serving data past its intended lifetime.
 - The degradation indicator itself should not leak internal system health details to an untrusted caller beyond what the person genuinely needs to know their response is degraded.
 
+## 18. References
+
+- Google, Site Reliability Engineering, Handling Overload chapter (https://sre.google/sre-book/handling-overload/)
+- Google, Site Reliability Engineering, Addressing Cascading Failures chapter (https://sre.google/sre-book/addressing-cascading-failures/)
+
 ## Code examples
 
 ### Python
@@ -276,8 +281,3 @@ let response = handleRequest(request: "search query", signal: signal)
 print("degraded " + String(response.degraded))
 print("data " + response.data)
 ```
-
-## 18. References
-
-- Google, Site Reliability Engineering, Handling Overload chapter (https://sre.google/sre-book/handling-overload/)
-- Google, Site Reliability Engineering, Addressing Cascading Failures chapter (https://sre.google/sre-book/addressing-cascading-failures/)

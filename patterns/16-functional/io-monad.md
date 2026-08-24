@@ -481,6 +481,22 @@ sanitised input. The usual input-validation, authorisation, and
 output-encoding discipline still applies inside the IO-typed function,
 exactly as it would without the wrapper.
 
+## 18. References
+
+1. Simon Peyton Jones and Philip Wadler. "Imperative Functional
+   Programming". 20th ACM Symposium on Principles of Programming
+   Languages, POPL 1993.
+   https://www.microsoft.com/en-us/research/publication/imperative-functional-programming/
+   Verified 2026-08-21. Source of the first_described lineage claim.
+2. GHC base library documentation. `System.IO`.
+   https://hackage.haskell.org/package/base/docs/System-IO.html
+   Verified 2026-08-21. Source for the GHC production use in dimension
+   9 and the type description quoted there.
+3. Typelevel Cats Effect documentation. Getting Started.
+   https://typelevel.org/cats-effect/docs/getting-started
+   Verified 2026-08-21. Source for the Scala production use in
+   dimension 9.
+
 ## Code examples
 
 Three languages where the pattern is genuinely idiomatic in different
@@ -598,19 +614,3 @@ let program = readLine.flatMap { name in printLine("hello " + name) }
 
 program.run()
 ```
-
-## 18. References
-
-1. Simon Peyton Jones and Philip Wadler. "Imperative Functional
-   Programming". 20th ACM Symposium on Principles of Programming
-   Languages, POPL 1993.
-   https://www.microsoft.com/en-us/research/publication/imperative-functional-programming/
-   Verified 2026-08-21. Source of the first_described lineage claim.
-2. GHC base library documentation. `System.IO`.
-   https://hackage.haskell.org/package/base/docs/System-IO.html
-   Verified 2026-08-21. Source for the GHC production use in dimension
-   9 and the type description quoted there.
-3. Typelevel Cats Effect documentation. Getting Started.
-   https://typelevel.org/cats-effect/docs/getting-started
-   Verified 2026-08-21. Source for the Scala production use in
-   dimension 9.
