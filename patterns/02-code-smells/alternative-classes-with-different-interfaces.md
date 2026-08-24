@@ -238,36 +238,53 @@ After treatment.
 ## 6. ASCII structure diagram
 
 ```
-   BEFORE                                         AFTER
+BEFORE
 
-   +-------------------+                          +-------------------+
-   |  DivergentClassA   |                          |   SharedContract  |
-   |---------------------|                        |  (interface)      |
-   | + doThingOldWay()  |                          |--------------------|
-   +-------------------+                          | + doThing()        |
-                                                    +-------------------+
-   +-------------------+                                    ^
-   |  DivergentClassB   |                                   |
-   |---------------------|                        implements|implements
-   | + performTheJob()  |                                   |
-   +-------------------+                    +------------------+  +------------------+
-                                             | DivergentClassA |  | DivergentClassB  |
-   +-------------------+                     |------------------|  |------------------|
-   |    AdHocCaller     |                    | + doThing()      |  | + doThing()      |
-   |---------------------|                   +------------------+  +------------------+
-   | if a: a.doThingOldWay() |                          ^                    ^
-   | if b: b.performTheJob() |                          |                    |
-   +-------------------+                                +---------+----------+
-                                                                    |
-                                                          +-------------------+
-                                                          |  UnifiedCaller    |
-                                                          |---------------------|
-                                                          | for x in things:   |
-                                                          |   x.doThing()      |
-                                                          +-------------------+
++-----------------+
+| DivergentClassA |
+| doThingOldWay() |
++-----------------+
 
-   The left side has one branch per concrete class at every call site.
-   The right side has one shared name, resolved by dispatch, not by branch.
++-----------------+
+| DivergentClassB |
+| performTheJob() |
++-----------------+
+
++-------------------------+
+| AdHocCaller             |
+| if a: a.doThingOldWay() |
+| if b: b.performTheJob() |
++-------------------------+
+
+The left side has one branch per concrete class at
+every call site.
+
+
+AFTER
+
++----------------------------+
+| SharedContract (interface) |
+| doThing()                  |
++----------------------------+
+           ^
+           | implements
+     +-----+-----+
+     |           |
++--------------------+ +--------------------+
+| DivergentClassA    | | DivergentClassB    |
+| doThing()          | | doThing()          |
++--------------------+ +--------------------+
+     ^           ^
+     +-----+-----+
+           |
++------------------+
+| UnifiedCaller    |
+| for x in things: |
+|   x.doThing()    |
++------------------+
+
+The right side has one shared name, resolved by
+dispatch, not by branch.
 ```
 
 ## 7. Dynamics

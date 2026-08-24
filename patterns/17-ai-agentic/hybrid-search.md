@@ -229,41 +229,40 @@ Do NOT reach for Hybrid Search when any of the following hold.
 ## 6. ASCII structure diagram
 
 ```
-+----------------------------------------------------------------------+
-|                              Hybrid Search                           |
-+----------------------------------------------------------------------+
++---------------+
+| Hybrid Search |
++---------------+
 
-                              +-------------+
-                    query --->|   Router    |
-                              +------+------+
-                                     |
-                 +-------------------+-------------------+
-                 |                                        |
-                 v                                        v
-        +----------------+                       +------------------+
-        | Sparse Retriever|                       | Dense Retriever  |
-        | (BM25 / BM25F)  |                       | (HNSW / ANN over |
-        |  Inverted Index |                       |  embedding index)|
-        +--------+--------+                       +---------+--------+
-                 |                                          |
-                 |  ranked list A                           |  ranked list B
-                 |  [doc7, doc2, doc9, ...]                 |  [doc2, doc4, doc7, ...]
-                 v                                          v
-        +----------------------------------------------------------+
-        |                    Fusion Function                       |
-        |   Reciprocal Rank Fusion  OR  normalized score blend      |
-        |        score(d) = sum_over_lists( 1 / (k + rank(d)) )    |
-        +----------------------------------+-----------------------+
-                                            |
-                                            v  fused, single ranked list
-                                 +----------------------+
-                                 | Optional Reranker     |
-                                 | (cross-encoder scoring|
-                                 |  top-N query,doc pairs|
-                                 +-----------+-----------+
-                                             |
-                                             v
-                                   final ranked results
++--------+
+| Router |
++--------+
+(query goes in here)
+           |
+     +-----+-----+
+     |           |
++----------------------+ +----------------------+
+| Sparse Retriever     | | Dense Retriever      |
+| (BM25 / BM25F)       | | (HNSW / ANN over     |
+| Inverted Index       | | embedding index)     |
++----------------------+ +----------------------+
+     |           |
+     | ranked list A     ranked list B
+     | [doc7, doc2, ...] [doc2, doc4, ...]
+     v           v
++--------------------------------------------------+
+| Fusion Function                                  |
+| Reciprocal Rank Fusion OR normalized score blend |
+| score(d) = sum_over_lists( 1 / (k + rank(d)) )   |
++--------------------------------------------------+
+           | fused, single ranked list
+           v
++-----------------------------------------------+
+| Optional Reranker                             |
+| (cross-encoder scoring top-N query,doc pairs) |
++-----------------------------------------------+
+           |
+           v
+final ranked results
 ```
 
 ## 7. Dynamics

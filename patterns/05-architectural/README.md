@@ -2,7 +2,7 @@
 
 Origin. Buschmann POSA 1, Bass SEI
 
-31 entries, 248,986 words. Every entry carries all 18
+31 entries, 248,971 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Architectural
@@ -17,7 +17,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Event-Carried State Transfer](event-carried-state-transfer.md) | established | 7,462 | A system grows a second consumer that needs data owned by a first system. |
 | [Event-Driven Architecture](event-driven-architecture.md) | canonical | 9,420 | A system built from several independently deployable components needs to react to things that happen elsewhere in the system, without each component knowing the internal state ... |
 | [Hexagonal Architecture](hexagonal-architecture.md) | canonical | 10,373 | A codebase reaches a specific, recognizable moment. |
-| [Interpreter Architecture](interpreter-architecture.md) | canonical | 8,049 | A system needs to accept a piece of behaviour, a rule, a query, a formula, a policy, that was not known when the system was compiled, and that behaviour must be safe to run inside ... |
+| [Interpreter Architecture](interpreter-architecture.md) | canonical | 8,034 | A system needs to accept a piece of behaviour, a rule, a query, a formula, a policy, that was not known when the system was compiled, and that behaviour must be safe to run inside ... |
 | [Layered Architecture](layered-architecture.md) | canonical | 7,640 | A non-trivial application has at least three concerns that change for different reasons and at different rates. |
 | [Leader-Follower Architecture](leader-follower-architecture.md) | canonical | 10,195 | A distributed system frequently needs some class of decision made exactly once and in a single agreed order, even though the work of making that decision is spread across several ... |
 | [Microkernel](microkernel.md) | canonical | 8,103 | A team is building a system whose core purpose is settled and small, but whose surrounding behavior is not. |

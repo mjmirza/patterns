@@ -219,39 +219,39 @@ Manager.
 ## 6. ASCII structure diagram
 
 ```
-+--------------------------------------------------------------------+
-|                       Process Manager Instance                     |
-|  correlation_id: "order-4471"                                      |
-|  current_state:  AWAITING_PAYMENT                                  |
-|  history:        [InventoryReserved]                               |
-+---------------------------+------------------------------------------+
-                             | reads / writes state, per
-                             | Process Definition rules
-                             v
-+----------------------------------------------------------------+
-|                    Process Definition (rules)                  |
-|  STARTED           --InventoryReserved-->  AWAITING_PAYMENT    |
-|  AWAITING_PAYMENT  --PaymentConfirmed-->    READY_TO_SHIP       |
-|  AWAITING_PAYMENT  --PaymentDeclined-->     COMPENSATING        |
-|  READY_TO_SHIP     --ShipmentDispatched-->  COMPLETED           |
-+----------------------------------------------------------------+
++-------------------------------------+
+| Process Manager Instance            |
+| correlation_id: "order-4471"        |
+| current_state:  AWAITING_PAYMENT    |
+| history:        [InventoryReserved] |
++-------------------------------------+
+           |
+           | reads / writes state, per
+           | Process Definition rules
+           v
++-----------------------------------------------------------+
+| Process Definition (rules)                                |
+| STARTED           --InventoryReserved--> AWAITING_PAYMENT |
+| AWAITING_PAYMENT  --PaymentConfirmed-->   READY_TO_SHIP   |
+| AWAITING_PAYMENT  --PaymentDeclined-->    COMPENSATING    |
+| READY_TO_SHIP     --ShipmentDispatched--> COMPLETED       |
++-----------------------------------------------------------+
 
-     command(reserve)          command(charge)          command(ship)
-        |                          |                         |
-        v                          v                         v
-  +-----------+             +------------+            +------------+
-  | Inventory |             |  Payment   |            | Shipping   |
-  | Service   |             |  Service   |            | Service    |
-  +-----+-----+             +------+-----+            +------+-----+
-        |                          |                         |
-        | event(Reserved)          | event(Confirmed/         | event(Dispatched)
-        | correlation=order-4471   | Declined)                | correlation=order-4471
-        |                          | correlation=order-4471   |
-        +--------------------------+-------------------------+
-                                    |
-                                    v
-                     back to the Process Manager Instance,
-                     looked up by correlation_id "order-4471"
+  command(reserve)   command(charge)   command(ship)
+       |                  |                 |
+       v                  v                 v
++------------+ +------------+ +------------+
+| Inventory  | | Payment    | | Shipping   |
+| Service    | | Service    | | Service    |
++------------+ +------------+ +------------+
+     |             |             |
+     | event(Reserved) event(Confirmed/  event(Dispatched)
+     | corr=order-4471 Declined)          corr=order-4471
+     |                 corr=order-4471
+     +-----------------+-----------------+
+                       v
+back to the Process Manager Instance, looked up by
+correlation_id "order-4471"
 ```
 
 ## 7. Dynamics

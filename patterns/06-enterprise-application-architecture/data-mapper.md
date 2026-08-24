@@ -170,25 +170,27 @@ that dependency.
 ## 6. ASCII structure diagram
 
 ```
-+-------------------+           +----------------------+
-|   Client Code      |  finds,   |     Data Mapper       |
-|  (Service/Command)  |---------->|   (e.g. UserMapper)    |
-+-------------------+  saves    +----------+-----------+
-                                            |
-                        knows how to translate both ways
-                                            |
-                 +--------------------------+--------------------------+
-                 |                                                     |
-                 v                                                     v
-       +-------------------+                                +-------------------+
-       |   Domain Object    |                                |     Database       |
-       |     (e.g. User)     |                                |   (users table)     |
-       |  no SQL, no mapper  |                                |  rows and columns    |
-       |     reference        |                                |                     |
-       +-------------------+                                +-------------------+
++-------------------------------+
+| Client Code (Service/Command) |
++-------------------------------+
+           | finds, saves
+           v
++-------------------------------+
+| Data Mapper (e.g. UserMapper) |
++-------------------------------+
+           |
+           | knows how to translate both ways
+     +-----+-----+
+     |           |
++---------------------+ +---------------------+
+| Domain Object       | | Database            |
+| (e.g. User)         | | (users table)       |
+| no SQL, no mapper   | | rows and columns    |
+| reference           | |                     |
++---------------------+ +---------------------+
 
-   Domain Object and Database never reference each other directly.
-   Only the Data Mapper knows both shapes.
+Domain Object and Database never reference each other
+directly. Only the Data Mapper knows both shapes.
 ```
 
 ## 7. Dynamics

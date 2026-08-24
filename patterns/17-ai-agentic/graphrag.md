@@ -217,43 +217,41 @@ outward from a small number of seed entities matched to the question.
 ## 6. ASCII structure diagram
 
 ```
-+------------------+     +----------------+     +------------------+
-| Source Documents |---->|   Text Units   |---->| Entity Extractor |
-+------------------+     +----------------+     |  (LLM, per unit) |
-                                                 +---------+--------+
-                                                           |
-                                                           v
-                                                +----------------------+
-                                                |    Knowledge Graph    |
-                                                | entities + relations  |
-                                                +-----------+-----------+
-                                                            |
-                                                            v
-                                                +----------------------+
-                                                |  Community Detector   |
-                                                |  (Leiden clustering)  |
-                                                +-----------+-----------+
-                                                            |
-                                                            v
-                                                +----------------------+
-                                                |   Community Reports   |
-                                                | (LLM, per community)  |
-                                                +-----------+-----------+
-                                                            |
-                              +-----------------------------+---------------+
-                              |                                             |
-                              v                                             v
-                    +------------------+                         +------------------+
-                    |  Global Search    |                         |  Local Search     |
-                    |  map communities  |                         |  walk from seed   |
-                    |  reduce to answer |                         |  entity neighbors |
-                    +------------------+                         +------------------+
-                              |                                             |
-                              +-----------------------------+---------------+
-                                                            v
-                                                     +----------------+
-                                                     |  Final Answer  |
-                                                     +----------------+
++------------------+
+| Source Documents |
++------------------+
+           v
++------------+
+| Text Units |
++------------+
+           v
++------------------+
+| Entity Extractor |
+| (LLM, per unit)  |
++------------------+
+           v
++----------------------+
+| Knowledge Graph      |
+| entities + relations |
++----------------------+
+           v
++---------------------+
+| Community Detector  |
+| (Leiden clustering) |
++---------------------+
+           v
++----------------------+
+| Community Reports    |
+| (LLM, per community) |
++----------------------+
+           |
+     +-----+-----+
+     |           |
++----------------------+ +----------------------+
+| Global Search        | | Local Search         |
+| map communities      | | walk from seed       |
+| reduce to answer     | | entity neighbors     |
++----------------------+ +----------------------+
 ```
 
 ## 7. Dynamics
