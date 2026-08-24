@@ -129,25 +129,46 @@ The refactoring has two participants.
 ## 6. ASCII structure diagram
 
 ```
-  BEFORE                              AFTER
-  ------                              -----
+BEFORE
+------
 
-  class Account:                     class AccountType:
-    type: AccountType                  interestRate
-                                       fee
-    calculateOverdraft():              threshold
-      // uses type.interestRate
-      // uses type.fee                 calculateOverdraft():
-      // uses type.threshold             // uses interestRate
-      // barely uses own fields          // uses fee
-                                         // uses threshold
-  class AccountType:
-    interestRate                    class Account:
-    fee                                type: AccountType
-    threshold
-                                      overdraftCharge():
-                                        return type.calculateOverdraft()
-  (feature envy on AccountType)      (function on AccountType, Account delegates)
+class Account:
+  type: AccountType
+
+  calculateOverdraft():
+    // uses type.interestRate
+    // uses type.fee
+    // uses type.threshold
+    // barely uses own fields
+
+class AccountType:
+  interestRate
+  fee
+  threshold
+
+(feature envy on AccountType)
+
+
+AFTER
+-----
+
+class AccountType:
+  interestRate
+  fee
+  threshold
+
+  calculateOverdraft():
+    // uses interestRate
+    // uses fee
+    // uses threshold
+
+class Account:
+  type: AccountType
+
+  overdraftCharge():
+    return type.calculateOverdraft()
+
+(function moved onto AccountType, Account delegates)
 ```
 
 ## 7. Dynamics

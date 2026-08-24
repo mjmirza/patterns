@@ -151,29 +151,31 @@ Validation and a fail-fast Either.
 ## 6. ASCII structure diagram
 
 ```
-    Validation, two constructors
+Validation, two constructors
 
-    Success v          holds a value v on the happy path
-    Failure e          holds an accumulated error value e
+  Success v   holds a value v on the happy path
+  Failure e   holds an accumulated error value e
 
-    Applicative apply, combining two Validation values
+Applicative apply, combining two Validation values
 
-    Success f  applied to  Success x   ->  Success (f x)
-    Success f  applied to  Failure e2  ->  Failure e2
-    Failure e1 applied to  Success x   ->  Failure e1
-    Failure e1 applied to  Failure e2  ->  Failure (e1 <> e2)
-                                                     ^^^^^^^^
-                                            combine, both errors kept
+  Success f  x Success x  -> Success (f x)
+  Success f  x Failure e2 -> Failure e2
+  Failure e1 x Success x  -> Failure e1
+  Failure e1 x Failure e2 -> Failure (e1 <> e2)
+                             ^^ combine, both errors kept
 
-    Three independent field checks combined with map3
+Three independent field checks combined with map3
 
-    checkName(input)   ---> Success "Ada"     or  Failure ["name required"]
-    checkAge(input)    ---> Success 34        or  Failure ["age must be positive"]
-    checkEmail(input)  ---> Success "a@b.com" or  Failure ["invalid email"]
+  checkName(input)
+    -> Success "Ada" or Failure ["name required"]
+  checkAge(input)
+    -> Success 34 or Failure ["age must be positive"]
+  checkEmail(input)
+    -> Success "a@b.com" or Failure ["invalid email"]
 
-    map3(checkName, checkAge, checkEmail, makeUser)
-       all three Success  ->  Success (makeUser "Ada" 34 "a@b.com")
-       any Failures       ->  Failure (every failing message combined)
+  map3(checkName, checkAge, checkEmail, makeUser)
+    all three Success -> Success (makeUser name age email)
+    any Failures      -> Failure (every failing msg combined)
 ```
 
 ## 7. Dynamics

@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-51 entries, 398,662 words. Every entry carries all 18
+51 entries, 398,620 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -45,7 +45,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Anemic Domain Model](anemic-domain-model.md) | canonical | 8,622 | A codebase reaches for persistence early. |
+| [Anemic Domain Model](anemic-domain-model.md) | canonical | 8,580 | A codebase reaches for persistence early. |
 | [Big Ball of Mud](big-ball-of-mud.md) | canonical | 9,287 | A reader can recognize this problem without ever hearing the pattern's name. |
 | [Boat Anchor](boat-anchor.md) | established | 7,077 | A team adds a piece of code, an API, a dependency, a database table, a configuration flag, or a whole service for a reason that was real at the time. |
 | [Circular Dependency](circular-dependency.md) | canonical | 9,330 | A codebase grows by adding files, packages, or services, and each new unit imports whatever it needs from its neighbours. |

@@ -264,35 +264,34 @@ than classes and interfaces.
 ## 6. ASCII structure diagram
 
 ```
-  TIMELINE (left = earlier, right = later)
-  --------------------------------------------------------------->
+TIMELINE, earlier to later, read top to bottom
 
-  [Actor]      [Command]        [Aggregate]      [Domain Event]
-  Customer  -->  PlaceOrder --> OrderAggregate --> OrderPlaced
-  (yellow)       (blue)         (yellow/tan)        (orange)
-                                                        |
-                                                        v
-                                                    [Policy]
-                                              "whenever OrderPlaced,
-                                               then ReserveStock"
-                                                     (lilac)
-                                                        |
-                                                        v
-  [External Sys]                              [Command]
-  Warehouse   <-------------------------------  ReserveStock
-  (pink)                                          (blue)
-                                                        |
-                                                        v
-                                              [Aggregate]      [Domain Event]
-                                              StockAggregate --> StockReserved
-                                              (yellow/tan)         (orange)
-                                                                       |
-                                                                       v
-                                                                  [Hotspot]
-                                                              "what happens if
-                                                               stock runs out
-                                                               mid-order?"
-                                                                (red, unresolved)
+[Actor] Customer (yellow)
+     |
+     v
+[Command] PlaceOrder (blue)
+     |
+     v
+[Aggregate] OrderAggregate (yellow/tan)
+     |
+     v
+[Domain Event] OrderPlaced (orange)
+     |
+     v
+[Policy] whenever OrderPlaced, then ReserveStock (lilac)
+     |
+     v
+[Command] ReserveStock (blue)
+     |
+     +---> [External Sys] Warehouse (pink)
+     v
+[Aggregate] StockAggregate (yellow/tan)
+     |
+     v
+[Domain Event] StockReserved (orange)
+     |
+     v
+[Hotspot] "what happens if stock runs out mid-order?" (red, unresolved)
 ```
 
 ## 7. Dynamics

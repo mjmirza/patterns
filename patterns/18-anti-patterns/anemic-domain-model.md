@@ -239,50 +239,50 @@ by the role they fail to play is the clearest way to see the shape.
 ## 6. ASCII structure diagram
 
 ```
-   ANEMIC SHAPE (the anti-pattern)
+ANEMIC SHAPE, the anti-pattern
 
-   +-----------------------+      reads/writes      +-----------------------+
-   |   OrderService        | ----------------------> |   Order (Data Holder)|
-   |------------------------|      every field       |------------------------|
-   | + placeOrder(order)   |      via getters/       | - id                  |
-   | + cancelOrder(order)  |      setters, no        | - lineItems           |
-   | + addLineItem(order,  |      encapsulation      | - status              |
-   |     item)             |      enforced by Order  | - total               |
-   | + recalculateTotal(   |                         | + getId()             |
-   |     order)            |                         | + getLineItems()      |
-   +-----------------------+                         | + setLineItems(list)  |
-              ^                                       | + getStatus()         |
-              |  called by                             | + setStatus(status)   |
-              |                                        | + getTotal()          |
-   +-----------------------+                          | + setTotal(amount)    |
-   |   OrderController      |                          +-----------------------+
-   |   BatchJob              |                                     ^
-   |   AnyOtherCaller        |----------------------------------- direct field
-   +-----------------------+          mutation, bypassing               access,
-                                       OrderService entirely,            no rule
-                                       nothing prevents it                enforced
++-----------------+
+| OrderController |
+| BatchJob        |
+| AnyOtherCaller  |
++-----------------+
+     | called by
+     v
++----------------------------+
+| OrderService               |
+| + placeOrder(order)        |
+| + cancelOrder(order)       |
+| + addLineItem(order, item) |
+| + recalculateTotal(order)  |
++----------------------------+
+     | reads/writes every field via getters/setters,
+     | no encapsulation enforced by Order
+     v
++-----------------------------------------------+
+| Order (Data Holder)                           |
+| - id                                          |
+| - lineItems                                   |
+| - status                                      |
+| - total                                       |
+| + getId(), getLineItems(), setLineItems(list) |
+| + getStatus(), setStatus(status)              |
+| + getTotal(), setTotal(amount)                |
++-----------------------------------------------+
 
+Any caller can also mutate a field directly, bypassing
+OrderService entirely, since no rule is enforced.
 
-   RICH ALTERNATIVE (what dimension 14 refactors toward)
+RICH ALTERNATIVE, what dimension 14 refactors toward
 
-   +-----------------------+
-   |   Order (Rich Entity) |
-   |------------------------|
-   | - id                   |
-   | - lineItems  (private) |
-   | - status     (private) |
-   |------------------------|
-   | + addLineItem(item)    |  <- enforces: cannot add after shipped
-   | + cancel()             |  <- enforces: cannot cancel after shipped
-   | + total(): Money       |  <- always derived, never a stale field
-   +-----------------------+
-              ^
-              | calls only the public, invariant-preserving methods
-              |
-   +-----------------------+
-   |   OrderController      |
-   |   BatchJob              |
-   +-----------------------+
++---------------------------------------------------+
+| Order (Rich Entity)                               |
+| - id                                              |
+| - lineItems  (private)                            |
+| - status     (private)                            |
+| + addLineItem(item)   enforces: not after shipped |
+| + cancel()            enforces: not after shipped |
+| + total(): Money      always derived, never stale |
++---------------------------------------------------+
 ```
 
 ## 7. Dynamics

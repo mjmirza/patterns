@@ -72,14 +72,24 @@ Strategy" and a "Delegate Adapter Strategy."
 ## 6. ASCII structure diagram
 
 ```
-  +------------+     +--------------------+     +----------------------+
-  | client      | --> | Business Delegate   | --> | business-tier service  |
-  | (presentation |     | hides lookup, retry, |     | remote or local        |
-  |  tier, device, |     | exception translation |     |                        |
-  |  web service) |     +--------------------+     +----------------------+
-  +------------+
++-------------------------------------------+
+| Client                                    |
+| presentation tier, device, or web service |
++-------------------------------------------+
+     |
+     v
++--------------------------------------------+
+| Business Delegate                          |
+| hides lookup, retry, exception translation |
++--------------------------------------------+
+     |
+     v
++----------------------------------------+
+| Business-tier service, remote or local |
++----------------------------------------+
 
-  the client only ever calls the local-looking delegate, per dimension 5
+The client only ever calls the local-looking delegate,
+per dimension 5.
 ```
 
 ## 7. Dynamics
