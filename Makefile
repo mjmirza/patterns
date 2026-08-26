@@ -37,6 +37,7 @@ test:
 	@python3 tools/gen-catalogue-status-test.py
 	@python3 tools/check-code-test.py
 	@python3 tools/check-claims-test.py
+	@python3 tools/validate-refs-test.py
 
 duplicates:
 	@python3 tools/check-duplicates.py --strict
