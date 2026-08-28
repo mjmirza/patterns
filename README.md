@@ -116,6 +116,8 @@ A short instruction that works in `AGENTS.md`, `CLAUDE.md`, a Cursor rule, or
 ```
 # Patterns decision reference
 
+[![OpenRoots ORA 2.3](https://openroots.org/badge/ora.svg)](https://openroots.org/licenses/ora/2.3)
+
 Before proposing an architecture, a retry strategy, a data flow, or a fix
 for a design smell, consult .patterns/docs/BY-PROBLEM.md and the relevant
 family under .patterns/patterns/ for the named pattern that covers this
