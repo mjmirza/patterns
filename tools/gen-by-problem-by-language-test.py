@@ -77,13 +77,15 @@ def make_fixture(tmp: Path) -> Path:
         "## 2. Problem and context\n\n"
         "This is the core problem statement for Beta.\n\n"
         "Symptoms:\n"
-        "- First symptom of Beta.\n\n"
+        "- , a barrier that should reset for\n"
+        "  the next round instead throws an exception.\n\n"
         "## 4. Applicability\n\n"
         "Do NOT reach for it in Python.\n\n"
         "## 8. Implementation variants\n\n"
         "In TypeScript, this pattern is simpler.\n\n"
         "## 11. Failure modes\n\n"
-        "- Failure symptom for Beta.\n\n"
+        "**Precondition strengthening.** (Section 9). The observable symptom is\n"
+        "a runtime crash at a call site that has never changed.\n\n"
         "## 18. References\n\n"
         "References here.\n\n"
         "```rust\n"
@@ -94,6 +96,25 @@ def make_fixture(tmp: Path) -> Path:
 
 
 class TestGenerator(unittest.TestCase):
+    def test_clean_symptom_prefix_and_multiline_extraction(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("gen", TOOLS / "gen-by-problem-by-language.py")
+        gen = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(gen)
+
+        cleaned1 = gen.clean_symptom_prefix(", a barrier that should reset")
+        self.assertEqual(cleaned1, "A barrier that should reset")
+
+        sec11_text = (
+            "**Precondition strengthening.** (Section 9). The observable symptom is\n"
+            "a runtime crash at a call site that has never changed.\n"
+        )
+        symptoms = gen.extract_symptoms_sec11(sec11_text)
+        self.assertEqual(len(symptoms), 1)
+        self.assertEqual(
+            symptoms[0],
+            "Precondition strengthening. (Section 9). The observable symptom is a runtime crash at a call site that has never changed.",
+        )
     def test_generator_runs_successfully_and_parses_content(self):
         with tempfile.TemporaryDirectory() as td:
             repo = make_fixture(Path(td))
@@ -116,8 +137,8 @@ class TestGenerator(unittest.TestCase):
             self.assertIn("First symptom of Alpha.", by_problem)
             self.assertIn("Second symptom of Alpha.", by_problem)
             self.assertIn("Alpha has failed.", by_problem)
-            self.assertIn("First symptom of Beta.", by_problem)
-            self.assertIn("Failure symptom for Beta.", by_problem)
+            self.assertIn("A barrier that should reset for the next round instead throws an exception.", by_problem)
+            self.assertIn("Precondition strengthening.", by_problem)
 
             # Verify by-language content
             self.assertIn("Yes", by_language)  # Implementation checkmarks

@@ -616,7 +616,7 @@ Negative.
   couples itself to capabilities most strategies do not have.
   **Fix.** Keep the strategized interface to the smallest common contract
   every candidate lock genuinely shares, matching the paper's own two-method
-  `acquire`/`release`, or `lock`/`unlock`, shape. Strategy-specific
+  `acquire`/`release`, or `lock`/`release`, shape. Strategy-specific
   capabilities that only some lock types offer belong on a separate,
   narrower, optional interface that a component explicitly opts into, not on
   the base strategy contract every component depends on.
