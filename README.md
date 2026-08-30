@@ -116,6 +116,8 @@ A short instruction that works in `AGENTS.md`, `CLAUDE.md`, a Cursor rule, or
 ```
 # Patterns decision reference
 
+[![OpenRoots ORA 2.3](https://openroots.org/badge/ora.svg)](https://openroots.org/licenses/ora/2.3)
+
 Before proposing an architecture, a retry strategy, a data flow, or a fix
 for a design smell, consult .patterns/docs/BY-PROBLEM.md and the relevant
 family under .patterns/patterns/ for the named pattern that covers this
@@ -476,7 +478,7 @@ version.
 4. Every claim cited. Every cited URL verified on the day you submit.
 5. Production usage names a real system with a real source.
 
-Contributions are licensed under the same OpenRoots Agent License 1.0 as
+Contributions are licensed under the same OpenRoots Agent License 2.3 as
 the rest of this repository.
 
 ### Contributing with an AI coding agent
@@ -539,9 +541,9 @@ not claim it.
 ## License
 
 Content is licensed under the
-[OpenRoots Agent License 1.0](LICENSE), effective 2026-08-24. The
+[OpenRoots Agent License 2.3](LICENSE), effective 2026-08-27. The
 [NOTICE](NOTICE) file carries the short summary, the canonical legal text
-lives at [openroots.org](https://openroots.org/licenses/ora/1.0).
+lives at [openroots.org](https://openroots.org/licenses/ora/2.3).
 
 Free and unconditional at or below two million US dollars in annual
 revenue, and for any individual, nonprofit, school, or government body.
@@ -553,6 +555,6 @@ this repository's prior license keeps those rights permanently, that
 grant does not change.
 
 ```text
-"Patterns" by Mirza Iqbal, OpenRoots Agent License 1.0
+"Patterns" by Mirza Iqbal, OpenRoots Agent License 2.3
 https://github.com/mjmirza/patterns
 ```
