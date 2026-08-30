@@ -123,6 +123,31 @@ class TestCheckDuplicates(unittest.TestCase):
         finally:
             check_duplicates.fetch_historical_proposals = original_fetch
 
+    def test_collision_deduplication(self):
+        queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
+        results = analyze_repository(queue_file)
+        collisions = results["collisions"]
+        seen_keys = set()
+        for c in collisions:
+            target = c.get("published_path", c.get("historical_path"))
+            key = (c["type"], c["queue_path"], target, c["normalized_key"])
+            self.assertNotIn(key, seen_keys, "Duplicate collision tuple found in results")
+            seen_keys.add(key)
+
+    def test_main_check_and_strict_exit_codes(self):
+        import unittest.mock
+        with unittest.mock.patch.object(
+            sys, "argv", ["check-duplicates.py", "--check"]
+        ):
+            code_check = check_duplicates.main()
+            self.assertEqual(code_check, 1)
+
+        with unittest.mock.patch.object(
+            sys, "argv", ["check-duplicates.py", "--strict"]
+        ):
+            code_strict = check_duplicates.main()
+            self.assertEqual(code_strict, 1)
+
 
 if __name__ == "__main__":
     unittest.main()
