@@ -209,6 +209,8 @@ def analyze_repository(queue_path: Path) -> dict:
             if norm:
                 published_norm_map.setdefault(norm, []).append(entry)
 
+    seen_collisions: set[tuple[str, str, str, str]] = set()
+
     # Queue vs Published Normalized Name/Alias Collisions
     for q in queue:
         q_path = q.get("path", "")
@@ -222,17 +224,20 @@ def analyze_repository(queue_path: Path) -> dict:
             if norm in published_norm_map:
                 for pub in published_norm_map[norm]:
                     if pub["path"] != q_path:
-                        collisions.append(
-                            {
-                                "type": "QUEUE_VS_PUBLISHED",
-                                "queue_path": q_path,
-                                "published_path": pub["path"],
-                                "matched_term": term,
-                                "normalized_key": norm,
-                                "queue_name": q_name,
-                                "published_name": pub["name"],
-                            }
-                        )
+                        key = ("QUEUE_VS_PUBLISHED", q_path, pub["path"], norm)
+                        if key not in seen_collisions:
+                            seen_collisions.add(key)
+                            collisions.append(
+                                {
+                                    "type": "QUEUE_VS_PUBLISHED",
+                                    "queue_path": q_path,
+                                    "published_path": pub["path"],
+                                    "matched_term": term,
+                                    "normalized_key": norm,
+                                    "queue_name": q_name,
+                                    "published_name": pub["name"],
+                                }
+                            )
 
     # Published vs Published Semantic Similarity Check
     semantic_collisions = []
@@ -283,17 +288,25 @@ def analyze_repository(queue_path: Path) -> dict:
             if norm in history_norm_map:
                 for hist in history_norm_map[norm]:
                     if hist["path"] != q_path:
-                        collisions.append(
-                            {
-                                "type": "HISTORICAL_PROPOSAL_COLLISION",
-                                "queue_path": q_path,
-                                "historical_path": hist["path"],
-                                "matched_term": term,
-                                "normalized_key": norm,
-                                "queue_name": q_name,
-                                "historical_slug": hist["slug"],
-                            }
+                        key = (
+                            "HISTORICAL_PROPOSAL_COLLISION",
+                            q_path,
+                            hist["path"],
+                            norm,
                         )
+                        if key not in seen_collisions:
+                            seen_collisions.add(key)
+                            collisions.append(
+                                {
+                                    "type": "HISTORICAL_PROPOSAL_COLLISION",
+                                    "queue_path": q_path,
+                                    "historical_path": hist["path"],
+                                    "matched_term": term,
+                                    "normalized_key": norm,
+                                    "queue_name": q_name,
+                                    "historical_slug": hist["slug"],
+                                }
+                            )
 
     return {
         "published_count": len(published),
@@ -352,8 +365,8 @@ def main() -> int:
 
     if args.strict or args.check:
         # Require clean check if strict is set or if specified
-        if collisions and args.strict:
-            print("\nDUPLICATE CHECK FAILED: Strict duplicate blocking enabled.")
+        if collisions and (args.strict or args.check):
+            print("\nDUPLICATE CHECK FAILED: Duplicate collision(s) detected.")
             return 1
 
     print("\nDuplicate check completed.")
