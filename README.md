@@ -3,7 +3,7 @@
 A master level reference for software patterns. Every entry is written from
 primary sources, carries eighteen mandatory dimensions, and cites every claim.
 
-![License](https://img.shields.io/badge/license-ORA%201.0-blue)
+![License](https://img.shields.io/badge/license-ORA%202.3-blue)
 ![Families](https://img.shields.io/badge/families-29-informational)
 ![Entries](https://img.shields.io/badge/entries-890%20published-brightgreen)
 ![Dimensions per entry](https://img.shields.io/badge/dimensions%20per%20entry-18-green)
