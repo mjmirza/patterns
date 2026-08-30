@@ -74,7 +74,13 @@ def main() -> int:
     entries = json.loads(QUEUE.read_text())
     done = passing()
     claims = claimed_paths()
-    todo = [e for e in entries if e["path"] not in done and e["path"] not in claims]
+    todo = [
+        e
+        for e in entries
+        if e.get("status") != "deferred"
+        and e["path"] not in done
+        and e["path"] not in claims
+    ]
     if args.family:
         todo = [e for e in todo if e["path"].startswith(f"patterns/{args.family}")]
 
@@ -86,7 +92,8 @@ def main() -> int:
 
     if args.status:
         by_family: dict[str, list[int]] = {}
-        for e in entries:
+        active_entries = [e for e in entries if e.get("status") != "deferred"]
+        for e in active_entries:
             fam = e["path"].split("/")[1]
             slot = by_family.setdefault(fam, [0, 0])
             slot[1] += 1
@@ -96,7 +103,7 @@ def main() -> int:
             d, t = by_family[fam]
             bar = "#" * round(20 * d / t) if t else ""
             print(f"{fam:<26} {d:>3}/{t:<3} {bar}")
-        print(f"\n{len(done)} done, {len(todo)} remaining, {len(entries)} total")
+        print(f"\n{len(done)} done, {len(todo)} remaining, {len(active_entries)} total")
         return 0
 
     print(json.dumps(todo[: args.size], ensure_ascii=False))
