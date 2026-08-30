@@ -23,9 +23,9 @@ site on 31 August 2004 and syndicated the same year through IEEE Software's
 Shore's framing is direct. software should fail immediately and visibly when
 an error occurs, rather than working around the error, because a system that
 masks a fault produces a mysterious failure later, far from the place the
-fault actually happened. Fowler carries the same essay on his own bliki under
-the same title and cites Shore as the source
-(https://martinfowler.com/bliki/FailFast.html, verified 2026-08-02, page
+fault actually happened. Fowler published the IEEE Software article titled
+"Fail Fast" by James Shore on his site and cites Shore as the source
+(https://martinfowler.com/ieeeSoftware/failFast.pdf, verified 2026-08-30, page
 confirmed reachable and attributes the term to Shore's 2004 IEEE Software
 piece).
 
@@ -746,8 +746,8 @@ enough of the rest of the input to reproduce the problem.
 
 - James Shore, "Fail Fast", 31 August 2004,
   https://www.jamesshore.com/v2/blog/2004/fail-fast, verified 2026-08-02.
-- Martin Fowler, "FailFast", bliki, 2004,
-  https://martinfowler.com/bliki/FailFast.html, verified 2026-08-02.
+- Martin Fowler, "FailFast", IEEE Software column article by James Shore, 2004,
+  https://martinfowler.com/ieeeSoftware/failFast.pdf, verified 2026-08-30.
 - Bertrand Meyer, "Object-Oriented Software Construction", 2nd edition,
   Prentice Hall, 1997, chapter 11, "Design by Contract, if you insist".
 - "Design by Contract" summary, https://en.wikipedia.org/wiki/Design_by_contract,
