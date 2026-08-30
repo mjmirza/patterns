@@ -1,15 +1,13 @@
-Licensed under the OpenRoots Agent License 1.0 (ORA 1.0).
+Licensed under the OpenRoots Agent License 2.3 (ORA 2.3).
 
-Effective:    2026-08-24
-Sunset Date:  2029-08-24
-Fallback:     Apache-2.0
-Full text:    https://openroots.org/licenses/ora/1.0
+Effective:    2026-08-27
+Term:         Permanent. This release does not convert to another
+              licence by lapse of time. No sunset. No fallback.
+Full text:    https://openroots.org/licenses/ora/2.3/legalcode.txt
+SPDX:         LicenseRef-OpenRoots-ORA-2.3
 
-On the Sunset Date this release becomes available under Apache-2.0,
-automatically and irrevocably. That date cannot be moved by anyone.
+Free at or below USD 20,000,000 annual revenue (Root tier). Above the
+threshold, 0.5% of the revenue that exceeds it, capped at USD 250,000
+per calendar year (Canopy tier).
 
-Free below USD 2,000,000 annual revenue. Above it, 0.5% of attributable
-revenue, capped at USD 250,000 per year.
-
-AI training on this work requires a separate Compute licence.
-See Section 6 of the full text.
+AI Training Use requires a separate grant. See the full text.
