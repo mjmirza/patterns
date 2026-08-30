@@ -22,6 +22,8 @@ TRAILING = ".,;:!?"
 
 UA = "Mozilla/5.0 (compatible; patterns-ref-validator/1.0; +https://github.com/mjmirza/patterns)"
 
+VALID_STATUSES = {"200", "202", "204", "301", "302", "303", "307", "308"}
+
 ALLOW_UNREACHABLE = {
     # Publishers that block automated HEAD requests but are stable citations.
     "dl.acm.org",
@@ -56,6 +58,16 @@ ALLOW_UNREACHABLE = {
     "en.cppreference.com",
     "ssw.jku.at",
 }
+
+
+def is_cached(url: str, cache: dict[str, object]) -> bool:
+    if url not in cache:
+        return False
+    val = str(cache[url])
+    if val in VALID_STATUSES:
+        return True
+    host = url.split("/")[2] if "://" in url else ""
+    return host in ALLOW_UNREACHABLE
 
 
 def clean(u: str) -> str:
@@ -131,7 +143,7 @@ def main() -> int:
         return 0
 
     cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
-    todo = [u for u in urls if str(cache.get(u)) not in {"200", "301", "302"}]
+    todo = [u for u in urls if not is_cached(u, cache)]
     print(f"{len(urls)} distinct citations, {len(todo)} to probe")
 
     bad: list[tuple[str, object, list[str]]] = []
