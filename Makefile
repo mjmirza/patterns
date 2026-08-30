@@ -33,6 +33,8 @@ by-problem-by-language-check: by-problem-by-language
 test:
 	@python3 tools/check-structure-test.py
 	@python3 tools/check-family-names-test.py
+	@python3 tools/check-prose-test.py
+	@python3 tools/gen-indexes-test.py
 	@python3 tools/gen-by-problem-by-language-test.py
 	@python3 tools/gen-catalogue-status-test.py
 	@python3 tools/check-code-test.py
