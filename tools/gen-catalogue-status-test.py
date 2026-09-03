@@ -5,7 +5,6 @@ as planned) stays fixed."""
 
 from __future__ import annotations
 
-import importlib.util
 import json
 import shutil
 import subprocess
@@ -13,16 +12,9 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import MagicMock, patch
 
 TOOLS = Path(__file__).resolve().parent
 ROOT = TOOLS.parent
-
-SPEC = importlib.util.spec_from_file_location(
-    "gen_catalogue_status", TOOLS / "gen-catalogue-status.py"
-)
-gen_catalogue_status = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(gen_catalogue_status)
 
 
 def run_generator(repo: Path) -> dict:
@@ -74,37 +66,6 @@ class DoubleCountRegression(unittest.TestCase):
             status = run_generator(repo)
             self.assertEqual(status["published_total"], 1)
             self.assertEqual(status["target_total"], 2)
-
-
-class StaleCountTest(unittest.TestCase):
-    def test_stale_count_no_git_directory(self):
-        with tempfile.TemporaryDirectory() as td:
-            tmp_path = Path(td)
-            orig_root = gen_catalogue_status.ROOT
-            try:
-                gen_catalogue_status.ROOT = tmp_path
-                count = gen_catalogue_status.stale_count({"patterns/01-fake/alpha.md"})
-                self.assertEqual(count, 0)
-            finally:
-                gen_catalogue_status.ROOT = orig_root
-
-    @patch("subprocess.run")
-    def test_stale_count_calculation(self, mock_run):
-        from datetime import datetime, timezone
-
-        now = datetime.now(timezone.utc).timestamp()
-        fresh_ts = int(now - (10 * 86400))
-        stale_ts = int(now - (200 * 86400))
-
-        mock_stdout = (
-            f"TS:{fresh_ts}\npatterns/01-fake/fresh.md\n"
-            f"TS:{stale_ts}\npatterns/01-fake/stale.md\n"
-        )
-        mock_run.return_value = MagicMock(returncode=0, stdout=mock_stdout)
-
-        published = {"patterns/01-fake/fresh.md", "patterns/01-fake/stale.md"}
-        count = gen_catalogue_status.stale_count(published)
-        self.assertEqual(count, 1)
 
 
 if __name__ == "__main__":

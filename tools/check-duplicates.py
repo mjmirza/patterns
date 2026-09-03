@@ -100,14 +100,21 @@ def jaccard_similarity(set1: set[str], set2: set[str], threshold: float = 0.0) -
     return inter_len / union_len if union_len > 0 else 0.0
 
 
+H_MATCH_RE = re.compile(r"^#{2,3}\s+(.+)$")
+FM_RE = re.compile(r"^---\n(.*?)\n---", re.DOTALL)
+NAME_RE = re.compile(r"^name\s*:\s*(.+)$", re.MULTILINE)
+ALIASES_RE = re.compile(r"^aliases\s*:\s*(.+)$", re.MULTILINE)
+FAMILY_RE = re.compile(r"^family\s*:\s*(.+)$", re.MULTILINE)
+
+
 def extract_frontmatter_and_sections(filepath: Path) -> dict:
     text = filepath.read_text(encoding="utf-8", errors="replace")
-    fm_match = re.search(r"^---\n(.*?)\n---", text, re.DOTALL)
+    fm_match = FM_RE.search(text)
 
     fm_text = fm_match.group(1) if fm_match else ""
-    name_match = re.search(r"^name\s*:\s*(.+)$", fm_text, re.MULTILINE)
-    aliases_match = re.search(r"^aliases\s*:\s*(.+)$", fm_text, re.MULTILINE)
-    family_match = re.search(r"^family\s*:\s*(.+)$", fm_text, re.MULTILINE)
+    name_match = NAME_RE.search(fm_text)
+    aliases_match = ALIASES_RE.search(fm_text)
+    family_match = FAMILY_RE.search(fm_text)
 
     name = name_match.group(1).strip(" \"'\t") if name_match else filepath.stem
     family = (
@@ -125,15 +132,18 @@ def extract_frontmatter_and_sections(filepath: Path) -> dict:
     # Extract sections
     sections: dict[str, list[str]] = {}
     current_section = "preamble"
-    sections[current_section] = []
+    curr_list: list[str] = []
+    sections[current_section] = curr_list
 
     for line in text.splitlines():
-        h_match = re.match(r"^#{2,3}\s+(.+)$", line)
-        if h_match:
-            current_section = h_match.group(1).strip().lower()
-            sections[current_section] = []
-        else:
-            sections.setdefault(current_section, []).append(line)
+        if line.startswith("#"):
+            h_match = H_MATCH_RE.match(line)
+            if h_match:
+                current_section = h_match.group(1).strip().lower()
+                curr_list = []
+                sections[current_section] = curr_list
+                continue
+        curr_list.append(line)
 
     sec_combined = {k: "\n".join(v) for k, v in sections.items()}
 
