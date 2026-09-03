@@ -109,25 +109,46 @@ def published_by_family() -> dict[str, list[dict]]:
 def stale_count(published_paths: set[str]) -> int:
     if not (ROOT / ".git").exists():
         return 0
+    try:
+        out = subprocess.run(
+            ["git", "log", "--format=TS:%ct", "--name-only", "--", "patterns"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if out.returncode != 0:
+            return 0
+    except (subprocess.SubprocessError, FileNotFoundError):
+        return 0
+
+    latest_ts: dict[str, int] = {}
+    remaining = set(published_paths)
+    current_ts: int | None = None
+
+    for line in out.stdout.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        if line.startswith("TS:"):
+            if not remaining:
+                break
+            try:
+                current_ts = int(line[3:])
+            except ValueError:
+                current_ts = None
+        elif current_ts is not None and line in remaining:
+            latest_ts[line] = current_ts
+            remaining.remove(line)
+
+    now_ts = datetime.now(timezone.utc).timestamp()
     stale = 0
-    for rel in published_paths:
-        path = ROOT / rel
-        if not path.exists():
-            continue
-        try:
-            out = subprocess.run(
-                ["git", "log", "-1", "--format=%ct", "--", rel],
-                cwd=ROOT,
-                capture_output=True,
-                text=True,
-                timeout=5,
-            )
-            ts = int(out.stdout.strip())
-        except (ValueError, subprocess.SubprocessError):
-            continue
-        age_days = (datetime.now(timezone.utc).timestamp() - ts) / 86400
-        if age_days > STALE_DAYS:
-            stale += 1
+    for path in published_paths:
+        ts = latest_ts.get(path)
+        if ts is not None:
+            age_days = (now_ts - ts) / 86400
+            if age_days > STALE_DAYS:
+                stale += 1
     return stale
 
 
