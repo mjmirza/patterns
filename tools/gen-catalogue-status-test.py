@@ -5,16 +5,25 @@ as planned) stays fixed."""
 
 from __future__ import annotations
 
+import importlib.util
 import json
 import shutil
 import subprocess
 import sys
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
+from unittest.mock import MagicMock, patch
 
 TOOLS = Path(__file__).resolve().parent
 ROOT = TOOLS.parent
+
+SPEC = importlib.util.spec_from_file_location(
+    "gen_catalogue_status", TOOLS / "gen-catalogue-status.py"
+)
+gen_catalogue_status = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(gen_catalogue_status)
 
 
 def run_generator(repo: Path) -> dict:
@@ -66,6 +75,31 @@ class DoubleCountRegression(unittest.TestCase):
             status = run_generator(repo)
             self.assertEqual(status["published_total"], 1)
             self.assertEqual(status["target_total"], 2)
+
+
+class StaleCountTests(unittest.TestCase):
+    def test_stale_count_empty_paths(self):
+        self.assertEqual(gen_catalogue_status.stale_count(set()), 0)
+
+    @patch("subprocess.run")
+    def test_stale_count_git_log_parsing(self, mock_run):
+        now = datetime.now(timezone.utc).timestamp()
+        old_ts = int(now - (200 * 86400))
+        recent_ts = int(now - (10 * 86400))
+
+        mock_output = (
+            f"COMMIT {recent_ts}\n"
+            f"patterns/01-fake/recent.md\n"
+            f"COMMIT {old_ts}\n"
+            f"patterns/01-fake/old.md\n"
+        )
+        mock_run.return_value = MagicMock(returncode=0, stdout=mock_output)
+
+        with patch.object(gen_catalogue_status, "ROOT", Path("/tmp")):
+            with patch.object(Path, "exists", return_value=True):
+                paths = {"patterns/01-fake/recent.md", "patterns/01-fake/old.md"}
+                stale = gen_catalogue_status.stale_count(paths)
+                self.assertEqual(stale, 1)
 
 
 if __name__ == "__main__":
