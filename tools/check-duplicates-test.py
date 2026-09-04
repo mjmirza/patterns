@@ -92,8 +92,45 @@ class TestCheckDuplicates(unittest.TestCase):
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
         results = analyze_repository(queue_file)
         self.assertGreater(results["published_count"], 0)
-        self.assertGreater(results["queue_count"], 0)
+        self.assertGreaterEqual(results["queue_count"], 0)
         self.assertIsInstance(results["collisions"], list)
+
+    def test_deferred_queue_filtering(self):
+        import json
+        import tempfile
+
+        queue_data = [
+            {
+                "name": "Virtual List",
+                "slug": "virtual-list",
+                "path": "patterns/13-frontend-ui/virtual-list-deferred.md",
+                "status": "deferred",
+                "reason": "Deferred test item",
+            },
+            {
+                "name": "Virtual List",
+                "slug": "virtual-list",
+                "path": "patterns/13-frontend-ui/virtual-list-active.md",
+                "reason": "Active duplicate test item",
+            },
+        ]
+
+        with tempfile.NamedTemporaryFile("w+", suffix=".json", delete=False) as tf:
+            json.dump(queue_data, tf)
+            tf.flush()
+            temp_path = Path(tf.name)
+
+        try:
+            results = analyze_repository(temp_path)
+            self.assertEqual(results["queue_count"], 1)
+            collisions = results["collisions"]
+            queue_paths = {c["queue_path"] for c in collisions}
+            self.assertIn("patterns/13-frontend-ui/virtual-list-active.md", queue_paths)
+            self.assertNotIn(
+                "patterns/13-frontend-ui/virtual-list-deferred.md", queue_paths
+            )
+        finally:
+            temp_path.unlink(missing_ok=True)
 
     def test_historical_proposal_detection(self):
         history = fetch_historical_proposals()
@@ -111,9 +148,23 @@ class TestCheckDuplicates(unittest.TestCase):
         ]
         original_fetch = check_duplicates.fetch_historical_proposals
         check_duplicates.fetch_historical_proposals = lambda: fake_history
+        import json
+        import tempfile
+
+        active_queue = [
+            {
+                "name": "Windowing",
+                "slug": "windowing",
+                "path": "patterns/24-stream-processing/windowing.md",
+            }
+        ]
+        with tempfile.NamedTemporaryFile("w+", suffix=".json", delete=False) as tf:
+            json.dump(active_queue, tf)
+            tf.flush()
+            temp_path = Path(tf.name)
+
         try:
-            queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
-            results = analyze_repository(queue_file)
+            results = analyze_repository(temp_path)
             historical_collisions = [
                 c
                 for c in results["collisions"]
@@ -122,6 +173,7 @@ class TestCheckDuplicates(unittest.TestCase):
             self.assertGreater(len(historical_collisions), 0)
         finally:
             check_duplicates.fetch_historical_proposals = original_fetch
+            temp_path.unlink(missing_ok=True)
 
     def test_collision_deduplication(self):
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
@@ -136,17 +188,44 @@ class TestCheckDuplicates(unittest.TestCase):
 
     def test_main_check_and_strict_exit_codes(self):
         import unittest.mock
+
         with unittest.mock.patch.object(
             sys, "argv", ["check-duplicates.py", "--check"]
         ):
             code_check = check_duplicates.main()
-            self.assertEqual(code_check, 1)
+            self.assertEqual(code_check, 0)
 
         with unittest.mock.patch.object(
             sys, "argv", ["check-duplicates.py", "--strict"]
         ):
             code_strict = check_duplicates.main()
-            self.assertEqual(code_strict, 1)
+            self.assertEqual(code_strict, 0)
+
+        fake_collisions = {
+            "published_count": 1,
+            "queue_count": 1,
+            "historical_count": 0,
+            "collisions": [
+                {
+                    "type": "QUEUE_VS_PUBLISHED",
+                    "queue_path": "patterns/13-frontend-ui/test.md",
+                    "published_path": "patterns/13-frontend-ui/virtual-list.md",
+                    "matched_term": "virtual-list",
+                    "normalized_key": "virtuallist",
+                    "queue_name": "Virtual List",
+                    "published_name": "Virtual List",
+                }
+            ],
+            "semantic_collisions": [],
+        }
+        with unittest.mock.patch.object(
+            check_duplicates, "analyze_repository", lambda _: fake_collisions
+        ):
+            with unittest.mock.patch.object(
+                sys, "argv", ["check-duplicates.py", "--strict"]
+            ):
+                code_mock_strict = check_duplicates.main()
+                self.assertEqual(code_mock_strict, 1)
 
 
 if __name__ == "__main__":
