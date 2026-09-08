@@ -92,8 +92,32 @@ class TestCheckDuplicates(unittest.TestCase):
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
         results = analyze_repository(queue_file)
         self.assertGreater(results["published_count"], 0)
-        self.assertGreater(results["queue_count"], 0)
+        self.assertIsInstance(results["queue_count"], int)
         self.assertIsInstance(results["collisions"], list)
+
+    def test_deferred_queue_items_filtered(self):
+        import json, tempfile
+        queue_data = [
+            {
+                "name": "Deferred Item",
+                "slug": "deferred-item",
+                "path": "patterns/01-gof/deferred-item.md",
+                "status": "deferred",
+            },
+            {
+                "name": "Active Item",
+                "slug": "active-item",
+                "path": "patterns/01-gof/active-item.md",
+            },
+        ]
+        with tempfile.NamedTemporaryFile("w+", suffix=".json", delete=False) as tmp:
+            json.dump(queue_data, tmp)
+            tmp_path = Path(tmp.name)
+        try:
+            results = analyze_repository(tmp_path)
+            self.assertEqual(results["queue_count"], 1)
+        finally:
+            tmp_path.unlink(missing_ok=True)
 
     def test_historical_proposal_detection(self):
         history = fetch_historical_proposals()
@@ -109,11 +133,22 @@ class TestCheckDuplicates(unittest.TestCase):
                 "slug": "windowing",
             }
         ]
+        fake_queue = [
+            {
+                "name": "Windowing",
+                "slug": "windowing",
+                "path": "patterns/24-stream-processing/windowing.md",
+            }
+        ]
+        import json, tempfile
+        with tempfile.NamedTemporaryFile("w+", suffix=".json", delete=False) as tmp:
+            json.dump(fake_queue, tmp)
+            tmp_path = Path(tmp.name)
+
         original_fetch = check_duplicates.fetch_historical_proposals
         check_duplicates.fetch_historical_proposals = lambda: fake_history
         try:
-            queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
-            results = analyze_repository(queue_file)
+            results = analyze_repository(tmp_path)
             historical_collisions = [
                 c
                 for c in results["collisions"]
@@ -122,6 +157,7 @@ class TestCheckDuplicates(unittest.TestCase):
             self.assertGreater(len(historical_collisions), 0)
         finally:
             check_duplicates.fetch_historical_proposals = original_fetch
+            tmp_path.unlink(missing_ok=True)
 
     def test_collision_deduplication(self):
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
@@ -136,17 +172,51 @@ class TestCheckDuplicates(unittest.TestCase):
 
     def test_main_check_and_strict_exit_codes(self):
         import unittest.mock
+        # Clean repository state returns 0
         with unittest.mock.patch.object(
             sys, "argv", ["check-duplicates.py", "--check"]
         ):
             code_check = check_duplicates.main()
-            self.assertEqual(code_check, 1)
+            self.assertEqual(code_check, 0)
 
         with unittest.mock.patch.object(
             sys, "argv", ["check-duplicates.py", "--strict"]
         ):
             code_strict = check_duplicates.main()
-            self.assertEqual(code_strict, 1)
+            self.assertEqual(code_strict, 0)
+
+        # Mocked collision returns 1
+        fake_results = {
+            "published_count": 10,
+            "queue_count": 1,
+            "historical_count": 5,
+            "collisions": [
+                {
+                    "type": "QUEUE_VS_PUBLISHED",
+                    "queue_path": "patterns/01-gof/factory-method.md",
+                    "published_path": "patterns/01-gof/factory-method.md",
+                    "matched_term": "Factory Method",
+                    "normalized_key": "factorymethod",
+                    "queue_name": "Factory Method",
+                    "published_name": "Factory Method",
+                }
+            ],
+            "semantic_collisions": [],
+        }
+        with unittest.mock.patch.object(
+            check_duplicates, "analyze_repository", return_value=fake_results
+        ):
+            with unittest.mock.patch.object(
+                sys, "argv", ["check-duplicates.py", "--check"]
+            ):
+                code_check_coll = check_duplicates.main()
+                self.assertEqual(code_check_coll, 1)
+
+            with unittest.mock.patch.object(
+                sys, "argv", ["check-duplicates.py", "--strict"]
+            ):
+                code_strict_coll = check_duplicates.main()
+                self.assertEqual(code_strict_coll, 1)
 
 
 if __name__ == "__main__":
