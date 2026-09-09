@@ -115,6 +115,22 @@ class TestGenerator(unittest.TestCase):
             symptoms[0],
             "Precondition strengthening. (Section 9). The observable symptom is a runtime crash at a call site that has never changed.",
         )
+
+    def test_extract_section_stops_at_unnumbered_headings(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("gen", TOOLS / "gen-by-problem-by-language.py")
+        gen = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(gen)
+
+        sample_doc = (
+            "## 18. References\n\n"
+            "1. https://example.com/paper\n\n"
+            "## Code examples\n\n"
+            "```python\ndef foo(): pass\n```\n"
+        )
+        sec18 = gen.extract_section(sample_doc, 18)
+        self.assertEqual(sec18, "1. https://example.com/paper")
+        self.assertNotIn("Code examples", sec18)
     def test_generator_runs_successfully_and_parses_content(self):
         with tempfile.TemporaryDirectory() as td:
             repo = make_fixture(Path(td))

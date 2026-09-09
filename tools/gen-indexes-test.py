@@ -56,6 +56,15 @@ class TestGenIndexes(unittest.TestCase):
         intent = gen_indexes.first_intent(sample_entry)
         self.assertEqual(intent, "")
 
+    def test_first_intent_at_eof(self):
+        sample_entry = (
+            "---\nname: Test Pattern\n---\n"
+            "## 2. Problem and context\n"
+            "This problem statement occurs at the very end of the file with no trailing sections."
+        )
+        intent = gen_indexes.first_intent(sample_entry)
+        self.assertTrue(intent.startswith("This problem statement occurs at the very end"))
+
     def test_load_planned(self):
         queue_file = self.tmp / "AUTHORING-QUEUE.json"
         queue_data = [
