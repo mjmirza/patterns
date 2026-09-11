@@ -92,8 +92,33 @@ class TestCheckDuplicates(unittest.TestCase):
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
         results = analyze_repository(queue_file)
         self.assertGreater(results["published_count"], 0)
-        self.assertGreater(results["queue_count"], 0)
+        self.assertEqual(results["queue_count"], 0)
         self.assertIsInstance(results["collisions"], list)
+
+    def test_deferred_queue_filtering(self):
+        import tempfile
+        import json
+        tmp_queue = [
+            {
+                "name": "Deferred Item",
+                "slug": "virtual-list",
+                "status": "deferred",
+                "path": "patterns/13-frontend-ui/virtual-list.md"
+            },
+            {
+                "name": "Active Collision Item",
+                "slug": "virtual-list",
+                "status": "planned",
+                "path": "patterns/13-frontend-ui/fake-virtual-list.md"
+            }
+        ]
+        with tempfile.NamedTemporaryFile("w+", suffix=".json") as tf:
+            tf.write(json.dumps(tmp_queue))
+            tf.flush()
+            results = analyze_repository(Path(tf.name))
+            self.assertEqual(results["queue_count"], 1)
+            self.assertEqual(len(results["collisions"]), 1)
+            self.assertEqual(results["collisions"][0]["queue_path"], "patterns/13-frontend-ui/fake-virtual-list.md")
 
     def test_historical_proposal_detection(self):
         history = fetch_historical_proposals()
@@ -103,23 +128,35 @@ class TestCheckDuplicates(unittest.TestCase):
         self.assertIsInstance(results["collisions"], list)
 
     def test_historical_proposal_collision_mock(self):
+        import tempfile
+        import json
+        tmp_queue = [
+            {
+                "name": "Historical Attempt",
+                "slug": "old-attempt",
+                "status": "planned",
+                "path": "patterns/24-stream-processing/new-attempt.md"
+            }
+        ]
         fake_history = [
             {
-                "path": "patterns/24-stream-processing/old-windowing-attempt.md",
-                "slug": "windowing",
+                "path": "patterns/24-stream-processing/old-attempt.md",
+                "slug": "old-attempt",
             }
         ]
         original_fetch = check_duplicates.fetch_historical_proposals
         check_duplicates.fetch_historical_proposals = lambda: fake_history
         try:
-            queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
-            results = analyze_repository(queue_file)
-            historical_collisions = [
-                c
-                for c in results["collisions"]
-                if c.get("type") == "HISTORICAL_PROPOSAL_COLLISION"
-            ]
-            self.assertGreater(len(historical_collisions), 0)
+            with tempfile.NamedTemporaryFile("w+", suffix=".json") as tf:
+                tf.write(json.dumps(tmp_queue))
+                tf.flush()
+                results = analyze_repository(Path(tf.name))
+                historical_collisions = [
+                    c
+                    for c in results["collisions"]
+                    if c.get("type") == "HISTORICAL_PROPOSAL_COLLISION"
+                ]
+                self.assertGreater(len(historical_collisions), 0)
         finally:
             check_duplicates.fetch_historical_proposals = original_fetch
 
@@ -136,17 +173,31 @@ class TestCheckDuplicates(unittest.TestCase):
 
     def test_main_check_and_strict_exit_codes(self):
         import unittest.mock
-        with unittest.mock.patch.object(
-            sys, "argv", ["check-duplicates.py", "--check"]
-        ):
-            code_check = check_duplicates.main()
-            self.assertEqual(code_check, 1)
+        import tempfile
+        import json
+        tmp_queue = [
+            {
+                "name": "Collision Item",
+                "slug": "virtual-list",
+                "status": "planned",
+                "path": "patterns/13-frontend-ui/fake-virtual-list.md"
+            }
+        ]
+        with tempfile.NamedTemporaryFile("w+", suffix=".json") as tf:
+            tf.write(json.dumps(tmp_queue))
+            tf.flush()
+            with unittest.mock.patch.object(check_duplicates, "QUEUE_FILE", Path(tf.name)):
+                with unittest.mock.patch.object(
+                    sys, "argv", ["check-duplicates.py", "--check"]
+                ):
+                    code_check = check_duplicates.main()
+                    self.assertEqual(code_check, 1)
 
-        with unittest.mock.patch.object(
-            sys, "argv", ["check-duplicates.py", "--strict"]
-        ):
-            code_strict = check_duplicates.main()
-            self.assertEqual(code_strict, 1)
+                with unittest.mock.patch.object(
+                    sys, "argv", ["check-duplicates.py", "--strict"]
+                ):
+                    code_strict = check_duplicates.main()
+                    self.assertEqual(code_strict, 1)
 
 
 if __name__ == "__main__":
