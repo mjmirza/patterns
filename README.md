@@ -12,7 +12,7 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Catalogue completion](https://img.shields.io/badge/completion-100.0%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-5067-brightgreen)
+![References checked](https://img.shields.io/badge/references%20checked-5068-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
