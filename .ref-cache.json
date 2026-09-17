@@ -1,6 +1,6 @@
 {
  "http://c2.com/doc/oopsla92.html": 200,
- "http://callbackhell.com/": "403 then HTTPError",
+ "http://callbackhell.com/": "URLError",
  "http://commandcenter.blogspot.com.au/2014/01/self-referential-functions-and-design.html": 200,
  "http://disi.unitn.it/~montreso/ds/papers/montresor17.pdf": 200,
  "http://dougseven.com/2014/04/17/knightmare-a-devops-cautionary-tale/": 200,
@@ -2127,7 +2127,7 @@
  "https://fp-ts.github.io/core/modules/Either.ts.html": 200,
  "https://framework.zend.com/manual/1.12/en/zend.db.table.html": 200,
  "https://framework.zend.com/manual/1.12/en/zend.db.table.row.html": 200,
- "https://freecontent.manning.com/the-service-locator-anti-pattern/": 202,
+ "https://freecontent.manning.com/the-service-locator-anti-pattern/": "URLError",
  "https://freetype.org/freetype2/docs/reference/ft2-cache_subsystem.html": 200,
  "https://fsharp.github.io/fsharp-core-docs/": 200,
  "https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html": 200,
