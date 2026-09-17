@@ -32,6 +32,10 @@ jobs:
         run: python3 tools/check-family-names.py
       - name: Prose gate
         run: python3 tools/check-prose.py
+      - name: Link validator tests
+        run: python3 tools/check-links-test.py
+      - name: Internal relative links gate
+        run: python3 tools/check-links.py --strict
       - name: Indexes are current
         run: |
           python3 tools/gen-indexes.py

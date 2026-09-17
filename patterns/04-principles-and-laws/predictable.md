@@ -6,7 +6,7 @@ category: Design Principle
 aliases: [Predictability, Behavioral Predictability, Deterministic Behavior]
 first_described: "Convergent principle with no single coined origin. Earliest formal reification is Bertrand Meyer, Design by Contract, IEEE Computer, October 1992 (contracts as a predictability guarantee); the idempotency reification traces to HTTP method semantics formalized in RFC 2616, 1999, later RFC 7231, 2014"
 maturity: canonical
-related: [principle-of-least-astonishment, fail-fast, single-source-of-truth, liskov-substitution-principle, postel-law, idempotent-consumer, state, command]
+related: [principle-of-least-astonishment, fail-fast, single-source-of-truth, liskov-substitution-principle, postel-law]
 incompatible_with: []
 verified: 2026-08-02
 ---
@@ -771,19 +771,19 @@ converge predictably if the desired state it is converging toward has
 exactly one authoritative source, and every out-of-band actor that can also
 write to the same state undermines the guarantee.
 
-[Idempotent Consumer](idempotent-consumer.md) is the messaging-system
+[Idempotent Consumer](../10-microservices/idempotent-consumer.md) is the messaging-system
 counterpart of the idempotency key variant described in dimension 8,
 applied to the receiving side of an asynchronous message rather than to a
 synchronous request, and the two are frequently implemented with the same
 underlying deduplication store.
 
-The [State](state.md) pattern and the closed transition table variant from
+The [State](../01-design-patterns-gof/state.md) pattern and the closed transition table variant from
 dimension 8 share the same intent, encoding every legal transition
 explicitly so an illegal one is structurally impossible or explicitly
 rejected rather than silently allowed to happen through an unconstrained
 mutation of a status field.
 
-The [Command](command.md) pattern's support for reversible operations, undo
+The [Command](../01-design-patterns-gof/command.md) pattern's support for reversible operations, undo
 and redo, depends on predictable, forecastable effects. a command's undo
 implementation can only reliably reverse an effect it can predict, which
 means a command whose execute step touches unpinned non-determinism is

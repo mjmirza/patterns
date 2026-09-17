@@ -1,8 +1,8 @@
-.PHONY: check structure refs prose code catalogue catalogue-check by-problem-by-language by-problem-by-language-check duplicates duplicates-test test all stats
+.PHONY: check structure refs prose links code catalogue catalogue-check by-problem-by-language by-problem-by-language-check duplicates duplicates-test test all stats
 
 all: check
 
-check: test structure prose code refs catalogue-check by-problem-by-language-check duplicates-test
+check: test structure prose links code refs catalogue-check by-problem-by-language-check duplicates-test
 
 structure:
 	@python3 tools/check-structure.py
@@ -12,6 +12,9 @@ refs:
 
 prose:
 	@python3 tools/check-prose.py
+
+links:
+	@python3 tools/check-links.py --strict
 
 code:
 	@python3 tools/check-code.py --strict
@@ -40,6 +43,7 @@ test:
 	@python3 tools/check-code-test.py
 	@python3 tools/check-claims-test.py
 	@python3 tools/next-batch-test.py
+	@python3 tools/check-links-test.py
 
 duplicates:
 	@python3 tools/check-duplicates.py --strict

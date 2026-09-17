@@ -497,7 +497,7 @@ level software pattern catalogue. Follow these steps exactly, in order.
 2. Read .github/CONTRIBUTING.md, docs/ENTRY-TEMPLATE.md, and one existing
    published entry under patterns/ end to end. These are the real, current
    rules. Do not assume you already know them.
-3. Check docs/AUTHORING-PLAN.md for an unclaimed pattern, or pick a pattern
+3. Check docs/PROGRESS.md for an unclaimed pattern, or pick a pattern
    the maintainer has not catalogued yet.
 4. Create a branch named entry/<slug>, for example entry/circuit-breaker.
    Never commit to main.
@@ -527,7 +527,7 @@ in the repo, the file in the repo wins, not this prompt.
 
 ### Authoring plan and progress
 
-See [docs/AUTHORING-PLAN.md](docs/AUTHORING-PLAN.md) for the family by family
+See [docs/PROGRESS.md](docs/PROGRESS.md) for the family by family
 authoring order and the current state of each family.
 
 ## Credits
