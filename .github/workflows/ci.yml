@@ -30,8 +30,12 @@ jobs:
         run: python3 tools/check-family-names-test.py
       - name: Family folder naming gate
         run: python3 tools/check-family-names.py
+      - name: Prose validator tests
+        run: python3 tools/check-prose-test.py
       - name: Prose gate
         run: python3 tools/check-prose.py
+      - name: Family index generator tests
+        run: python3 tools/gen-indexes-test.py
       - name: Indexes are current
         run: |
           python3 tools/gen-indexes.py
@@ -78,6 +82,8 @@ jobs:
           node-version: "22"
       - name: Rust toolchain
         run: rustup toolchain install stable --profile minimal --no-self-update
+      - name: Code validator tests
+        run: python3 tools/check-code-test.py
       - name: Compile every sample
         run: python3 tools/check-code.py --strict
 
@@ -117,6 +123,8 @@ jobs:
           python-version: "3.12"
       - name: Fetch main for comparison
         run: git fetch origin main --depth=200
+      - name: Claim check validator tests
+        run: python3 tools/check-claims-test.py
       - name: No two contributors on the same entry
         env:
           GH_TOKEN: ${{ github.token }}
