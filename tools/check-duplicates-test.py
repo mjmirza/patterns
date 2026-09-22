@@ -92,8 +92,43 @@ class TestCheckDuplicates(unittest.TestCase):
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
         results = analyze_repository(queue_file)
         self.assertGreater(results["published_count"], 0)
-        self.assertGreater(results["queue_count"], 0)
+        self.assertGreaterEqual(results["queue_count"], 0)
         self.assertIsInstance(results["collisions"], list)
+
+    def test_filter_deferred_queue_items(self):
+        import tempfile
+        import json
+        test_queue = [
+            {
+                "name": "Strategy Pattern",
+                "slug": "strategy",
+                "path": "patterns/01-gof/new-strategy-attempt.md",
+                "status": "active",
+            },
+            {
+                "name": "Deferred Pattern",
+                "slug": "virtual-list",
+                "path": "patterns/13-frontend-ui/virtual-list-attempt.md",
+                "status": "deferred",
+            },
+        ]
+        with tempfile.NamedTemporaryFile("w+", suffix=".json", delete=False) as f:
+            json.dump(test_queue, f)
+            temp_path = Path(f.name)
+        try:
+            results = analyze_repository(temp_path)
+            self.assertEqual(results["queue_count"], 1)
+            # Strategy matches published strategy.md
+            collisions = [
+                c for c in results["collisions"] if c.get("queue_name") == "Strategy Pattern"
+            ]
+            self.assertGreater(len(collisions), 0)
+            deferred_collisions = [
+                c for c in results["collisions"] if c.get("queue_name") == "Deferred Pattern"
+            ]
+            self.assertEqual(len(deferred_collisions), 0)
+        finally:
+            temp_path.unlink(missing_ok=True)
 
     def test_historical_proposal_detection(self):
         history = fetch_historical_proposals()
@@ -103,17 +138,29 @@ class TestCheckDuplicates(unittest.TestCase):
         self.assertIsInstance(results["collisions"], list)
 
     def test_historical_proposal_collision_mock(self):
+        import tempfile
+        import json
         fake_history = [
             {
                 "path": "patterns/24-stream-processing/old-windowing-attempt.md",
                 "slug": "windowing",
             }
         ]
+        test_queue = [
+            {
+                "name": "Windowing",
+                "slug": "windowing",
+                "path": "patterns/24-stream-processing/new-windowing-attempt.md",
+                "status": "active",
+            }
+        ]
         original_fetch = check_duplicates.fetch_historical_proposals
         check_duplicates.fetch_historical_proposals = lambda: fake_history
+        with tempfile.NamedTemporaryFile("w+", suffix=".json", delete=False) as f:
+            json.dump(test_queue, f)
+            temp_path = Path(f.name)
         try:
-            queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
-            results = analyze_repository(queue_file)
+            results = analyze_repository(temp_path)
             historical_collisions = [
                 c
                 for c in results["collisions"]
@@ -122,6 +169,7 @@ class TestCheckDuplicates(unittest.TestCase):
             self.assertGreater(len(historical_collisions), 0)
         finally:
             check_duplicates.fetch_historical_proposals = original_fetch
+            temp_path.unlink(missing_ok=True)
 
     def test_collision_deduplication(self):
         queue_file = ROOT / "docs" / "AUTHORING-QUEUE.json"
@@ -140,13 +188,13 @@ class TestCheckDuplicates(unittest.TestCase):
             sys, "argv", ["check-duplicates.py", "--check"]
         ):
             code_check = check_duplicates.main()
-            self.assertEqual(code_check, 1)
+            self.assertEqual(code_check, 0)
 
         with unittest.mock.patch.object(
             sys, "argv", ["check-duplicates.py", "--strict"]
         ):
             code_strict = check_duplicates.main()
-            self.assertEqual(code_strict, 1)
+            self.assertEqual(code_strict, 0)
 
 
 if __name__ == "__main__":
