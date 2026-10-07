@@ -194,7 +194,8 @@ def analyze_repository(queue_path: Path) -> dict:
     queue = []
     if queue_path.exists():
         try:
-            queue = json.loads(queue_path.read_text(encoding="utf-8"))
+            raw_queue = json.loads(queue_path.read_text(encoding="utf-8"))
+            queue = [q for q in raw_queue if q.get("status") != "deferred"]
         except Exception:
             queue = []
 
