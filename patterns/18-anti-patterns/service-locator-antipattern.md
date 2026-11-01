@@ -51,8 +51,9 @@ application components outside the composition root with access to an unbounded
 set of dependencies, quoted in Manning's excerpt "The Service Locator
 Anti-Pattern" (Steven van Deursen and Mark Seemann, *Dependency Injection
 Principles, Practices, and Patterns*, Manning, 2019, chapter 5; Manning
-excerpt, https://freecontent.manning.com/the-service-locator-anti-pattern/,
-verified 2026-08-02).
+excerpt, archived copy at
+https://web.archive.org/web/20260210014146/https://freecontent.manning.com/the-service-locator-anti-pattern/,
+verified 2026-08-02, archived snapshot checked 2026-11-01).
 
 Common aliases include Locator Pattern, Registry Lookup, Container Lookup, and
 Ambient Container. The alias Ambient Container is used here for the common
@@ -705,8 +706,9 @@ effect is capability spread through ambient access.
 4. Steven van Deursen, Mark Seemann. *Dependency Injection Principles,
    Practices, and Patterns*. Manning, 2019. Chapter 5, anti-patterns. Manning
    excerpt, "The Service Locator Anti-Pattern".
-   https://freecontent.manning.com/the-service-locator-anti-pattern/
-   Verified 2026-08-02.
+   https://web.archive.org/web/20260210014146/https://freecontent.manning.com/the-service-locator-anti-pattern/
+   Verified 2026-08-02. The original freecontent.manning.com page now returns
+   503; the archived snapshot was checked 2026-11-01.
 5. Microsoft. ".NET dependency injection guidelines", section
    "Recommendations".
    https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/guidelines
