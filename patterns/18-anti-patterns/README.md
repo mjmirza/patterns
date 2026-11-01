@@ -2,7 +2,7 @@
 
 Origin. Brown et al, AntiPatterns
 
-51 entries, 398,620 words. Every entry carries all 18
+51 entries, 398,640 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Anti-Pattern
@@ -53,7 +53,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Extraneous Fetching](extraneous-fetching.md) | established | 8,221 | A piece of code needs three fields from a record, a page needs the title and the thumbnail of a hundred articles, a mobile screen needs a user's display name and avatar. |
 | [Improper Instantiation](improper-instantiation.md) | established | 9,564 | A type in the codebase is expensive, or moderately expensive, or genuinely expensive, to construct. |
 | [Service Locator](service-locator.md) | contested | 6,102 | A component needs a collaborator to do its work, a repository, a logger, a payment gateway client, a feature-flag reader, and it does not want to be handed a concrete instance by ... |
-| [Service Locator Antipattern](service-locator-antipattern.md) | contested | 6,301 | A component needs collaborators to perform its work. |
+| [Service Locator Antipattern](service-locator-antipattern.md) | contested | 6,321 | A component needs collaborators to perform its work. |
 | [Vendor Lock-in](vendor-lock-in.md) | established | 8,019 | A team building a system needs to store data, run compute, send messages, authenticate users, and observe the running system. |
 
 ## Anti-pattern (Messaging and Concurrency)
