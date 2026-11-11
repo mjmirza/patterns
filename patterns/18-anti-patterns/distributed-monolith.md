@@ -1,14 +1,20 @@
 ---
 name: Distributed Monolith
 slug: distributed-monolith
+id: pat.18.distributed-monolith
+kind: anti-pattern
 family: 18-anti-patterns
 category: Architectural
 aliases: [Distributed Big Ball of Mud, Monolith in Disguise, Fauxcroservices]
 first_described: "Ben Christensen, Microservices Practitioner Summit, 2016 (informal name); Newman 2015/2021"
 maturity: established
-related: [big-ball-of-mud, bounded-context, shared-database, strangler-fig, saga, circuit-breaker]
+related: [11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud, bounded-context, shared-database, strangler-fig, saga, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Distributed Monolith

@@ -1,14 +1,20 @@
 ---
 name: Common Closure Principle
 slug: common-closure-principle
+id: pat.04.common-closure-principle
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [CCP, Package Closure Principle, Component Closure Principle]
 first_described: "Robert C. Martin, 1996, \"Granularity\", C++ Report; restated as CCP in Agile Software Development: Principles, Patterns, and Practices, 2002, and in Clean Architecture, 2018"
 maturity: canonical
 related: [release-reuse-equivalence, common-reuse-principle, single-responsibility-principle, open-closed-principle, separation-of-concerns, dependency-inversion-principle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-10
+last_reviewed: 2026-08-10
+next_review_due: 2027-02-06
 ---
 
 # Common Closure Principle

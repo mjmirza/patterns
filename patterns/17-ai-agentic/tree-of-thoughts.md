@@ -1,14 +1,20 @@
 ---
 name: Tree of Thoughts
 slug: tree-of-thoughts
+id: pat.17.tree-of-thoughts
+kind: pattern
 family: 17-ai-agentic
 category: AI and Agentic
 aliases: [ToT, Deliberate Problem Solving, LLM-Guided Tree-of-Thought]
 first_described: "Yao, Yu, Zhao, Shafran, Griffiths, Cao, Narasimhan 2023 (concurrently, Long 2023)"
 maturity: established
-related: [chain-of-thought, self-consistency, react-pattern, reflection, plan-and-solve, monte-carlo-tree-search, beam-search, retry-with-backoff]
+related: [chain-of-thought, self-consistency, retry]
+related_concepts: [react-pattern, reflection, plan-and-solve, monte-carlo-tree-search, beam-search]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Tree of Thoughts

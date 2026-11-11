@@ -1,14 +1,20 @@
 ---
 name: Selective Consumer
 slug: selective-consumer
+id: pat.07.selective-consumer
+kind: pattern
 family: 07-integration
 category: Enterprise Integration
 aliases: [Message Selector, Message Filter, Content-Based Consumer]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [message-filter, competing-consumers, datatype-channel, publish-subscribe-channel, content-based-router]
+related: [message-filter, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, datatype-channel, publisher-subscriber, content-based-router]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Selective Consumer

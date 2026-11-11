@@ -1,14 +1,20 @@
 ---
 name: Zero Trust
 slug: zero-trust
+id: pat.15.zero-trust
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Zero Trust Architecture, ZTA, Zero Trust Network Architecture, BeyondCorp Model]
 first_described: "Kindervag 2010; NIST SP 800-207 2020"
 maturity: established
 related: [least-privilege, complete-mediation, defense-in-depth, mutual-tls, abac, audit-log, federated-identity]
-incompatible_with: [implicit-network-trust, flat-internal-network, shared-credential, service-locator]
+related_concepts: []
+incompatible_with: [service-locator]
+incompatible_concepts: [implicit-network-trust, flat-internal-network, shared-credential]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Zero Trust

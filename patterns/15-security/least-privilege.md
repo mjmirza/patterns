@@ -1,14 +1,20 @@
 ---
 name: Least Privilege
 slug: least-privilege
+id: pat.15.least-privilege
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Principle of Least Privilege, POLP, Least Authority, Minimum Necessary Access]
 first_described: "Saltzer and Schroeder 1975"
 maturity: canonical
-related: [zero-trust, role-based-access-control, capability-based-security, privilege-separation, defense-in-depth, secrets-management]
-incompatible_with: [ambient-authority, shared-administrator-account, wildcard-permission]
+related: [zero-trust, rbac, defense-in-depth, secrets-management]
+related_concepts: [capability-based-security, privilege-separation]
+incompatible_with: []
+incompatible_concepts: [ambient-authority, shared-administrator-account, wildcard-permission]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Least Privilege

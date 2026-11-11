@@ -1,14 +1,20 @@
 ---
 name: Valet Key
 slug: valet-key
+id: pat.08.valet-key
+kind: pattern
 family: 08-cloud-distributed
 category: Security
 aliases: [Pre-Signed URL, Signed URL, Scoped Access Token]
 first_described: "Homer, Sharp, Brader, Narumoto, Swanson, Cloud Design Patterns, Microsoft patterns and practices, 2014"
 maturity: canonical
-related: [gatekeeper, federated-identity, gateway-routing, ambassador, claim-check, static-content-hosting]
+related: [gatekeeper, federated-identity, gateway-routing, ambassador, 07-integration/claim-check, 08-cloud-distributed/claim-check, static-content-hosting]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Valet Key

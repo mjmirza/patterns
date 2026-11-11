@@ -1,14 +1,20 @@
 ---
 name: Read-Write Lock
 slug: read-write-lock
+id: pat.09.read-write-lock
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Reader-Writer Lock, Shared-Exclusive Lock, Multiple Readers Single Writer Lock, RWLock]
 first_described: "Courtois, Heymans, Parnas 1971"
 maturity: canonical
-related: [mutex, monitor-object, double-checked-locking, optimistic-concurrency-control, actor-model]
+related: [monitor-object, double-checked-locking, actor-model]
+related_concepts: [mutex, optimistic-concurrency-control]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Read-Write Lock

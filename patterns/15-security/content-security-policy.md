@@ -1,14 +1,20 @@
 ---
 name: Content Security Policy
 slug: content-security-policy
+id: pat.15.content-security-policy
+kind: pattern
 family: 15-security
 category: Security
 aliases: [CSP, CSP header, Strict CSP, Browser Content Policy]
 first_described: "Sterne 2012"
 maturity: established
 related: [defense-in-depth, secure-by-default, complete-mediation, least-privilege, csrf-token, session-management]
-incompatible_with: [inline-script-by-default, wildcard-asset-policy, client-side-template-injection]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [inline-script-by-default, wildcard-asset-policy, client-side-template-injection]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Content Security Policy

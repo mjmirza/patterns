@@ -1,14 +1,20 @@
 ---
 name: Polling Consumer
 slug: polling-consumer
+id: pat.07.polling-consumer
+kind: pattern
 family: 07-integration
 category: Messaging Endpoints
 aliases: [Pull Consumer, Synchronous Receiver, Polled Endpoint]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [event-driven-consumer, message-channel, competing-consumers, guaranteed-delivery, dead-letter-channel, throttling, circuit-breaker]
+related: [event-driven-consumer, message-channel, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, guaranteed-delivery, dead-letter-channel, throttling, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

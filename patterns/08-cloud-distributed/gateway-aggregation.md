@@ -1,14 +1,20 @@
 ---
 name: Gateway Aggregation
 slug: gateway-aggregation
+id: pat.08.gateway-aggregation
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed
 aliases: [Aggregating Gateway, Composition Gateway, API Composition, Backend Aggregation Layer]
 first_described: "Microsoft patterns and practices, Cloud Design Patterns, 2014"
 maturity: canonical
 related: [backends-for-frontends, circuit-breaker, bulkhead, retry, cache-aside, materialized-view, api-gateway]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Gateway Aggregation

@@ -1,14 +1,20 @@
 ---
 name: API Gateway
 slug: api-gateway
+id: pat.10.api-gateway
+kind: pattern
 family: 10-microservices
 category: Microservices
 aliases: [Edge Service, Backend for Frontends (specialised form), Gateway Aggregation]
 first_described: "Richardson, microservices.io, and independently by Netflix (Zuul, 2013)"
 maturity: canonical
 related: [remote-procedure-invocation, api-composition, service-per-team, decompose-by-business-capability, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # API Gateway

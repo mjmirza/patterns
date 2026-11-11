@@ -1,14 +1,20 @@
 ---
 name: Game Day
 slug: game-day
+id: pat.21.game-day
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [Disaster Recovery Testing, DiRT, Fire Drill]
 first_described: 'Google, Site Reliability Engineering, Lessons Learned chapter (DiRT), 2016'
 maturity: canonical
 related: [runbook-automation, chaos-engineering]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Game Day

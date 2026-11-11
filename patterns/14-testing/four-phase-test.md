@@ -1,14 +1,20 @@
 ---
 name: Four-Phase Test
 slug: four-phase-test
+id: pat.14.four-phase-test
+kind: pattern
 family: 14-testing
 category: Test Structure
 aliases: [Arrange-Act-Assert, Given-When-Then, Setup-Exercise-Verify-Teardown]
 first_described: "Meszaros 2007"
 maturity: canonical
-related: [test-fixture, test-double, parameterized-test, page-object, builder]
+related: [builder]
+related_concepts: [test-fixture, test-double, parameterized-test, page-object]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Four-Phase Test

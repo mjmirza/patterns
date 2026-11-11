@@ -1,14 +1,20 @@
 ---
 name: Service Locator Antipattern
 slug: service-locator-antipattern
+id: pat.18.service-locator-antipattern
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [Service Locator, Locator Pattern, Registry Lookup, Container Lookup, Ambient Container]
 first_described: "Alur, Crupi, Malks 2001 (pattern); Seemann 2010 (anti-pattern criticism)"
 maturity: contested
-related: [dependency-injection, inversion-of-control, singleton-abuse, abstract-factory, factory-method, service-provider-interface]
-incompatible_with: [dependency-injection, explicit-dependencies-principle]
+related: [dependency-injection, inversion-of-control, singleton-abuse, abstract-factory, factory-method]
+related_concepts: [service-provider-interface]
+incompatible_with: [dependency-injection]
+incompatible_concepts: [explicit-dependencies-principle]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service Locator Antipattern

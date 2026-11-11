@@ -1,14 +1,20 @@
 ---
 name: Load Balancing
 slug: load-balancing
+id: pat.08.load-balancing
+kind: pattern
 family: 08-cloud-distributed
 category: Traffic Distribution
 aliases: [Load Sharing, Server Load Balancing, Traffic Distribution]
 first_described: "IETF RFC 2391, Load Sharing using IP Network Address Translation (LSNAT), August 1998"
 maturity: canonical
 related: [circuit-breaker, health-endpoint-monitoring, sharding, gateway-routing, rate-limiting, consistent-hashing, client-side-service-discovery, server-side-service-discovery]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Load Balancing

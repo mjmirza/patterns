@@ -1,14 +1,20 @@
 ---
 name: Implicit Lock
 slug: implicit-lock
+id: pat.06.implicit-lock
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Concurrency
 aliases: [Framework-Managed Locking, Transparent Concurrency Control]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [optimistic-offline-lock, pessimistic-offline-lock, coarse-grained-lock, layer-supertype, unit-of-work]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Implicit Lock

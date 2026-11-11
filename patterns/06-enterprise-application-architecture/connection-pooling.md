@@ -1,14 +1,20 @@
 ---
 name: Connection Pooling
 slug: connection-pooling
+id: pat.06.connection-pooling
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Enterprise Application Architecture
 aliases: [Database Connection Pool, Connection Pooler]
 first_described: "PgBouncer's and HikariCP's own current documentation"
 maturity: canonical
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Connection Pooling

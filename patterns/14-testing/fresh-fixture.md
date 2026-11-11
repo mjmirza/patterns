@@ -1,14 +1,20 @@
 ---
 name: Fresh Fixture
 slug: fresh-fixture
+id: pat.14.fresh-fixture
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Per-Test Fixture, Test-Local Fixture]
 first_described: "Meszaros 2007"
 maturity: canonical
 related: [shared-fixture, test-data-builder, object-mother, four-phase-test]
+related_concepts: []
 incompatible_with: [shared-fixture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Fresh Fixture

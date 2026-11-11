@@ -1,14 +1,20 @@
 ---
 name: Move Statements to Callers
 slug: move-statements-to-callers
+id: pat.03.move-statements-to-callers
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Extract Statements to Caller, Push Statements Out]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [move-statements-into-function, extract-function, inline-function, move-function, replace-function-with-command]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Move Statements to Callers

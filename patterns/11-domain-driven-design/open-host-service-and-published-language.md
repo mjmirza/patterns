@@ -1,14 +1,20 @@
 ---
 name: Open Host Service and Published Language
 slug: open-host-service-and-published-language
+id: pat.11.open-host-service-and-published-language
+kind: pattern
 family: 11-domain-driven-design
 category: Structural
 aliases: [OHS/PL, Open Host Service, Published Language, Well-Published Interface]
 first_described: "Evans 2003"
 maturity: canonical
 related: [anti-corruption-layer, shared-kernel, customer-supplier, conformist, api-gateway, event-carried-state-transfer, hexagonal-architecture, facade]
+related_concepts: []
 incompatible_with: [shared-kernel, conformist]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

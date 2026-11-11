@@ -1,14 +1,20 @@
 ---
 name: Identity Map
 slug: identity-map
+id: pat.06.identity-map
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Behavioral
 aliases: [Object Cache, Session Cache, First-Level Cache, Persistence Context Uniqueness]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [unit-of-work, lazy-load, data-mapper, repository]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Identity Map

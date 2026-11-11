@@ -1,14 +1,20 @@
 ---
 name: Split Brain
 slug: split-brain
+id: pat.18.split-brain
+kind: anti-pattern
 family: 18-anti-patterns
 category: Distributed Systems Anti-Pattern
 aliases: [Dual Primary, Divergent Cluster, Partition Amnesia]
 first_described: "Coined in the clustering and high-availability literature of the 1980s and 1990s (VAXcluster, IBM HACMP), popularized in distributed-systems writing through the 2000s"
 maturity: canonical
 related: [saga, event-sourcing, cqrs, circuit-breaker, bulkhead]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Split Brain

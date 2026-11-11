@@ -1,14 +1,20 @@
 ---
 name: Metamorphic Testing
 slug: metamorphic-testing
+id: pat.14.metamorphic-testing
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Metamorphic Relation Testing, MR-based Testing]
 first_described: "Chen, Cheung, Yiu 1998"
 maturity: established
 related: [property-based-test, mutation-test, golden-master, characterization-test, contract-test]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Metamorphic Testing

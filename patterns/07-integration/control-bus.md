@@ -1,14 +1,20 @@
 ---
 name: Control Bus
 slug: control-bus
+id: pat.07.control-bus
+kind: pattern
 family: 07-integration
 category: Enterprise Integration Pattern, System Management
 aliases: [Administrative Channel, Management Bus, Control Channel]
 first_described: "Hohpe, Woolf 2003, Enterprise Integration Patterns"
 maturity: canonical
-related: [message-bus, message-channel, event-message, command-message, correlation-identifier, dead-letter-channel, publish-subscribe-channel]
+related: [message-bus, message-channel, event-message, command-message, correlation-identifier, dead-letter-channel, publisher-subscriber]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Control Bus

@@ -1,14 +1,20 @@
 ---
 name: Active Object
 slug: active-object
+id: pat.09.active-object
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Concurrent Object, Actor (informal, imprecise)]
 first_described: "Lavender, Schmidt 1996; Schmidt, Stal, Rohnert, Buschmann 2000"
 maturity: canonical
 related: [monitor-object, reactor, proactor, half-sync-half-async, command, future-promise]
+related_concepts: []
 incompatible_with: [monitor-object]
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 ## 1. Name, aliases, and lineage

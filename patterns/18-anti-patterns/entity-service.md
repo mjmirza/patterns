@@ -1,14 +1,20 @@
 ---
 name: Entity Service
 slug: entity-service
+id: pat.18.entity-service
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [CRUD Service, CRUDy Service, Table-per-Service, Data-Centric Service, Entity-Centric Business Service, Anemic Microservice]
 first_described: "Erl 2008 (entity-centric business service, a neutral SOA service model); Nygard 2017 (named as an anti-pattern for microservices)"
 maturity: contested
-related: [anemic-domain-model, big-ball-of-mud, god-object, bounded-context, aggregate, backend-for-frontend, saga]
-incompatible_with: [bounded-context, aggregate]
+related: [anemic-domain-model, 11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud, god-object, bounded-context, 10-microservices/aggregate, 11-domain-driven-design/aggregate, backends-for-frontends, saga]
+related_concepts: []
+incompatible_with: [bounded-context, 10-microservices/aggregate, 11-domain-driven-design/aggregate]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Entity Service

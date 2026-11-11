@@ -1,14 +1,20 @@
 ---
 name: Call Super
 slug: call-super
+id: pat.18.call-super
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Base Class Call Requirement, Forgot to Call Super, Refused Bequest of Behaviour, Overriding Hazard]
 first_described: "Framework practitioner folklore, mid-1990s; catalogued as a hook-method antidote in Gamma, Helm, Johnson, Vlissides 1994 (Template Method)"
 maturity: canonical
 related: [template-method, factory-method, decorator, strategy, liskov-substitution-principle]
+related_concepts: []
 incompatible_with: [template-method]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Call Super

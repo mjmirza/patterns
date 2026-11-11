@@ -1,14 +1,20 @@
 ---
 name: Dummy
 slug: dummy
+id: pat.14.dummy
+kind: pattern
 family: 14-testing
 category: Test Double
 aliases: [Dummy Object, Placeholder Object, Null Argument]
 first_described: "Meszaros 2007"
 maturity: canonical
-related: [stub, fake-object, mock-object, spy, dependency-injection, null-object]
+related: [stub, fake, mock, spy, dependency-injection, null-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Dummy

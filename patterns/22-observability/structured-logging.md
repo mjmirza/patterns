@@ -1,14 +1,20 @@
 ---
 name: Structured Logging
 slug: structured-logging
+id: pat.22.structured-logging
+kind: pattern
 family: 22-observability
 category: Structural
 aliases: [Key-Value Logging, JSON Logging (a common concrete shape)]
 first_described: 'no single named originator; converged industry practice, reflected in language standard libraries such as Go log/slog, added in Go 1.21, 2023'
 maturity: canonical
 related: [correlation-id, red-method, use-method]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Structured Logging

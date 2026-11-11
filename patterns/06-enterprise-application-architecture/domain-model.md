@@ -1,14 +1,20 @@
 ---
 name: Domain Model
 slug: domain-model
+id: pat.06.domain-model
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Domain Logic
 aliases: [Rich Domain Model, Object Model]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [transaction-script, table-module, repository, unit-of-work, data-mapper, active-record, specification, factory-method]
+related_concepts: []
 incompatible_with: [transaction-script]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Domain Model

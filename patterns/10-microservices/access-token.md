@@ -1,14 +1,20 @@
 ---
 name: Access Token
 slug: access-token
+id: pat.10.access-token
+kind: pattern
 family: 10-microservices
 category: Security
 aliases: [Bearer Token, API Token, Security Token]
 first_described: "IETF RFC 6749, D. Hardt (ed.), 2012"
 maturity: canonical
 related: [api-gateway, service-mesh, self-contained-service, audit-logging]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Access Token

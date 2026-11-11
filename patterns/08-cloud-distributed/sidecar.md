@@ -1,14 +1,20 @@
 ---
 name: Sidecar
 slug: sidecar
+id: pat.08.sidecar
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed Systems
 aliases: [Sidekick Pattern, Sidecar Container, Sidecar Proxy]
 first_described: "Burns and Oppenheimer 2016 (Design patterns for container-based distributed systems), USENIX HotCloud"
 maturity: canonical
 related: [ambassador, adapter, service-mesh, gatekeeper, circuit-breaker, bulkhead, gateway-offloading]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Sidecar

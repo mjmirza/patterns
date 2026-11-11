@@ -1,14 +1,20 @@
 ---
 name: Association Table Mapping
 slug: association-table-mapping
+id: pat.06.association-table-mapping
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Metadata Mapping Patterns
 aliases: [Join Table, Junction Table, Link Table, Bridge Table, Relation Table]
 first_described: "Fowler 2002, Patterns of Enterprise Application Architecture"
 maturity: canonical
 related: [foreign-key-mapping, identity-map, unit-of-work, embedded-value, data-mapper, repository]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Association Table Mapping

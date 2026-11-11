@@ -1,14 +1,20 @@
 ---
 name: Iterator
 slug: iterator
+id: pat.01.iterator
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Cursor, Enumerator, Enumeration, Sequence Traversal]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [composite, visitor, factory-method, memento, decorator, template-method, null-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Iterator

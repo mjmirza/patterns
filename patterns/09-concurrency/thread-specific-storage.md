@@ -1,14 +1,20 @@
 ---
 name: Thread-Specific Storage
 slug: thread-specific-storage
+id: pat.09.thread-specific-storage
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Thread-Local Storage, TLS, TSS, Per-Thread Singleton]
 first_described: "Schmidt, Harrison, Pryce 1997"
 maturity: canonical
 related: [singleton, proxy, double-checked-locking, active-object, monitor-object, half-sync-half-async]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Thread-Specific Storage

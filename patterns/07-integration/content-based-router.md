@@ -1,14 +1,20 @@
 ---
 name: Content-Based Router
 slug: content-based-router
+id: pat.07.content-based-router
+kind: pattern
 family: 07-integration
 category: Messaging
 aliases: [Message Router, Smart Router, Routing Slip Router (related, distinct)]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [message-filter, recipient-list, pipes-and-filters, message-endpoint, dynamic-router, splitter, aggregator]
+related: [message-filter, recipient-list, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, dynamic-router, splitter, aggregator]
+related_concepts: [message-endpoint]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Content-Based Router

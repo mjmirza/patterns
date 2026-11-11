@@ -1,14 +1,20 @@
 ---
 name: Database Federation
 slug: database-federation
+id: pat.12.database-federation
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Federated Query, Foreign Data Wrapper]
 first_described: "PostgreSQL's own postgres_fdw and Trino's own connector architecture, current documentation"
 maturity: established
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Database Federation

@@ -1,14 +1,20 @@
 ---
 name: Inbox
 slug: inbox
+id: pat.10.inbox
+kind: pattern
 family: 10-microservices
 category: Reliability
 aliases: [Transactional Inbox, Inbox Table, Message Deduplication Table, Idempotent Receiver Table]
 first_described: "Dudycz, Outbox, Inbox patterns and delivery guarantees explained, event-driven.io, 2020, and Richardson, Microservices Patterns, Manning, 2018, chapter 3"
 maturity: established
-related: [idempotent-consumer, transactional-outbox, transaction-log-tailing, domain-event, database-per-service, saga]
+related: [idempotent-consumer, transactional-outbox, transaction-log-tailing, 10-microservices/domain-event, 11-domain-driven-design/domain-event, database-per-service, saga]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Inbox

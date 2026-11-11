@@ -1,14 +1,20 @@
 ---
 name: Peer-to-Peer
 slug: peer-to-peer
+id: pat.05.peer-to-peer
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [P2P, Overlay Network, Serverless Network Architecture]
 first_described: "Schollmeier 2001"
 maturity: canonical
-related: [event-driven-architecture, publish-subscribe, gossip-protocol, circuit-breaker, saga]
-incompatible_with: [layered-architecture]
+related: [event-driven-architecture, publisher-subscriber, gossip-protocol, circuit-breaker, saga]
+related_concepts: []
+incompatible_with: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Peer-to-Peer

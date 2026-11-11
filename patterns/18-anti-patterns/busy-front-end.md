@@ -1,14 +1,20 @@
 ---
 name: Busy Front End
 slug: busy-front-end
+id: pat.18.busy-front-end
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [CPU-Bound Work on the Web Tier, Fire-and-Forget Contention]
 first_described: "Microsoft Azure Architecture Center performance antipatterns catalog, authored by claytonsiemens77, dated 2017-06-05"
 maturity: canonical
-related: [queue-based-load-leveling, throttling, priority-queue, bulkhead, competing-consumers, circuit-breaker, busy-database, chatty-i-o]
+related: [queue-based-load-leveling, throttling, priority-queue, bulkhead, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, circuit-breaker, busy-database, chatty-i-o]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Busy Front End

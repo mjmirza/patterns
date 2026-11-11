@@ -1,14 +1,20 @@
 ---
 name: Structured Output
 slug: structured-output
+id: pat.17.structured-output
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [Guided Generation, Constrained Decoding, JSON Mode, Schema-Constrained Generation, Grammar-Constrained Sampling]
 first_described: "Willard, Louf 2023 (constrained decoding formalized as a finite-state process); productized as OpenAI Structured Outputs, 6 August 2024"
 maturity: canonical
 related: [function-calling, react-prompting, plan-execute, orchestrator-worker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Structured Output

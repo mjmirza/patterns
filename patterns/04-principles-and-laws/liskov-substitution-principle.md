@@ -1,14 +1,20 @@
 ---
 name: Liskov Substitution Principle
 slug: liskov-substitution-principle
+id: pat.04.liskov-substitution-principle
+kind: principle
 family: 04-principles-and-laws
 category: Principles and Laws
 aliases: [Substitutability Principle, Behavioral Subtyping, The L in SOLID]
 first_described: "Liskov 1987, Liskov and Wing 1994"
 maturity: canonical
 related: [interface-segregation-principle, open-closed-principle, template-method, strategy, bridge]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-09
+last_reviewed: 2026-08-09
+next_review_due: 2027-02-05
 ---
 
 # Liskov Substitution Principle

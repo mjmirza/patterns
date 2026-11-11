@@ -1,14 +1,20 @@
 ---
 name: Message Sequence
 slug: message-sequence
+id: pat.07.message-sequence
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Multi-Part Message, Sequenced Message, Message Chunking]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [splitter, aggregator, correlation-identifier, competing-consumers, claim-check]
+related: [splitter, aggregator, correlation-identifier, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, 07-integration/claim-check, 08-cloud-distributed/claim-check]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Message Sequence

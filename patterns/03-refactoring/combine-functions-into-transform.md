@@ -1,14 +1,20 @@
 ---
 name: Combine Functions into Transform
 slug: combine-functions-into-transform
+id: pat.03.combine-functions-into-transform
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Compose Functions, Pipeline to Transform, Merge Transform Pipeline]
 first_described: "Fowler 2018"
 maturity: canonical
-related: [combine-functions-into-class, inline-function, extract-function, replace-pipeline-with-collections, introduce-parameter-object]
+related: [combine-functions-into-class, inline-function, extract-function, introduce-parameter-object]
+related_concepts: [replace-pipeline-with-collections]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Combine Functions into Transform

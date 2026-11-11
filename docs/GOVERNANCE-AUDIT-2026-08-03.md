@@ -4,6 +4,10 @@ freshness: 90d
 
 # Governance Audit, 2026-08-03
 
+Current gap status lives in `docs/ULTRA-AUDIT-2026-11-11.md`. This file is
+the record of the 2026-08-03 review, including findings that later changes
+closed.
+
 Requested by the repository owner as a full trust, content-model, tooling,
 governance, and security review. This document is the audit, the gap
 analysis, and the prioritized plan. Section 5 lists what shipped in the

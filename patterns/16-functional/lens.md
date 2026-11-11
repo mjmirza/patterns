@@ -1,14 +1,20 @@
 ---
 name: Lens
 slug: lens
+id: pat.16.lens
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Functional Reference, Optic, Total Lens, Van Laarhoven Lens]
 first_described: "N. F., Greenwald, Moore, Pierce, Schmitt 2007"
 maturity: established
-related: [functor, profunctor, traversal, prism, optional, getter, setter]
-incompatible_with: [partial-focus-as-total-lens, mutating-setter, shape-changing-update]
+related: [functor, profunctor, prism, option-maybe]
+related_concepts: [traversal, getter, setter]
+incompatible_with: []
+incompatible_concepts: [partial-focus-as-total-lens, mutating-setter, shape-changing-update]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Lens

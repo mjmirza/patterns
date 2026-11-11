@@ -1,14 +1,20 @@
 ---
 name: Semantic Caching
 slug: semantic-caching
+id: pat.17.semantic-caching
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Embedding Cache, Similarity Cache, LLM Semantic Cache, Prompt Cache (informal, ambiguous)]
 first_described: "Shaul Dar, Michael J. Franklin, Bjorn Thor Jonsson, Divesh Srivastava, Michael Tan, VLDB 1996 (database query caching); applied to LLM prompt and completion caching by GPTCache (Zilliz, March 2023)"
 maturity: established
 related: [tool-result-caching, cost-guard, llm-circuit-breaker, rate-limiting, retrieval-augmented-generation, hybrid-search, reranking, input-guardrails]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Semantic Caching

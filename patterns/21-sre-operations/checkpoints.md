@@ -1,14 +1,20 @@
 ---
 name: Checkpoints
 slug: checkpoints
+id: pat.21.checkpoints
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [Checkpointing, Distributed Snapshot, Checkpoint and Restart]
 first_described: 'K. Mani Chandy and Leslie Lamport, Distributed Snapshots and Determining Global States of Distributed Systems, ACM Transactions on Computer Systems, 1985'
 maturity: canonical
 related: [write-ahead-log, event-sourcing, saga, error-budget, graceful-degradation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Checkpoints

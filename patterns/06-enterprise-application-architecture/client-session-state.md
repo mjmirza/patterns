@@ -1,14 +1,20 @@
 ---
 name: Client Session State
 slug: client-session-state
+id: pat.06.client-session-state
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Patterns
 aliases: [Cookie-Based Session, Stateless Session Token, Client-Side Session]
 first_described: "Fowler, Patterns of Enterprise Application Architecture, 2002"
 maturity: canonical
 related: [server-session-state, database-session-state, remote-facade, data-transfer-object, identity-field]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Client Session State

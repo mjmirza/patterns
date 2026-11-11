@@ -1,14 +1,20 @@
 ---
 name: Replace Magic Literal
 slug: replace-magic-literal
+id: pat.03.replace-magic-literal
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Magic Number with Symbolic Constant, Introduce Constant]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [extract-variable, rename-variable, encapsulate-variable, replace-primitive-with-object, introduce-parameter-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Magic Literal

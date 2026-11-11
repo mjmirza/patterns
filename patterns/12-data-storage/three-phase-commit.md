@@ -1,14 +1,20 @@
 ---
 name: Three-Phase Commit
 slug: three-phase-commit
+id: pat.12.three-phase-commit
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [3PC, Nonblocking Commit Protocol, Quorum-Based Commit Protocol]
 first_described: "Skeen 1981, extended by Skeen and Stonebraker 1983"
 maturity: established
-related: [saga, outbox-pattern, event-sourcing, write-ahead-log, consistent-hashing]
+related: [saga, transactional-outbox, event-sourcing, write-ahead-log, consistent-hashing]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Three-Phase Commit

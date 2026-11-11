@@ -1,14 +1,20 @@
 ---
 name: Loops
 slug: loops
+id: pat.02.loops
+kind: smell
 family: 02-code-smells
 category: Code Smell
 aliases: [Loop Smell, Imperative Loop, Manual Iteration]
 first_described: "Fowler, Beck 1999 (Duplicated Code, Long Method); Fowler 2018 (Replace Loop with Pipeline)"
 maturity: canonical
-related: [duplicated-code, long-method, primitive-obsession, feature-envy, iterator]
+related: [duplicate-code, long-method, primitive-obsession, feature-envy, iterator]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Loops

@@ -1,14 +1,20 @@
 ---
 name: Principle of Least Astonishment
 slug: principle-of-least-astonishment
+id: pat.04.principle-of-least-astonishment
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Principle of Least Surprise, Law of Least Astonishment, POLA, POLS, Rule of Least Surprise]
 first_described: "W. N. Holmes, PL/I Bulletin, December 1967 (earliest documented use); popularized as a Unix design tenet through the 1970s-1980s and formalized by Eric S. Raymond, The Art of Unix Programming, 2003"
 maturity: canonical
-related: [command-query-separation, fail-fast, convention-over-configuration, single-responsibility-principle, template-method, factory-method]
+related: [separate-query-from-modifier, fail-fast, single-responsibility-principle, template-method, factory-method]
+related_concepts: [convention-over-configuration]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Principle of Least Astonishment

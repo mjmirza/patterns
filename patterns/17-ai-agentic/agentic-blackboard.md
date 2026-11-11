@@ -1,14 +1,20 @@
 ---
 name: Agentic Blackboard
 slug: agentic-blackboard
+id: pat.17.agentic-blackboard
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [Blackboard Architecture, Shared Workspace Pattern, Shared Scratchpad Pattern, Blackboard System]
 first_described: "Erman, Hayes-Roth, Lesser, Reddy 1980, applied to multi-agent LLM systems circa 2023-2024"
 maturity: established
 related: [multi-agent-supervisor, mediator, observer, agent-memory, hierarchical-agents, tool-result-caching]
+related_concepts: []
 incompatible_with: [orchestrator-worker]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Agentic Blackboard

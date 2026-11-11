@@ -1,14 +1,20 @@
 ---
 name: Messaging
 slug: messaging
+id: pat.10.messaging
+kind: pattern
 family: 10-microservices
 category: Communication Style
 aliases: [Asynchronous Messaging, Message-Based Communication]
 first_described: "Hohpe and Woolf 2003, applied to microservices by Richardson 2018"
 maturity: canonical
-related: [domain-event, transactional-outbox, idempotent-consumer, polling-publisher, api-gateway, remote-procedure-invocation]
+related: [10-microservices/domain-event, 11-domain-driven-design/domain-event, transactional-outbox, idempotent-consumer, polling-publisher, api-gateway, remote-procedure-invocation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Messaging

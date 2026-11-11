@@ -1,14 +1,20 @@
 ---
 name: Future Promise
 slug: future-promise
+id: pat.09.future-promise
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Eventual, Deferred, Delay, Task, CompletionStage]
 first_described: "Baker and Hewitt 1977, Friedman and Wise 1976"
 maturity: canonical
-related: [thread-pool, active-object, producer-consumer, reactor, half-sync-half-async]
+related: [thread-pool, active-object, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, reactor, half-sync-half-async]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Future Promise

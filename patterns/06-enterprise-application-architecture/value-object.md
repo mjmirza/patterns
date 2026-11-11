@@ -1,14 +1,20 @@
 ---
 name: Value Object
 slug: value-object
+id: pat.06.value-object
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Pattern
 aliases: [Value Type, Immutable Value, Value Data Type]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [money, embedded-value, data-transfer-object, identity-field, domain-model, layer-supertype]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Value Object

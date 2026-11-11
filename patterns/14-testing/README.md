@@ -2,63 +2,63 @@
 
 Origin. Meszaros, xUnit Test Patterns
 
-30 entries, 217,020 words. Every entry carries all 18
+30 entries, 217,368 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Test Data
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Derived Value](derived-value.md) | canonical | 5,147 | A test needs data. Every object under test, and every collaborator it talks to, has fields that must be filled in before the test can run, and the overwhelming majority of those ... |
-| [Generated Value](generated-value.md) | canonical | 6,233 | A fixture object almost always has more fields than the test actually cares about. |
+| [Derived Value](derived-value.md) | canonical | 5,158 | A test needs data. Every object under test, and every collaborator it talks to, has fields that must be filled in before the test can run, and the overwhelming majority of those ... |
+| [Generated Value](generated-value.md) | canonical | 6,245 | A fixture object almost always has more fields than the test actually cares about. |
 
 ## Test Double
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Dummy](dummy.md) | canonical | 6,529 | A constructor, a factory function, or a method signature requires an argument of a particular type, but the code path being exercised by a specific test does not use that argument ... |
-| [Fake](fake.md) | canonical | 6,405 | A piece of code depends on a collaborator that is real, correct, and slow, or real, correct, and hard to set up. |
-| [Mock](mock.md) | canonical | 6,136 | A unit of code under test calls a method on a collaborator, and the whole reason the test exists is to prove that call happens, with the right arguments, in the right ... |
-| [Stub](stub.md) | canonical | 9,010 | Code under test frequently depends on something the test cannot, or should not, use as it really behaves. |
+| [Dummy](dummy.md) | canonical | 6,541 | A constructor, a factory function, or a method signature requires an argument of a particular type, but the code path being exercised by a specific test does not use that argument ... |
+| [Fake](fake.md) | canonical | 6,417 | A piece of code depends on a collaborator that is real, correct, and slow, or real, correct, and hard to set up. |
+| [Mock](mock.md) | canonical | 6,147 | A unit of code under test calls a method on a collaborator, and the whole reason the test exists is to prove that call happens, with the right arguments, in the right ... |
+| [Stub](stub.md) | canonical | 9,022 | Code under test frequently depends on something the test cannot, or should not, use as it really behaves. |
 
 ## Test Structure
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Four-Phase Test](four-phase-test.md) | canonical | 7,168 | A test method's job is to answer one question unambiguously, did the behaviour under test do the right thing. |
+| [Four-Phase Test](four-phase-test.md) | canonical | 7,179 | A test method's job is to answer one question unambiguously, did the behaviour under test do the right thing. |
 
 ## Testing
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Approval Test](approval-test.md) | established | 7,682 | Consider a function that renders an invoice as HTML, a compiler pass that lowers an abstract syntax tree to bytecode, a report generator that produces a multi-page PDF summary, or ... |
-| [Arrange-Act-Assert](arrange-act-assert.md) | canonical | 6,255 | A test that has no imposed shape tends to accrete in whatever order the writer thought of things. |
-| [Characterization Test](characterization-test.md) | canonical | 6,412 | A team inherits a module, a service, or a whole codebase with no tests, or with tests too sparse to trust. |
-| [Contract Test](contract-test.md) | canonical | 8,368 | A team splits a monolith into services, or simply has two teams shipping two deployables that talk over HTTP, gRPC, or a message queue. |
-| [Differential Testing](differential-testing.md) | established | 7,373 | A team owns, or depends on, more than one thing that is meant to compute the same answer. |
-| [Fault Injection](fault-injection.md) | established | 7,609 | Software that talks to another process over a network, a disk, a database connection, or any other boundary will eventually see that boundary fail. |
-| [Fresh Fixture](fresh-fixture.md) | canonical | 7,305 | A test needs an environment in which to run its assertions, objects to act on, data in a database, files on disk, a running process. |
-| [Fuzz Testing](fuzz-testing.md) | canonical | 9,721 | A function, parser, decoder or protocol handler accepts input from outside the program's control, and the person who wrote it can only imagine a finite set of test cases by hand. |
-| [Given-When-Then](given-when-then.md) | canonical | 7,476 | A test file with no shape reads as an undifferentiated block of setup calls, one action, and a pile of assertions, and a reader cannot tell at a glance which lines are ... |
-| [Golden Master](golden-master.md) | established | 7,989 | A piece of code produces output that is expensive or awkward to specify by hand, one field at a time, and a person needs confidence that a change to the code did not alter that ... |
-| [Humble Object](humble-object.md) | canonical | 7,022 | Some classes are hard to unit test not because their logic is hard, but because constructing or invoking them at all requires something a fast, isolated test cannot or should not ... |
-| [Metamorphic Testing](metamorphic-testing.md) | established | 6,215 | Some programs have no practical way to check whether a single output is correct. |
-| [Mutation Test](mutation-test.md) | canonical | 8,102 | A test suite that exercises every line and every branch of a program can still fail to notice when the program is wrong. |
-| [Object Mother](object-mother.md) | established | 6,582 | A test needs an object in a known, valid state before it can exercise the behavior under test. |
-| [Prebuilt Fixture](prebuilt-fixture.md) | canonical | 7,102 | A test needs the system under test to start from a known state before its assertions can mean anything. |
-| [Property-Based Test](property-based-test.md) | canonical | 7,086 | A function or a module has a genuine algebraic or structural invariant, and an author trying to test it by hand can only ever write down the handful of inputs they personally ... |
-| [Shared Fixture](shared-fixture.md) | canonical | 8,501 | A test needs a fixture. The object under test needs collaborators wired up, a database needs rows in it that match the scenario, a file needs to exist on disk, an external service ... |
-| [Snapshot Test](snapshot-test.md) | established | 9,149 | A function, a component, or an API endpoint produces an output that is correct today, and the author knows it is correct today because they looked at it, ran it, or eyeballed a ... |
-| [Spy](spy.md) | canonical | 7,242 | A unit under test collaborates with something outside itself, a payment gateway, an email service, a logger, an event bus, a cache. |
-| [Test Data Builder](test-data-builder.md) | canonical | 6,941 | A domain object has enough constructor parameters, or enough invariants, that constructing one directly in a test is either impossible without a long argument list or actively ... |
-| [Testcontainers](testcontainers.md) | canonical | 6,622 | A test that exercises code talking to a database, a message broker, a cache, or another networked service has three unhappy default choices. |
+| [Approval Test](approval-test.md) | established | 7,693 | Consider a function that renders an invoice as HTML, a compiler pass that lowers an abstract syntax tree to bytecode, a report generator that produces a multi-page PDF summary, or ... |
+| [Arrange-Act-Assert](arrange-act-assert.md) | canonical | 6,266 | A test that has no imposed shape tends to accrete in whatever order the writer thought of things. |
+| [Characterization Test](characterization-test.md) | canonical | 6,424 | A team inherits a module, a service, or a whole codebase with no tests, or with tests too sparse to trust. |
+| [Contract Test](contract-test.md) | canonical | 8,379 | A team splits a monolith into services, or simply has two teams shipping two deployables that talk over HTTP, gRPC, or a message queue. |
+| [Differential Testing](differential-testing.md) | established | 7,385 | A team owns, or depends on, more than one thing that is meant to compute the same answer. |
+| [Fault Injection](fault-injection.md) | established | 7,620 | Software that talks to another process over a network, a disk, a database connection, or any other boundary will eventually see that boundary fail. |
+| [Fresh Fixture](fresh-fixture.md) | canonical | 7,317 | A test needs an environment in which to run its assertions, objects to act on, data in a database, files on disk, a running process. |
+| [Fuzz Testing](fuzz-testing.md) | canonical | 9,733 | A function, parser, decoder or protocol handler accepts input from outside the program's control, and the person who wrote it can only imagine a finite set of test cases by hand. |
+| [Given-When-Then](given-when-then.md) | canonical | 7,487 | A test file with no shape reads as an undifferentiated block of setup calls, one action, and a pile of assertions, and a reader cannot tell at a glance which lines are ... |
+| [Golden Master](golden-master.md) | established | 8,001 | A piece of code produces output that is expensive or awkward to specify by hand, one field at a time, and a person needs confidence that a change to the code did not alter that ... |
+| [Humble Object](humble-object.md) | canonical | 7,034 | Some classes are hard to unit test not because their logic is hard, but because constructing or invoking them at all requires something a fast, isolated test cannot or should not ... |
+| [Metamorphic Testing](metamorphic-testing.md) | established | 6,227 | Some programs have no practical way to check whether a single output is correct. |
+| [Mutation Test](mutation-test.md) | canonical | 8,114 | A test suite that exercises every line and every branch of a program can still fail to notice when the program is wrong. |
+| [Object Mother](object-mother.md) | established | 6,594 | A test needs an object in a known, valid state before it can exercise the behavior under test. |
+| [Prebuilt Fixture](prebuilt-fixture.md) | canonical | 7,114 | A test needs the system under test to start from a known state before its assertions can mean anything. |
+| [Property-Based Test](property-based-test.md) | canonical | 7,097 | A function or a module has a genuine algebraic or structural invariant, and an author trying to test it by hand can only ever write down the handful of inputs they personally ... |
+| [Shared Fixture](shared-fixture.md) | canonical | 8,512 | A test needs a fixture. The object under test needs collaborators wired up, a database needs rows in it that match the scenario, a file needs to exist on disk, an external service ... |
+| [Snapshot Test](snapshot-test.md) | established | 9,161 | A function, a component, or an API endpoint produces an output that is correct today, and the author knows it is correct today because they looked at it, ran it, or eyeballed a ... |
+| [Spy](spy.md) | canonical | 7,254 | A unit under test collaborates with something outside itself, a payment gateway, an email service, a logger, an event bus, a cache. |
+| [Test Data Builder](test-data-builder.md) | canonical | 6,953 | A domain object has enough constructor parameters, or enough invariants, that constructing one directly in a test is either impossible without a long argument list or actively ... |
+| [Testcontainers](testcontainers.md) | canonical | 6,633 | A test that exercises code talking to a database, a message broker, a cache, or another networked service has three unhappy default choices. |
 
 ## Testing Strategy
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Test Pyramid](test-pyramid.md) | established | 7,148 | A team writes automated tests without a stated distribution, and the suite drifts toward whatever is easiest to write in the moment rather than what is cheapest to run and ... |
-| [Test Trophy](test-trophy.md) | established | 6,490 | A team writing automated tests eventually has to decide, consciously or by accretion, how much of its testing effort should sit at each level of isolation, from fully isolated ... |
+| [Test Pyramid](test-pyramid.md) | established | 7,160 | A team writes automated tests without a stated distribution, and the suite drifts toward whatever is easiest to write in the moment rather than what is cheapest to run and ... |
+| [Test Trophy](test-trophy.md) | established | 6,501 | A team writing automated tests eventually has to decide, consciously or by accretion, how much of its testing effort should sit at each level of isolation, from fully isolated ... |
 
 ## Reading order
 

@@ -1,14 +1,20 @@
 ---
 name: Retrieval Augmented Generation
 slug: retrieval-augmented-generation
+id: pat.17.retrieval-augmented-generation
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [RAG, Retrieval Augmented LLM, Grounded Generation, Contextual Retrieval]
 first_described: "Lewis, Perez, Piktus, Petroni, Karpukhin, Goyal, Kuttler, Lewis, Yih, Rocktaschel, Riedel, Kiela 2020"
 maturity: canonical
 related: [strategy, chain-of-responsibility, decorator, cache-aside, circuit-breaker, adapter]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Retrieval Augmented Generation

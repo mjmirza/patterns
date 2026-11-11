@@ -1,14 +1,20 @@
 ---
 name: Watermark
 slug: watermark
+id: pat.24.watermark
+kind: pattern
 family: 24-stream-processing
 category: Stream Processing
 aliases: [Low Watermark]
 first_described: "Tyler Akidau, Alex Balikov, Kaya Bekiroglu, Slava Chernyak, Josh Haberman, Reuven Lax, Sam McVeety, Daniel Mills, Paul Nordstrom, Sam Whittle, MillWheel: Fault-Tolerant Stream Processing at Internet Scale, Proceedings of the VLDB Endowment, Volume 6, Number 11, pages 1033 to 1044, 2013"
 maturity: established
-related: [event-time-processing, windowing, exactly-once-processing]
+related: [event-time-processing, exactly-once-processing]
+related_concepts: [windowing]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

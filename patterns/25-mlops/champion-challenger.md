@@ -1,14 +1,20 @@
 ---
 name: Champion-Challenger
 slug: champion-challenger
+id: pat.25.champion-challenger
+kind: pattern
 family: 25-mlops
 category: MLOps
 aliases: [Champion Challenger, Challenger Model]
 first_described: "MLflow Model Registry alias documentation, current"
 maturity: emerging
 related: [model-registry, shadow-model, online-inference, model-monitoring]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Champion-Challenger

@@ -1,14 +1,20 @@
 ---
 name: Circuit Breaker
 slug: circuit-breaker
+id: pat.08.circuit-breaker
+kind: pattern
 family: 08-cloud-distributed
 category: Stability
 aliases: [Breaker, Fail Fast Proxy, Trip Switch]
 first_described: "Michael T. Nygard 2007"
 maturity: canonical
-related: [retry, bulkhead, timeout, fallback, health-endpoint-monitoring, rate-limiter, hedging]
+related: [retry, bulkhead, health-endpoint-monitoring, rate-limiter]
+related_concepts: [timeout, fallback, hedging]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Circuit Breaker

@@ -1,14 +1,20 @@
 ---
 name: Signals
 slug: signals
+id: pat.13.signals
+kind: pattern
 family: 13-frontend-ui
 category: State Management
 aliases: [Fine-Grained Reactivity, Reactive Primitives]
 first_described: "Preact Signals, 6 September 2022"
 maturity: established
 related: [hooks, provider-pattern, higher-order-component, render-props]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Signals

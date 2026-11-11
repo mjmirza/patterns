@@ -1,14 +1,20 @@
 ---
 name: Hinted Handoff
 slug: hinted-handoff
+id: pat.12.hinted-handoff
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Sloppy Quorum Write, Hint Delivery]
 first_described: "DeCandia et al. 2007"
 maturity: canonical
 related: [quorum, leaderless-replication, gossip-protocol, merkle-tree, vector-clock, write-ahead-log]
+related_concepts: []
 incompatible_with: [two-phase-commit]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Hinted Handoff

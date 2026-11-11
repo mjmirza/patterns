@@ -1,14 +1,20 @@
 ---
 name: Routing Slip
 slug: routing-slip
+id: pat.07.routing-slip
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Itinerary Pattern, Traveling Itinerary]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [pipes-and-filters, process-manager, saga, content-based-router, dynamic-router, message-router]
+related: [05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, 07-integration/process-manager, 11-domain-driven-design/process-manager, saga, content-based-router, dynamic-router]
+related_concepts: [message-router]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Routing Slip

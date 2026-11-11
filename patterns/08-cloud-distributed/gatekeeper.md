@@ -1,14 +1,20 @@
 ---
 name: Gatekeeper
 slug: gatekeeper
+id: pat.08.gatekeeper
+kind: pattern
 family: 08-cloud-distributed
 category: Security
 aliases: [Broker Pattern, Validating Gateway, Bastion Broker]
 first_described: "Microsoft patterns & practices, Cloud Design Patterns guide, 2014"
 maturity: established
-related: [gateway-offloading, gateway-routing, gateway-aggregation, valet-key, federated-identity, quarantine, sidecar, rate-limiting-pattern]
+related: [gateway-offloading, gateway-routing, gateway-aggregation, valet-key, federated-identity, sidecar, rate-limiting]
+related_concepts: [quarantine]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Gatekeeper

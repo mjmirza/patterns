@@ -1,14 +1,20 @@
 ---
 name: Mock
 slug: mock
+id: pat.14.mock
+kind: pattern
 family: 14-testing
 category: Test Double
 aliases: [Mock Object, Behavior Verification Double]
 first_described: "Mackinnon, Freeman, Craig 2000; Meszaros 2007"
 maturity: canonical
-related: [stub, fake-object, spy, dummy, dependency-injection, test-doubles]
+related: [stub, fake, spy, dummy, dependency-injection]
+related_concepts: [test-doubles]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Mock

@@ -1,14 +1,20 @@
 ---
 name: Static Content Hosting
 slug: static-content-hosting
+id: pat.08.static-content-hosting
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud Distributed
 aliases: [Static Site Hosting, Static Asset Origin + CDN, JAMstack Hosting]
 first_described: "Industry practice, formalized by CDN providers late 1990s onward"
 maturity: canonical
 related: [cache-aside, gateway-offloading, sharding, geode, external-configuration-store]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Static Content Hosting

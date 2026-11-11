@@ -1,14 +1,20 @@
 ---
 name: Aggregate
 slug: aggregate
+id: pat.11.aggregate
+kind: pattern
 family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Consistency Boundary, Transaction Boundary, Cluster of Entities]
 first_described: "Evans 2003"
 maturity: canonical
-related: [aggregate-root, entity, value-object, repository, domain-event, factory, bounded-context]
+related: [aggregate-root, entity, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, repository, 10-microservices/domain-event, 11-domain-driven-design/domain-event, factory, bounded-context]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Aggregate

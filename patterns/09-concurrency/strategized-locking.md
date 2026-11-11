@@ -1,14 +1,20 @@
 ---
 name: Strategized Locking
 slug: strategized-locking
+id: pat.09.strategized-locking
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Pluggable Synchronization, Parameterized Locking Strategy, Policy-Based Locking]
 first_described: "Schmidt 1999; Schmidt, Stal, Rohnert, Buschmann 2000"
 maturity: canonical
 related: [scoped-locking, thread-safe-interface, monitor-object, strategy, bridge, template-method, double-checked-locking]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-14
+last_reviewed: 2026-08-14
+next_review_due: 2027-02-10
 ---
 
 # Strategized Locking

@@ -1,14 +1,20 @@
 ---
 name: Replace Nested Conditional with Guard Clauses
 slug: replace-nested-conditional-with-guard-clauses
+id: pat.03.replace-nested-conditional-with-guard-clauses
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Nested Conditional with Early Return, Introduce Guard Clauses, Flatten Conditional]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [decompose-conditional, consolidate-conditional-expression, replace-control-flag-with-break, extract-function, replace-conditional-with-polymorphism]
-incompatible_with: [single-exit-point-rule]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [single-exit-point-rule]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Nested Conditional with Guard Clauses

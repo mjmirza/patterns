@@ -1,14 +1,20 @@
 ---
 name: Remote Facade
 slug: remote-facade
+id: pat.06.remote-facade
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Distribution
 aliases: [Session Facade, Service Facade, Coarse-Grained Interface]
 first_described: "Fowler 2002"
 maturity: canonical
-related: [data-transfer-object, facade, dto-assembler, gateway]
+related: [data-transfer-object, facade, gateway]
+related_concepts: [dto-assembler]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Remote Facade

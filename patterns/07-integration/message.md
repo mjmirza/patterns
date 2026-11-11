@@ -1,14 +1,20 @@
 ---
 name: Message
 slug: message
+id: pat.07.message
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Message Object, Envelope]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [message-channel, message-endpoint, message-translator, canonical-data-model, command-message, document-message, event-message]
+related: [message-channel, canonical-data-model, command-message, document-message, event-message]
+related_concepts: [message-endpoint, message-translator]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Message

@@ -1,14 +1,20 @@
 ---
 name: Long Parameter List
 slug: long-parameter-list
+id: pat.02.long-parameter-list
+kind: smell
 family: 02-code-smells
 category: Code Smell
 aliases: [Parameter Bloat, Argument List Overload]
 first_described: "Fowler, Beck 1999, Refactoring, 1st edition, chapter 3"
 maturity: canonical
 related: [introduce-parameter-object, preserve-whole-object, builder, data-clumps, feature-envy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Long Parameter List

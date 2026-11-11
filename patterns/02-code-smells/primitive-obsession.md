@@ -1,14 +1,20 @@
 ---
 name: Primitive Obsession
 slug: primitive-obsession
+id: pat.02.primitive-obsession
+kind: smell
 family: 02-code-smells
 category: Code Smell
 aliases: [Primitive Type Obsession, Stringly Typed Code]
 first_described: "Fowler, Beck 1999"
 maturity: canonical
-related: [replace-primitive-with-object, value-object, whole-value, type-code, introduce-parameter-object]
+related: [replace-primitive-with-object, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, introduce-parameter-object]
+related_concepts: [type-code]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Primitive Obsession

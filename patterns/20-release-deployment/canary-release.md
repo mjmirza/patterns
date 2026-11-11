@@ -1,14 +1,20 @@
 ---
 name: Canary Release
 slug: canary-release
+id: pat.20.canary-release
+kind: pattern
 family: 20-release-deployment
 category: Deployment
 aliases: [Canary Deployment, Canary Rollout]
 first_described: 'Martin Fowler, CanaryRelease bliki article; Google SRE Workbook'
 maturity: canonical
 related: [blue-green-deployment, rolling-deployment]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Canary Release

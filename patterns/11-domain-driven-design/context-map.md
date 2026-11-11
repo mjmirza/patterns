@@ -1,14 +1,20 @@
 ---
 name: Context Map
 slug: context-map
+id: pat.11.context-map
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Bounded Context Map, Context Mapping]
 first_described: "Evans 2003"
 maturity: canonical
 related: [bounded-context, anticorruption-layer, shared-kernel, published-language, open-host-service, customer-supplier, conformist]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

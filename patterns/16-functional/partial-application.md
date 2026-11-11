@@ -1,14 +1,20 @@
 ---
 name: Partial Application
 slug: partial-application
+id: pat.16.partial-application
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Argument Binding, Partially Applied Function, Bound Function]
 first_described: "Established in lambda calculus and functional programming practice"
 maturity: canonical
-related: [currying, higher-order-function, function-composition, pipeline, decorator]
-incompatible_with: [long-parameter-list, global-state]
+related: [currying, function-composition, decorator]
+related_concepts: [higher-order-function, pipeline]
+incompatible_with: [long-parameter-list, global-data]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Partial Application

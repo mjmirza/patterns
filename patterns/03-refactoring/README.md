@@ -2,99 +2,99 @@
 
 Origin. Fowler, Refactoring 2nd edition
 
-66 entries, 262,769 words. Every entry carries all 18
+66 entries, 263,552 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Composing Functions
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Return Modified Value](return-modified-value.md) | established | 6,195 | A function changes a value that lives outside the function boundary. |
+| [Return Modified Value](return-modified-value.md) | established | 6,207 | A function changes a value that lives outside the function boundary. |
 
 ## Data Organization
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Replace Primitive with Object](replace-primitive-with-object.md) | canonical | 6,571 | A primitive has started to carry a domain concept that the language type cannot express. |
+| [Replace Primitive with Object](replace-primitive-with-object.md) | canonical | 6,584 | A primitive has started to carry a domain concept that the language type cannot express. |
 
 ## Dealing with Inheritance
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Replace Subclass with Delegate](replace-subclass-with-delegate.md) | canonical | 6,357 | A class hierarchy has started to carry more variation than inheritance can represent cleanly. |
-| [Replace Superclass with Delegate](replace-superclass-with-delegate.md) | canonical | 6,036 | A class extends a superclass to reuse behavior, but the subclass is not truly a special case of that superclass. |
+| [Replace Subclass with Delegate](replace-subclass-with-delegate.md) | canonical | 6,369 | A class hierarchy has started to carry more variation than inheritance can represent cleanly. |
+| [Replace Superclass with Delegate](replace-superclass-with-delegate.md) | canonical | 6,048 | A class extends a superclass to reuse behavior, but the subclass is not truly a special case of that superclass. |
 
 ## Refactoring
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Change Function Declaration](change-function-declaration.md) | canonical | 4,133 | A function's declaration, its name and its parameter list, is the single contract every caller depends on. |
-| [Change Reference to Value](change-reference-to-value.md) | canonical | 3,516 | You have a reference object, an object whose identity matters and which is shared among multiple callers, but the sharing is producing more problems than it solves. |
-| [Change Value to Reference](change-value-to-reference.md) | canonical | 3,616 | You have a value object, an object whose identity is defined by its field values and which is immutable, but the immutability and the value semantics are producing more problems ... |
-| [Collapse Hierarchy](collapse-hierarchy.md) | canonical | 3,138 | A subclass and its superclass have diverged or, more commonly, have converged to the point where the hierarchy level adds no value. |
-| [Combine Functions into Class](combine-functions-into-class.md) | canonical | 3,579 | You have a set of functions, typically free functions in a module, that all operate on the same data structure or the same set of parameters. |
-| [Combine Functions into Transform](combine-functions-into-transform.md) | canonical | 3,278 | You have a pipeline of functions, each taking the output of the previous and producing input for the next, forming a chain of transformations. |
-| [Consolidate Conditional Expression](consolidate-conditional-expression.md) | canonical | 3,243 | You have a series of conditional checks, each of which leads to the same result or the same action. |
-| [Decompose Conditional](decompose-conditional.md) | canonical | 3,391 | You have a conditional whose complexity lies not in the branching but in the readability of its parts. |
-| [Encapsulate Collection](encapsulate-collection.md) | canonical | 3,249 | A class has a collection field, typically a list or a map, that is exposed to callers. |
-| [Encapsulate Record](encapsulate-record.md) | canonical | 3,025 | You have a data record, a structure with public fields and no behaviour, that callers read and write directly. |
-| [Encapsulate Variable](encapsulate-variable.md) | canonical | 3,123 | You have a variable, typically a public field on a class or a module level variable, that callers read and write directly. |
-| [Extract Class](extract-class.md) | canonical | 3,113 | You have a class that has grown to the point where it does two things that should be separate. |
-| [Extract Function](extract-function.md) | canonical | 3,043 | You have a function that does two or more things, or a function that does one thing but is long enough that a reader cannot hold the whole function in their head. |
-| [Extract Superclass](extract-superclass.md) | canonical | 2,825 | You have two classes that share fields and methods, either because they were written independently and converged, or because they were originally one class that was split and the ... |
-| [Extract Variable](extract-variable.md) | canonical | 2,799 | You have an expression that is hard to read because it combines several subexpressions into one statement. |
-| [Hide Delegate](hide-delegate.md) | canonical | 2,863 | A client calls a method on an object it reaches through another object, forming a chain of access. |
-| [Inline Class](inline-class.md) | canonical | 2,513 | You have a class that no longer earns its place. |
-| [Inline Function](inline-function.md) | canonical | 2,528 | You have a function whose body is as clear as its name, or clearer. |
-| [Inline Variable](inline-variable.md) | canonical | 2,113 | You have a variable whose initialiser is as clear as the variable name, or clearer. |
-| [Introduce Assertion](introduce-assertion.md) | canonical | 2,657 | A section of code makes an assumption about the state of the program at that point, for example that a divisor is not zero, that a list is not empty, or that a temperature is in a ... |
-| [Introduce Parameter Object](introduce-parameter-object.md) | canonical | 2,642 | You have a function with a long parameter list where several parameters are naturally related. |
-| [Introduce Special Case](introduce-special-case.md) | canonical | 3,021 | You have code that checks for null, or for a special value that means "no value" or "unknown," before every operation on the object. |
-| [Move Field](move-field.md) | canonical | 2,268 | A field is on a class that does not use it, or that uses it less than another class does. |
-| [Move Function](move-function.md) | canonical | 2,437 | A function is on a class or module that does not use it, or that uses it less than another class does. |
-| [Move Statements into Function](move-statements-into-function.md) | canonical | 1,717 | You have a function that is called from multiple places, and every caller performs the same statements immediately before or after the call. |
-| [Move Statements to Callers](move-statements-to-callers.md) | canonical | 1,599 | A function performs statements that vary by caller or that are not the function's responsibility. |
-| [Parameterize Function](parameterize-function.md) | canonical | 1,755 | You have two or more functions that perform the same operation with different constant values. |
-| [Preserve Whole Object](preserve-whole-object.md) | canonical | 2,026 | A function takes several parameters that are all fields of the same object. |
-| [Pull Up Constructor Body](pull-up-constructor-body.md) | canonical | 1,881 | Two or more subclasses have constructors that share the same initialisation logic. |
-| [Pull Up Field](pull-up-field.md) | canonical | 1,774 | Two or more subclasses have the same field, with the same type and the same meaning. |
-| [Pull Up Method](pull-up-method.md) | canonical | 1,714 | Two or more subclasses have the same method, with the same body and the same signature. |
-| [Push Down Field](push-down-field.md) | canonical | 1,853 | A field on the superclass is only used by one subclass. |
-| [Push Down Method](push-down-method.md) | canonical | 1,719 | A method on the superclass is only called by one subclass, or its behaviour only makes sense for one subclass. |
-| [Remove Dead Code](remove-dead-code.md) | canonical | 1,764 | A method or a block of code is not called by anything. |
-| [Remove Flag Argument](remove-flag-argument.md) | canonical | 1,615 | A function takes a boolean parameter that selects between two different behaviours. |
-| [Remove Middle Man](remove-middle-man.md) | canonical | 1,516 | A class has methods that do nothing but forward to another class. |
-| [Remove Setting Method](remove-setting-method.md) | canonical | 1,581 | A class has a setter for a field that should not change after construction. |
-| [Remove Subclass](remove-subclass.md) | canonical | 1,401 | A subclass exists but adds no value over its superclass. |
-| [Rename Field](rename-field.md) | canonical | 1,525 | A field has a name that does not communicate what the field represents. |
-| [Rename Variable](rename-variable.md) | canonical | 1,714 | A local variable has a name that does not communicate what the value represents. |
-| [Replace Command with Function](replace-command-with-function.md) | canonical | 6,061 | A codebase has a class whose only purpose is to perform one calculation or one small action. |
-| [Replace Conditional with Polymorphism](replace-conditional-with-polymorphism.md) | established | 6,052 | The problem begins with a conditional that asks the same object, value, or type code what kind it is, then runs different behavior for each answer. |
-| [Replace Constructor with Factory Function](replace-constructor-with-factory-function.md) | canonical | 6,808 | A constructor is too narrow for the creation contract the type now needs. |
-| [Replace Control Flag with Break](replace-control-flag-with-break.md) | canonical | 6,155 | A loop is doing a search, scan, parse, validation pass, import pass, or accumulation. |
-| [Replace Derived Variable with Query](replace-derived-variable-with-query.md) | canonical | 6,534 | You have two facts in memory. One is source data. |
-| [Replace Error Code with Exception](replace-error-code-with-exception.md) | canonical | 6,282 | A function reports failure by returning a value from the same channel it uses to report success. |
-| [Replace Exception with Precheck](replace-exception-with-precheck.md) | canonical | 6,541 | A function calls an operation that can throw, catches one expected exception, and treats that catch block as a normal branch. |
-| [Replace Function with Command](replace-function-with-command.md) | canonical | 6,127 | A function has outgrown the flat shape that once made it clear. |
-| [Replace Inline Code with Function Call](replace-inline-code-with-function-call.md) | canonical | 5,030 | You have inline code that duplicates behavior already named elsewhere. |
-| [Replace Loop with Pipeline](replace-loop-with-pipeline.md) | established | 6,272 | The problem begins with a loop that has stopped being a small control-flow device and has become an unnamed data transformation. |
-| [Replace Magic Literal](replace-magic-literal.md) | canonical | 6,411 | A literal value appears in executable code, configuration assembly, tests, or queries, and the value has domain meaning that is not visible at the use site. |
-| [Replace Nested Conditional with Guard Clauses](replace-nested-conditional-with-guard-clauses.md) | canonical | 6,654 | A function has a normal path, but that path is buried inside a pyramid of conditionals. |
-| [Replace Parameter with Query](replace-parameter-with-query.md) | canonical | 6,421 | A caller computes a value, then passes that value to a function that already has access to the data needed to compute the same value. |
-| [Replace Query with Parameter](replace-query-with-parameter.md) | canonical | 6,092 | A function obtains information by reaching outward to something it can see: global state, ambient process state, a receiver field, a singleton, a service locator, a thread local ... |
-| [Replace Temp with Query](replace-temp-with-query.md) | canonical | 6,639 | A method calculates an intermediate value, stores it in a local variable, then uses that variable in one or more later statements. |
-| [Separate Query from Modifier](separate-query-from-modifier.md) | canonical | 6,536 | A method is used like a question but behaves like an action. |
-| [Slide Statements](slide-statements.md) | established | 6,068 | A function contains statements that are related by data, intent, or later extraction, but those statements are separated by other work. |
-| [Split Loop](split-loop.md) | canonical | 6,781 | A loop walks one collection and performs two or more independent pieces of work. |
-| [Split Phase](split-phase.md) | established | 6,241 | A single block of code does two jobs in a fixed order, and the local variables from the first job leak through the second job. |
-| [Split Variable](split-variable.md) | canonical | 6,511 | A variable is assigned once, used for one idea, then assigned again and used for a different idea. |
-| [Substitute Algorithm](substitute-algorithm.md) | established | 6,110 | A function uses an algorithm that has become the wrong way to express its behavior. |
+| [Change Function Declaration](change-function-declaration.md) | canonical | 4,145 | A function's declaration, its name and its parameter list, is the single contract every caller depends on. |
+| [Change Reference to Value](change-reference-to-value.md) | canonical | 3,528 | You have a reference object, an object whose identity matters and which is shared among multiple callers, but the sharing is producing more problems than it solves. |
+| [Change Value to Reference](change-value-to-reference.md) | canonical | 3,628 | You have a value object, an object whose identity is defined by its field values and which is immutable, but the immutability and the value semantics are producing more problems ... |
+| [Collapse Hierarchy](collapse-hierarchy.md) | canonical | 3,149 | A subclass and its superclass have diverged or, more commonly, have converged to the point where the hierarchy level adds no value. |
+| [Combine Functions into Class](combine-functions-into-class.md) | canonical | 3,591 | You have a set of functions, typically free functions in a module, that all operate on the same data structure or the same set of parameters. |
+| [Combine Functions into Transform](combine-functions-into-transform.md) | canonical | 3,289 | You have a pipeline of functions, each taking the output of the previous and producing input for the next, forming a chain of transformations. |
+| [Consolidate Conditional Expression](consolidate-conditional-expression.md) | canonical | 3,254 | You have a series of conditional checks, each of which leads to the same result or the same action. |
+| [Decompose Conditional](decompose-conditional.md) | canonical | 3,403 | You have a conditional whose complexity lies not in the branching but in the readability of its parts. |
+| [Encapsulate Collection](encapsulate-collection.md) | canonical | 3,260 | A class has a collection field, typically a list or a map, that is exposed to callers. |
+| [Encapsulate Record](encapsulate-record.md) | canonical | 3,037 | You have a data record, a structure with public fields and no behaviour, that callers read and write directly. |
+| [Encapsulate Variable](encapsulate-variable.md) | canonical | 3,135 | You have a variable, typically a public field on a class or a module level variable, that callers read and write directly. |
+| [Extract Class](extract-class.md) | canonical | 3,125 | You have a class that has grown to the point where it does two things that should be separate. |
+| [Extract Function](extract-function.md) | canonical | 3,055 | You have a function that does two or more things, or a function that does one thing but is long enough that a reader cannot hold the whole function in their head. |
+| [Extract Superclass](extract-superclass.md) | canonical | 2,836 | You have two classes that share fields and methods, either because they were written independently and converged, or because they were originally one class that was split and the ... |
+| [Extract Variable](extract-variable.md) | canonical | 2,811 | You have an expression that is hard to read because it combines several subexpressions into one statement. |
+| [Hide Delegate](hide-delegate.md) | canonical | 2,875 | A client calls a method on an object it reaches through another object, forming a chain of access. |
+| [Inline Class](inline-class.md) | canonical | 2,525 | You have a class that no longer earns its place. |
+| [Inline Function](inline-function.md) | canonical | 2,540 | You have a function whose body is as clear as its name, or clearer. |
+| [Inline Variable](inline-variable.md) | canonical | 2,124 | You have a variable whose initialiser is as clear as the variable name, or clearer. |
+| [Introduce Assertion](introduce-assertion.md) | canonical | 2,668 | A section of code makes an assumption about the state of the program at that point, for example that a divisor is not zero, that a list is not empty, or that a temperature is in a ... |
+| [Introduce Parameter Object](introduce-parameter-object.md) | canonical | 2,654 | You have a function with a long parameter list where several parameters are naturally related. |
+| [Introduce Special Case](introduce-special-case.md) | canonical | 3,033 | You have code that checks for null, or for a special value that means "no value" or "unknown," before every operation on the object. |
+| [Move Field](move-field.md) | canonical | 2,280 | A field is on a class that does not use it, or that uses it less than another class does. |
+| [Move Function](move-function.md) | canonical | 2,449 | A function is on a class or module that does not use it, or that uses it less than another class does. |
+| [Move Statements into Function](move-statements-into-function.md) | canonical | 1,729 | You have a function that is called from multiple places, and every caller performs the same statements immediately before or after the call. |
+| [Move Statements to Callers](move-statements-to-callers.md) | canonical | 1,611 | A function performs statements that vary by caller or that are not the function's responsibility. |
+| [Parameterize Function](parameterize-function.md) | canonical | 1,767 | You have two or more functions that perform the same operation with different constant values. |
+| [Preserve Whole Object](preserve-whole-object.md) | canonical | 2,038 | A function takes several parameters that are all fields of the same object. |
+| [Pull Up Constructor Body](pull-up-constructor-body.md) | canonical | 1,893 | Two or more subclasses have constructors that share the same initialisation logic. |
+| [Pull Up Field](pull-up-field.md) | canonical | 1,786 | Two or more subclasses have the same field, with the same type and the same meaning. |
+| [Pull Up Method](pull-up-method.md) | canonical | 1,726 | Two or more subclasses have the same method, with the same body and the same signature. |
+| [Push Down Field](push-down-field.md) | canonical | 1,864 | A field on the superclass is only used by one subclass. |
+| [Push Down Method](push-down-method.md) | canonical | 1,730 | A method on the superclass is only called by one subclass, or its behaviour only makes sense for one subclass. |
+| [Remove Dead Code](remove-dead-code.md) | canonical | 1,776 | A method or a block of code is not called by anything. |
+| [Remove Flag Argument](remove-flag-argument.md) | canonical | 1,627 | A function takes a boolean parameter that selects between two different behaviours. |
+| [Remove Middle Man](remove-middle-man.md) | canonical | 1,528 | A class has methods that do nothing but forward to another class. |
+| [Remove Setting Method](remove-setting-method.md) | canonical | 1,593 | A class has a setter for a field that should not change after construction. |
+| [Remove Subclass](remove-subclass.md) | canonical | 1,412 | A subclass exists but adds no value over its superclass. |
+| [Rename Field](rename-field.md) | canonical | 1,537 | A field has a name that does not communicate what the field represents. |
+| [Rename Variable](rename-variable.md) | canonical | 1,726 | A local variable has a name that does not communicate what the value represents. |
+| [Replace Command with Function](replace-command-with-function.md) | canonical | 6,073 | A codebase has a class whose only purpose is to perform one calculation or one small action. |
+| [Replace Conditional with Polymorphism](replace-conditional-with-polymorphism.md) | established | 6,064 | The problem begins with a conditional that asks the same object, value, or type code what kind it is, then runs different behavior for each answer. |
+| [Replace Constructor with Factory Function](replace-constructor-with-factory-function.md) | canonical | 6,820 | A constructor is too narrow for the creation contract the type now needs. |
+| [Replace Control Flag with Break](replace-control-flag-with-break.md) | canonical | 6,167 | A loop is doing a search, scan, parse, validation pass, import pass, or accumulation. |
+| [Replace Derived Variable with Query](replace-derived-variable-with-query.md) | canonical | 6,546 | You have two facts in memory. One is source data. |
+| [Replace Error Code with Exception](replace-error-code-with-exception.md) | canonical | 6,294 | A function reports failure by returning a value from the same channel it uses to report success. |
+| [Replace Exception with Precheck](replace-exception-with-precheck.md) | canonical | 6,553 | A function calls an operation that can throw, catches one expected exception, and treats that catch block as a normal branch. |
+| [Replace Function with Command](replace-function-with-command.md) | canonical | 6,139 | A function has outgrown the flat shape that once made it clear. |
+| [Replace Inline Code with Function Call](replace-inline-code-with-function-call.md) | canonical | 5,042 | You have inline code that duplicates behavior already named elsewhere. |
+| [Replace Loop with Pipeline](replace-loop-with-pipeline.md) | established | 6,284 | The problem begins with a loop that has stopped being a small control-flow device and has become an unnamed data transformation. |
+| [Replace Magic Literal](replace-magic-literal.md) | canonical | 6,423 | A literal value appears in executable code, configuration assembly, tests, or queries, and the value has domain meaning that is not visible at the use site. |
+| [Replace Nested Conditional with Guard Clauses](replace-nested-conditional-with-guard-clauses.md) | canonical | 6,666 | A function has a normal path, but that path is buried inside a pyramid of conditionals. |
+| [Replace Parameter with Query](replace-parameter-with-query.md) | canonical | 6,433 | A caller computes a value, then passes that value to a function that already has access to the data needed to compute the same value. |
+| [Replace Query with Parameter](replace-query-with-parameter.md) | canonical | 6,104 | A function obtains information by reaching outward to something it can see: global state, ambient process state, a receiver field, a singleton, a service locator, a thread local ... |
+| [Replace Temp with Query](replace-temp-with-query.md) | canonical | 6,651 | A method calculates an intermediate value, stores it in a local variable, then uses that variable in one or more later statements. |
+| [Separate Query from Modifier](separate-query-from-modifier.md) | canonical | 6,548 | A method is used like a question but behaves like an action. |
+| [Slide Statements](slide-statements.md) | established | 6,080 | A function contains statements that are related by data, intent, or later extraction, but those statements are separated by other work. |
+| [Split Loop](split-loop.md) | canonical | 6,793 | A loop walks one collection and performs two or more independent pieces of work. |
+| [Split Phase](split-phase.md) | established | 6,253 | A single block of code does two jobs in a fixed order, and the local variables from the first job leak through the second job. |
+| [Split Variable](split-variable.md) | canonical | 6,523 | A variable is assigned once, used for one idea, then assigned again and used for a different idea. |
+| [Substitute Algorithm](substitute-algorithm.md) | established | 6,122 | A function uses an algorithm that has become the wrong way to express its behavior. |
 
 ## Simplifying Conditional Logic
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Replace Type Code with Subclasses](replace-type-code-with-subclasses.md) | canonical | 6,017 | A field, enum, string, integer, or symbolic constant says what kind of thing an object is. |
+| [Replace Type Code with Subclasses](replace-type-code-with-subclasses.md) | canonical | 6,029 | A field, enum, string, integer, or symbolic constant says what kind of thing an object is. |
 
 ## Reading order
 

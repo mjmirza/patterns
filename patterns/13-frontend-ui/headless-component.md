@@ -1,14 +1,20 @@
 ---
 name: Headless Component
 slug: headless-component
+id: pat.13.headless-component
+kind: pattern
 family: 13-frontend-ui
 category: Composition
 aliases: [Unstyled Component, Logic-only Component, Renderless Component]
 first_described: "Martin Fowler's website, Headless Component article"
 maturity: established
 related: [slot-and-children-as-api, reducer-hook, context-selector]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Headless Component

@@ -1,14 +1,20 @@
 ---
 name: Double-Checked Locking
 slug: double-checked-locking
+id: pat.09.double-checked-locking
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [DCL, Double-Checked Locking Optimization, Lock Hint Pattern]
 first_described: "Schmidt, Harrison 1996 (Pattern Languages of Program Design 3); further formalized by Schmidt, Stal, Rohnert, Buschmann 2000 in Pattern-Oriented Software Architecture Volume 2"
 maturity: contested
 related: [monitor-object, scoped-locking, thread-specific-storage, leader-followers, half-sync-half-async]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-14
+last_reviewed: 2026-08-14
+next_review_due: 2027-02-10
 ---
 
 ## 1. Name, aliases, and lineage

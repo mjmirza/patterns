@@ -1,14 +1,20 @@
 ---
 name: Flux
 slug: flux
+id: pat.13.flux
+kind: pattern
 family: 13-frontend-ui
 category: State Management
 aliases: [Unidirectional Data Flow, Flux Architecture]
 first_described: "Facebook, 30 July 2014"
 maturity: deprecated
 related: [provider-pattern, hooks, signals, higher-order-component]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Flux

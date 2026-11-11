@@ -1,14 +1,20 @@
 ---
 name: Hydration Island
 slug: hydration-island
+id: pat.13.hydration-island
+kind: pattern
 family: 13-frontend-ui
 category: Loading Strategy
 aliases: [Client Directive, Selective Hydration, Partial Hydration Directive]
 first_described: "Astro documentation, client directives"
 maturity: established
 related: [islands-architecture, code-splitting, virtual-list]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Hydration Island

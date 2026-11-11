@@ -1,14 +1,20 @@
 ---
 name: Rate Monotonic Scheduling
 slug: rate-monotonic-scheduling
+id: pat.28.rate-monotonic-scheduling
+kind: pattern
 family: 28-embedded-hardware
 category: Behavioral
 aliases: [RMA, Rate Monotonic Analysis, Fixed-Priority Period-Based Scheduling]
 first_described: "Liu and Layland 1973, via Barr Group Rate Monotonic Algorithm reference"
 maturity: canonical
 related: [interrupt-service-routine, watchdog-timer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Rate Monotonic Scheduling

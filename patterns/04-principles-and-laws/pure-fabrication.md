@@ -1,14 +1,20 @@
 ---
 name: Pure Fabrication
 slug: pure-fabrication
+id: pat.04.pure-fabrication
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [GRASP Pure Fabrication, Fabricated Class, Service Class]
 first_described: "Craig Larman, 1997, Applying UML and Patterns"
 maturity: canonical
 related: [information-expert, low-coupling, high-cohesion, single-responsibility-principle, dependency-inversion-principle, creator]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Pure Fabrication

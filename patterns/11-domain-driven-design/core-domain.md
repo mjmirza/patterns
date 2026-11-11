@@ -1,14 +1,20 @@
 ---
 name: Core Domain
 slug: core-domain
+id: pat.11.core-domain
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Core Domain Distillation, Domain Classification, Subdomain Triage]
 first_described: "Eric Evans 2003"
 maturity: canonical
-related: [bounded-context, generic-subdomain, ubiquitous-language, context-mapping, anticorruption-layer]
+related: [bounded-context, generic-subdomain, ubiquitous-language, context-map, anticorruption-layer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Core Domain

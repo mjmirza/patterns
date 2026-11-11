@@ -1,13 +1,20 @@
 ---
 name: Rolling Deployment
 slug: rolling-deployment
+id: pat.20.rolling-deployment
+kind: pattern
 family: 20-release-deployment
 maturity: canonical
 category: Deployment
 aliases: [Rolling Update, Incremental Deployment]
 first_described: 'Kubernetes Deployments documentation; Amazon ECS rolling update deployment type'
 related: [blue-green-deployment, canary-release]
-verified: true
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
+verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Rolling Deployment

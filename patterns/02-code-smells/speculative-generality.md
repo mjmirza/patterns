@@ -1,14 +1,20 @@
 ---
 name: Speculative Generality
 slug: speculative-generality
+id: pat.02.speculative-generality
+kind: smell
 family: 02-code-smells
 category: Structural
 aliases: [Gold Plating, Over-Engineering, YAGNI Violation, Needless Complexity]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999"
 maturity: canonical
 related: [strategy, template-method, factory-method, dead-code, feature-envy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Speculative Generality

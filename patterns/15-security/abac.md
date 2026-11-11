@@ -1,14 +1,20 @@
 ---
 name: Attribute-Based Access Control
 slug: abac
+id: pat.15.abac
+kind: pattern
 family: 15-security
 category: Authorization
 aliases: [ABAC, Attribute Based Access Control, Policy-Based Access Control]
 first_described: "NIST SP 800-162 2014"
 maturity: established
-related: [rbac, policy-enforcement-point, policy-decision-point, zero-trust-architecture, federated-identity]
-incompatible_with: [hard-coded-authorization, ambient-authority]
+related: [rbac, zero-trust, federated-identity]
+related_concepts: [policy-enforcement-point, policy-decision-point]
+incompatible_with: []
+incompatible_concepts: [hard-coded-authorization, ambient-authority]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Attribute-Based Access Control

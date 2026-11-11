@@ -1,14 +1,20 @@
 ---
 name: Skeleton and Suspense
 slug: skeleton-and-suspense
+id: pat.13.skeleton-and-suspense
+kind: pattern
 family: 13-frontend-ui
 category: Loading Strategy
 aliases: [Skeleton Screens, Suspense Boundaries, Loading Placeholders]
 first_described: "React Suspense documentation"
 maturity: canonical
 related: [server-components, optimistic-ui, hooks]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Skeleton and Suspense

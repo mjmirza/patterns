@@ -1,14 +1,20 @@
 ---
 name: Prism
 slug: prism
+id: pat.16.prism
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Prism Optic, Partial Iso, Sum Optic, Variant Optic]
 first_described: "Optics folklore, formalized by Pickering, Gibbons, Wu 2017"
 maturity: established
-related: [lens, optional, traversal, iso, profunctor, sum-type]
-incompatible_with: [total-lens-for-variant, many-focus-traversal, validation-as-optic]
+related: [lens, option-maybe, profunctor, algebraic-data-type]
+related_concepts: [traversal, iso]
+incompatible_with: []
+incompatible_concepts: [total-lens-for-variant, many-focus-traversal, validation-as-optic]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Prism

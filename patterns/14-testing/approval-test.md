@@ -1,14 +1,20 @@
 ---
 name: Approval Test
 slug: approval-test
+id: pat.14.approval-test
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Golden Master Test, Snapshot Test, Characterization Test (closely related, not identical)]
 first_described: "Falco and Bache, ApprovalTests library and community practice, circa 2000s-2010s"
 maturity: established
-related: [test-double, template-method, visitor, memento]
+related: [template-method, visitor, memento]
+related_concepts: [test-double]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Approval Test

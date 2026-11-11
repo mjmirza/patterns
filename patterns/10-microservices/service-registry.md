@@ -1,14 +1,20 @@
 ---
 name: Service Registry
 slug: service-registry
+id: pat.10.service-registry
+kind: pattern
 family: 10-microservices
 category: Microservices
 aliases: [Service Discovery Registry, Naming Server, Discovery Service]
 first_described: "Richardson 2018, Microservices Patterns, Manning"
 maturity: canonical
 related: [api-gateway, self-contained-service, service-per-team, remote-procedure-invocation, decompose-by-business-capability]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 ## 1. Name, aliases, and lineage

@@ -1,14 +1,20 @@
 ---
 name: Application Controller
 slug: application-controller
+id: pat.06.application-controller
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Flow Controller, Navigation Controller, Coordinator]
 first_described: "Fowler 2002"
 maturity: established
 related: [front-controller, page-controller, model-view-controller, template-view, mediator, state, command]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Application Controller

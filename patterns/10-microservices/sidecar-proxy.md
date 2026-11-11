@@ -1,14 +1,20 @@
 ---
 name: Sidecar Proxy
 slug: sidecar-proxy
+id: pat.10.sidecar-proxy
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Sidecar Pattern, Sidekick Pattern]
 first_described: "SoundCloud engineering (2013 to 2015, per Phil Calcado), catalogued by Microsoft Azure Architecture Center"
 maturity: canonical
 related: [service-mesh, ambassador, api-gateway, health-check-api, distributed-tracing]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Sidecar Proxy

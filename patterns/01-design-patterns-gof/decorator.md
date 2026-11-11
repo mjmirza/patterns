@@ -1,14 +1,20 @@
 ---
 name: Decorator
 slug: decorator
+id: pat.01.decorator
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: [Wrapper, Filter, Middleware, Smart Proxy]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [proxy, adapter, facade, composite, chain-of-responsibility, strategy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Decorator

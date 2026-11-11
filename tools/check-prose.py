@@ -10,7 +10,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TARGETS = [ROOT / "patterns", ROOT / "docs"]
-EXTRA_FILES = [ROOT / "README.md", ROOT / "ATTRIBUTION.md"]
+EXTRA_FILES = [
+    ROOT / "README.md",
+    ROOT / "ATTRIBUTION.md",
+    ROOT / "GOVERNANCE.md",
+    ROOT / "MAINTAINERS.md",
+]
 
 BANNED_CHARS = {
     "—": "em dash",

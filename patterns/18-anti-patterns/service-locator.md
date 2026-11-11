@@ -1,14 +1,20 @@
 ---
 name: Service Locator
 slug: service-locator
+id: pat.18.service-locator
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [Locator Pattern, Registry-Based Lookup, Central Service Registry]
 first_described: "Alur, Crupi, Malks 2001 (Core J2EE Patterns)"
 maturity: contested
-related: [dependency-injection, singleton-abuse, factory-method, abstract-factory, layered-architecture, facade]
+related: [dependency-injection, singleton-abuse, factory-method, abstract-factory, 05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, facade]
+related_concepts: []
 incompatible_with: [dependency-injection, inversion-of-control]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service Locator

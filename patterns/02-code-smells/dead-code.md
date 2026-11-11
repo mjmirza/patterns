@@ -1,14 +1,20 @@
 ---
 name: Dead Code
 slug: dead-code
+id: pat.02.dead-code
+kind: smell
 family: 02-code-smells
 category: Code Smell
 aliases: [Unreachable Code, Unused Code, Vestigial Code, Zombie Code]
 first_described: "Beck, Fowler 1999"
 maturity: canonical
-related: [comments, speculative-generality, lazy-class, duplicate-code, feature-flags]
+related: [comments, speculative-generality, lazy-class, duplicate-code, feature-toggle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Dead Code

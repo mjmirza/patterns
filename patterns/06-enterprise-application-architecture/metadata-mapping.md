@@ -1,14 +1,20 @@
 ---
 name: Metadata Mapping
 slug: metadata-mapping
+id: pat.06.metadata-mapping
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Behavioral Patterns
 aliases: [Mapping by Metadata, Metadata-Driven Mapping, Configuration-Driven ORM]
 first_described: "Fowler 2002, Patterns of Enterprise Application Architecture"
 maturity: canonical
 related: [data-mapper, identity-field, active-record, lazy-load, unit-of-work, dependent-mapping]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

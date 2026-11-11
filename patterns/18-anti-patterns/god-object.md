@@ -1,14 +1,20 @@
 ---
 name: God Object
 slug: god-object
+id: pat.18.god-object
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [God Class, The Blob, Kitchen Sink Class, Winnebago, Massive Class]
 first_described: "Riel 1996 (heuristic warning); Brown, Malveau, McCormick, Mowbray 1998 (catalogued as The Blob)"
 maturity: canonical
 related: [single-responsibility-principle, facade, mediator, extract-class, large-class, singleton]
+related_concepts: []
 incompatible_with: [single-responsibility-principle]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # God Object

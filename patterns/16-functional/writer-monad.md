@@ -1,14 +1,20 @@
 ---
 name: Writer Monad
 slug: writer-monad
+id: pat.16.writer-monad
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Writer, WriterT, MonadWriter, Accumulating Output Monad]
 first_described: "Jones 1995"
 maturity: established
 related: [monad, monoid, applicative, reader-monad, state-monad, result-either]
-incompatible_with: [mutable-global-logger, unbounded-log-accumulation, effectful-logging-only]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [mutable-global-logger, unbounded-log-accumulation, effectful-logging-only]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Writer Monad

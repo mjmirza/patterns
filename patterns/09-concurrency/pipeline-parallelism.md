@@ -1,14 +1,20 @@
 ---
 name: Pipeline Parallelism
 slug: pipeline-parallelism
+id: pat.09.pipeline-parallelism
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Pipeline Pattern, Pipelined Processing, Staged Pipeline, Assembly Line Concurrency, Streaming Pipeline]
 first_described: "Concept traces to Douglas McIlroy's Unix pipe, implemented by Ken Thompson in Version 3 Unix, 1973. The concurrent-software pattern name was popularized in the reactive and channel-based programming literature of the 2000s and 2010s, most influentially by Sameer Ajmani, Go Concurrency Patterns, Pipelines and Cancellation, go.dev/blog/pipelines, 2014"
 maturity: canonical
-related: [producer-consumer, fork-join, reactor, active-object, thread-pool, future-promise, half-sync-half-async]
+related: [09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, fork-join, reactor, active-object, thread-pool, future-promise, half-sync-half-async]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Pipeline Parallelism

@@ -1,14 +1,20 @@
 ---
 name: Self-Consistency
 slug: self-consistency
+id: pat.17.self-consistency
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Self-Consistency Decoding, Majority Vote Reasoning, Sample-and-Marginalize, Self-Consistency Chain-of-Thought, SC-CoT]
 first_described: "Wang, Wei, Schuurmans, Le, Chi, Narang, Chowdhery, Zhou 2022"
 maturity: established
-related: [chain-of-thought, tree-of-thoughts, react, reflection, ensemble-of-agents, best-of-n-sampling, llm-as-judge, majority-voting]
+related: [chain-of-thought, tree-of-thoughts, react-prompting, llm-as-judge]
+related_concepts: [reflection, ensemble-of-agents, best-of-n-sampling, majority-voting]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Self-Consistency

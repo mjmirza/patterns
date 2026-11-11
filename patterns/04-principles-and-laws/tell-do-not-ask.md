@@ -1,14 +1,20 @@
 ---
 name: Tell, Don't Ask
 slug: tell-do-not-ask
+id: pat.04.tell-do-not-ask
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Tell Don't Ask, TDA, Do Not Ask, Tell]
 first_described: "Alec Sharp, Smalltalk by Example, McGraw-Hill, 1997; popularized by Andrew Hunt and David Thomas, The Pragmatic Programmer, 1999"
 maturity: canonical
 related: [law-of-demeter, information-expert, high-cohesion, low-coupling, single-responsibility-principle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Tell, Don't Ask

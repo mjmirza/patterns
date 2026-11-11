@@ -1,14 +1,20 @@
 ---
 name: Hide Delegate
 slug: hide-delegate
+id: pat.03.hide-delegate
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Encapsulate Delegate, Law of Demeter Fix, Add Delegating Method]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [remove-middle-man, extract-class, move-function, replace-delegation-with-inheritance, encapsulate-record]
+related: [remove-middle-man, extract-class, move-function, replace-superclass-with-delegate, encapsulate-record]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Hide Delegate

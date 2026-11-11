@@ -1,14 +1,20 @@
 ---
 name: LSM Tree
 slug: lsm-tree
+id: pat.12.lsm-tree
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Log-Structured Merge-Tree, Log-Structured Merge Tree]
 first_described: "O'Neil, Cheng, Gawlick, O'Neil 1996"
 maturity: canonical
 related: [write-ahead-log, bloom-filter, sharding, event-sourcing, cqrs]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # LSM Tree

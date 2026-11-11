@@ -1,14 +1,20 @@
 ---
 name: Foldable
 slug: foldable
+id: pat.16.foldable
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Fold, Reducible, Catamorphic reduction, Reductible container]
 first_described: "Meijer, Fokkinga, Paterson 1991"
 maturity: canonical
 related: [functor, applicative, monoid, semigroup, monad, iterator, traversable]
-incompatible_with: [unordered-fold-with-order-sensitive-operation, effectful-fold-without-sequencing-contract]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [unordered-fold-with-order-sensitive-operation, effectful-fold-without-sequencing-contract]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Foldable

@@ -1,14 +1,20 @@
 ---
 name: Boat Anchor
 slug: boat-anchor
+id: pat.18.boat-anchor
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [Dead Code Retention, Vestigial Interface, Legacy Cruft, Ballast Code]
 first_described: "hacker and radio-amateur slang, attested by Wiktionary; applied to software design in the AntiPatterns literature of the late 1990s"
 maturity: established
-related: [dead-code, speculative-generality, god-object, big-ball-of-mud, feature-toggle, strangler-fig-application, vendor-lock-in, gold-plating]
-incompatible_with: [yagni, dead-code-elimination]
+related: [dead-code, speculative-generality, god-object, 11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud, feature-toggle, strangler-fig, strangler-application, vendor-lock-in]
+related_concepts: []
+incompatible_with: [you-are-not-gonna-need-it]
+incompatible_concepts: [dead-code-elimination]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Boat Anchor

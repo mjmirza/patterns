@@ -1,14 +1,20 @@
 ---
 name: Registry
 slug: registry
+id: pat.06.registry
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Patterns
 aliases: [Service Registry, Component Registry, Global Registry, Well-Known Object]
 first_described: "Martin Fowler, Patterns of Enterprise Application Architecture, 2002"
 maturity: canonical
 related: [singleton, service-locator, separated-interface, plugin, factory-method, dependency-injection, layer-supertype]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Registry

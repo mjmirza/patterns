@@ -1,14 +1,20 @@
 ---
 name: Route-based Lazy Loading
 slug: route-based-lazy-loading
+id: pat.13.route-based-lazy-loading
+kind: pattern
 family: 13-frontend-ui
 category: Loading Strategy
 aliases: [Route Splitting, Per-route Code Splitting]
 first_described: "React Router documentation, Automatic Code Splitting"
 maturity: canonical
 related: [code-splitting, prpl-pattern, resource-hints]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Route-based Lazy Loading

@@ -1,14 +1,20 @@
 ---
 name: Hexagonal Architecture
 slug: hexagonal-architecture
+id: pat.05.hexagonal-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Ports and Adapters, Ports & Adapters]
 first_described: "Cockburn 2005"
 maturity: canonical
 related: [adapter, dependency-injection, repository, strategy, onion-architecture, clean-architecture, anti-corruption-layer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Hexagonal Architecture

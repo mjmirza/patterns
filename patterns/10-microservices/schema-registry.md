@@ -1,14 +1,20 @@
 ---
 name: Schema Registry
 slug: schema-registry
+id: pat.10.schema-registry
+kind: pattern
 family: 10-microservices
 category: Integration
 aliases: [Message Schema Registry, Event Schema Registry]
 first_described: "Confluent, LinkedIn streaming platform team, blog post September 24, 2015"
 maturity: canonical
-related: [messaging, domain-event, transactional-outbox, api-gateway, consumer-driven-contract-test, consumer-side-contract-test, externalized-configuration]
+related: [messaging, 10-microservices/domain-event, 11-domain-driven-design/domain-event, transactional-outbox, api-gateway, consumer-driven-contract-test, consumer-side-contract-test, externalized-configuration]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Schema Registry

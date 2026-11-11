@@ -1,14 +1,20 @@
 ---
 name: Runbook Automation
 slug: runbook-automation
+id: pat.21.runbook-automation
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [Playbook Automation, Automated Runbook, Executable Runbook]
 first_described: 'Google, Site Reliability Engineering, Effective Troubleshooting chapter, 2016'
 maturity: canonical
 related: [toil-automation, service-level-objective]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Runbook Automation

@@ -1,14 +1,20 @@
 ---
 name: Proxy
 slug: proxy
+id: pat.01.proxy
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: [Surrogate, Stub, Ambassador, Placeholder]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [decorator, adapter, facade, composite, flyweight, chain-of-responsibility]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Proxy

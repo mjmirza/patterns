@@ -1,14 +1,20 @@
 ---
 name: Columnar Storage
 slug: columnar-storage
+id: pat.12.columnar-storage
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Column-Oriented Storage, Column Store, Vertical Partitioning of Storage]
 first_described: "Copeland, Khoshafian 1985"
 maturity: canonical
 related: [write-ahead-log, lsm-tree, materialized-view, bloom-filter, cqrs]
-incompatible_with: [row-oriented-storage]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [row-oriented-storage]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Columnar Storage

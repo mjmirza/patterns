@@ -1,14 +1,20 @@
 ---
 name: Lock Striping
 slug: lock-striping
+id: pat.09.lock-striping
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Lock Splitting, Striped Locks, Segment Locking, Partitioned Locking]
 first_described: "Goetz, Peierls, Bloch, Bowbeer, Holmes, Lea 2006"
 maturity: canonical
-related: [read-write-lock, thread-pool, sharding, optimistic-locking, double-checked-locking]
-incompatible_with: [global-lock]
+related: [read-write-lock, thread-pool, sharding, double-checked-locking]
+related_concepts: [optimistic-locking]
+incompatible_with: []
+incompatible_concepts: [global-lock]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Lock Striping

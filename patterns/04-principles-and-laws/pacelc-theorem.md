@@ -1,14 +1,20 @@
 ---
 name: PACELC Theorem
 slug: pacelc-theorem
+id: pat.04.pacelc-theorem
+kind: law
 family: 04-principles-and-laws
 category: Principle
 aliases: [PACELC, PACELC Design Principle, Abadi's Extension to CAP]
 first_described: "Abadi 2010 (blog), Abadi 2012 (formal paper)"
 maturity: canonical
-related: [cap-theorem, quorum-consensus, eventual-consistency, saga, circuit-breaker, bulkhead]
+related: [cap-theorem, quorum, saga, circuit-breaker, bulkhead]
+related_concepts: [eventual-consistency]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # PACELC Theorem

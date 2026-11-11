@@ -1,14 +1,20 @@
 ---
 name: Consistent Hashing
 slug: consistent-hashing
+id: pat.12.consistent-hashing
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Ring Hashing, Karger Hashing, Hash Ring Partitioning]
 first_described: "Karger, Lehman, Leighton, Panigrahy, Levine, Lewin 1997"
 maturity: canonical
-related: [sharding, load-balancer, cache-aside, leader-election, bloom-filter]
+related: [sharding, load-balancing, cache-aside, leader-election, bloom-filter]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Consistent Hashing

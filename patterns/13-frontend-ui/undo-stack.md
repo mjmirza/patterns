@@ -1,14 +1,20 @@
 ---
 name: Undo Stack
 slug: undo-stack
+id: pat.13.undo-stack
+kind: pattern
 family: 13-frontend-ui
 category: Behavioral
 aliases: [Undo History, Past-Present-Future State, Command History]
 first_described: "Gamma, Helm, Johnson, Vlissides, Design Patterns, 1994, the Command pattern's undo application"
 maturity: canonical
 related: [reducer-hook, error-boundary]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Undo Stack

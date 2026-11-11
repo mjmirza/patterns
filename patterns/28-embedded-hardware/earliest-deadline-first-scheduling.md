@@ -1,14 +1,20 @@
 ---
 name: Earliest Deadline First Scheduling
 slug: earliest-deadline-first-scheduling
+id: pat.28.earliest-deadline-first-scheduling
+kind: pattern
 family: 28-embedded-hardware
 category: Behavioral
 aliases: [EDF, Least Time to Go, Dynamic Deadline Scheduling]
 first_described: "Liu and Layland 1973, via Wikipedia earliest deadline first scheduling reference"
 maturity: canonical
 related: [rate-monotonic-scheduling, interrupt-service-routine]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Earliest Deadline First Scheduling

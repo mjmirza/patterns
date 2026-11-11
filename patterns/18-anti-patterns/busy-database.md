@@ -1,14 +1,20 @@
 ---
 name: Busy Database
 slug: busy-database
+id: pat.18.busy-database
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Database As Compute Engine, Overloaded Database Server]
 first_described: "Microsoft Azure Architecture Center performance antipatterns catalog, authored by claytonsiemens77, dated 2017-06-05"
 maturity: canonical
-related: [god-object, shared-database, database-per-service, cqrs, big-ball-of-mud]
+related: [god-object, shared-database, database-per-service, cqrs, 11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud]
+related_concepts: []
 incompatible_with: [cqrs]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Busy Database

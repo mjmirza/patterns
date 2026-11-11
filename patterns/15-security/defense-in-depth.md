@@ -1,14 +1,20 @@
 ---
 name: Defense in Depth
 slug: defense-in-depth
+id: pat.15.defense-in-depth
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Layered Defense, Layered Security, DiD, Multiple Lines of Defense]
 first_described: "military doctrine, adopted by information security before 2007"
 maturity: canonical
-related: [least-privilege, secure-by-default, complete-mediation, zero-trust, segmentation, monitoring-and-alerting]
-incompatible_with: [single-control-security, perimeter-only-security, bypass-by-design]
+related: [least-privilege, secure-by-default, complete-mediation, zero-trust]
+related_concepts: [segmentation, monitoring-and-alerting]
+incompatible_with: []
+incompatible_concepts: [single-control-security, perimeter-only-security, bypass-by-design]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Defense in Depth

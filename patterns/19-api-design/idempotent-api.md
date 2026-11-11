@@ -1,14 +1,20 @@
 ---
 name: Idempotent API
 slug: idempotent-api
+id: pat.19.idempotent-api
+kind: pattern
 family: 19-api-design
 category: Data Fetching
 aliases: [Idempotency Key, Safe Retry Pattern]
 first_described: 'Stripe, official idempotent requests documentation'
 maturity: canonical
 related: [webhook-receiver, pagination-pattern]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Idempotent API

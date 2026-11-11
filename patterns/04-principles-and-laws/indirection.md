@@ -1,14 +1,20 @@
 ---
 name: Indirection
 slug: indirection
+id: pat.04.indirection
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Layer of Indirection, Level of Indirection, Indirection Layer]
 first_described: "Larman, Applying UML and Patterns, 1997 (GRASP formulation); the general computing aphorism is older and its exact origin is contested, see dimension 1"
 maturity: canonical
 related: [proxy, facade, adapter, dependency-inversion-principle, low-coupling, mediator, protected-variations]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

@@ -1,14 +1,20 @@
 ---
 name: Certificate Pinning
 slug: certificate-pinning
+id: pat.15.certificate-pinning
+kind: pattern
 family: 15-security
 category: Transport Security
 aliases: [Public Key Pinning, SPKI Pinning, Key Pinning, Trust Pinning]
 first_described: "Evans, Palmer, Sleevi 2015"
 maturity: established
-related: [mutual-tls, certificate-transparency, key-rotation, trust-on-first-use]
-incompatible_with: [transparent-tls-interception, unconstrained-ca-agility]
+related: [mutual-tls, key-rotation]
+related_concepts: [certificate-transparency, trust-on-first-use]
+incompatible_with: []
+incompatible_concepts: [transparent-tls-interception, unconstrained-ca-agility]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Certificate Pinning

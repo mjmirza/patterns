@@ -1,14 +1,20 @@
 ---
 name: Slot and Children as API
 slug: slot-and-children-as-api
+id: pat.13.slot-and-children-as-api
+kind: pattern
 family: 13-frontend-ui
 category: Composition
 aliases: [Named Slots, Children Prop, Content Projection]
 first_described: "React documentation, Passing Props to a Component"
 maturity: canonical
 related: [headless-component, atomic-design]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Slot and Children as API

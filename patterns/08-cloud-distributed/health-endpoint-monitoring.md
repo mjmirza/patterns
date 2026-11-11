@@ -1,14 +1,20 @@
 ---
 name: Health Endpoint Monitoring
 slug: health-endpoint-monitoring
+id: pat.08.health-endpoint-monitoring
+kind: pattern
 family: 08-cloud-distributed
 category: Reliability
 aliases: [Health Check Pattern, Health Probe, Liveness and Readiness Probes]
 first_described: "Microsoft patterns and practices group, Cloud Design Patterns, January 2014"
 maturity: canonical
 related: [circuit-breaker, retry, bulkhead, throttling, leader-election]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Health Endpoint Monitoring

@@ -1,14 +1,20 @@
 ---
 name: Parallel Inheritance Hierarchies
 slug: parallel-inheritance-hierarchies
+id: pat.02.parallel-inheritance-hierarchies
+kind: smell
 family: 02-code-smells
 category: Change Preventers
 aliases: [Parallel Class Hierarchies, Twin Hierarchies, Shadow Hierarchies]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999, Refactoring, Improving the Design of Existing Code"
 maturity: canonical
-related: [divergent-change, shotgun-surgery, bridge, visitor, factory-method, abstract-factory, move-method, extract-class]
+related: [divergent-change, shotgun-surgery, bridge, visitor, factory-method, abstract-factory, move-function, extract-class]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Parallel Inheritance Hierarchies

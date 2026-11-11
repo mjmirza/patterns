@@ -1,14 +1,20 @@
 ---
 name: Tombstone
 slug: tombstone
+id: pat.12.tombstone
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Death Certificate, Delete Marker, Deletion Marker]
 first_described: "Demers, Greene, Hauser, Irish, Larson, Shenker, Sturgis, Swinehart, Terry 1987"
 maturity: canonical
-related: [event-sourcing, soft-delete, write-ahead-log, crdt, log-structured-merge-tree]
+related: [event-sourcing, write-ahead-log, crdt, lsm-tree]
+related_concepts: [soft-delete]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Tombstone

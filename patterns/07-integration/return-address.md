@@ -1,14 +1,20 @@
 ---
 name: Return Address
 slug: return-address
+id: pat.07.return-address
+kind: pattern
 family: 07-integration
 category: Messaging
 aliases: [ReplyTo, Reply Channel, Callback Address]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [request-reply, correlation-identifier, message-endpoint, point-to-point-channel, command-message]
-incompatible_with: [fire-and-forget-event-message]
+related: [request-reply, correlation-identifier, point-to-point-channel, command-message]
+related_concepts: [message-endpoint]
+incompatible_with: []
+incompatible_concepts: [fire-and-forget-event-message]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Return Address

@@ -1,14 +1,20 @@
 ---
 name: Leader-Follower Architecture
 slug: leader-follower-architecture
+id: pat.05.leader-follower-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Leader-Based Coordination, Master-Election Architecture, Single-Writer Consensus Architecture]
 first_described: "Leader and follower as formal, named roles in a production coordination protocol appear in Benjamin C. Reed and Flavio Paiva Junqueira, A Simple Totally Ordered Broadcast Protocol, LADIS 2008 (the Zab protocol behind Apache ZooKeeper), and were later formalized precisely by Diego Ongaro and John Ousterhout, In Search of an Understandable Consensus Algorithm, USENIX ATC 2014 (Raft)"
 maturity: canonical
-related: [primary-replica, saga, circuit-breaker, event-sourcing, sharding-partitioning]
+related: [primary-replica, saga, circuit-breaker, event-sourcing]
+related_concepts: [sharding-partitioning]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Leader-Follower Architecture

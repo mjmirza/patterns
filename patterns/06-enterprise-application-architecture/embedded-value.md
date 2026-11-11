@@ -1,14 +1,20 @@
 ---
 name: Embedded Value
 slug: embedded-value
+id: pat.06.embedded-value
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Structural Pattern
 aliases: [Value Object Mapping, Composed Of, Component Mapping, Inlined Value Object]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [identity-field, data-mapper, active-record, foreign-key-mapping, dependent-mapping, domain-model]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-11
+last_reviewed: 2026-08-11
+next_review_due: 2027-02-07
 ---
 
 # Embedded Value

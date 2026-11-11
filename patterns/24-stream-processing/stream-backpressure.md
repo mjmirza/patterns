@@ -1,14 +1,20 @@
 ---
 name: Stream Backpressure
 slug: stream-backpressure
+id: pat.24.stream-backpressure
+kind: pattern
 family: 24-stream-processing
 category: Stream Processing
 aliases: [Credit-Based Flow Control, Watermark Alignment (Flink)]
 first_described: "Reactive Streams JVM SIG, 2013 to 2015, general application-level formalization, the subject of the sibling Backpressure entry; Apache Flink 1.5, credit-based network stack, 2018, the stream-processing-engine-specific protocol this entry documents"
 maturity: established
 related: [backpressure, watermark, event-time-processing, exactly-once-processing]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

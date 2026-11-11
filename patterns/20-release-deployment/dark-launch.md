@@ -1,13 +1,20 @@
 ---
 name: Dark Launch
 slug: dark-launch
+id: pat.20.dark-launch
+kind: pattern
 family: 20-release-deployment
 maturity: canonical
 category: Deployment
 aliases: [Dark Launching, Silent Launch, Invisible Release]
 first_described: 'Martin Fowler, DarkLaunching bliki article; Facebook Engineering, Facebook Chat (2008)'
 related: [shadow-traffic, canary-release]
-verified: true
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
+verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Dark Launch

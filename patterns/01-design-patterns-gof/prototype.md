@@ -1,14 +1,20 @@
 ---
 name: Prototype
 slug: prototype
+id: pat.01.prototype
+kind: pattern
 family: 01-design-patterns-gof
 category: Creational
 aliases: [Clone, Copy Constructor Pattern, Exemplar, Prototypal Instantiation]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [abstract-factory, factory-method, builder, singleton, memento, composite, decorator, flyweight]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Prototype

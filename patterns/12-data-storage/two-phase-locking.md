@@ -1,14 +1,20 @@
 ---
 name: Two-Phase Locking
 slug: two-phase-locking
+id: pat.12.two-phase-locking
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [2PL, Strict Two-Phase Locking, Rigorous Two-Phase Locking, Conservative Two-Phase Locking]
 first_described: "Eswaran, Gray, Lorie, Traiger 1976"
 maturity: canonical
 related: [write-ahead-log, quorum, three-phase-commit, raft, paxos, b-tree]
-incompatible_with: [optimistic-concurrency-control, multi-version-concurrency-control]
+related_concepts: []
+incompatible_with: [mvcc]
+incompatible_concepts: [optimistic-concurrency-control]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Two-Phase Locking

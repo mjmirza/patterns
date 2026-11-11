@@ -1,14 +1,20 @@
 ---
 name: Shared Database Microservices
 slug: shared-database-microservices
+id: pat.18.shared-database-microservices
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Shared Database, Shared Database per Service, Database Monolith in Disguise, Shared Persistence Microservices]
 first_described: "Richardson 2018"
 maturity: established
 related: [database-per-service, saga, api-composition, cqrs, event-sourcing, materialized-view, strangler-fig, distributed-monolith]
-incompatible_with: [database-per-service, bounded-context, polyglot-persistence]
+related_concepts: []
+incompatible_with: [database-per-service, bounded-context]
+incompatible_concepts: [polyglot-persistence]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Shared Database Microservices

@@ -1,14 +1,20 @@
 ---
 name: Adapter
 slug: adapter
+id: pat.01.adapter
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: [Wrapper, Translator, Shim, Ports and Adapters (architectural use)]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [facade, bridge, decorator, proxy, strategy, anti-corruption-layer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Adapter

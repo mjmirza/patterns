@@ -1,14 +1,20 @@
 ---
 name: Optimistic Offline Lock
 slug: optimistic-offline-lock
+id: pat.06.optimistic-offline-lock
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Concurrency
 aliases: [Optimistic Concurrency Control, Version Stamping, ETag Concurrency]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [unit-of-work, pessimistic-offline-lock, coarse-grained-lock, identity-map]
+related_concepts: []
 incompatible_with: [pessimistic-offline-lock]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Optimistic Offline Lock

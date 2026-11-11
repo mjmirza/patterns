@@ -1,14 +1,20 @@
 ---
 name: BASE
 slug: base
+id: pat.04.base
+kind: law
 family: 04-principles-and-laws
 category: Principle
 aliases: [Basically Available Soft State Eventually Consistent, BASE Consistency Model, ACID Alternative]
 first_described: "Pritchett 2008 (named and formalized), Brewer 1997-2000 (informal precursor)"
 maturity: canonical
-related: [cap-theorem, quorum-consensus, saga, single-source-of-truth, fail-fast]
+related: [cap-theorem, quorum, saga, single-source-of-truth, fail-fast]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # BASE

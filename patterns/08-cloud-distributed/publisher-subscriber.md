@@ -1,14 +1,20 @@
 ---
 name: Publisher-Subscriber
 slug: publisher-subscriber
+id: pat.08.publisher-subscriber
+kind: pattern
 family: 08-cloud-distributed
 category: Messaging and Integration
 aliases: [Pub-Sub, Publish-Subscribe, Publish-Subscribe Channel, Topic-Based Messaging]
 first_described: "Hohpe and Woolf 2003 (Enterprise Integration Patterns, Publish-Subscribe Channel); cloud realization documented in the Azure Architecture Center"
 maturity: canonical
-related: [observer, event-sourcing, cqrs, saga, retry, circuit-breaker, competing-consumers, transactional-outbox]
+related: [observer, event-sourcing, cqrs, saga, retry, circuit-breaker, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, transactional-outbox]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Publisher-Subscriber

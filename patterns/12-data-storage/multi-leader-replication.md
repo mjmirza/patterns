@@ -1,14 +1,20 @@
 ---
 name: Multi-Leader Replication
 slug: multi-leader-replication
+id: pat.12.multi-leader-replication
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Multi-Master Replication, Active-Active Replication, Master-Master Replication, Multi-Primary Replication]
 first_described: "Kleppmann, Designing Data-Intensive Applications, 2017, chapter 5"
 maturity: established
-related: [single-leader-replication, leaderless-replication, crdt, event-sourcing, conflict-free-replicated-data-type, saga, outbox-pattern]
-incompatible_with: [strict-serializability, single-writer-invariant]
+related: [leaderless-replication, crdt, event-sourcing, saga, transactional-outbox]
+related_concepts: [single-leader-replication]
+incompatible_with: []
+incompatible_concepts: [strict-serializability, single-writer-invariant]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

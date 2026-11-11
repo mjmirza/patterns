@@ -1,14 +1,20 @@
 ---
 name: IO Monad
 slug: io-monad
+id: pat.16.io-monad
+kind: pattern
 family: 16-functional
 category: Effects
 aliases: [IO Action, Effect Type, World-Passing IO]
 first_described: "Peyton Jones and Wadler 1993"
 maturity: canonical
 related: [monad, functor, applicative, algebraic-effects, free-monad]
-incompatible_with: [unrestricted-side-effects-in-pure-functions]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [unrestricted-side-effects-in-pure-functions]
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # IO Monad

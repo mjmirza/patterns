@@ -1,14 +1,20 @@
 ---
 name: Move Statements into Function
 slug: move-statements-into-function
+id: pat.03.move-statements-into-function
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Move Statements to Called Function, Absorb Statements]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [move-statements-to-callers, extract-function, inline-function, move-function, combine-functions-into-transform]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Move Statements into Function

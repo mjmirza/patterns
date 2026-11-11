@@ -1,14 +1,20 @@
 ---
 name: Shared Kernel
 slug: shared-kernel
+id: pat.11.shared-kernel
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Shared Kernel Context, Kernel Sharing]
 first_described: "Evans 2003"
 maturity: canonical
 related: [bounded-context, context-map, ubiquitous-language, anticorruption-layer, published-language, core-domain]
-incompatible_with: [conformist, anticorruption-layer-as-primary-boundary]
+related_concepts: []
+incompatible_with: [conformist]
+incompatible_concepts: [anticorruption-layer-as-primary-boundary]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

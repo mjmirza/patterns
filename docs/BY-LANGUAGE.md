@@ -725,7 +725,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [RLAIF](../patterns/17-ai-agentic/rlaif.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
-| [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [ReAct](../patterns/17-ai-agentic/react-prompting.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Reflexion](../patterns/17-ai-agentic/reflexion.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Reranking](../patterns/17-ai-agentic/reranking.md) | AI and Agentic |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Retrieval Augmented Generation](../patterns/17-ai-agentic/retrieval-augmented-generation.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1575,7 +1575,7 @@ These patterns contain runnable code examples written in Go:
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
-- [ReAct](../patterns/17-ai-agentic/react.md) (AI and Agentic)
+- [ReAct](../patterns/17-ai-agentic/react-prompting.md) (AI and Agentic)
 - [Read Repair](../patterns/12-data-storage/read-repair.md) (Data and Storage)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) (Data and Storage)
@@ -3423,7 +3423,7 @@ These patterns contain runnable code examples written in Python:
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
 - [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) (Embedded and Hardware-Software)
-- [ReAct](../patterns/17-ai-agentic/react.md) (AI and Agentic)
+- [ReAct](../patterns/17-ai-agentic/react-prompting.md) (AI and Agentic)
 - [Reactor](../patterns/09-concurrency/reactor.md) (Concurrency and Parallelism)
 - [Read Repair](../patterns/12-data-storage/read-repair.md) (Data and Storage)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
@@ -5248,7 +5248,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
-- [ReAct](../patterns/17-ai-agentic/react.md) (AI and Agentic)
+- [ReAct](../patterns/17-ai-agentic/react-prompting.md) (AI and Agentic)
 - [Reactor](../patterns/09-concurrency/reactor.md) (Concurrency and Parallelism)
 - [Read Repair](../patterns/12-data-storage/read-repair.md) (Data and Storage)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)

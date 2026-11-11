@@ -2,157 +2,157 @@
 
 Origin. Richardson
 
-49 entries, 364,269 words. Every entry carries all 18
+49 entries, 364,865 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Antipattern
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Distributed Transaction Coordinator Antipattern](distributed-transaction-coordinator-antipattern.md) | established | 6,082 | A team is decomposing a monolith, or is starting a new system, along service boundaries chosen so that each service owns its own data, per the Database per ... |
+| [Distributed Transaction Coordinator Antipattern](distributed-transaction-coordinator-antipattern.md) | established | 6,095 | A team is decomposing a monolith, or is starting a new system, along service boundaries chosen so that each service owns its own data, per the Database per ... |
 
 ## Behavioral
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Domain Event](domain-event.md) | canonical | 6,667 | An operation on one part of a domain model needs to trigger a reaction in another part of the model, or in another bounded context entirely, and the class performing the operation ... |
+| [Domain Event](domain-event.md) | canonical | 6,680 | An operation on one part of a domain model needs to trigger a reaction in another part of the model, or in another bounded context entirely, and the class performing the operation ... |
 
 ## Communication
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Client-side Service Discovery](client-side-service-discovery.md) | canonical | 5,959 | A microservices architecture replaces a small number of long-lived, statically addressed processes with many short-lived, dynamically addressed ones. |
-| [Domain-Specific Protocol](domain-specific-protocol.md) | canonical | 7,890 | A service in a microservice architecture must communicate with something outside the architecture's own control, and that something already has an established, standardized, or ... |
-| [Remote Procedure Invocation](remote-procedure-invocation.md) | canonical | 5,998 | A microservice architecture splits a system into many independently deployable services, and almost every non-trivial request touches more than one of them. |
+| [Client-side Service Discovery](client-side-service-discovery.md) | canonical | 5,971 | A microservices architecture replaces a small number of long-lived, statically addressed processes with many short-lived, dynamically addressed ones. |
+| [Domain-Specific Protocol](domain-specific-protocol.md) | canonical | 7,902 | A service in a microservice architecture must communicate with something outside the architecture's own control, and that something already has an established, standardized, or ... |
+| [Remote Procedure Invocation](remote-procedure-invocation.md) | canonical | 6,010 | A microservice architecture splits a system into many independently deployable services, and almost every non-trivial request touches more than one of them. |
 
 ## Communication Style
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Messaging](messaging.md) | canonical | 5,733 | A microservice architecture splits one application into many independently deployable services, and Richardson is explicit that this decomposition alone does not remove the need ... |
+| [Messaging](messaging.md) | canonical | 5,746 | A microservice architecture splits one application into many independently deployable services, and Richardson is explicit that this decomposition alone does not remove the need ... |
 
 ## Cross-Cutting Concerns
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Microservice Chassis](microservice-chassis.md) | canonical | 8,217 | A single microservice, considered in isolation, is a small and cheap thing to write. |
+| [Microservice Chassis](microservice-chassis.md) | canonical | 8,228 | A single microservice, considered in isolation, is a small and cheap thing to write. |
 
 ## Data
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Polling Publisher](polling-publisher.md) | canonical | 6,038 | The context is the second half of the Transactional Outbox story, and it is worth stating precisely because Polling Publisher is frequently confused with the outbox pattern itself. |
+| [Polling Publisher](polling-publisher.md) | canonical | 6,051 | The context is the second half of the Transactional Outbox story, and it is worth stating precisely because Polling Publisher is frequently confused with the outbox pattern itself. |
 
 ## Data Integration
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Transaction Log Tailing](transaction-log-tailing.md) | canonical | 8,647 | A service owns a database, per the Database per Service pattern, and its database is private. |
+| [Transaction Log Tailing](transaction-log-tailing.md) | canonical | 8,660 | A service owns a database, per the Database per Service pattern, and its database is private. |
 
 ## Data Query
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [API Composition](api-composition.md) | canonical | 9,045 | A client, whether a mobile app, a web frontend, or another service, needs a single response that draws on data owned by more than one microservice, and no single service holds all ... |
+| [API Composition](api-composition.md) | canonical | 9,057 | A client, whether a mobile app, a web frontend, or another service, needs a single response that draws on data owned by more than one microservice, and no single service holds all ... |
 
 ## Deployment
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Multiple Service Instances per Host](multiple-service-instances-per-host.md) | established | 7,536 | A single instance of a service process can only accept as many concurrent connections and use as many CPU cycles as one operating system process gets scheduled. |
-| [Serverless Deployment](serverless-deployment.md) | established | 7,804 | A team owns a piece of business logic that is genuinely small and genuinely bursty. |
-| [Service Deployment Platform](service-deployment-platform.md) | canonical | 7,181 | A team has decomposed an application into a set of independently deployable services, following one of the decomposition patterns in this family, and has chosen how a single ... |
-| [Service Instance per Container](service-instance-per-container.md) | canonical | 8,934 | A team is moving an application, or building a new one, on top of microservices, and has to decide the packaging and scheduling unit for each service instance. |
-| [Service Instance per Host](service-instance-per-host.md) | established | 7,761 | You have already decomposed a system into services, and each service runs as one or more service instances for throughput and redundancy, the same starting context Richardson ... |
-| [Service Instance per VM](service-instance-per-vm.md) | established | 9,283 | A team has already split a system into microservices, one deployable unit per business capability, following the Microservice Architecture pattern. |
+| [Multiple Service Instances per Host](multiple-service-instances-per-host.md) | established | 7,548 | A single instance of a service process can only accept as many concurrent connections and use as many CPU cycles as one operating system process gets scheduled. |
+| [Serverless Deployment](serverless-deployment.md) | established | 7,816 | A team owns a piece of business logic that is genuinely small and genuinely bursty. |
+| [Service Deployment Platform](service-deployment-platform.md) | canonical | 7,193 | A team has decomposed an application into a set of independently deployable services, following one of the decomposition patterns in this family, and has chosen how a single ... |
+| [Service Instance per Container](service-instance-per-container.md) | canonical | 8,946 | A team is moving an application, or building a new one, on top of microservices, and has to decide the packaging and scheduling unit for each service instance. |
+| [Service Instance per Host](service-instance-per-host.md) | established | 7,773 | You have already decomposed a system into services, and each service runs as one or more service instances for throughput and redundancy, the same starting context Richardson ... |
+| [Service Instance per VM](service-instance-per-vm.md) | established | 9,295 | A team has already split a system into microservices, one deployable unit per business capability, following the Microservice Architecture pattern. |
 
 ## Deployment and Discovery
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Third Party Registration](third-party-registration.md) | canonical | 7,960 | A caller wants to invoke a service that runs as more than one instance, and those instances are not static. |
+| [Third Party Registration](third-party-registration.md) | canonical | 7,972 | A caller wants to invoke a service that runs as more than one instance, and those instances are not static. |
 
 ## Domain Modeling
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Aggregate](aggregate.md) | canonical | 8,793 | A service, whether a monolith module or a microservice, owns a piece of the domain that contains more than one related object, and some of the rules that govern that piece span ... |
+| [Aggregate](aggregate.md) | canonical | 8,806 | A service, whether a monolith module or a microservice, owns a piece of the domain that contains more than one related object, and some of the rules that govern that piece span ... |
 
 ## Integration
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Schema Registry](schema-registry.md) | canonical | 7,196 | A team owns an order service that publishes an OrderPlaced event to a Kafka topic. |
-| [Shared Database](shared-database.md) | contested | 6,110 | A codebase is being decomposed into services, or several teams are building services that need to see overlapping pieces of business data. |
+| [Schema Registry](schema-registry.md) | canonical | 7,209 | A team owns an order service that publishes an OrderPlaced event to a Kafka topic. |
+| [Shared Database](shared-database.md) | contested | 6,122 | A codebase is being decomposed into services, or several teams are building services that need to see overlapping pieces of business data. |
 
 ## Microservices
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [API Gateway](api-gateway.md) | canonical | 7,645 | A client of a microservices system, whether a mobile app, a single-page web application, or a third-party integration, needs data or an action that in a monolith would have been a ... |
-| [Self Registration](self-registration.md) | canonical | 6,007 | A service instance's network location changes on every deployment, every autoscaling event, and every crash-and-restart. |
-| [Server-Side Discovery](server-side-discovery.md) | canonical | 9,299 | A monolith calls its own functions in the same process, so there is nothing to discover. |
-| [Server-Side Service Discovery](server-side-service-discovery.md) | canonical | 7,771 | A service instance's network address is not static. |
-| [Service Registry](service-registry.md) | canonical | 6,188 | A service instance in a cloud environment does not have a fixed network location. |
+| [API Gateway](api-gateway.md) | canonical | 7,657 | A client of a microservices system, whether a mobile app, a single-page web application, or a third-party integration, needs data or an action that in a monolith would have been a ... |
+| [Self Registration](self-registration.md) | canonical | 6,019 | A service instance's network location changes on every deployment, every autoscaling event, and every crash-and-restart. |
+| [Server-Side Discovery](server-side-discovery.md) | canonical | 9,311 | A monolith calls its own functions in the same process, so there is nothing to discover. |
+| [Server-Side Service Discovery](server-side-service-discovery.md) | canonical | 7,783 | A service instance's network address is not static. |
+| [Service Registry](service-registry.md) | canonical | 6,200 | A service instance in a cloud environment does not have a fixed network location. |
 
 ## Microservices, Observability
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Health Check API](health-check-api.md) | canonical | 5,516 | A running process is not the same thing as a working service. |
+| [Health Check API](health-check-api.md) | canonical | 5,528 | A running process is not the same thing as a working service. |
 
 ## Microservices, Resilience
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Retry Budget](retry-budget.md) | established | 7,645 | A service client calls a downstream dependency over the network. |
+| [Retry Budget](retry-budget.md) | established | 7,656 | A service client calls a downstream dependency over the network. |
 
 ## Observability
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Application Metrics](application-metrics.md) | canonical | 7,589 | A monolith has one process. When something is slow or wrong, an engineer attaches a profiler, reads a thread dump, or greps one log file, and the whole picture of the system's ... |
-| [Distributed Tracing](distributed-tracing.md) | canonical | 7,618 | A single user-facing request in a microservice architecture fans out into a call graph. |
-| [Exception Tracking](exception-tracking.md) | established | 8,433 | A request arrives at a service instance and, partway through handling it, code raises an exception the calling frames do not catch. |
-| [Log Aggregation](log-aggregation.md) | canonical | 8,736 | A service in a microservices system emits log lines to its own local standard output or to a file inside its own container. |
-| [Log Deployments and Changes](log-deployments-changes.md) | established | 9,428 | An engineer is paged. A service that was healthy an hour ago now returns higher error rates, or its latency has doubled, or a queue is backing up. |
+| [Application Metrics](application-metrics.md) | canonical | 7,601 | A monolith has one process. When something is slow or wrong, an engineer attaches a profiler, reads a thread dump, or greps one log file, and the whole picture of the system's ... |
+| [Distributed Tracing](distributed-tracing.md) | canonical | 7,630 | A single user-facing request in a microservice architecture fans out into a call graph. |
+| [Exception Tracking](exception-tracking.md) | established | 8,445 | A request arrives at a service instance and, partway through handling it, code raises an exception the calling frames do not catch. |
+| [Log Aggregation](log-aggregation.md) | canonical | 8,748 | A service in a microservices system emits log lines to its own local standard output or to a file inside its own container. |
+| [Log Deployments and Changes](log-deployments-changes.md) | established | 9,440 | An engineer is paged. A service that was healthy an hour ago now returns higher error rates, or its latency has doubled, or a queue is backing up. |
 
 ## Reliability
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Idempotent Consumer](idempotent-consumer.md) | canonical | 6,810 | A service consumes messages or events from a broker, whether that is Kafka, Amazon SQS, RabbitMQ, Azure Service Bus, Google Pub/Sub, or an HTTP webhook delivered by another ... |
-| [Inbox](inbox.md) | established | 6,244 | A service consumes messages from a broker, a queue, or an event stream, and it must apply the side effect of each message to its own database exactly once, even though the ... |
+| [Idempotent Consumer](idempotent-consumer.md) | canonical | 6,823 | A service consumes messages or events from a broker, whether that is Kafka, Amazon SQS, RabbitMQ, Azure Service Bus, Google Pub/Sub, or an HTTP webhook delivered by another ... |
+| [Inbox](inbox.md) | established | 6,257 | A service consumes messages from a broker, a queue, or an event stream, and it must apply the side effect of each message to its own database exactly once, even though the ... |
 
 ## Security
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Access Token](access-token.md) | canonical | 7,999 | A microservice architecture replaces one perimeter, the monolith's process boundary, with dozens or hundreds of network boundaries, one between every pair of services that call ... |
+| [Access Token](access-token.md) | canonical | 8,011 | A microservice architecture replaces one perimeter, the monolith's process boundary, with dozens or hundreds of network boundaries, one between every pair of services that call ... |
 
 ## Structural
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Audit Logging](audit-logging.md) | canonical | 8,686 | A system holds state that changes over time, and more than one actor, whether a human, a service account, or another microservice, can trigger those changes. |
-| [Database per Service](database-per-service.md) | canonical | 7,094 | A team is decomposing a monolith into services, or is designing a new system as microservices from the start, per Decompose by Business Capability or Decompose by Subdomain. |
-| [Decompose by Business Capability](decompose-by-business-capability.md) | canonical | 6,765 | A team owns a monolith, or is building a new system, and needs to draw service boundaries. |
-| [Decompose by Subdomain](decompose-by-subdomain.md) | established | 7,192 | A team owns a system that has grown past the point where one deployable, one shared database, and one release train can move at the speed the business needs. |
-| [Externalized Configuration](externalized-configuration.md) | canonical | 7,457 | A service needs values that differ by where and how it is running. |
-| [Self-Contained Service](self-contained-service.md) | established | 6,998 | A team owns a piece of business capability end to end, say "product catalog" or "checkout" or "order history", and wants to release a change to that capability without asking ... |
-| [Service Mesh](service-mesh.md) | established | 6,980 | A system decomposed into many independently deployable services, following Decompose by Business Capability or Decompose by Subdomain, replaces in-process method calls with ... |
-| [Service per Team](service-per-team.md) | canonical | 7,510 | A system has been split into services, using Decompose by Business Capability or Decompose by Subdomain or simply by growing that way over years. |
-| [Sidecar Proxy](sidecar-proxy.md) | canonical | 7,413 | A service needs a set of platform capabilities that have nothing to do with its business logic. |
-| [Strangler Application](strangler-application.md) | canonical | 8,747 | A team owns a monolithic application that has become expensive to change. |
-| [Transactional Outbox](transactional-outbox.md) | canonical | 7,548 | A service owns its own database, as the Database per Service pattern in this same family requires. |
+| [Audit Logging](audit-logging.md) | canonical | 8,698 | A system holds state that changes over time, and more than one actor, whether a human, a service account, or another microservice, can trigger those changes. |
+| [Database per Service](database-per-service.md) | canonical | 7,106 | A team is decomposing a monolith into services, or is designing a new system as microservices from the start, per Decompose by Business Capability or Decompose by Subdomain. |
+| [Decompose by Business Capability](decompose-by-business-capability.md) | canonical | 6,778 | A team owns a monolith, or is building a new system, and needs to draw service boundaries. |
+| [Decompose by Subdomain](decompose-by-subdomain.md) | established | 7,204 | A team owns a system that has grown past the point where one deployable, one shared database, and one release train can move at the speed the business needs. |
+| [Externalized Configuration](externalized-configuration.md) | canonical | 7,469 | A service needs values that differ by where and how it is running. |
+| [Self-Contained Service](self-contained-service.md) | established | 7,010 | A team owns a piece of business capability end to end, say "product catalog" or "checkout" or "order history", and wants to release a change to that capability without asking ... |
+| [Service Mesh](service-mesh.md) | established | 6,992 | A system decomposed into many independently deployable services, following Decompose by Business Capability or Decompose by Subdomain, replaces in-process method calls with ... |
+| [Service per Team](service-per-team.md) | canonical | 7,523 | A system has been split into services, using Decompose by Business Capability or Decompose by Subdomain or simply by growing that way over years. |
+| [Sidecar Proxy](sidecar-proxy.md) | canonical | 7,425 | A service needs a set of platform capabilities that have nothing to do with its business logic. |
+| [Strangler Application](strangler-application.md) | canonical | 8,759 | A team owns a monolithic application that has become expensive to change. |
+| [Transactional Outbox](transactional-outbox.md) | canonical | 7,560 | A service owns its own database, as the Database per Service pattern in this same family requires. |
 
 ## Testing
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Consumer-Driven Contract Test](consumer-driven-contract-test.md) | established | 6,565 | A consumer service calls a provider service over HTTP, gRPC, or an asynchronous message. |
-| [Consumer-Side Contract Test](consumer-side-contract-test.md) | canonical | 6,390 | A team owns a service that calls another team's service over HTTP, gRPC, or an asynchronous message channel. |
-| [Service Component Test](service-component-test.md) | established | 7,162 | A team owns one service inside a system decomposed into many services, for example an Order Service that, in the course of handling a single request, calls a Customer Service to ... |
+| [Consumer-Driven Contract Test](consumer-driven-contract-test.md) | established | 6,577 | A consumer service calls a provider service over HTTP, gRPC, or an asynchronous message. |
+| [Consumer-Side Contract Test](consumer-side-contract-test.md) | canonical | 6,402 | A team owns a service that calls another team's service over HTTP, gRPC, or an asynchronous message channel. |
+| [Service Component Test](service-component-test.md) | established | 7,173 | A team owns one service inside a system decomposed into many services, for example an Order Service that, in the course of handling a single request, calls a Customer Service to ... |
 
 ## Reading order
 

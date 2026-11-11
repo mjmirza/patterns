@@ -1,14 +1,20 @@
 ---
 name: Generic Subdomain
 slug: generic-subdomain
+id: pat.11.generic-subdomain
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic
 aliases: [Generic Domain, Commodity Subdomain, Buy-not-Build Subdomain]
 first_described: "Evans 2003"
 maturity: canonical
 related: [bounded-context, context-map, ubiquitous-language, anti-corruption-layer, core-domain]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Generic Subdomain

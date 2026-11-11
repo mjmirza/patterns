@@ -1,14 +1,20 @@
 ---
 name: Guarded Suspension
 slug: guarded-suspension
+id: pat.09.guarded-suspension
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Guarded Wait, Wait Until Ready, Condition-Guarded Blocking]
 first_described: "Lea 2000; Schmidt, Stal, Rohnert, Buschmann 2000"
 maturity: canonical
-related: [balking, monitor-object, producer-consumer, thread-safe-interface, read-write-lock, active-object]
+related: [balking, monitor-object, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, thread-safe-interface, read-write-lock, active-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Guarded Suspension

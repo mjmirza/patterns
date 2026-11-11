@@ -1,14 +1,20 @@
 ---
 name: Server Session State
 slug: server-session-state
+id: pat.06.server-session-state
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Session State
 aliases: [Server-Side Session, HttpSession Pattern, Distributed Session Store]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [client-session-state, database-session-state, remote-facade, identity-field, coarse-grained-lock]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Server Session State

@@ -1,14 +1,20 @@
 ---
 name: Specification
 slug: specification
+id: pat.11.specification
+kind: pattern
 family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Specification Pattern, Query Object composed with predicates, Business Rule Object]
 first_described: "Evans and Fowler 2002 (Specifications paper), Evans 2004"
 maturity: canonical
-related: [entity, value-object, repository, domain-service, factory, ubiquitous-language]
+related: [entity, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, repository, domain-service, factory, ubiquitous-language]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Specification

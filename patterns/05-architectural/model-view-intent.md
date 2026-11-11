@@ -1,14 +1,20 @@
 ---
 name: Model-View-Intent
 slug: model-view-intent
+id: pat.05.model-view-intent
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [MVI, Cycle MVI, Unidirectional MVI]
 first_described: "Andre Staltz, Cycle.js documentation and blog, circa 2015"
 maturity: established
-related: [model-view-viewmodel, model-view-presenter, flux, redux, elm-architecture, observer, command, memento, state]
+related: [model-view-viewmodel, model-view-presenter, flux, redux, observer, command, memento, state]
+related_concepts: [elm-architecture]
 incompatible_with: [model-view-controller]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Model-View-Intent

@@ -1,14 +1,20 @@
 ---
 name: Comments
 slug: comments
+id: pat.02.comments
+kind: smell
 family: 02-code-smells
 category: Code Smell
 aliases: [Comment Smell, Excuse Comments, Comment Rot, Deodorant Comments]
 first_described: "Beck, Fowler 1999"
 maturity: canonical
-related: [duplicated-code, long-method, mysterious-name, dead-code, speculative-generality, extract-method, rename-method]
+related: [duplicate-code, long-method, dead-code, speculative-generality, extract-function, change-function-declaration]
+related_concepts: [mysterious-name]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Comments

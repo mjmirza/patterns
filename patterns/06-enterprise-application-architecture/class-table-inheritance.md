@@ -1,14 +1,20 @@
 ---
 name: Class Table Inheritance
 slug: class-table-inheritance
+id: pat.06.class-table-inheritance
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Structural
 aliases: [Table Per Subclass, Joined Table Inheritance, Table Per Type, Multi-Table Inheritance]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [single-table-inheritance, concrete-table-inheritance, identity-map, unit-of-work, embedded-value]
+related_concepts: []
 incompatible_with: [single-table-inheritance, concrete-table-inheritance]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Class Table Inheritance

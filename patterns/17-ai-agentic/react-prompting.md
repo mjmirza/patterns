@@ -1,14 +1,20 @@
 ---
 name: ReAct
 slug: react-prompting
+id: pat.17.react-prompting
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [Reasoning and Acting, Thought-Action-Observation Loop, ReAct Prompting]
 first_described: "Yao, Zhao, Yu, Du, Shafran, Narasimhan, Cao 2022"
 maturity: canonical
-related: [reflexion, tool-use, plan-and-execute, chain-of-thought, orchestrator-worker]
+related: [reflexion, function-calling, plan-execute, chain-of-thought, orchestrator-worker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # ReAct

@@ -1,14 +1,20 @@
 ---
 name: Memory Compaction
 slug: memory-compaction
+id: pat.17.memory-compaction
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Context Compaction, Conversation Summarization, Sliding-Window Summarization, History Compaction]
 first_described: "The underlying idea traces to hierarchical memory paging in operating systems; applied specifically to LLM agent context windows by Packer, Wooders, Lin, Fang, Patil, Stoica, and Gonzalez, 'MemGPT. Towards LLMs as Operating Systems', arXiv 2310.08560, October 2023, and later named 'compaction' directly by Anthropic's engineering team in 'Effective context engineering for AI agents', 2026"
 maturity: established
-related: [react, orchestrator-worker, plan-execute, tool-result-caching, reflexion, retrieval-augmented-generation]
+related: [react-prompting, orchestrator-worker, plan-execute, tool-result-caching, reflexion, retrieval-augmented-generation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Memory Compaction

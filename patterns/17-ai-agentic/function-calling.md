@@ -1,14 +1,20 @@
 ---
 name: Function Calling
 slug: function-calling
+id: pat.17.function-calling
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [Tool Calling, Tool Use, Structured Tool Invocation]
 first_described: "Schick, Dwivedi-Yu, Dessi, Raileanu, Lomeli, Zettlemoyer, Cancedda, Scialom 2023 (Toolformer, academic precursor); productized as vendor APIs later the same year"
 maturity: canonical
 related: [react-prompting, orchestrator-worker, plan-execute, retrieval-augmented-generation, chain-of-thought]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Function Calling

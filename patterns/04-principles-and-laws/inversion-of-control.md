@@ -1,14 +1,20 @@
 ---
 name: Inversion of Control
 slug: inversion-of-control
+id: pat.04.inversion-of-control
+kind: principle
 family: 04-principles-and-laws
 category: Design Principle
 aliases: [IoC, Hollywood Principle]
 first_described: "Ralph E. Johnson and Brian Foote, Designing Reusable Classes, Journal of Object-Oriented Programming, June/July 1988"
 maturity: canonical
 related: [dependency-inversion-principle, template-method, observer, strategy, service-locator, event-driven-architecture]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Inversion of Control

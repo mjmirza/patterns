@@ -1,14 +1,20 @@
 ---
 name: Algebraic Data Type
 slug: algebraic-data-type
+id: pat.16.algebraic-data-type
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [ADT, Sum Type, Product Type, Tagged Union, Variant, Discriminated Union]
 first_described: "standard ML and Haskell data declaration practice"
 maturity: canonical
 related: [pattern-matching, option-maybe, result-either, prism, immutability]
-incompatible_with: [flag-argument, stringly-typed-state, nullable-field-bag]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [flag-argument, stringly-typed-state, nullable-field-bag]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Algebraic Data Type

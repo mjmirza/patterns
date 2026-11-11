@@ -1,14 +1,20 @@
 ---
 name: Quorum
 slug: quorum
+id: pat.12.quorum
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Quorum Replication, R/W/N Quorum, Sloppy Quorum, Majority Quorum]
 first_described: "Gifford 1979, generalized by DeCandia et al. 2007"
 maturity: canonical
 related: [leader-election, write-ahead-log, read-repair, gossip-protocol, saga]
-incompatible_with: [single-writer-principle]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [single-writer-principle]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Quorum

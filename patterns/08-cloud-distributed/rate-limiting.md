@@ -1,14 +1,20 @@
 ---
 name: Rate Limiting
 slug: rate-limiting
+id: pat.08.rate-limiting
+kind: pattern
 family: 08-cloud-distributed
 category: Resilience and Traffic Management
 aliases: [Throttling, Traffic Policing, Traffic Shaping, Quota Enforcement, Admission Control]
 first_described: "Turner 1986, leaky bucket, IEEE Communications Magazine 24(10)"
 maturity: canonical
-related: [circuit-breaker, bulkhead, retry-with-backoff, load-shedding, backpressure, queue-based-load-leveling]
+related: [circuit-breaker, bulkhead, retry, backpressure, queue-based-load-leveling]
+related_concepts: [load-shedding]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Rate Limiting

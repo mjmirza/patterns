@@ -1,14 +1,20 @@
 ---
 name: Bounded Context
 slug: bounded-context
+id: pat.11.bounded-context
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Context Boundary, Model Boundary]
 first_described: "Evans 2003"
 maturity: canonical
-related: [aggregate, repository, anti-corruption-layer, domain-event, cqrs, saga]
+related: [10-microservices/aggregate, 11-domain-driven-design/aggregate, repository, anti-corruption-layer, 10-microservices/domain-event, 11-domain-driven-design/domain-event, cqrs, saga]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Bounded Context

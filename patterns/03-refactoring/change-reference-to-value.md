@@ -1,14 +1,20 @@
 ---
 name: Change Reference to Value
 slug: change-reference-to-value
+id: pat.03.change-reference-to-value
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Reference to Value, Make Value Object]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [change-value-to-reference, replace-constructor-with-factory-function, replace-data-value-with-object, change-function-declaration]
+related: [change-value-to-reference, replace-constructor-with-factory-function, replace-primitive-with-object, change-function-declaration]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Change Reference to Value

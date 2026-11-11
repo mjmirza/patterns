@@ -1,14 +1,20 @@
 ---
 name: Wizard
 slug: wizard
+id: pat.26.wizard
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Setup Assistant, Multi-Step Form, Step-by-Step Wizard]
 first_described: "Microsoft, Windows User Experience guideline, ms997609(v=msdn.10), 1999"
 maturity: established
 related: [undo]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Wizard

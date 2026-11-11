@@ -1,14 +1,20 @@
 ---
 name: Monitor Object
 slug: monitor-object
+id: pat.09.monitor-object
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Monitor, Synchronized Object, Serialized Object]
 first_described: "Hoare 1974 (concept); Schmidt, Stal, Rohnert, Buschmann 2000 (pattern form)"
 maturity: canonical
-related: [active-object, half-sync-half-async, guarded-suspension, thread-safe-interface, producer-consumer]
+related: [active-object, half-sync-half-async, guarded-suspension, thread-safe-interface, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer]
+related_concepts: []
 incompatible_with: [active-object]
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 ## 1. Name, aliases, and lineage

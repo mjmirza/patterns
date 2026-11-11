@@ -1,14 +1,20 @@
 ---
 name: Fork-Join
 slug: fork-join
+id: pat.09.fork-join
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Divide and Conquer Parallelism, Spawn-Sync, Parallel Fork-Join]
 first_described: "Blumofe, Leiserson, et al., MIT Cilk project, 1994-1996 (theoretical roots trace to divide and conquer algorithms and PRAM models of the 1960s and 1970s)"
 maturity: canonical
-related: [producer-consumer, thread-pool, actor-model, pipeline-concurrency, future-promise, work-stealing, master-worker]
-incompatible_with: [single-threaded-event-loop]
+related: [09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, thread-pool, actor-model, future-promise, work-stealing]
+related_concepts: [pipeline-concurrency, master-worker]
+incompatible_with: []
+incompatible_concepts: [single-threaded-event-loop]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Fork-Join

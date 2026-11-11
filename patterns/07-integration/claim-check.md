@@ -1,14 +1,20 @@
 ---
 name: Claim Check
 slug: claim-check
+id: pat.07.claim-check
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: ["Store in Library (early EIP working title)", "Claim-Check Token", "Reference Message Pattern"]
 first_described: "Hohpe and Woolf 2003"
 maturity: canonical
 related: [content-enricher, message-expiration, guaranteed-delivery, dead-letter-channel, saga]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Claim Check

@@ -1,14 +1,20 @@
 ---
 name: Cost Guard
 slug: cost-guard
+id: pat.17.cost-guard
+kind: pattern
 family: 17-ai-agentic
 category: Reliability
 aliases: [Budget Guardrail, Spend Limiter, Token Budget Enforcer, LLM Cost Circuit Breaker, Usage Cap]
 first_described: "No single origin paper. Assembled from cloud cost-control practice (AWS Budgets, 2016) and applied to LLM calls by gateway and proxy vendors from 2023 onward, for example LiteLLM's budget manager and Helicone's cost based rate limiting"
 maturity: established
 related: [llm-circuit-breaker, rate-limiting, output-guardrails, input-guardrails, function-calling, human-in-the-loop, memory-compaction, tool-result-caching]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Cost Guard

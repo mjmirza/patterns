@@ -1,13 +1,20 @@
 ---
 name: Branch by Abstraction
 slug: branch-by-abstraction
+id: pat.20.branch-by-abstraction
+kind: pattern
 family: 20-release-deployment
 maturity: canonical
 category: Deployment
 aliases: [Branch By Abstraction]
 first_described: 'Paul Hammant; documented on trunkbaseddevelopment.com and Martin Fowler bliki'
 related: [feature-toggle, dark-launch]
-verified: true
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
+verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Branch by Abstraction

@@ -1,14 +1,20 @@
 ---
 name: Test Pyramid
 slug: test-pyramid
+id: pat.14.test-pyramid
+kind: pattern
 family: 14-testing
 category: Testing Strategy
 aliases: [Testing Pyramid, Cohn's Pyramid, Test Automation Pyramid]
 first_described: "Cohn 2009"
 maturity: established
 related: [four-phase-test, contract-test, fake, mock, mutation-test, characterization-test]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Test Pyramid

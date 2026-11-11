@@ -1,14 +1,20 @@
 ---
 name: Plugin
 slug: plugin
+id: pat.06.plugin
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Structural
 aliases: [Extension Point, Provider, Add-in, Loadable Module]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [separated-interface, service-locator, dependency-injection, factory-method, observer, strategy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Plugin

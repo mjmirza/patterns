@@ -1,13 +1,20 @@
 ---
 name: Feature Toggle
 slug: feature-toggle
+id: pat.20.feature-toggle
+kind: pattern
 family: 20-release-deployment
 maturity: canonical
 category: Deployment
 aliases: [Feature Flag, Feature Switch, Feature Flip]
 first_described: 'Pete Hodgson, Feature Toggles (Feature Flags), martinfowler.com'
 related: [dark-launch, canary-release]
-verified: true
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
+verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Feature Toggle

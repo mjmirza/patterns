@@ -1,14 +1,20 @@
 ---
 name: Structural Sharing
 slug: structural-sharing
+id: pat.16.structural-sharing
+kind: pattern
 family: 16-functional
 category: Data and State
 aliases: [Path Copying, Node Sharing, Shared Representation]
 first_described: "Okasaki 1998, persistence through copying and sharing"
 maturity: canonical
 related: [persistent-data-structures, immutability, copy-on-write, lens, memoization]
-incompatible_with: [shared-mutable-state, destructive-update, object-pooling]
+related_concepts: []
+incompatible_with: [mutable-data]
+incompatible_concepts: [destructive-update, object-pooling]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Structural Sharing

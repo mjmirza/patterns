@@ -1,14 +1,20 @@
 ---
 name: Derived Value
 slug: derived-value
+id: pat.14.derived-value
+kind: pattern
 family: 14-testing
 category: Test Data
 aliases: [Computed Test Value, Context-Derived Value]
 first_described: "Meszaros 2007"
 maturity: canonical
-related: [literal-value, generated-value, test-data-builder, fresh-fixture, dummy]
+related: [generated-value, test-data-builder, fresh-fixture, dummy]
+related_concepts: [literal-value]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Derived Value

@@ -1,14 +1,20 @@
 ---
 name: gRPC Streaming
 slug: grpc-streaming
+id: pat.19.grpc-streaming
+kind: pattern
 family: 19-api-design
 category: Data Fetching
 aliases: [Server Streaming RPC, Client Streaming RPC, Bidirectional Streaming RPC]
 first_described: 'Google, gRPC core concepts documentation'
 maturity: canonical
 related: [graphql-resolver-pattern, webhook-receiver]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # gRPC Streaming

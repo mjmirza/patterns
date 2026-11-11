@@ -1,14 +1,20 @@
 ---
 name: Emergency Lever
 slug: emergency-lever
+id: pat.21.emergency-lever
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [Kill Switch, Feature Toggle For Mitigation, Coarse Control]
 first_described: 'Google, Site Reliability Engineering practice, and AWS Well-Architected Framework, safe deployment guidance'
 maturity: canonical
 related: [graceful-degradation, runbook-automation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Emergency Lever

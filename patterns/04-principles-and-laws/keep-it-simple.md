@@ -1,14 +1,20 @@
 ---
 name: Keep It Simple
 slug: keep-it-simple
+id: pat.04.keep-it-simple
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [KISS, Keep It Simple Stupid, Simplicity Principle]
 first_described: "Kelly Johnson, Lockheed Skunk Works, c. 1960s (popularized); Hoare 1980 Turing Award lecture (software-specific framing)"
 maturity: canonical
-related: [yagni, dry, separation-of-concerns, single-responsibility-principle]
+related: [you-are-not-gonna-need-it, do-not-repeat-yourself, separation-of-concerns, single-responsibility-principle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Keep It Simple

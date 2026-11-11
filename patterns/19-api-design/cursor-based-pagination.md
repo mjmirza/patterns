@@ -1,14 +1,20 @@
 ---
 name: Cursor-based Pagination
 slug: cursor-based-pagination
+id: pat.19.cursor-based-pagination
+kind: pattern
 family: 19-api-design
 category: Data Fetching
 aliases: [Opaque Cursor Pagination, Keyset Pagination]
 first_described: 'Stripe list API pagination; Relay GraphQL Cursor Connections Specification'
 maturity: canonical
 related: [pagination-pattern, graphql-resolver-pattern]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Cursor-based Pagination

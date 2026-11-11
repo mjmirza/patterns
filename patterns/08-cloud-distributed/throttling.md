@@ -1,14 +1,20 @@
 ---
 name: Throttling
 slug: throttling
+id: pat.08.throttling
+kind: pattern
 family: 08-cloud-distributed
 category: Resilience and Traffic Management
 aliases: [Traffic Shaping, Client-Side Self-Throttling, Adaptive Concurrency Limiting, Graceful Degradation Control, Overload Control]
 first_described: "Homer, Sharp, Brader, Narumoto, Swanson 2014, Cloud Design Patterns"
 maturity: canonical
-related: [rate-limiting, circuit-breaker, bulkhead, retry, load-shedding, queue-based-load-leveling, priority-queue, backpressure]
+related: [rate-limiting, circuit-breaker, bulkhead, retry, queue-based-load-leveling, priority-queue, backpressure]
+related_concepts: [load-shedding]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Throttling

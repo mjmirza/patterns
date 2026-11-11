@@ -1,14 +1,20 @@
 ---
 name: Split Phase
 slug: split-phase
+id: pat.03.split-phase
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Phase Split, Two Phase Computation, Introduce Intermediate Record]
 first_described: "Fowler 2018"
 maturity: established
 related: [extract-function, slide-statements, split-loop, combine-functions-into-transform, introduce-parameter-object, separate-query-from-modifier]
+related_concepts: []
 incompatible_with: [inline-function, replace-loop-with-pipeline]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Split Phase

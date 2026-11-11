@@ -1,14 +1,20 @@
 ---
 name: Separated Interface
 slug: separated-interface
+id: pat.06.separated-interface
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Patterns
 aliases: [Interface Segregation by Package, SPI, Provider Interface]
 first_described: "Fowler 2002, Patterns of Enterprise Application Architecture"
 maturity: canonical
 related: [plugin, gateway, dependency-injection, layer-supertype, registry, strategy, bridge]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Separated Interface

@@ -1,14 +1,20 @@
 ---
 name: Template View
 slug: template-view
+id: pat.06.template-view
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Server Page, Scripted Page]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [transform-view, two-step-view, page-controller, front-controller, transaction-script, model-view-controller, application-controller]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Template View

@@ -1,14 +1,20 @@
 ---
 name: External Configuration Store
 slug: external-configuration-store
+id: pat.08.external-configuration-store
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud Distributed Systems
 aliases: [Centralized Configuration Store, Config Service, Externalized Configuration]
 first_described: "Microsoft patterns & practices team, Cloud Design Patterns, 2014"
 maturity: canonical
 related: [cache-aside, sidecar, ambassador, health-endpoint-monitoring, strangler-fig]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # External Configuration Store

@@ -1,14 +1,20 @@
 ---
 name: Dynamic Router
 slug: dynamic-router
+id: pat.07.dynamic-router
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Self-Configuring Router, Iterative Router, Recipient-Registering Router]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [content-based-router, routing-slip, recipient-list, publish-subscribe-channel, service-locator, circuit-breaker]
+related: [content-based-router, routing-slip, recipient-list, publisher-subscriber, service-locator, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Dynamic Router

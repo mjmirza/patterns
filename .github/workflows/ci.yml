@@ -24,6 +24,10 @@ jobs:
           python-version: "3.12"
       - name: Structural validator tests
         run: python3 tools/check-structure-test.py
+      - name: Link and identity tests
+        run: python3 tools/check-links-test.py
+      - name: Internal links and entry identity
+        run: python3 tools/check-links.py
       - name: Structural gate
         run: python3 tools/check-structure.py
       - name: Family naming validator tests
@@ -53,8 +57,19 @@ jobs:
       - name: Catalogue status is current
         run: |
           python3 tools/gen-catalogue-status.py
-          git diff --exit-code -- README.md docs/PROGRESS.md dist/ || {
+          git diff --exit-code -- README.md docs/PROGRESS.md dist/catalogue-status.json dist/catalogue-status.csv || {
             echo "Catalogue status is stale. Run tools/gen-catalogue-status.py and commit."
+            exit 1
+          }
+      - name: Entry index is current
+        run: |
+          python3 tools/gen-entry-index.py
+          git ls-files --error-unmatch dist/entries.json >/dev/null || {
+            echo "dist/entries.json is not tracked. Run tools/gen-entry-index.py and commit it."
+            exit 1
+          }
+          git diff --exit-code -- dist/entries.json || {
+            echo "Entry index is stale. Run tools/gen-entry-index.py and commit."
             exit 1
           }
 

@@ -1,14 +1,20 @@
 ---
 name: Replace Control Flag with Break
 slug: replace-control-flag-with-break
+id: pat.03.replace-control-flag-with-break
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Remove Control Flag, Replace Control Flag]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [replace-nested-conditional-with-guard-clauses, replace-loop-with-pipeline, remove-dead-code, extract-function, substitute-algorithm]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Control Flag with Break

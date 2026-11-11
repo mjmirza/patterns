@@ -1,14 +1,20 @@
 ---
 name: Empty State
 slug: empty-state
+id: pat.26.empty-state
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Zero State, Blank Slate, No Data State]
 first_described: "Craig Dennis, Codrops, January 9, 2013"
 maturity: established
 related: [wizard]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Empty State

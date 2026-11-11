@@ -1,14 +1,20 @@
 ---
 name: Claim Check
 slug: claim-check
+id: pat.08.claim-check
+kind: pattern
 family: 08-cloud-distributed
 category: Messaging and Integration
 aliases: [Store in Library, Claim-Check Pattern, Reference-Based Messaging]
 first_described: "Hohpe and Woolf 2003 (Enterprise Integration Patterns, Claim Check); cloud realization documented in the Azure Architecture Center"
 maturity: canonical
 related: [content-enricher, splitter, transactional-outbox, materialized-view, gateway-aggregation, publisher-subscriber, circuit-breaker, retry]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Claim Check

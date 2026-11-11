@@ -1,14 +1,20 @@
 ---
 name: Pipeline Architecture
 slug: pipeline-architecture
+id: pat.05.pipeline-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Pipes and Filters, Pipeline Pattern, Data Pipeline, Filter Chain]
 first_described: "McIlroy and Thompson, Bell Labs, 1973 (mechanism); Buschmann, Meunier, Rohnert, Sommerlad, Stal 1996 (formal pattern name)"
 maturity: canonical
-related: [chain-of-responsibility, decorator, iterator, event-driven-architecture, microkernel-architecture]
+related: [chain-of-responsibility, decorator, iterator, event-driven-architecture, microkernel]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Pipeline Architecture

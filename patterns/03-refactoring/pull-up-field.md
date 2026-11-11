@@ -1,14 +1,20 @@
 ---
 name: Pull Up Field
 slug: pull-up-field
+id: pat.03.pull-up-field
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Pull Up Attribute, Move Field to Superclass]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [pull-up-method, pull-up-constructor-body, extract-superclass, collapse-hierarchy, move-field, push-down-field]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Pull Up Field

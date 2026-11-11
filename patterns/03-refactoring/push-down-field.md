@@ -1,14 +1,20 @@
 ---
 name: Push Down Field
 slug: push-down-field
+id: pat.03.push-down-field
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Push Down Attribute, Move Field to Subclass]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [pull-up-field, push-down-method, extract-subclass, collapse-hierarchy, replace-inheritance-with-delegation, move-field]
+related: [pull-up-field, push-down-method, collapse-hierarchy, replace-subclass-with-delegate, move-field]
+related_concepts: [extract-subclass]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Push Down Field

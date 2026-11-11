@@ -1,14 +1,20 @@
 ---
 name: Provider Pattern
 slug: provider-pattern
+id: pat.13.provider-pattern
+kind: pattern
 family: 13-frontend-ui
 category: Component Composition
 aliases: [Context Provider, Dependency Injection via Context]
 first_described: "React Context API, formalized in official React documentation"
 maturity: canonical
 related: [hooks, compound-components, higher-order-component, render-props]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Provider Pattern

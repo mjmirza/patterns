@@ -1,14 +1,20 @@
 ---
 name: Extraneous Fetching
 slug: extraneous-fetching
+id: pat.18.extraneous-fetching
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [Overfetching, Fetching Too Much Data, SELECT star anti-pattern]
 first_described: "Microsoft Azure Architecture Center performance antipattern collection, 2017"
 maturity: established
 related: [n+1-query, chatty-i-o, cqrs, backends-for-frontends]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Extraneous Fetching

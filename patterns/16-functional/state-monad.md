@@ -1,14 +1,20 @@
 ---
 name: State Monad
 slug: state-monad
+id: pat.16.state-monad
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [State, StateT, MonadState, Stateful, State-passing Monad]
 first_described: "Wadler 1992 and 1995"
 maturity: established
 related: [monad, reader-monad, writer-monad, result-either, lens, traversable]
-incompatible_with: [shared-mutable-state, hidden-global-state, unbounded-state-threading]
+related_concepts: []
+incompatible_with: [mutable-data]
+incompatible_concepts: [hidden-global-state, unbounded-state-threading]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # State Monad

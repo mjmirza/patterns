@@ -1,14 +1,20 @@
 ---
 name: Switch Statements
 slug: switch-statements
+id: pat.02.switch-statements
+kind: smell
 family: 02-code-smells
 category: Object-Orientation Abusers
 aliases: [Type Code Switch, Case Statement Smell, Switch on Type]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999, Refactoring, Improving the Design of Existing Code"
 maturity: canonical
 related: [factory-method, alternative-classes-with-different-interfaces, refused-bequest, primitive-obsession, data-class]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Switch Statements

@@ -1,14 +1,20 @@
 ---
 name: Front Controller
 slug: front-controller
+id: pat.06.front-controller
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: []
 first_described: "Alur, Crupi, Malks 2001; Fowler 2003"
 maturity: canonical
 related: [page-controller, command, mediator, chain-of-responsibility, application-controller]
+related_concepts: []
 incompatible_with: [page-controller]
+incompatible_concepts: []
 verified: 2026-08-11
+last_reviewed: 2026-08-11
+next_review_due: 2027-02-07
 ---
 
 # Front Controller

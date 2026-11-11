@@ -1,14 +1,20 @@
 ---
 name: Fail Securely
 slug: fail-securely
+id: pat.15.fail-securely
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Fail Closed, Deny by Default, Fail-Safe Defaults, Safe Failure]
 first_described: "Saltzer and Schroeder 1975"
 maturity: established
 related: [least-privilege, secure-by-default, defense-in-depth, zero-trust, complete-mediation]
-incompatible_with: [fail-open, optimistic-authorization, default-allow]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [fail-open, optimistic-authorization, default-allow]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Fail Securely

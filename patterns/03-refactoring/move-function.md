@@ -1,14 +1,20 @@
 ---
 name: Move Function
 slug: move-function
+id: pat.03.move-function
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Move Method, Relocate Method, Relocate Function]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [move-field, extract-class, inline-class, hide-delegate, change-function-declaration, extract-function]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Move Function

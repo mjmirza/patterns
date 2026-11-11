@@ -1,14 +1,20 @@
 ---
 name: Modular Monolith
 slug: modular-monolith
+id: pat.05.modular-monolith
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Majestic Monolith, Modulith, Component-Based Monolith]
 first_described: "Simon Brown, conference talks and Software Architecture for Developers, circa 2014, popularizing a term already in informal use among practitioners"
 maturity: established
-related: [layered-architecture, hexagonal-architecture, clean-architecture, microkernel, event-driven-architecture]
+related: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, hexagonal-architecture, clean-architecture, microkernel, event-driven-architecture]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Modular Monolith

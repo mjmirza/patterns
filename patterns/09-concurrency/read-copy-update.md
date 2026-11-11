@@ -1,14 +1,20 @@
 ---
 name: Read-Copy-Update
 slug: read-copy-update
+id: pat.09.read-copy-update
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [RCU, Read-Copy Update, Quiescent-State-Based Reclamation, Epoch-Based Reclamation (sibling technique)]
 first_described: "Slingwine, McKenney patent 1995; McKenney, Slingwine 'Read-Copy Update' USENIX 1998"
 maturity: canonical
-related: [copy-on-write, double-checked-locking, read-write-lock, immutable-object, versioned-value, optimistic-concurrency-control]
-incompatible_with: [pessimistic-locking-only-designs]
+related: [copy-on-write, double-checked-locking, read-write-lock, immutable-object]
+related_concepts: [versioned-value, optimistic-concurrency-control]
+incompatible_with: []
+incompatible_concepts: [pessimistic-locking-only-designs]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Read-Copy-Update

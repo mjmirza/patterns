@@ -1,14 +1,20 @@
 ---
 name: Microkernel
 slug: microkernel
+id: pat.05.microkernel
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Plug-in Architecture, Plugin Architecture, Microkernel and Plugins, Extensible Kernel]
 first_described: "Buschmann, Meunier, Rohnert, Sommerlad, Stal 1996"
 maturity: canonical
-related: [layered-architecture, hexagonal-architecture, front-controller, mediator, chain-of-responsibility, observer]
+related: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, hexagonal-architecture, front-controller, mediator, chain-of-responsibility, observer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Microkernel

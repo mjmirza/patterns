@@ -1,14 +1,20 @@
 ---
 name: Self-Discover
 slug: self-discover
+id: pat.17.self-discover
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [SELF-DISCOVER, Self-Composed Reasoning Structures]
 first_described: "Zhou, Pujara, Ren, Chen, Cheng, Le, Chi, Zhou, Mishra, Zheng, arXiv 2402.03620"
 maturity: established
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Self-Discover

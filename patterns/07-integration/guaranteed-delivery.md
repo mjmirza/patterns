@@ -1,14 +1,20 @@
 ---
 name: Guaranteed Delivery
 slug: guaranteed-delivery
+id: pat.07.guaranteed-delivery
+kind: pattern
 family: 07-integration
 category: Messaging
 aliases: [Persistent Messaging, Store and Forward Messaging, Durable Messaging]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [message-channel, point-to-point-channel, dead-letter-channel, transactional-outbox, idempotent-receiver, retry, circuit-breaker]
+related: [message-channel, point-to-point-channel, dead-letter-channel, transactional-outbox, idempotent-consumer, retry, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-12
+last_reviewed: 2026-08-12
+next_review_due: 2027-02-08
 ---
 
 # Guaranteed Delivery

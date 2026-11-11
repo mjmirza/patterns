@@ -1,14 +1,20 @@
 ---
 name: Data Vault
 slug: data-vault
+id: pat.12.data-vault
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Data Vault Modeling, Data Vault 2.0, Hub-Link-Satellite Modeling]
 first_described: "Dan Linstedt, conceived in the 1990s, published 2000, Data Vault 2.0 published 2013"
 maturity: established
-related: [medallion-architecture, event-sourcing, cqrs, outbox-pattern, saga, repository]
+related: [medallion-architecture, event-sourcing, cqrs, transactional-outbox, saga, repository]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Data Vault

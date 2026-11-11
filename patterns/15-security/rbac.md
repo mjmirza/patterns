@@ -1,14 +1,20 @@
 ---
 name: Role-Based Access Control
 slug: rbac
+id: pat.15.rbac
+kind: pattern
 family: 15-security
 category: Security
 aliases: [RBAC, Role Based Access Control, Role-Based Security]
 first_described: "Ferraiolo and Kuhn 1992"
 maturity: canonical
 related: [least-privilege, separation-of-duties, zero-trust, federated-identity, complete-mediation, gatekeeper]
-incompatible_with: [ambient-authority, per-user-permission-sprawl, hardcoded-authorization]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [ambient-authority, per-user-permission-sprawl, hardcoded-authorization]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Role-Based Access Control

@@ -1,13 +1,20 @@
 ---
 name: Disaster Recovery Pilot Light
 slug: disaster-recovery-pilot-light
+id: pat.20.disaster-recovery-pilot-light
+kind: pattern
 family: 20-release-deployment
 maturity: canonical
 category: Deployment
 aliases: [Pilot Light DR, Pilot Light Disaster Recovery]
 first_described: 'AWS Disaster Recovery Whitepaper; AWS Well-Architected Framework, Reliability Pillar REL13-BP02'
 related: [warm-standby, blue-green-deployment]
-verified: true
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
+verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Disaster Recovery Pilot Light

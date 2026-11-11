@@ -1,14 +1,20 @@
 ---
 name: Golden Dataset
 slug: golden-dataset
+id: pat.17.golden-dataset
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Golden Set, Golden Test Set, Ground Truth Dataset, Reference Dataset, Eval Set]
 first_described: "No single origin paper. The word golden traces to golden master or characterization testing (Michael Feathers, Working Effectively with Legacy Code, Prentice Hall, 2004, ISBN 0-13-117705-2), re-purposed for model and agent evaluation by the ML testing and LLM eval tooling community from roughly 2018 to 2023"
 maturity: established
 related: [llm-as-judge, evaluator-optimizer, reflexion, self-consistency, human-in-the-loop, output-guardrails, input-guardrails, cost-guard]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Golden Dataset

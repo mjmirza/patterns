@@ -1,14 +1,20 @@
 ---
 name: Third Party Registration
 slug: third-party-registration
+id: pat.10.third-party-registration
+kind: pattern
 family: 10-microservices
 category: Deployment and Discovery
 aliases: [3rd Party Registration, External Registration, Registrar-Managed Registration]
 first_described: "Richardson 2016, microservices.io"
 maturity: canonical
-related: [self-registration, service-registry, client-side-discovery, server-side-discovery, sidecar]
+related: [self-registration, service-registry, client-side-service-discovery, server-side-discovery, sidecar]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Third Party Registration

@@ -1,14 +1,20 @@
 ---
 name: Transactional Outbox
 slug: transactional-outbox
+id: pat.10.transactional-outbox
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Outbox Pattern, Event Outbox, Application Events Table]
 first_described: "Richardson, microservices.io pattern catalog, and Morling, Debezium blog, Reliable Microservices Data Exchange With the Outbox Pattern, 2019"
 maturity: canonical
 related: [saga, api-composition, database-per-service, decompose-by-business-capability, decompose-by-subdomain]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Transactional Outbox

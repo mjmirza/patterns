@@ -1,14 +1,20 @@
 ---
 name: Clean Architecture
 slug: clean-architecture
+id: pat.05.clean-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: []
 first_described: "Martin 2012"
 maturity: canonical
-related: [hexagonal-architecture, onion-architecture, layered-architecture, dependency-injection, repository, use-case]
+related: [hexagonal-architecture, onion-architecture, 05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, dependency-injection, repository]
+related_concepts: [use-case]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Clean Architecture

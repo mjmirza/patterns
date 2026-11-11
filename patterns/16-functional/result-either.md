@@ -1,14 +1,20 @@
 ---
 name: Result Either
 slug: result-either
+id: pat.16.result-either
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Either, Result, Typed Result, Two-case Result, Left Right]
 first_described: "standard functional sum-type idiom"
 maturity: established
-related: [railway-oriented-programming, monad, applicative, validation, option]
-incompatible_with: [exception-only-flow, unchecked-null-flow, panic-flow]
+related: [railway-oriented-programming, monad, applicative, validation-applicative, option-maybe]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [exception-only-flow, unchecked-null-flow, panic-flow]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Result Either

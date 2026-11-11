@@ -1,14 +1,20 @@
 ---
 name: Code Splitting
 slug: code-splitting
+id: pat.13.code-splitting
+kind: pattern
 family: 13-frontend-ui
 category: Loading Strategy
 aliases: [Bundle Splitting, Dynamic Import Splitting, Chunk Splitting]
 first_described: "web.dev, Reduce JavaScript payloads with code splitting"
 maturity: canonical
 related: [prpl-pattern, resource-hints, route-based-lazy-loading, virtual-list]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Code Splitting

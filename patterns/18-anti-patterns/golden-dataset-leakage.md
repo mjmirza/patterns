@@ -1,14 +1,20 @@
 ---
 name: Golden Dataset Leakage
 slug: golden-dataset-leakage
+id: pat.18.golden-dataset-leakage
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Golden Set Leakage, Eval Set Leakage, Holdout Leakage, Benchmark Contamination, Test Set Contamination, Answer Key Leakage]
 first_described: "No single catalog origin. The lineage runs through data leakage in data mining, adaptive holdout reuse, public leaderboard overfitting, and benchmark contamination in language model evaluation"
 maturity: established
-related: [golden-dataset, evaluation-suite, llm-as-judge, data-leakage, golden-master, differential-testing, metamorphic-testing]
-incompatible_with: [training-on-the-test-set, public-answer-key-feedback]
+related: [golden-dataset, evaluation-suite, llm-as-judge, golden-master, differential-testing, metamorphic-testing]
+related_concepts: [data-leakage]
+incompatible_with: []
+incompatible_concepts: [training-on-the-test-set, public-answer-key-feedback]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Golden Dataset Leakage

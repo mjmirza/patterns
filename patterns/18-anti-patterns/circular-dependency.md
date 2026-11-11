@@ -1,14 +1,20 @@
 ---
 name: Circular Dependency
 slug: circular-dependency
+id: pat.18.circular-dependency
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [Cyclic Dependency, Dependency Cycle, Import Cycle, Mutual Dependency]
 first_described: "Robert C. Martin, Acyclic Dependencies Principle, Engineering Notebook, C++ Report, 1996"
 maturity: canonical
 related: [dependency-injection, facade, mediator, dependency-inversion-principle, god-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Circular Dependency

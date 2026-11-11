@@ -1,14 +1,20 @@
 ---
 name: Tagless Final
 slug: tagless-final
+id: pat.16.tagless-final
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Finally Tagless, Typed Tagless Final, Final Encoding, Final Tagless]
 first_described: "Carette, Kiselyov, Shan 2009"
 maturity: established
-related: [free-monad, interpreter, typeclass, dependency-injection, final-encoding]
-incompatible_with: [closed-syntax-ast-required, runtime-pattern-matching-first, untyped-plugin-boundary]
+related: [free-monad, interpreter, dependency-injection]
+related_concepts: [typeclass, final-encoding]
+incompatible_with: []
+incompatible_concepts: [closed-syntax-ast-required, runtime-pattern-matching-first, untyped-plugin-boundary]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Tagless Final

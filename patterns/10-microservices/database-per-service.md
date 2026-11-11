@@ -1,14 +1,20 @@
 ---
 name: Database per Service
 slug: database-per-service
+id: pat.10.database-per-service
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Private Database per Service, Data Isolation Pattern]
 first_described: "Richardson, Microservices Patterns, Manning, 2019, chapter 2, and microservices.io, pattern catalog, first published circa 2014"
 maturity: canonical
 related: [decompose-by-business-capability, decompose-by-subdomain, saga, api-composition, cqrs, event-sourcing, self-contained-service, strangler-application]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Database per Service

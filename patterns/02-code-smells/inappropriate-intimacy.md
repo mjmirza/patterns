@@ -1,14 +1,20 @@
 ---
 name: Inappropriate Intimacy
 slug: inappropriate-intimacy
+id: pat.02.inappropriate-intimacy
+kind: smell
 family: 02-code-smells
 category: Coupling
 aliases: []
 first_described: "Fowler and Beck 1999"
 maturity: canonical
-related: [feature-envy, data-class, message-chains, move-method, extract-class, hide-delegate]
+related: [feature-envy, data-class, message-chains, move-function, extract-class, hide-delegate]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Inappropriate Intimacy

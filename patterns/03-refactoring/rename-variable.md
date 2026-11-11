@@ -1,14 +1,20 @@
 ---
 name: Rename Variable
 slug: rename-variable
+id: pat.03.rename-variable
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Rename Local, Rename Temp, Rename Binding]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [rename-field, extract-variable, inline-variable, change-function-declaration, encapsulate-variable]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Rename Variable

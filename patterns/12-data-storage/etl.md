@@ -1,14 +1,20 @@
 ---
 name: ETL
 slug: etl
+id: pat.12.etl
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Extract Transform Load, Batch Data Pipeline, Data Integration Pipeline]
 first_described: "Kimball and Caserta 2004"
 maturity: canonical
 related: [lambda-architecture, kappa-architecture, medallion-architecture, star-schema, slowly-changing-dimensions, data-mesh, data-vault]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # ETL

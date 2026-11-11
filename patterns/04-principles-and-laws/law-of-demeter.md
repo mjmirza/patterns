@@ -1,14 +1,20 @@
 ---
 name: Law of Demeter
 slug: law-of-demeter
+id: pat.04.law-of-demeter
+kind: law
 family: 04-principles-and-laws
 category: Principle
 aliases: [Principle of Least Knowledge, Only Talk to Your Immediate Friends, One Dot Rule]
 first_described: "Lieberherr and Holland, Northeastern University, 1987 to 1988"
 maturity: canonical
-related: [information-expert, low-coupling, high-cohesion, single-responsibility-principle, tell-dont-ask, hide-delegate, encapsulation]
+related: [information-expert, low-coupling, high-cohesion, single-responsibility-principle, hide-delegate]
+related_concepts: [tell-dont-ask, encapsulation]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Law of Demeter

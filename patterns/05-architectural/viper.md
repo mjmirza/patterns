@@ -1,14 +1,20 @@
 ---
 name: VIPER
 slug: viper
+id: pat.05.viper
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: []
 first_described: "Gilbert, Stoll (Mutual Mobile) 2014"
 maturity: established
 related: [model-view-presenter, model-view-controller, clean-architecture, mediator, observer, command, repository]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # VIPER

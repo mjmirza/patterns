@@ -1,14 +1,20 @@
 ---
 name: Reducer Hook
 slug: reducer-hook
+id: pat.13.reducer-hook
+kind: pattern
 family: 13-frontend-ui
 category: State Management
 aliases: [useReducer, State Reducer Pattern]
 first_described: "React documentation, useReducer"
 maturity: canonical
 related: [headless-component, context-selector, flux, redux]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Reducer Hook

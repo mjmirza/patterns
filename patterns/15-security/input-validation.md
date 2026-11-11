@@ -1,14 +1,20 @@
 ---
 name: Input Validation
 slug: input-validation
+id: pat.15.input-validation
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Input Checking, Data Validation, Request Validation, Schema Validation]
 first_described: "Common secure programming practice"
 maturity: canonical
-related: [complete-mediation, fail-securely, secure-by-default, defense-in-depth, sql-injection, output-encoding]
-incompatible_with: [client-side-only-validation, denylist-only-filtering, parse-after-trust]
+related: [complete-mediation, fail-securely, secure-by-default, defense-in-depth, output-encoding]
+related_concepts: [sql-injection]
+incompatible_with: []
+incompatible_concepts: [client-side-only-validation, denylist-only-filtering, parse-after-trust]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Input Validation

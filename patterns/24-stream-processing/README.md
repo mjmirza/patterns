@@ -2,20 +2,20 @@
 
 Origin. Dataflow model, Kafka documentation
 
-7 entries, 41,933 words. Every entry carries all 18
+7 entries, 42,015 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Stream Processing
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Dead-Letter Topic](dead-letter-topic.md) | established | 4,634 | KIP-298's own motivation states the problem this entry's stream-native variant answers directly. |
-| [Event-Time Processing](event-time-processing.md) | established | 8,516 | The Dataflow paper states the root cause directly. |
-| [Exactly-Once Processing](exactly-once-processing.md) | canonical | 4,481 | A stream processor that crashes mid-batch and restarts will, by default, reprocess whatever it had not yet acknowledged. |
-| [Replayable Log](replayable-log.md) | canonical | 4,166 | A traditional message queue removes a message once it has been consumed. |
-| [Stream Backpressure](stream-backpressure.md) | established | 4,617 | In a single-process reactive pipeline the backpressure problem is a pair, one producer and one consumer, and a demand-signaling or buffer-based protocol between the two is ... |
-| [Stream-Table Duality](stream-table-duality.md) | established | 5,645 | Kafka's own documentation frames the problem as a first-class support gap a stream-processing technology must close, not a hypothetical. |
-| [Watermark](watermark.md) | established | 9,874 | A stream processing system that groups records by when they actually happened, not by when the system happened to receive them, faces a specific unanswerable-looking question. |
+| [Dead-Letter Topic](dead-letter-topic.md) | established | 4,646 | KIP-298's own motivation states the problem this entry's stream-native variant answers directly. |
+| [Event-Time Processing](event-time-processing.md) | established | 8,527 | The Dataflow paper states the root cause directly. |
+| [Exactly-Once Processing](exactly-once-processing.md) | canonical | 4,493 | A stream processor that crashes mid-batch and restarts will, by default, reprocess whatever it had not yet acknowledged. |
+| [Replayable Log](replayable-log.md) | canonical | 4,178 | A traditional message queue removes a message once it has been consumed. |
+| [Stream Backpressure](stream-backpressure.md) | established | 4,629 | In a single-process reactive pipeline the backpressure problem is a pair, one producer and one consumer, and a demand-signaling or buffer-based protocol between the two is ... |
+| [Stream-Table Duality](stream-table-duality.md) | established | 5,657 | Kafka's own documentation frames the problem as a first-class support gap a stream-processing technology must close, not a hypothetical. |
+| [Watermark](watermark.md) | established | 9,885 | A stream processing system that groups records by when they actually happened, not by when the system happened to receive them, faces a specific unanswerable-looking question. |
 
 ## Reading order
 

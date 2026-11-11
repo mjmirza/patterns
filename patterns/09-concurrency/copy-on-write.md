@@ -1,14 +1,20 @@
 ---
 name: Copy-on-Write
 slug: copy-on-write
+id: pat.09.copy-on-write
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [COW, Clone-on-Write, Lazy Copy]
 first_described: "Bell Labs Unix (fork semantics, 1970s); formalized as a general technique across operating systems and languages through the 1980s and 1990s"
 maturity: canonical
-related: [flyweight, immutable-value-object, memento, prototype, snapshot-isolation, reference-counting]
-incompatible_with: [in-place-mutation-with-shared-mutable-state]
+related: [flyweight, memento, prototype, snapshot-isolation]
+related_concepts: [immutable-value-object, reference-counting]
+incompatible_with: []
+incompatible_concepts: [in-place-mutation-with-shared-mutable-state]
 verified: 2026-08-14
+last_reviewed: 2026-08-14
+next_review_due: 2027-02-10
 ---
 
 # Copy-on-Write

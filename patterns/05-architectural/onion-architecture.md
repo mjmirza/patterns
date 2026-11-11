@@ -1,14 +1,20 @@
 ---
 name: Onion Architecture
 slug: onion-architecture
+id: pat.05.onion-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Domain Centric Architecture]
 first_described: "Palermo 2008"
 maturity: canonical
-related: [layered-architecture, repository, dependency-injection, hexagonal-architecture, clean-architecture, cqrs]
+related: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, repository, dependency-injection, hexagonal-architecture, clean-architecture, cqrs]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Onion Architecture

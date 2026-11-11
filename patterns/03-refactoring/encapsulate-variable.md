@@ -1,14 +1,20 @@
 ---
 name: Encapsulate Variable
 slug: encapsulate-variable
+id: pat.03.encapsulate-variable
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Encapsulate Field, Self Encapsulate Field, Wrap Variable]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [encapsulate-record, encapsulate-collection, extract-class, change-reference-to-value, introduce-parameter-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Encapsulate Variable

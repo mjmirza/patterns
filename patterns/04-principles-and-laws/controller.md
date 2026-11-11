@@ -1,14 +1,20 @@
 ---
 name: Controller
 slug: controller
+id: pat.04.controller
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [GRASP Controller, Use Case Controller, Facade Controller, Front Controller related not identical]
 first_described: "Larman 1997, Applying UML and Patterns, 1st edition"
 maturity: canonical
 related: [information-expert, creator, single-responsibility-principle, interface-segregation-principle, dependency-inversion-principle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

@@ -1,14 +1,20 @@
 ---
 name: Snapshot Isolation
 slug: snapshot-isolation
+id: pat.12.snapshot-isolation
+kind: pattern
 family: 12-data-storage
 category: Concurrency Control
 aliases: [SI, Multiversion Snapshot Isolation, Optimistic Multiversion Concurrency Control]
 first_described: "Berenson, Bernstein, Gray, Melton, O'Neil, O'Neil 1995"
 maturity: canonical
-related: [multiversion-concurrency-control, optimistic-concurrency-control, two-phase-locking, event-sourcing, serializable-snapshot-isolation]
-incompatible_with: [strict-two-phase-locking]
+related: [mvcc, two-phase-locking, event-sourcing]
+related_concepts: [optimistic-concurrency-control, serializable-snapshot-isolation]
+incompatible_with: [two-phase-locking]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Snapshot Isolation

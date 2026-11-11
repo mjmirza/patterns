@@ -1,14 +1,20 @@
 ---
 name: Open Closed Principle
 slug: open-closed-principle
+id: pat.04.open-closed-principle
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [OCP, Open-Closed Principle, the O in SOLID]
 first_described: "Meyer 1988"
 maturity: canonical
 related: [strategy, template-method, decorator, factory-method, dependency-inversion-principle, liskov-substitution-principle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Open Closed Principle

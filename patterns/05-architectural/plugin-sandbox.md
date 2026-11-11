@@ -1,14 +1,20 @@
 ---
 name: Plugin Sandbox
 slug: plugin-sandbox
+id: pat.05.plugin-sandbox
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Extension Sandbox, Addon Isolation, Untrusted Plugin Boundary, Capability-Based Extension Isolation]
 first_described: "Emerged from practice across browser, editor, and platform engineering rather than a single catalog; theoretical grounding in Jack B. Dennis and Earl C. Van Horn, Programming Semantics for Multiprogrammed Computations, Communications of the ACM 9(3), 1966"
 maturity: established
 related: [plugin-architecture, microkernel, broker-architecture, proxy, facade, bulkhead, circuit-breaker, dependency-injection, mediator, command]
+related_concepts: []
 incompatible_with: [singleton, god-object]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Plugin Sandbox

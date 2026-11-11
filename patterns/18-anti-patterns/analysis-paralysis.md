@@ -1,14 +1,20 @@
 ---
 name: Analysis Paralysis
 slug: analysis-paralysis
+id: pat.18.analysis-paralysis
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Paralysis by Analysis, Overanalysis, Decision Paralysis, Design Paralysis]
 first_described: "Ansoff 1965, popularized the phrase in a strategic-management context; later adopted into software engineering discourse through the agile movement of the late 1990s"
 maturity: canonical
-related: [big-ball-of-mud, golden-hammer, premature-optimization, speculative-generality, template-method]
+related: [11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud, golden-hammer, premature-optimization, speculative-generality, template-method]
+related_concepts: []
 incompatible_with: [strategy]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Analysis Paralysis

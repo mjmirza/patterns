@@ -1,14 +1,20 @@
 ---
 name: Given-When-Then
 slug: given-when-then
+id: pat.14.given-when-then
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [GWT, Four-Phase Test variant, Arrange-Act-Assert (Given-Then framing)]
 first_described: "Daniel Terhorst-North and Chris Matts, early 2000s, as part of Behavior-Driven Development"
 maturity: canonical
-related: [test-double, page-object, builder, four-phase-test]
+related: [builder, four-phase-test]
+related_concepts: [test-double, page-object]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Given-When-Then

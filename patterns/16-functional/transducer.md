@@ -1,14 +1,20 @@
 ---
 name: Transducer
 slug: transducer
+id: pat.16.transducer
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Xform, Reducing Function Transformer, Context Independent Transformation]
 first_described: "Rich Hickey 2014"
 maturity: established
-related: [foldable, function-composition, iterator, pipeline, reducer, stream]
-incompatible_with: [shared-stateful-step, order-dependent-parallel-step]
+related: [foldable, function-composition, iterator]
+related_concepts: [pipeline, reducer, stream]
+incompatible_with: []
+incompatible_concepts: [shared-stateful-step, order-dependent-parallel-step]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Transducer

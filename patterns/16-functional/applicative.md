@@ -1,14 +1,20 @@
 ---
 name: Applicative
 slug: applicative
+id: pat.16.applicative
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Applicative Functor, Idiom, Apply With Pure, Monoidal Functor]
 first_described: "McBride and Paterson 2008"
 maturity: canonical
-related: [functor, monad, traverse, validation, parser-combinator, free-applicative]
-incompatible_with: [dependent-sequencing, hidden-side-effects, unordered-error-reporting]
+related: [functor, monad, validation-applicative]
+related_concepts: [traverse, parser-combinator, free-applicative]
+incompatible_with: []
+incompatible_concepts: [dependent-sequencing, hidden-side-effects, unordered-error-reporting]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Applicative

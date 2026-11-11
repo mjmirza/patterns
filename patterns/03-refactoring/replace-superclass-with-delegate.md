@@ -1,14 +1,20 @@
 ---
 name: Replace Superclass with Delegate
 slug: replace-superclass-with-delegate
+id: pat.03.replace-superclass-with-delegate
+kind: technique
 family: 03-refactoring
 category: Dealing with Inheritance
 aliases: [Replace Inheritance with Delegation, Replace Superclass with Delegation]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [replace-subclass-with-delegate, extract-class, move-function, inline-class, adapter, decorator, composition-over-inheritance]
+related_concepts: []
 incompatible_with: [extract-superclass, pull-up-method, collapse-hierarchy]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Superclass with Delegate

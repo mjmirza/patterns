@@ -1,14 +1,20 @@
 ---
 name: Ubiquitous Language
 slug: ubiquitous-language
+id: pat.11.ubiquitous-language
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic
 aliases: [Common Language, Shared Domain Vocabulary]
 first_described: "Evans 2003"
 maturity: canonical
-related: [bounded-context, aggregate, domain-events, anti-corruption-layer, context-mapping]
+related: [bounded-context, 10-microservices/aggregate, 11-domain-driven-design/aggregate, 10-microservices/domain-event, 11-domain-driven-design/domain-event, anti-corruption-layer, context-map]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Ubiquitous Language

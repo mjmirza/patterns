@@ -1,13 +1,20 @@
 ---
 name: Shadow Traffic
 slug: shadow-traffic
+id: pat.20.shadow-traffic
+kind: pattern
 family: 20-release-deployment
 maturity: canonical
 category: Deployment
 aliases: [Traffic Mirroring, Dark Traffic, Traffic Shadowing]
 first_described: 'Istio traffic mirroring documentation; Envoy Proxy RequestMirrorPolicy documentation'
 related: [canary-release, blue-green-deployment]
-verified: true
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
+verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Shadow Traffic

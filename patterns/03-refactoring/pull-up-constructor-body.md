@@ -1,14 +1,20 @@
 ---
 name: Pull Up Constructor Body
 slug: pull-up-constructor-body
+id: pat.03.pull-up-constructor-body
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Extract Superclass Constructor, Pull Up Constructor]
 first_described: "Fowler 2018"
 maturity: canonical
-related: [pull-up-field, pull-up-method, extract-superclass, collapse-hierarchy, replace-inheritance-with-delegation]
+related: [pull-up-field, pull-up-method, extract-superclass, collapse-hierarchy, replace-subclass-with-delegate]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Pull Up Constructor Body

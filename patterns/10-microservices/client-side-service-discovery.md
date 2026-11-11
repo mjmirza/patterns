@@ -1,14 +1,20 @@
 ---
 name: Client-side Service Discovery
 slug: client-side-service-discovery
+id: pat.10.client-side-service-discovery
+kind: pattern
 family: 10-microservices
 category: Communication
 aliases: [Client-side Discovery, Client-driven Load Balancing]
 first_described: "Richardson 2018"
 maturity: canonical
 related: [server-side-discovery, api-gateway, self-registration, third-party-registration, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Client-side Service Discovery

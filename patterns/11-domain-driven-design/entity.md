@@ -1,14 +1,20 @@
 ---
 name: Entity
 slug: entity
+id: pat.11.entity
+kind: pattern
 family: 11-domain-driven-design
 category: Tactical Modeling
 aliases: [Domain Entity, Identity Object, Reference Object]
 first_described: "Evans 2003"
 maturity: canonical
-related: [value-object, aggregate, identity-field, repository, factory]
+related: [06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, 10-microservices/aggregate, 11-domain-driven-design/aggregate, identity-field, repository, factory]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Entity

@@ -1,14 +1,20 @@
 ---
 name: Event-Carried State Transfer
 slug: event-carried-state-transfer
+id: pat.05.event-carried-state-transfer
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Data Change Events, Event-Carried State, ECST]
 first_described: "Martin Fowler 2017"
 maturity: established
-related: [event-notification, event-sourcing, cqrs, materialized-view, saga, publish-subscribe, change-data-capture]
+related: [event-sourcing, cqrs, materialized-view, saga, publisher-subscriber, change-data-capture]
+related_concepts: [event-notification]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Event-Carried State Transfer

@@ -1,14 +1,20 @@
 ---
 name: Supply Chain SBOM
 slug: supply-chain-sbom
+id: pat.15.supply-chain-sbom
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Software Bill of Materials, SBOM, Dependency Inventory, Component Inventory]
 first_described: "NTIA multistakeholder process 2021; Executive Order 14028 2021"
 maturity: established
-related: [dependency-pinning, vulnerability-management, audit-log, provenance-attestation, secrets-management, least-privilege]
-incompatible_with: [opaque-binary-release, unchecked-vendoring, dependency-obscurity]
+related: [audit-log, secrets-management, least-privilege]
+related_concepts: [dependency-pinning, vulnerability-management, provenance-attestation]
+incompatible_with: []
+incompatible_concepts: [opaque-binary-release, unchecked-vendoring, dependency-obscurity]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Supply Chain SBOM

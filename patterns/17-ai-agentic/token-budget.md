@@ -1,14 +1,20 @@
 ---
 name: Token Budget
 slug: token-budget
+id: pat.17.token-budget
+kind: pattern
 family: 17-ai-agentic
 category: AI/Agentic
 aliases: [Context Budget, Context Window Budget, Token Allocation, Prompt Budget]
 first_described: "no single publication, an engineering practice that matured alongside per-token LLM billing and finite context windows, 2020 to 2024"
 maturity: established
-related: [agent-memory, react, reflexion, chunking-strategies, hybrid-search, graphrag, model-context-protocol]
+related: [agent-memory, react-prompting, reflexion, chunking-strategies, hybrid-search, graphrag, model-context-protocol]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Token Budget

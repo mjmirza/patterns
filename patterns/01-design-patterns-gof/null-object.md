@@ -1,14 +1,20 @@
 ---
 name: Null Object
 slug: null-object
+id: pat.01.null-object
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Active Nothing, No-Op Object]
 first_described: "Woolf, in Martin, Riehle, Buschmann (eds.), Pattern Languages of Program Design 3, 1998"
 maturity: canonical
 related: [strategy, state, special-case]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Null Object

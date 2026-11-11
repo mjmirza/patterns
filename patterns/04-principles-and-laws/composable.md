@@ -1,14 +1,20 @@
 ---
 name: Composable
 slug: composable
+id: pat.04.composable
+kind: principle
 family: 04-principles-and-laws
 category: Design Principle
 aliases: [Composability, Compositionality, Plug Compatibility, Orthogonality of Interface]
 first_described: "M. D. McIlroy 1968, formalized as a software design goal in M. D. McIlroy, E. N. Pinson, B. A. Tague, Unix Time-Sharing System Foreword, Bell System Technical Journal, 1978"
 maturity: canonical
-related: [composition-over-inheritance, single-responsibility-principle, interface-segregation-principle, pipe-and-filter, decorator, strategy, microservices, low-coupling, high-cohesion]
+related: [composition-over-inheritance, single-responsibility-principle, interface-segregation-principle, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, decorator, strategy, microservices-architecture, low-coupling, high-cohesion]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Composable

@@ -1,14 +1,20 @@
 ---
 name: Twin
 slug: twin
+id: pat.01.twin
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: []
 first_described: "Hanspeter Moessenboeck, Twin, A Design Pattern for Modeling Multiple Inheritance, University of Linz, presented at PSI 99, published in Perspectives of System Informatics, LNCS volume 1755, Springer, 2000, pages 358 to 369"
 maturity: contested
 related: [adapter, bridge, decorator]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

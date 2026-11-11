@@ -1,14 +1,20 @@
 ---
 name: Service Stub
 slug: service-stub
+id: pat.06.service-stub
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Patterns
 aliases: [Test Stub, Stub Server]
 first_described: "David Rice, in Martin Fowler, Patterns of Enterprise Application Architecture, Addison-Wesley, 2002"
 maturity: canonical
 related: [gateway, separated-interface, layer-supertype, remote-facade, registry, stub, fake, mock, testcontainers, contract-test, adapter, proxy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service Stub

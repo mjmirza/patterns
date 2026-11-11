@@ -1,14 +1,20 @@
 ---
 name: Magic Numbers
 slug: magic-numbers
+id: pat.18.magic-numbers
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Magic Literals, Unnamed Numeric Constant, Literal Constant Smell, Magic Constant]
 first_described: "McConnell 1993 (Code Complete, 1st edition); catalogued as a refactoring target by Fowler 1999"
 maturity: canonical
-related: [replace-magic-literal, extract-constant, enum-pattern, configuration-object, value-object]
+related: [replace-magic-literal, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object]
+related_concepts: [extract-constant, enum-pattern, configuration-object]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Magic Numbers

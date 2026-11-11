@@ -1,14 +1,20 @@
 ---
 name: Snowflake Schema
 slug: snowflake-schema
+id: pat.12.snowflake-schema
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Normalized Star Schema, Snowflaked Dimensions]
 first_described: "Dimensional modeling terminology tracing to Ralph Kimball's work in the 1990s, formalized as a named schema shape in vendor and RDBMS documentation through the following decade"
 maturity: canonical
 related: [medallion-architecture, data-vault, data-mesh, lambda-architecture, kappa-architecture]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Snowflake Schema

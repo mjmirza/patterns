@@ -1,14 +1,20 @@
 ---
 name: Queue-Based Load Leveling
 slug: queue-based-load-leveling
+id: pat.08.queue-based-load-leveling
+kind: pattern
 family: 08-cloud-distributed
 category: Resilience and Traffic Management
 aliases: [Load Leveling, Elastic Queue, Queue-Based Buffering, Smoothing Buffer]
 first_described: "Homer, Sharp, Brader, Narumoto, Swanson. Cloud Design Patterns. Microsoft patterns & practices, 2014"
 maturity: canonical
-related: [rate-limiting, bulkhead, circuit-breaker, retry, publisher-subscriber, dead-letter-queue, backpressure, load-shedding, cqrs]
-incompatible_with: [synchronous-request-response]
+related: [rate-limiting, bulkhead, circuit-breaker, retry, publisher-subscriber, dead-letter-channel, dead-letter-topic, backpressure, cqrs]
+related_concepts: [load-shedding]
+incompatible_with: []
+incompatible_concepts: [synchronous-request-response]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Queue-Based Load Leveling

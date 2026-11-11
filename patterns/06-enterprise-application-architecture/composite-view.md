@@ -1,14 +1,20 @@
 ---
 name: Composite View
 slug: composite-view
+id: pat.06.composite-view
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Enterprise Application Architecture
 aliases: [Template View Composition, Modular View Assembly]
 first_described: "Deepak Alur, John Crupi, Dan Malks, Core J2EE Patterns, 2nd Edition, Prentice Hall, 2003, ISBN 0-13-142246-4"
 maturity: established
 related: [composite, view-helper]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Composite View

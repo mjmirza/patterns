@@ -1,14 +1,20 @@
 ---
 name: GraphRAG
 slug: graphrag
+id: pat.17.graphrag
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Graph RAG, Graph-based Retrieval Augmented Generation, Knowledge Graph RAG]
 first_described: "Edge, Trinh, Cheng, Bradley, Chao, Mody, Truitt, Metropolitansky, Ness, Larson 2024"
 maturity: emerging
 related: [retrieval-augmented-generation, orchestrator-worker, map-reduce, cache-aside, strategy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # GraphRAG

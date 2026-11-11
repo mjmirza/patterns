@@ -1,14 +1,20 @@
 ---
 name: Message Expiration
 slug: message-expiration
+id: pat.07.message-expiration
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Time to Live, TTL Messaging, Message TTL]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [dead-letter-channel, guaranteed-delivery, invalid-message-channel, publish-subscribe-channel, request-reply, transactional-client]
+related: [dead-letter-channel, guaranteed-delivery, invalid-message-channel, publisher-subscriber, request-reply, transactional-client]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Message Expiration

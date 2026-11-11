@@ -1,14 +1,20 @@
 ---
 name: Unix Philosophy (CUPID)
 slug: unix-philosophy-cupid
+id: pat.04.unix-philosophy-cupid
+kind: principle
 family: 04-principles-and-laws
 category: Design Principle
 aliases: [The U in CUPID, Do One Thing Well, Narrow Interface Principle]
 first_described: "Daniel Terhorst-North, CUPID. for joyful coding, dannorth.net, 10 February 2022, drawing on M. D. McIlroy, quoted in Peter H. Salus, A Quarter Century of UNIX, Addison-Wesley, 1994, chapter 2, and dated to a 1978 internal Bell Labs memorandum"
 maturity: established
-related: [composable, single-responsibility-principle, interface-segregation-principle, pipes-filters, keep-it-simple, low-coupling, high-cohesion, you-are-not-gonna-need-it, separation-of-concerns]
+related: [composable, single-responsibility-principle, interface-segregation-principle, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, keep-it-simple, low-coupling, high-cohesion, you-are-not-gonna-need-it, separation-of-concerns]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Unix Philosophy (CUPID)

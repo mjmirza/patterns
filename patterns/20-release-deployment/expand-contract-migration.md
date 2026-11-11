@@ -1,13 +1,20 @@
 ---
 name: Expand-Contract Migration
 slug: expand-contract-migration
+id: pat.20.expand-contract-migration
+kind: pattern
 family: 20-release-deployment
 maturity: canonical
 category: Deployment
 aliases: [Parallel Change, Expand and Contract, Expand Contract Pattern]
 first_described: 'Martin Fowler, ParallelChange bliki article; Ambler and Sadalage, Refactoring Databases'
 related: [branch-by-abstraction, feature-toggle]
-verified: true
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
+verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Expand-Contract Migration

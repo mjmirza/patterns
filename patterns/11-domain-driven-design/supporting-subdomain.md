@@ -1,14 +1,20 @@
 ---
 name: Supporting Subdomain
 slug: supporting-subdomain
+id: pat.11.supporting-subdomain
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Supporting Domain, Supporting Component]
 first_described: "Evans 2003, formalized as a three-way split by Vernon 2013"
 maturity: canonical
 related: [bounded-context, context-map, ubiquitous-language, anti-corruption-layer, shared-kernel, published-language]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Supporting Subdomain

@@ -1,14 +1,20 @@
 ---
 name: Inference-Time Scaling
 slug: inference-time-scaling
+id: pat.17.inference-time-scaling
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Test-Time Compute Scaling, Compute-Optimal Inference]
 first_described: "Snell, Lee, Xu, Kumar, arXiv 2408.03314"
 maturity: established
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Inference-Time Scaling

@@ -1,14 +1,20 @@
 ---
 name: Aggregate
 slug: aggregate
+id: pat.10.aggregate
+kind: pattern
 family: 10-microservices
 category: Domain Modeling
 aliases: [Aggregate Root, DDD Aggregate, Consistency Boundary, Transactional Boundary]
 first_described: "Evans 2003, tactical pattern chapter; formalized for microservice boundaries by Richardson 2018"
 maturity: canonical
-related: [decompose-by-subdomain, saga, cqrs, event-sourcing, database-per-service, repository, optimistic-offline-lock, domain-event]
+related: [decompose-by-subdomain, saga, cqrs, event-sourcing, database-per-service, repository, optimistic-offline-lock, 10-microservices/domain-event, 11-domain-driven-design/domain-event]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Aggregate

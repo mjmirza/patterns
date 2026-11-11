@@ -1,14 +1,20 @@
 ---
 name: Error Boundary
 slug: error-boundary
+id: pat.13.error-boundary
+kind: pattern
 family: 13-frontend-ui
 category: Error Handling
 aliases: [componentDidCatch, getDerivedStateFromError]
 first_described: "React documentation, Error Boundaries"
 maturity: canonical
 related: [skeleton-and-suspense, optimistic-ui]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Error Boundary

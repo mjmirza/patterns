@@ -1,14 +1,20 @@
 ---
 name: Spaghetti Code
 slug: spaghetti-code
+id: pat.18.spaghetti-code
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Rat's Nest Code, Kangaroo Code, Pretzel Logic, Ravioli Code (transitional variant)]
 first_described: "Hopkins 1972 (earliest documented use); Conway 1978 and Noll 1979 (named in book titles)"
 maturity: canonical
-related: [big-ball-of-mud, god-object, structured-programming, extract-method, guard-clauses, state-pattern, strategy]
-incompatible_with: [structured-programming, guard-clauses]
+related: [11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud, god-object, extract-function, replace-nested-conditional-with-guard-clauses, state, strategy]
+related_concepts: [structured-programming]
+incompatible_with: [replace-nested-conditional-with-guard-clauses]
+incompatible_concepts: [structured-programming]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Spaghetti Code

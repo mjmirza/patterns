@@ -1,14 +1,20 @@
 ---
 name: Pessimistic Offline Lock
 slug: pessimistic-offline-lock
+id: pat.06.pessimistic-offline-lock
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Concurrency
 aliases: [Exclusive Checkout, Lock Manager Pattern, Editing Lock]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [optimistic-offline-lock, unit-of-work, coarse-grained-lock, identity-map]
+related_concepts: []
 incompatible_with: [optimistic-offline-lock]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Pessimistic Offline Lock

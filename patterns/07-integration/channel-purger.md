@@ -1,14 +1,20 @@
 ---
 name: Channel Purger
 slug: channel-purger
+id: pat.07.channel-purger
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Queue Purger, Channel Cleaner]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [test-message, point-to-point-channel, invalid-message-channel, dead-letter-channel, message-store, control-bus]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

@@ -1,14 +1,20 @@
 ---
 name: Two Step View
 slug: two-step-view
+id: pat.06.two-step-view
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Two Phase Rendering, Logical Page Then Format]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [transform-view, template-view, model-view-controller, front-controller, page-controller]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Two Step View

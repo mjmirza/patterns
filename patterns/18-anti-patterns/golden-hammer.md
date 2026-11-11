@@ -1,14 +1,20 @@
 ---
 name: Golden Hammer
 slug: golden-hammer
+id: pat.18.golden-hammer
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Law of the Instrument, Maslow's Hammer, Silver Bullet Syndrome, Familiar Tool Overuse]
 first_described: "Brown, Malveau, McCormick, Mowbray 1998"
 maturity: canonical
-related: [strategy, template-method, technical-debt, speculative-generality, big-ball-of-mud]
+related: [strategy, template-method, speculative-generality, 11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud]
+related_concepts: [technical-debt]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Golden Hammer

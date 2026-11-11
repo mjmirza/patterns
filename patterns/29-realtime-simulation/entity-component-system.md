@@ -1,14 +1,20 @@
 ---
 name: Entity-Component-System
 slug: entity-component-system
+id: pat.29.entity-component-system
+kind: pattern
 family: 29-realtime-simulation
 category: Real-Time Simulation
 aliases: [ECS, Component Pattern, Composition Over Inheritance]
 first_described: "Robert Nystrom's Component chapter in Game Programming Patterns is the closest formalized ancestor; the stricter systems-as-separate-logic ECS architecture is credited across the games industry to multiple independent lineages rather than one named origin, and this entry reports that plurality honestly rather than asserting a single first"
 maturity: established
 related: [game-loop]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Entity-Component-System

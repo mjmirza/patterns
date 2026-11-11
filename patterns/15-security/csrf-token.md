@@ -1,14 +1,20 @@
 ---
 name: CSRF Token
 slug: csrf-token
+id: pat.15.csrf-token
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Anti-CSRF Token, XSRF Token, Request Verification Token, Authenticity Token, Synchronizer Token]
 first_described: "OWASP community guidance, early 2000s"
 maturity: established
 related: [session-management, complete-mediation, secure-by-default, defense-in-depth, fail-securely, token-based-authentication]
-incompatible_with: [bearer-only-browser-session, state-changing-get, wildcard-credentialed-cors]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [bearer-only-browser-session, state-changing-get, wildcard-credentialed-cors]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # CSRF Token

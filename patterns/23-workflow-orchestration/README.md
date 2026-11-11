@@ -2,19 +2,19 @@
 
 Origin. Durable execution literature
 
-6 entries, 42,723 words. Every entry carries all 18
+6 entries, 42,803 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## workflow orchestration
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Compensation Handler](compensation-handler.md) | canonical | 6,596 | The problem this pattern solves is architectural, not merely inconvenient. |
-| [Durable Execution](durable-execution.md) | established | 6,489 | A long running process, one that spans minutes, days, or months of real wall clock time and moves through many sequential steps, will eventually crash, get killed by a deploy, or ... |
-| [Human Task](human-task.md) | established | 7,976 | AWS states the rationale for pausing a workflow for a human directly, in its own product documentation, as one of exactly three named reasons a callback task exists. |
-| [Outbox Inbox Pair](outbox-inbox-pair.md) | established | 6,190 | A service in a distributed system commonly needs to do two things when a business fact changes, update its own database and tell the rest of the system by publishing a message. |
-| [State Machine Workflow](state-machine-workflow.md) | canonical | 8,225 | Spring Statemachine's own reference documentation states the origin story for this pattern in its Background section directly. |
-| [Workflow Engine](workflow-engine.md) | established | 7,247 | A process that spans more than one service call, or that waits on a timer or a human response, cannot safely keep its state only in a running process's memory. |
+| [Compensation Handler](compensation-handler.md) | canonical | 6,610 | The problem this pattern solves is architectural, not merely inconvenient. |
+| [Durable Execution](durable-execution.md) | established | 6,503 | A long running process, one that spans minutes, days, or months of real wall clock time and moves through many sequential steps, will eventually crash, get killed by a deploy, or ... |
+| [Human Task](human-task.md) | established | 7,990 | AWS states the rationale for pausing a workflow for a human directly, in its own product documentation, as one of exactly three named reasons a callback task exists. |
+| [Outbox Inbox Pair](outbox-inbox-pair.md) | established | 6,204 | A service in a distributed system commonly needs to do two things when a business fact changes, update its own database and tell the rest of the system by publishing a message. |
+| [State Machine Workflow](state-machine-workflow.md) | canonical | 8,237 | Spring Statemachine's own reference documentation states the origin story for this pattern in its Background section directly. |
+| [Workflow Engine](workflow-engine.md) | established | 7,259 | A process that spans more than one service call, or that waits on a timer or a human response, cannot safely keep its state only in a running process's memory. |
 
 ## Reading order
 

@@ -1,14 +1,20 @@
 ---
 name: You Aren't Gonna Need It
 slug: you-are-not-gonna-need-it
+id: pat.04.you-are-not-gonna-need-it
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [YAGNI, You Ain't Gonna Need It, "You're Not Gonna Need It"]
 first_described: "Kent Beck and Chet Hendrickson, C3 project, 1996; Ron Jeffries, xprog.com, 1998; Jeffries, Anderson, Hendrickson, Extreme Programming Installed, 2001"
 maturity: canonical
 related: [keep-it-simple, do-not-repeat-yourself, single-responsibility-principle, open-closed-principle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # You Aren't Gonna Need It

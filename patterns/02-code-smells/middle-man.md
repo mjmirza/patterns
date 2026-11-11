@@ -1,14 +1,20 @@
 ---
 name: Middle Man
 slug: middle-man
+id: pat.02.middle-man
+kind: smell
 family: 02-code-smells
 category: Code Smell
 aliases: [Excessive Delegation, Delegation Overload]
 first_described: "Fowler, Beck 1999"
 maturity: canonical
 related: [feature-envy, facade, proxy, decorator, law-of-demeter, hide-delegate]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Middle Man

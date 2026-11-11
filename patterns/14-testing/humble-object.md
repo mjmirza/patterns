@@ -1,14 +1,20 @@
 ---
 name: Humble Object
 slug: humble-object
+id: pat.14.humble-object
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Humble Dialog Box, Humble View, Humble Controller, Passive View (specialization)]
 first_described: "Feathers 2001 (Humble Dialog Box), generalized by Meszaros 2007"
 maturity: canonical
 related: [fake, mock, stub, dummy, object-mother, four-phase-test, given-when-then]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-04
+last_reviewed: 2026-08-04
+next_review_due: 2027-01-31
 ---
 
 # Humble Object

@@ -1,14 +1,20 @@
 ---
 name: Monolithic Persistence
 slug: monolithic-persistence
+id: pat.18.monolithic-persistence
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Integration Database, Shared Database, One Big Database, God Schema]
 first_described: "Yourdon and Constantine 1979 (common coupling); Fowler 2004 (Integration Database)"
 maturity: canonical
 related: [repository, unit-of-work, database-per-service, saga, strangler-fig, anti-corruption-layer]
-incompatible_with: [database-per-service, event-sourcing-with-service-owned-store]
+related_concepts: []
+incompatible_with: [database-per-service]
+incompatible_concepts: [event-sourcing-with-service-owned-store]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Monolithic Persistence

@@ -1,14 +1,20 @@
 ---
 name: Service Instance per VM
 slug: service-instance-per-vm
+id: pat.10.service-instance-per-vm
+kind: pattern
 family: 10-microservices
 category: Deployment
 aliases: [Service per VM, One Service per Host, Single Service per Machine Image, AMI-per-service]
 first_described: "Chris Richardson, microservices.io, deployment patterns, and Microservices Patterns, Manning, 2019"
 maturity: established
-related: [service-per-container, sidecar, ambassador, health-check-api, self-registration, service-registry, circuit-breaker]
+related: [service-instance-per-container, sidecar, ambassador, health-check-api, self-registration, service-registry, circuit-breaker]
+related_concepts: []
 incompatible_with: [service-instance-per-container, serverless-deployment]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service Instance per VM

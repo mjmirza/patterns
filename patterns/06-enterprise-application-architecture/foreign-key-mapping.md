@@ -1,14 +1,20 @@
 ---
 name: Foreign Key Mapping
 slug: foreign-key-mapping
+id: pat.06.foreign-key-mapping
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Structural
 aliases: [Association Mapping, Reference Mapping]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [identity-field, association-table-mapping, dependent-mapping, lazy-load, unit-of-work, data-mapper]
+related_concepts: []
 incompatible_with: [serialized-lob]
+incompatible_concepts: []
 verified: 2026-08-11
+last_reviewed: 2026-08-11
+next_review_due: 2027-02-07
 ---
 
 # Foreign Key Mapping

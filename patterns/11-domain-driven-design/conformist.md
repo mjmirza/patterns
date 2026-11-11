@@ -1,14 +1,20 @@
 ---
 name: Conformist
 slug: conformist
+id: pat.11.conformist
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [CF, Conformist Relationship]
 first_described: "Evans 2003"
 maturity: canonical
 related: [bounded-context, context-map, anticorruption-layer, shared-kernel, customer-supplier, open-host-service, published-language]
+related_concepts: []
 incompatible_with: [customer-supplier]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Conformist

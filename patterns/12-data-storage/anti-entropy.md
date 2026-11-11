@@ -1,14 +1,20 @@
 ---
 name: Anti-Entropy
 slug: anti-entropy
+id: pat.12.anti-entropy
+kind: pattern
 family: 12-data-storage
 category: Data Structure
 aliases: [Anti-Entropy Repair, Replica Synchronization, Background Repair, Active Anti-Entropy]
 first_described: "Demers, Greene, Hauser, Irish, Larson, Shenker, Sturgis, Swinehart, Terry 1987"
 maturity: canonical
 related: [merkle-tree, gossip-protocol, crdt, quorum, leaderless-replication, multi-leader-replication, vector-clock, bloom-filter]
-incompatible_with: [strong-consistency-via-consensus]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [strong-consistency-via-consensus]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Anti-Entropy

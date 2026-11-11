@@ -1,14 +1,20 @@
 ---
 name: Property-Based Test
 slug: property-based-test
+id: pat.14.property-based-test
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Generative Testing, QuickCheck-Style Testing, PBT]
 first_described: "Claessen, Hughes 2000"
 maturity: canonical
-related: [contract-test, mutation-testing, fuzz-testing, test-driven-development, golden-master-test]
+related: [contract-test, mutation-test, fuzz-testing, golden-master]
+related_concepts: [test-driven-development]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Property-Based Test

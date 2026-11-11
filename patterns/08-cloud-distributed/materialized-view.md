@@ -1,14 +1,20 @@
 ---
 name: Materialized View
 slug: materialized-view
+id: pat.08.materialized-view
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed
 aliases: [Precomputed View, Materialized Query Table, Denormalized Read Model]
 first_described: "Blakeley, Larson, Tompa 1986 (incremental view maintenance algorithm); Microsoft patterns and practices, Cloud Design Patterns, 2014 (cloud architecture catalog name)"
 maturity: canonical
 related: [cache-aside, cqrs, event-sourcing, read-through-cache, write-through-cache]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Materialized View

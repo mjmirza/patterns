@@ -1,14 +1,20 @@
 ---
 name: Message Store
 slug: message-store
+id: pat.07.message-store
+kind: pattern
 family: 07-integration
 category: Enterprise Integration
 aliases: [Message Log, Message Journal, Audit Store]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [wire-tap, control-bus, message-history, claim-check, guaranteed-delivery]
+related: [wire-tap, control-bus, message-history, 07-integration/claim-check, 08-cloud-distributed/claim-check, guaranteed-delivery]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Message Store

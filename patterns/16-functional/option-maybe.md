@@ -1,14 +1,20 @@
 ---
 name: Option Maybe
 slug: option-maybe
+id: pat.16.option-maybe
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Option, Maybe, Optional, Some None, Just Nothing, Nullable Union]
 first_described: "standard functional sum-type idiom"
 maturity: established
 related: [result-either, monad, applicative, functor, null-object]
-incompatible_with: [unchecked-null-flow, sentinel-value, exception-only-flow]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [unchecked-null-flow, sentinel-value, exception-only-flow]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Option Maybe

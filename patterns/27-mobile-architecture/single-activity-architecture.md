@@ -1,14 +1,20 @@
 ---
 name: Single-Activity Architecture
 slug: single-activity-architecture
+id: pat.27.single-activity-architecture
+kind: pattern
 family: 27-mobile-architecture
 category: Structural
 aliases: [Single Activity, Fragment-Only Navigation, One-Activity Pattern]
 first_described: 'Google Android Developers, Navigation component guidance'
 maturity: canonical
 related: [feature-modules, unidirectional-data-flow]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Single-Activity Architecture

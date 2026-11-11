@@ -1,14 +1,20 @@
 ---
 name: Pull Up Method
 slug: pull-up-method
+id: pat.03.pull-up-method
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Pull Up Function, Move Method to Superclass]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [pull-up-field, pull-up-constructor-body, extract-superclass, collapse-hierarchy, push-down-method, move-function]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Pull Up Method

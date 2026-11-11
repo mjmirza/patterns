@@ -1,14 +1,20 @@
 ---
 name: Move Field
 slug: move-field
+id: pat.03.move-field
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Move Member, Relocate Field, Move Attribute]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [move-function, extract-class, inline-class, hide-delegate, change-reference-to-value]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Move Field

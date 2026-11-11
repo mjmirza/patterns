@@ -1,14 +1,20 @@
 ---
 name: Inline Function
 slug: inline-function
+id: pat.03.inline-function
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Inline Method, Merge Function into Caller, Remove Indirection]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [extract-function, inline-class, inline-variable, replace-function-with-command, combine-functions-into-transform]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Inline Function

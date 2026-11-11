@@ -1,14 +1,20 @@
 ---
 name: Mapper
 slug: mapper
+id: pat.06.mapper
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Pattern, Object-Relational Behavioral
 aliases: [Mapper Layer, Adapter Layer, Bridging Object]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [data-mapper, gateway, unit-of-work, identity-map, facade, adapter, metadata-mapping]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

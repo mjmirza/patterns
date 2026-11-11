@@ -1,14 +1,20 @@
 ---
 name: Routing
 slug: routing
+id: pat.17.routing
+kind: pattern
 family: 17-ai-agentic
 category: Workflow
 aliases: [Model Router, Content-Based Router (agentic variant), Classify-and-Dispatch, Intent Routing, LLM Router]
 first_described: "Anthropic engineering blog, Building Effective Agents, 2024"
 maturity: canonical
-related: [prompt-chaining, orchestrator-workers, evaluator-optimizer, chain-of-responsibility, fallback-chain]
+related: [prompt-chaining, orchestrator-worker, evaluator-optimizer, chain-of-responsibility, fallback-chain]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Routing

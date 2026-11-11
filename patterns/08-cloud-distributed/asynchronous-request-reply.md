@@ -1,14 +1,20 @@
 ---
 name: Asynchronous Request-Reply
 slug: asynchronous-request-reply
+id: pat.08.asynchronous-request-reply
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud Distributed
 aliases: [HTTP Polling Pattern, Poll and Redirect, 202 Accepted Pattern, Async HTTP Pattern]
 first_described: "Microsoft, Azure Architecture Center, Cloud Design Patterns"
 maturity: canonical
-related: [queue-based-load-leveling, competing-consumers, saga, circuit-breaker, retry, throttling, valet-key]
+related: [queue-based-load-leveling, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, saga, circuit-breaker, retry, throttling, valet-key]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Asynchronous Request-Reply

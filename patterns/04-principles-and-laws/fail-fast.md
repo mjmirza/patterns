@@ -1,14 +1,20 @@
 ---
 name: Fail Fast
 slug: fail-fast
+id: pat.04.fail-fast
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Crash Early, Offensive Programming, Let It Crash]
 first_described: "Popularized by James Shore 2004 and Martin Fowler 2004, with roots in Design by Contract (Bertrand Meyer 1986) and Erlang's supervisor model (Joe Armstrong 2003)"
 maturity: established
-related: [circuit-breaker, guard-clause, design-by-contract, retry-with-backoff, bulkhead]
-incompatible_with: [robustness-principle]
+related: [circuit-breaker, replace-nested-conditional-with-guard-clauses, retry, bulkhead]
+related_concepts: [design-by-contract]
+incompatible_with: [postel-law]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Fail Fast

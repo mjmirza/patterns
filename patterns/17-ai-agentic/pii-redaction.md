@@ -1,14 +1,20 @@
 ---
 name: PII Redaction
 slug: pii-redaction
+id: pat.17.pii-redaction
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [PII Scrubbing, PII Masking, De-identification, Sensitive Data Redaction, Data Sanitization Guardrail]
 first_described: "Sweeney 2002 (k-anonymity, structured-data de-identification); HHS 45 CFR 164.514(b)(2) Safe Harbor 2000; OWASP LLM02 2025 edition, Sensitive Information Disclosure (agentic/LLM framing)"
 maturity: established
 related: [input-guardrails, output-guardrails, function-calling, structured-output, tool-result-caching, agent-memory, model-context-protocol, retrieval-augmented-generation, chunking-strategies]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # PII Redaction

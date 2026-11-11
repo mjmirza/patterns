@@ -1,14 +1,20 @@
 ---
 name: Communicating Sequential Processes
 slug: communicating-sequential-processes
+id: pat.09.communicating-sequential-processes
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [CSP, Process Calculus Concurrency, Channel-Based Concurrency]
 first_described: "Hoare 1978"
 maturity: canonical
-related: [actor-model, producer-consumer, pipeline, fan-out-fan-in, select-loop, worker-pool]
-incompatible_with: [shared-mutable-state-with-locks]
+related: [actor-model, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, pipeline-parallelism, thread-pool]
+related_concepts: [fan-out-fan-in, select-loop]
+incompatible_with: []
+incompatible_concepts: [shared-mutable-state-with-locks]
 verified: 2026-08-14
+last_reviewed: 2026-08-14
+next_review_due: 2027-02-10
 ---
 
 # Communicating Sequential Processes

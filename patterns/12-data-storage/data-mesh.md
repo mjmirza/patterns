@@ -1,14 +1,20 @@
 ---
 name: Data Mesh
 slug: data-mesh
+id: pat.12.data-mesh
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Domain-Oriented Data Architecture, Decentralized Data Platform]
 first_described: "Zhamak Dehghani, ThoughtWorks, 2019"
 maturity: established
-related: [event-sourcing, cqrs, api-gateway, bounded-context, service-mesh, data-lakehouse]
-incompatible_with: [centralized-data-warehouse-as-sole-source-of-truth]
+related: [event-sourcing, cqrs, api-gateway, bounded-context, service-mesh]
+related_concepts: [data-lakehouse]
+incompatible_with: []
+incompatible_concepts: [centralized-data-warehouse-as-sole-source-of-truth]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Data Mesh

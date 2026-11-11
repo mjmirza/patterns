@@ -1,14 +1,20 @@
 ---
 name: Microservice Chassis
 slug: microservice-chassis
+id: pat.10.microservice-chassis
+kind: pattern
 family: 10-microservices
 category: Cross-Cutting Concerns
 aliases: [Service Chassis, Service Template Framework, Base Framework]
 first_described: "Richardson, microservices.io pattern catalog, popularized in Microservices Patterns, Manning, 2018"
 maturity: canonical
-related: [service-template, self-registration, third-party-registration, api-gateway, database-per-service, circuit-breaker, distributed-tracing]
+related: [self-registration, third-party-registration, api-gateway, database-per-service, circuit-breaker, distributed-tracing]
+related_concepts: [service-template]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Microservice Chassis

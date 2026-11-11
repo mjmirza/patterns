@@ -1,14 +1,20 @@
 ---
 name: Correlation ID
 slug: correlation-id
+id: pat.22.correlation-id
+kind: pattern
 family: 22-observability
 category: Structural
 aliases: [Request ID, Activity ID, Trace ID (informal usage)]
 first_described: 'no single named originator; converged industry practice, formalized by the W3C Trace Context specification, 2020'
 maturity: canonical
 related: [correlation-identifier, structured-logging, span-and-trace-context-propagation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Correlation ID

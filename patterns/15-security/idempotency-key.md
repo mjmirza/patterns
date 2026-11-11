@@ -1,14 +1,20 @@
 ---
 name: Idempotency Key
 slug: idempotency-key
+id: pat.15.idempotency-key
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Idempotency-Key, Idempotency Token, Client Token, Request Idempotency Key, PayPal-Request-Id]
 first_described: "Common API practice before the expired IETF HTTPAPI Internet-Draft"
 maturity: established
 related: [retry, idempotent-consumer, transactional-outbox, saga, audit-log, rate-limiter]
-incompatible_with: [ambient-authority, non-atomic-check-then-act, unbounded-replay-cache]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [ambient-authority, non-atomic-check-then-act, unbounded-replay-cache]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Idempotency Key

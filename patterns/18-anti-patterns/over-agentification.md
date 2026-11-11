@@ -1,14 +1,20 @@
 ---
 name: Over-Agentification
 slug: over-agentification
+id: pat.18.over-agentification
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Agent Sprawl, Agentic Overengineering, Agent Theater, Multi-Agent Sprawl]
 first_described: "Folk knowledge, LLM systems engineering practice, no single named originator"
 maturity: emerging
 related: [golden-hammer, inner-platform-effect, distributed-monolith, chatty-i-o, not-invented-here, service-locator]
-incompatible_with: [pipes-and-filters, transaction-script, simple-factory, rules-engine, workflow]
+related_concepts: []
+incompatible_with: [05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, transaction-script]
+incompatible_concepts: [simple-factory, rules-engine, workflow]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Over-Agentification

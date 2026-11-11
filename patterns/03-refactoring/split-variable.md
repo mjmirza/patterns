@@ -1,14 +1,20 @@
 ---
 name: Split Variable
 slug: split-variable
+id: pat.03.split-variable
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Split Temp, Split Temporary Variable, Remove Assignments to Parameters]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [rename-variable, extract-variable, inline-variable, replace-derived-variable-with-query, split-loop, slide-statements, extract-function]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Split Variable

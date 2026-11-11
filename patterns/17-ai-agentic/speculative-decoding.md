@@ -1,14 +1,20 @@
 ---
 name: Speculative Decoding
 slug: speculative-decoding
+id: pat.17.speculative-decoding
+kind: pattern
 family: 17-ai-agentic
 category: AI Inference & Serving
 aliases: [Speculative Sampling, Assisted Generation, Draft-Target Decoding]
 first_described: "Leviathan, Kalman, Matias 2023"
 maturity: canonical
 related: [prompt-caching-exact-prefix, inference-time-scaling, semantic-caching, token-budget]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

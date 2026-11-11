@@ -1,14 +1,20 @@
 ---
 name: Insider Trading
 slug: insider-trading
+id: pat.02.insider-trading
+kind: smell
 family: 02-code-smells
 category: Coupling
 aliases: [Inappropriate Intimacy (1999 name), Excessive Module Coupling]
 first_described: "Fowler 2018 (renaming Fowler and Beck 1999)"
 maturity: canonical
-related: [inappropriate-intimacy, feature-envy, shotgun-surgery, divergent-change, message-chains, middle-man, hide-delegate, move-method, extract-class]
+related: [inappropriate-intimacy, feature-envy, shotgun-surgery, divergent-change, message-chains, middle-man, hide-delegate, move-function, extract-class]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Insider Trading

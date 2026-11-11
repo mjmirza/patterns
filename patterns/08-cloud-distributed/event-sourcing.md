@@ -1,14 +1,20 @@
 ---
 name: Event Sourcing
 slug: event-sourcing
+id: pat.08.event-sourcing
+kind: pattern
 family: 08-cloud-distributed
 category: Data and Persistence
 aliases: [Event Log as System of Record, Event Store, Append-Only State]
 first_described: "Fowler 2005, Young 2010"
 maturity: established
-related: [cqrs, saga, outbox, materialized-view, snapshot, memento, command]
+related: [cqrs, saga, transactional-outbox, materialized-view, memento, command]
+related_concepts: [snapshot]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Event Sourcing

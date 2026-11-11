@@ -1,14 +1,20 @@
 ---
 name: Model-View-Controller
 slug: model-view-controller
+id: pat.05.model-view-controller
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [MVC, Model-View-Controller pattern, Smalltalk MVC]
 first_described: "Trygve Reenskaug, Xerox PARC, 1978-1979"
 maturity: canonical
 related: [observer, strategy, composite, front-controller, mediator, presentation-model]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Model-View-Controller

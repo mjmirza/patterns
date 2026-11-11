@@ -1,14 +1,20 @@
 ---
 name: Polling Loop
 slug: polling-loop
+id: pat.28.polling-loop
+kind: pattern
 family: 28-embedded-hardware
 category: Behavioral
 aliases: [Busy-Wait Loop, Spin Loop, Poll-and-Check]
 first_described: "Zephyr Project documentation, UART polling mode"
 maturity: canonical
 related: [interrupt-service-routine, watchdog-timer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Polling Loop

@@ -1,14 +1,20 @@
 ---
 name: Shared Database
 slug: shared-database
+id: pat.10.shared-database
+kind: pattern
 family: 10-microservices
 category: Integration
 aliases: [Shared Database Per Service, Integration Database, Database As Integration Point]
 first_described: "Richardson 2014, microservices.io pattern catalog"
 maturity: contested
 related: [database-per-service, saga, api-composition, cqrs, strangler-fig]
+related_concepts: []
 incompatible_with: [database-per-service]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Shared Database

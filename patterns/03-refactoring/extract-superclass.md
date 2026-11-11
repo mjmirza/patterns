@@ -1,14 +1,20 @@
 ---
 name: Extract Superclass
 slug: extract-superclass
+id: pat.03.extract-superclass
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Extract Base Class, Pull Up Common, Extract Parent]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [extract-class, extract-subclass, collapse-hierarchy, pull-up-field, pull-up-method, replace-inheritance-with-delegation]
+related: [extract-class, collapse-hierarchy, pull-up-field, pull-up-method, replace-subclass-with-delegate]
+related_concepts: [extract-subclass]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Extract Superclass

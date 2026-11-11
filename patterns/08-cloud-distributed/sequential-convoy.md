@@ -1,14 +1,20 @@
 ---
 name: Sequential Convoy
 slug: sequential-convoy
+id: pat.08.sequential-convoy
+kind: pattern
 family: 08-cloud-distributed
 category: Messaging and Integration
 aliases: [Convoy Pattern, Session-Based FIFO Processing, Partitioned Sequential Processing, Key-Ordered Consumer Pattern]
 first_described: "Microsoft Azure Architecture Center cloud design pattern catalog; earliest confirmed public documentation April 21, 2020 (docs.microsoft.com, Internet Archive capture); the mechanism it names was already in production use through Azure Service Bus message sessions before the catalog entry existed, and its problem framing descends from Hohpe and Woolf's Resequencer, Enterprise Integration Patterns, Addison-Wesley, 2003"
 maturity: established
-related: [competing-consumers, queue-based-load-leveling, priority-queue, publisher-subscriber, sharding, bulkhead, retry, throttling]
+related: [07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, queue-based-load-leveling, priority-queue, publisher-subscriber, sharding, bulkhead, retry, throttling]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Sequential Convoy
