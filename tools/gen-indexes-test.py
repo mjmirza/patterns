@@ -13,9 +13,7 @@ from pathlib import Path
 TOOLS = Path(__file__).resolve().parent
 sys.path.insert(0, str(TOOLS))
 
-spec = importlib.util.spec_from_file_location(
-    "gen_indexes", TOOLS / "gen-indexes.py"
-)
+spec = importlib.util.spec_from_file_location("gen_indexes", TOOLS / "gen-indexes.py")
 gen_indexes = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(gen_indexes)
 
@@ -33,7 +31,9 @@ class TestGenIndexes(unittest.TestCase):
         self.assertEqual(gen_indexes.field(block, "name"), "Strategy Pattern")
         self.assertEqual(gen_indexes.field(block, "category"), "Behavioral")
         self.assertEqual(gen_indexes.field(block, "maturity"), "canonical")
-        self.assertEqual(gen_indexes.field(block, "missing", "default_val"), "default_val")
+        self.assertEqual(
+            gen_indexes.field(block, "missing", "default_val"), "default_val"
+        )
 
     def test_first_intent_extraction_and_truncation(self):
         sample_entry = (
@@ -63,13 +63,37 @@ class TestGenIndexes(unittest.TestCase):
             "This problem statement occurs at the very end of the file with no trailing sections."
         )
         intent = gen_indexes.first_intent(sample_entry)
-        self.assertTrue(intent.startswith("This problem statement occurs at the very end"))
+        self.assertTrue(
+            intent.startswith("This problem statement occurs at the very end")
+        )
+
+    def test_first_intent_ignores_heading_inside_fence(self):
+        sample_entry = (
+            "## 2. Problem and context\n"
+            "Short.\n"
+            "```markdown\n"
+            "## Not the next section\n"
+            "```\n"
+            "The problem continues after the sample and should remain.\n"
+            "## 3. Forces\n"
+            "Later.\n"
+        )
+        intent = gen_indexes.first_intent(sample_entry)
+        self.assertIn("continues after the sample", intent)
 
     def test_load_planned(self):
         queue_file = self.tmp / "AUTHORING-QUEUE.json"
         queue_data = [
-            {"path": "patterns/01-design-patterns-gof/nonexistent-queued-test-pattern.md", "name": "Test Pattern", "reason": "Test reason"},
-            {"path": "patterns/01-design-patterns-gof/deferred-item.md", "name": "Deferred", "status": "deferred"},
+            {
+                "path": "patterns/01-design-patterns-gof/nonexistent-queued-test-pattern.md",
+                "name": "Test Pattern",
+                "reason": "Test reason",
+            },
+            {
+                "path": "patterns/01-design-patterns-gof/deferred-item.md",
+                "name": "Deferred",
+                "status": "deferred",
+            },
             {"path": "invalid-path/item.md", "name": "Invalid"},
         ]
         queue_file.write_text(json.dumps(queue_data), encoding="utf-8")
@@ -79,7 +103,9 @@ class TestGenIndexes(unittest.TestCase):
         try:
             planned = gen_indexes.load_planned()
             self.assertIn("01-design-patterns-gof", planned)
-            self.assertEqual(planned["01-design-patterns-gof"], [("Test Pattern", "Test reason")])
+            self.assertEqual(
+                planned["01-design-patterns-gof"], [("Test Pattern", "Test reason")]
+            )
         finally:
             gen_indexes.QUEUE = original_queue
 

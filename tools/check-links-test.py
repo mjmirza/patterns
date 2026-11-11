@@ -114,6 +114,41 @@ class CatalogueModelTest(unittest.TestCase):
             )
             self.assertEqual(errors, [])
 
+    def test_related_key_does_not_overwrite_related_concepts(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / "patterns" / "01-design-patterns-gof" / "command.md"
+            path.parent.mkdir(parents=True)
+            path.write_text(
+                "\n".join(
+                    [
+                        "---",
+                        "name: command",
+                        "slug: command",
+                        "family: 01-design-patterns-gof",
+                        "maturity: canonical",
+                        "related_concepts: [not-a-pattern]",
+                        "related: [strategy]",
+                        "incompatible_with: []",
+                        "verified: 2026-08-02",
+                        "---",
+                        "",
+                        "# command",
+                        "",
+                        "## 4. Applicability",
+                        "",
+                        "Use it when the case is real.",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            write_entry(root, "01-design-patterns-gof", "strategy", "")
+            index = model.build_index(root)
+            updated = model.rewrite_text(index.by_slug["command"][0], index)
+            self.assertIn("related: [strategy]", updated)
+            self.assertIn("related_concepts: [not-a-pattern]", updated)
+
     def test_broken_internal_link_is_reported(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

@@ -104,12 +104,26 @@ def field(block: str, key: str, default: str = "") -> str:
 def first_intent(text: str) -> str:
     # Dimension 2 opens on the problem, which is the useful one-line summary.
     # Dimension 1 opens on the canonical name, which says nothing.
-    m = re.search(r"^##\s*2\.[^\n]*\n(.*?)(?=^##\s|\Z)", text, re.M | re.S)
-    if not m:
+    lines = text.splitlines()
+    start = None
+    for index, line in enumerate(lines):
+        if re.match(r"^##\s*2\.", line):
+            start = index + 1
+            break
+    if start is None:
         return ""
+    captured: list[str] = []
+    fence = False
+    for line in lines[start:]:
+        if line.lstrip().startswith("```"):
+            fence = not fence
+            continue
+        if not fence and line.startswith("## "):
+            break
+        captured.append(line)
     body = "\n".join(
         ln
-        for ln in m.group(1).splitlines()
+        for ln in captured
         if ln.strip() and not ln.lstrip().startswith(("```", "|", ">", "#"))
     )
     flat = re.sub(r"\s+", " ", re.sub(r"[*_`\[\]]", "", body)).strip()

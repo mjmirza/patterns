@@ -419,7 +419,8 @@ def reviewed_dates(fields: dict[str, str], rel: str, root: Path) -> tuple[str, s
 def _set_line(lines: list[str], key: str, value: str, after: tuple[str, ...]) -> None:
     rendered = f"{key}: {value}"
     for index, line in enumerate(lines):
-        if line.startswith(f"{key}:"):
+        # Exact key. startswith("related:") also matches related_concepts.
+        if line.split(":", 1)[0] == key:
             lines[index] = rendered
             return
     insert_at = len(lines)

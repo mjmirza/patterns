@@ -345,7 +345,7 @@ def main() -> int:
     ts_results = check_ts_batch(ts_tasks) if ts_tasks else {}
 
     def process_file(
-        item: tuple[Path, list[tuple[int, str, str, int | None, int | None]]]
+        item: tuple[Path, list[tuple[int, str, str, int | None, int | None]]],
     ) -> list[tuple[Path, int, str, int, str]]:
         f, blocks = item
         file_results: list[tuple[Path, int, str, int, str]] = []
@@ -377,12 +377,17 @@ def main() -> int:
             file_results.append((f, i, lang, code, out))
         return file_results
 
-    workers = min(32, (os.cpu_count() or 4) * 4)
+    # Cap the pool. A laptop has enough cores to start dozens of rustc
+    # and javac processes, and one thrown checker used to abort the run.
+    workers = min(4, os.cpu_count() or 2)
     results: list[tuple[Path, int, str, int, str]] = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
-        futures = [executor.submit(process_file, pf) for pf in parsed_files]
-        for fut in futures:
-            results.extend(fut.result())
+        paired = [(executor.submit(process_file, pf), pf[0]) for pf in parsed_files]
+        for fut, path in paired:
+            try:
+                results.extend(fut.result())
+            except Exception as exc:
+                results.append((path, 0, "runner", 1, f"{type(exc).__name__}: {exc}"))
 
     total = passed = failed = skipped = 0
     failures: list[str] = []

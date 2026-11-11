@@ -2,7 +2,7 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-42 entries, 327,735 words. Every entry carries all 18
+42 entries, 327,717 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
@@ -36,7 +36,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Conway's Law](conway-law.md) | canonical | 7,762 | A team is asked to build a system with several distinct concerns. |
 | [Creator](creator.md) | canonical | 7,526 | Every object-oriented system eventually needs a new object of type A to come into existence somewhere, and the code that calls the constructor has to live in some class B. |
 | [Do Not Repeat Yourself](do-not-repeat-yourself.md) | canonical | 6,465 | A single fact about the system, a tax rate, a validation rule, a URL, a unit conversion, a business rule about who is allowed to approve a refund, gets written down in more than ... |
-| [Fail Fast](fail-fast.md) | established | 7,109 | A running program encounters a state it was not written to handle correctly. |
+| [Fail Fast](fail-fast.md) | established | 7,091 | A running program encounters a state it was not written to handle correctly. |
 | [High Cohesion](high-cohesion.md) | canonical | 8,026 | A team splits a system into modules, classes, packages, or services, and almost every split is defensible on some axis. |
 | [Idiomatic](idiomatic.md) | canonical | 7,084 | A person who learns to program in one language carries that language's mental model into every language learned afterward. |
 | [Indirection](indirection.md) | canonical | 8,505 | Two parts of a system need to interact, but binding them together directly creates a cost that shows up later rather than now. |

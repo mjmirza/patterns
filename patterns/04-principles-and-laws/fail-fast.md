@@ -29,11 +29,9 @@ site on 31 August 2004 and syndicated the same year through IEEE Software's
 Shore's framing is direct. software should fail immediately and visibly when
 an error occurs, rather than working around the error, because a system that
 masks a fault produces a mysterious failure later, far from the place the
-fault actually happened. Fowler published the IEEE Software article titled
-"Fail Fast" by James Shore on his site and cites Shore as the source
-(https://martinfowler.com/ieeeSoftware/failFast.pdf, verified 2026-08-30, page
-confirmed reachable and attributes the term to Shore's 2004 IEEE Software
-piece).
+fault actually happened. Fowler hosts that IEEE Software article on his
+own site and credits Shore as the source
+(https://martinfowler.com/ieeeSoftware/failFast.pdf, verified 2026-11-11).
 
 The idea itself predates the 2004 naming by nearly two decades. Bertrand
 Meyer's Design by Contract, first published in connection with the Eiffel
