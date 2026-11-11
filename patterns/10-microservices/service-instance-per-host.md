@@ -1,14 +1,20 @@
 ---
 name: Service Instance per Host
 slug: service-instance-per-host
+id: pat.10.service-instance-per-host
+kind: pattern
 family: 10-microservices
 category: Deployment
 aliases: [Single Service Instance per Host, One Service per Host, Dedicated Host Deployment]
 first_described: "Chris Richardson, microservices.io deployment pattern language, published as part of the site's pattern catalog, canonical form appears in Richardson, Microservices Patterns, Manning, 2019, chapter 12"
 maturity: established
-related: [service-per-vm, service-per-container, multiple-services-per-host, service-registry, self-contained-service, database-per-service, sidecar]
-incompatible_with: [multiple-services-per-host]
+related: [service-instance-per-vm, service-instance-per-container, multiple-service-instances-per-host, service-registry, self-contained-service, database-per-service, sidecar]
+related_concepts: []
+incompatible_with: [multiple-service-instances-per-host]
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Service Instance per Host

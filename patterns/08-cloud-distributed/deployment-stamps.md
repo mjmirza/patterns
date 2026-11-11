@@ -1,14 +1,20 @@
 ---
 name: Deployment Stamps
 slug: deployment-stamps
+id: pat.08.deployment-stamps
+kind: pattern
 family: 08-cloud-distributed
 category: Deployment and Scale
 aliases: [Stamps, Scale Units, Service Units, Cells, Stamp-Based Architecture]
 first_described: "John Downs, Microsoft Azure Architecture Center, 2019"
 maturity: canonical
 related: [sharding, bulkhead, gateway-aggregation, backends-for-frontends, health-endpoint-monitoring, rate-limiting]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Deployment Stamps

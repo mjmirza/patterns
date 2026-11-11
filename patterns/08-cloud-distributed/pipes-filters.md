@@ -1,14 +1,20 @@
 ---
 name: Pipes and Filters
 slug: pipes-filters
+id: pat.08.pipes-filters
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed Systems
 aliases: [Pipeline Architecture, Filter Chain, Data Flow Pattern]
 first_described: "McIlroy 1964 concept, Bell Labs Unix 1973 implementation, catalogued as an architectural style by Garlan and Shaw 1993, catalogued as an integration pattern by Hohpe and Woolf 2003"
 maturity: canonical
-related: [competing-consumers, publisher-subscriber, claim-check, queue-based-load-leveling, saga, choreography, strategy, decorator, chain-of-responsibility, template-method]
+related: [07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, publisher-subscriber, 07-integration/claim-check, 08-cloud-distributed/claim-check, queue-based-load-leveling, saga, choreography, strategy, decorator, chain-of-responsibility, template-method]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Pipes and Filters

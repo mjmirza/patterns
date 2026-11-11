@@ -1,14 +1,20 @@
 ---
 name: Process Manager
 slug: process-manager
+id: pat.11.process-manager
+kind: pattern
 family: 11-domain-driven-design
 category: Behavioral
 aliases: [Orchestrator, Saga Orchestrator, Central Coordinator]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [saga, mediator, state-machine, aggregate, event-sourcing, command]
+related: [saga, mediator, state-machine, 10-microservices/aggregate, 11-domain-driven-design/aggregate, event-sourcing, command]
+related_concepts: []
 incompatible_with: [choreography]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Process Manager

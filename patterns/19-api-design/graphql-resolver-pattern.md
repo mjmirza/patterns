@@ -1,14 +1,20 @@
 ---
 name: GraphQL Resolver Pattern
 slug: graphql-resolver-pattern
+id: pat.19.graphql-resolver-pattern
+kind: pattern
 family: 19-api-design
 category: Data Fetching
 aliases: [Field Resolver, Resolver Function]
 first_described: 'GraphQL specification and graphql.org execution documentation'
 maturity: canonical
 related: [rest-resource-modeling, graphql-dataloader]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # GraphQL Resolver Pattern

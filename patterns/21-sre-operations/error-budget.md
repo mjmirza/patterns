@@ -1,14 +1,20 @@
 ---
 name: Error Budget
 slug: error-budget
+id: pat.21.error-budget
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [Unreliability Budget, Reliability Budget]
 first_described: 'Google, Site Reliability Engineering, Embracing Risk chapter, 2016'
 maturity: canonical
 related: [service-level-objective, graceful-degradation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Error Budget

@@ -1,14 +1,20 @@
 ---
 name: HATEOAS
 slug: hateoas
+id: pat.19.hateoas
+kind: pattern
 family: 19-api-design
 category: Data Fetching
 aliases: [Hypermedia As The Engine Of Application State, Hypermedia-Driven API]
 first_described: 'Roy Fielding, REST APIs must be hypertext-driven, 2008'
 maturity: canonical
 related: [rest-resource-modeling, api-versioning]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # HATEOAS

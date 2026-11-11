@@ -1,14 +1,20 @@
 ---
 name: Duplicate Code
 slug: duplicate-code
+id: pat.02.duplicate-code
+kind: smell
 family: 02-code-smells
 category: Bloaters
 aliases: [Code Clone, Copy-Paste Code, Duplicated Code]
 first_described: "Fowler, Beck 1999"
 maturity: canonical
 related: [extract-function, extract-class, template-method, pull-up-method, strategy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Duplicate Code

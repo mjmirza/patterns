@@ -1,14 +1,20 @@
 ---
 name: API and Schema Federation
 slug: api-schema-federation
+id: pat.19.api-schema-federation
+kind: pattern
 family: 19-api-design
 category: API Composition
 aliases: [Schema Federation, GraphQL Federation, Federated GraphQL, Composite Schemas]
 first_described: "Apollo GraphQL, 2019, Apollo Federation announcement blog post"
 maturity: established
 related: [api-gateway, api-composition, graphql-resolver-pattern, graphql-dataloader]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # API and Schema Federation

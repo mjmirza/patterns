@@ -1,13 +1,20 @@
 ---
 name: Compensation Handler
 slug: compensation-handler
+id: pat.23.compensation-handler
+kind: pattern
 family: 23-workflow-orchestration
 category: workflow orchestration
 aliases: [Compensating Transaction, Compensation Action, Semantic Rollback]
 first_described: "Hector Garcia-Molina and Kenneth Salem, Sagas, ACM SIGMOD 1987, which coined the term compensating transaction for the undo-step of a long-lived transaction. Given a formal XML construct by the OASIS WS-BPEL 2.0 specification's compensationHandler element, 2007, which cites the Sagas paper directly. Given a graphical, event-driven shape by the OMG BPMN 2.0 specification's Compensation Boundary Event, January 2011"
 maturity: canonical
 related: [saga, workflow-engine, state-machine-workflow, human-task]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Compensation Handler

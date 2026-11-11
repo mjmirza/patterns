@@ -1,14 +1,20 @@
 ---
 name: Interpreter Architecture
 slug: interpreter-architecture
+id: pat.05.interpreter-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Tree-Walking Interpreter, AST Interpreter, Language Workbench Interpreter]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
-related: [interpreter-gof, visitor, composite, specification, builder, strategy]
+related: [interpreter, visitor, composite, specification, builder, strategy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Interpreter Architecture

@@ -1,14 +1,20 @@
 ---
 name: Continuation-Passing Style
 slug: continuation-passing-style
+id: pat.16.continuation-passing-style
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [CPS, Explicit Continuation, CPS Transform, Success Continuation, Failure Continuation]
 first_described: "Reynolds 1972"
 maturity: canonical
 related: [continuation, tail-call-optimization, trampolining, monad, async-await, future-promise, chain-of-responsibility]
-incompatible_with: [implicit-return-contracts, double-callback, ambient-mutable-state, unbounded-continuation-retention]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [implicit-return-contracts, double-callback, ambient-mutable-state, unbounded-continuation-retention]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Continuation-Passing Style

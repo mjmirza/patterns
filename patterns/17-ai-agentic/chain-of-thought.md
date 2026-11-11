@@ -1,14 +1,20 @@
 ---
 name: Chain of Thought
 slug: chain-of-thought
+id: pat.17.chain-of-thought
+kind: pattern
 family: 17-ai-agentic
 category: Reasoning
 aliases: [CoT, CoT Prompting, Step-by-Step Reasoning, Zero-Shot CoT, Manual CoT]
 first_described: "Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le, Zhou 2022"
 maturity: canonical
-related: [react-prompting, tree-of-thoughts, reflexion, prompt-chaining, self-consistency, least-to-most-prompting, plan-and-execute]
+related: [react-prompting, tree-of-thoughts, reflexion, prompt-chaining, self-consistency, least-to-most, plan-execute]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Chain of Thought

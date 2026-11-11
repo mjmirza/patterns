@@ -1,14 +1,20 @@
 ---
 name: Compare-and-Swap Loop
 slug: compare-and-swap-loop
+id: pat.09.compare-and-swap-loop
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [CAS Loop, Compare-and-Exchange Loop, Optimistic Concurrency Retry Loop, Read-Modify-CAS Loop]
 first_described: "Herlihy 1991 (theoretical treatment); IBM System/370 1970 (first hardware instruction)"
 maturity: canonical
 related: [read-copy-update, double-checked-locking, immutable-object, thread-safe-interface, copy-on-write]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Compare-and-Swap Loop

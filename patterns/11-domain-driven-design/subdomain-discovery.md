@@ -1,14 +1,20 @@
 ---
 name: Subdomain Discovery
 slug: subdomain-discovery
+id: pat.11.subdomain-discovery
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Domain Decomposition, Subdomain Identification, Domain Analysis]
 first_described: "Eric Evans 2003"
 maturity: established
 related: [core-domain, supporting-subdomain, generic-subdomain, bounded-context, event-storming, domain-storytelling, context-map, ubiquitous-language]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Subdomain Discovery

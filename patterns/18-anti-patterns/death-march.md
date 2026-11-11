@@ -1,14 +1,20 @@
 ---
 name: Death March
 slug: death-march
+id: pat.18.death-march
+kind: anti-pattern
 family: 18-anti-patterns
 category: Project Management
 aliases: [Mission Impossible Project, Crunch Project, Hero Project]
 first_described: "Edward Yourdon 1997"
 maturity: established
-related: [big-bang-rewrite, gold-plating, speculative-generality]
-incompatible_with: [sustainable-pace, incremental-delivery]
+related: [speculative-generality]
+related_concepts: [big-bang-rewrite]
+incompatible_with: []
+incompatible_concepts: [sustainable-pace, incremental-delivery]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Death March

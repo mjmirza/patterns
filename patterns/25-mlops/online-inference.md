@@ -1,14 +1,20 @@
 ---
 name: Online Inference
 slug: online-inference
+id: pat.25.online-inference
+kind: pattern
 family: 25-mlops
 category: MLOps
 aliases: [Real-Time Inference, Real-Time Serving, Real-Time Model Serving]
 first_described: "Common industry practice, formalized in AWS SageMaker real-time endpoints, 2018"
 maturity: established
 related: [model-registry, feature-store, batch-inference, shadow-model]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Online Inference

@@ -1,14 +1,20 @@
 ---
 name: Autoscaling
 slug: autoscaling
+id: pat.08.autoscaling
+kind: pattern
 family: 08-cloud-distributed
 category: Capacity Management
 aliases: [Auto Scaling, Elastic Scaling, Dynamic Scaling]
 first_described: "AWS Auto Scaling for Amazon EC2, announced May 2009 per the Amazon Web Services Blog, cited via Wikipedia; NIST later named rapid elasticity a defining characteristic of cloud computing in Special Publication 800-145, September 2011"
 maturity: canonical
-related: [load-balancing, health-endpoint-monitoring, queue-based-load-leveling, deployment-stamps, throttling, cell-based-architecture, competing-consumers]
+related: [load-balancing, health-endpoint-monitoring, queue-based-load-leveling, deployment-stamps, throttling, 05-architectural/cell-based-architecture, 08-cloud-distributed/cell-based-architecture, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Autoscaling

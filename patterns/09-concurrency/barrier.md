@@ -1,14 +1,20 @@
 ---
 name: Barrier
 slug: barrier
+id: pat.09.barrier
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Rendezvous, Synchronization Barrier, Barrier Synchronization]
 first_described: "Term traced to Harold Stone and others in parallel-computing literature circa 1970s to 1980s. Formalized in Allen B. Downey, The Little Book of Semaphores, Green Tea Press, 2nd edition, as the Barrier and Rendezvous synchronization problems (https://greenteapress.com/wp/semaphores/, verified 2026-08-14)"
 maturity: canonical
-related: [countdown-latch, phaser, fork-join, thread-pool, monitor-object, producer-consumer, join, semaphore]
+related: [countdown-latch, phaser, fork-join, thread-pool, monitor-object, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, semaphore]
+related_concepts: [join]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-14
+last_reviewed: 2026-08-14
+next_review_due: 2027-02-10
 ---
 
 # Barrier

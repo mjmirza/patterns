@@ -1,14 +1,20 @@
 ---
 name: Scheduler
 slug: scheduler
+id: pat.09.scheduler
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Task Scheduler, Cooperative Scheduler, Runnable Queue]
 first_described: "Schmidt, Stal, Rohnert, Buschmann 2000"
 maturity: canonical
-related: [thread-pool, work-queue, future-promise, active-object, reactor, producer-consumer]
+related: [thread-pool, work-queue, future-promise, active-object, reactor, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Scheduler

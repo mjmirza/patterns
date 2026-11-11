@@ -1,14 +1,20 @@
 ---
 name: Singleton Abuse
 slug: singleton-abuse
+id: pat.18.singleton-abuse
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Singletonitis, Singleton Overuse, Global State via Singleton, Static Everything]
 first_described: "Emergent practitioner critique, mid-2000s; earliest citable disowning by Gamma 2009"
 maturity: canonical
-related: [singleton, monostate, service-locator, dependency-injection, god-object, global-variable]
+related: [singleton, service-locator, dependency-injection, god-object]
+related_concepts: [monostate, global-variable]
 incompatible_with: [dependency-injection, single-responsibility-principle]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Singleton Abuse

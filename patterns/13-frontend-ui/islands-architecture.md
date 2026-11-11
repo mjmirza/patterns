@@ -1,14 +1,20 @@
 ---
 name: Islands Architecture
 slug: islands-architecture
+id: pat.13.islands-architecture
+kind: pattern
 family: 13-frontend-ui
 category: Rendering Strategy
 aliases: [Component Islands, Partial Hydration]
 first_described: "Katie Sylor-Miller, 2019, named by Jason Miller, August 2020"
 maturity: established
 related: [server-components, progressive-enhancement, hooks]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Islands Architecture

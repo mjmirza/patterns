@@ -1,14 +1,20 @@
 ---
 name: Contract Test
 slug: contract-test
+id: pat.14.contract-test
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Consumer-Driven Contract Test, Provider Verification Test, Interface Contract Test]
 first_described: "Robinson 2006 (Consumer-Driven Contracts), formalized in Pact tooling from 2013"
 maturity: canonical
-related: [test-double, mock-object, stub, fake-object, service-mesh, circuit-breaker]
+related: [mock, stub, fake, service-mesh, circuit-breaker]
+related_concepts: [test-double]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

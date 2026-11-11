@@ -1,14 +1,20 @@
 ---
 name: Scheduler Agent Supervisor
 slug: scheduler-agent-supervisor
+id: pat.08.scheduler-agent-supervisor
+kind: pattern
 family: 08-cloud-distributed
 category: Coordination
 aliases: [Workflow Orchestrator with Watchdog, Orchestrator Worker Watchdog, State Store Driven Workflow]
 first_described: "Homer, Sharp, Brader, Narumoto, Swanson. Cloud Design Patterns. Microsoft patterns and practices, 2014 (named catalog entry, still maintained at Microsoft Learn); conceptually related to Hohpe and Woolf's Process Manager, Enterprise Integration Patterns, Addison-Wesley, 2003"
 maturity: canonical
-related: [saga, compensating-transaction, retry, circuit-breaker, leader-election, competing-consumers, queue-based-load-leveling, choreography]
+related: [saga, compensating-transaction, retry, circuit-breaker, leader-election, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, queue-based-load-leveling, choreography]
+related_concepts: []
 incompatible_with: [two-phase-commit]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Scheduler Agent Supervisor

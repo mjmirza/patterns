@@ -1,14 +1,20 @@
 ---
 name: JWT
 slug: jwt
+id: pat.15.jwt
+kind: pattern
 family: 15-security
 category: Security
 aliases: [JSON Web Token, JOT, Self-contained Token, Signed Claims Token]
 first_described: "Jones, Bradley, Sakimura 2015"
 maturity: established
 related: [token-based-authentication, oauth-2-1-flows, openid-connect, least-privilege, complete-mediation, fail-securely]
-incompatible_with: [opaque-token-by-default, server-side-session-only, bearer-token-as-database-record]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [opaque-token-by-default, server-side-session-only, bearer-token-as-database-record]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # JWT

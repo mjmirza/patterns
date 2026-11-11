@@ -1,14 +1,20 @@
 ---
 name: Messaging Mapper
 slug: messaging-mapper
+id: pat.07.messaging-mapper
+kind: pattern
 family: 07-integration
 category: Message Endpoint
 aliases: [Message Mapper, Mapper for Messaging]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [message-translator, canonical-data-model, aggregator, message-router, messaging-gateway]
+related: [canonical-data-model, aggregator, messaging-gateway]
+related_concepts: [message-translator, message-router]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Messaging Mapper

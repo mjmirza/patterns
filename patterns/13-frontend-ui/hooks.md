@@ -1,14 +1,20 @@
 ---
 name: Hooks
 slug: hooks
+id: pat.13.hooks
+kind: pattern
 family: 13-frontend-ui
 category: Component Composition
 aliases: [React Hooks, Function Component State]
 first_described: "React v16.8, 6 February 2019"
 maturity: canonical
 related: [render-props, higher-order-component, compound-components, provider-pattern]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Hooks

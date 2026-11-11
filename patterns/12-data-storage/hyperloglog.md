@@ -1,14 +1,20 @@
 ---
 name: HyperLogLog
 slug: hyperloglog
+id: pat.12.hyperloglog
+kind: pattern
 family: 12-data-storage
 category: Probabilistic data structure
 aliases: [HLL, HyperLogLog++, Cardinality sketch]
 first_described: "Flajolet, Fusy, Gandouet, Meunier 2007"
 maturity: canonical
 related: [consistent-hashing, lsm-tree, crdt, gossip-protocol]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # HyperLogLog

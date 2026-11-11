@@ -1,14 +1,20 @@
 ---
 name: Replace Loop with Pipeline
 slug: replace-loop-with-pipeline
+id: pat.03.replace-loop-with-pipeline
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Loop to Pipeline, Collection Pipeline Refactoring]
 first_described: "Fowler 2018"
 maturity: established
 related: [extract-function, extract-variable, split-loop, combine-functions-into-transform, replace-inline-code-with-function-call]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Loop with Pipeline

@@ -1,14 +1,20 @@
 ---
 name: Monoid
 slug: monoid
+id: pat.16.monoid
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Identity-bearing Semigroup, Foldable Reducer, Combinable With Empty]
 first_described: "Abstract algebra, named in software through Haskell type classes"
 maturity: canonical
-related: [semigroup, functor, applicative, monad, fold, reducer, algebraic-data-type]
-incompatible_with: [non-associative-combine, missing-identity, order-sensitive-side-effects]
+related: [semigroup, functor, applicative, monad, algebraic-data-type]
+related_concepts: [fold, reducer]
+incompatible_with: []
+incompatible_concepts: [non-associative-combine, missing-identity, order-sensitive-side-effects]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Monoid

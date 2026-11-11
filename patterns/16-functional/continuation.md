@@ -1,14 +1,20 @@
 ---
 name: Continuation
 slug: continuation
+id: pat.16.continuation
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [CPS, Callback Continuation, Escape Continuation, Delimited Continuation]
 first_described: "Reynolds 1972"
 maturity: canonical
-related: [tail-call-optimization, trampolining, monad, callback, coroutine, chain-of-responsibility]
-incompatible_with: [hidden-control-flow, double-callback, unbounded-continuation-retention, ambient-mutable-state]
+related: [tail-call-optimization, trampolining, monad, chain-of-responsibility]
+related_concepts: [callback, coroutine]
+incompatible_with: []
+incompatible_concepts: [hidden-control-flow, double-callback, unbounded-continuation-retention, ambient-mutable-state]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Continuation

@@ -1,14 +1,20 @@
 ---
 name: Idempotent Consumer
 slug: idempotent-consumer
+id: pat.10.idempotent-consumer
+kind: pattern
 family: 10-microservices
 category: Reliability
 aliases: [Idempotent Receiver, Deduplicating Consumer, Exactly-Once Consumer]
 first_described: "Richardson, microservices.io pattern catalog, and Microservices Patterns, Manning 2018"
 maturity: canonical
-related: [transactional-outbox, transaction-log-tailing, domain-event, saga, database-per-service]
+related: [transactional-outbox, transaction-log-tailing, 10-microservices/domain-event, 11-domain-driven-design/domain-event, saga, database-per-service]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Idempotent Consumer

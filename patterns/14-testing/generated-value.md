@@ -1,14 +1,20 @@
 ---
 name: Generated Value
 slug: generated-value
+id: pat.14.generated-value
+kind: pattern
 family: 14-testing
 category: Test Data
 aliases: [Random Test Value, Arbitrary Value, Faker-Generated Value]
 first_described: "Meszaros 2007"
 maturity: canonical
 related: [derived-value, test-data-builder, fresh-fixture, dummy, object-mother]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Generated Value

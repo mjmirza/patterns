@@ -1,14 +1,20 @@
 ---
 name: Wire Tap
 slug: wire-tap
+id: pat.07.wire-tap
+kind: pattern
 family: 07-integration
 category: Enterprise Integration
 aliases: [Message Tap, Channel Tap, Passive Interceptor]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [content-enricher, recipient-list, message-filter, control-bus, dead-letter-channel]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Wire Tap

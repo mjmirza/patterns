@@ -1,14 +1,20 @@
 ---
 name: Shared Nothing
 slug: shared-nothing
+id: pat.05.shared-nothing
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Shared-Nothing Architecture, SN Architecture, Nothing-Shared Cluster]
 first_described: "Stonebraker 1986"
 maturity: canonical
-related: [sharding, database-per-service, bulkhead, load-balancer, consistent-hashing, event-driven-architecture]
-incompatible_with: [distributed-transaction-2pc, shared-database-integration]
+related: [sharding, database-per-service, bulkhead, load-balancing, consistent-hashing, event-driven-architecture]
+related_concepts: []
+incompatible_with: [two-phase-commit]
+incompatible_concepts: [shared-database-integration]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Shared Nothing

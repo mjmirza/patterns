@@ -1,14 +1,20 @@
 ---
 name: Choreography
 slug: choreography
+id: pat.08.choreography
+kind: pattern
 family: 08-cloud-distributed
 category: Messaging and Integration
 aliases: [Event Choreography, Choreographed Integration, Decentralized Event-Driven Coordination]
 first_described: "W3C Web Services Choreography Working Group, WS-CDL, 2004 to 2009 (formal specification lineage); popularized for microservices by Chris Richardson's microservices.io and the AWS and Azure cloud architecture centers, 2015 onward"
 maturity: established
-related: [saga, publisher-subscriber, event-sourcing, process-manager, compensating-transaction, transactional-outbox, circuit-breaker, cqrs]
+related: [saga, publisher-subscriber, event-sourcing, 07-integration/process-manager, 11-domain-driven-design/process-manager, compensating-transaction, transactional-outbox, circuit-breaker, cqrs]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Choreography

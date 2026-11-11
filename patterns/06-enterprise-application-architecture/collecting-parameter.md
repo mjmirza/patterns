@@ -1,14 +1,20 @@
 ---
 name: Collecting Parameter
 slug: collecting-parameter
+id: pat.06.collecting-parameter
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Enterprise Application Architecture
 aliases: [Move Accumulation To Collecting Parameter, Accumulator Parameter]
 first_described: "Joshua Kerievsky, Refactoring to Patterns, Addison-Wesley, 2004, plus the c2.com wiki community page, both current"
 maturity: established
 related: [visitor]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Collecting Parameter

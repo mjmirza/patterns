@@ -1,14 +1,20 @@
 ---
 name: Distributed Tracing
 slug: distributed-tracing
+id: pat.10.distributed-tracing
+kind: pattern
 family: 10-microservices
 category: Observability
 aliases: [Request Tracing, Full-Request Tracing, Trace-Based Observability]
 first_described: "Sigelman et al, Dapper, a Large-Scale Distributed Systems Tracing Infrastructure, Google technical report, 2010"
 maturity: canonical
 related: [circuit-breaker, api-gateway, saga, service-mesh, correlation-id]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Distributed Tracing

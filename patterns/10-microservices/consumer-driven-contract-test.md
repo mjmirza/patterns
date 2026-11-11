@@ -1,14 +1,20 @@
 ---
 name: Consumer-Driven Contract Test
 slug: consumer-driven-contract-test
+id: pat.10.consumer-driven-contract-test
+kind: pattern
 family: 10-microservices
 category: Testing
 aliases: [CDC Test, Contract Test, Pact Test]
 first_described: "Ian Robinson, ThoughtWorks, 2006"
 maturity: established
 related: [service-component-test, api-gateway, remote-procedure-invocation, messaging, transactional-outbox]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

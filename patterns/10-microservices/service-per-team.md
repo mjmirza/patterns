@@ -1,14 +1,20 @@
 ---
 name: Service per Team
 slug: service-per-team
+id: pat.10.service-per-team
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Team-Owned Service, You Build It You Run It, Single-Team-Owned Service, Stream-Aligned Service Ownership]
 first_described: "Conway 1968; Vogels 2006; Richardson 2018; Skelton and Pais 2019"
 maturity: canonical
 related: [decompose-by-business-capability, decompose-by-subdomain, api-gateway, backends-for-frontends, strangler-fig, saga]
-incompatible_with: [layered-architecture]
+related_concepts: []
+incompatible_with: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service per Team

@@ -1,14 +1,20 @@
 ---
 name: LLM Circuit Breaker
 slug: llm-circuit-breaker
+id: pat.17.llm-circuit-breaker
+kind: pattern
 family: 17-ai-agentic
 category: Reliability
 aliases: [AI Gateway Circuit Breaker, Provider Circuit Breaker, Model Circuit Breaker, Deployment Circuit Breaker]
 first_described: "Michael T. Nygard 2007, applied to LLM providers by AI gateway vendors circa 2023 to 2025"
 maturity: established
 related: [circuit-breaker, retry, bulkhead, rate-limiting, output-guardrails, input-guardrails, function-calling, agentic-rag, corrective-rag]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # LLM Circuit Breaker

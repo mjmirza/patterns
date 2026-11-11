@@ -1,14 +1,20 @@
 ---
 name: Sequential Coupling
 slug: sequential-coupling
+id: pat.18.sequential-coupling
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Temporal Coupling, Connascence of Execution, Order-Dependent API]
 first_described: "Page-Jones 1988 (as Connascence of Execution, within the connascence taxonomy); Seemann 2011 (named and defined as a design smell, Temporal Coupling)"
 maturity: canonical
 related: [state, builder, iterator, template-method, boat-anchor]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Sequential Coupling

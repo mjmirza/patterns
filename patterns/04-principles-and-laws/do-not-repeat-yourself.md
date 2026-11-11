@@ -1,14 +1,20 @@
 ---
 name: Do Not Repeat Yourself
 slug: do-not-repeat-yourself
+id: pat.04.do-not-repeat-yourself
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [DRY, Single Source of Truth, Once and Only Once]
 first_described: "Hunt, Thomas 1999"
 maturity: canonical
 related: [single-responsibility-principle, high-cohesion, low-coupling, template-method, pure-fabrication]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Do Not Repeat Yourself

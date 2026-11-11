@@ -1,14 +1,20 @@
 ---
 name: Point-free Style
 slug: point-free-style
+id: pat.16.point-free-style
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Tacit Programming, Pointfree Style, Eta-reduced Style, Combinator Style]
 first_described: "Established in mathematical and functional programming notation"
 maturity: established
-related: [function-composition, currying, partial-application, pipeline, combinator, higher-order-function]
-incompatible_with: [long-parameter-list, hidden-side-effects, unreadable-combinator-expression]
+related: [function-composition, currying, partial-application]
+related_concepts: [pipeline, combinator, higher-order-function]
+incompatible_with: [long-parameter-list]
+incompatible_concepts: [hidden-side-effects, unreadable-combinator-expression]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Point-free Style

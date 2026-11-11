@@ -1,14 +1,20 @@
 ---
 name: Saga
 slug: saga
+id: pat.08.saga
+kind: pattern
 family: 08-cloud-distributed
 category: Data consistency
 aliases: [Long Running Transaction, Compensating Transaction Pattern, Long Running Action, LRA]
 first_described: "Garcia-Molina and Salem 1987"
 maturity: canonical
-related: [two-phase-commit, transactional-outbox, event-sourcing, cqrs, process-manager, idempotent-receiver, circuit-breaker]
-incompatible_with: [distributed-two-phase-commit]
+related: [two-phase-commit, transactional-outbox, event-sourcing, cqrs, 07-integration/process-manager, 11-domain-driven-design/process-manager, idempotent-consumer, circuit-breaker]
+related_concepts: []
+incompatible_with: [two-phase-commit]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Saga

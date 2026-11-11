@@ -1,14 +1,20 @@
 ---
 name: Log Aggregation
 slug: log-aggregation
+id: pat.10.log-aggregation
+kind: pattern
 family: 10-microservices
 category: Observability
 aliases: [Centralized Logging, Log Collection, Unified Logging Layer]
 first_described: "Documented as a distributed systems necessity in Sam Newman, Building Microservices, O'Reilly, 2015, chapter 8"
 maturity: canonical
 related: [distributed-tracing, health-check-api, circuit-breaker, sidecar, service-mesh]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Log Aggregation

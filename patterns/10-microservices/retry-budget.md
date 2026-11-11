@@ -1,14 +1,20 @@
 ---
 name: Retry Budget
 slug: retry-budget
+id: pat.10.retry-budget
+kind: pattern
 family: 10-microservices
 category: Microservices, Resilience
 aliases: [Retry Throttling, Client-Side Retry Throttling, Retry Token Bucket]
 first_described: "Twitter, Finagle project, retry budgets blog post, 2016"
 maturity: established
-related: [circuit-breaker, timeout, bulkhead, remote-procedure-invocation, exponential-backoff-and-jitter, health-check-api, application-metrics]
+related: [circuit-breaker, bulkhead, remote-procedure-invocation, health-check-api, application-metrics]
+related_concepts: [timeout, exponential-backoff-and-jitter]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Retry Budget

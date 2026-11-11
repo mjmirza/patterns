@@ -1,14 +1,20 @@
 ---
 name: Content Enricher
 slug: content-enricher
+id: pat.07.content-enricher
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Data Enricher, Enricher]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [content-based-router, message-filter, splitter, aggregator, message]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Content Enricher

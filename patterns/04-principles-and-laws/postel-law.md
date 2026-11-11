@@ -1,14 +1,20 @@
 ---
 name: Postel's Law
 slug: postel-law
+id: pat.04.postel-law
+kind: law
 family: 04-principles-and-laws
 category: Principle
 aliases: [Robustness Principle, "Be Conservative In What You Do, Be Liberal In What You Accept"]
 first_described: "Jon Postel, RFC 761, January 1980"
 maturity: contested
 related: [adapter, protected-variations, open-closed-principle, template-method]
+related_concepts: []
 incompatible_with: [fail-fast]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Postel's Law

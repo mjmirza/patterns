@@ -1,14 +1,20 @@
 ---
 name: Reranking
 slug: reranking
+id: pat.17.reranking
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Two-Stage Retrieval, Cross-Encoder Reranking, Rerank]
 first_described: "Nogueira, Cho 2019 (passage re-ranking with BERT); the retrieve-then-rerank shape as a general IR technique predates it"
 maturity: canonical
 related: [retrieval-augmented-generation, advanced-rag, hyde, agentic-rag, self-rag, corrective-rag]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 ## 1. Name, aliases, and lineage

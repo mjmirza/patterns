@@ -1,14 +1,20 @@
 ---
 name: Identity Field
 slug: identity-field
+id: pat.06.identity-field
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Structural Pattern
 aliases: [Surrogate Key Field, Primary Key Property, ID Field]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [identity-map, unit-of-work, foreign-key-mapping, metadata-mapping, repository, lazy-load]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-11
+last_reviewed: 2026-08-11
+next_review_due: 2027-02-07
 ---
 
 # Identity Field

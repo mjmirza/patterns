@@ -1,14 +1,20 @@
 ---
 name: Published Language
 slug: published-language
+id: pat.11.published-language
+kind: pattern
 family: 11-domain-driven-design
 category: Domain-Driven Design, Strategic
 aliases: [Common Language for Integration, Canonical Exchange Format]
 first_described: "Evans 2003"
 maturity: canonical
 related: [open-host-service, anticorruption-layer, shared-kernel, conformist, event-driven-architecture]
+related_concepts: []
 incompatible_with: [shared-kernel]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Published Language

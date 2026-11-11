@@ -1,14 +1,20 @@
 ---
 name: Command Message
 slug: command-message
+id: pat.07.command-message
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Command Channel, RPC over Messaging]
 first_described: "Hohpe, Woolf 2003, Enterprise Integration Patterns"
 maturity: canonical
-related: [point-to-point-channel, invalid-message-channel, guaranteed-delivery, dead-letter-channel, messaging-bridge, datatype-channel]
+related: [point-to-point-channel, invalid-message-channel, guaranteed-delivery, dead-letter-channel, 07-integration/messaging-bridge, 08-cloud-distributed/messaging-bridge, datatype-channel]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Command Message

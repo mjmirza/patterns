@@ -1,14 +1,20 @@
 ---
 name: Smart Proxy
 slug: smart-proxy
+id: pat.07.smart-proxy
+kind: pattern
 family: 07-integration
 category: Enterprise Integration
 aliases: [Direct Reply-To, Reply Interception Proxy, Tracking Proxy]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [return-address, correlation-identifier, request-reply, wire-tap, content-based-router]
+related_concepts: []
 incompatible_with: [event-message]
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 ## 1. Name, aliases, and lineage

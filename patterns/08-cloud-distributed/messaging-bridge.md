@@ -1,14 +1,20 @@
 ---
 name: Messaging Bridge
 slug: messaging-bridge
+id: pat.08.messaging-bridge
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud Distributed
 aliases: [Broker Bridge, Message Bus Bridge, Protocol Bridge, Bridge Connector]
 first_described: "Hohpe, Woolf 2003, Enterprise Integration Patterns"
 maturity: canonical
-related: [channel-adapter, message-translator, content-based-router, dead-letter-channel, gateway]
+related: [channel-adapter, content-based-router, dead-letter-channel, gateway]
+related_concepts: [message-translator]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Messaging Bridge

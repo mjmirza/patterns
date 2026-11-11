@@ -1,14 +1,20 @@
 ---
 name: Event Storming
 slug: event-storming
+id: pat.11.event-storming
+kind: pattern
 family: 11-domain-driven-design
 category: Behavioral
 aliases: [EventStorming, Big Picture EventStorming, Process Modeling EventStorming, Design Level EventStorming]
 first_described: "Alberto Brandolini 2013"
 maturity: established
-related: [domain-event, bounded-context, ubiquitous-language, aggregate-root, context-map, process-manager, published-language]
+related: [10-microservices/domain-event, 11-domain-driven-design/domain-event, bounded-context, ubiquitous-language, aggregate-root, context-map, 07-integration/process-manager, 11-domain-driven-design/process-manager, published-language]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Event Storming

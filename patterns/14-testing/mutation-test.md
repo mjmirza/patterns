@@ -1,14 +1,20 @@
 ---
 name: Mutation Test
 slug: mutation-test
+id: pat.14.mutation-test
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Mutation Testing, Mutation Analysis, Fault-Based Testing]
 first_described: "DeMillo, Lipton, Sayward 1978"
 maturity: canonical
 related: [property-based-test, characterization-test, golden-master, contract-test, arrange-act-assert]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Mutation Test

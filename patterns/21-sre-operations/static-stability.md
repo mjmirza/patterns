@@ -1,14 +1,20 @@
 ---
 name: Static Stability
 slug: static-stability
+id: pat.21.static-stability
+kind: pattern
 family: 21-sre-operations
 category: Structural
 aliases: [Bimodal Behavior Avoidance, Statically Stable Design, Single Normal Mode]
 first_described: 'AWS, Static Stability Using Availability Zones, Builders Library'
 maturity: canonical
 related: [graceful-degradation, error-budget]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Static Stability

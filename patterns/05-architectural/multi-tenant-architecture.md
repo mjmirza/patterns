@@ -1,14 +1,20 @@
 ---
 name: Multi-Tenant Architecture
 slug: multi-tenant-architecture
+id: pat.05.multi-tenant-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Multi-Tenancy, SaaS Tenant Isolation]
 first_described: "Frederick Chong, Gianpaolo Carraro, and Roger Wolter, Multi-Tenant Data Architecture, Microsoft, 2006"
 maturity: canonical
-related: [sharding, bulkhead, cell-based-architecture, database-per-service]
+related: [sharding, bulkhead, 05-architectural/cell-based-architecture, 08-cloud-distributed/cell-based-architecture, database-per-service]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Multi-Tenant Architecture

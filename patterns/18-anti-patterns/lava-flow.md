@@ -1,14 +1,20 @@
 ---
 name: Lava Flow
 slug: lava-flow
+id: pat.18.lava-flow
+kind: anti-pattern
 family: 18-anti-patterns
 category: Software Development Anti-pattern
 aliases: [Dead Code, Lava Layer, Vestigial Code]
 first_described: "Brown, Malveau, McCormick, Mowbray 1998 (catalog usage); Wikipedia consolidation, no earlier print source independently verifiable"
 maturity: canonical
-related: [big-ball-of-mud, spaghetti-code, dead-code-elimination, extract-method, strangler-fig]
+related: [11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud, spaghetti-code, extract-function, strangler-fig]
+related_concepts: [dead-code-elimination]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Lava Flow

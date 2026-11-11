@@ -1,14 +1,20 @@
 ---
 name: Collapse Hierarchy
 slug: collapse-hierarchy
+id: pat.03.collapse-hierarchy
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Merge Superclass and Subclass, Flatten Inheritance]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [extract-superclass, extract-subclass, replace-inheritance-with-delegation, replace-delegation-with-inheritance, inline-class]
+related: [extract-superclass, replace-subclass-with-delegate, replace-superclass-with-delegate, inline-class]
+related_concepts: [extract-subclass]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Collapse Hierarchy

@@ -1,14 +1,20 @@
 ---
 name: Fallback Chain
 slug: fallback-chain
+id: pat.17.fallback-chain
+kind: pattern
 family: 17-ai-agentic
 category: Reliability
 aliases: [Model Fallback, Provider Fallback Chain, LLM Failover Chain, Cascading Fallback]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994 (Chain of Responsibility); applied to LLM providers by AI gateway and orchestration libraries circa 2023 to 2024"
 maturity: established
 related: [chain-of-responsibility, circuit-breaker, retry, bulkhead, llm-circuit-breaker, routing, function-calling]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Fallback Chain

@@ -70,9 +70,9 @@ def clean_text(text: str) -> str:
 
 
 def extract_section(text: str, num: int) -> str:
-    # Find Section "num." up to next main section heading "num+1." or any ## heading
+    # Find Section "num." up to next main section heading or any ## heading
     # Handles "## X." where X is the number, or "### X."
-    pattern = rf"^##[#]?\s+{num}\.[^\n]*\n(.*?)(?=^##[#]?\s+\d+\.|\Z)"
+    pattern = rf"^##[#]?\s+{num}\.[^\n]*\n(.*?)(?=^##\s+|\Z)"
     m = re.search(pattern, text, re.M | re.S)
     return m.group(1).strip() if m else ""
 

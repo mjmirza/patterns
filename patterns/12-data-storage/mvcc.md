@@ -1,14 +1,20 @@
 ---
 name: Multiversion Concurrency Control
 slug: mvcc
+id: pat.12.mvcc
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [MVCC, Multiversion Concurrency, Snapshot Isolation Storage, Time-Travel Storage]
 first_described: "Reed 1978 (MIT PhD thesis, Naming and Synchronization in a Decentralized Computer System); Bernstein and Goodman 1983 (ACM Computing Surveys survey paper)"
 maturity: canonical
-related: [optimistic-concurrency-control, event-sourcing, copy-on-write, snapshot-isolation, write-ahead-log, log-structured-merge-tree, saga]
-incompatible_with: [two-phase-locking-as-sole-mechanism]
+related: [event-sourcing, copy-on-write, snapshot-isolation, write-ahead-log, lsm-tree, saga]
+related_concepts: [optimistic-concurrency-control]
+incompatible_with: []
+incompatible_concepts: [two-phase-locking-as-sole-mechanism]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Multiversion Concurrency Control

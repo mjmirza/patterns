@@ -1,14 +1,20 @@
 ---
 name: Scatter-Gather
 slug: scatter-gather
+id: pat.07.scatter-gather
+kind: pattern
 family: 07-integration
 category: Enterprise Integration Pattern
 aliases: [Fan-Out/Fan-In, Parallel Broadcast Recipient List, Distribution Aggregate]
 first_described: "Hohpe, Woolf, Enterprise Integration Patterns, 2003"
 maturity: canonical
-related: [recipient-list, aggregator, publish-subscribe-channel, correlation-identifier, message-sequence, dead-letter-channel, circuit-breaker]
+related: [recipient-list, aggregator, publisher-subscriber, correlation-identifier, message-sequence, dead-letter-channel, circuit-breaker]
+related_concepts: []
 incompatible_with: [point-to-point-channel]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

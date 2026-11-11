@@ -1,14 +1,20 @@
 ---
 name: Data Class
 slug: data-class
+id: pat.02.data-class
+kind: smell
 family: 02-code-smells
 category: Object-Orientation Abusers
 aliases: [Anemic Class, Dumb Data Holder, POJO-only Class]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999"
 maturity: canonical
-related: [anemic-domain-model, feature-envy, data-transfer-object, value-object, primitive-obsession]
-incompatible_with: [rich-domain-model]
+related: [anemic-domain-model, feature-envy, data-transfer-object, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, primitive-obsession]
+related_concepts: []
+incompatible_with: [domain-model]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Data Class

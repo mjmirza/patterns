@@ -1,14 +1,20 @@
 ---
 name: Write-Through Cache
 slug: write-through-cache
+id: pat.12.write-through-cache
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Synchronous Cache Update, Write-Through Caching Strategy]
 first_described: "Industry practice, no single named originator. Formalized in CPU cache literature and later reused for application caches."
 maturity: canonical
-related: [cache-aside, write-behind-cache, read-through-cache, refresh-ahead-cache, circuit-breaker]
+related: [cache-aside, write-behind-cache, read-through-cache, circuit-breaker]
+related_concepts: [refresh-ahead-cache]
 incompatible_with: [write-behind-cache]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Write-Through Cache

@@ -1,14 +1,20 @@
 ---
 name: Nanoservices
 slug: nanoservices
+id: pat.18.nanoservices
+kind: anti-pattern
 family: 18-anti-patterns
 category: Architectural (Distributed Systems)
 aliases: [Lambda Pinball, Fine-Grained Service Explosion, Function-per-Endpoint Antipattern, Over-Decomposition]
 first_described: "Community usage circa 2014, e.g. Arnon Rotem-Gal-Oz, 'Services, Microservices, Nanoservices - oh my!', 2014"
 maturity: contested
-related: [decompose-by-business-capability, decompose-by-subdomain, service-per-team, api-composition, database-per-service, saga, big-ball-of-mud]
+related: [decompose-by-business-capability, decompose-by-subdomain, service-per-team, api-composition, database-per-service, saga, 11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Nanoservices

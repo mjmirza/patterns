@@ -1,14 +1,20 @@
 ---
 name: Reader Monad
 slug: reader-monad
+id: pat.16.reader-monad
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Environment Monad, Reader, ReaderT, MonadReader]
 first_described: "Jones 1995"
 maturity: established
 related: [monad, applicative, functor, tagless-final, dependency-injection]
-incompatible_with: [global-mutable-state, service-locator]
+related_concepts: []
+incompatible_with: [global-data, service-locator]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Reader Monad

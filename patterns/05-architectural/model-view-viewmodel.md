@@ -1,14 +1,20 @@
 ---
 name: Model View ViewModel
 slug: model-view-viewmodel
+id: pat.05.model-view-viewmodel
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [MVVM, Presentation Model, Application Model]
 first_described: "Fowler 2004 (Presentation Model), Gossman 2005 (MVVM name)"
 maturity: canonical
 related: [observer, mediator, command, facade, front-controller]
+related_concepts: []
 incompatible_with: [model-view-controller]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Model View ViewModel

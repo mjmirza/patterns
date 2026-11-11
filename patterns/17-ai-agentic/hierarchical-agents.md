@@ -1,14 +1,20 @@
 ---
 name: Hierarchical Agents
 slug: hierarchical-agents
+id: pat.17.hierarchical-agents
+kind: pattern
 family: 17-ai-agentic
 category: Multi-Agent Coordination
 aliases: [Hierarchical Agent Teams, Multi-Level Supervisor Pattern, Agent Organizational Chart, Supervisor-of-Supervisors, Nested Agent Delegation]
 first_described: "Erol, Hendler, Nau 1994 (HTN planning, decomposition root); LLM-agentic form named by LangChain in the Hierarchical Agent Teams tutorial, circa 2024"
 maturity: established
-related: [orchestrator-worker, sub-agent-isolation, blackboard, mediator, chain-of-responsibility, composite, strategy, evaluator-optimizer]
+related: [orchestrator-worker, sub-agent-isolation, blackboard-architecture, mediator, chain-of-responsibility, composite, strategy, evaluator-optimizer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Hierarchical Agents

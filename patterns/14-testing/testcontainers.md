@@ -1,14 +1,20 @@
 ---
 name: Testcontainers
 slug: testcontainers
+id: pat.14.testcontainers
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Disposable Containers, Ephemeral Test Infrastructure]
 first_described: "Richard North, Testcontainers project, 2015"
 maturity: canonical
-related: [dependency-injection, test-doubles-strategy, builder, singleton]
+related: [dependency-injection, builder, singleton]
+related_concepts: [test-doubles-strategy]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Testcontainers

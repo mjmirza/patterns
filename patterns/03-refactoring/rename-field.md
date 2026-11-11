@@ -1,14 +1,20 @@
 ---
 name: Rename Field
 slug: rename-field
+id: pat.03.rename-field
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Rename Attribute, Rename Member, Rename Property]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [change-function-declaration, rename-variable, encapsulate-variable, move-field, extract-variable]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Rename Field

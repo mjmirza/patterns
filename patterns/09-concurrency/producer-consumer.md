@@ -1,14 +1,20 @@
 ---
 name: Producer-Consumer
 slug: producer-consumer
+id: pat.09.producer-consumer
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Bounded Buffer, Producer-Consumer Queue, Work Queue Pattern]
 first_described: "Dijkstra 1965 (bounded buffer synchronization problem), formalized as a design pattern in Schmidt, Stal, Rohnert, Buschmann, Pattern-Oriented Software Architecture Volume 2, 2000"
 maturity: canonical
 related: [monitor-object, active-object, half-sync-half-async, thread-safe-interface, reactor, leader-followers]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

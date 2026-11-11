@@ -1,14 +1,20 @@
 ---
 name: Bikeshedding
 slug: bikeshedding
+id: pat.18.bikeshedding
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Law of Triviality, Parkinson's Law of Triviality, Bike-Shedding, Painting the Bikeshed]
 first_described: "Parkinson 1957, popularized in software by Poul-Henning Kamp 1999"
 maturity: canonical
-related: [analysis-paralysis, golden-hammer, cargo-cult-programming, gold-plating, yagni, decision-record]
-incompatible_with: [timeboxing, decision-record, rfc-process]
+related: [analysis-paralysis, golden-hammer, cargo-cult-programming, speculative-generality, you-are-not-gonna-need-it]
+related_concepts: [decision-record]
+incompatible_with: []
+incompatible_concepts: [timeboxing, decision-record, rfc-process]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Bikeshedding

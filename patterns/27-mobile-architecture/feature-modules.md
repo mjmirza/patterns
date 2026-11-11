@@ -1,14 +1,20 @@
 ---
 name: Feature Modules
 slug: feature-modules
+id: pat.27.feature-modules
+kind: pattern
 family: 27-mobile-architecture
 category: Structural
 aliases: [App Modularization, Multi-Module Architecture]
 first_described: 'Google Android Developers, "Guide to app modularization" architecture guidance'
 maturity: canonical
 related: [clean-architecture, single-activity-architecture]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Feature Modules

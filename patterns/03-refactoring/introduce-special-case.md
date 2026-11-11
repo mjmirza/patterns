@@ -1,14 +1,20 @@
 ---
 name: Introduce Special Case
 slug: introduce-special-case
+id: pat.03.introduce-special-case
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Introduce Null Object, Null Object Pattern, Special Case Pattern]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [change-reference-to-value, change-value-to-reference, extract-class, replace-conditional-with-polymorphism, extract-function]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Introduce Special Case

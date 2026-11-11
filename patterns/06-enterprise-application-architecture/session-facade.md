@@ -1,14 +1,20 @@
 ---
 name: Session Facade
 slug: session-facade
+id: pat.06.session-facade
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Distribution
 aliases: [Session Facade Bean]
 first_described: "Alur, Crupi, Malks, Core J2EE Patterns, 2001"
 maturity: established
 related: [facade, remote-facade, service-layer, business-delegate, data-transfer-object, data-access-object, composite-entity]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Session Facade

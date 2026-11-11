@@ -1,14 +1,20 @@
 ---
 name: Extension Object
 slug: extension-object
+id: pat.01.extension-object
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: [Extension Interface, Interface Extensions]
 first_described: "Erich Gamma, The Extension Objects Pattern, published as chapter 6, Extension Object, in Martin, Riehle, Buschmann (editors), Pattern Languages of Program Design 3, Addison-Wesley, 1997"
 maturity: established
 related: [visitor, decorator, adapter]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

@@ -1,14 +1,20 @@
 ---
 name: Replace Query with Parameter
 slug: replace-query-with-parameter
+id: pat.03.replace-query-with-parameter
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Parameterize Query, Pass Derived Value]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [replace-parameter-with-query, change-function-declaration, separate-query-from-modifier, parameterize-function, move-function, introduce-parameter-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Query with Parameter

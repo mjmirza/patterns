@@ -1,14 +1,20 @@
 ---
 name: Coarse-Grained Lock
 slug: coarse-grained-lock
+id: pat.06.coarse-grained-lock
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Concurrency
 aliases: [Root Lock, Aggregate Lock, Root Version]
 first_described: "Rice, Foemmel in Fowler et al. 2002"
 maturity: canonical
-related: [optimistic-offline-lock, pessimistic-offline-lock, unit-of-work, identity-map, aggregate]
+related: [optimistic-offline-lock, pessimistic-offline-lock, unit-of-work, identity-map, 10-microservices/aggregate, 11-domain-driven-design/aggregate]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Coarse-Grained Lock

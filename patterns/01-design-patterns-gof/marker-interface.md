@@ -1,14 +1,20 @@
 ---
 name: Marker Interface
 slug: marker-interface
+id: pat.01.marker-interface
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: [Tag Interface, Tagging Interface]
 first_described: "Bloch 2008 (Effective Java, 2nd ed., Item 37)"
 maturity: contested
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

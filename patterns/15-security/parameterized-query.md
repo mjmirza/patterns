@@ -1,14 +1,20 @@
 ---
 name: Parameterized Query
 slug: parameterized-query
+id: pat.15.parameterized-query
+kind: pattern
 family: 15-security
 category: Injection Defense
 aliases: [Prepared Statement, Bind Variables, Query Parameters, Bound Parameters]
 first_described: "Established in database APIs and SQL interface practice"
 maturity: canonical
 related: [input-validation, output-encoding, least-privilege, defense-in-depth]
-incompatible_with: [string-concatenated-sql, client-side-sql-escaping]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [string-concatenated-sql, client-side-sql-escaping]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Parameterized Query

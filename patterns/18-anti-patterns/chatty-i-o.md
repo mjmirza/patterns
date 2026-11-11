@@ -1,14 +1,20 @@
 ---
 name: Chatty I/O
 slug: chatty-i-o
+id: pat.18.chatty-i-o
+kind: anti-pattern
 family: 18-anti-patterns
 category: Architectural
 aliases: [Chatty Interface, Chattiness, N+1 Query Problem (specific case), Excessive Round Tripping]
 first_described: "Microsoft patterns and practices, Azure Architecture Center, 2017"
 maturity: established
 related: [distributed-monolith, extraneous-fetching, boat-anchor, entity-service]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-04
+last_reviewed: 2026-08-04
+next_review_due: 2027-01-31
 ---
 
 # Chatty I/O

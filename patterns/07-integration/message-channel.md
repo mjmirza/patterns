@@ -1,14 +1,20 @@
 ---
 name: Message Channel
 slug: message-channel
+id: pat.07.message-channel
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Channel, Message Queue (as channel abstraction), Topic (as channel abstraction)]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [publish-subscribe-channel, point-to-point-channel, message-router, dead-letter-channel, competing-consumers, outbox-pattern]
+related: [publisher-subscriber, point-to-point-channel, dead-letter-channel, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, transactional-outbox]
+related_concepts: [message-router]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Message Channel

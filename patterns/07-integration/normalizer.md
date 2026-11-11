@@ -1,14 +1,20 @@
 ---
 name: Normalizer
 slug: normalizer
+id: pat.07.normalizer
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Message Normalizer, Format Normalizer]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [content-based-router, message-translator, canonical-data-model, datatype-channel, format-indicator, aggregator]
+related: [content-based-router, canonical-data-model, datatype-channel, format-indicator, aggregator]
+related_concepts: [message-translator]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Normalizer

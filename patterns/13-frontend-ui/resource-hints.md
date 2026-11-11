@@ -1,14 +1,20 @@
 ---
 name: Resource Hints
 slug: resource-hints
+id: pat.13.resource-hints
+kind: pattern
 family: 13-frontend-ui
 category: Loading Strategy
 aliases: [Link Rel Hints, Speculative Loading, dns-prefetch and preconnect]
 first_described: "MDN, link rel preload and Speculative loading documentation"
 maturity: canonical
 related: [prpl-pattern, code-splitting, route-based-lazy-loading]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Resource Hints

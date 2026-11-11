@@ -1,14 +1,20 @@
 ---
 name: Dependency Inversion Principle
 slug: dependency-inversion-principle
+id: pat.04.dependency-inversion-principle
+kind: principle
 family: 04-principles-and-laws
 category: Design Principle
 aliases: [DIP, Dependency Inversion, "the D in SOLID"]
 first_described: "Robert C. Martin, C++ Report, June 1996"
 maturity: canonical
 related: [strategy, factory-method, adapter, interface-segregation-principle, open-closed-principle, single-responsibility-principle, liskov-substitution-principle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Dependency Inversion Principle

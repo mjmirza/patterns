@@ -1,14 +1,20 @@
 ---
 name: Application Metrics
 slug: application-metrics
+id: pat.10.application-metrics
+kind: pattern
 family: 10-microservices
 category: Observability
 aliases: [Metrics Instrumentation, Service Metrics, Operational Metrics]
 first_described: "Richardson 2018 (microservices.io pattern catalog)"
 maturity: canonical
 related: [health-check-api, log-aggregation, distributed-tracing, circuit-breaker, service-mesh, api-gateway]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Application Metrics

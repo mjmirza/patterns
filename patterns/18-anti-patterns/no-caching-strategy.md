@@ -1,14 +1,20 @@
 ---
 name: No Caching Strategy
 slug: no-caching-strategy
+id: pat.18.no-caching-strategy
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Ad Hoc Caching, Accidental Cache, Cache by Hope, Undisciplined Caching]
 first_described: "industry cache design practice, no single canonical origin"
 maturity: established
-related: [cache-aside, read-through-cache, write-through-cache, cache-stampede, circuit-breaker, bulkhead, throttling, stale-while-revalidate]
-incompatible_with: [cache-as-database, no-store-everywhere]
+related: [cache-aside, read-through-cache, write-through-cache, cache-stampede, circuit-breaker, bulkhead, throttling]
+related_concepts: [stale-while-revalidate]
+incompatible_with: []
+incompatible_concepts: [cache-as-database, no-store-everywhere]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # No Caching Strategy

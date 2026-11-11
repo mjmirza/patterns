@@ -1,14 +1,20 @@
 ---
 name: Double Buffering
 slug: double-buffering
+id: pat.28.double-buffering
+kind: pattern
 family: 28-embedded-hardware
 category: Structural
 aliases: [Back Buffer, Front-Back Buffer Swap, Flip Buffering]
 first_described: "LVGL documentation, display double buffering"
 maturity: canonical
 related: [ring-buffer, hardware-abstraction-layer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Double Buffering

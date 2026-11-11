@@ -1,14 +1,20 @@
 ---
 name: Single Responsibility Principle
 slug: single-responsibility-principle
+id: pat.04.single-responsibility-principle
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [SRP, One Reason to Change]
 first_described: "Robert C. Martin, early 2000s, as part of the Principles of Object Oriented Design"
 maturity: canonical
-related: [interface-segregation-principle, open-closed-principle, dependency-inversion-principle, separation-of-concerns, cohesion-and-coupling]
+related: [interface-segregation-principle, open-closed-principle, dependency-inversion-principle, separation-of-concerns]
+related_concepts: [cohesion-and-coupling]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Single Responsibility Principle

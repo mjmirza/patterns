@@ -1,14 +1,20 @@
 ---
 name: Command
 slug: command
+id: pat.01.command
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Action, Transaction]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 related: [memento, composite, chain-of-responsibility, strategy, prototype, observer, mediator]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 maturity: canonical
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Command

@@ -1,14 +1,20 @@
 ---
 name: Map-Reduce
 slug: map-reduce
+id: pat.09.map-reduce
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [MapReduce, Map/Reduce, Scatter-Gather (data-parallel variant)]
 first_described: "Dean, Ghemawat 2004"
 maturity: canonical
-related: [fork-join, pipeline-parallelism, producer-consumer, immutable-object, barrier]
+related: [fork-join, pipeline-parallelism, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, immutable-object, barrier]
+related_concepts: []
 incompatible_with: [monitor-object]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Map-Reduce

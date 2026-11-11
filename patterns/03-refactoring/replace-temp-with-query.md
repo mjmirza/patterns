@@ -1,14 +1,20 @@
 ---
 name: Replace Temp with Query
 slug: replace-temp-with-query
+id: pat.03.replace-temp-with-query
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Temporary Variable with Query, Replace Temp with Method]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [extract-function, inline-variable, split-variable, replace-query-with-parameter, replace-derived-variable-with-query, separate-query-from-modifier]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Temp with Query

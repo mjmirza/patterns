@@ -1,14 +1,20 @@
 ---
 name: Composition over Inheritance
 slug: composition-over-inheritance
+id: pat.04.composition-over-inheritance
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Favor Object Composition over Class Inheritance, Has-A over Is-A, Delegation over Subclassing]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [strategy, decorator, bridge, template-method, dependency-injection]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Composition over Inheritance

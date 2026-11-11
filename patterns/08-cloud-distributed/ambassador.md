@@ -1,14 +1,20 @@
 ---
 name: Ambassador
 slug: ambassador
+id: pat.08.ambassador
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed Systems
 aliases: [Ambassador Sidecar, Client-Side Proxy Sidecar, Sidecar Proxy]
 first_described: "Burns and Oppenheimer 2016 (design patterns for container-based distributed systems), Microsoft patterns and practices team, Azure Architecture Center"
 maturity: canonical
 related: [sidecar, adapter, proxy, circuit-breaker, service-mesh, api-gateway, decorator]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Ambassador

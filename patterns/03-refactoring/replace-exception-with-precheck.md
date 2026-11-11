@@ -1,14 +1,20 @@
 ---
 name: Replace Exception with Precheck
 slug: replace-exception-with-precheck
+id: pat.03.replace-exception-with-precheck
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Exception with Test, Check Before Operation]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [replace-error-code-with-exception, introduce-assertion, separate-query-from-modifier, consolidate-conditional-expression]
-incompatible_with: [easier-to-ask-for-forgiveness-than-permission]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [easier-to-ask-for-forgiveness-than-permission]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Exception with Precheck

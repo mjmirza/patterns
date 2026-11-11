@@ -1,14 +1,20 @@
 ---
 name: OAuth 2.1 Flows
 slug: oauth-2-1-flows
+id: pat.15.oauth-2-1-flows
+kind: pattern
 family: 15-security
 category: Authorization
 aliases: [OAuth Authorization Flows, OAuth Grant Flows, Authorization Code with PKCE]
 first_described: "Hardt 2012, Hardt, Parecki, Lodderstedt 2026 draft"
 maturity: established
 related: [token-based-authentication, zero-trust, least-privilege, defense-in-depth]
-incompatible_with: [password-sharing, implicit-browser-tokens, resource-owner-password-credentials]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [password-sharing, implicit-browser-tokens, resource-owner-password-credentials]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # OAuth 2.1 Flows

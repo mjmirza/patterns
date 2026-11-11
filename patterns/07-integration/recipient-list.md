@@ -1,14 +1,20 @@
 ---
 name: Recipient List
 slug: recipient-list
+id: pat.07.recipient-list
+kind: pattern
 family: 07-integration
 category: Messaging
 aliases: [Recipient List Router, Dynamic Recipient List, Fan-Out Router]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [content-based-router, message-filter, splitter, aggregator, publish-subscribe-channel, pipes-and-filters, dynamic-router, correlation-identifier]
+related: [content-based-router, message-filter, splitter, aggregator, publisher-subscriber, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, dynamic-router, correlation-identifier]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Recipient List

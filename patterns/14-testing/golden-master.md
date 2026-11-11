@@ -1,14 +1,20 @@
 ---
 name: Golden Master
 slug: golden-master
+id: pat.14.golden-master
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Characterization Test, Approval Test, Snapshot Test, Approval Testing, Golden Master Testing]
 first_described: "Feathers 2004"
 maturity: established
 related: [arrange-act-assert, four-phase-test, fresh-fixture, shared-fixture, test-data-builder, given-when-then, mock, fake]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Golden Master

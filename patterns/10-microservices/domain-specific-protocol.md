@@ -1,14 +1,20 @@
 ---
 name: Domain-Specific Protocol
 slug: domain-specific-protocol
+id: pat.10.domain-specific-protocol
+kind: pattern
 family: 10-microservices
 category: Communication
 aliases: [Domain-Specific IPC Protocol, Vertical Protocol Adapter]
 first_described: "Richardson, microservices.io, Domain-specific protocol pattern"
 maturity: canonical
 related: [remote-procedure-invocation, messaging, api-gateway, sidecar-proxy, service-mesh]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Domain-Specific Protocol

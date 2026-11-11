@@ -1,14 +1,20 @@
 ---
 name: Profunctor
 slug: profunctor
+id: pat.16.profunctor
+kind: pattern
 family: 16-functional
 category: Composition
 aliases: [Distributor, Bimodule, Correspondence]
 first_described: "Benabou 1973"
 maturity: canonical
-related: [function-composition, lens, functor, natural-transformation]
-incompatible_with: [covariant-only-functor, contravariant-only-functor]
+related: [function-composition, lens, functor]
+related_concepts: [natural-transformation]
+incompatible_with: []
+incompatible_concepts: [covariant-only-functor, contravariant-only-functor]
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Profunctor

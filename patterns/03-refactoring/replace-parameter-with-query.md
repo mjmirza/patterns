@@ -1,14 +1,20 @@
 ---
 name: Replace Parameter with Query
 slug: replace-parameter-with-query
+id: pat.03.replace-parameter-with-query
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Parameter with Method, Remove Redundant Parameter]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [preserve-whole-object, replace-query-with-parameter, separate-query-from-modifier, change-function-declaration, introduce-parameter-object, move-function]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Parameter with Query

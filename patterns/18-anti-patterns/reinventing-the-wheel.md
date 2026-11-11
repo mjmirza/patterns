@@ -1,14 +1,20 @@
 ---
 name: Reinventing the Wheel
 slug: reinventing-the-wheel
+id: pat.18.reinventing-the-wheel
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Reinvent the Wheel, Reinvent the Square Wheel, Design in a Vacuum, Greenfield System, Roll Your Own]
 first_described: "Brown, Malveau, McCormick, Mowbray 1998"
 maturity: canonical
 related: [not-invented-here, golden-hammer, cargo-cult-programming, premature-optimization, vendor-lock-in, inner-platform-effect, copy-paste-programming]
+related_concepts: []
 incompatible_with: [common-reuse-principle, dependency-inversion-principle]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Reinventing the Wheel

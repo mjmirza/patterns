@@ -1,14 +1,20 @@
 ---
 name: Lamport Clock
 slug: lamport-clock
+id: pat.12.lamport-clock
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Lamport Timestamp, Logical Clock, Scalar Clock]
 first_described: "Lamport 1978"
 maturity: canonical
 related: [vector-clock, quorum, leaderless-replication, crdt, write-ahead-log, multi-leader-replication]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Lamport Clock

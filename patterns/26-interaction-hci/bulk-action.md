@@ -1,14 +1,20 @@
 ---
 name: Bulk Action
 slug: bulk-action
+id: pat.26.bulk-action
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Batch Actions, Multi-Select Actions, Mass Action]
 first_described: "Google Material Design's Selection pattern, archived at m1.material.io, circa 2014, for the checkbox-selection mechanics; the term batch actions is IBM Carbon's own naming for the same shape"
 maturity: established
 related: [undo]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Bulk Action

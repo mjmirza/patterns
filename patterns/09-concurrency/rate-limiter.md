@@ -1,14 +1,20 @@
 ---
 name: Rate Limiter
 slug: rate-limiter
+id: pat.09.rate-limiter
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Throttle, Traffic Shaper, Request Governor]
 first_described: "ITU-T I.371 (1996), Turner 1986"
 maturity: canonical
-related: [semaphore, backpressure, circuit-breaker, bulkhead, load-shedding]
+related: [semaphore, backpressure, circuit-breaker, bulkhead]
+related_concepts: [load-shedding]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Rate Limiter

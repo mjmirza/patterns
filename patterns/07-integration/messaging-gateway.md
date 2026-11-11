@@ -1,14 +1,20 @@
 ---
 name: Messaging Gateway
 slug: messaging-gateway
+id: pat.07.messaging-gateway
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Gateway, Message Gateway, Channel Adapter Facade]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [channel-adapter, command-message, request-reply, service-activator, envelope-wrapper]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Messaging Gateway

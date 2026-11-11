@@ -1,14 +1,20 @@
 ---
 name: Singleton
 slug: singleton
+id: pat.01.singleton
+kind: pattern
 family: 01-design-patterns-gof
 category: Creational
 aliases: [Highlander, Single Instance, Solitaire]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: contested
-related: [factory-method, abstract-factory, monostate, object-pool, flyweight, facade]
+related: [factory-method, abstract-factory, object-pool, flyweight, facade]
+related_concepts: [monostate]
 incompatible_with: [dependency-injection, service-locator]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Singleton

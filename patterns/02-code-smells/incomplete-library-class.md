@@ -1,14 +1,20 @@
 ---
 name: Incomplete Library Class
 slug: incomplete-library-class
+id: pat.02.incomplete-library-class
+kind: smell
 family: 02-code-smells
 category: Coupling
 aliases: [Foreign Class Needs Extra Method, Insufficient Library Class]
 first_described: "Fowler and Beck 1999"
 maturity: canonical
 related: [adapter, decorator, feature-envy, data-class, alternative-classes-with-different-interfaces]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Incomplete Library Class

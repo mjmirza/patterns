@@ -1,13 +1,20 @@
 ---
 name: Dependency Injection
 slug: dependency-injection
+id: pat.01.dependency-injection
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: [DI, Constructor Injection, Setter Injection, Interface Injection, IoC Container Injection]
 first_described: "Martin Fowler, Inversion of Control Containers and the Dependency Injection pattern, martinfowler.com, January 2004, which coined and popularized the specific term Dependency Injection as a more precise replacement for the vaguer, older term Inversion of Control. The underlying practice predates the essay, visible in the PicoContainer and Spring frameworks Fowler cites as already active projects at the time of writing, and the closely related design principle it most often serves, the Dependency Inversion Principle, was published by Robert C. Martin in The C++ Report in 1996, eight years earlier"
 maturity: canonical
 related: [factory-method, abstract-factory, strategy, inversion-of-control]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Dependency Injection

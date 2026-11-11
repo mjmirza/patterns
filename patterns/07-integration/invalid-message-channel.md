@@ -1,14 +1,20 @@
 ---
 name: Invalid Message Channel
 slug: invalid-message-channel
+id: pat.07.invalid-message-channel
+kind: pattern
 family: 07-integration
 category: Messaging Channels
 aliases: [Invalid Message Queue, Application-Level Poison Queue]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [dead-letter-channel, selective-consumer, guaranteed-delivery, message-filter, canonical-data-model, format-indicator, correlation-identifier, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Invalid Message Channel

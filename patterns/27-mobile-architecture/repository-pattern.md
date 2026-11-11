@@ -1,14 +1,20 @@
 ---
 name: Repository Pattern (Mobile Offline-First)
 slug: repository-pattern
+id: pat.27.repository-pattern
+kind: pattern
 family: 27-mobile-architecture
 category: Structural
 aliases: [Offline-First Repository, Single-Source-of-Truth Repository]
 first_described: 'Google Android Developers, "Build an offline-first app" architecture guidance'
 maturity: canonical
 related: [unidirectional-data-flow, mvvm-c]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Repository Pattern (Mobile Offline-First)

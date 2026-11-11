@@ -1,14 +1,20 @@
 ---
 name: Remove Middle Man
 slug: remove-middle-man
+id: pat.03.remove-middle-man
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Remove Delegating Methods, Expose Delegate]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [hide-delegate, move-function, move-field, inline-class, extract-class]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Remove Middle Man

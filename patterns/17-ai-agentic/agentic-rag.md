@@ -1,14 +1,20 @@
 ---
 name: Agentic RAG
 slug: agentic-rag
+id: pat.17.agentic-rag
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Agent-Driven RAG, Adaptive RAG, RAG Agent, Agentic Retrieval]
 first_described: "Term and taxonomy formalized in Singh, Ehtesham, Kumar, Khoei, Vasilakos 2025; the retrieval-plus-reasoning mechanism traces to Lewis et al. 2020 (RAG), Yao et al. 2022 (ReAct), and Asai et al. 2023 (Self-RAG)"
 maturity: emerging
 related: [retrieval-augmented-generation, react-prompting, reflexion, orchestrator-worker, routing, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Agentic RAG

@@ -1,14 +1,20 @@
 ---
 name: Interface Segregation Principle
 slug: interface-segregation-principle
+id: pat.04.interface-segregation-principle
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [ISP, Role Interfaces, Fat Interface Anti-Pattern (the thing it opposes)]
 first_described: "Robert C. Martin, 1996, C++ Report article, restated in Agile Software Development: Principles, Patterns, and Practices, 2002"
 maturity: canonical
 related: [single-responsibility-principle, dependency-inversion-principle, open-closed-principle, adapter, facade, strategy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Interface Segregation Principle

@@ -1,13 +1,20 @@
 ---
 name: Durable Execution
 slug: durable-execution
+id: pat.23.durable-execution
+kind: pattern
 family: 23-workflow-orchestration
 category: workflow orchestration
 aliases: [Fault Tolerant Workflow Execution, Crash Proof Execution, Durable Functions]
 first_described: "Fred B. Schneider, Implementing Fault Tolerant Services Using the State Machine Approach, ACM Computing Surveys, December 1990, which formalized deterministic state machine replication as the theoretical basis for reconstructing execution from a recorded request sequence. The event sourced replay mechanism itself traces to Martin Fowler's Event Sourcing pattern, published on his site in 2005. The term durable execution as a named category for this specific mechanism was popularized by Temporal in its own documentation and blog beginning in the early 2020s"
 maturity: established
 related: [workflow-engine, state-machine-workflow, human-task, compensation-handler, saga]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Durable Execution

@@ -1,14 +1,20 @@
 ---
 name: Training-Serving Skew Guard
 slug: training-serving-skew-guard
+id: pat.25.training-serving-skew-guard
+kind: pattern
 family: 25-mlops
 category: MLOps
 aliases: [Training-Serving Skew Detection, Skew Comparator]
 first_described: "Martin Zinkevich, Rules of Machine Learning, Google, undated"
 maturity: established
 related: [feature-store, model-monitoring, drift-detection, model-registry, shadow-model]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Training-Serving Skew Guard

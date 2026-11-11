@@ -1,14 +1,20 @@
 ---
 name: Not Invented Here
 slug: not-invented-here
+id: pat.18.not-invented-here
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [NIH Syndrome, Homegrown Everything]
 first_described: "Katz, Allen 1982"
 maturity: canonical
-related: [golden-hammer, boat-anchor, vendor-lock-in, cargo-cult-programming, big-ball-of-mud]
+related: [golden-hammer, boat-anchor, vendor-lock-in, cargo-cult-programming, 11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Not Invented Here

@@ -1,14 +1,20 @@
 ---
 name: Semaphore
 slug: semaphore
+id: pat.09.semaphore
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Counting Semaphore, Binary Semaphore, P/V Operations, Dijkstra Semaphore]
 first_described: "Dijkstra 1962 or 1963, EWD-35"
 maturity: canonical
-related: [mutex, monitor, producer-consumer, thread-pool, bulkhead, rate-limiter, condition-variable]
+related: [09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, thread-pool, bulkhead, rate-limiter]
+related_concepts: [mutex, monitor, condition-variable]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Semaphore

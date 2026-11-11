@@ -1,14 +1,20 @@
 ---
 name: Externalized Configuration
 slug: externalized-configuration
+id: pat.10.externalized-configuration
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Config Server Pattern, Configuration as a Service, Centralized Configuration]
 first_described: "Twelve-Factor App, Adam Wiggins, Heroku, 2011"
 maturity: canonical
 related: [circuit-breaker, service-registry, sidecar, feature-toggle, strangler-fig]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Externalized Configuration

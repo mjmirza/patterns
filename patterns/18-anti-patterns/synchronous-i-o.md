@@ -1,14 +1,20 @@
 ---
 name: Synchronous I/O
 slug: synchronous-i-o
+id: pat.18.synchronous-i-o
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Blocking I/O, Blocking Call Anti-Pattern, Synchronous Blocking Call, Sync-Over-Async]
 first_described: "No single formal catalog names this anti-pattern. The earliest widely cited technical account of the failure mode at scale is Dan Kegel, The C10k problem, 1999, describing why a thread blocked on I/O per connection stops scaling long before CPU capacity is exhausted (see dimension 1 for the full lineage)"
 maturity: established
 related: [chatty-i-o, busy-database, bulkhead, circuit-breaker, asynchronous-request-reply, queue-based-load-leveling, n+1-query]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Synchronous I/O

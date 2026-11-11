@@ -1,14 +1,20 @@
 ---
 name: Serverless Architecture
 slug: serverless-architecture
+id: pat.05.serverless-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Function as a Service Architecture, FaaS Architecture, Serverless Compute]
 first_described: "Roberts 2018 (term definition); commercial origin AWS Lambda, launched 2014"
 maturity: established
-related: [event-driven-architecture, microservices, hexagonal-architecture, pipes-and-filters, cqrs]
-incompatible_with: [monolithic-architecture]
+related: [event-driven-architecture, microservices-architecture, hexagonal-architecture, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, cqrs]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [monolithic-architecture]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Serverless Architecture

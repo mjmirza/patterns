@@ -1,14 +1,20 @@
 ---
 name: Service Mesh
 slug: service-mesh
+id: pat.10.service-mesh
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Sidecar Mesh, Data Plane and Control Plane]
 first_described: "William Morgan, Buoyant, 2017 (term); sidecar mechanics predate the term at Google (Stubby) and Netflix (client libraries)"
 maturity: established
 related: [api-gateway, server-side-service-discovery, client-side-service-discovery, service-registry, circuit-breaker, bulkhead, retry, self-contained-service, decompose-by-business-capability]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service Mesh

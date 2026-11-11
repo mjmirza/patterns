@@ -1,14 +1,20 @@
 ---
 name: Layered Architecture
 slug: layered-architecture
+id: pat.05.layered-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [N-Tier Architecture, Multitier Architecture, N-Layer Architecture, Presentation-Domain-Data Layering]
 first_described: "Buschmann, Meunier, Rohnert, Sommerlad, Stal 1996"
 maturity: canonical
-related: [hexagonal-architecture, onion-architecture, dependency-injection, repository, facade, mvc]
+related: [hexagonal-architecture, onion-architecture, dependency-injection, repository, facade, model-view-controller]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Layered Architecture

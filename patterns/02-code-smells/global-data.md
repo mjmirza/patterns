@@ -1,14 +1,20 @@
 ---
 name: Global Data
 slug: global-data
+id: pat.02.global-data
+kind: smell
 family: 02-code-smells
 category: Coupling
 aliases: [Global Variables, Global State, Global Mutable State, Global Data Smell]
 first_described: "Fowler 2018, Refactoring, second edition, with Kent Beck as contributor for the JavaScript examples"
 maturity: canonical
 related: [large-class, primitive-obsession, feature-envy, shotgun-surgery, singleton, dependency-injection, encapsulate-variable]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Global Data

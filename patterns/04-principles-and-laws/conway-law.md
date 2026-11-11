@@ -1,14 +1,20 @@
 ---
 name: Conway's Law
 slug: conway-law
+id: pat.04.conway-law
+kind: law
 family: 04-principles-and-laws
 category: Principle
 aliases: [Mirroring Hypothesis, Homomorphic Force, The Committee Paper]
 first_described: "Melvin Conway, \"How Do Committees Invent?\", Datamation, April 1968"
 maturity: canonical
-related: [team-topologies, bounded-context, microservices, modular-monolith, single-responsibility-principle, high-cohesion, low-coupling]
+related: [bounded-context, microservices-architecture, modular-monolith, single-responsibility-principle, high-cohesion, low-coupling]
+related_concepts: [team-topologies]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Conway's Law

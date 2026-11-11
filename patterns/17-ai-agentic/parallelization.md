@@ -1,14 +1,20 @@
 ---
 name: Parallelization
 slug: parallelization
+id: pat.17.parallelization
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Sectioning, Voting, Parallel Subagents, Fan-out Fan-in for LLMs, Map-Reduce Agent Pattern]
 first_described: "Anthropic engineering team, Building Effective Agents, December 2024"
 maturity: established
 related: [orchestrator-worker, prompt-chaining, routing, self-consistency, plan-execute]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Parallelization

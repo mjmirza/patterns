@@ -2,30 +2,30 @@
 
 Origin. Google SRE, AWS Well-Architected
 
-12 entries, 33,510 words. Every entry carries all 18
+12 entries, 33,654 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Chaos Engineering](chaos-engineering.md) | canonical | 2,457 | A distributed system's resilience is, by default, an assumption. |
-| [Checkpoints](checkpoints.md) | canonical | 5,564 | A long-running computation, a stream-processing job, a database, a multi-step workflow, or a distributed training run, must survive a crash without either losing all of its ... |
-| [Emergency Lever](emergency-lever.md) | canonical | 2,475 | During an active incident, an operator often knows which feature or which category of load is causing the problem, but has no fast, safe way to turn it off. |
-| [Error Budget](error-budget.md) | canonical | 2,574 | Engineering teams building on top of a service and the team operating that service structurally want different things. |
-| [Game Day](game-day.md) | canonical | 2,510 | A system's resilience, a runbook's correctness, and a team's readiness are all assumptions until they are tested against a real failure. |
-| [Graceful Degradation](graceful-degradation.md) | canonical | 2,434 | When a system is overloaded, or a dependency it relies on fails, the naive response is to fail every request outright. |
-| [Regional Evacuation](regional-evacuation.md) | canonical | 2,523 | A multi-site architecture removes a single point of failure at the architectural level, but it does not by itself give an operator a fast, safe, well tested way to actually act on ... |
-| [Runbook Automation](runbook-automation.md) | canonical | 2,671 | During an incident, a person following a runbook by hand introduces two real costs. |
-| [Service Level Objective](service-level-objective.md) | canonical | 2,649 | A service either works or it does not, but complex distributed systems rarely fail as a binary. |
-| [Toil Automation](toil-automation.md) | canonical | 2,647 | As a service grows, the amount of manual operational work required to keep it running (provisioning, restarts, routine configuration changes, responding to the same class of ... |
+| [Chaos Engineering](chaos-engineering.md) | canonical | 2,469 | A distributed system's resilience is, by default, an assumption. |
+| [Checkpoints](checkpoints.md) | canonical | 5,576 | A long-running computation, a stream-processing job, a database, a multi-step workflow, or a distributed training run, must survive a crash without either losing all of its ... |
+| [Emergency Lever](emergency-lever.md) | canonical | 2,487 | During an active incident, an operator often knows which feature or which category of load is causing the problem, but has no fast, safe way to turn it off. |
+| [Error Budget](error-budget.md) | canonical | 2,586 | Engineering teams building on top of a service and the team operating that service structurally want different things. |
+| [Game Day](game-day.md) | canonical | 2,522 | A system's resilience, a runbook's correctness, and a team's readiness are all assumptions until they are tested against a real failure. |
+| [Graceful Degradation](graceful-degradation.md) | canonical | 2,446 | When a system is overloaded, or a dependency it relies on fails, the naive response is to fail every request outright. |
+| [Regional Evacuation](regional-evacuation.md) | canonical | 2,535 | A multi-site architecture removes a single point of failure at the architectural level, but it does not by itself give an operator a fast, safe, well tested way to actually act on ... |
+| [Runbook Automation](runbook-automation.md) | canonical | 2,683 | During an incident, a person following a runbook by hand introduces two real costs. |
+| [Service Level Objective](service-level-objective.md) | canonical | 2,661 | A service either works or it does not, but complex distributed systems rarely fail as a binary. |
+| [Toil Automation](toil-automation.md) | canonical | 2,659 | As a service grows, the amount of manual operational work required to keep it running (provisioning, restarts, routine configuration changes, responding to the same class of ... |
 
 ## Structural
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Multi-Site Active Active](multi-site-active-active.md) | canonical | 2,538 | A single-site or passive-standby architecture concentrates real risk in one place. |
-| [Static Stability](static-stability.md) | canonical | 2,468 | A distributed system spread across multiple availability zones or regions often relies on real-time coordination with a central control plane, or with its peers, to make decisions. |
+| [Multi-Site Active Active](multi-site-active-active.md) | canonical | 2,550 | A single-site or passive-standby architecture concentrates real risk in one place. |
+| [Static Stability](static-stability.md) | canonical | 2,480 | A distributed system spread across multiple availability zones or regions often relies on real-time coordination with a central control plane, or with its peers, to make decisions. |
 
 ## Reading order
 

@@ -1,14 +1,20 @@
 ---
 name: Contextual Retrieval
 slug: contextual-retrieval
+id: pat.17.contextual-retrieval
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Contextual Embeddings, Contextual Chunking, Chunk Context Enrichment]
 first_described: "Anthropic Applied AI team 2024"
 maturity: established
 related: [chunking-strategies, hybrid-search, reranking, retrieval-augmented-generation, advanced-rag, graphrag]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Contextual Retrieval

@@ -1,14 +1,20 @@
 ---
 name: Service Level Objective
 slug: service-level-objective
+id: pat.21.service-level-objective
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [SLO, Reliability Target]
 first_described: 'Google, Site Reliability Engineering, 2016'
 maturity: canonical
 related: [error-budget, graceful-degradation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Service Level Objective

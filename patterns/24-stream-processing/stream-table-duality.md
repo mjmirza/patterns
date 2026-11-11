@@ -1,14 +1,20 @@
 ---
 name: Stream-Table Duality
 slug: stream-table-duality
+id: pat.24.stream-table-duality
+kind: pattern
 family: 24-stream-processing
 category: Stream Processing
 aliases: [Stream/Table Duality, Duality of Streams and Tables]
 first_described: "Apache Kafka Streams documentation, current, exact original coinage and date unconfirmed; conceptual predecessor, Martin Kleppmann, Turning the Database Inside Out with Apache Samza, Strange Loop 2014, published on the Confluent blog, 2015"
 maturity: established
 related: [event-sourcing, cqrs, materialized-view, change-data-capture, watermark, event-time-processing]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

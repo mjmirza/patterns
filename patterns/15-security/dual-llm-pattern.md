@@ -1,14 +1,20 @@
 ---
 name: Dual LLM Pattern
 slug: dual-llm-pattern
+id: pat.15.dual-llm-pattern
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Privileged and Quarantined LLM, Two-LLM Isolation]
 first_described: "Simon Willison's own blog post introducing the pattern"
 maturity: emerging
 related: [lethal-trifecta-threat-model]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Dual LLM Pattern

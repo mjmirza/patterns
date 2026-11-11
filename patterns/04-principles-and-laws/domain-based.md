@@ -1,14 +1,20 @@
 ---
 name: Domain-based
 slug: domain-based
+id: pat.04.domain-based
+kind: principle
 family: 04-principles-and-laws
 category: Structural principle
 aliases: [Domain-oriented organization, Package by feature, Vertical slicing, Business capability alignment]
 first_described: "Evans 2003 (Domain-Driven Design, strategic patterns); Bogard 2018 (Vertical Slice Architecture, as a codebase-organization name)"
 maturity: canonical
-related: [bounded-context, aggregate, hexagonal-architecture, strategy, facade, single-responsibility-principle]
-incompatible_with: [layered-architecture-as-primary-axis]
+related: [bounded-context, 10-microservices/aggregate, 11-domain-driven-design/aggregate, hexagonal-architecture, strategy, facade, single-responsibility-principle]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [layered-architecture-as-primary-axis]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Domain-based

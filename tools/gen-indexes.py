@@ -104,7 +104,7 @@ def field(block: str, key: str, default: str = "") -> str:
 def first_intent(text: str) -> str:
     # Dimension 2 opens on the problem, which is the useful one-line summary.
     # Dimension 1 opens on the canonical name, which says nothing.
-    m = re.search(r"^##\s*2\.[^\n]*\n(.*?)(?=^##\s)", text, re.M | re.S)
+    m = re.search(r"^##\s*2\.[^\n]*\n(.*?)(?=^##\s|\Z)", text, re.M | re.S)
     if not m:
         return ""
     body = "\n".join(

@@ -1,14 +1,20 @@
 ---
 name: Federated Identity
 slug: federated-identity
+id: pat.08.federated-identity
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed
 aliases: [Identity Federation, Single Sign-On Federation, Cross-Domain Authentication, Claims-Based Identity]
 first_described: "OASIS SSTC, SAML 1.0, 2002; Kim Cameron, The Laws of Identity, 2005; OpenID Foundation, OpenID Connect Core 1.0, 2014"
 maturity: canonical
-related: [api-gateway, backend-for-frontend, circuit-breaker, saga, strangler-fig, event-sourcing]
+related: [api-gateway, backends-for-frontends, circuit-breaker, saga, strangler-fig, event-sourcing]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Federated Identity

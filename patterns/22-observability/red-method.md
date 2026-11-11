@@ -1,14 +1,20 @@
 ---
 name: RED Method
 slug: red-method
+id: pat.22.red-method
+kind: pattern
 family: 22-observability
 category: Structural
 aliases: [Rate Errors Duration]
 first_described: 'Tom Wilkie, 2015, presented while at Weaveworks and later at Grafana Labs'
 maturity: canonical
 related: [use-method, structured-logging, correlation-id]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # RED Method

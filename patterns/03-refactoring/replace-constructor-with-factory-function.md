@@ -1,14 +1,20 @@
 ---
 name: Replace Constructor with Factory Function
 slug: replace-constructor-with-factory-function
+id: pat.03.replace-constructor-with-factory-function
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Constructor with Factory Method, Static Creation Function, Named Constructor]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [factory-method, abstract-factory, builder, introduce-parameter-object, change-function-declaration]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Constructor with Factory Function

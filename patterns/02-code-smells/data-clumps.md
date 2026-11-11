@@ -1,14 +1,20 @@
 ---
 name: Data Clumps
 slug: data-clumps
+id: pat.02.data-clumps
+kind: smell
 family: 02-code-smells
 category: Bloaters
 aliases: [Parameter Clumps, Primitive Clumps, Shotgun Parameter List]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999, Refactoring, Improving the Design of Existing Code"
 maturity: canonical
-related: [primitive-obsession, long-parameter-list, extract-class, introduce-parameter-object, value-object, builder]
+related: [primitive-obsession, long-parameter-list, extract-class, introduce-parameter-object, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, builder]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

@@ -1,14 +1,20 @@
 ---
 name: Input Guardrails
 slug: input-guardrails
+id: pat.17.input-guardrails
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Input Rails, Prompt Shields, Guard Model Filtering, Pre-Inference Content Filtering]
 first_described: "Rebedea, Dinu, Sreedhar, Parisien, Cohen 2023 (NeMo Guardrails); OWASP LLM01 2023, revised 2025"
 maturity: established
-related: [function-calling, model-context-protocol, react, agent-memory, multi-agent-supervisor, orchestrator-worker, structured-output, chain-of-responsibility]
+related: [function-calling, model-context-protocol, react-prompting, agent-memory, multi-agent-supervisor, orchestrator-worker, structured-output, chain-of-responsibility]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Input Guardrails

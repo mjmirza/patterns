@@ -1,14 +1,20 @@
 ---
 name: Graph of Thoughts
 slug: graph-of-thoughts
+id: pat.17.graph-of-thoughts
+kind: pattern
 family: 17-ai-agentic
 category: AI and Agentic
 aliases: [GoT, Graph of Operations, Thought Graph Prompting]
 first_described: "Besta, Blach, Kubicek, Gerstenberger, Podstawski, Gianinazzi, Gajda, Lehmann, Niewiadomski, Nyczyk, Hoefler 2023 (arXiv preprint), AAAI 2024"
 maturity: established
 related: [tree-of-thoughts, chain-of-thought, self-consistency, reflexion, plan-execute, multi-agent-supervisor, orchestrator-worker, evaluator-optimizer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Graph of Thoughts

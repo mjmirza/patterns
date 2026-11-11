@@ -1,14 +1,20 @@
 ---
 name: Self-RAG
 slug: self-rag
+id: pat.17.self-rag
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [SELF-RAG, Self-Reflective Retrieval-Augmented Generation]
 first_described: "Asai, Wu, Wang, Sil, Hajishirzi 2023"
 maturity: established
 related: [retrieval-augmented-generation, agentic-rag, advanced-rag, reflexion, react-prompting, graphrag]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Self-RAG

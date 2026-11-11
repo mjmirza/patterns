@@ -1,14 +1,20 @@
 ---
 name: Service Layer
 slug: service-layer
+id: pat.06.service-layer
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Domain Logic
 aliases: [Application Service]
 first_described: "Fowler and Stafford, Patterns of Enterprise Application Architecture, 2002"
 maturity: canonical
 related: [domain-model, transaction-script, active-record, data-transfer-object, unit-of-work, remote-facade]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Service Layer

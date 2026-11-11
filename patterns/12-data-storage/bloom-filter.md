@@ -1,14 +1,20 @@
 ---
 name: Bloom Filter
 slug: bloom-filter
+id: pat.12.bloom-filter
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Bloom Membership Filter, Probabilistic Set Membership Filter]
 first_described: "Bloom 1970"
 maturity: canonical
 related: [lsm-tree, consistent-hashing, quorum, sharding, cache-aside]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Bloom Filter

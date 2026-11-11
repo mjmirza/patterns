@@ -1,14 +1,20 @@
 ---
 name: Workflow Engine
 slug: workflow-engine
+id: pat.23.workflow-engine
+kind: pattern
 family: 23-workflow-orchestration
 category: workflow orchestration
 aliases: [Durable Execution Engine, Orchestration Engine, Durable Workflow Runtime]
 first_described: "Workflow Management Coalition, founded May 1993, published the Workflow Reference Model in 1995. The modern durable-execution framing traces through Amazon Simple Workflow Service to Uber's Cadence, open sourced 2017, and its fork Temporal, founded around 2019 by the same two engineers who co-created Amazon SWF"
 maturity: established
 related: [saga, choreography, queue-based-load-leveling, orchestrator-worker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Workflow Engine

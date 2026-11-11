@@ -1,14 +1,20 @@
 ---
 name: STRIDE
 slug: stride
+id: pat.15.stride
+kind: pattern
 family: 15-security
 category: Security
 aliases: [STRIDE Threat Modeling, STRIDE per Element, STRIDE Taxonomy]
 first_described: "Kohnfelder and Garg 1999"
 maturity: established
 related: [threat-modeling, defense-in-depth, least-privilege, complete-mediation, audit-log, zero-trust]
-incompatible_with: [checklist-compliance, unsourced-risk-scoring, attacker-free-threat-modeling]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [checklist-compliance, unsourced-risk-scoring, attacker-free-threat-modeling]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # STRIDE

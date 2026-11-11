@@ -1,14 +1,20 @@
 ---
 name: Secure by Default
 slug: secure-by-default
+id: pat.15.secure-by-default
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Secure Defaults, Fail-Safe Defaults, Deny by Default, Safe Defaults]
 first_described: "Saltzer and Schroeder 1975"
 maturity: established
-related: [least-privilege, complete-mediation, defense-in-depth, secure-configuration, policy-as-code]
-incompatible_with: [permit-by-default, ambient-authority, insecure-default-configuration]
+related: [least-privilege, complete-mediation, defense-in-depth]
+related_concepts: [secure-configuration, policy-as-code]
+incompatible_with: []
+incompatible_concepts: [permit-by-default, ambient-authority, insecure-default-configuration]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Secure by Default

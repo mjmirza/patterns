@@ -1,14 +1,20 @@
 ---
 name: Kappa Architecture
 slug: kappa-architecture
+id: pat.12.kappa-architecture
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Streaming-Only Architecture, Unified Log Architecture, Single-Path Streaming]
 first_described: "Jay Kreps, Questioning the Lambda Architecture, O'Reilly Radar, 2 July 2014"
 maturity: established
-related: [event-sourcing, cqrs, lambda-architecture, log-compaction, materialized-view, saga-orchestration]
-incompatible_with: [two-tier-batch-speed-layer]
+related: [event-sourcing, cqrs, lambda-architecture, log-compaction, materialized-view, saga]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [two-tier-batch-speed-layer]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Kappa Architecture

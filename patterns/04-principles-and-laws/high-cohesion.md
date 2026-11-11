@@ -1,14 +1,20 @@
 ---
 name: High Cohesion
 slug: high-cohesion
+id: pat.04.high-cohesion
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Functional Cohesion, Module Cohesion, Cohesion Principle]
 first_described: "Larry Constantine and Edward Yourdon, Structured Design, 1979; formalized as a GRASP pattern by Craig Larman in Applying UML and Patterns, 1997"
 maturity: canonical
 related: [single-responsibility-principle, low-coupling, information-expert, separation-of-concerns, facade]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # High Cohesion

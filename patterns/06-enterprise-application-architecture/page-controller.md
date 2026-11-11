@@ -1,14 +1,20 @@
 ---
 name: Page Controller
 slug: page-controller
+id: pat.06.page-controller
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Page-per-Controller, Action Servlet (loosely, when misapplied)]
 first_described: "Fowler 2003"
 maturity: canonical
 related: [front-controller, template-view, transform-view, application-controller, transaction-script, model-view-controller]
+related_concepts: []
 incompatible_with: [front-controller]
+incompatible_concepts: []
 verified: 2026-08-11
+last_reviewed: 2026-08-11
+next_review_due: 2027-02-07
 ---
 
 # Page Controller

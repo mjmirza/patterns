@@ -1,14 +1,20 @@
 ---
 name: Serverless Deployment
 slug: serverless-deployment
+id: pat.10.serverless-deployment
+kind: pattern
 family: 10-microservices
 category: Deployment
 aliases: [Function as a Service, FaaS Deployment, Lambda-Style Deployment]
 first_described: "Roberts, Serverless Architectures, martinfowler.com, 2018"
 maturity: established
 related: [idempotent-consumer, api-gateway, service-instance-per-host, database-per-service, transactional-outbox]
+related_concepts: []
 incompatible_with: [service-instance-per-host]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Serverless Deployment

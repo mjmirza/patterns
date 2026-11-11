@@ -1,14 +1,20 @@
 ---
 name: Gateway Offloading
 slug: gateway-offloading
+id: pat.08.gateway-offloading
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed
 aliases: [SSL Offloading, TLS Offloading, Offload Gateway, Termination Proxy]
 first_described: "Microsoft patterns and practices, Cloud Design Patterns, 2014"
 maturity: canonical
 related: [gateway-aggregation, backends-for-frontends, circuit-breaker, rate-limiting, throttling, federated-identity, ambassador]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Gateway Offloading

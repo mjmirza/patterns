@@ -1,14 +1,20 @@
 ---
 name: MVVM-C (Model-View-ViewModel-Coordinator)
 slug: mvvm-c
+id: pat.27.mvvm-c
+kind: pattern
 family: 27-mobile-architecture
 category: Structural
 aliases: [MVVM Plus Coordinator, Coordinated MVVM]
 first_described: 'Composition of MVVM and the Coordinator Pattern, common in iOS practice since roughly 2015'
 maturity: canonical
 related: [coordinator-pattern, unidirectional-data-flow]
+related_concepts: []
 incompatible_with: [model-view-intent]
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # MVVM-C (Model-View-ViewModel-Coordinator)

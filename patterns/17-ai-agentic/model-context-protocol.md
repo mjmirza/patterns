@@ -1,14 +1,20 @@
 ---
 name: Model Context Protocol
 slug: model-context-protocol
+id: pat.17.model-context-protocol
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [MCP, USB-C for AI]
 first_described: "Anthropic, 25 November 2024"
 maturity: canonical
 related: [function-calling, react-prompting, orchestrator-worker, retrieval-augmented-generation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Model Context Protocol

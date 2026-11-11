@@ -1,14 +1,20 @@
 ---
 name: Read Repair
 slug: read-repair
+id: pat.12.read-repair
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Opportunistic Repair, Foreground Repair]
 first_described: "DeCandia et al. 2007"
 maturity: canonical
 related: [quorum, leaderless-replication, merkle-tree, gossip-protocol, crdt, consistent-hashing, vector-clock]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Read Repair

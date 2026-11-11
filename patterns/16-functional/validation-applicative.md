@@ -1,14 +1,20 @@
 ---
 name: Validation Applicative
 slug: validation-applicative
+id: pat.16.validation-applicative
+kind: pattern
 family: 16-functional
 category: Error Handling
 aliases: [Accumulating Validation, Validated, Error-Accumulating Applicative]
 first_described: "McBride and Paterson 2008"
 maturity: canonical
 related: [functor, applicative, monad, railway-oriented-programming, result-either]
-incompatible_with: [monadic-validation-for-independent-checks]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [monadic-validation-for-independent-checks]
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Validation Applicative

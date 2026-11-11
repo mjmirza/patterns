@@ -1,14 +1,20 @@
 ---
 name: Disruptor
 slug: disruptor
+id: pat.09.disruptor
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [LMAX Disruptor, Ring Buffer Messaging Pattern]
 first_described: "Thompson, LMAX Development Team, 2011"
 maturity: established
-related: [producer-consumer, pipeline, object-pool, mediator, chain-of-responsibility, observer]
+related: [09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, pipeline-parallelism, object-pool, mediator, chain-of-responsibility, observer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Disruptor

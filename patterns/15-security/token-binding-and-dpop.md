@@ -1,14 +1,20 @@
 ---
 name: Token Binding and DPoP
 slug: token-binding-and-dpop
+id: pat.15.token-binding-and-dpop
+kind: pattern
 family: 15-security
 category: Security
 aliases: [DPoP, Demonstrating Proof of Possession, Sender-Constrained Tokens, Proof-of-Possession Tokens, Holder-of-Key Tokens, Token Binding]
 first_described: "Popov, Nystroem, Balfanz, Hodges 2018. Fett, Campbell, Bradley, Lodderstedt, Jones, Waite 2023"
 maturity: established
-related: [bearer-token, mutual-tls, oauth-2, proof-key-for-code-exchange, jwk-thumbprint, replay-cache, nonce, certificate-bound-token]
-incompatible_with: [bearer-only-api, token-in-url, shared-signing-key, client-secret-in-public-client]
+related: [mutual-tls]
+related_concepts: [bearer-token, oauth-2, proof-key-for-code-exchange, jwk-thumbprint, replay-cache, nonce, certificate-bound-token]
+incompatible_with: []
+incompatible_concepts: [bearer-only-api, token-in-url, shared-signing-key, client-secret-in-public-client]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Token Binding and DPoP

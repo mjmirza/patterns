@@ -1,14 +1,20 @@
 ---
 name: Geode
 slug: geode
+id: pat.08.geode
+kind: pattern
 family: 08-cloud-distributed
 category: Geo-Distribution and Availability
 aliases: [Geode Pattern, Active-Active Geo-Distribution, Geo-Replicated Compute]
 first_described: "Microsoft Azure Architecture Center, Cloud Design Patterns catalog"
 maturity: established
 related: [deployment-stamps, sharding, gateway-routing, health-endpoint-monitoring, materialized-view, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Geode

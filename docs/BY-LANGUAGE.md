@@ -725,7 +725,7 @@ This matrix tracks which patterns provide runnable code examples in each languag
 | [Prompt Chaining](../patterns/17-ai-agentic/prompt-chaining.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Prompt Injection Defense](../patterns/17-ai-agentic/prompt-injection-defense.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [RLAIF](../patterns/17-ai-agentic/rlaif.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
-| [ReAct](../patterns/17-ai-agentic/react.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
+| [ReAct](../patterns/17-ai-agentic/react-prompting.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Reflexion](../patterns/17-ai-agentic/reflexion.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
 | [Reranking](../patterns/17-ai-agentic/reranking.md) | AI and Agentic |  |  | Yes |  |  | Yes | Yes |  | Yes |
 | [Retrieval Augmented Generation](../patterns/17-ai-agentic/retrieval-augmented-generation.md) | AI and Agentic |  |  | Yes |  |  | Yes |  |  | Yes |
@@ -1575,7 +1575,7 @@ These patterns contain runnable code examples written in Go:
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
-- [ReAct](../patterns/17-ai-agentic/react.md) (AI and Agentic)
+- [ReAct](../patterns/17-ai-agentic/react-prompting.md) (AI and Agentic)
 - [Read Repair](../patterns/12-data-storage/read-repair.md) (Data and Storage)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
 - [Read-Through Cache](../patterns/12-data-storage/read-through-cache.md) (Data and Storage)
@@ -2007,6 +2007,7 @@ These patterns have unique implementation variants or change their design struct
 - [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) (Refactoring Techniques)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
 - [Retrieval Augmented Generation](../patterns/17-ai-agentic/retrieval-augmented-generation.md) (AI and Agentic)
+- [Retry](../patterns/08-cloud-distributed/retry.md) (Cloud and Distributed)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
 - [Saga](../patterns/08-cloud-distributed/saga.md) (Cloud and Distributed)
 - [Scatter-Gather](../patterns/07-integration/scatter-gather.md) (Enterprise Integration)
@@ -3423,7 +3424,7 @@ These patterns contain runnable code examples written in Python:
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
 - [Rate Monotonic Scheduling](../patterns/28-embedded-hardware/rate-monotonic-scheduling.md) (Embedded and Hardware-Software)
-- [ReAct](../patterns/17-ai-agentic/react.md) (AI and Agentic)
+- [ReAct](../patterns/17-ai-agentic/react-prompting.md) (AI and Agentic)
 - [Reactor](../patterns/09-concurrency/reactor.md) (Concurrency and Parallelism)
 - [Read Repair](../patterns/12-data-storage/read-repair.md) (Data and Storage)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
@@ -3936,6 +3937,7 @@ These patterns have unique implementation variants or change their design struct
 - [Request-Reply](../patterns/07-integration/request-reply.md) (Enterprise Integration)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
 - [Retrieval Augmented Generation](../patterns/17-ai-agentic/retrieval-augmented-generation.md) (AI and Agentic)
+- [Retry](../patterns/08-cloud-distributed/retry.md) (Cloud and Distributed)
 - [Return Address](../patterns/07-integration/return-address.md) (Enterprise Integration)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
@@ -4367,6 +4369,7 @@ These patterns have unique implementation variants or change their design struct
 - [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) (Refactoring Techniques)
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
+- [Retry](../patterns/08-cloud-distributed/retry.md) (Cloud and Distributed)
 - [Return Modified Value](../patterns/03-refactoring/return-modified-value.md) (Refactoring Techniques)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
 - [Saga](../patterns/08-cloud-distributed/saga.md) (Cloud and Distributed)
@@ -5248,7 +5251,7 @@ These patterns contain runnable code examples written in TypeScript:
 - [Railway-Oriented Programming](../patterns/16-functional/railway-oriented-programming.md) (Functional Programming)
 - [Rate Limiter](../patterns/09-concurrency/rate-limiter.md) (Concurrency and Parallelism)
 - [Rate Limiting](../patterns/08-cloud-distributed/rate-limiting.md) (Cloud and Distributed)
-- [ReAct](../patterns/17-ai-agentic/react.md) (AI and Agentic)
+- [ReAct](../patterns/17-ai-agentic/react-prompting.md) (AI and Agentic)
 - [Reactor](../patterns/09-concurrency/reactor.md) (Concurrency and Parallelism)
 - [Read Repair](../patterns/12-data-storage/read-repair.md) (Data and Storage)
 - [Read-Copy-Update](../patterns/09-concurrency/read-copy-update.md) (Concurrency and Parallelism)
@@ -5672,6 +5675,7 @@ These patterns have unique implementation variants or change their design struct
 - [Replace Temp with Query](../patterns/03-refactoring/replace-temp-with-query.md) (Refactoring Techniques)
 - [Replace Type Code with Subclasses](../patterns/03-refactoring/replace-type-code-with-subclasses.md) (Refactoring Techniques)
 - [Result Either](../patterns/16-functional/result-either.md) (Functional Programming)
+- [Retry](../patterns/08-cloud-distributed/retry.md) (Cloud and Distributed)
 - [Routing](../patterns/17-ai-agentic/routing.md) (AI and Agentic)
 - [Saga](../patterns/08-cloud-distributed/saga.md) (Cloud and Distributed)
 - [Scoped Locking](../patterns/09-concurrency/scoped-locking.md) (Concurrency and Parallelism)

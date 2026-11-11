@@ -1,14 +1,20 @@
 ---
 name: Context Object
 slug: context-object
+id: pat.06.context-object
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Enterprise Application Architecture
 aliases: [Request Context, Configuration Context]
 first_described: "Deepak Alur, John Crupi, Dan Malks, Core J2EE Patterns, 2nd Edition, Prentice Hall, 2003, ISBN 0-13-142246-4"
 maturity: established
 related: [front-controller, application-controller, data-transfer-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Context Object

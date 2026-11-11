@@ -1,14 +1,20 @@
 ---
 name: Retry Storm
 slug: retry-storm
+id: pat.18.retry-storm
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Retry Multiplication, Retry Avalanche, Retry Explosion, Thundering Herd of Retries]
 first_described: "AWS Architecture Blog, Marc Brooker, 2015"
 maturity: canonical
-related: [circuit-breaker, bulkhead, timeout-pattern, chatty-i-o, cascading-failure]
+related: [circuit-breaker, bulkhead, chatty-i-o]
+related_concepts: [timeout-pattern, cascading-failure]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Retry Storm

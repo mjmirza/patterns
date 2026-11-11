@@ -1,14 +1,20 @@
 ---
 name: Semigroup
 slug: semigroup
+id: pat.16.semigroup
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Associative Combine, Non-empty Reducer, Appendable]
 first_described: "Abstract algebra, adopted in software through functional type classes"
 maturity: canonical
-related: [monoid, magma, fold, reducer, functor, applicative, monad]
-incompatible_with: [non-associative-combine, hidden-empty-case, effectful-combine]
+related: [monoid, functor, applicative, monad]
+related_concepts: [magma, fold, reducer]
+incompatible_with: []
+incompatible_concepts: [non-associative-combine, hidden-empty-case, effectful-combine]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Semigroup

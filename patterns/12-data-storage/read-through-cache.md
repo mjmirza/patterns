@@ -1,14 +1,20 @@
 ---
 name: Read-Through Cache
 slug: read-through-cache
+id: pat.12.read-through-cache
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Lazy Loading Cache, Cache-Aside with a Loader, Look-Aside Read-Through]
 first_described: "Industry practice, no single canonical publication. Codified in caching-library APIs such as Guava CacheLoader (2011) and cache-provider documentation such as AWS ElastiCache Strategies"
 maturity: canonical
 related: [cache-aside, write-through-cache, write-behind-cache, circuit-breaker, proxy, decorator]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Read-Through Cache

@@ -1,14 +1,20 @@
 ---
 name: Event Message
 slug: event-message
+id: pat.07.event-message
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Event Notification, Domain Event Message, Event Record]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [message, publish-subscribe-channel, document-message, command-message, message-bus, dead-letter-channel]
+related: [message, publisher-subscriber, document-message, command-message, message-bus, dead-letter-channel]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Event Message

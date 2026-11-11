@@ -1,14 +1,20 @@
 ---
 name: Compound Components
 slug: compound-components
+id: pat.13.compound-components
+kind: pattern
 family: 13-frontend-ui
 category: Component Composition
 aliases: [Compound Component Pattern, Implicit State Sharing Components]
 first_described: "Florence 2016"
 maturity: established
 related: [container-presentational, higher-order-component, render-props, hooks, context-object]
-incompatible_with: [prop-drilling-heavy-flat-component]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [prop-drilling-heavy-flat-component]
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Compound Components

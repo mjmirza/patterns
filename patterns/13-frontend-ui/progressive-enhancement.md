@@ -1,14 +1,20 @@
 ---
 name: Progressive Enhancement
 slug: progressive-enhancement
+id: pat.13.progressive-enhancement
+kind: pattern
 family: 13-frontend-ui
 category: Delivery Strategy
 aliases: [PE, Layered Web Design]
 first_described: "Steven Champeon and Nick Finck, SXSW, 11 March 2003"
 maturity: canonical
 related: [islands-architecture, server-components, atomic-design]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Progressive Enhancement

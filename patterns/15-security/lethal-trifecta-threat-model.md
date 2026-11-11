@@ -1,14 +1,20 @@
 ---
 name: Lethal Trifecta Threat Model
 slug: lethal-trifecta-threat-model
+id: pat.15.lethal-trifecta-threat-model
+kind: pattern
 family: 15-security
 category: Security
 aliases: [The Lethal Trifecta, Trifecta Threat Model for AI Agents]
 first_described: "Simon Willison's own blog post naming and defining the three conditions"
 maturity: emerging
 related: [dual-llm-pattern]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Lethal Trifecta Threat Model

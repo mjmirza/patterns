@@ -1,14 +1,20 @@
 ---
 name: Request-Reply
 slug: request-reply
+id: pat.07.request-reply
+kind: pattern
 family: 07-integration
 category: Messaging
 aliases: [Request-Response, RPC over Messaging, Synchronous Messaging]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [return-address, correlation-identifier, message-endpoint, competing-consumers, saga]
-incompatible_with: [event-driven-architecture-tight-coupling]
+related: [return-address, correlation-identifier, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, saga]
+related_concepts: [message-endpoint]
+incompatible_with: []
+incompatible_concepts: [event-driven-architecture-tight-coupling]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Request-Reply

@@ -1,14 +1,20 @@
 ---
 name: Replace Conditional with Polymorphism
 slug: replace-conditional-with-polymorphism
+id: pat.03.replace-conditional-with-polymorphism
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Switch with Strategy]
 first_described: "Fowler 1999"
 maturity: established
 related: [consolidate-conditional-expression, decompose-conditional, introduce-special-case, remove-subclass, replace-command-with-function, replace-type-code-with-subclasses, strategy, state, template-method]
+related_concepts: []
 incompatible_with: [remove-subclass]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Conditional with Polymorphism

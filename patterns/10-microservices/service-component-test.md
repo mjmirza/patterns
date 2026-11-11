@@ -1,14 +1,20 @@
 ---
 name: Service Component Test
 slug: service-component-test
+id: pat.10.service-component-test
+kind: pattern
 family: 10-microservices
 category: Testing
 aliases: [Component Test, Isolated Service Test, In-Process Component Test]
 first_described: "Richardson, microservices.io, and Fowler, martinfowler.com, mid 2010s"
 maturity: established
-related: [consumer-driven-contract-test, service-integration-contract-test, database-per-service, api-gateway, circuit-breaker]
+related: [consumer-driven-contract-test, database-per-service, api-gateway, circuit-breaker]
+related_concepts: [service-integration-contract-test]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service Component Test

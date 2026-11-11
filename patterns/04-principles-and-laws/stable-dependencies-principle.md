@@ -1,14 +1,20 @@
 ---
 name: Stable Dependencies Principle
 slug: stable-dependencies-principle
+id: pat.04.stable-dependencies-principle
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [SDP, Dependency Stability Principle]
 first_described: "Martin 1996-2002, restated 2017"
 maturity: canonical
-related: [stable-abstractions-principle, acyclic-dependencies-principle, dependency-inversion-principle, common-closure-principle, common-reuse-principle, facade, semantic-versioning]
+related: [stable-abstractions-principle, acyclic-dependencies-principle, dependency-inversion-principle, common-closure-principle, common-reuse-principle, facade]
+related_concepts: [semantic-versioning]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Stable Dependencies Principle

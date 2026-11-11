@@ -1,14 +1,20 @@
 ---
 name: Redux
 slug: redux
+id: pat.13.redux
+kind: pattern
 family: 13-frontend-ui
 category: State Management
 aliases: [Redux Store, Predictable State Container]
 first_described: "Dan Abramov, 2015"
 maturity: canonical
 related: [flux, hooks, provider-pattern, signals]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Redux

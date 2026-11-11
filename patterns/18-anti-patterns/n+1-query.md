@@ -1,14 +1,20 @@
 ---
 name: N+1 Query
 slug: n+1-query
+id: pat.18.n+1-query
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [N+1 Selects Problem, N+1 Query Problem, Select N+1]
 first_described: "Community-documented ORM anti-pattern, term in widespread use in Hibernate and Ruby on Rails documentation and tooling by the mid-2000s; no single originating paper is attributable, see dimension 1"
 maturity: canonical
-related: [lazy-load, eager-loading, identity-map, unit-of-work, repository, data-mapper, batch-method, facade]
+related: [lazy-load, identity-map, unit-of-work, repository, data-mapper, facade]
+related_concepts: [eager-loading, batch-method]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # N+1 Query

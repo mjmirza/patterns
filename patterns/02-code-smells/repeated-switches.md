@@ -1,14 +1,20 @@
 ---
 name: Repeated Switches
 slug: repeated-switches
+id: pat.02.repeated-switches
+kind: smell
 family: 02-code-smells
 category: Object-Orientation Abusers
 aliases: [Scattered Switches, Duplicated Type Switches, Parallel Switch Statements]
 first_described: "Fowler 2018, Refactoring, Improving the Design of Existing Code, second edition, renamed and re-scoped from the 1999 first edition smell Switch Statements"
 maturity: canonical
 related: [switch-statements, factory-method, primitive-obsession, shotgun-surgery, divergent-change, data-clumps]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-05
+last_reviewed: 2026-08-05
+next_review_due: 2027-02-01
 ---
 
 # Repeated Switches

@@ -1,14 +1,20 @@
 ---
 name: Server-Side Discovery
 slug: server-side-discovery
+id: pat.10.server-side-discovery
+kind: pattern
 family: 10-microservices
 category: Microservices
 aliases: [Server-Side Service Discovery, Router-Based Discovery, Discovery via Load Balancer]
 first_described: "Richardson, microservices.io"
 maturity: canonical
 related: [client-side-service-discovery, api-gateway, service-registry, self-registration, third-party-registration, health-check-api, sidecar-proxy, service-mesh]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-16
+last_reviewed: 2026-08-16
+next_review_due: 2027-02-12
 ---
 
 # Server-Side Discovery

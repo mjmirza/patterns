@@ -1,14 +1,20 @@
 ---
 name: Cell-Based Architecture
 slug: cell-based-architecture
+id: pat.05.cell-based-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Cellular Architecture, Cell Architecture, Shuffle-Sharded Cells]
 first_described: "Colm MacCarthaigh and the AWS Builders Library team, re Invent 2019, formalised in the AWS Well-Architected guide Reducing the Scope of Impact with Cell-Based Architecture"
 maturity: established
 related: [bulkhead, deployment-stamps, sharding, circuit-breaker, service-mesh]
-incompatible_with: [shared-database-per-service]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [shared-database-per-service]
 verified: 2026-08-09
+last_reviewed: 2026-08-09
+next_review_due: 2027-02-05
 ---
 
 # Cell-Based Architecture

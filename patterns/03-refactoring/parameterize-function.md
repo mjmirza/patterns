@@ -1,14 +1,20 @@
 ---
 name: Parameterize Function
 slug: parameterize-function
+id: pat.03.parameterize-function
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Parameterize Method, Replace Functions with Parameterized Function]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [change-function-declaration, extract-function, inline-function, combine-functions-into-transform, replace-conditional-with-polymorphism]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Parameterize Function

@@ -66,6 +66,7 @@ def verify_family_names(
         return 1, [f"ERROR: patterns directory not found: {patterns_dir}"]
 
     actual_dirs = sorted(p.name for p in patterns_dir.iterdir() if p.is_dir())
+    actual_dir_set = set(actual_dirs)
     table_slug_set = set(table_slugs)
 
     problems: list[str] = []
@@ -77,6 +78,13 @@ def verify_family_names(
                 f"README '## The families' table. Either rename the folder "
                 f"to match the table, or update the table if the family "
                 f"was intentionally renamed."
+            )
+
+    for s in sorted(table_slugs):
+        if s not in actual_dir_set:
+            problems.append(
+                f"patterns/{s}/ is declared in the README '## The families' "
+                f"table but does NOT exist on disk."
             )
 
     if problems:

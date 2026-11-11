@@ -1,14 +1,20 @@
 ---
 name: Preserve Whole Object
 slug: preserve-whole-object
+id: pat.03.preserve-whole-object
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Pass Whole Object, Replace Parameters with Object]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [introduce-parameter-object, change-function-declaration, extract-function, encapsulate-record, hide-delegate]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Preserve Whole Object

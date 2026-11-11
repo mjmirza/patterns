@@ -1,14 +1,20 @@
 ---
 name: Separation of Concerns
 slug: separation-of-concerns
+id: pat.04.separation-of-concerns
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [SoC, Concern Separation, Divide and Conquer for Software Structure]
 first_described: "Dijkstra 1974"
 maturity: canonical
-related: [single-responsibility-principle, model-view-controller, layered-architecture, dependency-inversion-principle, hexagonal-architecture, cqrs, information-hiding]
+related: [single-responsibility-principle, model-view-controller, 05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, dependency-inversion-principle, hexagonal-architecture, cqrs]
+related_concepts: [information-hiding]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Separation of Concerns

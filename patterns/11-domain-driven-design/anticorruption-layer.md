@@ -1,14 +1,20 @@
 ---
 name: Anticorruption Layer
 slug: anticorruption-layer
+id: pat.11.anticorruption-layer
+kind: pattern
 family: 11-domain-driven-design
 category: Integration
 aliases: [ACL, Anti-Corruption Layer, Translation Layer]
 first_described: "Eric Evans 2003"
 maturity: canonical
 related: [bounded-context, context-map, conformist, customer-supplier, shared-kernel, adapter, facade, strangler-fig]
+related_concepts: []
 incompatible_with: [shared-kernel]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Anticorruption Layer

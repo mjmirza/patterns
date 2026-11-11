@@ -1,14 +1,20 @@
 ---
 name: Thundering Herd
 slug: thundering-herd
+id: pat.18.thundering-herd
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Cache Stampede, Dogpile Effect, Cache Avalanche, Wake-One Storm]
 first_described: "The Jargon File, entry for thundering herd problem, describing the Unix accept() wakeup case; the term predates web caching and was later reapplied to cache expiry storms"
 maturity: canonical
-related: [circuit-breaker, retry-with-backoff, bulkhead, cache-aside, rate-limiter]
+related: [circuit-breaker, retry, bulkhead, cache-aside, rate-limiter]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Thundering Herd

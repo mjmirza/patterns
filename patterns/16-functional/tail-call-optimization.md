@@ -1,14 +1,20 @@
 ---
 name: Tail Call Optimization
 slug: tail-call-optimization
+id: pat.16.tail-call-optimization
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Tail Call Elimination, Tail Recursion Elimination, Proper Tail Calls, Proper Tail Recursion, Sibling Call Optimization]
 first_described: "Steele and Sussman 1975"
 maturity: established
-related: [trampolining, continuation-passing-style, recursion, foldable, compiler-optimization, loop-conversion]
-incompatible_with: [stack-trace-dependent-diagnostics, stack-inspection-security, post-call-cleanup-required]
+related: [trampolining, continuation-passing-style, foldable]
+related_concepts: [recursion, compiler-optimization, loop-conversion]
+incompatible_with: []
+incompatible_concepts: [stack-trace-dependent-diagnostics, stack-inspection-security, post-call-cleanup-required]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Tail Call Optimization

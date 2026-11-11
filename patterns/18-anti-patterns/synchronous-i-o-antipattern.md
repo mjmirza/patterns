@@ -1,14 +1,20 @@
 ---
 name: Synchronous I O Antipattern
 slug: synchronous-i-o-antipattern
+id: pat.18.synchronous-i-o-antipattern
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Blocking I O, Blocking Call, Sync-over-Async, Main Thread I O]
 first_described: "industry concurrency practice, no single canonical origin"
 maturity: established
 related: [reactor, proactor, half-sync-half-async, bulkhead, circuit-breaker, queue-based-load-leveling, chatty-i-o]
-incompatible_with: [event-loop-per-request]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [event-loop-per-request]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Synchronous I O Antipattern

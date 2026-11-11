@@ -1,14 +1,20 @@
 ---
 name: Leaderless Replication
 slug: leaderless-replication
+id: pat.12.leaderless-replication
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Dynamo-style Replication, Quorum Replication, Multi-Master Without a Leader, N/R/W Replication]
 first_described: "DeCandia, Hastorun, Jampani, Kakulapati, Lakshman, Pilchin, Sivasubramanian, Vosshall, Vogels 2007"
 maturity: canonical
 related: [quorum, multi-leader-replication, consistent-hashing, write-ahead-log, crdt, gossip-protocol]
-incompatible_with: [single-leader-replication, two-phase-commit]
+related_concepts: []
+incompatible_with: [two-phase-commit]
+incompatible_concepts: [single-leader-replication]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Leaderless Replication

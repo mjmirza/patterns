@@ -1,14 +1,20 @@
 ---
 name: Servant
 slug: servant
+id: pat.01.servant
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Helper, Helper Class, Utility Class]
 first_described: "Uncertain. Wikipedia's sole citation is Pecinovsky, Pavlickova, Pavlicek, June 2006, University of Bologna, but its content was not independently verified. The pattern's own reference lineage traces more plausibly to POSA1, per the iluwatar reference implementation's own citation list"
 maturity: contested
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

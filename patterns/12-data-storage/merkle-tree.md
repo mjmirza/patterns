@@ -1,14 +1,20 @@
 ---
 name: Merkle Tree
 slug: merkle-tree
+id: pat.12.merkle-tree
+kind: pattern
 family: 12-data-storage
 category: Data Structure
 aliases: [Hash Tree, Binary Hash Tree]
 first_described: "Ralph Merkle 1979, US Patent 4,309,569"
 maturity: canonical
-related: [merkle-patricia-trie, content-addressable-storage, gossip-protocol, bloom-filter, event-sourcing]
+related: [gossip-protocol, bloom-filter, event-sourcing]
+related_concepts: [merkle-patricia-trie, content-addressable-storage]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Merkle Tree

@@ -1,14 +1,20 @@
 ---
 name: Data Access Object
 slug: data-access-object
+id: pat.01.data-access-object
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: [DAO, DAO Pattern]
 first_described: "Alur, Crupi, Malks 2001 (Core J2EE Patterns)"
 maturity: canonical
 related: [facade, factory-method, abstract-factory, dependency-injection, data-transfer-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

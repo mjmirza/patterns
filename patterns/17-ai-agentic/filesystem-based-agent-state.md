@@ -1,14 +1,20 @@
 ---
 name: Filesystem-Based Agent State
 slug: filesystem-based-agent-state
+id: pat.17.filesystem-based-agent-state
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Auto Memory, On-Disk Agent Memory]
 first_described: "Anthropic's own Claude Code documentation for its auto memory feature"
 maturity: established
-related: [context-window-auto-compaction, prompt-caching-exact-prefix, agent-memory]
+related: [memory-compaction, prompt-caching-exact-prefix, agent-memory]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Filesystem-Based Agent State

@@ -1,14 +1,20 @@
 ---
 name: Code Execution as Tool
 slug: code-execution-as-tool
+id: pat.17.code-execution-as-tool
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [CodeAct, Code Interpreter, Programmatic Tool Calling, Code as Action Space]
 first_described: "Wang, Chen, Yuan, Zhang, Li, Peng, Ji 2024 (CodeAct); OpenAI Code Interpreter 2023 (production precedent)"
 maturity: established
-related: [function-calling, react, sandbox-sdk, cost-guard, tool-result-caching, plan-execute, human-in-the-loop, prompt-injection-defense]
+related: [function-calling, react-prompting, cost-guard, tool-result-caching, plan-execute, human-in-the-loop, prompt-injection-defense]
+related_concepts: [sandbox-sdk]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Code Execution as Tool

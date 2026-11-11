@@ -1,14 +1,20 @@
 ---
 name: Multi-Site Active Active
 slug: multi-site-active-active
+id: pat.21.multi-site-active-active
+kind: pattern
 family: 21-sre-operations
 category: Structural
 aliases: [Multi-Region Active Active, Active Active Deployment, Multi-Site DR]
 first_described: 'AWS, Well-Architected Framework and Disaster Recovery of Workloads on AWS whitepaper'
 maturity: canonical
 related: [static-stability, service-level-objective]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Multi-Site Active Active

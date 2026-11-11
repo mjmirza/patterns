@@ -1,14 +1,20 @@
 ---
 name: Protected Variations
 slug: protected-variations
+id: pat.04.protected-variations
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [PV, Open-Closed Principle, Information Hiding at Variation Points]
 first_described: "Cockburn 1996, named and generalized by Larman 2001"
 maturity: canonical
-related: [strategy, factory-method, template-method, bridge, dependency-inversion-principle, open-closed-principle, information-hiding]
+related: [strategy, factory-method, template-method, bridge, dependency-inversion-principle, open-closed-principle]
+related_concepts: [information-hiding]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Protected Variations

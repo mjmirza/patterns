@@ -1,14 +1,20 @@
 ---
 name: Copy-Paste Programming
 slug: copy-paste-programming
+id: pat.18.copy-paste-programming
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Clone and Own, Copy and Paste Reuse, Cut and Paste Programming, WET Code]
 first_described: "Brown, Malveau, McCormick, Mowbray 1998 (catalogued as Cut-and-Paste Programming); Fowler and Beck 1999 (Duplicated Code smell)"
 maturity: canonical
-related: [extract-method, template-method, strategy, dry-principle, template-repository]
-incompatible_with: [dry-principle]
+related: [extract-function, template-method, strategy, do-not-repeat-yourself]
+related_concepts: [template-repository]
+incompatible_with: [do-not-repeat-yourself]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Copy-Paste Programming

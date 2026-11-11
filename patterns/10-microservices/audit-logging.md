@@ -1,14 +1,20 @@
 ---
 name: Audit Logging
 slug: audit-logging
+id: pat.10.audit-logging
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Audit Trail, Change Log Pattern, Audit Trail Pattern]
 first_described: "Practitioner convention, no single canonical source; codified in NIST SP 800-53 Audit and Accountability family and OWASP Logging Cheat Sheet"
 maturity: canonical
-related: [event-sourcing, cqrs, outbox-pattern, decorator, chain-of-responsibility, sidecar]
+related: [event-sourcing, cqrs, transactional-outbox, decorator, chain-of-responsibility, sidecar]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Audit Logging

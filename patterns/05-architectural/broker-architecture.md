@@ -1,14 +1,20 @@
 ---
 name: Broker
 slug: broker-architecture
+id: pat.05.broker-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Object Request Broker, Message Broker, Broker Pattern, Mediator Infrastructure]
 first_described: "Buschmann, Meunier, Rohnert, Sommerlad, Stal 1996"
 maturity: canonical
-related: [mediator, facade, proxy, publish-subscribe, service-locator, adapter]
+related: [mediator, facade, proxy, publisher-subscriber, service-locator, adapter]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Broker

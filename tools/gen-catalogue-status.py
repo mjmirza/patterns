@@ -107,25 +107,45 @@ def published_by_family() -> dict[str, list[dict]]:
 
 
 def stale_count(published_paths: set[str]) -> int:
-    if not (ROOT / ".git").exists():
+    if not (ROOT / ".git").exists() or not published_paths:
         return 0
+    try:
+        out = subprocess.run(
+            ["git", "log", "--format=COMMIT %ct", "--name-only", "--", "patterns/"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        if out.returncode != 0:
+            return 0
+    except (subprocess.SubprocessError, FileNotFoundError):
+        return 0
+
+    latest_ts: dict[str, int] = {}
+    cur_ts: int | None = None
+    for line in out.stdout.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        if line.startswith("COMMIT "):
+            try:
+                cur_ts = int(line[7:])
+            except ValueError:
+                cur_ts = None
+        elif cur_ts is not None and line in published_paths:
+            if line not in latest_ts:
+                latest_ts[line] = cur_ts
+                if len(latest_ts) == len(published_paths):
+                    break
+
+    now_ts = datetime.now(timezone.utc).timestamp()
     stale = 0
     for rel in published_paths:
-        path = ROOT / rel
-        if not path.exists():
+        ts = latest_ts.get(rel)
+        if ts is None:
             continue
-        try:
-            out = subprocess.run(
-                ["git", "log", "-1", "--format=%ct", "--", rel],
-                cwd=ROOT,
-                capture_output=True,
-                text=True,
-                timeout=5,
-            )
-            ts = int(out.stdout.strip())
-        except (ValueError, subprocess.SubprocessError):
-            continue
-        age_days = (datetime.now(timezone.utc).timestamp() - ts) / 86400
+        age_days = (now_ts - ts) / 86400
         if age_days > STALE_DAYS:
             stale += 1
     return stale

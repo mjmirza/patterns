@@ -1,14 +1,20 @@
 ---
 name: Replace Error Code with Exception
 slug: replace-error-code-with-exception
+id: pat.03.replace-error-code-with-exception
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Throw Exception Instead of Error Code, Replace Status Return with Exception]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [replace-exception-with-precheck, introduce-assertion, change-function-declaration, separate-query-from-modifier]
-incompatible_with: [notification]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [notification]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Error Code with Exception

@@ -1,14 +1,20 @@
 ---
 name: Higher-Order Component
 slug: higher-order-component
+id: pat.13.higher-order-component
+kind: pattern
 family: 13-frontend-ui
 category: Component Composition
 aliases: [HOC, Component Wrapper Function]
 first_described: "Common React practice, formalized in official React documentation"
 maturity: established
 related: [render-props, compound-components, container-presentational, hooks]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Higher-Order Component

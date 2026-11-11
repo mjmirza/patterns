@@ -1,14 +1,20 @@
 ---
 name: Slowly Changing Dimensions
 slug: slowly-changing-dimensions
+id: pat.12.slowly-changing-dimensions
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [SCD, SCD Type 2, Dimension Versioning, Historical Dimension Tracking]
 first_described: "Ralph Kimball, The Data Warehouse Toolkit, 1996, expanded through Kimball Group Design Tips 1998 to 2013"
 maturity: canonical
-related: [data-vault, event-sourcing, temporal-tables, cqrs, medallion-architecture, change-data-capture]
+related: [data-vault, event-sourcing, cqrs, medallion-architecture, change-data-capture]
+related_concepts: [temporal-tables]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Slowly Changing Dimensions

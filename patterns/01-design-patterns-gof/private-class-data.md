@@ -1,14 +1,20 @@
 ---
 name: Private Class Data
 slug: private-class-data
+id: pat.01.private-class-data
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: [Data Hiding, Encapsulation]
 first_described: "Uncertain. Earliest attestation is SourceMaking.com, active since 2006-2007, plus a now-deleted English Wikipedia article a 2021 deletion discussion places around 2004"
 maturity: contested
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

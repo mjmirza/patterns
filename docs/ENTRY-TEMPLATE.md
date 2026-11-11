@@ -31,20 +31,45 @@ master reference and a getting started overview, and it is enforced by
 ---
 name: Chain of Responsibility
 slug: chain-of-responsibility
+id: pat.01.chain-of-responsibility
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Chain of Command, Responsibility Chain]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [command, composite, decorator, mediator]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 ````
 
 `maturity` is one of `canonical`, `established`, `emerging`, `contested`,
 `deprecated`. Emerging and contested entries must say plainly in the body what
 is not yet settled.
+
+`id` is `pat.<family number>.<slug>`. The family number is the two digits that
+start the directory name. `kind` is `pattern`, `smell`, `technique`,
+`principle`, `law`, or `anti-pattern`. Family 02 is smell, family 03 is
+technique, family 04 is principle except the named laws (ACID, BASE, CAP,
+PACELC, Conway, Postel, Demeter), family 18 is anti-pattern, and every other
+family is pattern.
+
+`related` and `incompatible_with` name published entries. Use the bare slug
+when it is unique, and `family/slug` when the same slug exists in two
+families. A name that is not a published entry goes in `related_concepts` or
+`incompatible_concepts`. Those two lists are notes, not links.
+`tools/check-links.py` rejects a ref that does not resolve, and it rejects a
+concept that does resolve.
+
+`verified`, `last_reviewed`, and `next_review_due` are `YYYY-MM-DD`.
+`last_reviewed` starts equal to `verified`. `next_review_due` is 180 days
+later until a reviewer sets a new date. A boolean true in `verified` is not a
+date and does not pass.
 
 ## The 18 dimensions, in order
 

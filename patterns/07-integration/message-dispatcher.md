@@ -1,14 +1,20 @@
 ---
 name: Message Dispatcher
 slug: message-dispatcher
+id: pat.07.message-dispatcher
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Dispatcher, Worker Pool Dispatcher, Load-Balancing Consumer]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [competing-consumers, polling-consumer, event-driven-consumer, message-channel, point-to-point-channel, claim-check, transactional-client, datatype-channel]
+related: [07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, polling-consumer, event-driven-consumer, message-channel, point-to-point-channel, 07-integration/claim-check, 08-cloud-distributed/claim-check, transactional-client, datatype-channel]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

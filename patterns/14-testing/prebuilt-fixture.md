@@ -1,14 +1,20 @@
 ---
 name: Prebuilt Fixture
 slug: prebuilt-fixture
+id: pat.14.prebuilt-fixture
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Persistent Fixture, Shared Fixture Data, Golden Fixture, Fixture File, Baked Fixture]
 first_described: "Meszaros 2007"
 maturity: canonical
-related: [object-mother, test-data-builder, golden-master-testing, shared-fixture, mock-object]
+related: [object-mother, test-data-builder, golden-master, shared-fixture, mock]
+related_concepts: []
 incompatible_with: [fresh-fixture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

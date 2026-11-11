@@ -1,14 +1,20 @@
 ---
 name: Parallel Scatter-Gather
 slug: parallel-scatter-gather
+id: pat.09.parallel-scatter-gather
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Scatter-Gather, Fan-Out Fan-In, Fan-Out/Fan-In, Broadcast-Aggregate]
 first_described: "Hohpe, Woolf 2003 (Enterprise Integration Patterns, as a messaging composition of Recipient List and Aggregator); the same shape was independently named Fan-Out/Fan-In in distributed systems and concurrent programming practice through the 1990s and 2000s"
 maturity: canonical
-related: [fork-join, future-promise, thread-pool, producer-consumer, work-stealing, circuit-breaker, bulkhead]
+related: [fork-join, future-promise, thread-pool, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, work-stealing, circuit-breaker, bulkhead]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Parallel Scatter-Gather

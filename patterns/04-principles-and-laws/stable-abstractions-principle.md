@@ -1,14 +1,20 @@
 ---
 name: Stable Abstractions Principle
 slug: stable-abstractions-principle
+id: pat.04.stable-abstractions-principle
+kind: principle
 family: 04-principles-and-laws
 category: Design Principle
 aliases: [SAP, The Stable Abstraction Principle]
 first_described: "Robert C. Martin, Design Principles and Design Patterns, 2000"
 maturity: canonical
 related: [acyclic-dependencies-principle, dependency-inversion-principle, open-closed-principle, single-responsibility-principle, interface-segregation-principle, factory-method]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Stable Abstractions Principle

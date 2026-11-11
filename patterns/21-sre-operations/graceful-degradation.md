@@ -1,14 +1,20 @@
 ---
 name: Graceful Degradation
 slug: graceful-degradation
+id: pat.21.graceful-degradation
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [Degraded Mode, Fail Soft, Load Shedding With Fallback]
 first_described: 'Google, Site Reliability Engineering, Handling Overload and Addressing Cascading Failures chapters, 2016'
 maturity: canonical
 related: [error-budget, service-level-objective]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Graceful Degradation

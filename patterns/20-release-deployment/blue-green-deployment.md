@@ -1,14 +1,20 @@
 ---
 name: Blue-Green Deployment
 slug: blue-green-deployment
+id: pat.20.blue-green-deployment
+kind: pattern
 family: 20-release-deployment
 category: Deployment
 aliases: [Blue Green Release, Red Black Deployment]
 first_described: 'Martin Fowler, BlueGreenDeployment bliki article'
 maturity: canonical
 related: [canary-release, rolling-deployment]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Blue-Green Deployment

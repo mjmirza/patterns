@@ -1,14 +1,20 @@
 ---
 name: Structured Concurrency
 slug: structured-concurrency
+id: pat.09.structured-concurrency
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Nursery Pattern, Scoped Concurrency, Task Scope]
 first_described: "Martin Sustrik, libdill design notes, 2016. Term popularized by Nathaniel J. Smith, Trio project, 2017"
 maturity: established
-related: [fork-join, future-promise, actor-model, thread-pool, barrier, countdown-latch, producer-consumer]
+related: [fork-join, future-promise, actor-model, thread-pool, barrier, countdown-latch, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer]
+related_concepts: []
 incompatible_with: [half-sync-half-async]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Structured Concurrency

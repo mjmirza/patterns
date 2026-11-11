@@ -1,14 +1,20 @@
 ---
 name: Type Object
 slug: type-object
+id: pat.29.type-object
+kind: pattern
 family: 29-realtime-simulation
 category: Real-Time Simulation
 aliases: [Breed Pattern, Data-Driven Type]
 first_described: "Robert Nystrom's Type Object chapter in Game Programming Patterns, in the book's own Behavioral Patterns part"
 maturity: canonical
 related: [object-pool]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Type Object

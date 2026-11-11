@@ -1,14 +1,20 @@
 ---
 name: Common Reuse Principle
 slug: common-reuse-principle
+id: pat.04.common-reuse-principle
+kind: principle
 family: 04-principles-and-laws
 category: Package and Component Design
 aliases: [CRP, Interface Segregation Principle for Packages, Common Reuse Principle for Packages]
 first_described: "Robert C. Martin, Object Mentor engineering notebook, mid 1990s, later collected in Agile Software Development. Principles, Patterns, and Practices, 2002"
 maturity: canonical
 related: [interface-segregation-principle, single-responsibility-principle, acyclic-dependencies-principle, stable-dependencies-principle, facade, mediator]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-10
+last_reviewed: 2026-08-10
+next_review_due: 2027-02-06
 ---
 
 # Common Reuse Principle

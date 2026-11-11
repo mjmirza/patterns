@@ -1,14 +1,20 @@
 ---
 name: Inline Validation
 slug: inline-validation
+id: pat.26.inline-validation
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Live Validation, Real-Time Form Validation, Field-Level Validation]
 first_described: "Luke Wroblewski, with Etre, A List Apart, September 1, 2009"
 maturity: established
 related: [wizard]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Inline Validation

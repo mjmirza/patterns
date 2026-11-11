@@ -1,14 +1,20 @@
 ---
 name: Optics
 slug: optics
+id: pat.16.optics
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Functional Optics, Composable Data Accessors, Profunctor Optics]
 first_described: "J. N. F., Greenwald, Moore, Pierce, Schmitt 2007"
 maturity: established
-related: [lens, prism, traversal, optional, iso, functor, profunctor]
-incompatible_with: [stringly-typed-paths, mutating-accessors, effectful-getters]
+related: [lens, prism, option-maybe, functor, profunctor]
+related_concepts: [traversal, iso]
+incompatible_with: []
+incompatible_concepts: [stringly-typed-paths, mutating-accessors, effectful-getters]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Optics

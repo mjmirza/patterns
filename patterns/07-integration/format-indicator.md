@@ -1,14 +1,20 @@
 ---
 name: Format Indicator
 slug: format-indicator
+id: pat.07.format-indicator
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Magic Number, Magic Byte, Type Tag, Content-Type Header, File Signature]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [canonical-data-model, message, document-message, envelope-wrapper, message-translator]
+related: [canonical-data-model, message, document-message, envelope-wrapper]
+related_concepts: [message-translator]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Format Indicator

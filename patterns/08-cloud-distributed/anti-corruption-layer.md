@@ -1,14 +1,20 @@
 ---
 name: Anti-Corruption Layer
 slug: anti-corruption-layer
+id: pat.08.anti-corruption-layer
+kind: pattern
 family: 08-cloud-distributed
 category: Integration
 aliases: [ACL, Translation Layer (informally, though Evans treats the two as distinct)]
 first_described: "Evans 2003"
 maturity: canonical
 related: [adapter, facade, strangler-fig, circuit-breaker, retry, bulkhead, saga, bounded-context, shared-kernel, open-host-service]
+related_concepts: []
 incompatible_with: [shared-kernel]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Anti-Corruption Layer

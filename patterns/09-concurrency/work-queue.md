@@ -1,14 +1,20 @@
 ---
 name: Work Queue
 slug: work-queue
+id: pat.09.work-queue
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Task Queue, Job Queue, Message Queue Worker Pool]
 first_described: "Hohpe, Woolf 2003 (Competing Consumers); popularized as a decoupled job system by RabbitMQ, Celery, Sidekiq documentation, mid-2000s to 2010s"
 maturity: canonical
-related: [producer-consumer, thread-pool, leader-followers, pipeline-parallelism, future-promise, competing-consumers]
+related: [09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, thread-pool, leader-followers, pipeline-parallelism, future-promise, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-14
+last_reviewed: 2026-08-14
+next_review_due: 2027-02-10
 ---
 
 # Work Queue

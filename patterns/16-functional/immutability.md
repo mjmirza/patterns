@@ -1,14 +1,20 @@
 ---
 name: Immutability
 slug: immutability
+id: pat.16.immutability
+kind: pattern
 family: 16-functional
 category: Data and State
 aliases: [Immutable Data, Persistent Data, Value-Oriented State]
 first_described: "McCarthy 1960, Lisp symbolic expressions"
 maturity: canonical
-related: [persistent-data-structures, pure-functions, value-object, event-sourcing, memoization]
-incompatible_with: [shared-mutable-state, active-record]
+related: [persistent-data-structures, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, event-sourcing, memoization]
+related_concepts: [pure-functions]
+incompatible_with: [mutable-data, active-record]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Immutability

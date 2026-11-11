@@ -1,14 +1,20 @@
 ---
 name: Debounce and Throttle
 slug: debounce-and-throttle
+id: pat.13.debounce-and-throttle
+kind: pattern
 family: 13-frontend-ui
 category: Event Handling
 aliases: [Rate Limiting Input Handlers, Debouncing, Throttling]
 first_described: "lodash documentation, debounce and throttle functions"
 maturity: canonical
 related: [virtual-list, optimistic-ui]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Debounce and Throttle

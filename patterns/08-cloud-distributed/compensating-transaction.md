@@ -1,14 +1,20 @@
 ---
 name: Compensating Transaction
 slug: compensating-transaction
+id: pat.08.compensating-transaction
+kind: pattern
 family: 08-cloud-distributed
 category: Data consistency
 aliases: [Compensating Action, Undo Transaction, Semantic Rollback]
 first_described: "Garcia-Molina and Salem 1987 (mechanism); Microsoft Azure Architecture Center (named catalog entry)"
 maturity: canonical
-related: [saga, retry, circuit-breaker, transactional-outbox, event-sourcing, scheduler-agent-supervisor, idempotent-receiver]
+related: [saga, retry, circuit-breaker, transactional-outbox, event-sourcing, scheduler-agent-supervisor, idempotent-consumer]
+related_concepts: []
 incompatible_with: [two-phase-commit]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Compensating Transaction

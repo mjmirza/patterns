@@ -1,14 +1,20 @@
 ---
 name: Prompt Injection Sink
 slug: prompt-injection-sink
+id: pat.18.prompt-injection-sink
+kind: anti-pattern
 family: 18-anti-patterns
 category: Security
 aliases: [LLM Prompt Sink, Context-to-Action Injection Sink, Agentic Injection Sink]
 first_described: "OpenAI source-sink framing 2026"
 maturity: emerging
-related: [service-locator-antipattern, shared-database-microservices, command-injection, confused-deputy, rag-poisoning]
-incompatible_with: [least-privilege-agent, context-firewall, structured-output-boundary]
+related: [service-locator-antipattern, shared-database-microservices]
+related_concepts: [command-injection, confused-deputy, rag-poisoning]
+incompatible_with: []
+incompatible_concepts: [least-privilege-agent, context-firewall, structured-output-boundary]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Prompt Injection Sink

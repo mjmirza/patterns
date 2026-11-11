@@ -1,14 +1,20 @@
 ---
 name: Table Data Gateway
 slug: table-data-gateway
+id: pat.06.table-data-gateway
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Data Source Architectural
 aliases: [Table Gateway]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [row-data-gateway, active-record, data-mapper, repository, unit-of-work]
+related_concepts: []
 incompatible_with: [row-data-gateway]
+incompatible_concepts: []
 verified: 2026-08-11
+last_reviewed: 2026-08-11
+next_review_due: 2027-02-07
 ---
 
 # Table Data Gateway

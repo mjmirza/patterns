@@ -1,14 +1,20 @@
 ---
 name: Saga versus Process Manager
 slug: saga-versus-process-manager
+id: pat.11.saga-versus-process-manager
+kind: pattern
 family: 11-domain-driven-design
 category: Structural, Distributed Coordination
 aliases: [Saga Pattern, Orchestration Saga, Choreography Saga, EIP Process Manager]
 first_described: "Garcia-Molina and Salem 1987 (sagas); Hohpe and Woolf 2003 (Process Manager)"
 maturity: canonical
-related: [aggregate, domain-event, event-sourcing, outbox, template-method, mediator, state-machine]
+related: [10-microservices/aggregate, 11-domain-driven-design/aggregate, 10-microservices/domain-event, 11-domain-driven-design/domain-event, event-sourcing, transactional-outbox, template-method, mediator, state-machine]
+related_concepts: []
 incompatible_with: [two-phase-commit]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Saga versus Process Manager

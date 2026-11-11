@@ -1,14 +1,20 @@
 ---
 name: Primary-Replica
 slug: primary-replica
+id: pat.05.primary-replica
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Master-Slave Replication, Leader-Follower Replication, Source-Replica, Primary-Standby, Read Replica]
 first_described: "Gray and Reuter 1993 (log shipping for backup); popularized as a scaling pattern by MySQL and PostgreSQL replication documentation through the 2000s"
 maturity: canonical
-related: [cqrs, sharding-partitioning, circuit-breaker, saga, event-sourcing]
+related: [cqrs, circuit-breaker, saga, event-sourcing]
+related_concepts: [sharding-partitioning]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Primary-Replica

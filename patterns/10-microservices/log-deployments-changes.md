@@ -1,14 +1,20 @@
 ---
 name: Log Deployments and Changes
 slug: log-deployments-changes
+id: pat.10.log-deployments-changes
+kind: pattern
 family: 10-microservices
 category: Observability
 aliases: [Deployment Markers, Deploy Events, Change Annotations, Change Correlation Logging]
 first_described: "Chris Richardson, microservices.io, 2026"
 maturity: established
 related: [log-aggregation, application-metrics, distributed-tracing, audit-logging, health-check-api]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-04
+last_reviewed: 2026-08-04
+next_review_due: 2027-01-31
 ---
 
 # Log Deployments and Changes

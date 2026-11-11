@@ -1,14 +1,20 @@
 ---
 name: Functor
 slug: functor
+id: pat.16.functor
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Mappable, Covariant Functor, Fmap]
 first_described: "Eilenberg and Mac Lane 1945"
 maturity: canonical
-related: [applicative, monad, bifunctor, contravariant-functor, natural-transformation, iterator]
-incompatible_with: [contravariant-functor-for-the-same-parameter, effectful-map]
+related: [applicative, monad, iterator]
+related_concepts: [bifunctor, contravariant-functor, natural-transformation]
+incompatible_with: []
+incompatible_concepts: [contravariant-functor-for-the-same-parameter, effectful-map]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Functor

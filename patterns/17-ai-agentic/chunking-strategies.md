@@ -1,14 +1,20 @@
 ---
 name: Chunking Strategies
 slug: chunking-strategies
+id: pat.17.chunking-strategies
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Document Chunking, Text Splitting, Segmentation for RAG]
 first_described: "Practitioner consensus, LangChain and LlamaIndex documentation, 2023 onward"
 maturity: established
 related: [advanced-rag, hyde, graphrag, corrective-rag]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Chunking Strategies

@@ -1,14 +1,20 @@
 ---
 name: Agent Debate
 slug: agent-debate
+id: pat.17.agent-debate
+kind: pattern
 family: 17-ai-agentic
 category: Workflow
 aliases: [Multi-Agent Debate, MAD, LLM Debate, Society of Minds Debate, ChatEval-style Debate]
 first_described: "Irving, Christiano, Amodei, AI Safety via Debate, May 2018"
 maturity: established
 related: [multi-agent-supervisor, evaluator-optimizer, orchestrator-worker, self-consistency, reflexion, tree-of-thoughts, hierarchical-agents]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Agent Debate

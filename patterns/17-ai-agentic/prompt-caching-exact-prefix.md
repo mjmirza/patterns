@@ -1,14 +1,20 @@
 ---
 name: Prompt Caching via Exact Prefix Preservation
 slug: prompt-caching-exact-prefix
+id: pat.17.prompt-caching-exact-prefix
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Prefix Caching, Cache Breakpoints]
 first_described: "Anthropic's own prompt caching documentation for the Claude API"
 maturity: established
 related: [filesystem-based-agent-state]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Prompt Caching via Exact Prefix Preservation

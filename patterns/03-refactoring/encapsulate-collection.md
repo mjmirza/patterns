@@ -1,14 +1,20 @@
 ---
 name: Encapsulate Collection
 slug: encapsulate-collection
+id: pat.03.encapsulate-collection
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Wrap Collection, Encapsulate List, Return Read-Only Collection]
 first_described: "Fowler 2002"
 maturity: canonical
-related: [encapsulate-record, encapsulate-variable, extract-class, change-reference-to-value, replace-record-with-data-class]
+related: [encapsulate-record, encapsulate-variable, extract-class, change-reference-to-value]
+related_concepts: [replace-record-with-data-class]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Encapsulate Collection

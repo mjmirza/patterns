@@ -1,14 +1,20 @@
 ---
 name: Offline-First Sync
 slug: offline-first-sync
+id: pat.27.offline-first-sync
+kind: pattern
 family: 27-mobile-architecture
 category: Structural
 aliases: [Local-First Sync, Sync Engine, Replication Layer]
 first_described: 'CouchDB/PouchDB project, replication and conflict-resolution guidance'
 maturity: canonical
 related: [repository-pattern, unidirectional-data-flow]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Offline-First Sync

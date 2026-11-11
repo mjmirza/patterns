@@ -1,14 +1,20 @@
 ---
 name: Hybrid Search
 slug: hybrid-search
+id: pat.17.hybrid-search
+kind: pattern
 family: 17-ai-agentic
 category: Retrieval
 aliases: [Hybrid Retrieval, Dense-Sparse Fusion, Lexical-Semantic Search]
 first_described: "Reciprocal Rank Fusion, Cormack, Clarke, Buettcher 2009; combined dense+sparse retrieval, industry practice mid-2010s onward"
 maturity: established
-related: [retrieval-augmented-generation, reranker-pattern, vector-store-abstraction, query-router, self-query-retriever]
+related: [retrieval-augmented-generation, reranking]
+related_concepts: [vector-store-abstraction, query-router, self-query-retriever]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Hybrid Search

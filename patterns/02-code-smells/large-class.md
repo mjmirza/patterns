@@ -1,14 +1,20 @@
 ---
 name: Large Class
 slug: large-class
+id: pat.02.large-class
+kind: smell
 family: 02-code-smells
 category: Bloaters
 aliases: [God Class, God Object, The Blob, Kitchen Sink Class, Swiss Army Knife Class]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999, Refactoring, Improving the Design of Existing Code"
 maturity: canonical
-related: [divergent-change, feature-envy, data-clumps, extract-class, move-method, facade, single-responsibility-principle, strategy, observer]
+related: [divergent-change, feature-envy, data-clumps, extract-class, move-function, facade, single-responsibility-principle, strategy, observer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Large Class

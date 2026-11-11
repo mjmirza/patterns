@@ -1,14 +1,20 @@
 ---
 name: Fault Injection
 slug: fault-injection
+id: pat.14.fault-injection
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Chaos Engineering (production-scale variant), Failure Injection Testing, FIT]
 first_described: "Netflix Chaos Monkey, 2011 to 2012 (industrial popularization); academic fault injection dates to Jean Arlat and colleagues, LAAS-CNRS, mid 1980s"
 maturity: established
-related: [circuit-breaker, retry-with-backoff, bulkhead, timeout, canary-release, blue-green-deployment]
+related: [circuit-breaker, retry, bulkhead, canary-release, blue-green-deployment]
+related_concepts: [timeout]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Fault Injection

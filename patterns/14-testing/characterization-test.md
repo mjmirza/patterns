@@ -1,14 +1,20 @@
 ---
 name: Characterization Test
 slug: characterization-test
+id: pat.14.characterization-test
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Golden Master Test, Approval Test, Pinning Test]
 first_described: "Michael Feathers, Working Effectively with Legacy Code, Prentice Hall, 2004"
 maturity: canonical
 related: [golden-master, mock, stub, fake, spy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-04
+last_reviewed: 2026-08-04
+next_review_due: 2027-01-31
 ---
 
 # Characterization Test

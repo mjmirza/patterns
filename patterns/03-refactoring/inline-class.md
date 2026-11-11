@@ -1,14 +1,20 @@
 ---
 name: Inline Class
 slug: inline-class
+id: pat.03.inline-class
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Merge Class, Collapse Class, Absorb Class]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [extract-class, move-function, move-field, hide-delegate, inline-function, replace-delegation-with-inheritance]
+related: [extract-class, move-function, move-field, hide-delegate, inline-function, replace-superclass-with-delegate]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Inline Class

@@ -1,14 +1,20 @@
 ---
 name: No Caching
 slug: no-caching
+id: pat.18.no-caching
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Uncached Read Path, Compute Every Time, Cache Absence, Naive Recomputation]
 first_described: "Folk knowledge, systems performance engineering practice, no single named originator"
 maturity: established
-related: [cache-aside, read-through, write-through, write-behind, n+1-query, chatty-i-o, busy-database]
+related: [cache-aside, read-through-cache, write-through-cache, write-behind-cache, n+1-query, chatty-i-o, busy-database]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # No Caching

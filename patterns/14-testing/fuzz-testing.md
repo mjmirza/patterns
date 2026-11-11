@@ -1,14 +1,20 @@
 ---
 name: Fuzz Testing
 slug: fuzz-testing
+id: pat.14.fuzz-testing
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Fuzzing, Random Testing, Grammar-Based Testing, Coverage-Guided Fuzzing]
 first_described: "Miller, Fredriksen, So 1990"
 maturity: canonical
 related: [property-based-test, mutation-test, fault-injection, golden-master, contract-test]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Fuzz Testing

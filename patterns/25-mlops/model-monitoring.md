@@ -1,14 +1,20 @@
 ---
 name: Model Monitoring
 slug: model-monitoring
+id: pat.25.model-monitoring
+kind: pattern
 family: 25-mlops
 category: MLOps
 aliases: [ML Observability, Production Model Monitoring, Model Performance Monitoring]
 first_described: "Emergent industry practice, converging circa 2015 to 2020 across Sculley et al., Google's Rules of Machine Learning, and Uber Michelangelo"
 maturity: established
 related: [drift-detection, training-serving-skew-guard, online-inference, champion-challenger]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Model Monitoring

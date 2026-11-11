@@ -1,14 +1,20 @@
 ---
 name: Long Method
 slug: long-method
+id: pat.02.long-method
+kind: smell
 family: 02-code-smells
 category: Bloaters
 aliases: [Long Function, Long Routine, God Function]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999, Refactoring, Improving the Design of Existing Code"
 maturity: canonical
 related: [large-class, feature-envy, comments, duplicate-code, dead-code, data-clumps]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Long Method

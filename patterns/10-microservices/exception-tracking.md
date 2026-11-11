@@ -1,14 +1,20 @@
 ---
 name: Exception Tracking
 slug: exception-tracking
+id: pat.10.exception-tracking
+kind: pattern
 family: 10-microservices
 category: Observability
 aliases: [Error Tracking, Crash Reporting, Centralized Exception Reporting]
 first_described: "Chris Richardson, microservices.io, Observability patterns, 2018"
 maturity: established
 related: [log-aggregation, application-metrics, circuit-breaker, microservice-chassis]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Exception Tracking

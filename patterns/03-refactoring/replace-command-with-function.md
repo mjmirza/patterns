@@ -1,14 +1,20 @@
 ---
 name: Replace Command with Function
 slug: replace-command-with-function
+id: pat.03.replace-command-with-function
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Command Object with Function, Collapse Command Object]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [replace-function-with-command, inline-class, move-function, change-function-declaration, parameterize-function, remove-dead-code]
+related_concepts: []
 incompatible_with: [command]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Command with Function

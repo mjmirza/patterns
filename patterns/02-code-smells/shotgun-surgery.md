@@ -1,14 +1,20 @@
 ---
 name: Shotgun Surgery
 slug: shotgun-surgery
+id: pat.02.shotgun-surgery
+kind: smell
 family: 02-code-smells
 category: Coupling
 aliases: []
 first_described: "Fowler and Beck 1999"
 maturity: canonical
-related: [divergent-change, duplicate-code, feature-envy, message-chains, parallel-inheritance-hierarchies, data-clumps, move-method, move-field, inline-class, extract-class, chain-of-responsibility, strategy, observer, template-method]
+related: [divergent-change, duplicate-code, feature-envy, message-chains, parallel-inheritance-hierarchies, data-clumps, move-function, move-field, inline-class, extract-class, chain-of-responsibility, strategy, observer, template-method]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Shotgun Surgery

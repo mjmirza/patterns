@@ -1,14 +1,20 @@
 ---
 name: Least to Most
 slug: least-to-most
+id: pat.17.least-to-most
+kind: pattern
 family: 17-ai-agentic
 category: AI and Agentic
 aliases: [Least-to-Most Prompting, LtM, LtM Prompting, Decompose-then-Solve Prompting]
 first_described: "Zhou, Schärli, Hou, Wei, Scales, Wang, Schuurmans, Cui, Bousquet, Le, Chi 2022"
 maturity: established
-related: [chain-of-thought, self-consistency, tree-of-thoughts, plan-execute, prompt-chaining, react, orchestrator-worker]
+related: [chain-of-thought, self-consistency, tree-of-thoughts, plan-execute, prompt-chaining, react-prompting, orchestrator-worker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Least to Most

@@ -1,14 +1,20 @@
 ---
 name: Replace Derived Variable with Query
 slug: replace-derived-variable-with-query
+id: pat.03.replace-derived-variable-with-query
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Derived State with Query, Replace Cached Derived Value with Query]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [inline-variable, extract-function, encapsulate-variable, split-variable, separate-query-from-modifier, combine-functions-into-transform]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Derived Variable with Query

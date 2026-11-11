@@ -1,14 +1,20 @@
 ---
 name: Advanced RAG
 slug: advanced-rag
+id: pat.17.advanced-rag
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Modular RAG, Multi-Stage RAG, RAG Pipeline Pattern]
 first_described: "Gao, Xiong, Gao, Jia, Pan, Bi, Dai, Sun, Wang, Wang 2023"
 maturity: established
-related: [retrieval-augmented-generation, routing, evaluator-optimizer, reflexion, react, chain-of-responsibility, orchestrator-worker]
+related: [retrieval-augmented-generation, routing, evaluator-optimizer, reflexion, react-prompting, chain-of-responsibility, orchestrator-worker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Advanced RAG

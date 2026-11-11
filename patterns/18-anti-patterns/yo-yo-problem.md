@@ -1,14 +1,20 @@
 ---
 name: Yo-yo Problem
 slug: yo-yo-problem
+id: pat.18.yo-yo-problem
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: []
 first_described: "Taenzer, Ganti, Podar 1989"
 maturity: canonical
-related: [template-method, strategy, composite, facade, mediator, god-object, extract-class, replace-inheritance-with-delegation, liskov-substitution-principle]
+related: [template-method, strategy, composite, facade, mediator, god-object, extract-class, replace-subclass-with-delegate, liskov-substitution-principle]
+related_concepts: []
 incompatible_with: [composition-over-inheritance]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Yo-yo Problem

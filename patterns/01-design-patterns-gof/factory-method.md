@@ -1,14 +1,20 @@
 ---
 name: Factory Method
 slug: factory-method
+id: pat.01.factory-method
+kind: pattern
 family: 01-design-patterns-gof
 category: Creational
 aliases: [Virtual Constructor, Factory Hook]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [abstract-factory, template-method, prototype, builder, strategy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Factory Method

@@ -1,14 +1,20 @@
 ---
 name: Data Mapper
 slug: data-mapper
+id: pat.06.data-mapper
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Behavioral
 aliases: [Mapper, Object-Relational Mapper Layer, Persistence Mapper]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [unit-of-work, identity-map, repository, lazy-load, active-record, domain-model, query-object]
+related_concepts: []
 incompatible_with: [active-record]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

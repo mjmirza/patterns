@@ -1,14 +1,20 @@
 ---
 name: API Versioning
 slug: api-versioning
+id: pat.19.api-versioning
+kind: pattern
 family: 19-api-design
 category: Data Fetching
 aliases: [Header-Based Versioning, Release-Based API Versioning]
 first_described: 'Stripe, official API versioning documentation'
 maturity: canonical
 related: [cursor-based-pagination, rest-resource-modeling]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # API Versioning

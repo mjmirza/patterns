@@ -1,14 +1,20 @@
 ---
 name: Visitor
 slug: visitor
+id: pat.01.visitor
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Double Dispatch, Walker, Extrinsic Visitor]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [composite, interpreter, iterator, strategy, template-method, command]
+related_concepts: []
 incompatible_with: [service-locator]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Visitor

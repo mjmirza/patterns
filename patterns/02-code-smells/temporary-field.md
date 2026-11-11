@@ -1,14 +1,20 @@
 ---
 name: Temporary Field
 slug: temporary-field
+id: pat.02.temporary-field
+kind: smell
 family: 02-code-smells
 category: Object-Orientation Abusers
 aliases: [Temporary Attribute, Sometimes Field, Optional Field]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999, Refactoring, Improving the Design of Existing Code"
 maturity: canonical
 related: [data-class, lazy-class, feature-envy, long-method, extract-class]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Temporary Field

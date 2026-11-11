@@ -1,14 +1,20 @@
 ---
 name: Ring Buffer
 slug: ring-buffer
+id: pat.28.ring-buffer
+kind: pattern
 family: 28-embedded-hardware
 category: Structural
 aliases: [Circular Buffer, FIFO Ring, Lock-Free SPSC Queue]
 first_described: "Zephyr Project documentation, ring buffer data structure"
 maturity: canonical
 related: [interrupt-service-routine, double-buffering]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Ring Buffer

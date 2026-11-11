@@ -1,14 +1,20 @@
 ---
 name: Transform View
 slug: transform-view
+id: pat.06.transform-view
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Element-by-Element Transform, XSLT View]
 first_described: "Fowler 2002"
 maturity: established
 related: [template-view, two-step-view, front-controller, page-controller, application-controller]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Transform View

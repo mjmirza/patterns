@@ -31,22 +31,24 @@ first. Rebase onto a different, unclaimed entry from the queue instead.
    `patterns/<family>/README.md` so a new entry does not duplicate one
    already published or already queued. Also check `gh pr list` for a draft
    PR already claiming the same path.
-3. Run the local gates before you push, the same four gates CI runs:
+3. Run the local gates before you push, the same gates CI runs:
 
    ```
    python3 tools/check-structure.py
    python3 tools/check-prose.py
+   python3 tools/check-links.py
    python3 tools/check-code.py --strict
    python3 tools/validate-refs.py --strict
-   npx --yes markdownlint-cli2@0.23.2 "patterns/**/*.md" "docs/**/*.md" README.md
+   npx --yes markdownlint-cli2@0.23.2 "patterns/**/*.md" "docs/**/*.md" README.md GOVERNANCE.md MAINTAINERS.md
    ```
 
-4. If you touch `docs/AUTHORING-QUEUE.json` or add a published entry, also
-   run `python3 tools/gen-indexes.py` and
-   `python3 tools/gen-catalogue-status.py`, and commit the files they
-   regenerate (family `README.md`, `docs/PROGRESS.md`, `dist/`, the root
-   `README.md` badges and table) in the same commit. A stale catalogue status
-   is caught in CI and blocks the merge.
+4. If you touch `docs/AUTHORING-QUEUE.json`, add a published entry, or change
+   frontmatter relationships, also run `python3 tools/gen-indexes.py`,
+   `python3 tools/gen-catalogue-status.py`, and
+   `python3 tools/gen-entry-index.py`. Commit the files they regenerate
+   (family `README.md`, `docs/PROGRESS.md`, `dist/`, the root `README.md`
+   badges and table) in the same commit. A stale catalogue status or entry
+   index is caught in CI and blocks the merge.
 
 ## What a pull request needs
 
@@ -96,5 +98,5 @@ discusses those exact strings.
 ## License
 
 By contributing, you agree your contribution is licensed under this
-repository's OpenRoots Agent License 1.0 (see `LICENSE`), and that you have
+repository's OpenRoots Agent License 2.3 (see `LICENSE`), and that you have
 the right to license it that way.

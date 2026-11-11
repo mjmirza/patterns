@@ -1,14 +1,20 @@
 ---
 name: Reflexion
 slug: reflexion
+id: pat.17.reflexion
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [Verbal Reinforcement Learning, Reflexion Agent, Actor-Evaluator-Self-Reflection Loop]
 first_described: "Shinn, Cassano, Berman, Gopinath, Narasimhan, Yao 2023"
 maturity: emerging
-related: [react-prompting, tool-use, plan-and-execute, self-consistency, chain-of-thought]
+related: [react-prompting, function-calling, plan-execute, self-consistency, chain-of-thought]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Reflexion

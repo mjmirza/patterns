@@ -1,14 +1,20 @@
 ---
 name: Context Selector
 slug: context-selector
+id: pat.13.context-selector
+kind: pattern
 family: 13-frontend-ui
 category: State Management
 aliases: [useContextSelector, Selective Context Subscription]
 first_described: "use-context-selector library, dai-shi"
 maturity: established
 related: [reducer-hook, headless-component]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Context Selector

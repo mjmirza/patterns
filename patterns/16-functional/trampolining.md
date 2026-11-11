@@ -1,14 +1,20 @@
 ---
 name: Trampolining
 slug: trampolining
+id: pat.16.trampolining
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Trampoline, Trampolined Style, Stackless Recursion, Bounce Loop]
 first_described: "Established implementation technique in functional programming and compiler literature"
 maturity: established
-related: [continuation-passing-style, tail-recursion, free-monad, monad, interpreter, iterator]
-incompatible_with: [native-tail-call-required, synchronous-unbounded-work-on-request-thread, stack-sensitive-security-checks]
+related: [continuation-passing-style, free-monad, monad, interpreter, iterator]
+related_concepts: [tail-recursion]
+incompatible_with: []
+incompatible_concepts: [native-tail-call-required, synchronous-unbounded-work-on-request-thread, stack-sensitive-security-checks]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Trampolining

@@ -1,14 +1,20 @@
 ---
 name: Lazy Class
 slug: lazy-class
+id: pat.02.lazy-class
+kind: smell
 family: 02-code-smells
 category: Bloaters
 aliases: [Freeloader, Lazy Type, Do-Nothing Class]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999"
 maturity: canonical
 related: [data-class, dead-code, large-class, speculative-generality, middle-man]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Lazy Class

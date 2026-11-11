@@ -1,14 +1,20 @@
 ---
 name: Pagination Pattern
 slug: pagination-pattern
+id: pat.19.pagination-pattern
+kind: pattern
 family: 19-api-design
 category: Data Fetching
 aliases: [Page-Based Pagination, Offset and Limit Pagination]
 first_described: 'Google, AIP-158; JSON:API specification'
 maturity: canonical
 related: [rest-resource-modeling, cursor-based-pagination]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Pagination Pattern

@@ -1,14 +1,20 @@
 ---
 name: Refused Bequest
 slug: refused-bequest
+id: pat.02.refused-bequest
+kind: smell
 family: 02-code-smells
 category: Object-Orientation Abusers
 aliases: []
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999, Refactoring, Improving the Design of Existing Code"
 maturity: canonical
 related: [large-class, feature-envy, incomplete-library-class, parallel-inheritance-hierarchies, data-class]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Refused Bequest

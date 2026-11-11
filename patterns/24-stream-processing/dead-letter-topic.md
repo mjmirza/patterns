@@ -1,14 +1,20 @@
 ---
 name: Dead-Letter Topic
 slug: dead-letter-topic
+id: pat.24.dead-letter-topic
+kind: pattern
 family: 24-stream-processing
 category: Stream Processing
 aliases: [Dead Letter Queue Topic, Retry Letter Topic]
 first_described: "Hohpe and Woolf, Enterprise Integration Patterns, 2003, the general Dead Letter Channel this entry specializes; Apache Kafka KIP-298, Error Handling in Connect, 2018, Kafka 2.0.0, the stream-native, topic-based formalization this entry documents"
 maturity: established
 related: [dead-letter-channel, stream-backpressure, watermark, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

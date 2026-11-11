@@ -1,14 +1,20 @@
 ---
 name: Alternative Classes with Different Interfaces
 slug: alternative-classes-with-different-interfaces
+id: pat.02.alternative-classes-with-different-interfaces
+kind: smell
 family: 02-code-smells
 category: Code Smell, Object-Oriented Abusers
 aliases: [Divergent Interfaces, Incompatible Substitutes]
 first_described: "Fowler and Beck 1999, revised Fowler 2018"
 maturity: canonical
 related: [factory-method, template-method, strategy, adapter, extract-superclass]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Alternative Classes with Different Interfaces

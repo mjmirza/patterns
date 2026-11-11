@@ -1,14 +1,20 @@
 ---
 name: Differential Testing
 slug: differential-testing
+id: pat.14.differential-testing
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Differential Fuzzing, Cross-Implementation Testing, N-Version Diffing]
 first_described: "McKeeman 1998"
 maturity: established
 related: [golden-master, characterization-test, fuzz-testing, metamorphic-testing, contract-test]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Differential Testing

@@ -1,14 +1,20 @@
 ---
 name: Decompose by Business Capability
 slug: decompose-by-business-capability
+id: pat.10.decompose-by-business-capability
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Capability-Based Decomposition, Business-Aligned Services]
 first_described: "Richardson 2016"
 maturity: canonical
 related: [decompose-by-subdomain, api-gateway, saga, backends-for-frontends, strangler-fig]
-incompatible_with: [layered-architecture]
+related_concepts: []
+incompatible_with: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Decompose by Business Capability

@@ -1,14 +1,20 @@
 ---
 name: Aggregate Root
 slug: aggregate-root
+id: pat.11.aggregate-root
+kind: pattern
 family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Root Entity, Aggregate Boundary, Consistency Boundary]
 first_described: "Evans 2003"
 maturity: canonical
-related: [entity, factory, repository, bounded-context, ubiquitous-language, domain-event]
+related: [entity, factory, repository, bounded-context, ubiquitous-language, 10-microservices/domain-event, 11-domain-driven-design/domain-event]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Aggregate Root

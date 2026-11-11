@@ -5,7 +5,10 @@ A sample that does not compile is a defect. Missing toolchains are skipped, neve
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import json
+import os
+import py_compile
 import re
 import shutil
 import subprocess
@@ -69,7 +72,13 @@ def public_class(src: str) -> str | None:
 def check_python(src: str, d: Path) -> tuple[int, str]:
     f = d / "s.py"
     f.write_text(src, encoding="utf-8")
-    return run([sys.executable, "-m", "py_compile", str(f)], d)
+    try:
+        py_compile.compile(str(f), doraise=True)
+        return 0, ""
+    except py_compile.PyCompileError as e:
+        return 1, str(e)
+    except Exception as e:
+        return 1, f"{type(e).__name__}: {e}"
 
 
 def check_java(src: str, d: Path) -> tuple[int, str]:
@@ -335,21 +344,25 @@ def main() -> int:
     # Run TypeScript tasks in batch
     ts_results = check_ts_batch(ts_tasks) if ts_tasks else {}
 
-    total = passed = failed = skipped = 0
-    failures: list[str] = []
-
-    # Second pass: evaluate all results using explicit task IDs
-    for f, blocks in parsed_files:
-        rel = f.relative_to(ROOT)
+    def process_file(
+        item: tuple[Path, list[tuple[int, str, str, int | None, int | None]]]
+    ) -> list[tuple[Path, int, str, int, str]]:
+        f, blocks = item
+        file_results: list[tuple[Path, int, str, int, str]] = []
         seen_by_lang: dict[str, str] = {}
         for i, lang, src, st_id, cum_id in blocks:
-            total += 1
-            if lang == "typescript" and st_id is not None:
-                code, out = ts_results.get(st_id, (-1, "no result"))
-                if code not in (0, -1) and cum_id is not None:
-                    code2, out2 = ts_results.get(cum_id, (-1, "no result"))
-                    if code2 == 0:
-                        code, out = code2, out2
+            code: int = -1
+            out: str = ""
+            if lang == "typescript":
+                if st_id is not None:
+                    code, out = ts_results.get(st_id, (-1, "no result"))
+                    if code not in (0, -1) and cum_id is not None:
+                        code2, out2 = ts_results.get(cum_id, (-1, "no result"))
+                        if code2 == 0:
+                            code, out = code2, out2
+                else:
+                    with tempfile.TemporaryDirectory() as td:
+                        code, out = CHECKERS[lang](src, Path(td))
                 seen_by_lang[lang] = seen_by_lang.get(lang, "") + "\n\n" + src
             else:
                 with tempfile.TemporaryDirectory() as td:
@@ -361,14 +374,29 @@ def main() -> int:
                     if code2 == 0:
                         code, out = code2, out2
                 seen_by_lang[lang] = seen_by_lang.get(lang, "") + "\n\n" + src
+            file_results.append((f, i, lang, code, out))
+        return file_results
 
-            if code == -1:
-                skipped += 1
-            elif code == 0:
-                passed += 1
-            else:
-                failed += 1
-                failures.append(f"{rel} block {i} [{lang}]\n{out.strip()[:600]}")
+    workers = min(32, (os.cpu_count() or 4) * 4)
+    results: list[tuple[Path, int, str, int, str]] = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = [executor.submit(process_file, pf) for pf in parsed_files]
+        for fut in futures:
+            results.extend(fut.result())
+
+    total = passed = failed = skipped = 0
+    failures: list[str] = []
+
+    for f, i, lang, code, out in results:
+        rel = f.relative_to(ROOT)
+        total += 1
+        if code == -1:
+            skipped += 1
+        elif code == 0:
+            passed += 1
+        else:
+            failed += 1
+            failures.append(f"{rel} block {i} [{lang}]\n{out.strip()[:600]}")
 
     for fail in failures:
         print(f"FAIL {fail}\n")

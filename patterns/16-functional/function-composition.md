@@ -1,14 +1,20 @@
 ---
 name: Function Composition
 slug: function-composition
+id: pat.16.function-composition
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Composition, Compose, Pipeline, Function Pipeline, Unary Composition]
 first_described: "Standard mathematical operation, established in functional programming practice"
 maturity: canonical
-related: [higher-order-function, partial-application, currying, pipeline, functor, monad, decorator, chain-of-responsibility]
-incompatible_with: [hidden-side-effects, order-dependent-global-state, untyped-dynamic-pipeline]
+related: [partial-application, currying, functor, monad, decorator, chain-of-responsibility]
+related_concepts: [higher-order-function, pipeline]
+incompatible_with: []
+incompatible_concepts: [hidden-side-effects, order-dependent-global-state, untyped-dynamic-pipeline]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Function Composition

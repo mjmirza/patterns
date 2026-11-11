@@ -1,14 +1,20 @@
 ---
 name: Open Host Service
 slug: open-host-service
+id: pat.11.open-host-service
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [OHS, Public Host Interface, Open API Context Relationship]
 first_described: "Evans 2003"
 maturity: canonical
 related: [published-language, anti-corruption-layer, conformist, customer-supplier, bounded-context, context-map, shared-kernel]
+related_concepts: []
 incompatible_with: [shared-kernel, conformist]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Open Host Service

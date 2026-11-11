@@ -1,14 +1,20 @@
 ---
 name: Drift Detection
 slug: drift-detection
+id: pat.25.drift-detection
+kind: pattern
 family: 25-mlops
 category: MLOps
 aliases: [Data Drift Detection, Distribution Shift Detection, Concept Drift Detection]
 first_described: "Chip Huyen, Data Distribution Shifts and Monitoring, Stanford CS 329S course note, 2022"
 maturity: established
 related: [model-monitoring, training-serving-skew-guard]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Drift Detection

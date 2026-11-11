@@ -1,14 +1,20 @@
 ---
 name: Human in the Loop
 slug: human-in-the-loop
+id: pat.17.human-in-the-loop
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [HITL, Human-in-the-Loop Oversight, Interrupt and Resume, Approval Gate, Wait for Human Input]
 first_described: "U.S. Department of Defense Modeling and Simulation Glossary, DoD 5000.59-M, 1998 (simulation taxonomy); re-purposed for LLM agent frameworks circa 2023 to 2024"
 maturity: established
-related: [react, orchestrator-worker, plan-execute, function-calling, input-guardrails, output-guardrails, agent-handoff, chain-of-responsibility]
+related: [react-prompting, orchestrator-worker, plan-execute, function-calling, input-guardrails, output-guardrails, agent-handoff, chain-of-responsibility]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Human in the Loop

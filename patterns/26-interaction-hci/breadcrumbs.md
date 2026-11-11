@@ -1,14 +1,20 @@
 ---
 name: Breadcrumbs
 slug: breadcrumbs
+id: pat.26.breadcrumbs
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Breadcrumb Navigation, Breadcrumb Trail, Cookie Crumb, Fil d'Ariane]
 first_described: "Named for the Hansel and Gretel fairy tale, emergent web-design practice"
 maturity: established
 related: [wizard]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Breadcrumbs

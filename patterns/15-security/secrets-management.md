@@ -1,14 +1,20 @@
 ---
 name: Secrets Management
 slug: secrets-management
+id: pat.15.secrets-management
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Secret Management, Credential Management, Runtime Secret Injection]
 first_described: "Saltzer and Schroeder 1975; OWASP Secrets Management Cheat Sheet"
 maturity: established
 related: [least-privilege, key-rotation, envelope-encryption, token-based-authentication, externalized-configuration]
-incompatible_with: [hardcoded-secret, shared-credential]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [hardcoded-secret, shared-credential]
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Secrets Management

@@ -1,14 +1,20 @@
 ---
 name: Immutable Object
 slug: immutable-object
+id: pat.09.immutable-object
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Immutable Value, Value Object (concurrency sense), Functional Object]
 first_described: "Lea 1999"
 maturity: canonical
-related: [read-write-lock, monitor-object, thread-specific-storage, producer-consumer, future-promise, strategized-locking]
+related: [read-write-lock, monitor-object, thread-specific-storage, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, future-promise, strategized-locking]
+related_concepts: []
 incompatible_with: [double-checked-locking]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Immutable Object

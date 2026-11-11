@@ -1,14 +1,20 @@
 ---
 name: Thread-Safe Interface
 slug: thread-safe-interface
+id: pat.09.thread-safe-interface
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Synchronized Interface, Guarded Interface, Locked Boundary]
 first_described: "Schmidt 1999; Schmidt, Stal, Rohnert, Buschmann 2000"
 maturity: canonical
 related: [monitor-object, scoped-locking, double-checked-locking, active-object, strategized-locking]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Thread-Safe Interface

@@ -1,14 +1,20 @@
 ---
 name: Cache-Aside
 slug: cache-aside
+id: pat.08.cache-aside
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed
 aliases: [Lazy Loading, Look-Aside Cache, Demand-Filled Cache, Lazy Population]
 first_described: "Microsoft patterns and practices, Cloud Design Patterns, 2014"
 maturity: canonical
-related: [read-through-cache, write-through-cache, write-behind-cache, refresh-ahead-cache, circuit-breaker, bulkhead, materialized-view, retry]
+related: [read-through-cache, write-through-cache, write-behind-cache, circuit-breaker, bulkhead, materialized-view, retry]
+related_concepts: [refresh-ahead-cache]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Cache-Aside

@@ -1,14 +1,20 @@
 ---
 name: Shadow Model
 slug: shadow-model
+id: pat.25.shadow-model
+kind: pattern
 family: 25-mlops
 category: MLOps
 aliases: [Shadow Deployment, Shadow Testing, Shadow Variant]
 first_described: "Martin Fowler, Dark Launching, martinfowler.com bliki, undated"
 maturity: established
 related: [online-inference, model-registry, champion-challenger, training-serving-skew-guard]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Shadow Model

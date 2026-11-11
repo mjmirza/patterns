@@ -1,14 +1,20 @@
 ---
 name: Memory Pool (Fixed Block Allocator)
 slug: memory-pool
+id: pat.28.memory-pool
+kind: pattern
 family: 28-embedded-hardware
 category: Structural
 aliases: [Memory Slab, Fixed-Size Block Allocator, Block Pool]
 first_described: "Zephyr Project documentation, memory slabs"
 maturity: canonical
 related: [hardware-abstraction-layer, ring-buffer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Memory Pool (Fixed Block Allocator)

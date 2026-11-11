@@ -1,14 +1,20 @@
 ---
 name: Transactional Client
 slug: transactional-client
+id: pat.07.transactional-client
+kind: pattern
 family: 07-integration
 category: Messaging
 aliases: [Transacted Session, Transacted Client, Local Transaction Client]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [guaranteed-delivery, idempotent-receiver, transactional-outbox, point-to-point-channel, message-channel, dead-letter-channel, retry, circuit-breaker]
+related: [guaranteed-delivery, idempotent-consumer, transactional-outbox, point-to-point-channel, message-channel, dead-letter-channel, retry, circuit-breaker]
+related_concepts: []
 incompatible_with: [transactional-outbox]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Transactional Client

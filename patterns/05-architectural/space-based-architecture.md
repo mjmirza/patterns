@@ -1,14 +1,20 @@
 ---
 name: Space-Based Architecture
 slug: space-based-architecture
+id: pat.05.space-based-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Cloud Application Architecture, Tuple Space Architecture]
 first_described: "Microsoft internal Youkon platform, 1997-1998"
 maturity: established
 related: [event-driven-architecture, microservices-architecture, serverless-architecture]
-incompatible_with: [layered-architecture]
+related_concepts: []
+incompatible_with: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Space-Based Architecture

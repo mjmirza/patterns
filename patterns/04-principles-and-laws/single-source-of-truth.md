@@ -1,14 +1,20 @@
 ---
 name: Single Source of Truth
 slug: single-source-of-truth
+id: pat.04.single-source-of-truth
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [SSOT, Single Point of Truth, SPOT]
 first_described: "Practitioner term, data management and normalization tradition, no single named originator"
 maturity: canonical
-related: [dont-repeat-yourself, information-expert, low-coupling, high-cohesion, pure-fabrication]
+related: [do-not-repeat-yourself, information-expert, low-coupling, high-cohesion, pure-fabrication]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Single Source of Truth

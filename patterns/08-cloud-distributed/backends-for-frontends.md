@@ -1,14 +1,20 @@
 ---
 name: Backends for Frontends
 slug: backends-for-frontends
+id: pat.08.backends-for-frontends
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed
 aliases: [BFF, Backend for Frontend, Backend-for-Frontend]
 first_described: "Calçado 2013, catalogued by Newman 2015"
 maturity: established
 related: [gateway-aggregation, anti-corruption-layer, facade, adapter, circuit-breaker, retry, bulkhead, materialized-view, api-gateway]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Backends for Frontends

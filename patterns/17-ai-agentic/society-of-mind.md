@@ -1,14 +1,20 @@
 ---
 name: Society of Mind
 slug: society-of-mind
+id: pat.17.society-of-mind
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [Multi-Agent Orchestration, Agent Society, Society of Minds, Multiagent Debate]
 first_described: "Minsky 1986"
 maturity: established
-related: [orchestrator-worker, mixture-of-experts, blackboard, mediator, chain-of-responsibility, actor-model]
-incompatible_with: [single-agent-monolith]
+related: [orchestrator-worker, blackboard-architecture, mediator, chain-of-responsibility, actor-model]
+related_concepts: [mixture-of-experts]
+incompatible_with: []
+incompatible_concepts: [single-agent-monolith]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Society of Mind

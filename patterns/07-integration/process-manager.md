@@ -1,14 +1,20 @@
 ---
 name: Process Manager
 slug: process-manager
+id: pat.07.process-manager
+kind: pattern
 family: 07-integration
 category: System Management
 aliases: [Process Orchestrator, Orchestration Engine, Central Coordinator]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [routing-slip, aggregator, correlation-identifier, content-based-router, message-bus, event-message, command-message]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Process Manager

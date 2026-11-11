@@ -1,14 +1,20 @@
 ---
 name: Role Object
 slug: role-object
+id: pat.01.role-object
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: []
 first_described: "Dirk Baeumer, Dirk Riehle, Wolf Siberski, and Martina Wulf, Role Object, in Neil Harrison, Brian Foote, Hans Rohnert (editors), Pattern Languages of Program Design 4, Addison-Wesley, 2000, Chapter 2, pages 15 to 32. First presented as a conference paper at PLoP 97 (1997), Technical Report WUCS-97-34, Washington University Department of Computer Science."
 maturity: established
 related: [extension-object, decorator, adapter]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

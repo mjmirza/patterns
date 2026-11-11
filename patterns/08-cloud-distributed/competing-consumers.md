@@ -1,14 +1,20 @@
 ---
 name: Competing Consumers
 slug: competing-consumers
+id: pat.08.competing-consumers
+kind: pattern
 family: 08-cloud-distributed
 category: Resilience and Traffic Management
 aliases: [Point-to-Point Channel with Multiple Receivers, Worker Pool over a Queue, Consumer Group Pattern]
 first_described: "Hohpe, Woolf. Enterprise Integration Patterns. Addison-Wesley, 2003"
 maturity: canonical
 related: [queue-based-load-leveling, publisher-subscriber, sharding, throttling, retry, bulkhead, cqrs]
-incompatible_with: [strict-total-message-ordering]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [strict-total-message-ordering]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Competing Consumers

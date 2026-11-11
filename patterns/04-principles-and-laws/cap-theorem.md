@@ -1,14 +1,20 @@
 ---
 name: CAP Theorem
 slug: cap-theorem
+id: pat.04.cap-theorem
+kind: law
 family: 04-principles-and-laws
 category: Principle
 aliases: [Brewer's Theorem, Brewer's Conjecture, CAP Trade-off]
 first_described: "Brewer 2000 (conjecture), Gilbert and Lynch 2002 (proof)"
 maturity: canonical
-related: [pacelc, quorum-consensus, eventual-consistency, saga, circuit-breaker]
+related: [quorum, saga, circuit-breaker]
+related_concepts: [pacelc, eventual-consistency]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # CAP Theorem

@@ -1,14 +1,20 @@
 ---
 name: Container Presentational
 slug: container-presentational
+id: pat.13.container-presentational
+kind: pattern
 family: 13-frontend-ui
 category: Component Composition
 aliases: [Smart and Dumb Components, Container and Presentational Components, Stateful and Stateless Components]
 first_described: "Abramov 2015"
 maturity: deprecated
 related: [hooks, higher-order-component, render-props, compound-components, separation-of-concerns]
-incompatible_with: [monolithic-component]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [monolithic-component]
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Container Presentational
