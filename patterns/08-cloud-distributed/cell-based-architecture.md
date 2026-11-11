@@ -1,14 +1,20 @@
 ---
 name: Cell-Based Architecture
 slug: cell-based-architecture
+id: pat.08.cell-based-architecture
+kind: pattern
 family: 08-cloud-distributed
 category: Resilience and Scale
 aliases: [Cellular Architecture, Cells, Cell Router Pattern, Silo Architecture]
 first_described: "AWS engineering practice, extending Nygard's Bulkhead metaphor, formalized in the AWS Well-Architected guide 'Reducing the Scope of Impact with Cell-Based Architecture'"
 maturity: established
 related: [bulkhead, deployment-stamps, sharding, circuit-breaker, health-endpoint-monitoring, rate-limiting, geode]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Cell-Based Architecture

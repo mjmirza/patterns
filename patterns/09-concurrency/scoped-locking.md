@@ -1,14 +1,20 @@
 ---
 name: Scoped Locking
 slug: scoped-locking
+id: pat.09.scoped-locking
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [RAII Lock, Lock Guard, Guard Idiom, Resource Acquisition Is Initialization applied to mutexes]
 first_described: "Schmidt 1999; Schmidt, Stal, Rohnert, Buschmann 2000"
 maturity: canonical
 related: [strategy, thread-safe-interface, double-checked-locking, monitor-object, active-object, reactor]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Scoped Locking

@@ -1,14 +1,20 @@
 ---
 name: Mediator
 slug: mediator
+id: pat.01.mediator
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Dialog Director, Coordinator, Hub, Broker (loosely)]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [observer, facade, command, memento, adapter, chain-of-responsibility]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Mediator

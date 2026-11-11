@@ -1,14 +1,20 @@
 ---
 name: Resequencer
 slug: resequencer
+id: pat.07.resequencer
+kind: pattern
 family: 07-integration
 category: Integration (Message Routing)
 aliases: [Reordering Filter, Sequence Resequencer, Message Resequencer, Reorder Buffer]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [message-sequence, correlation-identifier, message-filter, guaranteed-delivery, dead-letter-channel, idempotent-consumer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Resequencer

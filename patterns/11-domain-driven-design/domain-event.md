@@ -1,14 +1,20 @@
 ---
 name: Domain Event
 slug: domain-event
+id: pat.11.domain-event
+kind: pattern
 family: 11-domain-driven-design
 category: Tactical
 aliases: [Business Event, Domain Notification]
 first_described: "Evans 2003, formalized by Fowler 2005 and Vernon 2013"
 maturity: canonical
-related: [entity, aggregate, bounded-context, ubiquitous-language, published-language, open-host-service]
+related: [entity, 10-microservices/aggregate, 11-domain-driven-design/aggregate, bounded-context, ubiquitous-language, published-language, open-host-service]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Domain Event

@@ -1,14 +1,20 @@
 ---
 name: Index Table
 slug: index-table
+id: pat.08.index-table
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud Distributed
 aliases: [Secondary Index Table, Lookup Table Pattern, Inverted Index Table]
 first_described: "Microsoft Azure Architecture Center, Cloud Design Patterns catalog"
 maturity: canonical
 related: [sharding, materialized-view, cqrs, cache-aside, gateway-aggregation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Index Table

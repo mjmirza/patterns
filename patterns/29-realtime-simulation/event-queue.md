@@ -1,14 +1,20 @@
 ---
 name: Event Queue
 slug: event-queue
+id: pat.29.event-queue
+kind: pattern
 family: 29-realtime-simulation
 category: Real-Time Simulation
 aliases: [Message Queue, Mailbox]
 first_described: "Robert Nystrom's Event Queue chapter in Game Programming Patterns, in the book's own Decoupling Patterns part"
 maturity: canonical
 related: [update-method]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Event Queue

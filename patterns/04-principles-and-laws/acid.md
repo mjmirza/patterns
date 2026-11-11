@@ -1,14 +1,20 @@
 ---
 name: ACID
 slug: acid
+id: pat.04.acid
+kind: law
 family: 04-principles-and-laws
 category: Principle
 aliases: [ACID Properties, ACID Transactions, Transactional Guarantees]
 first_described: "Haerder and Reuter 1983 (acronym), Gray 1981 (concept)"
 maturity: canonical
 related: [cap-theorem, single-source-of-truth, fail-fast, saga, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # ACID

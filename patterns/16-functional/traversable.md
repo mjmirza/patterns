@@ -1,14 +1,20 @@
 ---
 name: Traversable
 slug: traversable
+id: pat.16.traversable
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Traverse, Traversal, Sequence, ForEach]
 first_described: "McBride and Paterson 2008"
 maturity: canonical
-related: [functor, foldable, applicative, monad, iterator, validation]
-incompatible_with: [unordered-effects, shape-changing-transform, dependent-sequencing]
+related: [functor, foldable, applicative, monad, iterator, validation-applicative]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [unordered-effects, shape-changing-transform, dependent-sequencing]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Traversable

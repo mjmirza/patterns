@@ -1,14 +1,20 @@
 ---
 name: Tool Result Caching
 slug: tool-result-caching
+id: pat.17.tool-result-caching
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Tool Call Caching, Function Result Memoization, Action Caching]
 first_described: "General memoization traces to Donald Michie 1968 (Nature); applied specifically to LLM agent tool and function calls by practitioner tooling from 2023 onward, for example GPTCache (Zilliz, March 2023) and the LangGraph node CachePolicy"
 maturity: established
-related: [function-calling, react, orchestrator-worker, plan-execute, reflexion]
+related: [function-calling, react-prompting, orchestrator-worker, plan-execute, reflexion]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Tool Result Caching

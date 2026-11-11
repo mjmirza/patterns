@@ -1,14 +1,20 @@
 ---
 name: Anemic Domain Model
 slug: anemic-domain-model
+id: pat.18.anemic-domain-model
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [Anaemic Domain Model, Data-Only Model, Bag of Getters and Setters, Naked Data Object]
 first_described: "Fowler 2003"
 maturity: canonical
-related: [entity-service, active-record, repository, domain-model, transaction-script, value-object, aggregate, layered-architecture]
-incompatible_with: [domain-model, aggregate]
+related: [entity-service, active-record, repository, domain-model, transaction-script, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, 10-microservices/aggregate, 11-domain-driven-design/aggregate, 05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture]
+related_concepts: []
+incompatible_with: [domain-model, 10-microservices/aggregate, 11-domain-driven-design/aggregate]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Anemic Domain Model

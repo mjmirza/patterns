@@ -1,14 +1,20 @@
 ---
 name: Mutual TLS
 slug: mutual-tls
+id: pat.15.mutual-tls
+kind: pattern
 family: 15-security
 category: Security
 aliases: [mTLS, mutual authentication TLS, client-authenticated TLS, two-way TLS]
 first_described: "Dierks, Allen 1999"
 maturity: established
 related: [zero-trust, least-privilege, complete-mediation, fail-securely, secrets-management, oauth-2-1-flows]
-incompatible_with: [bearer-token-only-service-identity, perimeter-only-authentication, certificate-without-identity-policy]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [bearer-token-only-service-identity, perimeter-only-authentication, certificate-without-identity-policy]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Mutual TLS

@@ -1,14 +1,20 @@
 ---
 name: Remote Procedure Invocation
 slug: remote-procedure-invocation
+id: pat.10.remote-procedure-invocation
+kind: pattern
 family: 10-microservices
 category: Communication
 aliases: [RPI, RPC, Request Reply Communication]
 first_described: "Richardson, microservices.io, Remote Procedure Invocation pattern"
 maturity: canonical
 related: [api-gateway, service-registry, circuit-breaker, self-contained-service, transactional-outbox]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Remote Procedure Invocation

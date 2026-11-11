@@ -1,14 +1,20 @@
 ---
 name: Substitute Algorithm
 slug: substitute-algorithm
+id: pat.03.substitute-algorithm
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Algorithm, Algorithm Substitution]
 first_described: "Fowler 1999"
 maturity: established
 related: [extract-function, replace-loop-with-pipeline, split-phase, separate-query-from-modifier, replace-conditional-with-polymorphism]
-incompatible_with: [speculative-rewrite, untested-behavior-change]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [speculative-rewrite, untested-behavior-change]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Substitute Algorithm

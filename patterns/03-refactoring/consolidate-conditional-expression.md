@@ -1,14 +1,20 @@
 ---
 name: Consolidate Conditional Expression
 slug: consolidate-conditional-expression
+id: pat.03.consolidate-conditional-expression
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Merge Conditional, Combine Conditions, Consolidate Conditionals]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [decompose-conditional, replace-nested-conditional-with-guard-clauses, consolidate-conditional-expression, extract-function, replace-conditional-with-polymorphism]
+related: [decompose-conditional, replace-nested-conditional-with-guard-clauses, extract-function, replace-conditional-with-polymorphism]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Consolidate Conditional Expression

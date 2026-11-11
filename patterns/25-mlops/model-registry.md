@@ -1,14 +1,20 @@
 ---
 name: Model Registry
 slug: model-registry
+id: pat.25.model-registry
+kind: pattern
 family: 25-mlops
 category: MLOps
 aliases: [ML Model Registry, Model Repository]
 first_described: "Del Balso and Hermann, Meet Michelangelo, Uber Engineering, 2017"
 maturity: established
 related: [feature-store, training-serving-skew-guard, champion-challenger, batch-inference, online-inference]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Model Registry

@@ -1,14 +1,20 @@
 ---
 name: Domain Storytelling
 slug: domain-storytelling
+id: pat.11.domain-storytelling
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic
 aliases: [Domain Story Modeling, Pictographic Domain Modeling]
 first_described: "Hofer and Schwentner 2021"
 maturity: established
-related: [ubiquitous-language, bounded-context, domain-event, context-map]
+related: [ubiquitous-language, bounded-context, 10-microservices/domain-event, 11-domain-driven-design/domain-event, context-map]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Domain Storytelling

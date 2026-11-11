@@ -1,14 +1,20 @@
 ---
 name: Remove Flag Argument
 slug: remove-flag-argument
+id: pat.03.remove-flag-argument
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Remove Boolean Parameter, Split Flag Function, Replace Boolean with Methods]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [parameterize-function, change-function-declaration, extract-function, replace-conditional-with-polymorphism, decompose-conditional]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Remove Flag Argument

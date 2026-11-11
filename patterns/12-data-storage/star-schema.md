@@ -1,14 +1,20 @@
 ---
 name: Star Schema
 slug: star-schema
+id: pat.12.star-schema
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Dimensional Model, Star Join Schema]
 first_described: "Kimball 1996"
 maturity: canonical
 related: [snowflake-schema, data-vault, medallion-architecture, cqrs, materialized-view]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Star Schema

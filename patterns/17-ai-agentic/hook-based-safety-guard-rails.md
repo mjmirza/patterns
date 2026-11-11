@@ -1,14 +1,20 @@
 ---
 name: Hook-Based Safety Guard Rails
 slug: hook-based-safety-guard-rails
+id: pat.17.hook-based-safety-guard-rails
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [PreToolUse Hooks, Deterministic Agent Guardrails]
 first_described: "Anthropic's own Claude Code hooks reference documentation"
 maturity: established
 related: [filesystem-based-agent-state]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Hook-Based Safety Guard Rails

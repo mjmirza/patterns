@@ -1,14 +1,20 @@
 ---
 name: Incident-to-Eval Synthesis
 slug: incident-to-eval-synthesis
+id: pat.17.incident-to-eval-synthesis
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Production-to-Eval Loop, Golden Dataset Curation, Failure-Driven Dataset Growth]
 first_described: "Braintrust's own Human Review documentation, plus LangSmith's own annotation queue documentation, both current"
 maturity: established
 related: [golden-dataset, evaluation-suite, llm-as-judge]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Incident-to-Eval Synthesis

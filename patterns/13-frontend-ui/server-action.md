@@ -1,14 +1,20 @@
 ---
 name: Server Action
 slug: server-action
+id: pat.13.server-action
+kind: pattern
 family: 13-frontend-ui
 category: Data Fetching
 aliases: [Server Function, use server]
 first_described: "React documentation, Server Functions"
 maturity: canonical
 related: [server-components, optimistic-ui, prpl-pattern]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Server Action

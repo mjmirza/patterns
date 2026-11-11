@@ -1,14 +1,20 @@
 ---
 name: Remove Dead Code
 slug: remove-dead-code
+id: pat.03.remove-dead-code
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Delete Unreachable Code, Remove Unused Method, Eliminate Dead Code]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [inline-function, remove-subclass, collapse-hierarchy, extract-function, change-function-declaration]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Remove Dead Code

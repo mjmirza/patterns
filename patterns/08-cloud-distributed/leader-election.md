@@ -1,14 +1,20 @@
 ---
 name: Leader Election
 slug: leader-election
+id: pat.08.leader-election
+kind: pattern
 family: 08-cloud-distributed
 category: Coordination
 aliases: [Master Election, Coordinator Election, Election Algorithm]
 first_described: "Garcia-Molina 1982 (Bully Algorithm); Lamport 1998 (Paxos); Ongaro and Ousterhout 2014 (Raft)"
 maturity: canonical
-related: [saga, circuit-breaker, retry, bulkhead, health-endpoint-monitoring, competing-consumers]
+related: [saga, circuit-breaker, retry, bulkhead, health-endpoint-monitoring, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Leader Election

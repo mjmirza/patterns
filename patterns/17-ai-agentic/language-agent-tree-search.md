@@ -1,14 +1,20 @@
 ---
 name: Language Agent Tree Search
 slug: language-agent-tree-search
+id: pat.17.language-agent-tree-search
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [LATS, MCTS for LLM Agents]
 first_described: "Zhou, Yan, Shlapentokh-Rothman, Wang, Wang, arXiv 2310.04406"
 maturity: established
 related: [tree-of-thoughts]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Language Agent Tree Search

@@ -1,14 +1,20 @@
 ---
 name: Return Modified Value
 slug: return-modified-value
+id: pat.03.return-modified-value
+kind: technique
 family: 03-refactoring
 category: Composing Functions
 aliases: [Return Updated Value, Return New Value, Accumulator Return]
 first_described: "Fowler 2018"
 maturity: established
 related: [split-variable, extract-function, combine-functions-into-transform, replace-temp-with-query, separate-query-from-modifier]
-incompatible_with: [command-query-separation]
+related_concepts: []
+incompatible_with: [separate-query-from-modifier]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Return Modified Value

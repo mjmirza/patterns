@@ -1,14 +1,20 @@
 ---
 name: Envelope Wrapper
 slug: envelope-wrapper
+id: pat.07.envelope-wrapper
+kind: pattern
 family: 07-integration
 category: Message Construction
 aliases: [Message Envelope, Wrapper Pattern (EIP), Envelope Pattern]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [message, correlation-identifier, format-indicator, channel-adapter, content-based-router, message-sequence]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Envelope Wrapper

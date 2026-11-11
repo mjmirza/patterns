@@ -1,14 +1,20 @@
 ---
 name: Mutable Data
 slug: mutable-data
+id: pat.02.mutable-data
+kind: smell
 family: 02-code-smells
 category: Change Preventers
 aliases: [Shared Mutable State, Aliasing Bug, Reference Mutation]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999, Refactoring, Improving the Design of Existing Code, second edition renamed and expanded 2018"
 maturity: canonical
 related: [long-method, feature-envy, primitive-obsession, data-clumps, temporary-field, divergent-change, shotgun-surgery]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Mutable Data

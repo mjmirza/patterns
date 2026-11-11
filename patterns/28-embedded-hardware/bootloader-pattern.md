@@ -1,14 +1,20 @@
 ---
 name: Bootloader Pattern
 slug: bootloader-pattern
+id: pat.28.bootloader-pattern
+kind: pattern
 family: 28-embedded-hardware
 category: Structural
 aliases: [Firmware Update Bootloader, A/B Image Swap, Secure Boot Chain]
 first_described: "MCUboot documentation, design and image trailer"
 maturity: canonical
 related: [hardware-abstraction-layer, watchdog-timer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Bootloader Pattern

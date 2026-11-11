@@ -1,14 +1,20 @@
 ---
 name: Audit Log
 slug: audit-log
+id: pat.15.audit-log
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Audit Trail, Security Audit Log, Activity Log, Event Audit Trail]
 first_described: "longstanding audit practice; Kent and Souppaya 2006"
 maturity: established
 related: [complete-mediation, least-privilege, rbac, abac, zero-trust, separation-of-duties]
-incompatible_with: [ambient-authority, unstructured-logging, shared-accounting]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [ambient-authority, unstructured-logging, shared-accounting]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Audit Log

@@ -1,14 +1,20 @@
 ---
 name: Data Locality
 slug: data-locality
+id: pat.29.data-locality
+kind: pattern
 family: 29-realtime-simulation
 category: Real-Time Simulation
 aliases: [Cache-Friendly Layout, Contiguous Component Storage]
 first_described: "Robert Nystrom's Data Locality chapter in Game Programming Patterns, in the book's own Optimization Patterns part"
 maturity: canonical
 related: [object-pool, entity-component-system]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Data Locality

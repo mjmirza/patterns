@@ -1,14 +1,20 @@
 ---
 name: Strangler Application
 slug: strangler-application
+id: pat.10.strangler-application
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Strangler Fig Application, Strangler Fig Pattern, Strangler Pattern]
 first_described: "Fowler 2004"
 maturity: canonical
 related: [decompose-by-business-capability, decompose-by-subdomain, api-gateway, anti-corruption-layer, backends-for-frontends]
-incompatible_with: [big-bang-rewrite]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [big-bang-rewrite]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Strangler Application

@@ -1,14 +1,20 @@
 ---
 name: Money
 slug: money
+id: pat.06.money
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Pattern
 aliases: [Monetary Value Object, Amount and Currency, Cents Pattern]
 first_described: "Fowler 2002"
 maturity: canonical
-related: [value-object, embedded-value, active-record, data-transfer-object, specification]
+related: [06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, embedded-value, active-record, data-transfer-object, specification]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Money

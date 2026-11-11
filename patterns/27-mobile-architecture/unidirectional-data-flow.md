@@ -1,14 +1,20 @@
 ---
 name: Unidirectional Data Flow (Mobile)
 slug: unidirectional-data-flow
+id: pat.27.unidirectional-data-flow
+kind: pattern
 family: 27-mobile-architecture
 category: Structural
 aliases: [UDF, One-Way Data Binding, State Down Events Up]
 first_described: 'Google Android Developers, "UI layer" architecture guidance, and independently by the Composable Architecture (TCA) on iOS'
 maturity: canonical
 related: [coordinator-pattern, redux-for-mobile]
+related_concepts: []
 incompatible_with: [mvvm-c]
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Unidirectional Data Flow (Mobile)

@@ -1,14 +1,20 @@
 ---
 name: Consumer-Side Contract Test
 slug: consumer-side-contract-test
+id: pat.10.consumer-side-contract-test
+kind: pattern
 family: 10-microservices
 category: Testing
 aliases: [Consumer-Driven Contract Test, CDC Test, Pact Test]
 first_described: "Robinson 2006, Consumer-Driven Contracts: A Service Evolution Pattern"
 maturity: canonical
 related: [service-component-test, transactional-outbox, idempotent-consumer, api-gateway, distributed-tracing]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

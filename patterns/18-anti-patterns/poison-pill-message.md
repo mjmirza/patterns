@@ -1,14 +1,20 @@
 ---
 name: Poison Pill Message
 slug: poison-pill-message
+id: pat.18.poison-pill-message
+kind: anti-pattern
 family: 18-anti-patterns
 category: Messaging
 aliases: [Poison Message, Toxic Message, Poison Event, Unprocessable Message]
 first_described: "Hohpe, Woolf 2003"
 maturity: established
-related: [dead-letter-channel, invalid-message-channel, idempotent-receiver, retry]
-incompatible_with: [infinite-retry, receive-and-delete]
+related: [dead-letter-channel, invalid-message-channel, idempotent-consumer, retry]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [infinite-retry, receive-and-delete]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Poison Pill Message

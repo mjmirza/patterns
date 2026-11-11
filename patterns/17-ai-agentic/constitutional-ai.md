@@ -1,14 +1,20 @@
 ---
 name: Constitutional AI
 slug: constitutional-ai
+id: pat.17.constitutional-ai
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [CAI, RLAIF Alignment, Self-Critique Training, Principle-Based Alignment]
 first_described: "Bai, Kadavath, Kundu, Askell et al., Anthropic, arXiv:2212.08073, 15 December 2022"
 maturity: established
 related: [output-guardrails, input-guardrails, reflexion, llm-as-judge, evaluator-optimizer, self-consistency]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Constitutional AI

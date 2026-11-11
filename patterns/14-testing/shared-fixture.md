@@ -1,14 +1,20 @@
 ---
 name: Shared Fixture
 slug: shared-fixture
+id: pat.14.shared-fixture
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Shared State Fixture, Class Fixture, Suite Fixture, Persistent Fresh Fixture]
 first_described: "Meszaros 2007"
 maturity: canonical
-related: [fresh-fixture, prebuilt-fixture, lazy-setup, setup-decorator, chained-tests, four-phase-test, arrange-act-assert, given-when-then]
+related: [fresh-fixture, prebuilt-fixture, four-phase-test, arrange-act-assert, given-when-then]
+related_concepts: [lazy-setup, setup-decorator, chained-tests]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Shared Fixture

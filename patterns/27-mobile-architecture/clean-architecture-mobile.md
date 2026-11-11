@@ -1,14 +1,20 @@
 ---
 name: Clean Architecture (Mobile)
 slug: clean-architecture-mobile
+id: pat.27.clean-architecture-mobile
+kind: pattern
 family: 27-mobile-architecture
 category: Structural
 aliases: [Onion Architecture (Mobile), Domain-Centric Architecture, Layered Clean Architecture]
 first_described: 'Robert C. Martin, The Clean Architecture, 2012'
 maturity: canonical
 related: [repository-pattern, mvvm-c]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Clean Architecture (Mobile)

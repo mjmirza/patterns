@@ -1,14 +1,20 @@
 ---
 name: Regional Evacuation
 slug: regional-evacuation
+id: pat.21.regional-evacuation
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [Zonal Shift, Traffic Draining, Zone Evacuation]
 first_described: 'AWS, Amazon Application Recovery Controller zonal shift documentation'
 maturity: canonical
 related: [multi-site-active-active, static-stability]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Regional Evacuation

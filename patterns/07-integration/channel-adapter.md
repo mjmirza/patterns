@@ -1,14 +1,20 @@
 ---
 name: Channel Adapter
 slug: channel-adapter
+id: pat.07.channel-adapter
+kind: pattern
 family: 07-integration
 category: Messaging Endpoints
 aliases: [Adapter Endpoint, Inbound Adapter, Outbound Adapter, System Adapter]
 first_described: "Hohpe and Woolf 2003"
 maturity: canonical
-related: [message-channel, gateway, message-translator, messaging-bridge, point-to-point-channel, dead-letter-channel, canonical-data-model, service-activator]
+related: [message-channel, gateway, 07-integration/messaging-bridge, 08-cloud-distributed/messaging-bridge, point-to-point-channel, dead-letter-channel, canonical-data-model, service-activator]
+related_concepts: [message-translator]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Channel Adapter

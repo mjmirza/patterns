@@ -1,14 +1,20 @@
 ---
 name: Raft
 slug: raft
+id: pat.12.raft
+kind: pattern
 family: 12-data-storage
 category: Distributed Consensus
 aliases: [Raft Consensus Algorithm, Understandable Consensus]
 first_described: "Ongaro, Ousterhout 2014"
 maturity: canonical
-related: [leader-election, write-ahead-log, state-machine-replication, quorum-consensus, log-compaction, snapshotting]
+related: [leader-election, write-ahead-log, quorum, log-compaction]
+related_concepts: [state-machine-replication, snapshotting]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Raft

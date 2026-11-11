@@ -1,14 +1,20 @@
 ---
 name: Replayable Log
 slug: replayable-log
+id: pat.24.replayable-log
+kind: pattern
 family: 24-stream-processing
 category: Stream Processing
 aliases: [Commit Log, Append-Only Log, Log-Structured Storage]
 first_described: "Apache Kafka project (Kreps, Narkhede, Rao), LinkedIn, 2011; retention and compaction model per Apache Kafka design documentation"
 maturity: canonical
 related: [stream-table-duality, event-time-processing, watermark, exactly-once-processing, idempotent-consumer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Replayable Log

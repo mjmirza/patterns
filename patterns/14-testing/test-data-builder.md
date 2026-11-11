@@ -1,14 +1,20 @@
 ---
 name: Test Data Builder
 slug: test-data-builder
+id: pat.14.test-data-builder
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Object Builder for Tests, Fluent Test Fixture Builder]
 first_described: "Pryce 2007 (blog), Freeman and Pryce 2009 (book)"
 maturity: canonical
 related: [builder, fresh-fixture, object-mother, prebuilt-fixture, four-phase-test, arrange-act-assert, stub, fake]
+related_concepts: []
 incompatible_with: [prebuilt-fixture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Test Data Builder

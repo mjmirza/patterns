@@ -104,6 +104,25 @@ class TestCheckFamilyNames(unittest.TestCase):
             "patterns/99-unlisted/ exists on disk but is NOT declared", output
         )
 
+    def test_verify_family_names_missing_directory_declared_in_readme(self):
+        self.readme.write_text(
+            "## The families\n\n"
+            "| # | Family |\n"
+            "|---|---|\n"
+            "| 01 | [GoF](patterns/01-design-patterns-gof/) |\n"
+            "| 02 | [Smells](patterns/02-code-smells/) |\n\n"
+            "## Next\n"
+        )
+        (self.patterns / "01-design-patterns-gof").mkdir()
+
+        code, lines = check_family_names.verify_family_names(self.patterns, self.readme)
+        self.assertEqual(code, 1)
+        output = "\n".join(lines)
+        self.assertIn(
+            "patterns/02-code-smells/ is declared in the README '## The families' table but does NOT exist on disk.",
+            output,
+        )
+
     def test_verify_family_names_missing_patterns_dir(self):
         self.readme.write_text(
             "## The families\n\n| 01 | [GoF](patterns/01-design-patterns-gof/) |\n\n## Next\n"

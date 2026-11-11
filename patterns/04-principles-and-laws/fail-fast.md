@@ -1,14 +1,20 @@
 ---
 name: Fail Fast
 slug: fail-fast
+id: pat.04.fail-fast
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Crash Early, Offensive Programming, Let It Crash]
 first_described: "Popularized by James Shore 2004 and Martin Fowler 2004, with roots in Design by Contract (Bertrand Meyer 1986) and Erlang's supervisor model (Joe Armstrong 2003)"
 maturity: established
-related: [circuit-breaker, guard-clause, design-by-contract, retry-with-backoff, bulkhead]
-incompatible_with: [robustness-principle]
+related: [circuit-breaker, replace-nested-conditional-with-guard-clauses, retry, bulkhead]
+related_concepts: [design-by-contract]
+incompatible_with: [postel-law]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Fail Fast
@@ -23,11 +29,9 @@ site on 31 August 2004 and syndicated the same year through IEEE Software's
 Shore's framing is direct. software should fail immediately and visibly when
 an error occurs, rather than working around the error, because a system that
 masks a fault produces a mysterious failure later, far from the place the
-fault actually happened. Fowler carries the same essay on his own bliki under
-the same title and cites Shore as the source
-(https://martinfowler.com/bliki/FailFast.html, verified 2026-08-02, page
-confirmed reachable and attributes the term to Shore's 2004 IEEE Software
-piece).
+fault actually happened. Fowler hosts that IEEE Software article on his
+own site and credits Shore as the source
+(https://martinfowler.com/ieeeSoftware/failFast.pdf, verified 2026-11-11).
 
 The idea itself predates the 2004 naming by nearly two decades. Bertrand
 Meyer's Design by Contract, first published in connection with the Eiffel
@@ -746,8 +750,8 @@ enough of the rest of the input to reproduce the problem.
 
 - James Shore, "Fail Fast", 31 August 2004,
   https://www.jamesshore.com/v2/blog/2004/fail-fast, verified 2026-08-02.
-- Martin Fowler, "FailFast", bliki, 2004,
-  https://martinfowler.com/bliki/FailFast.html, verified 2026-08-02.
+- Martin Fowler, "FailFast", IEEE Software column article by James Shore, 2004,
+  https://martinfowler.com/ieeeSoftware/failFast.pdf, verified 2026-08-30.
 - Bertrand Meyer, "Object-Oriented Software Construction", 2nd edition,
   Prentice Hall, 1997, chapter 11, "Design by Contract, if you insist".
 - "Design by Contract" summary, https://en.wikipedia.org/wiki/Design_by_contract,

@@ -1,14 +1,20 @@
 ---
 name: Complete Mediation
 slug: complete-mediation
+id: pat.15.complete-mediation
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Every Request Authorization, Per Access Authorization, Continuous Authorization]
 first_described: "Saltzer and Schroeder 1975"
 maturity: canonical
 related: [fail-securely, least-privilege, zero-trust, defense-in-depth, secure-by-default]
-incompatible_with: [ambient-authority, cached-authorization-without-invalidation, client-side-authorization]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [ambient-authority, cached-authorization-without-invalidation, client-side-authorization]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Complete Mediation

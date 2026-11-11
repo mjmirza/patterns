@@ -1,14 +1,20 @@
 ---
 name: Separation of Duties
 slug: separation-of-duties
+id: pat.15.separation-of-duties
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Segregation of Duties, SoD, Four Eyes, Two-Person Control, Dual Authorization]
 first_described: "Clark and Wilson 1987"
 maturity: canonical
-related: [least-privilege, role-based-access-control, defense-in-depth, complete-mediation, zero-trust, audit-log]
-incompatible_with: [shared-administrator-account, break-glass-without-review, self-approval]
+related: [least-privilege, rbac, defense-in-depth, complete-mediation, zero-trust, audit-log]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [shared-administrator-account, break-glass-without-review, self-approval]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Separation of Duties

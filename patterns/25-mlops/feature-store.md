@@ -1,14 +1,20 @@
 ---
 name: Feature Store
 slug: feature-store
+id: pat.25.feature-store
+kind: pattern
 family: 25-mlops
 category: MLOps
 aliases: [ML Feature Store, Feature Platform]
 first_described: "Del Balso and Hermann, Meet Michelangelo, Uber Engineering, 2017"
 maturity: established
 related: [model-registry, training-serving-skew-guard, batch-inference, online-inference]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Feature Store

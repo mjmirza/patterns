@@ -1,14 +1,20 @@
 ---
 name: Monad
 slug: monad
+id: pat.16.monad
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Bind, FlatMap, Chain, Kleisli composition]
 first_described: "Moggi 1991, Wadler 1992"
 maturity: canonical
-related: [functor, applicative, kleisli-category, monad-transformer, effect-system, parser-combinator]
-incompatible_with: [unlawful-bind, hidden-effects, accidental-nesting, applicative-only-composition]
+related: [functor, applicative]
+related_concepts: [kleisli-category, monad-transformer, effect-system, parser-combinator]
+incompatible_with: []
+incompatible_concepts: [unlawful-bind, hidden-effects, accidental-nesting, applicative-only-composition]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Monad

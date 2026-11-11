@@ -1,14 +1,20 @@
 ---
 name: Customer-Supplier
 slug: customer-supplier
+id: pat.11.customer-supplier
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Customer/Supplier Development Teams, Customer-Supplier Development Team Relationship, Customer-Supplier Context Relationship]
 first_described: "Evans 2003"
 maturity: canonical
 related: [context-map, bounded-context, conformist, anticorruption-layer, open-host-service, published-language, ubiquitous-language]
+related_concepts: []
 incompatible_with: [conformist, shared-kernel]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

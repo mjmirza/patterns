@@ -1,8 +1,8 @@
-.PHONY: check structure refs prose code catalogue catalogue-check by-problem-by-language by-problem-by-language-check duplicates duplicates-test test all stats
+.PHONY: check structure refs prose code links catalogue catalogue-check by-problem-by-language by-problem-by-language-check entries entries-check duplicates duplicates-test test all stats
 
 all: check
 
-check: test structure prose code refs catalogue-check by-problem-by-language-check duplicates-test
+check: test structure prose links code refs catalogue-check by-problem-by-language-check entries-check duplicates-test
 
 structure:
 	@python3 tools/check-structure.py
@@ -13,6 +13,18 @@ refs:
 prose:
 	@python3 tools/check-prose.py
 
+links:
+	@python3 tools/check-links.py
+
+entries:
+	@python3 tools/gen-entry-index.py
+
+entries-check: entries
+	@git ls-files --error-unmatch dist/entries.json >/dev/null || \
+		(echo "dist/entries.json is not tracked. Run 'make entries' and commit it." && exit 1)
+	@git diff --exit-code -- dist/entries.json || \
+		(echo "Entry index is stale. Run 'make entries' and commit." && exit 1)
+
 code:
 	@python3 tools/check-code.py --strict
 
@@ -20,7 +32,7 @@ catalogue:
 	@python3 tools/gen-catalogue-status.py
 
 catalogue-check: catalogue
-	@git diff --exit-code -- README.md docs/PROGRESS.md dist/ || \
+	@git diff --exit-code -- README.md docs/PROGRESS.md dist/catalogue-status.json dist/catalogue-status.csv || \
 		(echo "Catalogue status is stale. Run 'make catalogue' and commit." && exit 1)
 
 by-problem-by-language:
@@ -32,6 +44,7 @@ by-problem-by-language-check: by-problem-by-language
 
 test:
 	@python3 tools/check-structure-test.py
+	@python3 tools/check-links-test.py
 	@python3 tools/check-family-names-test.py
 	@python3 tools/check-prose-test.py
 	@python3 tools/gen-indexes-test.py
@@ -40,6 +53,9 @@ test:
 	@python3 tools/check-code-test.py
 	@python3 tools/check-claims-test.py
 	@python3 tools/next-batch-test.py
+	@python3 tools/validate-refs-test.py
+	@python3 tools/check-duplicates-test.py
+	@python3 tools/check-pr-security-test.py
 
 duplicates:
 	@python3 tools/check-duplicates.py --strict

@@ -1,14 +1,20 @@
 ---
 name: Relationship-Based Access Control
 slug: rebac
+id: pat.15.rebac
+kind: pattern
 family: 15-security
 category: Security
 aliases: [ReBAC, Relationship Based Access Control, Relationship-Based Authorization, Zanzibar-Style Authorization]
 first_described: "Gates 2007, Fong 2011"
 maturity: established
 related: [rbac, abac, least-privilege, complete-mediation, gatekeeper, federated-identity]
-incompatible_with: [ambient-authority, hardcoded-authorization, unchecked-direct-object-reference]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [ambient-authority, hardcoded-authorization, unchecked-direct-object-reference]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Relationship-Based Access Control

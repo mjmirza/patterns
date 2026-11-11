@@ -1,14 +1,20 @@
 ---
 name: Message Chains
 slug: message-chains
+id: pat.02.message-chains
+kind: smell
 family: 02-code-smells
 category: Coupling
 aliases: [Law of Demeter Violation, Train Wreck]
 first_described: "Fowler and Beck 1999"
 maturity: canonical
 related: [feature-envy, middle-man, inappropriate-intimacy, data-clumps, builder]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Message Chains

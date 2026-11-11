@@ -1,14 +1,20 @@
 ---
 name: Unit of Work
 slug: unit-of-work
+id: pat.06.unit-of-work
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Behavioral
 aliases: [Change Tracker, Transaction Manager Object, Session]
 first_described: "Fowler 2003"
 maturity: canonical
 related: [identity-map, data-mapper, repository, optimistic-offline-lock, transaction-script, domain-model]
+related_concepts: []
 incompatible_with: [table-data-gateway]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Unit of Work

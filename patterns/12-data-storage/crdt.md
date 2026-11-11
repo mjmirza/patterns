@@ -1,14 +1,20 @@
 ---
 name: CRDT
 slug: crdt
+id: pat.12.crdt
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Conflict-free Replicated Data Type, Convergent Replicated Data Type, Commutative Replicated Data Type]
 first_described: "Shapiro, Preguica, Baquero, Zawirski 2011"
 maturity: established
-related: [event-sourcing, vector-clocks, eventual-consistency, gossip-protocol, operational-transformation]
-incompatible_with: [strong-consistency-linearizability]
+related: [event-sourcing, vector-clock, gossip-protocol]
+related_concepts: [eventual-consistency, operational-transformation]
+incompatible_with: []
+incompatible_concepts: [strong-consistency-linearizability]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # CRDT

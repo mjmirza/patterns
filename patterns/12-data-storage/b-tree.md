@@ -1,14 +1,20 @@
 ---
 name: B-Tree
 slug: b-tree
+id: pat.12.b-tree
+kind: pattern
 family: 12-data-storage
 category: Data Structure
 aliases: [Balanced Tree, Multiway Search Tree, B+Tree (variant)]
 first_described: "Bayer, McCreight 1972"
 maturity: canonical
-related: [lsm-tree, skip-list, hash-index, write-ahead-log, buffer-pool]
+related: [lsm-tree, write-ahead-log]
+related_concepts: [skip-list, hash-index, buffer-pool]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # B-Tree

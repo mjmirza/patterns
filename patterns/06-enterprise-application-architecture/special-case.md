@@ -1,14 +1,20 @@
 ---
 name: Special Case
 slug: special-case
+id: pat.06.special-case
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Patterns
 aliases: [Null Object (partial overlap), Special Case Object]
 first_described: "Fowler et al. 2002"
 maturity: canonical
-related: [value-object, layer-supertype, gateway, remote-facade, template-view]
+related: [06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, layer-supertype, gateway, remote-facade, template-view]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Special Case

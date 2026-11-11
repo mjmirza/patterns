@@ -1,14 +1,20 @@
 ---
 name: Big Ball of Mud
 slug: big-ball-of-mud
+id: pat.11.big-ball-of-mud
+kind: pattern
 family: 11-domain-driven-design
 category: Anti-pattern
 aliases: [Spaghetti Architecture, Mud Ball]
 first_described: "Foote, Yoder 1997"
 maturity: canonical
 related: [bounded-context, anticorruption-layer, context-map, core-domain, supporting-subdomain]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Big Ball of Mud

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mjmirza/patterns/schema/pattern.schema.json",
+  "title": "Pattern entry frontmatter",
+  "description": "Documented contract for pattern entry frontmatter. tools/check-links.py enforces it with the Python standard library. This file is not executed on its own.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "name",
+    "slug",
+    "id",
+    "kind",
+    "family",
+    "maturity",
+    "related",
+    "related_concepts",
+    "incompatible_with",
+    "incompatible_concepts",
+    "verified",
+    "last_reviewed",
+    "next_review_due"
+  ],
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "id": { "type": "string", "pattern": "^pat\\.[0-9]{2}\\.[a-z0-9]+(-[a-z0-9]+)*$" },
+    "kind": {
+      "enum": ["pattern", "smell", "technique", "principle", "law", "anti-pattern"]
+    },
+    "family": { "type": "string", "pattern": "^[0-9]{2}-[a-z0-9-]+$" },
+    "maturity": {
+      "enum": ["canonical", "established", "emerging", "contested", "deprecated"]
+    },
+    "related": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "related_concepts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "incompatible_with": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "incompatible_concepts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "verified": { "type": "string", "format": "date" },
+    "last_reviewed": { "type": "string", "format": "date" },
+    "next_review_due": { "type": "string", "format": "date" }
+  }
+}

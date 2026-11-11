@@ -1,14 +1,20 @@
 ---
 name: Spy
 slug: spy
+id: pat.14.spy
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Test Spy, Recording Stub]
 first_described: "Meszaros 2007"
 maturity: canonical
-related: [stub, mock-object, fake-object, dummy-object, dependency-injection]
+related: [stub, mock, fake, dummy, dependency-injection]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Spy

@@ -1,14 +1,20 @@
 ---
 name: Record Set
 slug: record-set
+id: pat.06.record-set
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Data Source Architectural Patterns
 aliases: [Disconnected Recordset, DataSet, CachedRowSet, ADO Recordset]
 first_described: "Fowler 2002"
 maturity: established
 related: [table-data-gateway, row-data-gateway, data-transfer-object, data-mapper, gateway]
+related_concepts: []
 incompatible_with: [domain-model]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Record Set

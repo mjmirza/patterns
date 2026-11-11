@@ -12,13 +12,13 @@ primary sources, carries eighteen mandatory dimensions, and cites every claim.
 <!-- BADGES:AUTOGEN:START -->
 ![CI](https://github.com/mjmirza/patterns/actions/workflows/ci.yml/badge.svg?branch=main)
 ![Catalogue completion](https://img.shields.io/badge/completion-100.0%25-yellow)
-![References checked](https://img.shields.io/badge/references%20checked-5068-brightgreen)
+![References checked](https://img.shields.io/badge/references%20checked-5069-brightgreen)
 ![Stale entries](https://img.shields.io/badge/stale%20entries-0-brightgreen)
 ![Code examples tested](https://img.shields.io/badge/code%20examples-compiled%20in%20CI-brightgreen)
 <!-- BADGES:AUTOGEN:END -->
 
 There is no documentation site yet (no rendered docs build to badge). Tracked
-as an open item in `docs/GOVERNANCE-AUDIT-2026-08-03.md`.
+as an open item in `docs/ULTRA-AUDIT-2026-11-11.md`.
 
 **[Watch the explainer video](https://youtu.be/V802Fm13ZNA).**
 
@@ -278,7 +278,7 @@ the live, machine-readable numbers.
 | canonical / established / emerging / contested / deprecated | Per-entry epistemic maturity, declared in frontmatter | `tools/check-structure.py` |
 
 Draft, in-review, and superseded are not yet modelled by the tooling. They
-are open work, listed in `docs/GOVERNANCE-AUDIT-2026-08-03.md`, and this
+are open work, listed in `docs/ULTRA-AUDIT-2026-11-11.md`, and this
 README does not claim they are implemented.
 
 ## The families
@@ -388,9 +388,8 @@ Nothing merges without passing all of these.
 | Markdown | `markdownlint-cli2` | Malformed markdown, emphasis used as a heading |
 | Code | `tools/check-code.py` | Non-compiling examples (Python, TypeScript, Java, Go, Rust, Swift) |
 | Catalogue status | `tools/gen-catalogue-status.py` | A README, `docs/PROGRESS.md`, or `dist/` export that has drifted from real repository state |
-
-A per-file internal link checker does not exist yet. It is tracked in
-`docs/GOVERNANCE-AUDIT-2026-08-03.md` as open work, not claimed as done.
+| Links and identity | `tools/check-links.py` | A broken internal link, an entry id that does not match its path, or a `related` value that is not a published entry |
+| Entry index | `tools/gen-entry-index.py` | A `dist/entries.json` export that has drifted from frontmatter |
 
 Run the whole set locally.
 
@@ -497,8 +496,8 @@ level software pattern catalogue. Follow these steps exactly, in order.
 2. Read .github/CONTRIBUTING.md, docs/ENTRY-TEMPLATE.md, and one existing
    published entry under patterns/ end to end. These are the real, current
    rules. Do not assume you already know them.
-3. Check docs/AUTHORING-PLAN.md for an unclaimed pattern, or pick a pattern
-   the maintainer has not catalogued yet.
+3. Check docs/AUTHORING-QUEUE.json for an unclaimed pattern, or open a
+   new-pattern issue before cataloguing something the queue does not name.
 4. Create a branch named entry/<slug>, for example entry/circuit-breaker.
    Never commit to main.
 5. Open a DRAFT pull request immediately, naming only the branch and the
@@ -527,8 +526,10 @@ in the repo, the file in the repo wins, not this prompt.
 
 ### Authoring plan and progress
 
-See [docs/AUTHORING-PLAN.md](docs/AUTHORING-PLAN.md) for the family by family
-authoring order and the current state of each family.
+See [docs/AUTHORING-QUEUE.json](docs/AUTHORING-QUEUE.json) for what is still
+unauthored, [docs/PROGRESS.md](docs/PROGRESS.md) for family counts, and
+[docs/RESUME.md](docs/RESUME.md) for how a new session continues the work.
+Decision authority is in [GOVERNANCE.md](GOVERNANCE.md).
 
 ## Credits
 

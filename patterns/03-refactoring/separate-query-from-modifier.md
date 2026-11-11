@@ -1,14 +1,20 @@
 ---
 name: Separate Query from Modifier
 slug: separate-query-from-modifier
+id: pat.03.separate-query-from-modifier
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Command Query Separation, CQS, Separate Command from Query, Split Query and Modifier]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [replace-temp-with-query, extract-function, change-function-declaration, remove-setting-method, replace-derived-variable-with-query, cqrs]
-incompatible_with: [toggle-function, hidden-side-effect-query]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [toggle-function, hidden-side-effect-query]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Separate Query from Modifier

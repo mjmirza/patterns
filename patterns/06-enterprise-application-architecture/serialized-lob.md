@@ -1,14 +1,20 @@
 ---
 name: Serialized LOB
 slug: serialized-lob
+id: pat.06.serialized-lob
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Structural
 aliases: [Serialized Large Object, Blob Serialization, Object Graph Serialization]
 first_described: "Fowler 2002"
 maturity: established
 related: [memento, single-table-inheritance, class-table-inheritance, lazy-load, embedded-value]
+related_concepts: []
 incompatible_with: [class-table-inheritance, query-object]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Serialized LOB

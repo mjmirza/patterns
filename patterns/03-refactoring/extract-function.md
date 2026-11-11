@@ -1,14 +1,20 @@
 ---
 name: Extract Function
 slug: extract-function
+id: pat.03.extract-function
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Extract Method, Introduce Named Function, Name a Block]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [inline-function, extract-class, extract-variable, decompose-conditional, combine-functions-into-transform]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Extract Function

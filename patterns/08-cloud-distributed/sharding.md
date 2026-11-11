@@ -1,14 +1,20 @@
 ---
 name: Sharding
 slug: sharding
+id: pat.08.sharding
+kind: pattern
 family: 08-cloud-distributed
 category: Data Distribution
 aliases: [Horizontal Partitioning, Data Partitioning, Database Sharding]
 first_described: "Google 2006 (Bigtable), popularized as a web-scale term by MySQL and Flickr operators mid-2000s"
 maturity: canonical
 related: [consistent-hashing, leader-election, cqrs, event-sourcing, saga]
-incompatible_with: [two-phase-commit-as-primary-consistency-model]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [two-phase-commit-as-primary-consistency-model]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Sharding

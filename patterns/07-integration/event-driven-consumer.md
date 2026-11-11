@@ -1,14 +1,20 @@
 ---
 name: Event-Driven Consumer
 slug: event-driven-consumer
+id: pat.07.event-driven-consumer
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Message-Driven Consumer, Asynchronous Receiver, Consumer Endpoint]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [competing-consumers, polling-consumer, publish-subscribe-channel, message-endpoint, dead-letter-channel, saga]
+related: [07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, polling-consumer, publisher-subscriber, dead-letter-channel, saga]
+related_concepts: [message-endpoint]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

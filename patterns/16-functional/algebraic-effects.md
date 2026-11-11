@@ -1,14 +1,20 @@
 ---
 name: Algebraic Effects
 slug: algebraic-effects
+id: pat.16.algebraic-effects
+kind: pattern
 family: 16-functional
 category: Effects
 aliases: [Effect Handlers, Algebraic Effects and Handlers, Resumable Exceptions]
 first_described: "Plotkin and Pretnar 2009"
 maturity: emerging
-related: [io-monad, monad, free-monad, continuation-passing-style, exception-handling]
-incompatible_with: [deeply-nested-monad-transformer-stacks]
+related: [io-monad, monad, free-monad, continuation-passing-style]
+related_concepts: [exception-handling]
+incompatible_with: []
+incompatible_concepts: [deeply-nested-monad-transformer-stacks]
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Algebraic Effects

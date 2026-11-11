@@ -1,14 +1,20 @@
 ---
 name: Release Reuse Equivalence
 slug: release-reuse-equivalence
+id: pat.04.release-reuse-equivalence
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Reuse/Release Equivalence Principle, REP, Reuse-Release Equivalency Principle]
 first_described: "Robert C. Martin, 1996, \"Granularity\", C++ Report; restated as REP in Agile Software Development: Principles, Patterns, and Practices, 2002, and in Clean Architecture, 2018"
 maturity: canonical
-related: [common-closure-principle, common-reuse-principle, single-responsibility-principle, dependency-inversion-principle, semantic-versioning]
+related: [common-closure-principle, common-reuse-principle, single-responsibility-principle, dependency-inversion-principle]
+related_concepts: [semantic-versioning]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Release Reuse Equivalence

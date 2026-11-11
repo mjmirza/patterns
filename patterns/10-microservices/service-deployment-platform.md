@@ -1,14 +1,20 @@
 ---
 name: Service Deployment Platform
 slug: service-deployment-platform
+id: pat.10.service-deployment-platform
+kind: pattern
 family: 10-microservices
 category: Deployment
 aliases: [Deployment Platform, Container Orchestration Platform, Application Platform]
 first_described: "Richardson microservices.io deployment pattern catalog, circa 2016"
 maturity: canonical
 related: [service-instance-per-container, service-instance-per-vm, service-instance-per-host, serverless-deployment, service-registry, server-side-service-discovery, sidecar]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service Deployment Platform

@@ -1,14 +1,20 @@
 ---
 name: Passkeys and WebAuthn
 slug: passkeys-and-webauthn
+id: pat.15.passkeys-and-webauthn
+kind: pattern
 family: 15-security
 category: Security
 aliases: [WebAuthn, Passkey Authentication, FIDO2, Public Key Credentials]
 first_described: "W3C WebAuthn Level 1, 2019"
 maturity: established
 related: [passwordless-authentication, session-management, zero-trust, mutual-tls, openid-connect]
-incompatible_with: [password-per-request, shared-secret-login, sms-otp-primary-factor]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [password-per-request, shared-secret-login, sms-otp-primary-factor]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Passkeys and WebAuthn

@@ -1,14 +1,20 @@
 ---
 name: Two-Phase Commit
 slug: two-phase-commit
+id: pat.12.two-phase-commit
+kind: pattern
 family: 12-data-storage
 category: Distributed Transactions
 aliases: [2PC, Two-Phase Commit Protocol]
 first_described: "Gray 1978"
 maturity: canonical
-related: [saga, write-ahead-log, quorum, event-sourcing, outbox]
+related: [saga, write-ahead-log, quorum, event-sourcing, transactional-outbox]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Two-Phase Commit

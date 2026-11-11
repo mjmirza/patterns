@@ -1,14 +1,20 @@
 ---
 name: Inline Variable
 slug: inline-variable
+id: pat.03.inline-variable
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Inline Temp, Remove Explaining Variable, Inline Temp Variable]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [extract-variable, inline-function, replace-temp-with-query, introduce-explaining-variable]
+related: [extract-variable, inline-function, replace-temp-with-query]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Inline Variable

@@ -1,14 +1,20 @@
 ---
 name: Client-Server
 slug: client-server
+id: pat.05.client-server
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Frontend-Backend, Request-Response Architecture, C/S Model]
 first_described: "Fielding, dissertation, 2000, section 3.4.1, tracing to distributed computing practice of the late 1970s and early 1980s"
 maturity: canonical
-related: [layered-architecture, broker-architecture, microservices-architecture, model-view-controller, hexagonal-architecture]
+related: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, broker-architecture, microservices-architecture, model-view-controller, hexagonal-architecture]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Client-Server

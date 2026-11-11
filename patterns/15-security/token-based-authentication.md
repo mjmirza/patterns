@@ -1,14 +1,20 @@
 ---
 name: Token-based Authentication
 slug: token-based-authentication
+id: pat.15.token-based-authentication
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Bearer Token Authentication, Access Token Authentication, Token Auth]
 first_described: "IETF OAuth 2.0 and Bearer Token specifications, 2012"
 maturity: established
 related: [least-privilege, zero-trust, secure-by-default, complete-mediation]
-incompatible_with: [password-per-request, implicit-session-authority]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [password-per-request, implicit-session-authority]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Token-based Authentication

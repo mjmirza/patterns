@@ -1,14 +1,20 @@
 ---
 name: ELT
 slug: elt
+id: pat.12.elt
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Extract Load Transform, Load then Transform, ELT Pipeline]
 first_described: "Term in common use since the early 2010s alongside columnar MPP warehouses, no single named originator"
 maturity: established
 related: [medallion-architecture, data-vault, star-schema, snowflake-schema, lambda-architecture, kappa-architecture]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # ELT

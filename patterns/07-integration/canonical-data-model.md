@@ -1,14 +1,20 @@
 ---
 name: Canonical Data Model
 slug: canonical-data-model
+id: pat.07.canonical-data-model
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Canonical Model, Canonical Message Format, Canonical Schema, Common Data Model, Shared Data Model]
 first_described: "Hohpe and Woolf 2003"
 maturity: canonical
-related: [message-translator, message-router, publish-subscribe-channel, anticorruption-layer]
+related: [publisher-subscriber, anticorruption-layer]
+related_concepts: [message-translator, message-router]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Canonical Data Model

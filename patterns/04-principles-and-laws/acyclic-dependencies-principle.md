@@ -1,14 +1,20 @@
 ---
 name: Acyclic Dependencies Principle
 slug: acyclic-dependencies-principle
+id: pat.04.acyclic-dependencies-principle
+kind: principle
 family: 04-principles-and-laws
 category: Design Principle
 aliases: [ADP, No Cyclic Dependencies, Component Coupling Principle]
 first_described: "Robert C. Martin, Design Principles and Design Patterns, 2000"
 maturity: canonical
 related: [dependency-inversion-principle, interface-segregation-principle, single-responsibility-principle, low-coupling, high-cohesion, factory-method]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Acyclic Dependencies Principle

@@ -1,14 +1,20 @@
 ---
 name: Introduce Assertion
 slug: introduce-assertion
+id: pat.03.introduce-assertion
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Add Precondition, Assert Invariant, Explicit Assumption]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [replace-exception-with-test, replace-assertion-with-test, encapsulate-variable, extract-function, replace-constructor-with-factory-function]
+related: [replace-exception-with-precheck, encapsulate-variable, extract-function, replace-constructor-with-factory-function]
+related_concepts: [replace-assertion-with-test]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Introduce Assertion

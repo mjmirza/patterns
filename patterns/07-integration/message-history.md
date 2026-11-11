@@ -1,14 +1,20 @@
 ---
 name: Message History
 slug: message-history
+id: pat.07.message-history
+kind: pattern
 family: 07-integration
 category: Enterprise Integration
 aliases: [Message Audit Trail, Route Stack Trace, Provenance Header]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [content-enrichment, wire-tap, message-router, correlation-identifier, pipes-and-filters]
+related: [wire-tap, correlation-identifier, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters]
+related_concepts: [content-enrichment, message-router]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 ## 1. Name, aliases, and lineage

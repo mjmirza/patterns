@@ -1,13 +1,20 @@
 ---
 name: Human Task
 slug: human-task
+id: pat.23.human-task
+kind: pattern
 family: 23-workflow-orchestration
 category: workflow orchestration
 aliases: [User Task, Manual Task, Human-in-the-Loop Step, Human Interaction Task]
 first_described: "The Workflow Management Coalition's Automated Activity versus Manual Activity split, from its 1990s workflow reference terminology. Given a durable, orchestrated shape by the OASIS WS-BPEL Extension for People (BPEL4People) and WS-HumanTask specifications, 2007. Made a first-class element, split into User Task and Manual Task, by the OMG BPMN 2.0 specification, January 2011"
 maturity: established
 related: [workflow-engine, state-machine-workflow, saga]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Human Task

@@ -1,14 +1,20 @@
 ---
 name: Byzantine Fault Tolerance
 slug: byzantine-fault-tolerance
+id: pat.12.byzantine-fault-tolerance
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [BFT, Byzantine Generals Problem, PBFT]
 first_described: "Lamport, Shostak, Pease, 1982, 'The Byzantine Generals Problem'"
 maturity: canonical
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Byzantine Fault Tolerance

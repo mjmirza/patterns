@@ -1,14 +1,20 @@
 ---
 name: Distributed Hash Table
 slug: distributed-hash-table
+id: pat.12.distributed-hash-table
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [DHT, Chord, Kademlia]
 first_described: "Multiple independent 2001-era papers, including Chord (Stoica, Morris, Karger, Kaashoek, Balakrishnan, MIT, 2001)"
 maturity: canonical
 related: [consistent-hashing]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Distributed Hash Table

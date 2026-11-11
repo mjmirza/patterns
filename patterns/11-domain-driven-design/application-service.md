@@ -1,14 +1,20 @@
 ---
 name: Application Service
 slug: application-service
+id: pat.11.application-service
+kind: pattern
 family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Service Layer, Use Case Interactor, Application Layer Service]
 first_described: "Evans 2003"
 maturity: canonical
-related: [domain-service, repository, aggregate-root, domain-event, bounded-context, factory]
+related: [domain-service, repository, aggregate-root, 10-microservices/domain-event, 11-domain-driven-design/domain-event, bounded-context, factory]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Application Service

@@ -1,14 +1,20 @@
 ---
 name: HyDE (Hypothetical Document Embeddings)
 slug: hyde
+id: pat.17.hyde
+kind: pattern
 family: 17-ai-agentic
 category: Retrieval
 aliases: [Hypothetical Document Embeddings, Query-to-Document Expansion]
 first_described: "Gao, Ma, Lin, Callan 2022"
 maturity: established
 related: [retrieval-augmented-generation, advanced-rag, agentic-rag, graphrag, self-consistency]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # HyDE (Hypothetical Document Embeddings)

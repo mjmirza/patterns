@@ -1,14 +1,20 @@
 ---
 name: ViewModel with State Hoisting
 slug: viewmodel-with-state-hoisting
+id: pat.27.viewmodel-with-state-hoisting
+kind: pattern
 family: 27-mobile-architecture
 category: Structural
 aliases: [State Hoisting, Stateless Composable Pattern]
 first_described: 'Google, Jetpack Compose "Thinking in Compose" and "State and Jetpack Compose" documentation'
 maturity: canonical
 related: [unidirectional-data-flow, mvvm-c]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # ViewModel with State Hoisting

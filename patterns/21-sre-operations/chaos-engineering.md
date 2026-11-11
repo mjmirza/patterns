@@ -1,14 +1,20 @@
 ---
 name: Chaos Engineering
 slug: chaos-engineering
+id: pat.21.chaos-engineering
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [Fault Injection Testing, Resilience Testing, Simian Army]
 first_described: 'Netflix, Chaos Monkey and the Principles of Chaos Engineering manifesto, 2011 to 2015'
 maturity: canonical
 related: [game-day, error-budget]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Chaos Engineering

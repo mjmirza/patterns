@@ -1,14 +1,20 @@
 ---
 name: Interrupt Service Routine
 slug: interrupt-service-routine
+id: pat.28.interrupt-service-routine
+kind: pattern
 family: 28-embedded-hardware
 category: Behavioral
 aliases: [ISR, Interrupt Handler, FromISR Pattern]
 first_described: "FreeRTOS Kernel Book, interrupt management"
 maturity: canonical
 related: [hardware-abstraction-layer, ring-buffer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Interrupt Service Routine

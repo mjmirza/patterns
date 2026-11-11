@@ -1,14 +1,20 @@
 ---
 name: Query Object
 slug: query-object
+id: pat.06.query-object
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Data Source Architectural
 aliases: [Criteria Object, Fluent Query Builder]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [repository, data-mapper, table-data-gateway, specification, interpreter, lazy-load]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-11
+last_reviewed: 2026-08-11
+next_review_due: 2027-02-07
 ---
 
 # Query Object

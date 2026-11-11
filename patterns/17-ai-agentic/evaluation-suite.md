@@ -1,14 +1,20 @@
 ---
 name: Evaluation Suite
 slug: evaluation-suite
+id: pat.17.evaluation-suite
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Eval Suite, Eval Runner, LLM Eval Pipeline, Golden Dataset Testing, Regression Eval Set]
 first_described: "Wang, Singh, Michael, Hill, Levy, Bowman 2018 (GLUE benchmark); formalized as an application-development practice by OpenAI 2023 (Evals)"
 maturity: established
-related: [llm-as-judge, input-guardrails, output-guardrails, prompt-injection-defense, self-consistency, evaluator-optimizer, cost-guard, structured-output, react]
+related: [llm-as-judge, input-guardrails, output-guardrails, prompt-injection-defense, self-consistency, evaluator-optimizer, cost-guard, structured-output, react-prompting]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Evaluation Suite

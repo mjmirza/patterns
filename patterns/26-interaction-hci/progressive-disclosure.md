@@ -1,14 +1,20 @@
 ---
 name: Progressive Disclosure
 slug: progressive-disclosure
+id: pat.26.progressive-disclosure
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Show More, Advanced Options, Disclosure Widget]
 first_described: "Kristina Hooper Woolsey, 1985, per Norman, Donald A., and Draper, Stephen W., editors, User Centered System Design: New Perspectives on Human-Computer Interaction, L. Erlbaum Associates, 1986, ISBN 0-89859-781-1"
 maturity: canonical
 related: [wizard]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Progressive Disclosure

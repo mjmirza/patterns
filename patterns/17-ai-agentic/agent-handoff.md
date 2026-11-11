@@ -1,14 +1,20 @@
 ---
 name: Agent Handoff
 slug: agent-handoff
+id: pat.17.agent-handoff
+kind: pattern
 family: 17-ai-agentic
 category: Multi-Agent Coordination
 aliases: [Handoff, Handoff Orchestration, Control Transfer, Agent Transfer, Warm Handoff, Escalation]
 first_described: "OpenAI, Swarm framework, informal 2024 description; formalized as a named `handoff` primitive in the OpenAI Agents SDK"
 maturity: established
 related: [orchestrator-worker, routing, sub-agent-isolation, chain-of-responsibility, state]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Agent Handoff

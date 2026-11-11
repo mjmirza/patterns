@@ -1,14 +1,20 @@
 ---
 name: Concrete Table Inheritance
 slug: concrete-table-inheritance
+id: pat.06.concrete-table-inheritance
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Structural Patterns
 aliases: [CTI, Table Per Concrete Type, TPC, Leaf Table Inheritance]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [single-table-inheritance, class-table-inheritance, active-record, foreign-key-mapping, layer-supertype, identity-field]
+related_concepts: []
 incompatible_with: [single-table-inheritance, class-table-inheritance]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Concrete Table Inheritance

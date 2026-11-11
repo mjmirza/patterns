@@ -1,14 +1,20 @@
 ---
 name: State Machine UI
 slug: state-machine-ui
+id: pat.13.state-machine-ui
+kind: pattern
 family: 13-frontend-ui
 category: State Management
 aliases: [Statechart UI, Finite State Machine UI, XState Pattern]
 first_described: "David Khourshid, React Rally 2017"
 maturity: established
 related: [redux, hooks, provider-pattern]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # State Machine UI

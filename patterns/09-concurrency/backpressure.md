@@ -1,14 +1,20 @@
 ---
 name: Backpressure
 slug: backpressure
+id: pat.09.backpressure
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Flow Control, Rate Limiting via Feedback, Bounded Buffering, Pull-Based Streaming]
 first_described: "Postel, RFC 793, 1981 (TCP sliding window); Reactive Streams JVM SIG, 2013-2015 (application-level formalization)"
 maturity: canonical
-related: [producer-consumer, bounded-buffer, circuit-breaker, bulkhead, rate-limiter, thread-pool, event-loop, actor-model, load-shedding, pull-based-iteration]
-incompatible_with: [fire-and-forget-messaging, unbounded-queue]
+related: [09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, circuit-breaker, bulkhead, rate-limiter, thread-pool, actor-model]
+related_concepts: [event-loop, load-shedding, pull-based-iteration]
+incompatible_with: []
+incompatible_concepts: [fire-and-forget-messaging, unbounded-queue]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Backpressure

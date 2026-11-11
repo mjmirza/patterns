@@ -1,14 +1,20 @@
 ---
 name: Intercepting Filter
 slug: intercepting-filter
+id: pat.06.intercepting-filter
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Filter Chain, Middleware Pipeline]
 first_described: "Alur, Crupi, Malks, Core J2EE Patterns, 2001"
 maturity: canonical
-related: [chain-of-responsibility, decorator, front-controller, pipes-filters]
+related: [chain-of-responsibility, decorator, front-controller, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Intercepting Filter

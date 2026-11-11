@@ -1,14 +1,20 @@
 ---
 name: Competing Consumers
 slug: competing-consumers
+id: pat.07.competing-consumers
+kind: pattern
 family: 07-integration
 category: Messaging
 aliases: [Work Queue, Message Dispatcher (informal), Consumer Group Fan-Out]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [message-channel, point-to-point-channel, publish-subscribe-channel, message-dispatcher, event-driven-consumer, polling-consumer, dead-letter-channel, idempotent-receiver, load-balancer, circuit-breaker]
-incompatible_with: [publish-subscribe-channel]
+related: [message-channel, point-to-point-channel, publisher-subscriber, message-dispatcher, event-driven-consumer, polling-consumer, dead-letter-channel, idempotent-consumer, load-balancing, circuit-breaker]
+related_concepts: []
+incompatible_with: [publisher-subscriber]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Competing Consumers

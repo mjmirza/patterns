@@ -1,14 +1,20 @@
 ---
 name: Lambda Architecture
 slug: lambda-architecture
+id: pat.12.lambda-architecture
+kind: pattern
 family: 12-data-storage
 category: Data Processing
 aliases: [Batch/Realtime Architecture]
 first_described: "Nathan Marz 2011"
 maturity: contested
 related: [cqrs, event-sourcing, materialized-view, saga]
+related_concepts: []
 incompatible_with: [kappa-architecture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Lambda Architecture

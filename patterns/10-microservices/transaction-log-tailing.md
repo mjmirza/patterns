@@ -1,14 +1,20 @@
 ---
 name: Transaction Log Tailing
 slug: transaction-log-tailing
+id: pat.10.transaction-log-tailing
+kind: pattern
 family: 10-microservices
 category: Data Integration
 aliases: [Log-Based Change Data Capture, Database Log Mining, CDC via Transaction Log, Log-Based CDC]
 first_described: "Richardson, microservices.io pattern catalog, and Richardson, Microservices Patterns, Manning, 2018, chapter 3"
 maturity: canonical
-related: [transactional-outbox, saga, cqrs, event-sourcing, database-per-service, domain-event, strangler-application]
+related: [transactional-outbox, saga, cqrs, event-sourcing, database-per-service, 10-microservices/domain-event, 11-domain-driven-design/domain-event, strangler-application]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Transaction Log Tailing

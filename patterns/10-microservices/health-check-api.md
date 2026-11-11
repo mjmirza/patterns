@@ -1,14 +1,20 @@
 ---
 name: Health Check API
 slug: health-check-api
+id: pat.10.health-check-api
+kind: pattern
 family: 10-microservices
 category: Microservices, Observability
 aliases: [Health Endpoint, Liveness and Readiness Probes, Health Check Endpoint]
 first_described: "Newman, Sam. Building Microservices, 1st edition, O'Reilly, 2015"
 maturity: canonical
 related: [application-metrics, distributed-tracing, service-registry, self-registration, circuit-breaker, service-mesh]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Health Check API

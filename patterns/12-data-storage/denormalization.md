@@ -1,14 +1,20 @@
 ---
 name: Denormalization
 slug: denormalization
+id: pat.12.denormalization
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Data Redundancy for Read Performance, Materialized Denormalization]
 first_described: "Widely documented database design technique, formalized in reference to the normal forms it deliberately relaxes"
 maturity: canonical
 related: [star-schema, snowflake-schema]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Denormalization

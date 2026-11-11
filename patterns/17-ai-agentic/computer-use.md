@@ -1,14 +1,20 @@
 ---
 name: Computer Use
 slug: computer-use
+id: pat.17.computer-use
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [GUI Agent, Screen Agent, Computer-Using Agent (CUA), Autonomous Desktop Control]
 first_described: "Anthropic, 22 October 2024"
 maturity: emerging
 related: [function-calling, react-prompting, human-in-the-loop, prompt-injection-defense, sub-agent-isolation, llm-circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Computer Use

@@ -1,14 +1,20 @@
 ---
 name: Remove Subclass
 slug: remove-subclass
+id: pat.03.remove-subclass
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Remove Subclassing, Eliminate Subclass, Collapse Subclass]
 first_described: "Fowler 2018"
 maturity: canonical
-related: [collapse-hierarchy, extract-subclass, remove-dead-code, replace-inheritance-with-delegation, replace-conditional-with-polymorphism]
+related: [collapse-hierarchy, remove-dead-code, replace-subclass-with-delegate, replace-conditional-with-polymorphism]
+related_concepts: [extract-subclass]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Remove Subclass

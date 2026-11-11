@@ -1,14 +1,20 @@
 ---
 name: Partnership
 slug: partnership
+id: pat.11.partnership
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Partnership Context Map Relationship, Peer Team Alliance]
 first_described: "Evans 2003"
 maturity: canonical
 related: [shared-kernel, customer-supplier, conformist, bounded-context, context-map, separate-ways, open-host-service-and-published-language]
+related_concepts: []
 incompatible_with: [customer-supplier, conformist]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

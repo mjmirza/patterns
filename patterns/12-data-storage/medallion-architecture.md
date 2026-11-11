@@ -1,14 +1,20 @@
 ---
 name: Medallion Architecture
 slug: medallion-architecture
+id: pat.12.medallion-architecture
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Multi-hop Architecture, Bronze Silver Gold]
 first_described: "Databricks 2019 to 2020, popularized in published form 2022"
 maturity: established
-related: [event-sourcing, cqrs, data-lakehouse, outbox-pattern, saga]
+related: [event-sourcing, cqrs, transactional-outbox, saga]
+related_concepts: [data-lakehouse]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Medallion Architecture

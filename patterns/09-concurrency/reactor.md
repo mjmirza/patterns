@@ -1,14 +1,20 @@
 ---
 name: Reactor
 slug: reactor
+id: pat.09.reactor
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Dispatcher, Notifier, Non-blocking I/O Event Loop]
 first_described: "Schmidt 1995"
 maturity: canonical
 related: [proactor, half-sync-half-async, leader-followers, active-object, thread-pool, observer, command, template-method, strategy]
+related_concepts: []
 incompatible_with: [proactor]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Reactor

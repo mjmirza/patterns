@@ -1,14 +1,20 @@
 ---
 name: Command Query Responsibility Segregation
 slug: cqrs
+id: pat.08.cqrs
+kind: pattern
 family: 08-cloud-distributed
 category: Data and Consistency
 aliases: [CQRS, Command Query Responsibility Separation, Read Model Write Model Split]
 first_described: "Greg Young 2010, extending Bertrand Meyer's Command Query Separation"
 maturity: established
 related: [event-sourcing, materialized-view, transactional-outbox, saga, event-driven-architecture, database-per-service, cache-aside]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Command Query Responsibility Segregation

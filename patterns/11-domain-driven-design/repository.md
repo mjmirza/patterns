@@ -1,14 +1,20 @@
 ---
 name: Repository
 slug: repository
+id: pat.11.repository
+kind: pattern
 family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Repository Pattern, Persistence Repository, Collection-Oriented Repository]
 first_described: "Evans 2003 (Domain-Driven Design); Fowler, Rice, Foemmel, Hieatt, Mee, Stafford 2002 (Patterns of Enterprise Application Architecture)"
 maturity: canonical
-related: [unit-of-work, aggregate, specification, data-mapper, active-record, factory-method, dependency-injection]
+related: [unit-of-work, 10-microservices/aggregate, 11-domain-driven-design/aggregate, specification, data-mapper, active-record, factory-method, dependency-injection]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Repository

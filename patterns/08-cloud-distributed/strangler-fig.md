@@ -1,14 +1,20 @@
 ---
 name: Strangler Fig
 slug: strangler-fig
+id: pat.08.strangler-fig
+kind: pattern
 family: 08-cloud-distributed
 category: Migration
 aliases: [Strangler Application, Strangler Application Pattern, Strangler Pattern, Ship of Theseus Pattern]
 first_described: "Fowler 2004"
 maturity: canonical
 related: [anti-corruption-layer, circuit-breaker, branch-by-abstraction, feature-toggle, blue-green-deployment]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Strangler Fig

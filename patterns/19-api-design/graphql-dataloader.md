@@ -1,14 +1,20 @@
 ---
 name: GraphQL DataLoader
 slug: graphql-dataloader
+id: pat.19.graphql-dataloader
+kind: pattern
 family: 19-api-design
 category: Data Fetching
 aliases: [Batch and Cache Loader, Per-Request Batching Loader]
 first_described: 'Lee Byron and Facebook, the graphql/dataloader utility library'
 maturity: canonical
 related: [graphql-resolver-pattern, rest-resource-modeling]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # GraphQL DataLoader

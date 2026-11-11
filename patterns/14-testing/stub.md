@@ -1,14 +1,20 @@
 ---
 name: Stub
 slug: stub
+id: pat.14.stub
+kind: pattern
 family: 14-testing
 category: Test Double
 aliases: [Test Stub]
 first_described: "Meszaros 2007, popularized by Fowler 2007"
 maturity: canonical
-related: [fake, mock-object, spy, dummy, dependency-injection, test-data-builder]
+related: [fake, mock, spy, dummy, dependency-injection, test-data-builder]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Stub

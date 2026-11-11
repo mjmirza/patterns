@@ -1,14 +1,20 @@
 ---
 name: Autosave
 slug: autosave
+id: pat.26.autosave
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Auto-save, Background Save, AutoRecover]
 first_described: "Wikipedia's dedicated Autosave article names the text editor Elvis as an early example, unsourced in the article itself, so this entry treats the origin as genuinely uncertain rather than asserting a false first"
 maturity: canonical
 related: [undo]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Autosave

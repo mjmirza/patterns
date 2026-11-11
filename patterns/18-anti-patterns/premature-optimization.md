@@ -1,14 +1,20 @@
 ---
 name: Premature Optimization
 slug: premature-optimization
+id: pat.18.premature-optimization
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Optimization Before Profiling, Speculative Performance Tuning, Micro-Optimization Trap]
 first_described: "Knuth 1974, as a maxim in academic computer science; hardened into a named practice by the software engineering community through the 1990s and 2000s"
 maturity: canonical
-related: [strategy, template-method, ycombinator-yagni, gold-plating, big-ball-of-mud]
+related: [strategy, template-method, you-are-not-gonna-need-it, speculative-generality, 11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Premature Optimization

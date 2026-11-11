@@ -1,14 +1,20 @@
 ---
 name: Vector Clock
 slug: vector-clock
+id: pat.12.vector-clock
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Vector Timestamp, Fidge-Mattern Clock]
 first_described: "Fidge 1988, Mattern 1989"
 maturity: canonical
-related: [lamport-timestamp, version-vector, gossip-protocol, crdt, eventual-consistency, read-repair]
+related: [lamport-clock, gossip-protocol, crdt, read-repair]
+related_concepts: [version-vector, eventual-consistency]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Vector Clock

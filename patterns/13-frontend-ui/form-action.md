@@ -1,14 +1,20 @@
 ---
 name: Form Action
 slug: form-action
+id: pat.13.form-action
+kind: pattern
 family: 13-frontend-ui
 category: Composition
 aliases: [Action Prop, useActionState, Progressive Form Enhancement]
 first_described: "React documentation, form action prop"
 maturity: established
 related: [server-action, reducer-hook]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Form Action

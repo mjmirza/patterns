@@ -1,14 +1,20 @@
 ---
 name: Document Message
 slug: document-message
+id: pat.07.document-message
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Data Message, Data Transfer Message]
 first_described: "Hohpe, Woolf 2003, Enterprise Integration Patterns"
 maturity: canonical
-related: [command-message, message, datatype-channel, guaranteed-delivery, invalid-message-channel, dead-letter-channel, messaging-bridge, point-to-point-channel]
+related: [command-message, message, datatype-channel, guaranteed-delivery, invalid-message-channel, dead-letter-channel, 07-integration/messaging-bridge, 08-cloud-distributed/messaging-bridge, point-to-point-channel]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Document Message

@@ -163,17 +163,17 @@ def check_file(path: Path) -> list[str]:
         if m and m.group(1).strip().strip("\"'") not in VALID_MATURITY:
             errors.append(f"invalid maturity '{m.group(1)}'")
 
-    headings = re.findall(r"^#{2,3}\s+(.+)$", text, re.M)
+    errors.extend(check_section_order(text))
+
+    body = text if not fm else text[fm.end() :]
+    prose = strip_fences(body)
+
+    headings = re.findall(r"^#{2,3}\s+(.+)$", prose, re.M)
     joined = " || ".join(headings).lower()
     for section in REQUIRED_SECTIONS:
         probe = section.split(",")[0].lower()
         if probe not in joined:
             errors.append(f"missing dimension '{section}'")
-
-    errors.extend(check_section_order(text))
-
-    body = text if not fm else text[fm.end() :]
-    prose = strip_fences(body)
 
     for ch, label in BANNED_CHARS.items():
         if ch in prose:

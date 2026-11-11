@@ -1,14 +1,20 @@
 ---
 name: Message Bus
 slug: message-bus
+id: pat.07.message-bus
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Enterprise Service Bus, ESB, Event Bus, Command Bus (specialization), Bus Architecture]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [publish-subscribe-channel, message-channel, message-router, message-broker, mediator, observer, dead-letter-channel]
+related: [publisher-subscriber, message-channel, mediator, observer, dead-letter-channel]
+related_concepts: [message-router, message-broker]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Message Bus

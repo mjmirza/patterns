@@ -1,14 +1,20 @@
 ---
 name: Exactly-Once Processing
 slug: exactly-once-processing
+id: pat.24.exactly-once-processing
+kind: pattern
 family: 24-stream-processing
 category: Stream Processing
 aliases: [Exactly-Once Semantics, EOS, Effectively-Once Processing]
 first_described: "Akidau et al, MillWheel, VLDB 2013; formalized for Kafka in KIP-98, Exactly Once Delivery and Transactional Messaging"
 maturity: canonical
 related: [idempotent-consumer, idempotency-key, transactional-outbox, dead-letter-topic, stream-table-duality, replayable-log, watermark, event-time-processing]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Exactly-Once Processing

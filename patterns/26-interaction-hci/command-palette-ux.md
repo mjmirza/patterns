@@ -1,14 +1,20 @@
 ---
 name: Command Palette
 slug: command-palette-ux
+id: pat.26.command-palette-ux
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Command Bar, Command Menu, Quick Open, Cmd K]
 first_described: "Sublime Text popularized the term, exact origin unverifiable live, dedicated Wikipedia stub"
 maturity: established
 related: [breadcrumbs]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Command Palette

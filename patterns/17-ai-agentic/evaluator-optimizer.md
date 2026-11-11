@@ -1,14 +1,20 @@
 ---
 name: Evaluator-Optimizer
 slug: evaluator-optimizer
+id: pat.17.evaluator-optimizer
+kind: pattern
 family: 17-ai-agentic
 category: Workflow
 aliases: [Generator-Critic Loop, Generate-Evaluate-Refine, Self-Refine Loop, Actor-Critic Workflow (LLM form), Generate-and-Test Loop]
 first_described: "Anthropic, Building Effective Agents, Dec 19 2024"
 maturity: established
 related: [prompt-chaining, orchestrator-worker, routing, reflexion, self-consistency, tree-of-thoughts, chain-of-responsibility]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Evaluator-Optimizer

@@ -1,14 +1,20 @@
 ---
 name: Dead Letter Channel
 slug: dead-letter-channel
+id: pat.07.dead-letter-channel
+kind: pattern
 family: 07-integration
 category: Messaging Channels
 aliases: [Dead Letter Queue, DLQ, Dead Message Queue, Poison Queue]
 first_described: "Hohpe and Woolf 2003"
 maturity: canonical
-related: [point-to-point-channel, message-channel, guaranteed-delivery, retry, circuit-breaker, message-dispatcher, competing-consumers, transactional-outbox]
+related: [point-to-point-channel, message-channel, guaranteed-delivery, retry, circuit-breaker, message-dispatcher, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, transactional-outbox]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Dead Letter Channel

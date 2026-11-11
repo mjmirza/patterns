@@ -1,14 +1,20 @@
 ---
 name: Hardware-in-the-Loop Testing
 slug: hardware-in-the-loop-testing
+id: pat.28.hardware-in-the-loop-testing
+kind: pattern
 family: 28-embedded-hardware
 category: Structural
 aliases: [HIL, HIL Simulation, Plant-in-the-Loop Testing]
 first_described: "Wikipedia and National Instruments hardware-in-the-loop documentation"
 maturity: canonical
 related: [interrupt-service-routine, watchdog-timer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Hardware-in-the-Loop Testing

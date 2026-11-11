@@ -1,14 +1,20 @@
 ---
 name: Event-Time Processing
 slug: event-time-processing
+id: pat.24.event-time-processing
+kind: pattern
 family: 24-stream-processing
 category: Stream Processing
 aliases: []
 first_described: "Tyler Akidau, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernandez-Moctezuma, Reuven Lax, Sam McVeety, Daniel Mills, Frances Perry, Eric Schmidt, Sam Whittle, The Dataflow Model, Proceedings of the VLDB Endowment, Volume 8, Number 12, pages 1792 to 1803, 2015"
 maturity: established
-related: [watermark, windowing, lambda-architecture]
+related: [watermark, lambda-architecture]
+related_concepts: [windowing]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

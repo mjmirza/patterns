@@ -1,14 +1,20 @@
 ---
 name: Poison Pill
 slug: poison-pill
+id: pat.18.poison-pill
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern (Messaging and Concurrency)
 aliases: [Poison Message, Poisoned Message, Toxic Message, Kill Pill]
 first_described: "informal industry term, no single canonical origin"
 maturity: established
 related: [dead-letter-channel, circuit-breaker, bulkhead, retry, guarded-suspension, active-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Poison Pill

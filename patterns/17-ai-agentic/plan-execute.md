@@ -1,14 +1,20 @@
 ---
 name: Plan and Execute
 slug: plan-execute
+id: pat.17.plan-execute
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [Plan-and-Execute Agent, Plan-Solve-Execute, Planner-Executor Pattern, Decoupled Planning]
 first_described: "Wang, Xu, Lan, Hu, Lan, Lee, Lim 2023 (Plan-and-Solve Prompting); LangChain 2023 (Plan-and-Execute agent)"
 maturity: canonical
-related: [react, reflexion, orchestrator-worker, tool-use, chain-of-thought]
+related: [react-prompting, reflexion, orchestrator-worker, function-calling, chain-of-thought]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Plan and Execute

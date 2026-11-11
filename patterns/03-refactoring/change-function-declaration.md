@@ -1,14 +1,20 @@
 ---
 name: Change Function Declaration
 slug: change-function-declaration
+id: pat.03.change-function-declaration
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Rename Method, Rename Function, Change Signature, Change Parameter List]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [extract-function, inline-function, parameterize-function, rename-variable, introduce-parameter-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Change Function Declaration

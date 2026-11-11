@@ -1,14 +1,20 @@
 ---
 name: Balking
 slug: balking
+id: pat.09.balking
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Balk Pattern, Guard-and-Bail]
 first_described: "Grand 2002 (Patterns in Java, Volume 1, John Wiley & Sons), documented independently in concurrency folklore through the 1990s"
 maturity: established
 related: [guarded-suspension, double-checked-locking, monitor-object, thread-safe-interface, scoped-locking]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-14
+last_reviewed: 2026-08-14
+next_review_due: 2027-02-10
 ---
 
 ## 1. Name, aliases, and lineage

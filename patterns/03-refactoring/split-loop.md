@@ -1,14 +1,20 @@
 ---
 name: Split Loop
 slug: split-loop
+id: pat.03.split-loop
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Loop Splitting, Separate Loop Concerns, Two Pass Loop]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [slide-statements, extract-function, split-variable, replace-loop-with-pipeline, separate-query-from-modifier]
-incompatible_with: [loop-fusion]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [loop-fusion]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Split Loop

@@ -1,14 +1,20 @@
 ---
 name: Encapsulate Record
 slug: encapsulate-record
+id: pat.03.encapsulate-record
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Encapsulate Field, Wrap Record, Replace Record with Class]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [encapsulate-collection, encapsulate-variable, extract-class, combine-functions-into-class, replace-data-value-with-object]
+related: [encapsulate-collection, encapsulate-variable, extract-class, combine-functions-into-class, replace-primitive-with-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Encapsulate Record

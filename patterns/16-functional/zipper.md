@@ -1,14 +1,20 @@
 ---
 name: Zipper
 slug: zipper
+id: pat.16.zipper
+kind: pattern
 family: 16-functional
 category: Data and State
 aliases: [Huet Zipper, One-Hole Context, Tree Zipper, Location]
 first_described: "Huet 1997"
 maturity: canonical
 related: [persistent-data-structures, structural-sharing, lens, immutability, iterator]
-incompatible_with: [shared-mutable-tree, in-place-tree-mutation]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [shared-mutable-tree, in-place-tree-mutation]
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Zipper

@@ -1,14 +1,20 @@
 ---
 name: Layered Architecture
 slug: layered-architecture
+id: pat.11.layered-architecture
+kind: pattern
 family: 11-domain-driven-design
 category: Architectural
 aliases: [N-tier Architecture, Multilayer Architecture, Tiered Architecture, Presentation-Domain-Data Layering]
 first_described: "Buschmann, Meunier, Rohnert, Sommerlad, Stal 1996 (Pattern-Oriented Software Architecture, Volume 1)"
 maturity: canonical
 related: [application-service, domain-service, repository, anticorruption-layer, module, bounded-context]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Layered Architecture

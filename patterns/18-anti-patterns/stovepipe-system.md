@@ -1,14 +1,20 @@
 ---
 name: Stovepipe System
 slug: stovepipe-system
+id: pat.18.stovepipe-system
+kind: anti-pattern
 family: 18-anti-patterns
 category: Architectural
 aliases: [Stovepipe Enterprise, Stovepipe Architecture, Vertical Silo, Stovepiping]
 first_described: "Brown, Malveau, McCormick, Mowbray 1998"
 maturity: canonical
-related: [big-ball-of-mud, shared-database, facade, mediator, adapter, enterprise-service-bus, message-broker, layered-architecture, bounded-context, entity-service]
-incompatible_with: [enterprise-service-bus, bounded-context, hexagonal-architecture]
+related: [11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud, shared-database, facade, mediator, adapter, 05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, bounded-context, entity-service]
+related_concepts: [enterprise-service-bus, message-broker]
+incompatible_with: [bounded-context, hexagonal-architecture]
+incompatible_concepts: [enterprise-service-bus]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Stovepipe System

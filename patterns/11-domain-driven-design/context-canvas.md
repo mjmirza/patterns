@@ -1,14 +1,20 @@
 ---
 name: Context Canvas
 slug: context-canvas
+id: pat.11.context-canvas
+kind: pattern
 family: 11-domain-driven-design
 category: Strategic Design
 aliases: [Bounded Context Canvas, BC Canvas, Bounded Context Design Canvas]
 first_described: "Tune 2019"
 maturity: established
 related: [bounded-context, context-map, ubiquitous-language, event-storming, core-domain, generic-subdomain, supporting-subdomain, customer-supplier, conformist]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Context Canvas

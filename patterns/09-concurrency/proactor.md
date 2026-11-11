@@ -1,14 +1,20 @@
 ---
 name: Proactor
 slug: proactor
+id: pat.09.proactor
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Asynchronous Completion Token, Completion Port Pattern]
 first_described: "Pyarali, Harrison, Schmidt, Jordan 1997; Schmidt, Stal, Rohnert, Buschmann 2000"
 maturity: canonical
 related: [reactor, half-sync-half-async, leader-followers, active-object, thread-pool]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Proactor

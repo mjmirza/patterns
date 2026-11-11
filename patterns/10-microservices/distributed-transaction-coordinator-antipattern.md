@@ -1,14 +1,20 @@
 ---
 name: Distributed Transaction Coordinator Antipattern
 slug: distributed-transaction-coordinator-antipattern
+id: pat.10.distributed-transaction-coordinator-antipattern
+kind: pattern
 family: 10-microservices
 category: Antipattern
 aliases: [XA Across Services, Two-Phase Commit Across Microservices, Global Transaction Manager Antipattern, Distributed ACID Antipattern]
 first_described: "Richardson, Microservices Patterns, Manning 2018, chapter 4, and Helland, Life beyond Distributed Transactions. An Apostate's Opinion, CIDR 2007"
 maturity: established
-related: [saga, transactional-outbox, idempotent-consumer, domain-event, transaction-log-tailing, database-per-service]
+related: [saga, transactional-outbox, idempotent-consumer, 10-microservices/domain-event, 11-domain-driven-design/domain-event, transaction-log-tailing, database-per-service]
+related_concepts: []
 incompatible_with: [saga, database-per-service]
+incompatible_concepts: []
 verified: 2026-08-17
+last_reviewed: 2026-08-17
+next_review_due: 2027-02-13
 ---
 
 # Distributed Transaction Coordinator Antipattern

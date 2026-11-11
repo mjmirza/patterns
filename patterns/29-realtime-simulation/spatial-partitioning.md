@@ -1,14 +1,20 @@
 ---
 name: Spatial Partitioning
 slug: spatial-partitioning
+id: pat.29.spatial-partitioning
+kind: pattern
 family: 29-realtime-simulation
 category: Real-Time Simulation
 aliases: [Spatial Partition, Spatial Index, Broad-Phase Collision Structure]
 first_described: "Robert Nystrom's Spatial Partition chapter in Game Programming Patterns names the family of structures directly; the individual structures it covers, grids, quadtrees, BSP trees, k-d trees, and bounding volume hierarchies, each have their own separate, much older lineage in computational geometry, so this entry reports the pattern-catalogue framing and the underlying structures' ages as two distinct claims rather than one origin"
 maturity: canonical
 related: [game-loop]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Spatial Partitioning

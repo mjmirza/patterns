@@ -1,14 +1,20 @@
 ---
 name: Presentation Model
 slug: presentation-model
+id: pat.06.presentation-model
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Web Presentation
 aliases: [Application Model, MVVM, Model-View-ViewModel]
 first_described: "Fowler, martinfowler.com, 2004"
 maturity: canonical
 related: [observer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Presentation Model

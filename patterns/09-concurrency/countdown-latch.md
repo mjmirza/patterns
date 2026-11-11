@@ -1,14 +1,20 @@
 ---
 name: Countdown Latch
 slug: countdown-latch
+id: pat.09.countdown-latch
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Latch, Completion Latch, One-Shot Barrier]
 first_described: "Doug Lea, java.util.concurrent design notes and Concurrent Programming in Java, 2nd edition, Addison-Wesley, 1999, section 3.4 (Latches). Implemented as java.util.concurrent.CountDownLatch, JSR-166, shipped in J2SE 5.0, 2004"
 maturity: canonical
 related: [barrier, semaphore, future-promise, thread-pool, fork-join, monitor-object, parallel-scatter-gather]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-14
+last_reviewed: 2026-08-14
+next_review_due: 2027-02-10
 ---
 
 # Countdown Latch

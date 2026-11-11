@@ -1,14 +1,20 @@
 ---
 name: State Machine (Embedded)
 slug: state-machine
+id: pat.28.state-machine
+kind: pattern
 family: 28-embedded-hardware
 category: Behavioral
 aliases: [Finite State Machine, FSM, Statechart]
 first_described: "Miro Samek, state-machine.com, Practical UML Statecharts in C/C++"
 maturity: canonical
 related: [interrupt-service-routine, polling-loop]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # State Machine (Embedded)

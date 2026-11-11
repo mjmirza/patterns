@@ -1,14 +1,20 @@
 ---
 name: Object Mother
 slug: object-mother
+id: pat.14.object-mother
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Test Object Factory, Mother Object, Domain Object Factory]
 first_described: "Coined on a ThoughtWorks project circa 2000, documented by Martin Fowler 2006"
 maturity: established
 related: [factory-method, builder, fresh-fixture, prebuilt-fixture, shared-fixture]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Object Mother

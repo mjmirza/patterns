@@ -1,14 +1,20 @@
 ---
 name: Multi-Agent Supervisor
 slug: multi-agent-supervisor
+id: pat.17.multi-agent-supervisor
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [Orchestrator-Worker, Agent Supervisor, Lead Agent Pattern, Manager-Worker Agents, Classifier-Router Agents]
 first_described: "LangChain/LangGraph docs and Wu et al. AutoGen, 2023-2024"
 maturity: established
-related: [chain-of-responsibility, mediator, command, strategy, react-agent-loop, tool-use-function-calling]
-incompatible_with: [peer-to-peer-agent-handoff]
+related: [chain-of-responsibility, mediator, command, strategy, function-calling]
+related_concepts: [react-agent-loop]
+incompatible_with: []
+incompatible_concepts: [peer-to-peer-agent-handoff]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Multi-Agent Supervisor

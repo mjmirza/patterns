@@ -1,14 +1,20 @@
 ---
 name: Log Compaction
 slug: log-compaction
+id: pat.12.log-compaction
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Key-Based Retention, Compacted Topic, Changelog Compaction]
 first_described: "Apache Kafka project, log compaction design added circa 2013 (KAFKA-46), documented in the official Kafka design guide"
 maturity: established
 related: [lsm-tree, write-ahead-log, change-data-capture, event-sourcing, snapshot-isolation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

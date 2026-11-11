@@ -1,14 +1,20 @@
 ---
 name: Transaction Script
 slug: transaction-script
+id: pat.06.transaction-script
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Domain Logic
 aliases: [Script, Procedural Domain Logic]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [table-module, active-record, service-layer, gateway, template-method]
+related_concepts: []
 incompatible_with: [domain-model]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Transaction Script

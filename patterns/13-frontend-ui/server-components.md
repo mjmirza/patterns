@@ -1,14 +1,20 @@
 ---
 name: Server Components
 slug: server-components
+id: pat.13.server-components
+kind: pattern
 family: 13-frontend-ui
 category: Rendering Strategy
 aliases: [React Server Components, RSC]
 first_described: "React documentation, React 19, stable"
 maturity: canonical
 related: [islands-architecture, hooks, progressive-enhancement]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Server Components

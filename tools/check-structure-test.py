@@ -267,6 +267,19 @@ class TestCheckStructure(unittest.TestCase):
             errors = check_structure.check_file(file_path)
             self.assertTrue(any("missing dimension 'Security'" in e for e in errors))
 
+    def test_check_file_heading_inside_fence_does_not_satisfy_required_section(self):
+        with tempfile.TemporaryDirectory() as td:
+            file_path = Path(td) / "invalid.md"
+            content = generate_valid_pattern().replace(
+                "## 17. Security", "## 17. Governance"
+            ) + "\n\n```python\n# ## Security\n```\n"
+            file_path.write_text(content, encoding="utf-8")
+            errors = check_structure.check_file(file_path)
+            self.assertTrue(
+                any("missing dimension 'Security'" in e for e in errors),
+                f"expected missing dimension 'Security' error, got {errors}",
+            )
+
     def test_check_file_banned_characters(self):
         with tempfile.TemporaryDirectory() as td:
             file_path = Path(td) / "invalid.md"

@@ -1,14 +1,20 @@
 ---
 name: Gateway Routing
 slug: gateway-routing
+id: pat.08.gateway-routing
+kind: pattern
 family: 08-cloud-distributed
 category: Cloud and Distributed Systems
 aliases: [Edge Routing, L7 Routing Gateway, API Gateway Routing, Reverse Proxy Routing]
 first_described: "Microsoft Azure Architecture Center, Cloud Design Patterns catalog"
 maturity: canonical
-related: [gateway-aggregation, gateway-offloading, backends-for-frontends, circuit-breaker, service-discovery, strangler-fig, sidecar, ambassador]
+related: [gateway-aggregation, gateway-offloading, backends-for-frontends, circuit-breaker, strangler-fig, sidecar, ambassador]
+related_concepts: [service-discovery]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Gateway Routing

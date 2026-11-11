@@ -1,14 +1,20 @@
 ---
 name: Thread Pool
 slug: thread-pool
+id: pat.09.thread-pool
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Worker Pool, Thread Pool Pattern, Replicated Workers]
 first_described: "Schmidt, Stal, Rohnert, Buschmann 2000"
 maturity: canonical
-related: [producer-consumer, future-promise, active-object, monitor-object, half-sync-half-async]
+related: [09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, future-promise, active-object, monitor-object, half-sync-half-async]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Thread Pool

@@ -98,7 +98,10 @@ def make_fixture(tmp: Path) -> Path:
 class TestGenerator(unittest.TestCase):
     def test_clean_symptom_prefix_and_multiline_extraction(self):
         import importlib.util
-        spec = importlib.util.spec_from_file_location("gen", TOOLS / "gen-by-problem-by-language.py")
+
+        spec = importlib.util.spec_from_file_location(
+            "gen", TOOLS / "gen-by-problem-by-language.py"
+        )
         gen = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(gen)
 
@@ -115,6 +118,41 @@ class TestGenerator(unittest.TestCase):
             symptoms[0],
             "Precondition strengthening. (Section 9). The observable symptom is a runtime crash at a call site that has never changed.",
         )
+
+    def test_extract_section_stops_at_unnumbered_headings(self):
+        import importlib.util
+
+        spec = importlib.util.spec_from_file_location(
+            "gen", TOOLS / "gen-by-problem-by-language.py"
+        )
+        gen = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(gen)
+
+        sample_doc = (
+            "## 18. References\n\n"
+            "1. https://example.com/paper\n\n"
+            "## Code examples\n\n"
+            "```python\ndef foo(): pass\n```\n"
+        )
+        sec18 = gen.extract_section(sample_doc, 18)
+        self.assertEqual(sec18, "1. https://example.com/paper")
+        self.assertNotIn("Code examples", sec18)
+
+        fenced = (
+            "## 18. References\n\n"
+            "before\n\n"
+            "```markdown\n"
+            "## Not a heading\n"
+            "```\n\n"
+            "after\n\n"
+            "## Code examples\n"
+        )
+        sec = gen.extract_section(fenced, 18)
+        self.assertIn("before", sec)
+        self.assertIn("Not a heading", sec)
+        self.assertIn("after", sec)
+        self.assertNotIn("Code examples", sec)
+
     def test_generator_runs_successfully_and_parses_content(self):
         with tempfile.TemporaryDirectory() as td:
             repo = make_fixture(Path(td))
@@ -137,7 +175,10 @@ class TestGenerator(unittest.TestCase):
             self.assertIn("First symptom of Alpha.", by_problem)
             self.assertIn("Second symptom of Alpha.", by_problem)
             self.assertIn("Alpha has failed.", by_problem)
-            self.assertIn("A barrier that should reset for the next round instead throws an exception.", by_problem)
+            self.assertIn(
+                "A barrier that should reset for the next round instead throws an exception.",
+                by_problem,
+            )
             self.assertIn("Precondition strengthening.", by_problem)
 
             # Verify by-language content

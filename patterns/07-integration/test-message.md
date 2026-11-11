@@ -1,14 +1,20 @@
 ---
 name: Test Message
 slug: test-message
+id: pat.07.test-message
+kind: pattern
 family: 07-integration
 category: System Management
 aliases: [Synthetic Transaction, Canary Message, Probe Message]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [control-bus, content-based-router, wire-tap, dead-letter-channel, message-history]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Test Message

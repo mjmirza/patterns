@@ -1,14 +1,20 @@
 ---
 name: Phaser
 slug: phaser
+id: pat.09.phaser
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Reusable Multi-Party Barrier, Dynamic Barrier, Phased Rendezvous]
 first_described: "Written by Doug Lea with assistance from the JCP JSR 166 Expert Group and added to java.util.concurrent in Java 7 (source header of java/util/concurrent/Phaser.java, https://raw.githubusercontent.com/openjdk/jdk/master/src/java.base/share/classes/java/util/concurrent/Phaser.java, verified 2026-08-14)"
 maturity: established
-related: [barrier, countdown-latch, fork-join, thread-pool, producer-consumer, monitor-object, guarded-suspension]
+related: [barrier, countdown-latch, fork-join, thread-pool, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, monitor-object, guarded-suspension]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-14
+last_reviewed: 2026-08-14
+next_review_due: 2027-02-10
 ---
 
 # Phaser

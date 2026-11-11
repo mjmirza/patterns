@@ -1,14 +1,20 @@
 ---
 name: Tolerant Reader
 slug: tolerant-reader
+id: pat.06.tolerant-reader
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Enterprise Application Architecture
 aliases: [Robustness Principle for Services, Postel's Law for Interfaces]
 first_described: "Martin Fowler's own bliki article"
 maturity: established
 related: [consumer-driven-contract-test]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Tolerant Reader

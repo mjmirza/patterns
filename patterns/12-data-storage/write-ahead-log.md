@@ -1,14 +1,20 @@
 ---
 name: Write-Ahead Log
 slug: write-ahead-log
+id: pat.12.write-ahead-log
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [WAL, Redo Log, Commit Log, Transaction Log]
 first_described: "Gray 1978, formalized by Mohan et al. 1992 (ARIES)"
 maturity: canonical
 related: [event-sourcing, leader-followers, leader-follower-architecture, change-data-capture]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Write-Ahead Log

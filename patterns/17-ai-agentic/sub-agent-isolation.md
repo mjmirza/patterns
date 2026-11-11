@@ -1,14 +1,20 @@
 ---
 name: Sub-Agent Isolation
 slug: sub-agent-isolation
+id: pat.17.sub-agent-isolation
+kind: pattern
 family: 17-ai-agentic
 category: Multi-Agent Coordination
 aliases: [Context Isolation, Isolated Subagent Context, Agent Sandbox Boundary, Bulkhead Agent]
 first_described: "Anthropic, Building Effective Agents and How we built our multi-agent research system, 2024-2025 (informal engineering description); Carl Hewitt, Peter Bishop, Richard Steiger 1973 (actor-model isolation ancestor)"
 maturity: established
 related: [orchestrator-worker, parallelization, routing, model-context-protocol, function-calling]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Sub-Agent Isolation

@@ -1,14 +1,20 @@
 ---
 name: Extract Variable
 slug: extract-variable
+id: pat.03.extract-variable
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Introduce Explaining Variable, Split Temporary Variable, Extract Local]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [extract-function, inline-variable, encapsulate-variable, replace-temp-with-query, introduce-parameter-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Extract Variable

@@ -1,14 +1,20 @@
 ---
 name: Single Table Inheritance
 slug: single-table-inheritance
+id: pat.06.single-table-inheritance
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Structural Patterns
 aliases: [STI, Discriminator Column Inheritance, Type Column Inheritance]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [class-table-inheritance, concrete-table-inheritance, active-record, foreign-key-mapping, layer-supertype, identity-field]
+related_concepts: []
 incompatible_with: [concrete-table-inheritance, class-table-inheritance]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Single Table Inheritance

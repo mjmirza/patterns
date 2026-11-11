@@ -1,14 +1,20 @@
 ---
 name: Slide Statements
 slug: slide-statements
+id: pat.03.slide-statements
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Consolidate Duplicate Conditional Fragments, Move Declaration Closer to Use, Code Sinking]
 first_described: "Fowler 2018"
 maturity: established
 related: [extract-function, split-loop, split-variable, move-statements-into-function, move-statements-to-callers, separate-query-from-modifier]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Slide Statements

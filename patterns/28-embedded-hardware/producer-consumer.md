@@ -1,14 +1,20 @@
 ---
 name: Producer-Consumer (Embedded)
 slug: producer-consumer
+id: pat.28.producer-consumer
+kind: pattern
 family: 28-embedded-hardware
 category: Structural
 aliases: [ISR-Safe Message Queue, Non-Blocking Producer Handoff, Interrupt-to-Task Data Passing]
 first_described: "Zephyr Project documentation, message queues and pipes"
 maturity: canonical
 related: [ring-buffer, interrupt-service-routine]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Producer-Consumer (Embedded)

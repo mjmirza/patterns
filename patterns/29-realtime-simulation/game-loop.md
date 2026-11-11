@@ -1,14 +1,20 @@
 ---
 name: Game Loop
 slug: game-loop
+id: pat.29.game-loop
+kind: pattern
 family: 29-realtime-simulation
 category: Real-Time Simulation
 aliases: [Main Loop, Core Loop, Fixed Timestep Loop]
 first_described: "Glenn Fiedler, Fix Your Timestep!, gafferongames.com, June 10, 2004; formalized as a named pattern by Robert Nystrom in Game Programming Patterns"
 maturity: canonical
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Game Loop

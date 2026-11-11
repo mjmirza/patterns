@@ -1,14 +1,20 @@
 ---
 name: Synthetic Monitoring
 slug: synthetic-monitoring
+id: pat.22.synthetic-monitoring
+kind: pattern
 family: 22-observability
 category: Structural
 aliases: [Synthetic Testing, Proactive Monitoring, Black-Box Monitoring, Scripted Transaction Monitoring]
 first_described: 'Google names it black-box monitoring in the Site Reliability Engineering book, 2016; the term synthetic monitoring is standard vendor and industry usage by the mid 2010s'
 maturity: canonical
 related: [correlation-id, structured-logging, red-method, use-method, span-and-trace-context-propagation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Synthetic Monitoring

@@ -1,14 +1,20 @@
 ---
 name: Service Instance per Container
 slug: service-instance-per-container
+id: pat.10.service-instance-per-container
+kind: pattern
 family: 10-microservices
 category: Deployment
 aliases: [Single Service Instance per Container, Container per Service, One Process per Container]
 first_described: "Richardson microservices.io deployment pattern catalog, circa 2016, building on Docker Inc best-practice guidance from 2013 to 2014"
 maturity: canonical
 related: [sidecar, ambassador, adapter, service-instance-per-host, service-instance-per-vm, serverless-deployment]
-incompatible_with: [big-ball-of-mud-container, multi-process-supervisor-container]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [big-ball-of-mud-container, multi-process-supervisor-container]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service Instance per Container

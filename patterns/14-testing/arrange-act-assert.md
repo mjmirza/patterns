@@ -1,14 +1,20 @@
 ---
 name: Arrange-Act-Assert
 slug: arrange-act-assert
+id: pat.14.arrange-act-assert
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [AAA, 3A]
 first_described: "Wake 2001"
 maturity: canonical
-related: [four-phase-test, given-when-then, mock, stub, fake, spy, dummy, test-driven-development]
+related: [four-phase-test, given-when-then, mock, stub, fake, spy, dummy]
+related_concepts: [test-driven-development]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Arrange-Act-Assert

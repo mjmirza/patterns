@@ -1,14 +1,20 @@
 ---
 name: Real User Monitoring
 slug: real-user-monitoring
+id: pat.22.real-user-monitoring
+kind: pattern
 family: 22-observability
 category: Structural
 aliases: [RUM, Field Monitoring, Web Performance Monitoring]
 first_described: 'no single named originator; the term Real User Monitoring is standard vendor and web performance industry usage by the early 2010s, formalized alongside the Core Web Vitals initiative Google introduced in 2020'
 maturity: canonical
 related: [correlation-id, structured-logging, red-method, use-method, span-and-trace-context-propagation, synthetic-monitoring]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Real User Monitoring

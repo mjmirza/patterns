@@ -1,14 +1,20 @@
 ---
 name: Device Driver Pattern
 slug: device-driver-pattern
+id: pat.28.device-driver-pattern
+kind: pattern
 family: 28-embedded-hardware
 category: Structural
 aliases: [Device Model, Subsystem API, Config-Data Split]
 first_described: "Zephyr Project documentation, device driver model"
 maturity: canonical
 related: [hardware-abstraction-layer, interrupt-service-routine]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Device Driver Pattern

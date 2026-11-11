@@ -1,14 +1,20 @@
 ---
 name: Priority Queue
 slug: priority-queue
+id: pat.08.priority-queue
+kind: pattern
 family: 08-cloud-distributed
 category: Resilience and Traffic Management
 aliases: [Priority Message Queue, Weighted Queue, Multi-Lane Queue, Prioritized Work Queue]
 first_described: "Williams 1964 (binary heap); AMQP 0-9-1 message priority field, 2008"
 maturity: canonical
-related: [rate-limiting, throttling, queue-based-load-leveling, competing-consumers, publisher-subscriber, bulkhead, sharding, leader-election]
-incompatible_with: [strict-total-message-ordering]
+related: [rate-limiting, throttling, queue-based-load-leveling, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, publisher-subscriber, bulkhead, sharding, leader-election]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [strict-total-message-ordering]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Priority Queue

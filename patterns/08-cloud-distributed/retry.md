@@ -1,14 +1,20 @@
 ---
 name: Retry
 slug: retry
+id: pat.08.retry
+kind: pattern
 family: 08-cloud-distributed
 category: Resilience
 aliases: [Retry with Backoff, Exponential Backoff, Requeue, Automatic Retry]
 first_described: "Metcalfe and Boggs 1976 for binary exponential backoff, framed for distributed services by Nygard 2007 and the AWS Architecture Blog 2015"
 maturity: canonical
-related: [circuit-breaker, timeout, bulkhead, idempotent-receiver, rate-limiting, fallback, hedged-request, dead-letter-queue]
+related: [circuit-breaker, bulkhead, idempotent-consumer, rate-limiting, dead-letter-channel, dead-letter-topic]
+related_concepts: [timeout, fallback, hedged-request]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Retry

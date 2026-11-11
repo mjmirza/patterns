@@ -1,14 +1,20 @@
 ---
 name: Test Trophy
 slug: test-trophy
+id: pat.14.test-trophy
+kind: pattern
 family: 14-testing
 category: Testing Strategy
 aliases: [Testing Trophy, Kent C. Dodds Testing Trophy]
 first_described: "Kent C. Dodds, blog post 'Write tests. Not too many. Mostly integration.', 2018"
 maturity: established
-related: [test-pyramid, test-double, arrange-act-assert, contract-testing, mock-service-worker]
+related: [test-pyramid, arrange-act-assert, contract-test]
+related_concepts: [test-double, mock-service-worker]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Test Trophy

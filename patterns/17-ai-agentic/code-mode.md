@@ -1,14 +1,20 @@
 ---
 name: Code Mode
 slug: code-mode
+id: pat.17.code-mode
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Tools-as-Code, Code Execution Tool Calling]
 first_described: "Cloudflare's own engineering blog post introducing the technique"
 maturity: emerging
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Code Mode

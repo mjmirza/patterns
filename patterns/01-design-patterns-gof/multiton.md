@@ -1,14 +1,20 @@
 ---
 name: Multiton
 slug: multiton
+id: pat.01.multiton
+kind: pattern
 family: 01-design-patterns-gof
 category: Creational
 aliases: [Registry of Singletons, Parameterized Singleton]
 first_described: "O'Docherty 2005, generalizing a technique the 1994 GoF book itself describes without naming"
 maturity: contested
 related: [singleton, singleton-abuse, flyweight, dependency-injection]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 ## 1. Name, aliases, and lineage

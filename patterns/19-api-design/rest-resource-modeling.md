@@ -1,14 +1,20 @@
 ---
 name: REST Resource Modeling
 slug: rest-resource-modeling
+id: pat.19.rest-resource-modeling
+kind: pattern
 family: 19-api-design
 category: Structural
 aliases: [Resource-Oriented Design, Noun-Based API Design, RESTful Resource Modeling]
 first_described: 'Roy Fielding, Architectural Styles and the Design of Network-based Software Architectures, 2000'
 maturity: canonical
 related: [pagination-pattern, api-versioning]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # REST Resource Modeling

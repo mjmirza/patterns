@@ -1,14 +1,20 @@
 ---
 name: Deep Link Router
 slug: deep-link-router
+id: pat.27.deep-link-router
+kind: pattern
 family: 27-mobile-architecture
 category: Structural
 aliases: [URL Router (Mobile), Route Table, Link Resolver]
 first_described: 'Google Android Developers, "Deep link into your app with Navigation" architecture guidance'
 maturity: canonical
 related: [coordinator-pattern, feature-modules]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Deep Link Router

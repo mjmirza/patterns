@@ -1,14 +1,20 @@
 ---
 name: Persistent Data Structures
 slug: persistent-data-structures
+id: pat.16.persistent-data-structures
+kind: pattern
 family: 16-functional
 category: Data and State
 aliases: [Persistent Collections, Functional Data Structures, Immutable Collections]
 first_described: "Driscoll, Sarnak, Sleator, Tarjan 1989"
 maturity: canonical
-related: [immutability, value-object, lens, event-sourcing, copy-on-write]
-incompatible_with: [shared-mutable-state, in-place-aggregate-mutation]
+related: [immutability, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, lens, event-sourcing, copy-on-write]
+related_concepts: []
+incompatible_with: [mutable-data]
+incompatible_concepts: [in-place-aggregate-mutation]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Persistent Data Structures

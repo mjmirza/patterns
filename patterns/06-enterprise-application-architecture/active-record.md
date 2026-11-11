@@ -1,14 +1,20 @@
 ---
 name: Active Record
 slug: active-record
+id: pat.06.active-record
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Metadata Mapping Pattern
 aliases: [ActiveRecord, Model as Row]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [table-data-gateway, row-data-gateway, domain-model, transaction-script, unit-of-work, identity-map]
+related_concepts: []
 incompatible_with: [table-data-gateway]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Active Record

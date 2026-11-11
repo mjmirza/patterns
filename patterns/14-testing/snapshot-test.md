@@ -1,14 +1,20 @@
 ---
 name: Snapshot Test
 slug: snapshot-test
+id: pat.14.snapshot-test
+kind: pattern
 family: 14-testing
 category: Testing
 aliases: [Snapshot Testing, Golden File Testing, Snapshot Assertion]
 first_described: "Alpert, Carlesso 2016"
 maturity: established
 related: [golden-master, characterization-test, contract-test, property-based-test, fresh-fixture, test-data-builder]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Snapshot Test

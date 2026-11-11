@@ -1,14 +1,20 @@
 ---
 name: Change Data Capture
 slug: change-data-capture
+id: pat.12.change-data-capture
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [CDC, Log-Based Replication, Database Streaming]
 first_described: "Practitioner term formalized through commercial ETL and replication tooling in the 1990s, later re-grounded in log-based streaming by Martin Kleppmann"
 maturity: established
-related: [event-sourcing, outbox-pattern, materialized-view, saga, cqrs]
+related: [event-sourcing, transactional-outbox, materialized-view, saga, cqrs]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Change Data Capture

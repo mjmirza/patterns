@@ -1,14 +1,20 @@
 ---
 name: Event-Driven Architecture
 slug: event-driven-architecture
+id: pat.05.event-driven-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [EDA, Event-Based Architecture, Reactive Event Architecture]
 first_described: "Widely attributed usage from the late 1990s and early 2000s complex event processing literature; the term itself has no single named originator the way GoF patterns do"
 maturity: canonical
-related: [publish-subscribe, mediator, observer, cqrs, event-sourcing, saga, pipe-and-filter, layered-architecture]
-incompatible_with: [strict-two-phase-commit, layered-architecture-with-synchronous-only-calls]
+related: [publisher-subscriber, mediator, observer, cqrs, event-sourcing, saga, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, 05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture]
+related_concepts: []
+incompatible_with: [two-phase-commit]
+incompatible_concepts: [layered-architecture-with-synchronous-only-calls]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Event-Driven Architecture

@@ -1,14 +1,20 @@
 ---
 name: Gateway
 slug: gateway
+id: pat.06.gateway
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Patterns
 aliases: [Service Gateway, Client Gateway, Wire Wrapper]
 first_described: "Martin Fowler, Patterns of Enterprise Application Architecture, 2002"
 maturity: canonical
 related: [adapter, facade, repository, proxy, mapper, service-stub]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Gateway

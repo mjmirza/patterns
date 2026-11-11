@@ -1,14 +1,20 @@
 ---
 name: Plugin Architecture
 slug: plugin-architecture
+id: pat.05.plugin-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Extension Point Architecture, Hook-Based Extensibility, Microkernel Plugin Model]
 first_described: "Marc-Thomas Schmidt and coauthors, Microkernel Architecture Pattern, in Frank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad, Michael Stal, Pattern-Oriented Software Architecture Volume 1, Wiley, 1996"
 maturity: canonical
 related: [strategy, observer, template-method, chain-of-responsibility, dependency-injection, service-locator]
+related_concepts: []
 incompatible_with: [singleton]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Plugin Architecture

@@ -1,13 +1,20 @@
 ---
 name: Warm Standby
 slug: warm-standby
+id: pat.20.warm-standby
+kind: pattern
 family: 20-release-deployment
 maturity: canonical
 category: Deployment
 aliases: [Active-Passive Warm Standby, Scaled-Down Standby]
 first_described: 'AWS Well-Architected Framework, Reliability Pillar REL13-BP02; AWS Disaster Recovery Whitepaper'
 related: [disaster-recovery-pilot-light, blue-green-deployment]
-verified: true
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
+verified: 2026-08-24
+last_reviewed: 2026-08-24
+next_review_due: 2027-02-20
 ---
 
 # Warm Standby

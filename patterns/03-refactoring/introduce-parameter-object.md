@@ -1,14 +1,20 @@
 ---
 name: Introduce Parameter Object
 slug: introduce-parameter-object
+id: pat.03.introduce-parameter-object
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Group Parameters, Parameter Object, Bundle Parameters]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [extract-function, combine-functions-into-class, encapsulate-record, change-function-declaration, preserve-whole-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Introduce Parameter Object

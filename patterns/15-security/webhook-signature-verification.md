@@ -1,14 +1,20 @@
 ---
 name: Webhook Signature Verification
 slug: webhook-signature-verification
+id: pat.15.webhook-signature-verification
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Signed Webhook, HMAC Webhook Verification, Request Signing, Webhook HMAC Verification]
 first_described: "Krawczyk, Bellare, Canetti 1997"
 maturity: established
 related: [complete-mediation, fail-securely, secrets-management, idempotency-key, audit-log, mutual-tls, token-based-authentication]
-incompatible_with: [unsigned-webhook-endpoint, parse-before-verify, shared-secret-in-client-code]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [unsigned-webhook-endpoint, parse-before-verify, shared-secret-in-client-code]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Webhook Signature Verification

@@ -1,14 +1,20 @@
 ---
 name: Observer
 slug: observer
+id: pat.01.observer
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Dependents, Publish-Subscribe, Listener, Event Listener, Signal-Slot]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [mediator, singleton, command, strategy, chain-of-responsibility, memento]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Observer

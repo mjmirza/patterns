@@ -1,14 +1,20 @@
 ---
 name: Self-Contained Service
 slug: self-contained-service
+id: pat.10.self-contained-service
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Self-Contained System, SCS, Vertical Slice Service]
 first_described: "Self-Contained Systems community, self-contained-systems.org, first published guidance circa 2015; Newman 2021 discusses the same shape under service boundary design"
 maturity: established
 related: [decompose-by-business-capability, decompose-by-subdomain, backends-for-frontends, api-gateway, database-per-service, saga]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Self-Contained Service

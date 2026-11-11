@@ -1,14 +1,20 @@
 ---
 name: Domain Event
 slug: domain-event
+id: pat.10.domain-event
+kind: pattern
 family: 10-microservices
 category: Behavioral
 aliases: [Application Event, Domain Notification]
 first_described: "Evans 2003, Fowler eaaDev catalog"
 maturity: canonical
-related: [event-sourcing, transactional-outbox, saga, cqrs, aggregate, mediator, observer]
+related: [event-sourcing, transactional-outbox, saga, cqrs, 10-microservices/aggregate, 11-domain-driven-design/aggregate, mediator, observer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Domain Event

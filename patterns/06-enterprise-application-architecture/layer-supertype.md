@@ -1,14 +1,20 @@
 ---
 name: Layer Supertype
 slug: layer-supertype
+id: pat.06.layer-supertype
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Pattern
 aliases: [Base Class Pattern, Common Base, Abstract Layer Root]
 first_described: "Fowler 2002"
 maturity: canonical
 related: [template-method, mapper, unit-of-work, identity-field, repository, active-record]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Layer Supertype

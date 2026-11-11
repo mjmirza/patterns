@@ -1,14 +1,20 @@
 ---
 name: Session Management
 slug: session-management
+id: pat.15.session-management
+kind: pattern
 family: 15-security
 category: Web Security
 aliases: [Server-Side Sessions, Authenticated Session Binding, Session State]
 first_described: "HTTP cookies standardized by RFC 6265 in 2011"
 maturity: established
-related: [token-based-authentication, oauth-2-1-flows, openid-connect, jwt, csrf-protection, secure-by-default]
-incompatible_with: [stateless-only-authorization, bearer-token-local-storage]
+related: [token-based-authentication, oauth-2-1-flows, openid-connect, jwt, csrf-token, secure-by-default]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [stateless-only-authorization, bearer-token-local-storage]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Session Management

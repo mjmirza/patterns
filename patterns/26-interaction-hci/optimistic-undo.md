@@ -1,14 +1,20 @@
 ---
 name: Optimistic Undo
 slug: optimistic-undo
+id: pat.26.optimistic-undo
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Undo Toast, Undo Snackbar, Undo Send]
 first_described: "Google, New in Labs. Undo Send, Official Gmail Blog, March 19, 2009"
 maturity: established
 related: [undo]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Optimistic Undo

@@ -1,14 +1,20 @@
 ---
 name: Low Coupling
 slug: low-coupling
+id: pat.04.low-coupling
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Loose Coupling, Weak Coupling, Minimal Coupling]
 first_described: "Stevens, Myers, Constantine 1974 (structured design); Larman GRASP 1997"
 maturity: canonical
 related: [high-cohesion, dependency-inversion-principle, interface-segregation-principle, facade, observer, dependency-injection]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

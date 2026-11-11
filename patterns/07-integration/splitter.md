@@ -1,14 +1,20 @@
 ---
 name: Splitter
 slug: splitter
+id: pat.07.splitter
+kind: pattern
 family: 07-integration
 category: Message Routing
 aliases: [Sequencer, Message Splitter, Fan-Out]
 first_described: "Hohpe and Woolf 2003"
 maturity: canonical
 related: [aggregator, correlation-identifier, message-sequence, content-based-router, recipient-list, composed-message-processor, resequencer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Splitter

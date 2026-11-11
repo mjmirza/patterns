@@ -1,14 +1,20 @@
 ---
 name: Orchestrator-Worker
 slug: orchestrator-worker
+id: pat.17.orchestrator-worker
+kind: pattern
 family: 17-ai-agentic
 category: Multi-Agent Coordination
 aliases: [Orchestrator-Workers, Lead Agent and Subagents, Supervisor Pattern, Manager-Worker, Master-Worker]
 first_described: "Anthropic, Building Effective Agents, Dec 19 2024 (LLM-agentic form); Mattson, Sanders, Massingill 2004 (distributed-computing ancestor)"
 maturity: established
-related: [prompt-chaining, parallelization, routing, evaluator-optimizer, reflection, map-reduce, scatter-gather, saga]
+related: [prompt-chaining, parallelization, routing, evaluator-optimizer, map-reduce, scatter-gather, saga]
+related_concepts: [reflection]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Orchestrator-Worker

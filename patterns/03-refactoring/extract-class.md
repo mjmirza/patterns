@@ -1,14 +1,20 @@
 ---
 name: Extract Class
 slug: extract-class
+id: pat.03.extract-class
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Split Class, Extract Responsibility, Decompose Class]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [inline-class, extract-function, extract-superclass, move-function, move-field, combine-functions-into-class]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Extract Class

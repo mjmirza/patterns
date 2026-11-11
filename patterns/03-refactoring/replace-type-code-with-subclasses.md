@@ -1,14 +1,20 @@
 ---
 name: Replace Type Code with Subclasses
 slug: replace-type-code-with-subclasses
+id: pat.03.replace-type-code-with-subclasses
+kind: technique
 family: 03-refactoring
 category: Simplifying Conditional Logic
 aliases: [Replace Type Code with Class Hierarchy, Replace Type Code with State or Strategy]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [replace-conditional-with-polymorphism, replace-primitive-with-object, replace-subclass-with-delegate, replace-constructor-with-factory-function, state, strategy]
+related_concepts: []
 incompatible_with: [replace-subclass-with-delegate, remove-subclass]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Type Code with Subclasses

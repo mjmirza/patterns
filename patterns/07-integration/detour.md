@@ -1,14 +1,20 @@
 ---
 name: Detour
 slug: detour
+id: pat.07.detour
+kind: pattern
 family: 07-integration
 category: Enterprise Integration Pattern, System Management
 aliases: [Debug Router, Diagnostic Bypass, Toggled Router, Instrumented Bypass]
 first_described: "Hohpe, Woolf 2003, Enterprise Integration Patterns"
 maturity: canonical
-related: [control-bus, content-based-router, wire-tap, routing-slip, dynamic-router, message-router, content-enricher]
+related: [control-bus, content-based-router, wire-tap, routing-slip, dynamic-router, content-enricher]
+related_concepts: [message-router]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Detour

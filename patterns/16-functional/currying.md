@@ -1,14 +1,20 @@
 ---
 name: Currying
 slug: currying
+id: pat.16.currying
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Schönfinkelization, Curried Functions, Unary Function Encoding]
 first_described: "Schönfinkel 1924, popularized by Curry"
 maturity: canonical
-related: [partial-application, higher-order-function, function-composition, pipeline, applicative]
+related: [partial-application, function-composition, applicative]
+related_concepts: [higher-order-function, pipeline]
 incompatible_with: [long-parameter-list]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Currying

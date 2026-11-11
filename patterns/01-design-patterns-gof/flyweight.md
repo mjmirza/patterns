@@ -1,14 +1,20 @@
 ---
 name: Flyweight
 slug: flyweight
+id: pat.01.flyweight
+kind: pattern
 family: 01-design-patterns-gof
 category: Structural
 aliases: [Glyph, Interning, Hash Consing, Canonicalization, Shared Immutable Value]
 first_described: "Calder and Linton 1990, cataloged by Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
-related: [factory-method, composite, singleton, prototype, proxy, object-pool, memoization, value-object]
-incompatible_with: [mutable-shared-state]
+related: [factory-method, composite, singleton, prototype, proxy, object-pool, memoization, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [mutable-shared-state]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Flyweight

@@ -1,14 +1,20 @@
 ---
 name: API Composition
 slug: api-composition
+id: pat.10.api-composition
+kind: pattern
 family: 10-microservices
 category: Data Query
 aliases: [Composite API, Aggregator Gateway, Query Aggregation Pattern]
 first_described: "Chris Richardson, microservices.io, published as part of the microservices pattern language, circa 2017"
 maturity: canonical
-related: [backend-for-frontend, decompose-by-business-capability, self-contained-service, cqrs, saga, circuit-breaker, retry-with-backoff, api-gateway]
+related: [backends-for-frontends, decompose-by-business-capability, self-contained-service, cqrs, saga, circuit-breaker, retry, api-gateway]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # API Composition

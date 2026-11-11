@@ -1,14 +1,20 @@
 ---
 name: Vendor Lock-in
 slug: vendor-lock-in
+id: pat.18.vendor-lock-in
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [Platform Lock-in, Cloud Lock-in, Proprietary Coupling, Golden Handcuffs]
 first_described: "Term in general commercial use since at least the 1970s IBM mainframe era; first academic treatment of switching costs as a lock-in mechanism appears in Paul Klemperer, Market with Consumer Switching Costs, Quarterly Journal of Economics, 1987"
 maturity: established
-related: [hexagonal-architecture, adapter, strangler-fig-application, anti-corruption-layer, facade, dependency-inversion-principle, repository]
+related: [hexagonal-architecture, adapter, strangler-fig, strangler-application, anti-corruption-layer, facade, dependency-inversion-principle, repository]
+related_concepts: []
 incompatible_with: [hexagonal-architecture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Vendor Lock-in

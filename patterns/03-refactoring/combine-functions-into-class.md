@@ -1,14 +1,20 @@
 ---
 name: Combine Functions into Class
 slug: combine-functions-into-class
+id: pat.03.combine-functions-into-class
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Form Class from Functions, Encapsulate Functions, Group Functions into Class]
 first_described: "Fowler 1999"
 maturity: canonical
 related: [combine-functions-into-transform, extract-class, encapsulate-record, replace-function-with-command, introduce-parameter-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Combine Functions into Class

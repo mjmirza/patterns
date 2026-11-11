@@ -1,14 +1,20 @@
 ---
 name: Data Transfer Object
 slug: data-transfer-object
+id: pat.06.data-transfer-object
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Structural
 aliases: [DTO, Transfer Object, Value Object (legacy J2EE usage)]
 first_described: "Sun J2EE patterns catalog, popularized by Alur, Crupi, Malks 2001; consolidated by Martin Fowler, Patterns of Enterprise Application Architecture, 2002"
 maturity: canonical
-related: [assembler, remote-facade, repository, domain-model, table-module, service-layer, adapter]
+related: [remote-facade, repository, domain-model, table-module, service-layer, adapter]
+related_concepts: [assembler]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Data Transfer Object

@@ -1,14 +1,20 @@
 ---
 name: Datatype Channel
 slug: datatype-channel
+id: pat.07.datatype-channel
+kind: pattern
 family: 07-integration
 category: Enterprise Integration, Messaging Channels
 aliases: [Typed Channel, Single-Type Channel]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [message-channel, canonical-data-model, message-translator, format-indicator, content-based-router, message-dispatcher]
+related: [message-channel, canonical-data-model, format-indicator, content-based-router, message-dispatcher]
+related_concepts: [message-translator]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Datatype Channel

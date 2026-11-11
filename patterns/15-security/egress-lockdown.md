@@ -1,14 +1,20 @@
 ---
 name: Egress Lockdown
 slug: egress-lockdown
+id: pat.15.egress-lockdown
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Default-Deny Egress, Network Egress Policy, FQDN-Based Egress Control]
 first_described: "Kubernetes' own NetworkPolicy resource and Cilium's own toFQDNs rule, current documentation"
 maturity: established
 related: [lethal-trifecta-threat-model]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Egress Lockdown

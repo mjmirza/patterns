@@ -1,14 +1,20 @@
 ---
 name: Paxos
 slug: paxos
+id: pat.12.paxos
+kind: pattern
 family: 12-data-storage
 category: Distributed Consensus
 aliases: [Synod Protocol, Single-Decree Paxos, Multi-Paxos]
 first_described: "Lamport 1998 (written), Lamport 2001 (Paxos Made Simple, published)"
 maturity: canonical
-related: [raft, two-phase-commit, three-phase-commit, leader-election, quorum, replicated-state-machine]
+related: [raft, two-phase-commit, three-phase-commit, leader-election, quorum]
+related_concepts: [replicated-state-machine]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Paxos

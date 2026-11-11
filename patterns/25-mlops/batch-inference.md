@@ -1,14 +1,20 @@
 ---
 name: Batch Inference
 slug: batch-inference
+id: pat.25.batch-inference
+kind: pattern
 family: 25-mlops
 category: MLOps
 aliases: [Batch Prediction, Offline Inference, Batch Scoring]
 first_described: "Common industry practice, formalized in AWS SageMaker Batch Transform, 2018"
 maturity: established
 related: [model-registry, feature-store, online-inference, shadow-model]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Batch Inference

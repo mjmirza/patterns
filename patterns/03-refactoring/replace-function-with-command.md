@@ -1,14 +1,20 @@
 ---
 name: Replace Function with Command
 slug: replace-function-with-command
+id: pat.03.replace-function-with-command
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Method with Method Object, Function to Command, Method Object]
 first_described: "Fowler 1999 as Replace Method with Method Object"
 maturity: canonical
 related: [replace-command-with-function, extract-function, move-function, introduce-parameter-object, preserve-whole-object, command]
+related_concepts: []
 incompatible_with: [replace-command-with-function]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Function with Command

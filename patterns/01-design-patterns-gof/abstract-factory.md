@@ -1,14 +1,20 @@
 ---
 name: Abstract Factory
 slug: abstract-factory
+id: pat.01.abstract-factory
+kind: pattern
 family: 01-design-patterns-gof
 category: Creational
 aliases: [Kit, Toolkit, Factory of Factories, Product Family Factory]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [factory-method, builder, prototype, singleton, bridge, facade]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Abstract Factory

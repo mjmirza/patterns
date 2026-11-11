@@ -1,14 +1,20 @@
 ---
 name: Replace Primitive with Object
 slug: replace-primitive-with-object
+id: pat.03.replace-primitive-with-object
+kind: technique
 family: 03-refactoring
 category: Data Organization
 aliases: [Replace Data Value with Object, Replace Type Code with Class, Introduce Value Object]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [primitive-obsession, value-object, domain-primitive, introduce-parameter-object, change-reference-to-value]
+related: [primitive-obsession, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, domain-primitive, introduce-parameter-object, change-reference-to-value]
+related_concepts: []
 incompatible_with: [inline-class]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Primitive with Object

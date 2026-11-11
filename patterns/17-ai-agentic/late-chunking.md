@@ -1,14 +1,20 @@
 ---
 name: Late Chunking
 slug: late-chunking
+id: pat.17.late-chunking
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Contextual Chunk Embeddings, Chunked Pooling]
 first_described: "Günther, Mohr, Williams, Wang, Xiao (Jina AI) 2024"
 maturity: emerging
 related: [chunking-strategies, retrieval-augmented-generation, advanced-rag, hybrid-search, reranking, hyde]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Late Chunking

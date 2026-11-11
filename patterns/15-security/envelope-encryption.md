@@ -1,14 +1,20 @@
 ---
 name: Envelope Encryption
 slug: envelope-encryption
+id: pat.15.envelope-encryption
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Key Wrapping, Data Key Wrapping, DEK and KEK, Client-side Envelope Encryption]
 first_described: "Established key management practice"
 maturity: established
 related: [secrets-management, key-rotation, least-privilege, defense-in-depth, fail-securely]
-incompatible_with: [single-static-data-key, hardcoded-secret, homegrown-cryptography]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [single-static-data-key, hardcoded-secret, homegrown-cryptography]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Envelope Encryption

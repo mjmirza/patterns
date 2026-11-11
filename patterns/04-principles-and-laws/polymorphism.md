@@ -1,14 +1,20 @@
 ---
 name: Polymorphism
 slug: polymorphism
+id: pat.04.polymorphism
+kind: principle
 family: 04-principles-and-laws
 category: Principles and Laws
 aliases: [Subtype Polymorphism, Parametric Polymorphism, Ad Hoc Polymorphism, Dynamic Dispatch, Late Binding]
 first_described: "Christopher Strachey 1967, Cardelli and Wegner 1985"
 maturity: canonical
 related: [liskov-substitution-principle, open-closed-principle, strategy, template-method, visitor, bridge, dependency-inversion-principle, interface-segregation-principle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-09
+last_reviewed: 2026-08-09
+next_review_due: 2027-02-05
 ---
 
 # Polymorphism

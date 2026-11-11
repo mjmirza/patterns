@@ -1,14 +1,20 @@
 ---
 name: Agent Tracing
 slug: agent-tracing
+id: pat.17.agent-tracing
+kind: pattern
 family: 17-ai-agentic
 category: Observability
 aliases: [LLM Tracing, Agent Observability, GenAI Tracing, Trace-Based Agent Debugging]
 first_described: "Sigelman, Barroso, Burrows, Stephenson, Plakal, Beaver, Jaspan, Shanbhag 2010 (distributed tracing origin, Google Dapper); adapted to LLM and agent workloads by LangSmith, Langfuse and OpenTelemetry's GenAI semantic conventions working group from 2023 onward"
 maturity: emerging
-related: [model-context-protocol, function-calling, llm-circuit-breaker, cost-guard, multi-agent-supervisor, react, agent-handoff, evaluation-suite]
+related: [model-context-protocol, function-calling, llm-circuit-breaker, cost-guard, multi-agent-supervisor, react-prompting, agent-handoff, evaluation-suite]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Agent Tracing

@@ -1,14 +1,20 @@
 ---
 name: Message Filter
 slug: message-filter
+id: pat.07.message-filter
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Content Filter, Selective Consumer, Filter EIP]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [content-based-router, message-router, publish-subscribe-channel, dead-letter-channel, pipes-and-filters]
+related: [content-based-router, publisher-subscriber, dead-letter-channel, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters]
+related_concepts: [message-router]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Message Filter

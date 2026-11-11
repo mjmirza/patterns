@@ -1,14 +1,20 @@
 ---
 name: State
 slug: state
+id: pat.01.state
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Objects for States, State Object, Statechart Pattern]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [strategy, flyweight, singleton, command, observer, memento, bridge]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # State

@@ -1,14 +1,20 @@
 ---
 name: Cache Stampede
 slug: cache-stampede
+id: pat.18.cache-stampede
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Dog-Piling, Cache Herd, Dogpile Effect, Thundering Herd on a Cache]
 first_described: "Community usage, term traced by Wikipedia to caching and web operations literature circa 2009"
 maturity: canonical
-related: [circuit-breaker, bulkhead, cache-aside, lazy-initialization, singleton]
+related: [circuit-breaker, bulkhead, cache-aside, singleton]
+related_concepts: [lazy-initialization]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Cache Stampede

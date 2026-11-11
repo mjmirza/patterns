@@ -1,14 +1,20 @@
 ---
 name: Command Palette UI
 slug: command-palette-ui
+id: pat.13.command-palette-ui
+kind: pattern
 family: 13-frontend-ui
 category: Composition
 aliases: [Command Menu, cmdk, Quick Switcher]
 first_described: "cmdk library, pacocoursey"
 maturity: established
 related: [headless-component, debounce-and-throttle]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Command Palette UI

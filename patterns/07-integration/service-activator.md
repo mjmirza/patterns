@@ -1,14 +1,20 @@
 ---
 name: Service Activator
 slug: service-activator
+id: pat.07.service-activator
+kind: pattern
 family: 07-integration
 category: Messaging Endpoint
 aliases: [Messaging Adapter, Message-Driven POJO, Message Endpoint Bean]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [message-endpoint, messaging-gateway, request-reply, competing-consumers, message-channel]
+related: [messaging-gateway, request-reply, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, message-channel]
+related_concepts: [message-endpoint]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service Activator

@@ -1,14 +1,20 @@
 ---
 name: Module
 slug: module
+id: pat.11.module
+kind: pattern
 family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Package, Namespace, Bounded Context Internal Grouping]
 first_described: "Evans 2003"
 maturity: canonical
-related: [aggregate, bounded-context, layered-architecture, hexagonal-architecture, repository]
+related: [10-microservices/aggregate, 11-domain-driven-design/aggregate, bounded-context, 05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, hexagonal-architecture, repository]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Module

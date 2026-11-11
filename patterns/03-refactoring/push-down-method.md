@@ -1,14 +1,20 @@
 ---
 name: Push Down Method
 slug: push-down-method
+id: pat.03.push-down-method
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Push Down Function, Move Method to Subclass]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [push-down-field, pull-up-method, extract-subclass, collapse-hierarchy, replace-conditional-with-polymorphism, move-function]
+related: [push-down-field, pull-up-method, collapse-hierarchy, replace-conditional-with-polymorphism, move-function]
+related_concepts: [extract-subclass]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Push Down Method

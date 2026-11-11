@@ -1,14 +1,20 @@
 ---
 name: LLM as Judge
 slug: llm-as-judge
+id: pat.17.llm-as-judge
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [LLM-as-a-Judge, Model-Graded Evaluation, AI Judge, Autorater]
 first_described: "Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li, Li, Xing, Zhang, Gonzalez, Stoica 2023"
 maturity: established
-related: [reflexion, evaluator-optimizer, self-consistency, self-rag, input-guardrails, output-guardrails, chain-of-thought, react]
+related: [reflexion, evaluator-optimizer, self-consistency, self-rag, input-guardrails, output-guardrails, chain-of-thought, react-prompting]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # LLM as Judge

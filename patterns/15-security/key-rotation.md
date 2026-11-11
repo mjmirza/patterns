@@ -1,14 +1,20 @@
 ---
 name: Key Rotation
 slug: key-rotation
+id: pat.15.key-rotation
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Cryptographic Key Rotation, Secret Rotation, Credential Rotation, Certificate Rotation]
 first_described: "Established key management practice"
 maturity: established
 related: [secrets-management, envelope-encryption, least-privilege, defense-in-depth, fail-securely]
-incompatible_with: [hardcoded-secret, shared-credential, single-static-key]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [hardcoded-secret, shared-credential, single-static-key]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Key Rotation

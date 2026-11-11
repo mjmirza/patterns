@@ -1,14 +1,20 @@
 ---
 name: Divergent Change
 slug: divergent-change
+id: pat.02.divergent-change
+kind: smell
 family: 02-code-smells
 category: Change Preventers
 aliases: [Shotgun Class, God Class Drift, Multiple Reasons to Change]
 first_described: "Fowler, Beck, Brant, Opdyke, Roberts 1999, Refactoring, Improving the Design of Existing Code"
 maturity: canonical
-related: [shotgun-surgery, single-responsibility-principle, extract-class, move-method, facade, strategy, observer]
+related: [shotgun-surgery, single-responsibility-principle, extract-class, move-function, facade, strategy, observer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Divergent Change

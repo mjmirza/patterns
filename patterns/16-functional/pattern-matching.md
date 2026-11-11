@@ -1,14 +1,20 @@
 ---
 name: Pattern Matching
 slug: pattern-matching
+id: pat.16.pattern-matching
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Match Expression, Case Analysis, Destructuring Match, Structural Pattern Matching]
 first_described: "functional language lineage, including Hope, ML, Haskell, OCaml, Erlang"
 maturity: established
-related: [algebraic-data-type, result-either, option-maybe, visitor, parser-combinator, finite-state-machine]
-incompatible_with: [large-type-switch, catch-all-default-flow, reflective-dispatch]
+related: [algebraic-data-type, result-either, option-maybe, visitor]
+related_concepts: [parser-combinator, finite-state-machine]
+incompatible_with: []
+incompatible_concepts: [large-type-switch, catch-all-default-flow, reflective-dispatch]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Pattern Matching

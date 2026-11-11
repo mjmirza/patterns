@@ -1,14 +1,20 @@
 ---
 name: State Machine Workflow
 slug: state-machine-workflow
+id: pat.23.state-machine-workflow
+kind: pattern
 family: 23-workflow-orchestration
 category: workflow orchestration
 aliases: [Finite State Machine, Statechart, Explicit State Modeling]
 first_described: "Mealy machines, George H. Mealy, 1955. Moore machines, Edward F. Moore, 1956. Extended with hierarchy and orthogonal regions by David Harel's Statecharts, 1987. Given an object-oriented implementation shape by the Gang of Four's State design pattern, 1994"
 maturity: canonical
 related: [state, saga, choreography, workflow-engine, orchestrator-worker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # State Machine Workflow

@@ -1,14 +1,20 @@
 ---
 name: Gossip Protocol
 slug: gossip-protocol
+id: pat.12.gossip-protocol
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Epidemic Protocol, Epidemic Algorithm, Rumor Mongering, Infection-Style Dissemination]
 first_described: "Demers, Greene, Hauser, Irish, Larson, Shenker, Sturgis, Swinehart, Terry 1987"
 maturity: canonical
 related: [leaderless-replication, consistent-hashing, crdt, quorum, lamport-clock, leader-election]
-incompatible_with: [two-phase-commit, single-leader-replication]
+related_concepts: []
+incompatible_with: [two-phase-commit]
+incompatible_concepts: [single-leader-replication]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Gossip Protocol

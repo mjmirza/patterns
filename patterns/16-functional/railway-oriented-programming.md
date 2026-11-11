@@ -1,14 +1,20 @@
 ---
 name: Railway-Oriented Programming
 slug: railway-oriented-programming
+id: pat.16.railway-oriented-programming
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [ROP, Two-track error handling, Result pipeline, Either pipeline]
 first_described: "Wlaschin 2013"
 maturity: established
-related: [result, either, monad, kleisli-composition, validation, error-handling]
-incompatible_with: [exception-only-flow, unchecked-null-flow, fail-fast-panic-flow]
+related: [result-either, monad, validation-applicative]
+related_concepts: [kleisli-composition, error-handling]
+incompatible_with: []
+incompatible_concepts: [exception-only-flow, unchecked-null-flow, fail-fast-panic-flow]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Railway-Oriented Programming

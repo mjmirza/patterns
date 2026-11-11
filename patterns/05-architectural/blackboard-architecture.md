@@ -1,14 +1,20 @@
 ---
 name: Blackboard Architecture
 slug: blackboard-architecture
+id: pat.05.blackboard-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Blackboard System, Blackboard Model, Blackboard Pattern]
 first_described: "Hearsay-II project members, Carnegie Mellon University, 1970s; catalogued by Buschmann, Meunier, Rohnert, Sommerlad, Stal, 1996"
 maturity: established
-related: [pipes-filters, mediator, observer, event-driven-architecture, microkernel, chain-of-responsibility]
-incompatible_with: [layered-architecture]
+related: [05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, mediator, observer, event-driven-architecture, microkernel, chain-of-responsibility]
+related_concepts: []
+incompatible_with: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases and lineage

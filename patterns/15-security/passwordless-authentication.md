@@ -1,14 +1,20 @@
 ---
 name: Passwordless Authentication
 slug: passwordless-authentication
+id: pat.15.passwordless-authentication
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Passwordless Login, Passwordless Sign-In, Passkey Authentication, Magic Link Login, FIDO2 Passwordless]
 first_described: "FIDO Alliance FIDO2 and W3C WebAuthn, 2018"
 maturity: established
-related: [passkeys-webauthn, session-management, token-based-authentication, openid-connect, zero-trust, secure-by-default]
-incompatible_with: [password-per-request, shared-secret-login, knowledge-based-authentication]
+related: [passkeys-and-webauthn, session-management, token-based-authentication, openid-connect, zero-trust, secure-by-default]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [password-per-request, shared-secret-login, knowledge-based-authentication]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Passwordless Authentication

@@ -1,14 +1,20 @@
 ---
 name: PRPL Pattern
 slug: prpl-pattern
+id: pat.13.prpl-pattern
+kind: pattern
 family: 13-frontend-ui
 category: Loading Strategy
 aliases: [Push Render Precache Lazy-load, Instant Loading Pattern]
 first_described: "web.dev, Apply instant loading with the PRPL pattern"
 maturity: established
-related: [code-splitting, resource-hints, route-based-lazy-loading, service-worker]
+related: [code-splitting, resource-hints, route-based-lazy-loading]
+related_concepts: [service-worker]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # PRPL Pattern

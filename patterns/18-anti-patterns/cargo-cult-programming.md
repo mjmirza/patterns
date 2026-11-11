@@ -1,14 +1,20 @@
 ---
 name: Cargo Cult Programming
 slug: cargo-cult-programming
+id: pat.18.cargo-cult-programming
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Cargo Cult Software Engineering, Ritual Programming, Copy-Paste-Without-Understanding]
 first_described: "Term appears in the Jargon File version 2.5.1, January 1991, per the term's own etymology on Wikipedia; the underlying metaphor is Richard Feynman's 1974 Caltech commencement address 'Cargo Cult Science'"
 maturity: canonical
-related: [copy-paste-programming, golden-hammer, boat-anchor, template-method, code-review, dead-code]
-incompatible_with: [code-review, test-driven-development]
+related: [copy-paste-programming, golden-hammer, boat-anchor, template-method, dead-code]
+related_concepts: [code-review]
+incompatible_with: []
+incompatible_concepts: [code-review, test-driven-development]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Cargo Cult Programming

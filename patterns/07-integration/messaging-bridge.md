@@ -1,14 +1,20 @@
 ---
 name: Messaging Bridge
 slug: messaging-bridge
+id: pat.07.messaging-bridge
+kind: pattern
 family: 07-integration
 category: Enterprise Integration
 aliases: [Message Bridge, Bus Bridge, Broker Bridge]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [channel-adapter, message-translator, point-to-point-channel, publish-subscribe-channel, dead-letter-channel]
+related: [channel-adapter, point-to-point-channel, publisher-subscriber, dead-letter-channel]
+related_concepts: [message-translator]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Messaging Bridge

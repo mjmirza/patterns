@@ -1,14 +1,20 @@
 ---
 name: Object Pool
 slug: object-pool
+id: pat.29.object-pool
+kind: pattern
 family: 29-realtime-simulation
 category: Real-Time Simulation
 aliases: [Pool Allocator, Free List, Reusable Object Pool]
 first_described: "Robert Nystrom's Object Pool chapter in Game Programming Patterns, in the book's own Optimization Patterns part"
 maturity: canonical
 related: [game-loop]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Object Pool

@@ -2,56 +2,56 @@
 
 Origin. Gamma, Helm, Johnson, Vlissides 1994
 
-33 entries, 309,854 words. Every entry carries all 18
+33 entries, 310,252 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Behavioral
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Chain of Responsibility](chain-of-responsibility.md) | canonical | 11,381 | A request arrives and there are several plausible things that might deal with it, the correct one depends on the request itself, and the code raising the request has no business ... |
-| [Command](command.md) | canonical | 11,022 | An invoker needs to trigger work without knowing what the work is, who performs it, or when it will actually run. |
-| [Interpreter](interpreter.md) | canonical | 12,160 | A system has to make a decision, a computation, or a selection whose rule is not known when the system is compiled. |
-| [Iterator](iterator.md) | canonical | 11,672 | A client needs to visit every element of a collection, and the collection knows how it stores those elements while the client does not and should not. |
-| [Mediator](mediator.md) | canonical | 11,878 | A set of objects has to cooperate, and every one of them needs to know something about the others in order to do its part. |
-| [Memento](memento.md) | canonical | 11,628 | An object holds state that changes over time, and something outside that object needs the ability to put the state back the way it was. |
-| [Null Object](null-object.md) | canonical | 3,506 | Client code that collaborates with an optional object is, in most languages, forced to check for absence before every call. |
-| [Observer](observer.md) | canonical | 13,315 | A piece of state changes, and an unknown number of other pieces of the system need to react. |
-| [Servant](servant.md) | contested | 5,677 | Wikipedia's own definition, quoted directly. |
-| [State](state.md) | canonical | 14,281 | An object behaves differently depending on a mode it is in, and every method that depends on that mode has grown the same conditional. |
-| [Strategy](strategy.md) | canonical | 11,071 | An object does a piece of work in more than one way, and the choice of way is not a property of the object's identity. |
-| [Template Method](template-method.md) | canonical | 12,033 | Two or more procedures do the same thing in the same order, and differ in a small number of steps in the middle. |
-| [Visitor](visitor.md) | canonical | 12,082 | There is a data structure whose shape is stable and whose set of node types almost never changes, and there is a growing pile of operations over it, each of which needs to do ... |
+| [Chain of Responsibility](chain-of-responsibility.md) | canonical | 11,393 | A request arrives and there are several plausible things that might deal with it, the correct one depends on the request itself, and the code raising the request has no business ... |
+| [Command](command.md) | canonical | 11,034 | An invoker needs to trigger work without knowing what the work is, who performs it, or when it will actually run. |
+| [Interpreter](interpreter.md) | canonical | 12,172 | A system has to make a decision, a computation, or a selection whose rule is not known when the system is compiled. |
+| [Iterator](iterator.md) | canonical | 11,684 | A client needs to visit every element of a collection, and the collection knows how it stores those elements while the client does not and should not. |
+| [Mediator](mediator.md) | canonical | 11,890 | A set of objects has to cooperate, and every one of them needs to know something about the others in order to do its part. |
+| [Memento](memento.md) | canonical | 11,640 | An object holds state that changes over time, and something outside that object needs the ability to put the state back the way it was. |
+| [Null Object](null-object.md) | canonical | 3,518 | Client code that collaborates with an optional object is, in most languages, forced to check for absence before every call. |
+| [Observer](observer.md) | canonical | 13,327 | A piece of state changes, and an unknown number of other pieces of the system need to react. |
+| [Servant](servant.md) | contested | 5,689 | Wikipedia's own definition, quoted directly. |
+| [State](state.md) | canonical | 14,293 | An object behaves differently depending on a mode it is in, and every method that depends on that mode has grown the same conditional. |
+| [Strategy](strategy.md) | canonical | 11,083 | An object does a piece of work in more than one way, and the choice of way is not a property of the object's identity. |
+| [Template Method](template-method.md) | canonical | 12,045 | Two or more procedures do the same thing in the same order, and differ in a small number of steps in the middle. |
+| [Visitor](visitor.md) | canonical | 12,094 | There is a data structure whose shape is stable and whose set of node types almost never changes, and there is a growing pile of operations over it, each of which needs to do ... |
 
 ## Creational
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Abstract Factory](abstract-factory.md) | canonical | 6,653 | You have several product types that must vary together. |
-| [Builder](builder.md) | canonical | 6,755 | A type is expensive or awkward to construct because construction has several independent axes. |
-| [Factory Method](factory-method.md) | canonical | 6,010 | A class does real work that involves an object it must create, and it cannot name the concrete class of that object at the point where the work is written. |
-| [Multiton](multiton.md) | contested | 5,315 | Sometimes an application needs at most one instance of a class per distinct key value, never a single global instance and never unrestricted instantiation. |
-| [Prototype](prototype.md) | canonical | 7,511 | You have an object whose configuration is expensive, awkward, or impossible to reconstruct from a constructor call. |
-| [Singleton](singleton.md) | contested | 9,217 | A resource exists once in the running process, and code scattered across the program needs to reach it without threading a reference through every call. |
+| [Abstract Factory](abstract-factory.md) | canonical | 6,665 | You have several product types that must vary together. |
+| [Builder](builder.md) | canonical | 6,767 | A type is expensive or awkward to construct because construction has several independent axes. |
+| [Factory Method](factory-method.md) | canonical | 6,022 | A class does real work that involves an object it must create, and it cannot name the concrete class of that object at the point where the work is written. |
+| [Multiton](multiton.md) | contested | 5,327 | Sometimes an application needs at most one instance of a class per distinct key value, never a single global instance and never unrestricted instantiation. |
+| [Prototype](prototype.md) | canonical | 7,523 | You have an object whose configuration is expensive, awkward, or impossible to reconstruct from a constructor call. |
+| [Singleton](singleton.md) | contested | 9,228 | A resource exists once in the running process, and code scattered across the program needs to reach it without threading a reference through every call. |
 
 ## Structural
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Adapter](adapter.md) | canonical | 11,688 | Two pieces of code need to work together and neither can be changed to match the other. |
-| [Bridge](bridge.md) | canonical | 12,403 | A single class hierarchy is being asked to vary along two independent axes at once, and the class count is growing as the product of the two axis sizes rather than as their sum. |
-| [Composite](composite.md) | canonical | 10,897 | There is a domain where a thing can be made of the same kind of thing, without limit, and client code has to operate over the whole structure without caring how deep it goes. |
-| [Data Access Object](data-access-object.md) | canonical | 6,452 | Most real applications need to read and write persistent data at some point, and that data can live behind very different access mechanisms: a relational database reached through ... |
-| [Decorator](decorator.md) | canonical | 14,044 | An object needs an extra responsibility, only sometimes, only for some instances, and the set of extra responsibilities keeps growing and keeps combining. |
-| [Dependency Injection](dependency-injection.md) | canonical | 5,802 | Fowler's own running example names the problem precisely. |
-| [Extension Object](extension-object.md) | established | 6,186 | Some abstractions cannot have their full, final interface anticipated at design time, because different clients of the same class genuinely need different views onto it. |
-| [Facade](facade.md) | canonical | 11,164 | A caller needs a small, ordinary result from a subsystem that is large, correct and unpleasant to talk to. |
-| [Flyweight](flyweight.md) | canonical | 11,738 | A program needs a very large number of objects that are almost all the same, and the memory cost of representing each one separately is what is going to break it. |
-| [Marker Interface](marker-interface.md) | contested | 5,211 | Sometimes a class needs to signal a capability or a semantic property to an external mechanism, most often the runtime or a framework, without adding any real behaviour of its own. |
-| [Private Class Data](private-class-data.md) | contested | 6,549 | SourceMaking's own "Problem" section states the target of the pattern directly. |
-| [Proxy](proxy.md) | canonical | 9,732 | Some object is expensive, remote, dangerous, or shared, and the code that wants to use it should not have to know that. |
-| [Role Object](role-object.md) | established | 8,705 | A single key abstraction is used from more than one context, and each context needs its own, different view of it. |
-| [Twin](twin.md) | contested | 6,116 | A designer working in a single inheritance language sometimes needs one conceptual object to behave as two unrelated, already existing base types at once, each carrying its own ... |
+| [Adapter](adapter.md) | canonical | 11,700 | Two pieces of code need to work together and neither can be changed to match the other. |
+| [Bridge](bridge.md) | canonical | 12,415 | A single class hierarchy is being asked to vary along two independent axes at once, and the class count is growing as the product of the two axis sizes rather than as their sum. |
+| [Composite](composite.md) | canonical | 10,909 | There is a domain where a thing can be made of the same kind of thing, without limit, and client code has to operate over the whole structure without caring how deep it goes. |
+| [Data Access Object](data-access-object.md) | canonical | 6,464 | Most real applications need to read and write persistent data at some point, and that data can live behind very different access mechanisms: a relational database reached through ... |
+| [Decorator](decorator.md) | canonical | 14,056 | An object needs an extra responsibility, only sometimes, only for some instances, and the set of extra responsibilities keeps growing and keeps combining. |
+| [Dependency Injection](dependency-injection.md) | canonical | 5,816 | Fowler's own running example names the problem precisely. |
+| [Extension Object](extension-object.md) | established | 6,198 | Some abstractions cannot have their full, final interface anticipated at design time, because different clients of the same class genuinely need different views onto it. |
+| [Facade](facade.md) | canonical | 11,176 | A caller needs a small, ordinary result from a subsystem that is large, correct and unpleasant to talk to. |
+| [Flyweight](flyweight.md) | canonical | 11,751 | A program needs a very large number of objects that are almost all the same, and the memory cost of representing each one separately is what is going to break it. |
+| [Marker Interface](marker-interface.md) | contested | 5,223 | Sometimes a class needs to signal a capability or a semantic property to an external mechanism, most often the runtime or a framework, without adding any real behaviour of its own. |
+| [Private Class Data](private-class-data.md) | contested | 6,561 | SourceMaking's own "Problem" section states the target of the pattern directly. |
+| [Proxy](proxy.md) | canonical | 9,744 | Some object is expensive, remote, dangerous, or shared, and the code that wants to use it should not have to know that. |
+| [Role Object](role-object.md) | established | 8,717 | A single key abstraction is used from more than one context, and each context needs its own, different view of it. |
+| [Twin](twin.md) | contested | 6,128 | A designer working in a single inheritance language sometimes needs one conceptual object to behave as two unrelated, already existing base types at once, each carrying its own ... |
 
 ## Reading order
 

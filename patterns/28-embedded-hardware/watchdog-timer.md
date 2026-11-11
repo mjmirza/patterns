@@ -1,14 +1,20 @@
 ---
 name: Watchdog Timer
 slug: watchdog-timer
+id: pat.28.watchdog-timer
+kind: pattern
 family: 28-embedded-hardware
 category: Behavioral
 aliases: [WDT, Feed the Dog, Kick the Watchdog]
 first_described: "Zephyr Project documentation, Task Watchdog service"
 maturity: canonical
 related: [interrupt-service-routine, polling-loop]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Watchdog Timer

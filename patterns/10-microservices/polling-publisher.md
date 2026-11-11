@@ -1,14 +1,20 @@
 ---
 name: Polling Publisher
 slug: polling-publisher
+id: pat.10.polling-publisher
+kind: pattern
 family: 10-microservices
 category: Data
 aliases: [Outbox Polling, Message Relay Polling, Cursor-Based Relay]
 first_described: "Richardson, microservices.io pattern catalog"
 maturity: canonical
-related: [transactional-outbox, transaction-log-tailing, domain-event, saga, database-per-service]
+related: [transactional-outbox, transaction-log-tailing, 10-microservices/domain-event, 11-domain-driven-design/domain-event, saga, database-per-service]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Polling Publisher

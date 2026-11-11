@@ -1,14 +1,20 @@
 ---
 name: Work Stealing
 slug: work-stealing
+id: pat.09.work-stealing
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Work-Stealing Scheduler, Randomized Work Stealing, Cilk Scheduling]
 first_described: "Blumofe, Leiserson 1994 (Scheduling Multithreaded Computations by Work Stealing)"
 maturity: canonical
-related: [thread-pool, fork-join, producer-consumer, future-promise, leader-followers]
+related: [thread-pool, fork-join, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer, future-promise, leader-followers]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

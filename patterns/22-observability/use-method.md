@@ -1,14 +1,20 @@
 ---
 name: USE Method
 slug: use-method
+id: pat.22.use-method
+kind: pattern
 family: 22-observability
 category: Structural
 aliases: [Utilization Saturation Errors]
 first_described: 'Brendan Gregg, brendangregg.com/usemethod.html, exact first publication year not independently verified this session'
 maturity: canonical
 related: [red-method, structured-logging, correlation-id]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # USE Method

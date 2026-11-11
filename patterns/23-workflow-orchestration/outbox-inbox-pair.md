@@ -1,13 +1,20 @@
 ---
 name: Outbox Inbox Pair
 slug: outbox-inbox-pair
+id: pat.23.outbox-inbox-pair
+kind: pattern
 family: 23-workflow-orchestration
 category: workflow orchestration
 aliases: [Transactional Outbox, Idempotent Consumer, Inbox Pattern, Outbox Pattern]
 first_described: "Gregor Hohpe and Bobby Woolf's Idempotent Receiver, documented on the Enterprise Integration Patterns companion site to their 2003 Addison-Wesley book, is the earliest closely related concept, addressing safe handling of a duplicate message. The send-side half, Transactional Outbox, and the receive-side half, named Idempotent Consumer, were both catalogued together by Chris Richardson on microservices.io, with detailed treatment in his 2018 Manning book Microservices Patterns. Debezium's Outbox Event Router, first shipped by Red Hat's Debezium project, later became the most widely used concrete implementation of the send-side relay"
 maturity: established
 related: [saga, compensation-handler, durable-execution, workflow-engine, state-machine-workflow, human-task]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Outbox Inbox Pair

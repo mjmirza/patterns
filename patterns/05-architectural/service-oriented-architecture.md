@@ -1,14 +1,20 @@
 ---
 name: Service-Oriented Architecture
 slug: service-oriented-architecture
+id: pat.05.service-oriented-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [SOA, Enterprise SOA, WS-* SOA]
 first_described: "IBM and industry consortia, late 1990s, popularized through W3C Web Services Architecture, 2004"
 maturity: contested
-related: [microservices, api-gateway, service-registry, message-bus, esb, saga]
-incompatible_with: [big-ball-of-mud]
+related: [microservices-architecture, api-gateway, service-registry, message-bus, saga]
+related_concepts: [esb]
+incompatible_with: [11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Service-Oriented Architecture

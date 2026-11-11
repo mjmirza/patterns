@@ -1,14 +1,20 @@
 ---
 name: Free Monad
 slug: free-monad
+id: pat.16.free-monad
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Free, FreeM, Freer Monad, Operational Monad]
 first_described: "Swierstra 2008, Voigtlaender 2008"
 maturity: established
 related: [functor, monad, applicative, tagless-final, interpreter, command, trampolining]
-incompatible_with: [opaque-effect-stack, direct-style-io-only, performance-critical-hot-loop]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [opaque-effect-stack, direct-style-io-only, performance-critical-hot-loop]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Free Monad

@@ -1,14 +1,20 @@
 ---
 name: Point-to-Point Channel
 slug: point-to-point-channel
+id: pat.07.point-to-point-channel
+kind: pattern
 family: 07-integration
 category: Messaging Channels
 aliases: [PTP Channel, Queue Channel, Point-to-Point Messaging Domain]
 first_described: "Hohpe and Woolf 2003"
 maturity: canonical
-related: [publish-subscribe-channel, competing-consumers, message-queue, dead-letter-channel, guaranteed-delivery, message-dispatcher, selective-consumer, request-reply, correlation-identifier]
+related: [publisher-subscriber, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, dead-letter-channel, guaranteed-delivery, message-dispatcher, selective-consumer, request-reply, correlation-identifier]
+related_concepts: [message-queue]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Point-to-Point Channel

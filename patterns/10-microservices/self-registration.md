@@ -1,14 +1,20 @@
 ---
 name: Self Registration
 slug: self-registration
+id: pat.10.self-registration
+kind: pattern
 family: 10-microservices
 category: Microservices
 aliases: [Client-Side Registration, Push Registration, Service Self-Registration]
 first_described: "Richardson 2018, Microservices Patterns, Manning"
 maturity: canonical
 related: [service-registry, client-side-service-discovery, server-side-service-discovery, self-contained-service]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Self Registration

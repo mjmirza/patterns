@@ -1,14 +1,20 @@
 ---
 name: Factory
 slug: factory
+id: pat.11.factory
+kind: pattern
 family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Domain Factory, Aggregate Factory, Factory Method on Aggregate Root]
 first_described: "Evans 2003"
 maturity: canonical
-related: [aggregate-root, entity, value-object, repository, factory-method, abstract-factory, builder]
+related: [aggregate-root, entity, 06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, repository, factory-method, abstract-factory, builder]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Factory

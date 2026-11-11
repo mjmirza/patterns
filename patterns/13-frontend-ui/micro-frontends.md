@@ -1,14 +1,20 @@
 ---
 name: Micro Frontends
 slug: micro-frontends
+id: pat.13.micro-frontends
+kind: pattern
 family: 13-frontend-ui
 category: Application Architecture
 aliases: [Frontend Microservices, Micro Frontend Architecture]
 first_described: "Thoughtworks Technology Radar, November 2016"
 maturity: established
 related: [server-components, islands-architecture, atomic-design]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Micro Frontends

@@ -1,14 +1,20 @@
 ---
 name: Poltergeist
 slug: poltergeist
+id: pat.18.poltergeist
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Gypsy Wagon, Ghost Class, Stub Class Proliferation, Class-Happy Design]
 first_described: "Akroyd 1996, catalogued in Brown, Malveau, McCormick, Mowbray 1998"
 maturity: canonical
 related: [factory-method, facade, middle-man, feature-envy, god-object, lava-flow]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Poltergeist

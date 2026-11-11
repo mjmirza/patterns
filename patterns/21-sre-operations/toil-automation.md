@@ -1,14 +1,20 @@
 ---
 name: Toil Automation
 slug: toil-automation
+id: pat.21.toil-automation
+kind: pattern
 family: 21-sre-operations
 category: Behavioral
 aliases: [Operational Automation, Toil Elimination, Toil Reduction]
 first_described: 'Google, Site Reliability Engineering, Eliminating Toil chapter, 2016'
 maturity: canonical
 related: [error-budget, runbook-automation]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Toil Automation

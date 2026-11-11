@@ -1,14 +1,20 @@
 ---
 name: Prompt Chaining
 slug: prompt-chaining
+id: pat.17.prompt-chaining
+kind: pattern
 family: 17-ai-agentic
 category: Agentic Workflow
 aliases: [Sequential Chain, LLM Pipeline, Chained Prompting, Prompt Pipelining]
 first_described: "Anthropic 2024, Building Effective Agents"
 maturity: established
-related: [pipeline-processing, chain-of-responsibility, pipes-and-filters, retry, orchestrator-workers, routing-workflow]
+related: [chain-of-responsibility, 05-architectural/pipes-filters, 08-cloud-distributed/pipes-filters, retry, orchestrator-worker]
+related_concepts: [pipeline-processing, routing-workflow]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Prompt Chaining

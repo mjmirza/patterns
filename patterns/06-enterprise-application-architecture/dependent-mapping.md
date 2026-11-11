@@ -1,14 +1,20 @@
 ---
 name: Dependent Mapping
 slug: dependent-mapping
+id: pat.06.dependent-mapping
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Object-Relational Structural
 aliases: [Owned Entity Mapping, Privately Owned Association]
 first_described: "Fowler 2003"
 maturity: canonical
 related: [data-mapper, identity-field, foreign-key-mapping, embedded-value, serialized-lob, unit-of-work]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Dependent Mapping

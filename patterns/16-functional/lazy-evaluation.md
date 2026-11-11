@@ -1,14 +1,20 @@
 ---
 name: Lazy Evaluation
 slug: lazy-evaluation
+id: pat.16.lazy-evaluation
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Laziness, Deferred Evaluation, Deferred Execution, Call by Need, Non-strict Evaluation]
 first_described: "Established in non-strict functional language research and call-by-need semantics"
 maturity: canonical
-related: [memoization, iterator, generator, stream, function-composition, foldable, monad, persistent-data-structures]
-incompatible_with: [strict-resource-release, required-immediate-side-effects, stack-trace-dependent-control-flow]
+related: [memoization, iterator, function-composition, foldable, monad, persistent-data-structures]
+related_concepts: [generator, stream]
+incompatible_with: []
+incompatible_concepts: [strict-resource-release, required-immediate-side-effects, stack-trace-dependent-control-flow]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Lazy Evaluation

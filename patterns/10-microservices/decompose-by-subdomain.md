@@ -1,14 +1,20 @@
 ---
 name: Decompose by Subdomain
 slug: decompose-by-subdomain
+id: pat.10.decompose-by-subdomain
+kind: pattern
 family: 10-microservices
 category: Structural
 aliases: [Domain-Oriented Decomposition, DDD-Aligned Service Boundaries, Subdomain-Driven Decomposition]
 first_described: "Richardson 2018 (pattern catalog), building on Evans 2003 (DDD subdomains)"
 maturity: established
 related: [decompose-by-business-capability, strangler-fig, bounded-context, saga, api-gateway, backends-for-frontends]
+related_concepts: []
 incompatible_with: [shared-database]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Decompose by Subdomain

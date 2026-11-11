@@ -1,14 +1,20 @@
 ---
 name: Async Await
 slug: async-await
+id: pat.09.async-await
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Coroutines with async/await, Async Functions, Task-Based Asynchronous Pattern]
 first_described: "Selivanov 2015 (Python), Hejlsberg and Torgersen 2010 (C#), TC39 2017 (ECMAScript)"
 maturity: canonical
-related: [future-promise, reactor, proactor, half-sync-half-async, thread-pool, producer-consumer]
+related: [future-promise, reactor, proactor, half-sync-half-async, thread-pool, 09-concurrency/producer-consumer, 28-embedded-hardware/producer-consumer]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Async Await

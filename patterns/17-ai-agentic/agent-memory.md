@@ -1,14 +1,20 @@
 ---
 name: Agent Memory
 slug: agent-memory
+id: pat.17.agent-memory
+kind: pattern
 family: 17-ai-agentic
 category: AI/Agentic
 aliases: [Long-Term Memory, Stateful Agent Memory, Self-Editing Memory, Persistent Agent Memory]
 first_described: "Packer, Wooders, Lin, Fang, Patil, Stoica, Gonzalez 2023 (MemGPT)"
 maturity: established
-related: [react, reflexion, chunking-strategies, model-context-protocol, hybrid-search, graphrag]
+related: [react-prompting, reflexion, chunking-strategies, model-context-protocol, hybrid-search, graphrag]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Agent Memory

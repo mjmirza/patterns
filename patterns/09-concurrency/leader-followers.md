@@ -1,14 +1,20 @@
 ---
 name: Leader/Followers
 slug: leader-followers
+id: pat.09.leader-followers
+kind: pattern
 family: 09-concurrency
 category: Concurrency
 aliases: [Leader-Follower, Leader-Followers]
 first_described: "Schmidt, O'Ryan, Kircher, Pyarali, Buschmann 2000"
 maturity: canonical
-related: [reactor, proactor, half-sync-half-async, active-object, thread-pool, monitor-object, manager]
+related: [reactor, proactor, half-sync-half-async, active-object, thread-pool, monitor-object]
+related_concepts: [manager]
 incompatible_with: [proactor]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Leader/Followers

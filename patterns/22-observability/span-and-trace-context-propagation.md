@@ -1,14 +1,20 @@
 ---
 name: Span and Trace Context Propagation
 slug: span-and-trace-context-propagation
+id: pat.22.span-and-trace-context-propagation
+kind: pattern
 family: 22-observability
 category: Structural
 aliases: [Trace Propagation]
 first_described: 'no single named originator; converged industry practice, standardized by the W3C Trace Context specification, 2020, and implemented by OpenTelemetry'
 maturity: canonical
 related: [correlation-id, structured-logging, red-method, use-method]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Span and Trace Context Propagation

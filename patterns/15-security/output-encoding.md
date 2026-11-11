@@ -1,14 +1,20 @@
 ---
 name: Output Encoding
 slug: output-encoding
+id: pat.15.output-encoding
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Output Escaping, Contextual Escaping, Context-Sensitive Escaping, HTML Escaping]
 first_described: "OWASP Cross Site Scripting Prevention Cheat Sheet"
 maturity: established
 related: [input-validation, content-security-policy, complete-mediation, secure-by-default, parameterized-query]
-incompatible_with: [raw-html-rendering, string-concatenated-code, interceptor-only-escaping]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [raw-html-rendering, string-concatenated-code, interceptor-only-escaping]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Output Encoding

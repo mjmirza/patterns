@@ -1,14 +1,20 @@
 ---
 name: Hardware Abstraction Layer
 slug: hardware-abstraction-layer
+id: pat.28.hardware-abstraction-layer
+kind: pattern
 family: 28-embedded-hardware
 category: Structural
 aliases: [HAL, Board Support Package layer, Device Independence Layer]
 first_described: "ARM CMSIS documentation, hardware abstraction layer for Cortex-M processor registers"
 maturity: canonical
 related: [device-driver-pattern, interrupt-service-routine]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Hardware Abstraction Layer

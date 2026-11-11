@@ -1,14 +1,20 @@
 ---
 name: Durable Subscriber
 slug: durable-subscriber
+id: pat.07.durable-subscriber
+kind: pattern
 family: 07-integration
 category: Messaging
 aliases: [Durable Subscription, Persistent Subscriber, Retained Subscription]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
-related: [publish-subscribe-channel, message-store, competing-consumers, guaranteed-delivery, idempotent-receiver, dead-letter-channel]
-incompatible_with: [fire-and-forget-notification]
+related: [publisher-subscriber, message-store, 07-integration/competing-consumers, 08-cloud-distributed/competing-consumers, guaranteed-delivery, idempotent-consumer, dead-letter-channel]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [fire-and-forget-notification]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Durable Subscriber

@@ -1,14 +1,20 @@
 ---
 name: Improper Instantiation
 slug: improper-instantiation
+id: pat.18.improper-instantiation
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [Object Churn, Instantiation Abuse, Repeated Construction Anti-pattern]
 first_described: "Practitioner literature, no single origin, terminology stabilized in performance-tuning and API-design guides through the 2000s and 2010s"
 maturity: established
 related: [singleton-abuse, flyweight, object-pool, dependency-injection, factory-method, abstract-factory, golden-hammer]
+related_concepts: []
 incompatible_with: [flyweight, object-pool]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Improper Instantiation

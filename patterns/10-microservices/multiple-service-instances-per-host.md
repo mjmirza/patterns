@@ -1,14 +1,20 @@
 ---
 name: Multiple Service Instances per Host
 slug: multiple-service-instances-per-host
+id: pat.10.multiple-service-instances-per-host
+kind: pattern
 family: 10-microservices
 category: Deployment
 aliases: [Colocated Replicas, Process-per-Core, Preforking, N Instances per Node]
 first_described: "Newman 2015, Burns 2018"
 maturity: established
-related: [service-instance-per-host, service-instance-per-container, sidecar, service-mesh, circuit-breaker, health-check-api, client-side-discovery, self-registration]
+related: [service-instance-per-host, service-instance-per-container, sidecar, service-mesh, circuit-breaker, health-check-api, client-side-service-discovery, self-registration]
+related_concepts: []
 incompatible_with: [service-instance-per-vm]
+incompatible_concepts: []
 verified: 2026-08-17
+last_reviewed: 2026-08-17
+next_review_due: 2027-02-13
 ---
 
 # Multiple Service Instances per Host

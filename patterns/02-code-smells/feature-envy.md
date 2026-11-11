@@ -1,14 +1,20 @@
 ---
 name: Feature Envy
 slug: feature-envy
+id: pat.02.feature-envy
+kind: smell
 family: 02-code-smells
 category: Coupling
 aliases: [Inappropriate Method Placement, Misplaced Responsibility]
 first_described: "Fowler and Beck 1999"
 maturity: canonical
-related: [data-class, move-method, extract-class, message-chains, inappropriate-intimacy]
+related: [data-class, move-function, extract-class, message-chains, inappropriate-intimacy]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Feature Envy

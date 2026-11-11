@@ -1,14 +1,20 @@
 ---
 name: Render Props
 slug: render-props
+id: pat.13.render-props
+kind: pattern
 family: 13-frontend-ui
 category: Component Composition
 aliases: [Render Prop Pattern, Function as Child, Children as a Function]
 first_described: "Jackson 2017"
 maturity: established
 related: [compound-components, higher-order-component, container-presentational, hooks]
-incompatible_with: [hoc-wrapper-hell]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [hoc-wrapper-hell]
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # Render Props

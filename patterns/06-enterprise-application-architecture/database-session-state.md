@@ -1,14 +1,20 @@
 ---
 name: Database Session State
 slug: database-session-state
+id: pat.06.database-session-state
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Base Patterns
 aliases: [Session Table, Persistent Session Store, Server-Side Database Session, Shared Session Store]
 first_described: "Fowler, Patterns of Enterprise Application Architecture, 2002"
 maturity: canonical
 related: [server-session-state, client-session-state, serialized-lob, optimistic-offline-lock, pessimistic-offline-lock, identity-field, remote-facade, data-transfer-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-11
+last_reviewed: 2026-08-11
+next_review_due: 2027-02-07
 ---
 
 # Database Session State

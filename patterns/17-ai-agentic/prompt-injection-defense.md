@@ -1,14 +1,20 @@
 ---
 name: Prompt Injection Defense
 slug: prompt-injection-defense
+id: pat.17.prompt-injection-defense
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Jailbreak Defense, Instruction Hierarchy Enforcement, Indirect Prompt Injection Mitigation]
 first_described: "Willison 2022 (coined the term); Greshake, Abdelnabi, Mishra, Endres, Holz, Fritz 2023 (indirect variant)"
 maturity: emerging
 related: [input-guardrails, output-guardrails, function-calling, model-context-protocol, sub-agent-isolation, cost-guard, llm-circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Prompt Injection Defense

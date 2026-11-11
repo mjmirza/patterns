@@ -1,14 +1,20 @@
 ---
 name: SLSA Provenance
 slug: slsa-provenance
+id: pat.15.slsa-provenance
+kind: pattern
 family: 15-security
 category: Supply Chain Security
 aliases: [Build Provenance, SLSA Attestation, Supply-chain Levels for Software Artifacts]
 first_described: "Google 2021"
 maturity: emerging
-related: [supply-chain-sbom, sigstore-signing, immutable-infrastructure, zero-trust-architecture]
-incompatible_with: [unattested-third-party-artifacts]
+related: [supply-chain-sbom, zero-trust]
+related_concepts: [sigstore-signing, immutable-infrastructure]
+incompatible_with: []
+incompatible_concepts: [unattested-third-party-artifacts]
 verified: 2026-08-21
+last_reviewed: 2026-08-21
+next_review_due: 2027-02-17
 ---
 
 # SLSA Provenance

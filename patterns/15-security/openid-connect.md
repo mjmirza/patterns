@@ -1,14 +1,20 @@
 ---
 name: OpenID Connect
 slug: openid-connect
+id: pat.15.openid-connect
+kind: pattern
 family: 15-security
 category: Security
 aliases: [OIDC, OpenID Connect 1.0, OpenID Connect Core]
 first_described: "OpenID Foundation OpenID Connect Core 1.0, 2014"
 maturity: established
 related: [oauth-2-1-flows, token-based-authentication, complete-mediation, zero-trust, secure-by-default]
-incompatible_with: [homegrown-login-protocol, password-per-request, implicit-session-authority]
+related_concepts: []
+incompatible_with: []
+incompatible_concepts: [homegrown-login-protocol, password-per-request, implicit-session-authority]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # OpenID Connect

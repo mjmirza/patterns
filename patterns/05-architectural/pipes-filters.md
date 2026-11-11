@@ -1,14 +1,20 @@
 ---
 name: Pipes and Filters
 slug: pipes-filters
+id: pat.05.pipes-filters
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Pipeline Architecture, Filter Pipeline, Pipe and Filter, Data Flow Architecture]
 first_described: "Buschmann, Meunier, Rohnert, Sommerlad, Stal 1996"
 maturity: canonical
-related: [layered-architecture, microkernel, chain-of-responsibility, decorator, mediator]
+related: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, microkernel, chain-of-responsibility, decorator, mediator]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Pipes and Filters

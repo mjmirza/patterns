@@ -1,14 +1,20 @@
 ---
 name: Idiomatic
 slug: idiomatic
+id: pat.04.idiomatic
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Idiomatic Code, Pythonic, Go-like, Rustic, Idiom Compliance]
 first_described: "Kernighan and Plauger 1974, formalized per-language from the 1990s onward"
 maturity: canonical
-related: [convention-over-configuration, principle-of-least-astonishment, kiss, yagni]
+related: [principle-of-least-astonishment, keep-it-simple, you-are-not-gonna-need-it]
+related_concepts: [convention-over-configuration]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Idiomatic

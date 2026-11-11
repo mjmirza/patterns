@@ -1,14 +1,20 @@
 ---
 name: Fake
 slug: fake
+id: pat.14.fake
+kind: pattern
 family: 14-testing
 category: Test Double
 aliases: [Fake Object, In-Memory Implementation]
 first_described: "Meszaros 2007, popularized by Fowler 2007"
 maturity: canonical
-related: [stub, dummy, mock-object, spy, dependency-injection, test-data-builder, adapter, repository]
+related: [stub, dummy, mock, spy, dependency-injection, test-data-builder, adapter, repository]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Fake

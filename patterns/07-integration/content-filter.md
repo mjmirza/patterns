@@ -1,14 +1,20 @@
 ---
 name: Content Filter
 slug: content-filter
+id: pat.07.content-filter
+kind: pattern
 family: 07-integration
 category: Integration
 aliases: [Data Filter, Field Selector, Response Filter, Payload Trimmer]
 first_described: "Hohpe, Woolf 2003"
 maturity: canonical
 related: [content-enricher, message-filter, splitter, content-based-router, channel-adapter]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Content Filter

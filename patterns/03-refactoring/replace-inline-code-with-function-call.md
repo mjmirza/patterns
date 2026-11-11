@@ -1,14 +1,20 @@
 ---
 name: Replace Inline Code with Function Call
 slug: replace-inline-code-with-function-call
+id: pat.03.replace-inline-code-with-function-call
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Replace Hand-Written Idiom with Function Call, Replace Manual Code with Library Call]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [extract-function, inline-function, substitute-algorithm, replace-loop-with-pipeline, slide-statements]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Inline Code with Function Call

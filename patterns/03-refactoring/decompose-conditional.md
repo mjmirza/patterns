@@ -1,14 +1,20 @@
 ---
 name: Decompose Conditional
 slug: decompose-conditional
+id: pat.03.decompose-conditional
+kind: technique
 family: 03-refactoring
 category: Refactoring
 aliases: [Split Conditional, Extract Condition, Name the Parts of a Conditional]
 first_described: "Fowler 1999"
 maturity: canonical
-related: [consolidate-conditional-expression, extract-function, replace-nested-conditional-with-guard-clauses, replace-conditional-with-polymorphism, introduce-explaining-variable]
+related: [consolidate-conditional-expression, extract-function, replace-nested-conditional-with-guard-clauses, replace-conditional-with-polymorphism, extract-variable]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-13
+last_reviewed: 2026-08-13
+next_review_due: 2027-02-09
 ---
 
 # Decompose Conditional

@@ -1,14 +1,20 @@
 ---
 name: Information Expert
 slug: information-expert
+id: pat.04.information-expert
+kind: principle
 family: 04-principles-and-laws
 category: Principle
 aliases: [Expert, GRASP Expert]
 first_described: "Larman 1997, Applying UML and Patterns, 1st edition"
 maturity: canonical
-related: [creator, low-coupling, high-cohesion, tell-dont-ask, single-responsibility-principle, anemic-domain-model, feature-envy]
+related: [creator, low-coupling, high-cohesion, single-responsibility-principle, anemic-domain-model, feature-envy]
+related_concepts: [tell-dont-ask]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

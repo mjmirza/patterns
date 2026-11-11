@@ -1,14 +1,20 @@
 ---
 name: Model-View-Presenter
 slug: model-view-presenter
+id: pat.05.model-view-presenter
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [MVP, Taligent MVP, Passive View, Supervising Controller, Supervising Presenter]
 first_described: "Potel, Mike, Taligent Inc. 1996"
 maturity: established
 related: [model-view-controller, model-view-viewmodel, observer, application-controller, dependency-injection]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-05
+last_reviewed: 2026-08-05
+next_review_due: 2027-02-01
 ---
 
 # Model-View-Presenter

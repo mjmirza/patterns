@@ -1,14 +1,20 @@
 ---
 name: Big Ball of Mud
 slug: big-ball-of-mud
+id: pat.18.big-ball-of-mud
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-pattern
 aliases: [Shantytown, Kitchen Sink Architecture, Distributed Big Ball of Mud]
 first_described: "Foote, Yoder 1997"
 maturity: canonical
-related: [strangler-fig-application, bounded-context, god-object, spaghetti-code, lava-flow, layered-architecture, modular-monolith, technical-debt]
-incompatible_with: [layered-architecture, hexagonal-architecture, bounded-context]
+related: [strangler-fig, strangler-application, bounded-context, god-object, spaghetti-code, lava-flow, 05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, modular-monolith]
+related_concepts: [technical-debt]
+incompatible_with: [05-architectural/layered-architecture, 11-domain-driven-design/layered-architecture, hexagonal-architecture, bounded-context]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Big Ball of Mud

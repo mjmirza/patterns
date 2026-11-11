@@ -1,14 +1,20 @@
 ---
 name: Template Method
 slug: template-method
+id: pat.01.template-method
+kind: pattern
 family: 01-design-patterns-gof
 category: Behavioral
 aliases: [Template Function, Skeleton Algorithm, Hook Method Pattern]
 first_described: "Gamma, Helm, Johnson, Vlissides 1994"
 maturity: canonical
 related: [factory-method, strategy, bridge, decorator, chain-of-responsibility, builder]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Template Method

@@ -70,11 +70,27 @@ def clean_text(text: str) -> str:
 
 
 def extract_section(text: str, num: int) -> str:
-    # Find Section "num." up to next main section heading "num+1." or any ## heading
-    # Handles "## X." where X is the number, or "### X."
-    pattern = rf"^##[#]?\s+{num}\.[^\n]*\n(.*?)(?=^##[#]?\s+\d+\.|\Z)"
-    m = re.search(pattern, text, re.M | re.S)
-    return m.group(1).strip() if m else ""
+    # Stop at the next level-2 heading. A heading inside a code fence stays.
+    lines = text.splitlines()
+    header = re.compile(rf"^##[#]?\s+{num}\.")
+    start = None
+    for index, line in enumerate(lines):
+        if header.match(line):
+            start = index + 1
+            break
+    if start is None:
+        return ""
+    kept: list[str] = []
+    fence = False
+    for line in lines[start:]:
+        if line.lstrip().startswith("```"):
+            fence = not fence
+            kept.append(line)
+            continue
+        if not fence and line.startswith("## "):
+            break
+        kept.append(line)
+    return "\n".join(kept).strip()
 
 
 def extract_problem_statement(sec2: str) -> str:
@@ -139,7 +155,9 @@ def extract_symptoms_sec11(sec11: str) -> list[str]:
     symptoms = []
     blocks = sec11.split("\n\n")
     for block in blocks:
-        block_str = " ".join(line.strip() for line in block.splitlines() if line.strip())
+        block_str = " ".join(
+            line.strip() for line in block.splitlines() if line.strip()
+        )
         low = block_str.lower()
         if not block_str:
             continue
@@ -160,7 +178,9 @@ def extract_symptoms_sec11(sec11: str) -> list[str]:
             # Make sure it didn't turn into a Cause or Fix, or a table header residue
             if (
                 cleaned
-                and not cleaned.lower().startswith(("cause.", "fix.", "triple", "/ symptom /"))
+                and not cleaned.lower().startswith(
+                    ("cause.", "fix.", "triple", "/ symptom /")
+                )
                 and not cleaned.startswith("/ ")
                 and len(cleaned) > 10
             ):

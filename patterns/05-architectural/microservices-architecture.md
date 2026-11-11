@@ -1,14 +1,20 @@
 ---
 name: Microservices Architecture
 slug: microservices-architecture
+id: pat.05.microservices-architecture
+kind: pattern
 family: 05-architectural
 category: Architectural
 aliases: [Microservice Architecture, Fine-Grained SOA, Service-Based Architecture]
 first_described: "Fowler, Lewis 2014, popularizing a style already in production at Amazon and Netflix in the mid-2000s"
 maturity: established
 related: [database-per-service, api-gateway, circuit-breaker, saga, event-driven-architecture, cqrs, strangler-fig, service-mesh]
-incompatible_with: [shared-database-per-service, distributed-monolith]
+related_concepts: []
+incompatible_with: [distributed-monolith]
+incompatible_concepts: [shared-database-per-service]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 ## 1. Name, aliases, and lineage

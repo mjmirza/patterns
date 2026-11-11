@@ -1,14 +1,20 @@
 ---
 name: Inner-Platform Effect
 slug: inner-platform-effect
+id: pat.18.inner-platform-effect
+kind: anti-pattern
 family: 18-anti-patterns
 category: Anti-Pattern
 aliases: [Inner Platform, Second System of the Wrong Kind, Meta-System Trap]
 first_described: "Alex Papadimoulis 2006, The Daily WTF"
 maturity: canonical
-related: [god-object, golden-hammer, lava-flow, big-ball-of-mud, speculative-generality, ncsi-not-created-shrug]
+related: [god-object, golden-hammer, lava-flow, 11-domain-driven-design/big-ball-of-mud, 18-anti-patterns/big-ball-of-mud, speculative-generality]
+related_concepts: [ncsi-not-created-shrug]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Inner-Platform Effect

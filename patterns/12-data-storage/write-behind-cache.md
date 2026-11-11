@@ -1,14 +1,20 @@
 ---
 name: Write-Behind Cache
 slug: write-behind-cache
+id: pat.12.write-behind-cache
+kind: pattern
 family: 12-data-storage
 category: Data and Storage
 aliases: [Write-Back Cache, Deferred Write Cache, Asynchronous Write Cache]
 first_described: "Practitioner and systems-literature term, in wide industrial use since at least the CPU cache write-back policies of the 1970s and formalized for application caches by commercial cache-store products in the late 1990s and 2000s"
 maturity: canonical
-related: [cache-aside, write-ahead-log, change-data-capture, log-compaction, buffer-pool]
-incompatible_with: [strong-consistency-via-consensus]
+related: [cache-aside, write-ahead-log, change-data-capture, log-compaction]
+related_concepts: [buffer-pool]
+incompatible_with: []
+incompatible_concepts: [strong-consistency-via-consensus]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Write-Behind Cache

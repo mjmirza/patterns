@@ -1,14 +1,20 @@
 ---
 name: Value Object
 slug: value-object
+id: pat.11.value-object
+kind: pattern
 family: 11-domain-driven-design
 category: Domain-Driven Design
 aliases: [Value Type, Immutable Value, Whole Value]
 first_described: "Fowler and Evans, 2002 to 2003"
 maturity: canonical
-related: [entity, aggregate, factory, flyweight, money-pattern, null-object]
+related: [entity, 10-microservices/aggregate, 11-domain-driven-design/aggregate, factory, flyweight, money, null-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Value Object

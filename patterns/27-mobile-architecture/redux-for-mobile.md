@@ -1,14 +1,20 @@
 ---
 name: Redux for Mobile
 slug: redux-for-mobile
+id: pat.27.redux-for-mobile
+kind: pattern
 family: 27-mobile-architecture
 category: Behavioral
 aliases: [ReSwift Pattern, Native Redux, Mobile Redux Store]
 first_described: 'Dan Abramov, Redux, 2015, adapted for mobile by ReSwift and similar libraries'
 maturity: established
 related: [unidirectional-data-flow, mvvm-c]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-22
+last_reviewed: 2026-08-22
+next_review_due: 2027-02-18
 ---
 
 # Redux for Mobile

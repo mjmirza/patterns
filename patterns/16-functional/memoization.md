@@ -1,14 +1,20 @@
 ---
 name: Memoization
 slug: memoization
+id: pat.16.memoization
+kind: pattern
 family: 16-functional
 category: Functional
 aliases: [Memo Functions, Function Memoization, Result Caching, Tabling]
 first_described: "Michie 1968"
 maturity: canonical
-related: [dynamic-programming, lazy-evaluation, referential-transparency, pure-function, caching, flyweight]
-incompatible_with: [impure-functions, volatile-inputs, unbounded-key-space, secret-bearing-cache-keys]
+related: [lazy-evaluation, flyweight]
+related_concepts: [dynamic-programming, referential-transparency, pure-function, caching]
+incompatible_with: []
+incompatible_concepts: [impure-functions, volatile-inputs, unbounded-key-space, secret-bearing-cache-keys]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Memoization

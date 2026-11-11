@@ -1,14 +1,20 @@
 ---
 name: Bulkhead
 slug: bulkhead
+id: pat.08.bulkhead
+kind: pattern
 family: 08-cloud-distributed
 category: Resilience
 aliases: [Resource Isolation, Compartmentalization, Cell-Based Architecture, Partition]
 first_described: "Michael T. Nygard 2007"
 maturity: canonical
-related: [circuit-breaker, timeout, retry, rate-limiter, load-shedding, backpressure, queue-based-load-leveling]
+related: [circuit-breaker, retry, rate-limiter, backpressure, queue-based-load-leveling]
+related_concepts: [timeout, load-shedding]
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Bulkhead

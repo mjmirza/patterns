@@ -1,14 +1,20 @@
 ---
 name: Corrective RAG
 slug: corrective-rag
+id: pat.17.corrective-rag
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [CRAG, Corrective Retrieval Augmented Generation]
 first_described: "Yan, Gu, Zhu, Ling 2024"
 maturity: emerging
 related: [retrieval-augmented-generation, advanced-rag, agentic-rag, routing, evaluator-optimizer, reflexion, circuit-breaker]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Corrective RAG

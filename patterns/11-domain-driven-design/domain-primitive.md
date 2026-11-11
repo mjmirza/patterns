@@ -1,14 +1,20 @@
 ---
 name: Domain Primitive
 slug: domain-primitive
+id: pat.11.domain-primitive
+kind: pattern
 family: 11-domain-driven-design
 category: Tactical Modeling
 aliases: [Tiny Type, Wrapper Type, Strong Type, Notification-Aware Value Object]
 first_described: "Fowler and Yegor Bugayenko, popularized by Dan Bergh Johnsson and Daniel Deogun 2019"
 maturity: canonical
-related: [value-object, entity, specification, factory, null-object]
+related: [06-enterprise-application-architecture/value-object, 11-domain-driven-design/value-object, entity, specification, factory, null-object]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Domain Primitive

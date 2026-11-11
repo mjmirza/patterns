@@ -1,14 +1,20 @@
 ---
 name: Undo
 slug: undo
+id: pat.26.undo
+kind: pattern
 family: 26-interaction-hci
 category: Interaction and HCI
 aliases: [Undo/Redo, Command History, Reversible Action]
 first_described: "Warren Teitelman, undo built into BBN-LISP, 1971 (per Wikipedia's Undo article, citing the original Interlisp lineage)"
 maturity: established
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # Undo

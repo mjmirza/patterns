@@ -1,14 +1,20 @@
 ---
 name: Output Guardrails
 slug: output-guardrails
+id: pat.17.output-guardrails
+kind: pattern
 family: 17-ai-agentic
 category: Agentic
 aliases: [Output Rails, Response Validation, Output Validation, Guarded Generation, Safety Rails, Post-Generation Filtering]
 first_described: "Programmable dialogue rails formalized by Rebedea, Dinu, Sreedhar, Parisien, Cohen 2023 (NeMo Guardrails, EMNLP Demo track); reask-and-validate output checking popularized by Guardrails AI, open sourced 2023"
 maturity: established
 related: [structured-output, function-calling, evaluator-optimizer, reflexion, self-consistency]
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-03
+last_reviewed: 2026-08-03
+next_review_due: 2027-01-30
 ---
 
 # Output Guardrails

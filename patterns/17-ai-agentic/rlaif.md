@@ -1,14 +1,20 @@
 ---
 name: RLAIF
 slug: rlaif
+id: pat.17.rlaif
+kind: pattern
 family: 17-ai-agentic
 category: AI Agentic
 aliases: [Reinforcement Learning from AI Feedback, Direct-RLAIF, d-RLAIF]
 first_described: "Lee, Phatale, Mansoor, Mesnard, Ferret, Lu, Bishop, Hall, Carbune, Rastogi, Prakash, arXiv 2309.00267"
 maturity: established
 related: []
+related_concepts: []
 incompatible_with: []
+incompatible_concepts: []
 verified: 2026-08-23
+last_reviewed: 2026-08-23
+next_review_due: 2027-02-19
 ---
 
 # RLAIF

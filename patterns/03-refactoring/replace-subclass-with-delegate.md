@@ -1,14 +1,20 @@
 ---
 name: Replace Subclass with Delegate
 slug: replace-subclass-with-delegate
+id: pat.03.replace-subclass-with-delegate
+kind: technique
 family: 03-refactoring
 category: Dealing with Inheritance
 aliases: [Replace Inheritance with Delegation, Replace Type Code with State or Strategy]
 first_described: "Fowler 2018"
 maturity: canonical
 related: [replace-superclass-with-delegate, replace-conditional-with-polymorphism, remove-subclass, strategy, state, decorator]
+related_concepts: []
 incompatible_with: [collapse-hierarchy]
+incompatible_concepts: []
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Replace Subclass with Delegate

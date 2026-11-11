@@ -1,14 +1,20 @@
 ---
 name: Table Module
 slug: table-module
+id: pat.06.table-module
+kind: pattern
 family: 06-enterprise-application-architecture
 category: Domain Logic
 aliases: [Table Module Pattern]
 first_described: "Fowler 2003"
 maturity: established
 related: [transaction-script, active-record, domain-model, table-data-gateway, row-data-gateway, gateway]
+related_concepts: []
 incompatible_with: [domain-model]
+incompatible_concepts: []
 verified: 2026-08-11
+last_reviewed: 2026-08-11
+next_review_due: 2027-02-07
 ---
 
 # Table Module

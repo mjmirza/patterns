@@ -1,14 +1,20 @@
 ---
 name: Threat Modeling
 slug: threat-modeling
+id: pat.15.threat-modeling
+kind: pattern
 family: 15-security
 category: Security
 aliases: [Threat Modelling, STRIDE Modeling, Attack Tree Analysis, Risk-Centric Threat Modeling]
 first_described: "Kohnfelder and Garg 1999; Shostack 2014"
 maturity: established
-related: [secure-by-default, defense-in-depth, least-privilege, complete-mediation, audit-log, zero-trust, abuse-case]
-incompatible_with: [checkbox-compliance, security-theater, unowned-risk-register]
+related: [secure-by-default, defense-in-depth, least-privilege, complete-mediation, audit-log, zero-trust]
+related_concepts: [abuse-case]
+incompatible_with: []
+incompatible_concepts: [checkbox-compliance, security-theater, unowned-risk-register]
 verified: 2026-08-02
+last_reviewed: 2026-08-02
+next_review_due: 2027-01-29
 ---
 
 # Threat Modeling
