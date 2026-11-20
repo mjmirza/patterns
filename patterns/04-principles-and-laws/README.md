@@ -2,14 +2,14 @@
 
 Origin. Martin, Larman, Brewer, Conway
 
-42 entries, 327,717 words. Every entry carries all 18
+42 entries, 327,676 words. Every entry carries all 18
 dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 
 ## Design Principle
 
 | Pattern | Maturity | Words | Intent |
 |---|---|---|---|
-| [Acyclic Dependencies Principle](acyclic-dependencies-principle.md) | canonical | 8,491 | A codebase of any real size is not one file. |
+| [Acyclic Dependencies Principle](acyclic-dependencies-principle.md) | canonical | 8,494 | A codebase of any real size is not one file. |
 | [Composable](composable.md) | canonical | 7,693 | Every system with more than one moving part eventually needs behavior that no single unit provides on its own. |
 | [Dependency Inversion Principle](dependency-inversion-principle.md) | canonical | 7,109 | A codebase grows outward from a small number of policy decisions, what the system does, in what order, and why. |
 | [Inversion of Control](inversion-of-control.md) | canonical | 4,801 | In an ordinary, un-inverted call structure, application code owns the entry point. |
@@ -52,7 +52,7 @@ dimensions from [the entry contract](../../docs/ENTRY-TEMPLATE.md).
 | [Protected Variations](protected-variations.md) | canonical | 8,172 | A system is never finished changing. Requirements shift, a vendor is replaced, a data format gains a field, a regulator adds a rule, a second platform needs support, a team splits ... |
 | [Pure Fabrication](pure-fabrication.md) | canonical | 7,616 | A designer following Information Expert as the default rule will, for a large share of responsibilities, land on the right class without further thought. |
 | [Release Reuse Equivalence](release-reuse-equivalence.md) | canonical | 8,332 | The problem REP addresses shows up the moment more than one piece of software wants to depend on the same piece of source code. |
-| [Separation of Concerns](separation-of-concerns.md) | canonical | 10,262 | A codebase grows by accretion. A new requirement lands, and the fastest way to satisfy it is to add a few lines wherever the relevant data already sits in memory. |
+| [Separation of Concerns](separation-of-concerns.md) | canonical | 10,218 | A codebase grows by accretion. A new requirement lands, and the fastest way to satisfy it is to add a few lines wherever the relevant data already sits in memory. |
 | [Single Responsibility Principle](single-responsibility-principle.md) | canonical | 8,419 | The problem SRP names is a specific, recognizable shape of decay. |
 | [Single Source of Truth](single-source-of-truth.md) | canonical | 8,270 | A fact about the world gets written down more than once, in more than one system, in more than one file, or in more than one variable, because writing it again was faster than ... |
 | [Stable Dependencies Principle](stable-dependencies-principle.md) | canonical | 8,892 | A system of any real size is built from more than one compilation or deployment unit, whatever the language calls that unit, a package, a module, a JAR, a crate, an npm package ... |
