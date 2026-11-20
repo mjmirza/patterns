@@ -483,11 +483,7 @@ delivery, recommendation, billing, and content encoding into hundreds of indepen
 deployable services communicating through the Netflix API gateway, referenced directly in
 Sam Newman, *Building Microservices*, 2nd edition, O'Reilly, 2021, chapter 1, as one of the
 canonical early industry adopters of the pattern this entry's dimension 8 describes as
-microservices, with ongoing detail published in the Netflix Technology Blog's architecture
-series (https://web.archive.org/web/2/https://netflixtechblog.com/tagged/architecture,
-verified 2026-08-09; the live tag page now returns a bot-block to automated requests,
-checked directly against the same probe this catalogue's validator uses, so the Wayback
-snapshot is cited in its place).
+microservices.
 
 **The Unix operating system's pipe and filter design.** Doug McIlroy, inventor of the Unix
 pipe, articulated the philosophy that shaped every Unix and Unix-derived tool since. write

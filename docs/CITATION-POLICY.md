@@ -44,6 +44,19 @@ classifier in this repository that pretends otherwise.
 An optional evidence grade may close dimension 18, as the template describes.
 Old entries are not required to carry it.
 
+## Archived pages
+
+A citation of a page saved by the Wayback Machine names one capture. The
+replay URL has the form `https://web.archive.org/web/YYYYMMDDhhmmss/`
+followed by the original URL. Those 14 digits are the capture time. A
+shorter token, including a bare `2`, is a prefix search. The archive
+answers HTTP 200 and then redirects to whichever capture is currently
+closest, so a green citation check can leave the reader on a different
+page than the one that was read. `tools/validate-refs.py` rejects a replay
+URL whose capture id is not those 14 digits. A record under
+`archive.org/details/` is a catalogue item, not a replay URL, and this
+rule does not apply to it.
+
 ## Dates
 
 Web citations include the full URL and the date the page was checked. The

@@ -57,20 +57,19 @@ name, only the tool that enforces it changes.
 
 A companion phrase that shows up in secondary writing about this principle
 is the "morning after syndrome." A developer stays late to finish a change,
-comes back the next morning, and finds the change no longer compiles or no
-longer passes tests, because someone else, working in a different part of a
-cyclically coupled dependency graph, checked in an unrelated change
-overnight that reached back around the cycle and touched the same code
-(paraphrase of the informal description of the syndrome and its root cause
-in a cyclic dependency graph, [summary discussion of the principle and the
-morning after syndrome, via the Wayback Machine snapshot](https://web.archive.org/web/2/https://karandhillon95.medium.com/the-morning-after-syndrome-4e49096156ed),
-verified 2026-08-10; Medium now returns a bot-block to automated requests
-on the live host, checked directly against the same probe this catalogue's
-validator uses, so the archived snapshot is cited in its place). The name
-is memorable because the pain it describes
-happens to a person who did nothing wrong themselves. Their code broke
-because the graph they depend on, indirectly, loops back through their own
-work.
+comes back the next morning, and finds that the change is gone, because
+someone else's edit overwrote it overnight. The write-up names a cyclic
+dependency graph among the components as the cause
+([Karan Dhillon, "The morning after syndrome," Medium, 12 January 2021, a
+secondary article, via the Wayback Machine capture](https://web.archive.org/web/20221101064556/https://karandhillon95.medium.com/the-morning-after-syndrome-4e49096156ed),
+verified 2026-11-20; the live Medium host returns a bot-block to automated
+requests, checked directly against the same probe this catalogue's
+validator uses, so the citation names that capture rather than the live
+URL). The saved page of that capture contains the phrase and the
+cyclic-graph cause. The name is memorable because the pain it describes
+happens to a person who did nothing wrong themselves. They left the code
+in place, and the next morning another person's change had overwritten
+theirs.
 
 ## 2. Problem and context
 
@@ -867,12 +866,13 @@ or privacy-boundary analysis, which requires its own, separate review.
    importing `invoice`, `invoice` importing `order`) built with `go build
    ./...`, producing the compiler error quoted in dimension 9, executed
    and captured 2026-08-10.
-8. Discussion of the "morning after syndrome" as the informal description
-   of the harm caused by a cyclic package dependency graph,
-   [https://web.archive.org/web/2/https://karandhillon95.medium.com/the-morning-after-syndrome-4e49096156ed](https://web.archive.org/web/2/https://karandhillon95.medium.com/the-morning-after-syndrome-4e49096156ed),
-   verified 2026-08-10 (the live Medium host now bot-blocks automated
-   requests, checked directly, so the Wayback Machine snapshot is cited
-   in its place).
+8. Karan Dhillon, "The morning after syndrome," Medium, 12 January 2021.
+   Secondary write-up of the phrase. The saved page says a change left in
+   place one day is gone the next morning because someone else overwrote
+   it, and names a cyclic dependency graph as the cause.
+   [https://web.archive.org/web/20221101064556/https://karandhillon95.medium.com/the-morning-after-syndrome-4e49096156ed](https://web.archive.org/web/20221101064556/https://karandhillon95.medium.com/the-morning-after-syndrome-4e49096156ed),
+   verified 2026-11-20 (the live Medium host bot-blocks automated
+   requests, checked directly, so the citation is this capture).
 
 ## Code examples
 
