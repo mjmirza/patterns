@@ -162,6 +162,32 @@ class CatalogueModelTest(unittest.TestCase):
             errors = model.markdown_link_errors(page, page.read_text(), root)
             self.assertEqual(errors, ["broken internal link: missing.md"])
 
+    def test_wayback_prefix_is_rejected_and_a_pinned_capture_is_not(self):
+        spec = importlib.util.spec_from_file_location(
+            "check_links", TOOLS / "check-links.py"
+        )
+        links = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(links)
+        prefix = (
+            "See https://web.archive.org/web/2/https://example.com/page, "
+            "and https://archive.org/details/refactoringimpro0000fowl."
+        )
+        errors = links.wayback_replay_errors(prefix)
+        self.assertEqual(len(errors), 1)
+        self.assertIn("14 digits", errors[0])
+        self.assertIn("/web/2/", errors[0])
+        pinned = (
+            "https://web.archive.org/web/20221101064556/"
+            "https://example.com/page"
+        )
+        self.assertEqual(links.wayback_replay_errors(pinned), [])
+        impossible = "https://web.archive.org/web/20221131064556/https://example.com/a"
+        self.assertIn("calendar time", links.wayback_replay_errors(impossible)[0])
+        fenced = "```\nhttps://web.archive.org/web/2/https://example.com/page\n```\n"
+        self.assertEqual(links.wayback_replay_errors(fenced), [])
+        coded = "Use `https://web.archive.org/web/2/https://example.com/page`.\n"
+        self.assertEqual(links.wayback_replay_errors(coded), [])
+
     def test_inline_code_is_not_a_link(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

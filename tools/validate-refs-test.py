@@ -26,29 +26,6 @@ class TestValidateRefs(unittest.TestCase):
         self.assertIn("line2", stripped)
         self.assertNotIn("https://example.com", stripped)
 
-    def test_wayback_prefix_timestamp_is_rejected(self):
-        short = "https://web.archive.org/web/2/https://example.com/page"
-        self.assertIn("14 digits", validate_refs.wayback_timestamp_error(short))
-        wildcard = "https://web.archive.org/web/*/https://example.com/page"
-        self.assertIn("14 digits", validate_refs.wayback_timestamp_error(wildcard))
-
-    def test_wayback_pinned_capture_is_accepted(self):
-        pinned = (
-            "https://web.archive.org/web/20221101064556/"
-            "https://karandhillon95.medium.com/the-morning-after-syndrome-4e49096156ed"
-        )
-        self.assertIsNone(validate_refs.wayback_timestamp_error(pinned))
-        flagged = "https://web.archive.org/web/20221101064556id_/https://example.com/a"
-        self.assertIsNone(validate_refs.wayback_timestamp_error(flagged))
-
-    def test_wayback_impossible_calendar_time_is_rejected(self):
-        bad = "https://web.archive.org/web/20221131064556/https://example.com/a"
-        self.assertIn("calendar time", validate_refs.wayback_timestamp_error(bad))
-
-    def test_archive_catalogue_record_is_not_a_replay_url(self):
-        record = "https://archive.org/details/refactoringimpro0000fowl"
-        self.assertIsNone(validate_refs.wayback_timestamp_error(record))
-
     def test_probe_success(self):
         mock_response = MagicMock()
         mock_response.status = 200

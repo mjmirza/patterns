@@ -11,7 +11,6 @@ import re
 import sys
 import urllib.error
 import urllib.request
-from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -22,14 +21,6 @@ URL = re.compile(r"https?://[^\s<>\]\"']+")
 TRAILING = ".,;:!?"
 
 UA = "Mozilla/5.0 (compatible; patterns-ref-validator/1.0; +https://github.com/mjmirza/patterns)"
-
-# A Wayback replay URL is /web/<capture id>/<original>. The capture id is
-# YYYYMMDDhhmmss, optionally followed by a rewrite flag such as id_.
-WAYBACK_REPLAY = re.compile(
-    r"^https?://web\.archive\.org/web/([^/]+)(?:/.*)?$",
-    re.IGNORECASE,
-)
-WAYBACK_FLAGS = ("id_", "js_", "cs_", "im_", "if_", "fw_", "mp_", "oe_")
 
 ALLOW_UNREACHABLE = {
     # Publishers that block automated HEAD requests but are stable citations.
@@ -65,30 +56,6 @@ ALLOW_UNREACHABLE = {
     "en.cppreference.com",
     "ssw.jku.at",
 }
-
-
-def wayback_timestamp_error(url: str) -> str | None:
-    """A short Wayback timestamp is a prefix search, not a citation.
-
-    /web/2/ answers HTTP 200 and redirects to whichever capture is currently
-    closest. The cached status then stays green while the page changes.
-    """
-    match = WAYBACK_REPLAY.match(url)
-    if not match:
-        return None
-    token = match.group(1)
-    digits = token
-    for flag in WAYBACK_FLAGS:
-        if token.endswith(flag):
-            digits = token[: -len(flag)]
-            break
-    if not re.fullmatch(r"\d{14}", digits):
-        return f"wayback capture id must be 14 digits, found '{token}'"
-    try:
-        datetime.strptime(digits, "%Y%m%d%H%M%S")
-    except ValueError:
-        return f"wayback capture id is not a calendar time, found '{digits}'"
-    return None
 
 
 def clean(u: str) -> str:
@@ -164,18 +131,10 @@ def main() -> int:
         return 0
 
     cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
-    bad: list[tuple[str, object, list[str]]] = []
-    # A cached 200 does not excuse a prefix timestamp. The archive returns
-    # 200 for /web/2/ and then redirects, so the cache would hide it forever.
-    structural = {u for u in urls if wayback_timestamp_error(u)}
-    for url in sorted(structural):
-        bad.append((url, wayback_timestamp_error(url), urls[url]))
-    todo = [
-        u
-        for u in urls
-        if u not in structural and str(cache.get(u)) not in {"200", "301", "302"}
-    ]
+    todo = [u for u in urls if str(cache.get(u)) not in {"200", "301", "302"}]
     print(f"{len(urls)} distinct citations, {len(todo)} to probe")
+
+    bad: list[tuple[str, object, list[str]]] = []
     with cf.ThreadPoolExecutor(max_workers=args.workers) as ex:
         for url, status in ex.map(lambda u: probe(u, args.timeout), todo):
             cache[url] = status
