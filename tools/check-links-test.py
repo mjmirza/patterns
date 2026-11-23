@@ -57,6 +57,104 @@ class CatalogueModelTest(unittest.TestCase):
         parsed = model.parse_flow_list('["Gamma, Helm", singleton]')
         self.assertEqual(parsed, ["Gamma, Helm", "singleton"])
 
+    def test_apostrophe_in_an_unquoted_alias_is_part_of_the_name(self):
+        parsed = model.parse_flow_list(
+            "[Brewer's Theorem, Brewer's Conjecture, CAP Trade-off]"
+        )
+        self.assertEqual(
+            parsed, ["Brewer's Theorem", "Brewer's Conjecture", "CAP Trade-off"]
+        )
+        parsed = model.parse_flow_list("[Tell Don't Ask, TDA]")
+        self.assertEqual(parsed, ["Tell Don't Ask", "TDA"])
+
+    def test_single_quoted_apostrophe_escape(self):
+        parsed = model.parse_flow_list("['You''re Not Gonna Need It']")
+        self.assertEqual(parsed, ["You're Not Gonna Need It"])
+
+    def test_unclosed_alias_quote_does_not_parse(self):
+        self.assertIsNone(model.parse_flow_list('["open]'))
+
+    def test_unclosed_alias_quote_is_reported(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            write_entry(root, "04-principles-and-laws", "cap-theorem", "", aliases='"open')
+            index = model.build_index(root)
+            errors = model.identity_errors(index.by_slug["cap-theorem"][0], index)
+            self.assertTrue(
+                any("aliases must be a single-line flow list" in error for error in errors),
+                errors,
+            )
+
+    def test_missing_aliases_key_is_reported(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / "patterns" / "04-principles-and-laws" / "cap-theorem.md"
+            path.parent.mkdir(parents=True)
+            path.write_text(
+                "\n".join(
+                    [
+                        "---",
+                        "name: CAP Theorem",
+                        "slug: cap-theorem",
+                        "id: pat.04.cap-theorem",
+                        "kind: law",
+                        "family: 04-principles-and-laws",
+                        "maturity: canonical",
+                        "related: []",
+                        "related_concepts: []",
+                        "incompatible_with: []",
+                        "incompatible_concepts: []",
+                        "verified: 2026-08-02",
+                        "last_reviewed: 2026-08-02",
+                        "next_review_due: 2027-01-29",
+                        "---",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            index = model.build_index(root)
+            errors = model.identity_errors(index.by_slug["cap-theorem"][0], index)
+            self.assertIn("frontmatter missing aliases", errors)
+
+    def test_published_alias_lists_keep_apostrophes_and_quoted_commas(self):
+        root = Path(__file__).resolve().parent.parent
+        index = model.build_index(root)
+        self.assertEqual(
+            index.by_slug["cap-theorem"][0].aliases,
+            ["Brewer's Theorem", "Brewer's Conjecture", "CAP Trade-off"],
+        )
+        self.assertIn(
+            "Be Conservative In What You Do, Be Liberal In What You Accept",
+            index.by_slug["postel-law"][0].aliases,
+        )
+        self.assertEqual(
+            index.by_slug["tell-do-not-ask"][0].aliases[0], "Tell Don't Ask"
+        )
+        for entry in index.entries:
+            parsed = model.parse_flow_list(entry.fields["aliases"])
+            self.assertIsNotNone(parsed, entry.rel)
+            self.assertEqual(entry.aliases, parsed, entry.rel)
+        index_spec = importlib.util.spec_from_file_location(
+            "gen_entry_index", TOOLS / "gen-entry-index.py"
+        )
+        gen_entry_index = importlib.util.module_from_spec(index_spec)
+        index_spec.loader.exec_module(gen_entry_index)
+        exported = {
+            row["slug"]: row["aliases"]
+            for row in gen_entry_index.payload(index)["entries"]
+            if row["slug"] in {"cap-theorem", "postel-law", "tell-do-not-ask"}
+        }
+        self.assertEqual(
+            exported["cap-theorem"],
+            ["Brewer's Theorem", "Brewer's Conjecture", "CAP Trade-off"],
+        )
+        self.assertIn(
+            "Be Conservative In What You Do, Be Liberal In What You Accept",
+            exported["postel-law"],
+        )
+        self.assertEqual(exported["tell-do-not-ask"][0], "Tell Don't Ask")
+
     def test_windowing_alias_does_not_become_virtual_list(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

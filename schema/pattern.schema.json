@@ -11,6 +11,7 @@
     "id",
     "kind",
     "family",
+    "aliases",
     "maturity",
     "related",
     "related_concepts",
@@ -28,6 +29,11 @@
       "enum": ["pattern", "smell", "technique", "principle", "law", "anti-pattern"]
     },
     "family": { "type": "string", "pattern": "^[0-9]{2}-[a-z0-9-]+$" },
+    "aliases": {
+      "type": "array",
+      "description": "Single-line flow list. An apostrophe is part of the name. Quote an item that contains a comma. tools/check-links.py rejects a list that does not parse.",
+      "items": { "type": "string", "minLength": 1 }
+    },
     "maturity": {
       "enum": ["canonical", "established", "emerging", "contested", "deprecated"]
     },

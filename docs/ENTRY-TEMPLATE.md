@@ -59,6 +59,13 @@ technique, family 04 is principle except the named laws (ACID, BASE, CAP,
 PACELC, Conway, Postel, Demeter), family 18 is anti-pattern, and every other
 family is pattern.
 
+`aliases` is a single-line flow list on the same line as the key. An
+apostrophe belongs to the name, as in `Brewer's Theorem` or `Don't Ask`.
+When an alias itself contains a comma, quote that item. `tools/check-links.py`
+rejects a list that does not parse. A list that did not parse was stored as
+no aliases at all, so the name disappeared from the catalogue and from
+`dist/entries.json`.
+
 `related` and `incompatible_with` name published entries. Use the bare slug
 when it is unique, and `family/slug` when the same slug exists in two
 families. A name that is not a published entry goes in `related_concepts` or
