@@ -7,13 +7,16 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   refresh:
-    name: re-probe every citation and commit the refreshed cache
+    name: re-probe every citation and open a pull request for the refreshed cache
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
@@ -21,12 +24,48 @@ jobs:
         run: |
           rm -f .ref-cache.json
           python3 tools/validate-refs.py --timeout 25 || true
-      - name: Commit the refreshed cache
+      - name: Push the refreshed cache branch
+        id: push
         run: |
-          if ! git diff --quiet -- .ref-cache.json; then
-            git config user.name "patterns-bot"
-            git config user.email "actions@github.com"
-            git add .ref-cache.json
-            git commit -m "chore: weekly citation cache refresh"
-            git push
+          diff_status=0
+          git diff --quiet -- .ref-cache.json || diff_status=$?
+          if [ "$diff_status" -eq 0 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Citation cache is unchanged; not opening a pull request."
+            exit 0
+          fi
+          if [ "$diff_status" -ne 1 ]; then
+            echo "git diff failed while checking .ref-cache.json (exit ${diff_status})"
+            exit "$diff_status"
+          fi
+          git checkout -B chore/citation-cache-refresh
+          git add -- .ref-cache.json
+          git -c user.name="github-actions[bot]" \
+            -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "chore: weekly citation cache refresh"
+          # main is protected. Publish the cache on a fixed branch and open a pull request.
+          git push --force origin HEAD:refs/heads/chore/citation-cache-refresh
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Open or update the pull request
+        if: steps.push.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="chore: weekly citation cache refresh"
+          body="$(cat <<EOF
+          Weekly re-probe of every citation. This updates .ref-cache.json only.
+
+          The branch chore/citation-cache-refresh is replaced from main on each run, so this pull request stays one commit ahead of main.
+
+          Probe run: ${RUN_URL}
+
+          Pull requests created with GITHUB_TOKEN do not trigger other workflows, so required checks may need a manual re-run or close/reopen.
+          EOF
+          )"
+          existing="$(gh pr list --base main --head chore/citation-cache-refresh --state open --json number --jq '.[0].number // empty')"
+          if [ -n "$existing" ]; then
+            gh pr edit "$existing" --title "$title" --body "$body"
+          else
+            gh pr create --base main --head chore/citation-cache-refresh --title "$title" --body "$body"
           fi
