@@ -18,6 +18,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import catalogue_model as model
+
 ROOT = Path(__file__).resolve().parent.parent
 PATTERNS_DIR = ROOT / "patterns"
 QUEUE_FILE = ROOT / "docs" / "AUTHORING-QUEUE.json"
@@ -100,6 +102,22 @@ def jaccard_similarity(set1: set[str], set2: set[str], threshold: float = 0.0) -
     return inter_len / union_len if union_len > 0 else 0.0
 
 
+def parse_alias_list(val: str) -> list[str]:
+    """Parse an aliases value with the catalogue flow-list rules.
+
+    A comma inside quotes is part of one alias. Splitting on every comma
+    turned the second half of a quoted alias into a name the catalogue
+    does not have, which then collided with a queue row of that fragment.
+    """
+    text = val.strip()
+    parsed = model.parse_flow_list(text)
+    if parsed is not None:
+        return parsed
+    if text:
+        return [text.strip(" \"'\t")]
+    return []
+
+
 def extract_frontmatter_and_sections(filepath: Path) -> dict:
     text = filepath.read_text(encoding="utf-8", errors="replace")
     fm_match = re.search(r"^---\n(.*?)\n---", text, re.DOTALL)
@@ -114,13 +132,7 @@ def extract_frontmatter_and_sections(filepath: Path) -> dict:
         family_match.group(1).strip(" \"'\t") if family_match else filepath.parent.name
     )
 
-    aliases = []
-    if aliases_match:
-        val = aliases_match.group(1).strip()
-        if val.startswith("[") and val.endswith("]"):
-            aliases = [x.strip(" \"'\t") for x in val[1:-1].split(",") if x.strip()]
-        else:
-            aliases = [val.strip(" \"'\t")]
+    aliases = parse_alias_list(aliases_match.group(1)) if aliases_match else []
 
     # Extract sections
     sections: dict[str, list[str]] = {}

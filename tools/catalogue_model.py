@@ -162,37 +162,68 @@ def add_days(iso: str, days: int) -> str:
 
 
 def parse_flow_list(raw: str) -> list[str] | None:
-    """Parse one YAML flow list. Returns None when the value is not one."""
+    """Parse one YAML flow list. Returns None when the value is not one.
+
+    A quote starts only at the beginning of an item. An apostrophe inside
+    an unquoted name, as in Brewer's Theorem, is part of that name. Inside
+    single quotes, '' is one apostrophe. Inside double quotes, a backslash
+    escapes the next character. A comma inside quotes does not split items.
+    """
     text = raw.strip()
     if not (text.startswith("[") and text.endswith("]")):
         return None
-    inner = text[1:-1].strip()
-    if not inner:
+    inner = text[1:-1]
+    if not inner.strip():
         return []
     parts: list[str] = []
     buf: list[str] = []
     quote: str | None = None
-    for ch in inner:
+    index = 0
+    length = len(inner)
+
+    def flush() -> None:
+        part = "".join(buf).strip()
+        buf.clear()
+        if part:
+            parts.append(part)
+
+    while index < length:
+        ch = inner[index]
         if quote:
+            if (
+                quote == "'"
+                and ch == "'"
+                and index + 1 < length
+                and inner[index + 1] == "'"
+            ):
+                buf.append("'")
+                index += 2
+                continue
+            if quote == '"' and ch == "\\" and index + 1 < length:
+                buf.append(inner[index + 1])
+                index += 2
+                continue
             if ch == quote:
                 quote = None
-            else:
-                buf.append(ch)
+                index += 1
+                continue
+            buf.append(ch)
+            index += 1
             continue
-        if ch in ("'", '"'):
+        if ch in ("'", '"') and not any(not item.isspace() for item in buf):
             quote = ch
+            index += 1
             continue
         if ch == ",":
-            parts.append("".join(buf).strip())
-            buf = []
+            flush()
+            index += 1
             continue
         buf.append(ch)
+        index += 1
     if quote:
         return None
-    tail = "".join(buf).strip()
-    if tail:
-        parts.append(tail)
-    return [part for part in parts if part]
+    flush()
+    return parts
 
 
 def format_flow(items: list[str]) -> str:
@@ -525,6 +556,15 @@ def identity_errors(entry: Entry, index: Index) -> list[str]:
         errors.append("next_review_due is earlier than last_reviewed")
     if ISO_DATE.fullmatch(verified) and ISO_DATE.fullmatch(last) and last < verified:
         errors.append("last_reviewed is earlier than verified")
+    raw_aliases = fields.get("aliases")
+    if raw_aliases is None:
+        errors.append("frontmatter missing aliases")
+    elif parse_flow_list(raw_aliases) is None:
+        errors.append(
+            "aliases must be a single-line flow list. "
+            "An apostrophe inside a name is not a quote. "
+            "Quote an item that contains a comma."
+        )
     for key in ("related", "incompatible_with"):
         raw = fields.get(key)
         if raw is None:

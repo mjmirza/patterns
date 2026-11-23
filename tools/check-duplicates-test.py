@@ -25,6 +25,55 @@ fetch_historical_proposals = check_duplicates.fetch_historical_proposals
 
 
 class TestCheckDuplicates(unittest.TestCase):
+    def test_parse_alias_list_keeps_quoted_commas_and_apostrophes(self):
+        self.assertEqual(
+            check_duplicates.parse_alias_list(
+                '[Robustness Principle, "Be Conservative In What You Do, Be Liberal In What You Accept"]'
+            ),
+            [
+                "Robustness Principle",
+                "Be Conservative In What You Do, Be Liberal In What You Accept",
+            ],
+        )
+        self.assertEqual(
+            check_duplicates.parse_alias_list(
+                "[Brewer's Theorem, Brewer's Conjecture, CAP Trade-off]"
+            ),
+            ["Brewer's Theorem", "Brewer's Conjecture", "CAP Trade-off"],
+        )
+
+    def test_quoted_alias_fragment_is_not_a_collision(self):
+        import json
+        import tempfile
+
+        fragment = {
+            "name": "Be Liberal In What You Accept",
+            "slug": "be-liberal",
+            "path": "patterns/04-principles-and-laws/be-liberal.md",
+            "status": "planned",
+        }
+        whole = {
+            "name": "Be Conservative In What You Do, Be Liberal In What You Accept",
+            "slug": "robustness-quote",
+            "path": "patterns/04-principles-and-laws/robustness-quote.md",
+            "status": "planned",
+        }
+        with tempfile.NamedTemporaryFile("w+", suffix=".json") as tf:
+            json.dump([fragment], tf)
+            tf.flush()
+            fragment_hits = analyze_repository(Path(tf.name))["collisions"]
+        with tempfile.NamedTemporaryFile("w+", suffix=".json") as tf:
+            json.dump([whole], tf)
+            tf.flush()
+            whole_hits = analyze_repository(Path(tf.name))["collisions"]
+        self.assertEqual(fragment_hits, [])
+        self.assertTrue(
+            any(
+                hit["published_path"].endswith("postel-law.md") for hit in whole_hits
+            ),
+            whole_hits,
+        )
+
     def test_normalize_term(self):
         self.assertEqual(normalize_term("Strangler Fig"), "stranglerfig")
         self.assertEqual(

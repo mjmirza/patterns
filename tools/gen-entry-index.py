@@ -25,6 +25,7 @@ def payload(index: model.Index) -> dict:
                 "id": fields.get("id", "").strip("'\""),
                 "name": entry.name,
                 "slug": entry.slug,
+                "aliases": entry.aliases,
                 "family": entry.family,
                 "kind": fields.get("kind", "").strip("'\""),
                 "maturity": fields.get("maturity", "").strip("'\""),
